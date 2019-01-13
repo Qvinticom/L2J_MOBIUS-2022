@@ -1217,7 +1217,7 @@
 	</skill>
 	<skill id="15145" toLevel="1" name="Ruler's Authority">
 		<!-- When equipped, Max HP/ MP/ CP +$s1, weight +$s2, damage dealt +$s3, damage received -$s4, Damage Reflect Resistance +$s5, inventory slot +$s6, and all attribute resistance +$s7. -->
-		<icon>icon.skill0332</icon>
+		<icon>icon.belt_rulers_authority</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -1333,10 +1333,10 @@
 	</skill>
 	<skill id="15147" toLevel="1" name="Overheat">
 		<!-- The machine is overheated. Inflicts continuous damage on the target that harms you. -->
+		<icon>icon.skill1492</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
-		<icon>icon.skill1492</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -1368,10 +1368,10 @@
 	</skill>
 	<skill id="15148" toLevel="1" name="Coolant Leak">
 		<!-- The machine is overheated. Inflicts a speed decreasing effect on the target that harms you. -->
+		<icon>icon.skill0102</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
-		<icon>icon.skill0102</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -1403,10 +1403,10 @@
 	</skill>
 	<skill id="15149" toLevel="1" name="Self Recovery">
 		<!-- Recovers your HP. -->
+		<icon>icon.skill1216</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
-		<icon>icon.skill1216</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
 		<reuseDelay>120000</reuseDelay>
@@ -1430,10 +1430,10 @@
 	</skill>
 	<skill id="15150" toLevel="1" name="Self Defense">
 		<!-- The machine is protecting itself. Increases your P. Def. -->
+		<icon>icon.skill1389</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DEBUFF_SHIELD</abnormalType>
-		<icon>icon.skill1389</icon>
 		<operateType>A2</operateType>
 		<coolTime>500</coolTime>
 		<reuseDelay>120000</reuseDelay>
@@ -1461,11 +1461,11 @@
 	</skill>
 	<skill id="15151" toLevel="1" name="Overheat">
 		<!-- The machine is burning from overheating and HP is wearing away. -->
+		<icon>icon.skill1492</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<icon>icon.skill1492</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
@@ -1491,11 +1491,11 @@
 	</skill>
 	<skill id="15152" toLevel="1" name="Coolant Leak">
 		<!-- Speed is decreased due to the machine's coolant leak. -->
+		<icon>icon.skill0102</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<abnormalVisualEffect>SPEED_DOWN</abnormalVisualEffect>
-		<icon>icon.skill0102</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
@@ -1588,7 +1588,6 @@
 		</effects>
 	</skill>
 	<skill id="15156" toLevel="1" name="Flower Planting">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1598,7 +1597,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15157" toLevel="1" name="Flower Planting">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1608,7 +1606,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15158" toLevel="1" name="Flower Planting">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1618,7 +1615,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15159" toLevel="1" name="Flower Planting">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1628,7 +1624,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15160" toLevel="1" name="Flower Planting">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1638,7 +1633,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15161" toLevel="1" name="Flower Planting">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1648,7 +1642,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15162" toLevel="1" name="Flower Planting">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2673,7 +2666,6 @@
 	</skill>
 	<skill id="15197" toLevel="1" name="Guardian Spirit's Wrath">
 		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -2696,7 +2688,6 @@
 	</skill>
 	<skill id="15198" toLevel="1" name="Guardian Spirit's Wrath">
 		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -2719,7 +2710,6 @@
 	</skill>
 	<skill id="15199" toLevel="1" name="Guardian Spirit's Wrath">
 		<!-- Attacks nearby enemies with the wrath of the guardian spirit. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>

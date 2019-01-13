@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="37000" name="9th Anniversary Cube (20-day) (Event)" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
+		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -11,11 +12,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
-		<set name="icon" val="icon.special_cube_i00" />
 		<set name="time" val="28800" />
 	</item>
 	<item id="37001" name="9th Anniversary Cube (10-day) (Event)" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
+		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -25,11 +26,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
-		<set name="icon" val="icon.special_cube_i00" />
 		<set name="time" val="14400" />
 	</item>
 	<item id="37002" name="9th Anniversary Cube (5-day) (Event)" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
+		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -39,7 +40,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
-		<set name="icon" val="icon.special_cube_i00" />
 		<set name="time" val="7200" />
 	</item>
 	<item id="37003" name="Letter Collector's Pouch: TOGETHER" type="EtcItem">
@@ -709,6 +709,7 @@
 	</item>
 	<item id="37046" name="9th Anniversary Cube (1-time use)" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/ Hellfire/ Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
+		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -718,7 +719,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
-		<set name="icon" val="icon.special_cube_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37047" name="Theor's Sword" type="Weapon">
@@ -1473,6 +1473,7 @@
 	</item>
 	<item id="37087" name="Dimensional Energy - Stage 1" type="EtcItem">
 		<!-- Energy with the power of dimension. Required to receive a reward or increase the stage level through Mermoden. If you use it to increase the stage level, you can later receive more rewards. To increase the level to Stage 2, you have to succeed in defense in the next cycle. 15-day. -->
+		<set name="icon" val="icon.etc_magic_energy_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1481,10 +1482,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_magic_energy_i00" />
 	</item>
 	<item id="37088" name="Dimensional Energy - Stage 2" type="EtcItem">
 		<!-- Energy with the power of dimension. Required to receive a reward or increase the stage level through Mermoden. If you use it to increase the stage level, you can later receive more rewards. To increase the level to Stage 3, you have to succeed in defense in the next cycle. 15-day. -->
+		<set name="icon" val="icon.etc_magic_energy_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1493,10 +1494,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_magic_energy_i01" />
 	</item>
 	<item id="37089" name="Dimensional Energy - Stage 3" type="EtcItem">
 		<!-- Energy with the power of dimension. Required to receive a reward or increase the stage level through Mermoden. If you use it to increase the stage level, you can later receive more rewards. To increase the level to Stage 4, you have to succeed in defense in the next cycle. 15-day. -->
+		<set name="icon" val="icon.etc_magic_energy_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1505,10 +1506,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_magic_energy_i01" />
 	</item>
 	<item id="37090" name="Dimensional Energy - Stage 4" type="EtcItem">
 		<!-- Energy of dimensional strength. It is needed to receive rewards from Mermoden or to raise the stage. If you raise the stage without receiving the reward, you can receive even more rewards later. But, in order to raise to stage 5, the next period's defense must be successful. 15-day. -->
+		<set name="icon" val="icon.etc_magic_energy_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1517,7 +1518,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_magic_energy_i02" />
 	</item>
 	<item id="37091" name="Dimensional Potion" type="EtcItem">
 		<!-- Potion that can be used only in dimensional space. Restores HP by 3,000. if HP is full, CP is restored. -->

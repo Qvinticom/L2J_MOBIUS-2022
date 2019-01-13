@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="18600" toLevel="3" name="Supply Box (Kingdom's Royal Guard)">
-		<icon>icon.skill18600</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
 			<value level="1">47175</value> <!-- Basic Supply Box -->
@@ -78,7 +77,6 @@
 		</effects>
 	</skill>
 	<skill id="18601" toLevel="3" name="Supply Box (Mother Tree Guardians)">
-		<icon>icon.skill18601</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
 			<value level="1">47178</value> <!-- Basic Supply Box -->
@@ -260,7 +258,6 @@
 		</effects>
 	</skill>
 	<skill id="18602" toLevel="3" name="Supply Box (Unworldly Visitors)">
-		<icon>icon.skill18602</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
 			<value level="1">47181</value> <!-- Basic Supply Box -->
@@ -345,7 +342,6 @@
 		</effects>
 	</skill>
 	<skill id="18603" toLevel="3" name="Basic Supply Box (Giant Trackers)">
-		<icon>icon.skill18603</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
 			<value level="1">47184</value> <!-- Basic Supply Box -->
@@ -600,74 +596,71 @@
 	</skill>
 	<skill id="18605" toLevel="1" name="Fish Chilli Stew - WIT">
 		<!-- Use to enable WIT +3 and LUC +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18606" toLevel="1" name="Fish Chilli Stew - INT">
 		<!-- Use to enable INT +3 and LUC +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18607" toLevel="1" name="Fish Chilli Stew - MEN">
 		<!-- Use to enable MEN +3 and LUC +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18608" toLevel="1" name="Fish Chilli Stew - DEX">
 		<!-- Use to enable DEX +3 and LUC +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18609" toLevel="1" name="Fish Chilli Stew - STR">
 		<!-- Use to enable STR +3 and LUC +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18610" toLevel="1" name="Fish Chilli Stew - CON">
 		<!-- Use to enable CON +3 and LUC +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_luc</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18611" toLevel="1" name="Fish Cream Stew - WIT">
 		<!-- Use to enable WIT +3 and CHA +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18612" toLevel="1" name="Fish Cream Stew - INT">
 		<!-- Use to enable INT +3 and CHA +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18613" toLevel="1" name="Fish Cream Stew - MEN">
 		<!-- Use to enable MEN +3 and CHA +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18614" toLevel="1" name="Fish Cream Stew - DEX">
 		<!-- Use to enable DEX +3 and CHA +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18615" toLevel="1" name="Fish Cream Stew - STR">
 		<!-- Use to enable STR +3 and CHA +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18616" toLevel="1" name="Fish Cream Stew - CON">
 		<!-- Use to enable CON +3 and CHA +1 for 30 minutes. Effect does not stack with identical ones. Cooldown 5 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_residence_cha</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18617" toLevel="1" name="Histie's Reward Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18618" toLevel="10" name="Scroll of Escape: Pagan Temple">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18619" toLevel="3" name="Supply Box (Blackbird Clan)">
-		<icon>icon.skill18619</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
 			<value level="1">47356</value> <!-- Basic Supply Box -->
@@ -729,7 +722,6 @@
 		</effects>
 	</skill>
 	<skill id="18620" toLevel="3" name="Basic Supply Box (Giant Trackers)">
-		<icon>icon.skill18620</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
 			<value level="1">47359</value> <!-- Basic Supply Box -->
@@ -830,7 +822,6 @@
 		</effects>
 	</skill>
 	<skill id="18621" toLevel="1" name="Supply Box">
-		<icon>icon.skill18621</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>47362</itemConsumeId> <!-- Supply Box -->
 		<operateType>A1</operateType>
@@ -910,31 +901,24 @@
 		</effects>
 	</skill>
 	<skill id="18622" toLevel="6" name="+8 Bloody Eternal Pack">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18623" toLevel="8" name="White Assassin Suit Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18624" toLevel="2" name="Agathion Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18625" toLevel="2" name="Elcyum Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18626" toLevel="1" name="Superior Giant's Codex Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18627" toLevel="2" name="Blessed Lucky Armor Enchant Stone Chest - R">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18628" toLevel="1" name="Express Bus Pass Card">
-		<icon>icon.skill0000</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>47384</itemConsumeId> <!-- Express Bus Pass Card -->
@@ -957,32 +941,32 @@
 	</skill>
 	<skill id="18629" toLevel="1" name="Balthus Knight Disguise">
 		<!-- Disguised as a member of the Balthus Knights. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18630" toLevel="1" name="Balthus Knight Disguise">
 		<!-- Disguised as a member of the Balthus Knights. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18631" toLevel="1" name="Balthus Knight Disguise">
 		<!-- Disguised as a member of the Balthus Knights. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18632" toLevel="1" name="Balthus Knight Disguise">
 		<!-- Disguised as a member of the Balthus Knights. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18633" toLevel="1" name="Balthus Knight Disguise">
 		<!-- Disguised as a member of the Balthus Knights. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18634" toLevel="1" name="Duo - Freya Wind">
 		<!-- XP/SP gained by hunting +$s1, Vitality doubled. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.freya_cube_box</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -1099,44 +1083,43 @@
 	</skill>
 	<skill id="18638" toLevel="1" name="PC Cafe Points Coupon (200 points)">
 		<!-- 200 PC Cafe Points obtained -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_ticket_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18639" toLevel="3" name="Scroll of Experience (Dual Class)">
 		<!-- Use to obtain XP (TBD) -->
-		<icon>icon.skill0000</icon>
+		<icon>
+			<value level="1">icon.etc_codex_of_giant_i01</value>
+			<value level="2">icon.etc_codex_of_giant_i01</value>
+			<value level="3">icon.giant_book_i01</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18640" toLevel="1" name="Duo Growth Rune 30%">
 		<!-- XP and SP gained through hunting increased +30%. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18641" toLevel="1" name="Balthus Knights Supply Items">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18642" toLevel="9" name="Duo's Gift">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18643" toLevel="1" name="Duo's Gift">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18644" toLevel="1" name="Freya's Luxury Shopping Bag">
 		<!-- Double click the luxury shopping bag to obtain Freya's Frozen Scroll x1, Freya's Art of Seduction x1, Freya's Recovery Potion x1. In addition, there is the chance that you will obtain one of the following: Freya/Sirra/Snowman Gift Box, Freya's Vital Rune (30 minutes) Box, Freya's Recovery Potion. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18645" toLevel="1" name="Black Freya's Kindness">
 		<!-- Double click to receive a random item that allows you to change the appearance into that of a Dark/White Assassin Suit, Red/White Noblesse Garment, Red Pirate Shipmate Garment, or Purple Cowboy Garment. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18646" toLevel="1" name="Freya's Scroll of Storm">
 		<!-- Vitality consumption +$s1 and XP/SP acquisition +$s2 while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. -->
-		<icon>icon.freya_scroll</icon>
+		<icon>icon.bm_freya_storm_scroll</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -1163,6 +1146,7 @@
 	</skill>
 	<skill id="18647" toLevel="1" name="Freya's Bloody Rune">
 		<!-- Damage dealt to NPCs is increased by $s1 when in your inventory. -->
+		<icon>icon.bm_freya_bloody_rune</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PveMagicalSkillDamageBonus">
@@ -1181,7 +1165,7 @@
 	</skill>
 	<skill id="18648" toLevel="1" name="Freya's Rune">
 		<!-- Boosts STR/DEX/CON/INT/WIT/MEN by $s1 and increases Paralysis Resistance by $s2 when in your inventory. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_freya_rune</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
@@ -1215,7 +1199,7 @@
 	</skill>
 	<skill id="18649" toLevel="1" name="Freya's Vital Rune">
 		<!-- Bonus XP gained in Vitality state is boosted by $s1 when in your inventory (Does not apply to Boss Monsters) -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_freya_vital_rune</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="VitalityExpRate">
@@ -1226,165 +1210,153 @@
 	</skill>
 	<skill id="18650" toLevel="1" name="Mysterious Talisman - Attribute Defense">
 		<!-- Attribute Defense is boosted by 50 when the When worn, is worn. Only the effect of one Talisman applies even when two of the same Talisman are equipped, or a PC Cafe Talisman/Mysterious Talisman with the same effect is equipped. -->
-		<icon>icon.skill0000</icon>
+		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18651" toLevel="10" name="Kelbim Weapon Pack">
 		<!-- Double click to obtain one of the following +8 enchanted items: Shiny Elemental/Melee Reflect/Magical Reflect T-Shirt. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18652" toLevel="1" name="Shining Scroll: Enchant Elemental Shirt">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18653" toLevel="1" name="Lias Supply Items">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18654" toLevel="1" name="Craft Effect - Body">
 		<!-- Max HP +$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.rare_acc_smith_piece</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18655" toLevel="1" name="Craft Effect - Mind">
 		<!-- Skill Cooldown -$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.rare_acc_smith_piece</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18656" toLevel="1" name="Craft Effect - Barrier">
 		<!-- Fixed Damage Resistance +$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.rare_acc_smith_piece</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18657" toLevel="1" name="Craft Effect - Shield">
 		<!-- P. Def. +$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.rare_acc_smith_piece</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18658" toLevel="1" name="Craft Effect - Earth">
 		<!-- M. Def. +$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.rare_acc_smith_piece</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18659" toLevel="1" name="Craft Effect - Pure">
 		<!-- 6 Major Attributes Def. +$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.rare_acc_smith_piece</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18660" toLevel="1" name="Craft Effect - STR">
 		<!-- STR +$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.rare_acc_smith_piece</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18661" toLevel="1" name="Craft Effect - INT">
 		<!-- INT +$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.rare_acc_smith_piece</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18662" toLevel="1" name="Craft Effect - CON">
 		<!-- CON +$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.rare_acc_smith_piece</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18663" toLevel="4" name="Zodiac Agathion Box">
 		<!-- Double click to obtain a special item. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18664" toLevel="7" name="Reward for Defeating the Giant Monsters">
 		<!-- Double click to obtain the reward for Defeating the Giant Monsters. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18665" toLevel="2" name="Santiago's High-grade Reward Treasure Chest">
 		<!-- Double click to obtain Santiago's reward. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18666" toLevel="1" name="PC Cafe Map Treasure Chest">
 		<!-- Double click to obtain a special item. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18667" toLevel="1" name="Royal Blue Save Card (R-grade) - Armor">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18668" toLevel="1" name="Royal Blue Save Card (R95-grade) - Armor">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18669" toLevel="1" name="Royal Blue Save Card (R99-grade) - Armor">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18670" toLevel="1" name="Gran Kain's Miraculous Medicine">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18671" toLevel="1" name="Prophecy of Might - PC Cafe exclusive">
 		<!-- For $s1, Standard and Skill Attack Critical Rate and Damage +$s2. PC Cafe exclusive skill. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19204</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18672" toLevel="1" name="Christmas Party Herb">
 		<!-- Christmas Party Herb. P. Atk./M. Atk./P. Def./M. Def. are increased by $s2, and you are turned into Santa for $s1. Effect disappears when restarted. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys.icon.br_xmas_present_fun_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18673" toLevel="1" name="Transformation Scroll: Tow">
 		<!-- Transformed into Tow -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18674" toLevel="1" name="Transformation Scroll: Lady Tow">
 		<!-- Transformed into Lady Tow -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18675" toLevel="1" name="Transformation Scroll: Angry Tow">
 		<!-- Transformed into Angry Tow -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18676" toLevel="1" name="Transformation Scroll: Sleepy Tow">
 		<!-- Transformed into Sleepy Tow -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18677" toLevel="1" name="Transformation Scroll: Pig">
 		<!-- Transformed into a pig -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18678" toLevel="1" name="Transformation Scroll: Rabbit">
 		<!-- Transformed into a rabbit -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18679" toLevel="1" name="Transformation Scroll: Queen Ant">
 		<!-- Transformed into a Queen Ant -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18680" toLevel="1" name="Transformation Scroll: Orfen">
 		<!-- Transformed into Orfen -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18681" toLevel="1" name="Transformation Scroll: Anakim">
 		<!-- Transformed into Anakim -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18682" toLevel="1" name="Transformation Scroll: Lilith">
 		<!-- Transformed into Lilith -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18683" toLevel="1" name="Cat Fighter Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1395,7 +1367,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18684" toLevel="1" name="Warm Bear Paws Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1406,7 +1377,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18685" toLevel="1" name="Boxing Glove Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1417,7 +1387,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18686" toLevel="1" name="Cupid's Arrow Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1428,7 +1397,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18687" toLevel="1" name="Wedding Bouquet Appearance Stone -One-handed Blunt Weapon">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1439,7 +1407,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18688" toLevel="1" name="Pig Lollipop">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1451,12 +1418,11 @@
 	</skill>
 	<skill id="18689" toLevel="1" name="Chef Monkeys' Banana Herb">
 		<!-- Chef Monkeys' Banana Herb. P.Atk./M.Atk./P. Def./M. Def. increase by $s2 for $s1, and XP and SP gained increase by $s3. Effect disappears when restarted. -->
-		<icon>icon.skill0000</icon>
+		<icon>Icon.ev_monkey_banana</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18690" toLevel="1" name="Chef Monkey's Treasure Chest">
 		<!-- Chef Monkey's Treasure Chest, caught using the Banana Bait. Use to obtain various items.To be deleted at the time of the scheduled server check on Wednesday, February 17, 2016. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

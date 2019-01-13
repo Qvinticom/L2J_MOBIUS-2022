@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10000" toLevel="1" name="Steel Door Guild Reward Box  (Top-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37394</itemConsumeId>
@@ -386,14 +385,14 @@
 	</skill>
 	<skill id="10007" toLevel="3" name="Last Patience">
 		<!-- For 9 seconds, Shield Defense/Skill Power + 25%. -->
-		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>9</abnormalTime>
-		<abnormalType>WEAPON_MASTERY</abnormalType>
 		<icon>
 			<value level="1">icon.skill10006</value>
 			<value level="2">icon.skill10007</value>
 			<value level="3">icon.skill10007</value>
 		</icon>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>WEAPON_MASTERY</abnormalType>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">89</value>
@@ -429,6 +428,7 @@
 	</skill>
 	<skill id="10008" toLevel="11" name="Shield Charge">
 		<!-- Uses a shield to attack target with 13634 Power added to P. Atk. and also P. Def. - 10%, P. Evasion - 2, and P. Critical Damage + 10%. Can be used while a shield is equipped. -->
+		<icon>icon.skill10008</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">80</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
@@ -449,7 +449,6 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SHIELD_ATTACK</abnormalType>
 		<affectHeight>-100;200</affectHeight>
-		<icon>icon.skill10008</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">53</value>
@@ -547,6 +546,7 @@
 	</skill>
 	<skill id="10009" toLevel="11" name="Last Judgment">
 		<!-- Attacks target with 16556 Power added to P. Atk, and Speed - 70. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
+		<icon>icon.skill10009</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -555,7 +555,6 @@
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<effectRange>400</effectRange>
-		<icon>icon.skill10009</icon>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -649,6 +648,7 @@
 	</skill>
 	<skill id="10010" toLevel="11" name="Justice Punishment">
 		<!-- Attacks target with 20451 Power added to P. Atk, and P. Atk./M. Atk. - 20%. Blocks the use of magic skills. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill10010</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>CRITICAL_DMG_DOWN</abnormalType>
@@ -673,7 +673,6 @@
 		</magicLvl>
 		<trait>DERANGEMENT</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill10010</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
@@ -761,6 +760,7 @@
 	</skill>
 	<skill id="10011" toLevel="8" name="Shield Impact">
 		<!-- Attacks target with 11253 Power added to P. Atk. and Stuns for 5 seconds. Can be used while a shield is equipped. -->
+		<icon>icon.skill10011</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -784,7 +784,6 @@
 			<value level="8">105</value>
 		</magicLvl>
 		<trait>SHOCK</trait>
-		<icon>icon.skill10011</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
@@ -849,6 +848,7 @@
 	</skill>
 	<skill id="10012" toLevel="10" name="Shield Wave">
 		<!-- Attacks nearby targets with 10174 Power added to P. Atk. Power added to P. Atk. and Stuns for 9 seconds Power added to P. Atk. Can be used while a shield is equipped. -->
+		<icon>icon.skill10012</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -875,7 +875,6 @@
 			<value level="10">105</value>
 		</magicLvl>
 		<trait>SHOCK</trait>
-		<icon>icon.skill10012</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -947,6 +946,7 @@
 	</skill>
 	<skill id="10013" toLevel="11" name="Gust Blade">
 		<!-- Attacks nearby targets with 10314 Power added to P. Atk. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
+		<icon>icon.skill10013</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<affectHeight>-100;200</affectHeight>
@@ -966,7 +966,6 @@
 			<value level="11">105</value>
 		</magicLvl>
 		<fanRange>0;0;150;120</fanRange>
-		<icon>icon.skill10013</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -1044,6 +1043,7 @@
 	</skill>
 	<skill id="10014" toLevel="11" name="Chain Galaxy">
 		<!-- Attacks nearby targets with 14300 Power added to P. Atk. Healing Power received - 90%. -->
+		<icon>icon.skill10014</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -1069,7 +1069,6 @@
 			<value level="10">103</value>
 			<value level="11">105</value>
 		</magicLvl>
-		<icon>icon.skill10014</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">159</value>
@@ -1139,6 +1138,7 @@
 	</skill>
 	<skill id="10015" toLevel="9" name="Chain Strike">
 		<!-- Pulls selected target to make them attack you. Requires a shield. -->
+		<icon>icon.skill10015</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1158,7 +1158,6 @@
 			<value level="8">103</value>
 			<value level="9">105</value>
 		</magicLvl>
-		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
@@ -1212,6 +1211,7 @@
 	</skill>
 	<skill id="10016" toLevel="9" name="Chain Hydra">
 		<!-- Pulls target and nearby enemies to make them attack you. Requires a shield. -->
+		<icon>icon.skill10016</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1232,7 +1232,6 @@
 			<value level="8">103</value>
 			<value level="9">105</value>
 		</magicLvl>
-		<icon>icon.skill10016</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">123</value>
@@ -1287,6 +1286,7 @@
 	</skill>
 	<skill id="10017" toLevel="7" name="Final Ultimate Defense">
 		<!-- For 30 sec., P. Def. + 4000 and M. Def. + 4000. Damage received is capped at 300 and 40% of it is reflected back to the attacker. Additionally, + 80% Buff-canceling Attack Resistance. -->
+		<icon>icon.skill10017</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">30</value>
@@ -1305,7 +1305,6 @@
 			<value level="6">102</value>
 			<value level="7">104</value>
 		</magicLvl>
-		<icon>icon.skill10017</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">58</value>
@@ -1401,6 +1400,7 @@
 	</skill>
 	<skill id="10018" toLevel="2" name="Noble Sacrifice">
 		<!-- For 10 seconds, receives 60% of the damage inflicted to the party member. -->
+		<icon>icon.skill10018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="2">10</value>
@@ -1413,7 +1413,6 @@
 			<value level="1">91</value>
 			<value level="2">96</value>
 		</magicLvl>
-		<icon>icon.skill10018</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">60</value>
@@ -1455,6 +1454,7 @@
 	</skill>
 	<skill id="10019" toLevel="5" name="Protection of Faith">
 		<!-- For 15 seconds, all party members' P. Def. + 5000, M. Def. + 5000, and Debuff Resistance + 50%. Receives 90% of the damage inflicted to each party member. -->
+		<icon>icon.skill10019</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -1470,7 +1470,6 @@
 			<value level="4">102</value>
 			<value level="5">104</value>
 		</magicLvl>
-		<icon>icon.skill10019</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">127</value>
@@ -1540,6 +1539,7 @@
 	</skill>
 	<skill id="10020" toLevel="7" name="Focus Shield">
 		<!-- P. Def. + 350, Shield Defense + 700, and shield defense + 35%. MP is continuously consumed. -->
+		<icon>icon.skill10020</icon>
 		<mpConsume>50</mpConsume>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1551,7 +1551,6 @@
 			<value level="6">102</value>
 			<value level="7">104</value>
 		</magicLvl>
-		<icon>icon.skill10020</icon>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
 		<mpConsume>50</mpConsume>
@@ -1601,13 +1600,13 @@
 	</skill>
 	<skill id="10021" toLevel="7" name="Spike Shield">
 		<!-- For 10 seconds, reflects 10% of received damage back to the attacker. Also has a 50% chance of reflecting magic damage back to the attacker. Requires a shield. -->
+		<icon>icon.skill10021</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">10</value>
 			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>REFLECT_MAGIC_DD</abnormalType>
-		<icon>icon.skill10021</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
@@ -1662,6 +1661,7 @@
 	</skill>
 	<skill id="10022" toLevel="1" name="Ignore Death">
 		<!-- For 10 seconds, HP does not decrease below 1. -->
+		<icon>icon.skill10022</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">10</value>
@@ -1669,7 +1669,6 @@
 		</abnormalTime>
 		<abnormalType>RESIST_DEATH</abnormalType>
 		<magicLvl>97</magicLvl>
-		<icon>icon.skill10022</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>38</mpConsume>
@@ -1701,6 +1700,7 @@
 	</skill>
 	<skill id="10023" toLevel="5" name="King of Beasts">
 		<!-- Summons the King of Beasts to attack nearby and frontal targets with 35222 Power added to P. Atk. Requires a shield. Over-hit. -->
+		<icon>icon.skill10023</icon>
 		<affectLimit>5-12</affectLimit>
 		<nextAction>ATTACK</nextAction>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1711,7 +1711,6 @@
 			<value level="4">103</value>
 			<value level="5">105</value>
 		</magicLvl>
-		<icon>icon.skill10023</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">1103</value>
@@ -1767,6 +1766,7 @@
 	</skill>
 	<skill id="10024" toLevel="1" name="Party Rescue">
 		<!-- Drags all party members to oneself, and for 15 seconds receives 90% of the damage inflicted to all party members. Additionally, all damage received is capped at 10. Requires a shield. -->
+		<icon>icon.skill10024</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">15</value>
@@ -1775,7 +1775,6 @@
 		<abnormalType>TRANSFER_DAMAGE</abnormalType>
 		<magicLevel>99</magicLevel>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill10024</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>96</mpConsume>
@@ -1815,6 +1814,7 @@
 	</skill>
 	<skill id="10025" toLevel="4" name="Knight Frenzy">
 		<!-- For 1 minute, P. Def. and M. Def. + 50%, Speed + 10, Accuracy + 4 and Atk. Spd. + 10% when equipped with a sword or blunt weapon. Additionally, Critical Rate + 30 when equipped with a sword, and Critical Damage + 30% when equipped with a blunt weapon. -->
+		<icon>icon.skill10025</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
@@ -1825,7 +1825,6 @@
 			<value level="4">99</value>
 		</magicLvl>
 		<staticReuse>true</staticReuse>
-		<icon>icon.skill10025</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -1926,6 +1925,7 @@
 	</skill>
 	<skill id="10026" toLevel="9" name="Superior Aggression">
 		<!-- Provokes target into attacking you. -->
+		<icon>icon.skill10026</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -1945,7 +1945,6 @@
 			<value level="8">103</value>
 			<value level="9">105</value>
 		</magicLvl>
-		<icon>icon.skill10026</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -2001,6 +2000,7 @@
 	</skill>
 	<skill id="10027" toLevel="8" name="Superior Aggression Aura">
 		<!-- Provokes nearby enemies into attacking you. -->
+		<icon>icon.skill10027</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -2030,7 +2030,6 @@
 			<value level="8">105</value>
 		</magicLvl>
 		<staticReuse>true</staticReuse>
-		<icon>icon.skill10027</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2083,8 +2082,8 @@
 	</skill>
 	<skill id="10028" toLevel="1" name="Rage Aura">
 		<!-- When equipped with a sword or blunt weapon, increases P. Atk. Atk. Spd. and P. Critical Damage by 10%, and Speed by 10. Decreases nearby enemies' P. Atk. and Atk. Spd. by 20%. Only one Sigel Knight's Aura can be active at any time. -->
-		<abnormalVisualEffect>AURA_DEBUFF_SELF</abnormalVisualEffect>
 		<icon>icon.skill10028</icon>
+		<abnormalVisualEffect>AURA_DEBUFF_SELF</abnormalVisualEffect>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>AU</operateType>
@@ -2121,13 +2120,13 @@
 	</skill>
 	<skill id="10029" toLevel="1" name="Rage Aura">
 		<!-- Decrease P. Atk and Atk. Spd. by 20%. -->
+		<icon>icon.skill10028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
 		<abnormalVisualEffect>AURA_DEBUFF</abnormalVisualEffect>
 		<affectRange>1000</affectRange>
 		<activateRate>100</activateRate>
-		<icon>icon.skill10028</icon>
 		<operateType>A5</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2162,8 +2161,8 @@
 	</skill>
 	<skill id="10030" toLevel="1" name="Challenge Aura">
 		<!-- When a sword or blunt weapon is equipped, increases aggression power. Additionally, increases party members' P. Atk. and Atk. Spd. by 5% and decreases skill MP Consumption by 20%. Only one Sigel Knight's Aura can be active at any time. -->
-		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<icon>icon.skill10030</icon>
+		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>AU</operateType>
@@ -2218,6 +2217,7 @@
 	</skill>
 	<skill id="10031" toLevel="1" name="Challenge Aura">
 		<!-- P. Atk. and Atk. Spd. + 5%, and skill MP Consumption - 20%. -->
+		<icon>icon.skill10030</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
@@ -2226,7 +2226,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10030</icon>
 		<operateType>A5</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>2</effectPoint>
@@ -2271,8 +2270,8 @@
 	</skill>
 	<skill id="10032" toLevel="1" name="Iron Aura">
 		<!-- P. Atk. and Atk. Spd. + 5%. P. Def. + 215, Shield Defense + 50%, shield defense rate + 100% when equipped with heavy armor. Bow/Crossbow Resistance + 20%. Damage from critical attack - 15%. Only one Sigel Knight's Aura can be active at any time. -->
-		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<icon>icon.skill10032</icon>
+		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>AU</operateType>
@@ -2297,6 +2296,7 @@
 	</skill>
 	<skill id="10033" toLevel="1" name="Iron Aura">
 		<!-- P. Atk. and Atk. Spd. + 5%, P. Def. + 10%, Bow/Crossbow Resistance + 20%. Instant heal effect + 10%. -->
+		<icon>icon.skill10032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
@@ -2305,7 +2305,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10032</icon>
 		<operateType>A5</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>2</effectPoint>
@@ -2328,10 +2327,10 @@
 	</skill>
 	<skill id="10034" toLevel="1" name="Aura Resistance">
 		<!-- P. Atk. and Atk. Spd. + 5%, M. Def. + 10%, Fire/Water/Wind/Earth Resistance + 20. Only one Sigel Knight's Aura can be active at any time. -->
+		<icon>icon.skill10034</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10034</icon>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<toggleGroupId>4</toggleGroupId>
@@ -2366,6 +2365,7 @@
 	</skill>
 	<skill id="10035" toLevel="1" name="Aura Resistance">
 		<!-- P. Atk. and Atk. Spd. + 5%, M. Def. + 10%, Fire/Water/Wind/Earth Resistance + 20. -->
+		<icon>icon.skill10034</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
@@ -2374,7 +2374,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10034</icon>
 		<operateType>A5</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>2</effectPoint>
@@ -2409,10 +2408,10 @@
 	</skill>
 	<skill id="10036" toLevel="1" name="Recovery Aura">
 		<!-- P. Atk. and Atk. Spd. + 5%, and P. Mez/Debuff Resistance + 20. Additionally, Heal Amount by healing skills + 10% and HP Recovery Bonus + 10%. Only one Sigel Knight's Aura can be active at any time. -->
+		<icon>icon.skill10036</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10036</icon>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<toggleGroupId>4</toggleGroupId>
@@ -2437,6 +2436,7 @@
 	</skill>
 	<skill id="10037" toLevel="1" name="Recovery Aura">
 		<!-- P. Atk. and Atk. Spd. + 5%, and P. Mez/Debuff Resistance + 20. Additionally, Heal Amount by healing skills + 10% and HP Recovery Bonus + 10%. -->
+		<icon>icon.skill10036</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
@@ -2445,7 +2445,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10036</icon>
 		<operateType>A5</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>2</effectPoint>
@@ -2470,10 +2469,10 @@
 	</skill>
 	<skill id="10038" toLevel="1" name="Spirit Aura">
 		<!-- P. Atk. and Atk. Spd. + 5%, and M. Mez/Debuff Resistance + 20. Additionally, Additionally, MP Recovery Amount and MP Recovery Bonus + 10%. Only one Sigel Knight's Aura can be active at any time. -->
+		<icon>icon.skill10038</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10038</icon>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<toggleGroupId>4</toggleGroupId>
@@ -2497,6 +2496,7 @@
 	</skill>
 	<skill id="10039" toLevel="1" name="Spirit Aura">
 		<!-- P. Atk. and Atk. Spd. + 5%, and M. Mez/Debuff Resistance + 20. Additionally, Additionally, MP Recovery Amount and MP Recovery Bonus + 10%. -->
+		<icon>icon.skill10038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
@@ -2505,7 +2505,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10038</icon>
 		<operateType>A5</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>2</effectPoint>
@@ -3419,13 +3418,13 @@
 	</skill>
 	<skill id="10055" toLevel="1" name="Cubic Attack">
 		<!-- Momentarily decreases P. Atk. Effect 3. -->
+		<icon>icon.skill1164</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
 		<activateRate>80</activateRate>
 		<lvlBonusRate>30</lvlBonusRate>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill1164</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -3444,7 +3443,6 @@
 		</effects>
 	</skill>
 	<skill id="10056" toLevel="8" name="Cubic Protection">
-		<icon>icon.skill0000</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>
@@ -3503,6 +3501,7 @@
 	</skill>
 	<skill id="10057" toLevel="1" name="Cubic Curse">
 		<!-- Inflicted with poison and HP is momentarily decreased. Effect 5. -->
+		<icon>icon.skill1168</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>POISON</abnormalType>
@@ -3510,7 +3509,6 @@
 		<activateRate>70</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill1168</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -3530,10 +3528,10 @@
 	</skill>
 	<skill id="10058" toLevel="1" name="Blessing of Protection">
 		<!-- M. Def. and Attribute Resistance are momentarily increased. -->
+		<icon>icon.skill0755</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PROTECTION</abnormalType>
-		<icon>icon.skill0755</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -3647,6 +3645,7 @@
 	</skill>
 	<skill id="10060" toLevel="1" name="Aggression Attack">
 		<!-- Provokes. -->
+		<icon>icon.skill0086</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>6</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -3655,7 +3654,6 @@
 		<effectPoint>2</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>700</hitTime>
-		<icon>icon.skill0086</icon>
 		<isDebuff>true</isDebuff>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
@@ -3683,11 +3681,11 @@
 	</skill>
 	<skill id="10061" toLevel="1" name="Price of Summoning">
 		<!-- P. Def. is intentionally decreased as price for summoning a lion. -->
+		<icon>icon.skill1100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
 		<activateRate>100</activateRate>
-		<icon>icon.skill1100</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLevel>99</magicLevel>
 		<operateType>A2</operateType>
@@ -3771,6 +3769,7 @@
 	</skill>
 	<skill id="10063" toLevel="4" name="Phoenix Spirit">
 		<!-- For 10 sec., all party members' P. Def./ M. Def. + 2%. -->
+		<icon>icon.skill11829</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3779,7 +3778,6 @@
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11829</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
 		<magicLvl>
@@ -3927,6 +3925,7 @@
 	</skill>
 	<skill id="10067" toLevel="4" name="Spirit of Revenge">
 		<!-- For 10 sec., all party members' P. Atk./ M. Atk. + 2%. -->
+		<icon>icon.skill11830</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3936,7 +3935,6 @@
 		<abnormalTime>10</abnormalTime>
 		<affectRange>1000</affectRange>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<icon>icon.skill11830</icon>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -4121,6 +4119,7 @@
 	</skill>
 	<skill id="10072" toLevel="4" name="Eva's Presence">
 		<!-- For 10 sec., all party members' P. Def./ M. Def. and heal amount by 1%. -->
+		<icon>icon.skill10071</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4136,7 +4135,6 @@
 			<value level="3">95</value>
 			<value level="4">99</value>
 		</magicLvl>
-		<icon>icon.skill10071</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -4318,6 +4316,7 @@
 	</skill>
 	<skill id="10078" toLevel="4" name="Shilen's Presence">
 		<!-- For 10 sec., all party members' P. Atk./ M. Atk. + 2%. -->
+		<icon>icon.skill11832</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4333,7 +4332,6 @@
 			<value level="3">95</value>
 			<value level="4">99</value>
 		</magicLvl>
-		<icon>icon.skill11832</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -4442,11 +4440,11 @@
 	</skill>
 	<skill id="10081" toLevel="4" name="Lightning Root">
 		<!-- With lightning, inflicts non-attribute damage on target with 15574 Power added to M. Atk. Instantly becomes stunned for 5 sec. Requires a shield. -->
+		<icon>icon.skill0279</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<activateRate>40</activateRate>
-		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4492,7 +4490,6 @@
 		</effects>
 	</skill>
 	<skill id="10082" toLevel="7" name="Strong Cubic Heal">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4533,7 +4530,6 @@
 		</effects>
 	</skill>
 	<skill id="10083" toLevel="7" name="Basic Cubic Heal">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4645,6 +4641,7 @@
 	</skill>
 	<skill id="10086" toLevel="7" name="Cubic Hex">
 		<!-- For 5 sec., P. Def./ M. Def. - 5%. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -4657,7 +4654,6 @@
 			<value level="6">103</value>
 			<value level="7">105</value>
 		</magicLvl>
-		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -4835,6 +4831,7 @@
 	</skill>
 	<skill id="10090" toLevel="4" name="Provoking Shackle">
 		<!-- Provokes nearby enemies and inflicts Hold for 9 sec. -->
+		<icon>icon.skill10090new</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4866,7 +4863,6 @@
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
-		<icon>icon.skill10090new</icon>
 		<effectPoint>
 			<value level="1">-1098</value>
 			<value level="2">-1163</value>
@@ -4983,6 +4979,7 @@
 	</skill>
 	<skill id="10094" toLevel="7" name="Mass Lightning Strike">
 		<!-- Strikes target and nearby enemies with a lightning bolt that inflicts non-attribute damage with 11997 Power. Paralyzes for 5 seconds. Consumes 1 Soulstone. -->
+		<icon>icon.skll10094</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -4993,7 +4990,6 @@
 		<affectLimit>10-10</affectLimit>
 		<affectRange>100</affectRange>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-		<icon>icon.skll10094</icon>
 		<itemConsumeId>1785</itemConsumeId>
 		<itemConsumeCount>
 			<value level="1">1</value>
@@ -5115,12 +5111,12 @@
 	</skill>
 	<skill id="10097" toLevel="6" name="Riot Shield">
 		<!-- Attacks nearby targets with 17927 Power added to P. Atk., and forces them to target you. Requires a shield. Consumes 6 Soulstones. Over-hit. Critical. -->
+		<icon>icon.skill10097</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
-		<icon>icon.skill10097</icon>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstone -->
 		<itemConsumeCount>6</itemConsumeCount>
 		<operateType>A2</operateType>
@@ -5179,12 +5175,12 @@
 	</skill>
 	<skill id="10098" toLevel="4" name="Paladin's Frenzy">
 		<!-- For 1 min., P./M. Def. +50%, Debuff Resistance + 10%, Speed + 10. When equipped with a sword or blunt weapon, Accuracy + 4, Atk. Spd. + 10%, Critical Rate + 30, Critical Damage + 30%. -->
+		<icon>icon.skill10098</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
-		<icon>icon.skill10098</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -5297,12 +5293,12 @@
 	</skill>
 	<skill id="10099" toLevel="4" name="Avenger's Frenzy">
 		<!-- For 1 min., P. Atk. + 5%, P./M. Def. + 50%, Speed + 10. When equipped with a sword or blunt weapon, Accuracy + 4, Atk. Spd. + 10%, Critical Rate + 30, Critical Damage + 30%. -->
+		<icon>icon.skill10099</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
-		<icon>icon.skill10099</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

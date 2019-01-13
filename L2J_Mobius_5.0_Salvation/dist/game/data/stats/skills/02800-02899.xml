@@ -2,11 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2800" toLevel="1" name="Stone of Ease">
 		<!-- Temporarily increases Max HP. Effect 3. -->
+		<icon>icon.stone_4_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.stone_4_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
@@ -24,11 +24,11 @@
 	</skill>
 	<skill id="2801" toLevel="1" name="Stone of Abundance">
 		<!-- Temporarily increases Max MP. Effect 3. -->
+		<icon>icon.stone_5_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.stone_5_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
@@ -45,9 +45,9 @@
 		</effects>
 	</skill>
 	<skill id="2802" toLevel="1" name="Recovery Stone">
+		<icon>icon.stone_1_i00</icon>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.stone_1_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>80</magicLvl>
 		<operateType>A1</operateType>
@@ -1428,12 +1428,12 @@
 	</skill>
 	<skill id="2839" toLevel="1" name="Sacred Light Fragment">
 		<!-- Decreases Holy Attack Resistance. -->
+		<icon>icon.etc_piece_holy_light</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ATTRIBUTE_POTION</abnormalType>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.etc_piece_holy_light</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13855</itemConsumeId> <!-- Sacred Light Fragment -->
@@ -2016,11 +2016,11 @@
 	</skill>
 	<skill id="2856" toLevel="1" name="Santa's Buff Gift Set">
 		<!-- For 1 hour, receives help from a great spirit to increase Max MP by 20%, MP Recovery Bonus by 20%, HP Recovery Bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption needed for skill use by 5%. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14614</itemConsumeId> <!-- Lineage II Devotee Scroll -->
@@ -2106,11 +2106,11 @@
 	</skill>
 	<skill id="2857" toLevel="1" name="Holiday Event - Enchant Scroll (Wizard)">
 		<!-- For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP Recovery Bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14615</itemConsumeId> <!-- Scroll of Christmas Festival - Mage Type -->
@@ -2447,10 +2447,10 @@
 	</skill>
 	<skill id="2863" toLevel="1" name="Superior Healing Potion">
 		<!-- Greatly increases HP Recovery Bonus. Effect 4. -->
+		<icon>icon.etc_reagent_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
-		<icon>icon.etc_reagent_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14700</itemConsumeId> <!-- Greater Healing Potion -->
@@ -2639,8 +2639,8 @@
 	</skill>
 	<skill id="2867" toLevel="1" name="Cupid's Cure">
 		<!-- Sends mutated animals a Heart with love. -->
-		<effectPoint>-1000</effectPoint>
 		<icon>icon.skill3260</icon>
+		<effectPoint>-1000</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14722</itemConsumeId> <!-- Event - Cupid's Fatigue Recovery Potion -->
@@ -2671,8 +2671,8 @@
 	</skill>
 	<skill id="2868" toLevel="1" name="Cupid's Enhanced Cure">
 		<!-- Sends mutated animals a powerful Heart filled with love. -->
-		<effectPoint>-1000</effectPoint>
 		<icon>icon.skill3260</icon>
+		<effectPoint>-1000</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14723</itemConsumeId> <!-- Event - Cupid's Powerful Fatigue Recovery Potion -->
@@ -2702,8 +2702,8 @@
 		</conditions>
 	</skill>
 	<skill id="2869" toLevel="1" name="Event - Summon Scroll: Milk Cow">
-		<hitTime>1500</hitTime>
 		<icon>icon.etc_scroll_of_return_i00</icon>
+		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14724</itemConsumeId> <!-- Event - Milk Cow Summon Scroll -->
@@ -2726,8 +2726,8 @@
 		</effects>
 	</skill>
 	<skill id="2870" toLevel="1" name="Event - Summon Scroll: Milk Cow Captain">
-		<hitTime>1500</hitTime>
 		<icon>icon.etc_scroll_of_return_i00</icon>
+		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14725</itemConsumeId> <!-- Event - Head Milk Cow Summon Scroll -->
@@ -2795,11 +2795,11 @@
 	</skill>
 	<skill id="2873" toLevel="1" name="Might">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>20</magicLvl>
 		<operateType>A2</operateType>
@@ -2817,11 +2817,11 @@
 	</skill>
 	<skill id="2874" toLevel="1" name="Wind Walk">
 		<!-- Increases Speed by 60 for 33 minutes. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>30</magicLvl>
 		<operateType>A2</operateType>
@@ -2839,11 +2839,11 @@
 	</skill>
 	<skill id="2875" toLevel="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
@@ -2861,11 +2861,11 @@
 	</skill>
 	<skill id="2876" toLevel="1" name="Vampiric Rage">
 		<!-- For 60 minutes, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
@@ -2883,11 +2883,11 @@
 	</skill>
 	<skill id="2877" toLevel="1" name="Berserker Spirit">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 minutes. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>35</magicLvl>
 		<operateType>A2</operateType>
@@ -2933,11 +2933,11 @@
 	</skill>
 	<skill id="2878" toLevel="1" name="Empower">
 		<!-- Increases M. Atk. by 75% for 60 minutes. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
@@ -2955,11 +2955,11 @@
 	</skill>
 	<skill id="2879" toLevel="1" name="Acumen">
 		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>35</magicLvl>
 		<operateType>A2</operateType>
@@ -2976,8 +2976,8 @@
 		</effects>
 	</skill>
 	<skill id="2880" toLevel="1" name="Event - Summon Scroll: Gloomy Milk Cow">
-		<hitTime>1500</hitTime>
 		<icon>icon.etc_scroll_of_return_i00</icon>
+		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14726</itemConsumeId> <!-- Event - Gloomy Milk Cow Summon Scroll -->
@@ -2997,8 +2997,8 @@
 		</effects>
 	</skill>
 	<skill id="2881" toLevel="1" name="Event - Summon Scroll: Gloomy Milk Cow Captain">
-		<hitTime>1500</hitTime>
 		<icon>icon.etc_scroll_of_return_i00</icon>
+		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14727</itemConsumeId> <!-- Event - Gloomy Head Milk Cow Summon Scroll -->
@@ -3066,13 +3066,13 @@
 	</skill>
 	<skill id="2883" toLevel="1" name="Vitality Recovering Potion">
 		<!-- Recovers Vitality upon acquiring XP for 10 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14742</itemConsumeId> <!-- Event - Vitality Replenishing Herb Tea 10 minutes -->
@@ -3093,13 +3093,13 @@
 	</skill>
 	<skill id="2884" toLevel="1" name="Vitality Recovering Potion">
 		<!-- Recovers Vitality upon acquiring XP for 20 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>14743</itemConsumeId> <!-- Event - Vitality Replenishing Herb Tea 20 minutes -->
@@ -3120,11 +3120,11 @@
 	</skill>
 	<skill id="2885" toLevel="1" name="Shield">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>25</magicLvl>
 		<operateType>A2</operateType>
@@ -3142,11 +3142,11 @@
 	</skill>
 	<skill id="2886" toLevel="1" name="Focus">
 		<!-- Increases Critical Rate by 30% for 60 minutes. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
@@ -3164,11 +3164,11 @@
 	</skill>
 	<skill id="2887" toLevel="1" name="Death Whisper">
 		<!-- Increases Critical Damage by 35% for 60 minutes. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>48</magicLvl>
 		<operateType>A2</operateType>
@@ -3186,11 +3186,11 @@
 	</skill>
 	<skill id="2888" toLevel="1" name="Guidance">
 		<!-- Increases Accuracy by 4 for 60 minutes. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>48</magicLvl>
 		<operateType>A2</operateType>
@@ -3208,11 +3208,11 @@
 	</skill>
 	<skill id="2889" toLevel="1" name="Clarity">
 		<!-- For 60 minutes, decreases MP consumption by 20% for physical skills, by 10% for magic skills, and by 20% for song/ dance skills. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>58</magicLvl>
 		<operateType>A2</operateType>
@@ -3241,11 +3241,11 @@
 	</skill>
 	<skill id="2890" toLevel="1" name="Wild Magic">
 		<!-- For 60 minutes, increases the chance of causing a prominent magic damage by 2. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>70</magicLvl>
 		<operateType>A2</operateType>
@@ -3263,11 +3263,11 @@
 	</skill>
 	<skill id="2891" toLevel="6" name="Concentration">
 		<!-- For 60 minutes, decreases magic cancel rate by 53. -->
+		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_fresh_milk_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -3302,13 +3302,13 @@
 	</skill>
 	<skill id="2893" toLevel="1" name="Solo Escape Petition">
 		<!-- Maintains Vitality for 10 minutes. Solo escape petition containing the wish for a solo player's escape -->
+		<icon>icon.etc_candle_yellow_i00</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_candle_yellow_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14770</itemConsumeId> <!-- Solo Escape Petition -->
@@ -3422,6 +3422,7 @@
 	</skill>
 	<skill id="2897" toLevel="1" name="Baguette's Herb">
 		<!-- For 10 minutes, increases HP Recovery Bonus by 20% and Max HP by 10%. Also, the outward appearance of your hair and weapon are changed by the hallucinatory effects of the crocodile tears sprinkled by Pierre Baguette. However, the capabilities of your weapon stay the same. -->
+		<icon>icon.etc_herb_of_baguette</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -3429,7 +3430,6 @@
 		<abnormalVisualEffect>CHANGE_WP;CHANGE_HAIR_B</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_herb_of_baguette</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -3452,6 +3452,7 @@
 	</skill>
 	<skill id="2898" toLevel="1" name="Cream Puff Herb">
 		<!-- For 10 minutes, increases Max HP/ Max HP/ Casting Spd./ P. Def./ M. Def. and Debuff Resistance by 10%. Increases Atk. Spd. by 15% and Moving Spd. by 10. Weapon and hair appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But, weapons don't change their abilities. -->
+		<icon>icon.etc_herb_of_cream</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -3459,7 +3460,6 @@
 		<abnormalVisualEffect>CHANGE_WP;CHANGE_HAIR_G</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_herb_of_cream</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -3502,6 +3502,7 @@
 	</skill>
 	<skill id="2899" toLevel="1" name="Cheesecake Herb">
 		<!-- For 10 minutes, increases MP Recovery Bonus by 20% and Max MP by 10%. Also, the outward appearance of your hair and weapon is changed by the hallucinatory effects of the crocodile tears sprinkled by Pierre Baguette. However, the capabilities of your weapon stay the same. -->
+		<icon>icon.etc_herb_of_cheesecake</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -3509,7 +3510,6 @@
 		<abnormalVisualEffect>CHANGE_WP;CHANGE_HAIR_P</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_herb_of_cheesecake</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>

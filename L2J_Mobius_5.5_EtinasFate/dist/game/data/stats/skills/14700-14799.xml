@@ -2,13 +2,13 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="14700" toLevel="1" name="Maximum Defense">
 		<!-- For 1 min., increases one's own P. Atk. by 25%, M. Atk. by 50%, P. Def. by 1800, M. Def. by 1620, HP recovery speed by 300, MP recovery speed by 300%, and Buff-canceling Attack Resistance by 80%. -->
+		<icon>icon.skill0110</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<castRange>900</castRange>
 		<effectPoint>204</effectPoint>
 		<hitTime>700</hitTime>
-		<icon>icon.skill0110</icon>
 		<magicLvl>85</magicLvl>
 		<mpConsume>25</mpConsume>
 		<operateType>A2</operateType>
@@ -162,7 +162,6 @@
 	</skill>
 	<skill id="14705" toLevel="1" name="Stun Resistance">
 		<!-- Resistant to Stun. -->
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -174,7 +173,6 @@
 	</skill>
 	<skill id="14706" toLevel="1" name="Stun Resistance">
 		<!-- Resistant to Stun. -->
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -186,7 +184,6 @@
 	</skill>
 	<skill id="14707" toLevel="1" name="Stun Resistance">
 		<!-- Resistant to Stun. -->
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -394,6 +391,7 @@
 	</skill>
 	<skill id="14736" toLevel="1" name="Light Heal">
 		<!-- Restores the target's HP with 1488 Power. Once HP is filled, the remaining effect stores CP. -->
+		<icon>icon.skill11755</icon>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<effectPoint>867</effectPoint>
@@ -404,7 +402,6 @@
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<icon>icon.skill11755</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
@@ -1128,7 +1125,6 @@
 	</skill>
 	<skill id="14767" toLevel="1" name="Siege Punch">
 		<!-- Launches a powerful attack on the target around you -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>4600</hitTime>
 		<effectPoint>-100</effectPoint>
@@ -1563,7 +1559,7 @@
 	</skill>
 	<skill id="14785" toLevel="1" name="Master's Blessing - Knight's Harmony">
 		<!-- The GM is always by your side. For $s1, this blessing increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, and Shield Defense Rate/ P. Def by $s6, and decreases the chance of receiving Physical/ Magic Critical Hit by $s7. -->
-		<icon>icon.skill11523</icon>
+		<icon>icon.skill19500</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1617,7 +1613,7 @@
 	</skill>
 	<skill id="14786" toLevel="1" name="Master's Blessing - Warrior's Harmony">
 		<!-- The GM is always by your side. For $s1, this blessing increases P. Atk by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. There is also a chance to add the Spectral Slash effect to the target. -->
-		<icon>icon.skill11524</icon>
+		<icon>icon.skill19501</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1675,7 +1671,7 @@
 	</skill>
 	<skill id="14787" toLevel="1" name="Master's Blessing - Wizard's Harmony">
 		<!-- The GM is always by your side. For $s1, this blessing increases M. Atk. by $s2, M. Critical Rate by $s3, M. Critical Damage by $s4, Casting Spd. by $s5, and Atk. Attribute by $s6. Decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
-		<icon>icon.skill11525</icon>
+		<icon>icon.skill19502</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -2233,7 +2229,7 @@
 	</skill>
 	<skill id="14797" toLevel="1" name="Master's Blessing - Knight's Harmony">
 		<!-- The GM is always by your side. For $s1, this blessing increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, and Shield Defense Rate/ P. Def by $s6, and decreases the chance of receiving Physical/ Magic Critical Hit by $s7. -->
-		<icon>icon.skill11523</icon>
+		<icon>icon.skill19500</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>500</hitTime>
@@ -2287,7 +2283,7 @@
 	</skill>
 	<skill id="14798" toLevel="1" name="Master's Blessing - Warrior's Harmony">
 		<!-- The GM is always by your side. For $s1, this blessing increases P. Atk by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. There is also a chance to add the Spectral Slash effect to the target. -->
-		<icon>icon.skill11524</icon>
+		<icon>icon.skill19501</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>500</hitTime>
@@ -2345,7 +2341,7 @@
 	</skill>
 	<skill id="14799" toLevel="1" name="Master's Blessing - Wizard's Harmony">
 		<!-- The GM is always by your side. For $s1, this blessing increases M. Atk. by $s2, M. Critical Rate by $s3, M. Critical Damage by $s4, Casting Spd. by $s5, and Atk. Attribute by $s6. Decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
-		<icon>icon.skill11525</icon>
+		<icon>icon.skill19502</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>500</hitTime>

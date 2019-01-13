@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1500" toLevel="1" name="Improve Magic">
 		<!-- Increases both M. Atk. and M. Def. to have more advanced magic ability increase effect. For 40 minutes, increases M. Atk. by 75% and M. Def. by 30%. -->
+		<icon>icon.skill1500</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -9,7 +10,6 @@
 		<effectPoint>679</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1500</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>22</mpConsume>
@@ -40,6 +40,7 @@
 	</skill>
 	<skill id="1501" toLevel="1" name="Improve Condition">
 		<!-- Combines Max HP increase and Max MP increase to have more advanced mental and physical power. For 40 minutes, increases Max HP by 35% and Max MP by 35%. -->
+		<icon>icon.skill1501</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_HP_MP_UP</abnormalType>
@@ -47,7 +48,6 @@
 		<effectPoint>679</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1501</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>22</mpConsume>
@@ -78,6 +78,7 @@
 	</skill>
 	<skill id="1502" toLevel="1" name="Improve Critical Attack">
 		<!-- Combines Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 40 minutes, increases Critical Rate by 30% and Critical Damage by 35%. -->
+		<icon>icon.skill1502</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
@@ -85,7 +86,6 @@
 		<effectPoint>679</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1502</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>22</mpConsume>
@@ -116,6 +116,7 @@
 	</skill>
 	<skill id="1503" toLevel="1" name="Improve Shield Defense">
 		<!-- Combines Shield Defense rate increase and Shield Defense. increase to have more advanced shield ability increase effect. For 40 minutes, increases Shield Defense by 30% and Shield Defense by 50%. -->
+		<icon>icon.skill1503</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_SHIELD_RATE_DEFENCE_UP</abnormalType>
@@ -123,7 +124,6 @@
 		<effectPoint>679</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1503</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>21</mpConsume>
@@ -154,6 +154,7 @@
 	</skill>
 	<skill id="1504" toLevel="1" name="Improve Movement">
 		<!-- Combines Spd. increase and Evasion increase to have more advanced movement increase effect. For 40 minutes, increases Speed by 33 and Evasion by 4. -->
+		<icon>icon.skill1504</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_SPEED_AVOID_UP</abnormalType>
@@ -161,7 +162,6 @@
 		<effectPoint>679</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1504</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>22</mpConsume>
@@ -192,6 +192,7 @@
 	</skill>
 	<skill id="1505" toLevel="1" name="Sublime Self-Sacrifice">
 		<!-- Sacrifices oneself to allow all other party members (excluding oneself) to fully recover their HP/MP/CP and to become invincible for 15 seconds. -->
+		<icon>icon.skill1505</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -200,7 +201,6 @@
 		<effectPoint>668</effectPoint>
 		<hitTime>4000</hitTime>
 		<hpConsume>4000</hpConsume>
-		<icon>icon.skill1505</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>174</mpConsume>
@@ -236,11 +236,11 @@
 	</skill>
 	<skill id="1506" toLevel="1" name="Blessing of Eva">
 		<!-- By casting Eva's blessing, it recovers HP/MP/CP, and cancels bad abnormal conditions by rate. -->
+		<icon>icon.skill1506</icon>
 		<castRange>400</castRange>
 		<effectPoint>668</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1506</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>58</mpConsume>
@@ -270,6 +270,7 @@
 	</skill>
 	<skill id="1507" toLevel="1" name="Lord of Vampires">
 		<!-- For 30 sec., 80% of the standard melee damage inflicted on the enemy is recovered as HP with a certain probability. -->
+		<icon>icon.skill1507</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK_SPECIAL</abnormalType>
@@ -277,7 +278,6 @@
 		<effectPoint>679</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1507</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>29</mpConsume>
@@ -298,6 +298,7 @@
 	</skill>
 	<skill id="1508" toLevel="1" name="Thorn Root">
 		<!-- Holds nearby enemies for 10 seconds and makes them consume 90 HP and 30 MP every second. -->
+		<icon>icon.skill1508</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -308,7 +309,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-679</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1508</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -340,6 +340,7 @@
 	</skill>
 	<skill id="1509" toLevel="9" name="Seal of Limit">
 		<!-- During PvP, limits the CP, HP, and MP recovery of the target and nearby enemies to maximum 80% for 30 seconds. -->
+		<icon>icon.skill1509</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>LIMIT</abnormalType>
@@ -352,7 +353,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-679</effectPoint>
 		<hitTime>2110</hitTime>
-		<icon>icon.skill1509</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -457,11 +457,11 @@
 	</skill>
 	<skill id="1510" toLevel="1" name="Soul Cleanse">
 		<!-- Cancel up to 3 debuffs. Can only be used within the same race. -->
+		<icon>icon.skill1510</icon>
 		<castRange>600</castRange>
 		<effectPoint>611</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1510</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>66</magicLvl>
 		<mpConsume>25</mpConsume>
@@ -487,6 +487,7 @@
 	</skill>
 	<skill id="1511" toLevel="8" name="Curse of Life Flow">
 		<!-- For 30 sec., inflicts a curse on the enemy that causes him to lose the power of life. Regenerates the target's HP if damaged at a certain rate. -->
+		<icon>icon.skill1511</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -515,7 +516,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1511</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -581,6 +581,7 @@
 	</skill>
 	<skill id="1512" toLevel="1" name="Soul Vortex">
 		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with 112 Power added to M. Atk. For 30 sec., decreases Speed by 20%, Atk. Spd. by 30%, and Casting Spd. by 30%. Consumes 12 MP every second. Over-hit is possible. -->
+		<icon>icon.skill1512</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_SOUL</abnormalType>
@@ -590,7 +591,6 @@
 		<effectPoint>-999</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1512</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -629,11 +629,11 @@
 	</skill>
 	<skill id="1513" toLevel="1" name="Soul Vortex Extinction">
 		<!-- Detonates an Soul Vortex to inflict non-attribute damage on the enemy with 195 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
+		<icon>icon.skill1513</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1513</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>68</mpConsume>
@@ -663,6 +663,7 @@
 	</skill>
 	<skill id="1514" toLevel="7" name="Soul Barrier">
 		<!-- Spreads the soul's defensive barrier to increase your Bow Resistance + 10, Crossbow Resistance + 10, and M. Def. + 100% for 30 seconds. -->
+		<icon>icon.skill1514</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="7">30</value>
@@ -672,7 +673,6 @@
 		<abnormalType>PD_UP_BOW</abnormalType>
 		<effectPoint>150</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1514</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>58</magicLvl>
 		<mpConsume>
@@ -752,12 +752,12 @@
 	</skill>
 	<skill id="1515" toLevel="1" name="Lightning Barrier">
 		<!-- Spreads lightning's defensive barrier for 20 minutes. Paralyzes the target that attacked you. -->
+		<icon>icon.skill1515</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ELEMENTAL_ARMOR</abnormalType>
 		<effectPoint>138</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1515</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>80</magicLvl>
 		<mpConsume>29</mpConsume>
@@ -785,11 +785,11 @@
 	</skill>
 	<skill id="1516" toLevel="1" name="Soul Strike">
 		<!-- Consecutively throws souls to inflict non-attribute damage on the enemy using 166 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
+		<icon>icon.skill1516</icon>
 		<castRange>750</castRange>
 		<effectPoint>-662</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1516</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<mpConsume>27</mpConsume>
@@ -809,13 +809,13 @@
 	</skill>
 	<skill id="1517" toLevel="1" name="Chant of Combat">
 		<!-- Combines party members' P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 minutes, increases P. Atk. by 15% and P. Def. by 15%. -->
+		<icon>icon.skill1499</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_PA_PD_UP</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>635</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1499</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>52</mpConsume>
@@ -847,13 +847,13 @@
 	</skill>
 	<skill id="1518" toLevel="1" name="Chant of Critical">
 		<!-- Combines party members' Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. Increases Critical Rate by 30% and Critical Damage by 35% for 40 minutes. -->
+		<icon>icon.skill1502</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>646</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1502</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>53</mpConsume>
@@ -885,13 +885,13 @@
 	</skill>
 	<skill id="1519" toLevel="1" name="Chant of Blood Awakening">
 		<!-- Combines party members' general attack damage absorption and Atk. Spd. increase to have a more advanced blood awakening effect. For 40 minutes, increases Atk. Spd. by 33% and has a chance of recovering 9% of the damage inflicted on the enemy as HP. -->
+		<icon>icon.skill1519</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_VAMPIRIC_HASTE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>655</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1519</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>55</mpConsume>
@@ -923,12 +923,12 @@
 	</skill>
 	<skill id="1520" toLevel="1" name="Inquisitor">
 		<!-- Receives the ability to judge those who oppose the gods' authority. Can use holy attacks and magic. -->
+		<icon>icon.skill1520</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>21600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1520</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<mpConsume>39</mpConsume>
@@ -956,12 +956,12 @@
 	</skill>
 	<skill id="1521" toLevel="1" name="Inquisitor">
 		<!-- Receives the ability to judge those who oppose the gods' authority. Can use holy attacks and magic. -->
+		<icon>icon.skill1520</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>21600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1520</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<mpConsume>39</mpConsume>
@@ -989,12 +989,12 @@
 	</skill>
 	<skill id="1522" toLevel="1" name="Inquisitor">
 		<!-- Receives the ability to judge those who oppose the gods' authority. Can use holy attacks and magic. -->
+		<icon>icon.skill1520</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>21600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1520</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<mpConsume>39</mpConsume>
@@ -1022,6 +1022,7 @@
 	</skill>
 	<skill id="1523" toLevel="42" name="Divine Punishment">
 		<!-- Calls down the gods' retribution to inflict damage on the enemy using 52 Power added to M. Atk. -->
+		<icon>icon.skill1523</icon>
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
@@ -1157,7 +1158,6 @@
 			<value level="42">20</value>
 		</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1523</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -1348,6 +1348,7 @@
 	</skill>
 	<skill id="1524" toLevel="42" name="Surrender to Holy">
 		<!-- For 30 sec., decreases the enemy's Holy Attack Resistance by 25 and M. Def. by 10%, and increases Dark Attack Resistance by 12. -->
+		<icon>icon.skill1524</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_HOLY</abnormalType>
@@ -1400,7 +1401,6 @@
 		</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1524</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -1557,6 +1557,7 @@
 	</skill>
 	<skill id="1525" toLevel="42" name="Divine Curse">
 		<!-- For 2 minutes, casts the wrathful curse of the gods to decrease the effect of recovery magic by 50%. Decreases 9 HP every second. -->
+		<icon>icon.skill1525</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -1611,7 +1612,6 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1525</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -1872,6 +1872,7 @@
 	</skill>
 	<skill id="1528" toLevel="42" name="Divine Flash">
 		<!-- Detonates holy energy to inflict damage on nearby enemies with 29 Power added to M. Atk. -->
+		<icon>icon.skill1528</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -2009,7 +2010,6 @@
 			<value level="42">20</value>
 		</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -2201,6 +2201,7 @@
 	</skill>
 	<skill id="1529" toLevel="7" name="Soul Web">
 		<!-- Spreads a soul net to decrease Speed near the enemy by 30% for 1 minute. -->
+		<icon>icon.skill1529</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2212,7 +2213,6 @@
 		<effectPoint>-1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1529</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -2259,6 +2259,7 @@
 	</skill>
 	<skill id="1530" toLevel="13" name="Death Spike">
 		<!-- Throws a bone to inflict dark damage on the enemy with 35 Power added to M. Atk. -->
+		<icon>icon.skill1148</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
@@ -2279,7 +2280,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1148</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -2355,6 +2355,7 @@
 	</skill>
 	<skill id="1531" toLevel="7" name="Blessed Blood">
 		<!-- For 15 seconds, bestows the blessing of blood upon party members. Recovers HP by a certain rate when being attacked. -->
+		<icon>icon.skill1218</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>BLESS_THE_BLOOD</abnormalType>
@@ -2362,7 +2363,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1218</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -2428,12 +2428,12 @@
 	</skill>
 	<skill id="1532" toLevel="1" name="Enlightenment">
 		<!-- User receives mystical enlightenment for 20 seconds, increasing M. Atk. by 40%, Casting Spd. by 50% and M. Critical Rate by 50%, and decreasing MP Consumption by 90%. -->
+		<icon>icon.skill1532</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>FINAL_SECRET</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1532</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>73</mpConsume>
@@ -2467,12 +2467,12 @@
 	</skill>
 	<skill id="1533" toLevel="1" name="Enlightenment">
 		<!-- User receives mystical enlightenment for 20 seconds, increasing M. Atk. by 10%, Heal by 40%, Casting Spd. by 50% and M. Critical Rate by 50%, and decreasing MP Consumption by 90%. -->
+		<icon>icon.skill1532</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>FINAL_SECRET</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1532</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>73</mpConsume>
@@ -2510,6 +2510,7 @@
 	</skill>
 	<skill id="1534" toLevel="1" name="Courage of Pa'agrio">
 		<!-- Temporarily increases party and clan members' Max CP. Effect 1. -->
+		<icon>icon.skill1534</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -2517,7 +2518,6 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1534</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>30</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -2539,13 +2539,13 @@
 	</skill>
 	<skill id="1535" toLevel="1" name="Chant of Movement">
 		<!-- Combines a party member's Speed increase and Evasion increase effects for a more advanced movement increase effect. For 40 minutes, increases Speed by 33 and Evasion by 4. -->
+		<icon>icon.skill1535</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_SPEED_AVOID_UP</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1535</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>55</mpConsume>
@@ -2577,6 +2577,7 @@
 	</skill>
 	<skill id="1536" toLevel="1" name="Combat of Pa'agrio">
 		<!-- Combines a party/clan member's P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 minutes, increases P. Atk. by 15% and P. Def. by 15%. -->
+		<icon>icon.skill1536</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_PA_PD_UP</abnormalType>
@@ -2584,7 +2585,6 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1536</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>217</mpConsume>
@@ -2616,6 +2616,7 @@
 	</skill>
 	<skill id="1537" toLevel="1" name="Critical of Pa'agrio">
 		<!-- Combines a party/clan member's Critical Rate increase and Critical Damage increase effects for a more advanced critical increase effect. For 40 minutes, increases Critical Rate by 30% and Critical Damage by 35%. -->
+		<icon>icon.skill1537</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
@@ -2623,7 +2624,6 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1537</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>217</mpConsume>
@@ -2655,6 +2655,7 @@
 	</skill>
 	<skill id="1538" toLevel="1" name="Condition of Pa'agrio">
 		<!-- Combines a party/clan member's Max HP increase and Max MP increase effects for more advanced mental and physical power. For 40 minutes, increases Max HP by 35% and Max MP by 35%. -->
+		<icon>icon.skill1538</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_HP_MP_UP</abnormalType>
@@ -2662,7 +2663,6 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1538</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>217</mpConsume>
@@ -2694,6 +2694,7 @@
 	</skill>
 	<skill id="1539" toLevel="4" name="Stigma of Shilen">
 		<!-- For 30 sec., decreases Short-range Weapon Resistance by 16. -->
+		<icon>icon.skill1539</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2717,7 +2718,6 @@
 			<value level="4">1400</value>
 		</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1539</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">40</value>
@@ -2801,13 +2801,13 @@
 	</skill>
 	<skill id="1540" toLevel="1" name="Turn to Stone">
 		<!-- Petrifies oneself for 8 seconds to avoid incurring damage. -->
+		<icon>icon.skill1540</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<effectPoint>343</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill1540</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
@@ -2838,6 +2838,7 @@
 	</skill>
 	<skill id="1541" toLevel="1" name="Curse of Desparion">
 		<!-- Inflicts the Curse of Desparion, momentarily decreasing enemy Speed, Accuracy, P. Atk. and Atk. Spd. -->
+		<icon>icon.skill1541</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
@@ -2848,7 +2849,6 @@
 		<effectPoint>-679</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1541</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -2883,6 +2883,7 @@
 	</skill>
 	<skill id="1542" toLevel="1" name="Counter Critical">
 		<!-- For 20 minutes, increases the target's P. Def. against Critical by 30%. When the target receives an attack above a certain amount of damage, increases Critical Damage of standard melee attack for 8 seconds. -->
+		<icon>icon.skill1542</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL</abnormalType>
@@ -2890,7 +2891,6 @@
 		<effectPoint>679</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1542</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>58</mpConsume>
@@ -2940,6 +2940,7 @@
 	</skill>
 	<skill id="1544" toLevel="7" name="Death Beam">
 		<!-- Blasts enemies in front with 138 Power. -->
+		<icon>icon.skill1471</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
 		<castRange>40</castRange>
@@ -2947,7 +2948,6 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;400;180</fanRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1471</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">79</value>
@@ -2985,6 +2985,7 @@
 	</skill>
 	<skill id="1545" toLevel="1" name="Soul Sucking">
 		<!-- Continuously absorbs the enemy's soul. -->
+		<icon>icon.skill1472</icon>
 		<castRange>900</castRange>
 		<channelingStart>1</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
@@ -2993,7 +2994,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill1472</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpInitialConsume>36</mpInitialConsume>
@@ -3014,6 +3014,7 @@
 	</skill>
 	<skill id="1546" toLevel="1" name="Strider Fear">
 		<!-- Frightens the enemy into fleeing for 10 seconds. -->
+		<icon>icon.skill1546</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -3025,7 +3026,6 @@
 		<effectPoint>-521</effectPoint>
 		<fanRange>0;0;900;100</fanRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1546</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -3047,6 +3047,7 @@
 	</skill>
 	<skill id="1547" toLevel="3" name="Spirit Sharing">
 		<!-- For 20 minutes, increases P. Atk. by 3%, M. Atk. by 3%, Skill Power by 5%, Atk. Spd. by 2%, Casting Spd. by 1%, and Critical Rate by 5%. The master's abilities are extended to the servitor. -->
+		<icon>icon.skill1497</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3060,7 +3061,6 @@
 			<value level="3">635</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1497</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -3137,6 +3137,7 @@
 	</skill>
 	<skill id="1548" toLevel="3" name="Earth Resistance">
 		<!-- Increases Earth Resistance by 10 for 20 minutes. -->
+		<icon>icon.skill1548</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3148,7 +3149,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1548</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">38</value>
@@ -3185,12 +3185,12 @@
 	</skill>
 	<skill id="1549" toLevel="1" name="Chant of Elements">
 		<!-- For 20 minutes, increases the elemental attribute of all party members by 20. -->
+		<icon>icon.skill1549</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
 		<affectRange>1000</affectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1549</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>56</magicLvl>
 		<mpConsume>220</mpConsume>
@@ -3225,10 +3225,10 @@
 	</skill>
 	<skill id="1550" toLevel="1" name="Mass Cure Poison">
 		<!-- Cures all poisoned party members. -->
+		<icon>icon.skill1550</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>662</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1550</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<mpConsume>66</mpConsume>
@@ -3248,10 +3248,10 @@
 	</skill>
 	<skill id="1551" toLevel="1" name="Mass Purify">
 		<!-- Cancels paralysis and petrification effects, and also cures poison and bleed condition of all party members. -->
+		<icon>icon.skill1551</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>662</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1551</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<mpConsume>66</mpConsume>
@@ -3271,10 +3271,10 @@
 	</skill>
 	<skill id="1552" toLevel="1" name="Mass Vitalize">
 		<!-- Restores HP of party members with 796 Power, and also cures poison and bleed condition of all party members. -->
+		<icon>icon.skill1552</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>1261</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1552</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<mpConsume>154</mpConsume>
@@ -3297,13 +3297,13 @@
 	</skill>
 	<skill id="1553" toLevel="1" name="Chain Heal">
 		<!-- Recovers the target and the 10 most injured allies around the target by 30% of their Max HP. The recovery amount decreases starting from the most injured person. Requires 4 Spirit Ore. -->
+		<icon>icon.skill1553</icon>
 		<affectLimit>9-0</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>1301</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1553</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>4</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -3325,6 +3325,7 @@
 	</skill>
 	<skill id="1554" toLevel="1" name="Aura Blast">
 		<!-- Inflicts non-attribute damage on the target and enemies around the target with 141 Power added to M. Atk., and recovers MP. Inflicts additional non-attribute damage with 58 Power if the target is a monster. -->
+		<icon>icon.skill1554</icon>
 		<abnormalTime>3</abnormalTime>
 		<affectLimit>10-0-1</affectLimit>
 		<affectRange>200</affectRange>
@@ -3332,7 +3333,6 @@
 		<effectPoint>-689</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1554</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>116</mpConsume>
@@ -3364,11 +3364,11 @@
 	</skill>
 	<skill id="1555" toLevel="1" name="Aura Cannon">
 		<!-- Inflicts non-attribute damage on the enemy with 178 Power added to M. Atk. and recovers MP. Inflicts additional non-attribute damage with 124 Power if the target is a monster. -->
+		<icon>icon.skill1555</icon>
 		<castRange>150</castRange>
 		<effectPoint>-689</effectPoint>
 		<effectRange>300</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1555</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>82</magicLvl>
 		<mpConsume>98</mpConsume>
@@ -3399,12 +3399,12 @@
 	</skill>
 	<skill id="1556" toLevel="1" name="Arcane Shield">
 		<!-- For 10 seconds, decreases the damage received by 70% and turns the remaining damage into MP Consumption. When MP becomes 0, the skill's effect disappears. -->
+		<icon>icon.skill1556</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
 		<effectPoint>138</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1556</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>83</magicLvl>
 		<mpConsume>89</mpConsume>
@@ -3426,12 +3426,12 @@
 	</skill>
 	<skill id="1557" toLevel="1" name="Servitor Share">
 		<!-- Extends the summoner's abilities to the servitor. Using the summoner's abilities as the basis, extends to the servitor P. Atk./P. Def. by 50%, M. Atk./M. Def. by 25%, Max HP/MP by 10%, Critical Rate by 20%, Atk. Spd. by 10%, and Casting Spd. by 3%. -->
+		<icon>icon.skill1557</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ABILITY_CHANGE</abnormalType>
 		<effectPoint>379</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1557</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>83</magicLvl>
 		<mpConsume>28</mpConsume>
@@ -3465,11 +3465,11 @@
 	</skill>
 	<skill id="1558" toLevel="24" name="Dimension Spiral">
 		<!-- Creates a tear in the dimension to inflict damage on the enemy with 57 Power added to M. Atk. Over-hit is possible. -->
+		<icon>icon.skill1558</icon>
 		<castRange>900</castRange>
 		<effectPoint>-590</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1558</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -3639,13 +3639,13 @@
 	</skill>
 	<skill id="1560" toLevel="1" name="Lucky Blow">
 		<!-- Attacks the target's vital points with 11234 Power added to P. Atk., causing a Spoiled state. Lethal strike, half Kill, critical hit, and over-hit are possible. Requires a dual dagger. -->
+		<icon>icon.skill1560</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-337</effectPoint>
 		<effectRange>400</effectRange>
 		<halfKillRate>8</halfKillRate>
 		<hitTime>1800</hitTime>
-		<icon>icon.skill1560</icon>
 		<magicLvl>83</magicLvl>
 		<mpConsume>82</mpConsume>
 		<nextAction>ATTACK</nextAction>
@@ -3679,6 +3679,7 @@
 	</skill>
 	<skill id="1561" toLevel="5" name="Battle Cry">
 		<!-- Instantly recovers 15% of Max HP and increases one's own Max HP by 15% for 10 minutes. -->
+		<icon>icon.skill1561</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -3690,7 +3691,6 @@
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<effectPoint>635</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1561</icon>
 		<magicLvl>
 			<value level="1">40</value>
 			<value level="2">49</value>
@@ -3728,6 +3728,7 @@
 	</skill>
 	<skill id="1562" toLevel="2" name="Chant of Berserker">
 		<!-- Decreases all party members' P. Def. by 5%, M. Def. by 10% and Evasion by 2, and increases P. Atk. by 5%, M. Atk. by 10%, Atk. Spd. by 5%, Casting Spd. by 5%, and Speed by 5 for 20 minutes. -->
+		<icon>icon.skill1562</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3740,7 +3741,6 @@
 			<value level="2">495</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1562</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -3823,6 +3823,7 @@
 	</skill>
 	<skill id="1563" toLevel="2" name="Pa'agrio's Fury">
 		<!-- Increases party or clan members' Atk. Spd. by 15% for 20 minutes. -->
+		<icon>icon.skill1563</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3835,7 +3836,6 @@
 			<value level="2">532</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1563</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">48</value>
@@ -4041,10 +4041,10 @@
 	</skill>
 	<skill id="1570" toLevel="1" name="Identity Crisis">
 		<!-- For 15 seconds, you are going through an Identity Crisis. Battle abilities are decreased and skills and items cannot be used. However, consumables items can still be used. Also, you cannot switch between main, dual, or sub classes while under the effect of Identity Crisis. -->
+		<icon>icon.skill1570</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CLASS_CHANGE</abnormalType>
-		<icon>icon.skill1570</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>1</isMagic>
@@ -4385,11 +4385,11 @@
 	</skill>
 	<skill id="1585" toLevel="1" name="Rhythm of Critical Dark">
 		<!-- For 2 minutes, increases party members' Critical Damage by 35% and critical attack rate by 100%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<icon>icon.skill1583</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_FIRE</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1583</icon>
 		<operateType>A2</operateType>
 		<magicLvl>43</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -4430,11 +4430,11 @@
 	</skill>
 	<skill id="1586" toLevel="1" name="Rhythm of Critical">
 		<!-- For 2 minutes, increases party members' Critical Damage by 35% and critical attack rate by 100%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<icon>icon.skill1583</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_FIRE</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1583</icon>
 		<operateType>A2</operateType>
 		<magicLvl>43</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -4467,11 +4467,11 @@
 	</skill>
 	<skill id="1587" toLevel="1" name="Rhythm of Magic Dark">
 		<!-- Increases all party members' M. Atk. by 20% and M. Def. by 30% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<icon>icon.skill1588</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_MYSTIC</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1588</icon>
 		<operateType>A2</operateType>
 		<magicLvl>52</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -4512,11 +4512,11 @@
 	</skill>
 	<skill id="1588" toLevel="1" name="Rhythm of Magic">
 		<!-- Increases all party members' M. Atk. by 20% and M. Def. by 30% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<icon>icon.skill1588</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_MYSTIC</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1588</icon>
 		<operateType>A2</operateType>
 		<magicLvl>52</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -4549,11 +4549,11 @@
 	</skill>
 	<skill id="1589" toLevel="1" name="Rhythm of Combat Dark">
 		<!-- Increases all party members' P. Atk. by 12% and P. Def. by 25% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<icon>icon.skill1584</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1584</icon>
 		<operateType>A2</operateType>
 		<magicLvl>58</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -4594,11 +4594,11 @@
 	</skill>
 	<skill id="1590" toLevel="1" name="Rhythm of Combat">
 		<!-- Increases all party members' P. Atk. by 12% and P. Def. by 25% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<icon>icon.skill1584</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_WARRIOR</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1584</icon>
 		<operateType>A2</operateType>
 		<magicLvl>58</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -4631,11 +4631,11 @@
 	</skill>
 	<skill id="1591" toLevel="1" name="Rhythm of Fighter Dark">
 		<!-- Increases all party members' Atk. Spd. by 15% and Max HP by 30% for 2 minutes. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<icon>icon.skill1587</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1587</icon>
 		<operateType>A2</operateType>
 		<magicLvl>60</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -4676,11 +4676,11 @@
 	</skill>
 	<skill id="1592" toLevel="1" name="Rhythm of Fighter">
 		<!-- Increases all party members' Atk. Spd. by 15% and Max HP by 30% for 2 minutes. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<icon>icon.skill1587</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1587</icon>
 		<operateType>A2</operateType>
 		<magicLvl>60</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -4713,11 +4713,11 @@
 	</skill>
 	<skill id="1593" toLevel="1" name="Rhythm of Revenge Dark">
 		<!-- For 2 minutes, gives all party members the ability to recover as HP 8% of any damage inflicted on the enemy, and has a chance of giving all party members the ability to return 20% of damage back to the enemy. Additionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<icon>icon.skill1585</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1585</icon>
 		<operateType>A2</operateType>
 		<magicLvl>76</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -4757,11 +4757,11 @@
 	</skill>
 	<skill id="1594" toLevel="1" name="Rhythm of Revenge">
 		<!-- For 2 minutes, gives all party members the ability to recover as HP 8% of any damage inflicted on the enemy, and has a chance of giving all party members the ability to return 20% of damage back to the enemy. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<icon>icon.skill1585</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_VAMPIRE</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1585</icon>
 		<operateType>A2</operateType>
 		<magicLvl>76</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -4793,11 +4793,11 @@
 	</skill>
 	<skill id="1595" toLevel="1" name="Rhythm of Start Dark">
 		<!-- For 2 minutes, decreases all party members' damage attack magic's Critical Rate by 100%, physical/magic/song/dance skills' MP Consumption by 5%, and physical/magic skills' Cooldown by 20%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<icon>icon.skill1586</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_SIREN</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1586</icon>
 		<operateType>A2</operateType>
 		<mpConsume>60</mpConsume>
 		<hitTime>2500</hitTime>
@@ -4859,11 +4859,11 @@
 	</skill>
 	<skill id="1596" toLevel="1" name="Rhythm of Start">
 		<!-- For 2 minutes, decreases all party members' damage attack magic's Critical Rate by 100%, physical/magic/song/dance skills' MP Consumption by 5%, and physical/magic skills' Cooldown by 20%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<icon>icon.skill1586</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_SIREN</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1586</icon>
 		<operateType>A2</operateType>
 		<mpConsume>60</mpConsume>
 		<hitTime>2500</hitTime>
@@ -4929,11 +4929,11 @@
 	</skill>
 	<skill id="1598" toLevel="1" name="Rhythm of Magician Dark">
 		<!-- For 2 minutes, decreases all party members' magic cancel damage by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. Addtionally increases MP Consumption when the skill is used while song/dance effect is in place. Requires a dualsword to be equipped. -->
+		<icon>icon.skill11005</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_CONCENTRATION</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11005</icon>
 		<operateType>A2</operateType>
 		<mpConsume>60</mpConsume>
 		<hitTime>2500</hitTime>
@@ -4983,11 +4983,11 @@
 	</skill>
 	<skill id="1599" toLevel="1" name="Rhythm of Magician">
 		<!-- For 2 minutes, decreases all party members' magic cancel damage by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. MP Consumption is additionally increased if the skill is used while song/dance effect is in place. -->
+		<icon>icon.skill11005</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>DANCE_OF_CONCENTRATION</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11005</icon>
 		<operateType>A2</operateType>
 		<mpConsume>60</mpConsume>
 		<hitTime>2500</hitTime>

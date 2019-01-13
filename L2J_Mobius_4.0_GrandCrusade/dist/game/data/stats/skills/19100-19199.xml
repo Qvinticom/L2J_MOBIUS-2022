@@ -383,7 +383,6 @@
 		<itemConsumeCount>1000</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<magicLvl>1</magicLvl>
-		<icon>icon.skill1323</icon>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -714,8 +713,8 @@
 	</skill>
 	<skill id="19135" toLevel="4" name="Noble Heavy Armor Attack">
 		<!-- When equipped with Heavy Armor, P. Atk. + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19135</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -733,8 +732,8 @@
 	</skill>
 	<skill id="19136" toLevel="3" name="Noble Prayer">
 		<!-- Received heal amount + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1273</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="HealEffect">
 				<amount>
@@ -748,8 +747,8 @@
 	</skill>
 	<skill id="19137" toLevel="1" name="Noble Guts">
 		<!-- Received damage - 10%. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19137</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="DamageByAttack">
 				<amount>-10</amount>
@@ -765,8 +764,8 @@
 	</skill>
 	<skill id="19138" toLevel="1" name="Noble Frenzy">
 		<!-- Physical Skill Power + 10%. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19138</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalSkillPower">
 				<amount>10</amount>
@@ -776,8 +775,8 @@
 	</skill>
 	<skill id="19139" toLevel="4" name="Noble Might">
 		<!-- P. Atk. + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19139</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -792,8 +791,8 @@
 	</skill>
 	<skill id="19140" toLevel="2" name="Noble Cost">
 		<!-- Physical Skill MP Consumption - $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19140</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicMpCost">
 				<amount>
@@ -807,8 +806,8 @@
 	</skill>
 	<skill id="19141" toLevel="2" name="Noble Wind Walk">
 		<!-- Speed + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1204</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="Speed">
 				<amount>
@@ -821,8 +820,8 @@
 	</skill>
 	<skill id="19142" toLevel="2" name="Noble Warrior Buffs">
 		<!-- Stun/Restrain success rate and defense rate + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19142</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<SHOCK>
@@ -848,8 +847,8 @@
 	</skill>
 	<skill id="19143" toLevel="2" name="Noble Focus">
 		<!-- P. Critical Rate + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1077</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>
@@ -862,8 +861,8 @@
 	</skill>
 	<skill id="19144" toLevel="2" name="Noble Backfire">
 		<!-- Rear Damage + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0030</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="RearDamage">
 				<amount>
@@ -877,8 +876,8 @@
 	</skill>
 	<skill id="19145" toLevel="2" name="Noble Death Whisper">
 		<!-- Physical Critical Damage + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill4278</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalDamage">
 				<amount>
@@ -891,8 +890,8 @@
 	</skill>
 	<skill id="19146" toLevel="2" name="Noble Protection Magic">
 		<!-- Chance of receiving an M. Critical attack - $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19146</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceMagicCriticalRate">
 				<amount>2</amount>
@@ -902,8 +901,8 @@
 	</skill>
 	<skill id="19147" toLevel="2" name="Noble Ambush">
 		<!-- Spd. + $s1 when not engaged in battle. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1905</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="Speed">
 				<amount>
@@ -917,8 +916,8 @@
 	</skill>
 	<skill id="19148" toLevel="1" name="Noble Light Armor Blessing">
 		<!-- When equipped with Light Armor, Max HP + 6% and Max MP + 6%. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19148</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
 				<amount>6</amount>
@@ -938,8 +937,8 @@
 	</skill>
 	<skill id="19149" toLevel="4" name="Noble Anti Magic">
 		<!-- When equipped with Light Armor, M. Def. + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0146</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalDefence">
 				<amount>
@@ -957,8 +956,8 @@
 	</skill>
 	<skill id="19150" toLevel="4" name="Noble Light Armor Attack">
 		<!-- When equipped with Light Armor, P. Atk. + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19150</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -976,8 +975,8 @@
 	</skill>
 	<skill id="19151" toLevel="3" name="Noble Vampiric Rage">
 		<!-- During an attack, there is a chance of restoring $s1 of damage as HP. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1268</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="VampiricAttack">
 				<amount>
@@ -991,14 +990,14 @@
 	</skill>
 	<skill id="19152" toLevel="1" name="Noble Endurance">
 		<!-- Damage received while immobile decreases - 21%. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19152</icon>
+		<operateType>P</operateType>
 		<!-- TODO: Handle this skill -->
 	</skill>
 	<skill id="19153" toLevel="1" name="Noble Critical Boost">
 		<!-- P. Critical Rate + 50, M. Critical Rate + 20, and Skill Mastery Rate + 50%. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19153</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalRate">
 				<amount>50</amount>
@@ -1016,8 +1015,8 @@
 	</skill>
 	<skill id="19154" toLevel="4" name="Noble Empower">
 		<!-- M. Atk. + $s1 and recovery magic Power + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1059</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -1041,8 +1040,8 @@
 	</skill>
 	<skill id="19155" toLevel="2" name="Noble Acumen">
 		<!-- Casting Spd. + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1085</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
 				<amount>
@@ -1055,8 +1054,8 @@
 	</skill>
 	<skill id="19156" toLevel="2" name="Noble Wizard Buffs">
 		<!-- Restrain/Mind success rate and defense rate + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19156</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
 				<DERANGEMENT>
@@ -1082,8 +1081,8 @@
 	</skill>
 	<skill id="19157" toLevel="2" name="Noble Wild Magic">
 		<!-- M. Critical Rate + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1303</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalRate">
 				<amount>
@@ -1096,8 +1095,8 @@
 	</skill>
 	<skill id="19158" toLevel="2" name="Noble Blessed Soul">
 		<!-- Max MP + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1048</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
 				<amount>
@@ -1110,8 +1109,8 @@
 	</skill>
 	<skill id="19159" toLevel="2" name="Noble Resistance">
 		<!-- Debuff Resistance + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill11567</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="ResistAbnormalByCategory">
 				<amount>
@@ -1124,8 +1123,8 @@
 	</skill>
 	<skill id="19160" toLevel="2" name="Noble Magic Death">
 		<!-- M. Critical Damage + $s1 and recovery magic Power + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19160</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalDamage">
 				<amount>
@@ -1145,8 +1144,8 @@
 	</skill>
 	<skill id="19161" toLevel="2" name="Noble Protection Armor">
 		<!-- Critical Damage during a normal attack - $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19161</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceCriticalDamage">
 				<amount>
@@ -1159,8 +1158,8 @@
 	</skill>
 	<skill id="19162" toLevel="2" name="Noble Recovery">
 		<!-- MP Recovery Bonus + $s1 while running. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19162</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="StatByMoveType">
 				<stat>REGENERATE_MP_RATE</stat>
@@ -1174,8 +1173,8 @@
 	</skill>
 	<skill id="19163" toLevel="2" name="Noble Skill Mastery">
 		<!-- Skill Mastery rate + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0330</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalProbability">
 				<amount>
@@ -1188,8 +1187,8 @@
 	</skill>
 	<skill id="19164" toLevel="1" name="Noble Robe Shield">
 		<!-- When equipped with a Robe, P. Def. + 3% and Max MP + 6%. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19164</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>3</amount>
@@ -1209,8 +1208,8 @@
 	</skill>
 	<skill id="19165" toLevel="4" name="Noble Robe Defense">
 		<!-- When equipped with a Robe, P. Def. + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19165</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -1228,8 +1227,8 @@
 	</skill>
 	<skill id="19166" toLevel="4" name="Noble Robe Attack">
 		<!-- When equipped with a Robe, M. Atk. + $s1 and recovery skill Power + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19166</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
 				<amount>
@@ -1247,8 +1246,8 @@
 	</skill>
 	<skill id="19167" toLevel="3" name="Noble Heal Boost">
 		<!-- Recovery effects not affected by magic + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19167</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="HpRegen">
 				<amount>
@@ -1262,8 +1261,8 @@
 	</skill>
 	<skill id="19168" toLevel="1" name="Noble Gain">
 		<!-- MP Recovery Bonus + 33 and Max MP + 10%. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19168</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
 				<amount>10</amount>
@@ -1277,8 +1276,8 @@
 	</skill>
 	<skill id="19169" toLevel="1" name="Noble Advance">
 		<!-- MP Recovery Bonus + 33 and magic skill Cooldown - 5%. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19169</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MpRegen">
 				<amount>33</amount>
@@ -1293,8 +1292,8 @@
 	</skill>
 	<skill id="19170" toLevel="2" name="Noble Blessing">
 		<!-- P. Def. + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19120</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -1307,8 +1306,8 @@
 	</skill>
 	<skill id="19171" toLevel="4" name="Noble Condition">
 		<!-- Max HP + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1045</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -1323,8 +1322,8 @@
 	</skill>
 	<skill id="19172" toLevel="2" name="Noble Eagle Eye">
 		<!-- P. Accuracy + $s1, M. Accuracy + $s2, servitor's P. Accuracy + $s3. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19127</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="Accuracy">
 				<amount>
@@ -1344,8 +1343,8 @@
 	</skill>
 	<skill id="19173" toLevel="2" name="Noble Emblem">
 		<!-- Attack Attribute + $s1. $s2 Attributes Resistance + $s3. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19130</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackAttributeAdd">
 				<amount>
@@ -1399,8 +1398,8 @@
 	</skill>
 	<skill id="19174" toLevel="4" name="Noble Earth">
 		<!-- Physical P. Def. + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19121</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
 				<amount>
@@ -1415,8 +1414,8 @@
 	</skill>
 	<skill id="19175" toLevel="2" name="Noble Life">
 		<!-- Max HP + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1045</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
 				<amount>
@@ -1429,8 +1428,8 @@
 	</skill>
 	<skill id="19176" toLevel="2" name="Noble Vision">
 		<!-- P. Accuracy + $s1, M. Accuracy + $s2, servitor's P. Accuracy + $s3. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19127</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="Accuracy">
 				<amount>
@@ -1450,8 +1449,8 @@
 	</skill>
 	<skill id="19177" toLevel="2" name="Noble Spirit">
 		<!-- Attack Attribute + $s1. $s2 Attributes Resistance + $s3. -->
-		<operateType>P</operateType>
 		<icon>icon.skill19130</icon>
+		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
 				<amount>
@@ -1498,35 +1497,27 @@
 		</effects>
 	</skill>
 	<skill id="19178" toLevel="1" name="Knight Hidden Trigger">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19179" toLevel="1" name="Warrior Hidden Trigger">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19180" toLevel="1" name="Rogue Hidden Trigger">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19181" toLevel="1" name="Archer Hidden Trigger">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19182" toLevel="1" name="Wizard Hidden Trigger">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19183" toLevel="1" name="Enchanter Hidden Trigger">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19184" toLevel="1" name="Summoner Hidden Trigger">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19185" toLevel="1" name="Healer Hidden Trigger">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="19186" toLevel="1" name="Rampage Shield">

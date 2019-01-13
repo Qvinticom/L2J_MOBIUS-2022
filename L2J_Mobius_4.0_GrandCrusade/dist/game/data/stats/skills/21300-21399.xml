@@ -1187,10 +1187,10 @@
 			<value level="6">BranchSys2.icon.g_twilight_gem</value>
 			<value level="7">BranchSys2.icon.g_twilight_gem</value>
 			<value level="8">BranchSys2.icon.g_twilight_gem</value>
-			<value level="9">BranchSys2.icon.g_therich_i00</value>
-			<value level="10">BranchSys2.icon.g_therich_i01</value>
-			<value level="11">BranchSys2.icon.g_therich_i02</value>
-			<value level="12">BranchSys2.icon.g_therich_i02</value>
+			<value level="9">BranchIcon.Icon.g_therich_i00</value>
+			<value level="10">BranchIcon.Icon.g_therich_i01</value>
+			<value level="11">BranchIcon.Icon.g_therich_i02</value>
+			<value level="12">BranchIcon.Icon.g_therich_i03</value>
 		</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -1625,6 +1625,7 @@
 	</skill>
 	<skill id="21365" toLevel="5" name="Talisman - Hunter">
 		<!-- The Talisman - Hunter effect has increased. -->
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1633,7 +1634,6 @@
 			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType>
-		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -1906,13 +1906,7 @@
 	</skill>
 	<skill id="21368" toLevel="5" name="Wondrous Slaughter Dye">
 		<!-- Received Damage - $s1 and Damage Reflect Resistance + $s2. -->
-		<icon>
-			<value level="1">BranchSys3.icon1.g_premium_hena_etc_slaughter</value>
-			<value level="2">BranchSys3.icon1.g_premium_hena_etc_slaughter_2</value>
-			<value level="3">BranchSys3.icon1.g_premium_hena_etc_slaughter_3</value>
-			<value level="4">BranchSys3.icon1.g_premium_hena_etc_slaughter_4</value>
-			<value level="5">BranchSys3.icon1.g_premium_hena_etc_slaughter_5</value>
-		</icon>
+		<icon>BranchSys3.icon1.g_premium_hena_etc_slaughter</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2006,6 +2000,7 @@
 	</skill>
 	<skill id="21370" toLevel="5" name="Talisman - Slaughterer">
 		<!-- The Talisman - Slaughterer effect has increased. -->
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2014,7 +2009,6 @@
 			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType>
-		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2249,6 +2243,7 @@
 	</skill>
 	<skill id="21371" toLevel="5" name="Talisman - Conquerer">
 		<!-- The Talisman - Conquerer effect has increased. -->
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2257,7 +2252,6 @@
 			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType> <!-- TODO: find retail value -->
-		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -2472,6 +2466,7 @@
 	</skill>
 	<skill id="21372" toLevel="5" name="Talisman - Outlaw">
 		<!-- The Talisman - Outlaw effect has increased. -->
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2480,7 +2475,6 @@
 			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalType>TALISMAN_TRIGGER_SPECIAL</abnormalType> <!-- TODO: find retail value -->
-		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>

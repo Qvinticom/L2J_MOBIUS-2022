@@ -255,6 +255,7 @@
 	</item>
 	<item id="45809" name="Returning Warrior's Soulshot Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing 1 Soulshot (Grade C~R). Will be deleted once the event ends. -->
+		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -262,10 +263,10 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 	</item>
 	<item id="45810" name="Returning Warrior's Blessed Spiritshot Pack" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing 1 Blessed Spiritshot (Grade C~R). Will be deleted once the event ends. -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -273,7 +274,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 	</item>
 	<item id="45811" name="Clan Reward" type="EtcItem">
 		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 16 Vitality Replenishing Star Candies.\r. -->
@@ -386,6 +386,7 @@
 	</item>
 	<item id="45820" name="Observation Report" type="EtcItem">
 		<!-- Research results received from Cardinal Seresin at the Town of Oren. It talks about the anomaly in the Dark Elf region after the appearance of Shilen and the epidemic. Double-click to read the details. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -396,7 +397,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_scroll_gray_i00" />
 	</item>
 	<item id="45821" name="Unstable Spirit's Energy" type="EtcItem">
 		<!-- Unstable energy obtained from defeating the mutated spirits in the Garden of Spirits. Take it to Master Cyphona. -->
@@ -869,6 +869,7 @@
 	</item>
 	<item id="45840" name="Mark of Trust (Low-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
+		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -879,10 +880,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_jewel_silver_i00" />
 	</item>
 	<item id="45841" name="Mark of Trust (Low-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
+		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -893,10 +894,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_jewel_silver_i00" />
 	</item>
 	<item id="45842" name="Mark of Trust (Low-grade)" type="EtcItem">
 		<!-- Proof that you've obtained Ferin and her people's trust. The trust level is still low, but at least it's something. -->
+		<set name="icon" val="icon.etc_jewel_silver_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -907,10 +908,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_jewel_silver_i00" />
 	</item>
 	<item id="45843" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
+		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -921,10 +922,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_jewel_gold_i00" />
 	</item>
 	<item id="45844" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
+		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -935,10 +936,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_jewel_gold_i00" />
 	</item>
 	<item id="45845" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
+		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -949,10 +950,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_jewel_gold_i00" />
 	</item>
 	<item id="45846" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
+		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -963,10 +964,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_jewel_gold_i00" />
 	</item>
 	<item id="45847" name="Mark of Trust (Mid-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
+		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -977,10 +978,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_jewel_gold_i00" />
 	</item>
 	<item id="45848" name="Mark of Trust (High-grade)" type="EtcItem">
 		<!-- An object received demonstrating the trust of Ferin and his party. Cannot be used any more. -->
+		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -991,7 +992,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_jewel_red_i00" />
 	</item>
 	<item id="45849" name="Mutated Spirit's Soul" type="EtcItem">
 		<!-- A mutated spirit's soul obtained from defeating the mutated spirits in the Garden of Spirits. It's proof that you've put them to rest in peace. Take it to Master Cyphona. -->

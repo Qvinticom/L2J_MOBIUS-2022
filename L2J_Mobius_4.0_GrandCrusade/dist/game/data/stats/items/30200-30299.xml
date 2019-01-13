@@ -2701,6 +2701,7 @@
 	</item>
 	<item id="30284" name="Requiem Weapon Pack" type="EtcItem">
 		<!-- Can acquire requiem weapons. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2710,7 +2711,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18103" min="1" max="1" chance="100" /> <!-- Unidentified Requiem Shaper -->
@@ -2731,6 +2731,7 @@
 	</item>
 	<item id="30285" name="Immortal Heavy Armor Pack" type="EtcItem">
 		<!-- Can acquire immortal heavy armor. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2740,7 +2741,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18117" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Helmet - Heavy Armor -->
@@ -2753,6 +2753,7 @@
 	</item>
 	<item id="30286" name="Immortal Light Armor Pack" type="EtcItem">
 		<!-- Can acquire immortal light armor. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2762,7 +2763,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18123" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Leather Helmet - Light Armor -->
@@ -2774,6 +2774,7 @@
 	</item>
 	<item id="30287" name="Immortal Robe Armor Pack" type="EtcItem">
 		<!-- Can acquire immortal robe armor. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2783,7 +2784,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18128" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Circlet - Robe -->
@@ -2796,6 +2796,7 @@
 	</item>
 	<item id="30288" name="Apocalypse Weapon Pack" type="EtcItem">
 		<!-- Can acquire Apocalypse weapons. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2805,7 +2806,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18137" min="1" max="1" chance="100" /> <!-- Unidentified Apocalypse Shaper -->
@@ -2826,6 +2826,7 @@
 	</item>
 	<item id="30289" name="Twilight Heavy Armor Pack" type="EtcItem">
 		<!-- Can acquire Twilight heavy armor. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2835,7 +2836,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18151" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Helmet - Heavy Armor -->
@@ -2848,6 +2848,7 @@
 	</item>
 	<item id="30290" name="Twilight Light Armor Pack" type="EtcItem">
 		<!-- Can acquire Twilight light armor. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2857,7 +2858,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18157" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Leather Helmet - Light Armor -->
@@ -2869,6 +2869,7 @@
 	</item>
 	<item id="30291" name="Twilight Robe Armor Pack" type="EtcItem">
 		<!-- Can acquire Twilight robe armor. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2878,7 +2879,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18162" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Circlet - Robe -->
@@ -2891,6 +2891,7 @@
 	</item>
 	<item id="30292" name="Immortal Accessory Pack" type="EtcItem">
 		<!-- Can acquire immortal accessories. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2900,7 +2901,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18134" min="1" max="1" chance="100" /> <!-- Unidentified Immortal Necklace -->
@@ -2910,6 +2910,7 @@
 	</item>
 	<item id="30293" name="Twilight Accessory Pack" type="EtcItem">
 		<!-- Can acquire Twilight accessories. -->
+		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2919,7 +2920,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="18168" min="1" max="1" chance="100" /> <!-- Unidentified Twilight Necklace -->
@@ -2929,6 +2929,7 @@
 	</item>
 	<item id="30294" name="Blood of the Guardian of the Altar" type="EtcItem">
 		<!-- It is the blood of Embryo's high level disciples Isadora and Maliss who protect Shilen's Altar inside the Seal of Shilen. Bring it to Lord of the Dusk Baro Negrado. -->
+		<set name="icon" val="icon.etc_dragons_blood_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2939,10 +2940,10 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.etc_dragons_blood_i00" />
 	</item>
 	<item id="30295" name="Embryo's Imprinting" type="EtcItem">
 		<!-- Embryo's seal that has been imprinted in blood. Bring it to a worker of the Dusk in the Town of Aden and ask about it. -->
+		<set name="icon" val="icon.yogi_stick_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -2953,7 +2954,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.yogi_stick_i00" />
 	</item>
 	<item id="30296" name="Ranger's Report" type="EtcItem">
 		<!-- The report of a ranger of the Dusk that was found in the Catacomb and the Necropolis. -->

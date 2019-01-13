@@ -763,6 +763,7 @@
 	</item>
 	<item id="35556" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" additionalName="1-day" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 85 solo dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -773,13 +774,13 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<skills>
 			<skill id="9479" level="1" /> <!-- Extra Pass -->
 		</skills>
 	</item>
 	<item id="35557" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Solo" additionalName="1-day" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 90 solo dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -790,13 +791,13 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<skills>
 			<skill id="9480" level="1" /> <!-- Extra Pass -->
 		</skills>
 	</item>
 	<item id="35558" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Solo" additionalName="1-day" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 95 solo dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -807,13 +808,13 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<skills>
 			<skill id="9481" level="1" /> <!-- Extra Pass -->
 		</skills>
 	</item>
 	<item id="35559" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party" additionalName="1-day" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 85 party dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -824,13 +825,13 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<skills>
 			<skill id="9482" level="1" /> <!-- Extra Pass -->
 		</skills>
 	</item>
 	<item id="35560" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Party" additionalName="1-day" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 90 party dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -841,13 +842,13 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<skills>
 			<skill id="9483" level="1" /> <!-- Extra Pass -->
 		</skills>
 	</item>
 	<item id="35561" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party" additionalName="1-day" type="EtcItem">
 		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 95 party dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -858,7 +859,6 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<skills>
 			<skill id="9484" level="1" /> <!-- Extra Pass -->
 		</skills>

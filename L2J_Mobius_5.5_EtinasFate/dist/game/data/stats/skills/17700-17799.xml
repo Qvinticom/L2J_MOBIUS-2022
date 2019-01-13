@@ -2,7 +2,18 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="17701" toLevel="6" name="Topaz: Spiritshot">
 		<!-- Disrupts the target's skill casting. When used during PvP, inflicts fixed damage of $s1 and ignores CP. -->
-		<icon>icon.etc_bm_jewel_topaz_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="2">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="3">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="4">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="5">icon.etc_bm_jewel_topaz_i00</value>
+			<value level="6">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A1</operateType>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -52,7 +63,6 @@
 	</skill>
 	<skill id="17702" toLevel="5" name="Jewel: Quick Recovery">
 		<!-- Recovers HP by $s1. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -88,7 +98,18 @@
 	</skill>
 	<skill id="17704" toLevel="6" name="Obsidian">
 		<!-- Decreases damage received during PvP by $s1. -->
-		<icon>icon.etc_bm_jewel_obsidian_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_obsidian_i00</value>
+			<value level="2">icon.etc_bm_jewel_obsidian_i00</value>
+			<value level="3">icon.etc_bm_jewel_obsidian_i00</value>
+			<value level="4">icon.etc_bm_jewel_obsidian_i00</value>
+			<value level="5">icon.etc_bm_jewel_obsidian_i00</value>
+			<value level="6">icon.bm_jewel_pvpdef_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_pvpdef_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_pvpdef_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_pvpdef_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_pvpdef_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
@@ -122,7 +143,18 @@
 	</skill>
 	<skill id="17705" toLevel="6" name="Opal">
 		<!-- Increases Atk. Attribute by $s1. -->
-		<icon>icon.etc_bm_jewel_opal_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_opal_i00</value>
+			<value level="2">icon.etc_bm_jewel_opal_i00</value>
+			<value level="3">icon.etc_bm_jewel_opal_i00</value>
+			<value level="4">icon.etc_bm_jewel_opal_i00</value>
+			<value level="5">icon.etc_bm_jewel_opal_i00</value>
+			<value level="6">icon.bm_jewel_atkeleup_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_atkeleup_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_atkeleup_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_atkeleup_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_atkeleup_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackAttributeAdd">
@@ -241,7 +273,18 @@
 	</skill>
 	<skill id="17708" toLevel="6" name="Diamond">
 		<!-- Increases P. Def. by $s1, and decreases Received P. Critical Damage by $s2. -->
-		<icon>icon.etc_bm_jewel_diamond_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="2">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="3">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="4">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="5">icon.etc_bm_jewel_diamond_i00</value>
+			<value level="6">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_phydef_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
@@ -282,7 +325,18 @@
 	</skill>
 	<skill id="17709" toLevel="6" name="Pearl">
 		<!-- M. Def. +$s1, and Received M. Critical Damage -$s2. -->
-		<icon>icon.etc_bm_jewel_pearl_i00</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="2">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="3">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="4">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="5">icon.etc_bm_jewel_pearl_i00</value>
+			<value level="6">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="7">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="8">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="9">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+			<value level="10">icon.bm_jewel_magdef_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
@@ -322,7 +376,6 @@
 		</effects>
 	</skill>
 	<skill id="17710" toLevel="1" name="10th Anniversary Blessing Effect (Free)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
@@ -361,7 +414,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17712" toLevel="1" name="10th Anniversary Blessing Effect (Paid)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
@@ -401,29 +453,29 @@
 	</skill>
 	<skill id="17714" toLevel="1" name="Dancing Cat's Steps">
 		<!-- For 1 hr., Max HP/ MP/ CP +30%, P./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill Cooldown -10%, and Skill MP Consumption -15%. (Same slot as Art of Seduction buff) -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17715" toLevel="1" name="Spirit Hit Lv. 1">
 		<!-- Inflicts 3186 damage to a single target. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17716" toLevel="1" name="Spirit Hit Lv. 2">
 		<!-- Inflicts 3186 damage to a single target. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17717" toLevel="1" name="Spirit Hit Lv. 3">
 		<!-- Inflicts 3186 damage to a single target. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3260</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17718" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Antharas Shaper (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -442,9 +494,9 @@
 	</skill>
 	<skill id="17719" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Sealed Antharas Slasher (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -463,9 +515,9 @@
 	</skill>
 	<skill id="17720" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Sealed Antharas Thrower (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -484,9 +536,9 @@
 	</skill>
 	<skill id="17721" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Sealed Antharas Buster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>60000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -506,9 +558,9 @@
 	</skill>
 	<skill id="17722" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Antharas Cutter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -527,9 +579,9 @@
 	</skill>
 	<skill id="17723" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Antharas Stormer (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -548,9 +600,9 @@
 	</skill>
 	<skill id="17724" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Antharas Fighter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -569,9 +621,9 @@
 	</skill>
 	<skill id="17725" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Antharas Avenger (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -590,9 +642,9 @@
 	</skill>
 	<skill id="17726" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Antharas Dual Blunt Weapon (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -611,9 +663,9 @@
 	</skill>
 	<skill id="17727" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Antharas Dual Sword (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -632,9 +684,9 @@
 	</skill>
 	<skill id="17728" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Valakas Shaper (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -653,9 +705,9 @@
 	</skill>
 	<skill id="17729" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Valakas Cutter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -674,9 +726,9 @@
 	</skill>
 	<skill id="17730" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Valakas Slasher (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -695,9 +747,9 @@
 	</skill>
 	<skill id="17731" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Valakas Thrower (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -716,9 +768,9 @@
 	</skill>
 	<skill id="17732" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Valakas Buster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -737,9 +789,9 @@
 	</skill>
 	<skill id="17733" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Valakas Caster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -758,9 +810,9 @@
 	</skill>
 	<skill id="17734" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Valakas Retributer (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -779,9 +831,9 @@
 	</skill>
 	<skill id="17735" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Lindvior Shaper (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -800,9 +852,9 @@
 	</skill>
 	<skill id="17736" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Lindvior Thrower (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -821,9 +873,9 @@
 	</skill>
 	<skill id="17737" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Lindvior Slasher (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -842,9 +894,9 @@
 	</skill>
 	<skill id="17738" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Lindvior Caster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -863,9 +915,9 @@
 	</skill>
 	<skill id="17739" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Lindvior Cutter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -884,9 +936,9 @@
 	</skill>
 	<skill id="17740" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Lindvior Shooter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -905,9 +957,9 @@
 	</skill>
 	<skill id="17741" toLevel="1" name="Dandy's Breath">
 		<!-- Can obtain Lindvior Dual Dagger (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
-		<icon>icon.ev_10th_dandi1</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

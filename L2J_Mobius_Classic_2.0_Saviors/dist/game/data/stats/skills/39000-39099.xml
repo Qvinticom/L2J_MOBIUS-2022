@@ -2,78 +2,67 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="39000" toLevel="1" name="Ol Mahum Adena Bank">
 		<!-- Double-click to randomly obtain a battle item or anywhere between 1 - 1,000,000 Adena. Once a day. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39001" toLevel="1" name="Turek Orc Adena Bank">
 		<!-- Double-click to randomly obtain a battle item or anywhere between 1 - 10,000,000 Adena. Once a day. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39002" toLevel="1" name="Healing Potion">
 		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_lesser_potion_red_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39003" toLevel="1" name="Greater Healing Potion">
 		<!-- Magical potion that slowly restores HP. Lasts 15 sec. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_potion_scarlet_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39004" toLevel="1" name="Facelifting Potion">
 		<!-- Beauty potion that changes one's facial appearance to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39005" toLevel="1" name="Facelifting Potion">
 		<!-- Beauty potion that changes one's facial appearance to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39006" toLevel="1" name="Facelifting Potion">
 		<!-- Beauty potion that changes one's facial appearance to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39007" toLevel="1" name="Dye Potion">
 		<!-- Beauty potion that changes one's hair color to Type A. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39008" toLevel="1" name="Dye Potion">
 		<!-- Beauty potion that changes one's hair color to Type B. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39009" toLevel="1" name="Dye Potion">
 		<!-- Beauty potion that changes one's hair color to Type C. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39010" toLevel="1" name="Dye Potion">
 		<!-- Beauty potion that changes one's hair color to Type D. Both genders. The results may be viewed on the Character Creation Screen. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39011" toLevel="1" name="Facelifting Potion Pack">
 		<!-- Wrapped Pack containing either Facelifting Potion A, B, or C. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39012" toLevel="1" name="Dye Potion Pack">
 		<!-- Wrapped Pack containing either Dye Potion A, B, C, or D. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39013" toLevel="1" name="Scroll: Empower">
 		<!-- Increases M. Atk. Effect 1. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>3932</itemConsumeId>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -91,11 +80,11 @@
 	</skill>
 	<skill id="39014" toLevel="1" name="Scroll: Might">
 		<!-- Increases P. Atk. Effect 1. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29685</itemConsumeId> <!-- L2Day - Might Scroll -->
@@ -115,11 +104,11 @@
 	</skill>
 	<skill id="39015" toLevel="1" name="Scroll: Shield">
 		<!-- Increases P. Def. Effect 1. -->
+		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_scroll_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29684</itemConsumeId> <!-- L2Day - Shield Scroll -->
@@ -139,13 +128,13 @@
 	</skill>
 	<skill id="39016" toLevel="1" name="Agathion - Dance of Fury">
 		<!-- For 20 minutes, Atk. Spd. + 5%. -->
+		<icon>icon.bm_agathion_fury</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>549</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill39016</icon>
 		<isMagic>4</isMagic> <!-- Dance Skill -->
 		<magicLvl>58</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -169,13 +158,13 @@
 	</skill>
 	<skill id="39017" toLevel="1" name="Agathion - Dance of Concentration">
 		<!-- For 20 minutes, Casting Spd. + 5%. -->
+		<icon>icon.bm_agathion_concentration</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>495</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill39017</icon>
 		<isMagic>4</isMagic> <!-- Dance Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -199,13 +188,13 @@
 	</skill>
 	<skill id="39018" toLevel="1" name="Agathion - Song of Wind">
 		<!-- For 5 minutes, Speed + 20. -->
+		<icon>icon.bm_agathion_wind</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>AGATHION_SONG_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>438</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill39018</icon>
 		<isMagic>4</isMagic> <!-- Dance Skill -->
 		<magicLvl>46</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -253,7 +242,6 @@
 		</effects>
 	</skill>
 	<skill id="39020" toLevel="1" name="Scroll: PK (No-grade)">
-		<icon>icon.skill39020</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -279,7 +267,6 @@
 		</effects>
 	</skill>
 	<skill id="39021" toLevel="1" name="Scroll: PK (D-grade)">
-		<icon>icon.skill39021</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -305,7 +292,6 @@
 		</effects>
 	</skill>
 	<skill id="39022" toLevel="1" name="Scroll: PK (C-grade)">
-		<icon>icon.skill39022</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -331,7 +317,6 @@
 		</effects>
 	</skill>
 	<skill id="39023" toLevel="1" name="Scroll: PK (B-grade)">
-		<icon>icon.skill39023</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -357,7 +342,6 @@
 		</effects>
 	</skill>
 	<skill id="39024" toLevel="1" name="Scroll: PK (A-grade)">
-		<icon>icon.skill39024</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -384,7 +368,7 @@
 	</skill>
 	<skill id="39025" toLevel="1" name="Adventurer's Scroll of Escape">
 		<!-- Teleports to a village. -->
-		<icon>icon.skill39025</icon>
+		<icon>icon.bm_soaring_escape</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -404,20 +388,18 @@
 	</skill>
 	<skill id="39026" toLevel="1" name="Ol Mahum Adena Pouch (Event)">
 		<!-- Ol Mahum Adena Pouch. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39027" toLevel="1" name="Turek Orc Adena Pouch (Event)">
 		<!-- Turek Orc Adena Pouch. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39028" toLevel="1" name="Newbie Wind Walk Potion">
 		<!-- Increases Speed. Effect 1. -->
+		<icon>icon.etc_potion_green_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
-		<icon>icon.etc_potion_green_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -435,7 +417,7 @@
 		</effects>
 	</skill>
 	<skill id="39029" toLevel="1" name="Mysterious Spiritshot (No-grade)">
-		<icon>icon.skill39029</icon>
+		<icon>icon.etc_spell_shot_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -446,7 +428,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39030" toLevel="1" name="Mysterious Spiritshot (D-grade)">
-		<icon>icon.skill39030</icon>
+		<icon>icon.etc_spell_shot_blue_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -457,7 +439,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="39031" toLevel="1" name="Mysterious Spiritshot (C-grade)">
-		<icon>icon.skill39031</icon>
+		<icon>icon.etc_spell_shot_green_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -469,62 +451,61 @@
 	</skill>
 	<skill id="39032" toLevel="1" name="Lucky Package: Soulshots (No-grade)">
 		<!-- Open the package to get from 100 to 10 000 Mysterious Soulshots (No-grade). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39033" toLevel="1" name="Lucky Package: Soulshots (D-grade)">
 		<!-- Open the package to get from 100 to 10 000 Mysterious Soulshots (D-grade). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39034" toLevel="1" name="Lucky Package: Soulshots (C-grade)">
 		<!-- Open the package to get from 50 to 5000 Mysterious Soulshots (C-grade). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39035" toLevel="1" name="Lucky Package: Spiritshots (No-grade)">
 		<!-- Open the package to get from 50 to 1000 Spiritshots (No-grade). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39036" toLevel="1" name="Lucky Package: Spiritshots (D-grade)">
 		<!-- Open the package to get from 80 to 3000 Spiritshots (D-grade). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39037" toLevel="1" name="Lucky Package: Spiritshots (C-grade)">
 		<!-- Open the package to get from 30 to 1000 Spiritshots (C-grade). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39038" toLevel="1" name="Lucky Package: Blessed Spiritshots (No-grade)">
 		<!-- Open the package to get from 100 to 10 000 Blessed Spiritshots (No-grade). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39039" toLevel="1" name="Lucky Package: Blessed Spiritshots (D-grade)">
 		<!-- Open the package to get from 100 to 10 000 Blessed Spiritshots (D-grade). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39040" toLevel="1" name="Lucky Package: Blessed Spiritshots (C-grade)">
 		<!-- Open the package to get from 50 to 5000 Blessed Spiritshots (C-grade). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39041" toLevel="1" name="Incredibly Quick Step">
 		<!-- For 20 minutes, XP/SP +10%, Speed +20. Cooldown - 10 minutes. Has no effect when Quick Step skill or Speed-increasing potion are used. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.stone_8_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39042" toLevel="1" name="Spirit Revival">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39043" toLevel="1" name="Side Effect">
 		<!-- Enlarges the user's head for 10 minutes. Cooldown - 30 minutes. -->
+		<icon>icon.skill2513</icon>
  		<!--	Side Effect: makes character's head bigger for 10 minutes. Reuse Time: 30 minutes. -->
-		<icon>icon.skill39043</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
@@ -549,8 +530,8 @@
 	</skill>
 	<skill id="39044" toLevel="1" name="Holiday Hat">
 		<!-- Resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore. -->
+		<icon>icon.bm_romantic_chaperon_gold</icon>
  		<!--	Holiday Hat: resurrects a dead target and restores 50% XP. Consumes 1 Spirit Ore(s). Reuse Time: 30 minutes. -->
-		<icon>icon.skill39044</icon>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -580,8 +561,8 @@
 	</skill>
 	<skill id="39045" toLevel="1" name="Overwhelming Power of a Holiday Hat"> <!-- increases XP and SP gain by 5% for 20 minutes -->
 		<!-- For 20 minutes, XP/SP gain + 5%. Will not be deleted upon death. -->
+		<icon>icon.skill19226</icon>
  		<!-- increases XP and SP gain by 5% for 20 minutes -->
-		<icon>icon.skill39045</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<abnormalTime>1200</abnormalTime>
@@ -600,12 +581,12 @@
 	</skill>
 	<skill id="39046" toLevel="1" name="Letter Collector's Gift">
 		<!-- Gives Santa appearance. For 1 hour, XP/SP bonus +10%, Max HP/MP +10%. Speed +5. Cooldown - 30 minutes. Effect remains after death. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.shield_bread_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39047" toLevel="1" name="Fish Stew: Might">
 		<!-- Increases P. Atk. by 8% for 20 minutes. -->
-		<icon>icon.skill39047</icon>
+		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -632,7 +613,7 @@
 	</skill>
 	<skill id="39048" toLevel="1" name="Fish Stew: Shield">
 		<!-- Increases P. Def. by 8% for 20 minutes -->
-		<icon>icon.skill39048</icon>
+		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -659,7 +640,7 @@
 	</skill>
 	<skill id="39049" toLevel="1" name="Fish Stew: Magic Barrier">
 		<!-- Increases M. Def. by 23% for 20 minutes. -->
-		<icon>icon.skill39049</icon>
+		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -686,7 +667,7 @@
 	</skill>
 	<skill id="39050" toLevel="1" name="Fish Stew: Vampiric Rage">
 		<!-- For 20 minutes, recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability. -->
-		<icon>icon.skill39050</icon>
+		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -713,7 +694,7 @@
 	</skill>
 	<skill id="39051" toLevel="1" name="Fish Stew: Empower">
 		<!-- For 20 minutes, M. Atk. +55%. -->
-		<icon>icon.skill39051</icon>
+		<icon>icon.fish_stew_buff</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -739,12 +720,11 @@
 		</effects>
 	</skill>
 	<skill id="39052" toLevel="1" name="Golden Treasure Chest">
-		<icon>icon.skill0000</icon>
+		<icon>icon.new_user_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39053" toLevel="1" name="Agathion Teleport: Gludio">
 		<!-- Teleport to Gludio -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>3000</hitTime>
@@ -768,7 +748,6 @@
 	</skill>
 	<skill id="39054" toLevel="1" name="Agathion Teleport: Dion">
 		<!-- Teleport to Dion -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>3000</hitTime>
@@ -792,7 +771,6 @@
 	</skill>
 	<skill id="39055" toLevel="1" name="Agathion Teleport: Giran">
 		<!-- Teleport to Giran -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>3000</hitTime>
@@ -816,7 +794,6 @@
 	</skill>
 	<skill id="39056" toLevel="1" name="Agathion Teleport: Oren">
 		<!-- Teleport to Oren -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>3000</hitTime>
@@ -864,7 +841,6 @@
 		</effects>
 	</skill>
 	<skill id="39058" toLevel="1" name="Rare Accessory Box">
-		<icon>icon.skil39058</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29578</itemConsumeId>
@@ -898,7 +874,6 @@
 		</effects>
 	</skill>
 	<skill id="39059" toLevel="1" name="Spellbok Box">
-		<icon>icon.skil39059</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49541</itemConsumeId>
@@ -1040,48 +1015,45 @@
 		</effects>
 	</skill>
 	<skill id="39060" toLevel="1" name="Pendant Varnish">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39061" toLevel="1" name="Shining Pendant Varnish">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39062" toLevel="1" name="Black Mask Teleport">
 		<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39063" toLevel="1" name="Solid Scroll: Enchant Armor (D-grade)">
-		<icon>icon.skill0000</icon>
+		<icon>icon.giant_scrl_of_ench_am_d</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39064" toLevel="1" name="Solid Scroll: Enchant Weapon (D-grade)">
-		<icon>icon.skill0000</icon>
+		<icon>icon.giant_scrl_of_ench_wp_d</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39065" toLevel="1" name="Solid Scroll: Enchant Armor (C-grade)">
-		<icon>icon.skill0000</icon>
+		<icon>icon.giant_scrl_of_ench_am_c</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39066" toLevel="1" name="Solid Scroll: Enchant Weapon (C-grade)">
-		<icon>icon.skill0000</icon>
+		<icon>icon.giant_scrl_of_ench_wp_c</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39067" toLevel="1" name="Solid Scroll: Enchant Armor (B-grade)">
-		<icon>icon.skill0000</icon>
+		<icon>icon.giant_scrl_of_ench_am_b</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39068" toLevel="1" name="Solid Scroll: Enchant Weapon (B-grade)">
-		<icon>icon.skill0000</icon>
+		<icon>icon.giant_scrl_of_ench_wp_b</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39069" toLevel="1" name="Major Warrior Healing Potion">
 		<!-- Greatly increases HP recovery bonus. Effect 3. -->
+		<icon>icon.etc_reagent_white_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
-		<icon>icon.etc_reagent_white_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1100,19 +1072,19 @@
 		</effects>
 	</skill>
 	<skill id="39070" toLevel="1" name="Parts of Enchantment Scrolls Chest">
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i08</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39071" toLevel="1" name="Luck Cube">
-		<icon>icon.skill0000</icon>
+		<icon>icon.special_cube_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39072" toLevel="1" name="Weapon Supply Box (D-grade)">
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_raid_e_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39073" toLevel="1" name="Weapon Supply Box (C-grade)">
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_raid_e_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39074" toLevel="1" name="Angel Cat's Energy">
@@ -1160,12 +1132,11 @@
 		</effects>
 	</skill>
 	<skill id="39075" toLevel="1" name="Improved Scroll of Escape">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39076" toLevel="1" name="Fish Stew - The Guild's Gratitude.">
 		<!-- For 20 minutes., obtained XP/SP + 10%. -->
-		<icon>icon.skill39076</icon>
+		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800</reuseDelay>
 		<effectPoint>1</effectPoint>
@@ -1183,7 +1154,6 @@
 	</skill>
 	<skill id="39077" toLevel="1" name="Teleport: Gludin Harbor">
 		<!-- Teleports to Gludin Harbor. -->
-		<icon>icon.skill39077</icon>
 		<hitTime>1800</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>49503</itemConsumeId>
@@ -1211,7 +1181,6 @@
 	</skill>
 	<skill id="39078" toLevel="1" name="Teleport: Giran Harbor">
 		<!-- Teleports to Giran Harbor. -->
-		<icon>icon.skill39078</icon>
 		<hitTime>1800</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>49502</itemConsumeId>
@@ -1239,21 +1208,20 @@
 	</skill>
 	<skill id="39079" toLevel="1" name="Sheep Resurrection">
 		<!-- Ian s Blessing resurrects the dead. Besides, restores 70% of lost experience. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11784</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39080" toLevel="2" name="Sheep�s Benediction">
 		<!-- For 3 hours M. and P. Atk. +7%, M. and P. Def +10%, HP/MP/CP +15%, HP/MP Recovery +20%. Can be used once a day. The number of usages is set to zero at 6.30 AM. Persists through death. When the buff ends, character gets a sheep s present. Warning! The item disappears if a character dies upon obtaining the item, not having put the item into the inventory. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.accessory_sheep_cap_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39081" toLevel="1" name="Sheep Gift">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39082" toLevel="1" name="Amulet: Prosperity">
 		<!-- All stats + 1. -->
-		<icon>icon.skill39082</icon>
+		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -1285,17 +1253,17 @@
 		</effects>
 	</skill>
 	<skill id="39083" toLevel="1" name="Receive Ian�s Gift">
-		<icon>icon.skill0000</icon>
+		<icon>icon.accessory_sheep_cap_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39084" toLevel="1" name="Pirate Trophy Chest">
 		<!-- Double-click to get 2 Special Pirate Fruit. With a bit of luck you may receive Pirate King's Treasure Chest. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.freya_box_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39085" toLevel="1" name="Special Pirate Fruit">
 		<!-- For 20 minutes, P./M. Atk. +7%, P./M. Def. +10%, Max. HP/CP/MP +15%, HP/MP Regeneration +20%. At a certain chance absorbs 3% of the damage inflicted on target as HP. Increases XP/SP gain by 5%. Cooldown is 1 minute. Buff remains after death. -->
-		<icon>icon.skill39085</icon>
+		<icon>icon.etc_codran_i09</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
@@ -1366,69 +1334,61 @@
 		</effects>
 	</skill>
 	<skill id="39086" toLevel="1" name="King Pirate's Treasure Chest">
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_blue_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39087" toLevel="1" name="Captain Pirate Hat Box">
-		<icon>icon.skill0000</icon>
+		<icon>icon.card_event_black_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39088" toLevel="1" name="Improved Scroll of Resurrection">
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_of_resurrection_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39089" toLevel="1" name="Pirate Healing Potion">
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_bm_hero_red_potion</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39090" toLevel="1" name="Agathion Teleport - Giran Castle">
 		<!-- Teleport to the Town of Giran. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39091" toLevel="1" name="Agathion Teleport - Dion Castle">
 		<!-- Teleport to Dion -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39092" toLevel="1" name="Agathion Teleport - Oren Castle">
 		<!-- Teleport to Oren -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39093" toLevel="1" name="Agathion Teleport - Gludio Castle">
 		<!-- Teleport to Gludio -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39094" toLevel="1" name="Strength of Aries">
 		<!-- STR/INT/CON/MEN + 1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill6343_2</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39095" toLevel="1" name="Blessing of Aries">
 		<!-- Resistance to mental attacks / stun / sleep / paralysis is increased by 5%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill6366_2</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39096" toLevel="1" name="Agathion Teleport: Giran">
 		<!-- Teleport to the Town of Giran. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39097" toLevel="1" name="Agathion Teleport: Gludio">
 		<!-- Teleport to Gludio -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39098" toLevel="1" name="Agathion Teleport: Dion">
 		<!-- Teleport to Dion -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39099" toLevel="1" name="Agathion Teleport: Oren">
 		<!-- Teleport to Oren -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

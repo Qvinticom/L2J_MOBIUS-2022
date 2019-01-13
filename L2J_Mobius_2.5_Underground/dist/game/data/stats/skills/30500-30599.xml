@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="30500" toLevel="28" name="Lateral Hit">
 		<!-- Attacks target with $s1 Power added to P. Atk., and decreases their P. Def. by $s3 for $s2. $s4 more damage if target is Stunned. Requires a fist weapon. -->
+		<icon>icon.skill30500</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -9,7 +10,6 @@
 			<value fromLevel="1" toLevel="28">80</value>
 			<value fromLevel="24" toLevel="28" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill30500</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
@@ -513,13 +513,13 @@
 	</skill>
 	<skill id="30505" toLevel="10" name="Pressure Punch">
 		<!-- Attacks target with $s1 Power added to P. Atk, causing target to tumble toward you. Requires a fist weapon. -->
+		<icon>icon.skill30505</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<activateRate> <!-- Guessed -->
 			<value fromLevel="1" toLevel="10">80</value>
 			<value fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill30505</icon>
 		<affectRange>200</affectRange>
 		<affectLimit>10-10</affectLimit>
 		<coolTime>500</coolTime>
@@ -596,6 +596,7 @@
 	</skill>
 	<skill id="30506" toLevel="14" name="Distant Kick">
 		<!-- Attacks frontal target with $s1 Power added to P. Atk. and blows them away. Requires a fist weapon. -->
+		<icon>icon.skill30506</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -604,7 +605,6 @@
 			<value fromLevel="1" toLevel="14">80</value>
 			<value fromLevel="10" toLevel="14" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill30506</icon>
 		<affectRange>200</affectRange>
 		<castRange>80</castRange>
 		<coolTime>1000</coolTime>
@@ -695,6 +695,7 @@
 	</skill>
 	<skill id="30507" toLevel="24" name="Left Sidestep">
 		<!-- Disables targeting and finds weakness to the enemy's left. Enemy is stunned for$s1. Requires a fist weapon. -->
+		<icon>icon.skill30507</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -703,7 +704,6 @@
 			<value fromLevel="1" toLevel="24">80</value>
 			<value fromLevel="20" toLevel="24" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill30507</icon>
 		<effectPoint>-687</effectPoint>
 		<effectRange>900</effectRange> <!-- Unconfirmed -->
 		<operateType>DA4</operateType>
@@ -761,9 +761,9 @@
 	</skill>
 	<skill id="30508" toLevel="27" name="Right Sidestep">
 		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to Fist Weapons by $s2 for $s1. The decrease in resistance is not canceled when striking. Requires a fist weapon. -->
+		<icon>icon.skill30508</icon>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
-		<icon>icon.skill30508</icon>
 		<effectPoint>-687</effectPoint>
 		<effectRange>900</effectRange> <!-- Unconfirmed -->
 		<operateType>DA5</operateType>
@@ -990,6 +990,7 @@
 	</skill>
 	<skill id="30512" toLevel="3" name="Distortion">
 		<!-- For $s1, distorts space to attack from behind. Increases P. Atk. by $s2, P. Critical Damage by $s3, and P. Skill Power by $s4. Requires a fist weapon. -->
+		<icon>icon.skill30512</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1000,7 +1001,6 @@
 			<value fromLevel="2" toLevel="3" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
 			<value fromLevel="2" toLevel="3" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
-		<icon>icon.skill30512</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1114,6 +1114,7 @@
 	</skill>
 	<skill id="30515" toLevel="1" name="Spallation">
 		<!-- Creates a protective sphere that diffuses all ranged attacks and debuffs for $s1. Damaged if attacked within the sphere. Requires a fist weapon. -->
+		<icon>icon.skill30515</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
@@ -1122,7 +1123,6 @@
 		</abnormalTime>
 		<abnormalType>NONE</abnormalType>
 		<abnormalVisualEffect>SPACEREF</abnormalVisualEffect>
-		<icon>icon.skill30515</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1152,6 +1152,7 @@
 	</skill>
 	<skill id="30516" toLevel="1" name="Gravity Barrier">
 		<!-- Cancels all debuffs and becomes invincible against all debuffs and damage. -->
+		<icon>icon.skill30516</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">10</value>
@@ -1159,7 +1160,6 @@
 		</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<icon>icon.skill30516</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1188,6 +1188,7 @@
 	</skill>
 	<skill id="30517" toLevel="11" name="Heavy Hand">
 		<!-- Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
+		<icon>icon.skill30517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
@@ -1195,7 +1196,6 @@
 			<value fromLevel="7" toLevel="11">80</value>  <!-- Guessed -->
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill30517</icon>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<affectRange>300</affectRange>
 		<effectPoint>-379</effectPoint>
@@ -1243,6 +1243,7 @@
 	</skill>
 	<skill id="30518" toLevel="11" name="Reverse Weight">
 		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
+		<icon>icon.skill30518</icon>
 		<abnormalTime>1</abnormalTime> <!-- Unconfirmed -->
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -1250,7 +1251,6 @@
 			<value fromLevel="7" toLevel="11">80</value>  <!-- Guessed -->
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill30518</icon>
 		<affectLimit>2-6</affectLimit>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<affectRange>300</affectRange> <!-- Unconfirmed -->
@@ -1318,13 +1318,13 @@
 	</skill>
 	<skill id="30519" toLevel="1" name="Warped Space">
 		<!-- Creates a warped space where the enemy is trapped and their abilities are decreased. Requires a fist weapon. -->
+		<icon>icon.skill30519</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill30519</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
 		<isDebuff>true</isDebuff>
@@ -1357,6 +1357,7 @@
 	</skill>
 	<skill id="30520" toLevel="3" name="Steel Mind">
 		<!-- For $s1, HP stays at $s2. Speed + $s3, P. Atk. + $s4, P. Critical Damage + $s5, Skill Critical Damage + $s6, and Knock Back / Knock Down / Pull / Danger Zone / Aerial Yoke / Aggression Resistance + $s7. Normal attacks have normal damage x $s8. When duration ends, $s9 of HP is restored. Requires a fist weapon. -->
+		<icon>icon.skill30520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1369,7 +1370,6 @@
 		</abnormalTime>
 		<abnormalVisualEffect>PMENTAL_TRAIL</abnormalVisualEffect>
 		<abnormalType>STEEL_MIND</abnormalType>
-		<icon>icon.skill30520</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1453,7 +1453,6 @@
 	</skill>
 	<skill id="30521" toLevel="1" name="Damage Up">
 		<!-- Inflicts normal damage x 5. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1542,7 +1541,6 @@
 	</skill>
 	<skill id="30524" toLevel="1" name="Reliable Hit">
 		<!-- Fixed damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<mpConsume>1</mpConsume>
@@ -1580,13 +1578,13 @@
 	</skill>
 	<skill id="30530" toLevel="15" name="Crushing Air">
 		<!-- Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
+		<icon>icon.skill30530</icon>
 		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
 		<abnormalVisualEffect>GRAVITY_SPACE_3</abnormalVisualEffect>
 		<activateRate>
 			<value fromLevel="1" toLevel="15">80</value>
 			<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill30530</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1640,6 +1638,7 @@
 	</skill>
 	<skill id="30532" toLevel="3" name="Inside Position">
 		<!-- P. Critical Rate + $s1, P. Skill Critical Rate + $s2. -->
+		<icon>icon.skill30510</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1647,7 +1646,6 @@
 		</abnormalLvl>
 		<abnormalType>INSIDE_POSITION</abnormalType>
 		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
-		<icon>icon.skill30510</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2275,6 +2273,7 @@
 	</skill>
 	<skill id="30546" toLevel="11" name="Flying Knee Kick">
 		<!-- Lands a knee kick on the target. Target is knocked down for $s1. Fist weapon must be equipped. -->
+		<icon>icon.skill30546</icon>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
@@ -2283,7 +2282,6 @@
 			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate> <!-- Guessed -->
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
-		<icon>icon.skill30546</icon>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
 		<trait>KNOCKDOWN</trait>

@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="45372" name="Agathion - Blessed Pisces" additionalName="30-day" type="Armor">
 		<!-- Summons Pisces. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. and Def. each increases by 30. -->
-		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -87,6 +86,7 @@
 	</item>
 	<item id="45378" name="Vitality Replenishing Herb - Party" additionalName="Event" type="EtcItem">
 		<!-- Restores a certain amount of Vitality for all party members. -->
+		<set name="icon" val="icon.general_fuel_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -94,7 +94,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.general_fuel_i00" />
 	</item>
 	<item id="45379" name="Monster Research" additionalName="Event" type="EtcItem">
 		<!-- A report on the monsters of Aden. Take these to L2B2 for rewards. -->

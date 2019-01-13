@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10100" toLevel="4" name="Guardian's Frenzy">
+		<icon>icon.skill10100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
@@ -8,7 +9,6 @@
 			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
-		<icon>icon.skill10100</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -171,6 +171,7 @@
 		</effects>
 	</skill>
 	<skill id="10101" toLevel="4" name="Templar's Frenzy">
+		<icon>icon.skill10101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">60</value>
@@ -178,7 +179,6 @@
 			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
-		<icon>icon.skill10101</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -296,6 +296,7 @@
 		</effects>
 	</skill>
 	<skill id="10102" toLevel="6" name="Shadow Slash">
+		<icon>icon.skill10102</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -308,7 +309,6 @@
 		</activateRate>
 		<lvlBonusRate>1</lvlBonusRate>
 		<nextAction>ATTACK</nextAction>
-		<icon>icon.skill10102</icon>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<itemConsumeCount>6</itemConsumeCount>
 		<operateType>A2</operateType>
@@ -362,6 +362,7 @@
 		</effects>
 	</skill>
 	<skill id="10103" toLevel="6" name="Mass Freezing Strike">
+		<icon>icon.skill10103_2</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -374,7 +375,6 @@
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill10103</icon>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<itemConsumeCount>6</itemConsumeCount>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -423,11 +423,11 @@
 		</effects>
 	</skill>
 	<skill id="10104" toLevel="1" name="Paladin's Aura">
+		<icon>icon.skill10104</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
 		<abnormalVisualEffect>PHOENIX_AURA</abnormalVisualEffect>
 		<magicLvl>101</magicLvl>
-		<icon>icon.skill10104</icon>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -469,11 +469,11 @@
 		</effects>
 	</skill>
 	<skill id="10105" toLevel="1" name="Avenger's Aura">
+		<icon>icon.skill10105</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
 		<abnormalVisualEffect>REVENGE_AURA</abnormalVisualEffect>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10105</icon>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -512,11 +512,11 @@
 		</effects>
 	</skill>
 	<skill id="10106" toLevel="1" name="Sentinel's Aura">
+		<icon>icon.skill10106</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
 		<abnormalVisualEffect>EVAS_AURA</abnormalVisualEffect>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10106</icon>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -593,11 +593,11 @@
 		</effects>
 	</skill>
 	<skill id="10107" toLevel="1" name="Templar's Aura">
+		<icon>icon.skill10107</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>4</toggleGroupId>
 		<abnormalVisualEffect>TEMPLAR_AURA</abnormalVisualEffect>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10107</icon>
 		<operateType>AU</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<effects>
@@ -635,6 +635,7 @@
 		</effects>
 	</skill>
 	<skill id="10108" toLevel="1" name="Paladin's Aura">
+		<icon>icon.skill10104</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
@@ -643,7 +644,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10104</icon>
 		<operateType>A5</operateType>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -680,6 +680,7 @@
 		</effects>
 	</skill>
 	<skill id="10109" toLevel="1" name="Avenger's Aura">
+		<icon>icon.skill10105</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
@@ -688,7 +689,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10105</icon>
 		<operateType>A5</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -731,6 +731,7 @@
 		</effects>
 	</skill>
 	<skill id="10110" toLevel="1" name="Sentinel's Aura">
+		<icon>icon.skill10106</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
@@ -738,7 +739,6 @@
 		<affectRange>1000</affectRange>
 		<canBeDispelled>false</canBeDispelled>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10106</icon>
 		<operateType>A5</operateType>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>
@@ -803,6 +803,7 @@
 		</effects>
 	</skill>
 	<skill id="10111" toLevel="1" name="Templar's Aura">
+		<icon>icon.skill10107</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>AURA</abnormalType>
@@ -811,7 +812,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10107</icon>
 		<operateType>A5</operateType>
 		<targetType>MY_PARTY</targetType>
 		<affectScope>PARTY</affectScope>

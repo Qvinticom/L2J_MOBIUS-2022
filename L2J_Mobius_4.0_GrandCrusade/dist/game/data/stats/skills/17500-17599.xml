@@ -578,7 +578,7 @@
 	</skill>
 	<skill id="17547" toLevel="1" name="Agathion Teleport: Town of Aden">
 		<!-- Teleport to the Town of Aden. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
@@ -599,7 +599,7 @@
 	</skill>
 	<skill id="17548" toLevel="1" name="Agathion Teleport: Town of Rune">
 		<!-- Teleport to the Town of Rune. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
@@ -620,7 +620,7 @@
 	</skill>
 	<skill id="17549" toLevel="1" name="Agathion Teleport: Town of Giran">
 		<!-- Teleport to the Town of Giran. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
@@ -641,7 +641,7 @@
 	</skill>
 	<skill id="17550" toLevel="1" name="Agathion Teleport: Heine">
 		<!-- Teleport to Heine. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
@@ -662,7 +662,7 @@
 	</skill>
 	<skill id="17551" toLevel="1" name="Balanced Power">
 		<!-- Increases STR/INT/CON/DEX/WIT/MEN by $s1. -->
-		<icon>icon.bracelet_tersi_agathion</icon>
+		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
@@ -701,7 +701,7 @@
 	</skill>
 	<skill id="17552" toLevel="1" name="Attribute Enchant">
 		<!-- Increases attack speed by $s1 and all defense attributes by $s2. -->
-		<icon>icon.bracelet_tersi_agathion</icon>
+		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackAttribute">
@@ -1848,7 +1848,7 @@
 	</skill>
 	<skill id="17567" toLevel="1" name="Enchant Attribute Attack">
 		<!-- All attribute attacks + 30. -->
-		<icon>icon.bracelet_tersi_agathion</icon>
+		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackAttributeAdd">
@@ -1858,7 +1858,7 @@
 	</skill>
 	<skill id="17568" toLevel="1" name="Enchant Attribute Defense">
 		<!-- All attribute resistance + 30. -->
-		<icon>icon.bracelet_tersi_agathion</icon>
+		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -2023,91 +2023,69 @@
 		</effects>
 	</skill>
 	<skill id="17578" toLevel="1" name="Blue Mackerel Appearance Stone: One-handed Sword (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17579" toLevel="1" name="Trumpetfish Appearance Stone: Dagger (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17580" toLevel="1" name="Shark Appearance Stone: Two-handed Sword (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17581" toLevel="1" name="Squid Appearance Stone: Spear (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17582" toLevel="1" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17583" toLevel="1" name="Lobster Appearance Stone: Fist Weapon (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17584" toLevel="1" name="Giant Crab Appearance Stone: Bow (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17585" toLevel="1" name="Crayfish Appearance Stone: Crossbow (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17586" toLevel="1" name="Starfish Appearance Stone: Sigil (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17587" toLevel="1" name="Turtle Appearance Stone: Shield (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17588" toLevel="1" name="Blue Mackerel Appearance Stone: Dualsword (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17589" toLevel="1" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17590" toLevel="1" name="Trumpetfish Appearance Stone: Dual Dagger (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17591" toLevel="1" name="Blue Mackerel Appearance Stone: One-handed Blunt Weapon (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17592" toLevel="1" name="Blue Mackerel Appearance Stone: One-handed Sword">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17593" toLevel="1" name="Trumpetfish Appearance Stone: Dagger">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17594" toLevel="1" name="Shark Appearance Stone: Two-handed Sword">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17595" toLevel="1" name="Squid Appearance Stone: Spear">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17596" toLevel="1" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17597" toLevel="1" name="Lobster Appearance Stone: Fist Weapon">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17598" toLevel="1" name="Giant Crab Appearance Stone: Bow">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17599" toLevel="1" name="Crayfish Appearance Stone: Crossbow">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

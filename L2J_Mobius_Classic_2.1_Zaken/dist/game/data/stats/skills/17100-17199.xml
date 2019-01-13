@@ -17,11 +17,9 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17109" toLevel="1" name="-">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17110" toLevel="1" name="Snowy Squash Nectar">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
 		<effectPoint>-150</effectPoint>
@@ -53,7 +51,6 @@
 		</conditions>
 	</skill>
 	<skill id="17111" toLevel="1" name="Snowy Squash Seed">
-		<icon>icon.skill17111</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<reuseDelay>10000</reuseDelay>
@@ -78,7 +75,6 @@
 		</effects>
 	</skill>
 	<skill id="17112" toLevel="1" name="Large Snowy Squash Seed">
-		<icon>icon.skill17112</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<reuseDelay>10000</reuseDelay>
@@ -103,17 +99,16 @@
 		</effects>
 	</skill>
 	<skill id="17113" toLevel="1" name="Christmas Buff Set 2015">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17154" toLevel="1" name="Love Potion">
 		<!-- Your body is filled with mysterious sweet energy. Your soul stands still, but your heart is beating like a hammer. For 2 min., P. Atk. / M. Atk. + 15%, P. Def. / M. Def. + 15%. Equipped weapon changes shape. The effect disappears upon logout. -->
+		<icon>icon.etc_whiteday_herb</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>RHAPSODY</abnormalType>
 		<abnormalVisualEffect>CHANGE_VALENTINE</abnormalVisualEffect>
-		<icon>icon.etc_whiteday_herb</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>

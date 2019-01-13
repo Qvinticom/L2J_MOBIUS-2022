@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4400" toLevel="3" name="Acumen">
 		<!-- Momentarily increases Casting Spd. Effect $s1. -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -11,7 +12,6 @@
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1085</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -34,6 +34,7 @@
 	</skill>
 	<skill id="4401" toLevel="3" name="Empower">
 		<!-- M. Atk. increases temporarily. Effect $s1. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -43,7 +44,6 @@
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1059</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -66,6 +66,7 @@
 	</skill>
 	<skill id="4402" toLevel="2" name="Haste">
 		<!-- Atk. Spd. increases temporarily. Effect $s1. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -74,7 +75,6 @@
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -96,6 +96,7 @@
 	</skill>
 	<skill id="4403" toLevel="3" name="Guidance">
 		<!-- Momentarily increases Accuracy. Effect $s1. -->
+		<icon>icon.skill1240</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -105,7 +106,6 @@
 		<abnormalType>HIT_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1240</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -128,6 +128,7 @@
 	</skill>
 	<skill id="4404" toLevel="3" name="Focus">
 		<!-- Momentarily increases the probability of critical attack. Effect $s1. -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -137,7 +138,6 @@
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1077</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -160,6 +160,7 @@
 	</skill>
 	<skill id="4405" toLevel="3" name="Death Whisper">
 		<!-- Momentarily increases critical P. Atk. Effect $s1. -->
+		<icon>icon.skill1242</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -169,7 +170,6 @@
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1242</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -192,6 +192,7 @@
 	</skill>
 	<skill id="4406" toLevel="3" name="Agility">
 		<!-- Momentarily increases evasion. Effect $s1. -->
+		<icon>icon.skill1087</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -201,7 +202,6 @@
 		<abnormalType>AVOID_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1087</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -746,9 +746,9 @@
 			<value level="22">icon.skill4416_castleguard</value>
 			<value level="23">icon.skill4416_mercenary</value>
 			<value level="24">icon.skill4416_none</value>
-			<value level="25">icon.skill4296</value>
-			<value level="26">icon.skill4296</value>
-			<value level="27">icon.skill4296</value>			
+			<value level="25">icon.skill4416_kamael</value>
+			<value level="26">icon.skill_4416_ertheia</value>
+			<value level="27">icon.skill4416_mercenary</value>
 		</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2351,6 +2351,7 @@
 	</skill>
 	<skill id="4463" toLevel="3" name="Surrender to Water">
 		<!-- Water Resistance decreases and Fire Resistance increases momentarily. Effect $s1. -->
+		<icon>icon.skill4280_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2364,7 +2365,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4280_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2411,6 +2411,7 @@
 	</skill>
 	<skill id="4464" toLevel="3" name="Surrender to Wind">
 		<!-- Wind Resistance decreases and Earth Resistance increases momentarily. Effect $s1. -->
+		<icon>icon.skill4281_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2424,7 +2425,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4281_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2471,6 +2471,7 @@
 	</skill>
 	<skill id="4465" toLevel="3" name="Surrender to Earth">
 		<!-- Earth Resistance decreases and Wind Resistance increases momentarily. Effect $s1. -->
+		<icon>icon.skill4282_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2484,7 +2485,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4282_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2531,6 +2531,7 @@
 	</skill>
 	<skill id="4466" toLevel="3" name="Surrender to Dark">
 		<!-- State of momentarily decreased Dark Resistance and increased Holy Resistance. Effect $s1 -->
+		<icon>icon.skill4336_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2544,7 +2545,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4336_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2591,6 +2591,7 @@
 	</skill>
 	<skill id="4467" toLevel="3" name="Surrender to Holy">
 		<!-- State of momentarily decreased Holy Resistance and increased Dark Resistance. Effect $s1 -->
+		<icon>icon.skill4275_new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2604,7 +2605,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4275_new</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -2874,6 +2874,7 @@
 	</skill>
 	<skill id="4473" toLevel="12" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2884,7 +2885,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2998,6 +2998,7 @@
 	</skill>
 	<skill id="4476" toLevel="5" name="Silent Move">
 		<!-- Protected from preemptive attacks from monsters. -->
+		<icon>icon.skill0221</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">60</value>
@@ -3010,7 +3011,6 @@
 		<activateRate>0</activateRate>
 		<effectPoint>100</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0221</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -3147,6 +3147,7 @@
 	</skill>
 	<skill id="4479" toLevel="1" name="Ice Fairy's Blessing">
 		<!-- Increases Water Resistance. Effect 4. -->
+		<icon>icon.skill1182</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
@@ -3154,7 +3155,6 @@
 		<effectPoint>100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1182</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>64</magicLvl>
 		<mpConsume>31</mpConsume>
@@ -3229,6 +3229,7 @@
 		</effects>
 	</skill>
 	<skill id="4482" toLevel="1" name="Silence">
+		<icon>icon.skill1064</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -3237,7 +3238,6 @@
 		<effectPoint>100</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>100</hitTime>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -3255,6 +3255,7 @@
 	</skill>
 	<skill id="4483" toLevel="12" name="Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
+		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -3264,7 +3265,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill4047</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>
 			<value level="1">0</value>
@@ -3366,6 +3366,7 @@
 	</skill>
 	<skill id="4486" toLevel="12" name="Decrease P. Def.">
 		<!-- P. Def. decreases temporarily. Effect $s1. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3389,7 +3390,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0122</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -3561,6 +3561,7 @@
 	</skill>
 	<skill id="4488" toLevel="12" name="Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
+		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -3571,7 +3572,6 @@
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill4047</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -3752,6 +3752,7 @@
 	</skill>
 	<skill id="4491" toLevel="12" name="Holy Weapon">
 		<!-- State of dealing Holy attack. -->
+		<icon>icon.skill1043</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -3763,7 +3764,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>3200</hitTime>
-		<icon>icon.skill1043</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
@@ -4033,6 +4033,7 @@
 	</skill>
 	<skill id="4496" toLevel="12" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4056,7 +4057,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>

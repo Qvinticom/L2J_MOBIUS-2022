@@ -1780,9 +1780,9 @@
 	</skill>
 	<skill id="8237" toLevel="1" name="Shalin Heal">
 		<!-- Recovers with the power of Talisman attached to the Sword of Fire and Water. -->
+		<icon>icon.skill1401</icon>
 		<effectPoint>743</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1401</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>73</magicLvl>
 		<mpConsume>61</mpConsume>
@@ -1802,11 +1802,11 @@
 	</skill>
 	<skill id="8238" toLevel="1" name="Shalin Strike">
 		<!-- Inflicts a powerful physical water attack on the enemy with the power of Talisman attached to the Sword of Fire and Water. -->
+		<icon>icon.skill0003</icon>
 		<castRange>40</castRange>
 		<effectPoint>-650</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0003</icon>
 		<magicLvl>73</magicLvl>
 		<mpConsume>74</mpConsume>
 		<operateType>A1</operateType>
@@ -1823,12 +1823,12 @@
 	</skill>
 	<skill id="8239" toLevel="1" name="Critical Up">
 		<!-- Increases Critical Rate and Atk. Spd. Improves chance of a critical hit from range attacks. -->
+		<icon>icon.skill5760</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SEED_OF_CRITICAL</abnormalType>
 		<effectPoint>100</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill5760</icon>
 		<magicLvl>73</magicLvl>
 		<mpConsume>74</mpConsume>
 		<operateType>A2</operateType>
@@ -1864,6 +1864,7 @@
 	</skill>
 	<skill id="8240" toLevel="3" name="Obliteration Storm">
 		<!-- Delivers a powerful range attack, shocking the target. Consumes all accumulated critical hits. Requires a Stage 3 critical hit. -->
+		<icon>icon.weapon_long_spear_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1873,7 +1874,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-1300</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.weapon_long_spear_i00</icon>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>73</magicLvl>
 		<mpConsume>149</mpConsume>
@@ -1915,6 +1915,7 @@
 	</skill>
 	<skill id="8241" toLevel="1" name="Critical Up">
 		<!-- Temporarily increases Critical Damage rate. Effect 3. -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -1922,7 +1923,6 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1077</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>73</magicLvl>
 		<mpConsume>38</mpConsume>
@@ -1943,13 +1943,13 @@
 	</skill>
 	<skill id="8242" toLevel="1" name="Ice Ball">
 		<!-- Inflicts a powerful long-range water attack on the enemy. -->
+		<icon>icon.skill1184</icon>
 		<castRange>900</castRange>
 		<effectPoint>-574</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1184</icon>
 		<magicLvl>61</magicLvl>
 		<mpConsume>61</mpConsume>
 		<operateType>A1</operateType>
@@ -1966,13 +1966,13 @@
 	</skill>
 	<skill id="8243" toLevel="1" name="Chill Strike">
 		<!-- Inflicts a powerful short-range water attack on the enemy. -->
+		<icon>icon.skill0105</icon>
 		<castRange>40</castRange>
 		<effectPoint>-574</effectPoint>
 		<effectRange>400</effectRange>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>850</hitTime>
-		<icon>icon.skill0105</icon>
 		<magicLvl>61</magicLvl>
 		<mpConsume>61</mpConsume>
 		<operateType>A1</operateType>
@@ -1989,12 +1989,12 @@
 	</skill>
 	<skill id="8244" toLevel="1" name="Transform Gatekeeper">
 		<!-- Transforms target into a Gatekeeper. Allows Vitality to be restored when XP is acquired. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2024,8 +2024,8 @@
 	</skill>
 	<skill id="8245" toLevel="1" name="Release Agathion's Seal - Love">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2042,11 +2042,11 @@
 	</skill>
 	<skill id="8246" toLevel="1" name="Transform Pumpkin Ghost">
 		<!-- Transform into a Pumpkin Ghost. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2071,12 +2071,12 @@
 	</skill>
 	<skill id="8247" toLevel="1" name="Ride Darkmane Pacer">
 		<!-- Ride a Darkmane Pacer. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2101,9 +2101,9 @@
 	</skill>
 	<skill id="8248" toLevel="1" name="Cancels Gatekeeper Transformation">
 		<!-- Cancels transformation. -->
+		<icon>icon.skilltransform2</icon>
 		<effectPoint>10</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform2</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
@@ -2136,8 +2136,8 @@
 	</skill>
 	<skill id="8250" toLevel="2" name="Summon Tigress">
 		<!-- Summons Tigress. -->
-		<hitTime>15000</hitTime>
 		<icon>icon.skill0283</icon>
+		<hitTime>15000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>63</magicLvl>
 		<magicLvl>63</magicLvl>
@@ -2163,8 +2163,8 @@
 	</skill>
 	<skill id="8251" toLevel="1" name="Collection Agathion Release Seal">
 		<!-- Removes the seal on a Collection Agathion. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2181,11 +2181,11 @@
 	</skill>
 	<skill id="8252" toLevel="1" name="Test - Transform Mount1">
 		<!-- Mounts a test mount. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2205,11 +2205,11 @@
 	</skill>
 	<skill id="8253" toLevel="1" name="Test - Transform Mount2">
 		<!-- Mounts a test mount. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2229,8 +2229,8 @@
 	</skill>
 	<skill id="8254" toLevel="1" name="Release Agathion's Seal - Monkey">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2247,8 +2247,8 @@
 	</skill>
 	<skill id="8255" toLevel="1" name="Release Agathion's Seal - Griffin">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2265,8 +2265,8 @@
 	</skill>
 	<skill id="8256" toLevel="1" name="Release Agathion's Seal - Joy">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2283,8 +2283,8 @@
 	</skill>
 	<skill id="8257" toLevel="1" name="Release Agathion's Seal - Angry Devil">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2301,8 +2301,8 @@
 	</skill>
 	<skill id="8258" toLevel="1" name="Release Agathion's Seal - Sorrow">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2319,8 +2319,8 @@
 	</skill>
 	<skill id="8259" toLevel="1" name="Release Agathion's Seal - Teddy Boy">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2337,8 +2337,8 @@
 	</skill>
 	<skill id="8260" toLevel="1" name="Release Agathion's Seal - Teddy Girl">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2355,12 +2355,12 @@
 	</skill>
 	<skill id="8261" toLevel="1" name="Ride Steam Beetle">
 		<!-- Ride a Steam Beetle. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2385,12 +2385,12 @@
 	</skill>
 	<skill id="8262" toLevel="1" name="Ride Gold Maned Lion">
 		<!-- Ride a Gold Maned Lion. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2415,11 +2415,11 @@
 	</skill>
 	<skill id="8263" toLevel="1" name="Transform Snow Kung">
 		<!-- Transforms user into a Snow Kung. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2444,11 +2444,11 @@
 	</skill>
 	<skill id="8264" toLevel="1" name="Transform Scarecrow Jack">
 		<!-- Transforms user into Scarecrow Jack. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2473,11 +2473,11 @@
 	</skill>
 	<skill id="8265" toLevel="1" name="Transform Tin Golem">
 		<!-- Transforms user into a Tin Golem. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2556,8 +2556,8 @@
 	</skill>
 	<skill id="8275" toLevel="1" name="Release Agathion's Seal - Knight">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
@@ -2574,6 +2574,7 @@
 	</skill>
 	<skill id="8276" toLevel="1" name="Shield Branding">
 		<!-- Stuns certain monsters within the Tumor of Death and the Seed of Infinity, causing them to become momentarily immobile and lose their target. -->
+		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2584,7 +2585,6 @@
 		<effectPoint>-100</effectPoint>
 		<fanRange>0;0;150;90</fanRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0092</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -2615,11 +2615,11 @@
 	</skill>
 	<skill id="8277" toLevel="1" name="Transform Native">
 		<!-- Transforms into a Native. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>
@@ -2643,11 +2643,11 @@
 	</skill>
 	<skill id="8278" toLevel="1" name="Transform Guard of Down">
 		<!-- Transforms into a Guard of the Dawn. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>

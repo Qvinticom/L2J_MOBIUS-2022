@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="400" toLevel="10" name="Tribunal">
 		<!-- Inflicts holy damage on the enemy with $s1 Power added to P. Atk. and greatly provokes the enemy. For $s2, decreases Critical Rate by $s3 and Melee Weapon Resistance by $s4. Requires a sword or blunt weapon to be equipped. Over-hit and Critical are possible. -->
+		<icon>icon.skill0400</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -36,7 +37,6 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1300</hitTime>
-		<icon>icon.skill0400</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -225,6 +225,7 @@
 	</skill>
 	<skill id="401" toLevel="10" name="Judgment">
 		<!-- Inflicts dark damage on the enemy with $s1 Power added to P. Atk. and greatly provokes the enemy. For $s2, decreases Critical Damage by $s3 and Melee Weapon Resistance by $s4. Requires a sword, blunt weapon, or dualsword. Over-hit and Critical are possible. -->
+		<icon>icon.skill0401</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -259,7 +260,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1300</hitTime>
-		<icon>icon.skill0401</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -450,6 +450,7 @@
 	</skill>
 	<skill id="402" toLevel="10" name="Arrest">
 		<!-- Provokes the enemy to attack, then immobilizes them for $s1. -->
+		<icon>icon.skill0402</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
@@ -471,7 +472,6 @@
 		</effectPoint>
 		<effectRange>650</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0402</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -514,6 +514,7 @@
 	</skill>
 	<skill id="403" toLevel="10" name="Shackle">
 		<!-- Provokes the enemy to attack, then immobilizes them for $s1. -->
+		<icon>icon.skill0403</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
@@ -535,7 +536,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0403</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -578,6 +578,7 @@
 	</skill>
 	<skill id="404" toLevel="17" name="Mass Shackling">
 		<!-- Provokes nearby enemies to attack, then immobilizes them for $s1. -->
+		<icon>icon.skill0404</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_PHYSICALLY</abnormalType>
@@ -610,7 +611,6 @@
 			<value level="17">-1477</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0404</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -680,6 +680,7 @@
 	</skill>
 	<skill id="405" toLevel="10" name="Banish Undead">
 		<!-- Fills undead with fear, causing them to flee for $s1. Consumes $s2 Soulstones. Lethal strike is possible. -->
+		<icon>icon.skill0405</icon>
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-523</value>
@@ -697,7 +698,6 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0405</icon>
 		<isDebuff>true</isDebuff>
 		<itemConsumeCount>
 			<value level="1">5</value>
@@ -758,6 +758,7 @@
 	</skill>
 	<skill id="406" toLevel="3" name="Angelic Archon">
 		<!-- Channels the gods' strength to greatly increase your combat effectiveness. For $s1, increases Debuff Resistance by $s2, P. Def. by $s3, M. Def. by $s4, Accuracy by $s5 when a sword/blunt weapon is equipped, Speed by $s6, Atk. Spd. by $s7 when a sword/blunt weapon is equipped, Critical Rate by $s8 when a sword is equipped, Critical Damage by $s9 when a blunt weapon is equipped, and Buff-canceling Attack Resistance by $s10. Decreases the effect of recovery magic by $s11. Available when HP is $s12 or lower. -->
+		<icon>icon.skill0406</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -771,7 +772,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0406</icon>
 		<magicLvl>
 			<value level="1">58</value>
 			<value level="2">66</value>
@@ -871,6 +871,7 @@
 	</skill>
 	<skill id="407" toLevel="10" name="Psycho Symphony">
 		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and decreases Speed/Atk. Spd./Casting Spd. by $s3 for $s2. Over-hit and Critical are possible. -->
+		<icon>icon.skill0407</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -902,7 +903,6 @@
 			<value level="10">-655</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0407</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -1002,6 +1002,7 @@
 	</skill>
 	<skill id="408" toLevel="10" name="Demonic Blade Dance">
 		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and decreases P. Atk./M. Atk. by $s3 for $s2. Over-hit and Critical are possible. -->
+		<icon>icon.skill0408</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -1033,7 +1034,6 @@
 			<value level="10">-655</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0408</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -1126,6 +1126,7 @@
 	</skill>
 	<skill id="409" toLevel="10" name="Critical Blow">
 		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Increases your Vital Spot Attack Rate by $s3 for $s2. Requires a dagger. Over-hit and Half-kill are possible. -->
+		<icon>icon.skill0409</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -1156,7 +1157,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1300</hitTime>
-		<icon>icon.skill0409</icon>
 		<magicLvl>
 			<value level="1">55</value>
 			<value level="2">58</value>
@@ -1239,6 +1239,7 @@
 	</skill>
 	<skill id="410" toLevel="8" name="Mortal Strike">
 		<!-- Increases your Vital Spot Attack Rate by $s2 for $s1. Requires a dagger or dual dagger. -->
+		<icon>icon.skill0410</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1265,7 +1266,6 @@
 			<value level="8">655</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0410</icon>
 		<magicLvl>
 			<value level="1">58</value>
 			<value level="2">66</value>
@@ -1343,6 +1343,7 @@
 	</skill>
 	<skill id="411" toLevel="3" name="Stealth">
 		<!-- Prevents being pre-emptively attacked by monsters for $s1, and decreases Evasion by $s2, P. Def. by $s3, M. Def. by $s4, Accuracy by $s5 and P. Atk. by $s6. -->
+		<icon>icon.skill0411</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1357,7 +1358,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0411</icon>
 		<magicLvl>
 			<value level="1">58</value>
 			<value level="2">66</value>
@@ -1415,6 +1415,7 @@
 	</skill>
 	<skill id="412" toLevel="10" name="Sand Bomb">
 		<!-- Detonates a sand bomb to decrease the enemy's Accuracy by $s2 for $s1. -->
+		<icon>icon.skill0412</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">1</value>
@@ -1446,7 +1447,6 @@
 		</effectPoint>
 		<effectRange>650</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0412</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -1499,6 +1499,7 @@
 	</skill>
 	<skill id="413" toLevel="8" name="Rapid Fire">
 		<!-- For $s1, increases P. Atk. by $s2 and Atk. Spd. by $s3. Decreases range by $s4. Requires a bow. -->
+		<icon>icon.skill0413</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1522,7 +1523,6 @@
 			<value level="8">655</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0413</icon>
 		<magicLvl>
 			<value level="1">60</value>
 			<value level="2">62</value>
@@ -1592,6 +1592,7 @@
 	</skill>
 	<skill id="414" toLevel="8" name="Dead Eye">
 		<!-- For $s1, when using a bow, increases one's own Accuracy by $s2, P. Atk. by $s3, and Critical Damage by $s4. Decreases Atk. Spd. by $s5. Requires a bow. -->
+		<icon>icon.skill0414</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1615,7 +1616,6 @@
 			<value level="8">655</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0414</icon>
 		<magicLvl>
 			<value level="1">60</value>
 			<value level="2">62</value>
@@ -1701,6 +1701,7 @@
 	</skill>
 	<skill id="415" toLevel="3" name="Spirit of Sagittarius">
 		<!-- Decreases physical skill MP Consumption by $s2 for $s1. -->
+		<icon>icon.skill0415</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">4</value>
@@ -1714,7 +1715,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0415</icon>
 		<magicLvl>
 			<value level="1">58</value>
 			<value level="2">66</value>
@@ -1746,6 +1746,7 @@
 	</skill>
 	<skill id="416" toLevel="3" name="Blessing of Sagittarius">
 		<!-- Decreases physical skill Cooldown by $s2 for $s1. -->
+		<icon>icon.skill0416</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">4</value>
@@ -1759,7 +1760,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0416</icon>
 		<magicLvl>
 			<value level="1">58</value>
 			<value level="2">66</value>
@@ -1791,6 +1791,7 @@
 	</skill>
 	<skill id="417" toLevel="5" name="Pain of Sagittarius">
 		<!-- Sacrifices your own HP to regenerate MP with $s1 Power. -->
+		<icon>icon.skill0417</icon>
 		<effectPoint>
 			<value level="1">549</value>
 			<value level="2">582</value>
@@ -1806,7 +1807,6 @@
 			<value level="4">387</value>
 			<value level="5">407</value>
 		</hpConsume>
-		<icon>icon.skill0417</icon>
 		<magicLvl>
 			<value level="1">58</value>
 			<value level="2">62</value>
@@ -1856,8 +1856,8 @@
 	</skill>
 	<skill id="419" toLevel="4" name="Summon Treasure Key">
 		<!-- Creates $s1 Maestro's Key. Consumes $s2 Thief Keys. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill0419</icon>
+		<hitTime>3000</hitTime>
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>1661</itemConsumeId> <!-- Thief Key -->
 		<magicLvl>
@@ -1931,6 +1931,7 @@
 	</skill>
 	<skill id="420" toLevel="3" name="Zealot">
 		<!-- Channels the power of your guardian deity for $s1, increasing Debuff Resistance by $s2, Buff-canceling Attack Resistance by $s3, Speed by $s4, Accuracy by $s5 when using a sword, blunt weapon or spear/fist weapon, Atk. Spd. by $s6, Critical Rate by $s7 when using a sword/spear, and Critical Damage by $s8 when using a blunt/fist weapon. Decreases physical skill MP Consumption by $s9 and the Healing power received by $s10. Available when HP is $s11 or lower. -->
+		<icon>icon.skill0420</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1949,7 +1950,6 @@
 			<value level="2">183</value>
 			<value level="3">204</value>
 		</hpConsume>
-		<icon>icon.skill0420</icon>
 		<magicLvl>
 			<value level="1">58</value>
 			<value level="2">66</value>
@@ -2052,6 +2052,7 @@
 	</skill>
 	<skill id="421" toLevel="5" name="Fell Swoop">
 		<!-- For $s1, increases the number of simultaneous targets by $s2. Requires a polearm. -->
+		<icon>icon.skill0421</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2069,7 +2070,6 @@
 			<value level="5">655</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0421</icon>
 		<magicLvl>
 			<value level="1">58</value>
 			<value level="2">62</value>
@@ -2148,6 +2148,7 @@
 	</skill>
 	<skill id="423" toLevel="3" name="Dark Form">
 		<!-- For $s1, increases Fire P. Atk. by $s2 and Fire Resistance by $s3. -->
+		<icon>icon.skill0423</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -2158,7 +2159,6 @@
 		</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0423</icon>
 		<magicLvl>
 			<value level="1">58</value>
 			<value level="2">66</value>
@@ -2233,12 +2233,12 @@
 	</skill>
 	<skill id="425" toLevel="1" name="Hawk Spirit Totem">
 		<!-- Becomes possessed by a Hawk's soul. For 5 minutes, when using a fist weapon, increases Accuracy by 6, Critical Rate by 100, and Critical Damage by 30%. Requires a fist weapon. -->
+		<icon>icon.skill0425</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>655</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0425</icon>
 		<magicLvl>74</magicLvl>
 		<mpConsume>68</mpConsume>
 		<operateType>A2</operateType>
@@ -2281,12 +2281,12 @@
 	</skill>
 	<skill id="426" toLevel="1" name="Battle Stance">
 		<!-- Transfers your strength to a party member. The effect can be canceled if you incur damage. -->
+		<icon>icon.skill0426</icon>
 		<castRange>400</castRange>
 		<channelingSkillId>5104</channelingSkillId> <!-- Battle Force -->
 		<effectPoint>1</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill0426</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>77</magicLvl>
 		<mpPerChanneling>15</mpPerChanneling>
@@ -2307,13 +2307,13 @@
 	</skill>
 	<skill id="427" toLevel="1" name="Spell Stance">
 		<!-- Transfers your magical strength to a party member. The effect can be canceled if you incur damage. -->
+		<icon>icon.skill0427</icon>
 		<castRange>400</castRange>
 		<channelingSkillId>5105</channelingSkillId> <!-- Spell Force -->
 		<effectPoint>1</effectPoint>
 		<effectPoint>1</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill0427</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>77</magicLvl>
 		<mpPerChanneling>15</mpPerChanneling>
@@ -2607,6 +2607,7 @@
 	</skill>
 	<skill id="437" toLevel="10" name="Song of Silence">
 		<!-- Sings a Song of Silence. Blocks all the enemies' physical/magic skills for $s1. -->
+		<icon>icon.skill0437</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2632,7 +2633,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-507</effectPoint>
 		<hitTime>1900</hitTime>
-		<icon>icon.skill0437</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -2663,6 +2663,7 @@
 	</skill>
 	<skill id="438" toLevel="4" name="Soul of the Phoenix">
 		<!-- Maintains buffs and debuffs even after death. The Noblesse Blessing and the Amulet of Luck disappear, however. Consumes $s1 Blood of the Phoenix. -->
+		<icon>icon.skill0438</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="4">1800</value>
@@ -2671,7 +2672,6 @@
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<effectPoint>673</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0438</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8873</itemConsumeId> <!-- Phoenix Blood -->
@@ -2694,12 +2694,12 @@
 	</skill>
 	<skill id="439" toLevel="1" name="Shield of Revenge">
 		<!-- For 5 min., has a chance of reflecting melee damage to the attacker. -->
+		<icon>icon.skill0439</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
 		<effectPoint>669</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0439</icon>
 		<magicLvl>79</magicLvl>
 		<mpConsume>78</mpConsume>
 		<operateType>A2</operateType>
@@ -2717,9 +2717,9 @@
 	</skill>
 	<skill id="440" toLevel="1" name="Braveheart">
 		<!-- Increases combat spirit to recover CP by $s1. -->
+		<icon>icon.skill0440</icon>
 		<effectPoint>669</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0440</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>57</mpConsume>
 		<operateType>A1</operateType>
@@ -2737,13 +2737,13 @@
 	</skill>
 	<skill id="441" toLevel="1" name="Force Meditation">
 		<!-- Uses Momentum to recover 60 HP and 10 MP per second for 1 minute. While skill is in effect, user is unable to move, and P. Def. is decreased by 80%. The effect is canceled if user is stunned. Must recharge 3rd Momentum level. -->
+		<icon>icon.skill0441</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>FORCE_MEDITATION</abnormalType>
 		<chargeConsume>3</chargeConsume>
 		<effectPoint>673</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0441</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>A2</operateType>
 		<removedOnDamage>true</removedOnDamage>
@@ -2777,6 +2777,7 @@
 	</skill>
 	<skill id="442" toLevel="1" name="Sonic Barrier">
 		<!-- Uses Momentum make user invincible against standard targets, skills and debuffs for 10 seconds. Requires a dualsword. Requires 5th stage Momentum. -->
+		<icon>icon.skill0442</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -2784,7 +2785,6 @@
 		<chargeConsume>5</chargeConsume>
 		<effectPoint>673</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0442</icon>
 		<magicLvl>79</magicLvl>
 		<mpConsume>65</mpConsume>
 		<operateType>A2</operateType>
@@ -2822,6 +2822,7 @@
 	</skill>
 	<skill id="443" toLevel="1" name="Force Barrier">
 		<!-- Makes user invincible against standard targets, skills and debuffs for 10 seconds. Requires a fist weapon. Requires 4th Momentum level. -->
+		<icon>icon.skill0443</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -2829,7 +2830,6 @@
 		<chargeConsume>4</chargeConsume>
 		<effectPoint>676</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0443</icon>
 		<magicLvl>79</magicLvl>
 		<mpConsume>72</mpConsume>
 		<operateType>A2</operateType>
@@ -2866,10 +2866,10 @@
 	</skill>
 	<skill id="444" toLevel="1" name="Sweeper Festival">
 		<!-- When used on nearby corpses that are in a Spoil state, extra items may be obtained. -->
+		<icon>BranchSys2.icon.br_skill0444_a</icon>
 		<affectLimit>9-10</affectLimit>
 		<affectRange>200</affectRange>
 		<hitTime>500</hitTime>
-		<icon>BranchSys2.icon.br_skill0444_a</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>12</mpConsume>
 		<operateType>A1</operateType>
@@ -2886,12 +2886,12 @@
 	</skill>
 	<skill id="445" toLevel="1" name="Mirage">
 		<!-- For 1 minute, provides a chance to cancel the target of an attacking enemy. -->
+		<icon>icon.skill0445</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MIRAGE</abnormalType>
 		<effectPoint>673</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0445</icon>
 		<magicLvl>79</magicLvl>
 		<mpConsume>43</mpConsume>
 		<operateType>A2</operateType>
@@ -2917,12 +2917,12 @@
 	</skill>
 	<skill id="446" toLevel="1" name="Evasion">
 		<!-- Allows user to evade short-range and long-range physical attack skills for 10 seconds. -->
+		<icon>icon.skill0446</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>AVOID_SKILL</abnormalType>
 		<effectPoint>337</effectPoint>
 		<hitTime>500</hitTime>
-		<icon>icon.skill0446</icon>
 		<magicLvl>79</magicLvl>
 		<mpConsume>29</mpConsume>
 		<operateType>A2</operateType>
@@ -2941,12 +2941,12 @@
 	</skill>
 	<skill id="447" toLevel="1" name="Counterattack">
 		<!-- For 10 seconds, transfers damage from melee attacks and skills back to the enemy. -->
+		<icon>icon.skill0447</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>COUNTER_SKILL</abnormalType>
 		<effectPoint>337</effectPoint>
 		<hitTime>500</hitTime>
-		<icon>icon.skill0447</icon>
 		<magicLvl>79</magicLvl>
 		<mpConsume>29</mpConsume>
 		<operateType>A2</operateType>
@@ -2964,8 +2964,8 @@
 	</skill>
 	<skill id="448" toLevel="1" name="Summon Swoop Cannon">
 		<!-- Summons a Swoop Cannon. Requires $s1 A-grade Crystals. -->
-		<hitTime>10000</hitTime>
 		<icon>icon.skill0448</icon>
+		<hitTime>10000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>27</itemConsumeCount>
 		<itemConsumeId>1461</itemConsumeId> <!-- Crystal (A-Grade) -->
@@ -2994,8 +2994,8 @@
 	</skill>
 	<skill id="449" toLevel="4" name="Summon Attractive Cubic">
 		<!-- Summons Attractive Cubic. Attractive Cubic can continuously use hate and hold magic on the enemy. Requires $s1 Spirit Ore(s). -->
-		<hitTime>6000</hitTime>
 		<icon>icon.skill0449</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">8</value>
@@ -3039,6 +3039,7 @@
 	</skill>
 	<skill id="450" toLevel="10" name="Banish Seraph">
 		<!-- For $s1, frightens an angel into fleeing. Consumes $s2 Soulstone. Lethal Strike is possible. -->
+		<icon>icon.skill0450</icon>
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-523</value>
@@ -3056,7 +3057,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0450</icon>
 		<isDebuff>true</isDebuff>
 		<itemConsumeCount>
 			<value level="1">5</value>
@@ -3117,6 +3117,7 @@
 	</skill>
 	<skill id="451" toLevel="2" name="Sonic Move">
 		<!-- Uses Momentum to increase Speed by $s2 for $s1. Need to recharge stage $s3 of Momentum. Requires a dualsword. -->
+		<icon>icon.skill0451</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
@@ -3129,7 +3130,6 @@
 			<value level="2">624</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0451</icon>
 		<magicLvl>
 			<value level="1">62</value>
 			<value level="2">68</value>
@@ -3171,6 +3171,7 @@
 	</skill>
 	<skill id="452" toLevel="5" name="Stun Stomp">
 		<!-- Rolls the feet to inflict Stun on nearby enemies for $s1. Requires a spear weapon. Cancels target. -->
+		<icon>icon.skill0452</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3182,7 +3183,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-1</effectPoint>
 		<hitTime>500</hitTime>
-		<icon>icon.skill0452</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -3223,9 +3223,9 @@
 	</skill>
 	<skill id="453" toLevel="1" name="Escape Shackle">
 		<!-- Allows you to escape from a captured state. -->
+		<icon>icon.skill0453</icon>
 		<effectPoint>597</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0453</icon>
 		<magicLvl>60</magicLvl>
 		<mpConsume>60</mpConsume>
 		<operateType>A1</operateType>
@@ -3242,9 +3242,9 @@
 	</skill>
 	<skill id="454" toLevel="1" name="Symbol of Defense">
 		<!-- Creates a seal that maximizes the defensives abilities of nearby allies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
+		<icon>icon.skill0454</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0454</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8875</itemConsumeId> <!-- Battle Symbol -->
@@ -3283,10 +3283,10 @@
 	</skill>
 	<skill id="455" toLevel="1" name="Symbol of Noise">
 		<!-- Creates a seal that cancels the song or dance of nearby enemies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
+		<icon>icon.skill0455</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>900</castRange>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0455</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8875</itemConsumeId> <!-- Battle Symbol -->
@@ -3326,9 +3326,9 @@
 	</skill>
 	<skill id="456" toLevel="1" name="Symbol of Resistance">
 		<!-- Creates a seal that maximizes Resistance to altered state abilities of nearby allies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
+		<icon>icon.skill0456</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0456</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8875</itemConsumeId> <!-- Battle Symbol -->
@@ -3367,9 +3367,9 @@
 	</skill>
 	<skill id="457" toLevel="1" name="Symbol of Honor">
 		<!-- Creates a seal that maximizes HP/CP regeneration of nearby allies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
+		<icon>icon.skill0457</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0457</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8875</itemConsumeId> <!-- Battle Symbol -->
@@ -3408,9 +3408,9 @@
 	</skill>
 	<skill id="458" toLevel="1" name="Symbol of Energy">
 		<!-- Creates a seal that increases P. Atk. and Momentum of nearby allies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
+		<icon>icon.skill0458</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0458</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8875</itemConsumeId> <!-- Battle Symbol -->
@@ -3449,9 +3449,9 @@
 	</skill>
 	<skill id="459" toLevel="1" name="Symbol of the Sniper">
 		<!-- Creates a seal that maximizes the bow/crossbow using abilities of nearby allies. The seal's effect disappears upon escape from the area. Consumes 1 Battle Symbol. -->
+		<icon>icon.skill0459</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0459</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8875</itemConsumeId> <!-- Battle Symbol -->
@@ -3490,9 +3490,9 @@
 	</skill>
 	<skill id="460" toLevel="1" name="Symbol of the Assassin">
 		<!-- Creates a seal that maximizes Evasion and Critical Rate of nearby allies. The seal's effect disappears upon leaving the area. Consumes 1 Battle Symbol. -->
+		<icon>icon.skill0460</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0460</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8875</itemConsumeId> <!-- Battle Symbol -->
@@ -3531,13 +3531,13 @@
 	</skill>
 	<skill id="461" toLevel="2" name="Break Duress">
 		<!-- Use your spirit to escape from an immobile state. Requires Level $s1 Momentum. -->
+		<icon>icon.skill0461</icon>
 		<chargeConsume>
 			<value level="1">2</value>
 			<value level="2">3</value>
 		</chargeConsume>
 		<effectPoint>1</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0461</icon>
 		<magicLvl>
 			<value level="1">60</value>
 			<value level="2">66</value>
@@ -4150,6 +4150,7 @@
 	</skill>
 	<skill id="468" toLevel="9" name="Fallen Attack">
 		<!-- Attacks an enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon or short sword. Over-hit is possible. -->
+		<icon>icon.skill0468</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -4165,7 +4166,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0468</icon>
 		<magicLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -4223,12 +4223,12 @@
 	</skill>
 	<skill id="469" toLevel="1" name="Rapid Attack">
 		<!-- Increases Atk. Spd. by 15% for 20 minutes. -->
+		<icon>icon.skill0469</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0469</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>10</magicLvl>
 		<mpConsume>11</mpConsume>
@@ -4249,9 +4249,9 @@
 	</skill>
 	<skill id="470" toLevel="7" name="Detect Trap">
 		<!-- Detects traps below Level $s1. -->
+		<icon>icon.skill0470</icon>
 		<affectRange>300</affectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0470</icon>
 		<magicLvl>
 			<value level="1">15</value>
 			<value level="2">24</value>
@@ -4293,10 +4293,10 @@
 	</skill>
 	<skill id="471" toLevel="7" name="Defuse Trap">
 		<!-- Disarm traps below Level $s1. -->
+		<icon>icon.skill0471</icon>
 		<castRange>400</castRange>
 		<effectRange>500</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0471</icon>
 		<magicLvl>
 			<value level="1">15</value>
 			<value level="2">24</value>
@@ -4731,6 +4731,7 @@
 	</skill>
 	<skill id="476" toLevel="15" name="Dark Strike">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a sword, blunt weapon, or ancient sword. Over-hit is possible. -->
+		<icon>icon.skill0476</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -4752,7 +4753,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0476</icon>
 		<magicLvl>
 			<value level="1">18</value>
 			<value level="2">19</value>
@@ -4829,6 +4829,7 @@
 	</skill>
 	<skill id="477" toLevel="37" name="Dark Smash">
 		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dualsword to be equipped. Over-hit. -->
+		<icon>icon.skill0477</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -4872,7 +4873,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0477</icon>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -5019,6 +5019,7 @@
 	</skill>
 	<skill id="478" toLevel="15" name="Double Thrust">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit is possible. -->
+		<icon>icon.skill0478</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
 		<effectPoint>
@@ -5040,7 +5041,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0478</icon>
 		<magicLvl>
 			<value level="1">18</value>
 			<value level="2">19</value>
@@ -5170,6 +5170,7 @@
 	</skill>
 	<skill id="482" toLevel="2" name="Furious Soul">
 		<!-- For $s1, increases Critical Rate by $s2 and Critical Damage by $s3. Decreases P. Def. by $s4. -->
+		<icon>icon.skill0482</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5181,7 +5182,6 @@
 			<value level="2">523</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0482</icon>
 		<magicLvl>
 			<value level="1">24</value>
 			<value level="2">55</value>
@@ -5220,6 +5220,7 @@
 	</skill>
 	<skill id="483" toLevel="8" name="Sword Shield">
 		<!-- For $s1, increases P. Def. by $s2 and decreases Speed by $s3. -->
+		<icon>icon.skill0483</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5247,7 +5248,6 @@
 			<value level="8">438</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0483</icon>
 		<magicLvl>
 			<value level="1">36</value>
 			<value level="2">52</value>
@@ -5312,12 +5312,12 @@
 	</skill>
 	<skill id="484" toLevel="1" name="Elementary Rush">
 		<!-- Charges into the enemy. Can be used while dagger, ancient sword, short sword is equipped. -->
+		<icon>icon.skill0484</icon>
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-303</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill0484</icon>
 		<magicLvl>32</magicLvl>
 		<mpConsume>20</mpConsume>
 		<nextAction>ATTACK</nextAction>
@@ -5341,6 +5341,7 @@
 	</skill>
 	<skill id="485" toLevel="19" name="Disarm">
 		<!-- Disarms the enemy for $s1. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dualsword. -->
+		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -5375,7 +5376,6 @@
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0485</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -5472,6 +5472,7 @@
 	</skill>
 	<skill id="487" toLevel="15" name="Penetrating Shot">
 		<!-- Fires a powerful bolt to attack the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a crossbow. Over-hit is possible. -->
+		<icon>icon.skill0487</icon>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>
@@ -5493,7 +5494,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>3200</hitTime>
-		<icon>icon.skill0487</icon>
 		<magicLvl>
 			<value level="1">18</value>
 			<value level="2">19</value>
@@ -5569,12 +5569,12 @@
 	</skill>
 	<skill id="489" toLevel="1" name="Shift Target">
 		<!-- Transfers the Aggression of nearby enemies to a selected party members only. Requires a crossbow. -->
+		<icon>icon.skill0489</icon>
 		<affectRange>300</affectRange>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0489</icon>
 		<magicLvl>40</magicLvl>
 		<mpConsume>53</mpConsume>
 		<operateType>A1</operateType>
@@ -5604,6 +5604,7 @@
 	</skill>
 	<skill id="490" toLevel="2" name="Fast Shot">
 		<!-- Increases crossbow Atk. Spd. by $s2 for $s1. -->
+		<icon>icon.skill0490</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -5615,7 +5616,6 @@
 			<value level="2">549</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0490</icon>
 		<magicLvl>
 			<value level="1">32</value>
 			<value level="2">55</value>
@@ -5645,8 +5645,8 @@
 		</effects>
 	</skill>
 	<skill id="491" toLevel="1" name="Not in Use">
-		<hitTime>3000</hitTime>
 		<icon>icon.skill0491</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>1461</itemConsumeId> <!-- Crystal (A-Grade) -->
@@ -5666,6 +5666,7 @@
 	</skill>
 	<skill id="492" toLevel="25" name="Spread Wing">
 		<!-- Spreads wings to attack nearby enemies with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Over-hit is possible. -->
+		<icon>icon.skill0492</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<rideState>NONE</rideState>
@@ -5698,7 +5699,6 @@
 			<value level="25">-333</value>
 		</effectPoint>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0492</icon>
 		<magicLvl>
 			<value level="1">50</value>
 			<value level="2">51</value>
@@ -5797,6 +5797,7 @@
 	</skill>
 	<skill id="493" toLevel="28" name="Storm Assault">
 		<!-- Makes a hurricane-like assault on the enemy's surroundings with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dualsword to be equipped. Over-hit. -->
+		<icon>icon.skill0493</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>
@@ -5891,7 +5892,6 @@
 			<value level="28">800</value>
 		</effectRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill0493</icon>
 		<magicLvl>
 			<value level="1">47</value>
 			<value level="2">48</value>
@@ -6014,6 +6014,7 @@
 	</skill>
 	<skill id="494" toLevel="37" name="Shoulder Charge">
 		<!-- Charges forward and hit the enemies hard with your shoulder to inflict Stun for $s1. Soul consumption boosts the power. Up to $s2 souls can be consumed. Requires an ancient sword/sword/blunt/spear/fist weapon/dual blunt/dual sword weapon. Over-hit is possible. -->
+		<icon>icon.skill0494</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -6139,7 +6140,6 @@
 			<value level="37">800</value>
 		</effectRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill0494</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -6257,6 +6257,7 @@
 	</skill>
 	<skill id="495" toLevel="10" name="Blade Rush">
 		<!-- Holds a sword up and rushes forward to inflict bleed on the enemies in the rushing path for $s1. Makes them consume $s2 HP every second. Increases Power upon the consumption of up to $s3 souls. Requires an ancient sword or sword to be equipped. Over-hit is possible. -->
+		<icon>icon.skill0495</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
 			<value level="2">6</value>
@@ -6315,7 +6316,6 @@
 		</effectRange>
 		<fanRange>0;0;300;100</fanRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill0495</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -6387,6 +6387,7 @@
 	</skill>
 	<skill id="496" toLevel="31" name="Slashing Blade">
 		<!-- Wields a sword at nearby enemies with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dualsword to be equipped. Over-hit. -->
+		<icon>icon.skill0496</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<coolTime>300</coolTime>
@@ -6424,7 +6425,6 @@
 			<value level="31">-333</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0496</icon>
 		<magicLvl>
 			<value level="1">44</value>
 			<value level="2">45</value>
@@ -6553,6 +6553,7 @@
 	</skill>
 	<skill id="497" toLevel="16" name="Crushing Pain">
 		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dualsword to be equipped. Over-hit. Ignores shield defense. -->
+		<icon>icon.skill0497</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -6575,7 +6576,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2200</hitTime>
-		<icon>icon.skill0497</icon>
 		<magicLvl>
 			<value level="1">59</value>
 			<value level="2">60</value>
@@ -6660,6 +6660,7 @@
 	</skill>
 	<skill id="498" toLevel="12" name="Contagion">
 		<!-- Attacks the enemy's wound with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires an ancient sword or a sword. Over-hit is possible. Ignores Shield Defense. -->
+		<icon>icon.skill0498</icon>
 		<castRange>40</castRange>
 		<coolTime>700</coolTime>
 		<effectPoint>
@@ -6678,7 +6679,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0498</icon>
 		<magicLvl>
 			<value level="1">63</value>
 			<value level="2">64</value>
@@ -6753,6 +6753,7 @@
 	</skill>
 	<skill id="499" toLevel="3" name="Courage">
 		<!-- Increases Mental Attack Resistance by $s2 for $s1. -->
+		<icon>icon.skill0499</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -6766,7 +6767,6 @@
 			<value level="3">582</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0499</icon>
 		<magicLvl>
 			<value level="1">36</value>
 			<value level="2">49</value>

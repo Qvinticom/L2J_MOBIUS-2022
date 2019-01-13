@@ -546,7 +546,6 @@
 	</skill>
 	<skill id="14320" toLevel="1" name="Invincibility">
 		<!-- Invincible against standard targets and skills and buffs/ debuffs. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>1</effectPoint>
@@ -979,7 +978,6 @@
 		</effects>
 	</skill>
 	<skill id="14335" toLevel="1" name="Haunting">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -993,7 +991,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14336" toLevel="1" name="Hiding">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -1101,7 +1098,6 @@
 		</effects>
 	</skill>
 	<skill id="14342" toLevel="1" name="Tail Haunting">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -1117,7 +1113,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="14343" toLevel="1" name="Tail Hiding">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -2035,7 +2030,6 @@
 		</effects>
 	</skill>
 	<skill id="14375" toLevel="1" name="Greeting">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>-2</effectPoint>
@@ -2116,7 +2110,6 @@
 		</effects>
 	</skill>
 	<skill id="14378" toLevel="1" name="Antharas' Grinding">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>500</castRange>
 		<hitTime>2300</hitTime>
@@ -2139,7 +2132,6 @@
 	</skill>
 	<skill id="14379" toLevel="1" name="Antharas' Grinding">
 		<!-- Burn status. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<hitTime>2300</hitTime>
@@ -2308,7 +2300,6 @@
 		</effects>
 	</skill>
 	<skill id="14383" toLevel="1" name="Antharas Meteor">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>6000</hitTime>
@@ -2381,7 +2372,6 @@
 		</effects>
 	</skill>
 	<skill id="14385" toLevel="1" name="Front Foot Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
 		<hitTime>2200</hitTime>
@@ -2405,7 +2395,6 @@
 		</effects>
 	</skill>
 	<skill id="14386" toLevel="1" name="Front Foot Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
 		<hitTime>2200</hitTime>
@@ -2504,7 +2493,6 @@
 		</effects>
 	</skill>
 	<skill id="14390" toLevel="1" name="Dragon Bomber Explosion">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
@@ -2525,7 +2513,6 @@
 		</effects>
 	</skill>
 	<skill id="14391" toLevel="1" name="Behemoth Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>40</castRange>
@@ -2550,7 +2537,6 @@
 	</skill>
 	<skill id="14392" toLevel="1" name="Tarask Splinter">
 		<!-- Stun State -->
-		<icon>icon.skill0000</icon>
 		<operateType>DA2</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>600</castRange>
@@ -2581,7 +2567,6 @@
 		</effects>
 	</skill>
 	<skill id="14393" toLevel="1" name="Tarask Carapace">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>97</magicLvl>
@@ -2617,7 +2602,6 @@
 		</effects>
 	</skill>
 	<skill id="14395" toLevel="1" name="Valakas Trample">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
 		<hitTime>1000</hitTime>
@@ -2642,7 +2626,6 @@
 		</effects>
 	</skill>
 	<skill id="14396" toLevel="1" name="Valakas Trample">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
 		<hitTime>1000</hitTime>
@@ -2667,7 +2650,6 @@
 		</effects>
 	</skill>
 	<skill id="14397" toLevel="1" name="Valakas Tail Stamp">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<effectPoint>-100</effectPoint>
@@ -2725,7 +2707,6 @@
 		</effects>
 	</skill>
 	<skill id="14399" toLevel="1" name="Valakas Meteor Storm">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>8000</hitTime>
 		<effectPoint>-100</effectPoint>

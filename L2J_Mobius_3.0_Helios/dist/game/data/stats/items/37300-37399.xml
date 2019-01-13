@@ -444,6 +444,7 @@
 	</item>
 	<item id="37314" name="Fated Support Box" type="EtcItem">
 		<!-- Double-click to receive equipment items for your grade and class. Can be used only by characters above Lv. 40 who have completed their 1st class transfer. -->
+		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -452,7 +453,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="FatedSupportBox" />
 	</item>

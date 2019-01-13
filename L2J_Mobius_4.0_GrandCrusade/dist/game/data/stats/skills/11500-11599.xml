@@ -461,6 +461,7 @@
 	</skill>
 	<skill id="11509" toLevel="11" name="Crippling Attack">
 		<!-- Attacks target with $s1 Power added to P. Atk. for $s2, P. Def. and M. Def. - $s3 and P. Evasion - $s4. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill11509</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
@@ -472,7 +473,6 @@
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>910</hitTime>
-		<icon>icon.skill11509</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -571,6 +571,7 @@
 	</skill>
 	<skill id="11510" toLevel="11" name="Shadow Blade">
 		<!-- Attacks target with $s1 Power added to P. Atk. for $s2, P. Atk. and M. Atk. - $s3. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill11510</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
@@ -582,7 +583,6 @@
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>1010</hitTime>
-		<icon>icon.skill11510</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -676,11 +676,11 @@
 	</skill>
 	<skill id="11511" toLevel="11" name="Death Strike">
 		<!-- Attacks target with $s1 Power added to P. Atk. Requires a sword, blunt, dualsword, or dual blunt weapon. Over-hit. Critical. -->
+		<icon>icon.skill11511</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>1410</hitTime>
-		<icon>icon.skill11511</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -780,7 +780,6 @@
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<hitTime>1210</hitTime>
-		<icon>icon.skill11509</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -880,6 +879,7 @@
 	</skill>
 	<skill id="11514" toLevel="11" name="Mass Shadow Blade">
 		<!-- Attacks target and nearby enemies with $s1 Power added to P. Atk. for $s2, decreases P. Atk. and M. Atk. by $s3. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill11514</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
@@ -892,7 +892,6 @@
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<hitTime>1410</hitTime>
-		<icon>icon.skill11514</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -1124,6 +1123,7 @@
 	</skill>
 	<skill id="11517" toLevel="4" name="Horn Melody">
 		<!-- For $s1, P. Atk. + $s2, P. Def. + $s3, M. Atk. + $s4, and M. Def. + $s5. -->
+		<icon>icon.skill11517</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1136,7 +1136,6 @@
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1221,6 +1220,7 @@
 	</skill>
 	<skill id="11518" toLevel="4" name="Drum Melody">
 		<!-- For $s1, Max MP + $s2, HP Recovery Bonus + $s3, M. Critical Rate + $s4, Critical Damage in standard attack + $s5, P. Atk. + $s6, P. Def. + $s7, Atk. Spd. + $s8, M. Atk. + $s9, M. Def. + $s10, Casting Spd. + $s11, and Debuff Resistance + $s12. Received Critical Damage - $s13, and Speed - $s14. Party members equipped with melee weapons/bows/crossbows have increased Critical Damage after receiving an amount of damage. -->
+		<icon>icon.skill11522</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1233,7 +1233,6 @@
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1359,6 +1358,7 @@
 	</skill>
 	<skill id="11519" toLevel="4" name="Pipe Organ Melody">
 		<!-- For $s1, Max HP + $s2, Max MP + $x3, Max CP + $s4, and HP Recovery Bonus + $s5. -->
+		<icon>icon.skill11519</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1371,7 +1371,6 @@
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1461,6 +1460,7 @@
 	</skill>
 	<skill id="11520" toLevel="4" name="Guitar Melody">
 		<!-- For $s1, P. Critical Rate + $s2, P. Critical Damage + $s3, and M. Critical Rate + $s4. P. Skill MP Consumption - $s5, M. Skill MP Consumption - $s6, and Iss Enchanter's Enchant Skill MP Consumption - $s7. -->
+		<icon>icon.skill11520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1473,7 +1473,6 @@
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1564,6 +1563,7 @@
 	</skill>
 	<skill id="11521" toLevel="4" name="Harp Melody">
 		<!-- For $s1, P. Accuracy + $s2, P./M. Evasion + $s3, and Speed + $s4. Received Critical Damage - $s5. -->
+		<icon>icon.skill11521</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1576,7 +1576,6 @@
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1670,6 +1669,7 @@
 	</skill>
 	<skill id="11522" toLevel="4" name="Lute Melody">
 		<!-- For $s1, Atk. Spd. + $s2, Casting Spd. + $s3, and has a chance of applying $s4 Vampiric Rage. -->
+		<icon>icon.skill11518</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1682,7 +1682,6 @@
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1758,13 +1757,13 @@
 	</skill>
 	<skill id="11523" toLevel="1" name="Knight's Harmony">
 		<!-- For $s1, the selected party member's P. Atk. + $s2, P. Critical Damage + $s3, P. Critical Rate + $s4, P. Def. + $s5, Shield Defense Rate + $s6 and Shield Defense + $s7. -->
+		<icon>icon.skill11523</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -1822,13 +1821,13 @@
 	</skill>
 	<skill id="11524" toLevel="1" name="Warrior's Harmony">
 		<!-- For $s1, the selected party member's P. Atk. + $s2, P. Critical Damage + $s3, P. Critical Rate + $s4, Atk. Spd. + $s5, M. Atk. + $s6, Casting Spd. + $s7 and Speed + $s8. -->
+		<icon>icon.skill11524</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -1890,13 +1889,13 @@
 	</skill>
 	<skill id="11525" toLevel="1" name="Wizard's Harmony">
 		<!-- For $s1, the selected party member's M. Atk. + $s2, M. Critical Rate + $s3, Casting Spd. + $s4, P. Atk. + $s5, Atk. Spd. + $s6, Speed + $s7, M. Def. + $s8, MP Recovery Bonus + $s9, MP Consumption for magic skills - $s10 and physical skills - $s11, and Cooldown - $s12. -->
+		<icon>icon.skill11525</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -2046,6 +2045,7 @@
 	</skill>
 	<skill id="11529" toLevel="1" name="Prevailing Sonata">
 		<!-- Increases party members' Atk. Spd. by $s2, Casting Spd. by $s3, Max HP by $s4, MP recovery bonus by $s5 and decreases MP Consumption for magic skill by $s6 and the magic cancel rate for $s1 minutes. -->
+		<icon>icon.skill11529</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -2053,7 +2053,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -2107,6 +2106,7 @@
 	</skill>
 	<skill id="11530" toLevel="1" name="Daring Sonata">
 		<!-- Increases party members' P. Atk. by $s2, M. Atk. by $s3, Atk. Spd. and Casting Spd. by $s4 and decreases P. Def. by $s5, M. Def. by $s6 and P. Evasion by $s7 for $s1 minutes. Also bestows an $s8 Vampiric Rage effect and a chance of reflecting $s9 of the damage received. -->
+		<icon>icon.skill11530</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -2114,7 +2114,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -2179,6 +2178,7 @@
 	</skill>
 	<skill id="11532" toLevel="1" name="Refreshing Sonata">
 		<!-- Increases party members' HP Recovery Bonus by $s2, P.?Accuracy by $s3, P.?Evasion by $s4, Speed by $s5, and decreases MP Consumption for skills by $s6 and skill Cooldown by $s7 for $s1. -->
+		<icon>icon.skill11532</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -2186,7 +2186,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -2434,6 +2433,7 @@
 	</skill>
 	<skill id="11537" toLevel="10" name="Transform">
 		<!-- Transforms target into a harmless creature and decrease its Speed by $s2 for $s1. The effect is canceled if the transformed target is attacked. -->
+		<icon>icon.skill11537</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
@@ -2442,7 +2442,6 @@
 			<value fromLevel="1" toLevel="10">60</value>
 			<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
 		<trait>CHANGEBODY</trait>
 		<magicLvl>
@@ -3081,6 +3080,7 @@
 	</skill>
 	<skill id="11546" toLevel="4" name="Chaos Symphony">
 		<!-- Inflicts $s1 damage on target and nearby enemies. Decreases nearby enemies' P. Atk., P. Def., M. Atk., M. Def. and Speed by $s3 for $s2. Requires a sword, dualsword or dual blunt to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill11533</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
 		<abnormalLvl>5</abnormalLvl>
@@ -3090,7 +3090,6 @@
 			<value fromLevel="1" toLevel="4">100</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill11533</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1767</mpConsume>
 		<castRange>900</castRange>
@@ -3157,6 +3156,7 @@
 	</skill>
 	<skill id="11547" toLevel="10" name="Superior HP Recovery">
 		<!-- HP Recovery Bonus + $s1. STR + $s2. -->
+		<icon>icon.skill0212</icon>
 		<operateType>P</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3170,7 +3170,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill0212</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="HpRegen">
@@ -3253,9 +3252,9 @@
 	</skill>
 	<skill id="11551" toLevel="1" name="Superior Mental Attack Resistance">
 		<!-- Poison/Bleed/Hold/Sleep/Mind Attack Resistance + 30%. STR + 2. -->
+		<icon>icon.skill10257</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10257</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
@@ -3273,9 +3272,9 @@
 	</skill>
 	<skill id="11552" toLevel="4" name="Superior Divine Lore">
 		<!-- MP Consumption for skills is decreased by $s1. -->
+		<icon>icon.skill11506</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill11506</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MagicMpCost">
@@ -3312,9 +3311,9 @@
 	</skill>
 	<skill id="11553" toLevel="1" name="Superior Focus Mind">
 		<!-- MP Recovery Bonus + 8.4. STR + 2. -->
+		<icon>icon.skill11187</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill11187</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MpRegen">
@@ -3329,9 +3328,9 @@
 	</skill>
 	<skill id="11554" toLevel="1" name="Superior Sixth Sense">
 		<!-- When HP is below 30%, increases P. Evasion by 17. STR + 2. -->
+		<icon>icon.skill11504</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill11504</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalEvasion">
@@ -3347,9 +3346,9 @@
 	</skill>
 	<skill id="11555" toLevel="1" name="Superior Fast Spell Casting">
 		<!-- Increases Casting Spd. by 15%. -->
+		<icon>icon.skill11788</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill11788</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -3770,6 +3769,7 @@
 	</skill>
 	<skill id="11565" toLevel="1" name="Elemental Resistance">
 		<!-- Increases party members' Fire/Water/Wind/Earth Resistance by $s3 for $s1. -->
+		<icon>icon.skill11565</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
@@ -3777,7 +3777,6 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
 		</abnormalTime>
-		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -3826,6 +3825,7 @@
 	</skill>
 	<skill id="11566" toLevel="1" name="Holy Attack Resistance">
 		<!-- Increases party members' Holy/Dark Attack Resistance by $s2, and Poison/Bleed Resistance by $s3 for $s1. -->
+		<icon>icon.skill11567</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>ARMOR_HOLY</abnormalType>
@@ -3833,7 +3833,6 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
 		</abnormalTime>
-		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -3878,6 +3877,7 @@
 	</skill>
 	<skill id="11567" toLevel="1" name="Mental Attack Resistance">
 		<!-- Increases party members' Hold/Sleep/Mental Attack Resistance by $s2, Buff-canceling Attack Resistance by $s3 and Debuff Resistance by $s4 for $s1. -->
+		<icon>icon.skill11824</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
@@ -3885,7 +3885,6 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
 		</abnormalTime>
-		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<hitTime>700</hitTime>
@@ -3930,10 +3929,10 @@
 	</skill>
 	<skill id="11569" toLevel="1" name="Critical Damage Increase">
 		<!-- Critical Damage is greatly increased through Poem of Drum. -->
+		<icon>icon.skill1542</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL_TRIGGER</abnormalType>
-		<icon>icon.skill1542</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -4097,9 +4096,9 @@
 	</skill>
 	<skill id="11581" toLevel="4" name="Superior Advantage">
 		<!-- Skill Cooldown - $s1, Skill Power + $s2, MP Recovery Rate + $s3, and Max HP, MP, and CP + $s4. Skill mastery effect + $s5. -->
+		<icon>icon.skill11841</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill11841</icon>
 		<effects>
 			<effect name="MaxCp">
 				<amount>
@@ -5030,7 +5029,6 @@
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>

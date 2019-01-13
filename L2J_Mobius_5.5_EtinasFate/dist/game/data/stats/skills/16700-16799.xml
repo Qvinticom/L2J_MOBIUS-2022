@@ -81,13 +81,13 @@
 	</skill>
 	<skill id="16707" toLevel="2" name="Dwelling - Horn Melody">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
+		<icon>icon.skill11517</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
-		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<effectPoint>
 			<value level="1">687</value>
@@ -134,13 +134,13 @@
 	</skill>
 	<skill id="16708" toLevel="2" name="Dwelling - Guitar Melody">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
+		<icon>icon.skill11520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
-		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<coolTime>300</coolTime>
@@ -299,7 +299,6 @@
 	</skill>
 	<skill id="16723" toLevel="3" name="Powered Giant Strike">
 		<!-- Attack skill that deals physical damage to a single target -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>13</mpConsume>
 		<castRange>150</castRange>
@@ -321,7 +320,6 @@
 	</skill>
 	<skill id="16724" toLevel="3" name="Powered Giant Slasher">
 		<!-- Attack skill that deals physical damage to the target and nearby enemies -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>13</mpConsume>
 		<castRange>150</castRange>
@@ -347,7 +345,6 @@
 	</skill>
 	<skill id="16725" toLevel="3" name="Powered Giant Plasma">
 		<!-- Attack skill that deals magic damage to a single target -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>34</mpConsume>
 		<castRange>900</castRange>
@@ -369,7 +366,6 @@
 	</skill>
 	<skill id="16726" toLevel="3" name="Powered Giant Storm">
 		<!-- Attack skill that deals magic damage to the target and nearby enemies -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<affectLimit>20-25</affectLimit>
 		<castRange>900</castRange>
@@ -393,7 +389,6 @@
 		</effects>
 	</skill>
 	<skill id="16727" toLevel="1" name="Helios Storm Fist">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>-1</castRange>
 		<hitTime>1500</hitTime>
@@ -408,7 +403,7 @@
 		</effects>
 	</skill>
 	<skill id="16728" toLevel="1" name="Side Slasher">
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>400</castRange>
@@ -429,7 +424,7 @@
 	</skill>
 	<skill id="16729" toLevel="1" name="Side Megabomber">
 		<!-- The opponents in range are knocked down for 10 sec. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0922</icon>
 		<operateType>A2</operateType>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalLvl>1</abnormalLvl>
@@ -461,7 +456,6 @@
 		</effects>
 	</skill>
 	<skill id="16730" toLevel="1" name="Faction Level-up">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<hitTime>500</hitTime>
@@ -496,7 +490,7 @@
 	</skill>
 	<skill id="16735" toLevel="10" name="Inherent Abilities - Blackbird Clan Talisman">
 		<!-- Damage received from Demons -$s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>etc_blackbird_talisman</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -548,7 +542,7 @@
 	</skill>
 	<skill id="16736" toLevel="10" name="Inherent Abilities - Mother Tree Guardians Talisman">
 		<!-- Damage received from Plants -$s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>etc_guardian_talisman</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -600,19 +594,19 @@
 	</skill>
 	<skill id="16737" toLevel="10" name="Inherent Abilities - Blackbird Clan Talisman">
 		<!-- Damage received from Embryo -$s1. -->
-		<icon>etc_blackbird_talisman</icon>
+		<icon>etc_royalgurad_talisman</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="16738" toLevel="10" name="Inherent Abilities - Mother Tree Guardians Talisman">
 		<!-- Damage received from Spirits -$s1. -->
-		<icon>etc_guardian_talisman</icon>
+		<icon>etc_stranger_talisman</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="16739" toLevel="10" name="Inherent Abilities - Giant Trackers Talisman">
 		<!-- Damage received from Giants -$s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>etc_giantslayer_talisman</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -664,7 +658,6 @@
 	</skill>
 	<skill id="16740" toLevel="1" name="Return to the Stronghold">
 		<!-- Return to the stronghold of the Blackbird Clan. Consumes 4 Spirit Ore. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<hitTime>2000</hitTime>
@@ -672,7 +665,6 @@
 	</skill>
 	<skill id="16741" toLevel="1" name="Return to the Stronghold">
 		<!-- Return to the stronghold of the Kingdom's Royal Guard. Consumes 4 Spirit Ore. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<hitTime>2000</hitTime>
@@ -680,7 +672,6 @@
 	</skill>
 	<skill id="16742" toLevel="1" name="Return to the Stronghold">
 		<!-- Return to the stronghold of the Unworldly Visitors. Consumes 4 Spirit Ore. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<hitTime>2000</hitTime>
@@ -688,7 +679,6 @@
 	</skill>
 	<skill id="16743" toLevel="1" name="Return to the Stronghold">
 		<!-- Return to the stronghold of the Mother Tree Guardians. Consumes 4 Spirit Ore. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<hitTime>2000</hitTime>
@@ -696,14 +686,12 @@
 	</skill>
 	<skill id="16744" toLevel="1" name="Return to the Stronghold">
 		<!-- Return to the stronghold of the Giant Trackers. Consumes 4 Spirit Ore. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<hitTime>2000</hitTime>
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="16745" toLevel="1" name="Kamael's Origin Dispatch">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 	</skill>
@@ -715,8 +703,8 @@
 	</skill>
 	<skill id="16747" toLevel="1" name="Ring of the Beginning">
 		<!-- Max MP +42, P. Atk./ M. Atk. +3%, P./ M. Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +15%, Additional Giant Damage +5% -->
+		<icon>icon.accessory_ring_of_helios_Black</icon>
 	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
-	<icon>icon.skillboss</icon>
 	<operateType>P</operateType>
 	<targetType>SELF</targetType>
 		<effects>
@@ -753,8 +741,11 @@
 	</skill>
 	<skill id="16748" toLevel="2" name="Ring of Authority">
 		<!-- Max MP +43, P. Atk. +4%, P. Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +25%, Additional Giant Damage +5% -->
+		<icon>
+			<value level="1">icon.accessory_ring_of_helios_red</value>
+			<value level="2">icon.accessory_ring_of_helios_enchant_red</value>
+		</icon>
 	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
-	<icon>icon.skillboss</icon>
 	<operateType>P</operateType>
 	<targetType>SELF</targetType>
 		<effects>
@@ -835,8 +826,11 @@
 	</skill>
 	<skill id="16749" toLevel="2" name="Ring of the Truth">
 		<!-- Max MP +43, M. Atk. +4%, M. Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +25%, Additional Giant Damage +5% -->
+		<icon>
+			<value level="1">icon.accessory_ring_of_helios</value>
+			<value level="2">icon.accessory_ring_of_helios_enchant</value>
+		</icon>
 	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
-	<icon>icon.skillboss</icon>
 	<operateType>P</operateType>
 	<targetType>SELF</targetType>
 		<effects>
@@ -917,8 +911,8 @@
 	</skill>
 	<skill id="16750" toLevel="1" name="Ramona's Fancy Earrings">
 		<!-- Max MP +64, Additional Damage to the Giants +5%, Vampiric Rage +5% -->
+		<icon>icon.glossy_earing_of_ramona</icon>
 	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
-	<icon>icon.skillboss</icon>
 	<operateType>P</operateType>
 	<targetType>SELF</targetType>
 		<effects>
@@ -933,8 +927,8 @@
 	</skill>
 	<skill id="16751" toLevel="1" name="Helios' Majestic Earrings">
 		<!-- Max MP +64, Additional Damage to the Giants +5%, Vampiric Rage +5% -->
+		<icon>icon.grand_earing_of_helios</icon>
 	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
-	<icon>icon.skillboss</icon>
 	<operateType>P</operateType>
 	<targetType>SELF</targetType>
 		<effects>
@@ -949,8 +943,8 @@
 	</skill>
 	<skill id="16752" toLevel="1" name="Harnak's Deformed Necklace">
 		<!-- Max MP +79, Skill Cooldown -10%, Additional Damage to the Giants +5% -->
+		<icon>icon.transform_necklace_of_harnak</icon>
 	<!-- Take it to Rafforty to exchange for the Source of the Emperor Exchange. MP +79, Additional Damage to the Giants +5%, Skill Cooldown -10%. Enchantment, Augment, Crystallization not possible -->
-	<icon>icon.skill16752</icon>
 	<operateType>P</operateType>
 	<targetType>SELF</targetType>
 		<effects>
@@ -971,8 +965,8 @@
 	</skill>
 	<skill id="16753" toLevel="1" name="Mimir's Worn Ring">
 		<!-- Max MP +42, P. Critical Damage +15%, Additional Damage to the Giants +5% -->
+		<icon>icon.old_ring_of_mimir</icon>
 	<!-- Take it to Rafforty to exchange for the Source of the Emperor. MP +42, Additional Damage to the Giants +5%, P. Critical Damage +15%. Effect does not stack with identical ones. Enchantment, Augment, Crystallization not possible -->
-	<icon>icon.skill16753</icon>
 	<operateType>P</operateType>
 	<targetType>SELF</targetType>
 		<effects>
@@ -987,8 +981,8 @@
 	</skill>
 	<skill id="16754" toLevel="1" name="Forgotten Ring of the Core">
 		<!-- Max MP +39, M. Critical Damage +15%, Additional Damage to the Giants +5% -->
+		<icon>icon.forgotten_ring_of_core</icon>
 	<!-- Take it to Rafforty to exchange for the Source of the Emperor. MP +39, Additional Damage to the Giants +5%, M. Critical Damage +15%. Effect does not stack with identical ones. Enchantment, Augment, Crystallization not possible -->
-	<icon>icon.skill16754</icon>
 	<operateType>P</operateType>
 	<targetType>SELF</targetType>
 		<effects>
@@ -1003,6 +997,7 @@
 	</skill>
 	<skill id="16755" toLevel="1" name="Activate.Paralysis">
 		<!-- Body is paralyzed and begins to stiffen. -->
+		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -1010,7 +1005,6 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<basicProperty>MAGIC</basicProperty>
 		<trait>PARALYZE</trait>
-		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1032,6 +1026,7 @@
 	</skill>
 	<skill id="16756" toLevel="1" name="Activate.Knock Down">
 		<!-- Knocked down to the ground. -->
+		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -1039,7 +1034,6 @@
 		<activateRate>120</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<trait>KNOCKDOWN</trait>
-		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1105,7 +1099,6 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="16760" toLevel="1" name="Giant's Vitality Recovery">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<castRange>1200</castRange>
@@ -1216,7 +1209,6 @@
 	</skill>
 	<skill id="16771" toLevel="1" name="Death Lift">
 		<!-- Lifts the target while dealing damage -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<castRange>40</castRange>
@@ -1226,7 +1218,6 @@
 		<effectPoint>-150</effectPoint>
 	</skill>
 	<skill id="16772" toLevel="1" name="Fatal Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<castRange>40</castRange>
@@ -1236,7 +1227,6 @@
 		<effectPoint>-100</effectPoint>
 	</skill>
 	<skill id="16773" toLevel="1" name="Unholy Spike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<castRange>900</castRange>
@@ -1256,7 +1246,6 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16775" toLevel="1" name="Power Shot">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<castRange>600</castRange>

@@ -821,38 +821,38 @@
 	</item>
 	<item id="24135" name="Dark Assassin Top" type="EtcItem">
 		<!-- Take 4 parts of the Dark Assassin Suit (tunic, stockings, gloves, boots) to the Dimensional Merchant to trade in for an Appearance Stone: Dark Assassin Suit. -->
+		<set name="icon" val="BranchIcon.Icon.etc_dark_suit_upbody_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="icon" val="BranchIcon.Icon.etc_dark_suit_upbody_i00" />
 	</item>
 	<item id="24136" name="Dark Assassin Pants" type="EtcItem">
 		<!-- Take 4 parts of the Dark Assassin Suit (tunic, stockings, gloves, boots) to the Dimensional Merchant to trade in for an Appearance Stone: Dark Assassin Suit. -->
+		<set name="icon" val="BranchIcon.Icon.etc_dark_suit_downbody_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="icon" val="BranchIcon.Icon.etc_dark_suit_downbody_i00" />
 	</item>
 	<item id="24137" name="Dark Assassin Gloves" type="EtcItem">
 		<!-- Take 4 parts of the Dark Assassin Suit (tunic, stockings, gloves, boots) to the Dimensional Merchant to trade in for an Appearance Stone: Dark Assassin Suit. -->
+		<set name="icon" val="BranchIcon.Icon.etc_dark_suit_gloves_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="icon" val="BranchIcon.Icon.etc_dark_suit_gloves_i00" />
 	</item>
 	<item id="24138" name="Dark Assassin Boots" type="EtcItem">
 		<!-- Take 4 parts of the Dark Assassin Suit (tunic, stockings, gloves, boots) to the Dimensional Merchant to trade in for an Appearance Stone: Dark Assassin Suit. -->
+		<set name="icon" val="BranchIcon.Icon.etc_dark_suit_shoes_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="icon" val="BranchIcon.Icon.etc_dark_suit_shoes_i00" />
 	</item>
 	<item id="24139" name="Starlight Jar" type="EtcItem">
 		<!-- Stars twinkle inside a star-shaped jar. Ingredient needed to craft a Zodiac Agathion bracelet with a 100% success rate. -->
+		<set name="icon" val="BranchIcon.Icon.etc_sign_agathion_feed_yellow_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="icon" val="BranchIcon.Icon.etc_sign_agathion_feed_yellow_i00" />
 	</item>
 	<item id="24140" name="Agathion - Three-headed Dragon" type="Armor">
 		<!-- Summons a cute Three-headed Dragon. Cannot be exchanged, dropped, or sold. -->
@@ -1281,7 +1281,7 @@
 	</item>
 	<item id="24188" name="Agathion - Twinkling Virgo" additionalName="Stage 1" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 2250 sec.). 2. Attribute Enchant: Attribute Resistance +5. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1298,7 +1298,7 @@
 	</item>
 	<item id="24189" name="Agathion - Twinkling Virgo" additionalName="Stage 2" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 2100 sec.). 2. Balanced Power: MEN +1. 2. Attribute Enchant: Attribute Resistance +5. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1315,7 +1315,7 @@
 	</item>
 	<item id="24190" name="Agathion - Twinkling Virgo" additionalName="Stage 3" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1950 sec.). 2. Balanced Power: MEN +1. 2. Attribute Enchant: Attribute Resistance +10. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1332,7 +1332,7 @@
 	</item>
 	<item id="24191" name="Agathion - Twinkling Virgo" additionalName="Stage 4" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1800 sec.). 2. Balanced Power: CON/ MEN +1. 2. Attribute Enchant: Attribute Resistance +10. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1349,7 +1349,7 @@
 	</item>
 	<item id="24192" name="Agathion - Twinkling Virgo" additionalName="Stage 5" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1650 sec.). 2. Balanced Power: CON/ MEN +1. 2. Attribute Enchant: Attribute Resistance +15. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1366,7 +1366,7 @@
 	</item>
 	<item id="24193" name="Agathion - Twinkling Virgo" additionalName="Stage 6" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1500 sec.). 2. Balanced Power: CON/ WIT/ MEN +1. 2. Attribute Enchant: Attribute Resistance +15. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1383,7 +1383,7 @@
 	</item>
 	<item id="24194" name="Agathion - Twinkling Virgo" additionalName="Stage 7" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1350 sec.). 2. Balanced Power: CON/ WIT/ MEN +1. 2. Attribute Enchant: Attribute Resistance +20. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1400,7 +1400,7 @@
 	</item>
 	<item id="24195" name="Agathion - Twinkling Virgo" additionalName="Stage 8" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1200 sec.). 2. Balanced Power: CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Attribute Resistance +20. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1417,7 +1417,7 @@
 	</item>
 	<item id="24196" name="Agathion - Twinkling Virgo" additionalName="Stage 9" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1050 sec.). 2. Balanced Power: CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Attribute Resistance +25. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1434,7 +1434,7 @@
 	</item>
 	<item id="24197" name="Agathion - Twinkling Virgo" additionalName="Stage 10" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 900 sec.). 2. Balanced Power: INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Attribute Resistance +25. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1451,7 +1451,7 @@
 	</item>
 	<item id="24198" name="Agathion - Twinkling Virgo" additionalName="Stage 11" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 750 sec.). 2. Balanced Power: INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Attribute Resistance +30. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1468,7 +1468,7 @@
 	</item>
 	<item id="24199" name="Agathion - Twinkling Virgo" additionalName="Stage 12" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 600 sec.). 2. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Attribute Resistance +30. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />

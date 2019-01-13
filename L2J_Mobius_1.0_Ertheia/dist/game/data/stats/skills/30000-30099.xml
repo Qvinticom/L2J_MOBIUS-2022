@@ -165,6 +165,7 @@
 	</skill>
 	<skill id="30002" toLevel="3" name="Storm Sign">
 		<!-- M. Def. - 30%, Speed - 70. -->
+		<icon>icon.skill30027</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -177,7 +178,6 @@
 			<value level="2"></value>
 			<value level="3">STORM_SIGN1</value>
 		</abnormalVisualEffect>
-		<icon>icon.skill30027</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -298,11 +298,11 @@
 	</skill>
 	<skill id="30004" toLevel="25" name="Hydro Strike">
 		<!-- Attacks target with 57 Power added to M. Atk., and knocks out target in a windy trap for 5 sec. Must be blended into wind. Requires a sword or blunt weapon. -->
+		<icon>icon.skill30004</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>5</abnormalTime>
 		<abnormalVisualEffect>WIND_STUN</abnormalVisualEffect>
-		<icon>icon.skill30004</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -416,11 +416,11 @@
 	</skill>
 	<skill id="30005" fromLevel="4" toLevel="4" name="Storm Sign">
 		<!-- M. Def. - 50%, Speed - 100. -->
+		<icon>icon.skill30027</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STORM_SIGN</abnormalType>
 		<abnormalVisualEffect>STORM_SIGN2</abnormalVisualEffect>
-		<icon>icon.skill30027</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -610,8 +610,8 @@
 	</skill>
 	<skill id="30008" toLevel="5" name="Wind Blend">
 		<!-- for 10 sec., blends into the wind and Speed + 70. Canceled when using normal attacks or attack skills. Requires a sword or blunt weapon. -->
-		<operateType>A2</operateType>
 		<icon>icon.skill30008</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -981,10 +981,10 @@
 	</skill>
 	<skill id="30014" toLevel="15" name="Compelling Wind">
 		<!-- Sends a breeze that pushes target toward you. Requires a sword / blunt weapon. -->
+		<icon>icon.skill30014</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
-		<icon>icon.skill30014</icon>
 		<effectPoint>-1371</effectPoint>
 		<operateType>A2</operateType>
 		<mpConsume>
@@ -1023,10 +1023,10 @@
 	</skill>
 	<skill id="30015" toLevel="1" name="Mass Compelling Wind">
 		<!-- Sends a breeze that pushes target and nearby enemies toward you. -->
+		<icon>icon.skill0028</icon>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
-		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
 		<castRange>1100</castRange>
 		<hitTime>1200</hitTime>
@@ -1402,7 +1402,6 @@
 	</skill>
 	<skill id="30023" toLevel="1" name="Decoy Lock">
 		<!-- Cannot change target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>-102</effectPoint>
@@ -1788,7 +1787,15 @@
 	</skill>
 	<skill id="30042" toLevel="13" name="Eminent Quick Recovery">
 		<!-- Max. MP + 33, MP Recovery Bonus + 1, and M. Skill Cooldown - 10%. -->
-		<icon>icon.skill10504</icon>
+		<icon>
+			<value level="1">icon.skill11004</value>
+			<value level="2">icon.skill10504</value>
+			<value level="3">icon.skill10504</value>
+			<value level="4">icon.skill10504</value>
+			<value level="5">icon.skill10504</value>
+			<value level="6">icon.skill10504</value>
+			<value level="7">icon.skill10504</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp" fromLevel="4" toLevel="13">

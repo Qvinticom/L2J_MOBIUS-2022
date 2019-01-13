@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4700" toLevel="13" name="Gift of Queen">
 		<!-- Queen's buff magic temporarily increases party members' P. Atk. and Accuracy. Effect 1. -->
+		<icon>icon.skill1331</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -50,7 +51,6 @@
 			<value level="13">692</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1331</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">57</value>
@@ -209,6 +209,7 @@
 	</skill>
 	<skill id="4702" toLevel="13" name="Blessing of Seraphim">
 		<!-- Buff magic used by the Seraphim the Unicorn. Party members' MP Recovery Bonus increases temporarily. Effect 1. -->
+		<icon>icon.skill1332</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -257,7 +258,6 @@
 			<value level="13">692</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1332</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">57</value>
@@ -320,6 +320,7 @@
 	</skill>
 	<skill id="4703" toLevel="13" name="Gift of Seraphim">
 		<!-- Seraphim the Unicorn's buff magic temporarily reduces party members' magic skill recovery time. Effect 1. -->
+		<icon>icon.skill1332</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -368,7 +369,6 @@
 			<value level="13">692</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1332</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">57</value>
@@ -510,6 +510,7 @@
 	</skill>
 	<skill id="4705" toLevel="13" name="Curse of Shade">
 		<!-- Nightshade's debuff magic. Provokes the enemy to attack and then casts a curse to momentarily decrease their P. Def. and M. Def. Effect 1. -->
+		<icon>icon.skill1333</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -563,7 +564,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1333</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -662,6 +662,7 @@
 	</skill>
 	<skill id="4706" toLevel="13" name="Mass Curse of Shade">
 		<!-- Nightshade's debuff magic. Provokes nearby enemies to attack and then casts a curse to momentarily decrease their P. Def. and M. Def. Effect 1. -->
+		<icon>icon.skill1333</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -715,7 +716,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1333</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -894,6 +894,7 @@
 	</skill>
 	<skill id="4708" toLevel="17" name="Cursed Strike">
 		<!-- Physical attack used by Cursed Man to inflict damage and stun target simultaneously. Power 1046. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -922,7 +923,6 @@
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -1091,6 +1091,7 @@
 	</skill>
 	<skill id="4710" toLevel="12" name="Wild Stun">
 		<!-- Debuff attack used by Hatchling of Wind/Strider. Inflicts damage and stun simultaneously. Power 16. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1115,7 +1116,6 @@
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1100</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -1175,6 +1175,7 @@
 	</skill>
 	<skill id="4711" toLevel="12" name="Wild Defense">
 		<!-- Wind Strider's defensive skill to escape from a crisis situation. Increases P. Def. and M. Def. significantly while greatly reducing Atk. Spd. and Speed. -->
+		<icon>icon.skill0110</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ULTIMATE_BUFF</abnormalType>
@@ -1208,7 +1209,6 @@
 			<value level="12">709</value>
 		</effectPoint>
 		<hitTime>1100</hitTime>
-		<icon>icon.skill0110</icon>
 		<magicLvl>
 			<value level="1">10</value>
 			<value level="2">20</value>
@@ -1267,6 +1267,7 @@
 	</skill>
 	<skill id="4712" toLevel="12" name="Bright Burst">
 		<!-- Star Hatchling/Strider's attack skill. Power 6. -->
+		<icon>icon.skill4712</icon>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>
@@ -1285,7 +1286,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill4712</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -1342,6 +1342,7 @@
 	</skill>
 	<skill id="4713" toLevel="12" name="Bright Heal">
 		<!-- Star Hatchling/Strider's recovery magic. Regenerates the pet's HP. Power 33. -->
+		<icon>icon.skill4713</icon>
 		<coolTime>1000</coolTime>
 		<effectPoint>
 			<value level="1">33</value>
@@ -1358,7 +1359,6 @@
 			<value level="12">366</value>
 		</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill4713</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -1437,6 +1437,7 @@
 	</skill>
 	<skill id="4717" toLevel="12" name="Heal Trick">
 		<!-- A recovery magic used by a pet. Regenerates master's HP just a little bit. Power 9. -->
+		<icon>icon.skill4717</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">9</value>
@@ -1454,7 +1455,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill4717</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -1498,6 +1498,7 @@
 	</skill>
 	<skill id="4718" toLevel="12" name="Greater Heal Trick">
 		<!-- Recovery magic used by a pet. Regenerates its master's HP. Power 37. -->
+		<icon>icon.skill4718</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">62</value>
@@ -1515,7 +1516,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill4718</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -1849,6 +1849,7 @@
 	</skill>
 	<skill id="4724" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -1873,7 +1874,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -1931,6 +1931,7 @@
 	</skill>
 	<skill id="4725" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -1955,7 +1956,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -2013,6 +2013,7 @@
 	</skill>
 	<skill id="4726" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -2037,7 +2038,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -2095,6 +2095,7 @@
 	</skill>
 	<skill id="4727" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -2119,7 +2120,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -2177,6 +2177,7 @@
 	</skill>
 	<skill id="4728" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -2201,7 +2202,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -3134,6 +3134,7 @@
 	</skill>
 	<skill id="4744" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3158,7 +3159,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -3216,6 +3216,7 @@
 	</skill>
 	<skill id="4745" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3240,7 +3241,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -3298,6 +3298,7 @@
 	</skill>
 	<skill id="4746" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3322,7 +3323,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -3380,6 +3380,7 @@
 	</skill>
 	<skill id="4747" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3404,7 +3405,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -3462,6 +3462,7 @@
 	</skill>
 	<skill id="4748" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -3486,7 +3487,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4124,6 +4124,7 @@
 	</skill>
 	<skill id="4759" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4147,7 +4148,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4205,6 +4205,7 @@
 	</skill>
 	<skill id="4760" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4228,7 +4229,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4286,6 +4286,7 @@
 	</skill>
 	<skill id="4761" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4309,7 +4310,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4367,6 +4367,7 @@
 	</skill>
 	<skill id="4762" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4390,7 +4391,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4448,6 +4448,7 @@
 	</skill>
 	<skill id="4763" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4471,7 +4472,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4814,6 +4814,7 @@
 	</skill>
 	<skill id="4769" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4837,7 +4838,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4895,6 +4895,7 @@
 	</skill>
 	<skill id="4770" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4918,7 +4919,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -4976,6 +4976,7 @@
 	</skill>
 	<skill id="4771" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -4999,7 +5000,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -5057,6 +5057,7 @@
 	</skill>
 	<skill id="4772" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -5080,7 +5081,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -5138,6 +5138,7 @@
 	</skill>
 	<skill id="4773" toLevel="12" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -5161,7 +5162,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>

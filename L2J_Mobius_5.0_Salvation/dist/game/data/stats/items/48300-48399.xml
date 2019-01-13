@@ -46,7 +46,7 @@
 	</item>
 	<item id="48305" name="Blessed Antharas' Earring - Shield" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. P. Def. +4% -->
-		<set name="icon" val="BranchIcon.icon.g_bm_elmore_cloak_normal" />
+		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -62,7 +62,7 @@
 	</item>
 	<item id="48306" name="Blessed Antharas' Earring - Earth" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. M. Def. +4% -->
-		<set name="icon" val="BranchIcon.icon.g_bm_perios_cloak_normal" />
+		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -78,7 +78,7 @@
 	</item>
 	<item id="48307" name="Blessed Antharas' Earring - Pure" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Defenses +25 -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -94,7 +94,7 @@
 	</item>
 	<item id="48308" name="Blessed Valakas' Necklace - Body" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. <Craft Effect>. Max HP +5% -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -110,7 +110,7 @@
 	</item>
 	<item id="48309" name="Blessed Valakas' Necklace - Mind" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power -3%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. <Craft Effect>. Skill Cooldown -3% -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -126,7 +126,7 @@
 	</item>
 	<item id="48310" name="Blessed Valakas' Necklace - Barrier" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. <Craft Effect>. Fixed Damage Resistance +5% -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -142,7 +142,7 @@
 	</item>
 	<item id="48311" name="Lindvior's Earring - Shield" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Def. +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Can use Knock Back/ Knock Down Cancellation. Momentarily increases Knock Back/ Knock Down Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. P. Def. +4% -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -158,7 +158,7 @@
 	</item>
 	<item id="48312" name="Lindvior's Earring - Earth" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Def. +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Can use Knock Back/ Knock Down Cancellation. Momentarily increases Knock Back/ Knock Down Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. M. Def. +4% -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -174,7 +174,7 @@
 	</item>
 	<item id="48313" name="Lindvior's Earring - Pure" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Def. +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Can use Knock Back/ Knock Down Cancellation. Momentarily increases Knock Back/ Knock Down Resistance +100%. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Defenses +25 -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -672,7 +672,7 @@
 	</item>
 	<item id="48361" name="Adventure Guild Talisman" type="Armor">
 		<!-- Adventure Guild Talisman -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.etc_blackbird_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />

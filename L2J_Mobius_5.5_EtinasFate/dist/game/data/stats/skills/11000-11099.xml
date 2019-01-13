@@ -38,6 +38,7 @@
 	</skill>
 	<skill id="11001" toLevel="10" name="Superior Weapon Mastery">
 		<!-- M. Atk. +$s1, additional M. Atk. +$s2, Casting Spd. +$s3. Depending on your INT, the Cooldown resets or the duration increases by $s4 times. -->
+		<icon>icon.skill11251</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -50,7 +51,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill11251</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -84,6 +84,7 @@
 	</skill>
 	<skill id="11002" toLevel="10" name="Superior Robe Mastery">
 		<!-- Max HP +$s1, P. Def. +$s2, and M. Def. +$s3 when equipped with a Robe. -->
+		<icon>icon.skill11252</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -96,7 +97,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill11252</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -136,6 +136,7 @@
 	</skill>
 	<skill id="11003" toLevel="10" name="Superior Anti Magic">
 		<!-- M. Def. +$s1, Magic Damage Resistance +$s2. INT +$s3. -->
+		<icon>icon.skill10004</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -148,7 +149,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill10004</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -179,8 +179,8 @@
 	</skill>
 	<skill id="11004" toLevel="1" name="Superior Sigil Mastery">
 		<!-- When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery Bonus by 20%. -->
-		<magicLvl>85</magicLvl>
 		<icon>icon.skill11791</icon>
+		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -202,9 +202,9 @@
 	</skill>
 	<skill id="11005" toLevel="1" name="Superior Wizard Mastery">
 		<!-- M. Atk./ Casting Spd./ M. Critical Rate +6%. Decreases skill MP Consumption by 6%. INT +2. -->
+		<icon>icon.skill11253</icon>
 		<magicLvl>90</magicLvl>
 		<operateType>P</operateType>
-		<icon>icon.skill11253</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MAtk">
@@ -232,8 +232,8 @@
 	</skill>
 	<skill id="11006" toLevel="1" name="Superior Mental Attack Resistance">
 		<!-- Poison/ Bleed/ Hold/ Sleep/ Mental Attack Resistance +30%. INT +2. -->
-		<magicLvl>95</magicLvl>
 		<icon>icon.skill11006</icon>
+		<magicLvl>95</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -916,7 +916,7 @@
 		</effects>
 	</skill>
 	<skill id="11017" toLevel="11" name="Elemental Crash">
-		<icon>icon.skill11017</icon>
+		<icon>icon.skill11018</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11017</reuseDelayGroup>
@@ -1033,7 +1033,7 @@
 		</effects>
 	</skill>
 	<skill id="11018" toLevel="11" name="Elemental Crash (Fire)">
-		<icon>icon.skill11017</icon>
+		<icon>icon.skill11018</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
@@ -1123,7 +1123,7 @@
 		</effects>
 	</skill>
 	<skill id="11019" toLevel="11" name="Elemental Crash (Water)">
-		<icon>icon.skill11017</icon>
+		<icon>icon.skill11018</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
@@ -1213,7 +1213,7 @@
 		</effects>
 	</skill>
 	<skill id="11020" toLevel="11" name="Elemental Crash (Wind)">
-		<icon>icon.skill11017</icon>
+		<icon>icon.skill11018</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
@@ -1303,7 +1303,7 @@
 		</effects>
 	</skill>
 	<skill id="11021" toLevel="11" name="Elemental Crash (Earth)">
-		<icon>icon.skill11017</icon>
+		<icon>icon.skill11018</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
@@ -1393,7 +1393,7 @@
 		</effects>
 	</skill>
 	<skill id="11022" toLevel="11" name="Elemental Crash (Holy)">
-		<icon>icon.skill11017</icon>
+		<icon>icon.skill11018</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11017</reuseDelayGroup>
 		<magicLvl>
@@ -1593,10 +1593,10 @@
 		</effects>
 	</skill>
 	<skill id="11024" toLevel="11" name="Volcanic Destruction">
+		<icon>icon.skill11024</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
-		<icon>icon.skill11023</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -1700,11 +1700,11 @@
 		</effects>
 	</skill>
 	<skill id="11025" toLevel="11" name="Icicle Destruction">
+		<icon>icon.skill11025</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<abnormalVisualEffect>ICE_ELEMENTALDESTROY</abnormalVisualEffect>
-		<icon>icon.skill11023</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -1807,10 +1807,10 @@
 		</effects>
 	</skill>
 	<skill id="11026" toLevel="11" name="Updraft Destruction">
+		<icon>icon.skill11017</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
-		<icon>icon.skill11023</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -1908,10 +1908,10 @@
 		</effects>
 	</skill>
 	<skill id="11027" toLevel="11" name="Lockshard Destruction">
+		<icon>icon.skill11027</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
-		<icon>icon.skill11023</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -2030,10 +2030,10 @@
 		</effects>
 	</skill>
 	<skill id="11028" toLevel="11" name="Void Destruction">
+		<icon>icon.skill19316</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
-		<icon>icon.skill11023</icon>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -2334,6 +2334,7 @@
 	</skill>
 	<skill id="11033" toLevel="3" name="Damaged Area">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2343,7 +2344,6 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill11032</icon>
 		<operateType>A4</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-696</effectPoint>
@@ -2373,9 +2373,9 @@
 		</effects>
 	</skill>
 	<skill id="11034" toLevel="8" name="Elemental Blast">
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11034</reuseDelayGroup>
@@ -2473,9 +2473,9 @@
 		</effects>
 	</skill>
 	<skill id="11035" toLevel="8" name="Elemental Blast (Fire)">
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2555,9 +2555,9 @@
 		</effects>
 	</skill>
 	<skill id="11036" toLevel="8" name="Elemental Blast (Water)">
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2637,9 +2637,9 @@
 		</effects>
 	</skill>
 	<skill id="11037" toLevel="8" name="Elemental Blast (Wind)">
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2719,9 +2719,9 @@
 		</effects>
 	</skill>
 	<skill id="11038" toLevel="8" name="Elemental Blast (Earth)">
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2801,9 +2801,9 @@
 		</effects>
 	</skill>
 	<skill id="11039" toLevel="8" name="Elemental Blast (4 Elements)">
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -2884,9 +2884,9 @@
 		</effects>
 	</skill>
 	<skill id="11040" toLevel="8" name="Elemental Storm">
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11040</reuseDelayGroup>
@@ -2984,9 +2984,9 @@
 		</effects>
 	</skill>
 	<skill id="11041" toLevel="8" name="Elemental Storm (Fire)">
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>10</attributeValue> <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3066,9 +3066,9 @@
 		</effects>
 	</skill>
 	<skill id="11042" toLevel="8" name="Elemental Storm (Water)">
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>10</attributeValue>  <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3148,9 +3148,9 @@
 		</effects>
 	</skill>
 	<skill id="11043" toLevel="8" name="Elemental Storm (Wind)">
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>10</attributeValue>  <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3230,9 +3230,9 @@
 		</effects>
 	</skill>
 	<skill id="11044" toLevel="8" name="Elemental Final Storm (Earth)">
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>10</attributeValue>  <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3312,9 +3312,9 @@
 		</effects>
 	</skill>
 	<skill id="11045" toLevel="8" name="Elemental Final Storm (Holy)">
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -4799,6 +4799,7 @@
 		</effects>
 	</skill>
 	<skill id="11067" toLevel="4" name="Quadruple Elemental Blast">
+		<icon>icon.skill11067</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -4810,7 +4811,6 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill11067</icon>
 		<operateType>A2</operateType>
 		<trait>DERANGEMENT</trait>
 		<magicLvl>
@@ -4895,10 +4895,10 @@
 		</effects>
 	</skill>
 	<skill id="11068" toLevel="4" name="Burst Casting">
+		<icon>icon.skill11068</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DC_MOD</abnormalType>
-		<icon>icon.skill11068</icon>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -5280,6 +5280,7 @@
 	</skill>
 	<skill id="11081" toLevel="3" name="Elemental Spike - Decrease Holy Resistance">
 		<!-- Decreases Holy Attribute Resistance by $s2 for $s1. -->
+		<icon>icon.skill11011</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
 			<value level="1">7</value>
@@ -5287,7 +5288,6 @@
 			<value level="3">15</value>
 		</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_HOLY</abnormalType>
-		<icon>icon.skill11011</icon>
 		<activateRate>100</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<operateType>A4</operateType>
@@ -5447,6 +5447,7 @@
 	</skill>
 	<skill id="11088" toLevel="3" name="Elemental Crash (Water)">
 		<!-- Decreases target's Speed. -->
+		<icon>icon.skill11017</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -5454,7 +5455,6 @@
 			<value level="3">5</value>
 		</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
-		<icon>icon.skill11017</icon>
 		<activateRate>99</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
@@ -5560,6 +5560,7 @@
 	</skill>
 	<skill id="11092" toLevel="3" name="Damaged Area">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -5569,7 +5570,6 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
-		<icon>icon.skill11032</icon>
 		<operateType>A4</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-711</effectPoint>

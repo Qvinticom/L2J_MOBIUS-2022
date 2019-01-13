@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="23300" toLevel="1" name="Ghost Piercing">
 		<!-- Envelops with a specter to inflict 300 dark damage every second for 10 seconds. -->
+		<icon>icon.skill0773</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -17,7 +18,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>1</lvlBonusRate>
-		<icon>icon.skill0773</icon>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -30,11 +30,11 @@
 	</skill>
 	<skill id="23301" toLevel="1" name="Dimensional Door A">
 		<!-- Summons a dimensional door that moves the PC to the Dimensional Door B. -->
+		<icon>Icon.skill1050</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>Icon.skill1050</icon>
 		<hitTime>4000</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -42,11 +42,11 @@
 	</skill>
 	<skill id="23302" toLevel="1" name="Dimensional Door B">
 		<!-- Summons a dimensional door that moves the PC to the Dimensional Door A. -->
+		<icon>Icon.skill1050</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>Icon.skill1050</icon>
 		<hitTime>4000</hitTime>
 		<reuseDelay>1000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -82,6 +82,7 @@
 	</skill>
 	<skill id="23305" toLevel="1" name="Zinyanzi Agathion - Yunbokhwan">
 		<!-- Restores all HP/MP/CP and becomes invincible for 5 seconds. But can only be used when HP is below 30%. -->
+		<icon>icon.skill_agathion_special</icon>
 		<operateType>A2</operateType>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -93,7 +94,6 @@
 		<abnormalLvl>82</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>icon.skill_agathion_special</icon>
 		<hitTime>200</hitTime>
 		<reuseDelay>43200000</reuseDelay>
 		<isMagic>2</isMagic>
@@ -110,12 +110,12 @@
 	</skill>
 	<skill id="23306" toLevel="1" name="Zinyanzi Agathion Cute Trick">
 		<!-- Able to see the summoned Zinyanzi perform cute tricks. -->
+		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -126,12 +126,12 @@
 	</skill>
 	<skill id="23307" toLevel="1" name="Yanzi Agathion Cute Trick">
 		<!-- Able to see the summoned Yanzi perform cute tricks. -->
+		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -142,10 +142,10 @@
 	</skill>
 	<skill id="23308" toLevel="1" name="Totem's Energy - Body">
 		<!-- Increases HP Recovery Bonus by 30% and decreases damage from the topography by 80% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
+		<icon>BranchSys2.icon.totem_of_body</icon>
 		<abnormalTime>300</abnormalTime>
 		<affectRange>400</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
-		<icon>BranchSys2.icon.totem_of_body</icon>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>ENERGY_OF_TOTEM_1</abnormalType>
@@ -171,10 +171,10 @@
 	</skill>
 	<skill id="23309" toLevel="1" name="Totem's Energy - Spirit">
 		<!-- Increases MP Recovery Bonus by 30% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
+		<icon>BranchSys2.icon.totem_of_mind</icon>
 		<abnormalTime>300</abnormalTime>
 		<affectRange>400</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
-		<icon>BranchSys2.icon.totem_of_mind</icon>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>ENERGY_OF_TOTEM_2</abnormalType>
@@ -196,10 +196,10 @@
 	</skill>
 	<skill id="23310" toLevel="1" name="Totem's Energy - Courage">
 		<!-- Increases P. Def. by 15% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
+		<icon>BranchSys2.icon.totem_of_bravery</icon>
 		<abnormalTime>300</abnormalTime>
 		<affectRange>400</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
-		<icon>BranchSys2.icon.totem_of_bravery</icon>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>ENERGY_OF_TOTEM_3</abnormalType>
@@ -221,10 +221,10 @@
 	</skill>
 	<skill id="23311" toLevel="1" name="Totem's Energy - Fortitude">
 		<!-- Increases M. Def. by 25% through the mysterious totem's energy. The energy disappears when the totem becomes out of range. -->
+		<icon>BranchSys2.icon.totem_of_fortitude</icon>
 		<abnormalTime>300</abnormalTime>
 		<affectRange>400</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
-		<icon>BranchSys2.icon.totem_of_fortitude</icon>
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>ENERGY_OF_TOTEM_4</abnormalType>
@@ -277,6 +277,7 @@
 	</skill>
 	<skill id="23313" toLevel="5" name="Action Prohibit Immunity">
 		<!-- Increases Resistance to action-inhibiting attacks by 20%. -->
+		<icon>icon.skill0386</icon>
 		<operateType>A4</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -299,13 +300,13 @@
 			<value level="4">4</value>
 			<value level="5">4</value>
 		</abnormalTime>
-		<icon>icon.skill0386</icon>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23314" toLevel="5" name="Control Prohibit Immunity">
 		<!-- Increases Resistance to control-inhibiting attacks by 20%. -->
+		<icon>icon.skill0388</icon>
 		<operateType>A4</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -322,7 +323,6 @@
 			<value level="4">4</value>
 			<value level="5">4</value>
 		</abnormalTime>
-		<icon>icon.skill0388</icon>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -377,6 +377,7 @@
 	</skill>
 	<skill id="23318" toLevel="1" name="Cat the Ranger Boost">
 		<!-- Recovers the master's HP by 10%. For 1 minute(s), receives power from Cat the Ranger to increase the master's Debuff Resistance by 80%, Buff-canceling Attack Resistance by 40%, Speed by 10%, P. Def. by 20%, and M. Def. by 20%. Does not receive preemptive attacks from monsters. Cooldown 10 minutes. -->
+		<icon>BranchSys2.icon.action5016</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -389,7 +390,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>BranchSys2.icon.action5016</icon>
 		<reuseDelay>600000</reuseDelay>
 		<isMagic>1</isMagic>
 		<castRange>900</castRange>
@@ -398,6 +398,7 @@
 	</skill>
 	<skill id="23319" toLevel="1" name="Blood Seeker">
 		<!-- HP decreases from bleeding momentarily. -->
+		<icon>BranchSys2.icon.br_wp_Caladbulg_i00</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -407,7 +408,6 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<castRange>80</castRange>
 		<effectRange>200</effectRange>
-		<icon>BranchSys2.icon.br_wp_Caladbulg_i00</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -438,6 +438,7 @@
 	</skill>
 	<skill id="23320" toLevel="1" name="Greedy Throat">
 		<!-- HP decreases from bleeding momentarily. -->
+		<icon>BranchSys2.icon.br_wp_habus_knife_i00</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -447,7 +448,6 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<castRange>80</castRange>
 		<effectRange>200</effectRange>
-		<icon>BranchSys2.icon.br_wp_habus_knife_i00</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -475,6 +475,7 @@
 	</skill>
 	<skill id="23321" toLevel="1" name="Draconic Evolver">
 		<!-- Afflicted with Fear and moving against own will. -->
+		<icon>BranchSys2.icon.br_wp_tiatenon_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -485,7 +486,6 @@
 		<castRange>80</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
-		<icon>BranchSys2.icon.br_wp_tiatenon_i00</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -507,6 +507,7 @@
 	</skill>
 	<skill id="23322" toLevel="10" name="Demonic Desire">
 		<!-- P. Def. decreases momentarily. -->
+		<icon>BranchSys2.icon.br_wp_astarot_i00</icon>
 		<abnormalLvl>13</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -526,7 +527,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
-		<icon>BranchSys2.icon.br_wp_astarot_i00</icon>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -539,6 +539,7 @@
 	</skill>
 	<skill id="23323" toLevel="10" name="Fury of Darkness">
 		<!-- Momentarily P. Def. decreases. Stunned and unable to move. -->
+		<icon>BranchSys2.icon.br_wp_tirbing_i00</icon>
 		<abnormalLvl>13</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -557,7 +558,6 @@
 		<reuseDelay>10000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>BranchSys2.icon.br_wp_tirbing_i00</icon>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -574,11 +574,11 @@
 	</skill>
 	<skill id="23324" toLevel="1" name="Jet Black Typhoon">
 		<!-- Casting Spd. and Wind P. Atk. increases momentarily. -->
+		<icon>BranchSys2.icon.br_wp_wind_of_mardil_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>800</effectPoint>
-		<icon>BranchSys2.icon.br_wp_wind_of_mardil_i00</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<isMagic>1</isMagic>
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -760,6 +760,7 @@
 	</skill>
 	<skill id="23333" toLevel="1" name="Agathion's New Year's Wish">
 		<!-- Through the power of the Lantern Agathion, Vitality is maintained and not consumed. -->
+		<icon>icon.etc_pi_gift_box_i03</icon>
 		<operateType>A2</operateType>
 		<abnormalType>VP_KEEP</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -771,7 +772,6 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>icon.etc_pi_gift_box_i03</icon>
 		<hitTime>2000</hitTime>
 		<coolTime>1000</coolTime>
 		<isMagic>4</isMagic>
@@ -786,12 +786,12 @@
 	</skill>
 	<skill id="23334" toLevel="1" name="Lantern Agathion Cute Trick">
 		<!-- Able to see the summoned Lantern's perform cute tricks. -->
+		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -802,6 +802,7 @@
 	</skill>
 	<skill id="23335" toLevel="1" name="Agathion's New Year's Wish">
 		<!-- Energy is maintained and not consumed through the Juju Agathion's strength. -->
+		<icon>icon.etc_pi_gift_box_i03</icon>
 		<operateType>A2</operateType>
 		<abnormalType>VP_KEEP</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -813,7 +814,6 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>icon.etc_pi_gift_box_i03</icon>
 		<hitTime>2000</hitTime>
 		<coolTime>1000</coolTime>
 		<isMagic>4</isMagic>
@@ -828,12 +828,12 @@
 	</skill>
 	<skill id="23336" toLevel="1" name="Juju Agathion Cute Trick">
 		<!-- You can see the summoned Juju's cute tricks. -->
+		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -1012,7 +1012,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23345" toLevel="1" name="Region Banishment">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>

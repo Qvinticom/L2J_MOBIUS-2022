@@ -22,6 +22,7 @@
 	</skill>
 	<skill id="3005" toLevel="1" name="Bleed">
 		<!-- Causes a scar that decreases HP. Effect 5. -->
+		<icon>icon.skill0223</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -29,7 +30,6 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>50</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>40</magicLvl>
@@ -56,7 +56,14 @@
 	</skill>
 	<skill id="3007" toLevel="6" name="Special Ability: Guidance">
 		<!-- Increases Accuracy. -->
-		<icon>icon.skill1240</icon>
+		<icon>
+			<value level="1">icon.skill1240</value>
+			<value level="2">icon.ensoul_big_old</value>
+			<value level="3">icon.ensoul_big_old</value>
+			<value level="4">icon.skill1240</value>
+			<value level="5">icon.ensoul_big_old</value>
+			<value level="6">icon.skill1240</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -83,7 +90,14 @@
 	</skill>
 	<skill id="3008" toLevel="6" name="Special Ability: Guidance">
 		<!-- Increases Accuracy by $s1. -->
-		<icon>icon.ensoul_big_old</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.ensoul_big_old</value>
+			<value level="3">icon.ensoul_big_old</value>
+			<value level="4">icon.ensoul_big_old</value>
+			<value level="5">icon.skill1240</value>
+			<value level="6">icon.ensoul_big_old</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -110,7 +124,17 @@
 	</skill>
 	<skill id="3009" toLevel="8" name="Special Ability: Evasion">
 		<!-- Increases Evasion by $s1. -->
-		<icon>icon.ensoul_big_old</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.ensoul_big_old</value>
+			<value level="3">icon.ensoul_big_old</value>
+			<value level="4">icon.skill0198</value>
+			<value level="5">icon.ensoul_big_old</value>
+			<value level="6">icon.skill0198</value>
+			<value level="7">icon.skill0198</value>
+			<value level="8">icon.skill0198</value>
+			<value level="9">icon.ensoul_big_old</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -168,7 +192,14 @@
 	</skill>
 	<skill id="3011" toLevel="6" name="Special Ability: Focus">
 		<!-- Increases Critical Rate by $s1. -->
-		<icon>icon.skill1077</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.skill1077</value>
+			<value level="3">icon.ensoul_big_old</value>
+			<value level="4">icon.skill1077</value>
+			<value level="5">icon.ensoul_big_old</value>
+			<value level="6">icon.skill1077</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -226,7 +257,13 @@
 	</skill>
 	<skill id="3013" toLevel="5" name="Special Ability: Health">
 		<!-- Increases Max HP by 25%. -->
-		<icon>icon.skill0211</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.skill0211</value>
+			<value level="3">icon.ensoul_big_old</value>
+			<value level="4">icon.skill0211</value>
+			<value level="5">icon.skill0211</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -288,7 +325,11 @@
 	</skill>
 	<skill id="3014" toLevel="3" name="Special Ability: Mana Up">
 		<!-- Increases Max MP by 30%. -->
-		<icon>icon.skill0213</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.skill0213</value>
+			<value level="3">icon.skill0213</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -329,6 +370,7 @@
 	</skill>
 	<skill id="3016" toLevel="6" name="Special Ability: Critical Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -344,7 +386,6 @@
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-92</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>
@@ -368,7 +409,14 @@
 	</skill>
 	<skill id="3018" toLevel="6" name="Special Ability: Back Blow">
 		<!-- Increases Critical Rate by $s1 when attacking a target from behind. -->
-		<icon>icon.skill1077</icon>
+		<icon>
+			<value level="1">icon.skill1077</value>
+			<value level="2">icon.ensoul_big_old</value>
+			<value level="3">icon.skill1077</value>
+			<value level="4">icon.skill1077</value>
+			<value level="5">icon.ensoul_big_old</value>
+			<value level="6">icon.skill1077</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -396,7 +444,14 @@
 	</skill>
 	<skill id="3019" toLevel="6" name="Special Ability: Back Blow">
 		<!-- Increases Critical Rate by $s1 when attacking a target from behind. -->
-		<icon>icon.skill1077</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.skill1077</value>
+			<value level="3">icon.ensoul_big_old</value>
+			<value level="4">icon.skill1077</value>
+			<value level="5">icon.ensoul_big_old</value>
+			<value level="6">icon.skill1077</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -424,6 +479,7 @@
 	</skill>
 	<skill id="3020" toLevel="6" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -446,7 +502,6 @@
 			<value level="6">12</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -479,6 +534,7 @@
 	</skill>
 	<skill id="3021" toLevel="6" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -494,7 +550,6 @@
 			<value level="6">35</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -526,6 +581,7 @@
 		</effects>
 	</skill>
 	<skill id="3022" toLevel="6" name="Special Ability: Critical Drain">
+		<icon>icon.skill0070</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -537,7 +593,6 @@
 			<value level="6">-234</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill0070</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -603,6 +658,7 @@
 	</skill>
 	<skill id="3024" toLevel="6" name="Special Ability: Critical Poison">
 		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -635,7 +691,6 @@
 			<value level="6">-582</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -721,7 +776,15 @@
 	</skill>
 	<skill id="3027" toLevel="7" name="Special Ability: Rsk. Focus">
 		<!-- Increases Critical Rate by $s1 when in danger. -->
-		<icon>icon.ensoul_big_old</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.skill1077</value>
+			<value level="3">icon.skill1077</value>
+			<value level="4">icon.ensoul_big_old</value>
+			<value level="5">icon.ensoul_big_old</value>
+			<value level="6">icon.ensoul_big_old</value>
+			<value level="7">icon.ensoul_big_old</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -787,7 +850,14 @@
 	</skill>
 	<skill id="3028" toLevel="6" name="Special Ability: Rsk. Evasion">
 		<!-- Increases Evasion by $s1 when in danger. -->
-		<icon>icon.skill0198</icon>
+		<icon>
+			<value level="1">icon.skill0198</value>
+			<value level="2">icon.ensoul_big_old</value>
+			<value level="3">icon.skill0198</value>
+			<value level="4">icon.skill0198</value>
+			<value level="5">icon.skill0198</value>
+			<value level="6">icon.skill0198</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -843,7 +913,14 @@
 	</skill>
 	<skill id="3030" toLevel="6" name="Special Ability: Rsk. Evasion">
 		<!-- Increases Evasion by $s1 when in danger. -->
-		<icon>icon.skill0198</icon>
+		<icon>
+			<value level="1">icon.skill0198</value>
+			<value level="2">icon.ensoul_big_old</value>
+			<value level="3">icon.ensoul_big_old</value>
+			<value level="4">icon.skill0198</value>
+			<value level="5">icon.ensoul_big_old</value>
+			<value level="6">icon.skill0198</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -871,7 +948,14 @@
 	</skill>
 	<skill id="3031" toLevel="6" name="Special Ability: Rsk. Evasion">
 		<!-- Increases Evasion by $s1 when in danger. -->
-		<icon>icon.skill0198</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.skill0198</value>
+			<value level="3">icon.ensoul_big_old</value>
+			<value level="4">icon.ensoul_big_old</value>
+			<value level="5">icon.skill0198</value>
+			<value level="6">icon.skill0198</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -926,7 +1010,14 @@
 	</skill>
 	<skill id="3033" toLevel="6" name="Special Ability: Rsk. Haste">
 		<!-- Increases Atk. Spd. when in danger by $s1. -->
-		<icon>icon.skill1086</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.ensoul_big_old</value>
+			<value level="3">icon.skill1086</value>
+			<value level="4">icon.skill1086</value>
+			<value level="5">icon.skill1086</value>
+			<value level="6">icon.skill1086</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -953,7 +1044,15 @@
 	</skill>
 	<skill id="3034" toLevel="7" name="Special Ability: Rsk. Haste">
 		<!-- Increases Atk. Spd. when in danger by $s1. -->
-		<icon>icon.skill1086</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.ensoul_big_old</value>
+			<value level="3">icon.ensoul_big_old</value>
+			<value level="4">icon.ensoul_big_old</value>
+			<value level="5">icon.ensoul_big_old</value>
+			<value level="6">icon.ensoul_big_old</value>
+			<value level="7">icon.skill1086</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1018,7 +1117,14 @@
 	</skill>
 	<skill id="3035" toLevel="6" name="Special Ability: Mighty Mortal">
 		<!-- Increases success rate of attacks targeting the enemy's vital parts by $s1. -->
-		<icon>icon.ensoul_big_old</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.ensoul_big_old</value>
+			<value level="3">icon.skill0016</value>
+			<value level="4">icon.ensoul_big_old</value>
+			<value level="5">icon.ensoul_big_old</value>
+			<value level="6">icon.ensoul_big_old</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1177,6 +1283,7 @@
 	</skill>
 	<skill id="3040" toLevel="6" name="Special Ability: Critical Poison">
 		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -1209,7 +1316,6 @@
 			<value level="6">-582</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1243,6 +1349,7 @@
 	</skill>
 	<skill id="3041" toLevel="6" name="Special Ability: Critical Poison">
 		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -1275,7 +1382,6 @@
 			<value level="6">-582</value>
 		</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1466,7 +1572,28 @@
 	</skill>
 	<skill id="3044" toLevel="20" name="Special Ability: Focus">
 		<!-- Increases Critical Rate by $s1. -->
-		<icon>icon.skill1077</icon>
+		<icon>
+			<value level="1">icon.skill1077</value>
+			<value level="2">icon.skill1077</value>
+			<value level="3">icon.ensoul_big_old</value>
+			<value level="4">icon.skill1077</value>
+			<value level="5">icon.skill1077</value>
+			<value level="6">icon.skill1077</value>
+			<value level="7">icon.ensoul_big_old</value>
+			<value level="8">icon.ensoul_big_old</value>
+			<value level="9">icon.ensoul_big_old</value>
+			<value level="10">icon.ensoul_big_old</value>
+			<value level="11">icon.ensoul_big_old</value>
+			<value level="12">icon.ensoul_big_old</value>
+			<value level="13">icon.ensoul_big_old</value>
+			<value level="14">icon.skill1077</value>
+			<value level="15">icon.skill1077</value>
+			<value level="16">icon.skill1077</value>
+			<value level="17">icon.skill1077</value>
+			<value level="18">icon.skill1077</value>
+			<value level="19">icon.skill1077</value>
+			<value level="20">icon.skill1077</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1596,7 +1723,28 @@
 	</skill>
 	<skill id="3045" toLevel="20" name="Special Ability: Haste">
 		<!-- Increases Atk. Spd. -->
-		<icon>icon.skill1086</icon>
+		<icon>
+			<value level="1">icon.skill1086</value>
+			<value level="2">icon.skill1086</value>
+			<value level="3">icon.skill1086</value>
+			<value level="4">icon.skill1086</value>
+			<value level="5">icon.skill1086</value>
+			<value level="6">icon.skill1086</value>
+			<value level="7">icon.skill1086</value>
+			<value level="8">icon.skill1086</value>
+			<value level="9">icon.skill1086</value>
+			<value level="10">icon.skill1086</value>
+			<value level="11">icon.skill1086</value>
+			<value level="12">icon.skill1086</value>
+			<value level="13">icon.skill1086</value>
+			<value level="14">icon.skill1086</value>
+			<value level="15">icon.skill1086</value>
+			<value level="16">icon.skill1086</value>
+			<value level="17">icon.ensoul_big_old</value>
+			<value level="18">icon.skill1086</value>
+			<value level="19">icon.skill1086</value>
+			<value level="20">icon.skill1086</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1663,7 +1811,28 @@
 	</skill>
 	<skill id="3046" toLevel="20" name="Special Ability: Guidance">
 		<!-- Increases Accuracy. -->
-		<icon>icon.ensoul_big_old</icon>
+		<icon>
+			<value level="1">icon.skill1240</value>
+			<value level="2">icon.skill1240</value>
+			<value level="3">icon.skill1240</value>
+			<value level="4">icon.skill1240</value>
+			<value level="5">icon.skill1240</value>
+			<value level="6">icon.skill1240</value>
+			<value level="7">icon.skill1240</value>
+			<value level="8">icon.skill1240</value>
+			<value level="9">icon.skill1240</value>
+			<value level="10">icon.skill1240</value>
+			<value level="11">icon.skill1240</value>
+			<value level="12">icon.skill1240</value>
+			<value level="13">icon.skill1240</value>
+			<value level="14">icon.skill1240</value>
+			<value level="15">icon.skill1240</value>
+			<value level="16">icon.skill1240</value>
+			<value level="17">icon.skill1240</value>
+			<value level="18">icon.skill1240</value>
+			<value level="19">icon.skill1240</value>
+			<value level="20">icon.ensoul_big_old</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1793,7 +1962,11 @@
 	</skill>
 	<skill id="3047" toLevel="3" name="Special Ability: Acumen">
 		<!-- Increases Casting Spd. by 15%. -->
-		<icon>icon.skill1085</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.skill1085</value>
+			<value level="3">icon.skill1085</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1956,6 +2129,7 @@
 	</skill>
 	<skill id="3052" toLevel="2" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1964,7 +2138,6 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>42</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -1986,6 +2159,7 @@
 	</skill>
 	<skill id="3053" toLevel="2" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1994,7 +2168,6 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>35</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2020,6 +2193,7 @@
 	</skill>
 	<skill id="3054" toLevel="2" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2028,7 +2202,6 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>12</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2054,6 +2227,7 @@
 	</skill>
 	<skill id="3055" toLevel="2" name="Special Ability: Critical Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2062,7 +2236,6 @@
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>24</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill0223</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2088,7 +2261,11 @@
 	</skill>
 	<skill id="3056" toLevel="3" name="Special Ability: Rsk. Haste">
 		<!-- Increases Atk. Spd. when in danger. -->
-		<icon>icon.ensoul_big_old</icon>
+		<icon>
+			<value level="1">icon.skill1086</value>
+			<value level="2">icon.ensoul_big_old</value>
+			<value level="3">icon.ensoul_big_old</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -2251,6 +2428,7 @@
 	</skill>
 	<skill id="3061" toLevel="3" name="Special Ability: Critical Poison">
 		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2261,7 +2439,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2289,6 +2466,7 @@
 	</skill>
 	<skill id="3062" toLevel="2" name="Special Ability: Critical Poison">
 		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<icon>icon.skill1168</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -2299,7 +2477,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2322,7 +2499,10 @@
 	</skill>
 	<skill id="3063" toLevel="2" name="Special Ability: Back Blow">
 		<!-- Increases Critical Rate when attacking a target from behind. Inflicts additional damage by $s1 during PvP. -->
-		<icon>icon.skill1077</icon>
+		<icon>
+			<value level="1">icon.ensoul_big_old</value>
+			<value level="2">icon.skill1077</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -2512,7 +2692,10 @@
 	</skill>
 	<skill id="3069" toLevel="1" name="Special Ability: Rsk. Evasion">
 		<!-- Increases Evasion when in danger. -->
-		<icon>icon.ensoul_big_old</icon>
+		<icon>
+			<value level="1">icon.skill0198</value>
+			<value level="2">icon.ensoul_big_old</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -2526,6 +2709,7 @@
 	</skill>
 	<skill id="3070" toLevel="4" name="Special Ability: Critical Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2539,7 +2723,6 @@
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>
@@ -2561,7 +2744,10 @@
 	</skill>
 	<skill id="3071" toLevel="2" name="Special Ability: Rsk. Focus">
 		<!-- Increases Critical Rate when in danger. -->
-		<icon>icon.ensoul_big_old</icon>
+		<icon>
+			<value level="1">icon.skill1077</value>
+			<value level="2">icon.ensoul_big_old</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>64</magicLvl>
@@ -2663,6 +2849,7 @@
 	</skill>
 	<skill id="3074" toLevel="2" name="Special Ability: Magic Silence">
 		<!-- Temporarily blocks the ability to use magic skills. -->
+		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2673,7 +2860,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2693,6 +2879,7 @@
 	</skill>
 	<skill id="3075" toLevel="2" name="Special Ability: Magic Paralyze">
 		<!-- Body is rigid with paralysis. -->
+		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2702,7 +2889,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1170</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>
@@ -2798,6 +2984,7 @@
 	</skill>
 	<skill id="3078" toLevel="6" name="Special Ability: Magic Silence">
 		<!-- Temporarily blocks the ability to use magic skills. -->
+		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2808,7 +2995,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2832,6 +3018,7 @@
 	</skill>
 	<skill id="3079" toLevel="6" name="Special Ability: Magic Paralyze">
 		<!-- Body is rigid with paralysis. -->
+		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2841,7 +3028,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -2882,6 +3068,7 @@
 	</skill>
 	<skill id="3080" toLevel="15" name="Item Skill: Aggression">
 		<!-- Chance: Provokes a target to attack during an standard physical attack. Power $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -2902,7 +3089,6 @@
 			<value level="15">-659</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -2940,10 +3126,10 @@
 	</skill>
 	<skill id="3081" toLevel="15" name="Item Skill: Charm (Attack Active)">
 		<!-- Chance: Decreases the target's urge to attack during a standard physical attack. Power $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -2998,10 +3184,10 @@
 	</skill>
 	<skill id="3082" toLevel="10" name="Item Skill: Mana Burn">
 		<!-- Chance: Burns up the target's MP during an standard physical attack. Power $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -3042,6 +3228,7 @@
 	</skill>
 	<skill id="3083" toLevel="15" name="Item Skill: Slow (Attack Active)">
 		<!-- Chance: Momentarily decreases the target's Speed during an standard physical attack. Effect $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3050,7 +3237,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3091,6 +3277,7 @@
 	</skill>
 	<skill id="3084" toLevel="10" name="Item Skill: Winter (Attack Active)">
 		<!-- Chance: Momentarily decreases the target's Atk. Spd. during an standard physical attack. Effect $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3099,7 +3286,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3130,6 +3316,7 @@
 	</skill>
 	<skill id="3085" toLevel="10" name="Item Skill: Stun">
 		<!-- Activated skill: Causes a target to enter the Stun state momentarily when dealing general physical attacks. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3139,7 +3326,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3168,6 +3354,7 @@
 	</skill>
 	<skill id="3086" toLevel="15" name="Item Skill: Hold">
 		<!-- Chance: Momentarily inflicts Hold on the target during an standard physical attack. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3177,7 +3364,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3219,6 +3405,7 @@
 	</skill>
 	<skill id="3087" toLevel="10" name="Item Skill: Sleep">
 		<!-- Chance: Momentarily inflicts Sleep on the target during a standard physical attack. Additional chance to be put into sleep greatly decreases while the effect lasts. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3228,7 +3415,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3260,6 +3446,7 @@
 	</skill>
 	<skill id="3088" toLevel="10" name="Item Skill: Paralyze">
 		<!-- Chance: Momentarily paralyzes the target during an standard physical attack. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3268,7 +3455,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3314,6 +3500,7 @@
 	</skill>
 	<skill id="3089" toLevel="10" name="Item Skill: Medusa">
 		<!-- Chance: Momentarily petrifies the target during a standard physical attack. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3325,7 +3512,6 @@
 		<effectRange>400</effectRange>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3353,6 +3539,7 @@
 	</skill>
 	<skill id="3090" toLevel="10" name="Item Skill: Fear">
 		<!-- Chance: Momentarily inflicts Fear on the target and causes him to flee during a standard physical attack. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3362,7 +3549,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3392,6 +3578,7 @@
 	</skill>
 	<skill id="3091" toLevel="20" name="Item Skill: Poison (Attack Active)">
 		<!-- Chance: Momentarily inflicts Poison on the target during a standard physical attack. Effect $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -3423,7 +3610,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -3486,6 +3672,7 @@
 	</skill>
 	<skill id="3092" toLevel="15" name="Item Skill: Bleed (Attack Active)">
 		<!-- Chance: Momentarily inflicts Bleed on the target during a standard physical attack. Effect $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -3517,7 +3704,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -3581,6 +3767,7 @@
 	</skill>
 	<skill id="3093" toLevel="10" name="Item Skill: Silence">
 		<!-- Chance: Momentarily blocks the target's magic skill during a standard physical attack. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3590,7 +3777,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3619,6 +3805,7 @@
 	</skill>
 	<skill id="3094" toLevel="10" name="Item Skill: Doom">
 		<!-- Chance: Momentarily blocks all of the target's physical and magic skills during a standard physical attack. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3628,7 +3815,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3658,11 +3844,11 @@
 	</skill>
 	<skill id="3095" toLevel="10" name="Item Skill: Mana Burn">
 		<!-- Chance: Burns up the target's MP during magic use. Power $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill3080</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -3703,6 +3889,7 @@
 	</skill>
 	<skill id="3096" toLevel="15" name="Item Skill: Slow (Magic Active)">
 		<!-- Chance: Momentarily decreases the target's Speed during magic use. Effect $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3712,7 +3899,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3753,6 +3939,7 @@
 	</skill>
 	<skill id="3097" toLevel="10" name="Item Skill: Winter (Magic Active)">
 		<!-- Chance: Momentarily decreases the target's Atk. Spd. during magic use. Effect $s1. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3762,7 +3949,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3793,6 +3979,7 @@
 	</skill>
 	<skill id="3098" toLevel="10" name="Item Skill: Stun">
 		<!-- Activated skill: Causes a target to enter the Stun state momentarily when using this magic. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3803,7 +3990,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -3832,6 +4018,7 @@
 	</skill>
 	<skill id="3099" toLevel="15" name="Item Skill: Hold">
 		<!-- Chance: Momentarily inflicts Hold on the target during magic use. The target cannot be affected by any additional hold attacks while the effect lasts. -->
+		<icon>icon.skill3080</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3842,7 +4029,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill3080</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>10</lvlBonusRate>

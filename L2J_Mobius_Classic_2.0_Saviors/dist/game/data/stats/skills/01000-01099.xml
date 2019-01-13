@@ -138,6 +138,7 @@
 	</skill>
 	<skill id="1002" toLevel="3" name="Chant of Flame">
 		<!-- Increases all party members' Casting Spd. by $s2 for $s1. -->
+		<icon>icon.skill1002</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -152,7 +153,6 @@
 			<value level="3">532</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1002</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">30</value>
@@ -190,6 +190,7 @@
 	</skill>
 	<skill id="1003" toLevel="3" name="Pa'agrio's Gift">
 		<!-- Increases nearby clan members' P. Atk. by $s2 for $s1. -->
+		<icon>icon.skill1003</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -205,7 +206,6 @@
 			<value level="3">457</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1003</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">30</value>
@@ -243,6 +243,7 @@
 	</skill>
 	<skill id="1004" toLevel="3" name="Pa'agrio's Wisdom">
 		<!-- Increases nearby clan members' Casting Spd. by $s2 for $s1. -->
+		<icon>icon.skill1004</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -258,7 +259,6 @@
 			<value level="3">532</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1004</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -296,6 +296,7 @@
 	</skill>
 	<skill id="1005" toLevel="3" name="Pa'agrio's Blessing">
 		<!-- Increases nearby clan members' P. Def. by $s2 for $s1. -->
+		<icon>icon.skill1005</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -311,7 +312,6 @@
 			<value level="3">495</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1005</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">35</value>
@@ -349,6 +349,7 @@
 	</skill>
 	<skill id="1006" toLevel="3" name="Chant of Fire">
 		<!-- Increases all party members' M. Def. by $s2 for $s1. -->
+		<icon>icon.skill1006</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -363,7 +364,6 @@
 			<value level="3">495</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1006</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -401,6 +401,7 @@
 	</skill>
 	<skill id="1007" toLevel="3" name="Chant of Battle">
 		<!-- Increases all party members' P. Atk. by $s2 for $s1. -->
+		<icon>icon.skill1007</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -415,7 +416,6 @@
 			<value level="3">418</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1007</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">14</value>
@@ -453,6 +453,7 @@
 	</skill>
 	<skill id="1008" toLevel="3" name="Pa'agrio's Glory">
 		<!-- Increases nearby clan members' M. Def. by $s2 for $s1. -->
+		<icon>icon.skill1008</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -468,7 +469,6 @@
 			<value level="3">532</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1008</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -506,6 +506,7 @@
 	</skill>
 	<skill id="1009" toLevel="3" name="Chant of Shielding">
 		<!-- Increases all party members' P. Def. by $s2 for $s1. -->
+		<icon>icon.skill1009</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -520,7 +521,6 @@
 			<value level="3">379</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1009</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -558,6 +558,7 @@
 	</skill>
 	<skill id="1010" toLevel="3" name="Soul Shield">
 		<!-- For $s1, increases P. Def. + $s2. -->
+		<icon>icon.skill1010</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -573,7 +574,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1010</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">7</value>
@@ -610,6 +610,7 @@
 	</skill>
 	<skill id="1011" toLevel="18" name="Heal">
 		<!-- Restores the target's HP with $s1 Power. -->
+		<icon>icon.skill1011</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">50</value>
@@ -633,7 +634,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1011</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">3</value>
@@ -728,6 +728,7 @@
 	</skill>
 	<skill id="1012" toLevel="3" name="Cure Poison">
 		<!-- Cures the target of minor poisoning. -->
+		<icon>icon.skill1012</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">121</value>
@@ -736,7 +737,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1012</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">7</value>
@@ -771,6 +771,7 @@
 	</skill>
 	<skill id="1013" toLevel="34" name="Recharge">
 		<!-- Recovers MP with up to $s1 Power, depending on the target's level. Cannot be used by classes that have Recharge skill. -->
+		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">268</value>
@@ -810,7 +811,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill1013</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">28</value>
@@ -975,6 +975,7 @@
 	</skill>
 	<skill id="1015" toLevel="15" name="Battle Heal">
 		<!-- Immediately restores the target's HP with $s1 Power. -->
+		<icon>icon.skill1015</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">66</value>
@@ -995,7 +996,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1015</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -1078,6 +1078,7 @@
 	</skill>
 	<skill id="1016" toLevel="9" name="Resurrection">
 		<!-- Resurrects a corpse. -->
+		<icon>icon.skill1016</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -1093,7 +1094,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1016</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -1157,6 +1157,7 @@
 	</skill>
 	<skill id="1018" toLevel="3" name="Purify">
 		<!-- Cancels paralysis and cures minor poison/bleed condition. -->
+		<icon>icon.skill1018</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">418</value>
@@ -1165,7 +1166,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1018</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -1200,6 +1200,7 @@
 	</skill>
 	<skill id="1020" toLevel="27" name="Vitalize">
 		<!-- Recovers HP with $s1 Power and cures minor poison/bleeding. -->
+		<icon>icon.skill1020</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">528</value>
@@ -1232,7 +1233,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1020</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -1394,6 +1394,7 @@
 	</skill>
 	<skill id="1027" toLevel="15" name="Group Heal">
 		<!-- Restores all party members' HP with $s1 Power. -->
+		<icon>icon.skill1027</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">66</value>
@@ -1413,7 +1414,6 @@
 			<value level="15">241</value>
 		</effectPoint>
 		<hitTime>7000</hitTime>
-		<icon>icon.skill1027</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -1497,6 +1497,7 @@
 	</skill>
 	<skill id="1028" toLevel="21" name="Might of Heaven">
 		<!-- Inflicts holy damage with $s1 Power. -->
+		<icon>icon.skill1028</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-360</value>
@@ -1525,7 +1526,6 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1028</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">38</value>
@@ -1632,6 +1632,7 @@
 	</skill>
 	<skill id="1031" toLevel="8" name="Disrupt Undead">
 		<!-- Inflicts holy damage on the undead with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1031</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">-182</value>
@@ -1647,7 +1648,6 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1031</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">17</value>
@@ -1707,6 +1707,7 @@
 	</skill>
 	<skill id="1032" toLevel="3" name="Invigor">
 		<!-- Increases Bleed Resistance by $s2 for $s1. -->
+		<icon>icon.skill1032</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1722,7 +1723,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1032</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -1753,6 +1753,7 @@
 	</skill>
 	<skill id="1033" toLevel="3" name="Poison Resistance">
 		<!-- Increases Poison Resistance by $s2 for $s1. -->
+		<icon>icon.skill1033</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1768,7 +1769,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1033</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">35</value>
@@ -1804,10 +1804,10 @@
 	</skill>
 	<skill id="1034" toLevel="13" name="Repose">
 		<!-- Diminishes undead monster's will to attack. -->
+		<icon>icon.skill1034</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>200</affectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1034</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -1870,6 +1870,7 @@
 	</skill>
 	<skill id="1035" toLevel="4" name="Mental Shield">
 		<!-- Increases Hold/Sleep/Mental Attack Resistance by $s2 for $s1. -->
+		<icon>icon.skill1035</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1887,7 +1888,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1035</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">25</value>
@@ -1939,6 +1939,7 @@
 	</skill>
 	<skill id="1036" toLevel="4" name="Magic Barrier">
 		<!-- Increases M. Def. by $s2 for $s1. -->
+		<icon>icon.skill1036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1956,7 +1957,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1036</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -1997,6 +1997,7 @@
 	</skill>
 	<skill id="1040" toLevel="9" name="Shield">
 		<!-- Increases P. Def. by $s2 for $s1. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2024,7 +2025,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1040</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">7</value>
@@ -2085,6 +2085,7 @@
 	</skill>
 	<skill id="1042" toLevel="14" name="Hold Undead">
 		<!-- Paralyzes an undead monster for $s1. -->
+		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -2110,7 +2111,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill1042</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2180,6 +2180,7 @@
 	</skill>
 	<skill id="1043" toLevel="1" name="Holy Weapon">
 		<!-- Increases a party member's holy P. Atk. by 20 for +20 minutes. -->
+		<icon>icon.skill1043</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -2188,7 +2189,6 @@
 		<effectRange>900</effectRange>
 		<attributeType>HOLY</attributeType>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1043</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>25</magicLvl>
 		<mpConsume>23</mpConsume>
@@ -2214,6 +2214,7 @@
 	</skill>
 	<skill id="1044" toLevel="6" name="Regeneration">
 		<!-- Increases HP Regeneration by $s2 for $s1. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2235,7 +2236,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1044</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">35</value>
@@ -2284,6 +2284,7 @@
 	</skill>
 	<skill id="1045" toLevel="12" name="Blessed Body">
 		<!-- Increases Max HP by $s2 for $s1. -->
+		<icon>icon.skill1045</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2317,7 +2318,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1045</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -2391,6 +2391,7 @@
 	</skill>
 	<skill id="1047" toLevel="4" name="Mana Regeneration">
 		<!-- Increases MP Recovery Bonus by $s2 for $s1. Consumes $s3 Spirit Ore(s). -->
+		<icon>icon.skill1047</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2406,7 +2407,6 @@
 			<value level="4">635</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1047</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">7</value>
@@ -2454,6 +2454,7 @@
 	</skill>
 	<skill id="1048" toLevel="12" name="Blessed Soul">
 		<!-- Increases Max MP by $s2 for $s1. -->
+		<icon>icon.skill1048</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2487,7 +2488,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1048</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -2560,6 +2560,7 @@
 	</skill>
 	<skill id="1049" toLevel="14" name="Requiem">
 		<!-- Sings a requiem that prevents nearby undead monsters from making preemptive attacks for $s1. -->
+		<icon>icon.skill1049</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_PASSIVE</abnormalType>
@@ -2568,7 +2569,6 @@
 		<affectRange>1000</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<hitTime>7000</hitTime>
-		<icon>icon.skill1049</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2634,12 +2634,12 @@
 	</skill>
 	<skill id="1050" toLevel="2" name="Return">
 		<!-- Teleports to a town. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<icon>Icon.skill1050</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>
 			<value level="1">20000</value>
 			<value level="2">1500</value>
 		</hitTime>
-		<icon>Icon.skill1050</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -2670,6 +2670,7 @@
 	</skill>
 	<skill id="1056" toLevel="12" name="Cancellation">
 		<!-- Cancels multiple enemy buffs. -->
+		<icon>icon.skill1056</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-455</value>
@@ -2687,7 +2688,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill1056</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">48</value>
@@ -2747,6 +2747,7 @@
 	</skill>
 	<skill id="1059" toLevel="9" name="Empower">
 		<!-- Increases M. Atk. by $s2 for $s1. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2774,7 +2775,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1059</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">25</value>
@@ -2835,6 +2835,7 @@
 	</skill>
 	<skill id="1062" toLevel="2" name="Berserker Spirit">
 		<!-- Decreases a party member's P. Def. by $s2, M. Def. by $s3 and Evasion by $s4, and increases P. Atk. by $s5, M. Atk. by $s6, Atk. Spd. by $s7, Casting Spd. by $s8 and Speed by $s9 for $s1. -->
+		<icon>icon.skill1062</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2848,7 +2849,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1062</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">35</value>
@@ -2935,6 +2935,7 @@
 	</skill>
 	<skill id="1064" toLevel="16" name="Silence">
 		<!-- Blocks the enemy's use of magic for $s1. -->
+		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>24</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -2962,7 +2963,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -3033,6 +3033,7 @@
 	</skill>
 	<skill id="1068" toLevel="9" name="Might">
 		<!-- Increases P. Atk. by $s2 for $s1. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3060,7 +3061,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">7</value>
@@ -3121,6 +3121,7 @@
 	</skill>
 	<skill id="1069" toLevel="45" name="Sleep">
 		<!-- Causes the enemy to sleep for $s1. -->
+		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -3177,7 +3178,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>10000</hitTime>
-		<icon>icon.skill1069</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -3339,6 +3339,7 @@
 	</skill>
 	<skill id="1071" toLevel="14" name="Surrender to Water">
 		<!-- For $s1, decreases the enemy's Water Resistance by $s2 and increases Fire Resistance by $s3. -->
+		<icon>icon.skill1071</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_WATER</abnormalType>
@@ -3365,7 +3366,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1071</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -3436,6 +3436,7 @@
 	</skill>
 	<skill id="1072" toLevel="6" name="Sleeping Cloud">
 		<!-- Casts Sleep on target and nearby enemies for $s1. -->
+		<icon>icon.skill1072</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -3455,7 +3456,6 @@
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill1072</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -3501,6 +3501,7 @@
 	</skill>
 	<skill id="1073" toLevel="2" name="Eva's Kiss">
 		<!-- Increases lung capacity by $s2 for $s1. -->
+		<icon>icon.skill1073</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -3514,7 +3515,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1073</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -3547,6 +3547,7 @@
 	</skill>
 	<skill id="1074" toLevel="14" name="Surrender to Wind">
 		<!-- For $s1, decreases the enemy's Wind Resistance by $s2 and increases Earth Resistance by $s3. -->
+		<icon>icon.skill1074</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_WIND</abnormalType>
@@ -3573,7 +3574,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1074</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -3644,10 +3644,10 @@
 	</skill>
 	<skill id="1075" toLevel="15" name="Peace">
 		<!-- Puts target's mind at peace, decreasing their aggression. -->
+		<icon>icon.skill1075</icon>
 		<castRange>600</castRange>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1075</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">24</value>
@@ -3698,6 +3698,7 @@
 	</skill>
 	<skill id="1077" toLevel="9" name="Focus">
 		<!-- Increases Critical Rate by $s2 for $s1. -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3725,7 +3726,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1077</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">23</value>
@@ -3786,6 +3786,7 @@
 	</skill>
 	<skill id="1078" toLevel="18" name="Concentration">
 		<!-- Decreases magic cancel damage by $s2 for $s1. -->
+		<icon>icon.skill1078</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3831,7 +3832,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1078</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">20</value>
@@ -3928,6 +3928,7 @@
 	</skill>
 	<skill id="1083" toLevel="17" name="Surrender to Fire">
 		<!-- For $s1, decreases the target's Fire Resistance by $s2 and increases Water Resistance by $s3. -->
+		<icon>icon.skill1083</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -4011,7 +4012,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1083</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -4091,6 +4091,7 @@
 	</skill>
 	<skill id="1085" toLevel="9" name="Acumen">
 		<!-- Increases Casting Spd. by $s2 for $s1. -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4118,7 +4119,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1085</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">20</value>
@@ -4179,6 +4179,7 @@
 	</skill>
 	<skill id="1086" toLevel="4" name="Haste">
 		<!-- Increases Atk. Spd. by $s2 for $s1. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4196,7 +4197,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">39</value>
@@ -4237,6 +4237,7 @@
 	</skill>
 	<skill id="1087" toLevel="9" name="Agility">
 		<!-- Increases Evasion by $s2 for $s1. -->
+		<icon>icon.skill1087</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4264,7 +4265,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1087</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">32</value>
@@ -4325,6 +4325,7 @@
 	</skill>
 	<skill id="1090" toLevel="6" name="Life Drain">
 		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
+		<icon>icon.skill1090</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-121</value>
@@ -4336,7 +4337,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1090</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">7</value>
@@ -4384,6 +4384,7 @@
 	</skill>
 	<skill id="1092" toLevel="21" name="Fear">
 		<!-- Frightens the enemy into fleeing for $s1. -->
+		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -4416,7 +4417,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1092</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4503,6 +4503,7 @@
 	</skill>
 	<skill id="1095" toLevel="5" name="Venom">
 		<!-- Poisons the target, causing loss of $s2 HP per second for $s1. -->
+		<icon>icon.skill1095</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4526,7 +4527,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1095</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4573,6 +4573,7 @@
 	</skill>
 	<skill id="1096" toLevel="18" name="Seal of Chaos">
 		<!-- Decreases nearby enemies' P. Accuracy by $s2 for $s1. -->
+		<icon>icon.skill1096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -4620,7 +4621,6 @@
 			<value level="18">-673</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1096</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4719,6 +4719,7 @@
 	</skill>
 	<skill id="1097" toLevel="22" name="Dreaming Spirit">
 		<!-- Causes the enemy to sleep for $s1. -->
+		<icon>icon.skill1097</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
@@ -4752,7 +4753,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1097</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -4845,6 +4845,7 @@
 	</skill>
 	<skill id="1099" toLevel="17" name="Seal of Slow">
 		<!-- Decreases nearby enemies' Speed by $s2 for $s1. -->
+		<icon>icon.skill1099</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -4890,7 +4891,6 @@
 			<value level="17">-673</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1099</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>

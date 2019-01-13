@@ -910,7 +910,7 @@
 	</item>
 	<item id="28486" name="La Vie En Rose's Radiant Brooch" type="Armor">
 		<!-- Activates 6 jewel slots when equipped. Inventory Slot + 12. -->
-		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
@@ -927,7 +927,7 @@
 	</item>
 	<item id="28487" name="La Vie En Rose's Radiant Brooch" additionalName="Enchant Type" type="Armor">
 		<!-- Activates 6 jewel slots when equipped. Inventory Slot + 12. CHA + 1. Cannot augment. -->
-		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
@@ -944,7 +944,7 @@
 	</item>
 	<item id="28488" name="La Vie En Rose's Radiant Brooch" additionalName="Rare Type" type="Armor">
 		<!-- Activates 6 jewel slots when equipped. Inventory Slot + 12. All Basic Stats + 2. Max CP + 12%. Cannot augment. -->
-		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i03" />
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
@@ -961,7 +961,7 @@
 	</item>
 	<item id="28497" name="Windy Lucky Enchant Stone: Weapon (R-grade)" type="EtcItem">
 		<!-- Enchant success rate + 20% for weapons (R-grade) when using the Giant's Enchant Scrolls.Only for items enchanted between + 3 and + 9. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
-		<set name="icon" val="icon.ench_am_stone_i00" />
+		<set name="icon" val="icon.giant_ench_wp_stone_r_i02" />
 		<set name="etcitem_type" val="BLESSED_GIANT_ENCHT_ATTR_INC_PROP_ENCHT_WP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />

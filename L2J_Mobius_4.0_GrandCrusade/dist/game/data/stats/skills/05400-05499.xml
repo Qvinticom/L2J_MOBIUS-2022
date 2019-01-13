@@ -16,13 +16,13 @@
 	</skill>
 	<skill id="5401" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>FLY_AWAY</abnormalType>
 		<affectRange>300</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>5800</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -308,6 +308,7 @@
 	</skill>
 	<skill id="5422" toLevel="12" name="Flame">
 		<!-- Body is on fire. HP continually decreases. -->
+		<icon>icon.skill1101</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FIRE_DOT</abnormalType>
@@ -317,7 +318,6 @@
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill1101</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -385,6 +385,7 @@
 	</skill>
 	<skill id="5423" toLevel="12" name="Poison">
 		<!-- HP decreases from poison momentarily. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -394,7 +395,6 @@
 		<affectRange>300</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill4035</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -446,6 +446,7 @@
 	</skill>
 	<skill id="5424" toLevel="12" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -455,7 +456,6 @@
 		<affectRange>300</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -507,10 +507,10 @@
 	</skill>
 	<skill id="5425" toLevel="1" name="Iron Shield">
 		<!-- Condition causing target to increase Shield Defense. -->
+		<icon>icon.skill0527</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>IRON_SHIELD_I</abnormalType>
-		<icon>icon.skill0527</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>79</magicLvl>
 		<operateType>A2</operateType>
@@ -532,10 +532,10 @@
 	</skill>
 	<skill id="5426" toLevel="1" name="Counter Chance">
 		<!-- Condition causing target to decrease skill Casting Spd. and MP consumption. -->
+		<icon>icon.skill0532</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARCHER_SPECIAL</abnormalType>
-		<icon>icon.skill0532</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>79</magicLvl>
 		<operateType>A2</operateType>
@@ -564,11 +564,11 @@
 	</skill>
 	<skill id="5427" toLevel="1" name="Counter Rapid Shot">
 		<!-- Bow/Crossbow Atk. Spd. has been increased. -->
+		<icon>icon.skill0533</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARCHER_SPECIAL</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill0533</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>79</magicLvl>
 		<operateType>A2</operateType>
@@ -595,11 +595,11 @@
 	</skill>
 	<skill id="5428" toLevel="1" name="Counter Dash">
 		<!-- Condition causing target to increase speed. -->
+		<icon>icon.skill0534</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ARCHER_SPECIAL_I</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill0534</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>79</magicLvl>
 		<operateType>A2</operateType>
@@ -637,8 +637,8 @@
 		</effects>
 	</skill>
 	<skill id="5430" toLevel="1" name="Spoil Bomb">
-		<affectRange>300</affectRange>
 		<icon>icon.skill0537</icon>
+		<affectRange>300</affectRange>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>79</magicLvl>
@@ -697,6 +697,7 @@
 	</skill>
 	<skill id="5434" toLevel="1" name="Gust">
 		<!-- Inflicted with gust and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -707,7 +708,6 @@
 		<coolTime>720</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>86</magicLvl>
@@ -731,6 +731,7 @@
 	</skill>
 	<skill id="5435" toLevel="1" name="Gust">
 		<!-- Inflicted with gust and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -742,7 +743,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>86</magicLvl>
@@ -1006,6 +1006,7 @@
 	</skill>
 	<skill id="5443" toLevel="4" name="Cry of the Wolf">
 		<!-- Dominate nearby enemies with a mighty roar. -->
+		<icon>icon.action109</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -1015,7 +1016,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-628</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.action109</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -1046,6 +1046,7 @@
 	</skill>
 	<skill id="5444" toLevel="2" name="Maul">
 		<!-- Attacks with fore-claws to create wound. Power $s1. Effect $s2. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1058,7 +1059,6 @@
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -1095,12 +1095,12 @@
 	</skill>
 	<skill id="5445" toLevel="1" name="Awakening">
 		<!-- Brings out the instinct of the wolf. -->
+		<icon>icon.action105</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>PINCH</abnormalType>
 		<effectPoint>303</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.action105</icon>
 		<magicLvl>70</magicLvl>
 		<mpConsume>71</mpConsume>
 		<operateType>A2</operateType>
@@ -1186,13 +1186,13 @@
 			<value level="36">icon.skill5446_36</value>
 			<value level="37">icon.skill5446_37</value>
 			<value level="38">icon.skill5446_38</value>
-			<value level="39">icon.skill5446_39
-				icon.skill5446_40</value>
-			<value level="40">icon.skill5446_41</value>
-			<value level="41">icon.skill5446_42</value>
-			<value level="42">icon.skill5446_43</value>
-			<value level="43">icon.skill5446_44</value>
-			<value level="44">icon.skill5446_45</value>
+			<value level="39">icon.skill5446_39</value>
+			<value level="40">icon.skill5446_40</value>
+			<value level="41">icon.skill5446_41</value>
+			<value level="42">icon.skill5446_42</value>
+			<value level="43">icon.skill5446_43</value>
+			<value level="44">icon.skill5446_44</value>
+			<value level="45">icon.skill5446_45</value>
 		</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1200,6 +1200,7 @@
 	</skill>
 	<skill id="5447" toLevel="7" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill0523</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -1207,7 +1208,6 @@
 		<activateRate>99</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0523</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1504,6 +1504,7 @@
 	</skill>
 	<skill id="5459" toLevel="1" name="Paralysis">
 		<!-- Paralyzed and unable to move temporarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -1511,7 +1512,6 @@
 		<activateRate>10</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1170</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -1525,6 +1525,7 @@
 	</skill>
 	<skill id="5460" toLevel="1" name="Fear">
 		<!-- Causes a temporary fear so strong that a target flees mindlessly. -->
+		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -1532,7 +1533,6 @@
 		<activateRate>10</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1092</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -1813,8 +1813,8 @@
 	</skill>
 	<skill id="5479" toLevel="1" name="Boss Petrification Resistance">
 		<!-- Resist against Petrification. -->
-		<hitTime>4000</hitTime>
 		<icon>icon.skill5479</icon>
+		<hitTime>4000</hitTime>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1844,11 +1844,11 @@
 	</skill>
 	<skill id="5481" toLevel="1" name="Transformation Penalty">
 		<!-- You cannot be transformed while under this effect. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM_HANGOVER</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1863,11 +1863,11 @@
 	</skill>
 	<skill id="5482" toLevel="1" name="Transformation Penalty">
 		<!-- You cannot be transformed while under this effect. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>480</abnormalTime>
 		<abnormalType>TRANSFORM_HANGOVER</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -2133,6 +2133,7 @@
 	</skill>
 	<skill id="5495" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding momentarily. Effect 10. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -2143,7 +2144,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -2190,6 +2190,7 @@
 	</skill>
 	<skill id="5497" toLevel="1" name="Horn of Rising Darkness">
 		<!-- Temporarily immobile due to the Stun and Bleed effect and your HP is draining. Effect 1 -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2202,7 +2203,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>180</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>

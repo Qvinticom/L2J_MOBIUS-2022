@@ -50,18 +50,18 @@
 	</item>
 	<item id="40202" name="Supply Box (R-grade)" type="EtcItem">
 		<!-- Double-click to obtain either a normal/ blessed weapon/ armor/ accessory (R-grade). -->
-		<set name="crystal_type" val="R" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="crystal_type" val="R" />
 	</item>
 	<item id="40203" name="Supply Box (R95-grade)" type="EtcItem">
 		<!-- Double-click to obtain either a normal/ blessed weapon/ armor/ accessory (R95-grade). -->
-		<set name="crystal_type" val="R" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="crystal_type" val="R" />
 	</item>
 	<item id="40204" name="Supply Box (R99-grade)" type="EtcItem">
 		<!-- Double-click to obtain either a normal/ blessed weapon/ armor/ accessory (R99-grade). -->
-		<set name="crystal_type" val="R" />
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
+		<set name="crystal_type" val="R" />
 	</item>
 	<item id="40205" name="Requiem Fragment" type="EtcItem">
 		<!-- Main ingredient for crafting a random R-grade item. -->
@@ -91,13 +91,13 @@
 	</item>
 	<item id="40208" name="Throwaway Item 1" additionalName="Not in Use" type="EtcItem">
 		<!-- Unidentified Helios weapon. Double-click to see whether you got a normal or blessed weapon. -->
-		<set name="crystal_type" val="R" />
 		<set name="icon" val="icon.weapon_aspeda_i00" />
+		<set name="crystal_type" val="R" />
 	</item>
 	<item id="40209" name="Throwaway Item 1" additionalName="Not in Use" type="EtcItem">
 		<!-- Unidentified Eternal armor. Double-click to see whether you got normal or blessed armor. -->
-		<set name="crystal_type" val="R" />
 		<set name="icon" val="icon.weapon_aspeda_i00" />
+		<set name="crystal_type" val="R" />
 	</item>
 	<item id="40210" name="Recipe: R (100%)" type="EtcItem">
 		<!-- Recipe for crafting an R-grade equipment. Results vary. Very high chance of obtaining blessed equipment. Requires Create Item Lv. 12. 100% success rate. Tyrr Maestros only. -->
@@ -1213,6 +1213,7 @@
 	</item>
 	<item id="40289" name="NC Magazine" additionalName="Event" type="EtcItem">
 		<!-- Go to Tiffany in town for a special gift. -->
+		<set name="icon" val="icon.nc_magazine" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1223,7 +1224,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="SCROLL" />
-		<set name="icon" val="icon.nc_magazine" />
 	</item>
 	<item id="40290" name="Lara's Key Card Pack" additionalName="Normal" type="EtcItem">
 		<!-- Double-click to obtain Lara's Key Card. -->

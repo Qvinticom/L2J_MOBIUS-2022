@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11600" toLevel="1" name="Frenzied Prevailing Sonata">
 		<!-- For $s1, clan members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and Magic Cancel Rate -$s5. A chance to add $s6 Vampiric Rage effect. -->
-		<icon>icon.skill11600</icon>
+		<icon>icon.skill11600_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
@@ -57,7 +57,7 @@
 	</skill>
 	<skill id="11601" toLevel="1" name="Frenzied Daring Sonata">
 		<!-- For $s1, clan members' Speed +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
-		<icon>icon.skill11601</icon>
+		<icon>icon.skill11601_2</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -120,7 +120,7 @@
 	</skill>
 	<skill id="11602" toLevel="1" name="Frenzied Refreshing Sonata">
 		<!-- For $s1, clan members' HP Recovery Bonus +$s2, MP Recovery Bonus +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
-		<icon>icon.skill11602</icon>
+		<icon>icon.skill11602_2</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -191,7 +191,15 @@
 	</skill>
 	<skill id="11603" toLevel="4" name="Mass Restriction">
 		<!-- For $s1, Heal received by the target and nearby enemies -$s2. -->
-		<icon>icon.skill11603</icon>
+		<icon>
+			<value level="1">icon.skill11559</value>
+			<value level="2">icon.skill11559</value>
+			<value level="3">icon.skill11559</value>
+			<value level="4">icon.skill1509</value>
+			<value level="5">icon.skill1509</value>
+			<value level="6">icon.skill1509</value>
+			<value level="7">icon.skill1509</value>
+		</icon>
 		<abnormalLvl>4</abnormalLvl> <!-- Custom -->
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>LIMIT</abnormalType>
@@ -363,6 +371,7 @@
 	</skill>
 	<skill id="11607" toLevel="1" name="Prevailing Song">
 		<!-- For $s1, party members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
+		<icon>icon.skill11607</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -370,7 +379,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11607</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -419,6 +427,7 @@
 	</skill>
 	<skill id="11608" toLevel="1" name="Daring Song">
 		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+		<icon>icon.skill11608</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -426,7 +435,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11608</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -487,6 +495,7 @@
 	</skill>
 	<skill id="11609" toLevel="1" name="Refreshing Song">
 		<!-- For $s1, party members' HP Recovery Bonus +$s2, MP Recovery Bonus +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+		<icon>icon.skill11609</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -494,7 +503,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11609</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -554,6 +562,7 @@
 	</skill>
 	<skill id="11610" toLevel="1" name="Prevailing Dance">
 		<!-- For $s1, party members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
+		<icon>icon.skill11610</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -561,7 +570,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11610</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -610,6 +618,7 @@
 	</skill>
 	<skill id="11611" toLevel="1" name="Daring Dance">
 		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+		<icon>icon.skill11611</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -617,7 +626,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11611</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -678,6 +686,7 @@
 	</skill>
 	<skill id="11612" toLevel="1" name="Refreshing Dance">
 		<!-- For $s1, party members' HP Recovery Bonus +$s2, MP Recovery Bonus +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
+		<icon>icon.skill11612</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -685,7 +694,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11612</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -1178,11 +1186,11 @@
 	</skill>
 	<skill id="11622" toLevel="1" name="Blessing Barrier">
 		<!-- The barrier absorbs 20000 damage for 10 seconds. -->
+		<icon>icon.skill11621</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
-		<icon>icon.skill11621</icon>
 		<operateType>A2</operateType>
 		<magicLvl>99</magicLvl>
 		<targetType>TARGET</targetType>

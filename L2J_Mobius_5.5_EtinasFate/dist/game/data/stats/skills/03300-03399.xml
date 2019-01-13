@@ -232,10 +232,10 @@
 	</skill>
 	<skill id="3318" toLevel="1" name="Flag Display">
 		<!-- In order to get recognition, display the combat flag on the fortress' flagpole. -->
+		<icon>icon.weapon_fort_flag_i00</icon>
 		<castRange>85</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>180000</hitTime>
-		<icon>icon.weapon_fort_flag_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>80</magicLvl>
 		<operateType>CA1</operateType>
@@ -282,12 +282,12 @@
 	</skill>
 	<skill id="3321" toLevel="1" name="Blue Talisman - Evasion">
 		<!-- Use the power of the Talisman to increase the Evasion rate and decrease the chance of receiving a critical attack. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>379</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>40</magicLvl>
 		<mpConsume>14</mpConsume>
@@ -387,12 +387,12 @@
 	</skill>
 	<skill id="3328" toLevel="1" name="Double Stab">
 		<!-- Stab with 2 cursed swords. -->
+		<icon>icon.weapon_dual_sword_i00</icon>
 		<castRange>40</castRange>
 		<coolTime>133</coolTime>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1667</hitTime>
-		<icon>icon.weapon_dual_sword_i00</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>140</mpConsume>
 		<nextAction>ATTACK</nextAction>
@@ -410,12 +410,12 @@
 	</skill>
 	<skill id="3329" toLevel="1" name="Power Slash">
 		<!-- Inflicts a powerful slashing attack with a cursed sword. -->
+		<icon>icon.weapon_unique_zariche_i00</icon>
 		<castRange>40</castRange>
 		<coolTime>133</coolTime>
 		<effectPoint>-1</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1667</hitTime>
-		<icon>icon.weapon_unique_zariche_i00</icon>
 		<magicLvl>99</magicLvl>
 		<mpConsume>140</mpConsume>
 		<nextAction>ATTACK</nextAction>
@@ -433,6 +433,7 @@
 	</skill>
 	<skill id="3330" toLevel="1" name="Air Blade">
 		<!-- Creates blade of air to attack enemies in front. -->
+		<icon>icon.skill3630</icon>
 		<affectLimit>6-12</affectLimit>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -440,7 +441,6 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;80;150</fanRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill3630</icon>
 		<magicLvl>99</magicLvl>
 		<mpConsume>140</mpConsume>
 		<nextAction>ATTACK</nextAction>
@@ -459,13 +459,13 @@
 	</skill>
 	<skill id="3331" toLevel="1" name="Enslave">
 		<!-- Emits force to nearby people, giving them the curse of sword. -->
+		<icon>icon.skill3631</icon>
 		<activateRate>60</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-1</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill3631</icon>
 		<rideState>NONE</rideState>
 		<magicLvl>99</magicLvl>
 		<mpConsume>200</mpConsume>
@@ -490,8 +490,8 @@
 	</skill>
 	<skill id="3332" toLevel="1" name="Orange Talisman - Hot Springs CP Potion">
 		<!-- Create 1 Hot Springs CP Potion with the power of the Talisman. Consumes 16 Soulstone. -->
-		<hitTime>20000</hitTime>
 		<icon>icon.etc_talisman_i04</icon>
+		<hitTime>20000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>16</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soul Ore -->
@@ -520,8 +520,8 @@
 	</skill>
 	<skill id="3333" toLevel="1" name="Orange Talisman - Elixir of Life (A-grade)">
 		<!-- Create 1 Elixir of Life A with power of the Talisman. Consumes 50 Soulstone. -->
-		<hitTime>20000</hitTime>
 		<icon>icon.etc_talisman_i04</icon>
+		<hitTime>20000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>50</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soul Ore -->
@@ -550,8 +550,8 @@
 	</skill>
 	<skill id="3334" toLevel="1" name="Orange Talisman - Elixir of Mind (A-grade)">
 		<!-- Create 1 Elixir of Mind A with the power of the Talisman. Consumes 57 Soulstone. -->
-		<hitTime>20000</hitTime>
 		<icon>icon.etc_talisman_i04</icon>
+		<hitTime>20000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>57</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soul Ore -->
@@ -580,12 +580,12 @@
 	</skill>
 	<skill id="3335" toLevel="1" name="Transform Yeti">
 		<!-- Transforms into Yeti. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>
@@ -609,12 +609,12 @@
 	</skill>
 	<skill id="3336" toLevel="1" name="Transform Buffalo">
 		<!-- Transform into a Yeti. There is no effect from the Mysterious Potion while in Yeti form. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>
@@ -641,12 +641,12 @@
 	</skill>
 	<skill id="3337" toLevel="1" name="Transform Cutie Pig">
 		<!-- Transforms into cute pig. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>
@@ -1049,12 +1049,12 @@
 	</skill>
 	<skill id="3359" toLevel="1" name="Transform Native">
 		<!-- Transforms into a Native. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>
@@ -1096,8 +1096,8 @@
 	</skill>
 	<skill id="3361" toLevel="1" name="Release Agathion's Seal - Fortress">
 		<!-- Summons Agathion. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>

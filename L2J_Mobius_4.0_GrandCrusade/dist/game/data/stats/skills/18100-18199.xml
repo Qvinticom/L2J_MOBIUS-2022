@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="18100" toLevel="1" name="Scroll: 100,000 SP">
 		<!-- Instantly boosts 100,000 SP. -->
-		<icon>icon.skill0000</icon>
 		<hitTime>200</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -24,7 +23,6 @@
 	</skill>
 	<skill id="18101" toLevel="1" name="Scroll: 1,000,000 SP">
 		<!-- Instantly boosts 1,000,000 SP. -->
-		<icon>icon.skill0000</icon>
 		<hitTime>200</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -46,7 +44,6 @@
 	</skill>
 	<skill id="18102" toLevel="1" name="Scroll: 10,000,000 SP">
 		<!-- Instantly boosts 10,000,000 SP. -->
-		<icon>icon.skill0000</icon>
 		<hitTime>200</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -67,17 +64,14 @@
 		</effects>
 	</skill>
 	<skill id="18103" toLevel="1" name="Lucky Clover">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="18104" toLevel="1" name="Soul Stealth">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="18105" toLevel="1" name="Scroll of Escape: Faeron Village">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -103,7 +97,6 @@
 	</skill>
 	<skill id="18106" toLevel="1" name="Ertheia Bracelet">
 		<!-- Activates 5 Talisman slots. STR/INT + 1. -->
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="StatUp">
@@ -125,84 +118,67 @@
 	</skill>
 	<skill id="18108" toLevel="1" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo">
 		<!-- Use to reset the cooldown to the Lv. 85 solo dungeon. One time only. Cannot be exchanged or dropped. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18109" toLevel="1" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party">
 		<!-- Use to reset the cooldown to the Lv. 85 party dungeon. One time only. Cannot be exchanged or dropped. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18110" toLevel="1" name="Entrance Pass: Fortuna">
 		<!-- Use to reset the cooldown to Fortuna. One time only. Cannot be exchanged or dropped. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18111" toLevel="1" name="Entrance Pass: Nornil's Garden">
 		<!-- Use to reset the cooldown to Nornil's Garden. One time only. Cannot be exchanged or dropped. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18112" toLevel="1" name="Entrance Pass: Octavis (Normal)">
 		<!-- Use to reset the cooldown to the Octavis dungeon (normal). One time only. Cannot be exchanged or dropped. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18113" toLevel="1" name="Disassembly Recipe Pouch: Armor">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18114" toLevel="1" name="Disassembly Recipe Pouch: Weapon">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18115" toLevel="1" name="Ertheia's Attribute Stone Pack (+ 60)">
 		<!-- Double-click to obtain a random Attribute Stone (+ 60). -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18116" toLevel="1" name="Ertheia's Attribute Stone Pack (+ 150)">
 		<!-- Double-click to obtain a random Attribute Stone (+ 150). -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18117" toLevel="1" name="Ertheia's Attribute Crystal Pack - Super">
 		<!-- Double-click to obtain a random Attribute Crystal - Super. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18118" toLevel="1" name="Appearance Stone: Cat Fighter (Ertheia Only)">
 		<!-- Changes the appearance of a fist weapon into that of a Cat Fighter. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18119" toLevel="1" name="Appearance Stone: Cat Staff (Ertheia Only)">
 		<!-- Changes the appearance of a staff into a Cat Staff. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18120" toLevel="1" name="Supply Box (R-grade)">
 		<!-- Double-click to obtain a random normal/blessed weapon/armor/accessory (R-grade). -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18121" toLevel="1" name="Supply Box (R95-grade)">
 		<!-- Double-click to obtain a random normal/blessed weapon/armor/accessory (R95-grade). -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18122" toLevel="1" name="Supply Box (R99-grade)">
 		<!-- Double-click to obtain a random normal/blessed weapon/armor/accessory (R99-grade). -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18123" toLevel="1" name="Scroll of Escape: Aden Castle">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="18124" toLevel="1" name="Scroll of Escape: Pagan Temple">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 	</skill>
@@ -368,21 +344,18 @@
 	</skill>
 	<skill id="18136" toLevel="1" name="Freya's Scroll of Escape: Town of Rune">
 		<!-- Teleports you to the Town of Rune. Agathion's Seal must be released. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="18137" toLevel="1" name="Freya's Scroll of Escape: Town of Aden">
 		<!-- Teleports you to the Town of Aden. Agathion's Seal must be released. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="18138" toLevel="1" name="Freya's Scroll of Escape: Talking Island Village">
 		<!-- Teleports you to Talking Island Village. Agathion's Seal must be released. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
@@ -417,7 +390,6 @@
 	</skill>
 	<skill id="18144" toLevel="1" name="Appearance Stone: Dark Assassin Suit">
 		<!-- Changes the appearance of your armor into that of a Dark Assassin Suit. -->
-		<icon>icon.skill18144</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -453,32 +425,25 @@
 	</skill>
 	<skill id="18149" toLevel="1" name="Monster Weapon Appearance Stone: Turikki's Blunt Weapon">
 		<!-- Changes the appearance of a blunt weapon into that of Turikki's Blunt Weapon. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18150" toLevel="1" name="Monster Weapon Appearance Stone: Tayga Archer's Bow">
 		<!-- Changes the appearance of a bow into that of a Tayga Archer's Bow. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18151" toLevel="1" name="Emissary's Reward Box (Low-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18152" toLevel="1" name="Emissary's Reward Box (Mid-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18153" toLevel="1" name="Emissary's Reward Box (High-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18154" toLevel="1" name="Emissary's Reward Box (Top-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18155" toLevel="1" name="Freya's Recovery Potion">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<itemConsumeId>40300</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -545,15 +510,12 @@
 		<operateType>A2</operateType>
 	</skill>
 	<skill id="18165" toLevel="1" name="Entrance Pass: Spezion (Normal)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18166" toLevel="1" name="Entrance Pass: Spezion (Epic)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18167" toLevel="1" name="Scroll of Escape: Dwarven Village">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -765,19 +727,15 @@
 		</conditions>
 	</skill>
 	<skill id="18176" toLevel="1" name="Presentation skill">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18177" toLevel="1" name="Presentation skill">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18178" toLevel="1" name="Presentation skill">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18179" toLevel="1" name="Buff Promotion Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18180" toLevel="1" name="Pew Pew">
@@ -863,7 +821,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18191" toLevel="1" name="Reward Capsule">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18192" toLevel="1" name="Vitality Replenishing Herb - Party">
@@ -875,14 +832,12 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18193" toLevel="1" name="Vitality Recovery - Party">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18194" toLevel="1" name="L2B2's Gift Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18195" toLevel="1" name="Knock Back">
@@ -908,15 +863,12 @@
 		<reuseDelay>30000</reuseDelay>
 	</skill>
 	<skill id="18197" toLevel="1" name="Blue Save Card (R-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18198" toLevel="1" name="Blue Save Card (R95-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18199" toLevel="1" name="Blue Save Card (R99-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

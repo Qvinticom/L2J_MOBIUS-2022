@@ -92,7 +92,6 @@
 	</skill>
 	<skill id="16518" toLevel="1" name="Event Invincibility">
 		<!-- Invincible to regular hits and skills, as well as buffs/debuffs. No HP Recovery. -->
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16519" toLevel="1" name="Slay X">
@@ -338,7 +337,6 @@
 	</skill>
 	<skill id="16543" toLevel="1" name="Spy's Aid Request">
 		<!-- When the Fortress Spy finds infiltrators inside the fortress will request aid and summon Fortress Raider, Atelia Passionate Soldier, and Atelia Elite Captain. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>10000</hitTime>
 		<effectPoint>-700</effectPoint>
@@ -678,9 +676,9 @@
 	</skill>
 	<skill id="16574" toLevel="4" name="Shield of Infinity">
 		<!-- P./M. Def. + 15%. -->
+		<icon>icon.skill0110</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
-		<icon>icon.skill0110</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -742,7 +740,6 @@
 	</skill>
 	<skill id="16578" toLevel="1" name="Dragonclaw Crush">
 		<!-- Inflicts damage to enemies around and stuns them. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
 		<coolTime>800</coolTime>
@@ -782,7 +779,6 @@
 	</skill>
 	<skill id="16582" toLevel="1" name="Let the Dogs Out!">
 		<!-- Typhoon summons his guardians. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>1500</castRange>
 		<hitTime>5000</hitTime>
@@ -814,7 +810,6 @@
 	</skill>
 	<skill id="16585" toLevel="1" name="Dragonclaw Cannon">
 		<!-- Bombards enemies around the target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2500</castRange>
 		<hitTime>3000</hitTime>
@@ -852,7 +847,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16589" toLevel="1" name="Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>

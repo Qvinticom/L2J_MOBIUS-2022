@@ -1156,6 +1156,7 @@
 	</item>
 	<item id="38577" name="Keucereus' Introduction - Seed of Destruction" type="EtcItem">
 		<!-- Letter from Keucereus. Bring this to Sergeant Allenos at the Seed of Destruction. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1165,10 +1166,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_scroll_gray_i00" />
 	</item>
 	<item id="38578" name="Keucereus' Introduction - Seed of Infinity" type="EtcItem">
 		<!-- Letter from Keucereus. Bring this to Officer Tepios at the Seed of Infinity. -->
+		<set name="icon" val="icon.etc_scroll_gray_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1178,7 +1179,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_scroll_gray_i00" />
 	</item>
 	<item id="38579" name="Tiat's Totem" type="EtcItem">
 		<!-- Obtained by hunting in the Seed of Destruction area. Bring these to Sergeant Allenos at the entrance. -->

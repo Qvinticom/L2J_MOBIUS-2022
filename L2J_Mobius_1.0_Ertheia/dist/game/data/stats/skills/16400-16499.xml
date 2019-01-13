@@ -31,7 +31,6 @@
 	</skill>
 	<skill id="16403" toLevel="1" name="Dimensional Judgment">
 		<!-- Sentence target to death. 150,000 damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
@@ -41,7 +40,6 @@
 	</skill>
 	<skill id="16404" toLevel="1" name="Dimensional Wide Judgment">
 		<!-- Sentence enemies to the front to death. 150,000 damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
@@ -51,7 +49,6 @@
 	</skill>
 	<skill id="16405" toLevel="1" name="Dimensional Mass Judgment">
 		<!-- Sentence all nearby enemies to death. 150,000 damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -244,7 +241,6 @@
 	</skill>
 	<skill id="16414" toLevel="1" name="Peace Zone Cure">
 		<!-- Recover 10% of Max HP and 30% of Max MP of self and everyone within 200 grids. Cooldown is 10 sec. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -438,7 +434,6 @@
 	</skill>
 	<skill id="16422" toLevel="1" name="Winter Holiday Reward">
 		<!-- Receive a Santa's Mark when the blessing from the Stocking/Tree/Snowman Fairy expires. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16423" toLevel="1" name="Noelle's Gift">
@@ -463,7 +458,6 @@
 	</skill>
 	<skill id="16424" toLevel="1" name="Appearance Stone: Santa Hat">
 		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16425" toLevel="1" name="Appearance Stone: Santa Suit">
@@ -705,7 +699,6 @@
 	</skill>
 	<skill id="16436" toLevel="1" name="Rush">
 		<!-- Charges into the enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>20</mpConsume>
 		<castRange>400</castRange>
@@ -722,7 +715,7 @@
 	</skill>
 	<skill id="16468" toLevel="1" name="Tauti's Temporary Invincibility">
 		<!-- A temporary buff that makes Tauti immune to attacks when he's down. -->
-		<icon>icon.weapon_tauti_one_hand_axe_i01</icon>
+		<icon>icon.skill1427</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>5000</reuseDelay>

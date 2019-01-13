@@ -927,6 +927,7 @@
 	</item> 
 	<item id="26248" name="Returning Hero's Support Cube" type="EtcItem">
 		<!-- Double-click to obtain one of the following items at a certain rate: Blessed Antharas' Earring Pack (7-day), Blessed Valakas' Necklace Pack (7-day), Tauti's Ring Pack (7-day), Earth Wyrm Heart Ring Pack (7-day), Blessed Zaken's Earring Pack (7-day), Tarot Card Coupon, Returning Hero's Vitality Replenishing Juice (1-hr), High-grade Love Potion x10, Mysterious Wind Scroll, Scroll: Enchant Armor (R-grade) x3, or Scroll: Enchant Weapon (R-grade). Can be used once a day, for character of any level. -->
+		<set name="icon" val="icon.cube_upgrade" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -936,7 +937,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.cube_upgrade" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />

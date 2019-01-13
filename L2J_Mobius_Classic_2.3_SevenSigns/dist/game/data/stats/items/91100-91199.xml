@@ -150,7 +150,7 @@
 	</item>
 	<item id="91116" name="Nebula’s Old Necklace" additionalName="Lv4" type="Armor">
 		<!-- MP +42, Water Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="icon" val="icon.elemental_necklace_water_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -169,7 +169,7 @@
 	</item>
 	<item id="91117" name="Nebula’s Necklace" type="Armor">
 		<!-- MP +42, Water Attack Defense +100, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="icon" val="icon.elemental_necklace_water_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -188,7 +188,7 @@
 	</item>
 	<item id="91118" name="Ignis’ Old Necklace" additionalName="Lv4" type="Armor">
 		<!-- MP +42, Fire Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="icon" val="icon.elemental_necklace_fire_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -207,7 +207,7 @@
 	</item>
 	<item id="91119" name="Ignis’ Necklace" type="Armor">
 		<!-- MP +50, Fire Attack Defense +100, Acquired Attribute XP +30%. Activates additional abilities after enchanting. -->
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="icon" val="icon.elemental_necklace_fire_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -226,7 +226,7 @@
 	</item>
 	<item id="91120" name="Procella’s Old Necklace" additionalName="Lv4" type="Armor">
 		<!-- MP +42, Wind Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="icon" val="icon.elemental_necklace_wind_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -245,7 +245,7 @@
 	</item>
 	<item id="91121" name="Procella’s Necklace" type="Armor">
 		<!-- MP +42, Wind Attack Defense +100, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="icon" val="icon.elemental_necklace_wind_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -264,7 +264,7 @@
 	</item>
 	<item id="91122" name="Petram’s Old Necklace" additionalName="Lv4" type="Armor">
 		<!-- MP +42, Earth Attack Defense +80, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="icon" val="icon.elemental_necklace_earth_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -283,7 +283,7 @@
 	</item>
 	<item id="91123" name="Petram’s Necklace" type="Armor">
 		<!-- MP +42, Earth Attack Defense +100, Acquired Attribute XP +15%. Cannot be enchanted using enchanting items. -->
-		<set name="icon" val="icon.accessary_earing_of_binding_i00" />
+		<set name="icon" val="icon.elemental_necklace_earth_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="false" />
@@ -437,7 +437,7 @@
 	</item>
 	<item id="91138" name="Reinforced Antharas' Earring" type="Armor">
 		<!-- MP +34, Bleed Resistance and Bleed Atk. Rate +10%, Stun Resistance and Stun Atk. Rate +10%, Mental Resistance and Atk. Rate +10%, Reflect Damage Resistance +7%, Healing Effects +10%, Skill MP Consumption -4%, Vampiric Rage effect +2%. The effect doesn't stack if two identical earrings are worn. -->
-		<set name="icon" val="icon.agathion_base" />
+		<set name="icon" val="icon.accessory_earring_of_antaras_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />

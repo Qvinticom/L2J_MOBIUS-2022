@@ -1411,7 +1411,7 @@
 	</skill>
 	<skill id="3568" toLevel="2" name="Special Ability: HP Drain">
 		<!-- Restores HP by using some of the damage inflicted upon the enemy with a certain probability. Inflicts additional damage during PvP. -->
-		<icon>icon.ensoul_big_old</icon>
+		<icon>icon.skill1268</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1487,7 +1487,7 @@
 	</skill>
 	<skill id="3570" toLevel="1" name="Special Ability: Robust Health">
 		<!-- Increases Max HP, Max MP, Max CP. Inflicts additional damage during PvP. -->
-		<icon>icon.ensoul_big_old</icon>
+		<icon>icon.skill1311</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1520,6 +1520,7 @@
 	</skill>
 	<skill id="3571" toLevel="2" name="Special Ability: Critical Stun">
 		<!-- Stunned and unable to move. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1530,7 +1531,6 @@
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>
 			<value level="1">10</value>
@@ -1642,6 +1642,7 @@
 	</skill>
 	<skill id="3574" toLevel="3" name="Special Ability: Critical Slow">
 		<!-- Temporarily decreases Speed. Effect 3. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1654,7 +1655,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>
@@ -1768,6 +1768,7 @@
 	</skill>
 	<skill id="3577" toLevel="3" name="Special Ability: Magic Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -1777,7 +1778,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -1840,12 +1840,12 @@
 	</skill>
 	<skill id="3579" toLevel="1" name="Decrease P. Def.">
 		<!-- Temporarily decreases P. Def. Effect 3 -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>4</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill0122</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>80</magicLvl>
@@ -2008,6 +2008,7 @@
 	</skill>
 	<skill id="3584" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2015,7 +2016,6 @@
 		<activateRate>25</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>80</magicLvl>
@@ -2078,6 +2078,7 @@
 	</skill>
 	<skill id="3586" toLevel="1" name="Restrain Physical Skills">
 		<!-- Temporarily blocks opponent's ability to use physical skills. -->
+		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SILENCE_PHYSICAL</abnormalType>
@@ -2085,7 +2086,6 @@
 		<activateRate>10</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>80</magicLvl>
@@ -2148,6 +2148,7 @@
 	</skill>
 	<skill id="3588" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2155,7 +2156,6 @@
 		<activateRate>25</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>80</magicLvl>
@@ -2217,6 +2217,7 @@
 	</skill>
 	<skill id="3590" toLevel="1" name="Restrain Magic Skills">
 		<!-- Magic skills are blocked momentarily. -->
+		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -2224,7 +2225,6 @@
 		<activateRate>5</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>80</magicLvl>
@@ -2340,13 +2340,13 @@
 	</skill>
 	<skill id="3594" toLevel="1" name="Decrease Speed">
 		<!-- Temporarily decreases Speed. Effect 3. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>7</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>80</magicLvl>

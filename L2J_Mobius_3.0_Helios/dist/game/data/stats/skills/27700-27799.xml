@@ -62,7 +62,7 @@
 	</skill>
 	<skill id="27702" toLevel="6" name="Shilen's Ring">
 		<!-- M. Def. + $s1, Dark Resistance + $s2, SRT/INT + $s3, Critical Damage + $s4. Effect does not stack with additional rings. -->
-		<icon>icon.ring_earthworm_heart</icon>
+		<icon>BranchIcon.Icon.ring_of_shilen_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
@@ -145,13 +145,13 @@
 	</skill>
 	<skill id="27703" toLevel="1" name="Shilen's Harshness">
 		<!-- When killing another character, there's a 70% chance that the PK count will not increase. -->
-		<icon>icon.ring_earthworm_heart</icon>
+		<icon>BranchIcon.Icon.ring_of_shilen_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="27704" toLevel="1" name="Shilen's Will">
 		<!-- Increases P./M. Atk. by 100% for 60 seconds. -->
-		<icon>icon.ring_earthworm_heart</icon>
+		<icon>BranchIcon.Icon.ring_of_shilen_i00</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<hitTime>200</hitTime>
@@ -159,7 +159,7 @@
 	</skill>
 	<skill id="27705" toLevel="6" name="Shilen's Necklace">
 		<!-- M. Def. + $s1, Dark Resistance + $s2, STR/INT + $s3, Physical/Mind attack success rate + $s4. Effect does not stack with additional rings. -->
-		<icon>icon.accessory_necklace_of_valakas_i00</icon>
+		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
@@ -231,17 +231,17 @@
 	</skill>
 	<skill id="27706" toLevel="1" name="Shilen's Strength">
 		<!-- When being attacked, there's a chance that the amount of PvP damage received will be reduced. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27707" toLevel="1" name="Shilen's Dignity">
 		<!-- Stuns target for 60 seconds. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.necklace_of_shilen_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27708" toLevel="6" name="Shilen's Earring">
 		<!-- M. Def. + $s1, Dark Resistance + $s2, STR/INT + $s3, Physical/Mind Resistance + $s4, Speed $s5. Effect does not stack with additional rings. -->
-		<icon>icon.accessory_earring_of_lind_i00</icon>
+		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<reuseDelay>
@@ -332,7 +332,7 @@
 	</skill>
 	<skill id="27709" toLevel="1" name="Shilen's Energy">
 		<!-- CHA + 10. -->
-		<icon>icon.accessory_earring_of_lind_i00</icon>
+		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 		<effects>
@@ -344,42 +344,38 @@
 	</skill>
 	<skill id="27710" toLevel="1" name="Shilen's Protection">
 		<!-- Creates a space that cancels all ranged attacks and debuffs for 60 seconds. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.earring_of_shilen_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27711" toLevel="1" name="Scroll: Shilen's Ring">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27712" toLevel="1" name="Scroll: Shilen's Necklace">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27713" toLevel="1" name="Scroll: Shilen's Earring">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27714" toLevel="1" name="Shilen's Strength">
 		<!-- When being attacked, there's a chance that the amount of PvP damage received will be reduced. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3080</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27715" toLevel="1" name="Prestige Cube">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27716" toLevel="1" name="Zodiac Agathion Pack">
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27717" toLevel="6" name="Greater Gemstone's Blessing">
 		<!-- You can feel a new energy thanks to your possession of a Greater Jewel. Max CP + 5%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_bm_brooch_lavianrose_piece</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27718" toLevel="1" name="La Vie En Rose's Elegant Brooch">
 		<!-- 6 Jewels can be equipped. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.icon.etc_g_bm_brooch_lavianrose</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="JewelSlot">
@@ -389,7 +385,7 @@
 	</skill>
 	<skill id="27719" toLevel="1" name="La Vie En Rose's Elegant Brooch">
 		<!-- Increases the inventory's size. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.icon.etc_g_bm_brooch_lavianrose</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="EnlargeSlot">
@@ -399,7 +395,6 @@
 		</effects>
 	</skill>
 	<skill id="27720" toLevel="1" name="Ultimate Jewelry Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27721" toLevel="1" name="Lv.1 La Vie En Rose's Energy">
@@ -507,11 +502,9 @@
 		</effects>
 	</skill>
 	<skill id="27725" toLevel="1" name="Ultimate Jewelry Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27726" toLevel="1" name="Abundance Box - Infinite">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27745" toLevel="1" name="Chef Monkey's Belt">
@@ -554,12 +547,12 @@
 	</skill>
 	<skill id="27746" toLevel="1" name="Item Skill: Unlimited Vitality Agathion">
 		<!-- When equipped, XP + $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys.icon.br_aga_bonus_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27786" toLevel="1" name="Ride Elk">
 		<!-- Mounts the Elk. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -669,7 +662,7 @@
 	</skill>
 	<skill id="27798" toLevel="1" name="Elk's Blessing">
 		<!-- Maintain vitality for 1 hour through Elk's blessing. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
@@ -697,7 +690,7 @@
 	</skill>
 	<skill id="27799" toLevel="1" name="Elk's Summoning">
 		<!-- Summon a party member. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1403</icon>
 		<castRange>-2</castRange>
 		<effectPoint>467</effectPoint>
 		<effectRange>-2</effectRange>

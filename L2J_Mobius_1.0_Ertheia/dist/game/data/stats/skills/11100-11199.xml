@@ -1642,7 +1642,6 @@
 	</skill>
 	<skill id="11126" toLevel="3" name="Fire Destruction">
 		<!-- Inflicts 620 magical damage on target, and inflicts Fear. Over-hit. -->
-		<icon>icon.skill0000</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime> <!-- Guessed -->
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -1682,7 +1681,6 @@
 	</skill>
 	<skill id="11127" toLevel="3" name="Dark Destruction">
 		<!-- Inflicts 713 magical damage on target. Over-hit. -->
-		<icon>icon.skill0000</icon>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
@@ -1712,7 +1710,6 @@
 	</skill>
 	<skill id="11128" toLevel="3" name="Water Destruction">
 		<!-- Inflicts 620 magical damage on target, and decreases their Speed by 130. Over-hit. -->
-		<icon>icon.skill0000</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1756,7 +1753,6 @@
 	</skill>
 	<skill id="11129" toLevel="3" name="Wind Destruction">
 		<!-- Inflicts 620 magical damage on target, and inflicts Knock Back. Over-hit. -->
-		<icon>icon.skill0000</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>1</abnormalTime>
@@ -1799,7 +1795,6 @@
 	</skill>
 	<skill id="11130" toLevel="3" name="Soul Destruction">
 		<!-- Inflicts 620 magical damage on target, and inflicts Hold. Over-hit. -->
-		<icon>icon.skill0000</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime> <!-- Guessed -->
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -1836,7 +1831,6 @@
 	</skill>
 	<skill id="11131" toLevel="3" name="Life Straw">
 		<!-- For 10 sec., attacks target with 115 Power per second and recovers HP equivalent to 100% of damage inflicted. -->
-		<icon>icon.skill0000</icon>
 		<channelingTickInterval>1</channelingTickInterval>
 		<channelingStart>2</channelingStart>
 		<operateType>CA1</operateType>
@@ -1938,7 +1932,6 @@
 	<skill id="11134" toLevel="1" name="Meteor">
 		<!-- Updated to IO -->
 		<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes 5 Spirit Ores. -->
-		<icon>icon.skill11134</icon>
 		<affectRange>250</affectRange>
 		<channelingSkillId>11134</channelingSkillId>
 		<channelingTickInterval>2</channelingTickInterval>
@@ -1997,7 +1990,6 @@
 	<skill id="11135" toLevel="1" name="Black Pool">
 		<!-- Updated to IO -->
 		<!-- Creates a black swamp in the selected location, dealing great damage, and receiving 50% of the target's damage as HP. Inflicts abnormal state and decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Shocks the target. Consumes 5 Spirit Ores. -->
-		<icon>icon.skill11135</icon>
 		<affectRange>250</affectRange>
 		<channelingTickInterval>1</channelingTickInterval>
 		<channelingStart>2</channelingStart>
@@ -2039,7 +2031,6 @@
 		<!-- Updated to IO -->
 		<!-- Hits 8 times -->
 		<!-- Creates an ice storm in the selected location, dealing continuous damage. Inflicts abnormal state and decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes 5 Spirit Ores. -->
-		<icon>icon.skill11136</icon>
 		<affectRange>250</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2101,7 +2092,6 @@
 	<skill id="11137" toLevel="1" name="Tornado">
 		<!-- Updated to IO -->
 		<!-- Creates a tornado in the selected location, dealing great damage. Inflicts abnormal state and decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, locks the target in an Aerial Yoke. Consumes 5 Spirit Ores. -->
-		<icon>icon.skill11137</icon>
 		<affectRange>250</affectRange>
 		<channelingTickInterval>1</channelingTickInterval>
 		<channelingStart>2</channelingStart>
@@ -2161,7 +2151,6 @@
 	<skill id="11138" toLevel="1" name="Soul Barrage">
 		<!-- Updated to IO -->
 		<!-- Detonates the soul in the selected location to attack surrounding enemies. Inflicts abnormal state and increases PvP Damage. The effect increases as the level of the abnormal state increases. Consumes 5 Spirit Ores. -->
-		<icon>icon.skill11138</icon>
 		<affectRange>250</affectRange> <!-- Guessed -->
 		<channelingTickInterval>1</channelingTickInterval>
 		<channelingStart>2</channelingStart>
@@ -2193,7 +2182,6 @@
 	<skill id="11139" toLevel="3" name="Ignite">
 		<!-- Updated to IO -->
 		<!-- Engulfed in flames. -->
-		<icon>icon.skill11134</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2225,7 +2213,6 @@
 	<skill id="11140" toLevel="5" name="Black Shackle">
 		<!-- Updated to IO -->
 		<!-- Bound to dark power. -->
-		<icon>icon.skill11135</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2260,7 +2247,6 @@
 	<skill id="11141" toLevel="5" name="Freezing Slow">
 		<!-- Updated to IO -->
 		<!-- The cold is creeping up from your feet. -->
-		<icon>icon.skill11136</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2301,6 +2287,7 @@
 	</skill>
 	<skill id="11142" toLevel="3" name="Damaged Area">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2310,7 +2297,6 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill11032</icon>
 		<operateType>A4</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-702</effectPoint>
@@ -2341,6 +2327,7 @@
 	</skill>
 	<skill id="11143" toLevel="3" name="Damaged Area">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2350,7 +2337,6 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill11032</icon>
 		<operateType>A4</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-707</effectPoint>
@@ -2382,7 +2368,6 @@
 	<skill id="11144" toLevel="5" name="Wind Binding">
 		<!-- Updated to IO -->
 		<!-- Speed has decreased due to the gust. -->
-		<icon>icon.skill11137</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2424,7 +2409,6 @@
 	<skill id="11145" toLevel="5" name="Soul Weakness">
 		<!-- Updated to IO -->
 		<!-- Cursed by a soul. -->
-		<icon>icon.skill11138</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3122,6 +3106,7 @@
 	</skill>
 	<skill id="11188" toLevel="5" name="Frozen">
 		<!-- The cold is creeping up from your feet. -->
+		<icon>icon.skill11017</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3131,7 +3116,6 @@
 		</abnormalLvl>
 		<abnormalTime>2</abnormalTime> <!-- Guessed -->
 		<abnormalType>SPEED_DOWN</abnormalType>
-		<icon>icon.skill11017</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>

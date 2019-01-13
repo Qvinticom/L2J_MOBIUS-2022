@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5200" toLevel="8" name="Pet Recharge">
 		<!-- Regenerates MP. -->
+		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">604</value>
@@ -15,7 +16,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill1013</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">65</value>
@@ -70,6 +70,7 @@
 	</skill>
 	<skill id="5201" toLevel="6" name="Pet Concentration">
 		<!-- Momentarily lowers the probability of magic being canceled due to damage taken. Effect $s1. -->
+		<icon>icon.skill1078</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -91,7 +92,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1078</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -195,6 +195,7 @@
 	</skill>
 	<skill id="5203" toLevel="12" name="Fear">
 		<!-- Inflicted with Fear and moving against own will momentarily. -->
+		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -206,7 +207,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1092</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">10</value>
@@ -274,6 +274,7 @@
 	</skill>
 	<skill id="5206" toLevel="1" name="Decrease Speed">
 		<!-- Curse of mutated animals: Speed decreases momentarily. Effect 1. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -283,7 +284,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -306,6 +306,7 @@
 	</skill>
 	<skill id="5207" toLevel="1" name="Decrease Atk. Spd.">
 		<!-- Curse of mutated animals: Atk. Spd. decreases momentarily. Effect 1. -->
+		<icon>icon.skill4038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -315,7 +316,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill4038</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -337,12 +337,12 @@
 	</skill>
 	<skill id="5208" toLevel="1" name="Wind Walk (Event)">
 		<!-- Speed increases temporarily. Effect 2. -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1204</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -362,12 +362,12 @@
 	</skill>
 	<skill id="5209" toLevel="1" name="Shield (Event)">
 		<!-- P. Def. increases temporarily. Effect 3. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1040</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -387,12 +387,12 @@
 	</skill>
 	<skill id="5210" toLevel="1" name="Blessed Body (Event)">
 		<!-- Momentarily increases maximum HP. Effect 6. -->
+		<icon>icon.skill1045</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1045</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -412,12 +412,12 @@
 	</skill>
 	<skill id="5211" toLevel="1" name="Vampiric Rage (Event)">
 		<!-- Uses damage inflicted upon the enemy to temporarily restore HP with a certain probability. Effect 4. -->
+		<icon>icon.skill1268</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1268</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -437,12 +437,12 @@
 	</skill>
 	<skill id="5212" toLevel="1" name="Regeneration (Event)">
 		<!-- HP recovery bonus is increased for a fixed time. Effect 3. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1044</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -462,12 +462,12 @@
 	</skill>
 	<skill id="5213" toLevel="1" name="Haste (Event)">
 		<!-- Atk. Spd. increases temporarily. Effect 1. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -487,12 +487,12 @@
 	</skill>
 	<skill id="5214" toLevel="1" name="Blessed Soul (Event)">
 		<!-- Momentarily increases maximum MP. Effect 6. -->
+		<icon>icon.skill1048</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1048</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -512,12 +512,12 @@
 	</skill>
 	<skill id="5215" toLevel="1" name="Acumen (Event)">
 		<!-- Momentarily increases Casting Spd. Effect 3. -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1085</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -537,12 +537,12 @@
 	</skill>
 	<skill id="5216" toLevel="1" name="Concentration (Event)">
 		<!-- Momentarily decreases the probability of magic being canceled due to damage taken. Effect 1. -->
+		<icon>icon.skill1078</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CANCEL_PROB_DOWN</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1078</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -562,12 +562,12 @@
 	</skill>
 	<skill id="5217" toLevel="1" name="Empower (Event)">
 		<!-- M. Atk. increases temporarily. Effect 1. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1059</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -704,6 +704,7 @@
 	</skill>
 	<skill id="5224" toLevel="1" name="Berserk">
 		<!-- Increases P. Atk. and P. Def. -->
+		<icon>icon.skill1062</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -717,7 +718,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1062</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -733,6 +733,7 @@
 	</skill>
 	<skill id="5225" toLevel="1" name="Invincibility">
 		<!-- Invincible against general attack and skill, buff/de-buff. -->
+		<icon>icon.skill1427</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -747,7 +748,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1427</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -844,6 +844,7 @@
 	</skill>
 	<skill id="5229" toLevel="2" name="Strong Punch">
 		<!-- Stunned by a Heavy Punch Attack. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -854,7 +855,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -887,6 +887,7 @@
 	</skill>
 	<skill id="5230" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -896,7 +897,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -917,6 +917,7 @@
 	</skill>
 	<skill id="5231" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -926,7 +927,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -947,6 +947,7 @@
 	</skill>
 	<skill id="5232" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -956,7 +957,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -1080,6 +1080,7 @@
 	</skill>
 	<skill id="5238" toLevel="1" name="Freezing">
 		<!-- Instantly freezes and immobilizes. -->
+		<icon>icon.skill1174</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>FREEZING</abnormalType>
@@ -1093,7 +1094,6 @@
 		<attributeValue>20</attributeValue>
 		<fanRange>0;0;600;60</fanRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1174</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1118,6 +1118,7 @@
 	</skill>
 	<skill id="5239" toLevel="5" name="Event Timer">
 		<!-- Battle cannot be continued when the corresponding effect disappears. Corresponding effects will disappear even if you ride a vehicle. -->
+		<icon>icon.skill5239</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">300</value>
@@ -1130,7 +1131,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<effectPoint>100</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill5239</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1144,6 +1144,7 @@
 	</skill>
 	<skill id="5240" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1155,7 +1156,6 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;600;60</fanRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>84</magicLvl>
@@ -1176,6 +1176,7 @@
 	</skill>
 	<skill id="5241" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1186,7 +1187,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>84</magicLvl>
@@ -1207,6 +1207,7 @@
 	</skill>
 	<skill id="5242" toLevel="1" name="Sickness">
 		<!-- Temporary illness that makes you queasy and blurs your vision. -->
+		<icon>icon.skill5242</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MAX_BREATH_UP</abnormalType>
@@ -1217,7 +1218,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill5242</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -1230,6 +1230,7 @@
 	</skill>
 	<skill id="5243" toLevel="1" name="Blind">
 		<!-- Momentarily cannot see. -->
+		<icon>icon.skill5243</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MAX_BREATH_UP</abnormalType>
@@ -1239,7 +1240,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill5243</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -1251,11 +1251,11 @@
 	</skill>
 	<skill id="5244" toLevel="1" name="Physical Up">
 		<!-- Increases P. Atk. and P. Def. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1068</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1278,11 +1278,11 @@
 	</skill>
 	<skill id="5245" toLevel="1" name="Magical Up">
 		<!-- Increases M. Atk. and M. Def. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>MA_MD_UP</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1059</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1367,6 +1367,7 @@
 	</skill>
 	<skill id="5247" toLevel="12" name="Seed of Darkness">
 		<!-- HP decreases momentarily. Critical Damage will be inflicted by the full grown seed if it is not removed. -->
+		<icon>icon.skill0523</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1392,7 +1393,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3300</hitTime>
-		<icon>icon.skill0523</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1596,6 +1596,7 @@
 	</skill>
 	<skill id="5250" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1607,7 +1608,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>87</magicLvl>
@@ -1626,6 +1626,7 @@
 	</skill>
 	<skill id="5251" toLevel="12" name="Poison">
 		<!-- Poisons a target, momentarily decreasing HP. Effect $s1. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1650,7 +1651,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1800</hitTime>
-		<icon>icon.skill4035</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -1729,6 +1729,7 @@
 	</skill>
 	<skill id="5252" toLevel="12" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -1738,7 +1739,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1769,6 +1769,7 @@
 	</skill>
 	<skill id="5253" toLevel="12" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1794,7 +1795,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1874,6 +1874,7 @@
 	</skill>
 	<skill id="5254" toLevel="12" name="Invasion of Spirit">
 		<!-- MP decreases. Effect $s1. -->
+		<icon>icon.skill1102</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -1897,7 +1898,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1102</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2021,6 +2021,7 @@
 	</skill>
 	<skill id="5256" toLevel="1" name="Announcement of Death">
 		<!-- Announcement of Death. Dead after 30 seconds. -->
+		<icon>icon.skill5239</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DEATH_CLACK</abnormalType>
@@ -2031,7 +2032,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill5239</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>95</magicLvl>
@@ -2144,6 +2144,7 @@
 	</skill>
 	<skill id="5259" toLevel="12" name="Fear">
 		<!-- Inflicted with Fear and moving against own will momentarily. -->
+		<icon>icon.skill1092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -2155,7 +2156,6 @@
 		<effectPoint>-1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1092</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2215,6 +2215,7 @@
 	</skill>
 	<skill id="5260" toLevel="12" name="Disarm">
 		<!-- Disarmed. -->
+		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -2225,7 +2226,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0485</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
@@ -2268,13 +2268,13 @@
 	</skill>
 	<skill id="5261" toLevel="1" name="Zombie">
 		<!-- Condition causing target to transform into zombie. Condition to decrease physical ability. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skilltransform3</icon>
 		<magicLvl>60</magicLvl>
 		<mpConsume>44</mpConsume>
 		<mpInitialConsume>11</mpInitialConsume>
@@ -2573,6 +2573,7 @@
 	</skill>
 	<skill id="5266" toLevel="12" name="Magical Backfire">
 		<!-- Increased MP consumption. Effect $s1. -->
+		<icon>icon.skill1396</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MP_COST_UP</abnormalType>
@@ -2582,7 +2583,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1396</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -2757,6 +2757,7 @@
 	</skill>
 	<skill id="5268" toLevel="17" name="Poison">
 		<!-- HP decreases from poison momentarily. -->
+		<icon>icon.skill0515</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -2766,7 +2767,6 @@
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0515</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2824,6 +2824,7 @@
 	</skill>
 	<skill id="5269" toLevel="17" name="Slow Trap">
 		<!-- Decreases Atk. Spd. and Casting Spd. Effect $s1. -->
+		<icon>icon.skill0516</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
@@ -2831,7 +2832,6 @@
 		<affectRange>200</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0516</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2878,6 +2878,7 @@
 	</skill>
 	<skill id="5270" toLevel="16" name="Flash Trap">
 		<!-- Lost the target. Stunned and unable to move momentarily. -->
+		<icon>icon.skill0517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2886,7 +2887,6 @@
 		<affectRange>200</affectRange>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0517</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2925,6 +2925,7 @@
 	</skill>
 	<skill id="5271" toLevel="19" name="Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
+		<icon>icon.skill0518</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -2934,7 +2935,6 @@
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill0518</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<lvlBonusRate>1</lvlBonusRate>

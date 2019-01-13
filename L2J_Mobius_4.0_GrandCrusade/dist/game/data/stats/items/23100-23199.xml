@@ -875,6 +875,7 @@
 	</item>
 	<item id="23137" name="Extra Pass: Ancient Kartia's Labyrinth" type="EtcItem">
 		<!-- Given to adventurers from the Kartia Research Center. Resets Cooldown for Ancient Kartia's Labyrinth. -->
+		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -886,7 +887,6 @@
 		<set name="time" val="1440" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="handler" val="ItemSkills" />
-		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<skills>
 			<skill id="22626" level="1" /> <!-- Extra Pass -->
 		</skills>

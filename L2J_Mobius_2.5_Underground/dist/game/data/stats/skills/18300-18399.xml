@@ -2,13 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="18344" toLevel="1" name="Escape: Village">
 		<!-- Teleports to a village. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>5000</hitTime>
 		<reuseDelay>60000</reuseDelay>
 	</skill>
 	<skill id="18345" toLevel="1" name="Spellbook: Dignity of the Exalted Lv. 1">
-		<icon>icon.skill0000</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -41,7 +39,6 @@
 		</effects>
 	</skill>
 	<skill id="18346" toLevel="1" name="Spellbook: Dignity of the Exalted Lv. 2">
-		<icon>icon.skill0000</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -73,7 +70,6 @@
 		</effects>
 	</skill>
 	<skill id="18347" toLevel="1" name="Spellbook: Dignity of the Exalted Lv. 3">
-		<icon>icon.skill0000</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -104,7 +100,6 @@
 		</effects>
 	</skill>
 	<skill id="18348" toLevel="1" name="Spellbook: Belief of the Exalted">
-		<icon>icon.skill0000</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -135,7 +130,6 @@
 		</effects>
 	</skill>
 	<skill id="18349" toLevel="1" name="Spellbook: Blessing of the Exalted">
-		<icon>icon.skill0000</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -196,7 +190,6 @@
 		</effects>
 	</skill>
 	<skill id="18351" toLevel="2" name="Spellbook: Favor of the Exalted Lv. 2">
-		<icon>icon.skill0000</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -350,7 +343,6 @@
 	</skill>
 	<skill id="18359" toLevel="1" name="Summon Kableon">
 		<!-- Summon Kableon. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>5000</reuseDelay>
@@ -405,13 +397,11 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="18367" toLevel="1" name="Festival Reward">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18368" toLevel="1" name="Festival Reward">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
@@ -684,21 +674,17 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="18396" toLevel="1" name="Player Commendation Points">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="18397" toLevel="1" name="Player Commendation Points">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="18398" toLevel="1" name="Zaken's Treasure Chest">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18399" toLevel="1" name="Leona Blackbird's Treasure Chest">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

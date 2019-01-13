@@ -15,6 +15,13 @@
 	</skill>
 	<skill id="6103" toLevel="5" name="Showdown with the Turkey - 1st Win">
 		<!-- $s1st win. -->
+		<icon>
+			<value level="1">icon.xmas_pcwin1_i00</value>
+			<value level="2">icon.xmas_pcwin2_i00</value>
+			<value level="3">icon.xmas_pcwin3_i00</value>
+			<value level="4">icon.xmas_pcwin4_i00</value>
+			<value level="5">icon.xmas_pcwin5_i00</value>
+		</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -25,13 +32,6 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>EVENT_WIN</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>
-			<value level="1">icon.xmas_pcwin1_i00</value>
-			<value level="2">icon.xmas_pcwin2_i00</value>
-			<value level="3">icon.xmas_pcwin3_i00</value>
-			<value level="4">icon.xmas_pcwin4_i00</value>
-			<value level="5">icon.xmas_pcwin5_i00</value>
-		</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -58,12 +58,12 @@
 	</skill>
 	<skill id="6105" toLevel="1" name="Turkey's Mistake">
 		<!-- The stupid turkey's mistake. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, Speed by 15%, P. Atk. by 10%, M. Atk. by 15%, Critical Rate by 5, Critical Damage by 15%, and the chance of prominent damage occurring through magic damage by 2. -->
+		<icon>icon.turkey_buff_i00</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>EVENT_SANTA_REWARD</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.turkey_buff_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -80,11 +80,11 @@
 	</skill>
 	<skill id="6106" toLevel="1" name="Winter Holiday Festival">
 		<!-- Holiday festival. For 1 hour, increases Max HP by 5%, Max MP by 5%, Max CP by 5%, Speed by 10, P. Atk. by 8%, and M. Atk. by 10%. -->
+		<icon>icon.xmas_miracle_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>EVENT_SANTA_REWARD</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.xmas_miracle_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -101,11 +101,11 @@
 	</skill>
 	<skill id="6107" toLevel="1" name="Winter Holiday Blessing - Gludio">
 		<!-- Holiday Blessing - Registered in Gludio territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -120,11 +120,11 @@
 	</skill>
 	<skill id="6108" toLevel="1" name="Winter Holiday Blessing - Dion">
 		<!-- Holiday Blessing - Registered in Dion territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -139,11 +139,11 @@
 	</skill>
 	<skill id="6109" toLevel="1" name="Winter Holiday Blessing - Giran">
 		<!-- Holiday Blessing - Registered in Giran territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -158,11 +158,11 @@
 	</skill>
 	<skill id="6110" toLevel="1" name="Winter Holiday Blessing - Oren">
 		<!-- Holiday Blessing - Registered in Oren territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -177,11 +177,11 @@
 	</skill>
 	<skill id="6111" toLevel="1" name="Winter Holiday Blessing - Aden">
 		<!-- Holiday Blessing - Registered in Aden territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -196,11 +196,11 @@
 	</skill>
 	<skill id="6112" toLevel="1" name="Winter Holiday Blessing - Innadril">
 		<!-- Holiday Blessing - Registered in Innadril territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -215,11 +215,11 @@
 	</skill>
 	<skill id="6113" toLevel="1" name="Winter Holiday Blessing - Goddard">
 		<!-- Holiday Blessing - Registered in Goddard territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -234,11 +234,11 @@
 	</skill>
 	<skill id="6114" toLevel="1" name="Winter Holiday Blessing - Rune">
 		<!-- Holiday Blessing - Registered in Rune territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -253,11 +253,11 @@
 	</skill>
 	<skill id="6115" toLevel="1" name="Winter Holiday Blessing - Schuttgart">
 		<!-- Holiday Blessing - Registered in Schuttgart territory. If the corresponding territory Santa is rescued, you get the chance to receive a gift from Santa. -->
+		<icon>icon.skill5762</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill5762</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -285,6 +285,11 @@
 	</skill>
 	<skill id="6117" toLevel="3" name="Choice - Scissors">
 		<!-- You have selected Scissors. You cannot move for $s1. -->
+		<icon>
+			<value level="1">icon.xmas_gawi_i00</value>
+			<value level="2">icon.xmas_bawi_i00</value>
+			<value level="3">icon.xmas_bo_i00</value>
+		</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -293,11 +298,6 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>EVENT_GAWI</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>
-			<value level="1">icon.xmas_gawi_i00</value>
-			<value level="2">icon.xmas_bawi_i00</value>
-			<value level="3">icon.xmas_bo_i00</value>
-		</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -314,11 +314,11 @@
 	</skill>
 	<skill id="6120" toLevel="1" name="Santa's Reward">
 		<!-- Santa's reward. For 1 hour, increases Max HP by 10%, Max MP by 10%, Max CP by 10%, Speed by 15%, P. Atk. by 10%, M. Atk. by 15%, Critical Rate by 5, Critical Damage by 15%, and the chance of prominent damage occurring through magic damage by 2. -->
+		<icon>icon.etc_pi_gift_box_i04</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>EVENT_SANTA_REWARD</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_pi_gift_box_i04</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -418,13 +418,13 @@
 	</skill>
 	<skill id="6123" toLevel="1" name="Agathion's New Year's Wish">
 		<!-- Agathion's New Year's Wish - Vitality is maintained and not consumed. -->
+		<icon>icon.etc_pi_gift_box_i03</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<coolTime>1000</coolTime>
 		<hitTime>2000</hitTime>
-		<icon>icon.etc_pi_gift_box_i03</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -445,8 +445,8 @@
 	</skill>
 	<skill id="6124" toLevel="1" name="Agathion Cute Trick - Neolithica">
 		<!-- See the summoned spirit perform cute tricks. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A1</operateType>
@@ -461,11 +461,11 @@
 	</skill>
 	<skill id="6125" toLevel="1" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -484,11 +484,11 @@
 	</skill>
 	<skill id="6126" toLevel="1" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -526,6 +526,7 @@
 	</skill>
 	<skill id="6129" toLevel="1" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -535,7 +536,6 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0092</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
@@ -551,6 +551,7 @@
 	</skill>
 	<skill id="6130" toLevel="1" name="Mutant Curse">
 		<!-- Mutant Curse: Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -561,7 +562,6 @@
 		<coolTime>2000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill0092</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
@@ -579,6 +579,7 @@
 	</skill>
 	<skill id="6131" toLevel="1" name="Decrease Speed">
 		<!-- Mutant Curse: Speed decreases momentarily. Effect 1. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -586,7 +587,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1160</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>95</magicLvl>
@@ -603,6 +603,7 @@
 	</skill>
 	<skill id="6132" toLevel="1" name="Decrease Atk. Spd.">
 		<!-- Mutant Curse: Atk. Spd. decreases momentarily. Effect 1. -->
+		<icon>icon.skill4038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -610,7 +611,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill4038</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>95</magicLvl>
@@ -626,13 +626,13 @@
 	</skill>
 	<skill id="6133" toLevel="1" name="Mysterious Effect">
 		<!-- Head is enlarged. -->
+		<icon>icon.skill2513</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
 		<activateRate>0</activateRate>
 		<effectPoint>-1</effectPoint>
-		<icon>icon.skill2513</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
@@ -649,6 +649,7 @@
 	</skill>
 	<skill id="6134" toLevel="1" name="Mutant Curse">
 		<!-- Mutant Curse: Atk. Spd. and Speed decrease momentarily. Effect 1. -->
+		<icon>icon.skill4038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
@@ -656,7 +657,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill4038</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>95</magicLvl>
@@ -672,6 +672,7 @@
 	</skill>
 	<skill id="6135" toLevel="1" name="Mutant Curse">
 		<!-- Mutant Curse: Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0092</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -681,7 +682,6 @@
 		<coolTime>2000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>6000</hitTime>
-		<icon>icon.skill0092</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>95</magicLvl>
 		<operateType>A2</operateType>
@@ -697,8 +697,8 @@
 	</skill>
 	<skill id="6136" toLevel="1" name="Agathion Cute Trick - Juju">
 		<!-- See the summoned spirit perform cute tricks. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A1</operateType>
@@ -714,13 +714,13 @@
 	</skill>
 	<skill id="6137" toLevel="1" name="Agathion Juju - Mysterious Effect">
 		<!-- Makes the head enlarge. -->
+		<icon>icon.skill2513</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
 		<activateRate>0</activateRate>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill2513</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -739,8 +739,8 @@
 	</skill>
 	<skill id="6138" toLevel="1" name="Agathion Juju - Large Firecracker">
 		<!-- Can set off large firecrackers. -->
-		<hitTime>1500</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A1</operateType>
@@ -756,13 +756,13 @@
 	</skill>
 	<skill id="6139" toLevel="1" name="Fake Tears">
 		<!-- For 10 minutes, weapon appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But, weapons don't change their abilities. -->
+		<icon>icon.etc_water_of_silen_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>WP_CHANGE_EVENT</abnormalType>
 		<abnormalVisualEffect>CHANGE_WP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_water_of_silen_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -813,6 +813,7 @@
 	</skill>
 	<skill id="6142" toLevel="3" name="Tar Trap">
 		<!-- You are covered in hot and sticky tar. Your Speed is decreased by $s2 for $s1. P. Def. and evasion are decreased by $s3. -->
+		<icon>icon.skill0770</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -827,7 +828,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0770</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -962,6 +962,7 @@
 	</skill>
 	<skill id="6148" toLevel="1" name="Altar's Curse">
 		<!-- You have been weakened by the Altar's Curse. You probably can't fight in this condition. -->
+		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -969,7 +970,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
@@ -1004,12 +1004,12 @@
 	</skill>
 	<skill id="6149" toLevel="1" name="Kasha's Brand">
 		<!-- Kasha's Brand. For 5 minutes, P. Def. - 30%. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>900</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0122</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
@@ -1040,17 +1040,17 @@
 	</skill>
 	<skill id="6150" toLevel="4" name="Kasha's Curse">
 		<!-- Kasha's Curse. Atk. Spd. increases. -->
-		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>11</abnormalTime>
-		<abnormalType>PD_DOWN</abnormalType>
-		<canBeDispelled>false</canBeDispelled>
-		<effectPoint>-100</effectPoint>
 		<icon>
 			<value level="1">icon.skill6151_1</value>
 			<value level="2">icon.skill6151_2</value>
 			<value level="3">icon.skill6151_3</value>
 			<value level="4">icon.skill6151_4</value>
 		</icon>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>11</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1076,16 +1076,16 @@
 	</skill>
 	<skill id="6151" toLevel="4" name="Kasha's Curse">
 		<!-- Kasha's Curse. Atk. Spd. increases and P. Def. decreases. -->
-		<abnormalLvl>3</abnormalLvl>
-		<abnormalTime>11</abnormalTime>
-		<abnormalType>PD_DOWN</abnormalType>
-		<effectPoint>-100</effectPoint>
 		<icon>
 			<value level="1">icon.skill6151_1</value>
 			<value level="2">icon.skill6151_2</value>
 			<value level="3">icon.skill6151_3</value>
 			<value level="4">icon.skill6151_4</value>
 		</icon>
+		<abnormalLvl>3</abnormalLvl>
+		<abnormalTime>11</abnormalTime>
+		<abnormalType>PD_DOWN</abnormalType>
+		<effectPoint>-100</effectPoint>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1100,17 +1100,17 @@
 	</skill>
 	<skill id="6152" toLevel="4" name="Kasha's Yearning">
 		<!-- Kasha's Yearning. P. Atk. increases. -->
-		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>11</abnormalTime>
-		<abnormalType>SIGNAL_A</abnormalType>
-		<canBeDispelled>false</canBeDispelled>
-		<effectPoint>-100</effectPoint>
 		<icon>
 			<value level="1">icon.skill6152_1</value>
 			<value level="2">icon.skill6152_2</value>
 			<value level="3">icon.skill6152_3</value>
 			<value level="4">icon.skill6152_4</value>
 		</icon>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>11</abnormalTime>
+		<abnormalType>SIGNAL_A</abnormalType>
+		<canBeDispelled>false</canBeDispelled>
+		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1136,16 +1136,16 @@
 	</skill>
 	<skill id="6153" toLevel="4" name="Kasha's Yearning">
 		<!-- Kasha's Yearning. P. Atk. increases and P. Def. decreases. -->
-		<abnormalLvl>2</abnormalLvl>
-		<abnormalTime>11</abnormalTime>
-		<abnormalType>SIGNAL_A</abnormalType>
-		<effectPoint>-100</effectPoint>
 		<icon>
 			<value level="1">icon.skill6152_1</value>
 			<value level="2">icon.skill6152_2</value>
 			<value level="3">icon.skill6152_3</value>
 			<value level="4">icon.skill6152_4</value>
 		</icon>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalTime>11</abnormalTime>
+		<abnormalType>SIGNAL_A</abnormalType>
+		<effectPoint>-100</effectPoint>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1160,18 +1160,18 @@
 	</skill>
 	<skill id="6154" toLevel="4" name="Kasha's Despair">
 		<!-- Kasha's Despair. Critical rate increases. -->
-		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>11</abnormalTime>
-		<abnormalType>MAX_HP_DOWN</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<canBeDispelled>false</canBeDispelled>
-		<effectPoint>-100</effectPoint>
 		<icon>
 			<value level="1">icon.skill6154_1</value>
 			<value level="2">icon.skill6154_2</value>
 			<value level="3">icon.skill6154_3</value>
 			<value level="4">icon.skill6154_4</value>
 		</icon>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>11</abnormalTime>
+		<abnormalType>MAX_HP_DOWN</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<canBeDispelled>false</canBeDispelled>
+		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1198,17 +1198,17 @@
 	</skill>
 	<skill id="6155" toLevel="4" name="Kasha's Despair">
 		<!-- Kasha's Despair. Critical rate increases and P. Def. decreases. -->
-		<abnormalLvl>4</abnormalLvl>
-		<abnormalTime>11</abnormalTime>
-		<abnormalType>MAX_HP_DOWN</abnormalType>
-		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
-		<effectPoint>-100</effectPoint>
 		<icon>
 			<value level="1">icon.skill6154_1</value>
 			<value level="2">icon.skill6154_2</value>
 			<value level="3">icon.skill6154_3</value>
 			<value level="4">icon.skill6154_4</value>
 		</icon>
+		<abnormalLvl>4</abnormalLvl>
+		<abnormalTime>11</abnormalTime>
+		<abnormalType>MAX_HP_DOWN</abnormalType>
+		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
+		<effectPoint>-100</effectPoint>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1224,6 +1224,7 @@
 	</skill>
 	<skill id="6166" toLevel="1" name="Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
+		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -1232,7 +1233,6 @@
 		<affectLimit>10-10</affectLimit>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill4047</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>81</magicLvl>
@@ -1252,6 +1252,7 @@
 	</skill>
 	<skill id="6167" toLevel="12" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1260,7 +1261,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
 			<value level="1">10</value>
@@ -1289,6 +1289,7 @@
 	</skill>
 	<skill id="6168" toLevel="12" name="Stun">
 		<!-- Momentarily immobile due to the Stun effect. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1297,7 +1298,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>
 			<value level="1">10</value>
@@ -1326,11 +1326,11 @@
 	</skill>
 	<skill id="6169" toLevel="1" name="Shyeed's Fury">
 		<!-- Shyeed's cries continue to be heard. Nearby monsters seem to get stronger. -->
+		<icon>icon.skill6169</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>NPC_FURY</abnormalType>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill6169</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
@@ -1342,11 +1342,11 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6170" toLevel="1" name="Shyeed's Fury">
+		<icon>icon.skill6169</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill6169</icon>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1383,11 +1383,11 @@
 	</skill>
 	<skill id="6171" toLevel="1" name="Full Authority">
 		<!-- It feels like something will escape the mouth. The predecessor's strength is full. Overall abilities are increased. -->
+		<icon>icon.skill6171</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ULTIMATE_BUFF</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill6171</icon>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1746,12 +1746,12 @@
 	</skill>
 	<skill id="6196" toLevel="1" name="Agathion Oink Oink's Ability">
 		<!-- Agathion Oink Oink's Ability: Vitality is maintained and not consumed. -->
+		<icon>icon.skill_agathion_cute</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<coolTime>1000</coolTime>
-		<icon>icon.skill_agathion_cute</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1774,8 +1774,8 @@
 	</skill>
 	<skill id="6197" toLevel="1" name="Agathion Cute Trick - Oink Oink">
 		<!-- See the summoned spirit perform cute tricks. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A1</operateType>

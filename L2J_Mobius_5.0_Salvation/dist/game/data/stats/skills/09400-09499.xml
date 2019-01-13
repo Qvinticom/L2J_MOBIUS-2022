@@ -3,7 +3,6 @@
 	<skill id="9400" toLevel="1" name="Squash Ring Pack">
 		<itemConsumeId>34819</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -30,7 +29,6 @@
 	<skill id="9401" toLevel="1" name="Squash Earring Pack">
 		<itemConsumeId>34820</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -57,7 +55,6 @@
 	<skill id="9402" toLevel="1" name="Squash Necklace Pack">
 		<itemConsumeId>34821</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -110,6 +107,7 @@
 	</skill>
 	<skill id="9404" toLevel="1" name="Wondrous Herb of Power">
 		<!-- For 1 min. 30 sec., P. Atk. +100%. -->
+		<icon>icon.etc_warrior_set_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>90</abnormalTime>
@@ -117,7 +115,6 @@
 		<abnormalVisualEffect>HERB_PA_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_warrior_set_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -136,6 +133,7 @@
 	</skill>
 	<skill id="9405" toLevel="1" name="Wondrous Herb of Magic">
 		<!-- For 1 min. 30 sec., M. Atk. +400%. -->
+		<icon>icon.etc_magic_set_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>90</abnormalTime>
@@ -143,7 +141,6 @@
 		<abnormalVisualEffect>HERB_MA_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_magic_set_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -163,7 +160,6 @@
 	<skill id="9406" toLevel="1" name="Ingredient and Hardener Pouch (R-grade)">
 		<itemConsumeId>34861</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -386,7 +382,6 @@
 		</conditions>
 	</skill>
 	<skill id="9417" toLevel="1" name="Dimension Keeper's Blue Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -439,7 +434,6 @@
 		</effects>
 	</skill>
 	<skill id="9418" toLevel="1" name="Dimension Keeper's Red Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -498,7 +492,6 @@
 		</effects>
 	</skill>
 	<skill id="9419" toLevel="1" name="Dimension Keeper's Golden Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -563,7 +556,6 @@
 		</effects>
 	</skill>
 	<skill id="9420" toLevel="1" name="Dimension Traveler's Blue Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -616,7 +608,6 @@
 		</effects>
 	</skill>
 	<skill id="9421" toLevel="1" name="Dimension Traveler's Red Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -687,7 +678,6 @@
 		</effects>
 	</skill>
 	<skill id="9422" toLevel="1" name="Dimension Traveler's Golden Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -766,7 +756,6 @@
 	<skill id="9423" toLevel="1" name="Campaign Reward Pouch">
 		<itemConsumeId>34933</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -791,7 +780,6 @@
 	<skill id="9424" toLevel="1" name="Campaign Reward Pouch">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -816,7 +804,6 @@
 	<skill id="9425" toLevel="1" name="Lv. 2 Giant Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -853,7 +840,6 @@
 	<skill id="9426" toLevel="1" name="Lv. 2 Legendary Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -890,7 +876,6 @@
 	<skill id="9427" toLevel="1" name="Lv. 2 Ancient Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -927,7 +912,6 @@
 	<skill id="9428" toLevel="1" name="Lv. 3 Giant Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -964,7 +948,6 @@
 	<skill id="9429" toLevel="1" name="Lv. 3 Legendary Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1001,7 +984,6 @@
 	<skill id="9430" toLevel="1" name="Lv. 3 Ancient Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1038,7 +1020,6 @@
 	<skill id="9431" toLevel="1" name="Lv. 4 Giant Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1075,7 +1056,6 @@
 	<skill id="9432" toLevel="1" name="Lv. 4 Legendary Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1112,7 +1092,6 @@
 	<skill id="9433" toLevel="1" name="Lv. 4 Ancient Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1149,7 +1128,6 @@
 	<skill id="9434" toLevel="1" name="Lv. 5 Giant Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1186,7 +1164,6 @@
 	<skill id="9435" toLevel="1" name="Lv. 5 Legendary Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1223,7 +1200,6 @@
 	<skill id="9436" toLevel="1" name="Lv. 5 Ancient Dye Pack">
 		<itemConsumeId>34934</itemConsumeId>
 		<itemConsumeCount>0</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1260,7 +1236,6 @@
 	<skill id="9437" toLevel="1" name="Scroll of Escape Pack: Village">
 		<itemConsumeId>34948</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1335,7 +1310,6 @@
 	</skill>
 	<skill id="9439" toLevel="1" name="Scroll: 10,000 Individual Fame">
 		<!-- Restores 10,000 Individual Fame. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1356,7 +1330,6 @@
 	</skill>
 	<skill id="9440" toLevel="1" name="Scroll: 50,000 Individual Fame">
 		<!-- Restores 50,000 Individual Fame. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1377,7 +1350,6 @@
 	</skill>
 	<skill id="9441" toLevel="1" name="Scroll: 100,000 Individual Fame">
 		<!-- Restores 100,000 Individual Fame. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -1398,7 +1370,6 @@
 	</skill>
 	<skill id="9442" toLevel="1" name="Trowel">
 		<!-- Gathers the Flame Flower. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
@@ -1422,7 +1393,6 @@
 	</skill>
 	<skill id="9443" toLevel="1" name="Empty Hot Spring Water Bottle">
 		<!-- Gathers Water from the Hot Springs. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1453,7 +1423,6 @@
 	</skill>
 	<skill id="9444" toLevel="1" name="Helping Seed">
 		<!-- Summons the Helping Tree. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<itemConsumeId>34961</itemConsumeId>
@@ -1484,7 +1453,6 @@
 	</skill>
 	<skill id="9445" toLevel="1" name="Summoning Stone">
 		<!-- Summons Lanya. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1505,7 +1473,6 @@
 		</effects>
 	</skill>
 	<skill id="9446" toLevel="1" name="Scroll of Escape: Hot Springs">
-		<icon>icon.skill0000</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -1534,7 +1501,6 @@
 		</effects>
 	</skill>
 	<skill id="9447" toLevel="1" name="Scroll of Escape: Forge of the Gods">
-		<icon>icon.skill0000</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -1563,7 +1529,6 @@
 		</effects>
 	</skill>
 	<skill id="9448" toLevel="1" name="Scroll of Escape: Isle of Prayer">
-		<icon>icon.skill0000</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -1592,7 +1557,6 @@
 		</effects>
 	</skill>
 	<skill id="9449" toLevel="1" name="Scroll of Escape: Aden Battlefield">
-		<icon>icon.skill0000</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -1621,7 +1585,6 @@
 		</effects>
 	</skill>
 	<skill id="9450" toLevel="1" name="Scroll of Escape: Rune Battlefield">
-		<icon>icon.skill0000</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -1651,10 +1614,10 @@
 	</skill>
 	<skill id="9451" toLevel="1" name="Item Skill: Warp">
 		<!-- Stuns and removes the targeting of nearby enemies and teleport forward. Cooldown is 24 sec. Consumes 10 Gemstones (B-grade). -->
+		<icon>icon.wizard_danger_warppow</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>STUN</abnormalType>
-		<icon>icon.wizard_danger_warppow</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>24000</reuseDelay>
@@ -1695,10 +1658,10 @@
 	</skill>
 	<skill id="9452" toLevel="1" name="Item Skill: Dash">
 		<!-- For 10 sec., Speed +30, P. Evasion +7, and HP Recovery Bonus +7. Consumes 10 Gemstones (B-grade). -->
+		<icon>icon.rogue_shadow_dash</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SUPER_MOVE</abnormalType>
-		<icon>icon.rogue_shadow_dash</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<effectPoint>692</effectPoint>
@@ -1730,11 +1693,11 @@
 	</skill>
 	<skill id="9453" toLevel="1" name="Item Skill: Undying Will">
 		<!-- Invincible for 5 sec. Can only be used when HP is 20% or below. Consumes 20 Gemstones (B-grade). -->
+		<icon>icon.race_orc_immortality</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>RACE_ORC2</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<icon>icon.race_orc_immortality</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<basicProperty>NONE</basicProperty>
@@ -1777,11 +1740,11 @@
 	</skill>
 	<skill id="9454" toLevel="1" name="Item Skill: Silence">
 		<!-- For 5 sec., cannot use P. Atk./ M. Atk. Consumes 30 Gemstones (B-grade). -->
+		<icon>icon.song_of_silence</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
-		<icon>icon.song_of_silence</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<hitTime>500</hitTime>
@@ -1808,11 +1771,11 @@
 	</skill>
 	<skill id="9455" toLevel="1" name="Item Skill: Disable Target">
 		<!-- For 5 sec., enemy cannot target you. Consumes 10 Gemstones (B-grade). -->
+		<icon>icon.notargetting</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<icon>icon.notargetting</icon>
 		<operateType>A2</operateType>
 		<hitTime>800</hitTime>
 		<basicProperty>NONE</basicProperty>
@@ -1833,6 +1796,7 @@
 	</skill>
 	<skill id="9456" toLevel="3" name="Item Skill: Damage Reflect Resistance">
 		<!-- For $s1, Damage Reflect Resistance +$s2. -->
+		<icon>icon.active_damage_shield1</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1840,7 +1804,6 @@
 		</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
-		<icon>icon.active_damage_shield1</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
 		<reuseDelay>4000</reuseDelay>
@@ -1873,12 +1836,12 @@
 	</skill>
 	<skill id="9459" toLevel="1" name="Tauti's Wrath">
 		<!-- Tauti's Rage. Inflicts 27557 damage and Knocks Down nearby enemies for 3 seconds. -->
+		<icon>icon.weapon_tauti_one_hand_axe_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>80</activateRate>
-		<icon>icon.weapon_tauti_one_hand_axe_i01</icon>
 		<operateType>A2</operateType>
 		<mpConsume>191</mpConsume>
 		<hitTime>1500</hitTime>
@@ -1922,11 +1885,11 @@
 	</skill>
 	<skill id="9460" toLevel="1" name="Frenzied Tauti's Authority">
 		<!-- Relies on Tauti's Authority to attack nearby enemies with $s1 power added to P. Atk., inflicting Knock Down. Consumes 4 Spirit Ore. -->
+		<icon>icon.tauti_weapon_one_hand_axe_high</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-		<icon>icon.tauti_weapon_one_hand_axe_high</icon>
 		<operateType>A2</operateType>
 		<mpConsume>279</mpConsume>
 		<hitTime>1500</hitTime>
@@ -1971,7 +1934,6 @@
 		</effects>
 	</skill>
 	<skill id="9461" toLevel="1" name="Scroll of Escape: Guillotine Fortress">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1991,7 +1953,6 @@
 	<skill id="9464" toLevel="1" name="Treasure Chest of the King of Aden">
 		<itemConsumeId>34918</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2028,7 +1989,6 @@
 	<skill id="9465" toLevel="1" name="Bundle">
 		<itemConsumeId>34919</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2443,7 +2403,6 @@
 	<skill id="9466" toLevel="1" name="Treasure Chest of the King of Rune">
 		<itemConsumeId>34920</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2480,7 +2439,6 @@
 	<skill id="9467" toLevel="1" name="Contaminated Draco Egg">
 		<itemConsumeId>34863</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2507,7 +2465,6 @@
 		</effects>
 	</skill>
 	<skill id="9468" toLevel="1" name="Small Draco Egg">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2533,7 +2490,6 @@
 		</effects>
 	</skill>
 	<skill id="9469" toLevel="1" name="Large Draco Egg">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2561,7 +2517,6 @@
 	<skill id="9470" toLevel="1" name="Draco's Gift">
 		<itemConsumeId>34867</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2628,7 +2583,6 @@
 	<skill id="9471" toLevel="1" name="Draco's Shiny Gift">
 		<itemConsumeId>34868</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2720,7 +2674,6 @@
 	<skill id="9473" toLevel="1" name="Deadman's Chest">
 		<itemConsumeId>35546</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3120,7 +3073,6 @@
 	<skill id="9474" toLevel="1" name="Deadman's Chest">
 		<itemConsumeId>35547</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3334,7 +3286,6 @@
 	<skill id="9475" toLevel="1" name="Engineer Zofan's Supply Box">
 		<itemConsumeId>35548</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3401,7 +3352,6 @@
 	<skill id="9476" toLevel="1" name="Rebel's Supply Box">
 		<itemConsumeId>35549</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3801,7 +3751,6 @@
 	<skill id="9477" toLevel="1" name="Aku's Supply Box">
 		<itemConsumeId>35550</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4225,7 +4174,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9479" toLevel="1" name="Extra Pass">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4236,7 +4184,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9480" toLevel="1" name="Extra Pass">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4247,7 +4194,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9481" toLevel="1" name="Extra Pass">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4258,7 +4204,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9482" toLevel="1" name="Extra Pass">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4269,7 +4214,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9483" toLevel="1" name="Extra Pass">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4280,7 +4224,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9484" toLevel="1" name="Extra Pass">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4293,7 +4236,6 @@
 	<skill id="9485" toLevel="1" name="Contaminated Draco Egg - Item Obtained">
 		<itemConsumeId>34863</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4566,7 +4508,6 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="9499" toLevel="1" name="Antharas Pocket">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>

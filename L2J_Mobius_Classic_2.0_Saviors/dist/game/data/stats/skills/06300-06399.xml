@@ -29,6 +29,7 @@
 	</skill>
 	<skill id="6301" toLevel="2" name="Cold Mana Fragment">
 		<!-- Recovers MP by $s1 per second. -->
+		<icon>icon.skill6301</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -37,7 +38,6 @@
 		<abnormalType>FORCE_MEDITATION</abnormalType>
 		<affectRange>350</affectRange>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6301</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>66</mpConsume>
@@ -64,11 +64,11 @@
 	</skill>
 	<skill id="6302" toLevel="1" name="Icy Air">
 		<!-- Increase P. Def. and M. Def. by 15%. -->
+		<icon>icon.skill6302</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6302</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>84</magicLvl>
@@ -115,6 +115,7 @@
 	</skill>
 	<skill id="6304" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move for 2 seconds. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -128,7 +129,6 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>83</magicLvl>
@@ -168,6 +168,7 @@
 	</skill>
 	<skill id="6306" toLevel="1" name="Solina Strike">
 		<!-- Causes bleeding for 10 seconds, draining 139 HP per second. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -182,7 +183,6 @@
 		<attributeType>HOLY</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>83</magicLvl>
@@ -479,13 +479,13 @@
 	</skill>
 	<skill id="6318" toLevel="1" name="Holy Shield Defense">
 		<!-- Increases P. Def. by 10% for 3 seconds. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<affectRange>200</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1040</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<mpConsume>88</mpConsume>
@@ -509,13 +509,13 @@
 	</skill>
 	<skill id="6319" toLevel="1" name="Divine Magic Protection">
 		<!-- Increases M. Def. by 10% for 3 seconds. -->
+		<icon>icon.skill6319</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<affectRange>200</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill6319</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<mpConsume>88</mpConsume>
@@ -539,6 +539,7 @@
 	</skill>
 	<skill id="6320" toLevel="1" name="Summon Holy Magic Circle">
 		<!-- Decreases enemy's P. Def. by 23% for 15 seconds. -->
+		<icon>icon.skill6320</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -546,7 +547,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill6320</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -807,6 +807,7 @@
 	</skill>
 	<skill id="6331" toLevel="1" name="Campfire Tired">
 		<!-- Atk. Spd. is decreased. -->
+		<icon>icon.skill1206</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -820,7 +821,6 @@
 		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill1206</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -832,6 +832,7 @@
 	</skill>
 	<skill id="6332" toLevel="1" name="Campfire Full">
 		<!-- Speed and Atk. Spd. is decreased. -->
+		<icon>icon.skill1206</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -845,7 +846,6 @@
 		<reuseDelay>1000</reuseDelay>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<icon>icon.skill1206</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -861,6 +861,7 @@
 	</skill>
 	<skill id="6333" toLevel="1" name="Electric Bolt 1">
 		<!-- Causes bleeding for 3 seconds, draining 200 HP per second. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -873,7 +874,6 @@
 		<effectPoint>-574</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>83</magicLvl>
@@ -898,6 +898,7 @@
 	</skill>
 	<skill id="6334" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move for 4 seconds. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -909,7 +910,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>83</magicLvl>
@@ -1016,6 +1016,7 @@
 	</skill>
 	<skill id="6339" toLevel="1" name="Divine Hammer Attack">
 		<!-- Causes bleeding for 3 seconds, draining 200 HP per second. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1029,7 +1030,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>84</magicLvl>
@@ -1055,6 +1055,7 @@
 	</skill>
 	<skill id="6340" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move for 4 seconds. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>4</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1067,7 +1068,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>83</magicLvl>
@@ -1108,6 +1108,10 @@
 	</skill>
 	<skill id="6343" toLevel="2" name="Maguen Plasma - Power">
 		<!-- The Wild Maguen blesses you with a buff that slightly increases your M. Atk. and P. Atk. for $s1. -->
+		<icon>
+			<value level="1">icon.skill6343_1</value>
+			<value level="2">icon.skill6343_2</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
@@ -1116,10 +1120,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>
-			<value level="1">icon.skill6343_1</value>
-			<value level="2">icon.skill6343_2</value>
-		</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>88</mpConsume>
@@ -1151,6 +1151,10 @@
 	</skill>
 	<skill id="6365" toLevel="2" name="Maguen Plasma - Speed">
 		<!-- The Wild Maguen blesses you with a buff that slightly increases your Speed, Atk. Spd. and Casting Spd. For $s1. -->
+		<icon>
+			<value level="1">icon.skill6365_1</value>
+			<value level="2">icon.skill6365_2</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
@@ -1159,10 +1163,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>
-			<value level="1">icon.skill6365_1</value>
-			<value level="2">icon.skill6365_2</value>
-		</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>88</mpConsume>
@@ -1201,6 +1201,10 @@
 	</skill>
 	<skill id="6366" toLevel="2" name="Maguen Plasma - Critical">
 		<!-- The Wild Maguen blesses you with a buff that slightly increases your Critical Rate and Critical Damage for $s1. -->
+		<icon>
+			<value level="1">icon.skill6366_1</value>
+			<value level="2">icon.skill6366_2</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
@@ -1209,10 +1213,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>
-			<value level="1">icon.skill6366_1</value>
-			<value level="2">icon.skill6366_2</value>
-		</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>88</mpConsume>
@@ -1251,6 +1251,11 @@
 	</skill>
 	<skill id="6367" toLevel="3" name="Maguen Plasma - Bistakon">
 		<!-- Lv. 1: The energy of Bistakon surrounds you. -->
+		<icon>
+			<value level="1">icon.skill6367_1</value>
+			<value level="2">icon.skill6367_2</value>
+			<value level="3">icon.skill6367_3</value>
+		</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1261,11 +1266,6 @@
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
-		<icon>
-			<value level="1">icon.skill6367_1</value>
-			<value level="2">icon.skill6367_2</value>
-			<value level="3">icon.skill6367_3</value>
-		</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>88</mpConsume>
@@ -1282,6 +1282,11 @@
 	</skill>
 	<skill id="6368" toLevel="3" name="Maguen Plasma - Kokracon">
 		<!-- Lv. 1: The energy of Kokracon surrounds you. -->
+		<icon>
+			<value level="1">icon.skill6368_1</value>
+			<value level="2">icon.skill6368_2</value>
+			<value level="3">icon.skill6368_3</value>
+		</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1292,11 +1297,6 @@
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
-		<icon>
-			<value level="1">icon.skill6368_1</value>
-			<value level="2">icon.skill6368_2</value>
-			<value level="3">icon.skill6368_3</value>
-		</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>88</mpConsume>
@@ -1313,6 +1313,11 @@
 	</skill>
 	<skill id="6369" toLevel="3" name="Maguen Plasma - Reptilikon">
 		<!-- Lv. 1: The energy of Reptilikon surrounds you. -->
+		<icon>
+			<value level="1">icon.skill6369_1</value>
+			<value level="2">icon.skill6369_2</value>
+			<value level="3">icon.skill6369_3</value>
+		</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1323,11 +1328,6 @@
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
-		<icon>
-			<value level="1">icon.skill6369_1</value>
-			<value level="2">icon.skill6369_2</value>
-			<value level="3">icon.skill6369_3</value>
-		</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>88</mpConsume>
@@ -1344,6 +1344,7 @@
 	</skill>
 	<skill id="6370" toLevel="1" name="Thunderbolt">
 		<!-- Receive damage is amplified. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DAMAGE_AMPLIFY</abnormalType>
@@ -1358,7 +1359,6 @@
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>300</effectRange>
-		<icon>icon.skill0122</icon>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<castRange>150</castRange>
@@ -1385,6 +1385,7 @@
 	</skill>
 	<skill id="6372" toLevel="10" name="Power Up">
 		<!-- $s1 of Atk. Spd. And $s2 of Physical Skill Damage are increased. -->
+		<icon>icon.skill0917</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1409,13 +1410,13 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill0917</icon>
 		<hitTime>1500</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6373" toLevel="1" name="Thunderbolt">
 		<!-- Receive damage is amplified. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DAMAGE_AMPLIFY</abnormalType>
@@ -1430,7 +1431,6 @@
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>300</effectRange>
-		<icon>icon.skill0122</icon>
 		<hitTime>1500</hitTime>
 		<isDebuff>true</isDebuff>
 		<castRange>150</castRange>
@@ -1467,6 +1467,7 @@
 	</skill>
 	<skill id="6376" toLevel="9" name="Sonic Strike">
 		<!-- For$s1, 10% of max HP, $s2 of max MP and $s3 HP per second decrease from Dopagen's Sonic Strike. -->
+		<icon>icon.skill1417</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1481,7 +1482,6 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAX_HP_DOWN</abnormalType>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1417</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -1497,6 +1497,7 @@
 	</skill>
 	<skill id="6377" toLevel="10" name="Speed Up">
 		<!-- Atk. Spd. + $s1 -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1521,19 +1522,18 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1086</icon>
 		<hitTime>1500</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6378" toLevel="1" name="Earth Shift">
 		<!-- The ground below your feet shakes, making concentration difficult. -->
+		<icon>icon.skill0347</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>VIBRATION</abnormalType>
 		<activateRate>50</activateRate>
 		<effectPoint>-1000</effectPoint>
-		<icon>icon.skill0347</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -1549,6 +1549,7 @@
 	</skill>
 	<skill id="6379" toLevel="1" name="Critical Blow">
 		<!-- Causes bleeding for 15 seconds, draining 93 HP per second. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1559,7 +1560,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-574</effectPoint>
 		<fanRange>0;0;150;120</fanRange>
-		<icon>icon.skill0096</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<nextAction>ATTACK</nextAction>
@@ -1578,6 +1578,7 @@
 	</skill>
 	<skill id="6380" toLevel="1" name="Bistakon Roar">
 		<!-- Blocks all physical/magic skills for 20 seconds. -->
+		<icon>icon.skill1336</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -1588,7 +1589,6 @@
 		<effectPoint>-666</effectPoint>
 		<fanRange>0;0;200;0</fanRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1336</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1609,6 +1609,7 @@
 	</skill>
 	<skill id="6381" toLevel="2" name="Bistakon Soul Beam">
 		<!-- Blocks all the enemy's physical and magical skills for $s1. -->
+		<icon>icon.skill1336</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1622,7 +1623,6 @@
 		<effectPoint>-666</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1336</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1644,6 +1644,7 @@
 	</skill>
 	<skill id="6382" toLevel="1" name="Bistakon Rolling Claw">
 		<!-- Causes bleeding for 15 seconds, draining 93 HP per second. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1656,7 +1657,6 @@
 		<effectPoint>-574</effectPoint>
 		<fanRange>0;0;200;0</fanRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -1679,6 +1679,7 @@
 	</skill>
 	<skill id="6383" toLevel="1" name="Bistakon Deadly Roar">
 		<!-- Blocks all physical/magic skills for 20 seconds. -->
+		<icon>icon.skill1336</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -1689,7 +1690,6 @@
 		<effectPoint>-666</effectPoint>
 		<effectRange>700</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1336</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1733,6 +1733,7 @@
 	</skill>
 	<skill id="6385" toLevel="1" name="Bistakon Critical Claw">
 		<!-- Causes bleeding for 15 seconds, draining 95 HP per second. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1746,7 +1747,6 @@
 		<effectRange>200</effectRange>
 		<fanRange>0;0;150;100</fanRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -1769,6 +1769,7 @@
 	</skill>
 	<skill id="6386" toLevel="1" name="Bistakon Earth Rise">
 		<!-- Momentarily Stuns and immobilizes the enemy for 3 seconds. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1780,7 +1781,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>83</magicLvl>

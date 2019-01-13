@@ -1,223 +1,253 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-    <item id="48954" name="Artifact Book - Level 1" type="Armor">
+	<item id="48954" name="Artifact Book - Level 1" type="Armor">
 		<!-- Activates 1 Artifact - Fighting Spirit slot, 1 Artifact - Protection slot, 1 Artifact - Support slot, 4 Artifact - Balance slots when equipped. Damage +1%, Received Damage -5% set effects are activated when artifacts are equipped to all slots. Can be equipped by characters level 100 and higher. -->
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifactbook" />
-        <set name="immediate_effect" val="true" />
-        <set name="material" val="GOLD" />
-        <set name="is_sellable" val="false" />
-        <cond msgId="113">
-            <player level="100" />
-        </cond>
-        <skills>
-      <skill id="39393" level="1" /> <!-- Artifact Book (Open 1 Slot) -->
-        </skills>
-    </item>
-    <item id="48955" name="Artifact Book - Level 2" type="Armor">
+		<set name="icon" val="icon.artifact_book_00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifactbook" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="113">
+			<player level="100" />
+		</cond>
+		<skills>
+			<skill id="39393" level="1" /> <!-- Artifact Book (Open 1 Slot) -->
+		</skills>
+	</item>
+	<item id="48955" name="Artifact Book - Level 2" type="Armor">
 		<!-- Activates 2 Artifact - Fighting Spirit slots, 2 Artifact - Protection slots, 2 Artifact - Support slots, 8 Artifact - Balance slots when equipped. Damage +5%, Received Damage -6% set effects are activated when artifacts are equipped to all slots. Can be equipped by characters level 105 and higher. -->
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifactbook" />
-        <set name="immediate_effect" val="true" />
-        <set name="material" val="GOLD" />
-        <set name="is_sellable" val="false" />
-        <cond msgId="113">
-            <player level="105" />
-        </cond>
-        <skills>
-      <skill id="39394" level="1" /> <!-- Artifact Book (Open 2 Slot) -->
-        </skills>
-    </item>
-    <item id="48956" name="Artifact Book - Level 3" type="Armor">
+		<set name="icon" val="icon.artifact_book_00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifactbook" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="113">
+			<player level="105" />
+		</cond>
+		<skills>
+			<skill id="39394" level="1" /> <!-- Artifact Book (Open 2 Slot) -->
+		</skills>
+	</item>
+	<item id="48956" name="Artifact Book - Level 3" type="Armor">
 		<!-- Activates 3 Artifact - Fighting Spirit slots, 3 Artifact - Protection slots, 3 Artifact - Support slots, 12 Artifact - Balance slots when equipped. Damage +6%, Received Damage -7% set effects are activated when artifacts are equipped to all slots. Can be equipped by characters level 110 and higher. -->
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifactbook" />
-        <set name="immediate_effect" val="true" />
-        <set name="material" val="GOLD" />
-        <set name="is_sellable" val="false" />
-        <cond msgId="113">
-            <player level="110" />
-        </cond>
-        <skills>
-      <skill id="39395" level="1" /> <!-- Artifact Book (Open 3 Slot) -->
-        </skills>
-    </item>
-    <item id="48957" name="Artifact - P. Atk. Fighting Spirit" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48958" name="Artifact - M. Atk. Fighting Spirit" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48959" name="Artifact - Atk. Spd. Fighting Spirit" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48960" name="Artifact - Casting Spd. Fighting Spirit" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48961" name="Artifact - P. Def. Protection" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48962" name="Artifact - M. Def. Protection" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48963" name="Artifact - Max HP Protection" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48964" name="Artifact - Max MP Protection" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48965" name="Artifact - XP Gain Support" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48966" name="Artifact - HP Absorption Support" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48967" name="Artifact - Speed Support" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48968" name="Artifact - Received Heal Amount Support" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48969" name="Artifact - P. Atk. Balance" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48970" name="Artifact - M. Atk. Balance" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48971" name="Artifact - P. Accuracy Balance" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48972" name="Artifact - M. Accuracy Balance" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48973" name="Artifact - P. Critical Rate Balance" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48974" name="Artifact - P. Skill Critical Rate Balance" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48975" name="Artifact - M. Skill Critical Rate Balance" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48976" name="Artifact - Potion / Elixir Effect Bonus Balance" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48977" name="Artifact - Received Damage Reduction When Imobilized Balance" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
-    <item id="48980" name="Artifact - Attack Attribute Balance" type="Armor">
+		<set name="icon" val="icon.artifact_book_00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifactbook" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<cond msgId="113">
+			<player level="110" />
+		</cond>
+		<skills>
+			<skill id="39395" level="1" /> <!-- Artifact Book (Open 3 Slot) -->
+		</skills>
+	</item>
+	<item id="48957" name="Artifact - P. Atk. Fighting Spirit" type="Armor">
+		<set name="icon" val="icon.artifact_b_pa" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48958" name="Artifact - M. Atk. Fighting Spirit" type="Armor">
+		<set name="icon" val="icon.artifact_b_ma" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48959" name="Artifact - Atk. Spd. Fighting Spirit" type="Armor">
+		<set name="icon" val="icon.artifact_b_pa_speed" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48960" name="Artifact - Casting Spd. Fighting Spirit" type="Armor">
+		<set name="icon" val="icon.artifact_b_ma_speed" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48961" name="Artifact - P. Def. Protection" type="Armor">
+		<set name="icon" val="icon.artifact_c_phy_def" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48962" name="Artifact - M. Def. Protection" type="Armor">
+		<set name="icon" val="icon.artifact_c_mag_def" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48963" name="Artifact - Max HP Protection" type="Armor">
+		<set name="icon" val="icon.artifact_c_hp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48964" name="Artifact - Max MP Protection" type="Armor">
+		<set name="icon" val="icon.artifact_c_mp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48965" name="Artifact - XP Gain Support" type="Armor">
+		<set name="icon" val="icon.artifact_d_exp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48966" name="Artifact - HP Absorption Support" type="Armor">
+		<set name="icon" val="icon.artifact_d_vampiric_rage" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48967" name="Artifact - Speed Support" type="Armor">
+		<set name="icon" val="icon.artifact_d_move_speed" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48968" name="Artifact - Received Heal Amount Support" type="Armor">
+		<set name="icon" val="icon.artifact_d_heal_effect" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48969" name="Artifact - P. Atk. Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_pa" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48970" name="Artifact - M. Atk. Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_ma" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48971" name="Artifact - P. Accuracy Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_hit" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48972" name="Artifact - M. Accuracy Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_mhit" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48973" name="Artifact - P. Critical Rate Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_crt_per" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48974" name="Artifact - P. Skill Critical Rate Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_crt_skill_per" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48975" name="Artifact - M. Skill Critical Rate Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_crt_mag_per" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48976" name="Artifact - Potion / Elixir Effect Bonus Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_hp_special" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48977" name="Artifact - Received Damage Reduction When Imobilized Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_block_act_dmg" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
+	<item id="48980" name="Artifact - Attack Attribute Balance" type="Armor">
 		<!-- An artifact that increases Attack Attribute. Can be applied to Artifact - Balance slots. Attack Attribute +30 when equipped. Can be purchased at Giran Town Luxury Shop. Cannot be upgraded. -->
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <skills>
-      <skill id="35252" level="1" /> <!-- Artifact - Attack Attribute -->
-        </skills>
-    </item>
-    <item id="48981" name="Artifact - Defense Attribute Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_attribute_att_up" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35252" level="1" /> <!-- Artifact - Attack Attribute -->
+		</skills>
+	</item>
+	<item id="48981" name="Artifact - Defense Attribute Balance" type="Armor">
 		<!-- An artifact that increases Defense Attribute. Can be applied to Artifact - Balance slots. Defense Attribute +30 when equipped. Can be purchased at Giran Town Luxury Shop. Cannot be upgraded. -->
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <skills>
-      <skill id="35253" level="1" /> <!-- Artifact - Defense Attribute -->
-        </skills>
-    </item>
-    <item id="48982" name="Artifact - Received Damage Reduction When Imobilized Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_attribute_def_up" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35253" level="1" /> <!-- Artifact - Defense Attribute -->
+		</skills>
+	</item>
+	<item id="48982" name="Artifact - Received Damage Reduction When Imobilized Balance" type="Armor">
 		<!-- An artifact that reduces Received Damage when Immobilized. Can be applied to Artifact - Balance slots. Received Damage Reduction when Immobilized -11%. Cannot be upgraded. -->
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <skills>
-      <skill id="35254" level="1" /> <!-- Artifact - Received Damage When Imobilized -->
-        </skills>
-    </item>
-    <item id="48983" name="Artifact - P. Skill Power Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_block_act_dmg" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35254" level="1" /> <!-- Artifact - Received Damage When Imobilized -->
+		</skills>
+	</item>
+	<item id="48983" name="Artifact - P. Skill Power Balance" type="Armor">
 		<!-- An artifact that increases P. Skill Power. Can be applied to Artifact - Balance slots. P. Skill Power +11% when equipped. Cannot be upgraded. -->
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <skills>
-      <skill id="35255" level="1" /> <!-- Artifact - P. Skill Power -->
-        </skills>
-    </item>
-    <item id="48984" name="Artifact - M. Skill Power Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_skill_power" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35255" level="1" /> <!-- Artifact - P. Skill Power -->
+		</skills>
+	</item>
+	<item id="48984" name="Artifact - M. Skill Power Balance" type="Armor">
 		<!-- An artifact that increases M. Skill Power. Can be applied to Artifact - Balance slots. M. Skill Power +11% when equipped. Cannot be upgraded. -->
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <skills>
-      <skill id="35256" level="1" /> <!-- Artifact - M. Skill Power -->
-        </skills>
-    </item>
-    <item id="48985" name="Artifact - Fixed Damage Reduction Balance" type="Armor">
-        <set name="default_action" val="EQUIP" />
-        <set name="bodypart" val="artifact" />
-        <set name="is_sellable" val="false" />
-        <!-- Skill add in option stat when enchant/upgrade -->
-    </item>
+		<set name="icon" val="icon.artifact_a_spell_power" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="35256" level="1" /> <!-- Artifact - M. Skill Power -->
+		</skills>
+	</item>
+	<item id="48985" name="Artifact - Fixed Damage Reduction Balance" type="Armor">
+		<set name="icon" val="icon.artifact_a_dmg_by_atk" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="artifact" />
+		<set name="is_sellable" val="false" />
+		<!-- Skill add in option stat when enchant/upgrade -->
+	</item>
 </list>
 

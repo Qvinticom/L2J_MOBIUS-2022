@@ -1815,12 +1815,12 @@
 	</item>
 	<item id="37682" name="Theamo's Rune" additionalName="Not in Use" type="EtcItem">
 		<!-- Test Item -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_dropable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_destroyable" val="false" />
 	</item>
 	<item id="37683" name="Demonic Sword Zariche" additionalName="Appearance Modification" type="Weapon">

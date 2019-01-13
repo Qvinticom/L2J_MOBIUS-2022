@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6416" toLevel="1" name="Reptilikon Poison Breath">
 		<!-- Decreases 4 MP per sec. for 20 sec. -->
+		<icon>icon.skill1102</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
@@ -15,7 +16,6 @@
 		<effectRange>900</effectRange>
 		<fanRange>0;0;200;90</fanRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1102</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -38,6 +38,7 @@
 	</skill>
 	<skill id="6417" toLevel="1" name="Reptilikon Poison Shot">
 		<!-- Decreases 4 MP per sec. for 20 sec. -->
+		<icon>icon.skill1102</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
@@ -50,7 +51,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1102</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -73,6 +73,7 @@
 	</skill>
 	<skill id="6418" toLevel="1" name="Reptilikon Fury Poison Bomb">
 		<!-- Decreases 69 HP and 4 MP per sec. for 20 sec. -->
+		<icon>icon.skill1102</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
@@ -85,7 +86,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1200</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1102</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -184,6 +184,7 @@
 	</skill>
 	<skill id="6423" toLevel="1" name="Stun">
 		<!-- Momentarily Stuns and immobilizes the enemy for 3 sec. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -195,7 +196,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
@@ -234,12 +234,12 @@
 	</skill>
 	<skill id="6425" toLevel="1" name="Demotivation Hex">
 		<!-- P. Def. -90% for 10 sec. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill0122</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>84</magicLvl>
@@ -281,10 +281,10 @@
 		</effects>
 	</skill>
 	<skill id="6427" toLevel="1" name="Medicinal Mushroom 1">
+		<icon>icon.skill0100</icon>
 		<affectRange>300</affectRange>
 		<coolTime>1000</coolTime>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0100</icon>
 		<magicLvl>84</magicLvl>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -295,6 +295,7 @@
 	</skill>
 	<skill id="6428" toLevel="1" name="Restore HP">
 		<!-- Recovers HP by 90%. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -304,7 +305,6 @@
 		<castRange>2000</castRange>
 		<effectPoint>100</effectPoint>
 		<effectRange>2000</effectRange>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
@@ -331,13 +331,13 @@
 	</skill>
 	<skill id="6429" toLevel="1" name="Cozy Mucus">
 		<!-- Bow/ Crossbow P. Atk. +15% and HP recovers. -->
+		<icon>icon.skill6429</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<castRange>2000</castRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>500</hitTime>
-		<icon>icon.skill6429</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -385,6 +385,7 @@
 	</skill>
 	<skill id="6431" toLevel="1" name="Feral Might">
 		<!-- P. Atk. +19% for 5 min. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -392,7 +393,6 @@
 		<effectPoint>379</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -412,6 +412,7 @@
 	</skill>
 	<skill id="6432" toLevel="1" name="Feral Focus">
 		<!-- Critical attack rate +35% for 5 min. -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -419,7 +420,6 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1077</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -439,6 +439,7 @@
 	</skill>
 	<skill id="6433" toLevel="1" name="Feral Guidance">
 		<!-- Accuracy +7 for 5 min. -->
+		<icon>icon.skill1240</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
@@ -446,7 +447,6 @@
 		<effectPoint>532</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1240</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -466,6 +466,7 @@
 	</skill>
 	<skill id="6434" toLevel="1" name="Feral Haste">
 		<!-- Atk. Spd. +38% for 5 min. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>315</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -473,7 +474,6 @@
 		<effectPoint>495</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -493,6 +493,7 @@
 	</skill>
 	<skill id="6435" toLevel="3" name="Curse of Abyss">
 		<!-- Bow/ Crossbow Critical Rate +$s1 and Critical Damage +$s2. -->
+		<icon>icon.skill6435</icon>
 		<abnormalLvl>
 			<value level="1">7</value>
 			<value level="2">8</value>
@@ -503,7 +504,6 @@
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill6435</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
@@ -561,13 +561,13 @@
 	</skill>
 	<skill id="6436" toLevel="1" name="Curse of the Dark Abyss">
 		<!-- Max HP -5%, Bow/ Crossbow Critical Rate +90% and Critical Damage +50% per sec. -->
+		<icon>icon.skill6435</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill6435</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
@@ -602,6 +602,7 @@
 	</skill>
 	<skill id="6437" toLevel="7" name="Freezing Core Area">
 		<!-- Decreases $s1 HP per sec. by cold. -->
+		<icon>icon.skill1183</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -612,7 +613,6 @@
 		<effectPoint>-100</effectPoint>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill1183</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
@@ -640,6 +640,7 @@
 	</skill>
 	<skill id="6438" toLevel="1" name="Penalty Area">
 		<!-- Decreases 1000 HP per sec. -->
+		<icon>icon.skill4036</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -648,7 +649,6 @@
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill4036</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -661,13 +661,13 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6439" toLevel="1" name="Energy of Wisdom">
+		<icon>icon.skill6439</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6439</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -695,13 +695,13 @@
 		</effects>
 	</skill>
 	<skill id="6440" toLevel="1" name="Energy of Strength">
+		<icon>icon.skill6440</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6440</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -729,13 +729,13 @@
 		</effects>
 	</skill>
 	<skill id="6441" toLevel="1" name="Energy of Agility">
+		<icon>icon.skill6441</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6441</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -764,13 +764,13 @@
 	</skill>
 	<skill id="6442" toLevel="1" name="Energy of Wisdom">
 		<!-- A special location buff that allows the user to inflict magic damage on monsters in the Seed of Annihilation. -->
+		<icon>icon.skill6439</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6439</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -790,13 +790,13 @@
 	</skill>
 	<skill id="6443" toLevel="1" name="Energy of Strength">
 		<!-- A special location buff that allows the user to inflict melee damage on monsters in the Seed of Annihilation. -->
+		<icon>icon.skill6440</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6440</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -820,13 +820,13 @@
 	</skill>
 	<skill id="6444" toLevel="1" name="Energy of Agility">
 		<!-- A special location buff that allows the user to inflict ranged physical damage on monsters in the Seed of Annihilation. -->
+		<icon>icon.skill6441</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_E</abnormalType>
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill6441</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1080,11 +1080,11 @@
 	</skill>
 	<skill id="6464" toLevel="1" name="Three Siblings' Trickery">
 		<!-- By the three sibling's trickery, Max HP/ MP/ CP +40% for 10 sec. -->
+		<icon>icon.ev_rotten_jack_ghost_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
-		<icon>icon.ev_rotten_jack_ghost_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>

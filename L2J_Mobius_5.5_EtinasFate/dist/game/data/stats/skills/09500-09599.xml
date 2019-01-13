@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="9500" toLevel="1" name="Echo Crystal - Eternal Adventures">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -13,7 +12,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9501" toLevel="1" name="Echo Crystal - The Stirrings of War">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -25,7 +23,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9502" toLevel="1" name="Echo Crystal - Reload">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -37,7 +34,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9503" toLevel="1" name="Zofan's Supply Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -90,7 +86,6 @@
 		</effects>
 	</skill>
 	<skill id="9504" toLevel="1" name="Scroll: PK (Low-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -114,7 +109,6 @@
 		</effects>
 	</skill>
 	<skill id="9505" toLevel="1" name="Scroll: PK (Mid-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -138,7 +132,6 @@
 		</effects>
 	</skill>
 	<skill id="9506" toLevel="1" name="Scroll: PK (High-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -162,7 +155,6 @@
 		</effects>
 	</skill>
 	<skill id="9507" toLevel="1" name="Scroll: PK (Top-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -186,7 +178,6 @@
 		</effects>
 	</skill>
 	<skill id="9508" toLevel="1" name="Scroll: Reputation (Low-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -212,7 +203,6 @@
 		</effects>
 	</skill>
 	<skill id="9509" toLevel="1" name="Scroll: Reputation (Mid-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -238,7 +228,6 @@
 		</effects>
 	</skill>
 	<skill id="9510" toLevel="1" name="Scroll: Reputation (High-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -264,7 +253,6 @@
 		</effects>
 	</skill>
 	<skill id="9511" toLevel="1" name="Scroll: Reputation (Top-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -291,7 +279,6 @@
 	<skill id="9512" toLevel="1" name="Draco's Accessory Gift Box">
 		<itemConsumeId>35751</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -325,7 +312,6 @@
 		</effects>
 	</skill>
 	<skill id="9513" toLevel="1" name="Draco's Health Potion">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -341,7 +327,6 @@
 		</effects>
 	</skill>
 	<skill id="9514" toLevel="1" name="Draco's Mana Potion">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -400,7 +385,6 @@
 		</effects>
 	</skill>
 	<skill id="9517" toLevel="1" name="Draco's Hat">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -527,7 +511,6 @@
 	</skill>
 	<skill id="9522" toLevel="1" name="Summon Clan Member">
 		<!-- Summon selected clan member to current location. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>-2</castRange>
 		<hitTime>1000</hitTime>
@@ -580,7 +563,6 @@
 		</conditions>
 	</skill>
 	<skill id="9524" toLevel="1" name="Healing Potion of Chaos">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -710,7 +692,6 @@
 	</skill>
 	<skill id="9531" toLevel="1" name="Jang Heejin Agathion's Blessed Escape">
 		<!-- Can use Blessed Escape. Cooldown is 1 hr. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -734,7 +715,6 @@
 	</skill>
 	<skill id="9533" toLevel="1" name="Jang Hyuk Agathion's Blessed Escape">
 		<!-- Can use Blessed Escape. Cooldown is 1 hr. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -758,7 +738,6 @@
 	</skill>
 	<skill id="9535" toLevel="1" name="Kim Sooro Agathion's Blessed Escape">
 		<!-- Can use Blessed Escape. Cooldown is 1 hr. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -782,7 +761,6 @@
 	</skill>
 	<skill id="9537" toLevel="1" name="Park Jaebum Agathion's Blessed Escape">
 		<!-- Can use Blessed Escape. Cooldown is 1 hr. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -806,7 +784,6 @@
 	</skill>
 	<skill id="9539" toLevel="1" name="Kim Shinyoung Agathion's Blessed Escape">
 		<!-- Can use Blessed Escape. Cooldown is 1 hr. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -882,7 +859,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9543" toLevel="1" name="HP Recovery Herb">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
@@ -1615,7 +1591,6 @@
 	<skill id="9568" toLevel="1" name="Tauti's Treasure Chest">
 		<itemConsumeId>35994</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1847,7 +1822,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9573" toLevel="1" name="High-grade Lucky Enchant Stone: Weapon (R-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1858,7 +1832,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9574" toLevel="1" name="High-grade Lucky Enchant Stone: Armor (R-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1869,7 +1842,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9575" toLevel="1" name="Returning Hero's Health Potion">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1880,7 +1852,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9576" toLevel="1" name="Returning Hero's Wondrous Cubic">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1945,7 +1916,6 @@
 	</skill>
 	<skill id="9579" toLevel="1" name="Clearest Water">
 		<!-- Clearest Water given by the Lady of the Lake. You can use it on the Mother Tree in the Elven Village. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
 		<hitTime>5000</hitTime>
@@ -1969,7 +1939,6 @@
 	</skill>
 	<skill id="9580" toLevel="1" name="Brightest Light">
 		<!-- Brightest Light given by Nerupa in the Arms of Timiniel of Magmeld. You can use it at Shilen's Stone Statue in the Dark Elf Village. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
 		<hitTime>5000</hitTime>
@@ -1993,7 +1962,6 @@
 	</skill>
 	<skill id="9581" toLevel="1" name="Purest Soul">
 		<!-- Purest Soul given by Enfeux in the Valley of Saints. You can use it at the Cave of Souls near Kamael Village. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
 		<hitTime>5000</hitTime>
@@ -2017,7 +1985,6 @@
 	</skill>
 	<skill id="9582" toLevel="1" name="Fiercest Flame">
 		<!-- Fiercest Flame given by Vulcan, the Blacksmith of Flame at the Forge of the Gods. You can use it at the Pa'agrio Temple in the Orc Village. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
 		<hitTime>5000</hitTime>
@@ -2041,7 +2008,6 @@
 	</skill>
 	<skill id="9583" toLevel="1" name="Fondest Heart">
 		<!-- Letter containing the fond heart of Vulcan, the Blacksmith of Flame. You can use it at the ruined Dwarven Village. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
 		<hitTime>5000</hitTime>
@@ -2065,7 +2031,6 @@
 	</skill>
 	<skill id="9584" toLevel="1" name="Verna's Vaccine">
 		<!-- Vaccine made by Verna. You can use it on the Virus-infected Golem in Nornil's Cave. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>200</castRange>
 		<hitTime>1000</hitTime>
@@ -2108,7 +2073,6 @@
 	</skill>
 	<skill id="9586" toLevel="1" name="Repair Stone-gathering Robot">
 		<!-- Usable through the Multi Hammer 1 item. Skill is used in Clan Handicrafting Request Type A. Repairs Stone-gathering Robot. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
@@ -2131,7 +2095,6 @@
 	</skill>
 	<skill id="9587" toLevel="1" name="Destroy Destroyer Robot">
 		<!-- Usable through the Multi Hammer 1 item. Skill is used in Clan Handicrafting Request Type A. Attacks Destroyer Robot. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
@@ -2153,7 +2116,6 @@
 	</skill>
 	<skill id="9588" toLevel="1" name="Repair Crystal-gathering Robot">
 		<!-- Usable through the Multi Hammer 2 item. Skill is used in Clan Handicrafting Request Type B. Repairs Crystal-gathering Robot. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
@@ -2176,7 +2138,6 @@
 	</skill>
 	<skill id="9589" toLevel="1" name="Destroy Crystal Raider">
 		<!-- Usable through the Multi Hammer 2 item. Skill is used in Clan Handicrafting Request Type B. Attacks Crystal Raider. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
@@ -2198,7 +2159,6 @@
 	</skill>
 	<skill id="9590" toLevel="1" name="Attack Silvermane White Tiger">
 		<!-- Usable through the Multi Hammer 3 item. Skill is used in Clan Production Request Type A. Attacks Silvermane White Tiger. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
@@ -2220,7 +2180,6 @@
 	</skill>
 	<skill id="9591" toLevel="1" name="Repair Toad Robot">
 		<!-- Usable through the Multi Hammer 5 item. Skill is used in Clan Alteration Request Type A. Repairs Toad Robot. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
@@ -2243,7 +2202,6 @@
 	</skill>
 	<skill id="9592" toLevel="1" name="Destroy Destroyer Robot">
 		<!-- Usable through the Multi Hammer 5 item. Skill is used in Clan Alteration Request Type A. Attacks Destroyer Robot. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
@@ -2266,7 +2224,6 @@
 	</skill>
 	<skill id="9593" toLevel="1" name="Repair Robot of Repairs">
 		<!-- Usable through the Multi Hammer 6 item. Skill is used in Clan Alteration Request Type B. Repairs Repair Robot. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
@@ -2334,7 +2291,6 @@
 	</skill>
 	<skill id="9596" toLevel="1" name="Stronghold Siege (10-second)">
 		<!-- Used for Stronghold Siege. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
 		<hitTime>10000</hitTime>
@@ -2358,7 +2314,6 @@
 	</skill>
 	<skill id="9597" toLevel="1" name="Stronghold Siege (20-second)">
 		<!-- Used for Stronghold Siege. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
 		<hitTime>20000</hitTime>
@@ -2382,7 +2337,6 @@
 	</skill>
 	<skill id="9598" toLevel="1" name="Stronghold Siege (30-second)">
 		<!-- Used for Stronghold Siege. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
 		<hitTime>30000</hitTime>
@@ -2406,7 +2360,6 @@
 	</skill>
 	<skill id="9599" toLevel="1" name="Stronghold Siege (40-second)">
 		<!-- Used for Stronghold Siege. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
 		<hitTime>40000</hitTime>

@@ -2,365 +2,325 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="50000" toLevel="1" name="Haste">
 		<!-- Atk. Spd. +50%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1086</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50001" toLevel="1" name="Transform: Pirate Costume">
 		<!-- Transformation ability, granted to the player by an NPC. Transforms you into an Undead Pirate to make an ambush as a part of a quest. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50002" toLevel="1" name="Curse Zaken">
 		<!-- Bleeding. HP momentarily decreases. Power 5. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50003" toLevel="2" name="Crescent Slash">
 		<!-- Deals a horizontal slashing blow with a sword. Inflicts bleeding. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0223</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50004" toLevel="2" name="Phantom Archer">
 		<!-- Releases Skeletal Ghost from the sword. The Ghost breaks free and deals damage to the target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50005" toLevel="2" name="Multiple Slash">
 		<!-- Swings dual swords. Deals huge damage and inflicts bleeding. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1630</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50006" toLevel="2" name="Blood To Flesh">
 		<!-- Decreases HP/ MP of the target and restores player's HP. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0289</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50007" toLevel="2" name="Typhoon Slash">
 		<!-- Deals ranged damage to all targets around you. Inflicts bleeding. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50008" toLevel="2" name="Pirate King Fury">
 		<!-- Attacks and knocks down a target. Attack energy dissolves among multiple targets. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50009" toLevel="41" name="Raid Boss (Lv. 55)">
 		<!-- A rift that had appeared after an earthquake and weakened the Maphr's Seal, now shifted to the material world and brought chaos and pain with it. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skillraid</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50010" toLevel="5" name="Greater Hold Resistance">
 		<!-- Very resistant to Hold. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill4288</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50011" toLevel="5" name="Greater Paralysis Resistance">
 		<!-- Very resistant to Paralysis. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill4440</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50012" toLevel="12" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50013" toLevel="1" name="Hold">
 		<!-- Inflicted with Hold and unable to move. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill4047</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50014" toLevel="1" name="Christmas Blessing">
 		<!-- For 1 hour activates the following effects: Might, Shield, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Focus, Death Whisper, Guidance, Purity, Wild Magic, Concentration. Cannot be used together with Scroll of Mood Melody. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_x_mas_tree_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50015" toLevel="20" name="Mega Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50016" toLevel="20" name="Mega Smash">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50017" toLevel="9" name="Power Bomber">
 		<!-- Deals P. Damage and knocks down. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50018" toLevel="9" name="Mega Bomber">
 		<!-- Deals damage to the enemies in front and knocks them down. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50019" toLevel="9" name="Giant Bombardier">
 		<!-- Deals damage to the enemies around and knocks them down. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50020" toLevel="1" name="Berserk">
 		<!-- Increases Atk. Spd. And P. Atk. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50021" toLevel="3" name="Body Enlargement">
 		<!-- Increases the size of the body. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50022" toLevel="1" name="Head Enlargement">
 		<!-- Increases the size of the head. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50023" toLevel="20" name="Deadshot">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50024" toLevel="20" name="Multi-arrow Shot">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50025" toLevel="1" name="Aggression">
 		<!-- Provokes target into attacking you by forcefully changing their target. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10027</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50026" toLevel="20" name="Magic Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50027" toLevel="2" name="Heal">
 		<!-- Restores 30000 HP of the target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50028" toLevel="20" name="80 Lv. Raid Boss">
 		<!-- This is one of the strongest Arena bosses, but nothing the brave heroes of Aden cannot handle. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skillraid</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50029" toLevel="1" name="Dancing Bard">
 		<!-- Performs a dance. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50030" toLevel="1" name="Dandy's Precise Swing">
 		<!-- Throws the target back and inflicts heavy physical damage. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50031" toLevel="1" name="Orc Thunder">
 		<!-- Pulls the target into your reach. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10015</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50032" toLevel="1" name="Blizzard">
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill6274</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50033" toLevel="1" name="Frozen Crystal">
 		<!-- Actions prohibited for 5 seconds, -50 HP per second. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill6274</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50034" toLevel="1" name="Aqua Blow">
 		<!-- Deals damage to the targets around the boss. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50035" toLevel="1" name="Aqua Arrow">
 		<!-- Deals M. Damage to a random target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50036" toLevel="10" name="Aqua Rage">
 		<!-- Affects the area. Inflicts a debuff. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50037" toLevel="1" name="Aqua Summon">
 		<!-- Summons water drops. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50038" toLevel="1" name="Aqua Wave">
 		<!-- Affects the area. Deals a lot of damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50039" toLevel="1" name="Aqua Destruction">
 		<!-- Used when water drops are under attack or destroyed. Decreases debuff level by 1. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50040" toLevel="1" name="Aqua Self-Destruction">
 		<!-- Water drops self-destruct in a certain amount of time. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50041" toLevel="1" name="Hurricane Cutter">
 		<!-- Hurricane blade that defends you. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50042" toLevel="1" name="Hurricane Summon">
 		<!-- Resets Hurricane Summon cooldown. Attack skill. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50043" toLevel="1" name="Hurricane Bolt">
 		<!-- Deals damage to the enemies around, paralyzes a random target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50044" toLevel="1" name="Hurricane Destruction">
 		<!-- Makes hurricanes go away. Deals damage and knocks down. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50045" toLevel="1" name="Hurricane">
 		<!-- Affects the area. Deals a lot of damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50046" toLevel="2" name="Wind Ability - Lv. 1 Atk.">
 		<!-- Increases Atk. Lv. 1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50047" toLevel="2" name="Wind Ability - Lv. 1 Def.">
 		<!-- Increases Def. Lv. 1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50048" toLevel="2" name="Wind Ability - Lv. 1 Magic">
 		<!-- Increases Magic. Lv. 1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50049" toLevel="1" name="Fire Breath">
 		<!-- Deals fire damage to the targets around the boss. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50050" toLevel="10" name="Fire Rage">
 		<!-- Affects the area. Inflicts a debuff. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50051" toLevel="1" name="Tears of Fire">
 		<!-- Affects the area. Deals a lot of damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50052" toLevel="1" name="Freya's Safety Zone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50053" toLevel="1" name="Dispel Fire">
 		<!-- Dispels the constant damage effect. Used on the area. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1056</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50054" toLevel="1" name="Stone Crusher">
 		<!-- Deals damage to the targets around the boss. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50055" toLevel="1" name="Stone Transformation - Long Distance">
 		<!-- Defends from long distance attacks. Magic attack. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill30515</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50056" toLevel="1" name="Stone Transformation - Short Distance">
 		<!-- Defends from short distance attacks. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50057" toLevel="1" name="Stone Earthquake">
 		<!-- Stuns from a distance. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50058" toLevel="1" name="Stone Slide">
 		<!-- Stuns with a donut. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50059" toLevel="1" name="Earth Fury">
 		<!-- Affects the area. Deals a lot of damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50060" toLevel="1" name="Stone Destruction">
 		<!-- Debuff. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1062</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50061" toLevel="1" name="Earth Life">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50062" toLevel="1" name="Ignition">
 		<!-- Last death. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50063" toLevel="1" name="Energy of Fire">
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1083</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50064" toLevel="1" name="Energy of Water">
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1071</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50065" toLevel="1" name="Energy of Wind">
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1074</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50066" toLevel="1" name="Earth Energy">
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1223</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50067" toLevel="1" name="Stone Earthquake">
 		<!-- Stuns from a distance. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50068" toLevel="1" name="Stone Crusher">
 		<!-- Deals damage to the targets around the boss. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50069" toLevel="1" name="Fire Breath">
 		<!-- Deals fire damage to the targets around the boss. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50070" toLevel="1" name="Tears of Fire">
 		<!-- Affects the area. Deals a lot of damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50071" toLevel="1" name="Aqua Arrow">
 		<!-- Deals M. Damage to a random target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50072" toLevel="1" name="Aqua Wave">
 		<!-- Affects the area. Deals a lot of damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50073" toLevel="1" name="Hurricane Bolt">
 		<!-- Deals damage to the enemies around, paralyzes a random target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="50074" toLevel="1" name="Hurricane">
 		<!-- Affects the area. Deals a lot of damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

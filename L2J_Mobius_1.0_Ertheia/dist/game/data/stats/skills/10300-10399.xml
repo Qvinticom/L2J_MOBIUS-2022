@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10300" toLevel="6" name="Last Attack">
 		<!-- Attacks target with 52746 Power added to P. Atk. Cuts regular monsters' HP down to 1. Usable when target's HP is 10% or below. Requires a sword, blunt, spear, fist, dual blunt, or dualsword. -->
+		<icon>icon.skill10300</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">90</value>
@@ -11,7 +12,6 @@
 			<value level="5">103</value>
 			<value level="6">105</value>
 		</magicLvl>
-		<icon>icon.skill10300</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">276</value>
@@ -118,13 +118,13 @@
 	</skill>
 	<skill id="10303" toLevel="4" name="Superior Combat Master">
 		<!-- Max CP/ HP + 2%. -->
+		<icon>icon.skill0430</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
 		</magicLvl>
-		<icon>icon.skill0430</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxCp">
@@ -188,6 +188,7 @@
 	</skill>
 	<skill id="10305" toLevel="4" name="Broad Pull">
 		<!-- Spear Resistance - 10%. Pulls enemies from a large radius nearby. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<icon>icon.skill11833</icon>
 		<affectLimit>9-10</affectLimit>
 		<affectRange>900</affectRange>
 		<abnormalLvl>
@@ -198,7 +199,6 @@
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
-		<icon>icon.skill11833</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -299,12 +299,12 @@
 	</skill>
 	<skill id="10308" toLevel="1" name="Wild Roar">
 		<!-- Shouts loudly to invoke the power of the Bison. For 5 minutes, P. Atk. and Critical Damage + 45%, Critical Rate + 45, and Atk. Spd. - 15%. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. -->
+		<icon>icon.skill11834</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
-		<icon>icon.skill11834</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -415,10 +415,10 @@
 	</skill>
 	<skill id="10310" toLevel="1" name="Primal Rage">
 		<!-- For 10 min., P. Atk. + 15%. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<icon>icon.skill10310</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
-		<icon>icon.skill10310</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -510,6 +510,7 @@
 	</skill>
 	<skill id="10313" toLevel="4" name="Infinite Rush">
 		<!-- Rush toward the frontal enemies to inflict Shock for 9 sec. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<icon>icon.skill10313</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -527,7 +528,6 @@
 			<value level="4">99</value>
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
-		<icon>icon.skill10313</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -565,11 +565,11 @@
 	</skill>
 	<skill id="10314" toLevel="4" name="Disarmament">
 		<!-- Disarms enemies for 5 sec. and decreases their P. Atk./ M. Atk. by 40%. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. -->
+		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>DISARM</abnormalType> <!-- Guessed -->
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect> <!-- Guessed -->
-		<icon>icon.skill0485</icon>
 		<operateType>A2</operateType>
 		<trait>DISARM</trait>
 		<mpConsume>38</mpConsume>
@@ -611,12 +611,12 @@
 	</skill>
 	<skill id="10315" toLevel="2" name="Superior Polearm Mastery">
 		<!-- When a spear is equipped, P. Atk. + 2 % and additional P. Atk. + 583. -->
+		<icon>icon.skill11836</icon>
 		<operateType>P</operateType>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
 		</magicLvl>
-		<icon>icon.skill11836</icon>
 		<effects>
 			<effect name="PAtk">
 				<amount>
@@ -642,6 +642,7 @@
 	</skill>
 	<skill id="10316" toLevel="4" name="Bloodthirst">
 		<!-- PvP P. Atk. + 5%. -->
+		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -649,7 +650,6 @@
 			<value level="3">95</value>
 			<value level="4">99</value>
 		</magicLvl>
-		<icon>icon.skill0193</icon>
 		<effects>
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
@@ -664,6 +664,7 @@
 	</skill>
 	<skill id="10317" toLevel="4" name="Thunder Slasher">
 		<!-- Swings a spear to inflict 26003 added to P. Atk. on nearby enemies and Stuns them for 5 sec. Requires a spear. Ignores Shield Defense. Over-hit. Critical. -->
+		<icon>icon.skill10317new</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -680,7 +681,6 @@
 			<value level="4">99</value>
 		</magicLvl>
 		<trait>SHOCK</trait>
-		<icon>icon.skill10317new</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -792,6 +792,7 @@
 	</skill>
 	<skill id="10319" toLevel="3" name="Duelist's Fury">
 		<!-- P. Atk. + 30%, Spd. + 66, and increases debuff resistance. -->
+		<icon>icon.skll10319</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>DUELING</abnormalVisualEffect>
@@ -801,7 +802,6 @@
 			<value level="2">95</value>
 			<value level="3">99</value>
 		</magicLvl>
-		<icon>icon.skll10319</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -840,10 +840,10 @@
 	</skill>
 	<skill id="10320" toLevel="3" name="Faceoff">
 		<!-- Engages target in 1:1 combat. Ignores all normal attacks, skills, and debuffs, except those of the opponent. Increases your P. Atk., Spd., and debuff resistance. -->
+		<icon>icon.skll10319</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalVisualEffect>DUELING</abnormalVisualEffect>
-		<icon>icon.skll10319</icon>
 		<operateType>A4</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -878,6 +878,7 @@
 	</skill>
 	<skill id="10321" toLevel="7" name="Thunder Spear">
 		<!-- Attacks near the enemy by throwing a spear with 22536 Power added to P. Atk. Stuns for 9 seconds. Requires a spear. Over-hit. Critical hit. Ignores Shield Defense. Target cancel. -->
+		<icon>icon.skll10321</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -899,7 +900,6 @@
 			<value level="7">105</value>
 		</magicLvl>
 		<trait>SHOCK</trait>
-		<icon>icon.skll10321</icon>
 		<operateType>A2</operateType>
 		<targetType>TARGET</targetType>
 		<affectScope>RANGE</affectScope>
@@ -946,12 +946,12 @@
 	</skill>
 	<skill id="10322" toLevel="1" name="Wolf's Cry">
 		<!-- Shouts loudly to invoke the power of the Wolf. For 5 minutes, P. Def. and M. Def. + 50%, Max HP + 25%, and Spd. + 20. Requires a sword, blunt, spear, fist weapon, dual blunt, or dualsword. -->
+		<icon>icon.skll10320</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
-		<icon>icon.skll10320</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -992,7 +992,6 @@
 	</skill>
 	<skill id="10323" toLevel="1" name="Self Heal (Warrior)">
 		<!-- Recovers 10% of Max HP. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<effectPoint>100</effectPoint>
@@ -1034,6 +1033,7 @@
 	</skill>
 	<skill id="10325" toLevel="6" name="Dreadful Roar">
 		<!-- Cancels at least one buff of nearby enemies. Consumes 10 Soulstones. -->
+		<icon>icon.skill10325</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>180</affectRange>
 		<magicLvl>
@@ -1046,7 +1046,6 @@
 		</magicLvl>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
-		<icon>icon.skill10325</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1262,6 +1261,7 @@
 	</skill>
 	<skill id="10330" toLevel="7" name="Power Hammer Crush">
 		<!-- Attacks target with 18005 Power added to P. Atk. while ignoring 30% of their P. Def. Stuns for 5 sec. Requires a blunt weapon. Over-hit. Critical. -->
+		<icon>icon.skill10330</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1282,7 +1282,6 @@
 			<value level="6">103</value>
 			<value level="7">105</value>
 		</magicLvl>
-		<icon>icon.skill10330</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1330,7 +1329,6 @@
 	<skill id="10331" toLevel="1" name="Last Man Standing">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Engages target in 1:1 combat. All damage from the target is ignored. -->
-		<icon>icon.skill10331</icon>
 		<operateType>A2</operateType>
 		<mpConsume>43</mpConsume>
 		<castRange>600</castRange>
@@ -1349,7 +1347,6 @@
 		</abnormalTime>
 		<abnormalType>SUPER_AVOID</abnormalType>
 		<abnormalVisualEffect>LONG_BLOW</abnormalVisualEffect>
-		<icon>icon.skill10332</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
@@ -1395,7 +1392,6 @@
 		</abnormalTime>
 		<abnormalType>SUPER_AVOID</abnormalType>
 		<abnormalVisualEffect>LONG_BLOW</abnormalVisualEffect>
-		<icon>icon.skill10333</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
@@ -1470,7 +1466,6 @@
 		</abnormalTime>
 		<abnormalType>SUPER_AVOID</abnormalType>		
 		<abnormalVisualEffect>WIDE_SWORD</abnormalVisualEffect>
-		<icon>icon.skill10334</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
@@ -1518,7 +1513,6 @@
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalVisualEffect>BIG_FIST</abnormalVisualEffect>
-		<icon>icon.skill10335</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
@@ -1589,13 +1583,11 @@
 	<skill id="10336" toLevel="1" name="Infinity Rush">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- Increases power when using the Rush Impact. -->
-		<icon>icon.skill10336</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="10337" toLevel="3" name="Infinity Rush">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- P. Atk. + 10% and P. Critical Damage + 10%. -->
-		<icon>icon.skill10336</icon>
 		<operateType>A2</operateType>
 		<effectPoint>2</effectPoint>
 		<isMagic>4</isMagic>
@@ -1605,7 +1597,6 @@
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
-		<icon>icon.skill10335</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1629,7 +1620,6 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>60</activateRate> <!-- Guessed -->
-		<icon>icon.skill10333</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<lvlBonusRate>1</lvlBonusRate>
 		<operateType>A2</operateType>
@@ -1649,11 +1639,6 @@
 	</skill>
 	<skill id="10340" toLevel="3" name="Blade Slasher">
 		<!-- Attacks enemies in front with 16214 Power added to P. Atk. If the target is stunned, attacks with 48641 power. Can be used while a sword or blunt weapon is equipped. Consumes 1 Soulstone. -->
-		<icon>
-			<value level="1">icon.skill10340</value>
-			<value level="2">icon.skill0526</value>
-			<value level="3">icon.skill0526</value>
-		</icon>
 		<itemConsumeCount>
 			<value level="1">1</value>
 			<value level="2">1</value>

@@ -58,6 +58,7 @@
 	</skill>
 	<skill id="6908" toLevel="1" name="Transform Master">
 		<!-- Transforms into a game Master. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalTime>-1</abnormalTime>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -70,7 +71,6 @@
 		<magicLvl>-2</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>icon.skilltransform1</icon>
 		<hitTime>2500</hitTime>
 		<reuseDelay>10000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -89,42 +89,43 @@
 	</skill>
 	<skill id="6909" toLevel="1" name="Charming">
 		<!-- Shows the game master's charming actions. -->
+		<icon>icon.skilltransform1</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skilltransform1</icon>
 		<hitTime>2700</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6910" toLevel="1" name="Dance">
 		<!-- Shows the game master's dancing skills. -->
+		<icon>icon.skilltransform2</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skilltransform2</icon>
 		<hitTime>4800</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6911" toLevel="1" name="Greeting">
 		<!-- Shows the game master's greeting. -->
+		<icon>icon.skilltransform3</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skilltransform3</icon>
 		<hitTime>3200</hitTime>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6912" toLevel="1" name="Stigma Aftermath">
 		<!-- Antharas' Stigma Aftermath. For 10 seconds, decreases 500 HP and 300 MP per second. -->
+		<icon>icon.skill5860</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>TIME_BOMB</abnormalType>
@@ -137,7 +138,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<affectRange>100</affectRange>
-		<icon>icon.skill5860</icon>
 		<isDebuff>true</isDebuff>
 		<castRange>1200</castRange>
 		<abnormalVisualEffect>TIME_BOMB</abnormalVisualEffect>
@@ -148,10 +148,10 @@
 	</skill>
 	<skill id="6913" toLevel="1" name="Challenge of Faith">
 		<!-- As a result of the challenge, for 15 seconds, increases P. Def. by 360 and M. Def. by 270. -->
+		<icon>icon.skill0985</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
-		<icon>icon.skill0985</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
@@ -180,6 +180,7 @@
 	</skill>
 	<skill id="6914" toLevel="10" name="Haste">
 		<!-- Atk Spd increased by $s1. -->
+		<icon>icon.skill1086</icon>
 		<operateType>A2</operateType>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -189,13 +190,13 @@
 		<hitCancelTime>0</hitCancelTime>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6915" toLevel="10" name="Acumen">
 		<!-- Casting Spd. is increased by $s1. -->
+		<icon>icon.skill1085</icon>
 		<operateType>A2</operateType>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -205,7 +206,6 @@
 		<hitCancelTime>0</hitCancelTime>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
-		<icon>icon.skill1085</icon>
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
@@ -213,12 +213,12 @@
 	</skill>
 	<skill id="6916" toLevel="1" name="Antharas' Cute Tricks">
 		<!-- See the summoned spirit perform cute tricks. -->
+		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -229,12 +229,12 @@
 	</skill>
 	<skill id="6917" toLevel="1" name="Kanna's Splendor">
 		<!-- Able to see the summoned spirit's splendor. -->
+		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -245,12 +245,12 @@
 	</skill>
 	<skill id="6918" toLevel="1" name="Kallesin's Splendor">
 		<!-- Able to see the summoned spirit's splendor. -->
+		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill_agathion_cute</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -276,9 +276,9 @@
 	</skill>
 	<skill id="6920" toLevel="1" name="Collector's Fortune">
 		<!-- A collector's luck. Increases P. Atk. by 15%, Critical Rate by 10%, Critical Damage by 10%, Atk. Spd. by 3%, and Speed by 5. -->
+		<icon>BranchSys2.icon.skill0952</icon>
 		<abnormalTime>10</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
-		<icon>BranchSys2.icon.skill0952</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>0</magicLvl>
 		<operateType>A2</operateType> <!-- FIXME: value unconfirmed -->
@@ -316,12 +316,12 @@
 	</skill>
 	<skill id="6921" toLevel="1" name="Penetrating Attack">
 		<!-- P. Def. decreases temporarily. -->
+		<icon>icon.skill0122</icon>
 		<abnormalTime>5</abnormalTime>
 		<activateRate>80</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
 		<abnormalType>PD_DOWN</abnormalType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>

@@ -44,7 +44,7 @@
 	</skill>
 	<skill id="15606" toLevel="1" name="Recharge">
 		<!-- Recharge. -->
-		<icon>icon.skill1449</icon>
+		<icon>icon.skill14444</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<hitTime>10000</hitTime>
@@ -184,7 +184,6 @@
 	</skill>
 	<skill id="15615" toLevel="7" name="Increases P. Atk.">
 		<!-- P. Atk./ M. Atk. +$s1. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -287,7 +286,6 @@
 	</skill>
 	<skill id="15629" toLevel="1" name="Nerva's Mental Blow">
 		<!-- Powerful attack on a single enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>70</castRange>
 		<hitTime>1500</hitTime>
@@ -329,7 +327,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15636" toLevel="1" name="Dimensional Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -337,7 +334,6 @@
 	</skill>
 	<skill id="15637" toLevel="1" name="Dimensional Space">
 		<!-- You are in the Dimensional Space. You can either restart the game or go through Mermoden in the village to return. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>3</isMagic>
@@ -450,7 +446,6 @@
 	</skill>
 	<skill id="15663" toLevel="1" name="Increases P. Atk.">
 		<!-- P. Atk. and M. Atk. +10%. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -468,164 +463,154 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15665" toLevel="1" name="Presentation - Anakim / Lilith">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 	</skill>
 	<skill id="15666" toLevel="5" name="HP Increase 1">
 		<!-- Max HP +20%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1045</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15667" toLevel="5" name="P. Atk. Increase 1">
 		<!-- P. Atk. +10%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1068</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15668" toLevel="5" name="M. Atk Increase 1">
 		<!-- M. Atk. +10%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1059</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15669" toLevel="5" name="P. Def. Increase 1">
 		<!-- P. Def. +20%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1040</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15670" toLevel="5" name="P. Def. Increase 1">
 		<!-- M. Def. +20%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1010</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15671" toLevel="5" name="Atk. Spd. Increase 1">
 		<!-- Atk. Spd. +10%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1086</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15672" toLevel="5" name="Physical Attack Resistance 1">
 		<!-- P. Atk. Resistance +10 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1086</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15673" toLevel="5" name="Terminal State">
 		<!-- For 5 sec., HP doesn t drop below 1. Stuns the target. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1608</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15674" toLevel="1" name="Mass Shackling">
 		<!-- Provokes nearby enemies and inflicts Hold for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0404</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15675" toLevel="1" name="Tribunal">
 		<!-- Inflicts physical damage on the enemy with $s1 Power added to P. Atk. and enemy's Critical Rate -$s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0400</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15676" toLevel="1" name="Shield Stun">
 		<!-- Makes an attack with a shield, stunning the target for $s1. Requires a shield. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0092</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15677" toLevel="1" name="Bloody Attack">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15678" toLevel="1" name="Sayha's Blessing">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15679" toLevel="1" name="Dandy's Precise Swing">
 		<!-- Throws back the target and inflicts heavy physical damage. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15680" toLevel="1" name="Roa's Hi-tech Attack">
 		<!-- Inflicts great damage by magic, for 5 sec. Speed, Atk. Spd., Casting Spd. -50%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill4107</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15681" toLevel="2" name="Arena Administrator's Location">
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1045</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15682" toLevel="3" name="Orc Thunder">
 		<!-- Pulls the target into your reach. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10015</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15683" toLevel="3" name="Front Drain">
 		<!-- Inflicts heavy physical damage on enemies in fron of your character. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15684" toLevel="3" name="Arena Administrator's Recovery">
 		<!-- Restores HP/ MP by 30%. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15685" toLevel="3" name="Heal">
 		<!-- Restores 10% of target's HP. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15686" toLevel="3" name="Multi-healing">
 		<!-- Restores 10% of allies' HP. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15687" toLevel="1" name="Promise of Vengeance">
 		<!-- Wrath caused by the death of an ally. Restores 50% of HP/ MP. P. Atk. and M. Atk., Speed, Casting Spd. +30% for 5 min. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1346</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15688" toLevel="1" name="Chain Snake">
 		<!-- Pulls the targets to your character. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10015</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15689" toLevel="1" name="Mass Chain Snake">
 		<!-- Pulls nearby enemies to your character. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10016</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15690" toLevel="2" name="Fearsome Defensive Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15691" toLevel="1" name="Defense Break">
 		<!-- Inflicts heavy physical damage on enemies in fron of your character. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15692" toLevel="1" name="Smashing Attack">
 		<!-- Inflicts heavy physical damage on enemies surrounding your character. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15693" toLevel="1" name="Giant Bombardier">
 		<!-- Knocks Down enemies in the working range. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15694" toLevel="1" name="Mighty Giant Bombardier">
 		<!-- Stuns enemies in the working range. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10265</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15695" toLevel="15" name="(Hex)">
 		<!-- Enemy's P. Def. -$s2 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0122</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15696" toLevel="1" name="Thunder Stun">
 		<!-- Stunned and unable to move momentarily. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="15697" toLevel="1" name="Giant Bombardier">
 		<!-- Knocks Down enemies in the working range. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

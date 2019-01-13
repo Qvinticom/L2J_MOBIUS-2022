@@ -337,7 +337,6 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<hitTime>200</hitTime>
-		<icon>icon.skill1012</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>0</mpConsume>
@@ -426,7 +425,6 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
 		<hitTime>200</hitTime>
-		<icon>icon.skill1012</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>0</mpConsume>
@@ -541,7 +539,6 @@
 		<!-- Removes poison effect. -->
 		<icon>icon.ring_earthworm_heart</icon>
 		<hitTime>200</hitTime>
-		<icon>icon.skill1012</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>0</mpConsume>
@@ -1453,10 +1450,10 @@
 	</skill>
 	<skill id="13355" toLevel="1" name="Player Commendation - Talisman - M. Atk. (Active)">
 		<!-- Increases M. Atk. by 111 momentarily through the power of the talisman. -->
+		<icon>icon.r85_talisman_ma_up_active</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
-		<icon>icon.r85_talisman_ma_up_active</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
 		<hitTime>4000</hitTime>
@@ -1890,7 +1887,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="13377" toLevel="1" name="Scroll: XP">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>

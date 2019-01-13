@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10015" toLevel="2" name="Chain Strike">
 		<!-- Pulls a selected target to you. Requires a shield. -->
+		<icon>icon.skill10015</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -15,7 +16,6 @@
 			<value level="1">76</value>
 			<value level="2">82</value>
 		</magicLvl>
-		<icon>icon.skill10015</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
@@ -50,6 +50,7 @@
 	</skill>
 	<skill id="10094" toLevel="7" name="Mass Lightning Strike">
 		<!-- A lightning strike inflicts damage to the target and nearby enemies. Power $s1. Paralyzes enemies for $s2 Consumes $s3 Soulstone(s). -->
+		<icon>icon.skll10094</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -61,7 +62,6 @@
 		<affectLimit>10-10</affectLimit>
 		<affectRange>100</affectRange>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-		<icon>icon.skll10094</icon>
 		<itemConsumeId>1785</itemConsumeId>
 		<itemConsumeCount>
 			<value level="1">1</value>

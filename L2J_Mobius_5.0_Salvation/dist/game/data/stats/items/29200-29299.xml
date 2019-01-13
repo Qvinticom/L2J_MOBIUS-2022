@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="29200" name="Returning User's Leaf" additionalName="14-day" type="Armor">
 		<!-- Special hair accessory for new warriors returning to their adventure in Aden. -->
-		<set name="icon" val="icon.armor_t79_l_i00" />
+		<set name="icon" val="icon.s_dormant_user_display" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
@@ -119,7 +119,7 @@
 	</item>
 	<item id="29212" name="Adventurer's Circlet" type="Armor">
 		<!-- A luxurious golden hair accessory for adventurers. Requires 2 hair accessory slots. Increases P. Atk. by 3% and M. Atk. by 5%. -->
-		<set name="icon" val="icon.armor_t76_ul_i00" />
+		<set name="icon" val="BranchSys.icon.br_valkyrie_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />
@@ -137,7 +137,7 @@
 	</item>
 	<item id="29213" name="Adventurer's Bracelet" type="Armor">
 		<!-- Bracelet for adventurers. Increases STR/ DEX/ CON/ INT/ WIT/ MEN by 1 and activates 3 talisman slots. -->
-		<set name="icon" val="icon.armor_t85_ul_i00" />
+		<set name="icon" val="BranchIcon.icon.bracelet_of_explorer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="onepiece" />

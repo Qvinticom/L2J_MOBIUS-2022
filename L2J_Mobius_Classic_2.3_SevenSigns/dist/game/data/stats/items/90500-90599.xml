@@ -201,7 +201,7 @@
 	</item>
 	<item id="90521" name="Golden Fishing Rod Pouch" type="EtcItem">
 		<!-- Double-click to obtain 180 pcs. of Golden Bait, 180 pcs. of Fishing Shot. Cannot be dropped. -->
-		<set name="icon" val="icon.bm_gold_fishing_poket" />
+		<set name="icon" val="Icon.bm_gold_fishing_poket" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_dropable" val="false" />
@@ -406,13 +406,13 @@
 	</item>
 	<item id="90547" name="Sigel’s Rune - Stage 14" type="EtcItem">
 		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90548" name="Sigel’s Rune - Stage 15" type="EtcItem">
 		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="icon" val="BranchIcon.Icon.g_rune_sigel_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -526,13 +526,13 @@
 	</item>
 	<item id="90567" name="Tyrr’s Rune - Stage 14" type="EtcItem">
 		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90568" name="Tyrr’s Rune - Stage 15" type="EtcItem">
 		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="icon" val="BranchIcon.Icon.g_rune_tir_lv02" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
@@ -646,13 +646,13 @@
 	</item>
 	<item id="90587" name="Othell’s Rune - Stage 14" type="EtcItem">
 		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv03" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="90588" name="Othell’s Rune - Stage 15" type="EtcItem">
 		<!-- A stone with a symbol of ancient Giants engraved. If a skilled blacksmith puts it in the slot, the weapon will be endowed with the Rune's power. -->
-		<set name="icon" val="icon.ensoul_big_p" />
+		<set name="icon" val="BranchIcon.Icon.g_rune_othel_lv03" />
 		<set name="weight" val="20" />
 		<set name="is_stackable" val="true" />
 	</item>

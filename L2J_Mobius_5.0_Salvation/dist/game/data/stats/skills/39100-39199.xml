@@ -2,8 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="39101" toLevel="1" name="Chase Down">
 		<!-- Speed +66 for 15 seconds. -->
-		<abnormalTime>15</abnormalTime>
 		<icon>icon.skill0998</icon>
+		<abnormalTime>15</abnormalTime>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>438</effectPoint>
@@ -35,11 +35,16 @@
 	</skill>
 	<skill id="39169" toLevel="1" name="Cheer Firecracker">
 		<!-- Large firecracker that explodes in colorful light and fills the sky. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys.icon.br_firecracker_gold_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39171" toLevel="1" name="Member of the Balthus Knight">
 		<!-- You have dressed up as a member of the Balthus Knights for 1 hour. Gain opportunities to receive special supplies. -->
+		<icon>
+			<value level="1">icon.ev_balthus_token</value>
+			<value level="2">icon.etc_lottery_card_i00</value>
+			<value level="3">icon.etc_lottery_card_i00</value>
+		</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49784</itemConsumeId>
 		<abnormalLvl>1</abnormalLvl>
@@ -49,7 +54,6 @@
 		<stayAfterDeath>true</stayAfterDeath>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill39171</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>56</magicLvl>
 		<operateType>A2</operateType>
@@ -82,6 +86,7 @@
 	</skill>
 	<skill id="39172" toLevel="1" name="Party Scroll of Escape">
 		<!-- Teleports party members to the nearest village. -->
+		<icon>icon.skill11819</icon>
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -105,10 +110,10 @@
 	</skill>
 	<skill id="39173" toLevel="1" name="Stealth Detector">
 		<!-- Fires a Flare to reveal nearby hiding enemies or traps. -->
+		<icon>icon.etc_fairy_fire_i00</icon>
 		<affectRange>300</affectRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>200</hitTime>
-		<icon>icon.skill0470</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>48283</itemConsumeId>
@@ -124,7 +129,6 @@
 		</effects>
 	</skill>
 	<skill id="39175" toLevel="1" name="Scroll: PK">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
@@ -150,7 +154,6 @@
 		</effects>
 	</skill>
 	<skill id="39176" toLevel="1" name="Scroll: Reputation">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>

@@ -15,8 +15,8 @@
 	</skill>
 	<skill id="19301" toLevel="9" name="Acid Swarm">
 		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for $s1. Enemies within the area suffer P. Def/ M. Def -$s2 and Atk. Spd./ Speed/ Shield Def. -$s3 and cannot use magic skills. -->
-		Enemies within the area suffer P. Def/ M. Def -30% and Atk. Spd./ Speed/ Shield Def. -50% and cannot use magic skills. -->
 		<icon>icon.skill19301</icon>
+		Enemies within the area suffer P. Def/ M. Def -30% and Atk. Spd./ Speed/ Shield Def. -50% and cannot use magic skills. -->
 		<operateType>A1</operateType>
 		<mpConsume>107</mpConsume>
 		<castRange>900</castRange>
@@ -115,6 +115,7 @@
 	</skill>
 	<skill id="19302" toLevel="9" name="Thrown Acid Sworm">
 		<!-- Poisoned. P. Def/ M. Def -$s1 and, Atk. Spd./ Speed/ Shield Def. -$s2, blocks magic skills, and HP -$s3 per second. -->
+		<icon>icon.skill19301</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -132,7 +133,6 @@
 		<activateRate>130</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill19302</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -198,6 +198,7 @@
 	</skill>
 	<skill id="19303" toLevel="7" name="Right Angle Reverse">
 		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk and stun the target for $s2. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
+		<icon>icon.skill19303</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -211,7 +212,6 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>120</activateRate>
-		<icon>icon.skill19303</icon>
 		<operateType>DA5</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -280,13 +280,13 @@
 	</skill>
 	<skill id="19304" toLevel="2" name="Easterly Wind Strike">
 		<!-- Critical rate/ critical damage inflicted from the flank +$s1 and critical rate/ critical damage inflicted from behind +$s2, and also resets cooldown of Right Angle Reverse and Easterly Wind Strike. -->
+		<icon>icon.skill10705</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>EASTERLY_WIND_STRIKE</abnormalType>
-		<icon>icon.skill10705</icon>
 		<effectPoint>80</effectPoint>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -322,9 +322,9 @@
 	</skill>
 	<skill id="19305" toLevel="7" name="Shadow Reverse">
 		<!-- Teleports to the back of the target and attempts Deadly Attack with $s1 power added to P. Atk. Additionally, decreases target Accuracy by $s3 for $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
+		<icon>icon.skill19305</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
-		<icon>icon.skill19305</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -515,6 +515,7 @@
 	</skill>
 	<skill id="19311" toLevel="3" name="Dwarven Flare Bluff">
 		<!-- Fires Special Flare to inflict Bluff on enemies in front for $s1. Requires dagger/ dual dagger. Consumes $s2 Soulstones. -->
+		<icon>icon.skill0537</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>POWER_BLUFF</abnormalType>
@@ -522,7 +523,6 @@
 		<activateRate>120</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<trait>DERANGEMENT</trait>
-		<icon>icon.skill0537</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>FAN</affectScope>
@@ -737,6 +737,7 @@
 	</skill>
 	<skill id="19315" toLevel="4" name="Mana Burst">
 		<!-- For $s1 increases M. Atk. by $s2. Able to cast Quadruple Elemental Blast if reached level 4. -->
+		<icon>icon.skill11046</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -750,7 +751,6 @@
 			<value level="4">15</value>
 		</abnormalTime>
 		<abnormalType>MANA_BURST</abnormalType>
-		<icon>icon.skill11046</icon>
 		<operateType>A2</operateType>
 		<isMagic>7</isMagic>
 		<reuseDelay>180000</reuseDelay>
@@ -794,9 +794,9 @@
 	</skill>
 	<skill id="19316" toLevel="8" name="Elemental Final Storm (Dark)">
 		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>DARK</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>

@@ -478,7 +478,7 @@
 	</item>
 	<item id="47944" name="13th Anniversary Item" type="EtcItem">
 		<!-- An event item for the 6th anniversary of Lineage 2. Village event NPC Bliss needs it for the event. Will be deleted when the event has concluded. -->
-		<set name="icon" val="icon.ev_13th" />
+		<set name="icon" val="icon.ev_L2_soul_ore" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -1318,7 +1318,7 @@
 	</item>
 	<item id="47984" name="La Vie En Rose's Glorious Brooch" type="Armor">
 		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -1334,7 +1334,7 @@
 	</item>
 	<item id="47985" name="La Vie En Rose's Glorious Brooch" additionalName="Enchant Type" type="Armor">
 		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. CHA +1. Can be augmented. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -1389,7 +1389,7 @@
 	</item>
 	<item id="47990" name="La Vie En Rose's Glorious Brooch" additionalName="Rare" type="Armor">
 		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. All stats +1. Can be augmented. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
+		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />

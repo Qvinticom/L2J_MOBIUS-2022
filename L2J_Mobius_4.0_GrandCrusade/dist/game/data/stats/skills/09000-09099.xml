@@ -102,12 +102,12 @@
 	</skill>
 	<skill id="9010" toLevel="1" name="Cool Pack">
 		<!-- Fires the cool air cannon It can only be used during humid weather. -->
+		<icon>icon.skill1184</icon>
 		<castRange>200</castRange>
 		<coolTime>700</coolTime>
 		<effectPoint>-10000</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1300</hitTime>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15364</itemConsumeId> <!-- Cool Pack -->
@@ -133,11 +133,11 @@
 	</skill>
 	<skill id="9011" toLevel="1" name="Might">
 		<!-- Increases P. Atk. by 15% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -155,11 +155,11 @@
 	</skill>
 	<skill id="9012" toLevel="1" name="Shield">
 		<!-- Increases P. Def. by 15% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -177,11 +177,11 @@
 	</skill>
 	<skill id="9013" toLevel="1" name="Wind Walk">
 		<!-- Increases Speed by 33 for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -199,11 +199,11 @@
 	</skill>
 	<skill id="9014" toLevel="1" name="Focus">
 		<!-- Increases Critical Rate by 30% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -221,11 +221,11 @@
 	</skill>
 	<skill id="9015" toLevel="1" name="Death Whisper">
 		<!-- Increases Critical Damage by 35% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -243,11 +243,11 @@
 	</skill>
 	<skill id="9016" toLevel="1" name="Guidance">
 		<!-- Increases Accuracy by 4 for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -265,11 +265,11 @@
 	</skill>
 	<skill id="9017" toLevel="1" name="Blessed Shield">
 		<!-- Increases Shield Defense Rate by 30% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -287,11 +287,11 @@
 	</skill>
 	<skill id="9018" toLevel="1" name="Blessed Body">
 		<!-- Increases Max HP by 35% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -309,11 +309,11 @@
 	</skill>
 	<skill id="9019" toLevel="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -331,11 +331,11 @@
 	</skill>
 	<skill id="9020" toLevel="1" name="Vampiric Rage">
 		<!-- Restores 9% of the physical damage inflicted on the enemy as HP with a certain probability for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -353,11 +353,11 @@
 	</skill>
 	<skill id="9021" toLevel="1" name="Berserker Spirit">
 		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -403,11 +403,11 @@
 	</skill>
 	<skill id="9022" toLevel="1" name="Magic Barrier">
 		<!-- Increases M. Def. by 30% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -425,11 +425,11 @@
 	</skill>
 	<skill id="9023" toLevel="1" name="Blessed Soul">
 		<!-- Increases Max MP by 35% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -447,11 +447,11 @@
 	</skill>
 	<skill id="9024" toLevel="1" name="Empower">
 		<!-- Increases M. Atk. by 75% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -469,11 +469,11 @@
 	</skill>
 	<skill id="9025" toLevel="1" name="Acumen">
 		<!-- Increases Casting Spd. by 30% for 60 minutes. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -491,11 +491,11 @@
 	</skill>
 	<skill id="9026" toLevel="1" name="Clarity">
 		<!-- For 60 minutes, decreases MP consumption by 20% for physical skills, by 10% for magic skills, and by 20% for song/dance skills. Consumes 3 Spirit Ore. -->
+		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -559,9 +559,9 @@
 	</skill>
 	<skill id="9028" toLevel="1" name="Lucky Cool Pack">
 		<!-- Fires the cool air cannon of fortune. It can only be used during humid weather. -->
+		<icon>icon.skill1184</icon>
 		<coolTime>700</coolTime>
 		<effectPoint>-10000</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15365</itemConsumeId> <!-- Lucky Cool Pack -->
@@ -701,12 +701,12 @@
 	</skill>
 	<skill id="9035" toLevel="1" name="Steamed Rice Cake">
 		<!-- Maintains Vitality for 10 minutes. Delicious steamed rice cake effect. -->
+		<icon>icon.etc.event_steamed_rice_cake_i00</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
-		<icon>icon.etc.event_steamed_rice_cake_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15379</itemConsumeId> <!-- Steamed Rice Cake -->
@@ -872,12 +872,12 @@
 	</skill>
 	<skill id="9041" toLevel="1" name="6th Anniversary Cake">
 		<!-- 6th Anniversary celebratory cake. Vitality is recovered for 1 hour when acquiring XP. -->
+		<icon>icon.event_six_party_cake_i00</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VP_UP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
-		<icon>icon.event_six_party_cake_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15427</itemConsumeId> <!-- 6th Anniversary Party Cake -->
@@ -3928,11 +3928,11 @@
 	</skill>
 	<skill id="9057" toLevel="1" name="Frozen Core">
 		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
+		<icon>icon.skill1418</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SKILL_IGNORE</abnormalType>
 		<affectRange>2000</affectRange>
-		<icon>icon.skill1418</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>1200000</reuseDelay>
@@ -3958,11 +3958,11 @@
 	</skill>
 	<skill id="9058" toLevel="1" name="Black Frozen Core">
 		<!-- Prevents user from being affected by Freya's Eternal Blizzard. -->
+		<icon>icon.skill1418</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SKILL_IGNORE</abnormalType>
 		<affectRange>2000</affectRange>
-		<icon>icon.skill1418</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15470</itemConsumeId> <!-- Black Frozen Core -->
 		<magicLvl>1</magicLvl>
@@ -4200,12 +4200,12 @@
 	</skill>
 	<skill id="9067" toLevel="1" name="Vitality Maintaining Potion">
 		<!-- Maintains Vitality for 10 minutes. -->
+		<icon>icon.etc_lesser_potion_blue_i00</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
-		<icon>icon.etc_lesser_potion_blue_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15438</itemConsumeId> <!-- Vitality Maintaining Potion (10 minutes) -->
@@ -4231,11 +4231,11 @@
 	</skill>
 	<skill id="9068" toLevel="2" name="Vitality Maintaining Potion">
 		<!-- Maintains Vitality for 30 minutes. -->
+		<icon>icon.etc_lesser_potion_scarlet_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.etc_lesser_potion_scarlet_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15440</itemConsumeId> <!-- Vitality Maintaining Potion (30 Minutes) -->
@@ -4402,13 +4402,13 @@
 	</skill>
 	<skill id="9073" toLevel="1" name="Energy of HP Drain">
 		<!-- Restores 9% of the physical damage inflicted on the enemy as HP with a certain probability for 20 minutes. -->
+		<icon>icon.xel_mahun_vampiric_rage_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>480</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.xel_mahun_vampiric_rage_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
@@ -4519,10 +4519,10 @@
 	</skill>
 	<skill id="9078" toLevel="1" name="Hot Springs Recovery Potion">
 		<!-- For 30 seconds, increases the regen rate of HP/MP/CP by 30%. -->
+		<icon>icon.etc_cp_potion_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
-		<icon>icon.etc_cp_potion_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -4550,10 +4550,10 @@
 	</skill>
 	<skill id="9079" toLevel="1" name="Scroll: Santa's Buff">
 		<!-- For 1 hour, receives help from a great spirit to increase Max MP by 20%, MP Recovery Bonus by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
+		<icon>icon.mysterious_wedding_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
-		<icon>icon.mysterious_wedding_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>16408</itemConsumeId> <!-- Santa's Buff Scroll -->
@@ -4707,13 +4707,13 @@
 	</skill>
 	<skill id="9082" toLevel="1" name="White Winter Wish Candle">
 		<!-- Maintains Vitality for 10 minutes. Petition asking for it to snow on Holiday. -->
+		<icon>icon.etc_candle_white_i00</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_candle_white_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>16404</itemConsumeId> <!-- White Christmas Wish Candle -->
@@ -4759,13 +4759,13 @@
 	</skill>
 	<skill id="9084" toLevel="1" name="White Winter Wish Candle (Event)">
 		<!-- Maintains Vitality for 10 minutes. Petition asking for it to snow on Holiday. -->
+		<icon>icon.etc_candle_white_i00</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<abnormalVisualEffect>VP_KEEP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
 		<hitTime>100</hitTime>
-		<icon>icon.etc_candle_white_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>16406</itemConsumeId> <!-- White Christmas Wish Candle (event) -->
@@ -5181,8 +5181,8 @@
 	</skill>
 	<skill id="9088" toLevel="1" name="Cupid's Cure">
 		<!-- Shoots a heart-arrow. -->
-		<effectPoint>-1000</effectPoint>
 		<icon>icon.skill3260</icon>
+		<effectPoint>-1000</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17067</itemConsumeId> <!-- Event - Cupid's Fatigue Relief Potion -->
@@ -5213,8 +5213,8 @@
 	</skill>
 	<skill id="9089" toLevel="1" name="Cupid's Enhanced Cure">
 		<!-- Shoots a big heart-arrow. -->
-		<effectPoint>-1000</effectPoint>
 		<icon>icon.skill3260</icon>
+		<effectPoint>-1000</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>17068</itemConsumeId> <!-- Event - Cupid's Powerful Fatigue Relief Potion -->

@@ -38,6 +38,7 @@
 	</skill>
 	<skill id="11001" toLevel="10" name="Superior Weapon Mastery">
 		<!-- M. Atk. + $s1, additional M. Atk. + $s2, Casting Spd. + $s3. Depending on your INT, the Cooldown resets or the duration increases by $s4 times. -->
+		<icon>icon.skill11251</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -50,7 +51,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill11251</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -84,6 +84,7 @@
 	</skill>
 	<skill id="11002" toLevel="10" name="Superior Robe Mastery">
 		<!-- Max HP + $s1, P. Def. + $s2, and M. Def. + $s3 when equipped with a Robe. -->
+		<icon>icon.skill11252</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -96,7 +97,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill11252</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -136,6 +136,7 @@
 	</skill>
 	<skill id="11003" toLevel="10" name="Superior Anti Magic">
 		<!-- M. Def. + $s1, Magic Attack Resistance + $s2. INT + $s3. -->
+		<icon>icon.skill10004</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -148,7 +149,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill10004</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -179,8 +179,8 @@
 	</skill>
 	<skill id="11004" toLevel="1" name="Superior Sigil Mastery">
 		<!-- When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery Bonus by 20%. -->
-		<magicLvl>85</magicLvl>
 		<icon>icon.skill11791</icon>
+		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -202,9 +202,9 @@
 	</skill>
 	<skill id="11005" toLevel="1" name="Superior Wizard Mastery">
 		<!-- M. Atk./Casting Spd./M. Critical Rate + 6%. Decreases skill MP Consumption by 6%. INT + 2. -->
+		<icon>icon.skill11253</icon>
 		<magicLvl>90</magicLvl>
 		<operateType>P</operateType>
-		<icon>icon.skill11253</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MAtk">
@@ -232,8 +232,8 @@
 	</skill>
 	<skill id="11006" toLevel="1" name="Superior Mental Attack Resistance">
 		<!-- Poison/Bleed/Hold/Sleep/Mind Attack Resistance + 30%. INT +2. -->
-		<magicLvl>95</magicLvl>
 		<icon>icon.skill11006</icon>
+		<magicLvl>95</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -923,7 +923,229 @@
 	</skill>
 	<skill id="11017" toLevel="11" name="Elemental Crash">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target. Each attribute decreases a certain effect as follows: Fire-Ignite, Water-Slow/Frozen, Wind-Knock Back, Earth-Hold, Holy-Stun, Dark-M. Defense. Over-hit is possible. -->
-		<icon>icon.skill11017</icon>
+		<icon>
+			<value level="1">icon.skill11018</value>
+			<value level="2">icon.skill11018</value>
+			<value level="3">icon.skill11018</value>
+			<value level="4">icon.skill11018</value>
+			<value level="5">icon.skill11018</value>
+			<value level="6">icon.skill11018</value>
+			<value level="7">icon.skill11018</value>
+			<value level="8">icon.skill11018</value>
+			<value level="9">icon.skill11018</value>
+			<value level="10">icon.skill11018</value>
+			<value level="11">icon.skill11018</value>
+			<value level="12">icon.skill11018</value>
+			<value level="13">icon.skill11018</value>
+			<value level="14">icon.skill11018</value>
+			<value level="15">icon.skill11018</value>
+			<value level="16">icon.skill11018</value>
+			<value level="17">icon.skill11018</value>
+			<value level="18">icon.skill11018</value>
+			<value level="19">icon.skill11018</value>
+			<value level="20">icon.skill11018</value>
+			<value level="21">icon.skill11018</value>
+			<value level="22">icon.skill11018</value>
+			<value level="23">icon.skill11018</value>
+			<value level="24">icon.skill11018</value>
+			<value level="25">icon.skill11018</value>
+			<value level="26">icon.skill11018</value>
+			<value level="27">icon.skill11018</value>
+			<value level="28">icon.skill11018</value>
+			<value level="29">icon.skill11018</value>
+			<value level="30">icon.skill11018</value>
+			<value level="31">icon.skill11018</value>
+			<value level="32">icon.skill11018</value>
+			<value level="33">icon.skill11018</value>
+			<value level="34">icon.skill11018</value>
+			<value level="35">icon.skill11018</value>
+			<value level="36">icon.skill11018</value>
+			<value level="37">icon.skill11018</value>
+			<value level="38">icon.skill11018</value>
+			<value level="39">icon.skill11018</value>
+			<value level="40">icon.skill11018</value>
+			<value level="41">icon.skill11018</value>
+			<value level="42">icon.skill11018</value>
+			<value level="43">icon.skill11018</value>
+			<value level="44">icon.skill11018</value>
+			<value level="45">icon.skill11018</value>
+			<value level="46">icon.skill11018</value>
+			<value level="47">icon.skill11018</value>
+			<value level="48">icon.skill11018</value>
+			<value level="49">icon.skill11018</value>
+			<value level="50">icon.skill11018</value>
+			<value level="51">icon.skill11018</value>
+			<value level="52">icon.skill11018</value>
+			<value level="53">icon.skill11018</value>
+			<value level="54">icon.skill11018</value>
+			<value level="55">icon.skill11018</value>
+			<value level="56">icon.skill11018</value>
+			<value level="57">icon.skill11018</value>
+			<value level="58">icon.skill11018</value>
+			<value level="59">icon.skill11018</value>
+			<value level="60">icon.skill11018</value>
+			<value level="61">icon.skill11018</value>
+			<value level="62">icon.skill11018</value>
+			<value level="63">icon.skill11018</value>
+			<value level="64">icon.skill11018</value>
+			<value level="65">icon.skill11018</value>
+			<value level="66">icon.skill11018</value>
+			<value level="67">icon.skill11018</value>
+			<value level="68">icon.skill11018</value>
+			<value level="69">icon.skill11018</value>
+			<value level="70">icon.skill11018</value>
+			<value level="71">icon.skill11018</value>
+			<value level="72">icon.skill11018</value>
+			<value level="73">icon.skill11018</value>
+			<value level="74">icon.skill11018</value>
+			<value level="75">icon.skill11018</value>
+			<value level="76">icon.skill11018</value>
+			<value level="77">icon.skill11018</value>
+			<value level="78">icon.skill11018</value>
+			<value level="79">icon.skill11018</value>
+			<value level="80">icon.skill11018</value>
+			<value level="81">icon.skill11018</value>
+			<value level="82">icon.skill11018</value>
+			<value level="83">icon.skill11018</value>
+			<value level="84">icon.skill11018</value>
+			<value level="85">icon.skill11018</value>
+			<value level="86">icon.skill11018</value>
+			<value level="87">icon.skill11018</value>
+			<value level="88">icon.skill11018</value>
+			<value level="89">icon.skill11017</value>
+			<value level="90">icon.skill11017</value>
+			<value level="91">icon.skill11017</value>
+			<value level="92">icon.skill11017</value>
+			<value level="93">icon.skill11017</value>
+			<value level="94">icon.skill11017</value>
+			<value level="95">icon.skill11017</value>
+			<value level="96">icon.skill11017</value>
+			<value level="97">icon.skill11017</value>
+			<value level="98">icon.skill11017</value>
+			<value level="99">icon.skill11018</value>
+			<value level="100">icon.skill11018</value>
+			<value level="101">icon.skill11018</value>
+			<value level="102">icon.skill11018</value>
+			<value level="103">icon.skill11018</value>
+			<value level="104">icon.skill11018</value>
+			<value level="105">icon.skill11018</value>
+			<value level="106">icon.skill11018</value>
+			<value level="107">icon.skill11018</value>
+			<value level="108">icon.skill11018</value>
+			<value level="109">icon.skill11018</value>
+			<value level="110">icon.skill11018</value>
+			<value level="111">icon.skill11018</value>
+			<value level="112">icon.skill11018</value>
+			<value level="113">icon.skill11018</value>
+			<value level="114">icon.skill11018</value>
+			<value level="115">icon.skill11018</value>
+			<value level="116">icon.skill11018</value>
+			<value level="117">icon.skill11018</value>
+			<value level="118">icon.skill11018</value>
+			<value level="119">icon.skill11018</value>
+			<value level="120">icon.skill11018</value>
+			<value level="121">icon.skill11018</value>
+			<value level="122">icon.skill11018</value>
+			<value level="123">icon.skill11018</value>
+			<value level="124">icon.skill11018</value>
+			<value level="125">icon.skill11018</value>
+			<value level="126">icon.skill11018</value>
+			<value level="127">icon.skill11018</value>
+			<value level="128">icon.skill11018</value>
+			<value level="129">icon.skill11018</value>
+			<value level="130">icon.skill11018</value>
+			<value level="131">icon.skill11018</value>
+			<value level="132">icon.skill11018</value>
+			<value level="133">icon.skill11018</value>
+			<value level="134">icon.skill11018</value>
+			<value level="135">icon.skill11018</value>
+			<value level="136">icon.skill11018</value>
+			<value level="137">icon.skill11018</value>
+			<value level="138">icon.skill11018</value>
+			<value level="139">icon.skill11018</value>
+			<value level="140">icon.skill11018</value>
+			<value level="141">icon.skill11018</value>
+			<value level="142">icon.skill11018</value>
+			<value level="143">icon.skill11018</value>
+			<value level="144">icon.skill11018</value>
+			<value level="145">icon.skill11018</value>
+			<value level="146">icon.skill11018</value>
+			<value level="147">icon.skill11018</value>
+			<value level="148">icon.skill11018</value>
+			<value level="149">icon.skill11018</value>
+			<value level="150">icon.skill11018</value>
+			<value level="151">icon.skill11018</value>
+			<value level="152">icon.skill11018</value>
+			<value level="153">icon.skill11018</value>
+			<value level="154">icon.skill11018</value>
+			<value level="155">icon.skill11018</value>
+			<value level="156">icon.skill11018</value>
+			<value level="157">icon.skill11018</value>
+			<value level="158">icon.skill11018</value>
+			<value level="159">icon.skill11018</value>
+			<value level="160">icon.skill11018</value>
+			<value level="161">icon.skill11018</value>
+			<value level="162">icon.skill11018</value>
+			<value level="163">icon.skill11018</value>
+			<value level="164">icon.skill11018</value>
+			<value level="165">icon.skill11018</value>
+			<value level="166">icon.skill11018</value>
+			<value level="167">icon.skill11018</value>
+			<value level="168">icon.skill11018</value>
+			<value level="169">icon.skill11018</value>
+			<value level="170">icon.skill11018</value>
+			<value level="171">icon.skill11018</value>
+			<value level="172">icon.skill11018</value>
+			<value level="173">icon.skill11018</value>
+			<value level="174">icon.skill11018</value>
+			<value level="175">icon.skill11018</value>
+			<value level="176">icon.skill11018</value>
+			<value level="177">icon.skill11018</value>
+			<value level="178">icon.skill11018</value>
+			<value level="179">icon.skill11018</value>
+			<value level="180">icon.skill11018</value>
+			<value level="181">icon.skill11018</value>
+			<value level="182">icon.skill11018</value>
+			<value level="183">icon.skill11018</value>
+			<value level="184">icon.skill11018</value>
+			<value level="185">icon.skill11018</value>
+			<value level="186">icon.skill11018</value>
+			<value level="187">icon.skill11018</value>
+			<value level="188">icon.skill11018</value>
+			<value level="189">icon.skill11018</value>
+			<value level="190">icon.skill11018</value>
+			<value level="191">icon.skill11018</value>
+			<value level="192">icon.skill11018</value>
+			<value level="193">icon.skill11018</value>
+			<value level="194">icon.skill11018</value>
+			<value level="195">icon.skill11018</value>
+			<value level="196">icon.skill11018</value>
+			<value level="197">icon.skill11018</value>
+			<value level="198">icon.skill11018</value>
+			<value level="199">icon.skill11018</value>
+			<value level="200">icon.skill11018</value>
+			<value level="201">icon.skill11018</value>
+			<value level="202">icon.skill11018</value>
+			<value level="203">icon.skill11018</value>
+			<value level="204">icon.skill11018</value>
+			<value level="205">icon.skill11018</value>
+			<value level="206">icon.skill11018</value>
+			<value level="207">icon.skill11018</value>
+			<value level="208">icon.skill11018</value>
+			<value level="209">icon.skill11018</value>
+			<value level="210">icon.skill11018</value>
+			<value level="211">icon.skill11018</value>
+			<value level="212">icon.skill11018</value>
+			<value level="213">icon.skill11018</value>
+			<value level="214">icon.skill11018</value>
+			<value level="215">icon.skill11018</value>
+			<value level="216">icon.skill11018</value>
+			<value level="217">icon.skill11018</value>
+			<value level="218">icon.skill11018</value>
+			<value level="219">icon.skill11018</value>
+			<value level="220">icon.skill11018</value>
+			<value level="221">icon.skill11018</value>
+		</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11017</reuseDelayGroup>
@@ -1041,7 +1263,229 @@
 	</skill>
 	<skill id="11018" toLevel="11" name="Elemental Crash (Fire)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and inflicts Ignite. Over-hit is possible. -->
-		<icon>icon.skill11017</icon>
+		<icon>
+			<value level="1">icon.skill11018</value>
+			<value level="2">icon.skill11018</value>
+			<value level="3">icon.skill11018</value>
+			<value level="4">icon.skill11018</value>
+			<value level="5">icon.skill11018</value>
+			<value level="6">icon.skill11018</value>
+			<value level="7">icon.skill11018</value>
+			<value level="8">icon.skill11018</value>
+			<value level="9">icon.skill11018</value>
+			<value level="10">icon.skill11018</value>
+			<value level="11">icon.skill11018</value>
+			<value level="12">icon.skill11018</value>
+			<value level="13">icon.skill11018</value>
+			<value level="14">icon.skill11018</value>
+			<value level="15">icon.skill11018</value>
+			<value level="16">icon.skill11018</value>
+			<value level="17">icon.skill11018</value>
+			<value level="18">icon.skill11018</value>
+			<value level="19">icon.skill11018</value>
+			<value level="20">icon.skill11018</value>
+			<value level="21">icon.skill11018</value>
+			<value level="22">icon.skill11018</value>
+			<value level="23">icon.skill11018</value>
+			<value level="24">icon.skill11018</value>
+			<value level="25">icon.skill11018</value>
+			<value level="26">icon.skill11018</value>
+			<value level="27">icon.skill11018</value>
+			<value level="28">icon.skill11018</value>
+			<value level="29">icon.skill11018</value>
+			<value level="30">icon.skill11018</value>
+			<value level="31">icon.skill11018</value>
+			<value level="32">icon.skill11018</value>
+			<value level="33">icon.skill11018</value>
+			<value level="34">icon.skill11018</value>
+			<value level="35">icon.skill11018</value>
+			<value level="36">icon.skill11018</value>
+			<value level="37">icon.skill11018</value>
+			<value level="38">icon.skill11018</value>
+			<value level="39">icon.skill11018</value>
+			<value level="40">icon.skill11018</value>
+			<value level="41">icon.skill11018</value>
+			<value level="42">icon.skill11018</value>
+			<value level="43">icon.skill11018</value>
+			<value level="44">icon.skill11018</value>
+			<value level="45">icon.skill11018</value>
+			<value level="46">icon.skill11018</value>
+			<value level="47">icon.skill11018</value>
+			<value level="48">icon.skill11018</value>
+			<value level="49">icon.skill11018</value>
+			<value level="50">icon.skill11018</value>
+			<value level="51">icon.skill11018</value>
+			<value level="52">icon.skill11018</value>
+			<value level="53">icon.skill11018</value>
+			<value level="54">icon.skill11018</value>
+			<value level="55">icon.skill11018</value>
+			<value level="56">icon.skill11018</value>
+			<value level="57">icon.skill11018</value>
+			<value level="58">icon.skill11018</value>
+			<value level="59">icon.skill11018</value>
+			<value level="60">icon.skill11018</value>
+			<value level="61">icon.skill11018</value>
+			<value level="62">icon.skill11018</value>
+			<value level="63">icon.skill11018</value>
+			<value level="64">icon.skill11018</value>
+			<value level="65">icon.skill11018</value>
+			<value level="66">icon.skill11018</value>
+			<value level="67">icon.skill11018</value>
+			<value level="68">icon.skill11018</value>
+			<value level="69">icon.skill11018</value>
+			<value level="70">icon.skill11018</value>
+			<value level="71">icon.skill11018</value>
+			<value level="72">icon.skill11018</value>
+			<value level="73">icon.skill11018</value>
+			<value level="74">icon.skill11018</value>
+			<value level="75">icon.skill11018</value>
+			<value level="76">icon.skill11018</value>
+			<value level="77">icon.skill11018</value>
+			<value level="78">icon.skill11018</value>
+			<value level="79">icon.skill11018</value>
+			<value level="80">icon.skill11018</value>
+			<value level="81">icon.skill11018</value>
+			<value level="82">icon.skill11018</value>
+			<value level="83">icon.skill11018</value>
+			<value level="84">icon.skill11018</value>
+			<value level="85">icon.skill11018</value>
+			<value level="86">icon.skill11018</value>
+			<value level="87">icon.skill11018</value>
+			<value level="88">icon.skill11018</value>
+			<value level="89">icon.skill11017</value>
+			<value level="90">icon.skill11017</value>
+			<value level="91">icon.skill11017</value>
+			<value level="92">icon.skill11017</value>
+			<value level="93">icon.skill11017</value>
+			<value level="94">icon.skill11017</value>
+			<value level="95">icon.skill11017</value>
+			<value level="96">icon.skill11017</value>
+			<value level="97">icon.skill11017</value>
+			<value level="98">icon.skill11017</value>
+			<value level="99">icon.skill11018</value>
+			<value level="100">icon.skill11018</value>
+			<value level="101">icon.skill11018</value>
+			<value level="102">icon.skill11018</value>
+			<value level="103">icon.skill11018</value>
+			<value level="104">icon.skill11018</value>
+			<value level="105">icon.skill11018</value>
+			<value level="106">icon.skill11018</value>
+			<value level="107">icon.skill11018</value>
+			<value level="108">icon.skill11018</value>
+			<value level="109">icon.skill11018</value>
+			<value level="110">icon.skill11018</value>
+			<value level="111">icon.skill11018</value>
+			<value level="112">icon.skill11018</value>
+			<value level="113">icon.skill11018</value>
+			<value level="114">icon.skill11018</value>
+			<value level="115">icon.skill11018</value>
+			<value level="116">icon.skill11018</value>
+			<value level="117">icon.skill11018</value>
+			<value level="118">icon.skill11018</value>
+			<value level="119">icon.skill11018</value>
+			<value level="120">icon.skill11018</value>
+			<value level="121">icon.skill11018</value>
+			<value level="122">icon.skill11018</value>
+			<value level="123">icon.skill11018</value>
+			<value level="124">icon.skill11018</value>
+			<value level="125">icon.skill11018</value>
+			<value level="126">icon.skill11018</value>
+			<value level="127">icon.skill11018</value>
+			<value level="128">icon.skill11018</value>
+			<value level="129">icon.skill11018</value>
+			<value level="130">icon.skill11018</value>
+			<value level="131">icon.skill11018</value>
+			<value level="132">icon.skill11018</value>
+			<value level="133">icon.skill11018</value>
+			<value level="134">icon.skill11018</value>
+			<value level="135">icon.skill11018</value>
+			<value level="136">icon.skill11018</value>
+			<value level="137">icon.skill11018</value>
+			<value level="138">icon.skill11018</value>
+			<value level="139">icon.skill11018</value>
+			<value level="140">icon.skill11018</value>
+			<value level="141">icon.skill11018</value>
+			<value level="142">icon.skill11018</value>
+			<value level="143">icon.skill11018</value>
+			<value level="144">icon.skill11018</value>
+			<value level="145">icon.skill11018</value>
+			<value level="146">icon.skill11018</value>
+			<value level="147">icon.skill11018</value>
+			<value level="148">icon.skill11018</value>
+			<value level="149">icon.skill11018</value>
+			<value level="150">icon.skill11018</value>
+			<value level="151">icon.skill11018</value>
+			<value level="152">icon.skill11018</value>
+			<value level="153">icon.skill11018</value>
+			<value level="154">icon.skill11018</value>
+			<value level="155">icon.skill11018</value>
+			<value level="156">icon.skill11018</value>
+			<value level="157">icon.skill11018</value>
+			<value level="158">icon.skill11018</value>
+			<value level="159">icon.skill11018</value>
+			<value level="160">icon.skill11018</value>
+			<value level="161">icon.skill11018</value>
+			<value level="162">icon.skill11018</value>
+			<value level="163">icon.skill11018</value>
+			<value level="164">icon.skill11018</value>
+			<value level="165">icon.skill11018</value>
+			<value level="166">icon.skill11018</value>
+			<value level="167">icon.skill11018</value>
+			<value level="168">icon.skill11018</value>
+			<value level="169">icon.skill11018</value>
+			<value level="170">icon.skill11018</value>
+			<value level="171">icon.skill11018</value>
+			<value level="172">icon.skill11018</value>
+			<value level="173">icon.skill11018</value>
+			<value level="174">icon.skill11018</value>
+			<value level="175">icon.skill11018</value>
+			<value level="176">icon.skill11018</value>
+			<value level="177">icon.skill11018</value>
+			<value level="178">icon.skill11018</value>
+			<value level="179">icon.skill11018</value>
+			<value level="180">icon.skill11018</value>
+			<value level="181">icon.skill11018</value>
+			<value level="182">icon.skill11018</value>
+			<value level="183">icon.skill11018</value>
+			<value level="184">icon.skill11018</value>
+			<value level="185">icon.skill11018</value>
+			<value level="186">icon.skill11018</value>
+			<value level="187">icon.skill11018</value>
+			<value level="188">icon.skill11018</value>
+			<value level="189">icon.skill11018</value>
+			<value level="190">icon.skill11018</value>
+			<value level="191">icon.skill11018</value>
+			<value level="192">icon.skill11018</value>
+			<value level="193">icon.skill11018</value>
+			<value level="194">icon.skill11018</value>
+			<value level="195">icon.skill11018</value>
+			<value level="196">icon.skill11018</value>
+			<value level="197">icon.skill11018</value>
+			<value level="198">icon.skill11018</value>
+			<value level="199">icon.skill11018</value>
+			<value level="200">icon.skill11018</value>
+			<value level="201">icon.skill11018</value>
+			<value level="202">icon.skill11018</value>
+			<value level="203">icon.skill11018</value>
+			<value level="204">icon.skill11018</value>
+			<value level="205">icon.skill11018</value>
+			<value level="206">icon.skill11018</value>
+			<value level="207">icon.skill11018</value>
+			<value level="208">icon.skill11018</value>
+			<value level="209">icon.skill11018</value>
+			<value level="210">icon.skill11018</value>
+			<value level="211">icon.skill11018</value>
+			<value level="212">icon.skill11018</value>
+			<value level="213">icon.skill11018</value>
+			<value level="214">icon.skill11018</value>
+			<value level="215">icon.skill11018</value>
+			<value level="216">icon.skill11018</value>
+			<value level="217">icon.skill11018</value>
+			<value level="218">icon.skill11018</value>
+			<value level="219">icon.skill11018</value>
+			<value level="220">icon.skill11018</value>
+			<value level="221">icon.skill11018</value>
+		</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
@@ -1132,7 +1576,229 @@
 	</skill>
 	<skill id="11019" toLevel="11" name="Elemental Crash (Water)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and inflicts Slow. Overlapped Slow effects result in Frozen. Over-hit is possible. -->
-		<icon>icon.skill11017</icon>
+		<icon>
+			<value level="1">icon.skill11018</value>
+			<value level="2">icon.skill11018</value>
+			<value level="3">icon.skill11018</value>
+			<value level="4">icon.skill11018</value>
+			<value level="5">icon.skill11018</value>
+			<value level="6">icon.skill11018</value>
+			<value level="7">icon.skill11018</value>
+			<value level="8">icon.skill11018</value>
+			<value level="9">icon.skill11018</value>
+			<value level="10">icon.skill11018</value>
+			<value level="11">icon.skill11018</value>
+			<value level="12">icon.skill11018</value>
+			<value level="13">icon.skill11018</value>
+			<value level="14">icon.skill11018</value>
+			<value level="15">icon.skill11018</value>
+			<value level="16">icon.skill11018</value>
+			<value level="17">icon.skill11018</value>
+			<value level="18">icon.skill11018</value>
+			<value level="19">icon.skill11018</value>
+			<value level="20">icon.skill11018</value>
+			<value level="21">icon.skill11018</value>
+			<value level="22">icon.skill11018</value>
+			<value level="23">icon.skill11018</value>
+			<value level="24">icon.skill11018</value>
+			<value level="25">icon.skill11018</value>
+			<value level="26">icon.skill11018</value>
+			<value level="27">icon.skill11018</value>
+			<value level="28">icon.skill11018</value>
+			<value level="29">icon.skill11018</value>
+			<value level="30">icon.skill11018</value>
+			<value level="31">icon.skill11018</value>
+			<value level="32">icon.skill11018</value>
+			<value level="33">icon.skill11018</value>
+			<value level="34">icon.skill11018</value>
+			<value level="35">icon.skill11018</value>
+			<value level="36">icon.skill11018</value>
+			<value level="37">icon.skill11018</value>
+			<value level="38">icon.skill11018</value>
+			<value level="39">icon.skill11018</value>
+			<value level="40">icon.skill11018</value>
+			<value level="41">icon.skill11018</value>
+			<value level="42">icon.skill11018</value>
+			<value level="43">icon.skill11018</value>
+			<value level="44">icon.skill11018</value>
+			<value level="45">icon.skill11018</value>
+			<value level="46">icon.skill11018</value>
+			<value level="47">icon.skill11018</value>
+			<value level="48">icon.skill11018</value>
+			<value level="49">icon.skill11018</value>
+			<value level="50">icon.skill11018</value>
+			<value level="51">icon.skill11018</value>
+			<value level="52">icon.skill11018</value>
+			<value level="53">icon.skill11018</value>
+			<value level="54">icon.skill11018</value>
+			<value level="55">icon.skill11018</value>
+			<value level="56">icon.skill11018</value>
+			<value level="57">icon.skill11018</value>
+			<value level="58">icon.skill11018</value>
+			<value level="59">icon.skill11018</value>
+			<value level="60">icon.skill11018</value>
+			<value level="61">icon.skill11018</value>
+			<value level="62">icon.skill11018</value>
+			<value level="63">icon.skill11018</value>
+			<value level="64">icon.skill11018</value>
+			<value level="65">icon.skill11018</value>
+			<value level="66">icon.skill11018</value>
+			<value level="67">icon.skill11018</value>
+			<value level="68">icon.skill11018</value>
+			<value level="69">icon.skill11018</value>
+			<value level="70">icon.skill11018</value>
+			<value level="71">icon.skill11018</value>
+			<value level="72">icon.skill11018</value>
+			<value level="73">icon.skill11018</value>
+			<value level="74">icon.skill11018</value>
+			<value level="75">icon.skill11018</value>
+			<value level="76">icon.skill11018</value>
+			<value level="77">icon.skill11018</value>
+			<value level="78">icon.skill11018</value>
+			<value level="79">icon.skill11018</value>
+			<value level="80">icon.skill11018</value>
+			<value level="81">icon.skill11018</value>
+			<value level="82">icon.skill11018</value>
+			<value level="83">icon.skill11018</value>
+			<value level="84">icon.skill11018</value>
+			<value level="85">icon.skill11018</value>
+			<value level="86">icon.skill11018</value>
+			<value level="87">icon.skill11018</value>
+			<value level="88">icon.skill11018</value>
+			<value level="89">icon.skill11017</value>
+			<value level="90">icon.skill11017</value>
+			<value level="91">icon.skill11017</value>
+			<value level="92">icon.skill11017</value>
+			<value level="93">icon.skill11017</value>
+			<value level="94">icon.skill11017</value>
+			<value level="95">icon.skill11017</value>
+			<value level="96">icon.skill11017</value>
+			<value level="97">icon.skill11017</value>
+			<value level="98">icon.skill11017</value>
+			<value level="99">icon.skill11018</value>
+			<value level="100">icon.skill11018</value>
+			<value level="101">icon.skill11018</value>
+			<value level="102">icon.skill11018</value>
+			<value level="103">icon.skill11018</value>
+			<value level="104">icon.skill11018</value>
+			<value level="105">icon.skill11018</value>
+			<value level="106">icon.skill11018</value>
+			<value level="107">icon.skill11018</value>
+			<value level="108">icon.skill11018</value>
+			<value level="109">icon.skill11018</value>
+			<value level="110">icon.skill11018</value>
+			<value level="111">icon.skill11018</value>
+			<value level="112">icon.skill11018</value>
+			<value level="113">icon.skill11018</value>
+			<value level="114">icon.skill11018</value>
+			<value level="115">icon.skill11018</value>
+			<value level="116">icon.skill11018</value>
+			<value level="117">icon.skill11018</value>
+			<value level="118">icon.skill11018</value>
+			<value level="119">icon.skill11018</value>
+			<value level="120">icon.skill11018</value>
+			<value level="121">icon.skill11018</value>
+			<value level="122">icon.skill11018</value>
+			<value level="123">icon.skill11018</value>
+			<value level="124">icon.skill11018</value>
+			<value level="125">icon.skill11018</value>
+			<value level="126">icon.skill11018</value>
+			<value level="127">icon.skill11018</value>
+			<value level="128">icon.skill11018</value>
+			<value level="129">icon.skill11018</value>
+			<value level="130">icon.skill11018</value>
+			<value level="131">icon.skill11018</value>
+			<value level="132">icon.skill11018</value>
+			<value level="133">icon.skill11018</value>
+			<value level="134">icon.skill11018</value>
+			<value level="135">icon.skill11018</value>
+			<value level="136">icon.skill11018</value>
+			<value level="137">icon.skill11018</value>
+			<value level="138">icon.skill11018</value>
+			<value level="139">icon.skill11018</value>
+			<value level="140">icon.skill11018</value>
+			<value level="141">icon.skill11018</value>
+			<value level="142">icon.skill11018</value>
+			<value level="143">icon.skill11018</value>
+			<value level="144">icon.skill11018</value>
+			<value level="145">icon.skill11018</value>
+			<value level="146">icon.skill11018</value>
+			<value level="147">icon.skill11018</value>
+			<value level="148">icon.skill11018</value>
+			<value level="149">icon.skill11018</value>
+			<value level="150">icon.skill11018</value>
+			<value level="151">icon.skill11018</value>
+			<value level="152">icon.skill11018</value>
+			<value level="153">icon.skill11018</value>
+			<value level="154">icon.skill11018</value>
+			<value level="155">icon.skill11018</value>
+			<value level="156">icon.skill11018</value>
+			<value level="157">icon.skill11018</value>
+			<value level="158">icon.skill11018</value>
+			<value level="159">icon.skill11018</value>
+			<value level="160">icon.skill11018</value>
+			<value level="161">icon.skill11018</value>
+			<value level="162">icon.skill11018</value>
+			<value level="163">icon.skill11018</value>
+			<value level="164">icon.skill11018</value>
+			<value level="165">icon.skill11018</value>
+			<value level="166">icon.skill11018</value>
+			<value level="167">icon.skill11018</value>
+			<value level="168">icon.skill11018</value>
+			<value level="169">icon.skill11018</value>
+			<value level="170">icon.skill11018</value>
+			<value level="171">icon.skill11018</value>
+			<value level="172">icon.skill11018</value>
+			<value level="173">icon.skill11018</value>
+			<value level="174">icon.skill11018</value>
+			<value level="175">icon.skill11018</value>
+			<value level="176">icon.skill11018</value>
+			<value level="177">icon.skill11018</value>
+			<value level="178">icon.skill11018</value>
+			<value level="179">icon.skill11018</value>
+			<value level="180">icon.skill11018</value>
+			<value level="181">icon.skill11018</value>
+			<value level="182">icon.skill11018</value>
+			<value level="183">icon.skill11018</value>
+			<value level="184">icon.skill11018</value>
+			<value level="185">icon.skill11018</value>
+			<value level="186">icon.skill11018</value>
+			<value level="187">icon.skill11018</value>
+			<value level="188">icon.skill11018</value>
+			<value level="189">icon.skill11018</value>
+			<value level="190">icon.skill11018</value>
+			<value level="191">icon.skill11018</value>
+			<value level="192">icon.skill11018</value>
+			<value level="193">icon.skill11018</value>
+			<value level="194">icon.skill11018</value>
+			<value level="195">icon.skill11018</value>
+			<value level="196">icon.skill11018</value>
+			<value level="197">icon.skill11018</value>
+			<value level="198">icon.skill11018</value>
+			<value level="199">icon.skill11018</value>
+			<value level="200">icon.skill11018</value>
+			<value level="201">icon.skill11018</value>
+			<value level="202">icon.skill11018</value>
+			<value level="203">icon.skill11018</value>
+			<value level="204">icon.skill11018</value>
+			<value level="205">icon.skill11018</value>
+			<value level="206">icon.skill11018</value>
+			<value level="207">icon.skill11018</value>
+			<value level="208">icon.skill11018</value>
+			<value level="209">icon.skill11018</value>
+			<value level="210">icon.skill11018</value>
+			<value level="211">icon.skill11018</value>
+			<value level="212">icon.skill11018</value>
+			<value level="213">icon.skill11018</value>
+			<value level="214">icon.skill11018</value>
+			<value level="215">icon.skill11018</value>
+			<value level="216">icon.skill11018</value>
+			<value level="217">icon.skill11018</value>
+			<value level="218">icon.skill11018</value>
+			<value level="219">icon.skill11018</value>
+			<value level="220">icon.skill11018</value>
+			<value level="221">icon.skill11018</value>
+		</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
@@ -1223,7 +1889,229 @@
 	</skill>
 	<skill id="11020" toLevel="11" name="Elemental Crash (Wind)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and pushes it. Over-hit is possible. -->
-		<icon>icon.skill11017</icon>
+		<icon>
+			<value level="1">icon.skill11018</value>
+			<value level="2">icon.skill11018</value>
+			<value level="3">icon.skill11018</value>
+			<value level="4">icon.skill11018</value>
+			<value level="5">icon.skill11018</value>
+			<value level="6">icon.skill11018</value>
+			<value level="7">icon.skill11018</value>
+			<value level="8">icon.skill11018</value>
+			<value level="9">icon.skill11018</value>
+			<value level="10">icon.skill11018</value>
+			<value level="11">icon.skill11018</value>
+			<value level="12">icon.skill11018</value>
+			<value level="13">icon.skill11018</value>
+			<value level="14">icon.skill11018</value>
+			<value level="15">icon.skill11018</value>
+			<value level="16">icon.skill11018</value>
+			<value level="17">icon.skill11018</value>
+			<value level="18">icon.skill11018</value>
+			<value level="19">icon.skill11018</value>
+			<value level="20">icon.skill11018</value>
+			<value level="21">icon.skill11018</value>
+			<value level="22">icon.skill11018</value>
+			<value level="23">icon.skill11018</value>
+			<value level="24">icon.skill11018</value>
+			<value level="25">icon.skill11018</value>
+			<value level="26">icon.skill11018</value>
+			<value level="27">icon.skill11018</value>
+			<value level="28">icon.skill11018</value>
+			<value level="29">icon.skill11018</value>
+			<value level="30">icon.skill11018</value>
+			<value level="31">icon.skill11018</value>
+			<value level="32">icon.skill11018</value>
+			<value level="33">icon.skill11018</value>
+			<value level="34">icon.skill11018</value>
+			<value level="35">icon.skill11018</value>
+			<value level="36">icon.skill11018</value>
+			<value level="37">icon.skill11018</value>
+			<value level="38">icon.skill11018</value>
+			<value level="39">icon.skill11018</value>
+			<value level="40">icon.skill11018</value>
+			<value level="41">icon.skill11018</value>
+			<value level="42">icon.skill11018</value>
+			<value level="43">icon.skill11018</value>
+			<value level="44">icon.skill11018</value>
+			<value level="45">icon.skill11018</value>
+			<value level="46">icon.skill11018</value>
+			<value level="47">icon.skill11018</value>
+			<value level="48">icon.skill11018</value>
+			<value level="49">icon.skill11018</value>
+			<value level="50">icon.skill11018</value>
+			<value level="51">icon.skill11018</value>
+			<value level="52">icon.skill11018</value>
+			<value level="53">icon.skill11018</value>
+			<value level="54">icon.skill11018</value>
+			<value level="55">icon.skill11018</value>
+			<value level="56">icon.skill11018</value>
+			<value level="57">icon.skill11018</value>
+			<value level="58">icon.skill11018</value>
+			<value level="59">icon.skill11018</value>
+			<value level="60">icon.skill11018</value>
+			<value level="61">icon.skill11018</value>
+			<value level="62">icon.skill11018</value>
+			<value level="63">icon.skill11018</value>
+			<value level="64">icon.skill11018</value>
+			<value level="65">icon.skill11018</value>
+			<value level="66">icon.skill11018</value>
+			<value level="67">icon.skill11018</value>
+			<value level="68">icon.skill11018</value>
+			<value level="69">icon.skill11018</value>
+			<value level="70">icon.skill11018</value>
+			<value level="71">icon.skill11018</value>
+			<value level="72">icon.skill11018</value>
+			<value level="73">icon.skill11018</value>
+			<value level="74">icon.skill11018</value>
+			<value level="75">icon.skill11018</value>
+			<value level="76">icon.skill11018</value>
+			<value level="77">icon.skill11018</value>
+			<value level="78">icon.skill11018</value>
+			<value level="79">icon.skill11018</value>
+			<value level="80">icon.skill11018</value>
+			<value level="81">icon.skill11018</value>
+			<value level="82">icon.skill11018</value>
+			<value level="83">icon.skill11018</value>
+			<value level="84">icon.skill11018</value>
+			<value level="85">icon.skill11018</value>
+			<value level="86">icon.skill11018</value>
+			<value level="87">icon.skill11018</value>
+			<value level="88">icon.skill11018</value>
+			<value level="89">icon.skill11017</value>
+			<value level="90">icon.skill11017</value>
+			<value level="91">icon.skill11017</value>
+			<value level="92">icon.skill11017</value>
+			<value level="93">icon.skill11017</value>
+			<value level="94">icon.skill11017</value>
+			<value level="95">icon.skill11017</value>
+			<value level="96">icon.skill11017</value>
+			<value level="97">icon.skill11017</value>
+			<value level="98">icon.skill11017</value>
+			<value level="99">icon.skill11018</value>
+			<value level="100">icon.skill11018</value>
+			<value level="101">icon.skill11018</value>
+			<value level="102">icon.skill11018</value>
+			<value level="103">icon.skill11018</value>
+			<value level="104">icon.skill11018</value>
+			<value level="105">icon.skill11018</value>
+			<value level="106">icon.skill11018</value>
+			<value level="107">icon.skill11018</value>
+			<value level="108">icon.skill11018</value>
+			<value level="109">icon.skill11018</value>
+			<value level="110">icon.skill11018</value>
+			<value level="111">icon.skill11018</value>
+			<value level="112">icon.skill11018</value>
+			<value level="113">icon.skill11018</value>
+			<value level="114">icon.skill11018</value>
+			<value level="115">icon.skill11018</value>
+			<value level="116">icon.skill11018</value>
+			<value level="117">icon.skill11018</value>
+			<value level="118">icon.skill11018</value>
+			<value level="119">icon.skill11018</value>
+			<value level="120">icon.skill11018</value>
+			<value level="121">icon.skill11018</value>
+			<value level="122">icon.skill11018</value>
+			<value level="123">icon.skill11018</value>
+			<value level="124">icon.skill11018</value>
+			<value level="125">icon.skill11018</value>
+			<value level="126">icon.skill11018</value>
+			<value level="127">icon.skill11018</value>
+			<value level="128">icon.skill11018</value>
+			<value level="129">icon.skill11018</value>
+			<value level="130">icon.skill11018</value>
+			<value level="131">icon.skill11018</value>
+			<value level="132">icon.skill11018</value>
+			<value level="133">icon.skill11018</value>
+			<value level="134">icon.skill11018</value>
+			<value level="135">icon.skill11018</value>
+			<value level="136">icon.skill11018</value>
+			<value level="137">icon.skill11018</value>
+			<value level="138">icon.skill11018</value>
+			<value level="139">icon.skill11018</value>
+			<value level="140">icon.skill11018</value>
+			<value level="141">icon.skill11018</value>
+			<value level="142">icon.skill11018</value>
+			<value level="143">icon.skill11018</value>
+			<value level="144">icon.skill11018</value>
+			<value level="145">icon.skill11018</value>
+			<value level="146">icon.skill11018</value>
+			<value level="147">icon.skill11018</value>
+			<value level="148">icon.skill11018</value>
+			<value level="149">icon.skill11018</value>
+			<value level="150">icon.skill11018</value>
+			<value level="151">icon.skill11018</value>
+			<value level="152">icon.skill11018</value>
+			<value level="153">icon.skill11018</value>
+			<value level="154">icon.skill11018</value>
+			<value level="155">icon.skill11018</value>
+			<value level="156">icon.skill11018</value>
+			<value level="157">icon.skill11018</value>
+			<value level="158">icon.skill11018</value>
+			<value level="159">icon.skill11018</value>
+			<value level="160">icon.skill11018</value>
+			<value level="161">icon.skill11018</value>
+			<value level="162">icon.skill11018</value>
+			<value level="163">icon.skill11018</value>
+			<value level="164">icon.skill11018</value>
+			<value level="165">icon.skill11018</value>
+			<value level="166">icon.skill11018</value>
+			<value level="167">icon.skill11018</value>
+			<value level="168">icon.skill11018</value>
+			<value level="169">icon.skill11018</value>
+			<value level="170">icon.skill11018</value>
+			<value level="171">icon.skill11018</value>
+			<value level="172">icon.skill11018</value>
+			<value level="173">icon.skill11018</value>
+			<value level="174">icon.skill11018</value>
+			<value level="175">icon.skill11018</value>
+			<value level="176">icon.skill11018</value>
+			<value level="177">icon.skill11018</value>
+			<value level="178">icon.skill11018</value>
+			<value level="179">icon.skill11018</value>
+			<value level="180">icon.skill11018</value>
+			<value level="181">icon.skill11018</value>
+			<value level="182">icon.skill11018</value>
+			<value level="183">icon.skill11018</value>
+			<value level="184">icon.skill11018</value>
+			<value level="185">icon.skill11018</value>
+			<value level="186">icon.skill11018</value>
+			<value level="187">icon.skill11018</value>
+			<value level="188">icon.skill11018</value>
+			<value level="189">icon.skill11018</value>
+			<value level="190">icon.skill11018</value>
+			<value level="191">icon.skill11018</value>
+			<value level="192">icon.skill11018</value>
+			<value level="193">icon.skill11018</value>
+			<value level="194">icon.skill11018</value>
+			<value level="195">icon.skill11018</value>
+			<value level="196">icon.skill11018</value>
+			<value level="197">icon.skill11018</value>
+			<value level="198">icon.skill11018</value>
+			<value level="199">icon.skill11018</value>
+			<value level="200">icon.skill11018</value>
+			<value level="201">icon.skill11018</value>
+			<value level="202">icon.skill11018</value>
+			<value level="203">icon.skill11018</value>
+			<value level="204">icon.skill11018</value>
+			<value level="205">icon.skill11018</value>
+			<value level="206">icon.skill11018</value>
+			<value level="207">icon.skill11018</value>
+			<value level="208">icon.skill11018</value>
+			<value level="209">icon.skill11018</value>
+			<value level="210">icon.skill11018</value>
+			<value level="211">icon.skill11018</value>
+			<value level="212">icon.skill11018</value>
+			<value level="213">icon.skill11018</value>
+			<value level="214">icon.skill11018</value>
+			<value level="215">icon.skill11018</value>
+			<value level="216">icon.skill11018</value>
+			<value level="217">icon.skill11018</value>
+			<value level="218">icon.skill11018</value>
+			<value level="219">icon.skill11018</value>
+			<value level="220">icon.skill11018</value>
+			<value level="221">icon.skill11018</value>
+		</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
@@ -1314,7 +2202,229 @@
 	</skill>
 	<skill id="11021" toLevel="11" name="Elemental Crash (Earth)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and inflicts Hold. Over-hit is possible. -->
-		<icon>icon.skill11017</icon>
+		<icon>
+			<value level="1">icon.skill11018</value>
+			<value level="2">icon.skill11018</value>
+			<value level="3">icon.skill11018</value>
+			<value level="4">icon.skill11018</value>
+			<value level="5">icon.skill11018</value>
+			<value level="6">icon.skill11018</value>
+			<value level="7">icon.skill11018</value>
+			<value level="8">icon.skill11018</value>
+			<value level="9">icon.skill11018</value>
+			<value level="10">icon.skill11018</value>
+			<value level="11">icon.skill11018</value>
+			<value level="12">icon.skill11018</value>
+			<value level="13">icon.skill11018</value>
+			<value level="14">icon.skill11018</value>
+			<value level="15">icon.skill11018</value>
+			<value level="16">icon.skill11018</value>
+			<value level="17">icon.skill11018</value>
+			<value level="18">icon.skill11018</value>
+			<value level="19">icon.skill11018</value>
+			<value level="20">icon.skill11018</value>
+			<value level="21">icon.skill11018</value>
+			<value level="22">icon.skill11018</value>
+			<value level="23">icon.skill11018</value>
+			<value level="24">icon.skill11018</value>
+			<value level="25">icon.skill11018</value>
+			<value level="26">icon.skill11018</value>
+			<value level="27">icon.skill11018</value>
+			<value level="28">icon.skill11018</value>
+			<value level="29">icon.skill11018</value>
+			<value level="30">icon.skill11018</value>
+			<value level="31">icon.skill11018</value>
+			<value level="32">icon.skill11018</value>
+			<value level="33">icon.skill11018</value>
+			<value level="34">icon.skill11018</value>
+			<value level="35">icon.skill11018</value>
+			<value level="36">icon.skill11018</value>
+			<value level="37">icon.skill11018</value>
+			<value level="38">icon.skill11018</value>
+			<value level="39">icon.skill11018</value>
+			<value level="40">icon.skill11018</value>
+			<value level="41">icon.skill11018</value>
+			<value level="42">icon.skill11018</value>
+			<value level="43">icon.skill11018</value>
+			<value level="44">icon.skill11018</value>
+			<value level="45">icon.skill11018</value>
+			<value level="46">icon.skill11018</value>
+			<value level="47">icon.skill11018</value>
+			<value level="48">icon.skill11018</value>
+			<value level="49">icon.skill11018</value>
+			<value level="50">icon.skill11018</value>
+			<value level="51">icon.skill11018</value>
+			<value level="52">icon.skill11018</value>
+			<value level="53">icon.skill11018</value>
+			<value level="54">icon.skill11018</value>
+			<value level="55">icon.skill11018</value>
+			<value level="56">icon.skill11018</value>
+			<value level="57">icon.skill11018</value>
+			<value level="58">icon.skill11018</value>
+			<value level="59">icon.skill11018</value>
+			<value level="60">icon.skill11018</value>
+			<value level="61">icon.skill11018</value>
+			<value level="62">icon.skill11018</value>
+			<value level="63">icon.skill11018</value>
+			<value level="64">icon.skill11018</value>
+			<value level="65">icon.skill11018</value>
+			<value level="66">icon.skill11018</value>
+			<value level="67">icon.skill11018</value>
+			<value level="68">icon.skill11018</value>
+			<value level="69">icon.skill11018</value>
+			<value level="70">icon.skill11018</value>
+			<value level="71">icon.skill11018</value>
+			<value level="72">icon.skill11018</value>
+			<value level="73">icon.skill11018</value>
+			<value level="74">icon.skill11018</value>
+			<value level="75">icon.skill11018</value>
+			<value level="76">icon.skill11018</value>
+			<value level="77">icon.skill11018</value>
+			<value level="78">icon.skill11018</value>
+			<value level="79">icon.skill11018</value>
+			<value level="80">icon.skill11018</value>
+			<value level="81">icon.skill11018</value>
+			<value level="82">icon.skill11018</value>
+			<value level="83">icon.skill11018</value>
+			<value level="84">icon.skill11018</value>
+			<value level="85">icon.skill11018</value>
+			<value level="86">icon.skill11018</value>
+			<value level="87">icon.skill11018</value>
+			<value level="88">icon.skill11018</value>
+			<value level="89">icon.skill11017</value>
+			<value level="90">icon.skill11017</value>
+			<value level="91">icon.skill11017</value>
+			<value level="92">icon.skill11017</value>
+			<value level="93">icon.skill11017</value>
+			<value level="94">icon.skill11017</value>
+			<value level="95">icon.skill11017</value>
+			<value level="96">icon.skill11017</value>
+			<value level="97">icon.skill11017</value>
+			<value level="98">icon.skill11017</value>
+			<value level="99">icon.skill11018</value>
+			<value level="100">icon.skill11018</value>
+			<value level="101">icon.skill11018</value>
+			<value level="102">icon.skill11018</value>
+			<value level="103">icon.skill11018</value>
+			<value level="104">icon.skill11018</value>
+			<value level="105">icon.skill11018</value>
+			<value level="106">icon.skill11018</value>
+			<value level="107">icon.skill11018</value>
+			<value level="108">icon.skill11018</value>
+			<value level="109">icon.skill11018</value>
+			<value level="110">icon.skill11018</value>
+			<value level="111">icon.skill11018</value>
+			<value level="112">icon.skill11018</value>
+			<value level="113">icon.skill11018</value>
+			<value level="114">icon.skill11018</value>
+			<value level="115">icon.skill11018</value>
+			<value level="116">icon.skill11018</value>
+			<value level="117">icon.skill11018</value>
+			<value level="118">icon.skill11018</value>
+			<value level="119">icon.skill11018</value>
+			<value level="120">icon.skill11018</value>
+			<value level="121">icon.skill11018</value>
+			<value level="122">icon.skill11018</value>
+			<value level="123">icon.skill11018</value>
+			<value level="124">icon.skill11018</value>
+			<value level="125">icon.skill11018</value>
+			<value level="126">icon.skill11018</value>
+			<value level="127">icon.skill11018</value>
+			<value level="128">icon.skill11018</value>
+			<value level="129">icon.skill11018</value>
+			<value level="130">icon.skill11018</value>
+			<value level="131">icon.skill11018</value>
+			<value level="132">icon.skill11018</value>
+			<value level="133">icon.skill11018</value>
+			<value level="134">icon.skill11018</value>
+			<value level="135">icon.skill11018</value>
+			<value level="136">icon.skill11018</value>
+			<value level="137">icon.skill11018</value>
+			<value level="138">icon.skill11018</value>
+			<value level="139">icon.skill11018</value>
+			<value level="140">icon.skill11018</value>
+			<value level="141">icon.skill11018</value>
+			<value level="142">icon.skill11018</value>
+			<value level="143">icon.skill11018</value>
+			<value level="144">icon.skill11018</value>
+			<value level="145">icon.skill11018</value>
+			<value level="146">icon.skill11018</value>
+			<value level="147">icon.skill11018</value>
+			<value level="148">icon.skill11018</value>
+			<value level="149">icon.skill11018</value>
+			<value level="150">icon.skill11018</value>
+			<value level="151">icon.skill11018</value>
+			<value level="152">icon.skill11018</value>
+			<value level="153">icon.skill11018</value>
+			<value level="154">icon.skill11018</value>
+			<value level="155">icon.skill11018</value>
+			<value level="156">icon.skill11018</value>
+			<value level="157">icon.skill11018</value>
+			<value level="158">icon.skill11018</value>
+			<value level="159">icon.skill11018</value>
+			<value level="160">icon.skill11018</value>
+			<value level="161">icon.skill11018</value>
+			<value level="162">icon.skill11018</value>
+			<value level="163">icon.skill11018</value>
+			<value level="164">icon.skill11018</value>
+			<value level="165">icon.skill11018</value>
+			<value level="166">icon.skill11018</value>
+			<value level="167">icon.skill11018</value>
+			<value level="168">icon.skill11018</value>
+			<value level="169">icon.skill11018</value>
+			<value level="170">icon.skill11018</value>
+			<value level="171">icon.skill11018</value>
+			<value level="172">icon.skill11018</value>
+			<value level="173">icon.skill11018</value>
+			<value level="174">icon.skill11018</value>
+			<value level="175">icon.skill11018</value>
+			<value level="176">icon.skill11018</value>
+			<value level="177">icon.skill11018</value>
+			<value level="178">icon.skill11018</value>
+			<value level="179">icon.skill11018</value>
+			<value level="180">icon.skill11018</value>
+			<value level="181">icon.skill11018</value>
+			<value level="182">icon.skill11018</value>
+			<value level="183">icon.skill11018</value>
+			<value level="184">icon.skill11018</value>
+			<value level="185">icon.skill11018</value>
+			<value level="186">icon.skill11018</value>
+			<value level="187">icon.skill11018</value>
+			<value level="188">icon.skill11018</value>
+			<value level="189">icon.skill11018</value>
+			<value level="190">icon.skill11018</value>
+			<value level="191">icon.skill11018</value>
+			<value level="192">icon.skill11018</value>
+			<value level="193">icon.skill11018</value>
+			<value level="194">icon.skill11018</value>
+			<value level="195">icon.skill11018</value>
+			<value level="196">icon.skill11018</value>
+			<value level="197">icon.skill11018</value>
+			<value level="198">icon.skill11018</value>
+			<value level="199">icon.skill11018</value>
+			<value level="200">icon.skill11018</value>
+			<value level="201">icon.skill11018</value>
+			<value level="202">icon.skill11018</value>
+			<value level="203">icon.skill11018</value>
+			<value level="204">icon.skill11018</value>
+			<value level="205">icon.skill11018</value>
+			<value level="206">icon.skill11018</value>
+			<value level="207">icon.skill11018</value>
+			<value level="208">icon.skill11018</value>
+			<value level="209">icon.skill11018</value>
+			<value level="210">icon.skill11018</value>
+			<value level="211">icon.skill11018</value>
+			<value level="212">icon.skill11018</value>
+			<value level="213">icon.skill11018</value>
+			<value level="214">icon.skill11018</value>
+			<value level="215">icon.skill11018</value>
+			<value level="216">icon.skill11018</value>
+			<value level="217">icon.skill11018</value>
+			<value level="218">icon.skill11018</value>
+			<value level="219">icon.skill11018</value>
+			<value level="220">icon.skill11018</value>
+			<value level="221">icon.skill11018</value>
+		</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A1</operateType>
@@ -1405,7 +2515,229 @@
 	</skill>
 	<skill id="11022" toLevel="11" name="Elemental Crash (Holy)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and inflicts Stun. Over-hit is possible. -->
-		<icon>icon.skill11017</icon>
+		<icon>
+			<value level="1">icon.skill11018</value>
+			<value level="2">icon.skill11018</value>
+			<value level="3">icon.skill11018</value>
+			<value level="4">icon.skill11018</value>
+			<value level="5">icon.skill11018</value>
+			<value level="6">icon.skill11018</value>
+			<value level="7">icon.skill11018</value>
+			<value level="8">icon.skill11018</value>
+			<value level="9">icon.skill11018</value>
+			<value level="10">icon.skill11018</value>
+			<value level="11">icon.skill11018</value>
+			<value level="12">icon.skill11018</value>
+			<value level="13">icon.skill11018</value>
+			<value level="14">icon.skill11018</value>
+			<value level="15">icon.skill11018</value>
+			<value level="16">icon.skill11018</value>
+			<value level="17">icon.skill11018</value>
+			<value level="18">icon.skill11018</value>
+			<value level="19">icon.skill11018</value>
+			<value level="20">icon.skill11018</value>
+			<value level="21">icon.skill11018</value>
+			<value level="22">icon.skill11018</value>
+			<value level="23">icon.skill11018</value>
+			<value level="24">icon.skill11018</value>
+			<value level="25">icon.skill11018</value>
+			<value level="26">icon.skill11018</value>
+			<value level="27">icon.skill11018</value>
+			<value level="28">icon.skill11018</value>
+			<value level="29">icon.skill11018</value>
+			<value level="30">icon.skill11018</value>
+			<value level="31">icon.skill11018</value>
+			<value level="32">icon.skill11018</value>
+			<value level="33">icon.skill11018</value>
+			<value level="34">icon.skill11018</value>
+			<value level="35">icon.skill11018</value>
+			<value level="36">icon.skill11018</value>
+			<value level="37">icon.skill11018</value>
+			<value level="38">icon.skill11018</value>
+			<value level="39">icon.skill11018</value>
+			<value level="40">icon.skill11018</value>
+			<value level="41">icon.skill11018</value>
+			<value level="42">icon.skill11018</value>
+			<value level="43">icon.skill11018</value>
+			<value level="44">icon.skill11018</value>
+			<value level="45">icon.skill11018</value>
+			<value level="46">icon.skill11018</value>
+			<value level="47">icon.skill11018</value>
+			<value level="48">icon.skill11018</value>
+			<value level="49">icon.skill11018</value>
+			<value level="50">icon.skill11018</value>
+			<value level="51">icon.skill11018</value>
+			<value level="52">icon.skill11018</value>
+			<value level="53">icon.skill11018</value>
+			<value level="54">icon.skill11018</value>
+			<value level="55">icon.skill11018</value>
+			<value level="56">icon.skill11018</value>
+			<value level="57">icon.skill11018</value>
+			<value level="58">icon.skill11018</value>
+			<value level="59">icon.skill11018</value>
+			<value level="60">icon.skill11018</value>
+			<value level="61">icon.skill11018</value>
+			<value level="62">icon.skill11018</value>
+			<value level="63">icon.skill11018</value>
+			<value level="64">icon.skill11018</value>
+			<value level="65">icon.skill11018</value>
+			<value level="66">icon.skill11018</value>
+			<value level="67">icon.skill11018</value>
+			<value level="68">icon.skill11018</value>
+			<value level="69">icon.skill11018</value>
+			<value level="70">icon.skill11018</value>
+			<value level="71">icon.skill11018</value>
+			<value level="72">icon.skill11018</value>
+			<value level="73">icon.skill11018</value>
+			<value level="74">icon.skill11018</value>
+			<value level="75">icon.skill11018</value>
+			<value level="76">icon.skill11018</value>
+			<value level="77">icon.skill11018</value>
+			<value level="78">icon.skill11018</value>
+			<value level="79">icon.skill11018</value>
+			<value level="80">icon.skill11018</value>
+			<value level="81">icon.skill11018</value>
+			<value level="82">icon.skill11018</value>
+			<value level="83">icon.skill11018</value>
+			<value level="84">icon.skill11018</value>
+			<value level="85">icon.skill11018</value>
+			<value level="86">icon.skill11018</value>
+			<value level="87">icon.skill11018</value>
+			<value level="88">icon.skill11018</value>
+			<value level="89">icon.skill11017</value>
+			<value level="90">icon.skill11017</value>
+			<value level="91">icon.skill11017</value>
+			<value level="92">icon.skill11017</value>
+			<value level="93">icon.skill11017</value>
+			<value level="94">icon.skill11017</value>
+			<value level="95">icon.skill11017</value>
+			<value level="96">icon.skill11017</value>
+			<value level="97">icon.skill11017</value>
+			<value level="98">icon.skill11017</value>
+			<value level="99">icon.skill11018</value>
+			<value level="100">icon.skill11018</value>
+			<value level="101">icon.skill11018</value>
+			<value level="102">icon.skill11018</value>
+			<value level="103">icon.skill11018</value>
+			<value level="104">icon.skill11018</value>
+			<value level="105">icon.skill11018</value>
+			<value level="106">icon.skill11018</value>
+			<value level="107">icon.skill11018</value>
+			<value level="108">icon.skill11018</value>
+			<value level="109">icon.skill11018</value>
+			<value level="110">icon.skill11018</value>
+			<value level="111">icon.skill11018</value>
+			<value level="112">icon.skill11018</value>
+			<value level="113">icon.skill11018</value>
+			<value level="114">icon.skill11018</value>
+			<value level="115">icon.skill11018</value>
+			<value level="116">icon.skill11018</value>
+			<value level="117">icon.skill11018</value>
+			<value level="118">icon.skill11018</value>
+			<value level="119">icon.skill11018</value>
+			<value level="120">icon.skill11018</value>
+			<value level="121">icon.skill11018</value>
+			<value level="122">icon.skill11018</value>
+			<value level="123">icon.skill11018</value>
+			<value level="124">icon.skill11018</value>
+			<value level="125">icon.skill11018</value>
+			<value level="126">icon.skill11018</value>
+			<value level="127">icon.skill11018</value>
+			<value level="128">icon.skill11018</value>
+			<value level="129">icon.skill11018</value>
+			<value level="130">icon.skill11018</value>
+			<value level="131">icon.skill11018</value>
+			<value level="132">icon.skill11018</value>
+			<value level="133">icon.skill11018</value>
+			<value level="134">icon.skill11018</value>
+			<value level="135">icon.skill11018</value>
+			<value level="136">icon.skill11018</value>
+			<value level="137">icon.skill11018</value>
+			<value level="138">icon.skill11018</value>
+			<value level="139">icon.skill11018</value>
+			<value level="140">icon.skill11018</value>
+			<value level="141">icon.skill11018</value>
+			<value level="142">icon.skill11018</value>
+			<value level="143">icon.skill11018</value>
+			<value level="144">icon.skill11018</value>
+			<value level="145">icon.skill11018</value>
+			<value level="146">icon.skill11018</value>
+			<value level="147">icon.skill11018</value>
+			<value level="148">icon.skill11018</value>
+			<value level="149">icon.skill11018</value>
+			<value level="150">icon.skill11018</value>
+			<value level="151">icon.skill11018</value>
+			<value level="152">icon.skill11018</value>
+			<value level="153">icon.skill11018</value>
+			<value level="154">icon.skill11018</value>
+			<value level="155">icon.skill11018</value>
+			<value level="156">icon.skill11018</value>
+			<value level="157">icon.skill11018</value>
+			<value level="158">icon.skill11018</value>
+			<value level="159">icon.skill11018</value>
+			<value level="160">icon.skill11018</value>
+			<value level="161">icon.skill11018</value>
+			<value level="162">icon.skill11018</value>
+			<value level="163">icon.skill11018</value>
+			<value level="164">icon.skill11018</value>
+			<value level="165">icon.skill11018</value>
+			<value level="166">icon.skill11018</value>
+			<value level="167">icon.skill11018</value>
+			<value level="168">icon.skill11018</value>
+			<value level="169">icon.skill11018</value>
+			<value level="170">icon.skill11018</value>
+			<value level="171">icon.skill11018</value>
+			<value level="172">icon.skill11018</value>
+			<value level="173">icon.skill11018</value>
+			<value level="174">icon.skill11018</value>
+			<value level="175">icon.skill11018</value>
+			<value level="176">icon.skill11018</value>
+			<value level="177">icon.skill11018</value>
+			<value level="178">icon.skill11018</value>
+			<value level="179">icon.skill11018</value>
+			<value level="180">icon.skill11018</value>
+			<value level="181">icon.skill11018</value>
+			<value level="182">icon.skill11018</value>
+			<value level="183">icon.skill11018</value>
+			<value level="184">icon.skill11018</value>
+			<value level="185">icon.skill11018</value>
+			<value level="186">icon.skill11018</value>
+			<value level="187">icon.skill11018</value>
+			<value level="188">icon.skill11018</value>
+			<value level="189">icon.skill11018</value>
+			<value level="190">icon.skill11018</value>
+			<value level="191">icon.skill11018</value>
+			<value level="192">icon.skill11018</value>
+			<value level="193">icon.skill11018</value>
+			<value level="194">icon.skill11018</value>
+			<value level="195">icon.skill11018</value>
+			<value level="196">icon.skill11018</value>
+			<value level="197">icon.skill11018</value>
+			<value level="198">icon.skill11018</value>
+			<value level="199">icon.skill11018</value>
+			<value level="200">icon.skill11018</value>
+			<value level="201">icon.skill11018</value>
+			<value level="202">icon.skill11018</value>
+			<value level="203">icon.skill11018</value>
+			<value level="204">icon.skill11018</value>
+			<value level="205">icon.skill11018</value>
+			<value level="206">icon.skill11018</value>
+			<value level="207">icon.skill11018</value>
+			<value level="208">icon.skill11018</value>
+			<value level="209">icon.skill11018</value>
+			<value level="210">icon.skill11018</value>
+			<value level="211">icon.skill11018</value>
+			<value level="212">icon.skill11018</value>
+			<value level="213">icon.skill11018</value>
+			<value level="214">icon.skill11018</value>
+			<value level="215">icon.skill11018</value>
+			<value level="216">icon.skill11018</value>
+			<value level="217">icon.skill11018</value>
+			<value level="218">icon.skill11018</value>
+			<value level="219">icon.skill11018</value>
+			<value level="220">icon.skill11018</value>
+			<value level="221">icon.skill11018</value>
+		</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11017</reuseDelayGroup>
 		<magicLvl>
@@ -1607,10 +2939,232 @@
 	</skill>
 	<skill id="11024" toLevel="11" name="Volcanic Destruction">
 		<!-- Inflicts M. Attack of $s1 power added with Fire damage on the target and the enemies in the route and decreases M. Defense by $s3 for $s2. Additionally, inflicts Ignite effect. Over-hit is possible. -->
+		<icon>
+			<value level="1">icon.skill11024</value>
+			<value level="2">icon.skill11024</value>
+			<value level="3">icon.skill11024</value>
+			<value level="4">icon.skill11024</value>
+			<value level="5">icon.skill11024</value>
+			<value level="6">icon.skill11024</value>
+			<value level="7">icon.skill11024</value>
+			<value level="8">icon.skill11024</value>
+			<value level="9">icon.skill11024</value>
+			<value level="10">icon.skill11024</value>
+			<value level="11">icon.skill11024</value>
+			<value level="12">icon.skill11024</value>
+			<value level="13">icon.skill11024</value>
+			<value level="14">icon.skill11024</value>
+			<value level="15">icon.skill11024</value>
+			<value level="16">icon.skill11024</value>
+			<value level="17">icon.skill11024</value>
+			<value level="18">icon.skill11024</value>
+			<value level="19">icon.skill11024</value>
+			<value level="20">icon.skill11024</value>
+			<value level="21">icon.skill11024</value>
+			<value level="22">icon.skill11024</value>
+			<value level="23">icon.skill11024</value>
+			<value level="24">icon.skill11024</value>
+			<value level="25">icon.skill11024</value>
+			<value level="26">icon.skill11024</value>
+			<value level="27">icon.skill11024</value>
+			<value level="28">icon.skill11024</value>
+			<value level="29">icon.skill11024</value>
+			<value level="30">icon.skill11024</value>
+			<value level="31">icon.skill11024</value>
+			<value level="32">icon.skill11024</value>
+			<value level="33">icon.skill11024</value>
+			<value level="34">icon.skill11024</value>
+			<value level="35">icon.skill11024</value>
+			<value level="36">icon.skill11024</value>
+			<value level="37">icon.skill11024</value>
+			<value level="38">icon.skill11024</value>
+			<value level="39">icon.skill11024</value>
+			<value level="40">icon.skill11024</value>
+			<value level="41">icon.skill11024</value>
+			<value level="42">icon.skill11024</value>
+			<value level="43">icon.skill11024</value>
+			<value level="44">icon.skill11024</value>
+			<value level="45">icon.skill11024</value>
+			<value level="46">icon.skill11024</value>
+			<value level="47">icon.skill11024</value>
+			<value level="48">icon.skill11024</value>
+			<value level="49">icon.skill11024</value>
+			<value level="50">icon.skill11024</value>
+			<value level="51">icon.skill11024</value>
+			<value level="52">icon.skill11024</value>
+			<value level="53">icon.skill11024</value>
+			<value level="54">icon.skill11024</value>
+			<value level="55">icon.skill11024</value>
+			<value level="56">icon.skill11024</value>
+			<value level="57">icon.skill11024</value>
+			<value level="58">icon.skill11024</value>
+			<value level="59">icon.skill11024</value>
+			<value level="60">icon.skill11024</value>
+			<value level="61">icon.skill11024</value>
+			<value level="62">icon.skill11024</value>
+			<value level="63">icon.skill11024</value>
+			<value level="64">icon.skill11024</value>
+			<value level="65">icon.skill11024</value>
+			<value level="66">icon.skill11024</value>
+			<value level="67">icon.skill11024</value>
+			<value level="68">icon.skill11024</value>
+			<value level="69">icon.skill11024</value>
+			<value level="70">icon.skill11024</value>
+			<value level="71">icon.skill11024</value>
+			<value level="72">icon.skill11024</value>
+			<value level="73">icon.skill11024</value>
+			<value level="74">icon.skill11024</value>
+			<value level="75">icon.skill11024</value>
+			<value level="76">icon.skill11024</value>
+			<value level="77">icon.skill11024</value>
+			<value level="78">icon.skill11024</value>
+			<value level="79">icon.skill11024</value>
+			<value level="80">icon.skill11024</value>
+			<value level="81">icon.skill11024</value>
+			<value level="82">icon.skill11024</value>
+			<value level="83">icon.skill11024</value>
+			<value level="84">icon.skill11024</value>
+			<value level="85">icon.skill11024</value>
+			<value level="86">icon.skill11024</value>
+			<value level="87">icon.skill11024</value>
+			<value level="88">icon.skill11024</value>
+			<value level="89">icon.skill11023</value>
+			<value level="90">icon.skill11023</value>
+			<value level="91">icon.skill11023</value>
+			<value level="92">icon.skill11023</value>
+			<value level="93">icon.skill11023</value>
+			<value level="94">icon.skill11023</value>
+			<value level="95">icon.skill11023</value>
+			<value level="96">icon.skill11023</value>
+			<value level="97">icon.skill11023</value>
+			<value level="98">icon.skill11023</value>
+			<value level="99">icon.skill11024</value>
+			<value level="100">icon.skill11024</value>
+			<value level="101">icon.skill11024</value>
+			<value level="102">icon.skill11024</value>
+			<value level="103">icon.skill11024</value>
+			<value level="104">icon.skill11024</value>
+			<value level="105">icon.skill11024</value>
+			<value level="106">icon.skill11024</value>
+			<value level="107">icon.skill11024</value>
+			<value level="108">icon.skill11024</value>
+			<value level="109">icon.skill11024</value>
+			<value level="110">icon.skill11024</value>
+			<value level="111">icon.skill11024</value>
+			<value level="112">icon.skill11024</value>
+			<value level="113">icon.skill11024</value>
+			<value level="114">icon.skill11024</value>
+			<value level="115">icon.skill11024</value>
+			<value level="116">icon.skill11024</value>
+			<value level="117">icon.skill11024</value>
+			<value level="118">icon.skill11024</value>
+			<value level="119">icon.skill11024</value>
+			<value level="120">icon.skill11024</value>
+			<value level="121">icon.skill11024</value>
+			<value level="122">icon.skill11024</value>
+			<value level="123">icon.skill11024</value>
+			<value level="124">icon.skill11024</value>
+			<value level="125">icon.skill11024</value>
+			<value level="126">icon.skill11024</value>
+			<value level="127">icon.skill11024</value>
+			<value level="128">icon.skill11024</value>
+			<value level="129">icon.skill11024</value>
+			<value level="130">icon.skill11024</value>
+			<value level="131">icon.skill11024</value>
+			<value level="132">icon.skill11024</value>
+			<value level="133">icon.skill11024</value>
+			<value level="134">icon.skill11024</value>
+			<value level="135">icon.skill11024</value>
+			<value level="136">icon.skill11024</value>
+			<value level="137">icon.skill11024</value>
+			<value level="138">icon.skill11024</value>
+			<value level="139">icon.skill11024</value>
+			<value level="140">icon.skill11024</value>
+			<value level="141">icon.skill11024</value>
+			<value level="142">icon.skill11024</value>
+			<value level="143">icon.skill11024</value>
+			<value level="144">icon.skill11024</value>
+			<value level="145">icon.skill11024</value>
+			<value level="146">icon.skill11024</value>
+			<value level="147">icon.skill11024</value>
+			<value level="148">icon.skill11024</value>
+			<value level="149">icon.skill11024</value>
+			<value level="150">icon.skill11024</value>
+			<value level="151">icon.skill11024</value>
+			<value level="152">icon.skill11024</value>
+			<value level="153">icon.skill11024</value>
+			<value level="154">icon.skill11024</value>
+			<value level="155">icon.skill11024</value>
+			<value level="156">icon.skill11024</value>
+			<value level="157">icon.skill11024</value>
+			<value level="158">icon.skill11024</value>
+			<value level="159">icon.skill11024</value>
+			<value level="160">icon.skill11024</value>
+			<value level="161">icon.skill11024</value>
+			<value level="162">icon.skill11024</value>
+			<value level="163">icon.skill11024</value>
+			<value level="164">icon.skill11024</value>
+			<value level="165">icon.skill11024</value>
+			<value level="166">icon.skill11024</value>
+			<value level="167">icon.skill11024</value>
+			<value level="168">icon.skill11024</value>
+			<value level="169">icon.skill11024</value>
+			<value level="170">icon.skill11024</value>
+			<value level="171">icon.skill11024</value>
+			<value level="172">icon.skill11024</value>
+			<value level="173">icon.skill11024</value>
+			<value level="174">icon.skill11024</value>
+			<value level="175">icon.skill11024</value>
+			<value level="176">icon.skill11024</value>
+			<value level="177">icon.skill11024</value>
+			<value level="178">icon.skill11024</value>
+			<value level="179">icon.skill11024</value>
+			<value level="180">icon.skill11024</value>
+			<value level="181">icon.skill11024</value>
+			<value level="182">icon.skill11024</value>
+			<value level="183">icon.skill11024</value>
+			<value level="184">icon.skill11024</value>
+			<value level="185">icon.skill11024</value>
+			<value level="186">icon.skill11024</value>
+			<value level="187">icon.skill11024</value>
+			<value level="188">icon.skill11024</value>
+			<value level="189">icon.skill11024</value>
+			<value level="190">icon.skill11024</value>
+			<value level="191">icon.skill11024</value>
+			<value level="192">icon.skill11024</value>
+			<value level="193">icon.skill11024</value>
+			<value level="194">icon.skill11024</value>
+			<value level="195">icon.skill11024</value>
+			<value level="196">icon.skill11024</value>
+			<value level="197">icon.skill11024</value>
+			<value level="198">icon.skill11024</value>
+			<value level="199">icon.skill11024</value>
+			<value level="200">icon.skill11024</value>
+			<value level="201">icon.skill11024</value>
+			<value level="202">icon.skill11024</value>
+			<value level="203">icon.skill11024</value>
+			<value level="204">icon.skill11024</value>
+			<value level="205">icon.skill11024</value>
+			<value level="206">icon.skill11024</value>
+			<value level="207">icon.skill11024</value>
+			<value level="208">icon.skill11024</value>
+			<value level="209">icon.skill11024</value>
+			<value level="210">icon.skill11024</value>
+			<value level="211">icon.skill11024</value>
+			<value level="212">icon.skill11024</value>
+			<value level="213">icon.skill11024</value>
+			<value level="214">icon.skill11024</value>
+			<value level="215">icon.skill11024</value>
+			<value level="216">icon.skill11024</value>
+			<value level="217">icon.skill11024</value>
+			<value level="218">icon.skill11024</value>
+			<value level="219">icon.skill11024</value>
+			<value level="220">icon.skill11024</value>
+			<value level="221">icon.skill11024</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
-		<icon>icon.skill11023</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -1715,11 +3269,233 @@
 	</skill>
 	<skill id="11025" toLevel="11" name="Icicle Destruction">
 		<!-- Deals M. Attack of $s1 power added with Water damage on the target. Decreases M. Defense by $s3 and Attack Speed/Speed by $s4 for $s2. Over-hit is possible. -->
+		<icon>
+			<value level="1">icon.skill11025</value>
+			<value level="2">icon.skill11025</value>
+			<value level="3">icon.skill11025</value>
+			<value level="4">icon.skill11025</value>
+			<value level="5">icon.skill11025</value>
+			<value level="6">icon.skill11025</value>
+			<value level="7">icon.skill11025</value>
+			<value level="8">icon.skill11025</value>
+			<value level="9">icon.skill11025</value>
+			<value level="10">icon.skill11025</value>
+			<value level="11">icon.skill11025</value>
+			<value level="12">icon.skill11025</value>
+			<value level="13">icon.skill11025</value>
+			<value level="14">icon.skill11025</value>
+			<value level="15">icon.skill11025</value>
+			<value level="16">icon.skill11025</value>
+			<value level="17">icon.skill11025</value>
+			<value level="18">icon.skill11025</value>
+			<value level="19">icon.skill11025</value>
+			<value level="20">icon.skill11025</value>
+			<value level="21">icon.skill11025</value>
+			<value level="22">icon.skill11025</value>
+			<value level="23">icon.skill11025</value>
+			<value level="24">icon.skill11025</value>
+			<value level="25">icon.skill11025</value>
+			<value level="26">icon.skill11025</value>
+			<value level="27">icon.skill11025</value>
+			<value level="28">icon.skill11025</value>
+			<value level="29">icon.skill11025</value>
+			<value level="30">icon.skill11025</value>
+			<value level="31">icon.skill11025</value>
+			<value level="32">icon.skill11025</value>
+			<value level="33">icon.skill11025</value>
+			<value level="34">icon.skill11025</value>
+			<value level="35">icon.skill11025</value>
+			<value level="36">icon.skill11025</value>
+			<value level="37">icon.skill11025</value>
+			<value level="38">icon.skill11025</value>
+			<value level="39">icon.skill11025</value>
+			<value level="40">icon.skill11025</value>
+			<value level="41">icon.skill11025</value>
+			<value level="42">icon.skill11025</value>
+			<value level="43">icon.skill11025</value>
+			<value level="44">icon.skill11025</value>
+			<value level="45">icon.skill11025</value>
+			<value level="46">icon.skill11025</value>
+			<value level="47">icon.skill11025</value>
+			<value level="48">icon.skill11025</value>
+			<value level="49">icon.skill11025</value>
+			<value level="50">icon.skill11025</value>
+			<value level="51">icon.skill11025</value>
+			<value level="52">icon.skill11025</value>
+			<value level="53">icon.skill11025</value>
+			<value level="54">icon.skill11025</value>
+			<value level="55">icon.skill11025</value>
+			<value level="56">icon.skill11025</value>
+			<value level="57">icon.skill11025</value>
+			<value level="58">icon.skill11025</value>
+			<value level="59">icon.skill11025</value>
+			<value level="60">icon.skill11025</value>
+			<value level="61">icon.skill11025</value>
+			<value level="62">icon.skill11025</value>
+			<value level="63">icon.skill11025</value>
+			<value level="64">icon.skill11025</value>
+			<value level="65">icon.skill11025</value>
+			<value level="66">icon.skill11025</value>
+			<value level="67">icon.skill11025</value>
+			<value level="68">icon.skill11025</value>
+			<value level="69">icon.skill11025</value>
+			<value level="70">icon.skill11025</value>
+			<value level="71">icon.skill11025</value>
+			<value level="72">icon.skill11025</value>
+			<value level="73">icon.skill11025</value>
+			<value level="74">icon.skill11025</value>
+			<value level="75">icon.skill11025</value>
+			<value level="76">icon.skill11025</value>
+			<value level="77">icon.skill11025</value>
+			<value level="78">icon.skill11025</value>
+			<value level="79">icon.skill11025</value>
+			<value level="80">icon.skill11025</value>
+			<value level="81">icon.skill11025</value>
+			<value level="82">icon.skill11025</value>
+			<value level="83">icon.skill11025</value>
+			<value level="84">icon.skill11025</value>
+			<value level="85">icon.skill11025</value>
+			<value level="86">icon.skill11025</value>
+			<value level="87">icon.skill11025</value>
+			<value level="88">icon.skill11025</value>
+			<value level="89">icon.skill11023</value>
+			<value level="90">icon.skill11023</value>
+			<value level="91">icon.skill11023</value>
+			<value level="92">icon.skill11023</value>
+			<value level="93">icon.skill11023</value>
+			<value level="94">icon.skill11023</value>
+			<value level="95">icon.skill11023</value>
+			<value level="96">icon.skill11023</value>
+			<value level="97">icon.skill11023</value>
+			<value level="98">icon.skill11023</value>
+			<value level="99">icon.skill11025</value>
+			<value level="100">icon.skill11025</value>
+			<value level="101">icon.skill11025</value>
+			<value level="102">icon.skill11025</value>
+			<value level="103">icon.skill11025</value>
+			<value level="104">icon.skill11025</value>
+			<value level="105">icon.skill11025</value>
+			<value level="106">icon.skill11025</value>
+			<value level="107">icon.skill11025</value>
+			<value level="108">icon.skill11025</value>
+			<value level="109">icon.skill11025</value>
+			<value level="110">icon.skill11025</value>
+			<value level="111">icon.skill11025</value>
+			<value level="112">icon.skill11025</value>
+			<value level="113">icon.skill11025</value>
+			<value level="114">icon.skill11025</value>
+			<value level="115">icon.skill11025</value>
+			<value level="116">icon.skill11025</value>
+			<value level="117">icon.skill11025</value>
+			<value level="118">icon.skill11025</value>
+			<value level="119">icon.skill11025</value>
+			<value level="120">icon.skill11025</value>
+			<value level="121">icon.skill11025</value>
+			<value level="122">icon.skill11025</value>
+			<value level="123">icon.skill11025</value>
+			<value level="124">icon.skill11025</value>
+			<value level="125">icon.skill11025</value>
+			<value level="126">icon.skill11025</value>
+			<value level="127">icon.skill11025</value>
+			<value level="128">icon.skill11025</value>
+			<value level="129">icon.skill11025</value>
+			<value level="130">icon.skill11025</value>
+			<value level="131">icon.skill11025</value>
+			<value level="132">icon.skill11025</value>
+			<value level="133">icon.skill11025</value>
+			<value level="134">icon.skill11025</value>
+			<value level="135">icon.skill11025</value>
+			<value level="136">icon.skill11025</value>
+			<value level="137">icon.skill11025</value>
+			<value level="138">icon.skill11025</value>
+			<value level="139">icon.skill11025</value>
+			<value level="140">icon.skill11025</value>
+			<value level="141">icon.skill11025</value>
+			<value level="142">icon.skill11025</value>
+			<value level="143">icon.skill11025</value>
+			<value level="144">icon.skill11025</value>
+			<value level="145">icon.skill11025</value>
+			<value level="146">icon.skill11025</value>
+			<value level="147">icon.skill11025</value>
+			<value level="148">icon.skill11025</value>
+			<value level="149">icon.skill11025</value>
+			<value level="150">icon.skill11025</value>
+			<value level="151">icon.skill11025</value>
+			<value level="152">icon.skill11025</value>
+			<value level="153">icon.skill11025</value>
+			<value level="154">icon.skill11025</value>
+			<value level="155">icon.skill11025</value>
+			<value level="156">icon.skill11025</value>
+			<value level="157">icon.skill11025</value>
+			<value level="158">icon.skill11025</value>
+			<value level="159">icon.skill11025</value>
+			<value level="160">icon.skill11025</value>
+			<value level="161">icon.skill11025</value>
+			<value level="162">icon.skill11025</value>
+			<value level="163">icon.skill11025</value>
+			<value level="164">icon.skill11025</value>
+			<value level="165">icon.skill11025</value>
+			<value level="166">icon.skill11025</value>
+			<value level="167">icon.skill11025</value>
+			<value level="168">icon.skill11025</value>
+			<value level="169">icon.skill11025</value>
+			<value level="170">icon.skill11025</value>
+			<value level="171">icon.skill11025</value>
+			<value level="172">icon.skill11025</value>
+			<value level="173">icon.skill11025</value>
+			<value level="174">icon.skill11025</value>
+			<value level="175">icon.skill11025</value>
+			<value level="176">icon.skill11025</value>
+			<value level="177">icon.skill11025</value>
+			<value level="178">icon.skill11025</value>
+			<value level="179">icon.skill11025</value>
+			<value level="180">icon.skill11025</value>
+			<value level="181">icon.skill11025</value>
+			<value level="182">icon.skill11025</value>
+			<value level="183">icon.skill11025</value>
+			<value level="184">icon.skill11025</value>
+			<value level="185">icon.skill11025</value>
+			<value level="186">icon.skill11025</value>
+			<value level="187">icon.skill11025</value>
+			<value level="188">icon.skill11025</value>
+			<value level="189">icon.skill11025</value>
+			<value level="190">icon.skill11025</value>
+			<value level="191">icon.skill11025</value>
+			<value level="192">icon.skill11025</value>
+			<value level="193">icon.skill11025</value>
+			<value level="194">icon.skill11025</value>
+			<value level="195">icon.skill11025</value>
+			<value level="196">icon.skill11025</value>
+			<value level="197">icon.skill11025</value>
+			<value level="198">icon.skill11025</value>
+			<value level="199">icon.skill11025</value>
+			<value level="200">icon.skill11025</value>
+			<value level="201">icon.skill11025</value>
+			<value level="202">icon.skill11025</value>
+			<value level="203">icon.skill11025</value>
+			<value level="204">icon.skill11025</value>
+			<value level="205">icon.skill11025</value>
+			<value level="206">icon.skill11025</value>
+			<value level="207">icon.skill11025</value>
+			<value level="208">icon.skill11025</value>
+			<value level="209">icon.skill11025</value>
+			<value level="210">icon.skill11025</value>
+			<value level="211">icon.skill11025</value>
+			<value level="212">icon.skill11025</value>
+			<value level="213">icon.skill11025</value>
+			<value level="214">icon.skill11025</value>
+			<value level="215">icon.skill11025</value>
+			<value level="216">icon.skill11025</value>
+			<value level="217">icon.skill11025</value>
+			<value level="218">icon.skill11025</value>
+			<value level="219">icon.skill11025</value>
+			<value level="220">icon.skill11025</value>
+			<value level="221">icon.skill11025</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
 		<abnormalVisualEffect>ICE_ELEMENTALDESTROY</abnormalVisualEffect>
-		<icon>icon.skill11023</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -1823,10 +3599,232 @@
 	</skill>
 	<skill id="11026" toLevel="11" name="Updraft Destruction">
 		<!-- Deals M. Attack of $s1 power added with Wind damage on the target and the enemies near it. Decreases M. Defense by $s3 for $s2. Over-hit is possible. -->
+		<icon>
+			<value level="1">icon.skill11017</value>
+			<value level="2">icon.skill11017</value>
+			<value level="3">icon.skill11017</value>
+			<value level="4">icon.skill11017</value>
+			<value level="5">icon.skill11017</value>
+			<value level="6">icon.skill11017</value>
+			<value level="7">icon.skill11017</value>
+			<value level="8">icon.skill11017</value>
+			<value level="9">icon.skill11017</value>
+			<value level="10">icon.skill11017</value>
+			<value level="11">icon.skill11017</value>
+			<value level="12">icon.skill11017</value>
+			<value level="13">icon.skill11017</value>
+			<value level="14">icon.skill11017</value>
+			<value level="15">icon.skill11017</value>
+			<value level="16">icon.skill11017</value>
+			<value level="17">icon.skill11017</value>
+			<value level="18">icon.skill11017</value>
+			<value level="19">icon.skill11017</value>
+			<value level="20">icon.skill11017</value>
+			<value level="21">icon.skill11017</value>
+			<value level="22">icon.skill11017</value>
+			<value level="23">icon.skill11017</value>
+			<value level="24">icon.skill11017</value>
+			<value level="25">icon.skill11017</value>
+			<value level="26">icon.skill11017</value>
+			<value level="27">icon.skill11017</value>
+			<value level="28">icon.skill11017</value>
+			<value level="29">icon.skill11017</value>
+			<value level="30">icon.skill11017</value>
+			<value level="31">icon.skill11017</value>
+			<value level="32">icon.skill11017</value>
+			<value level="33">icon.skill11017</value>
+			<value level="34">icon.skill11017</value>
+			<value level="35">icon.skill11017</value>
+			<value level="36">icon.skill11017</value>
+			<value level="37">icon.skill11017</value>
+			<value level="38">icon.skill11017</value>
+			<value level="39">icon.skill11017</value>
+			<value level="40">icon.skill11017</value>
+			<value level="41">icon.skill11017</value>
+			<value level="42">icon.skill11017</value>
+			<value level="43">icon.skill11017</value>
+			<value level="44">icon.skill11017</value>
+			<value level="45">icon.skill11017</value>
+			<value level="46">icon.skill11017</value>
+			<value level="47">icon.skill11017</value>
+			<value level="48">icon.skill11017</value>
+			<value level="49">icon.skill11017</value>
+			<value level="50">icon.skill11017</value>
+			<value level="51">icon.skill11017</value>
+			<value level="52">icon.skill11017</value>
+			<value level="53">icon.skill11017</value>
+			<value level="54">icon.skill11017</value>
+			<value level="55">icon.skill11017</value>
+			<value level="56">icon.skill11017</value>
+			<value level="57">icon.skill11017</value>
+			<value level="58">icon.skill11017</value>
+			<value level="59">icon.skill11017</value>
+			<value level="60">icon.skill11017</value>
+			<value level="61">icon.skill11017</value>
+			<value level="62">icon.skill11017</value>
+			<value level="63">icon.skill11017</value>
+			<value level="64">icon.skill11017</value>
+			<value level="65">icon.skill11017</value>
+			<value level="66">icon.skill11017</value>
+			<value level="67">icon.skill11017</value>
+			<value level="68">icon.skill11017</value>
+			<value level="69">icon.skill11017</value>
+			<value level="70">icon.skill11017</value>
+			<value level="71">icon.skill11017</value>
+			<value level="72">icon.skill11017</value>
+			<value level="73">icon.skill11017</value>
+			<value level="74">icon.skill11017</value>
+			<value level="75">icon.skill11017</value>
+			<value level="76">icon.skill11017</value>
+			<value level="77">icon.skill11017</value>
+			<value level="78">icon.skill11017</value>
+			<value level="79">icon.skill11017</value>
+			<value level="80">icon.skill11017</value>
+			<value level="81">icon.skill11017</value>
+			<value level="82">icon.skill11017</value>
+			<value level="83">icon.skill11017</value>
+			<value level="84">icon.skill11017</value>
+			<value level="85">icon.skill11017</value>
+			<value level="86">icon.skill11017</value>
+			<value level="87">icon.skill11017</value>
+			<value level="88">icon.skill11017</value>
+			<value level="89">icon.skill11023</value>
+			<value level="90">icon.skill11023</value>
+			<value level="91">icon.skill11023</value>
+			<value level="92">icon.skill11023</value>
+			<value level="93">icon.skill11023</value>
+			<value level="94">icon.skill11023</value>
+			<value level="95">icon.skill11023</value>
+			<value level="96">icon.skill11023</value>
+			<value level="97">icon.skill11023</value>
+			<value level="98">icon.skill11023</value>
+			<value level="99">icon.skill11017</value>
+			<value level="100">icon.skill11017</value>
+			<value level="101">icon.skill11017</value>
+			<value level="102">icon.skill11017</value>
+			<value level="103">icon.skill11017</value>
+			<value level="104">icon.skill11017</value>
+			<value level="105">icon.skill11017</value>
+			<value level="106">icon.skill11017</value>
+			<value level="107">icon.skill11017</value>
+			<value level="108">icon.skill11017</value>
+			<value level="109">icon.skill11017</value>
+			<value level="110">icon.skill11017</value>
+			<value level="111">icon.skill11017</value>
+			<value level="112">icon.skill11017</value>
+			<value level="113">icon.skill11017</value>
+			<value level="114">icon.skill11017</value>
+			<value level="115">icon.skill11017</value>
+			<value level="116">icon.skill11017</value>
+			<value level="117">icon.skill11017</value>
+			<value level="118">icon.skill11017</value>
+			<value level="119">icon.skill11017</value>
+			<value level="120">icon.skill11017</value>
+			<value level="121">icon.skill11017</value>
+			<value level="122">icon.skill11017</value>
+			<value level="123">icon.skill11017</value>
+			<value level="124">icon.skill11017</value>
+			<value level="125">icon.skill11017</value>
+			<value level="126">icon.skill11017</value>
+			<value level="127">icon.skill11017</value>
+			<value level="128">icon.skill11017</value>
+			<value level="129">icon.skill11017</value>
+			<value level="130">icon.skill11017</value>
+			<value level="131">icon.skill11017</value>
+			<value level="132">icon.skill11017</value>
+			<value level="133">icon.skill11017</value>
+			<value level="134">icon.skill11017</value>
+			<value level="135">icon.skill11017</value>
+			<value level="136">icon.skill11017</value>
+			<value level="137">icon.skill11017</value>
+			<value level="138">icon.skill11017</value>
+			<value level="139">icon.skill11017</value>
+			<value level="140">icon.skill11017</value>
+			<value level="141">icon.skill11017</value>
+			<value level="142">icon.skill11017</value>
+			<value level="143">icon.skill11017</value>
+			<value level="144">icon.skill11017</value>
+			<value level="145">icon.skill11017</value>
+			<value level="146">icon.skill11017</value>
+			<value level="147">icon.skill11017</value>
+			<value level="148">icon.skill11017</value>
+			<value level="149">icon.skill11017</value>
+			<value level="150">icon.skill11017</value>
+			<value level="151">icon.skill11017</value>
+			<value level="152">icon.skill11017</value>
+			<value level="153">icon.skill11017</value>
+			<value level="154">icon.skill11017</value>
+			<value level="155">icon.skill11017</value>
+			<value level="156">icon.skill11017</value>
+			<value level="157">icon.skill11017</value>
+			<value level="158">icon.skill11017</value>
+			<value level="159">icon.skill11017</value>
+			<value level="160">icon.skill11017</value>
+			<value level="161">icon.skill11017</value>
+			<value level="162">icon.skill11017</value>
+			<value level="163">icon.skill11017</value>
+			<value level="164">icon.skill11017</value>
+			<value level="165">icon.skill11017</value>
+			<value level="166">icon.skill11017</value>
+			<value level="167">icon.skill11017</value>
+			<value level="168">icon.skill11017</value>
+			<value level="169">icon.skill11017</value>
+			<value level="170">icon.skill11017</value>
+			<value level="171">icon.skill11017</value>
+			<value level="172">icon.skill11017</value>
+			<value level="173">icon.skill11017</value>
+			<value level="174">icon.skill11017</value>
+			<value level="175">icon.skill11017</value>
+			<value level="176">icon.skill11017</value>
+			<value level="177">icon.skill11017</value>
+			<value level="178">icon.skill11017</value>
+			<value level="179">icon.skill11017</value>
+			<value level="180">icon.skill11017</value>
+			<value level="181">icon.skill11017</value>
+			<value level="182">icon.skill11017</value>
+			<value level="183">icon.skill11017</value>
+			<value level="184">icon.skill11017</value>
+			<value level="185">icon.skill11017</value>
+			<value level="186">icon.skill11017</value>
+			<value level="187">icon.skill11017</value>
+			<value level="188">icon.skill11017</value>
+			<value level="189">icon.skill11017</value>
+			<value level="190">icon.skill11017</value>
+			<value level="191">icon.skill11017</value>
+			<value level="192">icon.skill11017</value>
+			<value level="193">icon.skill11017</value>
+			<value level="194">icon.skill11017</value>
+			<value level="195">icon.skill11017</value>
+			<value level="196">icon.skill11017</value>
+			<value level="197">icon.skill11017</value>
+			<value level="198">icon.skill11017</value>
+			<value level="199">icon.skill11017</value>
+			<value level="200">icon.skill11017</value>
+			<value level="201">icon.skill11017</value>
+			<value level="202">icon.skill11017</value>
+			<value level="203">icon.skill11017</value>
+			<value level="204">icon.skill11017</value>
+			<value level="205">icon.skill11017</value>
+			<value level="206">icon.skill11017</value>
+			<value level="207">icon.skill11017</value>
+			<value level="208">icon.skill11017</value>
+			<value level="209">icon.skill11017</value>
+			<value level="210">icon.skill11017</value>
+			<value level="211">icon.skill11017</value>
+			<value level="212">icon.skill11017</value>
+			<value level="213">icon.skill11017</value>
+			<value level="214">icon.skill11017</value>
+			<value level="215">icon.skill11017</value>
+			<value level="216">icon.skill11017</value>
+			<value level="217">icon.skill11017</value>
+			<value level="218">icon.skill11017</value>
+			<value level="219">icon.skill11017</value>
+			<value level="220">icon.skill11017</value>
+			<value level="221">icon.skill11017</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
-		<icon>icon.skill11023</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -1925,10 +3923,232 @@
 	</skill>
 	<skill id="11027" toLevel="11" name="Lockshard Destruction">
 		<!-- Deals M. Attack of $s1 power added with Earth damage on the target. Decreases M. Defense by $s3 and all attribute defenses by $s4 for $s2. -->
+		<icon>
+			<value level="1">icon.skill11027</value>
+			<value level="2">icon.skill11027</value>
+			<value level="3">icon.skill11027</value>
+			<value level="4">icon.skill11027</value>
+			<value level="5">icon.skill11027</value>
+			<value level="6">icon.skill11027</value>
+			<value level="7">icon.skill11027</value>
+			<value level="8">icon.skill11027</value>
+			<value level="9">icon.skill11027</value>
+			<value level="10">icon.skill11027</value>
+			<value level="11">icon.skill11027</value>
+			<value level="12">icon.skill11027</value>
+			<value level="13">icon.skill11027</value>
+			<value level="14">icon.skill11027</value>
+			<value level="15">icon.skill11027</value>
+			<value level="16">icon.skill11027</value>
+			<value level="17">icon.skill11027</value>
+			<value level="18">icon.skill11027</value>
+			<value level="19">icon.skill11027</value>
+			<value level="20">icon.skill11027</value>
+			<value level="21">icon.skill11027</value>
+			<value level="22">icon.skill11027</value>
+			<value level="23">icon.skill11027</value>
+			<value level="24">icon.skill11027</value>
+			<value level="25">icon.skill11027</value>
+			<value level="26">icon.skill11027</value>
+			<value level="27">icon.skill11027</value>
+			<value level="28">icon.skill11027</value>
+			<value level="29">icon.skill11027</value>
+			<value level="30">icon.skill11027</value>
+			<value level="31">icon.skill11027</value>
+			<value level="32">icon.skill11027</value>
+			<value level="33">icon.skill11027</value>
+			<value level="34">icon.skill11027</value>
+			<value level="35">icon.skill11027</value>
+			<value level="36">icon.skill11027</value>
+			<value level="37">icon.skill11027</value>
+			<value level="38">icon.skill11027</value>
+			<value level="39">icon.skill11027</value>
+			<value level="40">icon.skill11027</value>
+			<value level="41">icon.skill11027</value>
+			<value level="42">icon.skill11027</value>
+			<value level="43">icon.skill11027</value>
+			<value level="44">icon.skill11027</value>
+			<value level="45">icon.skill11027</value>
+			<value level="46">icon.skill11027</value>
+			<value level="47">icon.skill11027</value>
+			<value level="48">icon.skill11027</value>
+			<value level="49">icon.skill11027</value>
+			<value level="50">icon.skill11027</value>
+			<value level="51">icon.skill11027</value>
+			<value level="52">icon.skill11027</value>
+			<value level="53">icon.skill11027</value>
+			<value level="54">icon.skill11027</value>
+			<value level="55">icon.skill11027</value>
+			<value level="56">icon.skill11027</value>
+			<value level="57">icon.skill11027</value>
+			<value level="58">icon.skill11027</value>
+			<value level="59">icon.skill11027</value>
+			<value level="60">icon.skill11027</value>
+			<value level="61">icon.skill11027</value>
+			<value level="62">icon.skill11027</value>
+			<value level="63">icon.skill11027</value>
+			<value level="64">icon.skill11027</value>
+			<value level="65">icon.skill11027</value>
+			<value level="66">icon.skill11027</value>
+			<value level="67">icon.skill11027</value>
+			<value level="68">icon.skill11027</value>
+			<value level="69">icon.skill11027</value>
+			<value level="70">icon.skill11027</value>
+			<value level="71">icon.skill11027</value>
+			<value level="72">icon.skill11027</value>
+			<value level="73">icon.skill11027</value>
+			<value level="74">icon.skill11027</value>
+			<value level="75">icon.skill11027</value>
+			<value level="76">icon.skill11027</value>
+			<value level="77">icon.skill11027</value>
+			<value level="78">icon.skill11027</value>
+			<value level="79">icon.skill11027</value>
+			<value level="80">icon.skill11027</value>
+			<value level="81">icon.skill11027</value>
+			<value level="82">icon.skill11027</value>
+			<value level="83">icon.skill11027</value>
+			<value level="84">icon.skill11027</value>
+			<value level="85">icon.skill11027</value>
+			<value level="86">icon.skill11027</value>
+			<value level="87">icon.skill11027</value>
+			<value level="88">icon.skill11027</value>
+			<value level="89">icon.skill11023</value>
+			<value level="90">icon.skill11023</value>
+			<value level="91">icon.skill11023</value>
+			<value level="92">icon.skill11023</value>
+			<value level="93">icon.skill11023</value>
+			<value level="94">icon.skill11023</value>
+			<value level="95">icon.skill11023</value>
+			<value level="96">icon.skill11023</value>
+			<value level="97">icon.skill11023</value>
+			<value level="98">icon.skill11023</value>
+			<value level="99">icon.skill11027</value>
+			<value level="100">icon.skill11027</value>
+			<value level="101">icon.skill11027</value>
+			<value level="102">icon.skill11027</value>
+			<value level="103">icon.skill11027</value>
+			<value level="104">icon.skill11027</value>
+			<value level="105">icon.skill11027</value>
+			<value level="106">icon.skill11027</value>
+			<value level="107">icon.skill11027</value>
+			<value level="108">icon.skill11027</value>
+			<value level="109">icon.skill11027</value>
+			<value level="110">icon.skill11027</value>
+			<value level="111">icon.skill11027</value>
+			<value level="112">icon.skill11027</value>
+			<value level="113">icon.skill11027</value>
+			<value level="114">icon.skill11027</value>
+			<value level="115">icon.skill11027</value>
+			<value level="116">icon.skill11027</value>
+			<value level="117">icon.skill11027</value>
+			<value level="118">icon.skill11027</value>
+			<value level="119">icon.skill11027</value>
+			<value level="120">icon.skill11027</value>
+			<value level="121">icon.skill11027</value>
+			<value level="122">icon.skill11027</value>
+			<value level="123">icon.skill11027</value>
+			<value level="124">icon.skill11027</value>
+			<value level="125">icon.skill11027</value>
+			<value level="126">icon.skill11027</value>
+			<value level="127">icon.skill11027</value>
+			<value level="128">icon.skill11027</value>
+			<value level="129">icon.skill11027</value>
+			<value level="130">icon.skill11027</value>
+			<value level="131">icon.skill11027</value>
+			<value level="132">icon.skill11027</value>
+			<value level="133">icon.skill11027</value>
+			<value level="134">icon.skill11027</value>
+			<value level="135">icon.skill11027</value>
+			<value level="136">icon.skill11027</value>
+			<value level="137">icon.skill11027</value>
+			<value level="138">icon.skill11027</value>
+			<value level="139">icon.skill11027</value>
+			<value level="140">icon.skill11027</value>
+			<value level="141">icon.skill11027</value>
+			<value level="142">icon.skill11027</value>
+			<value level="143">icon.skill11027</value>
+			<value level="144">icon.skill11027</value>
+			<value level="145">icon.skill11027</value>
+			<value level="146">icon.skill11027</value>
+			<value level="147">icon.skill11027</value>
+			<value level="148">icon.skill11027</value>
+			<value level="149">icon.skill11027</value>
+			<value level="150">icon.skill11027</value>
+			<value level="151">icon.skill11027</value>
+			<value level="152">icon.skill11027</value>
+			<value level="153">icon.skill11027</value>
+			<value level="154">icon.skill11027</value>
+			<value level="155">icon.skill11027</value>
+			<value level="156">icon.skill11027</value>
+			<value level="157">icon.skill11027</value>
+			<value level="158">icon.skill11027</value>
+			<value level="159">icon.skill11027</value>
+			<value level="160">icon.skill11027</value>
+			<value level="161">icon.skill11027</value>
+			<value level="162">icon.skill11027</value>
+			<value level="163">icon.skill11027</value>
+			<value level="164">icon.skill11027</value>
+			<value level="165">icon.skill11027</value>
+			<value level="166">icon.skill11027</value>
+			<value level="167">icon.skill11027</value>
+			<value level="168">icon.skill11027</value>
+			<value level="169">icon.skill11027</value>
+			<value level="170">icon.skill11027</value>
+			<value level="171">icon.skill11027</value>
+			<value level="172">icon.skill11027</value>
+			<value level="173">icon.skill11027</value>
+			<value level="174">icon.skill11027</value>
+			<value level="175">icon.skill11027</value>
+			<value level="176">icon.skill11027</value>
+			<value level="177">icon.skill11027</value>
+			<value level="178">icon.skill11027</value>
+			<value level="179">icon.skill11027</value>
+			<value level="180">icon.skill11027</value>
+			<value level="181">icon.skill11027</value>
+			<value level="182">icon.skill11027</value>
+			<value level="183">icon.skill11027</value>
+			<value level="184">icon.skill11027</value>
+			<value level="185">icon.skill11027</value>
+			<value level="186">icon.skill11027</value>
+			<value level="187">icon.skill11027</value>
+			<value level="188">icon.skill11027</value>
+			<value level="189">icon.skill11027</value>
+			<value level="190">icon.skill11027</value>
+			<value level="191">icon.skill11027</value>
+			<value level="192">icon.skill11027</value>
+			<value level="193">icon.skill11027</value>
+			<value level="194">icon.skill11027</value>
+			<value level="195">icon.skill11027</value>
+			<value level="196">icon.skill11027</value>
+			<value level="197">icon.skill11027</value>
+			<value level="198">icon.skill11027</value>
+			<value level="199">icon.skill11027</value>
+			<value level="200">icon.skill11027</value>
+			<value level="201">icon.skill11027</value>
+			<value level="202">icon.skill11027</value>
+			<value level="203">icon.skill11027</value>
+			<value level="204">icon.skill11027</value>
+			<value level="205">icon.skill11027</value>
+			<value level="206">icon.skill11027</value>
+			<value level="207">icon.skill11027</value>
+			<value level="208">icon.skill11027</value>
+			<value level="209">icon.skill11027</value>
+			<value level="210">icon.skill11027</value>
+			<value level="211">icon.skill11027</value>
+			<value level="212">icon.skill11027</value>
+			<value level="213">icon.skill11027</value>
+			<value level="214">icon.skill11027</value>
+			<value level="215">icon.skill11027</value>
+			<value level="216">icon.skill11027</value>
+			<value level="217">icon.skill11027</value>
+			<value level="218">icon.skill11027</value>
+			<value level="219">icon.skill11027</value>
+			<value level="220">icon.skill11027</value>
+			<value level="221">icon.skill11027</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
-		<icon>icon.skill11023</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -2048,10 +4268,232 @@
 	</skill>
 	<skill id="11028" toLevel="11" name="Void Destruction">
 		<!-- Deals M. Attack of $s1 power added with Dark damage on the target. Additionally, decreases M. Defense by $s3 and increases M. Critical Rate Received by $s4 for $s2. Over-hit is possible. -->
+		<icon>
+			<value level="1">icon.skill19316</value>
+			<value level="2">icon.skill19316</value>
+			<value level="3">icon.skill19316</value>
+			<value level="4">icon.skill19316</value>
+			<value level="5">icon.skill19316</value>
+			<value level="6">icon.skill19316</value>
+			<value level="7">icon.skill19316</value>
+			<value level="8">icon.skill19316</value>
+			<value level="9">icon.skill19316</value>
+			<value level="10">icon.skill19316</value>
+			<value level="11">icon.skill19316</value>
+			<value level="12">icon.skill19316</value>
+			<value level="13">icon.skill19316</value>
+			<value level="14">icon.skill19316</value>
+			<value level="15">icon.skill19316</value>
+			<value level="16">icon.skill19316</value>
+			<value level="17">icon.skill19316</value>
+			<value level="18">icon.skill19316</value>
+			<value level="19">icon.skill19316</value>
+			<value level="20">icon.skill19316</value>
+			<value level="21">icon.skill19316</value>
+			<value level="22">icon.skill19316</value>
+			<value level="23">icon.skill19316</value>
+			<value level="24">icon.skill19316</value>
+			<value level="25">icon.skill19316</value>
+			<value level="26">icon.skill19316</value>
+			<value level="27">icon.skill19316</value>
+			<value level="28">icon.skill19316</value>
+			<value level="29">icon.skill19316</value>
+			<value level="30">icon.skill19316</value>
+			<value level="31">icon.skill19316</value>
+			<value level="32">icon.skill19316</value>
+			<value level="33">icon.skill19316</value>
+			<value level="34">icon.skill19316</value>
+			<value level="35">icon.skill19316</value>
+			<value level="36">icon.skill19316</value>
+			<value level="37">icon.skill19316</value>
+			<value level="38">icon.skill19316</value>
+			<value level="39">icon.skill19316</value>
+			<value level="40">icon.skill19316</value>
+			<value level="41">icon.skill19316</value>
+			<value level="42">icon.skill19316</value>
+			<value level="43">icon.skill19316</value>
+			<value level="44">icon.skill19316</value>
+			<value level="45">icon.skill19316</value>
+			<value level="46">icon.skill19316</value>
+			<value level="47">icon.skill19316</value>
+			<value level="48">icon.skill19316</value>
+			<value level="49">icon.skill19316</value>
+			<value level="50">icon.skill19316</value>
+			<value level="51">icon.skill19316</value>
+			<value level="52">icon.skill19316</value>
+			<value level="53">icon.skill19316</value>
+			<value level="54">icon.skill19316</value>
+			<value level="55">icon.skill19316</value>
+			<value level="56">icon.skill19316</value>
+			<value level="57">icon.skill19316</value>
+			<value level="58">icon.skill19316</value>
+			<value level="59">icon.skill19316</value>
+			<value level="60">icon.skill19316</value>
+			<value level="61">icon.skill19316</value>
+			<value level="62">icon.skill19316</value>
+			<value level="63">icon.skill19316</value>
+			<value level="64">icon.skill19316</value>
+			<value level="65">icon.skill19316</value>
+			<value level="66">icon.skill19316</value>
+			<value level="67">icon.skill19316</value>
+			<value level="68">icon.skill19316</value>
+			<value level="69">icon.skill19316</value>
+			<value level="70">icon.skill19316</value>
+			<value level="71">icon.skill19316</value>
+			<value level="72">icon.skill19316</value>
+			<value level="73">icon.skill19316</value>
+			<value level="74">icon.skill19316</value>
+			<value level="75">icon.skill19316</value>
+			<value level="76">icon.skill19316</value>
+			<value level="77">icon.skill19316</value>
+			<value level="78">icon.skill19316</value>
+			<value level="79">icon.skill19316</value>
+			<value level="80">icon.skill19316</value>
+			<value level="81">icon.skill19316</value>
+			<value level="82">icon.skill19316</value>
+			<value level="83">icon.skill19316</value>
+			<value level="84">icon.skill19316</value>
+			<value level="85">icon.skill19316</value>
+			<value level="86">icon.skill19316</value>
+			<value level="87">icon.skill19316</value>
+			<value level="88">icon.skill19316</value>
+			<value level="89">icon.skill11023</value>
+			<value level="90">icon.skill11023</value>
+			<value level="91">icon.skill11023</value>
+			<value level="92">icon.skill11023</value>
+			<value level="93">icon.skill11023</value>
+			<value level="94">icon.skill11023</value>
+			<value level="95">icon.skill11023</value>
+			<value level="96">icon.skill11023</value>
+			<value level="97">icon.skill11023</value>
+			<value level="98">icon.skill11023</value>
+			<value level="99">icon.skill19316</value>
+			<value level="100">icon.skill19316</value>
+			<value level="101">icon.skill19316</value>
+			<value level="102">icon.skill19316</value>
+			<value level="103">icon.skill19316</value>
+			<value level="104">icon.skill19316</value>
+			<value level="105">icon.skill19316</value>
+			<value level="106">icon.skill19316</value>
+			<value level="107">icon.skill19316</value>
+			<value level="108">icon.skill19316</value>
+			<value level="109">icon.skill19316</value>
+			<value level="110">icon.skill19316</value>
+			<value level="111">icon.skill19316</value>
+			<value level="112">icon.skill19316</value>
+			<value level="113">icon.skill19316</value>
+			<value level="114">icon.skill19316</value>
+			<value level="115">icon.skill19316</value>
+			<value level="116">icon.skill19316</value>
+			<value level="117">icon.skill19316</value>
+			<value level="118">icon.skill19316</value>
+			<value level="119">icon.skill19316</value>
+			<value level="120">icon.skill19316</value>
+			<value level="121">icon.skill19316</value>
+			<value level="122">icon.skill19316</value>
+			<value level="123">icon.skill19316</value>
+			<value level="124">icon.skill19316</value>
+			<value level="125">icon.skill19316</value>
+			<value level="126">icon.skill19316</value>
+			<value level="127">icon.skill19316</value>
+			<value level="128">icon.skill19316</value>
+			<value level="129">icon.skill19316</value>
+			<value level="130">icon.skill19316</value>
+			<value level="131">icon.skill19316</value>
+			<value level="132">icon.skill19316</value>
+			<value level="133">icon.skill19316</value>
+			<value level="134">icon.skill19316</value>
+			<value level="135">icon.skill19316</value>
+			<value level="136">icon.skill19316</value>
+			<value level="137">icon.skill19316</value>
+			<value level="138">icon.skill19316</value>
+			<value level="139">icon.skill19316</value>
+			<value level="140">icon.skill19316</value>
+			<value level="141">icon.skill19316</value>
+			<value level="142">icon.skill19316</value>
+			<value level="143">icon.skill19316</value>
+			<value level="144">icon.skill19316</value>
+			<value level="145">icon.skill19316</value>
+			<value level="146">icon.skill19316</value>
+			<value level="147">icon.skill19316</value>
+			<value level="148">icon.skill19316</value>
+			<value level="149">icon.skill19316</value>
+			<value level="150">icon.skill19316</value>
+			<value level="151">icon.skill19316</value>
+			<value level="152">icon.skill19316</value>
+			<value level="153">icon.skill19316</value>
+			<value level="154">icon.skill19316</value>
+			<value level="155">icon.skill19316</value>
+			<value level="156">icon.skill19316</value>
+			<value level="157">icon.skill19316</value>
+			<value level="158">icon.skill19316</value>
+			<value level="159">icon.skill19316</value>
+			<value level="160">icon.skill19316</value>
+			<value level="161">icon.skill19316</value>
+			<value level="162">icon.skill19316</value>
+			<value level="163">icon.skill19316</value>
+			<value level="164">icon.skill19316</value>
+			<value level="165">icon.skill19316</value>
+			<value level="166">icon.skill19316</value>
+			<value level="167">icon.skill19316</value>
+			<value level="168">icon.skill19316</value>
+			<value level="169">icon.skill19316</value>
+			<value level="170">icon.skill19316</value>
+			<value level="171">icon.skill19316</value>
+			<value level="172">icon.skill19316</value>
+			<value level="173">icon.skill19316</value>
+			<value level="174">icon.skill19316</value>
+			<value level="175">icon.skill19316</value>
+			<value level="176">icon.skill19316</value>
+			<value level="177">icon.skill19316</value>
+			<value level="178">icon.skill19316</value>
+			<value level="179">icon.skill19316</value>
+			<value level="180">icon.skill19316</value>
+			<value level="181">icon.skill19316</value>
+			<value level="182">icon.skill19316</value>
+			<value level="183">icon.skill19316</value>
+			<value level="184">icon.skill19316</value>
+			<value level="185">icon.skill19316</value>
+			<value level="186">icon.skill19316</value>
+			<value level="187">icon.skill19316</value>
+			<value level="188">icon.skill19316</value>
+			<value level="189">icon.skill19316</value>
+			<value level="190">icon.skill19316</value>
+			<value level="191">icon.skill19316</value>
+			<value level="192">icon.skill19316</value>
+			<value level="193">icon.skill19316</value>
+			<value level="194">icon.skill19316</value>
+			<value level="195">icon.skill19316</value>
+			<value level="196">icon.skill19316</value>
+			<value level="197">icon.skill19316</value>
+			<value level="198">icon.skill19316</value>
+			<value level="199">icon.skill19316</value>
+			<value level="200">icon.skill19316</value>
+			<value level="201">icon.skill19316</value>
+			<value level="202">icon.skill19316</value>
+			<value level="203">icon.skill19316</value>
+			<value level="204">icon.skill19316</value>
+			<value level="205">icon.skill19316</value>
+			<value level="206">icon.skill19316</value>
+			<value level="207">icon.skill19316</value>
+			<value level="208">icon.skill19316</value>
+			<value level="209">icon.skill19316</value>
+			<value level="210">icon.skill19316</value>
+			<value level="211">icon.skill19316</value>
+			<value level="212">icon.skill19316</value>
+			<value level="213">icon.skill19316</value>
+			<value level="214">icon.skill19316</value>
+			<value level="215">icon.skill19316</value>
+			<value level="216">icon.skill19316</value>
+			<value level="217">icon.skill19316</value>
+			<value level="218">icon.skill19316</value>
+			<value level="219">icon.skill19316</value>
+			<value level="220">icon.skill19316</value>
+			<value level="221">icon.skill19316</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BODY_DESTRUCTION</abnormalType>
-		<icon>icon.skill11023</icon>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<operateType>A2</operateType>
@@ -2355,6 +4797,7 @@
 	</skill>
 	<skill id="11033" toLevel="3" name="Damaged Area">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2364,7 +4807,6 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill11032</icon>
 		<operateType>A4</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-696</effectPoint>
@@ -2395,9 +4837,9 @@
 	</skill>
 	<skill id="11034" toLevel="8" name="Elemental Blast">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11034</reuseDelayGroup>
@@ -2496,9 +4938,9 @@
 	</skill>
 	<skill id="11035" toLevel="8" name="Elemental Blast (Fire)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2579,9 +5021,9 @@
 	</skill>
 	<skill id="11036" toLevel="8" name="Elemental Blast (Water)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2662,9 +5104,9 @@
 	</skill>
 	<skill id="11037" toLevel="8" name="Elemental Blast (Wind)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2745,9 +5187,9 @@
 	</skill>
 	<skill id="11038" toLevel="8" name="Elemental Blast (Earth)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2828,9 +5270,9 @@
 	</skill>
 	<skill id="11039" toLevel="8" name="Elemental Blast (4 Elements)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -2912,9 +5354,9 @@
 	</skill>
 	<skill id="11040" toLevel="8" name="Elemental Storm">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11040</reuseDelayGroup>
@@ -3013,9 +5455,9 @@
 	</skill>
 	<skill id="11041" toLevel="8" name="Elemental Storm (Fire)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>10</attributeValue> <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3096,9 +5538,9 @@
 	</skill>
 	<skill id="11042" toLevel="8" name="Elemental Storm (Water)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>10</attributeValue>  <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3179,9 +5621,9 @@
 	</skill>
 	<skill id="11043" toLevel="8" name="Elemental Storm (Wind)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>10</attributeValue>  <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3262,9 +5704,9 @@
 	</skill>
 	<skill id="11044" toLevel="8" name="Elemental Final Storm (Earth)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>10</attributeValue>  <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3345,9 +5787,9 @@
 	</skill>
 	<skill id="11045" toLevel="8" name="Elemental Final Storm (Holy)">
 		<!-- Deals M. Attack of $s1 power added with attribute damage on the target and the enemies near it. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -4848,6 +7290,7 @@
 	</skill>
 	<skill id="11067" toLevel="4" name="Quadruple Elemental Blast">
 		<!-- Deals M. Attack of $s1 power on the target and the enemies near it. Inflicts constant damage for $s2 to inflict Knock Down. Over-hit is possible. Available to use in the Mana Burst Level 4. -->
+		<icon>icon.skill11067</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -4859,7 +7302,6 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill11067</icon>
 		<operateType>A2</operateType>
 		<trait>DERANGEMENT</trait>
 		<magicLvl>
@@ -4945,10 +7387,10 @@
 	</skill>
 	<skill id="11068" toLevel="4" name="Burst Casting">
 		<!-- Decreases MP consumption by magic skills and magic skill cooldown by $s2 and $s3, respectively, for $s1 and prevents it from being canceled while casting. Increases the Mana Burst level which boosts M. Attack and Casting Speed as time passes. -->
+		<icon>icon.skill11068</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>DC_MOD</abnormalType>
-		<icon>icon.skill11068</icon>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -5330,6 +7772,7 @@
 	</skill>
 	<skill id="11081" toLevel="3" name="Elemental Spike - Decrease Holy Resistance">
 		<!-- Decreases Holy attribute defense by $s2 for $s1. -->
+		<icon>icon.skill11011</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
 			<value level="1">7</value>
@@ -5337,7 +7780,6 @@
 			<value level="3">15</value>
 		</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_HOLY</abnormalType>
-		<icon>icon.skill11011</icon>
 		<activateRate>100</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<operateType>A4</operateType>
@@ -5497,6 +7939,7 @@
 	</skill>
 	<skill id="11088" toLevel="3" name="Elemental Crash (Water)">
 		<!-- Decreases target's Speed. -->
+		<icon>icon.skill11017</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -5504,7 +7947,6 @@
 			<value level="3">5</value>
 		</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
-		<icon>icon.skill11017</icon>
 		<activateRate>99</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
@@ -5610,6 +8052,7 @@
 	</skill>
 	<skill id="11092" toLevel="3" name="Damaged Area">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -5619,7 +8062,6 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
-		<icon>icon.skill11032</icon>
 		<operateType>A4</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-711</effectPoint>

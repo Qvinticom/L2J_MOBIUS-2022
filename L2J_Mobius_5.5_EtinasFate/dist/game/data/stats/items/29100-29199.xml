@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="29100" name="Leo Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Leo Agathion. Its special ability is Maiden's Prayer Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
-		<set name="icon" val="icon.armor_t65_g_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_leo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -17,7 +17,7 @@
 	</item>
 	<item id="29101" name="Gemini Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Gemini Agathion. Its special ability is Bountiful Resurrection Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
-		<set name="icon" val="icon.armor_t56_g_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -32,7 +32,7 @@
 	</item>
 	<item id="29102" name="Scorpio Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Scorpio Agathion. Its special ability is Scorpion's Mass Exile Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
-		<set name="icon" val="icon.armor_t64_b_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -47,7 +47,7 @@
 	</item>
 	<item id="29103" name="Aquarius Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Aquarius Agathion. Its special ability is Mass Binding Flood Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
-		<set name="icon" val="icon.armor_t65_b_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -62,7 +62,7 @@
 	</item>
 	<item id="29104" name="Pisces Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Pisces Agathion. Its special ability is Slippery Scale Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
-		<set name="icon" val="icon.armor_t56_b_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -77,7 +77,7 @@
 	</item>
 	<item id="29105" name="Sagittarius Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Sagittarius Agathion. Its special ability is Archer's Call Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
-		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
@@ -92,7 +92,7 @@
 	</item>
 	<item id="29106" name="Cancer Agathion Charm - Stage 1" additionalName="30-day" type="Armor">
 		<!-- A charm that activates the power of the Cancer Agathion. Its special ability is Exoskeletal Shield Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the sub slot, only the unique ability will be activated. <Note>. The growth value of timed Agathion Charms cannot be increased, and the active skill of Agathion Charms cannot be used in the Olympiad and in the Ceremony of Chaos. -->
-		<set name="icon" val="icon.armor_t74_u_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="hair2" />
@@ -439,7 +439,7 @@
 	</item>
 	<item id="29143" name="Rudolph's Nose" type="Armor">
 		<!-- Accessory in the form of Rudolph's nose. -->
-		<set name="icon" val="icon.armor_t74_l_i00" />
+		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
@@ -493,7 +493,7 @@
 	</item>
 	<item id="29149" name="Sayha's Talisman Stage 6" additionalName="1-day" type="Armor">
 		<!-- When equipped, P. Def. +1126, M. Def. +736, Acquired XP/ SP +10%. If equipped with Venir's Talisman Stage 12 or above, Skill Power +3%, Skill Cooldown -3%. Active Skills. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. Only the effect of the max level Talisman is applied when 2 or more of the same are equipped. -->
-		<set name="icon" val="icon.armor_t83_ul_i00" />
+		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
@@ -596,7 +596,7 @@
 	</item>
 	<item id="29159" name="Jindo Dog Hat" type="Armor">
 		<!-- A Jindo dog hat. Uses 2 hair accessory slots. -->
-		<set name="icon" val="icon.armor_t75_u_i00" />
+		<set name="icon" val="icon.accessory_jindo_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="hair2" />
@@ -608,7 +608,7 @@
 	</item>
 	<item id="29160" name="Shaggy Dog Hat" type="Armor">
 		<!-- A shaggy dog hat. Uses 2 hair accessory slots. -->
-		<set name="icon" val="icon.armor_t75_l_i00" />
+		<set name="icon" val="icon.accessory_sapsal_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="immediate_effect" val="true" />
@@ -805,7 +805,7 @@
 	</item>
 	<item id="29181" name="Mermaid Agathion Charm" type="Armor">
 		<!-- Equip to summon Mermaid Agathion. -->
-		<set name="icon" val="icon.armor_t84_ul_i00" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
@@ -1000,7 +1000,7 @@
 	</item>
 	<item id="29199" name="New User's Leaf" additionalName="14-day" type="Armor">
 		<!-- Special hair accessory for heroes who just started their adventures in the world of Aden. -->
-		<set name="icon" val="icon.armor_t79_u_i00" />
+		<set name="icon" val="icon.s_newbie_user_display" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="hair2" />

@@ -376,7 +376,7 @@
 		</effects>
 	</skill>
 	<skill id="11508" toLevel="9" name="Assault Rush">
-		<icon>icon.skill11508</icon>
+		<icon>icon.skill11513</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -459,6 +459,7 @@
 		</effects>
 	</skill>
 	<skill id="11509" toLevel="11" name="Crippling Attack">
+		<icon>icon.skill11514</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
@@ -470,7 +471,6 @@
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>910</hitTime>
-		<icon>icon.skill11509</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -568,6 +568,7 @@
 		</effects>
 	</skill>
 	<skill id="11510" toLevel="11" name="Shadow Blade">
+		<icon>icon.skill11509</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
@@ -579,7 +580,6 @@
 		<coolTime>300</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>1010</hitTime>
-		<icon>icon.skill11510</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -672,11 +672,11 @@
 		</effects>
 	</skill>
 	<skill id="11511" toLevel="11" name="Death Strike">
+		<icon>icon.skill11511</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<effectRange>400</effectRange>
 		<hitTime>1410</hitTime>
-		<icon>icon.skill11511</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -762,7 +762,7 @@
 		</effects>
 	</skill>
 	<skill id="11513" toLevel="11" name="Mass Crippling Attack">
-		<icon>icon.skill11513</icon>
+		<icon>icon.skill11514</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
@@ -775,7 +775,6 @@
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<hitTime>1210</hitTime>
-		<icon>icon.skill11509</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -874,6 +873,7 @@
 		</effects>
 	</skill>
 	<skill id="11514" toLevel="11" name="Mass Shadow Blade">
+		<icon>icon.skill11509</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>CRITICAL_PROB_DOWN</abnormalType>
@@ -886,7 +886,6 @@
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
 		<hitTime>1410</hitTime>
-		<icon>icon.skill11514</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">87</value>
@@ -1117,6 +1116,7 @@
 		</effects>
 	</skill>
 	<skill id="11517" toLevel="5" name="Horn Melody">
+		<icon>icon.skill11517</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1130,7 +1130,6 @@
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1222,6 +1221,7 @@
 		</effects>
 	</skill>
 	<skill id="11518" toLevel="5" name="Drum Melody">
+		<icon>icon.skill11522</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1235,7 +1235,6 @@
 			<value fromLevel="3" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1338,6 +1337,7 @@
 		</effects>
 	</skill>
 	<skill id="11519" toLevel="5" name="Pipe Organ Melody">
+		<icon>icon.skill11519</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1351,7 +1351,6 @@
 			<value fromLevel="3" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1449,6 +1448,7 @@
 		</effects>
 	</skill>
 	<skill id="11520" toLevel="5" name="Guitar Melody">
+		<icon>icon.skill11520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1462,7 +1462,6 @@
 			<value fromLevel="3" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1570,6 +1569,7 @@
 		</effects>
 	</skill>
 	<skill id="11521" toLevel="4" name="Harp Melody">
+		<icon>icon.skill11521</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1582,7 +1582,6 @@
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1675,6 +1674,7 @@
 		</effects>
 	</skill>
 	<skill id="11522" toLevel="4" name="Lute Melody">
+		<icon>icon.skill11518</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1687,7 +1687,6 @@
 			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1762,6 +1761,7 @@
 		</effects>
 	</skill>
 	<skill id="11523" toLevel="2" name="Knight's Harmony">
+		<icon>icon.skill11523</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1771,7 +1771,6 @@
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -1855,6 +1854,7 @@
 		</effects>
 	</skill>
 	<skill id="11524" toLevel="2" name="Warrior's Harmony">
+		<icon>icon.skill11524</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1864,7 +1864,6 @@
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -1917,6 +1916,7 @@
 		</effects>
 	</skill>
 	<skill id="11525" toLevel="2" name="Wizard's Harmony">
+		<icon>icon.skill11525</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1926,7 +1926,6 @@
 			<value fromLevel="1" toLevel="2" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">140</value>
@@ -2104,6 +2103,7 @@
 		</effects>
 	</skill>
 	<skill id="11529" toLevel="1" name="Prevailing Sonata">
+		<icon>icon.skill11529</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -2111,7 +2111,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -2171,6 +2170,7 @@
 		</effects>
 	</skill>
 	<skill id="11530" toLevel="1" name="Daring Sonata">
+		<icon>icon.skill11530</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -2178,7 +2178,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -2227,6 +2226,7 @@
 		</effects>
 	</skill>
 	<skill id="11532" toLevel="1" name="Refreshing Sonata">
+		<icon>icon.skill11532</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -2234,7 +2234,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -2482,6 +2481,7 @@
 		</effects>
 	</skill>
 	<skill id="11537" toLevel="10" name="Transform">
+		<icon>icon.skill11537</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>CHANGEBODY</abnormalType>
@@ -2490,7 +2490,6 @@
 			<value fromLevel="1" toLevel="10">60</value>
 			<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill11537</icon>
 		<operateType>A2</operateType>
 		<trait>CHANGEBODY</trait>
 		<magicLvl>
@@ -3121,6 +3120,7 @@
 		</effects>
 	</skill>
 	<skill id="11546" toLevel="4" name="Chaos Symphony">
+		<icon>icon.skill11533</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
 		<abnormalLvl>5</abnormalLvl>
@@ -3130,7 +3130,6 @@
 			<value fromLevel="1" toLevel="4">100</value>
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill11533</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1767</mpConsume>
 		<castRange>900</castRange>
@@ -3197,6 +3196,7 @@
 	</skill>
 	<skill id="11547" toLevel="10" name="Superior HP Recovery">
 		<!-- HP Recovery Bonus +$s1. STR +$s2. -->
+		<icon>icon.skill0212</icon>
 		<operateType>P</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3210,7 +3210,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill0212</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="HpRegen">
@@ -3293,9 +3292,9 @@
 	</skill>
 	<skill id="11551" toLevel="1" name="Superior Mental Attack Resistance">
 		<!-- Poison/ Bleed/ Hold/ Sleep/ Mental Attack Resistance +30%. STR +2. -->
+		<icon>icon.skill10257</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill10257</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="DefenceTrait">
@@ -3313,9 +3312,9 @@
 	</skill>
 	<skill id="11552" toLevel="4" name="Superior Divine Lore">
 		<!-- MP Consumption for skills is decreased by $s1. -->
+		<icon>icon.skill11506</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill11506</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MagicMpCost">
@@ -3352,9 +3351,9 @@
 	</skill>
 	<skill id="11553" toLevel="1" name="Superior Focus Mind">
 		<!-- MP Recovery Bonus +8.4. STR +2. -->
+		<icon>icon.skill11187</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill11187</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MpRegen">
@@ -3369,9 +3368,9 @@
 	</skill>
 	<skill id="11554" toLevel="1" name="Superior Sixth Sense">
 		<!-- When HP is below 30%, increases P. Evasion by 17. STR +2. -->
+		<icon>icon.skill11504</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill11504</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="PhysicalEvasion">
@@ -3387,9 +3386,9 @@
 	</skill>
 	<skill id="11555" toLevel="1" name="Superior Fast Spell Casting">
 		<!-- Increases Casting Spd. by 15%. -->
+		<icon>icon.skill11788</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill11788</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -3417,7 +3416,7 @@
 	</skill>
 	<skill id="11557" toLevel="1" name="Ultimate Scourge">
 		<!-- For $s1, Heal received by the target and nearby enemies -$s2. -->
-		<icon>icon.skill11557</icon>
+		<icon>icon.skill11559</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
@@ -3449,7 +3448,7 @@
 	</skill>
 	<skill id="11558" toLevel="1" name="Ultimate Oblivion">
 		<!-- Cancels nearby enemies' targets. -->
-		<icon>icon.skill11558</icon>
+		<icon>icon.skill11557</icon>
 		<affectRange>200</affectRange>
 		<effectPoint>-457</effectPoint>
 		<operateType>A1</operateType>
@@ -3472,7 +3471,7 @@
 		</effects>
 	</skill>
 	<skill id="11559" toLevel="1" name="Ultimate Suspension">
-		<icon>icon.skill11559</icon>
+		<icon>icon.skill11558</icon>
 		<abnormalTime>120</abnormalTime>
 		<affectRange>200</affectRange>
 		<effectPoint>-457</effectPoint>
@@ -3805,6 +3804,7 @@
 		</effects>
 	</skill>
 	<skill id="11565" toLevel="1" name="Elemental Resistance">
+		<icon>icon.skill11565</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>ARMOR_ELEMENT_ALL</abnormalType>
@@ -3812,7 +3812,6 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
 		</abnormalTime>
-		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -3860,6 +3859,7 @@
 		</effects>
 	</skill>
 	<skill id="11566" toLevel="1" name="Holy Attack Resistance">
+		<icon>icon.skill11567</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>ARMOR_HOLY</abnormalType>
@@ -3867,7 +3867,6 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
 		</abnormalTime>
-		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -3911,6 +3910,7 @@
 		</effects>
 	</skill>
 	<skill id="11567" toLevel="1" name="Mental Attack Resistance">
+		<icon>icon.skill11824</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalType>RESIST_DERANGEMENT</abnormalType>
@@ -3918,7 +3918,6 @@
 			<value fromLevel="1" toLevel="1">1800</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 15}</value>
 		</abnormalTime>
-		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<hitTime>700</hitTime>
@@ -3963,10 +3962,10 @@
 	</skill>
 	<skill id="11569" toLevel="1" name="Critical Damage Increase">
 		<!-- Critical Damage is increased by 100% through Drum Melody. -->
+		<icon>icon.skill1542</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL_TRIGGER</abnormalType>
-		<icon>icon.skill1542</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -4129,9 +4128,9 @@
 	</skill>
 	<skill id="11581" toLevel="4" name="Superior Advantage">
 		<!-- M. Atk. +$s1, Skill Power +$s2 and Skill Cooldown -$s3. -->
+		<icon>icon.skill11581</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill11841</icon>
 		<effects>
 			<effect name="MaxCp">
 				<amount>
@@ -4244,7 +4243,7 @@
 	</skill>
 	<skill id="11583" toLevel="4" name="Superior Song of Mastery">
 		<!-- Atk. Spd./ Casting Spd. +$s1 and Atk. Attribute +$s2. Activates the Single Note effect on you if Sforzando Sting, Radiant Crash or Resolving Bash is cast. -->
-		<icon>icon.skill0153</icon>
+		<icon>icon.skill11583</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -4318,7 +4317,7 @@
 	</skill>
 	<skill id="11585" toLevel="4" name="Superior Dance of Mastery">
 		<!-- P. Atk./ M. Atk. +$s1 and P. Skill Power +$s2. Activates the Spectral Slash effect on the target if Trace of Twin Edges, Shadow Blade or Resolving Bash is cast. -->
-		<icon>icon.skill0141</icon>
+		<icon>icon.skill11585</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -4422,7 +4421,7 @@
 	</skill>
 	<skill id="11588" toLevel="4" name="Superior Wizard Mastery">
 		<!-- PvP damage +$s1 and Max MP/ CP +$s2. -->
-		<icon>icon.skill0164</icon>
+		<icon>icon.skill11588</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
@@ -5054,7 +5053,6 @@
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 90}</value>
 		</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PLEDGE</affectScope>

@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="32000" toLevel="1" name="Rice Cake of Fighting Spirit">
 		<!-- Increases XP and SP gain by 20% for 20 minutes. Cooldown - 10 minutes. The effect does not disappear after character's death. -->
-		<icon>icon.skill32000</icon>
+		<icon>icon.bm_rice_cake_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
@@ -32,7 +32,7 @@
 	</skill>
 	<skill id="32001" toLevel="1" name="Rice Cake of Fighting Spirit - Personal">
 		<!-- Increases XP and SP gain by 20% for 20 minutes. Cooldown - 10 minutes. The effect does not disappear after character's death. -->
-		<icon>icon.skill32001</icon>
+		<icon>icon.bm_rice_cake_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
@@ -62,7 +62,7 @@
 	</skill>
 	<skill id="32002" toLevel="1" name="Rice Cake of Flaming Fighting Spirit">
 		<!-- Increases XP and SP gain by 30% for 20 minutes. Cooldown - 10 minutes. The effect does not disappear after character's death. -->
-		<icon>icon.skill32002</icon>
+		<icon>icon.bm_rice_cake_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
@@ -92,41 +92,40 @@
 	</skill>
 	<skill id="32003" toLevel="1" name="Rich Supplies">
 		<!-- Open the chest to randomly get one of the next items: Scroll: Enchant Weapon / Armor (D / C-grade), Magic Haste Potion, Greater Magic Haste Potion, Haste Potion, Greater Haste Potion, Greater Scroll of Resurrection, Scroll of Escape. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.event_high_oriental_park_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32004" toLevel="1" name="Improved Scroll of Resurrection">
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_of_resurrection_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32005" toLevel="1" name="Fighting Spirit Support Box">
 		<!-- Double-click to obtain two Cakes of Fighting Spirit. Rich Supplies can be obtained at a certain chance. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_marguene_collection_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32006" toLevel="1" name="Commander�s Power">
 		<!-- Inflicts 50 damage. Can be used only in PvP. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.weapon_shining_knife_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32007" toLevel="3" name="Teleport: Entrance to Cruma Tower">
 		<!-- Teleports to Entrance to Cruma Tower -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32010" toLevel="1" name="Potion Box">
 		<!-- Double-click the chest to get one of the following items: Dye Potion Pack / Facelifting Potion Pack / Mysterious Potion. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_box_of_adventure_2_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32011" toLevel="1" name="Enchantment Scroll Box">
 		<!-- Double-click the chest to get one of the following items: Scroll: Empower / Scroll: Might / Scroll: Shield. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_box_of_adventure_3_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32012" toLevel="1" name="High-grade Wind Dye Pack">
 		<!-- Double-click to get one of the following items: Greater STR Dye / Greater CON Dye / Greater DEX Dye / Greater INT Dye / Greater Dye / Greater MEN Dye. -->
-		<icon>icon.skill32012</icon>
+		<icon>icon.etc_box_of_adventure_4_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49110</itemConsumeId>
@@ -188,7 +187,7 @@
 	</skill>
 	<skill id="32013" toLevel="1" name="Wind Dye Pack">
 		<!-- Double-click to get one of the following items: Dye of STR / Dye of CON / Dye of DEX / Dye of INT / Dye of MEN. -->
-		<icon>icon.skill32013</icon>
+		<icon>icon.etc_box_of_adventure_5_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49111</itemConsumeId>
@@ -250,91 +249,90 @@
 	</skill>
 	<skill id="32014" toLevel="1" name="Staff Chest">
 		<!-- Double-click to get one of the following items: Cursed Staff / Crystal Staff / Sage's Staff / Demon's Staff. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32015" toLevel="1" name="Fist Weapon Chest">
 		<!-- Double-click to get one of the following items: Knuckle Duster / Needle Wolverine / Fisted Blade / Great Pata. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32016" toLevel="1" name="Spear Chest">
 		<!-- Double-click to get one of the following items: Bec de Corbin / Orcish Glaive / Poleaxe / Orcish Poleaxe. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32017" toLevel="1" name="Blunt Weapon Chest">
 		<!-- Double-click to get one of the following items: Dwarven War Hammer / Heavy Doom Hammer / War Axe / Yaksa Mace. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32018" toLevel="1" name="Dagger Chest">
 		<!-- Double-click to get one of the following items: Stiletto / Cursed Dagger / Dark Screamer / Crystal Dagger. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i06</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32019" toLevel="1" name="One-Handed Sword Chest">
 		<!-- Double-click to get one of the following items: Katana / StormBringer / Sword of Delusion / Samurai Long Sword. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i07</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32020" toLevel="1" name="Bow Chest">
 		<!-- Double-click to get one of the following items: Elemental Bow / Crystallized Ice Bow / Akat Longbow / Eminence Bow. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_treasure_box_i08</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32021" toLevel="1" name="Souvenir Box">
-		<icon>icon.skill0000</icon>
+		<icon>icon.new_user_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32022" toLevel="1" name="Venezia Rune - Low-Grade">
 		<!-- When in inventory XP/SP gain +22%. Only usable up to level 40. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32023" toLevel="1" name="Ring of Macken">
 		<!-- Increases Max. HP and P./ M. Atk. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32024" toLevel="1" name="Earring of Macken">
 		<!-- Increases MP recovery rate and healing power. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32025" toLevel="1" name="Necklace of Macken">
 		<!-- P. Def. and M. Def. are increased. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32026" toLevel="1" name="Ring of Macken">
 		<!-- Increases Max. HP and P./ M. Atk. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32027" toLevel="1" name="Earring of Macken">
 		<!-- Increases MP recovery rate and healing power. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32028" toLevel="1" name="Necklace of Macken">
 		<!-- P. Def. and M. Def. are increased. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32029" toLevel="1" name="Venezia Rune - High-Grade">
 		<!-- XP/SP +11% Scroll -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19226</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32030" toLevel="1" name="Dandy's Home Run Ball">
 		<!-- XP/SP gain +100% for 1 hour. Gives your armor look like NC Dinos Uniform. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.ev_dinos_baseball</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32031" toLevel="1" name="Scroll of Escape: Talking Island Village">
 		<!-- Teleports to Talking Island Village. Cooldown - 60 minutes. -->
-		<icon>icon.skill32031</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -362,7 +360,6 @@
 	</skill>
 	<skill id="32032" toLevel="1" name="Scroll of Escape: Elven Village">
 		<!-- Teleports to Elven Village. Cooldown - 60 minutes. -->
-		<icon>icon.skill32032</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -390,7 +387,6 @@
 	</skill>
 	<skill id="32033" toLevel="1" name="Scroll of Escape: Dark Elf Village">
 		<!-- Teleports to Dark Elf Village. Cooldown - 60 minutes. -->
-		<icon>icon.skill32033</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -418,7 +414,6 @@
 	</skill>
 	<skill id="32034" toLevel="1" name="Scroll of Escape: Orc Village">
 		<!-- Teleports to Orc Village. Cooldown - 60 minutes. -->
-		<icon>icon.skill32034</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -446,7 +441,6 @@
 	</skill>
 	<skill id="32035" toLevel="1" name="Scroll of Escape: Dwarven Village">
 		<!-- Teleports to Dwarven Village. Cooldown - 60 minutes. -->
-		<icon>icon.skill32035</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -474,7 +468,6 @@
 	</skill>
 	<skill id="32036" toLevel="1" name="Scroll of Escape: Gludin Village">
 		<!-- Teleports to Gludin. Cooldown - 60 minutes. -->
-		<icon>icon.skill32036</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -502,7 +495,6 @@
 	</skill>
 	<skill id="32037" toLevel="1" name="Scroll of Escape: Town of Gludio">
 		<!-- Teleports to Gludio. Cooldown - 60 minutes. -->
-		<icon>icon.skill32037</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -530,37 +522,30 @@
 	</skill>
 	<skill id="32038" toLevel="1" name="Scroll of Escape: Town of Dion">
 		<!-- Teleports to Dion. Cooldown - 60 minutes. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32039" toLevel="1" name="Scroll of Escape: Floran Village">
 		<!-- Teleports to Floran. Cooldown - 60 minutes. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32040" toLevel="1" name="Scroll of Escape: Town of Giran">
 		<!-- Teleports to Giran. Cooldown - 60 minutes. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32041" toLevel="1" name="Scroll of Escape: Town of Oren">
 		<!-- Teleports to Oren. Cooldown - 60 minutes. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32042" toLevel="1" name="Scroll of Escape: Ivory Tower">
 		<!-- Teleports to Ivory Tower. Cooldown - 60 minutes. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32043" toLevel="1" name="Scroll of Escape: Hunter's Village">
 		<!-- Teleports to Hunters Village. Cooldown - 60 minutes. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32044" toLevel="1" name="Teleport: Entrance to Cruma Tower">
 		<!-- Teleports to Entrance to Cruma Tower. Cooldown - 60 minutes. -->
-		<icon>icon.skill32044</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -588,7 +573,6 @@
 	</skill>
 	<skill id="32045" toLevel="1" name="Teleport: Entrance to Dragon Valley">
 		<!-- Teleports to Entrance to Dragon Valley. Cooldown - 60 minutes. -->
-		<icon>icon.skill32045</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -616,7 +600,6 @@
 	</skill>
 	<skill id="32046" toLevel="1" name="Teleport: Dragon Valley Bridge">
 		<!-- Teleports to Dragon Valley Bridge. Cooldown - 60 minutes. -->
-		<icon>icon.skill32046</icon>
 		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -643,25 +626,25 @@
 		</effects>
 	</skill>
 	<skill id="32047" toLevel="1" name="Cube of Sayha - 30-days">
-		<icon>icon.skill0000</icon>
+		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32048" toLevel="1" name="Cube of Sayha - 90-days">
-		<icon>icon.skill0000</icon>
+		<icon>icon.sa_cube</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32049" toLevel="1" name="Storm Power">
 		<!-- Increases XP/SP gain by 50% for 2 hours. Cooldown - 2 hours. Effect remains after death. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.power_of_storm</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32050" toLevel="1" name="Sayha's Treasure Chest">
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_pi_gift_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="32051" toLevel="1" name="Berserker Spirit">
 		<!-- For 20 minutes, P. Def. -5%, M. Def. -10%, Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

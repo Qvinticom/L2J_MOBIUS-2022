@@ -1,12 +1,12 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11300" toLevel="6" name="Yoke Status">
+		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<effectPoint>-692</effectPoint>
-		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
 		<basicProperty>NONE</basicProperty>
@@ -315,8 +315,8 @@
 		</effects>
 	</skill>
 	<skill id="11309" toLevel="1" name="Mass Servitor Blessing">
-		<abnormalTime>5</abnormalTime>
 		<icon>icon.skill1301</icon>
+		<abnormalTime>5</abnormalTime>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
 		<castRange>900</castRange>
@@ -4001,6 +4001,7 @@
 		</effects>
 	</skill>
 	<skill id="11394" toLevel="4" name="Surrender to the Elemental">
+		<icon>icon.skill11394</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4014,7 +4015,6 @@
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill11394</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
@@ -4083,6 +4083,7 @@
 		</effects>
 	</skill>
 	<skill id="11395" toLevel="4" name="Curse Exposure">
+		<icon>icon.skill11395</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4096,7 +4097,6 @@
 			<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill11395</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>

@@ -352,10 +352,10 @@
 	</skill>
 	<skill id="6038" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Chatting has been blocked. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -373,10 +373,10 @@
 	</skill>
 	<skill id="6039" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Party participation has been blocked. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -394,10 +394,10 @@
 	</skill>
 	<skill id="6040" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. You can be attacked. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -415,12 +415,12 @@
 	</skill>
 	<skill id="6041" toLevel="1" name="Phoenix Rush">
 		<!-- Charges the enemy and inflicts damage. -->
+		<icon>icon.skill6041</icon>
 		<castRange>400</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>-679</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>800</hitTime>
-		<icon>icon.skill6041</icon>
 		<magicLvl>81</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA1</operateType>
@@ -442,11 +442,11 @@
 	</skill>
 	<skill id="6042" toLevel="1" name="Phoenix Cleanse">
 		<!-- Cancels the target's de-buff. -->
+		<icon>icon.skill6042</icon>
 		<castRange>600</castRange>
 		<effectPoint>679</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill6042</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>47</mpConsume>
@@ -467,13 +467,13 @@
 	</skill>
 	<skill id="6043" toLevel="1" name="Phoenix Flame Feather">
 		<!-- Spreads ring-shaped flames. Power 70. -->
+		<icon>icon.skill6043</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>-340</effectPoint>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill6043</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>87</mpConsume>
@@ -493,6 +493,7 @@
 	</skill>
 	<skill id="6044" toLevel="1" name="Phoenix Flame Beak">
 		<!-- Attacks the enemy with a powerful beak. Power 2156. -->
+		<icon>icon.skill6044</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-343</effectPoint>
@@ -500,7 +501,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill6044</icon>
 		<magicLvl>81</magicLvl>
 		<mpConsume>80</mpConsume>
 		<nextAction>ATTACK</nextAction>
@@ -772,6 +772,7 @@
 	</skill>
 	<skill id="6049" toLevel="4" name="Battle Cry">
 		<!-- Utters a battle cry that increases one's own P. Atk., P. Def. and M. Def. -->
+		<icon>icon.action117</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -783,7 +784,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.action117</icon>
 		<magicLvl>
 			<value level="1">50</value>
 			<value level="2">70</value>
@@ -1079,6 +1079,7 @@
 	</skill>
 	<skill id="6053" toLevel="4" name="Howl">
 		<!-- Amplifies one's own abilities with a loud roar, raising P. Atk., P. Def., M. Atk., and M. Def. -->
+		<icon>icon.action117</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1090,7 +1091,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.action117</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">50</value>
@@ -1167,10 +1167,10 @@
 	</skill>
 	<skill id="6055" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1190,10 +1190,10 @@
 	</skill>
 	<skill id="6056" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10800</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1213,10 +1213,10 @@
 	</skill>
 	<skill id="6057" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1237,10 +1237,10 @@
 	</skill>
 	<skill id="6058" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. You are no longer permitted to move. -->
+		<icon>icon.skill6038</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7200</abnormalTime>
 		<abnormalType>BOT_PENALTY</abnormalType>
-		<icon>icon.skill6038</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1261,10 +1261,10 @@
 	</skill>
 	<skill id="6059" toLevel="1" name="Counter Critical">
 		<!-- Increases P. Critical Damage. -->
+		<icon>icon.skill1542</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>COUNTER_CRITICAL_TRIGGER</abnormalType>
-		<icon>icon.skill1542</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
@@ -1296,11 +1296,11 @@
 	</skill>
 	<skill id="6060" toLevel="1" name="Great Fury">
 		<!-- Atk. Spd. +30% for 8 sec. -->
+		<icon>icon.skill1543</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN_SPECIAL</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill1543</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
@@ -1529,12 +1529,12 @@
 	</skill>
 	<skill id="6090" toLevel="1" name="Lightning Strike">
 		<!-- The target is paralyzed. -->
+		<icon>icon.skill0279</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill0279</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1553,12 +1553,12 @@
 	</skill>
 	<skill id="6091" toLevel="1" name="Anchor">
 		<!-- The target is paralyzed. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1576,12 +1576,12 @@
 	</skill>
 	<skill id="6092" toLevel="1" name="Lightning Shock">
 		<!-- The target is paralyzed. -->
+		<icon>icon.skill0791</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill0791</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
@@ -1600,12 +1600,12 @@
 	</skill>
 	<skill id="6093" toLevel="1" name="Panther Hide">
 		<!-- Allows one to stay hidden. Movement speed -10%. The effect is canceled if any action other than movement is initiated. -->
+		<icon>icon.skill0922</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<effectPoint>679</effectPoint>
-		<icon>icon.skill0922</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>42</mpConsume>
 		<operateType>A2</operateType>
@@ -1628,11 +1628,11 @@
 	</skill>
 	<skill id="6094" toLevel="11" name="Panther Cancel">
 		<!-- Cancels multiple enemy buffs. -->
+		<icon>icon.skill6094</icon>
 		<castRange>40</castRange>
 		<effectPoint>-475</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill6094</icon>
 		<magicLvl>
 			<value level="1">68</value>
 			<value level="2">72</value>
@@ -1663,6 +1663,7 @@
 	</skill>
 	<skill id="6095" toLevel="15" name="Panther Dark Claw">
 		<!-- Damages the target, decreasing Dark Attack Resistance by $s3 for $s2. -->
+		<icon>icon.skill1445</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
@@ -1674,7 +1675,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1445</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -1729,12 +1729,12 @@
 	</skill>
 	<skill id="6096" toLevel="13" name="Panther Fatal Claw">
 		<!-- Panther's P. Atk. is supplemented with $s1 Power added to P. Atk., in a deadly attack. -->
+		<icon>icon.skill6096</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>-475</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill6096</icon>
 		<magicLvl>
 			<value level="1">60</value>
 			<value level="2">64</value>
@@ -1780,9 +1780,9 @@
 	</skill>
 	<skill id="6097" toLevel="1" name="Scissors">
 		<!-- Scissors. -->
+		<icon>icon.xmas_gawi_i00</icon>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.xmas_gawi_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1797,9 +1797,9 @@
 	</skill>
 	<skill id="6098" toLevel="1" name="Rock">
 		<!-- Rock. -->
+		<icon>icon.xmas_bawi_i00</icon>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.xmas_bawi_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1814,9 +1814,9 @@
 	</skill>
 	<skill id="6099" toLevel="1" name="Paper">
 		<!-- Paper. -->
+		<icon>icon.xmas_bo_i00</icon>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.xmas_bo_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>

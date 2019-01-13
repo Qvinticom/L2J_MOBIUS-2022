@@ -2,42 +2,44 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="13652" toLevel="1" name="Put on Lv. 3 Brooch">
 		<!-- Brooch radiates bright light. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13653" toLevel="1" name="Remove Lv. 3 Brooch">
 		<!-- Bright light fades. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13654" toLevel="1" name="Put on Lv. 2 Brooch">
 		<!-- Brooch radiates bright light. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13655" toLevel="1" name="Remove Lv. 2 Brooch">
 		<!-- Bright light fades. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13656" toLevel="1" name="Lv. 1 Brooch">
 		<!-- Activates 2 jewel slots. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_bm_brooch_lavianrose_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13657" toLevel="1" name="Lv. 2 Brooch">
 		<!-- Activates 3 jewel slots. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_bm_brooch_lavianrose_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13658" toLevel="1" name="Lv. 3 Brooch">
 		<!-- Activates 4 jewel slots. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_bm_brooch_lavianrose_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13661" toLevel="2" name="Lv. 3 Brooch - Additional Effect">
 		<!-- Inventory Slot +5. -->
-		<icon>icon.skill0000</icon>
+		<icon>
+			<value level="1">icon.etc_bm_brooch_lavianrose_i00</value>
+			<value level="2">icon.etc_bm_brooch_lavianrose_i01</value>
+			<value level="3">icon.etc_bm_brooch_lavianrose_i03</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

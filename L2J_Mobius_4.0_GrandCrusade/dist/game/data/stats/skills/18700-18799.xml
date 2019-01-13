@@ -168,7 +168,7 @@
 	</skill>
 	<skill id="18702" toLevel="1" name="Pa'agrio's Blessing">
 		<!-- Dimensional Item. For 30 min., Max HP/MP/CP + 10%, P. Atk. + 20%, M. Atk. + 30%, P./M. Def + 10%, P. Accuracy+ 4, M. Accuracy + 4, Atk./Casting Spd. + 10%, Speed + 10, Attack Attribute + 100, Skill MP Consumption - 10%. Additionally, Damage + 10%, Skill Power + 10. Buff remains in place after death. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -264,7 +264,7 @@
 	</skill>
 	<skill id="18703" toLevel="1" name="Pa'agrio's Blessing">
 		<!-- Dimensional Item. For 30 min., Max HP/MP/CP + 10%, P. Atk. + 20%, M. Atk. + 30%, P./M. Def + 10%, P. Accuracy+ 4, M. Accuracy + 4, Atk./Casting Spd. + 10%, Speed + 10, Attack Attribute + 100, Skill MP Consumption - 10%. Additionally, XP Gain + 30%, Vitality Bonus + 12. Buff remains in place after death. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -360,20 +360,17 @@
 	</skill>
 	<skill id="18704" toLevel="1" name="MOPP Combat Ration">
 		<!-- MOPP Combat Ration. Increases Attack/M. Attack/P. Defense/M. Defense by $s2 and XP and SP acquisition by $s3 for $s1. This effect expires when restarted. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.ev_mopp_herb</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18705" toLevel="3" name="Low-grade Arena Loot">
 		<!-- Double-click to obtain a special item. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18706" toLevel="1" name="Player Commendation Points">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18710" toLevel="1" name="Formal Wear Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -385,17 +382,24 @@
 	</skill>
 	<skill id="18711" toLevel="1" name="Blessing of Twilight">
 		<!-- Increases XP and SP acquisition by 50% for 1 hour. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18712" toLevel="1" name="Blessing of the Dawn">
 		<!-- Increases XP and SP acquisition by 50% for 1 hour. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys2.icon.g_twilight_gem</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18713" toLevel="6" name="Red Cat's Eye">
 		<!-- P. Critical Damage + $s1, P. Skill Critical Damage + $s2. -->
-		<icon>icon.skill0000</icon>
+		<icon>
+			<value level="1">icon.bm_jewel_red_catseye</value>
+			<value level="2">icon.bm_jewel_red_catseye</value>
+			<value level="3">icon.bm_jewel_red_catseye</value>
+			<value level="4">icon.bm_jewel_red_catseye</value>
+			<value level="5">icon.bm_jewel_red_catseye</value>
+			<value level="6">icon.bm_jewel_red_catseye_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -430,7 +434,14 @@
 	</skill>
 	<skill id="18714" toLevel="6" name="Blue Cat's Eye">
 		<!-- M. Skill Critical Damage + $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>
+			<value level="1">Icon.bm_jewel_blue_catseye</value>
+			<value level="2">Icon.bm_jewel_blue_catseye</value>
+			<value level="3">Icon.bm_jewel_blue_catseye</value>
+			<value level="4">Icon.bm_jewel_blue_catseye</value>
+			<value level="5">Icon.bm_jewel_blue_catseye</value>
+			<value level="6">icon.bm_jewel_blue_catseye_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -466,6 +477,14 @@
 	</skill>
 	<skill id="18717" toLevel="6" name="Ruby">
 		<!-- Increases Soulshot/Beast Soulshot damage by $s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="2">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="3">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="4">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="5">icon.etc_bm_jewel_ruby_i00</value>
+			<value level="6">icon.bm_jewel_ssdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -487,6 +506,14 @@
 	</skill>
 	<skill id="18719" toLevel="6" name="Sapphire">
 		<!-- Increases Spiritshot/Blessed Spiritshot damage by $s1. -->
+		<icon>
+			<value level="1">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="2">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="3">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="4">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="5">icon.etc_bm_jewel_sapphire_i00</value>
+			<value level="6">icon.bm_jewel_spsdmg_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -561,12 +588,10 @@
 		</effects>
 	</skill>
 	<skill id="18723" toLevel="4" name="Ultimate Jewelry Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18724" toLevel="2" name="Red Cat's Eye Fortune Box">
 		<!-- Double-click to obtain 1 Red Cat's Eye Lv. 1-5. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18725" toLevel="1" name="Freya's Art of Seduction - Barrier">
@@ -741,6 +766,7 @@
 	</skill>
 	<skill id="18727" toLevel="1" name="Pa??agrio??s Blessing - Might">
 		<!-- Receives the following effects for 30 minutes: Increased Maximum HP/MP/CP by 10%, Attack by 20%, M. Attack by 30%, P. Defense/M. Defense by 10%, P. Accuracy by 4, M. Accuracy by 4, Attack/Casting Speed by 10%, Speed by 10, Attack attribute by 100 with decreased MP consumption by skills by 10%. Additionally increases Damage and Skill Power by 10% each. This buff remains effective even when you??re dead. -->
+		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -840,7 +866,7 @@
 	</skill>
 	<skill id="18728" toLevel="1" name="Pa??agrio??s Blessing - EXP">
 		<!-- Receives the following effects for 30 minutes: increased Maximum HP/MP/CP by 10%, Attack by 20%, M. Attack by 30%, P. Defense/M. Defense by 10%, P. Accuracy by 4, M. Accuracy by 4, Attack/Casting Speed by 10%, Speed by 10, Attack attribute by 100 with decreased MP consumption by skills by 10%. Additionally increases XP and Vitality bonus by 30% and 12%, each. This buff remains effective even when you??re dead. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -949,20 +975,19 @@
 		</effects>
 	</skill>
 	<skill id="18729" toLevel="1" name="Treat Wounded Soldier">
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18730" toLevel="1" name="Craft Protection Battery Parts">
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18731" toLevel="1" name="Activate Protection Battery">
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0246</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18732" toLevel="4" name="Low-grade Keucereus Defense Supply Box">
 		<!-- Double-click to obtain an item. -->
-		<icon>icon.skill0000</icon>
 		<itemConsumeId>
 				<value level="1">47729</value>
 				<value level="2">47730</value>
@@ -1115,32 +1140,30 @@
 	</skill>
 	<skill id="18733" toLevel="1" name="Guardian Captain Isburg Elimination Commemorative Supply Items">
 		<!-- Double-click to obtain an item. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18734" toLevel="1" name="Balthus Knight Camouflage">
 		<!-- Disguised as one of the Balthus Knight. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18735" toLevel="1" name="Balthus Knight Camouflage">
 		<!-- Disguised as one of the Balthus Knight. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18736" toLevel="1" name="Balthus Knight Camouflage">
 		<!-- Disguised as one of the Balthus Knight. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18737" toLevel="1" name="Balthus Knight Camouflage">
 		<!-- Disguised as one of the Balthus Knight. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18738" toLevel="1" name="+10 Blessed Amaranthine Weapon Supply Items">
 		<!-- Use this to obtain one of the Blessed Amaranthine Weapons enchanted by +10. -->
-		<icon>icon.skill18738</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>47746</itemConsumeId>
@@ -1208,12 +1231,10 @@
 	</skill>
 	<skill id="18739" toLevel="3" name="+8 Blessed Eternal Armor Heavy Capsule">
 		<!-- Use this to obtain the Blessed Eternal Armor: Heavy Armor Set enchanted by +8. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18740" toLevel="1" name="+8 Blessed Eternal Armor Supply Items">
 		<!-- Double-click to obtain an item. -->
-		<icon>icon.skill18740</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>47747</itemConsumeId>
@@ -1456,7 +1477,7 @@
 	</skill>
 	<skill id="18743" toLevel="1" name="Pa??agrio??s Blessing - Might">
 		<!-- Receives the following effects for 30 minutes: Increased Maximum HP/MP/CP by 10%, Attack by 20%, M. Attack by 30%, P. Defense/M. Defense by 10%, P. Accuracy by 4, M. Accuracy by 4, Attack/Casting Speed by 10%, Speed by 10, Attack attribute by 100 with decreased MP consumption by skills by 10%. Additionally increases Damage and Skill Power by 10% each. This buff remains effective even when you??re dead. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -1556,7 +1577,7 @@
 	</skill>
 	<skill id="18744" toLevel="1" name="Pa??agrio??s Blessing - EXP">
 		<!-- Receives the following effects for 30 minutes: increased Maximum HP/MP/CP by 10%, Attack by 20%, M. Attack by 30%, P. Defense/M. Defense by 10%, P. Accuracy by 4, M. Accuracy by 4, Attack/Casting Speed by 10%, Speed by 10, Attack attribute by 100 with decreased MP consumption by skills by 10%. Additionally increases XP and Vitality bonus by 30% and 12%, each. This buff remains effective even when you??re dead. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -1634,243 +1655,242 @@
 	</skill>
 	<skill id="18745" toLevel="3" name="Dragon??s Treasure Chest">
 		<!-- Double-click to obtain an item. -->
-		<icon>icon.skill0000</icon>
+		<icon>
+			<value level="1">icon.bm_dragon_posion</value>
+			<value level="2">icon.bm_dragon_posion_brave</value>
+			<value level="3">icon.skill0000</value>
+		</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18746" toLevel="1" name="Dragon??s Elemental Potion">
 		<!-- Receives a boosting effect for Attack attribute by $s2 and all Defense attributes by $s3 for $s1. This buff remains effective even when you??re dead. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_dragon_posion</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18747" toLevel="1" name="Dragon??s Elemental Potion - XP">
 		<!-- Receives a boosting effect for Attack attribute by $s2, all Defense attributes by $s3 and XP/SP Acquisition by $s4 for $s1. This buff remains effective even when you??re dead. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_dragon_posion_brave</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18748" toLevel="4" name="Horn Melody of Red">
 		<!-- Increases P. Attack by $s2, P. Defense by $s3, M. Attack by $s4 and M. Defense by $s5 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11517</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18749" toLevel="4" name="Drum Melody of Red">
 		<!-- Decreases Maximum MP by $s2, HP Recovery bonus by $s3, M. Critical Rate by $s4, Critical Damage for general attacks by $s5, attack by $s6, P. Defense by $s7, Attack Speed by $s8, M. Attack by $s9, M. Defense by $s10, Casting Speed by $s11, Debuff Resistance by $s12, and Critical Damage Received by $s13 for $s1. Has a chance to deal critical damage when dealing additional hits. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11522</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18750" toLevel="4" name="Pipe Organ Melody of Red">
 		<!-- Increases Maximum HP by $s2, Maximum MP by $s3, Maximum CP by $s4 and HP Recovery bonus by $s5 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11519</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18751" toLevel="4" name="Guitar Melody of Red">
 		<!-- Increases P. Critical Rate by $s2, P. Critical Damage by $s3, and M. Critical Rate by $s4, and decreases MP consumption by P./M. skills and Yis Enchanter??s enchanting skills by $s5, $s6, and $s7, respectively, for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11520</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18752" toLevel="4" name="Harp Melody of Red">
 		<!-- Increases P. Accuracy by $s2 and P./M. Evasion by $s3, and Speed by $s4, and decreases Critical Damage Received by $s5 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11521</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18753" toLevel="4" name="Lute Melody of Red">
 		<!-- Increases Attack Speed and Casting Speed by $s2 and $s3, respectively, for $s1, and applies the Vampiric Rage effect for $s4 at a certain probability. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11518</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18754" toLevel="1" name="Prevailing Sonata of Red">
 		<!-- Increases Attack Speed by $s2, Casting Speed by $s3, Maximum HP by $s4, and MP Recovery bonus by $s5, and decreases MP consumption for casting skill by $s6 and a chance of magic being canceled for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11529</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18755" toLevel="1" name="Daring Sonata of Red">
 		<!-- Increases P. Attack by $s2, M. Attack by $s3 and Attack Speed/Casting Speed by $s4, and decreases P. Defense by $s5, M. Defense by $s6 and P. Evasion by $s7 for $s1. Additionally, the Vampiric Rage effect applies by $s8 at a certain probability and $s9 of damage is returned to the enemy if hit at an attack. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11530</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18756" toLevel="1" name="Refreshing Sonata of Red">
 		<!-- Increases HP Recovery bonus by $s2, P. Accuracy by $s3, P. Evasion by $s4, and Speed by $s5, and decreases MP consumption for casting skill by $s6 and skill cooldown by $s7 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11532</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18757" toLevel="1" name="Knight's Harmony of Red">
 		<!-- Increases P. Attack by $s2, P. Critical Damage by $s3, P. Critical Rate by $s4, P. Defense by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11523</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18758" toLevel="1" name="Warrior's Harmony of Red">
 		<!-- Increases P. Attack by $s2, P. Critical Damage by $s3, P. Critical Rate by $s4, Attack Speed by $s5, M. Attack by $s6, Casting Speed by $s7 and Speed by $s8 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11524</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18759" toLevel="1" name="Wizard's Harmony of Red">
 		<!-- Increases M. Attack by $s2, M. Critical Rate by $s3, Casting Speed by $s4, P. Attack by $s5, Attack Speed by $s6, Speed by $s7, M. Defense by $s8 and MP Recovery bonus by $s9, and decreases MP consumption of M. skills and P. skills by $s10 and $s11, respectively, and skill cooldown by $s12 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11525</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18760" toLevel="1" name="Mighty Prophecy of Red">
 		<!-- Increases critical rate and damage of general attacks and skill attacks by $s2 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19204</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18761" toLevel="1" name="Pink??s Style Potion - Kelbim Light Armor">
 		<!-- Appearance changed by wearing the Kelbim light armor. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18762" toLevel="1" name="Pink's Style Potion - Freya Robe">
 		<!-- Appearance changed by wearing Freya's Robe. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18763" toLevel="1" name="Pink's Style Potion - Blue Dynasty">
 		<!-- Appearance changed by wearing the Blue Dynasty armor. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18764" toLevel="1" name="Pink's Style Potion - White Assassin">
 		<!-- Appearance changed by wearing the White Assassin??s costume. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18765" toLevel="1" name="Pink's Style Potion - Formal Wear">
 		<!-- Appearance changed by wearing the formal wear. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18766" toLevel="1" name="Pink's Style Potion - Vampiric">
 		<!-- Appearance changed by wearing the vampiric costume. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18767" toLevel="1" name="Pink's Style Potion - Green Archer">
 		<!-- Appearance changed by wearing the Green Archer costume. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18768" toLevel="1" name="Pink's Style Potion - Magician">
 		<!-- Appearance changed by wearing the wizard costume. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18769" toLevel="1" name="Scroll: Enchant Faint Elemental Shirt">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18770" toLevel="1" name="Scroll: Enchant Brilliant Elemental Shirt">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18771" toLevel="1" name="Einhasad??s Charisma Potion">
 		<!-- Receives a CHA $s2 boosting effect for $s1. Unavailable to use in Olympiad. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_instant_charisma_potion_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18772" toLevel="4" name="Horn Melody">
 		<!-- Increases P. Attack by $s2, P. Defense by $s3, M. Attack by $s4 and M. Defense by $s5 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11517</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18773" toLevel="4" name="Drum Melody">
 		<!-- Decreases Maximum MP by $s2, HP Recovery bonus by $s3, M. Critical Rate by $s4, Critical Damage for general attacks by $s5, attack by $s6, P. Defense by $s7, Attack Speed by $s8, M. Attack by $s9, M. Defense by $s10, Casting Speed by $s11, Debuff Resistance by $s12, and Critical Damage Received by $s13 for $s1. Additionally, a party member who is equipped with a melee weapon, bow and crossbow and hit by an attack with certain power experiences boosted critical damage for general attacks. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11522</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18774" toLevel="4" name="Pipe Organ Melody">
 		<!-- Increases Maximum HP by $s2, Maximum MP by $s3, Maximum CP by $s4 and HP Recovery bonus by $s5 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11519</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18775" toLevel="4" name="Guitar Melody">
 		<!-- Increases P. Critical Rate by $s2, P. Critical Damage by $s3, and M. Critical Rate by $s4, and decreases MP consumption by P./M. skills and Yis Enchanter??s enchanting skills by $s5, $s6, and $s7, respectively, for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11520</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18776" toLevel="4" name="Harp Melody">
 		<!-- Increases P. Accuracy by $s2 and P./M. Evasion by $s3, and Speed by $s4, and decreases Critical Damage Received by $s5 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11521</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18777" toLevel="4" name="Lute Melody">
 		<!-- Increases Attack Speed and Casting Speed by $s2 and $s3, respectively, for $s1, and applies the Vampiric Rage effect for $s4 at a certain probability. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11518</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18778" toLevel="1" name="Knight's Harmony">
 		<!-- Increases P. Attack by $s2, P. Critical Damage by $s3, P. Critical Rate by $s4, P. Defense by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11523</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18779" toLevel="1" name="Warrior's Harmony">
 		<!-- Increases P. Attack by $s2, P. Critical Damage by $s3, P. Critical Rate by $s4, Attack Speed by $s5, M. Attack by $s6, Casting Speed by $s7 and Speed by $s8 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11524</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18780" toLevel="1" name="Wizard's Harmony">
 		<!-- Increases M. Attack by $s2, M. Critical Rate by $s3, Casting Speed by $s4, P. Attack by $s5, Attack Speed by $s6, Speed by $s7, M. Defense by $s8 and MP Recovery bonus by $s9, and decreases MP consumption of M. skills and P. skills by $s10 and $s11, respectively, and skill cooldown by $s12 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11525</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18781" toLevel="1" name="Prevailing Sonata">
 		<!-- Increases Attack Speed by $s2, Casting Speed by $s3, Maximum HP by $s4, and MP Recovery bonus by $s5, and decreases MP consumption for casting skill by $s6 and a chance of magic being canceled for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11529</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18782" toLevel="1" name="Daring Sonata">
 		<!-- Increases P. Attack by $s2, M. Attack by $s3 and Attack Speed/Casting Speed by $s4, and decreases P. Defense by $s5, M. Defense by $s6 and P. Evasion by $s7 for $s1. Additionally, the Vampiric Rage effect applies by $s8 at a certain probability and $s9 of damage is returned to the enemy if hit at an attack. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11530</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18783" toLevel="1" name="Refreshing Sonata">
 		<!-- Increases HP Recovery bonus by $s2, P. Accuracy by $s3, P. Evasion by $s4, and Speed by $s5, and decreases MP consumption for casting skill by $s6 and skill cooldown by $s7 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11532</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18784" toLevel="1" name="Elements Resistance">
 		<!-- Increases a party member??s Fire/Water/Wind/Earth Resistance by $s3, which are $s2 major elemental attributes, for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11565</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18785" toLevel="1" name="Holy Attack Resistance">
 		<!-- Increases a party member's resistance to Holy and Dark attribute attacks by $s2 and to Poison and Bleed by $s3 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11567</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18786" toLevel="1" name="Mental Attack Resistance">
 		<!-- Increases a party member??s resistance to Hold/Sleep/Mental attacks by $s2, to buff-canceling attacks by $s3, and to debuff attacks by $s4 for $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11824</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18787" toLevel="1" name="Angel Cat's Blessing">
 		<!-- Receives the following effects for 30 minutes: increased Maximum HP/MP/CP by 30%, Attack by 20%, M. Attack by 30%, P. Defense/M. Defense by 30%, Attack/Casting Speed by 10%, Speed by 20, Attack attribute by 100 with decreased MP consumption by skills by 15%. Additionally increases bonus XP/SP by 50% each. This buff remains effective even when you??re dead. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys3.g_blessing_of_angel_cat_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18788" toLevel="2" name="Puss the Cat??s Blessing">
 		<!-- Puss the Cat gave you this buff as encouragement for cultivating watermelons. It increases bonus XP obtained under the Vitality state by 30% and gives you 250 Nectars at the end of the buff??s duration. Be careful - you won??t get any of them when you??re dead. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18789" toLevel="1" name="Puss the Cat??s Gift">
-		<icon>icon.skill0000</icon>
+		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18790" toLevel="1" name="Sweet Rice Cakes">
 		<!-- Vitality Recovery by 35,000 -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18791" toLevel="1" name="Hanbok Outfit">
 		<!-- Appearance changed by wearing Hanbok for the holiday in the East. Increases basic stats by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.armor_t2000_b_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18792" toLevel="1" name="Test Adena Box">
 		<!-- Double-click to obtain an item. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18793" toLevel="2" name="Spellbook: Vitality of the Exalted Lv. 1">
-		<icon>icon.skill0000</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1909,31 +1929,29 @@
 	</skill>
 	<skill id="18794" toLevel="2" name="Puss the Cat??s Blessing">
 		<!-- Puss the Cat gave you this buff as encouragement for cultivating watermelons. It increases bonus XP obtained under the Vitality state by 30% and gives you 100 Nectars at the end of the buff??s duration. Be careful - you won??t get any of them when you??re dead. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18795" toLevel="1" name="Puss the Cat??s Gift">
-		<icon>icon.skill0000</icon>
+		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18796" toLevel="3" name="Angel??s Fortune Box">
 		<!-- Double-click to obtain 30 Shining Magic Baits. Either Archangel??s Box of Grace or Nevit??s Blessing Box is available to get with a random chance. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18797" toLevel="1" name="Nevit??s Gold Hourglass">
 		<!-- Increases EXP/SP acquired from hunting by 50% for 30 minutes and obtains 1 Shining Scroll of Growth each time you obtain 5 billion EXP. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_nebit_bonus_time_up</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18798" toLevel="1" name="Shining Scroll of Growth">
 		<!-- When used, 1 billion EXP obtained, is only 20% effective after Lv 99. Can be used above Lv 85. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_nebit_exp_book</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18799" toLevel="4" name="First Gift Box">
 		<!-- Double-click for a chance to get a reward. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

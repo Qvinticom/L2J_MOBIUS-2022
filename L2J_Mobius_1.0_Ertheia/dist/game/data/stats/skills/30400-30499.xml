@@ -27,11 +27,11 @@
 	</skill>
 	<skill id="30401" toLevel="2" name="Tenacity">
 		<!-- Max. HP + 1%, Speed + 4. -->
+		<icon>icon.skill30401</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">85</value>
 		</magicLvl>
-		<icon>icon.skill30401</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">

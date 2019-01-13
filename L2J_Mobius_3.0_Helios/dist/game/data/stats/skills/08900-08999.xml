@@ -192,11 +192,11 @@
 	</skill>
 	<skill id="8904" toLevel="1" name="Summon Eviscerator Fox">
 		<!-- Mount the Eviscerator's pet fox. -->
+		<icon>icon.skill8904</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>icon.skill8904</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -215,11 +215,11 @@
 	</skill>
 	<skill id="8905" toLevel="1" name="Summon Sayha's Seer Fox">
 		<!-- Mount the Sayha's Seer's pet fox. -->
+		<icon>icon.skill8905</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>icon.skill8905</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -238,10 +238,10 @@
 	</skill>
 	<skill id="8906" toLevel="1" name="Riding the Hell Hound">
 		<!-- The Hell Hound can be mounted. -->
+		<icon>icon.hellound_vehicle</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
-		<icon>icon.hellound_vehicle</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -277,10 +277,10 @@
 	</skill>
 	<skill id="8907" toLevel="1" name="Riding the Pegasus">
 		<!-- The Pegasus can be mounted. -->
+		<icon>icon.pegasus_vehicle</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
-		<icon>icon.pegasus_vehicle</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -317,10 +317,10 @@
 	</skill>
 	<skill id="8908" toLevel="1" name="Riding the Wing Hound">
 		<!-- The Wing Hound can be mounted. -->
+		<icon>icon.winghound_vehicle</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
-		<icon>icon.winghound_vehicle</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -358,10 +358,10 @@
 	</skill>
 	<skill id="8909" toLevel="1" name="Riding the War Horse">
 		<!-- The War Horse can be mounted. -->
+		<icon>icon.warhorse_vehicle</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
-		<icon>icon.warhorse_vehicle</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -399,10 +399,10 @@
 	</skill>
 	<skill id="8910" toLevel="1" name="Riding the Griffin">
 		<!-- The Griffin can be mounted. -->
+		<icon>icon.griffin_vehicle</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
-		<icon>icon.griffin_vehicle</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>

@@ -86,11 +86,11 @@
 	</skill>
 	<skill id="13905" toLevel="1" name="Red Libra Talisman - Resurrection">
 		<!-- Resurrects all dead party members. Additionally restores around 100% XP. -->
+		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<affectLimit>0-0</affectLimit>
 		<affectRange>1000</affectRange>
 		<effectPoint>2</effectPoint>
 		<magicLvl>85</magicLvl>
-		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>300</coolTime>
@@ -113,9 +113,9 @@
 	</skill>
 	<skill id="13906" toLevel="1" name="Red Libra Talisman - Recovery">
 		<!-- Recovers the HP/ MP/ CP of all party members, with a chance of cancelling out party debuffs. -->
+		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<affectRange>1000</affectRange>
 		<magicLvl>85</magicLvl>
-		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>300</coolTime>
@@ -147,12 +147,12 @@
 	</skill>
 	<skill id="13907" toLevel="1" name="Red Libra Talisman - Cancel">
 		<!-- Dispels debuffs of all party members, and grants 7-second debuff immunity. -->
+		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<abnormalTime>7</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<affectRange>1000</affectRange>
 		<magicLvl>85</magicLvl>
-		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>300</coolTime>
@@ -179,9 +179,9 @@
 	</skill>
 	<skill id="13908" toLevel="1" name="Red Libra Talisman - Teleport">
 		<!-- Increases the speed of all party members by 70 for 10 seconds. -->
+		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
-		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>300</coolTime>
@@ -2121,6 +2121,7 @@
 	</skill>
 	<skill id="13956" toLevel="10" name="Activate.Stun">
 		<!-- Stun makes movement temporarily impossible. Ignores debuff immunity. -->
+		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2139,7 +2140,6 @@
 		<activateRate>-1</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<trait>SHOCK</trait>
-		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2169,6 +2169,7 @@
 	</skill>
 	<skill id="13957" toLevel="10" name="Activate.Silence">
 		<!-- Silence has temporarily restrained skills. Ignores debuff immunity. -->
+		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2187,7 +2188,6 @@
 		<activateRate>-1</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<trait>DERANGEMENT</trait>
-		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2216,6 +2216,7 @@
 	</skill>
 	<skill id="13958" toLevel="10" name="Activate.Hold">
 		<!-- Hold has made movement temporarily impossible. Ignores debuff immunity. -->
+		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2234,7 +2235,6 @@
 		<activateRate>-1</activateRate>
 		<trait>HOLD</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.bm_ensoul_stone_hidden</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2482,14 +2482,14 @@
 	</skill>
 	<skill id="13972" toLevel="4" name="Sayha's Benefaction">
 		<!-- Decreases damage received by $s2 for $s1. -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>45</abnormalTime>
 		<icon>
 			<value level="1">icon.sayhas_talisman_g_Lv1</value>
 			<value level="2">icon.sayhas_talisman_g_Lv2</value>
 			<value level="3">icon.sayhas_talisman_g_Lv3</value>
 			<value level="4">icon.sayhas_talisman_g_Lv4</value>
 		</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2529,14 +2529,14 @@
 	</skill>
 	<skill id="13973" toLevel="4" name="Sayha's Encouragement">
 		<!-- Increases PVE damage by $s2 for $s1. -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>45</abnormalTime>
 		<icon>
 			<value level="1">icon.sayhas_talisman_pve_Lv1</value>
 			<value level="2">icon.sayhas_talisman_pve_Lv2</value>
 			<value level="3">icon.sayhas_talisman_pve_Lv3</value>
 			<value level="4">icon.sayhas_talisman_pve_Lv4</value>
 		</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2583,14 +2583,14 @@
 	</skill>
 	<skill id="13974" toLevel="4" name="Sayha's Anger">
 		<!-- Increases PvP damage by $s2 for $s1. -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>45</abnormalTime>
 		<icon>
 			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
 			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
 			<value level="3">icon.sayhas_talisman_pvp_Lv3</value>
 			<value level="4">icon.sayhas_talisman_pvp_Lv4</value>
 		</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

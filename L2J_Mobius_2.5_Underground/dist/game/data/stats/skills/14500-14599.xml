@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="14500" toLevel="1" name="Hand of Death">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 		<rideState>NONE</rideState>
@@ -14,7 +13,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="14501" toLevel="1" name="Glimpse of Terror">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 		<rideState>NONE</rideState>
@@ -27,7 +25,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="14502" toLevel="1" name="Destruction of the Soul">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 		<rideState>NONE</rideState>
@@ -40,7 +37,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="14503" toLevel="1" name="Recovering Earth Wyrm">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 		<rideState>NONE</rideState>
@@ -52,7 +48,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14504" toLevel="1" name="Fainted Earth Wyrm">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 		<rideState>NONE</rideState>
@@ -64,7 +59,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14505" toLevel="1" name="Enraged Earth Wyrm Appearance">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 		<rideState>NONE</rideState>
@@ -732,7 +726,6 @@
 		</effects>
 	</skill>
 	<skill id="14526" toLevel="1" name="Roar of Death">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<rideState>NONE</rideState>
@@ -1875,7 +1868,6 @@
 		</effects>
 	</skill>
 	<skill id="14563" toLevel="1" name="Cancel Invincibility">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>500</hitTime>
@@ -2095,6 +2087,7 @@
 	</skill>
 	<skill id="14571" toLevel="5" name="Shilen's Breath">
 		<!-- Is killed and poisoned by Shilen's Breath. Increases Dark Attack Resistance by $s1 and HP recovery by $s2. If killed while poisoned, the poison stage increases. -->
+		<icon>icon.skill5076_c</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2109,7 +2102,6 @@
 			<value level="4">300</value>
 			<value level="5">300</value>
 		</abnormalTime>
-		<icon>icon.skill5076_c</icon>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 		<canBeDispelled>false</canBeDispelled>
@@ -2266,7 +2258,6 @@
 		</effects>
 	</skill>
 	<skill id="14573" toLevel="1" name="Spezion Self-destruction">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<rideState>NONE</rideState>
@@ -2287,7 +2278,6 @@
 		</effects>
 	</skill>
 	<skill id="14574" toLevel="1" name="Energy Bomb">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<rideState>NONE</rideState>

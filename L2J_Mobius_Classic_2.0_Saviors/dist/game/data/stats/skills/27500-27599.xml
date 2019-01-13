@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="27598" toLevel="1" name="Excellent Hit">
 		<!-- Allows to concentrate on the ball and strike it with enough force to do a home run. -->
-		<icon>BranchIcon.Icon.homerun</icon>
+		<icon>icon.homerun</icon>
 		<operateType>A2</operateType>
 		<hitTime>5500</hitTime>
 		<coolTime>400</coolTime>
@@ -10,7 +10,7 @@
 	</skill>
 	<skill id="27599" toLevel="1" name="Excellent Serve">
 		<!-- Allows to serve the ball with enough force to stop the batter from hitting it. -->
-		<icon>BranchIcon.Icon.strikeout</icon>
+		<icon>icon.strikeout</icon>
 		<operateType>A2</operateType>
 		<hitTime>5500</hitTime>
 		<coolTime>400</coolTime>

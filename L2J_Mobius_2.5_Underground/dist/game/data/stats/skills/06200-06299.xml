@@ -2,11 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="6200" toLevel="1" name="Dispel NPC Transformation">
 		<!-- Cancels transformation. -->
+		<icon>icon.skilltransform2</icon>
 		<castRange>900</castRange>
 		<effectPoint>10</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform2</icon>
 		<magicLvl>56</magicLvl>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -25,13 +25,13 @@
 	</skill>
 	<skill id="6201" toLevel="1" name="Transformed: Frog">
 		<!-- Transformed into a frog. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>520</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<castRange>900</castRange>
 		<effectPoint>10</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -73,13 +73,13 @@
 	</skill>
 	<skill id="6202" toLevel="1" name="Transformed: Young Child">
 		<!-- Transformed into a young child. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>460</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<castRange>900</castRange>
 		<effectPoint>10</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -121,13 +121,13 @@
 	</skill>
 	<skill id="6203" toLevel="1" name="Transformed: Native">
 		<!-- Transformed into a native. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>215</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<castRange>900</castRange>
 		<effectPoint>10</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -169,13 +169,13 @@
 	</skill>
 	<skill id="6204" toLevel="1" name="Transformed: Guards of the Dawn">
 		<!-- Transformed into a Guard of the Dawn. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>-1</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<castRange>900</castRange>
 		<effectPoint>10</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -465,12 +465,12 @@
 	</skill>
 	<skill id="6207" toLevel="1" name="Strider Dash">
 		<!-- Increases one's own Speed by 66 for 15 seconds. -->
+		<icon>icon.action108</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>438</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.action108</icon>
 		<magicLvl>56</magicLvl>
 		<mpConsume>55</mpConsume>
 		<operateType>A2</operateType>
@@ -490,10 +490,10 @@
 	</skill>
 	<skill id="6208" toLevel="1" name="Blessed Guidance">
 		<!-- Blessed Guidance. For 10 seconds, increases Accuracy by 2. -->
+		<icon>icon.skill1240</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
-		<icon>icon.skill1240</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -731,10 +731,10 @@
 	</skill>
 	<skill id="6235" toLevel="1" name="Blessed Focus">
 		<!-- Blessing's Focus. Increases Critical Rate for 1 minute. -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
-		<icon>icon.skill1077</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -759,6 +759,7 @@
 	</skill>
 	<skill id="6237" toLevel="1" name="Decrease Speed">
 		<!-- Speed is reduced by 80% for 10 seconds. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -766,7 +767,6 @@
 		<affectRange>300</affectRange>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
@@ -785,6 +785,7 @@
 	</skill>
 	<skill id="6238" toLevel="1" name="Decrease Speed">
 		<!-- Speed/Casting Spd./Atk. Spd. are reduced by 50% for 20 seconds. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -794,7 +795,6 @@
 		<effectPoint>-100</effectPoint>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
@@ -848,6 +848,7 @@
 	</skill>
 	<skill id="6240" toLevel="5" name="Heatstroke">
 		<!-- Heatstroke stage $s1. Inflicted with heatstroke. You are extremely hot and fatigued. -->
+		<icon>icon.etc_ashes_white_i00</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -858,7 +859,6 @@
 		<abnormalTime>86400</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.etc_ashes_white_i00</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
@@ -882,11 +882,11 @@
 	</skill>
 	<skill id="6241" toLevel="1" name="Heatstroke Prevention Effect - Gludio">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Gludio region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -901,11 +901,11 @@
 	</skill>
 	<skill id="6242" toLevel="1" name="Heatstroke Prevention Effect - Dion">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Dion region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -920,11 +920,11 @@
 	</skill>
 	<skill id="6243" toLevel="1" name="Heatstroke Prevention Effect - Giran">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Giran region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -939,11 +939,11 @@
 	</skill>
 	<skill id="6244" toLevel="1" name="Heatstroke Prevention Effect - Oren">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Oren region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -958,11 +958,11 @@
 	</skill>
 	<skill id="6245" toLevel="1" name="Heatstroke Prevention Effect - Aden">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Aden region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -977,11 +977,11 @@
 	</skill>
 	<skill id="6246" toLevel="1" name="Heatstroke Prevention Effect - Innadril">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Innadril region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -996,11 +996,11 @@
 	</skill>
 	<skill id="6247" toLevel="1" name="Heatstroke Prevention Effect - Goddard">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Goddard region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1015,11 +1015,11 @@
 	</skill>
 	<skill id="6248" toLevel="1" name="Heatstroke Prevention Effect - Rune">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Rune region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1034,11 +1034,11 @@
 	</skill>
 	<skill id="6249" toLevel="1" name="Heatstroke Prevention Effect -Schuttgart">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Schuttgart region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1053,12 +1053,12 @@
 	</skill>
 	<skill id="6250" toLevel="1" name="Severe Heatstroke">
 		<!-- Severe heatstroke. Sultriness is summoned. -->
+		<icon>icon.etc_ashes_red_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-1111</effectPoint>
-		<icon>icon.etc_ashes_red_i00</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1105,11 +1105,11 @@
 	</skill>
 	<skill id="6253" toLevel="1" name="Heatstroke Prevention Effect - Gludio">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Gludio region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1125,11 +1125,11 @@
 	</skill>
 	<skill id="6254" toLevel="1" name="Heatstroke Prevention Effect - Dion">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Dion region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1145,11 +1145,11 @@
 	</skill>
 	<skill id="6255" toLevel="1" name="Heatstroke Prevention Effect - Giran">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Giran region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1165,11 +1165,11 @@
 	</skill>
 	<skill id="6256" toLevel="1" name="Heatstroke Prevention Effect - Oren">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Oren region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1185,11 +1185,11 @@
 	</skill>
 	<skill id="6257" toLevel="1" name="Heatstroke Prevention Effect - Aden">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Aden region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1205,11 +1205,11 @@
 	</skill>
 	<skill id="6258" toLevel="1" name="Heatstroke Prevention Effect - Innadril">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Innadril region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1225,11 +1225,11 @@
 	</skill>
 	<skill id="6259" toLevel="1" name="Heatstroke Prevention Effect - Goddard">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Goddard region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1245,11 +1245,11 @@
 	</skill>
 	<skill id="6260" toLevel="1" name="Heatstroke Prevention Effect - Rune">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Rune region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1265,11 +1265,11 @@
 	</skill>
 	<skill id="6261" toLevel="1" name="Heatstroke Prevention Effect -Schuttgart">
 		<!-- Heatstroke Prevention Effect - Prevention effect received in the Schuttgart region. Effect that minimizes the damage incurred from heatstroke. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>604800</abnormalTime>
 		<abnormalType>EVENT_TERRITORY</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1184</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1299,6 +1299,7 @@
 	</skill>
 	<skill id="6263" toLevel="1" name="EMP Shock">
 		<!-- Stunned and unable to move for 2 seconds. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1307,7 +1308,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>77</magicLvl>
 		<operateType>A2</operateType>
@@ -1352,6 +1352,7 @@
 	</skill>
 	<skill id="6266" toLevel="1" name="Stun">
 		<!-- Stunned and unable to move for 30 seconds. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1360,7 +1361,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<coolTime>500</coolTime>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -1375,6 +1375,7 @@
 	</skill>
 	<skill id="6267" toLevel="1" name="Soul Drain">
 		<!-- Absorbs the target's stamina and makes it your own. -->
+		<icon>icon.skill1042</icon>
 		<effectPoint>-2</effectPoint>
 		<magicLvl>90</magicLvl>
 		<operateType>CA2</operateType>
@@ -1386,7 +1387,6 @@
 		<channelingSkillId>14559</channelingSkillId> <!-- Soul Drain Status -->
 		<channelingStart>1.2</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
-		<icon>icon.skill1042</icon>
 		<hitTime>10000</hitTime>
 		<reuseDelay>30000</reuseDelay>
 		<isDebuff>true</isDebuff>
@@ -1420,6 +1420,7 @@
 	</skill>
 	<skill id="6269" toLevel="1" name="Trojan Poison">
 		<!-- Poisons the enemy for 10 seconds and inflicts 345 HP damage per second. -->
+		<icon>icon.skill4036</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -1428,7 +1429,6 @@
 		<activateRate>80</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill4036</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1445,8 +1445,8 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6270" toLevel="1" name="Poison Gas">
-		<effectPoint>-100</effectPoint>
 		<icon>icon.skill4036</icon>
+		<effectPoint>-100</effectPoint>
 		<magicLvl>84</magicLvl>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -1459,6 +1459,7 @@
 	</skill>
 	<skill id="6271" toLevel="5" name="Grima Power Up">
 		<!-- Increase Physical Attack by $s1. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1469,7 +1470,6 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -1483,11 +1483,11 @@
 	</skill>
 	<skill id="6272" toLevel="1" name="Underbug Defense Up">
 		<!-- Increase each of P. Def. and M. Def. by 30%. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skill1040</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
@@ -1514,13 +1514,13 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6274" toLevel="1" name="Eternal Blizzard">
+		<icon>icon.skill6274</icon>
 		<affectRange>3000</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
 		<attributeType>WATER</attributeType>
 		<attributeValue>180</attributeValue>
 		<hitTime>10000</hitTime>
-		<icon>icon.skill6274</icon>
 		<magicLvl>85</magicLvl>
 		<mpConsume>165</mpConsume>
 		<operateType>A1</operateType>
@@ -1543,13 +1543,13 @@
 		</effects>
 	</skill>
 	<skill id="6275" toLevel="1" name="Eternal Blizzard">
+		<icon>icon.skill6274</icon>
 		<affectRange>3000</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
 		<attributeType>WATER</attributeType>
 		<attributeValue>180</attributeValue>
 		<hitTime>7000</hitTime>
-		<icon>icon.skill6274</icon>
 		<magicLvl>85</magicLvl>
 		<mpConsume>166</mpConsume>
 		<operateType>A1</operateType>
@@ -1572,13 +1572,13 @@
 		</effects>
 	</skill>
 	<skill id="6276" toLevel="1" name="Eternal Blizzard">
+		<icon>icon.skill6274</icon>
 		<affectRange>3000</affectRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-1000</effectPoint>
 		<attributeType>WATER</attributeType>
 		<attributeValue>180</attributeValue>
 		<hitTime>10000</hitTime>
-		<icon>icon.skill6274</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -1653,6 +1653,7 @@
 	</skill>
 	<skill id="6280" toLevel="1" name="Announcement of Death">
 		<!-- Freya's Cruel Sentence. Verdict will be made after 10 seconds. -->
+		<icon>icon.skill6280</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DEATH_CLACK</abnormalType>
@@ -1662,7 +1663,6 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
-		<icon>icon.skill6280</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
@@ -1805,6 +1805,7 @@
 	</skill>
 	<skill id="6286" toLevel="1" name="Divine Protection of Sword">
 		<!-- Increase HP Recovery Bonus by 15% and P. Def. by 10% for 20 minutes. -->
+		<icon>icon.skill6286</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -1812,7 +1813,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill6286</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -1836,11 +1836,11 @@
 		</effects>
 	</skill>
 	<skill id="6287" toLevel="1" name="Divine Protection of Sword">
+		<icon>icon.skill6286</icon>
 		<affectRange>1100</affectRange>
 		<castRange>650</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill6286</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1866,13 +1866,13 @@
 	</skill>
 	<skill id="6288" toLevel="1" name="Jinia's Prayer">
 		<!-- Increase P. Def. and M. Def. by 300%. -->
+		<icon>icon.skill6288</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill6288</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -1896,13 +1896,13 @@
 	</skill>
 	<skill id="6289" toLevel="1" name="Kegor's Courage">
 		<!-- Increase P. Atk. by 300%, M. Atk. by 300%, Atk. Spd. by 25% and Casting Spd. by 25%. -->
+		<icon>icon.skill6289</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SIGNAL_B</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill6289</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
 		<rideState>NONE</rideState>
@@ -2024,13 +2024,13 @@
 	</skill>
 	<skill id="6294" toLevel="1" name="Leader's Roar">
 		<!-- Increase P. Atk. by 15%. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
 		<affectRange>500</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>34400</hitTime>
-		<icon>icon.skill1040</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>66</mpConsume>

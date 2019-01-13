@@ -116,7 +116,7 @@
 	</skill>
 	<skill id="3507" toLevel="2" name="Set Effect - Elven Mithril Robe Armor, 3-piece">
 		<!-- MP Recovery Bonus +5.24%. -->
-		<icon>icon.armor_t51_u_i00</icon>
+		<icon>icon.armor_elven_tunic_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -274,7 +274,7 @@
 	</skill>
 	<skill id="3515" toLevel="1" name="Set Effect - Drake Light Armor, 2-piece">
 		<!-- M. Def. +5%, Stun Resistance +10%. -->
-		<icon>icon.armor_t21_ul_i00</icon>
+		<icon>icon.armor_t45_ul_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1078,7 +1078,7 @@
 	</skill>
 	<skill id="3542" toLevel="6" name="Special Ability: Critical Damage">
 		<!-- Increases Critical Damage. -->
-		<icon>icon.skill0193</icon>
+		<icon>icon.skill1242</icon>
 		<magicLvl>
 			<value level="1">46</value>
 			<value level="2">49</value>
@@ -1446,7 +1446,11 @@
 	</skill>
 	<skill id="3560" toLevel="3" name="Orfen's Earring">
 		<!-- Hold Resistance and Atk. Rate +10%, Mental Resistance and Atk. Rate +5%, Healing Power +2%, Skill MP Consumption -2%. -->
-		<icon>icon.accessory_earring_of_orfen_i00</icon>
+		<icon>
+			<value level="1">icon.accessory_earring_of_orfen_i00</value>
+			<value level="2">icon.accessory_earring_of_orfen_i02</value>
+			<value level="3">icon.accessory_earring_of_orfen_i03</value>
+		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1498,7 +1502,11 @@
 	</skill>
 	<skill id="3561" toLevel="3" name="Baium's Ring">
 		<!-- Stun Resistance and Stun Atk. Rate +10%, Bleed Resistance and Bleed Atk. Rate +5%, Atk. Spd./Casting Spd. +2%, Skill Power +2%. -->
-		<icon>icon.accessory_ring_of_baium_i00</icon>
+		<icon>
+			<value level="1">icon.accessory_ring_of_baium_i00</value>
+			<value level="2">icon.accessory_ring_of_baium_i02</value>
+			<value level="3">icon.accessory_ring_of_baium_i03</value>
+		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1571,7 +1579,11 @@
 	</skill>
 	<skill id="3562" toLevel="3" name="Queen Ant's Ring">
 		<!-- Poison Resistance and Atk. Rate +10%, P. /M. Accuracy +1, P. /M. Atk. +4%. -->
-		<icon>icon.accessory_ring_of_queen_ant_i00</icon>
+		<icon>
+			<value level="1">icon.accessory_ring_of_queen_ant_i00</value>
+			<value level="2">icon.accessory_ring_of_queen_ant_i02</value>
+			<value level="3">icon.accessory_ring_of_queen_ant_i03</value>
+		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1642,7 +1654,11 @@
 	</skill>
 	<skill id="3563" toLevel="3" name="Ring of Core">
 		<!-- Mental Resistance and Atk. Rate +10%, P./M. Evasion +1, Received Damage -2%. -->
-		<icon>icon.accessory_ring_of_core_i00</icon>
+		<icon>
+			<value level="1">icon.accessory_ring_of_core_i00</value>
+			<value level="2">icon.accessory_ring_of_core_i02</value>
+			<value level="3">icon.accessory_ring_of_core_i03</value>
+		</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1723,6 +1739,7 @@
 	</skill>
 	<skill id="3571" toLevel="2" name="Special Ability: Critical Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1733,7 +1750,6 @@
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>
 			<value level="1">10</value>
@@ -1757,6 +1773,7 @@
 	</skill>
 	<skill id="3574" toLevel="3" name="Special Ability: Critical Slow">
 		<!-- Temporarily decreases Speed. Effect $s1. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1769,7 +1786,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>
@@ -1793,6 +1809,7 @@
 	</skill>
 	<skill id="3577" toLevel="3" name="Special Ability: Magic Hold">
 		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -1802,7 +1819,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1500</effectRange>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>10</lvlBonusRate>
@@ -1932,7 +1948,6 @@
 	</skill>
 	<skill id="3581" toLevel="1" name="Infinity Power - Tenacity">
 		<!-- For $s1 returns $s2 of the received damage back to the enemy. Recovers $s3 HP. -->
-		<icon>icon.skill0000</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<operateType>A2</operateType>
@@ -2147,7 +2162,6 @@
 		<activateRate>25</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0100</icon>
 		<isDebuff>1</isDebuff>
 		<lvlBonusRate>10</lvlBonusRate>
 		<magicLvl>80</magicLvl>
@@ -2305,11 +2319,11 @@
 	</skill>
 	<skill id="3594" toLevel="1" name="Infinity Power - Archery">
 		<!-- For 5 min. Speed +15, the bow's range +100. -->
+		<icon>icon.skill0431</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<reuseDelay>600000</reuseDelay>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0431</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2430,7 +2444,6 @@
 	</skill>
 	<skill id="3598" toLevel="1" name="Infinity Power - Mana Limit">
 		<!-- For 30 sec. magic skills don't consume MP. -->
-		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<operateType>A2</operateType>

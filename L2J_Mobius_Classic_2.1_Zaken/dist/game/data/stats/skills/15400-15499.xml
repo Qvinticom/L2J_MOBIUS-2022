@@ -2,11 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15400" toLevel="1" name="Shield of Darkness">
 		<!-- P. Def. greatly increases temporarily due to the power of darkness. -->
+		<icon>icon.skill0110</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-		<icon>icon.skill0110</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<effectPoint>100</effectPoint>
@@ -36,10 +36,10 @@
 	</skill>
 	<skill id="15402" toLevel="1" name="Wisp's Blessing">
 		<!-- P. Atk. And M. Atk. increases temporarily. -->
+		<icon>icon.skill11046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>NPC_MULTI_BUFF1</abnormalType>
-		<icon>icon.skill11046</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<hitTime>1000</hitTime>
@@ -65,10 +65,10 @@
 	</skill>
 	<skill id="15403" toLevel="1" name="Favor Exchange">
 		<!-- For 15 sec., Speed + 30%. -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
-		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -92,11 +92,11 @@
 	</skill>
 	<skill id="15404" toLevel="1" name="Unable to Target">
 		<!-- Cannot target. -->
+		<icon>icon.notargetting</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<icon>icon.notargetting</icon>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
@@ -111,7 +111,6 @@
 	</skill>
 	<skill id="15405" toLevel="1" name="Master's Blessing (Awakening)">
 		<!-- Uses the Master's Blessing buff. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>1000</reuseDelay>
@@ -124,7 +123,6 @@
 	</skill>
 	<skill id="15406" toLevel="1" name="Warrior's Harmony Zone">
 		<!-- Creates a zone that provides the Harmony skill. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>1000</reuseDelay>
@@ -137,7 +135,6 @@
 	</skill>
 	<skill id="15407" toLevel="1" name="Knight's Harmony Zone">
 		<!-- Creates a zone that provides the Harmony skill. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>1000</reuseDelay>
@@ -150,7 +147,6 @@
 	</skill>
 	<skill id="15408" toLevel="1" name="Wizard's Harmony Zone">
 		<!-- Creates a zone that provides the Harmony skill. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>1000</reuseDelay>
@@ -163,7 +159,6 @@
 	</skill>
 	<skill id="15409" toLevel="1" name="Summon Buff Servant">
 		<!-- Summons the Buff Servant. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<reuseDelay>1000</reuseDelay>
@@ -176,12 +171,12 @@
 	</skill>
 	<skill id="15411" toLevel="1" name="Soul Break">
 		<!-- Inflicts a powerful attack on a target. -->
+		<icon>icon.skill0223</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-		<icon>icon.skill0223</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
 		<hitTime>1500</hitTime>
@@ -209,7 +204,6 @@
 		</effects>
 	</skill>
 	<skill id="15412" toLevel="1" name="Presentation - Toad Cannon Explosion">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<rideState>NONE</rideState>
@@ -345,7 +339,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15420" toLevel="1" name="Before Lind Attack">
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 	</skill>
 	<skill id="15421" toLevel="1" name="Lind Attack">
@@ -355,7 +348,6 @@
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="15426" toLevel="1" name="Energy Drain">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>145000</castRange>
 		<effectPoint>100</effectPoint>
@@ -382,7 +374,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15431" toLevel="1" name="Supersonic Blaster">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>42</mpConsume>
 		<castRange>1200</castRange>
@@ -402,7 +393,6 @@
 		</effects>
 	</skill>
 	<skill id="15432" toLevel="1" name="Power Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>80</mpConsume>
 		<castRange>40</castRange>
@@ -424,10 +414,10 @@
 	</skill>
 	<skill id="15433" toLevel="1" name="Surrender to Dark">
 		<!-- Dark Attack Resistance decreased, and Holy Attack Resistance increases momentarily. -->
+		<icon>icon.skill4336_new</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
-		<icon>icon.skill4336_new</icon>
 		<operateType>A2</operateType>
 		<mpConsume>65</mpConsume>
 		<castRange>600</castRange>
@@ -458,7 +448,6 @@
 		</effects>
 	</skill>
 	<skill id="15434" toLevel="1" name="Drain HP">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>73</mpConsume>
 		<castRange>600</castRange>
@@ -482,7 +471,6 @@
 		</effects>
 	</skill>
 	<skill id="15435" toLevel="1" name="Power Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>20</mpConsume>
 		<castRange>40</castRange>
@@ -503,7 +491,6 @@
 		</effects>
 	</skill>
 	<skill id="15436" toLevel="1" name="Wide Sweep">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>119</mpConsume>
 		<castRange>40</castRange>
@@ -525,7 +512,6 @@
 		</effects>
 	</skill>
 	<skill id="15437" toLevel="1" name="Sonic Blaster">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>80</mpConsume>
 		<castRange>600</castRange>
@@ -546,11 +532,11 @@
 	</skill>
 	<skill id="15438" toLevel="1" name="Hold">
 		<!-- Inflicted with Hold and unable to move. -->
+		<icon>icon.skill4047</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<icon>icon.skill4047</icon>
 		<operateType>A2</operateType>
 		<mpConsume>73</mpConsume>
 		<castRange>600</castRange>
@@ -574,7 +560,6 @@
 		</effects>
 	</skill>
 	<skill id="15439" toLevel="1" name="Drain HP">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>109</mpConsume>
 		<castRange>600</castRange>
@@ -598,7 +583,6 @@
 		</effects>
 	</skill>
 	<skill id="15440" toLevel="1" name="Aura Burn">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>150</castRange>
@@ -619,7 +603,6 @@
 		</effects>
 	</skill>
 	<skill id="15441" toLevel="1" name="Death Bomb">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
 		<rideState>NONE</rideState>
@@ -639,12 +622,12 @@
 	</skill>
 	<skill id="15442" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>80</mpConsume>
 		<castRange>40</castRange>
@@ -672,7 +655,6 @@
 		</effects>
 	</skill>
 	<skill id="15443" toLevel="1" name="Drain HP">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>102</mpConsume>
 		<castRange>400</castRange>
@@ -698,12 +680,12 @@
 	</skill>
 	<skill id="15444" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>120</mpConsume>
 		<castRange>500</castRange>
@@ -732,7 +714,6 @@
 		</effects>
 	</skill>
 	<skill id="15445" toLevel="1" name="Super Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>247</mpConsume>
 		<castRange>40</castRange>
@@ -752,7 +733,6 @@
 		</effects>
 	</skill>
 	<skill id="15446" toLevel="1" name="Drain HP">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>282</mpConsume>
 		<castRange>500</castRange>
@@ -779,12 +759,12 @@
 	</skill>
 	<skill id="15447" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>83</mpConsume>
 		<castRange>40</castRange>
@@ -812,7 +792,6 @@
 		</effects>
 	</skill>
 	<skill id="15448" toLevel="1" name="Aura Burn">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>3</mpConsume>
 		<castRange>150</castRange>
@@ -828,7 +807,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15449" toLevel="1" name="Dagger Storm">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>7</mpConsume>
 		<castRange>600</castRange>
@@ -852,10 +830,10 @@
 	</skill>
 	<skill id="15450" toLevel="1" name="Weakness">
 		<!-- P. Atk. decreases momentarily. -->
+		<icon>icon.skill4037</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
-		<icon>icon.skill4037</icon>
 		<operateType>A2</operateType>
 		<mpConsume>20</mpConsume>
 		<castRange>600</castRange>
@@ -882,12 +860,12 @@
 	</skill>
 	<skill id="15451" toLevel="1" name="Bleed">
 		<!-- HP decreases from bleeding. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<mpConsume>112</mpConsume>
 		<hitTime>3300</hitTime>
@@ -938,7 +916,6 @@
 		</effects>
 	</skill>
 	<skill id="15453" toLevel="1" name="Vampiric Touch">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>135</mpConsume>
 		<castRange>750</castRange>
@@ -984,7 +961,6 @@
 	</skill>
 	<skill id="15455" toLevel="1" name="Thin Skin">
 		<!-- Received damage increases due to skin sensitivity. -->
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>97</magicLvl>
@@ -1013,6 +989,7 @@
 	</skill>
 	<skill id="15457" toLevel="2" name="Triol's Reign">
 		<!-- Blood is drained by Triol, one of the 4 Demons of Hell. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1021,7 +998,6 @@
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
-		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
@@ -1042,11 +1018,11 @@
 	</skill>
 	<skill id="15458" toLevel="1" name="Memorable Raid Shield">
 		<!-- Defensive shield cast by the Memorable Raid boss unto itself. For 10 min., it only receives a certain amount of damage. -->
+		<icon>icon.skill0110</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-		<icon>icon.skill0110</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
@@ -1064,7 +1040,6 @@
 		</effects>
 	</skill>
 	<skill id="15459" toLevel="1" name="Blaze">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>73</mpConsume>
 		<castRange>1000</castRange>
@@ -1088,12 +1063,12 @@
 	</skill>
 	<skill id="15460" toLevel="1" name="Poison">
 		<!-- HP decreases from bleeding momentarily. -->
+		<icon>icon.skill4036</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
-		<icon>icon.skill4036</icon>
 		<operateType>A2</operateType>
 		<mpConsume>109</mpConsume>
 		<isMagic>1</isMagic>
@@ -1119,7 +1094,6 @@
 		</effects>
 	</skill>
 	<skill id="15461" toLevel="1" name="Drain HP">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>52</mpConsume>
 		<castRange>600</castRange>
@@ -1143,7 +1117,6 @@
 		</effects>
 	</skill>
 	<skill id="15462" toLevel="1" name="Heal">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>127</mpConsume>
 		<castRange>600</castRange>
@@ -1164,7 +1137,6 @@
 		</effects>
 	</skill>
 	<skill id="15463" toLevel="1" name="Prominence">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>37</mpConsume>
 		<castRange>600</castRange>
@@ -1187,7 +1159,6 @@
 		</effects>
 	</skill>
 	<skill id="15464" toLevel="1" name="Death Link">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>37</mpConsume>
 		<castRange>900</castRange>
@@ -1255,10 +1226,10 @@
 	</skill>
 	<skill id="15469" toLevel="1" name="Rites for Triol">
 		<!-- For 60 min., HP Recovery Bonus + 20%. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>HP_REGEN_UP</abnormalType>
-		<icon>icon.skill1044</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>1</effectPoint>
@@ -1405,11 +1376,11 @@
 	</skill>
 	<skill id="15476" toLevel="1" name="Spore Spray">
 		<!-- HP and Speed decreased due to spores. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
-		<icon>icon.skill1160</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
@@ -1437,10 +1408,10 @@
 	</skill>
 	<skill id="15477" toLevel="1" name="Corrosive Acid Spray">
 		<!-- P. Def. and M. Def. decreased. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
-		<icon>icon.skill0122</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
@@ -1470,11 +1441,11 @@
 	</skill>
 	<skill id="15478" toLevel="1" name="Spread Disease">
 		<!-- HP decreases from bleeding momentarily. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
-		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
@@ -1502,10 +1473,10 @@
 	</skill>
 	<skill id="15479" toLevel="1" name="Vomit Mucus">
 		<!-- P. Accuracy decreased due to mucus. -->
+		<icon>icon.skill1222</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
-		<icon>icon.skill1222</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
@@ -1528,11 +1499,11 @@
 	</skill>
 	<skill id="15480" toLevel="1" name="Shoot Poison">
 		<!-- HP decreased due to poison. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
-		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
@@ -1557,10 +1528,10 @@
 	</skill>
 	<skill id="15481" toLevel="1" name="Shoot Spider Web">
 		<!-- The web decreases Speed by 10%. -->
+		<icon>icon.skill0102</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
-		<icon>icon.skill0102</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<hitTime>1500</hitTime>
@@ -1584,13 +1555,11 @@
 	</skill>
 	<skill id="15482" toLevel="1" name="Presentation - Lind">
 		<!-- Lindvior's Event Presentation Skill. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>10000</hitTime>
 	</skill>
 	<skill id="15483" toLevel="1" name="Destroy">
 		<!-- P. Atk. On a single enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -1600,7 +1569,6 @@
 	</skill>
 	<skill id="15484" toLevel="1" name="Lightning">
 		<!-- M. Atk. On a single enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -1611,7 +1579,6 @@
 	</skill>
 	<skill id="15485" toLevel="1" name="Eliminate">
 		<!-- P. Atk. On a single enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -1633,7 +1600,6 @@
 	</skill>
 	<skill id="15487" toLevel="1" name="Disarray">
 		<!-- P. Atk. On a single enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -1643,7 +1609,6 @@
 	</skill>
 	<skill id="15488" toLevel="1" name="Penetrate">
 		<!-- P. Atk. On a single enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -1662,7 +1627,6 @@
 	</skill>
 	<skill id="15490" toLevel="1" name="Rush">
 		<!-- Rush toward enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<effectPoint>-100</effectPoint>
@@ -1670,7 +1634,6 @@
 	</skill>
 	<skill id="15491" toLevel="1" name="Deadly Weapon">
 		<!-- P. Atk. On a single enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -1692,7 +1655,6 @@
 	</skill>
 	<skill id="15493" toLevel="1" name="Charge">
 		<!-- Charges to attack a target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<effectPoint>-100</effectPoint>
@@ -1719,7 +1681,6 @@
 	</skill>
 	<skill id="15496" toLevel="1" name="Travis' Authority">
 		<!-- AoE M. Atk. On target's area. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -1730,7 +1691,6 @@
 	</skill>
 	<skill id="15497" toLevel="1" name="Summons Royal Guard Member.">
 		<!-- Summons Royal Guard Member. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<hitTime>1500</hitTime>
@@ -1745,7 +1705,6 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="15499" toLevel="1" name="Energy of Life">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2000</castRange>
 		<hitTime>100</hitTime>

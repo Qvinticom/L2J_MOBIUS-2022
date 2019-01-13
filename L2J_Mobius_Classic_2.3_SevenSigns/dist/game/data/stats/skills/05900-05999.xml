@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="5900" toLevel="1" name="Burst of Oblivion">
 		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
+		<icon>icon.skill1481</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>OBLIVION</abnormalType>
@@ -12,7 +13,6 @@
 		<effectPoint>-100</effectPoint>
 		<fanRange>0;0;150;90</fanRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1481</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -44,6 +44,7 @@
 	</skill>
 	<skill id="5901" toLevel="2" name="Burst of Oblivion">
 		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
+		<icon>icon.skill1481</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>OBLIVION</abnormalType>
@@ -56,7 +57,6 @@
 			<value level="1">2000</value>
 			<value level="2">22936</value>
 		</hitTime>
-		<icon>icon.skill1481</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -100,6 +100,7 @@
 	</skill>
 	<skill id="5903" toLevel="1" name="Burst of Misplace">
 		<!-- Equipment are removed. Unable to use weapons while the effect lasts. -->
+		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
@@ -112,7 +113,6 @@
 		<effectRange>1100</effectRange>
 		<fanRange>0;0;600;90</fanRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0485</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -131,6 +131,7 @@
 		</effects>
 	</skill>
 	<skill id="5904" toLevel="3" name="Mist of Souleater">
+		<icon>icon.skill1245</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
@@ -141,7 +142,6 @@
 			<value level="2">22936</value>
 			<value level="3">22936</value>
 		</hitTime>
-		<icon>icon.skill1245</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">77</value>
@@ -178,6 +178,7 @@
 	</skill>
 	<skill id="5905" toLevel="1" name="Confusing Nuph">
 		<!-- Physical and magic skills are all blocked. -->
+		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -187,7 +188,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1064</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>83</magicLvl>
@@ -215,6 +215,7 @@
 	</skill>
 	<skill id="5907" toLevel="2" name="Ritual of Entombment">
 		<!-- Momentarily inflicts Hold on the enemy. Additional Hold is not available while effects last. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -226,7 +227,6 @@
 			<value level="1">3000</value>
 			<value level="2">34404</value>
 		</hitTime>
-		<icon>icon.skill1201</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -248,6 +248,7 @@
 	</skill>
 	<skill id="5908" toLevel="2" name="Ritual of Entombment">
 		<!-- Momentarily inflicts Hold on the enemy. Additional Hold is not available while effects last. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -259,7 +260,6 @@
 			<value level="1">3000</value>
 			<value level="2">34404</value>
 		</hitTime>
-		<icon>icon.skill1201</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -324,13 +324,13 @@
 	</skill>
 	<skill id="5912" toLevel="1" name="Pestilence Cleanse">
 		<!-- P. Atk., M. Atk., Atk. Spd., Accuracy, Critical Rate, and Critical Impact are increased. Skill Cooldown is increased. -->
+		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_D</abnormalType>
 		<activateRate>90</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1337</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>83</magicLvl>
@@ -365,13 +365,13 @@
 	</skill>
 	<skill id="5914" toLevel="1" name="Putrefaction Cleanse">
 		<!-- P. Def., M. Def., Evasion, and Speed are decreased. -->
+		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_E</abnormalType>
 		<activateRate>90</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1337</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>83</magicLvl>
@@ -499,6 +499,7 @@
 	</skill>
 	<skill id="5919" toLevel="1" name="Obey">
 		<!-- Immortal Lord's command. Cannot resurrect. -->
+		<icon>icon.skill5919</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>BLOCK_RESURRECTION</abnormalType>
@@ -506,7 +507,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>12610</hitTime>
-		<icon>icon.skill5919</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-2</magicLvl>
@@ -549,6 +549,7 @@
 	</skill>
 	<skill id="5921" toLevel="1" name="Inhale">
 		<!-- P. Atk., Atk. Spd., M. Atk., Accuracy, critical attack rate and Critical Damage are decreased. -->
+		<icon>icon.skill1337</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_F</abnormalType>
@@ -562,7 +563,6 @@
 		<effectRange>1100</effectRange>
 		<fanRange>0;0;600;90</fanRange>
 		<hitTime>26950</hitTime>
-		<icon>icon.skill1337</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -608,6 +608,7 @@
 	</skill>
 	<skill id="5922" toLevel="1" name="Exhale">
 		<!-- Evasion, P. Def., M. Def. and speed are decreased. -->
+		<icon>icon.skill1263</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_G</abnormalType>
@@ -620,7 +621,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>22700</hitTime>
-		<icon>icon.skill1263</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -891,11 +891,11 @@
 	</skill>
 	<skill id="5934" toLevel="1" name="Meet the soul of darkness and fight against it.">
 		<!-- Earth/ Dark Attack Resistance is greatly raised. -->
+		<icon>icon.skill5934</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ARMOR_EARTH</abnormalType>
 		<activateRate>0</activateRate>
-		<icon>icon.skill5934</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -958,6 +958,7 @@
 		</effects>
 	</skill>
 	<skill id="5937" toLevel="1" name="Self Stun">
+		<icon>icon.skill1540</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -968,13 +969,13 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.skill1540</icon>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5938" toLevel="5" name="P. Atk. Up">
 		<!-- Attack abilities are enhanced. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -986,12 +987,12 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.skill1068</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5939" toLevel="5" name="Defense Ability Up">
 		<!-- Defense abilities are enhanced. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -1003,12 +1004,12 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.skill1040</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5940" toLevel="12" name="Energy of Generation">
 		<!-- HP recovery bonus and MP recovery bonus are increased. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -1026,7 +1027,6 @@
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill1044</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -1053,11 +1053,11 @@
 	</skill>
 	<skill id="5941" toLevel="1" name="Energy of Erosion">
 		<!-- Max HP and Max MP are decreased. -->
+		<icon>icon.skill0060</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MAX_HP_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill0060</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>10</magicLvl>
 		<operateType>A2</operateType>
@@ -1071,11 +1071,11 @@
 	</skill>
 	<skill id="5942" toLevel="1" name="Energy of Pollution">
 		<!-- HP/ MP recovery magic effect decreases temporarily. -->
+		<icon>icon.skill0052</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill0052</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>10</magicLvl>
 		<operateType>A2</operateType>
@@ -1089,11 +1089,11 @@
 	</skill>
 	<skill id="5943" toLevel="1" name="Energy of Contamination">
 		<!-- P. Def. is decreased and Skill MP Consumption is increased. -->
+		<icon>icon.skill0103</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MP_COST_UP</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill0103</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>10</magicLvl>
 		<operateType>A2</operateType>
@@ -1107,11 +1107,11 @@
 	</skill>
 	<skill id="5944" toLevel="1" name="Energy of Oblivion">
 		<!-- Accuracy is decreased. -->
+		<icon>icon.skill0107</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>HIT_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill0107</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>10</magicLvl>
 		<operateType>A2</operateType>
@@ -1194,8 +1194,8 @@
 	</skill>
 	<skill id="5951" toLevel="1" name="Agathion's Blessing">
 		<!-- The summoned spirit uses a blessing. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1210,8 +1210,8 @@
 	</skill>
 	<skill id="5952" toLevel="1" name="Agathion's Blessing">
 		<!-- The summoned spirit uses a blessing. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1226,8 +1226,8 @@
 	</skill>
 	<skill id="5953" toLevel="1" name="Agathion's Blessing">
 		<!-- The summoned spirit uses a blessing. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1242,8 +1242,8 @@
 	</skill>
 	<skill id="5954" toLevel="1" name="Agathion Cute Trick - Tinplate Golem">
 		<!-- See Agathion's cute trick. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1258,8 +1258,8 @@
 	</skill>
 	<skill id="5955" toLevel="1" name="Agathion Cute Trick - Joy">
 		<!-- See Agathion's cute trick. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1274,8 +1274,8 @@
 	</skill>
 	<skill id="5956" toLevel="1" name="Agathion Cute Trick - Angry Devil">
 		<!-- See Agathion's cute trick. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1290,8 +1290,8 @@
 	</skill>
 	<skill id="5957" toLevel="1" name="Agathion Cute Trick - Sorrow">
 		<!-- See Agathion's cute trick. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1306,8 +1306,8 @@
 	</skill>
 	<skill id="5958" toLevel="1" name="Agathion Cute Trick - Teddy Boy">
 		<!-- See Agathion's cute trick. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1322,8 +1322,8 @@
 	</skill>
 	<skill id="5959" toLevel="1" name="Agathion Cute Trick - Teddy Girl">
 		<!-- See Agathion's cute trick. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.skill_agathion_cute</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1338,6 +1338,7 @@
 	</skill>
 	<skill id="5960" toLevel="1" name="Stronghold Reactivate">
 		<!-- Wrapped in flames and HP is decreased. -->
+		<icon>icon.skill4036</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -1346,7 +1347,6 @@
 		<activateRate>10</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill4036</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -1360,6 +1360,7 @@
 	</skill>
 	<skill id="5961" toLevel="1" name="Barrier Thunder Storm">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1369,7 +1370,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-357</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0100</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -1450,6 +1450,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5967" toLevel="2" name="Aggression Aura">
+		<icon>icon.skill0018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -1457,7 +1458,6 @@
 		<affectLimit>10-10</affectLimit>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-7121</effectPoint>
-		<icon>icon.skill0018</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -1473,6 +1473,7 @@
 	</skill>
 	<skill id="5968" toLevel="2" name="Rapid Shot">
 		<!-- Momentarily increases your own bow Atk. Spd. Effect $s1 -->
+		<icon>icon.skill0099</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1484,7 +1485,6 @@
 			<value level="2">549</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0099</icon>
 		<magicLvl>
 			<value level="1">32</value>
 			<value level="2">55</value>
@@ -1500,6 +1500,7 @@
 	</skill>
 	<skill id="5969" toLevel="2" name="Punch of Doom">
 		<!-- Throws Iron Fist which inflicts significant damage to the enemy while inflicting Stun on you momentarily. Requires a fist weapon. Ignores Shield Defense. Over-hit. $s1 power. -->
+		<icon>icon.skill005969</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1512,7 +1513,6 @@
 			<value level="2">-698</value>
 		</effectPoint>
 		<hitTime>1360</hitTime>
-		<icon>icon.skill005969</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">64</value>
@@ -1541,12 +1541,12 @@
 	</skill>
 	<skill id="5970" toLevel="1" name="Seduced Knight's Help">
 		<!-- Increases Max HP. -->
+		<icon>icon.skill5970</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<effectPoint>646</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill5970</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -1562,12 +1562,12 @@
 	</skill>
 	<skill id="5971" toLevel="1" name="Seduced Ranger's Help">
 		<!-- Seduced Ranger's help. HP recovery bonus increases. -->
+		<icon>icon.skill5970</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<effectPoint>689</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill5970</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -1583,12 +1583,12 @@
 	</skill>
 	<skill id="5972" toLevel="1" name="Seduced Wizard's Help">
 		<!-- Increases Max MP. -->
+		<icon>icon.skill5970</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<effectPoint>635</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill5970</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -1604,12 +1604,12 @@
 	</skill>
 	<skill id="5973" toLevel="1" name="Seduced Warrior's Help">
 		<!-- Seduced Warrior's help. MP recovery bonus increases. -->
+		<icon>icon.skill5970</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<effectPoint>635</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill5970</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -1817,12 +1817,12 @@
 	</skill>
 	<skill id="5984" toLevel="1" name="Hand of Death">
 		<!-- P. Def., M. Def., and speed are greatly decreased. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MD_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill0122</icon>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -1887,6 +1887,7 @@
 	</skill>
 	<skill id="5987" toLevel="1" name="Weapon Maintenance">
 		<!-- Maintains the weapon in optimal condition to increase P. Atk. -->
+		<icon>icon.skill0825</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
@@ -1894,7 +1895,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>467</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0825</icon>
 		<magicLvl>85</magicLvl>
 		<mpConsume>41</mpConsume>
 		<operateType>A2</operateType>
@@ -1952,6 +1952,7 @@
 	</skill>
 	<skill id="5988" toLevel="1" name="Armor Maintenance">
 		<!-- Maintains the armor to increase defense ability. -->
+		<icon>icon.skill0828</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
@@ -1959,7 +1960,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>438</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0828</icon>
 		<magicLvl>85</magicLvl>
 		<mpConsume>41</mpConsume>
 		<operateType>A2</operateType>
@@ -2059,6 +2059,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5992" toLevel="12" name="Aggression">
+		<icon>icon.skill0028</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>TARGET_LOCK</abnormalType>
@@ -2078,7 +2079,6 @@
 			<value level="11">-6997</value>
 			<value level="12">-7082</value>
 		</effectPoint>
-		<icon>icon.skill0028</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">10</value>
@@ -2106,6 +2106,7 @@
 	</skill>
 	<skill id="5993" toLevel="1" name="Command of Anchor">
 		<!-- When a blow is incurred, the target is continuously removed, and skills and magic cannot be used. -->
+		<icon>icon.skill1481</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>OBLIVION</abnormalType>
@@ -2116,7 +2117,6 @@
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1481</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>85</magicLvl>
@@ -2151,6 +2151,7 @@
 	</skill>
 	<skill id="5994" toLevel="1" name="Mysterious Effect">
 		<!-- The target's head is enlarged. -->
+		<icon>icon.skill2513</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
@@ -2159,7 +2160,6 @@
 		<castRange>900</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>1400</effectRange>
-		<icon>icon.skill2513</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>

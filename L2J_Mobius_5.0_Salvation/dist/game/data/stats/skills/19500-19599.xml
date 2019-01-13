@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19503" toLevel="1" name="Crier's Harmony">
 		<!-- For $s1, selected party member's P. Atk. +$s2, M. Atk. +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, and Atk. Spd./ Casting Spd. +$s6, and Skill Cooldown -$s7 and Skill MP Consumption -$s8. -->
+		<icon>icon.skill19503</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
-		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
 		<mpInitialConsume>28</mpInitialConsume>
@@ -78,10 +78,10 @@
 	</skill>
 	<skill id="19526" toLevel="3" name="Limit of Sigel">
 		<!-- Decreases the duration of Protection of Faith/ Party Rescue by $s2 if it is shorter than $s1. -->
+		<icon>icon.skill10019</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
-		<icon>icon.skill19526</icon>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
 		<reuseDelay>1</reuseDelay>
@@ -93,10 +93,10 @@
 	</skill>
 	<skill id="19527" toLevel="3" name="Limit of Iss">
 		<!-- Decreases the duration of Battle Rhapsody/ Overlord's Dignity by $s2 if it is shorter than $s1. -->
+		<icon>icon.skill11544</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
-		<icon>icon.skill19527</icon>
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
 		<reuseDelay>1</reuseDelay>

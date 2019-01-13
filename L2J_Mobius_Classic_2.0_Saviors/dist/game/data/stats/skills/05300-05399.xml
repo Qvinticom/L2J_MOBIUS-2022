@@ -55,6 +55,7 @@
 	</skill>
 	<skill id="5301" toLevel="9" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -66,7 +67,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -117,6 +117,7 @@
 	</skill>
 	<skill id="5302" toLevel="9" name="Poison">
 		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -139,7 +140,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -202,6 +202,7 @@
 	</skill>
 	<skill id="5303" toLevel="9" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -224,7 +225,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0096</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -287,6 +287,7 @@
 	</skill>
 	<skill id="5304" toLevel="9" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -300,7 +301,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>830</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -351,6 +351,7 @@
 	</skill>
 	<skill id="5305" toLevel="9" name="Poison">
 		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -361,7 +362,6 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -426,6 +426,7 @@
 	</skill>
 	<skill id="5306" toLevel="9" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -438,7 +439,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1170</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -489,6 +489,7 @@
 	</skill>
 	<skill id="5307" toLevel="9" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -499,7 +500,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -550,6 +550,7 @@
 	</skill>
 	<skill id="5308" toLevel="9" name="Poison">
 		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -571,7 +572,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -634,6 +634,7 @@
 	</skill>
 	<skill id="5309" toLevel="9" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -655,7 +656,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -1787,6 +1787,7 @@
 	</skill>
 	<skill id="5333" toLevel="9" name="Poison">
 		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -1808,7 +1809,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill4035</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -2861,6 +2861,7 @@
 	</skill>
 	<skill id="5362" toLevel="9" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2872,7 +2873,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -2923,6 +2923,7 @@
 	</skill>
 	<skill id="5363" toLevel="9" name="Poison">
 		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -2945,7 +2946,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -3008,6 +3008,7 @@
 	</skill>
 	<skill id="5364" toLevel="9" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -3030,7 +3031,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>830</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -3093,6 +3093,7 @@
 	</skill>
 	<skill id="5365" toLevel="9" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -3106,7 +3107,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>830</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -3134,6 +3134,7 @@
 	</skill>
 	<skill id="5366" toLevel="9" name="Poison">
 		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -3145,7 +3146,6 @@
 		<coolTime>800</coolTime>
 		<effectPoint>-100</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -3209,6 +3209,7 @@
 	</skill>
 	<skill id="5367" toLevel="9" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
@@ -3221,7 +3222,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -3250,6 +3250,7 @@
 	</skill>
 	<skill id="5368" toLevel="9" name="Stun">
 		<!-- Stunned and unable to move momentarily. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3258,7 +3259,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0100</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -3284,6 +3284,7 @@
 	</skill>
 	<skill id="5369" toLevel="9" name="Poison">
 		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -3305,7 +3306,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill4035</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -3368,6 +3368,7 @@
 	</skill>
 	<skill id="5370" toLevel="9" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -3387,7 +3388,6 @@
 		<basicProperty>PHYSICAL</basicProperty>
 		<effectPoint>-100</effectPoint>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0096</icon>
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
 			<value level="1">75</value>
@@ -4381,6 +4381,7 @@
 	</skill>
 	<skill id="5394" toLevel="9" name="Poison">
 		<!-- HP cut due to Poison. $s1 power. -->
+		<icon>icon.skill4035</icon>
 		<abnormalLvl>
 			<value level="1">8</value>
 			<value level="2">8</value>
@@ -4405,7 +4406,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill4035</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>2</lvlBonusRate>
 		<magicLvl>
@@ -4539,6 +4539,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5397" toLevel="3" name="Spell Force">
+		<icon>icon.skill0427</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4547,7 +4548,6 @@
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MAGICAL_STANCE</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.skill0427</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A2</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -4584,13 +4584,13 @@
 	</skill>
 	<skill id="5399" toLevel="1" name="Heat of Desert">
 		<!-- Condition causing target to decrease HP by heat of desert. -->
+		<icon>icon.skill1230</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>HOT_GROUND</abnormalType>
 		<activateRate>10</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-100</effectPoint>
-		<icon>icon.skill1230</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>1</magicLvl>

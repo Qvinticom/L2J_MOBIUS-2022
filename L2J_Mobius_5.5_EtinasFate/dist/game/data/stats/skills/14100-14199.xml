@@ -116,7 +116,6 @@
 		</conditions>
 	</skill>
 	<skill id="14103" toLevel="1" name="Agathion Return - Magmeld Fairy">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
@@ -652,7 +651,6 @@
 		</effects>
 	</skill>
 	<skill id="14119" toLevel="1" name="Underbug Self Blasting">
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>5000</hitTime>
 		<reuseDelay>2000</reuseDelay>
@@ -1274,7 +1272,6 @@
 		</effects>
 	</skill>
 	<skill id="14138" toLevel="3" name="Dark Avenger">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>78</mpConsume>
 		<castRange>150</castRange>
@@ -1899,6 +1896,7 @@
 		</effects>
 	</skill>
 	<skill id="14156" toLevel="1" name="Snake">
+		<icon>icon.skill0006</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-64</effectPoint>
 		<rideState>NONE</rideState>
@@ -1909,7 +1907,6 @@
 		<mpConsume>11</mpConsume>
 		<castRange>150</castRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0006</icon>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1920,6 +1917,7 @@
 		</effects>
 	</skill>
 	<skill id="14157" toLevel="1" name="Long Snake">
+		<icon>icon.skill0006</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-64</effectPoint>
 		<rideState>NONE</rideState>
@@ -1931,7 +1929,6 @@
 		<affectRange>250</affectRange>
 		<mpConsume>11</mpConsume>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0006</icon>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1943,6 +1940,7 @@
 		</effects>
 	</skill>
 	<skill id="14158" toLevel="2" name="Crawler Spear">
+		<icon>icon.skill0006</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-76</effectPoint>
 		<rideState>NONE</rideState>
@@ -1954,7 +1952,6 @@
 		<mpConsume>15</mpConsume>
 		<castRange>200</castRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0006</icon>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -2097,6 +2094,7 @@
 		</effects>
 	</skill>
 	<skill id="14164" toLevel="1" name="Arcane Jet">
+		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-104</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2109,7 +2107,6 @@
 		<mpConsume>13</mpConsume>
 		<castRange>300</castRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1275</icon>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2120,6 +2117,7 @@
 		</effects>
 	</skill>
 	<skill id="14165" toLevel="1" name="Arcane Bust">
+		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-104</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2133,7 +2131,6 @@
 		<mpConsume>16</mpConsume>
 		<castRange>300</castRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1275</icon>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
@@ -2181,6 +2178,7 @@
 		</effects>
 	</skill>
 	<skill id="14167" toLevel="1" name="Black Powder">
+		<icon>icon.skill0006</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-96</effectPoint>
 		<rideState>NONE</rideState>
@@ -2191,7 +2189,6 @@
 		<castRange>400</castRange>
 		<hitTime>1500</hitTime>
 		<reuseDelay>5000</reuseDelay>
-		<icon>icon.skill0006</icon>
 		<mpConsume>18</mpConsume>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2202,6 +2199,7 @@
 		</effects>
 	</skill>
 	<skill id="14168" toLevel="1" name="Throw Grenade">
+		<icon>icon.skill1275</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-96</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -2215,7 +2213,6 @@
 		<mpConsume>15</mpConsume>
 		<castRange>400</castRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1275</icon>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -2382,7 +2379,6 @@
 		</effects>
 	</skill>
 	<skill id="14175" toLevel="1" name="Cannon Blast">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -2396,7 +2392,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14176" toLevel="1" name="Exorcism">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -2410,7 +2405,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14177" toLevel="1" name="Exorcism">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -2424,7 +2418,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14178" toLevel="1" name="Exorcism">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -2438,7 +2431,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14179" toLevel="1" name="Stronghold Water Cannon">
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<mpConsume>121</mpConsume>
 		<hitTime>500</hitTime>
@@ -2480,7 +2472,6 @@
 		</effects>
 	</skill>
 	<skill id="14180" toLevel="1" name="Trap Over Steam">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>123</mpConsume>
 		<hitTime>2000</hitTime>
@@ -2502,7 +2493,6 @@
 		</effects>
 	</skill>
 	<skill id="14181" toLevel="1" name="Trap Over Steam">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>123</mpConsume>
 		<hitTime>2000</hitTime>
@@ -2634,7 +2624,6 @@
 		</effects>
 	</skill>
 	<skill id="14186" toLevel="1" name="Fairy Lv.">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>2</mpConsume>
 		<hitTime>15000</hitTime>
@@ -2653,7 +2642,7 @@
 	</skill>
 	<skill id="14187" toLevel="1" name="Magmeld Teleport">
 		<!-- Teleports to Magmeld Ancient City Arcan. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.noblessescape_scroll_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>10000</hitTime>
 		<effectPoint>2</effectPoint>
@@ -2677,7 +2666,6 @@
 		</effects>
 	</skill>
 	<skill id="14188" toLevel="1" name="Millipede's Gas">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -2756,7 +2744,6 @@
 		</effects>
 	</skill>
 	<skill id="14191" toLevel="1" name="Cancel Invincibility">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>500</hitTime>
@@ -2963,7 +2950,6 @@
 	</skill>
 	<skill id="14198" toLevel="1" name="Water Cannon Damage">
 		<!-- Water Cannon -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<mpConsume>177</mpConsume>
 		<hitTime>500</hitTime>

@@ -931,6 +931,7 @@
 	</skill>
 	<skill id="2168" toLevel="6" name="Lucky Charm">
 		<!-- Blessing which grants an exemption from the death penalty if you are killed by Boss/ Raid Monsters. Effect 1. -->
+		<icon>icon.etc_orcish_talisman_i00</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -942,7 +943,6 @@
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>REDUCE_DROP_PENALTY</abnormalType>
 		<hitTime>2000</hitTime>
-		<icon>icon.etc_orcish_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
@@ -994,16 +994,16 @@
 	</skill>
 	<skill id="2169" toLevel="2" name="Magic Haste Potion">
 		<!-- Increases Casting Spd. Effect 2. -->
+		<icon>
+			<value level="1">icon.etc_potion_of_acumen2_i00</value>
+			<value level="2">icon.etc_potion_of_acumen3_i00</value>
+		</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
 		</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
-		<icon>
-			<value level="1">icon.etc_potion_of_acumen2_i00</value>
-			<value level="2">icon.etc_potion_of_acumen3_i00</value>
-		</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">35</value>

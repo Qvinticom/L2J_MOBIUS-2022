@@ -580,6 +580,7 @@
 	</item>
 	<item id="39537" name="Prophecy Machine Fragment" type="EtcItem">
 		<!-- Part of a machine used by ancient Ertheia to record prophecies. Double-click to look closer. -->
+		<set name="icon" val="icon.etc_ertheia_prophecy_device_piece" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -590,7 +591,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_ertheia_prophecy_device_piece" />
 	</item>
 	<item id="39538" name="Kain's Prophecy Machine Fragment" type="EtcItem">
 		<!-- Part of a machine used by ancient Ertheia to record prophecies, carried by Kain Van Halter. -->
@@ -609,6 +609,7 @@
 	</item>
 	<item id="39539" name="Ertheia Prophecy Machine" type="EtcItem">
 		<!-- Machine used by ancient Ertheia to record prophecies. Not all prophecies have been restoreds. Double-click to look closer. -->
+		<set name="icon" val="icon.etc_ertheia_prophecy_device" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -619,10 +620,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_ertheia_prophecy_device" />
 	</item>
 	<item id="39540" name="Ertheia Prophecy Machine" type="EtcItem">
 		<!-- Machine used by ancient Ertheia to record prophecies, its contents have been partially restored by Ivory Tower's Arkenias. Double-click to look closer. -->
+		<set name="icon" val="icon.etc_ertheia_prophecy_device" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -632,12 +633,12 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" /> 
-		<set name="icon" val="icon.etc_ertheia_prophecy_device" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="handler" val="Book" />
 	</item>
 	<item id="39541" name="Ertheia Prophecy Machine" type="EtcItem">
 		<!-- Machine used by ancient Ertheia to record prophecies, its contents have been restored by Lich King Icarus, a necromancer in Hardin's Academy. Double-click to look closer. -->
+		<set name="icon" val="icon.etc_ertheia_prophecy_device" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -648,7 +649,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_ertheia_prophecy_device" />
 	</item>
 	<item id="39542" name="Atelia" type="EtcItem">
 		<!-- A rare gem only found in the Wind Spirit Realm. It emits powerful energy. -->
@@ -869,6 +869,7 @@
 	</item>
 	<item id="39557" name="Minstrel's Scroll of Escape: Town of Aden" type="EtcItem">
 		<!-- A scroll given as a gift. Takes you to Town of Aden. -->
+		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -877,7 +878,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 	</item>
 	<item id="39558" name="Low-grade Talisman Ingredient Box" type="EtcItem">
 		<!-- Not in Use -->
@@ -1444,6 +1444,7 @@
 	</item>
 	<item id="39590" name="Yum Yum Candy (30-day)" additionalName="Event" type="EtcItem">
 		<!-- XP/SP Gain + 15%. Stacks with Nom Nom Candy, but not with another Yum Yum Candy. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1452,11 +1453,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="icon.etc_whiteday_candy_i05" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="39591" name="Nom Nom Candy (30-day)" additionalName="Event" type="EtcItem">
 		<!-- XP/SP Gain + 15%. Stacks with Yum Yum Candy, but not with another Nom Nom Candy. -->
+		<set name="icon" val="icon.etc_whiteday_candy_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1465,7 +1466,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="icon.etc_whiteday_candy_i06" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="39592" name="Tempest Stone" type="EtcItem">

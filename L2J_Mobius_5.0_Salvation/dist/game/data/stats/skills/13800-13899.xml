@@ -332,7 +332,6 @@
 			<value level="1">icon.weapon_kelbim_dual_dagger_i01</value>
 			<value level="2">icon.kelbim_weapon_dual_dagger_high</value>
 		</icon>
-		<icon>icon.weapon_kelbim_dual_dagger_i01</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
@@ -502,7 +501,6 @@
 	</skill>
 	<skill id="13821" toLevel="1" name="Spirit's Evil Thoughts">
 		<!-- Key for Spirits' Evil Thoughts. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
@@ -510,28 +508,24 @@
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="13822" toLevel="1" name="Stronghold I Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="13823" toLevel="1" name="Stronghold II Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="13824" toLevel="1" name="Stronghold III Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="13825" toLevel="1" name="Stronghold IV Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
@@ -640,11 +634,11 @@
 	</skill>
 	<skill id="13830" toLevel="1" name="Christmas Talisman - Ultimate Defense">
 		<!-- P./ M. Def +5000 for 15 seconds with the power of Talisman. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
 		<hitTime>500</hitTime>
@@ -670,10 +664,10 @@
 	</skill>
 	<skill id="13831" toLevel="1" name="Christmas Talisman - Debuff Resistance">
 		<!-- Defends against 5 Debuffs for 15 seconds. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
-		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
 		<hitTime>500</hitTime>
@@ -769,8 +763,19 @@
 	<skill id="13837" toLevel="13" name="Shadow Cutter">
 		<!-- Atk. Spd +$s1. -->
 		<icon>
-			<value fromLevel="1" toLevel="12">icon.weapon_shadow_onehand_sword</value>
-			<value fromLevel="13" toLevel="13">icon.shadow_onehand_sword_1_high</value>
+			<value level="1">icon.weapon_shadow_onehand_sword</value>
+			<value level="2">icon.weapon_shadow_onehand_sword</value>
+			<value level="3">icon.weapon_shadow_onehand_sword</value>
+			<value level="4">icon.weapon_shadow_onehand_sword</value>
+			<value level="5">icon.weapon_shadow_onehand_sword</value>
+			<value level="6">icon.weapon_shadow_onehand_sword</value>
+			<value level="7">icon.weapon_shadow_onehand_sword</value>
+			<value level="8">icon.weapon_shadow_onehand_sword</value>
+			<value level="9">icon.weapon_shadow_onehand_sword</value>
+			<value level="10">icon.weapon_shadow_onehand_sword</value>
+			<value level="11">icon.weapon_shadow_onehand_sword</value>
+			<value level="12">icon.weapon_shadow_onehand_sword</value>
+			<value level="13">icon.shadow_onehand_sword_1_high</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -830,8 +835,19 @@
 	<skill id="13838" toLevel="13" name="Shadow Slasher">
 		<!-- Atk. Spd +$s1. -->
 		<icon>
-			<value fromLevel="1" toLevel="12">icon.weapon_shadow_twohand_sword</value>
-			<value fromLevel="13" toLevel="13">icon.shadow_twohand_sword_1_high</value>
+			<value level="1">icon.weapon_shadow_twohand_sword</value>
+			<value level="2">icon.weapon_shadow_twohand_sword</value>
+			<value level="3">icon.weapon_shadow_twohand_sword</value>
+			<value level="4">icon.weapon_shadow_twohand_sword</value>
+			<value level="5">icon.weapon_shadow_twohand_sword</value>
+			<value level="6">icon.weapon_shadow_twohand_sword</value>
+			<value level="7">icon.weapon_shadow_twohand_sword</value>
+			<value level="8">icon.weapon_shadow_twohand_sword</value>
+			<value level="9">icon.weapon_shadow_twohand_sword</value>
+			<value level="10">icon.weapon_shadow_twohand_sword</value>
+			<value level="11">icon.weapon_shadow_twohand_sword</value>
+			<value level="12">icon.weapon_shadow_twohand_sword</value>
+			<value level="13">icon.shadow_twohand_sword_1_high</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -891,8 +907,19 @@
 	<skill id="13839" toLevel="13" name="Shadow Fighter">
 		<!-- Atk. Spd +$s1. -->
 		<icon>
-			<value fromLevel="1" toLevel="12">icon.weapon_shadow_fist</value>
-			<value fromLevel="13" toLevel="13">icon.shadow_fist_1_high</value>
+			<value level="1">icon.weapon_shadow_fist</value>
+			<value level="2">icon.weapon_shadow_fist</value>
+			<value level="3">icon.weapon_shadow_fist</value>
+			<value level="4">icon.weapon_shadow_fist</value>
+			<value level="5">icon.weapon_shadow_fist</value>
+			<value level="6">icon.weapon_shadow_fist</value>
+			<value level="7">icon.weapon_shadow_fist</value>
+			<value level="8">icon.weapon_shadow_fist</value>
+			<value level="9">icon.weapon_shadow_fist</value>
+			<value level="10">icon.weapon_shadow_fist</value>
+			<value level="11">icon.weapon_shadow_fist</value>
+			<value level="12">icon.weapon_shadow_fist</value>
+			<value level="13">icon.shadow_fist_1_high</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -952,8 +979,19 @@
 	<skill id="13840" toLevel="13" name="Shadow Stormer">
 		<!-- Atk. Spd +$s1. -->
 		<icon>
-			<value fromLevel="1" toLevel="12">icon.weapon_shadow_spear</value>
-			<value fromLevel="13" toLevel="13">icon.shadow_spear_1_high</value>
+			<value level="1">icon.weapon_shadow_spear</value>
+			<value level="2">icon.weapon_shadow_spear</value>
+			<value level="3">icon.weapon_shadow_spear</value>
+			<value level="4">icon.weapon_shadow_spear</value>
+			<value level="5">icon.weapon_shadow_spear</value>
+			<value level="6">icon.weapon_shadow_spear</value>
+			<value level="7">icon.weapon_shadow_spear</value>
+			<value level="8">icon.weapon_shadow_spear</value>
+			<value level="9">icon.weapon_shadow_spear</value>
+			<value level="10">icon.weapon_shadow_spear</value>
+			<value level="11">icon.weapon_shadow_spear</value>
+			<value level="12">icon.weapon_shadow_spear</value>
+			<value level="13">icon.shadow_spear_1_high</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1020,8 +1058,19 @@
 	<skill id="13841" toLevel="13" name="Shadow Dual Sword">
 		<!-- Atk. Spd +$s1. -->
 		<icon>
-			<value fromLevel="1" toLevel="12">icon.weapon_shadow_dual_sword</value>
-			<value fromLevel="13" toLevel="13">icon.shadow_dual_sword_1_high</value>
+			<value level="1">icon.weapon_shadow_dual_sword</value>
+			<value level="2">icon.weapon_shadow_dual_sword</value>
+			<value level="3">icon.weapon_shadow_dual_sword</value>
+			<value level="4">icon.weapon_shadow_dual_sword</value>
+			<value level="5">icon.weapon_shadow_dual_sword</value>
+			<value level="6">icon.weapon_shadow_dual_sword</value>
+			<value level="7">icon.weapon_shadow_dual_sword</value>
+			<value level="8">icon.weapon_shadow_dual_sword</value>
+			<value level="9">icon.weapon_shadow_dual_sword</value>
+			<value level="10">icon.weapon_shadow_dual_sword</value>
+			<value level="11">icon.weapon_shadow_dual_sword</value>
+			<value level="12">icon.weapon_shadow_dual_sword</value>
+			<value level="13">icon.shadow_dual_sword_1_high</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1081,8 +1130,19 @@
 	<skill id="13842" toLevel="13" name="Shadow Shaper">
 		<!-- Atk. Spd +$s1. -->
 		<icon>
-			<value fromLevel="1" toLevel="12">icon.weapon_shadow_dagger</value>
-			<value fromLevel="13" toLevel="13">icon.shadow_dagger_1_high</value>
+			<value level="1">icon.weapon_shadow_dagger</value>
+			<value level="2">icon.weapon_shadow_dagger</value>
+			<value level="3">icon.weapon_shadow_dagger</value>
+			<value level="4">icon.weapon_shadow_dagger</value>
+			<value level="5">icon.weapon_shadow_dagger</value>
+			<value level="6">icon.weapon_shadow_dagger</value>
+			<value level="7">icon.weapon_shadow_dagger</value>
+			<value level="8">icon.weapon_shadow_dagger</value>
+			<value level="9">icon.weapon_shadow_dagger</value>
+			<value level="10">icon.weapon_shadow_dagger</value>
+			<value level="11">icon.weapon_shadow_dagger</value>
+			<value level="12">icon.weapon_shadow_dagger</value>
+			<value level="13">icon.shadow_dagger_1_high</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1142,8 +1202,19 @@
 	<skill id="13843" toLevel="13" name="Shadow Thrower">
 		<!-- Atk. Spd +$s1. -->
 		<icon>
-			<value fromLevel="1" toLevel="12">icon.weapon_shadow_bow</value>
-			<value fromLevel="13" toLevel="13">icon.shadow_bow_1_high</value>
+			<value level="1">icon.weapon_shadow_bow</value>
+			<value level="2">icon.weapon_shadow_bow</value>
+			<value level="3">icon.weapon_shadow_bow</value>
+			<value level="4">icon.weapon_shadow_bow</value>
+			<value level="5">icon.weapon_shadow_bow</value>
+			<value level="6">icon.weapon_shadow_bow</value>
+			<value level="7">icon.weapon_shadow_bow</value>
+			<value level="8">icon.weapon_shadow_bow</value>
+			<value level="9">icon.weapon_shadow_bow</value>
+			<value level="10">icon.weapon_shadow_bow</value>
+			<value level="11">icon.weapon_shadow_bow</value>
+			<value level="12">icon.weapon_shadow_bow</value>
+			<value level="13">icon.shadow_bow_1_high</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1203,8 +1274,19 @@
 	<skill id="13844" toLevel="13" name="Shadow Shooter">
 		<!-- Atk. Spd +$s1. -->
 		<icon>
-			<value fromLevel="1" toLevel="12">icon.weapon_shadow_crossbow</value>
-			<value fromLevel="13" toLevel="13">icon.shadow_crossbow_1_high</value>
+			<value level="1">icon.weapon_shadow_crossbow</value>
+			<value level="2">icon.weapon_shadow_crossbow</value>
+			<value level="3">icon.weapon_shadow_crossbow</value>
+			<value level="4">icon.weapon_shadow_crossbow</value>
+			<value level="5">icon.weapon_shadow_crossbow</value>
+			<value level="6">icon.weapon_shadow_crossbow</value>
+			<value level="7">icon.weapon_shadow_crossbow</value>
+			<value level="8">icon.weapon_shadow_crossbow</value>
+			<value level="9">icon.weapon_shadow_crossbow</value>
+			<value level="10">icon.weapon_shadow_crossbow</value>
+			<value level="11">icon.weapon_shadow_crossbow</value>
+			<value level="12">icon.weapon_shadow_crossbow</value>
+			<value level="13">icon.shadow_crossbow_1_high</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1264,8 +1346,19 @@
 	<skill id="13845" toLevel="13" name="Shadow Buster">
 		<!-- Casting Spd. +$s1. -->
 		<icon>
-			<value fromLevel="1" toLevel="12">icon.weapon_shadow_magic_sword</value>
-			<value fromLevel="13" toLevel="13">icon.shadow_onehand_magic_sword_1_high</value>
+			<value level="1">icon.weapon_shadow_magic_sword</value>
+			<value level="2">icon.weapon_shadow_magic_sword</value>
+			<value level="3">icon.weapon_shadow_magic_sword</value>
+			<value level="4">icon.weapon_shadow_magic_sword</value>
+			<value level="5">icon.weapon_shadow_magic_sword</value>
+			<value level="6">icon.weapon_shadow_magic_sword</value>
+			<value level="7">icon.weapon_shadow_magic_sword</value>
+			<value level="8">icon.weapon_shadow_magic_sword</value>
+			<value level="9">icon.weapon_shadow_magic_sword</value>
+			<value level="10">icon.weapon_shadow_magic_sword</value>
+			<value level="11">icon.weapon_shadow_magic_sword</value>
+			<value level="12">icon.weapon_shadow_magic_sword</value>
+			<value level="13">icon.shadow_onehand_magic_sword_1_high</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1325,8 +1418,19 @@
 	<skill id="13846" toLevel="13" name="Shadow Retributer">
 		<!-- Atk. Spd. +$s1, Casting Spd. +$s2. -->
 		<icon>
-			<value fromLevel="1" toLevel="12">icon.weapon_shadow_magic_blunt</value>
-			<value fromLevel="13" toLevel="13">icon.shadow_twohand_magic_blunt_1_high</value>
+			<value level="1">icon.weapon_shadow_magic_blunt</value>
+			<value level="2">icon.weapon_shadow_magic_blunt</value>
+			<value level="3">icon.weapon_shadow_magic_blunt</value>
+			<value level="4">icon.weapon_shadow_magic_blunt</value>
+			<value level="5">icon.weapon_shadow_magic_blunt</value>
+			<value level="6">icon.weapon_shadow_magic_blunt</value>
+			<value level="7">icon.weapon_shadow_magic_blunt</value>
+			<value level="8">icon.weapon_shadow_magic_blunt</value>
+			<value level="9">icon.weapon_shadow_magic_blunt</value>
+			<value level="10">icon.weapon_shadow_magic_blunt</value>
+			<value level="11">icon.weapon_shadow_magic_blunt</value>
+			<value level="12">icon.weapon_shadow_magic_blunt</value>
+			<value level="13">icon.shadow_twohand_magic_blunt_1_high</value>
 		</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1483,7 +1587,6 @@
 	</skill>
 	<skill id="13853" toLevel="1" name="Agathion Teleport: Talking Island Village">
 		<!-- Teleports to the Talking Island Village. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
@@ -1509,7 +1612,6 @@
 	</skill>
 	<skill id="13854" toLevel="1" name="Agathion Teleport: Town of Goddard">
 		<!-- Teleports to the Town of Goddard. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
@@ -1535,7 +1637,6 @@
 	</skill>
 	<skill id="13855" toLevel="1" name="Agathion Teleport: Town of Schuttgart">
 		<!-- Teleports to the Town of Schuttgart. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>

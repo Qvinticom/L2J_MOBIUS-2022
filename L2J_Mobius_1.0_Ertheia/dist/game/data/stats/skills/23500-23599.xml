@@ -1634,7 +1634,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23544" toLevel="1" name="Piercing Attack">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>77</mpConsume>
 		<castRange>40</castRange>
@@ -1704,7 +1703,6 @@
 		<affectScope>PARTY</affectScope>
 	</skill>
 	<skill id="23547" toLevel="1" name="(Power Strike)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>77</mpConsume>
 		<castRange>40</castRange>
@@ -1740,7 +1738,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23549" toLevel="1" name="Lightning Wave">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>78</mpConsume>
 		<hitTime>2500</hitTime>
@@ -1757,7 +1754,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23550" toLevel="1" name="Thunder Bolt">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>78</mpConsume>
 		<castRange>900</castRange>
@@ -1870,7 +1866,6 @@
 		<affectObject>CLAN</affectObject>
 	</skill>
 	<skill id="23555" toLevel="2" name="(Power Smash)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>80</mpConsume>
 		<castRange>40</castRange>
@@ -1966,7 +1961,6 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="23559" toLevel="1" name="Mega Storm Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>26</mpConsume>
 		<castRange>600</castRange>
@@ -2120,7 +2114,6 @@
 		</conditions>
 	</skill>
 	<skill id="23566" toLevel="1" name="Blessed Griffin Egg">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
 		<coolTime>1000</coolTime>
@@ -2219,13 +2212,11 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23573" toLevel="1" name="Summon Pomona">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>4000</hitTime>
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23574" toLevel="1" name="Summon Uthanka's Minion">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>5000</hitTime>
 	</skill>
@@ -2374,7 +2365,6 @@
 	</skill>
 	<skill id="23593" toLevel="1" name="Burning Seal">
 		<!-- Burns up the Blood Seal imprinted on a target to inflict magical damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>51</mpConsume>
 		<castRange>600</castRange>
@@ -2397,7 +2387,6 @@
 	</skill>
 	<skill id="23595" toLevel="1" name="Charge">
 		<!-- Charges to attack a target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -2406,20 +2395,17 @@
 	</skill>
 	<skill id="23596" toLevel="1" name="Hide">
 		<!-- Hidden. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>2</effectPoint>
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="23597" toLevel="1" name="Unhide">
 		<!-- Cancels Hide. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
 	<skill id="23598" toLevel="1" name="Self-destruction">
 		<!-- Runs toward the target's area and self-destructs. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>142</mpConsume>
 		<reuseDelay>5000</reuseDelay>

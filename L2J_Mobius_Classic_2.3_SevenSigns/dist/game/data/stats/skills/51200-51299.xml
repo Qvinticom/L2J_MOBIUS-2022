@@ -2,135 +2,120 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="51200" toLevel="1" name="High Priest Energy">
 		<!-- Grants the power of High Priest. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death.. <Special ability>. During transformation in case of successful attack or skill use with a certain chance restores 1000 HP and 200 MP of party members. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm2018_healer_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51201" toLevel="1" name="Blood Noblesse Energy">
 		<!-- Grants the power of Blood Noblesse. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death.. <Special ability>. During transformation in case of successful attack or skill use with a certain chance strikes the target with 145 Power added to M. Atk. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm2018_rednoblesse_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51202" toLevel="1" name="White Noblesse Energy">
 		<!-- Grants the power of White Noblesse. For 15 min. Acquired XP +10%, P. Atk. +7%, M. Atk. +7%. Cooldown: 15 min. Transformation effect remains after death.. <Special ability>. During transformation in case of successful attack or skill use with a certain chance decreases enemy's M. Def. by 23%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm2018_whitenoblesse_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51203" toLevel="1" name="Soul of Berserker">
 		<!-- Grants the power of ??????????. During Berserker effect P. Atk. +50%, M. Atk. +50%, Atk. Spd. +50%, Casting Spd. +50%. Reflects 15% damage to enemy. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm2018_dragon_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51204" toLevel="1" name="Ninja Assassin - Cancel Target">
 		<!-- Cancels target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51205" toLevel="1" name="Blue Mustekeer - Stun">
 		<!-- Stuns and temporary disables ability to move. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0100</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51206" toLevel="1" name="Valkyrie - Paralyze">
 		<!-- Paralyses and temporary disables ability to move. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1170</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51207" toLevel="1" name="Wild Wolf - Hex">
 		<!-- P. Def. -23%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0122</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51208" toLevel="1" name="Pirate's Blessing">
 		<!-- For party members P./ M. Atk. +10%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm2018_pirate_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51209" toLevel="1" name="Purple Cowboy - Physical Attack">
 		<!-- Powerful physical attack. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51210" toLevel="1" name="High Priest - Blessing of Eva">
 		<!-- Restores 1000 HP and 200 MP of party members. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1506</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51211" toLevel="1" name="Blood Noblesse - Magical Attack">
 		<!-- Powerful magical attack. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51212" toLevel="1" name="White Noblesse - Curse Gloom">
 		<!-- P. Def. -23%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1263</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51213" toLevel="1" name="Mysterious Transformation Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51214" toLevel="1" name="Transformation Sealbook: Dragon Berserker">
 		<!-- Allows you to learn a skill to magically transform yourself into a Dragon Berserker. Item will disappear after using. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51215" toLevel="1" name="Transformation Sealbook: Ninja Assassin">
 		<!-- Allows you to learn a skill to magically transform yourself into a Ninja Assassin. Item will disappear after using. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51216" toLevel="1" name="Transformation Sealbook: Blue Musketeer">
 		<!-- Allows you to learn a skill to magically transform yourself into a Blue Musketeer. Item will disappear after using. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51217" toLevel="1" name="Transformation Sealbook: Valkyrie">
 		<!-- Allows you to learn a skill to magically transform yourself into a Valkyrie. Item will disappear after using. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51218" toLevel="1" name="Transformation Sealbook: Wild Wolf">
 		<!-- Allows you to learn a skill to magically transform yourself into a Wild Wolf. Item will disappear after using. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51219" toLevel="1" name="Transformation Sealbook: Pirate">
 		<!-- Allows you to learn a skill to magically transform yourself into a Pirate. Item will disappear after using. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51220" toLevel="1" name="Transformation Sealbook: Purple Cowboy">
 		<!-- Allows you to learn a skill to magically transform yourself into a Purple Cowboy. Item will disappear after using. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51221" toLevel="1" name="Transformation Sealbook: High Priest">
 		<!-- Allows you to learn a skill to magically transform yourself into a High Priest. Item will disappear after using. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51222" toLevel="1" name="Transformation Sealbook: Blood Noblesse">
 		<!-- Allows you to learn a skill to magically transform yourself into a Blood Noblesse. Item will disappear after using. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51223" toLevel="1" name="Transformation Sealbook: White Noblesse">
 		<!-- Allows you to learn a skill to magically transform yourself into a White Noblesse. Item will disappear after using. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51224" toLevel="2" name="null">
 		<!-- null -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_buff</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51225" toLevel="3" name="null">
 		<!-- null -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.fish_stew_buff</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="51226" toLevel="1" name="Mysterious Transformation Sealbook Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

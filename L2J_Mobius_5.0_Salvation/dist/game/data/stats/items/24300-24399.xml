@@ -546,10 +546,10 @@
 	</item>
 	<item id="24332" name="Starlight Jar" type="EtcItem">
 		<!-- Stars twinkle inside a star-shaped jar. Ingredient to crafting a Zodiac Agathion bracelet. -->
+		<set name="icon" val="BranchIcon.Icon.etc_sign_agathion_feed_yellow_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
-		<set name="icon" val="BranchIcon.Icon.etc_sign_agathion_feed_yellow_i00" />
 	</item>
 	<item id="24333" name="La Vie En Rose's Jewelry Box" type="EtcItem">
 		<!-- Double-click to acquire 1 of La Vie En Rose's jewels. Cannot be used in the auction house. -->
@@ -1174,6 +1174,7 @@
 	</item>
 	<item id="24376" name="Sayha's Rune: Luck" additionalName="Stage 1" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting +1%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1182,10 +1183,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 	</item>
 	<item id="24377" name="Sayha's Rune: Luck" additionalName="Stage 2" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting +3%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1194,10 +1195,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 	</item>
 	<item id="24378" name="Sayha's Rune: Luck" additionalName="Stage 3" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting +6%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1206,10 +1207,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 	</item>
 	<item id="24379" name="Sayha's Rune: Luck" additionalName="Stage 4" type="EtcItem">
 		<!-- 10-min. When possessed, drop rate during hunting +10%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1218,10 +1219,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 	</item>
 	<item id="24380" name="Sayha's Rune" additionalName="Stage 1" type="EtcItem">
 		<!-- 10-min. When possessed, XP/ SP/ Drop Rate +1%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1230,10 +1231,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 	</item>
 	<item id="24381" name="Sayha's Rune" additionalName="Stage 2" type="EtcItem">
 		<!-- 10-min. When possessed, XP/ SP/ Drop Rate +3%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1242,10 +1243,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 	</item>
 	<item id="24382" name="Sayha's Rune" additionalName="Stage 3" type="EtcItem">
 		<!-- 10-min. When possessed, XP/ SP/ Drop Rate +6%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1254,10 +1255,10 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 	</item>
 	<item id="24383" name="Sayha's Rune" additionalName="Stage 4" type="EtcItem">
 		<!-- 10-min. When possessed, XP/ SP/ Drop Rate +10%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1266,7 +1267,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 	</item>
 	<item id="24384" name="Sayha's Rune: Growth Pack Stage 1" type="EtcItem">
 		<!-- Wrapped Pack containing Sayha's Rune: Growth Stage 1. -->

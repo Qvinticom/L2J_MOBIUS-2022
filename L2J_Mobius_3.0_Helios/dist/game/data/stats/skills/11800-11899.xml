@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11800" toLevel="3" name="Sustain">
 		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
+		<icon>icon.skill1217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
-		<icon>icon.skill1217</icon>
 		<magicLvl>93</magicLvl>
 		<operateType>A4</operateType>
 		<effectPoint>1</effectPoint>
@@ -84,10 +84,10 @@
 	</skill>
 	<skill id="11802" toLevel="3" name="Sustain">
 		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
+		<icon>icon.skill1217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
-		<icon>icon.skill1217</icon>
 		<magicLvl>95</magicLvl>
 		<operateType>A4</operateType>
 		<effectPoint>1</effectPoint>
@@ -166,10 +166,10 @@
 	</skill>
 	<skill id="11804" toLevel="3" name="Sustain">
 		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
+		<icon>icon.skill1217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
-		<icon>icon.skill1217</icon>
 		<magicLvl>97</magicLvl>
 		<operateType>A4</operateType>
 		<effectPoint>1</effectPoint>
@@ -265,11 +265,11 @@
 	</skill>
 	<skill id="11808" toLevel="2" name="Elegance of Light">
 		<!-- Affected by Elegance of Light. HP is decreased. -->
+		<icon>icon.skill0086</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>ALL_REGEN_DOWN</abnormalType>
 		<affectRange>300</affectRange>
-		<icon>icon.skill0086</icon>
 		<operateType>A5</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>500</hitTime>
@@ -298,11 +298,11 @@
 	</skill>
 	<skill id="11809" toLevel="2" name="Elegance of Light">
 		<!-- Affected by Elegance of Light. Increases HP. -->
+		<icon>icon.skill0086</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>MULTI_DEBUFF_EARTH</abnormalType>
 		<affectRange>300</affectRange>
-		<icon>icon.skill0086</icon>
 		<operateType>A5</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>500</hitTime>
@@ -347,10 +347,10 @@
 	</skill>
 	<skill id="11811" toLevel="1" name="Total Resurrection Wish">
 		<!-- Can use the Mark of Resurrection and Mark of Total Resurrection for 30 seconds. -->
+		<icon>icon.skill1217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SNIPE</abnormalType>
-		<icon>icon.skill1217</icon>
 		<operateType>A4</operateType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -426,6 +426,7 @@
 	</skill>
 	<skill id="11814" toLevel="11" name="Dark Force">
 		<!-- Inflicts damage on target with $s1 Power added to M. Atk. Has a chance of pushing back target. -->
+		<icon>icon.skill11814</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>1</abnormalTime>
@@ -436,7 +437,6 @@
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<lvlBonusRate>20</lvlBonusRate>
-		<icon>icon.skill11814</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">86</value>
@@ -597,10 +597,10 @@
 	</skill>
 	<skill id="11816" toLevel="3" name="Sustain">
 		<!-- For $s1, increases Healing power by $s2. If triggered again, the effect will increase. -->
+		<icon>icon.skill1217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>LIFE_FORCE_HEALER_SELF</abnormalType>
-		<icon>icon.skill1217</icon>
 		<operateType>A4</operateType>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -624,9 +624,9 @@
 	</skill>
 	<skill id="11817" toLevel="11" name="Dark Rain">
 		<!-- Inflicts damage on nearby enemies with $s1 Power added to M. Atk. and decreases aggression toward yourself. -->
+		<icon>icon.skill11817</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill11817</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-1733</value>
@@ -728,10 +728,10 @@
 	</skill>
 	<skill id="11818" toLevel="1" name="Price of Summoning">
 		<!-- Healing abilities are decreased as a price for summoning Lumi. -->
+		<icon>icon.skill1100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>180</abnormalTime>
 		<abnormalType>DOT_MP</abnormalType>
-		<icon>icon.skill1100</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<reuseDelay>8000</reuseDelay>
@@ -1055,6 +1055,7 @@
 	</skill>
 	<skill id="11826" toLevel="1" name="Emblem of Salvation">
 		<!-- Resurrects from death fully recovered. Buffs/debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear. -->
+		<icon>icon.skill11826</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
 		<abnormalTime>
@@ -1065,7 +1066,6 @@
 		<effectPoint>687</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill11826</icon>
 		<isMagic>22</isMagic>
 		<magicLvl>85</magicLvl>
 		<mpConsume>70</mpConsume>
@@ -1116,13 +1116,13 @@
 	</skill>
 	<skill id="11828" toLevel="1" name="Progressive Heal">
 		<!-- Heals target and the $s1 most injured allies around target by up to $s2 of their Max HP. The recovery amount decreases starting from the most injured person. -->
+		<icon>icon.skill11828</icon>
 		<affectLimit>9-0</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>900</castRange>
 		<effectPoint>1301</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill11828</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<mpConsume>458</mpConsume>
@@ -1418,10 +1418,10 @@
 	</skill>
 	<skill id="11835" toLevel="1" name="Dissolve">
 		<!-- Increases Speed. -->
+		<icon>icon.skill11770</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
-		<icon>icon.skill11770</icon>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
 		<rideState>NONE</rideState>
@@ -1554,6 +1554,7 @@
 	</skill>
 	<skill id="11851" toLevel="4" name="Divine Prayer">
 		<!-- For $s1, party members' HP heal amount + $s2. -->
+		<icon>icon.skill11859</icon>
 		<abnormalLvl>
 			<value level="1">4</value>
 			<value level="2">5</value>
@@ -1564,7 +1565,6 @@
 		<abnormalTime>1800</abnormalTime>
 		<affectRange>1000</affectRange>
 		<operateType>A2</operateType>
-		<icon>icon.skill11859</icon>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
@@ -1624,6 +1624,7 @@
 	</skill>
 	<skill id="11852" toLevel="4" name="Mass Mana Gain">
 		<!-- For $s1, party members' MP heal amount + $s2. -->
+		<icon>icon.skill11852new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1634,7 +1635,6 @@
 		<abnormalTime>1800</abnormalTime>
 		<affectRange>1000</affectRange>
 		<operateType>A2</operateType>
-		<icon>icon.skill11852new</icon>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
@@ -1716,6 +1716,7 @@
 	</skill>
 	<skill id="11854" toLevel="4" name="Mass Mana Gain">
 		<!-- For $s1, party members' MP heal amount + $s2. -->
+		<icon>icon.skill11852new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1726,7 +1727,6 @@
 		<abnormalTime>1800</abnormalTime>
 		<affectRange>1000</affectRange>
 		<operateType>A2</operateType>
-		<icon>icon.skill11852new</icon>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
@@ -1916,10 +1916,10 @@
 	</skill>
 	<skill id="11861" toLevel="1" name="Elemental Resistance">
 		<!-- For $s1, increases party member's Elemental Resistance by $s2. Consumes $s3 Spirit Ores. -->
+		<icon>icon.skill11861</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>HEAL_RESISTANCE</abnormalType>
-		<icon>icon.skill11861</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -1972,10 +1972,10 @@
 	</skill>
 	<skill id="11862" toLevel="1" name="Limited Melee Weapon Resistance">
 		<!-- For $s1, increases party member's resistance to melee weapons by $s2. Consumes $s3 Spirit Ores. -->
+		<icon>icon.skill11862</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>HEAL_RESISTANCE</abnormalType>
-		<icon>icon.skill11862</icon>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
@@ -2028,10 +2028,10 @@
 	</skill>
 	<skill id="11863" toLevel="1" name="Limited Ranged Weapon Resistance">
 		<!-- For $s1, increases party member's resistance to ranged weapons by $s2. Consumes $s3 Spirit Ores. -->
+		<icon>icon.skill11863</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>HEAL_RESISTANCE</abnormalType>
-		<icon>icon.skill11863</icon>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>

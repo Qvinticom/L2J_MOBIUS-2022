@@ -112,7 +112,7 @@
 	</skill>
 	<skill id="11226" toLevel="7" name="Superior Abyss Stigma">
 		<!-- PvP Damage +$s1 and M. Atk. +$s2. Also resets the cooldown of M. Evasion/ Warp if you cast the Elemental Burst (Dark). -->
-		<icon>icon.skill0945</icon>
+		<icon>icon.skill11226</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -172,12 +172,12 @@
 	</skill>
 	<skill id="11242" toLevel="1" name="Shadow Snare Zone">
 		<!-- Pulls nearby enemies to the center. -->
+		<icon>icon.skill1469</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>COMBINATION</abnormalType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill1469</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-709</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -204,12 +204,12 @@
 	</skill>
 	<skill id="11245" toLevel="1" name="Sampling">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
-		<icon>icon.skill11032</icon>
 		<operateType>A4</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-696</effectPoint>
@@ -237,8 +237,8 @@
 	</skill>
 	<skill id="11247" toLevel="1" name="Heavy Hit">
 		<!-- Inflicts a powerful blow on target. -->
-		<attachToggleGroupId>1</attachToggleGroupId>
 		<icon>icon.skill10317</icon>
+		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<hitTime>3380</hitTime>
@@ -363,6 +363,7 @@
 	</skill>
 	<skill id="11251" toLevel="10" name="Superior Weapon Mastery">
 		<!-- Increases M. Atk. by $s1, additional M. Atk. by $s2, Casting Spd. by $s3, M. Critical Rate by $s4. P. Atk. by $s5, additional P. Atk. by $s6, P. Accuracy by $s7 when a two-handed staff or two-handed blunt is equipped. Increases INT by $s8. Depending on INT, the skill cooldown resets or duration increases by $s9 times. -->
+		<icon>icon.skill11251</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -375,7 +376,6 @@
 			<value level="9">104</value>
 			<value level="10">104</value>
 		</magicLvl>
-		<icon>icon.skill11251</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -446,6 +446,7 @@
 	</skill>
 	<skill id="11252" toLevel="10" name="Superior Robe Mastery">
 		<!-- Max HP +$s1, P. Def. +$s2, and M. Def. +$s3 when equipped with a Robe. INT +$s4. -->
+		<icon>icon.skill11252</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -458,7 +459,6 @@
 			<value level="9">104</value>
 			<value level="10">104</value>
 		</magicLvl>
-		<icon>icon.skill11252</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -499,6 +499,7 @@
 	</skill>
 	<skill id="11253" toLevel="10" name="Superior Magic Mastery">
 		<!-- M. Def. +$s1, Magic Damage Resistance +$s2, Magic skill Cooldown -$s3, MP Consumption -$s4. INT +$s5. -->
+		<icon>icon.skill11253</icon>
 		<skillType>BUFF</skillType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -512,7 +513,6 @@
 			<value level="9">104</value>
 			<value level="10">104</value>
 		</magicLvl>
-		<icon>icon.skill11253</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -599,8 +599,8 @@
 	</skill>
 	<skill id="11255" toLevel="1" name="Superior Spirit Mastery">
 		<!-- Poison/ Bleed/ Hold/ Sleep/ Mental Attack Resistance +30%. INT +2. -->
-		<magicLvl>85</magicLvl>
 		<icon>icon.skill11255</icon>
+		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -2093,6 +2093,7 @@
 	</skill>
 	<skill id="11277" toLevel="4" name="Sense of Loyalty">
 		<!-- Servitor's Fury. P. Atk. +$s1, M. Atk. +$s2, P. Critical Rate +$s3, and P. Critical Damage by $s4. -->
+		<icon>icon.skill11277</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2101,7 +2102,6 @@
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SUMMON_CONDITION</abnormalType>
-		<icon>icon.skill11277</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<basicProperty>NONE</basicProperty>
@@ -2915,7 +2915,6 @@
 	</skill>
 	<skill id="11292" toLevel="8" name="Cubic Cleanse">
 		<!-- Cancels debuffs on you. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>687</effectPoint>
@@ -2955,7 +2954,6 @@
 	</skill>
 	<skill id="11293" toLevel="8" name="Cubic Cancellation">
 		<!-- Cancels the enemy's buff. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>-687</effectPoint>

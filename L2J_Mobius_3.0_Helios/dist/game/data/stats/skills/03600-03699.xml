@@ -1140,13 +1140,13 @@
 	</skill>
 	<skill id="3626" toLevel="1" name="Kabokula">
 		<!-- Used when trapping a roaring Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
+		<icon>icon.weapon_seize_mace_i00</icon>
 		<castRange>300</castRange>
 		<channelingSkillId>5106</channelingSkillId> <!-- Capture A State -->
 		<channelingTickInterval>2</channelingTickInterval>
 		<effectPoint>-100</effectPoint>
 		<effectRange>500</effectRange>
 		<hitTime>25000</hitTime>
-		<icon>icon.weapon_seize_mace_i00</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1173,13 +1173,13 @@
 	</skill>
 	<skill id="3627" toLevel="1" name="Tapirawa">
 		<!-- Used on a quivering Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
+		<icon>icon.weapon_seize_mace_i00</icon>
 		<castRange>300</castRange>
 		<channelingSkillId>5107</channelingSkillId> <!-- Capture B State -->
 		<channelingTickInterval>2</channelingTickInterval>
 		<effectPoint>-100</effectPoint>
 		<effectRange>500</effectRange>
 		<hitTime>25000</hitTime>
-		<icon>icon.weapon_seize_mace_i00</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1206,13 +1206,13 @@
 	</skill>
 	<skill id="3628" toLevel="1" name="Shabonoba">
 		<!-- Used on a struggling Tyrannosaurus. Has no effect for other actions. Consumes 1 Trap Stone. -->
+		<icon>icon.weapon_seize_mace_i00</icon>
 		<castRange>300</castRange>
 		<channelingSkillId>5108</channelingSkillId> <!-- Capture C State -->
 		<channelingTickInterval>2</channelingTickInterval>
 		<effectPoint>-100</effectPoint>
 		<effectRange>500</effectRange>
 		<hitTime>25000</hitTime>
-		<icon>icon.weapon_seize_mace_i00</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1474,11 +1474,11 @@
 	</skill>
 	<skill id="3630" toLevel="1" name="Void Burst">
 		<!-- Discharges cursed energy to attack nearby enemies. -->
+		<icon>icon.skill3630</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill3630</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>140</mpConsume>
 		<operateType>A1</operateType>
@@ -1496,12 +1496,12 @@
 	</skill>
 	<skill id="3631" toLevel="1" name="Void Flow">
 		<!-- Emits cursed energy to strike a distant enemy. -->
+		<icon>icon.skill3631</icon>
 		<affectLimit>6-12</affectLimit>
 		<castRange>600</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
-		<icon>icon.skill3631</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>140</mpConsume>
 		<operateType>A1</operateType>
@@ -1518,13 +1518,13 @@
 	</skill>
 	<skill id="3632" toLevel="1" name="Clan Gate">
 		<!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
+		<icon>icon.accessory_crown_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<abnormalVisualEffect>MAGIC_SQUARE</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>10000</hitTime>
-		<icon>icon.accessory_crown_i00</icon>
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
@@ -1547,10 +1547,10 @@
 	</skill>
 	<skill id="3633" toLevel="2" name="Residential Stun Immunity">
 		<!-- Active: Momentarily increases Stun Resistance. -->
+		<icon>icon.accessory_pledge_cap1_i05</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
-		<icon>icon.accessory_pledge_cap1_i05</icon>
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
@@ -2344,12 +2344,12 @@
 	</skill>
 	<skill id="3664" toLevel="1" name="Red Talisman - Max CP">
 		<!-- Increases Max CP and continuously recovers CP with the power of the talisman. -->
+		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2371,12 +2371,12 @@
 	</skill>
 	<skill id="3665" toLevel="2" name="Red Talisman - CP Regeneration">
 		<!-- Drastically increases CP regeneration with the power of the talisman. -->
+		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>40</mpConsume>

@@ -2,12 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="21100" toLevel="1" name="Great Wizard's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. -->
+		<icon>BranchSys.icon.br_maid_hairband_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_maid_hairband_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -42,9 +42,9 @@
 	</skill>
 	<skill id="21101" toLevel="1" name="Blessed Escape">
 		<!-- Allows the use of Blessed Escape. Cooldown is 12 hours. -->
+		<icon>BranchSys.icon.br_babypanda_cap_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
-		<icon>BranchSys.icon.br_babypanda_cap_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -65,12 +65,12 @@
 	</skill>
 	<skill id="21102" toLevel="1" name="Blessed Resurrection">
 		<!-- Allows the use of Blessed Resurrection. Cooldown is 12 hours. -->
+		<icon>BranchSys.icon.br_sexypanda_cap_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>BranchSys.icon.br_sexypanda_cap_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -90,12 +90,12 @@
 	</skill>
 	<skill id="21103" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Debuff Resistance by 10%. -->
+		<icon>BranchSys.icon.br_kungfupanda_cap_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_kungfupanda_cap_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -129,12 +129,12 @@
 	</skill>
 	<skill id="21104" toLevel="1" name="Appetite for Destruction">
 		<!-- For 30 seconds, awakens your destructive instincts and increases P. Atk., P. Critical Rate and P. Critical Damage by 50%. -->
+		<icon>BranchSys.icon.br_gatekeeper_of_hat_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>2500</hitTime>
-		<icon>BranchSys.icon.br_gatekeeper_of_hat_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -151,8 +151,8 @@
 	</skill>
 	<skill id="21105" toLevel="1" name="Release Agathion's Seal - Lucky Girl">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -169,8 +169,8 @@
 	</skill>
 	<skill id="21106" toLevel="1" name="Release Agathion's Seal - Lucky Boy">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -187,8 +187,8 @@
 	</skill>
 	<skill id="21107" toLevel="1" name="Release Agathion's Seal - Dancing Lucky Kid">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -205,8 +205,8 @@
 	</skill>
 	<skill id="21108" toLevel="1" name="Release Agathion's Seal - Monkey King">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -223,8 +223,8 @@
 	</skill>
 	<skill id="21109" toLevel="1" name="Release Agathion's Seal - Uthanka">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -241,8 +241,8 @@
 	</skill>
 	<skill id="21110" toLevel="1" name="Release Agathion's Seal - Bonus B">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -259,12 +259,12 @@
 	</skill>
 	<skill id="21111" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. receives the soul's help to increase Debuff Resistance by 10%. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_headphone_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_headphone_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -298,12 +298,12 @@
 	</skill>
 	<skill id="21112" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_headphone_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_headphone_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -337,12 +337,12 @@
 	</skill>
 	<skill id="21113" toLevel="1" name="Great Wizard's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_headphone_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_headphone_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -377,12 +377,12 @@
 	</skill>
 	<skill id="21114" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. receives the soul's help to increase Debuff Resistance by 10%. Cooldown is 1 hour. -->
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -416,12 +416,12 @@
 	</skill>
 	<skill id="21115" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 1 hour. -->
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -455,12 +455,12 @@
 	</skill>
 	<skill id="21116" toLevel="1" name="Great Wizard's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. Cooldown is 1 hour. -->
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -495,12 +495,12 @@
 	</skill>
 	<skill id="21117" toLevel="1" name="Great Adventurer's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. receives the soul's help to increase HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Cooldown is 1 hour. -->
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -538,12 +538,12 @@
 	</skill>
 	<skill id="21118" toLevel="1" name="Brave Warrior's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. receives the soul's help to increase Critical Damage by 20% and Critical Rate by 20%. Cooldown is 1 hour. -->
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -581,12 +581,12 @@
 	</skill>
 	<skill id="21119" toLevel="1" name="Great Wizard's Soul Power">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. receives the soul's help to increase the power of Prominent Damage through magic damage by 20% and the chance of prominent damage occurring through magic damage by 2. Cooldown is 1 hour. -->
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -624,10 +624,10 @@
 	</skill>
 	<skill id="21120" toLevel="1" name="Jack O'Lantern Card">
 		<!-- Jack's game Skill -->
+		<icon>BranchSys.icon.br_jack_ghost_i00</icon>
 		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>500</effectRange>
-		<icon>BranchSys.icon.br_jack_ghost_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -640,10 +640,10 @@
 	</skill>
 	<skill id="21121" toLevel="1" name="Rotten Jack O'Lantern Card">
 		<!-- Jack's game Skill -->
+		<icon>BranchSys.icon.br_rotten_jack_ghost_i00</icon>
 		<castRange>400</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>500</effectRange>
-		<icon>BranchSys.icon.br_rotten_jack_ghost_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -656,12 +656,12 @@
 	</skill>
 	<skill id="21122" toLevel="1" name="Skooldie's Blessing: Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -701,12 +701,12 @@
 	</skill>
 	<skill id="21123" toLevel="1" name="Skooldie's Blessing: Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -746,12 +746,12 @@
 	</skill>
 	<skill id="21124" toLevel="1" name="Skooldie's Blessing: Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -791,12 +791,12 @@
 	</skill>
 	<skill id="21125" toLevel="1" name="Skooldie's Blessing: Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -836,12 +836,12 @@
 	</skill>
 	<skill id="21126" toLevel="1" name="Skooldie's Blessing: Protection of Darkness">
 		<!-- For 1 hour, increases Max HP by 20%, Max MP by 20%, P. Def. by 20%, and M. Def. by 20%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_scooldie_mask_i00</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -881,12 +881,12 @@
 	</skill>
 	<skill id="21127" toLevel="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases Dark Resistance by 20. Cooldown is 2 hours. -->
+		<icon>icon.skill1528</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -926,12 +926,12 @@
 	</skill>
 	<skill id="21128" toLevel="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, Critical Rate by 10%, and Critical Damage by 10%. Increases Dark Resistance by 20. Cooldown is 2 hours. -->
+		<icon>icon.skill1528</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -971,12 +971,12 @@
 	</skill>
 	<skill id="21129" toLevel="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, and Speed by 10%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Increases Dark Resistance by 20. Cooldown is 2 hours. -->
+		<icon>icon.skill1528</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1016,12 +1016,12 @@
 	</skill>
 	<skill id="21130" toLevel="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Decreases MP Consumption for skill use by 5%. Increases Dark Resistance by 20. Cooldown is 2 hours. -->
+		<icon>icon.skill1528</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1072,12 +1072,12 @@
 	</skill>
 	<skill id="21131" toLevel="1" name="Blessing of Halloween">
 		<!-- For 1 hour, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Dark Resistance by 20. Cooldown is 2 hours. -->
+		<icon>icon.skill1528</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>4</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1117,13 +1117,13 @@
 	</skill>
 	<skill id="21132" toLevel="1" name="Shadow Ability">
 		<!-- For 2 minutes, decreases the user's Speed by 30%, and obtains the ability to prevent a monster's preemptive attack. Cooldown is 1 hour. -->
+		<icon>icon.skill5739</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>STEALTH</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill5739</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1147,8 +1147,8 @@
 	</skill>
 	<skill id="21133" toLevel="1" name="Release Agathion's Seal - Zombie">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1165,8 +1165,8 @@
 	</skill>
 	<skill id="21134" toLevel="1" name="Release Agathion's Seal - Bluebird">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1183,8 +1183,8 @@
 	</skill>
 	<skill id="21135" toLevel="1" name="Release Agathion's Seal - Hatbird">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1201,13 +1201,13 @@
 	</skill>
 	<skill id="21136" toLevel="1" name="Golden Jack O'Lantern's Authority">
 		<!-- For 10 minutes, increases party members' Max HP by 40%, Max MP by 40%, Max CP by 40%, P. Def. by 30%, M. Def. by 30%, and Speed by 30. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_golden_jack0_mask_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>486</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>BranchSys.icon.br_golden_jack0_mask_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1253,12 +1253,12 @@
 	</skill>
 	<skill id="21137" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40% and Max MP by 40%. Increases Atk. Spd. by 20% and P. Atk. by 10%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
+		<icon>icon.skill1528</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1298,12 +1298,12 @@
 	</skill>
 	<skill id="21138" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, Critical Rate by 10%, and Critical Damage by 10%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
+		<icon>icon.skill1528</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1343,12 +1343,12 @@
 	</skill>
 	<skill id="21139" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Speed by 10%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
+		<icon>icon.skill1528</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1388,12 +1388,12 @@
 	</skill>
 	<skill id="21140" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Decreases MP Consumption for skill use by 5%. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
+		<icon>icon.skill1528</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1444,12 +1444,12 @@
 	</skill>
 	<skill id="21141" toLevel="1" name="Blessing of Halloween">
 		<!-- For 10 minutes, increases Max HP by 40%, Max MP by 40%, and Casting Spd. by 20%. Increases the rate of causing exceptional magic damage by 2. Increases Dark Resistance by 20. Cooldown is 1 hour. -->
+		<icon>icon.skill1528</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1528</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1489,8 +1489,8 @@
 	</skill>
 	<skill id="21142" toLevel="1" name="Release Agathion's Seal - Guangong">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1507,8 +1507,8 @@
 	</skill>
 	<skill id="21143" toLevel="1" name="Release Agathion's Seal - Gwanseum Nyang Nyang">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1525,8 +1525,8 @@
 	</skill>
 	<skill id="21144" toLevel="1" name="Release Agathion's Seal - Blue Opera">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1543,8 +1543,8 @@
 	</skill>
 	<skill id="21145" toLevel="1" name="Release Agathion's Seal - Blue Opera">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1561,8 +1561,8 @@
 	</skill>
 	<skill id="21146" toLevel="1" name="Release Agathion's Seal - Red Opera">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1579,8 +1579,8 @@
 	</skill>
 	<skill id="21147" toLevel="1" name="Release Agathion's Seal - Opera">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1597,8 +1597,8 @@
 	</skill>
 	<skill id="21148" toLevel="1" name="Release Agathion's Seal - Miss Chipao">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1615,8 +1615,8 @@
 	</skill>
 	<skill id="21149" toLevel="1" name="Release Agathion's Seal - Nepal Snow">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1633,8 +1633,8 @@
 	</skill>
 	<skill id="21150" toLevel="1" name="Release Agathion's Seal - Round Ball Snow">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1651,8 +1651,8 @@
 	</skill>
 	<skill id="21151" toLevel="1" name="Release Agathion's Seal - Ladder Snow">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1683,6 +1683,7 @@
 	</skill>
 	<skill id="21153" toLevel="1" name="Blessed Body">
 		<!-- Increases Max HP by 25% for 20 minutes. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_party_hat_gold_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
@@ -1697,7 +1698,6 @@
 		<specialLevel>-1</specialLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
-		<icon>BranchSys.icon.br_party_hat_gold_i00</icon>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1710,6 +1710,7 @@
 	</skill>
 	<skill id="21154" toLevel="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_party_hat_mask_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
@@ -1724,7 +1725,6 @@
 		<specialLevel>-1</specialLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
-		<icon>BranchSys.icon.br_party_hat_mask_i00</icon>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1737,12 +1737,12 @@
 	</skill>
 	<skill id="21155" toLevel="1" name="Scent of Flavorful Cheese">
 		<!-- For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases P. Critical Damage and P. Critical Rate by 20%. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_bigrat_cap_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_bigrat_cap_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1780,12 +1780,12 @@
 	</skill>
 	<skill id="21156" toLevel="1" name="Scent of Sweet Cheese">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Increases the power of Prominent Damage through magic damage by 20% and the chance of prominent damage occurring through magic damage by 2. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_goldrat_cap_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>4000</hitTime>
-		<icon>BranchSys.icon.br_goldrat_cap_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1819,8 +1819,8 @@
 	</skill>
 	<skill id="21157" toLevel="1" name="Release Agathion's Seal - Iken">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1837,8 +1837,8 @@
 	</skill>
 	<skill id="21158" toLevel="1" name="Release Agathion's Seal - Lanya">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1855,8 +1855,8 @@
 	</skill>
 	<skill id="21159" toLevel="1" name="Release Agathion's Seal - Gnosian">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1873,8 +1873,8 @@
 	</skill>
 	<skill id="21160" toLevel="1" name="Release Agathion's Seal - Orodriel">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1891,8 +1891,8 @@
 	</skill>
 	<skill id="21161" toLevel="1" name="Release Agathion's Seal - Lakinos">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1909,8 +1909,8 @@
 	</skill>
 	<skill id="21162" toLevel="1" name="Release Agathion's Seal - Mortia">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1927,8 +1927,8 @@
 	</skill>
 	<skill id="21163" toLevel="1" name="Release Agathion's Seal - Heintz">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1945,8 +1945,8 @@
 	</skill>
 	<skill id="21164" toLevel="1" name="Release Agathion's Seal - Meruril">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1963,8 +1963,8 @@
 	</skill>
 	<skill id="21165" toLevel="1" name="Release Agathion's Seal - Taman Zu Rapatui">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1981,8 +1981,8 @@
 	</skill>
 	<skill id="21166" toLevel="1" name="Release Agathion's Seal - Kaurin">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1999,8 +1999,8 @@
 	</skill>
 	<skill id="21167" toLevel="1" name="Release Agathion's Seal - Ahertbein">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2017,8 +2017,8 @@
 	</skill>
 	<skill id="21168" toLevel="1" name="Release Agathion's Seal - Naonin">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2035,11 +2035,11 @@
 	</skill>
 	<skill id="21169" toLevel="1" name="Transform Kadomas">
 		<!-- Transforms into a Kadomas. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2065,6 +2065,7 @@
 	</skill>
 	<skill id="21170" toLevel="1" name="Blessed Soul">
 		<!-- Increases Max MP by 25% for 20 minutes. Cooldown is 1 hour. -->
+		<icon>BranchSys.icon.br_party_mask_purple_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
@@ -2079,7 +2080,6 @@
 		<specialLevel>-1</specialLevel>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
-		<icon>BranchSys.icon.br_party_mask_purple_i00</icon>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2092,12 +2092,12 @@
 	</skill>
 	<skill id="21171" toLevel="1" name="Ride Jet Bike">
 		<!-- Ride a Jet Bike. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2123,12 +2123,12 @@
 	</skill>
 	<skill id="21172" toLevel="1" name="Reinforced Authority - CON + 1 / STR + 1">
 		<!-- By enhance authority, CON +1/ STR +1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes. -->
+		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>180000</reuseDelay>
@@ -2152,12 +2152,12 @@
 	</skill>
 	<skill id="21173" toLevel="1" name="Reinforced Authority - WIT + 1 / INT + 1">
 		<!-- By enhance authority, WIT +1/ INT +1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes. -->
+		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>180000</reuseDelay>
@@ -2181,12 +2181,12 @@
 	</skill>
 	<skill id="21174" toLevel="1" name="Reinforced Authority - WIT + 1 / MEN + 1">
 		<!-- By enhance authority, WIT +1/ MEN +1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes. -->
+		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>180000</reuseDelay>
@@ -2210,12 +2210,12 @@
 	</skill>
 	<skill id="21175" toLevel="1" name="Reinforced Authority - CON + 1 / DEX + 1">
 		<!-- By enhance authority, CON +1/ DEX +1 for 2 minutes. Consumes 240 energy. Cooldown 3 minutes. -->
+		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_stat_i00</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>180000</reuseDelay>
@@ -2239,9 +2239,9 @@
 	</skill>
 	<skill id="21176" toLevel="1" name="Divine Protection - Holy">
 		<!-- Increases Holy P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2256,9 +2256,9 @@
 	</skill>
 	<skill id="21177" toLevel="1" name="Divine Protection - Water">
 		<!-- Increases Water P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2273,9 +2273,9 @@
 	</skill>
 	<skill id="21178" toLevel="1" name="Divine Protection - Fire">
 		<!-- Increases Fire P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2290,9 +2290,9 @@
 	</skill>
 	<skill id="21179" toLevel="1" name="Divine Protection - Wind">
 		<!-- Increases Water P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2307,9 +2307,9 @@
 	</skill>
 	<skill id="21180" toLevel="1" name="Divine Protection - Earth">
 		<!-- Increases Earth P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2324,9 +2324,9 @@
 	</skill>
 	<skill id="21181" toLevel="1" name="Divine Protection - Dark">
 		<!-- Increases Dark P. Atk. and P. Def. by 10 each. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_attr_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2341,9 +2341,9 @@
 	</skill>
 	<skill id="21182" toLevel="1" name="Blessing of Resistance - Hold">
 		<!-- Increases Hold Resistance by 40%. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2363,9 +2363,9 @@
 	</skill>
 	<skill id="21183" toLevel="1" name="Blessing of Resistance - Paralysis">
 		<!-- Increases Paralysis Resistance by 40%. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2385,9 +2385,9 @@
 	</skill>
 	<skill id="21184" toLevel="1" name="Blessing of Resistance - Sleep">
 		<!-- Increases Sleep Resistance by 40%. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2407,9 +2407,9 @@
 	</skill>
 	<skill id="21185" toLevel="1" name="Blessing of Resistance - Decrease Speed">
 		<!-- Increases Slow Resistance by 40%. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2424,9 +2424,9 @@
 	</skill>
 	<skill id="21186" toLevel="1" name="Blessing of Resistance - Bleed">
 		<!-- Increases Bleed Resistance by 40%. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2446,9 +2446,9 @@
 	</skill>
 	<skill id="21187" toLevel="1" name="Blessing of Resistance - Stun">
 		<!-- Increases Stun Resistance by 40%. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_resist_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2468,9 +2468,9 @@
 	</skill>
 	<skill id="21188" toLevel="1" name="Recovery Ability: HP">
 		<!-- Increases HP Recovery Bonus by 20%. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_regen_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_regen_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2485,9 +2485,9 @@
 	</skill>
 	<skill id="21189" toLevel="1" name="Recovery Ability: MP">
 		<!-- Increases MP Recovery Bonus by 20%. Continuously consumes energy. -->
+		<icon>BranchSys2.icon.br_soulavatar_regen_i00</icon>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_regen_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -2502,12 +2502,12 @@
 	</skill>
 	<skill id="21190" toLevel="1" name="Soul's Shield">
 		<!-- For 10 seconds, increases P. Def. and M. Def. by 60%. Consumes 500 energy. Cooldown 20 minutes. -->
+		<icon>BranchSys2.icon.br_soulavatar_active_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_soulavatar_active_i00</icon>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>1200000</reuseDelay>
@@ -2530,8 +2530,8 @@
 	</skill>
 	<skill id="21191" toLevel="1" name="Release Agathion's Seal - Phoenix">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2548,13 +2548,13 @@
 	</skill>
 	<skill id="21192" toLevel="1" name="Silent Move">
 		<!-- For 2 minutes, blocks receive preemptive attacks from monsters. Decreases Speed by 40%. Cooldown is 4 hours. -->
+		<icon>BranchSys2.icon.br_fox_japan_cap_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>STEALTH</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>2000</hitTime>
-		<icon>BranchSys2.icon.br_fox_japan_cap_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2579,11 +2579,11 @@
 	</skill>
 	<skill id="21193" toLevel="1" name="Power of Guardian Deity">
 		<!-- Increases Critical Damage by 35% for 10 minutes. Cooldown is 1 hour. -->
+		<icon>BranchSys2.icon.br_paiwan_cap_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_paiwan_cap_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2601,8 +2601,8 @@
 	</skill>
 	<skill id="21194" toLevel="1" name="Release Agathion's Seal - Babayaga">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -2619,13 +2619,13 @@
 	</skill>
 	<skill id="21195" toLevel="1" name="Blessed Child Transformation Skill: Trejuo">
 		<!-- Transforms into the Blessed Child Trejuo. When transformed into Trejuo, recovers Vitality upon acquiring XP. Cooldown is 4 hours. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
 		<hitTime>500</hitTime>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2657,13 +2657,13 @@
 	</skill>
 	<skill id="21196" toLevel="1" name="Blessed Child Transformation Skill: Sujin">
 		<!-- Transforms into the Blessed Child Sujin. When transformed into Sujin, recovers Vitality upon acquiring XP. Cooldown is 4 hours. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
 		<hitTime>500</hitTime>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2695,8 +2695,8 @@
 	</skill>
 	<skill id="21197" toLevel="1" name="Induk's Buff">
 		<!-- Restores all HP, MP, and CP using the strength of Induk. Cooldown 30 minutes. Can only be used when HP, MP, and CP are all below 30%. Consumes 1 Proof of a Warrior upon skill use. -->
-		<blockedInOlympiad>true</blockedInOlympiad>
 		<icon>BranchSys2.icon.br_pekingopera_mask_a_i00</icon>
+		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20976</itemConsumeId> <!-- Proof of a Warrior -->
@@ -2724,13 +2724,13 @@
 	</skill>
 	<skill id="21198" toLevel="1" name="Silence of Loyalty">
 		<!-- Through the power of loyalty, increases party members' P. Def., M. Def. by 30%, P. Atk. by 20%, M. Atk. by 45%, and Speed by 30 for 5 minutes. Cooldown 30 minutes. Consumes 1 Proof of a Warrior upon skill use. -->
+		<icon>BranchSys2.icon.br_pekingopera_mask_b_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<activateRate>0</activateRate>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>486</effectPoint>
-		<icon>BranchSys2.icon.br_pekingopera_mask_b_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20976</itemConsumeId> <!-- Proof of a Warrior -->
@@ -2755,13 +2755,13 @@
 	</skill>
 	<skill id="21199" toLevel="1" name="Vitality of Courage">
 		<!-- Restores Vitality by certain amount using the power of Excellence, and for 5 minutes, maintains the Vitality stage. Cooldown 30 minutes. Consumes 1 Proof of a Warrior and 2 Vitality Effects upon skill use. -->
+		<icon>BranchSys2.icon.br_pekingopera_mask_c_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
 		<hitTime>500</hitTime>
-		<icon>BranchSys2.icon.br_pekingopera_mask_c_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20976</itemConsumeId> <!-- Proof of a Warrior -->

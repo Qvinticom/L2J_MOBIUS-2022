@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1400" toLevel="10" name="Turn Undead">
 		<!-- Strikes fear into undead for 20 seconds, causing them to flee. Consumes 3 Spirit Ore. Lethal Strike is possible. -->
+		<icon>icon.skill1400</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-532</value>
@@ -17,7 +18,6 @@
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1400</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
@@ -93,6 +93,7 @@
 	</skill>
 	<skill id="1401" toLevel="11" name="Major Heal">
 		<!-- Restores the target's HP by 690 Power. Consumes 1 Spirit Ore. -->
+		<icon>icon.skill1401</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">403</value>
@@ -109,7 +110,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1401</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -178,6 +178,7 @@
 	</skill>
 	<skill id="1402" toLevel="5" name="Major Group Heal">
 		<!-- Restores all party members' HP by 902 Power. Consumes 4 Spirit Ore. -->
+		<icon>icon.skill1402</icon>
 		<affectRange>1000</affectRange>
 		<effectPoint>
 			<value level="1">421</value>
@@ -187,7 +188,6 @@
 			<value level="5">546</value>
 		</effectPoint>
 		<hitTime>7000</hitTime>
-		<icon>icon.skill1402</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>4</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -227,11 +227,11 @@
 	</skill>
 	<skill id="1403" toLevel="1" name="Summon Friend">
 		<!-- Teleports a party member to one's current location. Requires a Summoning Crystal on the target. -->
+		<icon>icon.skill1403</icon>
 		<castRange>-2</castRange>
 		<effectPoint>467</effectPoint>
 		<effectRange>-2</effectRange>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill1403</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>56</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -257,11 +257,11 @@
 	</skill>
 	<skill id="1404" toLevel="1" name="Word of Invitation">
 		<!-- Teleports a party member to one's current location. Consumes 3 Spirit Ore. Requires a Summoning Crystal on the target. -->
+		<icon>icon.skill1404</icon>
 		<castRange>-2</castRange>
 		<effectPoint>677</effectPoint>
 		<effectRange>-2</effectRange>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill1404</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>3</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -315,8 +315,8 @@
 	</skill>
 	<skill id="1406" toLevel="1" name="Summon Feline King">
 		<!-- Summons Feline King. Requires 4 Spirit Ore. -->
-		<hitTime>6000</hitTime>
 		<icon>icon.skill1406</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>4</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -343,8 +343,8 @@
 	</skill>
 	<skill id="1407" toLevel="1" name="Summon Magnus the Unicorn">
 		<!-- Summons Magnus the Unicorn. Requires 4 Spirit Ore. -->
-		<hitTime>6000</hitTime>
 		<icon>icon.skill1407</icon>
+		<hitTime>6000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>4</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -371,8 +371,8 @@
 	</skill>
 	<skill id="1408" toLevel="1" name="Summon Spectral Lord">
 		<!-- Summons a Spectral Lord. Requires 4 Spirit Ore. -->
-		<hitTime>6000</hitTime>
 		<icon>icon.skill1408</icon>
+		<hitTime>6000</hitTime>
 		<inheritElementals>true</inheritElementals>
 		<inheritPercent>1.00</inheritPercent>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -401,11 +401,11 @@
 	</skill>
 	<skill id="1409" toLevel="1" name="Cleanse">
 		<!-- Cancels the target's debuffs. Consumes 1 Einhasad's Holy Water. -->
+		<icon>icon.skill1409</icon>
 		<castRange>600</castRange>
 		<effectPoint>1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1409</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8874</itemConsumeId> <!-- Einhasad's Holy Water -->
@@ -428,6 +428,7 @@
 	</skill>
 	<skill id="1410" toLevel="1" name="Salvation">
 		<!-- Maintains buffs and debuffs even after death. The Noblesse Blessing and the Amulet of Luck disappear, however. Consumes 2 Einhasad's Holy Water. -->
+		<icon>icon.skill1410</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
@@ -435,7 +436,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1410</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>8874</itemConsumeId> <!-- Einhasad's Holy Water -->
@@ -458,6 +458,7 @@
 	</skill>
 	<skill id="1411" toLevel="1" name="Mystic Immunity">
 		<!-- Becomes invincible to various debuffs for 30 seconds. Usable only on party members. -->
+		<icon>icon.skill1411</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
@@ -465,7 +466,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1411</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>73</mpConsume>
@@ -487,11 +487,11 @@
 	</skill>
 	<skill id="1412" toLevel="1" name="Spell Turning">
 		<!-- Disrupts a nearby target's casting, disrupting their spell. -->
+		<icon>icon.skill1412</icon>
 		<castRange>150</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>650</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1412</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>23</mpConsume>
@@ -510,13 +510,13 @@
 	</skill>
 	<skill id="1413" toLevel="1" name="Chant of Magnus">
 		<!-- For 5 minutes, a powerful spirit acts to increase all party members' Max MP by 15%, MP Recovery Bonus by 1.5 when equipped with light or heavy armor, MP Recovery Bonus by 4 when equipped with a robe, M. Def. by 30%, M. Atk. by 30%, Casting Spd. by 20%, Fire/Water/Wind/Earth Resistance by 10, Debuff Resistance by 25, and Buff-canceling Attack Resistance by 40. Consumes 40 Spirit Ore. -->
+		<icon>icon.skill1413</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>669</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1413</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>40</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -591,6 +591,7 @@
 	</skill>
 	<skill id="1414" toLevel="1" name="Victories of Pa'agrio">
 		<!-- For 5 minutes, a powerful spirit acts to increase nearby clan members' Max CP by 20%, CP recovery bonus by 20%, Max MP by 20%, Critical Rate by 20%, the power of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20%. Consumes 40 Spirit Ore. -->
+		<icon>icon.skill1414</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -598,7 +599,6 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>669</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1414</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>40</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -673,6 +673,7 @@
 	</skill>
 	<skill id="1415" toLevel="1" name="Pa'agrio's Emblem">
 		<!-- For 5 minutes, increases nearby clan members' Buff-canceling Attack Resistance by 30% and Debuff Resistance by 20%. -->
+		<icon>icon.skill1415</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>RESIST_DEBUFF_DISPEL</abnormalType>
@@ -680,7 +681,6 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>669</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1415</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>228</mpConsume>
@@ -706,6 +706,7 @@
 	</skill>
 	<skill id="1416" toLevel="8" name="Pa'agrio's Fist">
 		<!-- For 30 sec., restores and increases clan members' Max CP + 2%. -->
+		<icon>icon.skill1416</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="8">30</value>
@@ -717,7 +718,6 @@
 		<affectRange>1000</affectRange>
 		<effectPoint>669</effectPoint>
 		<hitTime>1300</hitTime>
-		<icon>icon.skill1416</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>20</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -775,6 +775,7 @@
 	</skill>
 	<skill id="1417" toLevel="5" name="Aura Flash">
 		<!-- Inflicts non-attribute damage on nearby enemies with 49 Power added to M. Atk. Consumes 2 Spirit Ore. Cancel target. -->
+		<icon>icon.skill1417</icon>
 		<affectRange>200</affectRange>
 		<effectPoint>
 			<value level="1">-440</value>
@@ -784,7 +785,6 @@
 			<value level="5">-524</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1417</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
@@ -839,6 +839,7 @@
 	</skill>
 	<skill id="1418" toLevel="1" name="Celestial Shield">
 		<!-- Protects the target with holy power, making it invincible for 10 seconds. -->
+		<icon>icon.skill1418</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -847,7 +848,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1418</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>64</magicLvl>
 		<mpConsume>60</mpConsume>
@@ -876,6 +876,7 @@
 	</skill>
 	<skill id="1419" toLevel="1" name="Volcano">
 		<!-- Continuously inflicts powerful Fire damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. -->
+		<icon>icon.skill1419</icon>
 		<affectLimit>15-25</affectLimit>
 		<affectRange>200</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -886,7 +887,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill1419</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8876</itemConsumeId> <!-- Magic Symbol -->
@@ -912,6 +912,7 @@
 	</skill>
 	<skill id="1420" toLevel="1" name="Cyclone">
 		<!-- Continuously inflicts powerful Wind damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. -->
+		<icon>icon.skill1420</icon>
 		<affectLimit>15-25</affectLimit>
 		<affectRange>200</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -922,7 +923,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill1420</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8876</itemConsumeId> <!-- Magic Symbol -->
@@ -948,6 +948,7 @@
 	</skill>
 	<skill id="1421" toLevel="1" name="Raging Waves">
 		<!-- Continuously inflicts powerful Water damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. -->
+		<icon>icon.skill1421</icon>
 		<affectLimit>15-25</affectLimit>
 		<affectRange>200</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -958,7 +959,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill1421</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8876</itemConsumeId> <!-- Magic Symbol -->
@@ -984,10 +984,10 @@
 	</skill>
 	<skill id="1422" toLevel="1" name="Day of Doom">
 		<!-- Creates a seal that casts a powerful curse that decreases all the abilities of nearby enemies. The seal's effect disappears upon leaving the area. Consumes 1 Magic Symbol. -->
+		<icon>icon.skill1422</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>900</castRange>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1422</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8876</itemConsumeId> <!-- Magic Symbol -->
@@ -1028,6 +1028,7 @@
 	</skill>
 	<skill id="1423" toLevel="1" name="Gehenna">
 		<!-- Continuously inflicts powerful dark damage. User cannot move while casting, and there is additional MP Consumption each time the effect occurs. Consumes 1 Magic Symbol. -->
+		<icon>icon.skill1423</icon>
 		<affectLimit>15-25</affectLimit>
 		<affectRange>200</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1038,7 +1039,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill1423</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8876</itemConsumeId> <!-- Magic Symbol -->
@@ -1064,10 +1064,10 @@
 	</skill>
 	<skill id="1424" toLevel="1" name="Anti-summoning Field">
 		<!-- Decreases all speeds of nearby enemies, gives speed-increasing buffs, and creates a seal that periodically banishes a servitor to another dimension. All characters and servitors in the area are affected. Consumes 1 Magic Symbol. -->
+		<icon>icon.skill1424</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>900</castRange>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1424</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8876</itemConsumeId> <!-- Magic Symbol -->
@@ -1107,11 +1107,11 @@
 	</skill>
 	<skill id="1425" toLevel="1" name="Purification Field">
 		<!-- Cancel all the debuffs of nearby clan members. -->
+		<icon>icon.skill1425</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>900</castRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1425</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>80</magicLvl>
 		<mpConsume>70</mpConsume>
@@ -1135,10 +1135,10 @@
 	</skill>
 	<skill id="1426" toLevel="1" name="Miracle">
 		<!-- Fully recovers HP of nearby clan members. Consumes 1 Magic Symbol. -->
+		<icon>icon.skill1426</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1426</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8876</itemConsumeId> <!-- Magic Symbol -->
@@ -1161,6 +1161,7 @@
 	</skill>
 	<skill id="1427" toLevel="1" name="Flames of Invincibility">
 		<!-- Calls down a blessing of flames on nearby clan members to make them invincible. Consumes 1 Magic Symbol. -->
+		<icon>icon.skill1427</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -1168,7 +1169,6 @@
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1427</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8876</itemConsumeId> <!-- Magic Symbol -->
@@ -1201,10 +1201,10 @@
 	</skill>
 	<skill id="1428" toLevel="1" name="Mass Recharge">
 		<!-- Recovers MP for all party members. Consumes 1 Magic Symbol. -->
+		<icon>icon.skill1428</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1428</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>8876</itemConsumeId> <!-- Magic Symbol -->
@@ -1227,9 +1227,9 @@
 	</skill>
 	<skill id="1429" toLevel="1" name="Chant of Gate">
 		<!-- Summons a party member. Consumes 4 Summoning Crystals. -->
+		<icon>icon.skill1429</icon>
 		<effectPoint>467</effectPoint>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill1429</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>4</itemConsumeCount>
 		<itemConsumeId>8615</itemConsumeId> <!-- Summoning Crystal -->
@@ -1257,13 +1257,13 @@
 	</skill>
 	<skill id="1430" toLevel="5" name="Invocation">
 		<!-- Decreases P. Def. by 90% and recovers 54 MP every second for 30 seconds. The status is canceled when damage is incurred. -->
+		<icon>icon.skill1430</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>FORCE_MEDITATION</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1430</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">56</value>
@@ -1316,6 +1316,7 @@
 	</skill>
 	<skill id="1431" toLevel="6" name="Fallen Arrow">
 		<!-- Fires an arrow with 13 Power added to P. Atk. and inflicts Dark damage on the enemy. Increases Power upon the consumption of up to 5 souls. -->
+		<icon>icon.skill1431</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-92</value>
@@ -1329,7 +1330,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill1431</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">3</value>
@@ -1384,6 +1384,7 @@
 	</skill>
 	<skill id="1432" toLevel="2" name="Increase Power">
 		<!-- Increases P. Atk. by 8% for 20 minutes. -->
+		<icon>icon.skill1432</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1395,7 +1396,6 @@
 			<value level="2">268</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1432</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">10</value>
@@ -1428,6 +1428,7 @@
 	</skill>
 	<skill id="1433" toLevel="10" name="Abyssal Blaze">
 		<!-- Inflicts dark damage on the enemy with 24 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
+		<icon>icon.skill1433</icon>
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-189</value>
@@ -1445,7 +1446,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill1433</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">18</value>
@@ -1509,6 +1509,7 @@
 	</skill>
 	<skill id="1434" toLevel="4" name="Dark Explosion">
 		<!-- Inflicts dark damage on nearby enemies with 16 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
+		<icon>icon.skill1434</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -1522,7 +1523,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1800</hitTime>
-		<icon>icon.skill1434</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">24</value>
@@ -1563,6 +1563,7 @@
 	</skill>
 	<skill id="1435" toLevel="10" name="Death Mark">
 		<!-- Marks the enemy with a Death Mark. For 30 sec., decreases P. Def. and M. Def. by 20% and consumes 24 HP per second. -->
+		<icon>icon.skill1435</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1595,7 +1596,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill1435</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -1691,6 +1691,7 @@
 	</skill>
 	<skill id="1436" toLevel="30" name="Soul of Pain">
 		<!-- Throws a soul to inflict dark damage on the enemy with 50 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. Cancels target. -->
+		<icon>icon.skill1436</icon>
 		<castRange>700</castRange>
 		<effectPoint>
 			<value level="1">-369</value>
@@ -1728,7 +1729,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill1436</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">39</value>
@@ -1875,6 +1875,7 @@
 	</skill>
 	<skill id="1437" toLevel="26" name="Dark Flame">
 		<!-- Inflicts dark damage on the enemies in front with 42 Power added to M. Atk. For 5 seconds, decreases Speed by 30%. Increases Power upon the consumption of up to 5 souls. -->
+		<icon>icon.skill1437</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1917,7 +1918,6 @@
 		<attributeValue>20</attributeValue>
 		<fanRange>0;0;200;180</fanRange>
 		<hitTime>1800</hitTime>
-		<icon>icon.skill1437</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2053,6 +2053,7 @@
 	</skill>
 	<skill id="1438" toLevel="9" name="Annihilation Circle">
 		<!-- Inflicts dark damage on the enemy's surroundings with 82 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
+		<icon>icon.skill1438</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
@@ -2071,7 +2072,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1800</hitTime>
-		<icon>icon.skill1438</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">58</value>
@@ -2132,6 +2132,7 @@
 	</skill>
 	<skill id="1439" toLevel="5" name="Curse of Divinity">
 		<!-- Inflicts non-attribute damage on the enemy with 96 Power added to M. Atk. Power changes depending on the target's altered state condition. -->
+		<icon>icon.skill1439</icon>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
@@ -2143,7 +2144,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill1439</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">66</value>
@@ -2187,6 +2187,7 @@
 	</skill>
 	<skill id="1440" toLevel="5" name="Steal Divinity">
 		<!-- Steals up to 3 of the enemy's abnormal statuses. Cannot steal buffs from monsters. -->
+		<icon>icon.skill1440</icon>
 		<castRange>600</castRange>
 		<coolTime>200</coolTime>
 		<effectPoint>
@@ -2198,7 +2199,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill1440</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -2244,6 +2244,7 @@
 	</skill>
 	<skill id="1441" toLevel="3" name="Soul to Empower">
 		<!-- Increases M. Atk. by 55% for 20 minutes. -->
+		<icon>icon.skill1441</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2257,7 +2258,6 @@
 			<value level="3">597</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1441</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">43</value>
@@ -2294,6 +2294,7 @@
 	</skill>
 	<skill id="1442" toLevel="3" name="Darkness Protection">
 		<!-- Increases the target's Dark Attack Resistance by 15 for 20 minutes. -->
+		<icon>icon.skill1442</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2309,7 +2310,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1442</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">58</value>
@@ -2346,6 +2346,7 @@
 	</skill>
 	<skill id="1443" toLevel="1" name="Dark Weapon">
 		<!-- Increases the target's Dark attack level by 20 for 20 minutes. Can be used on party members. -->
+		<icon>icon.skill1443</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -2353,7 +2354,6 @@
 		<effectPoint>438</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1443</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>46</magicLvl>
 		<mpConsume>33</mpConsume>
@@ -2379,6 +2379,7 @@
 	</skill>
 	<skill id="1444" toLevel="1" name="Pride of Kamael">
 		<!-- For 5 minutes, increases P. Atk., M. Atk. and lethal attack rate by 10% when using a Kamael-exclusive weapon. -->
+		<icon>icon.skill1444</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>KAMAEL_SPECIAL</abnormalType>
@@ -2386,7 +2387,6 @@
 		<effectPoint>669</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1444</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>49</magicLvl>
 		<mpConsume>35</mpConsume>
@@ -2420,6 +2420,7 @@
 	</skill>
 	<skill id="1445" toLevel="18" name="Surrender to Dark">
 		<!-- For 30 sec., decreases the enemy's Dark Attack Resistance by 25 and increases Holy Attack Resistance by 12. -->
+		<icon>icon.skill1445</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -2507,7 +2508,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1445</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -2628,6 +2628,7 @@
 	</skill>
 	<skill id="1446" toLevel="11" name="Shadow Bind">
 		<!-- Catches the enemy's shadow and inflicts hold for 15 seconds. -->
+		<icon>icon.skill1446</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -2650,7 +2651,6 @@
 		</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1446</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -2685,6 +2685,7 @@
 	</skill>
 	<skill id="1447" toLevel="9" name="Voice Bind">
 		<!-- Seals the enemy's voice, blocking their ability to cast magic for 20 seconds. -->
+		<icon>icon.skill1447</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
@@ -2705,7 +2706,6 @@
 		</effectPoint>
 		<effectRange>600</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1447</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -2735,6 +2735,7 @@
 	</skill>
 	<skill id="1448" toLevel="1" name="Blink">
 		<!-- Attacks nearby enemies with 1 Power added to P. Atk., stunning them for 2 seconds and teleporting them to the rear. Increases Power upon the consumption of up to 5 souls. -->
+		<icon>icon.skill1448</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -2746,7 +2747,6 @@
 		<coolTime>200</coolTime>
 		<effectPoint>-575</effectPoint>
 		<hitTime>300</hitTime>
-		<icon>icon.skill1448</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2784,12 +2784,12 @@
 	</skill>
 	<skill id="1449" toLevel="1" name="Transfer Soul">
 		<!-- Transfer a soul to the target. Only possible when the target is a Kamael. Consumes 1 Soul. -->
+		<icon>icon.skill1449</icon>
 		<castRange>400</castRange>
 		<effectPoint>150</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>2500</hitTime>
 		<hpConsume>20</hpConsume>
-		<icon>icon.skill1449</icon>
 		<magicLvl>24</magicLvl>
 		<mpConsume>5</mpConsume>
 		<operateType>A1</operateType>
@@ -2816,6 +2816,7 @@
 	</skill>
 	<skill id="1450" toLevel="1" name="Chain Lightning">
 		<!-- Hurls thunderbolts and inflicts non-attribute damage on the enemy's surroundings with 200 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
+		<icon>icon.skill1450</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -2824,7 +2825,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1450</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>75</magicLvl>
 		<mpConsume>50</mpConsume>
@@ -2845,13 +2845,13 @@
 	</skill>
 	<skill id="1451" toLevel="1" name="Fire Vortex Buster">
 		<!-- Detonates a Fire Vortex that inflicts Fire damage on the enemy with 195 Power added to M. Atk. -->
+		<icon>icon.skill1451</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1451</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>80</mpConsume>
@@ -2880,6 +2880,7 @@
 	</skill>
 	<skill id="1452" toLevel="1" name="Count of Fire">
 		<!-- Uses the power of Fire to burn the enemy for 10 seconds, inflicting damage of 173 HP per second. -->
+		<icon>icon.skill1452</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>FIRE_DOT</abnormalType>
@@ -2892,7 +2893,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1452</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2915,13 +2915,13 @@
 	</skill>
 	<skill id="1453" toLevel="1" name="Ice Vortex Crusher">
 		<!-- Creates an Ice Vortex that inflicts Water damage on the enemy with 195 Power added to M. Atk. -->
+		<icon>icon.skill1453</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1453</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>80</mpConsume>
@@ -2950,6 +2950,7 @@
 	</skill>
 	<skill id="1454" toLevel="1" name="Diamond Dust">
 		<!-- Summons a bitter ice storm that inflicts Water damage on the enemy with 70 Power added to M. Atk. Decreases nearby enemies' Speed by 40% for 15 seconds. -->
+		<icon>icon.skill1454</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2961,7 +2962,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1454</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2986,6 +2986,7 @@
 	</skill>
 	<skill id="1455" toLevel="1" name="Throne of Ice">
 		<!-- Summons a blast of icy air that freezes the enemy for 10 seconds, causing loss of 173 HP per second. -->
+		<icon>icon.skill1455</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>WATER_DOT</abnormalType>
@@ -2998,7 +2999,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1455</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -3019,13 +3019,13 @@
 	</skill>
 	<skill id="1456" toLevel="1" name="Wind Vortex Slug">
 		<!-- Creates a powerful Wind Vortex that inflicts Wind damage on the enemy with 195 Power added to M. Atk. -->
+		<icon>icon.skill1456</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1009</effectPoint>
 		<effectRange>1400</effectRange>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1456</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>80</mpConsume>
@@ -3054,6 +3054,7 @@
 	</skill>
 	<skill id="1457" toLevel="2" name="Empowering Echo">
 		<!-- For 20 minutes, increases magic MP Consumption by 35% and M. Atk. by 25%. -->
+		<icon>icon.skill1457</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">1200</value>
@@ -3063,7 +3064,6 @@
 		<!--<abnormalType>MA_UP_SPECIAL</abnormalType>--> <!-- Reported as retail by Hope -->
 		<effectPoint>1</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1457</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>
@@ -3101,6 +3101,7 @@
 	</skill>
 	<skill id="1458" toLevel="1" name="Throne of Wind">
 		<!-- Uses the power of a storm to weaken the enemy for 10 seconds, causing loss of 173 HP per second. -->
+		<icon>icon.skill1458</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>WIND_DOT</abnormalType>
@@ -3114,7 +3115,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1458</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -3135,12 +3135,12 @@
 	</skill>
 	<skill id="1459" toLevel="1" name="Divine Power">
 		<!-- Increases the power of recovery magic with 1000 Power for 15 seconds. -->
+		<icon>icon.skill1459</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HEAL_POWER_UP</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1459</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>109</mpConsume>
@@ -3160,6 +3160,7 @@
 	</skill>
 	<skill id="1460" toLevel="1" name="Mana Gain">
 		<!-- For 20 minutes, increases the recharge power received by the target by 85. -->
+		<icon>icon.skill1460</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>RECHARGE_UP</abnormalType>
@@ -3167,7 +3168,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1460</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>142</mpConsume>
@@ -3200,13 +3200,13 @@
 	</skill>
 	<skill id="1461" toLevel="1" name="Chant of Protection">
 		<!-- For 20 minutes, decreases Critical Damage received by a party member by 30%. -->
+		<icon>icon.skill1461</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>T_CRT_DMG_DOWN</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>676</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1461</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpConsume>250</mpConsume>
@@ -3228,6 +3228,7 @@
 	</skill>
 	<skill id="1462" toLevel="10" name="Seal of Blockade">
 		<!-- During PvP, restrains the normal attacks of the enemy and nearby targets for 10 seconds. -->
+		<icon>icon.skill1462</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>NORMAL_ATTACK_BLOCK</abnormalType>
@@ -3242,7 +3243,6 @@
 		<castRange>900</castRange>
 		<effectPoint>-673</effectPoint>
 		<hitTime>2200</hitTime>
-		<icon>icon.skill1462</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -3278,6 +3278,7 @@
 	</skill>
 	<skill id="1463" toLevel="1" name="Fire Weapon">
 		<!-- Adds Fire damage to a P. Atk. -->
+		<icon>icon.skill1463</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -3286,7 +3287,6 @@
 		<effectRange>900</effectRange>
 		<attributeType>FIRE</attributeType>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1463</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>75</magicLvl>
 		<mpConsume>54</mpConsume>
@@ -3307,6 +3307,7 @@
 	</skill>
 	<skill id="1464" toLevel="1" name="Ice Weapon">
 		<!-- Adds Water damage to a P. Atk. -->
+		<icon>icon.skill1464</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -3315,7 +3316,6 @@
 		<effectRange>900</effectRange>
 		<attributeType>WATER</attributeType>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1464</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>75</magicLvl>
 		<mpConsume>54</mpConsume>
@@ -3336,6 +3336,7 @@
 	</skill>
 	<skill id="1465" toLevel="1" name="Wind Weapon">
 		<!-- Adds Wind damage to a P. Atk. -->
+		<icon>icon.skill1465</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -3344,7 +3345,6 @@
 		<effectRange>900</effectRange>
 		<attributeType>WIND</attributeType>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1465</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>75</magicLvl>
 		<mpConsume>54</mpConsume>
@@ -3365,6 +3365,7 @@
 	</skill>
 	<skill id="1466" toLevel="1" name="Earth Weapon">
 		<!-- Bestows the Earth elemental to a P. Atk. -->
+		<icon>icon.skill1466</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>HOLY_ATTACK</abnormalType>
@@ -3373,7 +3374,6 @@
 		<effectRange>900</effectRange>
 		<attributeType>EARTH</attributeType>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1466</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>75</magicLvl>
 		<mpConsume>54</mpConsume>
@@ -3394,6 +3394,7 @@
 	</skill>
 	<skill id="1467" toLevel="1" name="Meteor">
 		<!-- Crashes down meteors to inflict continuous fire damage near the enemy with 117 Power. For 10 seconds, inflicts continuous fire damage. -->
+		<icon>icon.skill1467</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -3412,7 +3413,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1467</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpInitialConsume>72</mpInitialConsume>
@@ -3434,6 +3434,7 @@
 	</skill>
 	<skill id="1468" toLevel="1" name="Star Fall">
 		<!-- Crashes down meteors to inflict continuous non-attribute damage near the enemy with 117 Power. For 10 seconds, inflicts continuous non-attribute damage. -->
+		<icon>icon.skill1468</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
@@ -3450,7 +3451,6 @@
 		<effectPoint>-679</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1468</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpInitialConsume>72</mpInitialConsume>
@@ -3472,6 +3472,7 @@
 	</skill>
 	<skill id="1469" toLevel="1" name="Leopold">
 		<!-- Summons the devastating cannon Leopold to inflict Fire damage with 224 Power added to M. Atk. Increases Power upon the consumption of up to 5 souls. -->
+		<icon>icon.skill1469</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
 		<castRange>600</castRange>
@@ -3480,7 +3481,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1469</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>68</mpConsume>
@@ -3501,13 +3501,13 @@
 	</skill>
 	<skill id="1470" toLevel="1" name="Prahnah">
 		<!-- Increases all party members' M. Def. by 3000 for 30 seconds. -->
+		<icon>icon.skill1470</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1470</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>84</mpConsume>
@@ -3529,6 +3529,7 @@
 	</skill>
 	<skill id="1471" toLevel="2" name="Death Beam">
 		<!-- Attacks enemies in front of you. Power 138. -->
+		<icon>icon.skill1471</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
 		<castRange>40</castRange>
@@ -3538,7 +3539,6 @@
 		<attributeValue>20</attributeValue>
 		<fanRange>0;0;400;180</fanRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1471</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">79</value>
@@ -3565,6 +3565,7 @@
 	</skill>
 	<skill id="1472" toLevel="1" name="Soul Sucking">
 		<!-- Absorbs your enemy's soul over time. -->
+		<icon>icon.skill1472</icon>
 		<castRange>900</castRange>
 		<channelingStart>1</channelingStart>
 		<channelingTickInterval>2</channelingTickInterval>
@@ -3573,7 +3574,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>15000</hitTime>
-		<icon>icon.skill1472</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>79</magicLvl>
 		<mpInitialConsume>36</mpInitialConsume>
@@ -3594,9 +3594,9 @@
 	</skill>
 	<skill id="1473" toLevel="1" name="Change Weapon">
 		<!-- Changes a general weapon to a Kamael exclusive weapon. The weapon can be reverted back to a general weapon. Using the Change Weapon skill resets the weapon's appearance. -->
+		<icon>icon.skill1473</icon>
 		<effectPoint>10</effectPoint>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1473</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>20</magicLvl>
 		<mpConsume>23</mpConsume>
@@ -3629,6 +3629,7 @@
 	</skill>
 	<skill id="1475" toLevel="3" name="Erase Mark">
 		<!-- Removes minor Death Mark. -->
+		<icon>icon.skill1475</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">235</value>
@@ -3637,7 +3638,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1475</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">24</value>
@@ -3672,6 +3672,7 @@
 	</skill>
 	<skill id="1476" toLevel="3" name="Appetite for Destruction">
 		<!-- For 15 seconds, awakens a party member's destructive instincts and increases P. Atk., Critical Rate and Critical Damage by 30%. -->
+		<icon>icon.skill1476</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
@@ -3682,7 +3683,6 @@
 			<value level="3">549</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1476</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -3737,6 +3737,7 @@
 	</skill>
 	<skill id="1477" toLevel="3" name="Vampiric Impulse">
 		<!-- For 15 seconds, stirs up the blood-siphoning urge and has a chance of giving all party members the ability to recover as HP 60% of the damage inflicted on the enemy. -->
+		<icon>icon.skill1477</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
@@ -3747,7 +3748,6 @@
 			<value level="3">646</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1477</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">52</value>
@@ -3786,6 +3786,7 @@
 	</skill>
 	<skill id="1478" toLevel="2" name="Protection Instinct">
 		<!-- Stirs up the defense instinct to increase P. Def. by 1200 and M. Def. by 900 for 15 seconds. -->
+		<icon>icon.skill1478</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
@@ -3795,7 +3796,6 @@
 			<value level="2">566</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1478</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -3837,6 +3837,7 @@
 	</skill>
 	<skill id="1479" toLevel="3" name="Magic Impulse">
 		<!-- Stirs up the magic urge to increase M. Atk. by 75%, Casting Spd. by 15%, and the chance of prominent magic damage by 100% for 15 seconds. -->
+		<icon>icon.skill1479</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
@@ -3847,7 +3848,6 @@
 			<value level="3">624</value>
 		</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1479</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -3898,13 +3898,13 @@
 	</skill>
 	<skill id="1480" toLevel="1" name="Soul Harmony">
 		<!-- Empathizes with the souls of party members for 15 seconds to recover 200 MP per second, decrease P. Def. by 90%, and become unable to act. -->
+		<icon>icon.skill1480</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
 		<affectRange>600</affectRange>
 		<effectPoint>635</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1480</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>104</mpConsume>
@@ -3934,6 +3934,7 @@
 	</skill>
 	<skill id="1481" toLevel="7" name="Oblivion">
 		<!-- For 1 minute, inflicts the curse of forgetfulness on the enemy and makes him forget the target at a certain rate when damage is received. -->
+		<icon>icon.skill1481</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>OBLIVION</abnormalType>
@@ -3952,7 +3953,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1481</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4006,6 +4006,7 @@
 	</skill>
 	<skill id="1482" toLevel="4" name="Weak Constitution">
 		<!-- For 1 minute, inflicts the curse of weakness on the enemy and makes him faint at a certain rate when damage is received. -->
+		<icon>icon.skill1482</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>WEAK_CONSTITUTION</abnormalType>
@@ -4021,7 +4022,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1482</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -4066,6 +4066,7 @@
 	</skill>
 	<skill id="1483" toLevel="7" name="Thin Skin">
 		<!-- For 1 minute, inflicts a curse that weakens the enemy's skin and causes injuries to appear when damage is received. -->
+		<icon>icon.skill1483</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>THIN_SKIN</abnormalType>
@@ -4084,7 +4085,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1483</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -4138,6 +4138,7 @@
 	</skill>
 	<skill id="1484" toLevel="4" name="Enervation">
 		<!-- For 1 minute, makes the enemy lose his ambition, and decreases Atk. Spd./Speed/Casting Spd. at a certain rate when damage is received. -->
+		<icon>icon.skill1484</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ENERVATION</abnormalType>
@@ -4153,7 +4154,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1484</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -4198,6 +4198,7 @@
 	</skill>
 	<skill id="1485" toLevel="3" name="Spite">
 		<!-- For 1 minute, inflicts a curse that causes malice in the target that is attacking the enemy and causes great Critical Damage at a certain rate when damage is received. -->
+		<icon>icon.skill1485</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPITE</abnormalType>
@@ -4212,7 +4213,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1485</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4253,6 +4253,7 @@
 	</skill>
 	<skill id="1486" toLevel="4" name="Mental Impoverish">
 		<!-- For 1 minute, causes mental impoverishment on the enemy and causes MP to disappear at a certain rate when damage is received. -->
+		<icon>icon.skill1486</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>MENTAL_IMPOVERISH</abnormalType>
@@ -4268,7 +4269,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1486</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4307,6 +4307,7 @@
 	</skill>
 	<skill id="1487" toLevel="8" name="Restoration">
 		<!-- Restores 15 HP per second for 15 seconds. -->
+		<icon>icon.skill1487</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>LIFE_FORCE_KAMAEL</abnormalType>
@@ -4324,7 +4325,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1487</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -4381,6 +4381,7 @@
 	</skill>
 	<skill id="1488" toLevel="3" name="Restoration Impact">
 		<!-- Recovers 10 percent of Max HP by catalysis under restoration. Restoration will disappear. -->
+		<icon>icon.skill1488</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">701</value>
@@ -4389,7 +4390,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill1488</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">49</value>
@@ -4434,8 +4434,8 @@
 	</skill>
 	<skill id="1489" toLevel="1" name="Summoner Ability: Attribute Resistance">
 		<!-- Increases the Elemental Resistance. -->
-		<excludedFromCheck>true</excludedFromCheck>
 		<icon>icon.skill0433</icon>
+		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4460,8 +4460,8 @@
 	</skill>
 	<skill id="1490" toLevel="1" name="Healer Ability: Heal">
 		<!-- Has a chance to recover HP while being attacked. -->
-		<excludedFromCheck>true</excludedFromCheck>
 		<icon>icon.skill1011</icon>
+		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4481,8 +4481,8 @@
 	</skill>
 	<skill id="1491" toLevel="1" name="Summoner Ability: Spirit">
 		<!-- Has a chance to channel the soul of an ancient spirit when being attacked. -->
-		<excludedFromCheck>true</excludedFromCheck>
 		<icon>icon.skill1349</icon>
+		<excludedFromCheck>true</excludedFromCheck>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -4502,12 +4502,12 @@
 	</skill>
 	<skill id="1492" toLevel="1" name="Flame Armor">
 		<!-- Engulfs the user with a protective coat of fire. For 20 minutes, increases Fire Resistance by 60 and causes burn damage on the attacking enemy. -->
+		<icon>icon.skill1492</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ELEMENTAL_ARMOR</abnormalType>
 		<effectPoint>138</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1492</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>29</mpConsume>
@@ -4539,12 +4539,12 @@
 	</skill>
 	<skill id="1493" toLevel="1" name="Frost Armor">
 		<!-- Engulfs the user with a protective glacier barrier. For 20 minutes, increases Water Resistance by 60 and slows down the attacking enemy. -->
+		<icon>icon.skill1493</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ELEMENTAL_ARMOR</abnormalType>
 		<effectPoint>138</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1493</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>29</mpConsume>
@@ -4576,12 +4576,12 @@
 	</skill>
 	<skill id="1494" toLevel="1" name="Hurricane Armor">
 		<!-- Engulfs the body with a storm barrier. For 20 minutes, increases Wind Resistance by 60 and slows down the attacking enemy's Atk. Spd. -->
+		<icon>icon.skill1494</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ELEMENTAL_ARMOR</abnormalType>
 		<effectPoint>138</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1494</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>81</magicLvl>
 		<mpConsume>29</mpConsume>
@@ -4613,6 +4613,7 @@
 	</skill>
 	<skill id="1495" toLevel="1" name="Vampiric Mist">
 		<!-- Scatters a fog of death to inflict dark damage on nearby enemies with 117 Power added to M. Atk. Absorbs 20% of the damage as HP. For 10 seconds, decreases Speed/P. Atk./Atk. Spd. by 50% and Accuracy by 12. -->
+		<icon>icon.skill1495</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
@@ -4624,7 +4625,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1495</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -4663,6 +4663,7 @@
 	</skill>
 	<skill id="1496" toLevel="1" name="Servitor Barrier">
 		<!-- Momentarily makes the servitor invincible. Consumes 5 Spirit Ore. -->
+		<icon>icon.skill1496</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -4671,7 +4672,6 @@
 		<effectPoint>669</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1496</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -4739,6 +4739,7 @@
 	</skill>
 	<skill id="1499" toLevel="1" name="Improve Combat">
 		<!-- Combines P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 40 minutes, increases P. Atk. by 15% and P. Def. by 15%. -->
+		<icon>icon.skill1499</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
 		<abnormalType>IMPROVE_PA_PD_UP</abnormalType>
@@ -4746,7 +4747,6 @@
 		<effectPoint>679</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1499</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>21</mpConsume>

@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="48100" name="Agathion Charm - Little Angel" type="Armor">
 		<!-- Charm that summons a cute Little Angel Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -15,7 +15,7 @@
 	</item>
 	<item id="48101" name="Agathion Charm - Little Devil" additionalName="Firework" type="Armor">
 		<!-- Charm that summons a cute Little Devil Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -28,7 +28,7 @@
 	</item>
 	<item id="48102" name="Agathion Charm - Little Devil" additionalName="Big Head" type="Armor">
 		<!-- Charm that summons a cute Little Devil Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -41,7 +41,7 @@
 	</item>
 	<item id="48103" name="Agathion Charm - Little Devil" additionalName="Escape" type="Armor">
 		<!-- Charm that summons a cute Little Devil Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -54,7 +54,7 @@
 	</item>
 	<item id="48104" name="Agathion Charm - Little Devil" additionalName="Resurrection" type="Armor">
 		<!-- Charm that summons a cute Little Devil Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -67,7 +67,7 @@
 	</item>
 	<item id="48105" name="Agathion Charm - Little Devil" type="Armor">
 		<!-- Charm that summons a cute Little Devil Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -80,7 +80,7 @@
 	</item>
 	<item id="48106" name="Agathion Charm - Rudolph" type="Armor">
 		<!-- Charm that summons a cute Rudolph Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -92,7 +92,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48107" name="Agathion Summon Charm - Monkey" type="Armor">
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -104,7 +104,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48108" name="Agathion Summon Charm - Griffin" type="Armor">
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -117,7 +117,7 @@
 	</item>
 	<item id="48109" name="Agathion Charm - Little Angel" type="Armor">
 		<!-- Charm that summons a cute Little Angel Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -130,7 +130,7 @@
 	</item>
 	<item id="48110" name="Agathion Charm - Little Devil" type="Armor">
 		<!-- Charm that summons a cute Little Devil Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -143,7 +143,7 @@
 	</item>
 	<item id="48111" name="Love Agathion Charm" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. Can summon a Love Agathion when equipped. Can be used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -157,7 +157,7 @@
 	</item>
 	<item id="48112" name="Agathion - Angry Devil Charm" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. Can summon an Agathion - Angry Devil when equipped. Can be used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -171,7 +171,7 @@
 	</item>
 	<item id="48113" name="Agathion - Shiny Charm" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. Can summon an Agathion - Shiny when equipped. Can be used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -185,7 +185,7 @@
 	</item>
 	<item id="48114" name="Agathion - Sobbing Charm" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. Can summon an Agathion - Sobbing when equipped. Can be used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -199,7 +199,7 @@
 	</item>
 	<item id="48115" name="Love Agathion Charm" additionalName="7-day" type="Armor">
 		<!-- Dimensional Item. This sealing charm can summon a Love Agathion when equipped. Can be used for 7 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -213,7 +213,7 @@
 	</item>
 	<item id="48116" name="Love Agathion Charm - Event" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. Can summon a Love Agathion when equipped. Can be used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -227,7 +227,7 @@
 	</item>
 	<item id="48117" name="Love Agathion Charm - Event" additionalName="7-day" type="Armor">
 		<!-- Dimensional Item. This sealing charm can summon a Love Agathion when equipped. Can be used for 7 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -241,7 +241,7 @@
 	</item>
 	<item id="48118" name="Agathion Charm - Knight" type="Armor">
 		<!-- Charm that summons an Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -254,7 +254,7 @@
 	</item>
 	<item id="48119" name="Agathion Charm - Rudolph" additionalName="14-day" type="Armor">
 		<!-- Charm that summons a cute Rudolph Agathion. Limited-time item (14-day). -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -268,7 +268,7 @@
 	</item>
 	<item id="48120" name="Agathion Charm - Love" additionalName="14-day" type="Armor">
 		<!-- Can summon a Love Agathion when equipped in the main Agathion slot. Can be used for 14 days. No restore after deletion available for this item. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -282,7 +282,7 @@
 	</item>
 	<item id="48121" name="Agathion Charm - Juju" additionalName="14-day" type="Armor">
 		<!-- Can summon a Juju Agathion when equipped in the main Agathion slot. Can be used for 14 days. Restoration unavailable after deletion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -296,7 +296,7 @@
 	</item>
 	<item id="48122" name="Agathion Charm - Antharas" type="Armor">
 		<!-- Charm that summons a cute Agathion - Antharas. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -309,7 +309,7 @@
 	</item>
 	<item id="48123" name="Agathion Charm - Nevit's Messenger Kanna" type="Armor">
 		<!-- Charm that summons a cute Agathion - Nevit's Messenger Kanna. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -322,7 +322,7 @@
 	</item>
 	<item id="48124" name="Fairy Agathion Charm" type="Armor">
 		<!-- When equipped, you can summon a fairy Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -335,7 +335,7 @@
 	</item>
 	<item id="48125" name="PA - Propeller Agathion Charm" additionalName="PA exclusive" type="Armor">
 		<!-- Charm that summons a Propeller Agathion. Can use a skill that teleports party members back to town after summoning the Agathion. Used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -349,7 +349,7 @@
 	</item>
 	<item id="48126" name="PA - Magical Girl Agathion Charm" additionalName="PA exclusive" type="Armor">
 		<!-- Charm that summons a Magical Girl Agathion. Can use a skill that teleports party members back to town after summoning the Agathion. Used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -363,7 +363,7 @@
 	</item>
 	<item id="48127" name="PA - Agathion Charm" additionalName="PA exclusive" type="Armor">
 		<!-- Charm that summons a Cobra Agathion. Can use a skill that teleports party members back to town after summoning the Agathion. Used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -377,7 +377,7 @@
 	</item>
 	<item id="48128" name="PA - Baby Ufa Agathion Charm" additionalName="PA exclusive" type="Armor">
 		<!-- Charm that summons a Baby Ufa Agathion. Can use a skill that teleports party members back to town after summoning the Agathion. Used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -391,7 +391,7 @@
 	</item>
 	<item id="48129" name="Bae Kisung Agathion Charm" additionalName="90-day" type="Armor">
 		<!-- Charm that summons a Bae Kisung Agathion. 90-day limited item. Cannot be used in the Olympiad. <Active>. 1. Bae Kisung Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Talking Island Village. (Cooldown 30 min). <Item Skill>. 1. Kisung's Mysterious Power: Physical/ magic skill MP consumption -3%. 2. Kisung's Great Power: Atk. Spd./ Casting Spd. +50. 3. Kisung's Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.bm_agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -405,7 +405,7 @@
 	</item>
 	<item id="48130" name="Bae Kisung Agathion Charm" additionalName="1-day" type="Armor">
 		<!-- Charm that summons a Bae Kisung Agathion. 1-day limited item. Cannot be used in the Olympiad. <Active>. 1. Bae Kisung Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Talking Island Village. (Cooldown 30 min). <Item Skill>. 1. Kisung's Mysterious Power: Physical/ magic skill MP consumption -3%. 2. Kisung's Great Power: Atk. Spd./ Casting Spd. +50. 3. Kisung's Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.bm_agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -419,7 +419,7 @@
 	</item>
 	<item id="48131" name="Agathion Charm - Anakim Holly Barrier" type="Armor">
 		<!-- Charm that summons an Anakim Holy Barrier Agathion, which consists of Anakim's 5 spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Attack Boost: Fire/ Water/ Earth/ Wind/ Dark/ Holy attribute attack +30. 3. Anakim Blessing: XP and SP gained +3%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -429,7 +429,7 @@
 	</item>
 	<item id="48132" name="Agathion Charm - Anakim Holly Barrier" additionalName="30-day" type="Armor">
 		<!-- Charm that summons an Anakim Holy Barrier Agathion, which consists of Anakim's 5 spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 2. Enchant Attribute Attack: Fire/ Water/ Earth/ Wind/ Dark/ Holy attribute attack +30. 3. Anakim Blessing: XP and SP gained +3%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -443,7 +443,7 @@
 	</item>
 	<item id="48133" name="Agathion - Joon Charm (30-day)" type="Armor">
 		<!-- Charm that summons an Agathion - Joon. 30-day limited item. Cannot be used in the Olympiad.. <Item Skill>. 1. Joon's Magic: For 30 min, XP/ SP gained +10%, Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk. Spd. +10%, Casting Spd. +10%, P. Accuracy +4, M. Accuracy +4, Speed +10, Max HP/ MP/ CP +10%, P. Def. +10%, M. Def. +10%, Skill MP consumption -10%. Cannot be stacked with Art of Seduction. Buff effect persists through death. <Active Skill>. 1. Joon's Resurrection: Enables using Blessed Resurrection. Cooldown of 3 hours. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.bm_agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -456,7 +456,7 @@
 	</item>
 	<item id="48134" name="Agathion - Shiny Charm" type="Armor">
 		<!-- Can summon an Agathion - Shiny when equipped. <Active Skill>. 1. Agathion Teleport: Enables teleportation to Town of Aden/ Town of Rune/ Talking Island Village/ Town of Giran/ Town of Goddard/ Town of Schuttgart. (Cooldown 30 min). <Item Skill>. 1. Chase Down: For 15 sec, Speed +66. <Item Skill>. 2. Sneak: Monsters do not attack first. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="icon.pleasure_agathion_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -470,7 +470,7 @@
 	</item>
 	<item id="48135" name="Agathion Charm - Zaken's Spirit Swords" type="Armor">
 		<!-- Can summon Zaken's Spirit Swords when equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="BranchSys2.Icon.br_aga_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -624,7 +624,7 @@
 	</item>
 	<item id="48148" name="Agathion Charm - Lantern" additionalName="33-day (Event)" type="Armor">
 		<!-- Charm that summons a Lantern Agathion. Requires room in the inventory and the weight limit to receive Lantern Agathion's Gift. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="BranchSys2.icon.event_agathion_han_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -638,7 +638,7 @@
 	</item>
 	<item id="48149" name="Agathion Charm - Makeshift Bat" additionalName="7-day" type="Armor">
 		<!-- Dimensional Item. Can summon a Makeshift Bat Agathion when equipped. Can be used for 7 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -653,7 +653,7 @@
 	</item>
 	<item id="48150" name="Agathion Charm - Cow" additionalName="7-day" type="Armor">
 		<!-- Dimensional Item. Can summon a Cow Agathion when equipped. Can be used for 7 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -668,7 +668,7 @@
 	</item>
 	<item id="48151" name="Agathion Charm - Griffin" additionalName="7-day" type="Armor">
 		<!-- Dimensional Item. Can summon a Griffin Agathion when equipped. Can be used for 7 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -683,7 +683,7 @@
 	</item>
 	<item id="48152" name="Agathion Charm - Makeshift Bat" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. Can summon a Makeshift Bat Agathion when equipped. Can be used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -698,7 +698,7 @@
 	</item>
 	<item id="48153" name="Agathion Charm - Cow" type="Armor">
 		<!-- Dimensional Item. Can summon a Cow Agathion when equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -711,7 +711,7 @@
 	</item>
 	<item id="48154" name="Agathion Charm - Cow" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. Can summon a Cow Agathion when equipped. Can be used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -726,7 +726,7 @@
 	</item>
 	<item id="48155" name="Agathion Charm - Griffin" additionalName="30-day" type="Armor">
 		<!-- Dimensional Item. Can summon a Griffin Agathion when equipped. Can be used for 30 days. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -741,7 +741,7 @@
 	</item>
 	<item id="48156" name="Agathion Charm - Griffin" type="Armor">
 		<!-- Dimensional Item. Can summon a Griffin Agathion when equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -754,7 +754,7 @@
 	</item>
 	<item id="48157" name="Agathion Charm - Pegasus" type="Armor">
 		<!-- Bracelet that summons a Pegasus Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="BranchSys.icon.br_aga_pegasus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -767,7 +767,7 @@
 	</item>
 	<item id="48158" name="Agathion Charm - Makeshift Bat" type="Armor">
 		<!-- Dimensional Item. Can summon a Makeshift Bat Agathion when equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />

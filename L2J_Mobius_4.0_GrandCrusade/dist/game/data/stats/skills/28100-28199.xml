@@ -131,14 +131,14 @@
 	</skill>
 	<skill id="28144" toLevel="4" name="Sayha's Protection">
 		<!-- For $s1, Damage Received - $s2. -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>45</abnormalTime>
 		<icon>
 			<value level="1">icon.sayhas_talisman_g_Lv1</value>
 			<value level="2">icon.sayhas_talisman_g_Lv2</value>
 			<value level="3">icon.sayhas_talisman_g_Lv3</value>
 			<value level="4">icon.sayhas_talisman_g_Lv4</value>
 		</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -178,6 +178,12 @@
 	</skill>
 	<skill id="28145" toLevel="4" name="Sayha's Encouragement">
 		<!-- For $s1, PvE Damage + $s2. -->
+		<icon>
+			<value level="1">icon.sayhas_talisman_pve_Lv1</value>
+			<value level="2">icon.sayhas_talisman_pve_Lv2</value>
+			<value level="3">icon.sayhas_talisman_pve_Lv3</value>
+			<value level="4">icon.sayhas_talisman_pve_Lv4</value>
+		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">180</value>
@@ -185,12 +191,6 @@
 			<value level="3">300</value>
 			<value level="4">600</value>
 		</abnormalTime>
-		<icon>
-			<value level="1">icon.sayhas_talisman_pve_Lv1</value>
-			<value level="2">icon.sayhas_talisman_pve_Lv2</value>
-			<value level="3">icon.sayhas_talisman_pve_Lv3</value>
-			<value level="4">icon.sayhas_talisman_pve_Lv4</value>
-		</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -237,14 +237,14 @@
 	</skill>
 	<skill id="28146" toLevel="4" name="Sayha's Anger">
 		<!-- For $s1, PvP Damage + $s2. -->
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>45</abnormalTime>
 		<icon>
 			<value level="1">icon.sayhas_talisman_pvp_Lv1</value>
 			<value level="2">icon.sayhas_talisman_pvp_Lv2</value>
 			<value level="3">icon.sayhas_talisman_pvp_Lv3</value>
 			<value level="4">icon.sayhas_talisman_pvp_Lv4</value>
 		</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>45</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -330,28 +330,25 @@
 	</skill>
 	<skill id="28148" toLevel="1" name="Fortune Talisman Pack">
 		<!-- Double-click to obtain either Sayha's Talisman or Venir's Talisman. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28151" toLevel="4" name="Halloween Blessing">
 		<!-- Rico's Halloween buff. XP/SP gain + $s1 when hunting, P./M. Atk. + $s2, Received Damage - $s3. You can receive a Halloween gift once the buff expires. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.event_halloween_pumpkin_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28152" toLevel="1" name="Halloween Blessing">
-		<icon>icon.skill0000</icon>
+		<icon>icon.event_halloween_pumpkin_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28153" toLevel="1" name="Halloween Gift">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28154" toLevel="1" name="Talisman - Abundance Pack">
-		<icon>icon.skill0000</icon>
+		<icon>icon.event_hero_treasure_box_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="28155" toLevel="1" name="Wondrous Jewelry Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 </list>

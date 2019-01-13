@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="28700" name="Evolved Agathion - Leo" additionalName="Stage 3" type="Armor">
 		<!-- Summons Evolved Leo. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Maiden's Prayer Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 20 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t62_ul_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
@@ -18,7 +18,7 @@
 	</item>
 	<item id="28701" name="Evolved Agathion - Leo" additionalName="Stage 4" type="Armor">
 		<!-- Summons Evolved Leo. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Maiden's Prayer Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t62_b_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -33,7 +33,7 @@
 	</item>
 	<item id="28702" name="Evolved Agathion - Leo" additionalName="Stage 5" type="Armor">
 		<!-- Summons Evolved Leo. Activates 1 Agathion main slot and 2 sub slots when equipped. <Active Skill>. Maiden's Prayer Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 50 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC increases by 1. -->
-		<set name="icon" val="icon.armor_t62_g_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -48,7 +48,7 @@
 	</item>
 	<item id="28703" name="Evolved Agathion - Gemini" additionalName="Stage 1" type="Armor">
 		<!-- Summons Evolved Gemini. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Bountiful Resurrection Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. increases by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t18_b_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -63,7 +63,7 @@
 	</item>
 	<item id="28704" name="Evolved Agathion - Gemini" additionalName="Stage 2" type="Armor">
 		<!-- Summons Evolved Gemini. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Bountiful Resurrection Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 10 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t68_u_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="hair2" />
@@ -79,7 +79,7 @@
 	</item>
 	<item id="28705" name="Evolved Agathion - Gemini" additionalName="Stage 3" type="Armor">
 		<!-- Summons Evolved Gemini. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Bountiful Resurrection Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 20 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t70_l_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
@@ -97,7 +97,7 @@
 	</item>
 	<item id="28706" name="Evolved Agathion - Gemini" additionalName="Stage 4" type="Armor">
 		<!-- Summons Evolved Gemini. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Bountiful Resurrection Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
@@ -112,7 +112,7 @@
 	</item>
 	<item id="28707" name="Evolved Agathion - Gemini" additionalName="Stage 5" type="Armor">
 		<!-- Summons Evolved Gemini. Activates 1 Agathion main slot and 2 sub slots when equipped. <Active Skill>. Bountiful Resurrection Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 50 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC increases by 1. -->
-		<set name="icon" val="icon.armor_t70_u_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="hair2" />
@@ -131,7 +131,7 @@
 	</item>
 	<item id="28708" name="Evolved Agathion - Scorpio" additionalName="Stage 1" type="Armor">
 		<!-- Summons Evolved Scorpio. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Scorpion's Mass Exile Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. increases by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t68_g_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -146,7 +146,7 @@
 	</item>
 	<item id="28709" name="Evolved Agathion - Scorpio" additionalName="Stage 2" type="Armor">
 		<!-- Summons Evolved Scorpio. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Scorpion's Mass Exile Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 10 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t69_g_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -161,7 +161,7 @@
 	</item>
 	<item id="28710" name="Evolved Agathion - Scorpio" additionalName="Stage 3" type="Armor">
 		<!-- Summons Evolved Scorpio. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Scorpion's Mass Exile Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 20 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t70_g_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -176,7 +176,7 @@
 	</item>
 	<item id="28711" name="Evolved Agathion - Scorpio" additionalName="Stage 4" type="Armor">
 		<!-- Summons Evolved Scorpio. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Scorpion's Mass Exile Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t68_b_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -191,7 +191,7 @@
 	</item>
 	<item id="28712" name="Evolved Agathion - Scorpio" additionalName="Stage 5" type="Armor">
 		<!-- Summons Evolved Scorpio. Activates 1 Agathion main slot and 2 sub slots when equipped. <Active Skill>. Scorpion's Mass Exile Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 50 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC increases by 1. -->
-		<set name="icon" val="icon.armor_t69_b_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -206,7 +206,7 @@
 	</item>
 	<item id="28713" name="Evolved Agathion - Aquarius" additionalName="Stage 1" type="Armor">
 		<!-- Summons Evolved Aquarius. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Mass Binding Flood Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. increases by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t70_b_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -221,7 +221,7 @@
 	</item>
 	<item id="28714" name="Evolved Agathion - Aquarius" additionalName="Stage 2" type="Armor">
 		<!-- Summons Evolved Aquarius. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Mass Binding Flood Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 10 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t69_ul_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
@@ -237,7 +237,7 @@
 	</item>
 	<item id="28715" name="Evolved Agathion - Aquarius" additionalName="Stage 3" type="Armor">
 		<!-- Summons Evolved Aquarius. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Mass Binding Flood Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 20 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t68_l_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
@@ -252,7 +252,7 @@
 	</item>
 	<item id="28716" name="Evolved Agathion - Aquarius" additionalName="Stage 4" type="Armor">
 		<!-- Summons Evolved Aquarius. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Mass Binding Flood Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t56_u_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="hair2" />
@@ -271,7 +271,7 @@
 	</item>
 	<item id="28717" name="Evolved Agathion - Aquarius" additionalName="Stage 5" type="Armor">
 		<!-- Summons Evolved Aquarius. Activates 1 Agathion main slot and 2 sub slots when equipped. <Active Skill>. Mass Binding Flood Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 50 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC increases by 1. -->
-		<set name="icon" val="icon.armor_t73_u_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="hair2" />
@@ -290,7 +290,7 @@
 	</item>
 	<item id="28718" name="Evolved Agathion - Pisces" additionalName="Stage 1" type="Armor">
 		<!-- Summons Evolved Pisces. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Slippery Scale Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. increases by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t79_l_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
@@ -308,7 +308,7 @@
 	</item>
 	<item id="28719" name="Evolved Agathion - Pisces" additionalName="Stage 2" type="Armor">
 		<!-- Summons Evolved Pisces. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Slippery Scale Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 10 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
@@ -323,7 +323,7 @@
 	</item>
 	<item id="28720" name="Evolved Agathion - Pisces" additionalName="Stage 3" type="Armor">
 		<!-- Summons Evolved Pisces. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Slippery Scale Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 20 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t77_ul_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
@@ -339,7 +339,7 @@
 	</item>
 	<item id="28721" name="Evolved Agathion - Pisces" additionalName="Stage 4" type="Armor">
 		<!-- Summons Evolved Pisces. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Slippery Scale Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t79_u_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="hair2" />
@@ -358,7 +358,7 @@
 	</item>
 	<item id="28722" name="Evolved Agathion - Pisces" additionalName="Stage 5" type="Armor">
 		<!-- Summons Evolved Pisces. Activates 1 Agathion main slot and 2 sub slots when equipped. <Active Skill>. Slippery Scale Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 50 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC increases by 1. -->
-		<set name="icon" val="icon.armor_t77_b_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -373,7 +373,7 @@
 	</item>
 	<item id="28723" name="Evolved Agathion - Sagittarius" additionalName="Stage 1" type="Armor">
 		<!-- Summons Evolved Sagittarius. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Archer's Call Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. increases by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t78_b_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -388,7 +388,7 @@
 	</item>
 	<item id="28724" name="Evolved Agathion - Sagittarius" additionalName="Stage 2" type="Armor">
 		<!-- Summons Evolved Sagittarius. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Archer's Call Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 10 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t79_b_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -403,7 +403,7 @@
 	</item>
 	<item id="28725" name="Evolved Agathion - Sagittarius" additionalName="Stage 3" type="Armor">
 		<!-- Summons Evolved Sagittarius. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Archer's Call Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 20 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t78_ul_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="bodypart" val="onepiece" />
@@ -419,7 +419,7 @@
 	</item>
 	<item id="28726" name="Evolved Agathion - Sagittarius" additionalName="Stage 4" type="Armor">
 		<!-- Summons Evolved Sagittarius. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Archer's Call Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t77_g_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -434,7 +434,7 @@
 	</item>
 	<item id="28727" name="Evolved Agathion - Sagittarius" additionalName="Stage 5" type="Armor">
 		<!-- Summons Evolved Sagittarius. Activates 1 Agathion main slot and 2 sub slots when equipped. <Active Skill>. Archer's Call Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 50 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC increases by 1. -->
-		<set name="icon" val="icon.armor_t78_g_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -449,7 +449,7 @@
 	</item>
 	<item id="28728" name="Evolved Agathion - Cancer" additionalName="Stage 1" type="Armor">
 		<!-- Summons Evolved Cancer. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Exoskeletal Shield Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. increases by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.armor_t79_g_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -464,7 +464,7 @@
 	</item>
 	<item id="28729" name="Evolved Agathion - Cancer" additionalName="Stage 2" type="Armor">
 		<!-- Summons Evolved Cancer. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Exoskeletal Shield Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 10 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.accessory_tateossian_earring_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -482,7 +482,7 @@
 	</item>
 	<item id="28730" name="Evolved Agathion - Cancer" additionalName="Stage 3" type="Armor">
 		<!-- Summons Evolved Cancer. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Exoskeletal Shield Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 20 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.accessory_tateossian_ring_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
@@ -500,7 +500,7 @@
 	</item>
 	<item id="28731" name="Evolved Agathion - Cancer" additionalName="Stage 4" type="Armor">
 		<!-- Summons Evolved Cancer. Activates 1 Agathion main slot and 1 sub slot when equipped. <Active Skill>. Exoskeletal Shield Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. -->
-		<set name="icon" val="icon.accessory_tateossian_necklace_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
@@ -518,7 +518,7 @@
 	</item>
 	<item id="28732" name="Evolved Agathion - Cancer" additionalName="Stage 5" type="Armor">
 		<!-- Summons Evolved Cancer. Activates 1 Agathion main slot and 2 sub slots when equipped. <Active Skill>. Exoskeletal Shield Lv. 12. <Passive Effect>. 1. Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 50 and Def. by 40. 2. STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC increases by 1. -->
-		<set name="icon" val="icon.accessary_tigerseye_earing_i00" />
+		<set name="icon" val="BranchIcon.icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -629,7 +629,7 @@
 	</item>
 	<item id="28745" name="Virgo Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.accessary_tigerseye_earing_i00" />
+		<set name="icon" val="icon.agathion_virgo_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -644,7 +644,7 @@
 	</item>
 	<item id="28746" name="Capricorn Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_t61_ul_i00" />
+		<set name="icon" val="icon.agathion_capr_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="onepiece" />
@@ -660,7 +660,7 @@
 	</item>
 	<item id="28747" name="Libra Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Libra Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_leather_helmet_i00" />
+		<set name="icon" val="icon.agathion_lib_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
@@ -675,7 +675,7 @@
 	</item>
 	<item id="28748" name="Aries Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Aries Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_t61_b_i00" />
+		<set name="icon" val="icon.agathion_aries_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -690,7 +690,7 @@
 	</item>
 	<item id="28749" name="Taurus Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Taurus Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_t53_l_i00" />
+		<set name="icon" val="icon.agathion_tau_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
@@ -708,7 +708,7 @@
 	</item>
 	<item id="28750" name="Leo Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Leo Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_t53_u_i00" />
+		<set name="icon" val="icon.agathion_leo_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="hair2" />
@@ -727,7 +727,7 @@
 	</item>
 	<item id="28751" name="Gemini Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Gemini Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_t53_b_i00" />
+		<set name="icon" val="icon.agathion_gem_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -742,7 +742,7 @@
 	</item>
 	<item id="28752" name="Scorpio Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_t53_g_i00" />
+		<set name="icon" val="icon.agathion_sco_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -757,7 +757,7 @@
 	</item>
 	<item id="28753" name="Aquarius Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Aquarius Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_t48_u_i00" />
+		<set name="icon" val="icon.agathion_aqu_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="hair2" />
@@ -773,7 +773,7 @@
 	</item>
 	<item id="28754" name="Pisces Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Pisces Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_t48_l_i00" />
+		<set name="icon" val="icon.agathion_pis_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
@@ -788,7 +788,7 @@
 	</item>
 	<item id="28755" name="Sagittarius Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Sagittarius Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_t48_b_i00" />
+		<set name="icon" val="icon.agathion_sag_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -803,7 +803,7 @@
 	</item>
 	<item id="28756" name="Cancer Agathion Charm" additionalName="Not Used" type="Armor">
 		<!-- A charm that activates the power of the Cancer Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. -->
-		<set name="icon" val="icon.armor_t48_g_i00" />
+		<set name="icon" val="icon.agathion_can_star_1" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -843,7 +843,7 @@
 	</item>
 	<item id="28760" name="Seed Bracelet" type="Armor">
 		<!-- Activates 1 Agathion main slot. -->
-		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
@@ -869,7 +869,7 @@
 	</item>
 	<item id="28763" name="Agathion Charm - Guardian of Dawn Kallesin" type="Armor">
 		<!-- Charm to summon Agathion - Guardian of Dawn Kallesin. -->
-		<set name="icon" val="icon.armor_t12_l_i00" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
@@ -884,7 +884,7 @@
 	</item>
 	<item id="28764" name="Agathion Charm - Freya (30-day)" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion. Can enchant up to +10, and depending on the enchant level, additional special and unique abilities are added. Equip it on the Agathion main slot to get both special and unique abilities, or equip it on the side slot to only get the unique ability. A charm that summons Agathion - Freya. 30-day. Cannot be used in the Olympiad.. <Active Skill>. 1. Freya Agathion Teleport: Town of Aden/ Rune/ Talking Island Village. (Cooldown 30 min). <Item Skills>. 1. Freya's Mind: Mental Attack Resistance +10%, Paralysis Resistance +10%, Water Resistance +10. 2. Freya's Strength: STR/ INT/ CON/ DEX/ WIT/ MEN +1. 3. Freya's Magic: P./ M. Skill MP Consumption -3%. -->
-		<set name="icon" val="icon.armor_t57_b_i00" />
+		<set name="icon" val="icon.bm_agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -936,7 +936,7 @@
 	</item>
 	<item id="28769" name="Virgo Agathion Charm" additionalName="Stage 1" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t40_g_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -951,7 +951,7 @@
 	</item>
 	<item id="28770" name="Virgo Agathion Charm" additionalName="Stage 2" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 2, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t41_l_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
@@ -969,7 +969,7 @@
 	</item>
 	<item id="28771" name="Virgo Agathion Charm" additionalName="Stage 3" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 3, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t41_u_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="hair2" />
@@ -988,7 +988,7 @@
 	</item>
 	<item id="28772" name="Virgo Agathion Charm" additionalName="Stage 4" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 4, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t41_g_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -1003,7 +1003,7 @@
 	</item>
 	<item id="28773" name="Virgo Agathion Charm" additionalName="Stage 5" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 5, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t41_b_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -1018,7 +1018,7 @@
 	</item>
 	<item id="28774" name="Virgo Agathion Charm" additionalName="Stage 6" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 6, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.etc_stripe_shirts_c_i02" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
@@ -1033,7 +1033,7 @@
 	</item>
 	<item id="28775" name="Virgo Agathion Charm" additionalName="Stage 7" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 7, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.etc_stripe_shirts_d_i01" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
@@ -1048,7 +1048,7 @@
 	</item>
 	<item id="28776" name="Virgo Agathion Charm" additionalName="Stage 8" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 8, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t14_l_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
@@ -1066,7 +1066,7 @@
 	</item>
 	<item id="28777" name="Virgo Agathion Charm" additionalName="Stage 9" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 9, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t14_u_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="hair2" />
@@ -1085,7 +1085,7 @@
 	</item>
 	<item id="28778" name="Virgo Agathion Charm" additionalName="Stage 10" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 10, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t88_u_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="hair2" />
@@ -1101,7 +1101,7 @@
 	</item>
 	<item id="28779" name="Virgo Agathion Charm" additionalName="Stage 11" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 11, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_helmet_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
@@ -1116,7 +1116,7 @@
 	</item>
 	<item id="28780" name="Virgo Agathion Charm" additionalName="Stage 12" type="Armor">
 		<!-- A charm that activates the power of the Virgo Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Healing Light Lv. 12, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t88_b_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -1131,7 +1131,7 @@
 	</item>
 	<item id="28781" name="Capricorn Agathion Charm" additionalName="Stage 1" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t88_g_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -1146,7 +1146,7 @@
 	</item>
 	<item id="28782" name="Capricorn Agathion Charm" additionalName="Stage 2" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 2, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t88_l_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="immediate_effect" val="true" />
@@ -1161,7 +1161,7 @@
 	</item>
 	<item id="28783" name="Capricorn Agathion Charm" additionalName="Stage 3" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 3, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_necklace_of_mermaid_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
@@ -1176,7 +1176,7 @@
 	</item>
 	<item id="28784" name="Capricorn Agathion Charm" additionalName="Stage 4" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 4, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_necklace_of_mermaid_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
@@ -1191,7 +1191,7 @@
 	</item>
 	<item id="28785" name="Capricorn Agathion Charm" additionalName="Stage 5" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 5, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_onyxbeastseye_earing_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -1206,7 +1206,7 @@
 	</item>
 	<item id="28786" name="Capricorn Agathion Charm" additionalName="Stage 6" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 6, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t45_g_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -1221,7 +1221,7 @@
 	</item>
 	<item id="28787" name="Capricorn Agathion Charm" additionalName="Stage 7" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 7, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t45_g_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -1234,7 +1234,7 @@
 	</item>
 	<item id="28788" name="Capricorn Agathion Charm" additionalName="Stage 8" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 8, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_near_forest_necklace_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
@@ -1249,7 +1249,7 @@
 	</item>
 	<item id="28789" name="Capricorn Agathion Charm" additionalName="Stage 9" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 9, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_near_forest_necklace_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
 		<set name="immediate_effect" val="true" />
@@ -1264,7 +1264,7 @@
 	</item>
 	<item id="28790" name="Capricorn Agathion Charm" additionalName="Stage 10" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 10, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_ring_of_ages_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
@@ -1279,7 +1279,7 @@
 	</item>
 	<item id="28791" name="Capricorn Agathion Charm" additionalName="Stage 11" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 11, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_ring_of_ages_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
@@ -1294,7 +1294,7 @@
 	</item>
 	<item id="28792" name="Capricorn Agathion Charm" additionalName="Stage 12" type="Armor">
 		<!-- A charm that activates the power of the Capricorn Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Skipping Kid Lv. 12, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t11_l_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="immediate_effect" val="true" />
@@ -1312,7 +1312,7 @@
 	</item>
 	<item id="28793" name="Libra Agathion Charm" additionalName="Stage 1" type="Armor">
 		<!-- A charm that activates the power of the Libra Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Scale of Life Lv. 1, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t11_u_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="bodypart" val="hair2" />
@@ -1331,7 +1331,7 @@
 	</item>
 	<item id="28794" name="Libra Agathion Charm" additionalName="Stage 2" type="Armor">
 		<!-- A charm that activates the power of the Libra Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Scale of Life Lv. 2, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_elven_earing_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -1346,7 +1346,7 @@
 	</item>
 	<item id="28795" name="Libra Agathion Charm" additionalName="Stage 3" type="Armor">
 		<!-- A charm that activates the power of the Libra Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Scale of Life Lv. 3, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_elven_earing_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
@@ -1361,7 +1361,7 @@
 	</item>
 	<item id="28796" name="Libra Agathion Charm" additionalName="Stage 4" type="Armor">
 		<!-- A charm that activates the power of the Libra Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Scale of Life Lv. 4, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t51_b_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
@@ -1376,7 +1376,7 @@
 	</item>
 	<item id="28797" name="Libra Agathion Charm" additionalName="Stage 5" type="Armor">
 		<!-- A charm that activates the power of the Libra Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Scale of Life Lv. 5, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.armor_t51_g_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
@@ -1391,7 +1391,7 @@
 	</item>
 	<item id="28798" name="Libra Agathion Charm" additionalName="Stage 6" type="Armor">
 		<!-- A charm that activates the power of the Libra Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Scale of Life Lv. 6, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_elven_ring_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />
@@ -1406,7 +1406,7 @@
 	</item>
 	<item id="28799" name="Libra Agathion Charm" additionalName="Stage 7" type="Armor">
 		<!-- A charm that activates the power of the Libra Agathion.Combine with Starlight Jar up to Stage 12, and upgrade to +10 by using Book of Growth. Its special ability is Scale of Life Lv. 7, and depending on the level of the charm, a unique ability will be added. When equipped on the main slot of the Agathion Bracelet, the Agathion will be summoned automatically, and both special and unique abilities will be activated. When equipped on the side slot, only the unique ability will be activated. <Note>When combining, the growth value of the Agathion Charm will be reset. -->
-		<set name="icon" val="icon.accessary_elven_ring_i00" />
+		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
 		<set name="immediate_effect" val="true" />

@@ -2,12 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11300" toLevel="6" name="Yoke Status">
 		<!-- Momentarily immobilized midair. -->
+		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalVisualEffect>AIRBIND</abnormalVisualEffect>
 		<effectPoint>-692</effectPoint>
-		<icon>icon.skill1042</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
 		<basicProperty>NONE</basicProperty>
@@ -318,8 +318,8 @@
 	</skill>
 	<skill id="11309" toLevel="1" name="Mass Servitor Blessing">
 		<!-- Dispels debuffs on all servitors. -->
-		<abnormalTime>5</abnormalTime>
 		<icon>icon.skill1301</icon>
+		<abnormalTime>5</abnormalTime>
 		<operateType>A2</operateType>
 		<mpConsume>70</mpConsume>
 		<castRange>900</castRange>
@@ -2853,7 +2853,6 @@
 	<skill id="11369" toLevel="6" name="Summon Commando Cat">
 		<!-- Updated to IO -->
 		<!-- Summons Commando Cat. Consumes 2 summon points. -->
-		<icon>icon.skill11369</icon>
 		<magicLvl>
 			<value level="1">100</value>
 			<value level="2">101</value>
@@ -2899,7 +2898,6 @@
 	</skill>
 	<skill id="11370" toLevel="6" name="Summon Witch Cat">
 		<!-- Updated to IO -->
-		<icon>icon.skill11370</icon>
 		<magicLvl>
 			<value level="1">100</value>
 			<value level="2">101</value>
@@ -2946,7 +2944,6 @@
 	<skill id="11371" toLevel="6" name="Summon Unicorn Lancer">
 		<!-- Updated to IO -->
 		<!-- Summons Unicorn Lancer. Consumes 2 summon points. -->
-		<icon>icon.skill11371</icon>
 		<magicLvl>
 			<value level="1">100</value>
 			<value level="2">101</value>
@@ -2993,7 +2990,6 @@
 	<skill id="11372" toLevel="6" name="Summon Unicorn Cherub">
 		<!-- Updated to IO -->
 		<!-- Summons Unicorn Cherub. Consumes 2 summon points. -->
-		<icon>icon.skill11372</icon>
 		<magicLvl>
 			<value level="1">100</value>
 			<value level="2">101</value>
@@ -3040,7 +3036,6 @@
 	<skill id="11373" toLevel="6" name="Summon Dark Crusader">
 		<!-- Updated to IO -->
 		<!-- Summons Dark Crusader. Consumes 2 summon points. -->
-		<icon>icon.skill11373</icon>
 		<magicLvl>
 			<value level="1">100</value>
 			<value level="2">101</value>
@@ -3087,7 +3082,6 @@
 	<skill id="11374" toLevel="6" name="Summon Banshee Queen">
 		<!-- Updated to IO -->
 		<!-- Summons Banshee Queen. Consumes 2 summon points. -->
-		<icon>icon.skill11374</icon>
 		<magicLvl>
 			<value level="1">100</value>
 			<value level="2">101</value>
@@ -3134,7 +3128,6 @@
 	<skill id="11375" toLevel="3" name="Commando Jumping Attack">
 		<!-- Updated to IO -->
 		<!-- Jumps and hulrs attack to target and nearby enemies with 18224 Power added to P. Atk., and decreases Speed by 100 for 5 seconds. -->
-		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3184,7 +3177,6 @@
 	<skill id="11376" toLevel="3" name="Commando Double Smash">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage with 32410 Power added to P. Atk. And knocks down for 3 seconds. -->
-		<icon>icon.skill10546</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
@@ -3224,7 +3216,6 @@
 	<skill id="11377" toLevel="3" name="Witch Cat Power">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage to nearby enemies with 31903 Power added to P. Atk. -->
-		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3257,7 +3248,6 @@
 	<skill id="11378" toLevel="3" name="Elemental Slam">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage to nearby enemies with 30623 Power added to P. Atk. and pushes them back. -->
-		<icon>icon.skill1171</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>1</abnormalTime>
@@ -3303,7 +3293,6 @@
 	<skill id="11379" toLevel="3" name="Lancer Rush">
 		<!-- Updated to IO -->
 		<!-- Rushes forward to target inflicting damage with 16198 Power added to P. Atk. And stuns them for 5 seconds. -->
-		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3357,7 +3346,6 @@
 	<skill id="11380" toLevel="3" name="Power Stump">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage to nearby enemies with 22677 Power added to P. Atk. and blows them away. -->
-		<icon>icon.skill30006</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>1</abnormalTime>
@@ -3402,7 +3390,6 @@
 	<skill id="11381" toLevel="3" name="Cherub Power">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage to nearby enemies with 31903 Power added to P. Atk. -->
-		<icon>icon.skill1171</icon>
 		<affectRange>150</affectRange> <!-- Guessed -->
 		<operateType>A1</operateType>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3435,7 +3422,6 @@
 	<skill id="11382" toLevel="3" name="Multiple Icicles">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage to target and nearby enemies with 34449 Power added to P. Atk., and decreases Speed by 100 for 5 seconds. -->
-		<icon>icon.skill10103</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3482,7 +3468,6 @@
 	<skill id="11383" toLevel="3" name="Phantom Sword Attack">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage with 40502 Power added to P. Atk. -->
-		<icon>icon.skill0121</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3510,7 +3495,6 @@
 	<skill id="11384" toLevel="3" name="Phantom Blow">
 		<!-- Updated to IO -->
 		<!-- Attacks the target's vital points with 45696 Power added to P. Atk. -->
-		<icon>icon.skill10511</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3545,7 +3529,6 @@
 	<skill id="11385" toLevel="3" name="Phantom Spike">
 		<!-- Updated to IO -->
 		<!-- Attacks the target's vital points with 51411 Power added to P. Atk. -->
-		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3579,7 +3562,6 @@
 	<skill id="11386" toLevel="3" name="Phantom Crash">
 		<!-- Updated to IO -->
 		<!-- Inflicts damage with 45568 Power added to P. Atk. -->
-		<icon>icon.skill1171</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3606,7 +3588,6 @@
 	<skill id="11387" toLevel="1" name="Arcana's Call">
 		<!-- Updated to IO -->
 		<!-- Uses the power of nature to increase M. Atk. and M. Critical Rate for 30 seconds. Additionally increases your servitor's P. Atk. And success rate of Knock Back / Knock Down. Consumes 10 Spirit Ores. -->
-		<icon>icon.skill11387</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
@@ -3646,7 +3627,6 @@
 	<skill id="11388" toLevel="1" name="Lord of Arcana">
 		<!-- Updated to IO -->
 		<!-- M. Atk. + 30%, M. Critical Rate + 30% for 30 seconds. -->
-		<icon>icon.skill11387</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
@@ -3676,7 +3656,6 @@
 	<skill id="11389" toLevel="1" name="Elemental's Call">
 		<!-- Updated to IO -->
 		<!-- Uses the power of spirits to increase M. Atk. And Casting Spd. for 30 seconds. Additionally increases your servitor's P. Atk. and Atk. Spd, and decreases cooldown. Consumes 10 Spirit Ores. -->
-		<icon>icon.skill11388</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
@@ -3725,7 +3704,6 @@
 	<skill id="11390" toLevel="1" name="Lord of Elemental">
 		<!-- Updated to IO -->
 		<!-- M. Atk. + 30%, Casting Spd. + 30% for 30 seconds. -->
-		<icon>icon.skill11388</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
@@ -3755,7 +3733,6 @@
 	<skill id="11391" toLevel="1" name="Spectral's Call">
 		<!-- Updated to IO -->
 		<!-- Use the power of ghosts to increase M. Atk. And M. Critical Damage for 30 seconds. Additionally increases your servitor's P. Critical Damage and vital point attack rate. Consumes 10 Spirit Ores. -->
-		<icon>icon.skill11389</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>
@@ -3794,7 +3771,6 @@
 	<skill id="11392" toLevel="1" name="Lord of Spectral">
 		<!-- Updated to IO -->
 		<!-- M. Atk. + 30%, M. Critical Damage + 30% for 30 seconds. -->
-		<icon>icon.skill11389</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BIG_BODY_COMBINATION</abnormalType>

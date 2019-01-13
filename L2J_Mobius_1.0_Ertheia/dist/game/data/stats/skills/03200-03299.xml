@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3200" toLevel="3" name="Item Skill: Spell Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for magic skills. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -11,7 +12,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -45,6 +45,7 @@
 	</skill>
 	<skill id="3201" toLevel="3" name="Item Skill: Music Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for song/dance skills. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -54,7 +55,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -88,6 +88,7 @@
 	</skill>
 	<skill id="3202" toLevel="3" name="Item Skill: Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for all skills except for those with a fixed Cooldown time. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -97,7 +98,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -141,12 +141,12 @@
 	</skill>
 	<skill id="3203" toLevel="1" name="Item Skill: Mystery Skill">
 		<!-- Active: Increases your head size. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
 		<activateRate>0</activateRate>
-		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>10</mpConsume>
@@ -162,6 +162,7 @@
 	</skill>
 	<skill id="3204" toLevel="3" name="Item Skill: Reflect Damage">
 		<!-- Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -171,7 +172,6 @@
 			<value level="3">495</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill3123</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -208,13 +208,13 @@
 	</skill>
 	<skill id="3205" toLevel="2" name="Item Skill: Party Return">
 		<!-- Active: Teleports party members to a village. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<icon>icon.skill3123</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>
 			<value level="1">20000</value>
 			<value level="2">3500</value>
 		</hitTime>
-		<icon>icon.skill3123</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">48</value>
@@ -2322,12 +2322,12 @@
 	</skill>
 	<skill id="3260" toLevel="1" name="Forgiveness">
 		<!-- Sends mutated animals a Heart with love. -->
+		<icon>icon.skill3260</icon>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-1</effectPoint>
 		<effectRange>700</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill3260</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -2362,12 +2362,12 @@
 	</skill>
 	<skill id="3261" toLevel="1" name="Forgiveness">
 		<!-- Taps into the magic of the bow to fire a harmless bolt. Warning: If you use this skill against a monster, it will flag you for PvP. -->
+		<icon>icon.skill3260</icon>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>1</effectPoint>
 		<effectRange>700</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill3260</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -2381,12 +2381,12 @@
 	</skill>
 	<skill id="3262" toLevel="1" name="Pardon">
 		<!-- Continuously sends two hearts filled with love to mutated animals. -->
+		<icon>icon.skill3260</icon>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>-1</effectPoint>
 		<effectRange>700</effectRange>
 		<hitTime>3200</hitTime>
-		<icon>icon.skill3260</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -2505,8 +2505,8 @@
 	</skill>
 	<skill id="3267" toLevel="1" name="Seal Agathion">
 		<!-- Dismiss a summoned Agathion. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>
@@ -2521,8 +2521,8 @@
 	</skill>
 	<skill id="3268" toLevel="1" name="Release Agathion's Seal - Castle">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
@@ -2539,8 +2539,8 @@
 	</skill>
 	<skill id="3269" toLevel="1" name="Release Agathion's Seal - Rainbow Clan Hall">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>
@@ -2557,8 +2557,8 @@
 	</skill>
 	<skill id="3270" toLevel="1" name="Release Agathion's Seal - Beast Farm">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>
@@ -2575,12 +2575,12 @@
 	</skill>
 	<skill id="3271" toLevel="1" name="Blue Talisman - P. Atk.">
 		<!-- Increases P. Atk with the power of Talisman. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2602,12 +2602,12 @@
 	</skill>
 	<skill id="3272" toLevel="1" name="Blue Talisman - P. Def.">
 		<!-- Increases P. Def. with the power of Talisman. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2629,9 +2629,9 @@
 	</skill>
 	<skill id="3273" toLevel="1" name="Red Talisman - HP/CP Recovery">
 		<!-- Recover HP/CP with the power of Talisman. -->
+		<icon>icon.etc_talisman_i00</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2655,12 +2655,12 @@
 	</skill>
 	<skill id="3274" toLevel="1" name="Blue Talisman - Shield Defense">
 		<!-- Increases Shield Defense with the power of Talisman. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2682,12 +2682,12 @@
 	</skill>
 	<skill id="3275" toLevel="1" name="Blue Talisman - Shield Defense">
 		<!-- Increases Shield Defense Rate with the power of Talisman. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2709,12 +2709,12 @@
 	</skill>
 	<skill id="3276" toLevel="1" name="Blue Talisman - M. Def.">
 		<!-- Increases M. Def. with the power of Talisman. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2736,12 +2736,12 @@
 	</skill>
 	<skill id="3277" toLevel="1" name="Blue Talisman - M. Critical Rate">
 		<!-- Increases Critical Rate of magic attacks with the power of Talisman. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2763,12 +2763,12 @@
 	</skill>
 	<skill id="3278" toLevel="1" name="Red Talisman - Mental Regeneration">
 		<!-- Increases MP Recovery Rate with the power of Talisman. -->
+		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2790,12 +2790,12 @@
 	</skill>
 	<skill id="3279" toLevel="1" name="Red Talisman - Meditation">
 		<!-- Greatly increases MP Recovery Rate with the power of Talisman. Immobilized while being healed. -->
+		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2824,13 +2824,13 @@
 	</skill>
 	<skill id="3280" toLevel="1" name="Blue Talisman - Invisibility">
 		<!-- Uses power of Talisman to disable preemptive attacks from enemies. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2855,12 +2855,12 @@
 	</skill>
 	<skill id="3281" toLevel="1" name="Red Talisman - Clarity">
 		<!-- Decreases MP Consumption for a skill with the power of the Talisman. -->
+		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2893,12 +2893,12 @@
 	</skill>
 	<skill id="3282" toLevel="1" name="Red Talisman - Maximum Clarity">
 		<!-- Decreases MP Consumption for a skill with the power of the Talisman. -->
+		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>90</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2931,12 +2931,12 @@
 	</skill>
 	<skill id="3283" toLevel="1" name="Blue Talisman - Healing">
 		<!-- Increases the power of HP recovery magic. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2958,12 +2958,12 @@
 	</skill>
 	<skill id="3284" toLevel="1" name="Blue Talisman - Divine Protection">
 		<!-- Significantly increases P. Def. and M. Def. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -2989,12 +2989,12 @@
 	</skill>
 	<skill id="3285" toLevel="1" name="Blue Talisman - Berserker">
 		<!-- Temporarily decrease P. Def./M. Def./Evasion and increases P. Atk./M. Atk./Atk. Spd./Casting Spd./speed with the power of Talisman. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -3044,9 +3044,9 @@
 	</skill>
 	<skill id="3286" toLevel="1" name="Black Talisman - Mending">
 		<!-- Cure bleeding with the power of Talisman. -->
+		<icon>icon.etc_talisman_i05</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -3066,9 +3066,9 @@
 	</skill>
 	<skill id="3287" toLevel="1" name="Black Talisman - Physical Freedom">
 		<!-- Cancels Physical Movement Inability State with the power of Talisman. -->
+		<icon>icon.etc_talisman_i05</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -3088,9 +3088,9 @@
 	</skill>
 	<skill id="3288" toLevel="1" name="Black Talisman - Arcane Freedom">
 		<!-- Cancels Magical Movement Inability State with the power of Talisman. -->
+		<icon>icon.etc_talisman_i05</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -3110,9 +3110,9 @@
 	</skill>
 	<skill id="3289" toLevel="1" name="Black Talisman - Escape">
 		<!-- Cancels All Movement Inability State with the power of Talisman. -->
+		<icon>icon.etc_talisman_i05</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -3132,9 +3132,9 @@
 	</skill>
 	<skill id="3290" toLevel="1" name="Black Talisman - Rescue">
 		<!-- Cancels Physical Skill Inability State with the power of Talisman. -->
+		<icon>icon.etc_talisman_i05</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -3154,9 +3154,9 @@
 	</skill>
 	<skill id="3291" toLevel="1" name="Black Talisman - Vocalization">
 		<!-- Cancels Magical Skill Inability State with the power of Talisman. -->
+		<icon>icon.etc_talisman_i05</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -3176,9 +3176,9 @@
 	</skill>
 	<skill id="3292" toLevel="1" name="Black Talisman - Free Speech">
 		<!-- Cancels Skill Inability State with the power of Talisman. -->
+		<icon>icon.etc_talisman_i05</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>

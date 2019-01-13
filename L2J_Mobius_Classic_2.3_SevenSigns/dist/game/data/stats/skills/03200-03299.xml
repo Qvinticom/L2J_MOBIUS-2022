@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="3200" toLevel="3" name="Item Skill: Spell Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for magic skills. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -11,7 +12,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -45,6 +45,7 @@
 	</skill>
 	<skill id="3201" toLevel="3" name="Item Skill: Music Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for song/ dance skills. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -54,7 +55,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -88,6 +88,7 @@
 	</skill>
 	<skill id="3202" toLevel="3" name="Item Skill: Refresh">
 		<!-- Active: Temporarily decreases the Cooldown for all skills except for those with a fixed Cooldown time. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -97,7 +98,6 @@
 			<value level="3">655</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -141,12 +141,12 @@
 	</skill>
 	<skill id="3203" toLevel="1" name="Item Skill: Mystery Skill">
 		<!-- Active: Increases your head size. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
 		<activateRate>0</activateRate>
-		<icon>icon.skill3123</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>10</mpConsume>
@@ -162,6 +162,7 @@
 	</skill>
 	<skill id="3204" toLevel="3" name="Item Skill: Reflect Damage">
 		<!-- Active: Allows you to reflect some of the damage you incurred back to the enemy for a certain amount of time. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
@@ -171,7 +172,6 @@
 			<value level="3">495</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill3123</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">55</value>
@@ -208,13 +208,13 @@
 	</skill>
 	<skill id="3205" toLevel="2" name="Item Skill: Party Return">
 		<!-- Teleports party members to the nearest village. Cannot be used in a specially designated place such as the GM Consultation Service. -->
+		<icon>icon.skill3123</icon>
 		<affectRange>1000</affectRange>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>
 			<value level="1">20000</value>
 			<value level="2">3500</value>
 		</hitTime>
-		<icon>icon.skill3123</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">48</value>
@@ -2322,12 +2322,12 @@
 	</skill>
 	<skill id="3261" toLevel="1" name="Forgiveness">
 		<!-- Taps into the magic of the bow to fire a harmless bolt. Warning: If you use this skill against a monster, it will flag you for PvP. -->
+		<icon>icon.skill3260</icon>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
 		<effectPoint>1</effectPoint>
 		<effectRange>700</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill3260</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -2425,8 +2425,8 @@
 	</skill>
 	<skill id="3267" toLevel="1" name="Seal Agathion">
 		<!-- Dismiss a summoned Agathion. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>
@@ -2441,8 +2441,8 @@
 	</skill>
 	<skill id="3268" toLevel="1" name="Release Agathion's Seal - Castle">
 		<!-- Summon Agathion -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
@@ -2459,8 +2459,8 @@
 	</skill>
 	<skill id="3269" toLevel="1" name="Release Agathion's Seal - Rainbow Clan Hall">
 		<!-- Summon Agathion -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>
@@ -2477,8 +2477,8 @@
 	</skill>
 	<skill id="3270" toLevel="1" name="Release Agathion's Seal - Beast Farm">
 		<!-- Summon Agathion -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>
@@ -2495,7 +2495,10 @@
 	</skill>
 	<skill id="3271" toLevel="2" name="Blue Talisman - P. Crit.">
 		<!-- P. Critical Rate +10. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i01</icon>
+		<icon>
+			<value level="1">icon.etc_talisman_i01</value>
+			<value level="2">icon.etc_talisman_i00</value>
+		</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2511,7 +2514,11 @@
 	</skill>
 	<skill id="3272" toLevel="3" name="Blue Talisman - P. Atk.">
 		<!-- P. Atk. +3%. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i01</icon>
+		<icon>
+			<value level="1">icon.etc_talisman_i01</value>
+			<value level="2">icon.etc_talisman_i00</value>
+			<value level="3">icon.etc_wise_man_stone_i04</value>
+		</icon>
 		<magicLvl>
 			<value level="1">55</value>
 			<value level="2">55</value>
@@ -2532,7 +2539,11 @@
 	</skill>
 	<skill id="3273" toLevel="3" name="Talisman of Darkness - M. Def.">
 		<!-- P. Def. +3%. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i00</icon>
+		<icon>
+			<value level="1">icon.etc_talisman_i01</value>
+			<value level="2">icon.etc_talisman_i00</value>
+			<value level="3">icon.etc_wise_man_stone_i04</value>
+		</icon>
 		<magicLvl>
 			<value level="1">55</value>
 			<value level="2">55</value>
@@ -2553,7 +2564,11 @@
 	</skill>
 	<skill id="3274" toLevel="3" name="Blue Talisman - Physical Skill Evasion Rate">
 		<!-- Physical skill Evasion Rate +10%. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i01</icon>
+		<icon>
+			<value level="1">icon.etc_talisman_i01</value>
+			<value level="2">icon.etc_talisman_i00</value>
+			<value level="3">icon.etc_wise_man_stone_i04</value>
+		</icon>
 		<magicLvl>
 			<value level="1">55</value>
 			<value level="2">55</value>
@@ -2574,7 +2589,10 @@
 	</skill>
 	<skill id="3275" toLevel="2" name="Blue Talisman - M. Crit.">
 		<!-- M. Critical Rate +10. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i01</icon>
+		<icon>
+			<value level="1">icon.etc_talisman_i01</value>
+			<value level="2">icon.etc_talisman_i00</value>
+		</icon>
 		<magicLvl>
 			<value level="1">55</value>
 			<value level="2">55</value>
@@ -2593,7 +2611,11 @@
 	</skill>
 	<skill id="3276" toLevel="3" name="Blue Talisman - M. Atk.">
 		<!-- M. Atk. +3%. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i01</icon>
+		<icon>
+			<value level="1">icon.etc_talisman_i01</value>
+			<value level="2">icon.etc_talisman_i00</value>
+			<value level="3">icon.etc_wise_man_stone_i04</value>
+		</icon>
 		<magicLvl>
 			<value level="1">55</value>
 			<value level="2">55</value>
@@ -2614,7 +2636,11 @@
 	</skill>
 	<skill id="3277" toLevel="3" name="White Talisman - M. Def.">
 		<!-- M. Def. +3%. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i01</icon>
+		<icon>
+			<value level="1">icon.etc_talisman_i01</value>
+			<value level="2">icon.etc_talisman_i00</value>
+			<value level="3">icon.etc_wise_man_stone_i04</value>
+		</icon>
 		<magicLvl>
 			<value level="1">55</value>
 			<value level="2">55</value>
@@ -2635,7 +2661,11 @@
 	</skill>
 	<skill id="3278" toLevel="3" name="Blue Talisman - Magic Skill Evasion Rate">
 		<!-- Magic Skill Evasion Rate +10%. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i00</icon>
+		<icon>
+			<value level="1">icon.etc_talisman_i01</value>
+			<value level="2">icon.etc_talisman_i00</value>
+			<value level="3">icon.etc_wise_man_stone_i04</value>
+		</icon>
 		<magicLvl>
 			<value level="1">55</value>
 			<value level="2">55</value>
@@ -2656,7 +2686,11 @@
 	</skill>
 	<skill id="3279" toLevel="3" name="Talisman of Darkness - Max HP">
 		<!-- Max. HP +3%. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i00</icon>
+		<icon>
+			<value level="1">icon.etc_talisman_i01</value>
+			<value level="2">icon.etc_talisman_i00</value>
+			<value level="3">icon.etc_wise_man_stone_i04</value>
+		</icon>
 		<magicLvl>
 			<value level="1">55</value>
 			<value level="2">55</value>
@@ -2677,7 +2711,11 @@
 	</skill>
 	<skill id="3280" toLevel="3" name="Talisman of Darkness - Max MP">
 		<!-- Max. MP +3%. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i01</icon>
+		<icon>
+			<value level="1">icon.etc_talisman_i01</value>
+			<value level="2">icon.etc_talisman_i00</value>
+			<value level="3">icon.etc_wise_man_stone_i04</value>
+		</icon>
 		<magicLvl>
 			<value level="1">55</value>
 			<value level="2">55</value>
@@ -2698,12 +2736,12 @@
 	</skill>
 	<skill id="3281" toLevel="1" name="Grey Talisman Box - Guard">
 		<!-- For 10 sec., can protect from debuffs 5 times, when used. Effects from two such Talismans do not stack. Cooldown - 5 min. -->
+		<icon>icon.etc_talisman_i07</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -2722,9 +2760,9 @@
 	</skill>
 	<skill id="3282" toLevel="1" name="Grey Talisman - Denial">
 		<!-- Removes a debuff when used. Effects from two such Talismans do not stack. Cooldown - 5 min. -->
+		<icon>icon.etc_talisman_i07</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -2745,12 +2783,12 @@
 	</skill>
 	<skill id="3283" toLevel="1" name="Grey Talisman - Benefaction">
 		<!-- For 10 sec., P. Def. +1800 and M. Def. +1620. Buff-canceling Attack Resistance +80%. Effects from two such Talismans do not stack. Cooldown - 15 min. -->
+		<icon>icon.etc_talisman_i07</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -2778,6 +2816,7 @@
 	</skill>
 	<skill id="3284" toLevel="1" name="Grey Talisman - Block">
 		<!-- For 15 sec., restricts enemy's HP recovery up to 70%, when used. Effects from two such Talismans do not stack. Cooldown - 4 min. -->
+		<icon>icon.etc_talisman_i07</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
@@ -2785,7 +2824,6 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>3000</hitTime>
 		<castRange>900</castRange>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -2805,6 +2843,7 @@
 	</skill>
 	<skill id="3285" toLevel="1" name="Grey Talisman - Gravity">
 		<!-- For 15 sec., target's Atk. Spd. and Casting Spd. by -20%. Effects from two such Talismans do not stack. Cooldown - 4 min. -->
+		<icon>icon.etc_talisman_i07</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
@@ -2812,7 +2851,6 @@
 		<effectPoint>532</effectPoint>
 		<activateRate>70</activateRate>
 		<hitTime>3000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isDebuff>true</isDebuff>
 		<magicLvl>55</magicLvl>
@@ -2836,6 +2874,7 @@
 	</skill>
 	<skill id="3286" toLevel="1" name="Grey Talisman - Bond">
 		<!-- For 15 sec., target's Speed -30%, when used. Effects from two such Talismans do not stack. Cooldown - 4 min. -->
+		<icon>icon.etc_talisman_i07</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
@@ -2843,7 +2882,6 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>3000</hitTime>
 		<castRange>600</castRange>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -2862,12 +2900,12 @@
 	</skill>
 	<skill id="3287" toLevel="1" name="Yellow Talisman - Guard">
 		<!-- For 10 sec., can protect from debuffs 5 times, when used. Effects from two such Talismans do not stack. Cooldown - 4 min. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -2884,9 +2922,9 @@
 	</skill>
 	<skill id="3288" toLevel="1" name="Yellow Talisman - Denial">
 		<!-- Removes a debuff when used. Effects from two such Talismans do not stack. Cooldown - 4 min. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<effectPoint>532</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -2906,12 +2944,12 @@
 	</skill>
 	<skill id="3289" toLevel="1" name="Yellow Talisman - Benefaction">
 		<!-- For 10 sec., P. Def. +3600 and M. Def. +3240, when used. Buff-canceling Attack Resistance +80%. Effects from two such Talismans do not stack. Cooldown - 15 min. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>3000</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -2937,6 +2975,7 @@
 	</skill>
 	<skill id="3290" toLevel="1" name="Yellow Talisman - Block">
 		<!-- For 15 sec., restricts enemy's HP recovery up to 70%, when used. Effects from two such Talismans do not stack. Cooldown - 3 min. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
@@ -2944,7 +2983,6 @@
 		<hitTime>3000</hitTime>
 		<castRange>900</castRange>
 		<activateRate>70</activateRate>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<isDebuff>true</isDebuff>
@@ -2963,6 +3001,7 @@
 	</skill>
 	<skill id="3291" toLevel="1" name="Yellow Talisman - Gravity">
 		<!-- For 15 sec., target's Atk. Spd. and Casting Spd. by -20%. Effects from two such Talismans do not stack. Cooldown - 3 min. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
@@ -2971,7 +3010,6 @@
 		<effectPoint>532</effectPoint>
 		<hitTime>3000</hitTime>
 		<isDebuff>true</isDebuff>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -2993,6 +3031,7 @@
 	</skill>
 	<skill id="3292" toLevel="1" name="Yellow Talisman - Bond">
 		<!-- For 15 sec., target's Speed -30%, when used. Effects from two such Talismans do not stack. Cooldown - 3 min. -->
+		<icon>icon.etc_talisman_i02</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
@@ -3000,7 +3039,6 @@
 		<effectPoint>532</effectPoint>
 		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.etc_talisman_i05</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<operateType>A2</operateType>
@@ -3018,7 +3056,7 @@
 	</skill>
 	<skill id="3293" toLevel="1" name="Talisman of Darkness - Healing Power">
 		<!-- Healing Power +4%. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i02</icon>
+		<icon>icon.etc_wise_man_stone_i04</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3031,7 +3069,7 @@
 	</skill>
 	<skill id="3294" toLevel="1" name="Talisman of Darkness - Power of Healing Magic">
 		<!-- Power of healing magic +43. Effects from two such Talismans do not stack. -->
-		<icon>icon.etc_talisman_i02</icon>
+		<icon>icon.etc_wise_man_stone_i04</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

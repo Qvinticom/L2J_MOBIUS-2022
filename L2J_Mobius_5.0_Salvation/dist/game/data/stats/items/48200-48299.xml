@@ -204,7 +204,7 @@
 	</item>
 	<item id="48217" name="High-grade Balthus Knight Mark" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. -->
-		<set name="icon" val="icon.ev_balthus_token" />
+		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -216,7 +216,7 @@
 	</item>
 	<item id="48218" name="Veteran Duo Bracelet Pack" additionalName="Event" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -229,7 +229,7 @@
 	</item>
 	<item id="48219" name="Returned Duo Bracelet Pack" additionalName="Event" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
-		<set name="icon" val="icon.etc_pi_gift_box_i03" />
+		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
@@ -242,7 +242,7 @@
 	</item>
 	<item id="48220" name="NoItemName" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
-		<set name="icon" val="icon.bm_royal_white_save_ticket" />
+		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -374,7 +374,7 @@
 	</item>
 	<item id="48231" name="Antharas Transformation Costume" type="Armor">
 		<!-- NPC only costume -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="icon" val="icon.valkyrie_chest_change_0" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -413,7 +413,7 @@
 	</item>
 	<item id="48233" name="Clan Cloak - War Specialty" additionalName="Stage 1" type="Armor">
 		<!-- Can be worn when your level is at least 85 and your clan is at least level 8. <Upgrade Condition>. Can be upgraded to level 2 cloak when enchanted to +5. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="icon" val="icon.alliance_cloak_pvp01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -430,7 +430,7 @@
 	</item>
 	<item id="48234" name="Clan Cloak - War Specialty" additionalName="Stage 2" type="Armor">
 		<!-- Can be worn when your level is at least 99 and your clan is at least level 10. <Upgrade Condition>. Can be upgraded to level 3 cloak when enchanted to +5. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.alliance_cloak_pvp02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -447,7 +447,7 @@
 	</item>
 	<item id="48235" name="Clan Cloak - War Specialty" additionalName="Stage 3" type="Armor">
 		<!-- Can be worn when your level is at least 105 and your clan is at least level 12. <Upgrade Condition>. Can be upgraded to level 4 cloak when enchanted to +5. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.alliance_cloak_pvp03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -464,7 +464,7 @@
 	</item>
 	<item id="48236" name="Clan Cloak - War Specialty" additionalName="Stage 4" type="Armor">
 		<!-- Can be worn when your level is at least 110 and your clan is at least level 13. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.alliance_cloak_pvp04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -481,7 +481,7 @@
 	</item>
 	<item id="48237" name="Clan Cloak - Growth Specialty" additionalName="Stage 1" type="Armor">
 		<!-- Not open -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -498,7 +498,7 @@
 	</item>
 	<item id="48238" name="Clan Cloak - Growth Specialty" additionalName="Stage 2" type="Armor">
 		<!-- Not open -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -515,7 +515,7 @@
 	</item>
 	<item id="48239" name="Clan Cloak - Growth Specialty" additionalName="Stage 3" type="Armor">
 		<!-- Not open -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -532,7 +532,7 @@
 	</item>
 	<item id="48240" name="Clan Cloak - Growth Specialty" additionalName="Stage 4" type="Armor">
 		<!-- Not open -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -549,7 +549,7 @@
 	</item>
 	<item id="48241" name="Clan Cloak - Combat Specialty" additionalName="Stage 1" type="Armor">
 		<!-- Can be worn when your level is at least 85 and your clan is at least level 8. <Upgrade Condition>. Can be upgraded to level 2 cloak when enchanted to +5. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.alliance_cloak_pve01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -566,7 +566,7 @@
 	</item>
 	<item id="48242" name="Clan Cloak - Combat Specialty" additionalName="Stage 2" type="Armor">
 		<!-- Can be worn when your level is at least 99 and your clan is at least level 10. <Upgrade Condition>. Can be upgraded to level 3 cloak when enchanted to +5. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.alliance_cloak_pve02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -583,7 +583,7 @@
 	</item>
 	<item id="48243" name="Clan Cloak - Combat Specialty" additionalName="Stage 3" type="Armor">
 		<!-- Can be worn when your level is at least 105 and your clan is at least level 12. <Upgrade Condition>. Can be upgraded to level 4 cloak when enchanted to +5. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.alliance_cloak_pve03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -600,7 +600,7 @@
 	</item>
 	<item id="48244" name="Clan Cloak - Combat Specialty" additionalName="Stage 4" type="Armor">
 		<!-- Can be worn when your level is at least 110 and your clan is at least level 13. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.alliance_cloak_pve04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -694,7 +694,7 @@
 	</item>
 	<item id="48252" name="Herphah Bracelet" type="Armor">
 		<!-- Bracelet received after completing Herphah's mission. MP +187. Activates 5 Talisman slots when equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.dimension_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -867,7 +867,7 @@
 	</item>
 	<item id="48268" name="Training Fairy Agathion Charm" additionalName="1-day" type="Armor">
 		<!-- Equipping it summons a Training Fairy Agathion. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_elmoreden_cloak_normal" />
+		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -971,7 +971,7 @@
 	</item>
 	<item id="48277" name="Balthus Knight Bracelet" type="Armor">
 		<!-- A bracelet received as a reward for defeating Antharas with the Balthus Knights. When equipped, STR/ DEX/ CON/ INT/ WIT/ MEN +1 and 5 Talismans can be equipped. Cannot be shared within the account. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aden_cloak_normal" />
+		<set name="icon" val="icon.balthus_bracelet" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -983,7 +983,7 @@
 	</item>
 	<item id="48278" name="Clan Cloak - Economy Specialty" additionalName="Stage 1" type="Armor">
 		<!-- Not open -->
-		<set name="icon" val="BranchIcon.icon.g_bm_elmore_cloak_normal" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -999,7 +999,7 @@
 	</item>
 	<item id="48279" name="Clan Cloak - Economy Specialty" additionalName="Stage 2" type="Armor">
 		<!-- Not open -->
-		<set name="icon" val="BranchIcon.icon.g_bm_perios_cloak_normal" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1015,7 +1015,7 @@
 	</item>
 	<item id="48280" name="Clan Cloak - Economy Specialty" additionalName="Stage 3" type="Armor">
 		<!-- Not open -->
-		<set name="icon" val="BranchIcon.icon.g_bm_elmoreden_cloak_normal" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1031,7 +1031,7 @@
 	</item>
 	<item id="48281" name="Clan Cloak - Economy Specialty" additionalName="Stage 4" type="Armor">
 		<!-- Not open -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aden_cloak_normal" />
+		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
@@ -1070,7 +1070,7 @@
 	</item>
 	<item id="48283" name="Stealth Detector" type="EtcItem">
 		<!-- Use it to fire a flash bang that reveals hidden targets around you. -->
-		<set name="icon" val="icon.etc_unholy_crystal_1_i00" />
+		<set name="icon" val="icon.etc_fairy_fire_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

@@ -361,6 +361,7 @@
 	</skill>
 	<skill id="11607" toLevel="1" name="Prevailing Song">
 		<!-- For 5 minutes, increases party members' Atk. Spd. + 15%, Casting Spd. + 30%, Max HP + 30%, and MP recovery bonus + 20%. Decreases magic skill MP Consumption - 10% and the magic cancel rate. -->
+		<icon>icon.skill11607</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -368,7 +369,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11607</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -417,6 +417,7 @@
 	</skill>
 	<skill id="11608" toLevel="1" name="Daring Song">
 		<!-- For 5 minutes, increases party members' P. Atk. + 8%, M. Atk. + 16%, Atk. Spd. and Casting Spd. + 8%. Decreases P. Def. - 3%, M. Def. - 11%, and P. Evasion - 4. Chance of applying 8% Vampiric Rage effect. Reflects 10% of incurred damage back to the enemy. -->
+		<icon>icon.skill11608</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -424,7 +425,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11608</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -485,6 +485,7 @@
 	</skill>
 	<skill id="11609" toLevel="1" name="Refreshing Song">
 		<!-- For 5 minutes, increases party members' HP Recovery Bonus + 20%, P. Accuracy + 4, P. Evasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
+		<icon>icon.skill11609</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -492,7 +493,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11609</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -552,6 +552,7 @@
 	</skill>
 	<skill id="11610" toLevel="1" name="Prevailing Dance">
 		<!-- For 5 minutes, increases party members' Atk. Spd. + 15%, Casting Spd. + 30%, Max HP + 30%, and MP recovery bonus + 20%. Decreases magic skill MP Consumption - 10% and the magic cancel rate. -->
+		<icon>icon.skill11610</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -559,7 +560,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11610</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -608,6 +608,7 @@
 	</skill>
 	<skill id="11611" toLevel="1" name="Daring Dance">
 		<!-- For 5 minutes, increases party members' P. Atk. + 8%, M. Atk. + 16%, Atk. Spd. and Casting Spd. + 8%. Decreases P. Def. - 3%, M. Def. - 11%, and P. Evasion - 4. Chance of applying 8% Vampiric Rage effect. Reflects 10% of incurred damage back to the enemy. -->
+		<icon>icon.skill11611</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -615,7 +616,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11611</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -676,6 +676,7 @@
 	</skill>
 	<skill id="11612" toLevel="1" name="Refreshing Dance">
 		<!-- For 5 minutes, increases party members' HP Recovery Bonus + 20%, P. Accuracy + 4, P. Evasion + 3, and Spd. + 20. Decreases skill MP Consumption - 20% and skill Cooldown - 10%. -->
+		<icon>icon.skill11612</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -683,7 +684,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11612</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -1113,7 +1113,6 @@
 	<skill id="11620" toLevel="10" name="Superior Shield Mastery">
 		<!-- Updated to IO -->
 		<!-- Shield Defense Success Rate + $s1, Shield Defense + $s2. -->
-		<icon>icon.skill10003</icon>
 		<operateType>P</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1153,7 +1152,6 @@
 	<skill id="11621" toLevel="1" name="Blessing Barrier">
 		<!-- Updated to IO -->
 		<!-- Has a chance to create a barrier that absorbs damage. -->
-		<icon>icon.skill11621</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<effects>
@@ -1174,7 +1172,6 @@
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
-		<icon>icon.skill11621</icon>
 		<operateType>A2</operateType>
 		<magicLvl>99</magicLvl>
 		<targetType>TARGET</targetType>

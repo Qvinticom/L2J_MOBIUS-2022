@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="4200" toLevel="12" name="Decrease Atk. Spd.">
 		<!-- Atk. Spd. decreases momentarily. Effect $s1. -->
+		<icon>icon.skill1206</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -24,7 +25,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1206</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -81,6 +81,7 @@
 	</skill>
 	<skill id="4201" toLevel="12" name="Sleep">
 		<!-- Afflicted with Sleep and unable to move momentarily. -->
+		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -104,7 +105,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1069</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -147,6 +147,7 @@
 	</skill>
 	<skill id="4202" toLevel="12" name="Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -170,7 +171,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -212,6 +212,7 @@
 	</skill>
 	<skill id="4203" toLevel="12" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect $s1. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -234,7 +235,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -291,6 +291,7 @@
 	</skill>
 	<skill id="4204" toLevel="12" name="Bleed">
 		<!-- Causes target to bleed, momentarily reducing HP. Effect $s1. -->
+		<icon>icon.skill0096</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -315,7 +316,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill0096</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -373,6 +373,7 @@
 	</skill>
 	<skill id="4205" toLevel="12" name="Paralysis">
 		<!-- Paralyzed and unable to move momentarily. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
@@ -396,7 +397,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -438,6 +438,7 @@
 	</skill>
 	<skill id="4206" toLevel="12" name="Aura Sink">
 		<!-- Decreases the target's usable amount of MP. Effect $s1. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -461,7 +462,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1250</effectRange>
 		<hitTime>2500</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -575,6 +575,7 @@
 	</skill>
 	<skill id="4208" toLevel="12" name="Stun">
 		<!-- Momentarily stuns and paralyzes target. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -598,7 +599,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>4500</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">14</value>
@@ -714,6 +714,7 @@
 	</skill>
 	<skill id="4210" toLevel="12" name="Chant of Life">
 		<!-- HP is recovered. -->
+		<icon>icon.skill1229</icon>
 		<abnormalLvl>
 			<value level="1">11</value>
 			<value level="2">12</value>
@@ -769,7 +770,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1229</icon>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -797,6 +797,7 @@
 	</skill>
 	<skill id="4211" toLevel="12" name="Might">
 		<!-- P. Atk. is increased by $s1. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -836,7 +837,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1068</icon>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -849,6 +849,7 @@
 	</skill>
 	<skill id="4212" toLevel="12" name="Shield">
 		<!-- P. Def. + $s1. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -888,7 +889,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1040</icon>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -901,6 +901,7 @@
 	</skill>
 	<skill id="4213" toLevel="12" name="Haste">
 		<!-- Atk. Spd. is increased by $s1. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -940,7 +941,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill1086</icon>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -953,6 +953,7 @@
 	</skill>
 	<skill id="4214" toLevel="12" name="Reflect Damage">
 		<!-- Received damage is reflected by $s1. -->
+		<icon>icon.skill0086</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>DMG_SHIELD</abnormalType>
@@ -992,7 +993,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<icon>icon.skill0086</icon>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
@@ -1005,6 +1005,7 @@
 	</skill>
 	<skill id="4215" toLevel="1" name="Raid Curse">
 		<!-- You have been cursed by a Guardian Spirit. No magic or physical skills can be used at this time. This curse befalls those who attempt to challenge a raid boss who is 9 or more Lv.s below their own, or those who do not meet the requirements for the raid. The curse is irreversible. -->
+		<icon>icon.skill1064</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
@@ -1012,7 +1013,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<castRange>1500</castRange>
 		<effectRange>2000</effectRange>
-		<icon>icon.skill1064</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1086,6 +1086,7 @@
 	</skill>
 	<skill id="4219" toLevel="1" name="Hold">
 		<!-- Inflicted with hold and unable to move momentarily. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -1097,7 +1098,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1300</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill1201</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -1564,6 +1564,7 @@
 	</skill>
 	<skill id="4236" toLevel="1" name="Decrease Heal">
 		<!-- Reduces the effectiveness of recovery magic. -->
+		<icon>icon.skill1269</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>HEAL_EFFECT_DOWN</abnormalType>
@@ -1576,7 +1577,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1269</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>70</magicLvl>
 		<operateType>A2</operateType>
@@ -1598,6 +1598,7 @@
 	</skill>
 	<skill id="4237" toLevel="1" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect 3. -->
+		<icon>icon.skill1236</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1611,7 +1612,6 @@
 		<attributeValue>20</attributeValue>
 		<fanRange>0;0;200;180</fanRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1236</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>70</magicLvl>
 		<operateType>A2</operateType>
@@ -1633,13 +1633,13 @@
 	</skill>
 	<skill id="4238" toLevel="1" name="Increase Cooldown">
 		<!-- Skill Cooldown increases momentarily. -->
+		<icon>icon.skill1248</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>REUSE_DELAY_UP</abnormalType>
 		<affectRange>200</affectRange>
 		<effectPoint>-100</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1248</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>70</magicLvl>
 		<operateType>A2</operateType>
@@ -1665,6 +1665,7 @@
 	</skill>
 	<skill id="4239" toLevel="1" name="Antharas Recovery">
 		<!-- Antharas recovery stage 2. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>12</abnormalLvl>
 		<abnormalTime>43200</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
@@ -1675,7 +1676,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.skill1044</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1687,6 +1687,7 @@
 	</skill>
 	<skill id="4240" toLevel="1" name="Antharas Recovery">
 		<!-- Antharas Recovery stage 3. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>13</abnormalLvl>
 		<abnormalTime>43200</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
@@ -1697,7 +1698,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.skill1044</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1709,6 +1709,7 @@
 	</skill>
 	<skill id="4241" toLevel="1" name="Antharas Recovery">
 		<!-- Antharas Recovery stage 4. -->
+		<icon>icon.skill1044</icon>
 		<abnormalLvl>14</abnormalLvl>
 		<abnormalTime>43200</abnormalTime>
 		<abnormalType>HP_REGEN_DOWN</abnormalType>
@@ -1719,7 +1720,6 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.skill1044</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1745,6 +1745,7 @@
 	</skill>
 	<skill id="4243" toLevel="1" name="Venomous Poison">
 		<!-- A deadly toxin courses through your bloodstream, gradually reducing your HP. Effect 9. -->
+		<icon>icon.skill4082</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -1753,7 +1754,6 @@
 		<castRange>2000</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>2500</effectRange>
-		<icon>icon.skill4082</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>70</magicLvl>
@@ -2002,6 +2002,7 @@
 	</skill>
 	<skill id="4249" toLevel="12" name="Decrease Speed">
 		<!-- Speed decreases momentarily. Effect $s1. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2014,7 +2015,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1184</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2514,6 +2514,7 @@
 	</skill>
 	<skill id="4258" toLevel="1" name="Hinder Strider">
 		<!-- Slows down the speed of a user who is riding a strider. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>99</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -2521,7 +2522,6 @@
 		<effectPoint>-1</effectPoint>
 		<effectRange>2000</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
@@ -2542,6 +2542,7 @@
 	</skill>
 	<skill id="4259" toLevel="12" name="Toxic Smoke">
 		<!-- Noxious fumes gradually decrease your HP. Effect $s1. -->
+		<icon>icon.skill4036</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2581,7 +2582,6 @@
 		<effectPoint>-100</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill4036</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2807,6 +2807,7 @@
 	</skill>
 	<skill id="4262" toLevel="2" name="Holiday Wind Walk">
 		<!-- Speed increases temporarily. Effect 2. -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -2814,7 +2815,6 @@
 		<effectPoint>285</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1204</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>30</magicLvl>
 		<operateType>A2</operateType>
@@ -2832,6 +2832,7 @@
 	</skill>
 	<skill id="4263" toLevel="1" name="Holiday Haste">
 		<!-- Atk. Spd. increases temporarily. Effect 1. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -2839,7 +2840,6 @@
 		<effectPoint>418</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1086</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
@@ -2858,6 +2858,7 @@
 	</skill>
 	<skill id="4264" toLevel="1" name="Holiday Empower">
 		<!-- M. Atk. increases temporarily. Effect 1. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -2865,7 +2866,6 @@
 		<effectPoint>243</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1059</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>25</magicLvl>
 		<operateType>A2</operateType>
@@ -2884,6 +2884,7 @@
 	</skill>
 	<skill id="4265" toLevel="3" name="Holiday Might">
 		<!-- P. Atk. increases temporarily. Effect $s1. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2895,7 +2896,6 @@
 		<effectPoint>379</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1068</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
@@ -2914,6 +2914,7 @@
 	</skill>
 	<skill id="4266" toLevel="3" name="Holiday Shield">
 		<!-- P. Def. increases temporarily. Effect $s1. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2925,7 +2926,6 @@
 		<effectPoint>418</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1040</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>44</magicLvl>
 		<operateType>A2</operateType>
@@ -3008,8 +3008,6 @@
 	</skill>
 	<skill id="4271" toLevel="50" name="Momentum">
 		<!-- Momentum Lv. $s1. -->
-		<magicLvl>1</magicLvl>
-		<operateType>P</operateType>
 		<icon>
 			<value level="1">icon.skill_ct3_force01</value>
 			<value level="2">icon.skill_ct3_force02</value>
@@ -3062,6 +3060,8 @@
 			<value level="49">icon.skill_ct3_force49</value>
 			<value level="50">icon.skill_ct3_force50</value>
 		</icon>
+		<magicLvl>1</magicLvl>
+		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="4272" toLevel="1" name="Greater Bow/Crossbow Resistance">
@@ -3311,6 +3311,7 @@
 	</skill>
 	<skill id="4289" toLevel="1" name="Wyvern Breath">
 		<!-- A spewing out of wyvern breath that attacks multiple enemies. Success rate is best at close range. -->
+		<icon>icon.skill4289</icon>
 		<affectRange>200</affectRange>
 		<castRange>700</castRange>
 		<effectPoint>-1500</effectPoint>
@@ -3318,7 +3319,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3600</hitTime>
-		<icon>icon.skill4289</icon>
 		<magicLvl>60</magicLvl>
 		<mpConsume>400</mpConsume>
 		<operateType>A1</operateType>

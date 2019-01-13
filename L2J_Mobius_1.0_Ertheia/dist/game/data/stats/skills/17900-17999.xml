@@ -18,10 +18,10 @@
 	</skill>
 	<skill id="17904" toLevel="1" name="Windy Healing Potion">
 		<!-- Quickly restores HP. Lasts 15 sec. -->
+		<icon>icon.etc_potion_scarlet_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
-		<icon>icon.etc_potion_scarlet_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -45,7 +45,6 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
-		<icon>icon.etc_potion_scarlet_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -69,7 +68,6 @@
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
-		<icon>icon.etc_potion_scarlet_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -93,7 +91,6 @@
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
-		<icon>icon.etc_potion_scarlet_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -117,7 +114,6 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>HP_RECOVER</abnormalType>
-		<icon>icon.etc_potion_scarlet_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -449,7 +445,7 @@
 	</skill>
 	<skill id="17922" toLevel="4" name="Low-grade Love Potion">
 		<!-- Converts Low-grade Love Potion. Elementary Alchemy. -->
-		<icon>icon.love_potion_party</icon>
+		<icon>icon.love_potion</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="17923" toLevel="1" name="Super Elixir">
@@ -673,25 +669,21 @@
 	</skill>
 	<skill id="17944" toLevel="1" name="Scroll of Escape: Talking Island Village">
 		<!-- Teleports you to Talking Island Village. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="17945" toLevel="1" name="Scroll of Escape: Magmeld">
 		<!-- Teleports you to Magmeld. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="17946" toLevel="1" name="Scroll of Escape: Magmeld">
 		<!-- Teleports you to Magmeld. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="17947" toLevel="1" name="Scroll of Escape: Town of Rune">
 		<!-- Teleports you to the Town of Rune. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -720,7 +712,6 @@
 	</skill>
 	<skill id="17948" toLevel="1" name="Scroll of Escape: Town of Aden">
 		<!-- Teleports you to the Town of Aden. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -749,7 +740,6 @@
 	</skill>
 	<skill id="17949" toLevel="1" name="Scroll of Escape: Town of Oren">
 		<!-- Teleports you to the Town of Oren. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -777,7 +767,6 @@
 	</skill>
 	<skill id="17950" toLevel="1" name="Scroll of Escape: Sea of Spores">
 		<!-- Teleports you to Sea of Spores. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -805,7 +794,6 @@
 	</skill>
 	<skill id="17951" toLevel="1" name="Scroll of Escape: Town of Aden">
 		<!-- Teleports you to the Town of Aden. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -834,7 +822,6 @@
 	</skill>
 	<skill id="17952" toLevel="1" name="Scroll of Escape: Forsaken Plains">
 		<!-- Teleports you to Forsaken Plains. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -863,7 +850,6 @@
 	</skill>
 	<skill id="17953" toLevel="1" name="Scroll of Escape: Town of Aden">
 		<!-- Teleports you to the Town of Aden. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -891,7 +877,6 @@
 	</skill>
 	<skill id="17954" toLevel="1" name="Scroll of Escape: Fields of Massacre">
 		<!-- Teleports you to Fields of Massacre. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -919,7 +904,6 @@
 	</skill>
 	<skill id="17955" toLevel="1" name="Scroll of Escape: Town of Rune">
 		<!-- Teleports you to the Town of Rune. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -948,7 +932,6 @@
 	</skill>
 	<skill id="17956" toLevel="1" name="Scroll of Escape: Swamp of Screams">
 		<!-- Teleports you to Swamp of Screams. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -977,7 +960,6 @@
 	</skill>
 	<skill id="17957" toLevel="1" name="Scroll of Escape: Town of Rune">
 		<!-- Teleports you to the Town of Rune. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1005,7 +987,6 @@
 	</skill>
 	<skill id="17958" toLevel="1" name="Scroll of Escape: Forest of the Dead">
 		<!-- Teleports you to Forest of the Dead. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1033,7 +1014,6 @@
 	</skill>
 	<skill id="17959" toLevel="1" name="Scroll of Escape: Town of Goddard">
 		<!-- Teleports you to the Town of Goddard. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1062,7 +1042,6 @@
 	</skill>
 	<skill id="17960" toLevel="1" name="Scroll of Escape: Wall of Argos">
 		<!-- Teleports you to Wall of Argos. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1083,7 +1062,6 @@
 	</skill>
 	<skill id="17961" toLevel="1" name="Scroll of Escape: Town of Giran">
 		<!-- Teleports you to the Town of Giran. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1112,7 +1090,6 @@
 	</skill>
 	<skill id="17962" toLevel="1" name="Scroll of Escape: Dragon Valley">
 		<!-- Teleports you to Dragon Valley. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1140,35 +1117,29 @@
 		</effects>
 	</skill>
 	<skill id="17963" toLevel="1" name="Alchemy Acquisition">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="17964" toLevel="1" name="Master Alchemy: Failure">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="17965" toLevel="1" name="Master Alchemy: Success">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="17966" toLevel="1" name="Alchemy Cube: Random Success">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<reuseDelay>1500</reuseDelay>
 	</skill>
 	<skill id="17967" toLevel="1" name="Low-grade Talisman Ingredient Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17968" toLevel="1" name="High-grade Tallisman Ingredient Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17969" toLevel="1" name="Low-grade Wind Dye Pack">
@@ -1308,7 +1279,6 @@
 		</effects>
 	</skill>
 	<skill id="17981" toLevel="1" name="Scroll of Escape: Gludin Village">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1335,7 +1305,6 @@
 		</effects>
 	</skill>
 	<skill id="17982" toLevel="1" name="Scroll of Escape: Windy Hill">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1362,7 +1331,6 @@
 		</effects>
 	</skill>
 	<skill id="17983" toLevel="1" name="Scroll of Escape: Gludin Village Temple">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1389,7 +1357,6 @@
 		</effects>
 	</skill>
 	<skill id="17984" toLevel="1" name="Scroll of Escape: Orc Barracks">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1416,7 +1383,6 @@
 		</effects>
 	</skill>
 	<skill id="17985" toLevel="1" name="Scroll of Escape: Town of Dion">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1443,7 +1409,6 @@
 		</effects>
 	</skill>
 	<skill id="17986" toLevel="1" name="Scroll of Escape: Cruma Tower">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1471,7 +1436,6 @@
 		</effects>
 	</skill>
 	<skill id="17987" toLevel="1" name="Scroll of Escape: Town of Dion">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1498,7 +1462,6 @@
 		</effects>
 	</skill>
 	<skill id="17988" toLevel="1" name="Scroll of Escape: Cruma Tower">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1526,7 +1489,6 @@
 		</effects>
 	</skill>
 	<skill id="17989" toLevel="1" name="Scroll of Escape: Swamp of Screams">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1554,7 +1516,6 @@
 		</effects>
 	</skill>
 	<skill id="17990" toLevel="1" name="Scroll of Escape: Seed of Annihilation">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1582,7 +1543,6 @@
 		</effects>
 	</skill>
 	<skill id="17991" toLevel="1" name="Scroll of Escape: Harnak's Underground Ruins">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1610,7 +1570,6 @@
 		</effects>
 	</skill>
 	<skill id="17992" toLevel="1" name="Scroll of Escape: Kartia's Labyrinth">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1637,7 +1596,6 @@
 		</effects>
 	</skill>
 	<skill id="17993" toLevel="1" name="Scroll of Escape: Fairy Settlement">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1665,7 +1623,6 @@
 		</effects>
 	</skill>
 	<skill id="17994" toLevel="1" name="Scroll of Escape: Garden of Genesis">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1693,7 +1650,6 @@
 		</effects>
 	</skill>
 	<skill id="17995" toLevel="1" name="Scroll of Escape: Prison of Darkness">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1721,14 +1677,12 @@
 		</effects>
 	</skill>
 	<skill id="17996" toLevel="1" name="Scroll of Escape: Fortuna">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="17997" toLevel="1" name="Scroll of Escape: Isle of Souls">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1756,7 +1710,6 @@
 		</effects>
 	</skill>
 	<skill id="17998" toLevel="1" name="Scroll of Escape: Nornil's Cave">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1784,7 +1737,6 @@
 		</effects>
 	</skill>
 	<skill id="17999" toLevel="1" name="Scroll of Escape: Seal of Shilen">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

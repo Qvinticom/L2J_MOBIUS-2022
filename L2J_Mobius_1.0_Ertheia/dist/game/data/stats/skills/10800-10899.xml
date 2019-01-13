@@ -86,6 +86,7 @@
 	</skill>
 	<skill id="10801" toLevel="8" name="Bullseye">
 		<!-- Decreases target's Bow/Crossbow Resistance by 40% and M. Def. by 5%. -->
+		<icon>icon.skill10801</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime> <!-- Confirm duration, GDL = 20 -->
 		<abnormalType>REAL_TARGET</abnormalType>
@@ -94,7 +95,6 @@
 			<value fromLevel="1" toLevel="8">100</value>
 			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill10801</icon>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -207,6 +207,7 @@
 	</skill>
 	<skill id="10802" toLevel="4" name="Mass Bullseye">
 		<!-- Decreases target's and nearby enemies' Bow/Crossbow Resistance by 60% and M. Def. by 25%. After a certain time, target explodes, suffering heavy damage. -->
+		<icon>icon.skill10782</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime> <!-- Confirm duration, GDL = 20 -->
 		<abnormalType>REAL_TARGET</abnormalType>
@@ -217,7 +218,6 @@
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
-		<icon>icon.skill10782</icon>
 		<operateType>A2</operateType>
 		<magicLvl>
 			<value level="1">99</value>
@@ -441,7 +441,6 @@
 	</skill>
 	<skill id="10808" toLevel="4" name="Decoy Provocation">
 		<!-- Decoy's provocation. Cannot change target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>-2</effectPoint>
@@ -471,10 +470,10 @@
 	</skill>
 	<skill id="10809" toLevel="1" name="Survival Movement">
 		<!-- P. Evasion + 15. Disappears after 4 strikes. -->
+		<icon>icon.skill1087</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>SPECIAL_MOVE_UP</abnormalType>
-		<icon>icon.skill1087</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -496,6 +495,7 @@
 	</skill>
 	<skill id="10810" toLevel="4" name="Sniping">
 		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, Atk. Spd. + 5%, and P. Def./M. Def. + 5%. -->
+		<icon>icon.skill11870</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -507,7 +507,6 @@
 		</abnormalTime>
 		<!-- TODO: abnormalType -->
 		<effectPoint>687</effectPoint>
-		<icon>icon.skill11870</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -604,7 +603,6 @@
 	</skill>
 	<skill id="10812" toLevel="3" name="Sneak Shot">
 		<!-- Attacks distant target with 29176 Power added to P. Atk. Inflicts Stun when attacking from behind. Requires a bow/crossbow. Over-hit. Critical. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">93</value>
@@ -623,7 +621,6 @@
 	</skill>
 	<skill id="10813" toLevel="3" name="Sneak Shot: Stun">
 		<!-- Stuns the enemy for 5 sec. Has a chance of canceling enemy's targeting. Requires a bow/crossbow. Over-hit. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<castRange>1100</castRange>
 		<reuseDelay>5000</reuseDelay>
@@ -633,6 +630,7 @@
 	</skill>
 	<skill id="10856" toLevel="4" name="Rapid Fire Position">
 		<!-- For 30 minutes when a bow or crossbow is equipped, P. Atk. + 5%, chance of receiving an M. Critical Hit - 5%, and P. Skill Cooldown - 5%. -->
+		<icon>icon.skill11871</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -643,7 +641,6 @@
 			<value fromLevel="1" toLevel="4">1800</value>
 		</abnormalTime>
 		<!-- TODO: abnormalType -->
-		<icon>icon.skill11871</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -733,7 +730,6 @@
 	</skill>
 	<skill id="10858" toLevel="3" name="Retreating Shot">
 		<!-- Attacks target with 29176 Power added to P. Atk., cancels their targeting, and retreats 400 grids backward. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
 			<value level="1">32</value>

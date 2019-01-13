@@ -1,59 +1,45 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="13500" toLevel="1" name="Monster Weapon Appearance Stone: Glakias' Hammer">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13501" toLevel="1" name="Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13502" toLevel="1" name="Monster Weapon Appearance Stone: Drakos' Dagger">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13503" toLevel="1" name="Monster Weapon Appearance Stone: Drakos' Dual Dagger">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13504" toLevel="1" name="Monster Weapon Appearance Stone: Guillotine's Greatsword">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13505" toLevel="1" name="Monster Weapon Appearance Stone: Thesakar's Axe">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13506" toLevel="1" name="Monster Weapon Appearance Stone: Mimilead's Staff">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13507" toLevel="1" name="Monster Weapon Appearance Stone: Satyr's Staff">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13508" toLevel="1" name="Monster Weapon Appearance Stone: Kanadis' Hand">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13509" toLevel="1" name="Monster Weapon Appearance Stone: Kanadis' Bow">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13510" toLevel="1" name="Monster Weapon Appearance Stone: Centaur's Bow">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13511" toLevel="1" name="Monster Weapon Appearance Stone: Spicula's Crossbow">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13512" toLevel="1" name="Monster Weapon Appearance Stone: Theor's Shield">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13513" toLevel="1" name="Monster Weapon Appearance Stone: Shield of Corruption">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13514" toLevel="1" name="Giant's Damage Reflect">
@@ -68,10 +54,10 @@
 	</skill>
 	<skill id="13515" toLevel="1" name="Giant's Critical Damage">
 		<!-- For 5 min., P. Critical Damage +15%. -->
+		<icon>icon.skill0482</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
-		<icon>icon.skill0482</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -100,10 +86,10 @@
 	</skill>
 	<skill id="13517" toLevel="1" name="Giant's Battle Roar">
 		<!-- Max HP/ CP +10% for 5 min. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
-		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -126,11 +112,11 @@
 	</skill>
 	<skill id="13518" toLevel="1" name="Giant's Celestial Shield">
 		<!-- Invincible for 30 sec. Invincibility is removed when you attack. -->
+		<icon>icon.skill11758</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<icon>icon.skill11758</icon>
 		<operateType>A2</operateType>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<hitTime>500</hitTime>
@@ -159,11 +145,11 @@
 	</skill>
 	<skill id="13519" toLevel="1" name="Giant's Undying Will">
 		<!-- Does not die for 10 sec. Can be used when HP is 20% or below. -->
+		<icon>icon.race_orc_immortality</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<icon>icon.race_orc_immortality</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -203,11 +189,11 @@
 	</skill>
 	<skill id="13520" toLevel="1" name="Giant's Silence">
 		<!-- For 5 sec., locks target's P. Skill/ M. Skill. PvP only. -->
+		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SILENCE</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
-		<icon>icon.skill1064</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<effectRange>1500</effectRange>
@@ -234,11 +220,11 @@
 	</skill>
 	<skill id="13521" toLevel="1" name="Giant's Sleep">
 		<!-- Sleeps target for 5 sec. PvP only. -->
+		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SLEEP</abnormalType>
 		<abnormalVisualEffect>SLEEP</abnormalVisualEffect>
-		<icon>icon.skill1069</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<effectRange>1500</effectRange>
@@ -267,10 +253,10 @@
 	</skill>
 	<skill id="13522" toLevel="1" name="Giant's Winter">
 		<!-- For 10 sec., target's Atk. Spd./ Casting Spd. -50%. -->
+		<icon>icon.skill1454</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
-		<icon>icon.skill1454</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<effectRange>1500</effectRange>
@@ -301,11 +287,11 @@
 	</skill>
 	<skill id="13523" toLevel="1" name="Giant's Critical Weakness">
 		<!-- For 10 sec., increases target's Received Critical Damage and Critical Rate by 90%. -->
+		<icon>icon.skill1222</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>T_CRT_RATE_UP</abnormalType>
 		<nextAction>ATTACK</nextAction>
-		<icon>icon.skill1222</icon>
 		<operateType>A2</operateType>
 		<castRange>1000</castRange>
 		<effectRange>1500</effectRange>

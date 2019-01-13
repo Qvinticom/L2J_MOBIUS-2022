@@ -2,11 +2,11 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1600" toLevel="1" name="Soul Instinct">
 		<!-- For 15 seconds, awakens party members' destructive instincts to increase P. Atk., P. Critical Rate, M. Atk., and M. Critical Rate by 50%, and Atk. Spd. and Casting Spd. by 20%. -->
+		<icon>icon.skill1600</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>INSTINCT</abnormalType>
 		<affectRange>600</affectRange>
-		<icon>icon.skill1600</icon>
 		<operateType>A2</operateType>
 		<mpConsume>148</mpConsume>
 		<hitTime>2500</hitTime>
@@ -611,7 +611,6 @@
 		</effects>
 	</skill>
 	<skill id="1647" toLevel="1" name="50% Instant Herb of Mana">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>100</hitTime>
 		<effectPoint>100</effectPoint>
@@ -1191,7 +1190,6 @@
 	</skill>
 	<skill id="1672" toLevel="1" name="Gust">
 		<!-- Blow -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<rideState>NONE</rideState>
@@ -1390,7 +1388,6 @@
 		</effects>
 	</skill>
 	<skill id="1680" toLevel="1" name="Smokescreen">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>

@@ -1740,6 +1740,7 @@
 	</item>
 	<item id="17379" name="Letter containing secret information" type="EtcItem">
 		<!-- Letter containing secret information. Bring it to the fairy by Timiniel's side. -->
+		<set name="icon" val="icon.fairy_encounter_letter" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1749,7 +1750,6 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.fairy_encounter_letter" />
 	</item>
 	<item id="17380" name="Agathion - Fairy" type="Armor">
 		<!-- When equipped, you can summon a fairy Agathion. -->

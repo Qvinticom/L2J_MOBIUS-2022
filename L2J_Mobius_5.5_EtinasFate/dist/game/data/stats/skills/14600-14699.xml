@@ -528,7 +528,7 @@
 	</skill>
 	<skill id="14617" toLevel="1" name="Knock Down Resistance">
 		<!-- Knock Down/ Knock Back Immunity -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10262</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -540,7 +540,7 @@
 	</skill>
 	<skill id="14618" toLevel="1" name="Knock Back Resistance">
 		<!-- Knock Down/ Knock Back Immunity -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10262</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -552,7 +552,7 @@
 	</skill>
 	<skill id="14619" toLevel="1" name="Disarm Resistance">
 		<!-- Disarm Immunity -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0485</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -564,7 +564,7 @@
 	</skill>
 	<skill id="14620" toLevel="4" name="Aerial Yoke Attack Resistance">
 		<!-- Resistant to Aerial Yoke attack. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11050</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -576,7 +576,7 @@
 	</skill>
 	<skill id="14621" toLevel="1" name="Pulling Resistance">
 		<!-- Pull Immunity -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10015</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -588,7 +588,7 @@
 	</skill>
 	<skill id="14622" toLevel="1" name="Banishment Resistance">
 		<!-- Banishment Immunity -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11273</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -600,7 +600,7 @@
 	</skill>
 	<skill id="14623" toLevel="1" name="Mutation Resistance">
 		<!-- Mutation Immunity -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11537</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -646,10 +646,10 @@
 	</skill>
 	<skill id="14625" toLevel="1" name="Release of Power">
 		<!-- Shares power with the target. -->
+		<icon>icon.skill1042</icon>
 		<castRange>900</castRange>
 		<effectRange>1400</effectRange>
 		<hitTime>10000</hitTime>
-		<icon>icon.skill1042</icon>
 		<isMagic>1</isMagic>
 		<operateType>CA1</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -663,7 +663,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14626" toLevel="1" name="Mental Attack Resistance">
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1160,7 +1159,6 @@
 		</effects>
 	</skill>
 	<skill id="14643" toLevel="1" name="Summon">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>

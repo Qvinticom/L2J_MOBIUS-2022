@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="1100" toLevel="2" name="Chill Flame">
 		<!-- Strikes the target with magical cold flame, causing loss of $s2 HP per second for $s1. -->
+		<icon>icon.skill1100</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -20,7 +21,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1100</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -54,6 +54,7 @@
 	</skill>
 	<skill id="1101" toLevel="2" name="Blaze Quake">
 		<!-- Ignites nearby enemies, causing loss of $s2 HP per second for $s1. -->
+		<icon>icon.skill1101</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -72,7 +73,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1101</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -107,6 +107,7 @@
 	</skill>
 	<skill id="1102" toLevel="6" name="Aura Sink">
 		<!-- Consumes the enemy's MP with $s1 Power added to M. Atk. and additionally causes loss of $s3 MP per second for $s2. -->
+		<icon>icon.skill1102</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -131,7 +132,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1102</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -193,6 +193,7 @@
 	</skill>
 	<skill id="1104" toLevel="16" name="Seal of Winter">
 		<!-- Decreases Atk. Spd. of nearby enemies by $s2 for $s1. -->
+		<icon>icon.skill1104</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>ATTACK_TIME_UP</abnormalType>
@@ -219,7 +220,6 @@
 			<value level="16">-673</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1104</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -293,6 +293,7 @@
 	</skill>
 	<skill id="1105" toLevel="18" name="Madness">
 		<!-- Confuses the enemy into attacking random targets. -->
+		<icon>icon.skill1105</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-204</value>
@@ -316,7 +317,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1105</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -393,6 +393,7 @@
 	</skill>
 	<skill id="1107" toLevel="2" name="Frost Flame">
 		<!-- Strikes the target with magical cold flame, causing loss of $s2 HP per second for $s1. -->
+		<icon>icon.skill1107</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -411,7 +412,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1107</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -445,6 +445,7 @@
 	</skill>
 	<skill id="1108" toLevel="4" name="Seal of Flame">
 		<!-- Ignites mystical flames that causes loss of $s2 HP per second for $s1. -->
+		<icon>icon.skill1108</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -467,7 +468,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1108</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -662,6 +662,7 @@
 	</skill>
 	<skill id="1126" toLevel="37" name="Servitor Recharge">
 		<!-- Recovers the servitor's MP with up to $s1 Power depending on the servitor's level. -->
+		<icon>icon.skill1126</icon>
 		<castRange>400</castRange>
 		<effectPoint>
 			<value level="1">227</value>
@@ -704,7 +705,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1126</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">23</value>
@@ -875,6 +875,7 @@
 	</skill>
 	<skill id="1127" toLevel="48" name="Servitor Heal">
 		<!-- Heals the servitor with $s1 Power. -->
+		<icon>icon.skill1127</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">121</value>
@@ -928,7 +929,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1127</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">16</value>
@@ -1302,8 +1302,8 @@
 	</skill>
 	<skill id="1129" toLevel="16" name="Summon Reanimated Man">
 		<!-- Summons a Reanimated man. Requires $s1 Spirit Ore. -->
-		<hitTime>3500</hitTime>
 		<icon>icon.skill1129</icon>
+		<hitTime>3500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>
 			<value level="1">11</value>
@@ -1414,6 +1414,7 @@
 	</skill>
 	<skill id="1139" toLevel="2" name="Servitor Magic Shield">
 		<!-- Increases the servitor's M. Def. by $s2 for $s1. -->
+		<icon>icon.skill1139</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -1427,7 +1428,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1139</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">31</value>
@@ -1460,6 +1460,7 @@
 	</skill>
 	<skill id="1140" toLevel="3" name="Servitor Physical Shield">
 		<!-- Increases the servitor's P. Def. by $s2 for $s1. -->
+		<icon>icon.skill1140</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1475,7 +1476,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1140</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">28</value>
@@ -1512,6 +1512,7 @@
 	</skill>
 	<skill id="1141" toLevel="2" name="Servitor Haste">
 		<!-- Increases the servitor's Atk. Spd. by $s2 for $s1. -->
+		<icon>icon.skill1141</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1525,7 +1526,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1141</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">31</value>
@@ -1558,6 +1558,7 @@
 	</skill>
 	<skill id="1144" toLevel="2" name="Servitor Wind Walk">
 		<!-- Increases the servitor's Speed by $s2 for $s1. -->
+		<icon>icon.skill1144</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1571,7 +1572,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1144</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">24</value>
@@ -1604,6 +1604,7 @@
 	</skill>
 	<skill id="1145" toLevel="3" name="Servitor Magic Boost">
 		<!-- Increases the servitor's M. Atk. by $s2 for $s1. -->
+		<icon>icon.skill1145</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1619,7 +1620,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1145</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">24</value>
@@ -1656,6 +1656,7 @@
 	</skill>
 	<skill id="1146" toLevel="3" name="Mighty Servitor">
 		<!-- Increases the servitor's P. Atk. by $s2 for $s1. -->
+		<icon>icon.skill1146</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1671,7 +1672,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1146</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">24</value>
@@ -1708,6 +1708,7 @@
 	</skill>
 	<skill id="1147" toLevel="6" name="Vampiric Touch">
 		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 of the damage as HP. -->
+		<icon>icon.skill1147</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-143</value>
@@ -1721,7 +1722,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1147</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">11</value>
@@ -1769,6 +1769,7 @@
 	</skill>
 	<skill id="1148" toLevel="15" name="Death Spike">
 		<!-- Throws a bone to inflict damage on the enemy with $s1 Power added to M. Atk. Requires $s2 Cursed Bone(s). -->
+		<icon>icon.skill1148</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-418</value>
@@ -1791,7 +1792,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1148</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>2508</itemConsumeId> <!-- Cursed Bone -->
@@ -1877,10 +1877,10 @@
 	</skill>
 	<skill id="1151" toLevel="18" name="Corpse Life Drain">
 		<!-- Drains HP from corpses and uses it to restore your HP. -->
+		<icon>icon.skill1151</icon>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1151</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">30</value>
@@ -2037,6 +2037,7 @@
 	</skill>
 	<skill id="1155" toLevel="17" name="Corpse Burst">
 		<!-- Detonates a corpse to inflict dark damage on the enemies using $s1 Power added to M. Atk. -->
+		<icon>icon.skill1155</icon>
 		<affectRange>150</affectRange>
 		<castRange>400</castRange>
 		<effectPoint>
@@ -2062,7 +2063,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1155</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -2158,10 +2158,10 @@
 	</skill>
 	<skill id="1156" toLevel="13" name="Forget">
 		<!-- Takes away the enemy's will to attack. -->
+		<icon>icon.skill1156</icon>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1156</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">44</value>
@@ -2223,6 +2223,7 @@
 	</skill>
 	<skill id="1157" toLevel="5" name="Body To Mind">
 		<!-- Sacrifices your own HP to regenerate MP with $s1 Power. -->
+		<icon>icon.skill1157</icon>
 		<effectPoint>
 			<value level="1">243</value>
 			<value level="2">379</value>
@@ -2238,7 +2239,6 @@
 			<value level="4">318</value>
 			<value level="5">366</value>
 		</hpConsume>
-		<icon>icon.skill1157</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -2268,6 +2268,7 @@
 	</skill>
 	<skill id="1159" toLevel="25" name="Curse Death Link">
 		<!-- Transfers your pain. Inflicts Dark damage on the enemy with $s1 Power added to M. Atk. Power increases as HP decreases. -->
+		<icon>icon.skill1159</icon>
 		<castRange>900</castRange>
 		<effectPoint>
 			<value level="1">-477</value>
@@ -2300,7 +2301,6 @@
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1159</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">50</value>
@@ -2423,6 +2423,7 @@
 	</skill>
 	<skill id="1160" toLevel="17" name="Slow">
 		<!-- Decreases the enemy's Speed by $s2 for $s1. -->
+		<icon>icon.skill1160</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -2468,7 +2469,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1160</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -2562,6 +2562,7 @@
 	</skill>
 	<skill id="1163" toLevel="14" name="Curse Discord">
 		<!-- Confuses the enemy to attack its ally. -->
+		<icon>icon.skill1163</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-379</value>
@@ -2581,7 +2582,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1163</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
@@ -2647,6 +2647,7 @@
 	</skill>
 	<skill id="1164" toLevel="21" name="Curse Weakness">
 		<!-- Decreases the enemy's P. Atk. by $s2 for $s1. -->
+		<icon>icon.skill1164</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2700,7 +2701,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1164</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -2810,6 +2810,7 @@
 	</skill>
 	<skill id="1167" toLevel="7" name="Poisonous Cloud">
 		<!-- Creates a venomous cloud. For $s1 poisons the target and enemies around it, taking $s2 HP every second. -->
+		<icon>icon.skill1167</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">4</value>
@@ -2839,7 +2840,6 @@
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1167</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2895,6 +2895,7 @@
 	</skill>
 	<skill id="1168" toLevel="7" name="Curse Poison">
 		<!-- Poisons the target, causing loss of $s2 HP per second for $s1. -->
+		<icon>icon.skill1168</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">3</value>
@@ -2922,7 +2923,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1168</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2977,6 +2977,7 @@
 	</skill>
 	<skill id="1169" toLevel="16" name="Curse Fear">
 		<!-- Frightens the enemy into fleeing for $s1. -->
+		<icon>icon.skill1169</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -3004,7 +3005,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1169</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -3076,6 +3076,7 @@
 	</skill>
 	<skill id="1170" toLevel="15" name="Anchor">
 		<!-- Causes the enemy's body to go completely rigid for $s1 and causes paralysis for $s2. -->
+		<icon>icon.skill1170</icon>
 		<abnormalTime>5</abnormalTime>
 		<activateRate>100</activateRate>
 		<basicProperty>MAGIC</basicProperty>
@@ -3099,7 +3100,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1170</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -3186,6 +3186,7 @@
 	</skill>
 	<skill id="1171" toLevel="21" name="Blazing Circle">
 		<!-- Spreads ring-shaped flames to inflict Fire damage on nearby enemies with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1171</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
 		<effectPoint>
@@ -3214,7 +3215,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1171</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">38</value>
@@ -3322,6 +3322,7 @@
 	</skill>
 	<skill id="1172" toLevel="8" name="Aura Burn">
 		<!-- Inflicts non-attribute damage on the enemy using $s1 Power added to M. Atk. -->
+		<icon>icon.skill1172</icon>
 		<castRange>150</castRange>
 		<effectPoint>
 			<value level="1">-146</value>
@@ -3335,7 +3336,6 @@
 		</effectPoint>
 		<effectRange>650</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill1172</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">17</value>
@@ -3390,6 +3390,7 @@
 	</skill>
 	<skill id="1174" toLevel="25" name="Frost Wall">
 		<!-- Raises a wall of ice that inflicts Water damage on enemies with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1174</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -3425,7 +3426,6 @@
 		<attributeValue>20</attributeValue>
 		<fanRange>0;0;200;180</fanRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill1174</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">50</value>
@@ -3549,6 +3549,7 @@
 	</skill>
 	<skill id="1175" toLevel="8" name="Aqua Swirl">
 		<!-- Creates a powerful vortex of water, inflicting Water damage on the enemy with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1175</icon>
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-182</value>
@@ -3564,7 +3565,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1175</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">17</value>
@@ -3620,6 +3620,7 @@
 	</skill>
 	<skill id="1176" toLevel="17" name="Tempest">
 		<!-- Stirs up a hurricane that inflicts Wind damage near the enemy with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1176</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -3646,7 +3647,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>5000</hitTime>
-		<icon>icon.skill1176</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">46</value>
@@ -3738,6 +3738,7 @@
 	</skill>
 	<skill id="1177" toLevel="5" name="Wind Strike">
 		<!-- Creates a powerful hurricane, inflicting Wind damage on the enemy with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1177</icon>
 		<castRange>600</castRange>
 		<effectPoint>
 			<value level="1">-92</value>
@@ -3750,7 +3751,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1177</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">1</value>
@@ -3799,6 +3799,7 @@
 	</skill>
 	<skill id="1178" toLevel="8" name="Twister">
 		<!-- Creates a powerful cyclone and inflicts Wind damage on the enemy with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1178</icon>
 		<castRange>750</castRange>
 		<effectPoint>
 			<value level="1">-182</value>
@@ -3814,7 +3815,6 @@
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1178</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">17</value>
@@ -3869,6 +3869,7 @@
 	</skill>
 	<skill id="1181" toLevel="3" name="Flame Strike">
 		<!-- Launches a flaming swath of energy and inflicts Fire damage on the enemy with $s1 Power added to M. Atk. -->
+		<icon>icon.skill1181</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
 		<castRange>500</castRange>
@@ -3881,7 +3882,6 @@
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1181</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">20</value>
@@ -3917,6 +3917,7 @@
 	</skill>
 	<skill id="1182" toLevel="3" name="Water Resistance">
 		<!-- Increases Water Resistance by $s2 for $s1. -->
+		<icon>icon.skill1182</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -3932,7 +3933,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1182</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">18</value>
@@ -3969,6 +3969,7 @@
 	</skill>
 	<skill id="1183" toLevel="4" name="Freezing Shackle">
 		<!-- Freezes the enemy with a powerful cold wind, causing loss of $s2 HP per second for $s1. -->
+		<icon>icon.skill1183</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -3991,7 +3992,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1183</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -4033,6 +4033,7 @@
 	</skill>
 	<skill id="1184" toLevel="6" name="Ice Bolt">
 		<!-- Momentarily freezes the surrounding air, inflicting damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
+		<icon>icon.skill1184</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -4052,7 +4053,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3100</hitTime>
-		<icon>icon.skill1184</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -4105,6 +4105,7 @@
 	</skill>
 	<skill id="1189" toLevel="3" name="Wind Resistance">
 		<!-- Increases Wind Resistance by $s2 for $s1. -->
+		<icon>icon.skill1189</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4120,7 +4121,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1189</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">24</value>
@@ -4157,6 +4157,7 @@
 	</skill>
 	<skill id="1191" toLevel="3" name="Fire Resistance">
 		<!-- Increases Fire Resistance by $s2 for $s1. -->
+		<icon>icon.skill1191</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -4172,7 +4173,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill1191</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<mpConsume>
 			<value level="1">21</value>

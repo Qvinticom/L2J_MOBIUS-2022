@@ -2,12 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="21200" toLevel="1" name="Age of Three Kingdoms">
 		<!-- For 20 minutes, increases Speed by 33, Atk. Spd. by 33%, M. Atk. by 65%, Casting Spd. by 30%, P. Atk., and P. Def. by 15%. Cooldown is 2 hours. Consumes 1 Proof of Friendship upon skill use. -->
+		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>20977</itemConsumeId> <!-- Proof of Friendship -->
@@ -27,12 +27,12 @@
 	</skill>
 	<skill id="21201" toLevel="1" name="Haste">
 		<!-- Increases Atk. Spd. by 33% for 20 minutes. Cooldown is 1 hour. -->
+		<icon>BranchSys2.icon.br_dragonboat_cap_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<activateRate>0</activateRate>
 		<blockedInOlympiad>true</blockedInOlympiad>
-		<icon>BranchSys2.icon.br_dragonboat_cap_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -50,8 +50,8 @@
 	</skill>
 	<skill id="21202" toLevel="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -68,8 +68,8 @@
 	</skill>
 	<skill id="21203" toLevel="1" name="Release Agathion's Seal - Ball Trapping Orodriel">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -86,8 +86,8 @@
 	</skill>
 	<skill id="21204" toLevel="1" name="Release Agathion's Seal - Penalty Kick">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -104,8 +104,8 @@
 	</skill>
 	<skill id="21205" toLevel="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -122,8 +122,8 @@
 	</skill>
 	<skill id="21206" toLevel="1" name="Release Agathion's Seal - Ball Trapping Orodriel">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -140,8 +140,8 @@
 	</skill>
 	<skill id="21207" toLevel="1" name="Release Agathion's Seal - Penalty Kick">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -158,8 +158,8 @@
 	</skill>
 	<skill id="21208" toLevel="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -176,8 +176,8 @@
 	</skill>
 	<skill id="21209" toLevel="1" name="Release Agathion's Seal - Ball Trapping Orodriel">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -194,8 +194,8 @@
 	</skill>
 	<skill id="21210" toLevel="1" name="Release Agathion's Seal - Penalty Kick">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -219,8 +219,8 @@
 	</skill>
 	<skill id="21212" toLevel="1" name="Release Agathion's Seal - Granny Tiger">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -237,8 +237,8 @@
 	</skill>
 	<skill id="21213" toLevel="1" name="Release Agathion's Seal - Flower Fairy Spirit">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -255,8 +255,8 @@
 	</skill>
 	<skill id="21214" toLevel="1" name="Release Agathion's Seal - Cheerleader Orodriel">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -273,8 +273,8 @@
 	</skill>
 	<skill id="21215" toLevel="1" name="Release Agathion's Seal - Cheerleader Lanya">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -291,8 +291,8 @@
 	</skill>
 	<skill id="21216" toLevel="1" name="Release Agathion's Seal - Cheerleader Naonin">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -309,8 +309,8 @@
 	</skill>
 	<skill id="21217" toLevel="1" name="Release Agathion's Seal - Cheerleader Mortia">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -327,8 +327,8 @@
 	</skill>
 	<skill id="21218" toLevel="1" name="Release Agathion's Seal - Cheerleader Kaurin">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -345,8 +345,8 @@
 	</skill>
 	<skill id="21219" toLevel="1" name="Release Agathion's Seal - Cheerleader Meruril">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -363,8 +363,8 @@
 	</skill>
 	<skill id="21220" toLevel="1" name="Release Agathion's Seal - Handy">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -381,9 +381,9 @@
 	</skill>
 	<skill id="21221" toLevel="1" name="Blessed Resurrection">
 		<!-- Allows the use of Blessed Resurrection. Cooldown is 12 hours. -->
+		<icon>BranchSys2.icon.br_flag_cap_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>BranchSys2.icon.br_flag_cap_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -401,6 +401,7 @@
 	</skill>
 	<skill id="21222" toLevel="1" name="Elemental Resistance">
 		<!-- Increases Fire/Water/Wind/Earth Resistance by 20 for 1 hour. Cooldown is 4 hours. -->
+		<icon>BranchSys2.icon.br_polar_bear_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MD_UP_ATTR</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -411,7 +412,6 @@
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>BranchSys2.icon.br_polar_bear_cap_i00</icon>
 		<hitTime>3000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -421,6 +421,7 @@
 	</skill>
 	<skill id="21223" toLevel="1" name="Ultimate Defense">
 		<!-- For 30 seconds, increases one's own P. Def. by 3636, M. Def. by 2727, and Buff-canceling Attack Resistance by 80%, and becomes unable to move. Cooldown is 1 hour. -->
+		<icon>BranchSys2.icon.br_polar_bear_wp_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -430,7 +431,6 @@
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>BranchSys2.icon.br_polar_bear_wp_i00</icon>
 		<hitTime>1000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -440,6 +440,7 @@
 	</skill>
 	<skill id="21224" toLevel="1" name="Soul of an Adventurer of Immortality's Ability">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Debuff Resistance by 10%. Cooldown is 1 hour. -->
+		<icon>BranchSys2.icon.br_stagbeetle_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -450,7 +451,6 @@
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
-		<icon>BranchSys2.icon.br_stagbeetle_cap_i00</icon>
 		<hitTime>4000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -460,6 +460,7 @@
 	</skill>
 	<skill id="21225" toLevel="1" name="Soul of a Strong Warrior's Ability">
 		<!-- For 5 minutes, receives the soul's help to increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 1 hour. -->
+		<icon>BranchSys2.icon.br_hornbeetle_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -470,7 +471,6 @@
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
-		<icon>BranchSys2.icon.br_hornbeetle_cap_i00</icon>
 		<hitTime>4000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -480,6 +480,7 @@
 	</skill>
 	<skill id="21226" toLevel="1" name="Soul of a Wise Magician's Ability">
 		<!-- For 5 minutes, receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. Cooldown is 1 hour. -->
+		<icon>BranchSys2.icon.br_ladybug_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -490,7 +491,6 @@
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
-		<icon>BranchSys2.icon.br_ladybug_cap_i00</icon>
 		<hitTime>4000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -500,6 +500,7 @@
 	</skill>
 	<skill id="21227" toLevel="1" name="Ability of Prominent Adventure's Soul">
 		<!-- For 5 minutes, receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Cooldown is 1 hour. -->
+		<icon>BranchSys2.icon.br_mantis_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -510,7 +511,6 @@
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
-		<icon>BranchSys2.icon.br_mantis_cap_i00</icon>
 		<hitTime>4000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -520,6 +520,7 @@
 	</skill>
 	<skill id="21228" toLevel="1" name="Soul of a Brave Warrior's Ability">
 		<!-- For 5 minutes, receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases Critical Damage by 20% and Critical Rate by 20%. Cooldown is 1 hour. -->
+		<icon>BranchSys2.icon.br_locust_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -530,7 +531,6 @@
 		<abnormalTime>300</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
-		<icon>BranchSys2.icon.br_locust_cap_i00</icon>
 		<hitTime>4000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -540,6 +540,7 @@
 	</skill>
 	<skill id="21229" toLevel="1" name="Blood Awakening">
 		<!-- Combines general attack damage absorption and Atk. Spd. increase for a more advanced blood awakening effect. For 1 hour, increases Atk. Spd. by 33% and bestows the ability to recover as HP 9% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 4 hours. -->
+		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>IMPROVE_VAMPIRIC_HASTE</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -550,7 +551,6 @@
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
 		<hitTime>1500</hitTime>
 		<reuseDelay>14400000</reuseDelay>
 		<isMagic>1</isMagic>
@@ -560,6 +560,7 @@
 	</skill>
 	<skill id="21230" toLevel="1" name="Improve Magic">
 		<!-- Combines M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%. Cooldown is 4 hours. -->
+		<icon>BranchSys2.icon.br_navy_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -570,7 +571,6 @@
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>BranchSys2.icon.br_navy_cap_i00</icon>
 		<hitTime>3000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
 		<isMagic>1</isMagic>
@@ -580,6 +580,7 @@
 	</skill>
 	<skill id="21231" toLevel="1" name="Improve Critical Attack">
 		<!-- Combines Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases Critical Rate by 30% and Critical Damage by 35%. Cooldown is 4 hours. -->
+		<icon>BranchSys2.icon.br_gold_eyeglass_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -590,7 +591,6 @@
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>BranchSys2.icon.br_gold_eyeglass_i00</icon>
 		<hitTime>3000</hitTime>
 		<reuseDelay>14400000</reuseDelay>
 		<isMagic>1</isMagic>
@@ -600,6 +600,7 @@
 	</skill>
 	<skill id="21232" toLevel="1" name="Shiny Platform">
 		<!-- Steps onto the Shiny Platform. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -613,7 +614,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -634,6 +634,7 @@
 	</skill>
 	<skill id="21233" toLevel="1" name="Release Agathion's Seal - Singer and Dancer">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -641,7 +642,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -652,6 +652,7 @@
 	</skill>
 	<skill id="21234" toLevel="1" name="Release Agathion's Seal - Zaken's Spirit Swords">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -659,7 +660,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -670,10 +670,10 @@
 	</skill>
 	<skill id="21235" toLevel="1" name="7th Anniversary T-shirt: Speed">
 		<!-- Increases Speed by 7. -->
+		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
 		<effects>
 			<effect name="Speed">
 				<amount>7</amount>
@@ -683,6 +683,7 @@
 	</skill>
 	<skill id="21236" toLevel="1" name="7th Anniversary T-shirt: Blessed Escape Ability">
 		<!-- Allows the use of Blessed Escape every 20 hours. -->
+		<icon>Icon.skill1050</icon>
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
@@ -691,7 +692,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<icon>Icon.skill1050</icon>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -706,6 +706,7 @@
 	</skill>
 	<skill id="21237" toLevel="1" name="7th Anniversary T-shirt: Blessed Protection Ability">
 		<!-- Momentarily becomes invincible for 7 seconds. Can be used every 20 hours. -->
+		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
@@ -719,7 +720,6 @@
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
 		<magicLvl>1</magicLvl>
-		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
 		<staticReuse>true</staticReuse>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
 		<targetType>SELF</targetType>
@@ -740,6 +740,7 @@
 	</skill>
 	<skill id="21238" toLevel="1" name="Jet Bike">
 		<!-- Mounts a jet bike. -->
+		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>TRANSFORM</abnormalType>
@@ -752,7 +753,6 @@
 		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
 		<blockActionUseSkill>true</blockActionUseSkill>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -764,6 +764,7 @@
 	</skill>
 	<skill id="21239" toLevel="1" name="Release Agathion's Seal - Cow">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -771,7 +772,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -782,6 +782,7 @@
 	</skill>
 	<skill id="21240" toLevel="1" name="Release Agathion's Seal - Makeshift Bat">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -789,7 +790,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -813,9 +813,9 @@
 	</skill>
 	<skill id="21242" toLevel="1" name="Zaken's Call">
 		<!-- Can move to near Zaken's Headquarters. Cooldown 30 minutes. -->
+		<icon>BranchSys2.Icon.br_zaken_cloak_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>10000</hitTime>
-		<icon>BranchSys2.Icon.br_zaken_cloak_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -838,9 +838,9 @@
 	</skill>
 	<skill id="21243" toLevel="1" name="Freya's Call">
 		<!-- Can move to near Freya's Headquarters. Cooldown 30 minutes. -->
+		<icon>BranchSys2.Icon.br_freya_cloak_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>10000</hitTime>
-		<icon>BranchSys2.Icon.br_freya_cloak_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -863,9 +863,9 @@
 	</skill>
 	<skill id="21244" toLevel="1" name="Frintezza's Call">
 		<!-- Can move to near Frintezza's Headquarters. Cooldown 30 minutes. -->
+		<icon>BranchSys2.Icon.br_frintessa_cloak_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>10000</hitTime>
-		<icon>BranchSys2.Icon.br_frintessa_cloak_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -888,6 +888,7 @@
 	</skill>
 	<skill id="21245" toLevel="1" name="Release Agathion's Seal - Rudolph">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -895,7 +896,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -906,6 +906,7 @@
 	</skill>
 	<skill id="21246" toLevel="1" name="Rudolph's Energy">
 		<!-- For 10 minutes, Vitality is replenished when XP is acquired through hunting. Reuse time is 30 minutes. -->
+		<icon>icon.etc_rbracelet_aga_agit_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>VP_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -916,7 +917,6 @@
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>icon.etc_rbracelet_aga_agit_i00</icon>
 		<reuseDelay>1800000</reuseDelay>
 		<isMagic>4</isMagic>
 		<staticReuse>true</staticReuse>
@@ -936,12 +936,12 @@
 	</skill>
 	<skill id="21247" toLevel="1" name="Santa's Gift">
 		<!-- Receives a gift from Santa. It can be used only once a day, and the reuse time is reset every morning at 6:30 AM. -->
+		<icon>icon.etc_pi_gift_box_i04</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
-		<icon>icon.etc_pi_gift_box_i04</icon>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -965,6 +965,7 @@
 	</skill>
 	<skill id="21248" toLevel="1" name="Release Agathion's Seal - Zinyanzi">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -972,7 +973,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -983,6 +983,7 @@
 	</skill>
 	<skill id="21249" toLevel="1" name="Release Agathion's Seal - Yanzi">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -990,7 +991,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1040,6 +1040,7 @@
 	</skill>
 	<skill id="21251" toLevel="1" name="Shiny Party Hat - Greater Body">
 		<!-- Increases Max HP by 35% for 20 minutes. -->
+		<icon>BranchSys.icon.br_party_hat_gold_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<abnormalType>MAX_HP_UP</abnormalType>
@@ -1050,7 +1051,6 @@
 		<magicLvl>1</magicLvl>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
-		<icon>BranchSys.icon.br_party_hat_gold_i00</icon>
 		<hitTime>1000</hitTime>
 		<reuseDelay>1200000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -1190,6 +1190,7 @@
 	</skill>
 	<skill id="21258" toLevel="1" name="Ride Rocking Horse">
 		<!-- Ride a rocking horse. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
@@ -1202,7 +1203,6 @@
 		<hitCancelTime>0</hitCancelTime>
 		<abnormalLvl>1</abnormalLvl>
 		<irreplacableBuff>true</irreplacableBuff>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1219,6 +1219,7 @@
 	</skill>
 	<skill id="21259" toLevel="1" name="Release Agathion's Seal - Lantern">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -1226,7 +1227,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1237,12 +1237,12 @@
 	</skill>
 	<skill id="21260" toLevel="1" name="Notifier">
 		<!-- You can use to learn the number of received gifts and the number of remaining gifts. The gift provision time is reset every morning at 6:30. -->
+		<icon>icon.skill5239</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill5239</icon>
 		<reuseDelay>15000</reuseDelay>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -1253,34 +1253,34 @@
 	</skill>
 	<skill id="21261" toLevel="1" name="Bad Bunny's Necklace">
 		<!-- Its effects are MP+ 250, HP+ 500, CP+ 1035, increased P. Atk., increased M. Atk., wild magic effect, and increased Critical P. Atk. -->
+		<icon>branchsys2.icon2.g_accessory_event_necklace</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<icon>branchsys2.icon2.g_accessory_event_necklace</icon>
 	</skill>
 	<skill id="21262" toLevel="1" name="Bad Bunny's Earring">
 		<!-- Its effects are HP+ 250, Vampiric Rage effect with a certain probability, increased accuracy, decreased Cooldown for magic skills, and decreased MP Consumption for magic skills. When two identical earrings are equipped, only one effect is applied. -->
+		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
 	</skill>
 	<skill id="21263" toLevel="1" name="Bad Bunny's Ring">
 		<!-- Its effects are increased Atk. Spd., and increased Casting Spd. When two identical rings are equipped, only one effect is applied. -->
+		<icon>branchsys2.icon2.g_accessory_event_ring</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<icon>branchsys2.icon2.g_accessory_event_ring</icon>
 	</skill>
 	<skill id="21264" toLevel="1" name="Summon Friend">
 		<!-- Summons your friend. The target to be summoned must be equipped with a Shining Couple Ring and be a party member. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1000</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>-2</effectRange>
 		<magicLvl>1</magicLvl>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>10000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<isMagic>2</isMagic>
@@ -1299,13 +1299,13 @@
 	</skill>
 	<skill id="21265" toLevel="1" name="Summon Friend">
 		<!-- Summons your friend. The target to be summoned must be equipped with a Mysterious Friend Summon Bracelet and be a party member. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1000</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>-2</effectRange>
 		<magicLvl>1</magicLvl>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>10000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<isMagic>2</isMagic>
@@ -1324,6 +1324,7 @@
 	</skill>
 	<skill id="21266" toLevel="1" name="Release Agathion's Seal - Juju">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -1331,7 +1332,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1342,12 +1342,12 @@
 	</skill>
 	<skill id="21267" toLevel="1" name="Notifier">
 		<!-- When used, it informs of the number of currently received gifts and number of remaining gifts. The gift delivery time will reset every day at 6:30 AM. -->
+		<icon>icon.skill5239</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill5239</icon>
 		<reuseDelay>15000</reuseDelay>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -1497,9 +1497,9 @@
 	</skill>
 	<skill id="21274" toLevel="6" name="Start of Evolution">
 		<!-- Agathion has a chance of evolving to Lv. $s1 at the place to which you were teleported via the Evolution Deliverer. Cooldown is $s2 hr. -->
+		<icon>BranchSys3.icon.skill22419</icon>
 		<itemConsumeId>22394</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>BranchSys3.icon.skill22419</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>

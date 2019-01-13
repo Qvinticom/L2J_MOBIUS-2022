@@ -182,6 +182,7 @@
 	</skill>
 	<skill id="30002" toLevel="3" name="Storm Sign">
 		<!-- M. Def. - $s1, Speed - $s2. -->
+		<icon>icon.skill30027</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -196,7 +197,6 @@
 			<value level="3">STORM_SIGN1</value>
 		</abnormalVisualEffect>
 		<activateRate>100</activateRate>
-		<icon>icon.skill30027</icon>
 		<isMagic>4</isMagic>
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
@@ -333,6 +333,7 @@
 	</skill>
 	<skill id="30004" toLevel="25" name="Hydro Strike">
 		<!-- Uses the power of storm to inflict damage with $s1 power added to M. Attack and generates strong squall to make the target faint for $s2. -->
+		<icon>icon.skill30004</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
 		<abnormalTime>5</abnormalTime>
@@ -341,7 +342,6 @@
 			<value fromLevel="1" toLevel="25">120</value>
 			<value fromLevel="21" toLevel="25" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill30004</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -475,11 +475,11 @@
 	</skill>
 	<skill id="30005" fromLevel="4" toLevel="4" name="Storm Sign">
 		<!-- M. Def. - 50%, Speed - 100. -->
+		<icon>icon.skill30027</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STORM_SIGN</abnormalType>
 		<abnormalVisualEffect>STORM_SIGN2</abnormalVisualEffect>
-		<icon>icon.skill30027</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -709,8 +709,8 @@
 	</skill>
 	<skill id="30008" toLevel="5" name="Wind Blend">
 		<!-- For $s1, blends into the wind. Becomes one with the wind and disappears later on. Requires a sword or blunt weapon. -->
-		<operateType>A2</operateType>
 		<icon>icon.skill30008</icon>
+		<operateType>A2</operateType>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1140,6 +1140,7 @@
 	</skill>
 	<skill id="30014" toLevel="15" name="Compelling Wind">
 		<!-- Sends a breeze that pushes target toward you for $s1. Requires a sword / blunt weapon. -->
+		<icon>icon.skill30014</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
@@ -1151,7 +1152,6 @@
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<trait>PSYCHIC</trait> <!-- retail confirmed {trait_psychic} -->
-		<icon>icon.skill30014</icon>
 		<effectPoint>-1371</effectPoint>
 		<mpConsume>
 			<value level="1">31</value>
@@ -1202,12 +1202,12 @@
 	</skill>
 	<skill id="30015" toLevel="1" name="Mass Compelling Wind">
 		<!-- Sends a breeze that pushes target and nearby enemies toward you. -->
+		<icon>icon.skill0028</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>COMPELLING_WIND</abnormalType>
 		<abnormalVisualEffect>PSY_POWER</abnormalVisualEffect>
-		<icon>icon.skill0028</icon>
 		<castRange>1100</castRange>
 		<hitTime>1200</hitTime>
 		<coolTime>500</coolTime>
@@ -1658,7 +1658,6 @@
 	</skill>
 	<skill id="30023" toLevel="1" name="Decoy Lock">
 		<!-- Cannot change target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
 		<effectPoint>-102</effectPoint>
@@ -2092,7 +2091,21 @@
 	</skill>
 	<skill id="30042" toLevel="13" name="Eminent Quick Recovery">
 		<!-- Max. MP + $s1, MP Recovery Bonus + $s2, and M. Skill Cooldown - $s3. -->
-		<icon>icon.skill10504</icon>
+		<icon>
+			<value level="1">icon.skill11004</value>
+			<value level="2">icon.skill10504</value>
+			<value level="3">icon.skill10504</value>
+			<value level="4">icon.skill10504</value>
+			<value level="5">icon.skill10504</value>
+			<value level="6">icon.skill10504</value>
+			<value level="7">icon.skill10504</value>
+			<value level="8">icon.skill10504</value>
+			<value level="9">icon.skill10504</value>
+			<value level="10">icon.skill10504</value>
+			<value level="11">icon.skill10504</value>
+			<value level="12">icon.skill10504</value>
+			<value level="13">icon.skill10504</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp" fromLevel="4" toLevel="13">

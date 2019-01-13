@@ -1332,6 +1332,7 @@
 	</item>
 	<item id="37494" name="Chaos Essence (Dual Class)" type="EtcItem">
 		<!-- Mysterious essence with the power of chaos. Take it to Hardin at the Reliquary of the Giants to change your specialized awakened class. Cannot be used by Ertheia. Can be used only by dual classes. 30-day. -->
+		<set name="icon" val="icon.etc_water_of_silen_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1341,7 +1342,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_water_of_silen_i00" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="37495" name="Lindvior's Scale" type="EtcItem">

@@ -1387,11 +1387,11 @@
 	</skill>
 	<skill id="3630" toLevel="1" name="Void Burst">
 		<!-- Discharges cursed energy to attack nearby enemies. -->
+		<icon>icon.skill3630</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
 		<effectPoint>-1</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill3630</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>140</mpConsume>
 		<operateType>A1</operateType>
@@ -1409,12 +1409,12 @@
 	</skill>
 	<skill id="3631" toLevel="1" name="Void Flow">
 		<!-- Emits cursed energy to strike a distant enemy. -->
+		<icon>icon.skill3631</icon>
 		<affectLimit>6-12</affectLimit>
 		<castRange>600</castRange>
 		<effectPoint>-1</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1900</hitTime>
-		<icon>icon.skill3631</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>140</mpConsume>
 		<operateType>A1</operateType>
@@ -1431,13 +1431,13 @@
 	</skill>
 	<skill id="3632" toLevel="1" name="Clan Gate">
 		<!-- Active: Creates a gate that summons clan members. You cannot move while this skill is active. -->
+		<icon>icon.accessory_crown_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
 		<abnormalVisualEffect>MAGIC_SQUARE</abnormalVisualEffect>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>10000</hitTime>
-		<icon>icon.accessory_crown_i00</icon>
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
@@ -1460,10 +1460,10 @@
 	</skill>
 	<skill id="3633" toLevel="2" name="Residential Stun Immunity">
 		<!-- Active: Momentarily increases Stun Resistance. -->
+		<icon>icon.accessory_pledge_cap1_i05</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>ABNORMAL_ITEM</abnormalType>
-		<icon>icon.accessory_pledge_cap1_i05</icon>
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>

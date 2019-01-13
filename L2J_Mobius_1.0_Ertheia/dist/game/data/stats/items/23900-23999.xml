@@ -882,6 +882,7 @@
 	</item>
 	<item id="23949" name="Returning Hero's Wondrous Cubic" type="EtcItem">
 		<!-- Double-click to obtain either a Vitality Replenishing Potion (30-minute), Feather of Blessing, Heavenly Cocktail x 2, Scroll of Escape Pack: Village, or MP Recovery Potion. Once a day. -->
+		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -890,7 +891,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
 	</item>
 	<item id="23950" name="Returning Hero's Gold Chest" additionalName="Event" type="EtcItem">
 		<!-- Wrapped Pack containing Returning Hero's Mark x 250, a Returning Hero's Potion Pack, and a Returning Hero's Support Box. -->
@@ -1356,6 +1356,7 @@
 	</item>
 	<item id="23987" name="Rune of Bountiful Growth (30-day)" type="EtcItem">
 		<!-- Dimensional Item. Keep this in your inventory to gain SP/XP + 20% when hunting. Lv. 99 and below. Can be stacked with XP Rune I (Lv. 1-85) and XP Rune II (Lv. 1-95) 100%. When used with Emperor's Rune, only the Emperor's Rune takes effect. Cannot be exchanged, dropped, destroyed, or sold in the private store. Can be stored in a private warehouse. Deleted after event. -->
+		<set name="icon" val="icon.ev_charge_run" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1365,7 +1366,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="icon.ev_charge_run" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="23988" name="Wondrous Wind Scroll" type="EtcItem">

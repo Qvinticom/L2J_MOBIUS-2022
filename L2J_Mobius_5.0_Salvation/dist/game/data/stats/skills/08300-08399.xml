@@ -375,12 +375,12 @@
 	</skill>
 	<skill id="8308" toLevel="1" name="Red Talisman - Territory Guardian">
 		<!-- Instantly recovers 1200 CP and increases Max CP to 1200. -->
+		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -405,12 +405,12 @@
 	</skill>
 	<skill id="8309" toLevel="1" name="Red Talisman - Territory Escort">
 		<!-- Instantly recovers 800 CP and increases Max CP to 800. -->
+		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -497,8 +497,8 @@
 	</skill>
 	<skill id="8314" toLevel="1" name="Release Agathion's Seal - Neolithica">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -784,12 +784,12 @@
 	</skill>
 	<skill id="8325" toLevel="1" name="Wild Rose Pig Candy">
 		<!-- Head is enlarged. -->
+		<icon>icon.etc_pig_candy_i00</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>BIG_HEAD</abnormalType>
 		<abnormalVisualEffect>BIG_HEAD</abnormalVisualEffect>
 		<activateRate>0</activateRate>
-		<icon>icon.etc_pig_candy_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -811,8 +811,8 @@
 	</skill>
 	<skill id="8327" toLevel="1" name="Release Agathion's Seal - Juju">
 		<!-- Summons Agathion. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -829,8 +829,8 @@
 	</skill>
 	<skill id="8328" toLevel="1" name="Release Agathion's Seal - Oink oink">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -847,8 +847,8 @@
 	</skill>
 	<skill id="8329" toLevel="1" name="Summon Friend">
 		<!-- Summons your friend. -->
-		<effectPoint>1000</effectPoint>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<effectPoint>1000</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -872,8 +872,8 @@
 	</skill>
 	<skill id="8330" toLevel="1" name="Release Agathion's Seal - Dawn">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -890,11 +890,11 @@
 	</skill>
 	<skill id="8331" toLevel="1" name="Blue Talisman - Buff Cancel">
 		<!-- Cancels the buffs of nearby enemies by with the power of Talisman. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<affectLimit>5-5</affectLimit>
 		<affectRange>150</affectRange>
 		<effectPoint>-532</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -917,11 +917,11 @@
 	</skill>
 	<skill id="8332" toLevel="1" name="Blue Talisman - Buff Steal">
 		<!-- Steals the enemy's abnormal status using the talisman's power. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<castRange>600</castRange>
 		<effectPoint>-532</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>4000</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -943,12 +943,12 @@
 	</skill>
 	<skill id="8333" toLevel="1" name="Red Talisman - Territory Royal Guard">
 		<!-- Increases Max CP 1500 and recovers CP by the increased amount with the power of Talisman. -->
+		<icon>icon.etc_talisman_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -973,12 +973,12 @@
 	</skill>
 	<skill id="8334" toLevel="1" name="Blue Talisman - Lord's Divine Protection">
 		<!-- Decreases damage received during PvP by 75% with the power of Talisman. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i01</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -1004,12 +1004,12 @@
 	</skill>
 	<skill id="8335" toLevel="1" name="White Talisman - Attribute Resistance">
 		<!-- For 10 seconds, increases Attribute Resistance by 15 with the power of Talisman. -->
+		<icon>icon.etc_talisman_i06</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<effectPoint>532</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.etc_talisman_i06</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>55</magicLvl>
 		<mpConsume>40</mpConsume>
@@ -1051,11 +1051,11 @@
 	</skill>
 	<skill id="8336" toLevel="1" name="Ride Guardian's Strider">
 		<!-- Ride a Guardian's Strider. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1586,6 +1586,7 @@
 	</skill>
 	<skill id="8357" toLevel="1" name="Einhasad's Strike">
 		<!-- Einhasad's sword bestowed by Emperor Shunaiman of Elmoreden. With the pride of being chosen, he can fiercely attack the enemies on the front line. -->
+		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<affectLimit>5-15</affectLimit>
 		<affectRange>300</affectRange>
 		<castRange>200</castRange>
@@ -1594,7 +1595,6 @@
 		<effectRange>400</effectRange>
 		<fanRange>0;0;300;90</fanRange>
 		<hitTime>1300</hitTime>
-		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
@@ -1617,8 +1617,8 @@
 	</skill>
 	<skill id="8358" toLevel="1" name="Release Agathion's Seal - Towbat">
 		<!-- Removes the Agathion's seal. -->
-		<hitTime>3000</hitTime>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1648,12 +1648,12 @@
 	</skill>
 	<skill id="8360" toLevel="1" name="Vitality Maintenance Effect">
 		<!-- Maintains Vitality for 30 minutes. -->
+		<icon>icon.event_energy_belt_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>VP_KEEP</abnormalType>
 		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
 		<effectPoint>100</effectPoint>
-		<icon>icon.event_energy_belt_i00</icon>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1694,9 +1694,9 @@
 	</skill>
 	<skill id="8362" toLevel="1" name="Beast Training - Release">
 		<!-- Release a beast. -->
+		<icon>icon.skill8362</icon>
 		<castRange>900</castRange>
 		<effectRange>1200</effectRange>
-		<icon>icon.skill8362</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1720,8 +1720,8 @@
 	</skill>
 	<skill id="8363" toLevel="1" name="Beast Training - Accompany">
 		<!-- Order a beast to accompany. -->
-		<affectRange>1000</affectRange>
 		<icon>icon.skill8363</icon>
+		<affectRange>1000</affectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1735,8 +1735,8 @@
 	</skill>
 	<skill id="8364" toLevel="1" name="Beast Training - Use Special Ability">
 		<!-- Order a beast to use special ability. -->
-		<affectRange>1000</affectRange>
 		<icon>icon.skill8364</icon>
+		<affectRange>1000</affectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1778,8 +1778,8 @@
 	</skill>
 	<skill id="8369" toLevel="1" name="Halloween Pumpkin Card">
 		<!-- Showed the Halloween Pumpkin Card. -->
-		<effectPoint>-100</effectPoint>
 		<icon>icon.ev_jack_ghost_i00</icon>
+		<effectPoint>-100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1794,8 +1794,8 @@
 	</skill>
 	<skill id="8370" toLevel="1" name="Rotten Pumpkin Card">
 		<!-- Showed the Rotten Pumpkin Card. -->
-		<effectPoint>-100</effectPoint>
 		<icon>icon.ev_rotten_jack_ghost_i00</icon>
+		<effectPoint>-100</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1810,11 +1810,11 @@
 	</skill>
 	<skill id="8371" toLevel="1" name="Transform Halloween Pumpkin">
 		<!-- Transforms into a pumpkin ghost. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -1835,12 +1835,12 @@
 	</skill>
 	<skill id="8372" toLevel="1" name="Super Strong Giant's Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, P. Atk. by 5%, and Earth Resistance by 5. -->
+		<icon>icon.ev_frankenstein_mask_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.ev_frankenstein_mask_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1855,12 +1855,12 @@
 	</skill>
 	<skill id="8373" toLevel="1" name="Shriek Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Critical rate by 5%, and Wind Resistance by 5. -->
+		<icon>icon.ev_scream_mask_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.ev_scream_mask_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1875,12 +1875,12 @@
 	</skill>
 	<skill id="8374" toLevel="1" name="Red Devil Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, Speed by 5%, and Fire Resistance by 5. -->
+		<icon>icon.ev_doccabi_mask_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.ev_doccabi_mask_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1895,12 +1895,12 @@
 	</skill>
 	<skill id="8375" toLevel="1" name="Mummy Mask">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, skill's MP Consumption by 5%, and Dark Resistance by 5. -->
+		<icon>icon.ev_mummy_mask_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.ev_mummy_mask_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1915,12 +1915,12 @@
 	</skill>
 	<skill id="8376" toLevel="1" name="Planet X235 Alien Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 10%, magic damage's Prominent Damage occurrence by 2, and Water Resistance by 5. -->
+		<icon>icon.ev_alien_mask_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.ev_alien_mask_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1935,12 +1935,12 @@
 	</skill>
 	<skill id="8377" toLevel="1" name="Golden Jack O'Lantern Mask's Effect">
 		<!-- Mask's effect. For 60 minutes, increases Max HP and Max MP by 20%, Speed by 20, and Debuff Resistance by 10%. -->
+		<icon>icon.ev_golden_jack0_mask_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SIGNAL_D</abnormalType>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
-		<icon>icon.ev_golden_jack0_mask_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -1955,8 +1955,8 @@
 	</skill>
 	<skill id="8378" toLevel="1" name="Beast Training - Release All">
 		<!-- Release all beasts. -->
-		<affectRange>1000</affectRange>
 		<icon>icon.skill8378</icon>
+		<affectRange>1000</affectRange>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>

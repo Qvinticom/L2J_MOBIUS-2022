@@ -135,9 +135,9 @@
 	</skill>
 	<skill id="8509" toLevel="1" name="Blessed Escape">
 		<!-- Able to perform the High Angel Circlet power every hour -->
+		<icon>icon.accessory_highangel_circlet_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
-		<icon>icon.accessory_highangel_circlet_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -159,8 +159,8 @@
 	</skill>
 	<skill id="8510" toLevel="1" name="Summon Friend">
 		<!-- Summons your friend. -->
-		<effectPoint>1000</effectPoint>
 		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<effectPoint>1000</effectPoint>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -184,13 +184,14 @@
 	</skill>
 	<skill id="8511" toLevel="1" name="Blessing of Victory">
 		<!-- Increases Speed by 2%. -->
+		<icon>BranchSys2.icon.br_worldcup_hair_i02</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
-		<icon>BranchSys2.icon.br_worldcup_hair_i02</icon>
 	</skill>
 	<skill id="8512" toLevel="1" name="Olympic Athlete's Tenacity">
 		<!-- When used, you can obtain at random one 3-, 7-, 10-, 30-day, or unlimited Olympic Athlete's accessory set. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked. -->
+		<icon>BranchSys2.icon.br_spirit_of_brave_i00</icon>
 		<itemConsumeId>17201</itemConsumeId>
 		<itemConsumeCount>10</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -198,7 +199,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>BranchSys2.icon.br_spirit_of_brave_i00</icon>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -241,6 +241,7 @@
 	</skill>
 	<skill id="8513" toLevel="1" name="Olympic Athlete's Spell of Blessing">
 		<!-- When used, you can obtain at random a Blessed Scroll of Escape or a B~S-grade Blessed Weapon/Armor Strengthening Scroll. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked. -->
+		<icon>BranchSys2.icon.br_spell_of_blessing_i00</icon>
 		<itemConsumeId>17201</itemConsumeId>
 		<itemConsumeCount>10</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -248,7 +249,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>BranchSys2.icon.br_spell_of_blessing_i00</icon>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -287,6 +287,7 @@
 	</skill>
 	<skill id="8514" toLevel="1" name="Olympic Athlete's Energy of Victory">
 		<!-- When used, you can obtain at random one XP Buff 50% 1 (4-hour) and Nevit's Voice. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked. -->
+		<icon>BranchSys2.icon.br_obsession_of_winning_i00</icon>
 		<itemConsumeId>17201</itemConsumeId>
 		<itemConsumeCount>10</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -294,7 +295,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>BranchSys2.icon.br_obsession_of_winning_i00</icon>
 		<reuseDelay>2000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isMagic>2</isMagic>
@@ -336,9 +336,9 @@
 	</skill>
 	<skill id="8515" toLevel="1" name="Release Agathion's Seal - Ball Trapping Gnosian">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<hitTime>3000</hitTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -355,9 +355,9 @@
 	</skill>
 	<skill id="8516" toLevel="1" name="Release Agathion's Seal - Ball Trapping Orodriel">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<hitTime>3000</hitTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -374,9 +374,9 @@
 	</skill>
 	<skill id="8517" toLevel="1" name="Release Agathion's Seal - Penalty Kick">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<hitTime>3000</hitTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -393,12 +393,12 @@
 	</skill>
 	<skill id="8518" toLevel="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
+		<icon>icon.skill5239</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill5239</icon>
 		<reuseDelay>15000</reuseDelay>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -409,12 +409,12 @@
 	</skill>
 	<skill id="8519" toLevel="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
+		<icon>icon.skill5239</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill5239</icon>
 		<reuseDelay>15000</reuseDelay>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -425,12 +425,12 @@
 	</skill>
 	<skill id="8520" toLevel="1" name="Notifier">
 		<!-- Informs you of the re-supply time of the gift given by the Agathion. -->
+		<icon>icon.skill5239</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
-		<icon>icon.skill5239</icon>
 		<reuseDelay>15000</reuseDelay>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -441,6 +441,7 @@
 	</skill>
 	<skill id="8521" toLevel="1" name="Release Agathion's Seal - Antharas">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -448,7 +449,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -459,6 +459,7 @@
 	</skill>
 	<skill id="8522" toLevel="1" name="Release Agathion's Seal - Nevit's Messenger Kanna">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -466,7 +467,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -477,6 +477,7 @@
 	</skill>
 	<skill id="8523" toLevel="1" name="Release Agathion's Seal - Guardian of Dawn Kallesin">
 		<!-- Removes the Agathion's seal. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -484,7 +485,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -495,10 +495,10 @@
 	</skill>
 	<skill id="8524" toLevel="1" name="Hero's Holy Attack">
 		<!-- Increases Holy P. Atk. by 250. -->
+		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
-		<icon>icon.weapon_the_sword_of_hero_i00</icon>
 		<effects>
 			<effect name="AttackAttribute">
 				<amount>250</amount>
@@ -508,10 +508,10 @@
 	</skill>
 	<skill id="8525" toLevel="1" name="Hero's Holy Attack">
 		<!-- Increases Holy P. Atk. by 250. -->
+		<icon>icon.weapon_the_staff_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
-		<icon>icon.weapon_the_staff_of_hero_i00</icon>
 		<effects>
 			<effect name="AttackAttribute">
 				<amount>250</amount>
@@ -521,10 +521,10 @@
 	</skill>
 	<skill id="8526" toLevel="1" name="Shiny Bracelet">
 		<!-- 3 Talisman can be equipped. -->
+		<icon>icon.accessory_shiny_bracelet</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>52</magicLvl>
-		<icon>icon.accessory_shiny_bracelet</icon>
 		<effects>
 			<effect name="TalismanSlot">
 				<slots>3</slots>

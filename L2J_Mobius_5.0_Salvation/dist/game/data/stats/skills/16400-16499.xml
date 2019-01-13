@@ -31,7 +31,6 @@
 	</skill>
 	<skill id="16403" toLevel="1" name="Dimensional Judgment">
 		<!-- Sentence target to death. 150,000 damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
@@ -41,7 +40,6 @@
 	</skill>
 	<skill id="16404" toLevel="1" name="Dimensional Wide Judgment">
 		<!-- Sentence enemies to the front to death. 150,000 damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
@@ -51,7 +49,6 @@
 	</skill>
 	<skill id="16405" toLevel="1" name="Dimensional Mass Judgment">
 		<!-- Sentence all nearby enemies to death. 150,000 damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -244,7 +241,6 @@
 	</skill>
 	<skill id="16414" toLevel="1" name="Peace Zone Cure">
 		<!-- Recover 10% of Max HP and 30% of Max MP of self and everyone within 200 grids. Cooldown is 10 sec. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
@@ -438,7 +434,6 @@
 	</skill>
 	<skill id="16422" toLevel="1" name="Winter Holiday Reward">
 		<!-- Receive a Santa's Mark when the blessing from the Stocking/ Tree/ Snowman Fairy expires. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16423" toLevel="1" name="Noelle's Gift">
@@ -463,7 +458,6 @@
 	</skill>
 	<skill id="16424" toLevel="1" name="Appearance Stone: Santa Hat">
 		<!-- Changes the appearance of your hair accessory into that of a Santa Hat. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16425" toLevel="1" name="Appearance Stone: Santa Suit">
@@ -705,7 +699,6 @@
 	</skill>
 	<skill id="16436" toLevel="1" name="Rush">
 		<!-- Charges into the enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>20</mpConsume>
 		<castRange>400</castRange>
@@ -763,7 +756,6 @@
 		<castRange>400</castRange>
 	</skill>
 	<skill id="16444" toLevel="1" name="Fatal Slasher">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -771,7 +763,6 @@
 		<coolTime>1000</coolTime>
 	</skill>
 	<skill id="16445" toLevel="1" name="Dark Buster">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -780,7 +771,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16446" toLevel="1" name="Unholy Blast">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>39</mpConsume>
 		<castRange>1500</castRange>
@@ -848,7 +838,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16453" toLevel="1" name="Exalted Production">
-		<icon>icon.skill0922</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1040,7 +1029,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16472" toLevel="1" name="Holy Spike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1050,7 +1038,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16473" toLevel="1" name="Dark Spike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1060,7 +1047,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16474" toLevel="1" name="Fire Spike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1070,7 +1056,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16475" toLevel="1" name="Water Spike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1080,7 +1065,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16476" toLevel="1" name="Wind Spike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1090,7 +1074,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16477" toLevel="1" name="Earth Spike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1100,7 +1083,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16478" toLevel="1" name="Holy Buster">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -1110,7 +1092,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16479" toLevel="1" name="Fire Buster">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -1120,7 +1101,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16480" toLevel="1" name="Water Buster">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -1130,7 +1110,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16481" toLevel="1" name="Wind Buster">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -1140,7 +1119,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16482" toLevel="1" name="Earth Buster">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<hitTime>2000</hitTime>
@@ -1150,7 +1128,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16483" toLevel="1" name="Holy Blast">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1161,7 +1138,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16484" toLevel="1" name="Fire Blast">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1172,7 +1148,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16485" toLevel="1" name="Water Blast">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1183,7 +1158,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16486" toLevel="1" name="Wind Blast">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1194,7 +1168,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16487" toLevel="1" name="Earth Blast">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>900</castRange>
@@ -1205,7 +1178,6 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16488" toLevel="1" name="Fatal Strike">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>1</mpConsume>
 		<castRange>40</castRange>

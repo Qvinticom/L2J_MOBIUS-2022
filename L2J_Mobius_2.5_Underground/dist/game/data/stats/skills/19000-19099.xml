@@ -959,10 +959,10 @@
 	</skill>
 	<skill id="19034" toLevel="1" name="Imprint of Light">
 		<!-- Engraves the Imprint of Light on the ancient relic that guards the castle. -->
+		<icon>icon.skill0246</icon>
 		<castRange>85</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>120000</hitTime>
-		<icon>icon.skill0246</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -985,10 +985,10 @@
 	</skill>
 	<skill id="19035" toLevel="1" name="Imprint of Darkness">
 		<!-- Engraves the Imprint of Darkness on the ancient relic that guards the castle. -->
+		<icon>icon.skill0246</icon>
 		<castRange>85</castRange>
 		<effectRange>400</effectRange>
 		<hitTime>120000</hitTime>
-		<icon>icon.skill0246</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
@@ -1219,8 +1219,8 @@
 	</skill>
 	<skill id="19041" toLevel="1" name="Escape: Castle">
 		<!-- Teleports to your castle. -->
-		<hitTime>20000</hitTime>
 		<icon>icon.vesper_cloack_i00</icon>
+		<hitTime>20000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -1300,7 +1300,6 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="19076" toLevel="1" name="Clan Academy Reward">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>

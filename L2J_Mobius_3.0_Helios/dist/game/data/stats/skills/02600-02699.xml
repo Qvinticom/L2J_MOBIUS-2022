@@ -544,11 +544,11 @@
 	</skill>
 	<skill id="2623" toLevel="1" name="Alkaline Therapy">
 		<!-- Covers yourself in an ointment that reduces lethal de-buff effects within the Hall of Erosion. -->
+		<icon>icon.etc_potion_of_acumen2_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>MULTI_BUFF_A</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_potion_of_acumen2_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -561,11 +561,11 @@
 	</skill>
 	<skill id="2624" toLevel="1" name="Life Aid Banding">
 		<!-- Increases Resistance to bleed damage, poison and altered conditions caused by the Death Worm within the Seed of Infinity. -->
+		<icon>icon.etc_piece_of_cloth_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>RESIST_BLEEDING</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.etc_piece_of_cloth_white_i00</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
@@ -608,10 +608,10 @@
 	</skill>
 	<skill id="2628" toLevel="1" name="Structure Scarab">
 		<!-- Allows user to retain buffs and debuffs following death and resurrection. Noblesse Blessing and Amulet of Luck disappear, however. Consumes 1 Structure Scarab. -->
+		<icon>icon.etc_beetle_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
-		<icon>icon.etc_beetle_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13776</itemConsumeId> <!-- Structure Scarab -->
@@ -671,11 +671,11 @@
 	</skill>
 	<skill id="2631" toLevel="1" name="Transformation Scroll: Frog">
 		<!-- Transforms into a frog. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -700,11 +700,11 @@
 	</skill>
 	<skill id="2632" toLevel="1" name="Transformation Scroll: Young Child">
 		<!-- Transforms into a young child. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2076,11 +2076,11 @@
 	</skill>
 	<skill id="2670" toLevel="1" name="Transformation Scroll: Red">
 		<!-- Transforms caster into a member of the red team. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2105,11 +2105,11 @@
 	</skill>
 	<skill id="2671" toLevel="1" name="Transformation Scroll: Blue">
 		<!-- Transforms caster into a member of the blue team. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2134,12 +2134,12 @@
 	</skill>
 	<skill id="2672" toLevel="1" name="Gludio Human Mercenary">
 		<!-- Transforms into a human mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13569</itemConsumeId> <!-- Transformation Scroll: Gludio Human Mercenary -->
@@ -2174,12 +2174,12 @@
 	</skill>
 	<skill id="2673" toLevel="1" name="Gludio Elf Mercenary">
 		<!-- Transforms into an Elf mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13570</itemConsumeId> <!-- Transformation Scroll: Gludio Elf Mercenary -->
@@ -2214,12 +2214,12 @@
 	</skill>
 	<skill id="2674" toLevel="1" name="Gludio Dark Elf Mercenary">
 		<!-- Transforms into a Dark Elf mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13571</itemConsumeId> <!-- Transformation Scroll: Gludio Dark Elf Mercenary -->
@@ -2254,12 +2254,12 @@
 	</skill>
 	<skill id="2675" toLevel="1" name="Gludio Orc Mercenary">
 		<!-- Transforms into an Orc mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13572</itemConsumeId> <!-- Transformation Scroll: Gludio Orc Mercenary -->
@@ -2294,12 +2294,12 @@
 	</skill>
 	<skill id="2676" toLevel="1" name="Gludio Dwarf Mercenary">
 		<!-- Transforms into a Dwarf mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13573</itemConsumeId> <!-- Transformation Scroll: Gludio Dwarf Mercenary -->
@@ -2334,12 +2334,12 @@
 	</skill>
 	<skill id="2677" toLevel="1" name="Gludio Kamael Mercenary">
 		<!-- Transforms into a Kamael mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13574</itemConsumeId> <!-- Transformation Scroll: Gludio Kamael Mercenary -->
@@ -2374,12 +2374,12 @@
 	</skill>
 	<skill id="2678" toLevel="1" name="Gludio Royal Guard Captain">
 		<!-- Transforms into a Royal Guard Captain. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13575</itemConsumeId> <!-- Transformation Scroll: Gludio Knight Mercenary -->
@@ -2414,12 +2414,12 @@
 	</skill>
 	<skill id="2679" toLevel="1" name="Gludio Archer Captain">
 		<!-- Transforms into an Archer Captain. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13576</itemConsumeId> <!-- Transformation Scroll: Gludio Archer Mercenary -->
@@ -2454,12 +2454,12 @@
 	</skill>
 	<skill id="2680" toLevel="1" name="Gludio Wizard Captain">
 		<!-- Transforms into a Wizard Captain. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13577</itemConsumeId> <!-- Transformation Scroll: Gludio Wizard Mercenary -->
@@ -2494,12 +2494,12 @@
 	</skill>
 	<skill id="2681" toLevel="1" name="Gludio Kamael Guard Captain">
 		<!-- Transforms into a Kamael Guard Captain. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13578</itemConsumeId> <!-- Transformation Scroll: Gludio Kamael Captain Mercenary -->
@@ -2534,12 +2534,12 @@
 	</skill>
 	<skill id="2682" toLevel="1" name="Gludio Knight of Dawn">
 		<!-- Transforms into a Knight of Dawn. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13579</itemConsumeId> <!-- Transformation Scroll: Gludio Knight Captain Mercenary -->
@@ -2574,12 +2574,12 @@
 	</skill>
 	<skill id="2683" toLevel="1" name="Gludio Fortress Commander">
 		<!-- Transforms into a Fortress Commander. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13580</itemConsumeId> <!-- Transformation Scroll: Gludio Commander Mercenary -->
@@ -2614,12 +2614,12 @@
 	</skill>
 	<skill id="2684" toLevel="1" name="Dion Human Mercenary">
 		<!-- Transforms into a human mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13581</itemConsumeId> <!-- Transformation Scroll: Dion Human Mercenary -->
@@ -2654,12 +2654,12 @@
 	</skill>
 	<skill id="2685" toLevel="1" name="Dion Elf Mercenary">
 		<!-- Transforms into an Elf mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13582</itemConsumeId> <!-- Transformation Scroll: Dion Elf Mercenary -->
@@ -2694,12 +2694,12 @@
 	</skill>
 	<skill id="2686" toLevel="1" name="Dion Dark Elf Mercenary">
 		<!-- Transforms into a Dark Elf mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13583</itemConsumeId> <!-- Transformation Scroll: Dion Dark Elf Mercenary -->
@@ -2734,12 +2734,12 @@
 	</skill>
 	<skill id="2687" toLevel="1" name="Dion Orc Mercenary">
 		<!-- Transforms into an Orc mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13584</itemConsumeId> <!-- Transformation Scroll: Dion Orc Mercenary -->
@@ -2774,12 +2774,12 @@
 	</skill>
 	<skill id="2688" toLevel="1" name="Dion Dwarf Mercenary">
 		<!-- Transforms into a Dwarf mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13585</itemConsumeId> <!-- Transformation Scroll: Dion Dwarf Mercenary -->
@@ -2814,12 +2814,12 @@
 	</skill>
 	<skill id="2689" toLevel="1" name="Dion Kamael Mercenary">
 		<!-- Transforms into a Kamael mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13586</itemConsumeId> <!-- Transformation Scroll: Dion Kamael Mercenary -->
@@ -2854,12 +2854,12 @@
 	</skill>
 	<skill id="2690" toLevel="1" name="Dion Royal Guard Captain">
 		<!-- Transforms into a Royal Guard Captain. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13587</itemConsumeId> <!-- Transformation Scroll: Dion Knight Mercenary -->
@@ -2894,12 +2894,12 @@
 	</skill>
 	<skill id="2691" toLevel="1" name="Dion Archer Captain">
 		<!-- Transforms into an Archer Captain. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13588</itemConsumeId> <!-- Transformation Scroll: Dion Archer Mercenary -->
@@ -2934,12 +2934,12 @@
 	</skill>
 	<skill id="2692" toLevel="1" name="Dion Wizard Captain">
 		<!-- Transforms into a Wizard Captain. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13589</itemConsumeId> <!-- Transformation Scroll: Dion Wizard Mercenary -->
@@ -2974,12 +2974,12 @@
 	</skill>
 	<skill id="2693" toLevel="1" name="Dion Kamael Guard Captain">
 		<!-- Transforms into a Kamael Guard Captain. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13590</itemConsumeId> <!-- Transformation Scroll: Dion Kamael Captain Mercenary -->
@@ -3014,12 +3014,12 @@
 	</skill>
 	<skill id="2694" toLevel="1" name="Dion Knight of Dawn">
 		<!-- Transforms into a Knight of Dawn. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13591</itemConsumeId> <!-- Transformation Scroll: Dion Knight Captain Mercenary -->
@@ -3054,12 +3054,12 @@
 	</skill>
 	<skill id="2695" toLevel="1" name="Dion Fortress Commander">
 		<!-- Transforms into a Fortress Commander. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13592</itemConsumeId> <!-- Transformation Scroll: Dion Commander Mercenary -->
@@ -3094,12 +3094,12 @@
 	</skill>
 	<skill id="2696" toLevel="1" name="Giran Human Mercenary">
 		<!-- Transforms into a human mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13593</itemConsumeId> <!-- Transformation Scroll: Giran Human Mercenary -->
@@ -3134,12 +3134,12 @@
 	</skill>
 	<skill id="2697" toLevel="1" name="Giran Elf Mercenary">
 		<!-- Transforms into an Elf mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13594</itemConsumeId> <!-- Transformation Scroll: Giran Elf Mercenary -->
@@ -3174,12 +3174,12 @@
 	</skill>
 	<skill id="2698" toLevel="1" name="Giran Dark Elf Mercenary">
 		<!-- Transforms into a Dark Elf mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13595</itemConsumeId> <!-- Transformation Scroll: Giran Dark Elf Mercenary -->
@@ -3214,12 +3214,12 @@
 	</skill>
 	<skill id="2699" toLevel="1" name="Giran Orc Mercenary">
 		<!-- Transforms into an Orc mercenary. -->
+		<icon>icon.skilltransform1</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
 		<hitTime>2500</hitTime>
-		<icon>icon.skilltransform1</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>13596</itemConsumeId> <!-- Transformation Scroll: Giran Orc Mercenary -->

@@ -968,6 +968,7 @@
 	</item>
 	<item id="40055" name="Rune of Bountiful Growth (30-day)" type="EtcItem">
 		<!-- When possessed in the inventory, XP/SP acquisition + 20% while hunting. Lv. 99 or below. Can be stacked with XP Rune I (Lv. 1-85) and XP Rune II (Lv. 1-95) 100%. If used with the Emperor's Rune, only the Emperor's Rune will take effect. -->
+		<set name="icon" val="icon.ev_charge_run" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -977,7 +978,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="icon.ev_charge_run" />
 	</item>
 	<item id="40056" name="Mysterious Wind Scroll" type="EtcItem">
 		<!-- For 60 min., Max HP/MP/CP + 30%, P./M. Def. + 30%, P. Atk. + 10%, M. Atk. + 20%, Wind Atk./Resistance + 20. Skill Cooldown - 10%. Cannot be used in the Olympiad. Does not stack with Art of Seduction. -->

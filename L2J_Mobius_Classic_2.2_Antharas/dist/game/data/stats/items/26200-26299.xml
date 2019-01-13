@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="26254" name="Halloween Outfit" type="Armor">
 		<!-- Halloween outfit. -->
-		<set name="icon" val="icon.accessory_explorer_hat_i00" />
+		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
@@ -360,7 +360,7 @@
 	</item>
 	<item id="26271" name="Halloween Sigil" type="Armor">
 		<!-- Halloween sigil. -->
-		<set name="icon" val="icon.bm_romantic_chaperon_red" />
+		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
 		<set name="bodypart" val="hairall" />

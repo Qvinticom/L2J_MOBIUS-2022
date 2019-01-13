@@ -2,37 +2,37 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="35000" toLevel="1" name="Blessing of Fire Dragon">
 		<!-- Buff / debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_blessing_dragon</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35001" toLevel="1" name="Fire Dragon's Protection">
 		<!-- Fully restores a dying character. Buff / debuff effects remain after death, but Blessing of Fire Dragon is consumed. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_salvation_dragon</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35002" toLevel="1" name="Land Dragon Breath">
 		<!-- For 15 seconds, Atk. Spd. is decreased by 50% and Casting Spd. is decreased by 50%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_dragon_breath</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35003" toLevel="1" name="Land Dragon Defense">
 		<!-- For 15 sec., increases P. Def. by 3600, M. Def. by 3240, and Buff-canceling Attack Resistance by 80%, and restricts movement. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_dragon_defence</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35004" toLevel="1" name="Land Dragon Pendant Basic Effect">
 		<!-- Increases M. Def. by 9. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_pendant_pvp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35005" toLevel="10" name="Land Dragon Pendant Enchant Effect">
 		<!-- M. Def. + $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_pendant_pvp</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35006" toLevel="1" name="Fire Dragon Pendant Basic Effect">
 		<!-- Increases M. Def. by 9. -->
-		<icon>icon.skill35006</icon>
+		<icon>icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -45,7 +45,7 @@
 	</skill>
 	<skill id="35007" toLevel="10" name="Fire Dragon Pendant Enchant Effect">
 		<!-- M. Def. + $s1. -->
-		<icon>icon.skill35007</icon>
+		<icon>icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -137,23 +137,22 @@
 	</skill>
 	<skill id="35008" toLevel="1" name="Fire Dragon Resistance">
 		<!-- Debuff Resistance + 50%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.bm_salvation_dragon</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35009" toLevel="1" name="Black Mask Power">
 		<!-- STR + 1, INT + 1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.accessory_jjoro_masj_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35010" toLevel="1" name="Refined Romantic Chapeau">
 		<!-- STR + 1, INT + 1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.accessory_archer_hat2_i00</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<castRange>400</castRange>
 		<effectRange>900</effectRange>
-		<icon>icon.skill1045</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>60</magicLvl>
 		<operateType>A2</operateType>
@@ -173,10 +172,8 @@
 	</skill>
 	<skill id="35011" toLevel="1" name="Refined Romantic Chapeau: Teleport">
 		<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
-		<icon>icon.skill35011</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
-		<icon>Icon.skill1050</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -198,27 +195,25 @@
 	</skill>
 	<skill id="35012" toLevel="1" name="Pirate King Hat">
 		<!-- STR + 1, INT + 1. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys2.icon.zaken_hair_accessary</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35013" toLevel="1" name="Pirate King Hat: Teleport">
 		<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35014" toLevel="1" name="Demon's Circlet">
 		<!-- STR + 1, INT + 1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.Accessary_demon_circlet_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35015" toLevel="1" name="Circlet of Devil: Teleport">
 		<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35016" toLevel="1" name="Refined Ring of Core - Special Ability">
 		<!-- Cancel all debuffs. -->
-		<icon>icon.skill35016</icon>
+		<icon>icon.accessory_ring_of_core_i03</icon>
 		<reuseDelay>1800000</reuseDelay>
 		<hitTime>200</hitTime>
 		<operateType>A1</operateType>
@@ -562,7 +557,7 @@
 	</skill>
 	<skill id="35020" toLevel="1" name="Talisman of Baium">
 		<!-- Imbues with Talisman of Baium power. -->
-		<icon>icon.skill35020</icon>
+		<icon>icon.tallisman_baium</icon>
 		<abnormalType>SEED_TALISMAN1</abnormalType>
 		<abnormalVisualEffect>SEED_TALISMAN4</abnormalVisualEffect>
 		<operateType>A2</operateType>
@@ -583,7 +578,7 @@
 	</skill>
 	<skill id="35021" toLevel="1" name="Talisman of Baium - Removal">
 		<!-- The effect of Talisman of Baium weakens. -->
-		<icon>icon.skill35021</icon>
+		<icon>icon.tallisman_baium</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
@@ -602,12 +597,11 @@
 	</skill>
 	<skill id="35022" toLevel="1" name="Chic Silver Chapeau">
 		<!-- STR + 1, INT + 1. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchSys2.icon2.pi_silverchaperon</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35023" toLevel="1" name="Chic Silver Chapeau Teleport">
 		<!-- Teleports character to the nearest village. Cooldown - 2 hours. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35024" toLevel="11" name="Talisman of Border Lv. 1">
@@ -895,7 +889,7 @@
 	</skill>
 	<skill id="35025" toLevel="1" name="Border Purification">
 		<!-- Cancels paralysis and petrification and cures severe poison/bleed condition. -->
-		<icon>icon.skill35025</icon>
+		<icon>icon.skill10036</icon>
 		<reuseDelay>60000</reuseDelay>
 		<castRange>600</castRange>
 		<hitTime>3000</hitTime>
@@ -923,12 +917,12 @@
 	</skill>
 	<skill id="35026" toLevel="1" name="Blessing of Borders">
 		<!-- Restores 50% HP / MP / CP. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10034</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35027" toLevel="4" name="Border Power - Lv. 1">
 		<!-- During an attack P. / M. Atk. +2%, P. / M. Critical Damage +10% with some probability. -->
-		<icon>icon.skill35027</icon>
+		<icon>icon.skill10030</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<magicLvl>55</magicLvl>
@@ -980,47 +974,47 @@
 	</skill>
 	<skill id="35028" toLevel="1" name="Bracelet of Borders">
 		<!-- HP / MP Recovery Bonus + 7%, P./M. Accuracy + +1, Weight Limit + +7000. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.dimension_bracelet_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35029" toLevel="5" name="Item Skill: Might in Duel - PvE">
 		<!-- Item Skill: P. Atk increase in PvE. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35030" toLevel="5" name="Item Skill: Defense in Duel - PvP">
 		<!-- Item Skill: P. Def increase in PvE. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35031" toLevel="5" name="Item Skill: Defense in Duel - PvE">
 		<!-- Item Skill: P. Def increase in PvE. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35032" toLevel="5" name="Item Skill: Enhance">
 		<!-- Item Skill: XP/SP bonus increase -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35033" toLevel="3" name="Item Skill: Boost Atk. Spd.">
 		<!-- Skill: Increases Atk. Spd. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35034" toLevel="3" name="Item Skill: Fast Spell Casting">
 		<!-- Skill: Increases Casting Spd. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35035" toLevel="1" name="Item Skill: Cleanse">
 		<!-- Skill: Cancels debuffs. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill3123</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35036" toLevel="1" name="Warrior�s Talisman - Attack">
 		<!-- Damage dealt in PvE +3%, M. / P. Critical Damage +20, M. / P. Skill Power +2%, M. / P. Accuracy +1. -->
-		<icon>icon.skill35036</icon>
+		<icon>icon.r90_sp_talisman_dr_mp_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1071,7 +1065,7 @@
 	</skill>
 	<skill id="35037" toLevel="1" name="Warrior�s Talisman - Defense">
 		<!-- P. Def in PvE +3%, Magic Attack Resistance +2%, magic / physical skill Evasion Rate +4%, Debuff Resistance +3%, Pull Resistance +10%. -->
-		<icon>icon.skill35037</icon>
+		<icon>icon.r99_talisman_pd_up_passive</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1113,7 +1107,7 @@
 	</skill>
 	<skill id="35038" toLevel="1" name="Hero�s Talisman - Attack">
 		<!-- PvP Damage +3%, M. / P. Critical Damage +20, Skill Power +2%, M. / P. Accuracy +1. -->
-		<icon>icon.skill35038</icon>
+		<icon>icon.r90_sp_talisman_dr_hp_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1156,7 +1150,7 @@
 	</skill>
 	<skill id="35039" toLevel="1" name="Hero�s Talisman - Defense">
 		<!-- Received PvP damage +3%, Magic Attack Resistance +2%, P. / M. Skill Evasion +4%, Debuff Resistance +3%. -->
-		<icon>icon.skill35039</icon>
+		<icon>icon.r95_talisman_ca_down_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<irreplacableBuff>true</irreplacableBuff>
@@ -1195,32 +1189,32 @@
 	</skill>
 	<skill id="35040" toLevel="1" name="Belt">
 		<!-- When using the Belt, Inventory slot +2, weight limit +1000. You can enhance it to Rag Belt with magic. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.belt_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35041" toLevel="1" name="Rag Belt">
 		<!-- When using the Belt, Inventory slot +2, weight limit +2000. HP Recovery +1.24, MP Recovery +0.83, CP Recovery +1.66. You can enhance it to Leather Belt with magic. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.belt_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35042" toLevel="1" name="Leather Belt">
 		<!-- When using the Belt, Inventory slot +3, weight limit +3000. HP Recovery +1.47, MP Recovery +0.98, CP Recovery +1.96, Max HP / MP / CP +100. You can enhance it to Iron Belt with magic. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.belt_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35043" toLevel="1" name="Iron Belt">
 		<!-- When using the Belt, Inventory slot +4, weight limit +4000. HP Recovery +1.70, MP Recovery +1.13, CP Recovery +2.26, Max HP / MP / CP +150. You can enhance it to Mithril Belt with magic. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.belt_i03</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35044" toLevel="1" name="Mithril Belt">
 		<!-- When using the Belt, Inventory slot +5, weight limit +5000. HP Recovery +1.92, MP Recovery +1.28, CP Recovery +2.56, Max HP / MP / CP +200. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.belt_i04</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="35045" toLevel="1" name="Talisman of Battle - Liberate">
 		<!-- Removes all debuffs when used. Cooldown: 60 min. Can be used only at the Olympiad. -->
-		<icon>icon.skill35045</icon>
+		<icon>icon.etc_talisman_i03</icon>
 		<operateType>A1</operateType>
 		<mpConsume>50</mpConsume>
 		<hitTime>1000</hitTime>

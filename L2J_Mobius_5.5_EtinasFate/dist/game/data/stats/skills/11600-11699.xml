@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11600" toLevel="1" name="Frenzied Prevailing Sonata">
-		<icon>icon.skill11600</icon>
+		<icon>icon.skill11600_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>
@@ -55,7 +55,7 @@
 		</effects>
 	</skill>
 	<skill id="11601" toLevel="1" name="Frenzied Daring Sonata">
-		<icon>icon.skill11601</icon>
+		<icon>icon.skill11601_2</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -117,7 +117,7 @@
 		</effects>
 	</skill>
 	<skill id="11602" toLevel="1" name="Frenzied Refreshing Sonata">
-		<icon>icon.skill11602</icon>
+		<icon>icon.skill11602_2</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -188,7 +188,15 @@
 	</skill>
 	<skill id="11603" toLevel="4" name="Mass Restriction">
 		<!-- For $s1, Heal received by the target and nearby enemies -$s2. -->
-		<icon>icon.skill11603</icon>
+		<icon>
+			<value level="1">icon.skill11559</value>
+			<value level="2">icon.skill11559</value>
+			<value level="3">icon.skill11559</value>
+			<value level="4">icon.skill1509</value>
+			<value level="5">icon.skill1509</value>
+			<value level="6">icon.skill1509</value>
+			<value level="7">icon.skill1509</value>
+		</icon>
 		<abnormalLvl>4</abnormalLvl> <!-- Custom -->
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>LIMIT</abnormalType>
@@ -357,6 +365,7 @@
 		</effects>
 	</skill>
 	<skill id="11607" toLevel="1" name="Prevailing Song">
+		<icon>icon.skill11607</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -364,7 +373,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11607</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -412,6 +420,7 @@
 		</effects>
 	</skill>
 	<skill id="11608" toLevel="1" name="Daring Song">
+		<icon>icon.skill11608</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -419,7 +428,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11608</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -479,6 +487,7 @@
 		</effects>
 	</skill>
 	<skill id="11609" toLevel="1" name="Refreshing Song">
+		<icon>icon.skill11609</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -486,7 +495,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11609</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -545,6 +553,7 @@
 		</effects>
 	</skill>
 	<skill id="11610" toLevel="1" name="Prevailing Dance">
+		<icon>icon.skill11610</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
@@ -552,7 +561,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11610</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -600,6 +608,7 @@
 		</effects>
 	</skill>
 	<skill id="11611" toLevel="1" name="Daring Dance">
+		<icon>icon.skill11611</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
@@ -607,7 +616,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11611</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -667,6 +675,7 @@
 		</effects>
 	</skill>
 	<skill id="11612" toLevel="1" name="Refreshing Dance">
+		<icon>icon.skill11612</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>SYNERGY_IS</abnormalType>
@@ -674,7 +683,6 @@
 			<value fromLevel="1" toLevel="1">300</value>
 			<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
-		<icon>icon.skill11612</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -1161,11 +1169,11 @@
 	</skill>
 	<skill id="11622" toLevel="1" name="Blessing Barrier">
 		<!-- The barrier absorbs 20000 damage for 10 sec. -->
+		<icon>icon.skill11621</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BARRIER</abnormalType>
 		<abnormalVisualEffect>ABSORB_SHIELD</abnormalVisualEffect>
-		<icon>icon.skill11621</icon>
 		<operateType>A2</operateType>
 		<magicLvl>99</magicLvl>
 		<targetType>TARGET</targetType>

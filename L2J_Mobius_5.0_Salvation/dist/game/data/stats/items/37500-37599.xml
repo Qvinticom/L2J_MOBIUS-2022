@@ -467,6 +467,7 @@
 	</item>
 	<item id="37532" name="Lindvior's Egg" type="EtcItem">
 		<!-- Wind Dragon's egg. 10th anniversary item that brings you luck. -->
+		<set name="icon" val="icon.etc_ev_lind_egg" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -476,7 +477,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
-		<set name="icon" val="icon.etc_ev_lind_egg" />
 	</item>
 	<item id="37533" name="NC Messenger's Hat" type="Armor">
 		<!-- NC Messenger's Hat. Uses 2 hair accessory slots. When equipped, STR/ DEX/ INT/ WIT each increase by 1. -->
@@ -767,6 +767,7 @@
 	</item>
 	<item id="37564" name="Emperor's Rune" type="EtcItem">
 		<!-- 8-hour limited item. While in possession, the character's acquired XP and SP increase by 30%. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -775,7 +776,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="time" val="480" />
 	</item>
 	<item id="37565" name="Emperor's Rune Pack" type="EtcItem">

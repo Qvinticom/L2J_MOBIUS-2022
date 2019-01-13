@@ -371,6 +371,7 @@
 	</skill>
 	<skill id="10508" toLevel="11" name="Blood Stab">
 		<!-- Strike's the enemy's unprotected back with 32401 Power and additionally inflicts bleed. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. -->
+		<icon>icon.skill10508</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -388,7 +389,6 @@
 		<abnormalType>BLEEDING</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>120</activateRate>
-		<icon>icon.skill10508</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -506,10 +506,10 @@
 	</skill>
 	<skill id="10509" toLevel="11" name="Heart Breaker">
 		<!-- Stabs target's heart with 21344 Power added to P. Atk. to inflict a powerful vital spot attack. Increases Spd. + 40, Evasion + 5, and Rear Critical Damage + 30%. Over-hit. Critical hit. Half-kill. Requires a dagger or dual dagger. -->
+		<icon>icon.skill10509</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
-		<icon>icon.skill10509</icon>
 		<operateType>A3</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1121,6 +1121,7 @@
 	</skill>
 	<skill id="10515" toLevel="6" name="Paralyzed">
 		<!-- Your body is paralyzed. -->
+		<icon>icon.skill1170</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1132,7 +1133,6 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PARALYZE</abnormalType>
 		<abnormalVisualEffect>PARALYZE</abnormalVisualEffect>
-		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1168,6 +1168,7 @@
 	</skill>
 	<skill id="10516" toLevel="9" name="Shadow Chase">
 		<!-- Moves behind an enemy, cancels his target, and inflicts Stun. -->
+		<icon>icon.skill10516</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1199,7 +1200,6 @@
 			<value level="9">105</value>
 		</magicLvl>
 		<trait>SHOCK</trait>
-		<icon>icon.skill10516</icon>
 		<operateType>A2</operateType>
 		<mpConsume>
 			<value level="1">38</value>
@@ -1246,6 +1246,7 @@
 	</skill>
 	<skill id="10517" toLevel="1" name="Shadow Hide">
 		<!-- You go into Hide state, cancel debuffs and Hold effects on you, increase HP Recovery Bonus, and eliminate enemy enmity toward you. -->
+		<icon>icon.skill10517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">50</value>
@@ -1254,7 +1255,6 @@
 		</abnormalTime>
 		<abnormalType>HIDE</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
-		<icon>icon.skill10517</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -1296,10 +1296,10 @@
 	</skill>
 	<skill id="10518" toLevel="1" name="Assassin's Reflex">
 		<!-- Atk. Spd. + 20% for 10 seconds. -->
+		<icon>icon.skill10518</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>MIGHT_MORTAL</abnormalType>
-		<icon>icon.skill10518</icon>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1321,6 +1321,7 @@
 	</skill>
 	<skill id="10520" toLevel="4" name="Final Ultimate Evasion">
 		<!-- For 30 sec., increases P. Evasion by 60, M. Evasion by 60, M. Def. by 20%, P. Skill Evasion Rate by 60% and Debuff Resistance. Has a 40% chance of canceling the enemy's targeting when attacked. -->
+		<icon>icon.skill10520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1333,7 +1334,6 @@
 			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SUPER_AVOID</abnormalType>
-		<icon>icon.skill10520</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1477,6 +1477,7 @@
 	</skill>
 	<skill id="10523" toLevel="9" name="Poisoned">
 		<!-- Poisoned by a toxin cloud. Decreases Speed, P. Atk., Shield Defense, P. Def., and M. Def., and blocks the use of magic. Decreases HP by 687 per second. -->
+		<icon>icon.skill1167</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1494,7 +1495,6 @@
 		<activateRate>130</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill1167</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1633,6 +1633,7 @@
 	</skill>
 	<skill id="10525" toLevel="7" name="Shadow Dash">
 		<!-- For 15 seconds, increases Speed by 66, P. Evasion by 4, and HP Recovery Bonus by 10. -->
+		<icon>icon.skill10525</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1644,7 +1645,6 @@
 		</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>SUPER_MOVE</abnormalType>
-		<icon>icon.skill10525</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -1931,10 +1931,10 @@
 	</skill>
 	<skill id="10530" toLevel="1" name="Blind Spot">
 		<!-- Increases P. Atk., Critical Rate, Critical Damage and Vital Spot Attack Rate. -->
+		<icon>icon.skill10529</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SUPER_BUFF</abnormalType>
-		<icon>icon.skill10529</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -1970,6 +1970,7 @@
 	</skill>
 	<skill id="10531" toLevel="2" name="Angel of Death">
 		<!-- Momentarily increases Speed by 30, P. Evasion by 40, skill Evasion by 75, Vital Spot Attack Rate by 40%, and Debuff Resistance by 80%. Casts Crippling Poison on enemies attacking you. Requires a dagger/dual dagger to be equipped. -->
+		<icon>icon.skill10531</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1980,7 +1981,6 @@
 			<value fromLevel="1" toLevel="2" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>MOVEMENT</abnormalType>
-		<icon>icon.skill10531</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -2143,10 +2143,10 @@
 	</skill>
 	<skill id="10534" toLevel="1" name="Toad Poison">
 		<!-- During normal attacks, has a chance of inflicting Poison on the enemy and blocking the use of magic skills. -->
+		<icon>icon.skill10534</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POISON</abnormalType>
-		<icon>icon.skill10534</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -2317,6 +2317,7 @@
 	</skill>
 	<skill id="10539" toLevel="11" name="Throw Dagger">
 		<!-- Throws a dagger at the enemy with 7396 Power added to P. Atk. For 10 sec., Speed - 180. Requires a dagger/dual dagger to be equipped. Over-hit. -->
+		<icon>icon.skill10539</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2339,7 +2340,6 @@
 		<lvlBonusRate>20</lvlBonusRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectRange>900</effectRange>
-		<icon>icon.skill10539</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -2431,6 +2431,7 @@
 	</skill>
 	<skill id="10540" toLevel="8" name="Throw Sand">
 		<!-- Hurls poisonous sand at the enemy. For 5 seconds, greatly decreases P. accuracy and lures the enemy to you. Requires a dagger/dual dagger to be equipped. -->
+		<icon>icon.skill10540</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2447,7 +2448,6 @@
 			<value fromLevel="1" toLevel="8">80</value>
 			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
 		</activateRate>
-		<icon>icon.skill10540</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
@@ -2614,8 +2614,8 @@
 	</skill>
 	<skill id="10543" toLevel="1" name="Silent Step">
 		<!-- Allows you to move unnoticed by most monsters. Decreases P. Def. by 20% and increases Speed by 20%. MP is consumed continuously. -->
-		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<icon>icon.skill10543</icon>
+		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -3248,6 +3248,7 @@
 	</skill>
 	<skill id="10554" toLevel="7" name="Power Bluff">
 		<!-- For 3 sec., turns the enemy's back to you and Stuns them. Requires a dagger or dual dagger. -->
+		<icon>icon.skill10554</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -3257,7 +3258,6 @@
 			<value fromLevel="1" toLevel="7" fromSubLevel="1001" toSubLevel="1030">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill10554</icon>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3304,11 +3304,11 @@
 	</skill>
 	<skill id="10555" toLevel="1" name="Impaired">
 		<!-- Cannot move for 5 seconds. -->
+		<icon>icon.skill1201</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
-		<icon>icon.skill1201</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -3424,10 +3424,10 @@
 	</skill>
 	<skill id="10558" toLevel="1" name="Elusive Mirage">
 		<!-- For 30 sec., has a chance of cancelling target of the enemy that attacked you. Requires a dagger or dual dagger. -->
+		<icon>icon.skill11861</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>MIRAGE</abnormalType>
-		<icon>icon.skill11861</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3483,10 +3483,10 @@
 	</skill>
 	<skill id="10560" toLevel="1" name="Maximum Blow">
 		<!-- For 20 sec., Vital Spot Attack Rate + 10%. Requires a dagger or dual dagger. -->
+		<icon>icon.skill11877</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>MIGHT_MORTAL</abnormalType>
-		<icon>icon.skill11877</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3563,10 +3563,10 @@
 	</skill>
 	<skill id="10562" toLevel="1" name="Critical Adventures">
 		<!-- For 5 min., Critical Damage + 304 and vital spot attack success rate + 10%. Front Critical Damage - 30%, Side Critical Rate + 20% and Critical Damage + 20%. Rear Critical Rate + 40% and Critical Damage + 40%. Requires a dagger or dual dagger. -->
+		<icon>icon.skill10562</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>FOCUS_DAGGER</abnormalType>
-		<icon>icon.skill10562</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>

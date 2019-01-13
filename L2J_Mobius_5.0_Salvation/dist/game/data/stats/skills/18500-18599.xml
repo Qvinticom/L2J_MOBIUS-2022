@@ -2,12 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="18500" toLevel="1" name="Aden Vanguard Supply Box">
 		<!-- Random Prize. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18501" toLevel="1" name="System Control Room Key">
 		<!-- Key to get to Core in the Cruma Tower. Key to the System Control Room. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
 		<hitTime>3000</hitTime>
@@ -15,7 +13,6 @@
 		<reuseDelay>3000</reuseDelay>
 	</skill>
 	<skill id="18502" toLevel="1" name="Scroll: Enchant Shadow Weapon">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
@@ -26,7 +23,6 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18503" toLevel="1" name="Blessed Zodiac Agathion Pack (30-day)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -88,7 +84,6 @@
 	</skill>
 	<skill id="18504" toLevel="1" name="Emergency Whistle - Aden Vanguard">
 		<!-- Use it during your battle against Burnstein inside the Command Post, and one of the 5 Aden Vanguard members will appear randomly to support you. 30-minute. Can only be used inside the Command Post. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -96,7 +91,6 @@
 		<reuseDelay>300000</reuseDelay>
 	</skill>
 	<skill id="18505" toLevel="1" name="Mr. K's Gift Basket">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18506" toLevel="1" name="Angel Cat's Energy">
@@ -113,27 +107,22 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="18508" toLevel="1" name="Harp's Reward Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18509" toLevel="1" name="Divine Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18510" toLevel="1" name="Heine Treasure Chest">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18511" toLevel="1" name="Zodiac Agathion Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18513" toLevel="1" name="Summon Flame Flower">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<reuseDelay>3000</reuseDelay>
@@ -204,13 +193,11 @@
 	</skill>
 	<skill id="18531" toLevel="1" name="Rare Accessory Pack">
 		<!-- Double click to receive one of the following 7-day accessory chests: Blessed Antharas Earring/ Blessed Valakas Necklace/ Tauti's Ring/ Earth Wyrm Heart Ring/ Blessed Zaken's Earring. Cannot use in Olympiad. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<itemConsumeId>46535</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -242,13 +229,11 @@
 	</skill>
 	<skill id="18532" toLevel="1" name="Expertise Rune Pack">
 		<!-- Double click to receive one of the following: Expertise Rune Pack R, R95, or R99. Will be deleted at the time of the scheduled server check on June 3, 2015. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<itemConsumeId>46536</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<icon>icon.skill0000</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -273,7 +258,6 @@
 		</effects>
 	</skill>
 	<skill id="18534" toLevel="1" name="Scroll of Escape: Mystic Tavern">
-		<icon>icon.skill0000</icon>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -302,87 +286,66 @@
 		</effects>
 	</skill>
 	<skill id="18535" toLevel="1" name="Epic Tale Pouch">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18536" toLevel="1" name="Epic Tale Pouch">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18537" toLevel="1" name="Epic Tale Pouch">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18538" toLevel="1" name="Tauti's Helmet Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18539" toLevel="1" name="Tauti's Breastplate Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18540" toLevel="1" name="Tauti's Gaiters Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18541" toLevel="1" name="Tauti's Gauntlets Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18542" toLevel="1" name="Tauti's Boots Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18543" toLevel="1" name="Kelbim's Leather Helmet Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18544" toLevel="1" name="Kelbim's Leather Armor Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18545" toLevel="1" name="Kelbim's Leather Leggings Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18546" toLevel="1" name="Kelbim's Leather Gloves Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18547" toLevel="1" name="Kelbim's Leather Boots Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18548" toLevel="1" name="Freya's Circlet Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18549" toLevel="1" name="Freya's Tunic Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18550" toLevel="1" name="Freya's Stockings Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18551" toLevel="1" name="Freya's Gloves Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18552" toLevel="1" name="Freya's Shoes Appearance Stone">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18553" toLevel="1" name="Leona's Reward Box (High-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18554" toLevel="1" name="Leona's Reward Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18555" toLevel="1" name="Curtiz's Reward Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>46560</itemConsumeId>
@@ -444,17 +407,14 @@
 	</skill>
 	<skill id="18556" toLevel="1" name="Blue Dynasty Armor Appearance Stone">
 		<!-- An appearance stone that changes appearance to that of Blue Dynasty Armor. Can be used on upper and full-body costumes. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18557" toLevel="1" name="Red Zubei Armor Appearance Stone">
 		<!-- An appearance stone that changes appearance to that of Red Zubei Armor. Can be used on upper and full-body costumes. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18558" toLevel="1" name="White Assassin Suit Appearance Stone">
 		<!-- An appearance stone that changes appearance to that of a White Assassin Suit. Can be used on upper and full-body costumes. -->
-		<icon>icon.skill18558</icon>
 		<operateType>A1</operateType>
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -465,31 +425,29 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18559" toLevel="1" name="Entrance Pass: Nightmare Kamaloka">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18560" toLevel="1" name="Entrance Pass: Embryo Command Post">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18561" toLevel="1" name="Assistant Roa's Gift">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18562" toLevel="1" name="Entrance Pass: Crystal Caverns">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18563" toLevel="4" name="Red Libra Supplies Lv. 1">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18564" toLevel="1" name="Shadai's Jewelry Box">
-		<icon>icon.etc_bm_jewelbox_shhadai</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewelbox_main_i00</value>
+			<value level="2">icon.etc_bm_jewelbox_shhadai</value>
+		</icon>
 		<itemConsumeId>46689</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -532,7 +490,14 @@
 	</skill>
 	<skill id="18565" toLevel="6" name="Tanzanite - Barrier">
 		<!-- Creates a protective barrier to absorb $s2 of damage for $s1. -->
-		<icon>icon.etc_bm_jewel_tanzanite</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_tanzanite</value>
+			<value level="2">icon.etc_bm_jewel_tanzanite</value>
+			<value level="3">icon.etc_bm_jewel_tanzanite</value>
+			<value level="4">icon.etc_bm_jewel_tanzanite</value>
+			<value level="5">icon.etc_bm_jewel_tanzanite</value>
+			<value level="6">icon.bm_jewel_tanzanite_high_lv1_lavianrose</value>
+		</icon>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">5</value>
@@ -564,7 +529,14 @@
 	</skill>
 	<skill id="18566" toLevel="6" name="Garnet">
 		<!-- Resistance to Debuffs +$s1. -->
-		<icon>icon.etc_bm_jewel_garnet</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_garnet</value>
+			<value level="2">icon.etc_bm_jewel_garnet</value>
+			<value level="3">icon.etc_bm_jewel_garnet</value>
+			<value level="4">icon.etc_bm_jewel_garnet</value>
+			<value level="5">icon.etc_bm_jewel_garnet</value>
+			<value level="6">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ResistAbnormalByCategory">
@@ -596,7 +568,10 @@
 	</skill>
 	<skill id="18567" toLevel="2" name="Garnet - Purge">
 		<!-- Cancels your debuffs. -->
-		<icon>icon.etc_bm_jewel_garnet</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_garnet</value>
+			<value level="2">icon.bm_jewel_garnet_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>A2</operateType>
 		<abnormalType>SKILL_IGNORE</abnormalType>
 		<abnormalLvl>
@@ -635,7 +610,14 @@
 	</skill>
 	<skill id="18568" toLevel="6" name="Vital Stone">
 		<!-- Increases bonus XP obtained under the Vitality state by $s1. -->
-		<icon>icon.etc_bm_jewel_vital</icon>
+		<icon>
+			<value level="1">icon.etc_bm_jewel_vital</value>
+			<value level="2">icon.etc_bm_jewel_vital</value>
+			<value level="3">icon.etc_bm_jewel_vital</value>
+			<value level="4">icon.etc_bm_jewel_vital</value>
+			<value level="5">icon.etc_bm_jewel_vital</value>
+			<value level="6">icon.bm_jewel_vital_high_lv1_lavianrose</value>
+		</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="VitalityExpRate">
@@ -674,19 +656,18 @@
 		</effects>
 	</skill>
 	<skill id="18569" toLevel="1" name="Reward Fishing Rod Pack">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18570" toLevel="1" name="Function Test Item">
 		<!-- Increases XP and SP acquisition by $s2 for $s1 minute(s). -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_london_olympic_scroll_i01</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 	</skill>
 	<skill id="18571" toLevel="1" name="Warrior Basics I">
 		<!-- XP/ SP +3%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18571</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ExpModify">
@@ -701,7 +682,7 @@
 	</skill>
 	<skill id="18572" toLevel="1" name="Warrior Basics II">
 		<!-- XP/ SP +7%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18572</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ExpModify">
@@ -716,7 +697,7 @@
 	</skill>
 	<skill id="18573" toLevel="1" name="Warrior Basics III">
 		<!-- XP/ SP +3%, P. Atk. +3%, M. Atk. +3%, P. Def. +3%, M. Def. +3%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18573</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ExpModify">
@@ -747,7 +728,7 @@
 	</skill>
 	<skill id="18574" toLevel="1" name="Peaceful Town of Giran">
 		<!-- Stay in the Peace Zone to recover vitality. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18574</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="VitalityPointUp">
@@ -761,7 +742,7 @@
 	</skill>
 	<skill id="18575" toLevel="1" name="Hunting Cry I">
 		<!-- P. Atk. +5%, M. Atk. +5%, P. Critical Rate +20, M. Critical Rate +20, Bow/ Crossbow Range +100. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18575</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -792,7 +773,7 @@
 	</skill>
 	<skill id="18576" toLevel="1" name="Hunting Cry II">
 		<!-- P. Def. +10%, M. Def. +10%, Bow/ Crossbow Resistance +10%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18576</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -811,7 +792,7 @@
 	</skill>
 	<skill id="18577" toLevel="1" name="Roar of the Battlefield">
 		<!-- PvP Damage Received -5%, Debuff Resistance +10%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18577</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PvpMagicalSkillDefenceBonus">
@@ -834,24 +815,21 @@
 	</skill>
 	<skill id="18578" toLevel="1" name="The World's Next Top Singer">
 		<!-- World Chat Points +20. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill18578</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="18579" toLevel="1" name="Entrance Pass: Embryo Command Post">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18580" toLevel="1" name="Entrance Pass: Nightmare Kamaloka">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18581" toLevel="1" name="Pa'agrio's Blessing">
 		<!-- Receives the following effects for 30 minutes: increased Maximum HP/ MP/ CP by 10%, Attack by 20%, M. Atk. by 30%, P. Defense/ M. Defense by 10%, P. Accuracy by 4, M. Accuracy by 4, Attack/ Casting Speed by 10%, Speed by 10, Attack attribute by 100 with decreased MP consumption by skills by 10%. This buff remains effective even when you??re dead. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18582" toLevel="7" name="Teleport to the Town of Goddard">
-		<icon>icon.skill0000</icon>
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeId>
@@ -917,51 +895,42 @@
 	</skill>
 	<skill id="18583" toLevel="1" name="Inject Shine Energy">
 		<!-- The energy of the Shine Stone is injected into the Root of the Lesser Giant to trigger evolution. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_energy_stone_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18584" toLevel="1" name="Steel Armor Pack">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18585" toLevel="1" name="Schumadriba's Reward Treasure Chest">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18586" toLevel="1" name="Schumadriba's Advanced Reward Treasure Chest">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18587" toLevel="1" name="Giant Evolution Control">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18588" toLevel="13" name="Shadai's Good Fortune Jewelry Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18589" toLevel="1" name="Vitality Replenishing Potion of Quest Pride">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18590" toLevel="1" name="Equipment Enchantment Chest of Quest Pride">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18591" toLevel="1" name="Skill Enchantment Chest of Quest Pride">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18592" toLevel="1" name="Good Fortune Chest of Quest Pride">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18593" toLevel="1" name="Mentor's Harmony">
 		<!-- With your Mentor's help, your P. Atk. +$s1, M. Atk. +$s2, P. Critical Rate/ M. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd./ Casting Spd. +$s5, Skill Cooldown -$s6, and all Skill MP Consumption -$s7. Buff is triggered only when your Mentor is online. Buff persists for 5 min afer your Mentor goes offline. -->
+		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
-		<icon>icon.skill11524</icon>
 		<isMagic>1</isMagic>
 		<magicLvl>-2</magicLvl>
 		<effectPoint>1</effectPoint>
@@ -1100,24 +1069,21 @@
 	</skill>
 	<skill id="18595" toLevel="1" name="Blue Dynasty Transformation">
 		<!-- Armor is transformed into the Blue Dynasty for 1 hour. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.general_stone_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18596" toLevel="1" name="Red Zubei Transformation">
 		<!-- Armor is transformed into the Red Zubei for 1 hour. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.general_stone_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18597" toLevel="5" name="Paulina's Equipment Set (D-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18598" toLevel="5" name="Tulesir's Gift Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18599" toLevel="3" name="Basic Supply Box">
-		<icon>icon.skill18599</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>
 			<value level="1">47172</value> <!-- Basic Supply Box -->

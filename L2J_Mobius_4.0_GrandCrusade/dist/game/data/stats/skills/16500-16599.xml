@@ -92,7 +92,6 @@
 	</skill>
 	<skill id="16518" toLevel="1" name="Event Invincibility">
 		<!-- Invincible to regular hits and skills, as well as buffs/debuffs. No HP Recovery. -->
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16519" toLevel="1" name="Slay X">
@@ -337,7 +336,6 @@
 	</skill>
 	<skill id="16543" toLevel="1" name="Spy's Aid Request">
 		<!-- When the Fortress Spy finds infiltrators inside the fortress will request aid and summon Fortress Raider, Atelia Passionate Soldier, and Atelia Elite Captain. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>10000</hitTime>
 		<effectPoint>-700</effectPoint>
@@ -677,9 +675,9 @@
 	</skill>
 	<skill id="16574" toLevel="4" name="Shield of Infinity">
 		<!-- P. Def. and M. Def. are increased by 15%. -->
+		<icon>icon.skill0110</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
-		<icon>icon.skill0110</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -741,7 +739,6 @@
 	</skill>
 	<skill id="16578" toLevel="1" name="Dragonclaw Crush">
 		<!-- Deals damage and simultaneously stuns enemies around you. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
 		<coolTime>800</coolTime>
@@ -781,7 +778,6 @@
 	</skill>
 	<skill id="16582" toLevel="1" name="Let the Dogs Out!">
 		<!-- Typhoon summons his Guardian Deities. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>1500</castRange>
 		<hitTime>5000</hitTime>
@@ -813,7 +809,6 @@
 	</skill>
 	<skill id="16585" toLevel="1" name="Dragonclaw Cannon">
 		<!-- A powerful barrage of cannon fire is launched around the target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2500</castRange>
 		<hitTime>3000</hitTime>
@@ -851,13 +846,12 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16589" toLevel="1" name="Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="16590" toLevel="1" name="Ancient Power Thunder">
 		<!-- Powerful ancient thunder strikes the target, causing magic damage and 5-second Paralysis. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0279</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -890,7 +884,6 @@
 	</skill>
 	<skill id="16591" toLevel="1" name="Ancient Plasma Wave">
 		<!-- A powerful ancient wave of plasma is shot toward the target and nearby enemies, causing magic damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -911,7 +904,7 @@
 	</skill>
 	<skill id="16592" toLevel="1" name="Ancient Earthquake">
 		<!-- A powerful earthquake wave is shot toward the target and nearby enemies, causing stun for 3 seconds. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1172</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<abnormalType>STUN</abnormalType>
@@ -941,7 +934,7 @@
 	</skill>
 	<skill id="16593" toLevel="1" name="Prayer for the Emperor">
 		<!-- By the blessing of the first Emperor of the Giants, P. Atk., P. Def., M. Atk., and M. Def. +50% for 10 seconds. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19193</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -976,7 +969,6 @@
 	</skill>
 	<skill id="16594" toLevel="1" name="Plasma Strike">
 		<!-- An attack laden with a powerful current is dealt to the enemy, causing physical damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>100</castRange>
 		<hitTime>2000</hitTime>
@@ -994,7 +986,6 @@
 	</skill>
 	<skill id="16595" toLevel="1" name="Plasma Shooter">
 		<!-- An arrow laden with a powerful current is launched toward the enemy, causing physical damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<hitTime>2000</hitTime>
@@ -1012,7 +1003,6 @@
 	</skill>
 	<skill id="16596" toLevel="1" name="Plasma Ball">
 		<!-- A sphere laden with a powerful current is launched toward the enemy, causing magic damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<hitTime>500</hitTime>
@@ -1030,7 +1020,6 @@
 	</skill>
 	<skill id="16597" toLevel="1" name="Plasma Wave">
 		<!-- A powerful ancient wave of current is shot toward the target and nearby enemies, causing magic damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<affectLimit>10-10</affectLimit>
 		<castRange>600</castRange>
@@ -1052,7 +1041,7 @@
 	</skill>
 	<skill id="16598" toLevel="1" name="Stun Strike">
 		<!-- The target suffers severe physical damage and 3-second Paralysis. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0791</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1083,7 +1072,6 @@
 	</skill>
 	<skill id="16599" toLevel="1" name="Piercing Bolt">
 		<!-- A powerful, penetrating range attack arrow is shot toward the target and nearby enemies, dealing physical damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<affectLimit>10-25</affectLimit>

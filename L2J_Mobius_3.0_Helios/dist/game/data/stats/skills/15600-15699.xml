@@ -22,7 +22,6 @@
 	</skill>
 	<skill id="15602" toLevel="1" name="Breath">
 		<!-- Breathes on enemies within 120 degrees in front of you to inflict damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>1500</hitTime>
 		<coolTime>4500</coolTime>
@@ -59,7 +58,7 @@
 	</skill>
 	<skill id="15606" toLevel="1" name="Recharge">
 		<!-- Recharge. -->
-		<icon>icon.skill14444</icon>
+		<icon>icon.skill1449</icon>
 		<operateType>A1</operateType>
 		<isDebuff>true</isDebuff>
 		<castRange>900</castRange>
@@ -209,7 +208,6 @@
 	</skill>
 	<skill id="15615" toLevel="7" name="Increase P. Atk.">
 		<!-- P. Atk./ M. Atk. + $s1. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -332,7 +330,6 @@
 	</skill>
 	<skill id="15629" toLevel="1" name="Nerva's Mental Blow">
 		<!-- Powerful attack on a single enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>70</castRange>
 		<hitTime>1500</hitTime>
@@ -383,7 +380,6 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15636" toLevel="1" name="Dimensional Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>100</effectPoint>
@@ -391,7 +387,6 @@
 	</skill>
 	<skill id="15637" toLevel="1" name="Dimensional Space">
 		<!-- You are in the Dimensional Space. You can either restart the game or go through Mermoden in the village to return. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
 		<isMagic>3</isMagic>
@@ -1171,7 +1166,6 @@
 	</skill>
 	<skill id="15663" toLevel="1" name="Increase P. Atk.">
 		<!-- P. Atk. and M. Atk. + 10%. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -1189,7 +1183,6 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15665" toLevel="1" name="Presentation - Anakim / Lilith">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 	</skill>

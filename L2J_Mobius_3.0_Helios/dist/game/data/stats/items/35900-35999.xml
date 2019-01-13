@@ -1582,6 +1582,7 @@
 		</skills>
 	</item>
 	<item id="35984" name="Power Herb" type="EtcItem">
+		<set name="icon" val="icon.etc_warrior_set_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1589,13 +1590,13 @@
 		<set name="for_npc" val="true" />
 		<set name="ex_immediate_effect" val="true" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="icon.etc_warrior_set_i00" />
 		<skills>
 			<skill id="9544" level="1" /> <!-- Power Herb -->
 		</skills>
 	</item>
 	<item id="35985" name="XP Rune I (Lv. 1-85) 100% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Increases XP and SP acquired in hunt by 100%. The effect only applies to characters Lv. 86 or below. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1608,13 +1609,13 @@
  		<set name="handler" val="ItemSkills" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<skills>
 			<skill id="9240" level="1" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
 	<item id="35986" name="XP Rune I (Lv. 1-85) 200% (1-hour)" additionalName="Event" type="EtcItem">
 		<!-- Increases XP and SP acquired in hunt by 200%. The effect only applies to characters Lv. 86 or below. -->
+		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1626,7 +1627,6 @@
 		<set name="time" val="60" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
-		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<skills>
 			<skill id="9240" level="2" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>

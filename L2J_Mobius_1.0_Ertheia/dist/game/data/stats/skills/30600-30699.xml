@@ -2,7 +2,6 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="30600" toLevel="1" name="Additional Hit">
 		<!-- Powerful hit on target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<coolTime>500</coolTime>
@@ -11,7 +10,6 @@
 	</skill>
 	<skill id="30601" toLevel="1" name="Additional Hit">
 		<!-- Powerful hit on target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<hitTime>2000</hitTime>
@@ -21,9 +19,9 @@
 	</skill>
 	<skill id="30602" toLevel="1" name="Eviscerator Aura">
 		<!-- Casts Eviscerator Force on entire party, which increases P. Skill Critical Rate + 1%. -->
+		<icon>icon.icon_lender</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
-		<icon>icon.icon_lender</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>AU</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -38,6 +36,7 @@
 	</skill>
 	<skill id="30603" toLevel="1" name="Eviscerator Force">
 		<!-- P. Skill Critical Rate + 1%. -->
+		<icon>icon.icon_lender_01</icon>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_LENKER</abnormalType>
@@ -45,7 +44,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.icon_lender_01</icon>
 		<operateType>A6</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -67,9 +65,9 @@
 	</skill>
 	<skill id="30605" toLevel="1" name="Sayha's Seer Aura">
 		<!-- Casts Sayha's Seer Force on entire party, which increases M. Critical Rate + 1%. -->
+		<icon>icon.icon_Er_wizard</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
-		<icon>icon.icon_Er_wizard</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>AU</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -84,6 +82,7 @@
 	</skill>
 	<skill id="30606" toLevel="1" name="Sayha's Seer Force">
 		<!-- M. Critical Rate + 1%. -->
+		<icon>icon.icon_Er_wizard_01</icon>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_SEER</abnormalType>
@@ -91,7 +90,6 @@
 		<canBeDispelled>false</canBeDispelled>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
-		<icon>icon.icon_Er_wizard_01</icon>
 		<operateType>A6</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -116,7 +114,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
-		<icon>icon.skill30509</icon>
 		<operateType>A2</operateType>
 		<hitTime>300</hitTime>
 		<effectPoint>500</effectPoint>

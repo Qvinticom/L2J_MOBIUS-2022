@@ -2,6 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="100" toLevel="15" name="Shock Attack">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Over-hit. -->
+		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -29,7 +30,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0100</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -107,6 +107,7 @@
 	</skill>
 	<skill id="101" toLevel="48" name="Stun Shot">
 		<!-- Fires an arrow with $s1 Power added to P. Atk. and stuns the enemy for $s2. Requires a bow. Over-hit. Target cancel is possible. -->
+		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -162,7 +163,6 @@
 		</effectPoint>
 		<effectRange>1400</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0101</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>20</lvlBonusRate>
 		<magicLvl>
@@ -341,6 +341,7 @@
 	</skill>
 	<skill id="102" toLevel="18" name="Entangle">
 		<!-- Enemy's Speed -$s2 for $s1. -->
+		<icon>icon.skill0102</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">3</value>
@@ -388,7 +389,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0102</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -486,6 +486,7 @@
 	</skill>
 	<skill id="103" toLevel="5" name="Corpse Plague">
 		<!-- Causes a poison cloud to pour out of a corpse. Inflicts poison on enemies near the corpse for $s1, and makes them consume $s2 HP every sec. -->
+		<icon>icon.skill0103</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
 			<value level="2">6</value>
@@ -511,7 +512,6 @@
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0103</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -556,12 +556,12 @@
 	</skill>
 	<skill id="104" toLevel="1" name="Detect Plant Weakness">
 		<!-- For 10 min., damage against plants +5%. -->
+		<icon>icon.skill0104</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
 		<abnormalType>DETECT_WEAKNESS</abnormalType>
 		<effectPoint>438</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0104</icon>
 		<magicLvl>46</magicLvl>
 		<mpConsume>21</mpConsume>
 		<operateType>A2</operateType>
@@ -579,6 +579,7 @@
 	</skill>
 	<skill id="105" toLevel="26" name="Freezing Strike">
 		<!-- Momentarily freezes the surrounding air, inflicting Water damage on the enemy with $s1 Power and decreasing their Speed by $s3 for $s2. -->
+		<icon>icon.skill0105</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -617,7 +618,6 @@
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0105</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -750,6 +750,7 @@
 	</skill>
 	<skill id="106" toLevel="14" name="Veil">
 		<!-- Creates an illusion of nearby monsters for $s1. -->
+		<icon>icon.skill0106</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
 		<abnormalType>TURN_PASSIVE</abnormalType>
@@ -758,7 +759,6 @@
 		<castRange>500</castRange>
 		<effectRange>900</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0106</icon>
 		<isDebuff>true</isDebuff>
 		<magicLvl>
 			<value level="1">43</value>
@@ -805,6 +805,7 @@
 	</skill>
 	<skill id="107" toLevel="11" name="Holy Aura">
 		<!-- Holds nearby undead monsters for $s1. -->
+		<icon>icon.skill0107</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
@@ -827,7 +828,6 @@
 			<value level="11">-672</value>
 		</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0107</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -873,12 +873,12 @@
 	</skill>
 	<skill id="109" toLevel="1" name="Ogre Spirit Totem">
 		<!-- Possessed by an Ogre's Spirit, P. Atk., P. Def. and M. Def. +20%, Critical Damage +20% for 5 min. Requires a fist weapon. -->
+		<icon>icon.skill0109</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<effectPoint>438</effectPoint>
 		<hitTime>2000</hitTime>
-		<icon>icon.skill0109</icon>
 		<magicLvl>46</magicLvl>
 		<mpConsume>41</mpConsume>
 		<operateType>A2</operateType>
@@ -922,6 +922,7 @@
 	</skill>
 	<skill id="110" toLevel="2" name="Ultimate Defense">
 		<!-- For $s1., P. Def. +$s2, M. Def. +$s3, and Buff-canceling Attack Resistance +$s4, and restricts movement. -->
+		<icon>icon.skill0110</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -934,7 +935,6 @@
 			<value level="2">438</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0110</icon>
 		<magicLvl>
 			<value level="1">20</value>
 			<value level="2">46</value>
@@ -974,6 +974,7 @@
 	</skill>
 	<skill id="111" toLevel="2" name="Ultimate Evasion">
 		<!-- For $s1, Evasion +$s2, physical attack skill Evasion Rate +$s3, and Buff-canceling Attack Resistance +$s4. -->
+		<icon>icon.skill0111</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -985,7 +986,6 @@
 			<value level="2">523</value>
 		</effectPoint>
 		<hitTime>1000</hitTime>
-		<icon>icon.skill0111</icon>
 		<magicLvl>
 			<value level="1">28</value>
 			<value level="2">55</value>
@@ -1024,6 +1024,7 @@
 	</skill>
 	<skill id="112" toLevel="4" name="Deflect Arrow">
 		<!-- Bow Resistance +$s2 for $s1. -->
+		<icon>icon.skill0112</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1039,7 +1040,6 @@
 			<value level="4">40</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0112</icon>
 		<magicLvl>
 			<value level="1">24</value>
 			<value level="2">32</value>
@@ -1100,6 +1100,7 @@
 	</skill>
 	<skill id="115" toLevel="19" name="Power Break">
 		<!-- Enemy's P. Atk. -$s2 for $s1. -->
+		<icon>icon.skill0115</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
 			<value level="2">2</value>
@@ -1149,7 +1150,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0115</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -1251,6 +1251,7 @@
 	</skill>
 	<skill id="116" toLevel="16" name="Howl">
 		<!-- Nearby enemies' P. Atk. -$s2 for $s1. -->
+		<icon>icon.skill0116</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PA_DOWN</abnormalType>
@@ -1277,7 +1278,6 @@
 			<value level="16">-342</value>
 		</effectPoint>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0116</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -1350,6 +1350,7 @@
 	</skill>
 	<skill id="120" toLevel="15" name="Stunning Fist">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk. and stuns them for $s2. Requires a fist weapon. Over-hit. -->
+		<icon>icon.skill0120</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -1377,7 +1378,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1604</hitTime>
-		<icon>icon.skill0120</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -1455,6 +1455,7 @@
 	</skill>
 	<skill id="121" toLevel="6" name="Battle Roar">
 		<!-- Instantly recovers $s1 of Max HP and Max HP +$s3 for $s2. -->
+		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1474,7 +1475,6 @@
 			<value level="6">635</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0121</icon>
 		<magicLvl>
 			<value level="1">28</value>
 			<value level="2">40</value>
@@ -1515,6 +1515,7 @@
 	</skill>
 	<skill id="122" toLevel="17" name="Hex">
 		<!-- Enemy's P. Def. -$s2 for $s1. -->
+		<icon>icon.skill0122</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
@@ -1542,7 +1543,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1200</hitTime>
-		<icon>icon.skill0122</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>30</lvlBonusRate>
@@ -1599,6 +1599,7 @@
 	</skill>
 	<skill id="123" toLevel="3" name="Spirit Barrier">
 		<!-- M. Def. +$s2 for $s1. -->
+		<icon>icon.skill0123</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1612,7 +1613,6 @@
 			<value level="3">549</value>
 		</effectPoint>
 		<hitTime>4000</hitTime>
-		<icon>icon.skill0123</icon>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>
 			<value level="1">40</value>
@@ -1649,6 +1649,7 @@
 	</skill>
 	<skill id="127" toLevel="22" name="Hamstring">
 		<!-- Enemy's Speed -$s2 for $s1 -->
+		<icon>icon.skill0127</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
@@ -1675,7 +1676,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0127</icon>
 		<isDebuff>true</isDebuff>
 		<lvlBonusRate>30</lvlBonusRate>
 		<magicLvl>
@@ -1765,6 +1765,7 @@
 	</skill>
 	<skill id="129" toLevel="5" name="Poison">
 		<!-- Poisons the target, causing loss of $s2 HP per sec. for $s1 -->
+		<icon>icon.skill0129</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">5</value>
@@ -1788,7 +1789,6 @@
 		</effectPoint>
 		<effectRange>1100</effectRange>
 		<hitTime>3000</hitTime>
-		<icon>icon.skill0129</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>20</lvlBonusRate>
@@ -1835,6 +1835,7 @@
 	</skill>
 	<skill id="130" toLevel="2" name="Thrill Fight">
 		<!-- Speed -$s2 and Atk. Spd. +$s3 for $s1 -->
+		<icon>icon.skill0130</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1846,7 +1847,6 @@
 			<value level="2">523</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0130</icon>
 		<magicLvl>
 			<value level="1">46</value>
 			<value level="2">55</value>
@@ -1878,6 +1878,7 @@
 	</skill>
 	<skill id="131" toLevel="3" name="Hawk Eye">
 		<!-- Skill Power +$s2, Accuracy +$s3 for $s1 -->
+		<icon>icon.skill0131</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1891,7 +1892,6 @@
 			<value level="3">549</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0131</icon>
 		<magicLvl>
 			<value level="1">40</value>
 			<value level="2">49</value>
@@ -1963,6 +1963,7 @@
 	</skill>
 	<skill id="139" toLevel="9" name="Guts">
 		<!-- For $s1, P. Def. +$s2 and Debuff Resistance +$s3. Available when HP is $s4 or lower. -->
+		<icon>icon.skill0139</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1988,7 +1989,6 @@
 			<value level="9">550</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0139</icon>
 		<magicLvl>
 			<value level="1">36</value>
 			<value level="2">43</value>
@@ -2951,6 +2951,7 @@
 	</skill>
 	<skill id="176" toLevel="9" name="Frenzy">
 		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, P. Critical Rate +$s4, P. Critical Damage +$s5, and Speed +$s6. Additional P. Accuracy $s7 and P. Atk. +$s8 when using a two-handed sword, two-handed blunt weapon, or spear. Available when HP is $s9 or lower. -->
+		<icon>icon.skill0176</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2976,7 +2977,6 @@
 			<value level="9">1191</value>
 		</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0176</icon>
 		<magicLvl>
 			<value level="1">32</value>
 			<value level="2">46</value>
@@ -3168,9 +3168,9 @@
 	</skill>
 	<skill id="181" toLevel="1" name="Revival">
 		<!-- Restores to full HP in an emergency. Only usable if HP is 10 percent or lower. -->
+		<icon>icon.skill0181</icon>
 		<effectPoint>562</effectPoint>
 		<hitTime>1500</hitTime>
-		<icon>icon.skill0181</icon>
 		<magicLvl>55</magicLvl>
 		<mpConsume>25</mpConsume>
 		<operateType>A1</operateType>
@@ -3194,6 +3194,7 @@
 	</skill>
 	<skill id="190" toLevel="45" name="Fatal Strike">
 		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. Ignores Shield Defense. -->
+		<icon>icon.skill0190</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
 		<effectPoint>
@@ -3240,7 +3241,6 @@
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<hitTime>1080</hitTime>
-		<icon>icon.skill0190</icon>
 		<magicLvl>
 			<value level="1">38</value>
 			<value level="2">39</value>
@@ -3492,8 +3492,8 @@
 	</skill>
 	<skill id="196" toLevel="1" name="Holy Blade">
 		<!-- Ability to attack with holy power. -->
-		<attributeType>HOLY</attributeType>
 		<icon>icon.skill0196</icon>
+		<attributeType>HOLY</attributeType>
 		<magicLvl>43</magicLvl>
 		<mpConsume>8</mpConsume>
 		<operateType>T</operateType>

@@ -1,7 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15500" toLevel="1" name="Major Energy of Life">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2000</castRange>
 		<hitTime>100</hitTime>
@@ -9,7 +8,6 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15501" toLevel="1" name="Superior Energy of Life">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2000</castRange>
 		<hitTime>100</hitTime>
@@ -17,7 +15,6 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15502" toLevel="1" name="Energy of Mana">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2000</castRange>
 		<hitTime>100</hitTime>
@@ -25,7 +22,6 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15503" toLevel="1" name="Major Energy of Mana">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2000</castRange>
 		<hitTime>100</hitTime>
@@ -33,7 +29,6 @@
 		<reuseDelay>2000</reuseDelay>
 	</skill>
 	<skill id="15504" toLevel="1" name="Superior Energy of Mana">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2000</castRange>
 		<hitTime>100</hitTime>
@@ -70,7 +65,6 @@
 	</skill>
 	<skill id="15508" toLevel="4" name="Special Armor">
 		<!-- Special armor reduces damage received from servitors. -->
-		<icon>icon.skill0000</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="15509" toLevel="1" name="Laido Destruction">
@@ -136,7 +130,6 @@
 	</skill>
 	<skill id="15515" toLevel="1" name="Penetrating Eyes">
 		<!-- Emits power from the eyes for powerful damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
@@ -147,7 +140,6 @@
 	</skill>
 	<skill id="15516" toLevel="1" name="Summon Giant Illusion">
 		<!-- Twists the flow of time to summon a bigger version of the self upon death (Presentation). -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
@@ -156,7 +148,6 @@
 	</skill>
 	<skill id="15517" toLevel="1" name="Chaos Attack">
 		<!-- Swings arms to attack target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>70</castRange>
@@ -176,7 +167,6 @@
 	</skill>
 	<skill id="15519" toLevel="1" name="Summon Undead">
 		<!-- Summons real body. (Presentation) -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
@@ -185,7 +175,6 @@
 	</skill>
 	<skill id="15520" toLevel="1" name="Rush Raid">
 		<!-- Powerful rush attack on enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -195,7 +184,6 @@
 	</skill>
 	<skill id="15521" toLevel="1" name="Flailing Spin">
 		<!-- Swings arms to attack target. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>70</castRange>
@@ -227,7 +215,6 @@
 	</skill>
 	<skill id="15524" toLevel="1" name="Suck Blood">
 		<!-- Sucks blood from the enemy, continuously draining HP. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -238,7 +225,6 @@
 	</skill>
 	<skill id="15525" toLevel="2" name="Rush Attack">
 		<!-- Powerful rush attack on enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -257,7 +243,6 @@
 	</skill>
 	<skill id="15527" toLevel="1" name="Chaos Breath">
 		<!-- AoE M. Atk. On target's area. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>300</castRange>
@@ -268,7 +253,6 @@
 	</skill>
 	<skill id="15528" toLevel="1" name="Kaonel Rush">
 		<!-- Powerful rush attack on enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -311,7 +295,6 @@
 	</skill>
 	<skill id="15532" toLevel="1" name="Pupil Focus">
 		<!-- Emits power from the eyes for powerful damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -333,7 +316,6 @@
 	</skill>
 	<skill id="15534" toLevel="1" name="Mutilate Body">
 		<!-- Cuts enemy for powerful damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>70</castRange>
@@ -343,7 +325,6 @@
 	</skill>
 	<skill id="15535" toLevel="1" name="Bloody Breath">
 		<!-- Breathes a crimson breath on enemies within 120 degrees in front of you to inflict damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>300</castRange>
@@ -395,7 +376,6 @@
 	</skill>
 	<skill id="15541" toLevel="1" name="Flame Pillar">
 		<!-- A pillar of fire rushes from beneath your target's feet for damage. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>300</castRange>
@@ -405,7 +385,6 @@
 	</skill>
 	<skill id="15542" toLevel="1" name="Rush Raid">
 		<!-- Powerful rush attack on enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -426,7 +405,6 @@
 	</skill>
 	<skill id="15544" toLevel="2" name="Rush Attack">
 		<!-- Powerful rush attack on enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>300</castRange>
@@ -455,7 +433,6 @@
 	</skill>
 	<skill id="15547" toLevel="1" name="Point Attack">
 		<!-- Swings sword at an enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>150</castRange>
@@ -542,7 +519,6 @@
 	</skill>
 	<skill id="15555" toLevel="1" name="Cunning Strike">
 		<!-- Hits enemy's vital point. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>200</castRange>
@@ -641,7 +617,6 @@
 	</skill>
 	<skill id="15564" toLevel="2" name="Theor's Attack">
 		<!-- P. Atk. On a single enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>70</castRange>
@@ -681,7 +656,6 @@
 	</skill>
 	<skill id="15568" toLevel="1" name="Forward March">
 		<!-- Powerful rush attack on enemy. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>600</castRange>
@@ -957,19 +931,16 @@
 	</skill>
 	<skill id="15596" toLevel="1" name="Presentation - Lindvior's Takeoff">
 		<!-- Lindvior takes off. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>4200</hitTime>
 	</skill>
 	<skill id="15597" toLevel="1" name="Presentation - Lindvior's Landing">
 		<!-- Lindvior lands. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="15598" toLevel="1" name="Mighty Wind Strike">
 		<!-- Ranged projectile. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>2500</castRange>
 		<hitTime>2500</hitTime>

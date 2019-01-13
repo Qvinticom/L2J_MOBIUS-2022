@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19200" toLevel="1" name="Gravity Sign">
 		<!-- For 30 sec., P./M. Def. + 10%. -->
+		<icon>icon.skill1997</icon>
 		<abnormalType>1</abnormalType>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
-		<icon>icon.skill1997</icon>
 		<operateType>A2</operateType>
 		<effectPoint>2</effectPoint>
 		<isMagic>4</isMagic>
@@ -26,7 +26,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalVisualEffect>PALADIN_PROTECTION</abnormalVisualEffect>
-		<icon>icon.skill19201</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
@@ -59,7 +58,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalVisualEffect>SENTINEL_PROTECTION</abnormalVisualEffect>
-		<icon>icon.skill19202</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
@@ -92,7 +90,6 @@
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
-		<icon>icon.skill19203</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
@@ -132,7 +129,6 @@
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1030">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SONG_WEAPON</abnormalType> <!-- find proper name -->
-		<icon>icon.skill19204</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -182,7 +178,6 @@
 		</abnormalTime>
 		<abnormalType>SONG_OF_ARCHERY</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skillsongofarchery</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -211,7 +206,6 @@
 		</abnormalTime>
 		<abnormalType>DANCE_OF_SAGE</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skilldanceofwisdom</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -240,7 +234,6 @@
 		</abnormalTime>
 		<abnormalType>SONG_WEAPON</abnormalType> <!-- find proper name -->
 		<affectRange>1000</affectRange>
-		<icon>icon.skill19207</icon>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -274,7 +267,6 @@
 	<skill id="19208" toLevel="1" name="Seal of Restriction">
 		<!-- Updated to IO -->
 		<!-- Casts a curse that prevents the target and nearby enemies from receiving Invincibility for 30 seconds during PvP. Consumes 5 Spirit Ores. -->
-		<icon>icon.skill19208</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -317,7 +309,6 @@
 	<skill id="19209" toLevel="1" name="Divinity of Einhasad">
 		<!-- Updated to IO -->
 		<!-- Decreases Magic Skill MP Consumption by 30% and has a 100% to result in a Critical when using 'Radiant Heal', 'Panic Heal', or 'Brilliant Heal'. Consumes 5 Spirit Ores. -->
-		<icon>icon.skill19209</icon>
 		<operateType>A2</operateType>
 		<mpConsume>46</mpConsume>
 		<reuseDelay>180000</reuseDelay>
@@ -349,7 +340,6 @@
 	<skill id="19210" toLevel="1" name="Summon Tree of Sephiroth">
 		<!-- Updated to IO -->
 		<!-- Summons an Enchanted Tree of Life that cannot be targeted. The summoned tree heals nearby party members for 30 seconds and casts a debuff canceling blessing. Consumes 5 Spirit Ores. -->
-		<icon>icon.skill19210</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -411,7 +401,6 @@
 	<skill id="19211" toLevel="1" name="Barrer for Test">
 		<!-- AUTO GENERATED SKILL -->
 		<!-- For 1 min., puts a barrier around a party member. The barrier blocks 50000 damage. Consumes 5 Soulstones. -->
-		<icon>icon.skill19211</icon>
 		<operateType>A2</operateType>
 		<mpConsume>43</mpConsume>
 		<castRange>600</castRange>
@@ -424,7 +413,6 @@
 	<skill id="19212" toLevel="1" name="Shillien Protection">
 		<!-- Updated to IO -->
 		<!-- Puts a barrier around a party member for 30 seconds. Recovers 100% CP/HP if dealt a death blow. Buff is deleted when the effect is applied. Consumes 5 Spirit Ores. -->
-		<icon>icon.skill19211</icon>
 		<operateType>A2</operateType>
 		<mpConsume>46</mpConsume>
 		<castRange>600</castRange>
@@ -461,7 +449,6 @@
 	<skill id="19213" toLevel="1" name="Polishing Arrows: Atk. Spd.">
 		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Arrows with increased Atk. Spd. Consumes 1 Crystal (R-grade). -->
-		<icon>icon.skill_polishing_arrows</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -488,7 +475,6 @@
 	<skill id="19214" toLevel="1" name="Polishing Bolts: Atk. Spd.">
 		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Bolts with increased Atk. Spd. Consumes 1 Crystal (R-grade). -->
-		<icon>icon.skill_polishing_bolts</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -515,7 +501,6 @@
 	<skill id="19215" toLevel="1" name="Polishing Arrows: P. Atk.">
 		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Arrows with increased P. Atk. Consumes 1 Crystal (R-grade). -->
-		<icon>icon.skill_polishing_arrows</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -542,7 +527,6 @@
 	<skill id="19216" toLevel="1" name="Polishing Bolts: P. Atk.">
 		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Bolts with increased P. Atk. Consumes 1 Crystal (R-grade). -->
-		<icon>icon.skill_polishing_bolts</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -569,7 +553,6 @@
 	<skill id="19217" toLevel="1" name="Polishing Arrows: Added Blow">
 		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Arrows with Additional Hit. Consumes 1 Crystal (R-grade). -->
-		<icon>icon.skill_polishing_arrows</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -596,7 +579,6 @@
 	<skill id="19218" toLevel="1" name="Polishing Bolts: Added Blow">
 		<!-- Updated to IO -->
 		<!-- Creates 250 Enhanced Orichalcum Bolts with Additional Hit. Consumes 1 Crystal (R-grade). -->
-		<icon>icon.skill_polishing_bolts</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -623,7 +605,6 @@
 	<skill id="19219" toLevel="1" name="Blessing of Tree">
 		<!-- Updated to IO -->
 		<!-- Recovers HP and removes bad abnormal statuses. -->
-		<icon>icon.skill1258</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -650,7 +631,6 @@
 	<skill id="19220" toLevel="1" name="Sharing Equipment">
 		<!-- For 30 min., the ability of the equipped item transfers to your servitor. Consumes 5 Spirit Ores. -->
 		<!-- Info: Transfers PvP/PvE attack/defense from items, just as other SAs, but not augments. -->
-		<icon>icon.skill19220</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -715,7 +695,6 @@
 	</skill>
 	<skill id="19221" toLevel="1" name="Power of Darkness">
 		<!-- Updated to IO -->
-		<icon>Icon.skill1050</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>2</effectPoint>
@@ -736,7 +715,6 @@
 	</skill>
 	<skill id="19222" toLevel="3" name="Dignity of the Exalted">
 		<!-- STR/DEX/CON/INT/WIT/MEN/CHA + 1 -->
-		<icon>icon.skill19222</icon>
 		<operateType>P</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effectPoint>100</effectPoint>
@@ -802,7 +780,6 @@
 	</skill>
 	<skill id="19223" toLevel="1" name="Belief of the Exalted">
 		<!-- Teleports to selected party member. Consumes 100 Spirit Ores. -->
-		<icon>icon.skill19223</icon>
 		<operateType>A1</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
 		<mpConsume>142</mpConsume>
@@ -810,7 +787,6 @@
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
-		<icon>icon.skill0821</icon>
 		<magicLvl>99</magicLvl>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>100</itemConsumeCount>
@@ -829,7 +805,6 @@
 	</skill>
 	<skill id="19224" toLevel="1" name="Blessing of the Exalted">
 		<!-- Gives 'Blessing of the Exalted' effect to all party members. Maintains target's buff/de-buff condition even following death and resurrection. Consumes 40 Spirit Ores. -->
-		<icon>icon.skill19224</icon>
 		<operateType>A2</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
 		<mpConsume>207</mpConsume>
@@ -860,7 +835,6 @@
 	</skill>
 	<skill id="19225" toLevel="1" name="Summon Battle Potion">
 		<!-- Summons 5 Battle Quick Healing Potions. Consumes 40 Crystals (R-grade). -->
-		<icon>icon.skill19225</icon>
 		<operateType>A1</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
 		<mpConsume>142</mpConsume>
@@ -885,7 +859,6 @@
 	</skill>
 	<skill id="19226" toLevel="2" name="Favor of the Exalted">
 		<!-- For 1 hr., increases gained XP/SP by 3%. Consumes 40 Spirit Ores. -->
-		<icon>icon.skill19226</icon>
 		<operateType>A2</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
 		<abnormalLvl>
@@ -940,7 +913,6 @@
 			<value level="1">20</value>
 			<value level="2">85</value>
 		</magicLvl>
-		<icon>icon.skill30008</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -964,7 +936,6 @@
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SONG_OF_THIEF</abnormalType> <!-- TODO: confirm -->
 		<affectRange>1000</affectRange>
-		<icon>icon.skill19228</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -987,7 +958,6 @@
 	<skill id="19229" toLevel="1" name="Fate of the Exalted">
 		<!-- Updated to IO -->
 		<!-- LUC + 3. -->
-		<icon>icon.skill19222</icon>
 		<operateType>P</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effectPoint>100</effectPoint>
@@ -1002,7 +972,6 @@
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
-		<icon>icon.skill1047</icon>
 		<operateType>A2</operateType>
 		<effectPoint>635</effectPoint>
 		<abnormalTime>15</abnormalTime>
@@ -1019,7 +988,6 @@
 		</abnormalTime>
 		<abnormalType>SONG_OF_WISDOM</abnormalType> <!-- TODO: confirm -->
 		<affectRange>1000</affectRange>
-		<icon>icon.skill19231</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -1049,7 +1017,6 @@
 		</abnormalTime>
 		<abnormalType>CRIPPLING_DANCE</abnormalType> <!-- TODO: confirm -->
 		<affectRange>1000</affectRange>
-		<icon>icon.skill19232</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>

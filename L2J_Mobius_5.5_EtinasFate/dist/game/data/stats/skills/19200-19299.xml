@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19200" toLevel="1" name="Gravity Sign">
 		<!-- For 30 sec., P./ M. Def. +10%. -->
+		<icon>icon.skill1997</icon>
 		<abnormalType>1</abnormalType>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
-		<icon>icon.skill1997</icon>
 		<operateType>A2</operateType>
 		<effectPoint>2</effectPoint>
 		<isMagic>4</isMagic>
@@ -22,11 +22,11 @@
 	</skill>
 	<skill id="19201" toLevel="1" name="Paladin's Protection">
 		<!-- For 15 sec., all party members' P. Def. +200%, P. Evastion +8, Speed +20. Consumes 5 Soulstones. -->
+		<icon>icon.skill19201</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalVisualEffect>PALADIN_PROTECTION</abnormalVisualEffect>
-		<icon>icon.skill19201</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<targetType>SELF</targetType>
@@ -54,10 +54,10 @@
 	</skill>
 	<skill id="19202" toLevel="1" name="Sentinel's Protection">
 		<!-- For 15 sec., all party members' M. Def. +200%, M. Evastion +8, Speed +20. Consumes 5 Soulstones. -->
+		<icon>icon.skill19202</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalVisualEffect>SENTINEL_PROTECTION</abnormalVisualEffect>
-		<icon>icon.skill19202</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
@@ -85,11 +85,11 @@
 		</effects>
 	</skill>
 	<skill id="19203" toLevel="1" name="Ultimate Bullseye">
+		<icon>icon.skill19203</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
 		<abnormalType>REAL_TARGET</abnormalType>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
-		<icon>icon.skill19203</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>1785</itemConsumeId> <!-- Soulstones -->
 		<operateType>A2</operateType>
@@ -121,6 +121,7 @@
 		</effects>
 	</skill>
 	<skill id="19204" toLevel="1" name="Prophecy of Might">
+		<icon>icon.skill19204</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -128,7 +129,6 @@
 			<value fromLevel="1" toLevel="1" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>SONG_WEAPON</abnormalType> <!-- find proper name -->
-		<icon>icon.skill19204</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -169,6 +169,7 @@
 		</effects>
 	</skill>
 	<skill id="19205" toLevel="1" name="Song of Archery">
+		<icon>icon.skillsongofarchery</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
@@ -177,7 +178,6 @@
 		</abnormalTime>
 		<abnormalType>SONG_OF_ARCHERY</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skillsongofarchery</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -197,6 +197,7 @@
 		</effects>
 	</skill>
 	<skill id="19206" toLevel="1" name="Sage's Dance">
+		<icon>icon.skilldanceofwisdom</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
@@ -205,7 +206,6 @@
 		</abnormalTime>
 		<abnormalType>DANCE_OF_SAGE</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skilldanceofwisdom</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -225,6 +225,7 @@
 		</effects>
 	</skill>
 	<skill id="19207" toLevel="1" name="Chant of Bison">
+		<icon>icon.skill19207</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">300</value>
@@ -233,7 +234,6 @@
 		</abnormalTime>
 		<abnormalType>SONG_WEAPON</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill19207</icon>
 		<itemConsumeCount>10</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<operateType>A2</operateType>
@@ -265,7 +265,255 @@
 		</effects>
 	</skill>
 	<skill id="19208" toLevel="1" name="Seal of Restriction">
-		<icon>icon.skill19208</icon>
+		<icon>
+			<value level="1">icon.skill11558</value>
+			<value level="2">icon.skill11558</value>
+			<value level="3">icon.skill11558</value>
+			<value level="4">icon.skill19208</value>
+			<value level="5">icon.skill19208</value>
+			<value level="6">icon.skill19208</value>
+			<value level="7">icon.skill19208</value>
+			<value level="8">icon.skill19208</value>
+			<value level="9">icon.skill19208</value>
+			<value level="10">icon.skill19208</value>
+			<value level="11">icon.skill19208</value>
+			<value level="12">icon.skill19208</value>
+			<value level="13">icon.skill19208</value>
+			<value level="14">icon.skill19208</value>
+			<value level="15">icon.skill19208</value>
+			<value level="16">icon.skill19208</value>
+			<value level="17">icon.skill19208</value>
+			<value level="18">icon.skill19208</value>
+			<value level="19">icon.skill19208</value>
+			<value level="20">icon.skill19208</value>
+			<value level="21">icon.skill19208</value>
+			<value level="22">icon.skill19208</value>
+			<value level="23">icon.skill19208</value>
+			<value level="24">icon.skill19208</value>
+			<value level="25">icon.skill19208</value>
+			<value level="26">icon.skill19208</value>
+			<value level="27">icon.skill19208</value>
+			<value level="28">icon.skill19208</value>
+			<value level="29">icon.skill19208</value>
+			<value level="30">icon.skill19208</value>
+			<value level="31">icon.skill19208</value>
+			<value level="32">icon.skill19208</value>
+			<value level="33">icon.skill19208</value>
+			<value level="34">icon.skill19208</value>
+			<value level="35">icon.skill19208</value>
+			<value level="36">icon.skill19208</value>
+			<value level="37">icon.skill19208</value>
+			<value level="38">icon.skill19208</value>
+			<value level="39">icon.skill19208</value>
+			<value level="40">icon.skill19208</value>
+			<value level="41">icon.skill19208</value>
+			<value level="42">icon.skill19208</value>
+			<value level="43">icon.skill19208</value>
+			<value level="44">icon.skill19208</value>
+			<value level="45">icon.skill19208</value>
+			<value level="46">icon.skill19208</value>
+			<value level="47">icon.skill19208</value>
+			<value level="48">icon.skill19208</value>
+			<value level="49">icon.skill19208</value>
+			<value level="50">icon.skill19208</value>
+			<value level="51">icon.skill19208</value>
+			<value level="52">icon.skill19208</value>
+			<value level="53">icon.skill19208</value>
+			<value level="54">icon.skill19208</value>
+			<value level="55">icon.skill19208</value>
+			<value level="56">icon.skill19208</value>
+			<value level="57">icon.skill19208</value>
+			<value level="58">icon.skill19208</value>
+			<value level="59">icon.skill19208</value>
+			<value level="60">icon.skill19208</value>
+			<value level="61">icon.skill19208</value>
+			<value level="62">icon.skill19208</value>
+			<value level="63">icon.skill19208</value>
+			<value level="64">icon.skill19208</value>
+			<value level="65">icon.skill19208</value>
+			<value level="66">icon.skill19208</value>
+			<value level="67">icon.skill19208</value>
+			<value level="68">icon.skill19208</value>
+			<value level="69">icon.skill19208</value>
+			<value level="70">icon.skill19208</value>
+			<value level="71">icon.skill19208</value>
+			<value level="72">icon.skill19208</value>
+			<value level="73">icon.skill19208</value>
+			<value level="74">icon.skill19208</value>
+			<value level="75">icon.skill19208</value>
+			<value level="76">icon.skill19208</value>
+			<value level="77">icon.skill19208</value>
+			<value level="78">icon.skill19208</value>
+			<value level="79">icon.skill19208</value>
+			<value level="80">icon.skill19208</value>
+			<value level="81">icon.skill19208</value>
+			<value level="82">icon.skill19208</value>
+			<value level="83">icon.skill19208</value>
+			<value level="84">icon.skill19208</value>
+			<value level="85">icon.skill19208</value>
+			<value level="86">icon.skill19208</value>
+			<value level="87">icon.skill19208</value>
+			<value level="88">icon.skill19208</value>
+			<value level="89">icon.skill19208</value>
+			<value level="90">icon.skill19208</value>
+			<value level="91">icon.skill19208</value>
+			<value level="92">icon.skill19208</value>
+			<value level="93">icon.skill19208</value>
+			<value level="94">icon.skill19208</value>
+			<value level="95">icon.skill19208</value>
+			<value level="96">icon.skill19208</value>
+			<value level="97">icon.skill19208</value>
+			<value level="98">icon.skill19208</value>
+			<value level="99">icon.skill19208</value>
+			<value level="100">icon.skill19208</value>
+			<value level="101">icon.skill19208</value>
+			<value level="102">icon.skill19208</value>
+			<value level="103">icon.skill19208</value>
+			<value level="104">icon.skill19208</value>
+			<value level="105">icon.skill19208</value>
+			<value level="106">icon.skill19208</value>
+			<value level="107">icon.skill19208</value>
+			<value level="108">icon.skill19208</value>
+			<value level="109">icon.skill19208</value>
+			<value level="110">icon.skill19208</value>
+			<value level="111">icon.skill19208</value>
+			<value level="112">icon.skill19208</value>
+			<value level="113">icon.skill19208</value>
+			<value level="114">icon.skill19208</value>
+			<value level="115">icon.skill19208</value>
+			<value level="116">icon.skill19208</value>
+			<value level="117">icon.skill19208</value>
+			<value level="118">icon.skill19208</value>
+			<value level="119">icon.skill19208</value>
+			<value level="120">icon.skill19208</value>
+			<value level="121">icon.skill19208</value>
+			<value level="122">icon.skill19208</value>
+			<value level="123">icon.skill19208</value>
+			<value level="124">icon.skill19208</value>
+			<value level="125">icon.skill19208</value>
+			<value level="126">icon.skill19208</value>
+			<value level="127">icon.skill19208</value>
+			<value level="128">icon.skill19208</value>
+			<value level="129">icon.skill19208</value>
+			<value level="130">icon.skill19208</value>
+			<value level="131">icon.skill19208</value>
+			<value level="132">icon.skill19208</value>
+			<value level="133">icon.skill19208</value>
+			<value level="134">icon.skill19208</value>
+			<value level="135">icon.skill19208</value>
+			<value level="136">icon.skill19208</value>
+			<value level="137">icon.skill19208</value>
+			<value level="138">icon.skill19208</value>
+			<value level="139">icon.skill19208</value>
+			<value level="140">icon.skill19208</value>
+			<value level="141">icon.skill19208</value>
+			<value level="142">icon.skill19208</value>
+			<value level="143">icon.skill19208</value>
+			<value level="144">icon.skill19208</value>
+			<value level="145">icon.skill19208</value>
+			<value level="146">icon.skill19208</value>
+			<value level="147">icon.skill19208</value>
+			<value level="148">icon.skill19208</value>
+			<value level="149">icon.skill19208</value>
+			<value level="150">icon.skill19208</value>
+			<value level="151">icon.skill19208</value>
+			<value level="152">icon.skill19208</value>
+			<value level="153">icon.skill19208</value>
+			<value level="154">icon.skill19208</value>
+			<value level="155">icon.skill19208</value>
+			<value level="156">icon.skill19208</value>
+			<value level="157">icon.skill19208</value>
+			<value level="158">icon.skill19208</value>
+			<value level="159">icon.skill19208</value>
+			<value level="160">icon.skill19208</value>
+			<value level="161">icon.skill19208</value>
+			<value level="162">icon.skill19208</value>
+			<value level="163">icon.skill19208</value>
+			<value level="164">icon.skill19208</value>
+			<value level="165">icon.skill19208</value>
+			<value level="166">icon.skill19208</value>
+			<value level="167">icon.skill19208</value>
+			<value level="168">icon.skill19208</value>
+			<value level="169">icon.skill19208</value>
+			<value level="170">icon.skill19208</value>
+			<value level="171">icon.skill19208</value>
+			<value level="172">icon.skill19208</value>
+			<value level="173">icon.skill19208</value>
+			<value level="174">icon.skill19208</value>
+			<value level="175">icon.skill19208</value>
+			<value level="176">icon.skill19208</value>
+			<value level="177">icon.skill19208</value>
+			<value level="178">icon.skill19208</value>
+			<value level="179">icon.skill19208</value>
+			<value level="180">icon.skill19208</value>
+			<value level="181">icon.skill19208</value>
+			<value level="182">icon.skill19208</value>
+			<value level="183">icon.skill19208</value>
+			<value level="184">icon.skill19208</value>
+			<value level="185">icon.skill19208</value>
+			<value level="186">icon.skill19208</value>
+			<value level="187">icon.skill19208</value>
+			<value level="188">icon.skill19208</value>
+			<value level="189">icon.skill19208</value>
+			<value level="190">icon.skill19208</value>
+			<value level="191">icon.skill19208</value>
+			<value level="192">icon.skill19208</value>
+			<value level="193">icon.skill19208</value>
+			<value level="194">icon.skill19208</value>
+			<value level="195">icon.skill19208</value>
+			<value level="196">icon.skill19208</value>
+			<value level="197">icon.skill19208</value>
+			<value level="198">icon.skill19208</value>
+			<value level="199">icon.skill19208</value>
+			<value level="200">icon.skill19208</value>
+			<value level="201">icon.skill19208</value>
+			<value level="202">icon.skill19208</value>
+			<value level="203">icon.skill19208</value>
+			<value level="204">icon.skill19208</value>
+			<value level="205">icon.skill19208</value>
+			<value level="206">icon.skill19208</value>
+			<value level="207">icon.skill19208</value>
+			<value level="208">icon.skill19208</value>
+			<value level="209">icon.skill19208</value>
+			<value level="210">icon.skill19208</value>
+			<value level="211">icon.skill19208</value>
+			<value level="212">icon.skill19208</value>
+			<value level="213">icon.skill19208</value>
+			<value level="214">icon.skill19208</value>
+			<value level="215">icon.skill19208</value>
+			<value level="216">icon.skill19208</value>
+			<value level="217">icon.skill19208</value>
+			<value level="218">icon.skill19208</value>
+			<value level="219">icon.skill19208</value>
+			<value level="220">icon.skill19208</value>
+			<value level="221">icon.skill19208</value>
+			<value level="222">icon.skill19208</value>
+			<value level="223">icon.skill19208</value>
+			<value level="224">icon.skill19208</value>
+			<value level="225">icon.skill19208</value>
+			<value level="226">icon.skill19208</value>
+			<value level="227">icon.skill19208</value>
+			<value level="228">icon.skill19208</value>
+			<value level="229">icon.skill19208</value>
+			<value level="230">icon.skill19208</value>
+			<value level="231">icon.skill19208</value>
+			<value level="232">icon.skill19208</value>
+			<value level="233">icon.skill19208</value>
+			<value level="234">icon.skill19208</value>
+			<value level="235">icon.skill19208</value>
+			<value level="236">icon.skill19208</value>
+			<value level="237">icon.skill19208</value>
+			<value level="238">icon.skill19208</value>
+			<value level="239">icon.skill19208</value>
+			<value level="240">icon.skill19208</value>
+			<value level="241">icon.skill19208</value>
+			<value level="242">icon.skill19208</value>
+			<value level="243">icon.skill19208</value>
+			<value level="244">icon.skill19208</value>
+			<value level="245">icon.skill19208</value>
+			<value level="246">icon.skill19208</value>
+			<value level="247">icon.skill19208</value>
+		</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -795,7 +1043,6 @@
 		<hitTime>5000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>600000</reuseDelay>
-		<icon>icon.skill0821</icon>
 		<magicLvl>99</magicLvl>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
 		<itemConsumeCount>100</itemConsumeCount>
@@ -911,6 +1158,7 @@
 	</skill>
 	<skill id="19227" toLevel="2" name="Wind Hiding">
 		<!-- Blends into the wind for $s1. Spd. +$s2. Canceled when using standard attacks or attack skills. -->
+		<icon>icon.skill30008</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -925,7 +1173,6 @@
 			<value level="1">20</value>
 			<value level="2">85</value>
 		</magicLvl>
-		<icon>icon.skill30008</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -943,11 +1190,11 @@
 		</effects>
 	</skill>
 	<skill id="19228" toLevel="1" name="Song of Thief">
+		<icon>icon.skill19228</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>SONG_OF_THIEF</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill19228</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -982,16 +1229,17 @@
 	</skill>
 	<skill id="19230" toLevel="30" name="MP Recovery">
 		<!-- MP Recovery Bonus +$s2 for $s1. -->
+		<icon>icon.skill1047</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
-		<icon>icon.skill1047</icon>
 		<operateType>A2</operateType>
 		<effectPoint>635</effectPoint>
 		<abnormalTime>15</abnormalTime>
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="19231" toLevel="1" name="Song of Assault">
+		<icon>icon.skill19231</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
@@ -1000,7 +1248,6 @@
 		</abnormalTime>
 		<abnormalType>SONG_OF_WISDOM</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill19231</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -1044,6 +1291,7 @@
 		</effects>
 	</skill>
 	<skill id="19232" toLevel="1" name="Crippling Dance">
+		<icon>icon.skill19232</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="1">30</value>
@@ -1052,7 +1300,6 @@
 		</abnormalTime>
 		<abnormalType>CRIPPLING_DANCE</abnormalType>
 		<affectRange>1000</affectRange>
-		<icon>icon.skill19232</icon>
 		<itemConsumeCount>5</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ores -->
 		<operateType>A2</operateType>
@@ -1085,7 +1332,7 @@
 	</skill>
 	<skill id="19233" toLevel="3" name="Guardian's Shield">
 		<!-- Increase Defense by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19120</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -1100,7 +1347,7 @@
 	</skill>
 	<skill id="19234" toLevel="3" name="Guardian's Magic Barrier">
 		<!-- Increase M. Defense by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19121</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalDefence">
@@ -1115,7 +1362,7 @@
 	</skill>
 	<skill id="19235" toLevel="3" name="Guardian's Body">
 		<!-- Increase Max HP by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1045</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
@@ -1130,7 +1377,7 @@
 	</skill>
 	<skill id="19236" toLevel="3" name="Guardian's Elemental Cover">
 		<!-- Increase Attribute Resistance by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1352</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -1185,7 +1432,7 @@
 	</skill>
 	<skill id="19237" toLevel="2" name="Guardian's Armor Defense">
 		<!-- Increases P. Defense and M. Defense by $s1 if heavy armor is equipped. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0231</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -1212,7 +1459,7 @@
 	</skill>
 	<skill id="19238" toLevel="2" name="Guardian's Leather Defense">
 		<!-- Increases P. Defense and M. Defense by $s1 if light armor is equipped. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0233</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -1239,7 +1486,7 @@
 	</skill>
 	<skill id="19239" toLevel="2" name="Guardian's Tunic Defense">
 		<!-- Increases P. Defense and M. defense by $s1 if robe is equipped. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0234</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -1266,7 +1513,7 @@
 	</skill>
 	<skill id="19240" toLevel="2" name="Guardian's Resist">
 		<!-- Increase Debuff Resistance by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1354</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ResistAbnormalByCategory">
@@ -1280,7 +1527,7 @@
 	</skill>
 	<skill id="19241" toLevel="4" name="Guardian's Life">
 		<!-- Increase Max HP by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1229</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
@@ -1296,7 +1543,7 @@
 	</skill>
 	<skill id="19242" toLevel="1" name="Guardian's Block">
 		<!-- Increase Shield Defense by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1304</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ShieldDefence">
@@ -1307,7 +1554,7 @@
 	</skill>
 	<skill id="19243" toLevel="4" name="Guardian's Armor">
 		<!-- Increase Defense by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19165</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalDefence">
@@ -1323,7 +1570,7 @@
 	</skill>
 	<skill id="19244" toLevel="1" name="Guardian's Guidance">
 		<!-- Increases P. Accuracy, M. Accuracy, and Servitor's P. Accuracy by $s1. Enchants Revelation skill. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19127</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Accuracy">
@@ -1395,7 +1642,7 @@
 	</skill>
 	<skill id="19245" toLevel="2" name="Guardian's Death Shield">
 		<!-- Received P. Critical Damage -$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1542</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceCriticalDamage">
@@ -1409,7 +1656,7 @@
 	</skill>
 	<skill id="19246" toLevel="2" name="Guardian's Focus Shield">
 		<!-- Chance of receiving P. Critical Damage -$s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0986</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceCriticalRate">
@@ -1423,7 +1670,7 @@
 	</skill>
 	<skill id="19247" toLevel="2" name="Guardian's Mind Control">
 		<!-- Decreases skill cooldown by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19132</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Reuse">
@@ -1438,7 +1685,7 @@
 	</skill>
 	<skill id="19248" toLevel="2" name="Guardian's Blessing">
 		<!-- Increase EXP and SP by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill_exp_sp_up</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ExpModify">
@@ -1455,7 +1702,7 @@
 	</skill>
 	<skill id="19249" toLevel="2" name="Guardian's Binding Cover">
 		<!-- Decrease damage received by $s1 when immobilized -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0335</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
 			<condition name="OpCheckAbnormal">
@@ -1477,7 +1724,7 @@
 	</skill>
 	<skill id="19250" toLevel="1" name="Guardian's Spirit">
 		<!-- Increase Attribute Resistance by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10044</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="DefenceAttribute">
@@ -1508,7 +1755,7 @@
 	</skill>
 	<skill id="19251" toLevel="1" name="Guardian's Potential">
 		<!-- Increase skill critical rate by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1532</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalProbability">
@@ -1519,7 +1766,7 @@
 	</skill>
 	<skill id="19252" toLevel="2" name="Guardian's Expert Potion">
 		<!-- Increase Recovery Potion and Miracle Potion by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill_potion_up</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="HealEffect">
@@ -1568,7 +1815,7 @@
 	</skill>
 	<skill id="19255" toLevel="4" name="Berserker's Might">
 		<!-- Increase Attack by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19139</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -1584,7 +1831,7 @@
 	</skill>
 	<skill id="19256" toLevel="4" name="Berserker's Elemental Attack">
 		<!-- Increase Atk. Attribute by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19130</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackAttributeAdd">
@@ -1599,7 +1846,7 @@
 	</skill>
 	<skill id="19257" toLevel="3" name="Berserker's Craft Focus">
 		<!-- Increases P. Skill Critical Rate by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalProbability">
@@ -1614,7 +1861,7 @@
 	</skill>
 	<skill id="19258" toLevel="2" name="Berserker's Backfire">
 		<!-- Increase Damage From Behind by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0030</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="RearDamage">
@@ -1629,7 +1876,7 @@
 	</skill>
 	<skill id="19259" toLevel="3" name="Berserker's Focus">
 		<!-- Increase P. Critical Rate by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalRate">
@@ -1644,7 +1891,7 @@
 	</skill>
 	<skill id="19260" toLevel="1" name="Berserker's Coast">
 		<!-- Decrease skill consuming MP by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19140</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicMpCost">
@@ -1656,7 +1903,7 @@
 	</skill>
 	<skill id="19261" toLevel="3" name="Berserker's Craft Death">
 		<!-- Increases P. Skill Critical Damage by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill10655</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalDamage">
@@ -1671,7 +1918,7 @@
 	</skill>
 	<skill id="19262" toLevel="2" name="Berserker's Mortal">
 		<!-- Increase Skill Mastery rate by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0330</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalProbability">
@@ -1685,7 +1932,7 @@
 	</skill>
 	<skill id="19263" toLevel="3" name="Berserker's Death Whisper">
 		<!-- Increases P. Critical Damage by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill4278</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="CriticalDamage">
@@ -1700,7 +1947,7 @@
 	</skill>
 	<skill id="19264" toLevel="1" name="Berserker's Eagle">
 		<!-- Increases P. Accuracy, M. Accuracy, and Servitor's P. Accuracy by $s1. Enchants Revelation skill. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19127</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Accuracy">
@@ -1772,7 +2019,7 @@
 	</skill>
 	<skill id="19265" toLevel="2" name="Berserker's Battle">
 		<!-- Increase Attack by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1388</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PAtk">
@@ -1786,7 +2033,7 @@
 	</skill>
 	<skill id="19266" toLevel="2" name="Berserker's Fire">
 		<!-- Increase P. Skill Power by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1356</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PhysicalSkillPower">
@@ -1800,7 +2047,7 @@
 	</skill>
 	<skill id="19267" toLevel="1" name="Berserker's Skill Reduction">
 		<!-- Decreases skill cooldown by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0758</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Reuse">
@@ -1812,7 +2059,7 @@
 	</skill>
 	<skill id="19268" toLevel="2" name="Berserker's Blessing">
 		<!-- Increase EXP and SP by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill_exp_sp_up</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ExpModify">
@@ -1829,7 +2076,7 @@
 	</skill>
 	<skill id="19269" toLevel="2" name="Berserker's Binding Attack">
 		<!-- Increase damage on immobile target by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0983</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
 			<condition name="OpCheckAbnormal">
@@ -1851,7 +2098,7 @@
 	</skill>
 	<skill id="19270" toLevel="2" name="Berserker's Divine Attack">
 		<!-- Increase Atk. Attribute by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11011</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackAttributeAdd">
@@ -1864,7 +2111,7 @@
 	</skill>
 	<skill id="19271" toLevel="2" name="Berserker's Expert Potion">
 		<!-- Increase Recovery Potion and Miracle Potion by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill_potion_up</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="HealEffect">
@@ -1878,7 +2125,7 @@
 	</skill>
 	<skill id="19272" toLevel="1" name="Berserker's Combat Master">
 		<!-- Increase Damage by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1499</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PvePhysicalAttackDamageBonus">
@@ -1901,7 +2148,7 @@
 	</skill>
 	<skill id="19273" toLevel="2" name="Wizard's Acumen">
 		<!-- Increase Casting Spd. by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1085</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalAttackSpeed">
@@ -1915,7 +2162,7 @@
 	</skill>
 	<skill id="19274" toLevel="3" name="Wizard's Empower">
 		<!-- Increase M. Atk. by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MAtk">
@@ -1930,7 +2177,7 @@
 	</skill>
 	<skill id="19275" toLevel="3" name="Wizard's Elemental Shot">
 		<!-- Increase Atk. Attribute by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19130</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackAttributeAdd">
@@ -1944,7 +2191,7 @@
 	</skill>
 	<skill id="19276" toLevel="3" name="Wizard's Wild Magic">
 		<!-- Increase M. Critical Rate by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1303</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalRate">
@@ -1959,7 +2206,7 @@
 	</skill>
 	<skill id="19277" toLevel="3" name="Wizard's Condition">
 		<!-- Increase Max HP and MP by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1501</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
@@ -1982,7 +2229,7 @@
 	</skill>
 	<skill id="19278" toLevel="1" name="Wizard's Eva">
 		<!-- Decrease skill consuming MP by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0214</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicMpCost">
@@ -1994,7 +2241,7 @@
 	</skill>
 	<skill id="19279" toLevel="3" name="Wizard's Mystic">
 		<!-- Increase M. Critical Damage by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19160</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicCriticalDamage">
@@ -2009,7 +2256,7 @@
 	</skill>
 	<skill id="19280" toLevel="2" name="Wizard's Prominence">
 		<!-- Increase Skill Mastery rate by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0330</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="SkillCriticalProbability">
@@ -2023,7 +2270,7 @@
 	</skill>
 	<skill id="19281" toLevel="1" name="Wizard's Sight">
 		<!-- Increases P. Accuracy, M. Accuracy, and Servitor's P. Accuracy by $s1. Enchants Revelation skill. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill19127</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Accuracy">
@@ -2095,7 +2342,7 @@
 	</skill>
 	<skill id="19282" toLevel="2" name="Wizard's Protection">
 		<!-- Increase Mental, Stun, and Aerial Yoke success rate by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0046</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackTrait">
@@ -2116,7 +2363,7 @@
 	</skill>
 	<skill id="19283" toLevel="2" name="Wizard's Water">
 		<!-- Increase M. Skill Power by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1355</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MagicalSkillPower">
@@ -2130,7 +2377,7 @@
 	</skill>
 	<skill id="19284" toLevel="2" name="Wizard's Magic Reduction">
 		<!-- Decreases skill cooldown by $s1. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0945</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="Reuse">
@@ -2145,7 +2392,7 @@
 	</skill>
 	<skill id="19285" toLevel="2" name="Wizard's Blessing">
 		<!-- Increase EXP and SP by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill_exp_sp_up</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="ExpModify">
@@ -2162,7 +2409,7 @@
 	</skill>
 	<skill id="19286" toLevel="2" name="Wizard's Binding Shot">
 		<!-- Increase damage on immobile target by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill0983</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
 			<condition name="OpCheckAbnormal">
@@ -2184,7 +2431,7 @@
 	</skill>
 	<skill id="19287" toLevel="2" name="Wizard's Divine Shot">
 		<!-- Increase Atk. Attribute by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill11011</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="AttackAttributeAdd">
@@ -2197,7 +2444,7 @@
 	</skill>
 	<skill id="19288" toLevel="2" name="Wizard's Expert Potion">
 		<!-- Increase Recovery Potion and Miracle Potion by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill_potion_up</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="HealEffect">
@@ -2211,7 +2458,7 @@
 	</skill>
 	<skill id="19289" toLevel="1" name="Wizard's Spellmaster">
 		<!-- Increase Damage by $s1 -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill1500</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="PveMagicalSkillDamageBonus">
@@ -2250,6 +2497,7 @@
 	</skill>
 	<skill id="19296" toLevel="8" name="Counter Flip">
 		<!-- Knocks down the opponent who attacked you for $s1 and moves you behind opponent's back. Cancels Counter Stance. Requires dagger/ dual dagger. -->
+		<icon>icon.skill19296</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2263,7 +2511,6 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>COUNTER_FLIP</abnormalType>
 		<abnormalVisualEffect>RO_COUNTER_TRASPIE</abnormalVisualEffect>
-		<icon>icon.skill19296</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2323,6 +2570,7 @@
 	</skill>
 	<skill id="19297" toLevel="8" name="Counter Flip">
 		<!-- Countering has knocked you down for $s1. -->
+		<icon>icon.skill19296</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2336,7 +2584,6 @@
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
-		<icon>icon.skill19296</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2381,13 +2628,12 @@
 	</skill>
 	<skill id="19298" toLevel="8" name="Flash Dagger">
 		<!-- Blinds enemies in front of you for $s1 and cancels their ability to pick a target. Requires dagger/ dual dagger. -->
+		<icon>icon.skill19298</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>CONFUSION</abnormalType>
-		<icon>icon.skill10527</icon>
 		<activateRate>80</activateRate>
 		<trait>DERANGEMENT</trait>
-		<icon>icon.skill19298</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>

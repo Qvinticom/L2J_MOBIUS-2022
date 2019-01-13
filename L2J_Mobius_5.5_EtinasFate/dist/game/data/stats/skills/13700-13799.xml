@@ -2,9 +2,9 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="13700" toLevel="12" name="Item Skill: Damage Reflect">
 		<!-- For $s1, Damage Reflection +$s2. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -59,6 +59,7 @@
 	</skill>
 	<skill id="13701" toLevel="12" name="Item Skill: Disable Target">
 		<!-- For $s1, the enemy cannot target you. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -75,7 +76,6 @@
 			<value level="12">6</value>
 		</abnormalTime>
 		<abnormalType>MA_DOWN</abnormalType>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -120,6 +120,7 @@
 	</skill>
 	<skill id="13702" toLevel="12" name="Item Skill: Invincibility">
 		<!-- Becomes invincible for $s1. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -137,7 +138,6 @@
 		</abnormalTime>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -526,6 +526,7 @@
 	</skill>
 	<skill id="13708" toLevel="12" name="Item Skill: Aerial Yoke">
 		<!-- For $s1, inflicts Aerial Yoke on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl> <!-- Guessed -->
 		<abnormalTime>
 			<value level="1">3</value>
@@ -547,7 +548,6 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<trait>AIRBIND</trait>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -608,6 +608,7 @@
 	</skill>
 	<skill id="13709" toLevel="12" name="Item Skill: Fear">
 		<!-- For $s1, inflicts Fear on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl> <!-- Guessed -->
 		<abnormalTime>
 			<value level="1">3</value>
@@ -628,7 +629,6 @@
 		<activateRate>60</activateRate> <!-- Guessed -->
 		<trait>DERANGEMENT</trait>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -677,6 +677,7 @@
 	</skill>
 	<skill id="13710" toLevel="12" name="Item Skill: Hold">
 		<!-- For $s1, inflicts Hold on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -697,7 +698,6 @@
 		<activateRate>60</activateRate> <!-- Guessed -->
 		<trait>HOLD</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -747,6 +747,7 @@
 	</skill>
 	<skill id="13711" toLevel="12" name="Item Skill: Knock Down">
 		<!-- For $s1, inflicts Knock Down on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -767,7 +768,6 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<trait>KNOCKDOWN</trait>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -829,6 +829,7 @@
 	</skill>
 	<skill id="13712" toLevel="12" name="Item Skill: Paralyze">
 		<!-- For $s1, inflicts Paralysis on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -849,7 +850,6 @@
 		<activateRate>60</activateRate> <!-- Guessed -->
 		<trait>PARALYZE</trait>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -901,6 +901,7 @@
 	</skill>
 	<skill id="13713" toLevel="12" name="Item Skill: Silence">
 		<!-- For $s1, inflicts Silence on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -921,7 +922,6 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<trait>DERANGEMENT</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -968,6 +968,7 @@
 	</skill>
 	<skill id="13714" toLevel="12" name="Item Skill: Sleep">
 		<!-- For $s1, inflicts Sleep on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -988,7 +989,6 @@
 		<activateRate>80</activateRate> <!-- Guessed -->
 		<trait>SLEEP</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1040,12 +1040,12 @@
 	</skill>
 	<skill id="13715" toLevel="12" name="Item Skill: Slow">
 		<!-- For $s1, decreases the Speed of target and nearby enemies by $s2. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1108,6 +1108,7 @@
 	</skill>
 	<skill id="13716" toLevel="12" name="Item Skill: Stun">
 		<!-- For $s1, inflicts Stun on target and nearby enemies. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -1128,7 +1129,6 @@
 		<activateRate>70</activateRate> <!-- Guessed -->
 		<trait>SHOCK</trait>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1177,8 +1177,8 @@
 	</skill>
 	<skill id="13717" toLevel="4" name="Item Skill: Cancel Target">
 		<!-- Cancels target of nearby enemies. -->
-		<trait>DERANGEMENT</trait>
 		<icon>icon.skill3123</icon>
+		<trait>DERANGEMENT</trait>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">85</value>
@@ -1210,6 +1210,7 @@
 	</skill>
 	<skill id="13718" toLevel="12" name="Item Skill: Aerial Yoke">
 		<!-- For $s1, inflicts Aerial Yoke on target. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -1231,7 +1232,6 @@
 		<activateRate>80</activateRate>
 		<trait>AIRBIND</trait>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1288,6 +1288,7 @@
 	</skill>
 	<skill id="13719" toLevel="12" name="Item Skill: Fear">
 		<!-- For $s1, inflicts Fear on target. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -1308,7 +1309,6 @@
 		<activateRate>60</activateRate>
 		<trait>DERANGEMENT</trait>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1353,6 +1353,7 @@
 	</skill>
 	<skill id="13720" toLevel="12" name="Item Skill: Silence">
 		<!-- For $s1, inflicts Silence on target. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -1373,7 +1374,6 @@
 		<activateRate>80</activateRate>
 		<trait>DERANGEMENT</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1417,6 +1417,7 @@
 	</skill>
 	<skill id="13721" toLevel="12" name="Item Skill: Sleep">
 		<!-- For $s1, inflicts Sleep on target. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -1437,7 +1438,6 @@
 		<activateRate>80</activateRate>
 		<trait>SLEEP</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1484,12 +1484,12 @@
 	</skill>
 	<skill id="13722" toLevel="12" name="Item Skill: Slow">
 		<!-- For $s1, decreases the Speed of target by $s2. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>40</activateRate>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1550,6 +1550,7 @@
 	</skill>
 	<skill id="13723" toLevel="12" name="Item Skill: Stun">
 		<!-- For $s1, inflicts Stun on target. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -1570,7 +1571,6 @@
 		<activateRate>80</activateRate>
 		<trait>SHOCK</trait>
 		<basicProperty>PHYSICAL</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1616,6 +1616,7 @@
 	</skill>
 	<skill id="13724" toLevel="12" name="Item Skill: Hold">
 		<!-- For $s1, inflicts Hold on target. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -1636,7 +1637,6 @@
 		<activateRate>80</activateRate>
 		<trait>HOLD</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1683,6 +1683,7 @@
 	</skill>
 	<skill id="13725" toLevel="12" name="Item Skill: Knock Down">
 		<!-- For $s1, inflicts Knock Down on target. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -1703,7 +1704,6 @@
 		<activateRate>90</activateRate>
 		<trait>KNOCKDOWN</trait>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1762,6 +1762,7 @@
 	</skill>
 	<skill id="13726" toLevel="12" name="Item Skill: Paralyze">
 		<!-- For $s1, inflicts Paralysis on target. -->
+		<icon>icon.skill3123</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -1782,7 +1783,6 @@
 		<activateRate>60</activateRate>
 		<trait>PARALYZE</trait>
 		<basicProperty>MAGIC</basicProperty>
-		<icon>icon.skill3123</icon>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">52</value>
@@ -1845,8 +1845,8 @@
 	</skill>
 	<skill id="13727" toLevel="4" name="Item Skill: Trick">
 		<!-- Cancels enemy's target. -->
-		<trait>DERANGEMENT</trait>
 		<icon>icon.skill3123</icon>
+		<trait>DERANGEMENT</trait>
 		<magicLvl> <!-- Guessed -->
 			<value level="1">46</value>
 			<value level="2">85</value>

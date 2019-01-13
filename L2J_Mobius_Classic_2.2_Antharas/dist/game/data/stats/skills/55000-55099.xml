@@ -2,7 +2,7 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="55000" toLevel="4" name="XP/SP Scroll - High">
 		<!-- Increases XP/ SP gain by 30% for 20 minutes. Buff remains after death. -->
-		<icon>icon.skill55000</icon>
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -46,16 +46,14 @@
 		</effects>
 	</skill>
 	<skill id="55001" toLevel="1" name="Blessed Scroll of Escape">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55002" toLevel="1" name="Blessed Scroll of Resurrection">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55003" toLevel="1" name="1st Class Buff Scroll">
 		<!-- Provides the following positive effects: Shield (Lvl 2), Might (Lvl 2), Concentration (Lvl 2), Acumen (Lvl 1), Wind Walk (Lvl 1), Focus (Lvl 1), Agility (Lvl 1), Empower (Lvl 1). Lasts for 20 minutes. -->
-		<icon>icon.skill55003</icon>
+		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29011</itemConsumeId>
@@ -109,7 +107,7 @@
 	</skill>
 	<skill id="55004" toLevel="2" name="2nd Class Buff Scroll">
 		<!-- Provides the following positive effects: Shield (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2). Lasts for 20 minutes. -->
-		<icon>icon.skill55004</icon>
+		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i01</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29012</itemConsumeId>
@@ -186,47 +184,36 @@
 		</selfEffects>
 	</skill>
 	<skill id="55005" toLevel="1" name="Scroll: Enchant Weapon (D-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55006" toLevel="1" name="Scroll: Enchant Armor (D-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55007" toLevel="1" name="Scroll: Enchant Weapon (C-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55008" toLevel="1" name="Scroll: Enchant Armor (C-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55009" toLevel="1" name="Blessed Scroll: Enchant Weapon (D-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55010" toLevel="1" name="Blessed Scroll: Enchant Weapon (C-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55011" toLevel="1" name="Blessed Scroll: Enchant Armor (D-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55012" toLevel="1" name="Blessed Scroll: Enchant Armor (C-grade)">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55013" toLevel="1" name="Blessed Scroll of Escape">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55014" toLevel="1" name="Blessed Scroll of Resurrection">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55015" toLevel="1" name="Quick Healing Potion">
-		<icon>icon.skill55015</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29031</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -263,89 +250,80 @@
 		</effects>
 	</skill>
 	<skill id="55017" toLevel="1" name="Scroll of Escape: Talking Island Village">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55018" toLevel="2" name="Scroll of Escape: Elven Village">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55019" toLevel="3" name="Scroll of Escape: Dark Elf Village">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55020" toLevel="4" name="Scroll of Escape: Orc Village">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55021" toLevel="5" name="Scroll of Escape: Dwarven Village">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55022" toLevel="6" name="Scroll of Escape: Gludin Village">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55023" toLevel="7" name="Scroll of Escape: Town of Gludio">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55024" toLevel="1" name="VIP Level 1">
 		<!-- The right to VIP 1st level chest. XP/ SP gain +3%, item drop rate +3%. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.g_skill_vip1</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55025" toLevel="1" name="VIP Level 2">
 		<!-- The right to VIP 2nd level chest. XP/ SP gain +7%, item drop rate +7%. World chat on any level, number of usage attempts +10. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.g_skill_vip2</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55026" toLevel="1" name="VIP Level 3">
 		<!-- The right to VIP 3rd level chest. XP/ SP gain +15%, item drop rate +15%. Experience loss and chance to lose items upon death is decreased by 10%. World chat on any level, number of usage attempts +10. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.g_skill_vip3</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55027" toLevel="1" name="VIP Level 4">
 		<!-- The right to VIP 4th level chest. XP/ SP gain +25%, item drop rate +15%. Experience loss and chance to lose items upon death is decreased by 15%. World chat on any level, number of usage attempts +10. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.g_skill_vip4</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55028" toLevel="1" name="VIP Level 5">
 		<!-- The right to VIP 5th level chest. XP/ SP gain +30%, item drop rate +30%. Experience loss and chance to lose items upon death is decreased by 20%. PvE damage is increased. World chat on any level, number of usage attempts +10. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.g_skill_vip5</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55029" toLevel="1" name="VIP Level 6">
 		<!-- The right to VIP 6th level chest. XP/ SP gain +30%, item drop rate +30%. Experience loss and chance to lose items upon death is decreased by 20%. PvE damage is increased, STR/ DEX/ CON/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +10. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.g_skill_vip6</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55030" toLevel="1" name="VIP Level 7">
 		<!-- The right to VIP 7th level chest. XP/ SP gain +30%, item drop rate +30%. Experience loss and chance to lose items upon death is decreased by 20%. PvE/ PvP damage is increased, STR/ DEX/ CON/ INT/ WIT/ MEN +2. World chat on any level, number of usage attempts +10. -->
-		<icon>icon.skill0000</icon>
+		<icon>BranchIcon.Icon.g_skill_vip7</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55031" toLevel="1" name="Report Status">
 		<!-- You are under suspicion of using this program illegally. Your actions have been restricted. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill6038</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55032" toLevel="1" name="Life Hazard">
 		<!-- Resurrects and fully restores your Stats. Buff and Debuff effects remain after death. Cooldown - 12 hours. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.skill_agathion_special</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55033" toLevel="1" name="Blessed Scroll of Escape">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55034" toLevel="1" name="Blessed Scroll of Resurrection">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55035" toLevel="1" name="1st Class Buff Scroll">
 		<!-- Provides the following positive effects: Shield (Lvl 2), Might (Lvl 2), Concentration (Lvl 2), Acumen (Lvl 1), Wind Walk (Lvl 1), Focus (Lvl 1), Agility (Lvl 1), Empower (Lvl 1). Lasts for 20 minutes. -->
-		<icon>icon.skill55035</icon>
+		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29552</itemConsumeId>
@@ -399,7 +377,7 @@
 	</skill>
 	<skill id="55036" toLevel="2" name="2nd Class Buff Scroll">
 		<!-- Provides the following positive effects: Shield (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2). Lasts for 20 minutes. -->
-		<icon>icon.skill55036</icon>
+		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i01</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29553</itemConsumeId>
@@ -476,7 +454,6 @@
 		</selfEffects>
 	</skill>
 	<skill id="55037" toLevel="1" name="Quick Healing Potion">
-		<icon>icon.skill55037</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29554</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -495,7 +472,6 @@
 		</effects>
 	</skill>
 	<skill id="55038" toLevel="1" name="Major Quick Healing Potion">
-		<icon>icon.skill55038</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29555</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -514,17 +490,17 @@
 		</effects>
 	</skill>
 	<skill id="55039" toLevel="1" name="Chronicle Chest">
-		<icon>icon.skill0000</icon>
+		<icon>icon.new_user_box</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55040" toLevel="1" name="Greater Scion Ring">
 		<!-- Max HP +10%, HP Recovery Bonus +10%. Atk. Spd. and Casting Spd. are increased. P./ M. Accuracy +1, Weight Limit +5000. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.event_classic_ring</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55041" toLevel="1" name="XP/SP Scroll">
 		<!-- Increases XP/ SP gain by 20% for 60 minutes. Buff remains after death. -->
-		<icon>icon.skill55041</icon>
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
@@ -554,7 +530,7 @@
 	</skill>
 	<skill id="55042" toLevel="1" name="Attendance XP Rune">
 		<!-- XP/ SP gain +10%. -->
-		<icon>icon.skill55042</icon>
+		<icon>br_cashtex.item.br_cash_rune_of_exp_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
@@ -578,7 +554,6 @@
 		</effects>
 	</skill>
 	<skill id="55043" toLevel="1" name="Rare Accessory Box">
-		<icon>icon.skil55043</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29701</itemConsumeId>
@@ -612,7 +587,6 @@
 		</effects>
 	</skill>
 	<skill id="55044" toLevel="1" name="Lineage II Chest">
-		<icon>icon.skill55044</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29581</itemConsumeId>
@@ -785,7 +759,6 @@
 		</effects>
 	</skill>
 	<skill id="55045" toLevel="1" name="Chronicle Chest">
-		<icon>icon.skill55045</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29582</itemConsumeId>
@@ -922,7 +895,6 @@
 		</effects>
 	</skill>
 	<skill id="55046" toLevel="1" name="Memories Chest">
-		<icon>icon.skill55046</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29583</itemConsumeId>
@@ -1070,7 +1042,7 @@
 	</skill>
 	<skill id="55047" toLevel="1" name="Romantic Chapeau - Blessed Body">		
 		<!-- For 20 minutes, Max HP +10%. -->
-		<icon>icon.skill55047</icon>
+		<icon>icon.accessory_archer_hat2_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<abnormalTime>1200</abnormalTime>
@@ -1094,7 +1066,7 @@
 	</skill>
 	<skill id="55048" toLevel="1" name="Romantic Chapeau - Wind Walk">
 		<!-- For 5 min., Speed +20. -->
-		<icon>icon.skill55048</icon>
+		<icon>icon.accessory_archer_hat2_i00</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalType>SPEED_UP</abnormalType>
 		<abnormalTime>300</abnormalTime>
@@ -1117,16 +1089,14 @@
 		</effects>
 	</skill>
 	<skill id="55049" toLevel="1" name="Chronic Noble Successor Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55050" toLevel="1" name="Chronic Noble Successor Box">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55051" toLevel="1" name="XP/SP Scroll">
 		<!-- Increases XP/ SP gain by 30% for 20 minutes. Buff remains after death. -->
-		<icon>icon.skill55051</icon>
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VOTE</abnormalType>
@@ -1156,22 +1126,22 @@
 	</skill>
 	<skill id="55052" toLevel="2" name="XP/SP Scroll - Normal">
 		<!-- Increases XP/ SP gain by 30% for 20 minutes. Buff remains after death. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55053" toLevel="3" name="XP/SP Scroll - Medium">
 		<!-- Increases XP/ SP gain by 40% for 20 minutes. Buff remains after death. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55054" toLevel="4" name="XP/SP Scroll - High">
 		<!-- Increases XP/ SP gain by 100% for 20 minutes. Buff remains after death. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55055" toLevel="1" name="1st Class Buff Scroll">
 		<!-- Provides the following positive effects: Shield (Lvl 2), Might (Lvl 2), Concentration (Lvl 2), Acumen (Lvl 1), Wind Walk (Lvl 1), Focus (Lvl 1), Agility (Lvl 1), Empower (Lvl 1). Lasts for 20 minutes. -->
-		<icon>icon.skill55055</icon>
+		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29654</itemConsumeId>
@@ -1225,7 +1195,7 @@
 	</skill>
 	<skill id="55056" toLevel="2" name="2nd Class Buff Scroll">
 		<!-- Provides the following positive effects: Shield (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2). Lasts for 20 minutes. -->
-		<icon>icon.skill55056</icon>
+		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i01</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>1200</abnormalTime>
 		<itemConsumeId>29655</itemConsumeId>
@@ -1303,7 +1273,7 @@
 	</skill>
 	<skill id="55057" toLevel="1" name="Wind Walk">
 		<!-- For 10 minutes, Speed +20. -->
-		<icon>icon.skill55057</icon>
+		<icon>icon.skill1204</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -1325,6 +1295,7 @@
 	</skill>
 	<skill id="55059" toLevel="1" name="Summon Agathion - Griffin">
 		<!-- Summons Agathion. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
@@ -1332,7 +1303,6 @@
 		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
-		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1343,7 +1313,7 @@
 	</skill>
 	<skill id="55060" toLevel="1" name="Griffin�s Benediction">
 		<!-- STR +1, INT +1. -->
-		<icon>icon.skill55060</icon>
+		<icon>icon.etc_rbracelet_aga_agit_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1360,7 +1330,7 @@
 	</skill>
 	<skill id="55061" toLevel="2" name="Castle XP/SP Scroll - Normal">
 		<!-- Increases XP/ SP gain by 35% for 20 minutes. Buff remains after death. -->
-		<icon>icon.skill55061</icon>
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -1399,7 +1369,7 @@
 	</skill>
 	<skill id="55062" toLevel="2" name="Castle XP/SP Scroll - Medium">
 		<!-- Increases XP/ SP gain by 45% for 20 minutes. Buff remains after death. -->
-		<icon>icon.skill55062</icon>
+		<icon>icon.etc_recall_exp_scroll</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
 			<value level="2">3</value>
@@ -1437,7 +1407,6 @@
 		</effects>
 	</skill>
 	<skill id="55063" toLevel="1" name="Quick Castle Healing Potion">
-		<icon>icon.skill55063</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29671</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1456,7 +1425,6 @@
 		</effects>
 	</skill>
 	<skill id="55064" toLevel="1" name="Major Quick Castle Healing Potion">
-		<icon>icon.skill55064</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29672</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1476,7 +1444,7 @@
 	</skill>
 	<skill id="55065" toLevel="1" name="Scroll: Castle Berserker Spirit">
 		<!-- For 20 minutes, P. Def. -5%, M. Def. -10%, Evasion -2, P. Atk. +5%, M. Atk. +10%, Atk. Spd. +5%, Casting Spd. +5%, Speed +5. -->
-		<icon>icon.skill55065</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1526,7 +1494,7 @@
 	</skill>
 	<skill id="55066" toLevel="1" name="Scroll: Castle Death Whisper">
 		<!-- For 20 minutes, P. Critical Damage +25%. -->
-		<icon>icon.skill55066</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1547,7 +1515,6 @@
 		</effects>
 	</skill>
 	<skill id="55067" toLevel="1" name="Blessed Castle Scroll of Escape">
-		<icon>icon.skill55067</icon>
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1573,7 +1540,7 @@
 	</skill>
 	<skill id="55068" toLevel="1" name="Scroll: Castle Blessing">
 		<!-- Maintains buffs and debuffs upon death. The Noblesse Blessing and the Lucky Charm disappear, however. -->
-		<icon>icon.skill55068</icon>
+		<icon>icon.skill1323</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
@@ -1600,7 +1567,7 @@
 	</skill>
 	<skill id="55069" toLevel="1" name="Castle Ring">
 		<!-- Increases Max. HP and P./ M. Atk. -->
-		<icon>icon.skill55069</icon>
+		<icon>icon.ev_11th_rare_acc_ring</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxHp">
@@ -1619,7 +1586,7 @@
 	</skill>
 	<skill id="55070" toLevel="1" name="Castle Earring">
 		<!-- Increases MP recovery rate and healing power. -->
-		<icon>icon.skill55070</icon>
+		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MpRegen">
@@ -1638,7 +1605,7 @@
 	</skill>
 	<skill id="55071" toLevel="1" name="Castle Necklace">
 		<!-- P. Def. and M. Def. are increased. -->
-		<icon>icon.skill55071</icon>
+		<icon>icon.ev_11th_rare_acc_necklace</icon>
 		<operateType>P</operateType>
 		<effects>
 			<effect name="MaxMp">
@@ -1656,7 +1623,6 @@
 		</effects>
 	</skill>
 	<skill id="55072" toLevel="1" name="Lineage II Chest">
-		<icon>icon.skill55072</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29692</itemConsumeId>
@@ -1829,7 +1795,6 @@
 		</effects>
 	</skill>
 	<skill id="55073" toLevel="1" name="Chronicle Chest">
-		<icon>icon.skill55073</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29693</itemConsumeId>
@@ -1966,7 +1931,6 @@
 		</effects>
 	</skill>
 	<skill id="55074" toLevel="1" name="Memories Chest">
-		<icon>icon.skill55074</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29694</itemConsumeId>
@@ -2114,46 +2078,45 @@
 	</skill>
 	<skill id="55075" toLevel="5" name="Shield">
 		<!-- For 20 minutes, increases P. Def. by 12%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55076" toLevel="5" name="Might">
 		<!-- For 20 minutes, increases P. Atk. by 12%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55077" toLevel="8" name="Concentration">
 		<!-- For 20 minutes, damage required to cancel magic -25. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55078" toLevel="4" name="Agility">
 		<!-- For 20 minutes, P. Evasion +2. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55079" toLevel="4" name="Regeneration">
 		<!-- For 20 minutes, increases HP Recovery rate by 10%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55080" toLevel="3" name="Magic Barrier">
 		<!-- Increases M. Def. by 23% for 20 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55081" toLevel="7" name="Blessed Body">
 		<!-- Increases Max HP by 10% for 20 minutes. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55082" toLevel="7" name="Blessed Soul">
 		<!-- For 20 minutes, increases Max MP by 10%. -->
-		<icon>icon.skill0000</icon>
+		<icon>icon.etc_scroll_white_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55083" toLevel="1" name="Quick Healing Potion">
-		<icon>icon.skill55083</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29695</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2172,7 +2135,6 @@
 		</effects>
 	</skill>
 	<skill id="55084" toLevel="1" name="Major Quick Healing Potion">
-		<icon>icon.skill0000</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>29696</itemConsumeId>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -2192,7 +2154,7 @@
 	</skill>
 	<skill id="55085" toLevel="1" name="1st Class Buff Scroll">
 		<!-- Provides the following positive effects: Shield (Lvl 2), Might (Lvl 2), Concentration (Lvl 2), Acumen (Lvl 1), Wind Walk (Lvl 1), Focus (Lvl 1), Agility (Lvl 1), Empower (Lvl 1). Lasts for 10 minutes. -->
-		<icon>icon.skill55055</icon>
+		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>600</abnormalTime>
 		<itemConsumeId>29697</itemConsumeId>
@@ -2246,7 +2208,7 @@
 	</skill>
 	<skill id="55086" toLevel="2" name="2nd Class Buff Scroll">
 		<!-- Provides the following positive effects: Shield (Lvl 3), Acumen (Lvl 2), Wind Walk (Lvl 2), Focus (Lvl 2), Regeneration (Lvl 1), Guidance (Lvl 1), Death Whisper (Lvl 1), Magic Barrier (Lvl 1), Blessed Body (Lvl 1), Blessed Soul (Lvl 1), Haste (Lvl 1), Agility (Lvl 2). Lasts for 10 minutes. -->
-		<icon>icon.skill55056</icon>
+		<icon>BranchIcon.Icon.etc_g_bm_buff_scroll_i01</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>600</abnormalTime>
 		<itemConsumeId>29698</itemConsumeId>
@@ -2323,15 +2285,12 @@
 		</selfEffects>
 	</skill>
 	<skill id="55087" toLevel="1" name="Minor Blessed Scroll of Escape">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55088" toLevel="1" name="Minor Blessed Scroll of Resurrection">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="55089" toLevel="1" name="Rare Accessory Box">
-		<icon>icon.skil55089</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49525</itemConsumeId>
@@ -2366,7 +2325,7 @@
 	</skill>
 	<skill id="55090" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 1">
 		<!-- Increases P. Atk. by 4. -->
-		<icon>icon.skill55090</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2379,7 +2338,7 @@
 	</skill>
 	<skill id="55091" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 1">
 		<!-- Increases P. Atk. by 6. -->
-		<icon>icon.skill55091</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2403,7 +2362,7 @@
 	</skill>
 	<skill id="55092" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 2">
 		<!-- P. Atk. +4 and P. Critical Damage +26. -->
-		<icon>icon.skill55092</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2420,7 +2379,7 @@
 	</skill>
 	<skill id="55093" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 2">
 		<!-- P. Atk. +6 and P. Critical Damage +38. -->
-		<icon>icon.skill55093</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2459,7 +2418,7 @@
 	</skill>
 	<skill id="55094" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 3">
 		<!-- P. Atk. +4, P. Critical Damage +26, P. Critical Rate +1%. -->
-		<icon>icon.skill55094</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2480,7 +2439,7 @@
 	</skill>
 	<skill id="55095" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 3">
 		<!-- P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%. -->
-		<icon>icon.skill55095</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2534,7 +2493,7 @@
 	</skill>
 	<skill id="55096" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 4">
 		<!-- P. Atk. +4, P. Critical Damage +26, P. Critical Rate +1%, P. Atk. +1%. -->
-		<icon>icon.skill55096</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2559,7 +2518,7 @@
 	</skill>
 	<skill id="55097" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 4">
 		<!-- P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%, P. Atk. +1.5%. -->
-		<icon>icon.skill55097</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2628,7 +2587,7 @@
 	</skill>
 	<skill id="55098" toLevel="1" name="Fire Dragon Pendant Basic Effect Lv. 5">
 		<!-- P. Atk. +4, P. Critical Damage +26, P. Critical Rate +1%, P. Atk. +1%, P. Critical Damage +1%. -->
-		<icon>icon.skill55098</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2657,7 +2616,7 @@
 	</skill>
 	<skill id="55099" toLevel="10" name="Fire Dragon Pendant Enchant Effect Lvl 5">
 		<!-- P. Atk. +6, P. Critical Damage +38, P. Critical Rate +2%, P. Atk. +1.5%, P. Critical Damage +2%. -->
-		<icon>icon.skill55099</icon>
+		<icon>BranchIcon.Icon.bm_pendant_pve</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

@@ -2,10 +2,10 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19113" toLevel="1" name="No Clan Return">
 		<!-- For 30 sec. prevents the chosen target from using Teleport. Needs 2 Blood Crystals. -->
+		<icon>icon.skill_recall</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
-		<icon>icon.skill_recall</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<hitTime>2000</hitTime>

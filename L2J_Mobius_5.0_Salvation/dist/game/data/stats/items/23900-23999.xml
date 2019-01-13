@@ -914,6 +914,7 @@
 	</item>
 	<item id="23949" name="Returning Hero's Wondrous Cubic" type="EtcItem">
 		<!-- Double-click to obtain either a Vitality Replenishing Potion (30-minute), Feather of Blessing, Heavenly Cocktail x 2, Scroll of Escape Pack: Village, or MP Recovery Bonus Potion. Once a day. -->
+		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -922,7 +923,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="23950" name="Returning Hero's Gold Chest" additionalName="Event" type="EtcItem">
@@ -1390,6 +1390,7 @@
 	</item>
 	<item id="23987" name="Rune of Bountiful Growth (30-day)" type="EtcItem">
 		<!-- Keep this in your inventory to gain XP/ SP +20% when hunting. Lv. 99 and below. Can be stacked with XP Rune I (Lv. 1-85) and XP Rune II (Lv. 1-95) 100%. -->
+		<set name="icon" val="icon.ev_charge_run" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1399,7 +1400,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
-		<set name="icon" val="icon.ev_charge_run" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="23988" name="Wondrous Wind Scroll" type="EtcItem">
@@ -1418,7 +1418,7 @@
 	</item>
 	<item id="23989" name="Agathion - Virgo" additionalName="Stage 1" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 2250 sec.). 2. Attribute Defense: Fire/ Water/ Earth/ Wind/ Darkness/ Holy increased by +5. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1441,7 +1441,7 @@
 	</item>
 	<item id="23990" name="Agathion - Virgo" additionalName="Stage 2" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 2100 sec.). 2. Balanced Power: MEN +1. 2. Attribute Enchant: Attribute Atk./ Resistance +5. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1464,7 +1464,7 @@
 	</item>
 	<item id="23991" name="Agathion - Virgo" additionalName="Stage 3" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1950 sec.). 2. Balanced Power: MEN +1. 2. Attribute Defense: Fire/ Water/ Earth/ Wind/ Dark/ Holy increased by +10. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1488,7 +1488,7 @@
 	</item>
 	<item id="23992" name="Agathion - Virgo" additionalName="Stage 4" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1800 sec.). 2. Balanced Power: CON/ MEN +1. 2. Attribute Defense: Fire/ Water/ Earth/ Wind/ Dark/ Holy increased by +10. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1512,7 +1512,7 @@
 	</item>
 	<item id="23993" name="Agathion - Virgo" additionalName="Stage 5" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1650 sec.). 2. Balanced Power: CON/ MEN +1. 2. Attribute Defense: Fire/ Water/ Earth/ Wind/ Dark/ Holy increased by +15. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1536,7 +1536,7 @@
 	</item>
 	<item id="23994" name="Agathion - Virgo" additionalName="Stage 6" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1500 sec.). 2. Balanced Power: CON/ WIT/ MEN +1. 2. Attribute Defense: Fire/ Water/ Earth/ Wind/ Dark/ Holy increased by +15. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1560,7 +1560,7 @@
 	</item>
 	<item id="23995" name="Agathion - Virgo" additionalName="Stage 7" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1350 sec.). 2. Balanced Power: CON/ WIT/ MEN +1. 2. Attribute Defense: Fire/ Water/ Earth/ Wind/ Dark/ Holy increased by +20. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1584,7 +1584,7 @@
 	</item>
 	<item id="23996" name="Agathion - Virgo" additionalName="Stage 8" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1200 sec.). 2. Balanced Power: CON/ DEX/ WIT/ MEN +1. 2. Attribute Defense: Fire/ Water/ Earth/ Wind/ Dark/ Holy increased by +20. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1608,7 +1608,7 @@
 	</item>
 	<item id="23997" name="Agathion - Virgo" additionalName="Stage 9" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 1050 sec.). 2. Balanced Power: CON/ DEX/ WIT/ MEN +1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Attribute Defense +25. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1632,7 +1632,7 @@
 	</item>
 	<item id="23998" name="Agathion - Virgo" additionalName="Stage 10" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 900 sec.). 2. Balanced Power: INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Defense: Fire/ Water/ Earth/ Wind/ Dark/ Holy increased by +25. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />
@@ -1656,7 +1656,7 @@
 	</item>
 	<item id="23999" name="Agathion - Virgo" additionalName="Stage 11" type="Armor">
 		<!-- Can summon Virgo when equipped. <Active Skill>. 1. Healing Light: Restores entire party's HP/ MP/ CP with a chance to cancel debuffs. (Cooldown is 750 sec.). 2. Balanced Power: INT/ CON/ DEX/ WIT/ MEN +1. 2. Attribute Defense: Fire/ Water/ Earth/ Wind/ Dark/ Holy increased by +30. -->
-		<set name="icon" val="BranchIcon.Icon.accessary_sign_agathion_april_aug_i00" />
+		<set name="icon" val="BranchIcon.Icon.accessary_lbracelet_sign_agathion_aug_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
 		<set name="crystal_type" val="R" />

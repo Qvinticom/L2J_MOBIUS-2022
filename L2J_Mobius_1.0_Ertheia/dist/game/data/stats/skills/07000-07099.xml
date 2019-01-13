@@ -177,6 +177,7 @@
 	</skill>
 	<skill id="7008" toLevel="1" name="Feather of Blessing">
 		<!-- Once used, the Feather of Blessing cannot be reused for another 5 minutes. -->
+		<icon>icon.blessed_feather_i00</icon>
 		<magicLvl>-2</magicLvl>
 		<operateType>A2</operateType>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
@@ -189,7 +190,6 @@
 		<abnormalTime>300</abnormalTime>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.blessed_feather_i00</icon>
 		<isDebuff>true</isDebuff>
 		<isMagic>2</isMagic>
 		<targetType>TARGET</targetType>
@@ -336,8 +336,8 @@
 	</skill>
 	<skill id="7029" toLevel="4" name="Super Haste">
 		<!-- Speed is increased. -->
-		<effectPoint>1</effectPoint>
 		<icon>icon.skill7029</icon>
+		<effectPoint>1</effectPoint>
 		<magicLvl>1</magicLvl>
 		<operateType>T</operateType>
 		<rideState>NONE</rideState>
@@ -547,6 +547,7 @@
 	</skill>
 	<skill id="7041" toLevel="1" name="Master's Blessing - Focus">
 		<!-- The GM is always by your side. Increases Critical attack rate by 30% for 1 hour. -->
+		<icon>icon.skill1077</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
@@ -554,7 +555,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1077</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -574,6 +574,7 @@
 	</skill>
 	<skill id="7042" toLevel="1" name="Master's Blessing - Death Whisper">
 		<!-- The GM is always by your side. Increases Critical P. Atk. by 35% for 1 hour. -->
+		<icon>icon.skill1242</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CRITICAL_DMG_UP</abnormalType>
@@ -581,7 +582,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1242</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>56</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -601,6 +601,7 @@
 	</skill>
 	<skill id="7043" toLevel="1" name="Master's Blessing - Haste">
 		<!-- The GM is always by your side. Increases Atk. Spd. by 33% for 1 hour. -->
+		<icon>icon.skill1086</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
@@ -608,7 +609,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1086</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -628,6 +628,7 @@
 	</skill>
 	<skill id="7044" toLevel="1" name="Master's Blessing - Guidance">
 		<!-- The GM is always by your side. Increases Accuracy by 4 for 1 hour. -->
+		<icon>icon.skill1240</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>HIT_UP</abnormalType>
@@ -635,7 +636,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1240</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>56</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -655,6 +655,7 @@
 	</skill>
 	<skill id="7045" toLevel="1" name="Master's Blessing - Blessed Body">
 		<!-- The GM is always by your side. Increases Max HP by 35% for 1 hour. -->
+		<icon>icon.skill1045</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_HP_UP</abnormalType>
@@ -662,7 +663,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1045</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -682,6 +682,7 @@
 	</skill>
 	<skill id="7046" toLevel="1" name="Master's Blessing - Blessed Soul">
 		<!-- The GM is always by your side. Increases Max MP by 35% for 1 hour. -->
+		<icon>icon.skill1048</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAX_MP_UP</abnormalType>
@@ -689,7 +690,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1048</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -709,6 +709,7 @@
 	</skill>
 	<skill id="7047" toLevel="1" name="Master's Blessing - Agility">
 		<!-- The GM is always by your side. Increase Evasion by 4 for 1 hour. -->
+		<icon>icon.skill1087</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>AVOID_UP</abnormalType>
@@ -716,7 +717,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1087</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -736,6 +736,7 @@
 	</skill>
 	<skill id="7048" toLevel="1" name="Master's Blessing - Acumen">
 		<!-- The GM is always by your side. Increases Casting Spd. by 30% for 1 hour. -->
+		<icon>icon.skill1085</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
@@ -743,7 +744,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1085</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>48</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -763,6 +763,7 @@
 	</skill>
 	<skill id="7049" toLevel="1" name="Master's Blessing - Decrease Weight">
 		<!-- The GM is always by your side. Increases the weight penalty interval by 9000 for 1 hour. -->
+		<icon>icon.skill1257</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DECREASE_WEIGHT_PENALTY</abnormalType>
@@ -770,7 +771,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1257</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -789,6 +789,7 @@
 	</skill>
 	<skill id="7050" toLevel="1" name="Master's Blessing - Might">
 		<!-- The GM is always by your side. Increases P. Atk. by 15% for 1 hour. -->
+		<icon>icon.skill1068</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_UP</abnormalType>
@@ -796,7 +797,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1068</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>40</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -816,6 +816,7 @@
 	</skill>
 	<skill id="7051" toLevel="1" name="Master's Blessing - Shield">
 		<!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour. -->
+		<icon>icon.skill1040</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PD_UP</abnormalType>
@@ -823,7 +824,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1040</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>44</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -843,6 +843,7 @@
 	</skill>
 	<skill id="7052" toLevel="1" name="Master's Blessing - Magic Barrier">
 		<!-- The GM is always by your side. Increases M. Def. by 30% for 1 hour. -->
+		<icon>icon.skill1036</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MD_UP</abnormalType>
@@ -850,7 +851,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1036</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -870,6 +870,7 @@
 	</skill>
 	<skill id="7053" toLevel="1" name="Master's Blessing - Vampiric Rage">
 		<!-- The GM is always by your side. For 1 hour, 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
+		<icon>icon.skill1268</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -877,7 +878,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1268</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -897,6 +897,7 @@
 	</skill>
 	<skill id="7054" toLevel="1" name="Master's Blessing - Empower">
 		<!-- The GM is always by your side. Increases M. Atk. by 75% for 1 hour. -->
+		<icon>icon.skill1059</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MA_UP</abnormalType>
@@ -904,7 +905,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1059</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -924,6 +924,7 @@
 	</skill>
 	<skill id="7055" toLevel="1" name="Master's Blessing - Wind Walk">
 		<!-- The GM is always by your side. Increases Speed by 33 for 1 hour. -->
+		<icon>icon.skill1204</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>SPEED_UP</abnormalType>
@@ -931,7 +932,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1204</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>30</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -951,6 +951,7 @@
 	</skill>
 	<skill id="7056" toLevel="1" name="Master's Blessing - Berserker Spirit">
 		<!-- The GM is always by your side. For 1 hour, decreases a party member's P. Def. by 8%, M. Def. by 16%, and evasion by 4. Increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8. -->
+		<icon>icon.skill1062</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>
@@ -958,7 +959,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1062</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>52</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -1006,6 +1006,7 @@
 	</skill>
 	<skill id="7057" toLevel="1" name="Master's Blessing - Greater Might">
 		<!-- The GM is always by your side. Increases P. Atk. by 10% for 1 hour. -->
+		<icon>icon.skill1388</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
@@ -1013,7 +1014,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1388</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -1033,6 +1033,7 @@
 	</skill>
 	<skill id="7058" toLevel="1" name="Master's Blessing - Greater Shield">
 		<!-- The GM is always by your side. Increases P. Def. by 15% for 1 hour. -->
+		<icon>icon.skill1389</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PA_PD_UP</abnormalType>
@@ -1040,7 +1041,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1389</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -1060,6 +1060,7 @@
 	</skill>
 	<skill id="7059" toLevel="1" name="Master's Blessing - Wild Magic">
 		<!-- The GM is always by your side. For 1 hour, increases by 2 the occurrence rate of damage that is caused by magic damage. -->
+		<icon>icon.skill1303</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MAGIC_CRITICAL_UP</abnormalType>
@@ -1067,7 +1068,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1303</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -1087,6 +1087,7 @@
 	</skill>
 	<skill id="7060" toLevel="1" name="Master's Blessing - Clarity">
 		<!-- The GM is always by your side. For 1 hour, decreases physical skill MP consumption by 20%, magic skill's MP consumption by 10%, and song/dance skill's MP consumption by 20%. -->
+		<icon>icon.skill1397</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>CHEAP_MAGIC</abnormalType>
@@ -1094,7 +1095,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1397</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -1125,6 +1125,7 @@
 	</skill>
 	<skill id="7061" toLevel="1" name="Master's Blessing - Prophecy of Water">
 		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP recovery bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
+		<icon>icon.skill1355</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1132,7 +1133,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1355</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -1204,6 +1204,7 @@
 	</skill>
 	<skill id="7062" toLevel="1" name="Master's Blessing - Prophecy of Fire">
 		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max MP by 20%, HP recovery bonus by 20%, the chance of prominent damage occurring through magic damage by 2, the power of critical attacks by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20%. -->
+		<icon>icon.skill1356</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1211,7 +1212,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1356</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -1279,6 +1279,7 @@
 	</skill>
 	<skill id="7063" toLevel="1" name="Master's Blessing - Prophecy of Wind">
 		<!-- The GM is always by your side. For 1 hour, receives help from a great spirit to increase Max HP by 20%, rate of critical attack by 20%, rate of Prominent Damage through magic damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. -->
+		<icon>icon.skill1357</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1286,7 +1287,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1357</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -1350,6 +1350,7 @@
 	</skill>
 	<skill id="7064" toLevel="1" name="Master's Blessing - Chant of Victory">
 		<!-- The GM is always by your side. Recovers HP by 20%, and for 1 hour, receives help from a great spirit to increase Max HP by 20%, the chance of prominent damage occurring through magic damage by 2, the rate of critical attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and Accuracy by 4. -->
+		<icon>icon.skill1363</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -1357,7 +1358,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1363</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>78</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -1855,6 +1855,7 @@
 	</skill>
 	<skill id="7088" toLevel="1" name="Master's Blessing - Improve Combat">
 		<!-- The GM is always by your side. Combine P. Atk. increase and P. Def. increase to have more advanced combat power increase effect. For 1 hour, increases P. Atk. by 15% and P. Def. by 15%. -->
+		<icon>icon.skill1499</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_PA_PD_UP</abnormalType>
@@ -1862,7 +1863,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1499</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -1893,6 +1893,7 @@
 	</skill>
 	<skill id="7089" toLevel="1" name="Master's Blessing - Improve Magic">
 		<!-- The GM is always by your side. Combine M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hour, increases M. Atk. by 75% and M. Def. by 30%. -->
+		<icon>icon.skill1500</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -1900,7 +1901,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1500</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -1931,6 +1931,7 @@
 	</skill>
 	<skill id="7090" toLevel="1" name="Master's Blessing - Improve Condition">
 		<!-- The GM is always by your side. Combine maximum HP increase and maximum MP increase to have more advanced mental and physical power. For 1 hour, increases Max HP by 35% and Max MP by 35%. -->
+		<icon>icon.skill1501</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_HP_MP_UP</abnormalType>
@@ -1938,7 +1939,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1501</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -1969,6 +1969,7 @@
 	</skill>
 	<skill id="7091" toLevel="1" name="Master's Blessing - Improve Critical Attack">
 		<!-- The GM is always by your side. Combine Critical Rate increase and Critical Damage increase to have more advanced critical increase effect. For 1 hour, increases Critical Rate by 30% and Critical Damage by 35%. -->
+		<icon>icon.skill1502</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
@@ -1976,7 +1977,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1502</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>74</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -2007,6 +2007,7 @@
 	</skill>
 	<skill id="7092" toLevel="1" name="Master's Blessing - Improve Shield Defense">
 		<!-- The GM is always by your side. Combine Shield Defense rate increase and Shield Defense increase to have more advanced shield ability increase effect. For 1 hour, increases shield defense rate by 30% and Shield Defense by 50%. -->
+		<icon>icon.skill1503</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_SHIELD_RATE_DEFENCE_UP</abnormalType>
@@ -2014,7 +2015,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1503</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>70</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -2045,6 +2045,7 @@
 	</skill>
 	<skill id="7093" toLevel="1" name="Master's Blessing - Improve Movement">
 		<!-- The GM is always by your side. Combine Spd. increase and Evasion increase to have more advanced movement increase effect. For 1 hour, increases Speed by 33 and evasion by 4. -->
+		<icon>icon.skill1504</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>IMPROVE_SPEED_AVOID_UP</abnormalType>
@@ -2052,7 +2053,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1504</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>72</magicLvl>
 		<mpConsume>1</mpConsume>
@@ -2083,6 +2083,7 @@
 	</skill>
 	<skill id="7094" toLevel="1" name="Master's Blessing - Sharpen Edge">
 		<!-- The GM is always by your side. Sharpens a bladed weapon to increase P. Atk. by 5% and Critical Rate by 20% for 1 hour. -->
+		<icon>icon.skill0825</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_ATTACK_BUFF</abnormalType>
@@ -2091,7 +2092,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill0825</icon>
 		<magicLvl>49</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
@@ -2135,6 +2135,7 @@
 	</skill>
 	<skill id="7095" toLevel="1" name="Master's Blessing - Encase Armor">
 		<!-- The GM is always by your side. Thickens the surface of heavy armor to increase P. Def. by 10% for 1 hour. -->
+		<icon>icon.skill0828</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>DWARF_DEFENCE_BUFF</abnormalType>
@@ -2143,7 +2144,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill0828</icon>
 		<magicLvl>46</magicLvl>
 		<mpConsume>2</mpConsume>
 		<operateType>A2</operateType>
@@ -2166,6 +2166,7 @@
 	</skill>
 	<skill id="7096" toLevel="1" name="Master's Blessing - Noblesse Blessing">
 		<!-- The GM is always by your side. The target's buff/de-buff doesn't disappear at death but is maintained. But the Noblesse Blessing and the Amulet of Luck disappear. -->
+		<icon>icon.skill1323</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<abnormalType>PRESERVE_ABNORMAL</abnormalType>
@@ -2174,7 +2175,6 @@
 		<effectPoint>1</effectPoint>
 		<effectRange>1500</effectRange>
 		<hitTime>500</hitTime>
-		<icon>icon.skill1323</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<mpConsume>2</mpConsume>

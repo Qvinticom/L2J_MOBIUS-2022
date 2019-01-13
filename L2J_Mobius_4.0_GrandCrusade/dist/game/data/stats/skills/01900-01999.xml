@@ -57,13 +57,13 @@
 	</skill>
 	<skill id="1904" toLevel="2" name="Unbind">
 		<!-- Cancels all debuffs and renders immune for $s1. -->
+		<icon>icon.skill1904</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">10</value>
 			<value level="2">12</value>
 		</abnormalTime>
 		<abnormalType>RACE_HUMAN1</abnormalType>
-		<icon>icon.skill1904</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -125,10 +125,10 @@
 	</skill>
 	<skill id="1907" toLevel="2" name="Prevision">
 		<!-- For $s1., P. Evasion/ M. Evasion + $s2, and Speed + $s3. -->
+		<icon>icon.skill1907</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>RACE_ELF1</abnormalType>
-		<icon>icon.skill1907</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -236,13 +236,13 @@
 	</skill>
 	<skill id="1912" toLevel="2" name="Disparition">
 		<!-- Cancels all your debuffs. For $s1, you cannot be targeted. -->
+		<icon>icon.skill1912</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">6</value>
 		</abnormalTime>
 		<abnormalType>RACE_DARKELF1</abnormalType>
-		<icon>icon.skill1912</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -284,10 +284,10 @@
 	</skill>
 	<skill id="1914" toLevel="2" name="Savage">
 		<!-- For $s1, P. Atk. + $s2, M. Atk. + $s3, Atk. Spd., + $s4, and Casting Spd. + $s5. P. Def. / M. Def. - $s6. -->
+		<icon>icon.skill1914</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_ORC1</abnormalType>
-		<icon>icon.skill1914</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -389,11 +389,11 @@
 	</skill>
 	<skill id="1918" toLevel="2" name="Undying Will">
 		<!-- Becomes invincible. -->
+		<icon>icon.skill1917</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>RACE_ORC2</abnormalType>
 		<abnormalVisualEffect>INVINCIBILITY</abnormalVisualEffect>
-		<icon>icon.skill1917</icon>
 		<operateType>A2</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
@@ -452,13 +452,13 @@
 	</skill>
 	<skill id="1920" toLevel="2" name="Endurance">
 		<!-- For $s1, reflects $s2 of received damage to attacker and recovers s3 HP every second. -->
+		<icon>icon.skill1920</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">5</value>
 			<value level="2">7</value>
 		</abnormalTime>
 		<abnormalType>RACE_DWAF1</abnormalType>
-		<icon>icon.skill1920</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -496,13 +496,13 @@
 	</skill>
 	<skill id="1922" toLevel="2" name="Earth Tremor">
 		<!-- Knocks Down nearby enemies for $s1, and decreases their P. Def./ M. Def. by $s2. -->
+		<icon>icon.skill1922</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
 			<value level="2">5</value>
 		</abnormalTime>
 		<abnormalType>KNOCKDOWN</abnormalType>
-		<icon>icon.skill1922</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -585,10 +585,10 @@
 	</skill>
 	<skill id="1925" toLevel="2" name="Soul Protection">
 		<!-- For $s1, blocks debuff attacks $s2. -->
+		<icon>icon.skill1925</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>RACE_KAMAEL1</abnormalType>
-		<icon>icon.skill1925</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<operateType>A2</operateType>
@@ -656,10 +656,10 @@
 	</skill>
 	<skill id="1926" toLevel="1" name="Body Reinforcement">
 		<!-- For 5 minutes, transforms into ultimate combat form. -->
+		<icon>icon.skill1926</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
-		<icon>icon.skill1926</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
 		<hitTime>2500</hitTime>
@@ -716,12 +716,12 @@
 	</skill>
 	<skill id="1928" toLevel="1" name="Sigel Force">
 		<!-- P. Atk. + 1%. -->
+		<icon>icon.icon_sigel_01</icon>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_SIGEL</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
-		<icon>icon.icon_sigel_01</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
@@ -762,12 +762,12 @@
 	</skill>
 	<skill id="1930" toLevel="1" name="Tyrr Force">
 		<!-- P. Critical Rate + 1%. -->
+		<icon>icon.icon_tir_01</icon>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_TIR</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
-		<icon>icon.icon_tir_01</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
@@ -790,9 +790,9 @@
 	</skill>
 	<skill id="1931" toLevel="1" name="Othell Aura">
 		<!-- Casts Othell Force on entire party, which increases Atk. Spd. by 1%. -->
+		<icon>icon.icon_othel</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
-		<icon>icon.icon_othel</icon>
 		<operateType>AU</operateType>
 		<magicLvl>85</magicLvl>
 		<reuseDelay>5000</reuseDelay>
@@ -808,12 +808,12 @@
 	</skill>
 	<skill id="1932" toLevel="1" name="Othell Force">
 		<!-- Atk. Spd. + 1%. -->
+		<icon>icon.icon_othel_01</icon>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_OTHEL</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
-		<icon>icon.icon_othel_01</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
@@ -836,9 +836,9 @@
 	</skill>
 	<skill id="1933" toLevel="1" name="Yul Aura">
 		<!-- Casts Yul Force on entire party, which increases MP Recovery Bonus by 50%. -->
+		<icon>icon.icon_yr</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
-		<icon>icon.icon_yr</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>AU</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -854,12 +854,12 @@
 	</skill>
 	<skill id="1934" toLevel="1" name="Yul Force">
 		<!-- MP Recovery Bonus + 50%. -->
+		<icon>icon.icon_yr_01</icon>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_YR</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
-		<icon>icon.icon_yr_01</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
@@ -882,9 +882,9 @@
 	</skill>
 	<skill id="1935" toLevel="1" name="Feoh Aura">
 		<!-- Casts Feoh Force on entire party, which increases Casting Spd. by 1%. -->
+		<icon>icon.icon_feoh</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
-		<icon>icon.icon_feoh</icon>
 		<operateType>AU</operateType>
 		<magicLvl>85</magicLvl>
 		<reuseDelay>5000</reuseDelay>
@@ -900,12 +900,12 @@
 	</skill>
 	<skill id="1936" toLevel="1" name="Feoh Force">
 		<!-- Casting Spd. + 1%. -->
+		<icon>icon.icon_feoh_01</icon>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_FEOH</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
-		<icon>icon.icon_feoh_01</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
@@ -928,9 +928,9 @@
 	</skill>
 	<skill id="1937" toLevel="1" name="Wynn Aura">
 		<!-- Casts Wynn Force on entire party, which decreases P./M. Skill MP Consumption by 3%. -->
+		<icon>icon.icon_wynn</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
-		<icon>icon.icon_wynn</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>AU</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -946,12 +946,12 @@
 	</skill>
 	<skill id="1938" toLevel="1" name="Wynn Force">
 		<!-- P./M. Skill MP Consumption - 3%. -->
+		<icon>icon.icon_wynn_01</icon>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_WYNN</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
-		<icon>icon.icon_wynn_01</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
@@ -980,9 +980,9 @@
 	</skill>
 	<skill id="1939" toLevel="1" name="Aeore Aura">
 		<!-- Casts Aeore Force on entire party, which increases M. Atk. by 1%. -->
+		<icon>icon.icon_eolh</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<toggleGroupId>0</toggleGroupId>
-		<icon>icon.icon_eolh</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>AU</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -998,12 +998,12 @@
 	</skill>
 	<skill id="1940" toLevel="1" name="Aeore Force">
 		<!-- M. Atk. + 1%. -->
+		<icon>icon.icon_eolh_01</icon>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_EOLH</abnormalType>
 		<affectRange>1600</affectRange>
 		<canBeDispelled>false</canBeDispelled>
-		<icon>icon.icon_eolh_01</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<operateType>A6</operateType>
@@ -1026,8 +1026,8 @@
 	</skill>
 	<skill id="1941" toLevel="1" name="Physical Nail Attack">
 		<!-- Inflicts consecutive attacks using a Demon's claws. -->
-		<effectRange>400</effectRange>
 		<icon>icon.skill0539</icon>
+		<effectRange>400</effectRange>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -1047,9 +1047,9 @@
 	</skill>
 	<skill id="1942" toLevel="1" name="Wing Storm">
 		<!-- Attacks nearby enemies with spread wings. -->
+		<icon>icon.skill0492</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill0492</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -1072,9 +1072,9 @@
 	</skill>
 	<skill id="1943" toLevel="1" name="Wing Rush">
 		<!-- Attacks with spread wings. Strikes all in target rush area. -->
+		<icon>icon.skill0540</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill0540</icon>
 		<operateType>DA1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -1102,9 +1102,9 @@
 	</skill>
 	<skill id="1944" toLevel="1" name="Death Arrow">
 		<!-- Shoots a death arrow at the enemy. -->
+		<icon>icon.skill1431</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill1431</icon>
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -1127,11 +1127,11 @@
 	</skill>
 	<skill id="1945" toLevel="1" name="Power Death Beam">
 		<!-- Attack enemies at the front. -->
+		<icon>icon.skill1471</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
 		<attributeType>DARK</attributeType>
 		<attributeValue>20</attributeValue>
-		<icon>icon.skill1471</icon>
 		<operateType>A1</operateType>
 		<fanRange>0;0;400;180</fanRange>
 		<mpConsume>1</mpConsume>
@@ -1212,9 +1212,9 @@
 	</skill>
 	<skill id="1954" toLevel="1" name="Flying Body Reinforcement">
 		<!-- Transforms into final flying combat form. -->
+		<icon>icon.skill0840</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>TRANSFORM</abnormalType>
-		<icon>icon.skill0840</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
 		<hitTime>2500</hitTime>
@@ -1269,11 +1269,11 @@
 	</skill>
 	<skill id="1955" toLevel="3" name="Party Solidarity">
 		<!-- Increases party members' P. Atk. by $s1, M. Atk. by $s2, P. Critical Rate by $s3, Atk. Spd. by $s4, and Casting Spd. by $s5. Decreases physical and magic skill Cooldown by $s6. Always includes Sigel and Aeore Force. When $s7 or more forces are applied, the Party Solidarity effect is activated. When the number of forces applied increases, the Party Solidarity effect is raised. -->
+		<icon>icon.skill1955</icon>
 		<abnormallVL>1</abnormallVL>
 		<abnormalTime>11</abnormalTime>
 		<abnormalType>SYNERGY_PARTY_BUF</abnormalType>
 		<affectRange>200</affectRange>
-		<icon>icon.skill1955</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1358,8 +1358,8 @@
 	</skill>
 	<skill id="1956" toLevel="4" name="Sub - P. Atk./M. Atk. Increase">
 		<!-- P. Atk. + $s1, M. Atk. + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0816</icon>
+		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1386,8 +1386,8 @@
 	</skill>
 	<skill id="1957" toLevel="4" name="Sub - P. Def./M. Def. Increase">
 		<!-- P. Def. + $s1, M. Def. + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0439</icon>
+		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1414,8 +1414,8 @@
 	</skill>
 	<skill id="1958" toLevel="4" name="Sub - Atk. Spd./Casting Spd. Increase">
 		<!-- Atk. Spd. + $s1, Casting Spd. + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0817</icon>
+		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1442,8 +1442,8 @@
 	</skill>
 	<skill id="1959" toLevel="4" name="Sub - Critical Rate Increase">
 		<!-- P. Critical Rate/ M. Critical Rate + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0814</icon>
+		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1470,8 +1470,8 @@
 	</skill>
 	<skill id="1960" toLevel="4" name="Sub - P. Accuracy/ M. Accuracy Increase">
 		<!-- P. Accuracy + $s1, M. Accuracy + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1240</icon>
+		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1498,8 +1498,8 @@
 	</skill>
 	<skill id="1961" toLevel="4" name="Sub - P. Evasion/ M. Evasion Increase">
 		<!-- P. Evasion + $s1, M. Evasion + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0198</icon>
+		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1526,8 +1526,8 @@
 	</skill>
 	<skill id="1962" toLevel="4" name="Dual - P. Atk./M. Atk. Increase">
 		<!-- P. Atk. + $s1, M. Atk. + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0816</icon>
+		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1554,8 +1554,8 @@
 	</skill>
 	<skill id="1963" toLevel="4" name="Dual - P. Def./M. Def. Increase">
 		<!-- P. Def. + $s1, M. Def. + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0439</icon>
+		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1582,8 +1582,8 @@
 	</skill>
 	<skill id="1964" toLevel="4" name="Dual - Atk. Spd./Casting Spd. Increase">
 		<!-- Atk. Spd. + $s1, Casting Spd. + $s2. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0817</icon>
+		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1610,8 +1610,8 @@
 	</skill>
 	<skill id="1965" toLevel="4" name="Dual - Max HP Increase">
 		<!-- Max HP + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0211</icon>
+		<operateType>P</operateType>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1634,8 +1634,8 @@
 	</skill>
 	<skill id="1966" toLevel="4" name="Dual - Max MP Increase">
 		<!-- Max MP + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill0213</icon>
+		<operateType>P</operateType>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1658,8 +1658,8 @@
 	</skill>
 	<skill id="1967" toLevel="4" name="Dual - Max CP Increase">
 		<!-- Max CP + $s1. -->
-		<operateType>P</operateType>
 		<icon>icon.skill1397</icon>
+		<operateType>P</operateType>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -1682,8 +1682,8 @@
 	</skill>
 	<skill id="1968" toLevel="1" name="Dual - HP Drain">
 		<!-- Has a chance of absorbing 5% of damage inflicted upon the enemy as HP when attacking. -->
-		<operateType>P</operateType>
 		<icon>icon.dual_hpsteal</icon>
+		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1738,8 +1738,8 @@
 	</skill>
 	<skill id="1970" toLevel="1" name="Dual - Specialized for P. Atk.">
 		<!-- P. Atk. + 9%, P. Def./ M. Def. - 6%. -->
-		<operateType>P</operateType>
 		<icon>icon.dual_atkup</icon>
+		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1760,8 +1760,8 @@
 	</skill>
 	<skill id="1971" toLevel="1" name="Dual - Specialized for M. Atk.">
 		<!-- M. Atk. + 13%, P. Def./ M. Def. - 6%. -->
-		<operateType>P</operateType>
 		<icon>icon.dual_defup</icon>
+		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1782,8 +1782,8 @@
 	</skill>
 	<skill id="1972" toLevel="1" name="Dual - Physical Trait Increase">
 		<!-- Increases success rate for physical attacks and physical defense by 20%. -->
-		<operateType>P</operateType>
 		<icon>icon.skill4084</icon>
+		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1808,8 +1808,8 @@
 	</skill>
 	<skill id="1973" toLevel="1" name="Dual - Mental Trait Increase">
 		<!-- Increases success rate for mental attacks and mental defense by 20%. -->
-		<operateType>P</operateType>
 		<icon>icon.skill4116</icon>
+		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1838,10 +1838,10 @@
 	</skill>
 	<skill id="1974" toLevel="1" name="Dual - Berserker's Rage">
 		<!-- Has a chance of P. Atk. + 27% when attacking. -->
+		<icon>icon.dual_t_atkup</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<icon>icon.dual_t_atkup</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="TriggerSkillByAttack">
@@ -1861,13 +1861,13 @@
 	</skill>
 	<skill id="1975" toLevel="1" name="Dual - Berserker's Rage">
 		<!-- P. Atk. + 27% for 15 sec. -->
+		<icon>icon.dual_t_atkup</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_ATTACK_UP</abnormalType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>20000</reuseDelay>
-		<icon>icon.dual_t_atkup</icon>
 		<isMagic>4</isMagic>
 		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
@@ -1885,9 +1885,9 @@
 	</skill>
 	<skill id="1976" toLevel="1" name="Dual - Master's Rage">
 		<!-- Has a chance of Skill Power + 27% during skill use. -->
+		<icon>icon.dual_t_skup</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
-		<icon>icon.dual_t_skup</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
@@ -1903,6 +1903,7 @@
 	</skill>
 	<skill id="1977" toLevel="1" name="Dual - Master's Rage">
 		<!-- Skill Power + 27% for 15 sec. -->
+		<icon>icon.dual_t_skup</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_SKILL_UP</abnormalType>
@@ -1910,7 +1911,6 @@
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>A2</operateType>
-		<icon>icon.dual_t_skup</icon>
 		<isMagic>4</isMagic>
 		<basicProperty>NONE</basicProperty>
 		<reuseDelay>20000</reuseDelay>
@@ -1933,10 +1933,10 @@
 	</skill>
 	<skill id="1978" toLevel="1" name="Dual - Light of Protection">
 		<!-- Has a chance of P. Def./ M. Def. + 40% when attacked. -->
+		<icon>icon.dual_t_dmgdef</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<icon>icon.dual_t_dmgdef</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="TriggerSkillByDamage">
@@ -1954,13 +1954,13 @@
 	</skill>
 	<skill id="1979" toLevel="1" name="Dual - Light of Protection">
 		<!-- P. Def./ M. Def. + 40% for 15 sec. -->
+		<icon>icon.dual_t_dmgdef</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>DUAL_DEFENCE_UP</abnormalType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>20000</reuseDelay>
-		<icon>icon.dual_t_dmgdef</icon>
 		<isMagic>4</isMagic>
 		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
@@ -1983,10 +1983,10 @@
 	</skill>
 	<skill id="1980" toLevel="1" name="Dual - Light of Blessing">
 		<!-- Has a chance of restoring HP when attacked. -->
+		<icon>icon.dual_t_dmgheal</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
-		<icon>icon.dual_t_dmgheal</icon>
 		<excludedFromCheck>true</excludedFromCheck>
 		<effects>
 			<effect name="TriggerSkillByDamage">
@@ -2004,10 +2004,10 @@
 	</skill>
 	<skill id="1981" toLevel="1" name="Dual - Light of Blessing">
 		<!-- Restores HP. -->
+		<icon>icon.dual_t_dmgheal</icon>
 		<magicLvl>99</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>30000</reuseDelay>
-		<icon>icon.dual_t_dmgheal</icon>
 		<isMagic>4</isMagic>
 		<operateType>A1</operateType>
 		<rideState>NONE</rideState>
@@ -2024,12 +2024,12 @@
 	</skill>
 	<skill id="1982" toLevel="1" name="Dual - Shackles of the Giants">
 		<!-- Blocks target's Physical Skills for 5 sec. Can only use on PCs. -->
+		<icon>icon.dual_a_pblock</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>SILENCE_PHYSICAL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
-		<icon>icon.dual_a_pblock</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<hitTime>1500</hitTime>
@@ -2054,8 +2054,8 @@
 	</skill>
 	<skill id="1983" toLevel="1" name="Dual - Silence of the Giants">
 		<!-- Blocks target's Magical Skills for 5 sec. Can only use on PCs. -->
-		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<icon>icon.dual_a_mblock</icon>
+		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<hitTime>1500</hitTime>
@@ -2393,10 +2393,10 @@
 	</skill>
 	<skill id="1997" toLevel="2" name="Gravity Exile">
 		<!-- For $s1, blocks target from being resurrected by another character. -->
+		<icon>icon.skill1997</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
 		<abnormalType>BLOCK_RESURRECTION</abnormalType>
-		<icon>icon.skill1997</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>

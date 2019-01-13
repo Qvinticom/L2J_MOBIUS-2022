@@ -435,7 +435,6 @@
 	<skill id="13820" toLevel="1" name="Kelbim's Shout">
 		<!-- For 30 min., Damage Reflect Resistance + 20%. -->
 		<abnormalTime>1800</abnormalTime>
-		<icon>icon.skill0000</icon>
 		<operateType>A2</operateType>
 		<mpConsume>382</mpConsume>
 		<hitTime>3000</hitTime>
@@ -454,7 +453,6 @@
 	</skill>
 	<skill id="13821" toLevel="1" name="Spirit's Evil Thoughts">
 		<!-- Key for Spirits' Evil Thoughts. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>100</castRange>
@@ -462,28 +460,24 @@
 		<hitTime>5000</hitTime>
 	</skill>
 	<skill id="13822" toLevel="1" name="Stronghold I Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="13823" toLevel="1" name="Stronghold II Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="13824" toLevel="1" name="Stronghold III Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="13825" toLevel="1" name="Stronghold IV Teleport">
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>15000</hitTime>
 		<effectPoint>100</effectPoint>
@@ -592,11 +586,11 @@
 	</skill>
 	<skill id="13830" toLevel="1" name="Christmas Talisman - Ultimate Defense">
 		<!-- P./M. Def + 5000 for 15 seconds with the power of Talisman. Cooldown is 10 minutes. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
 		<abnormalVisualEffect>ULTIMATE_DEFENCE</abnormalVisualEffect>
-		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
 		<hitTime>500</hitTime>
@@ -622,10 +616,10 @@
 	</skill>
 	<skill id="13831" toLevel="1" name="Christmas Talisman - Debuff Resistance">
 		<!-- Defends against 5 Debuffs for 15 seconds. Cooldown is 10 minutes. -->
+		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<abnormalType>TALISMAN</abnormalType>
-		<icon>icon.etc_talisman_i01</icon>
 		<operateType>A2</operateType>
 		<mpConsume>50</mpConsume>
 		<hitTime>500</hitTime>
@@ -1100,7 +1094,6 @@
 	</skill>
 	<skill id="13853" toLevel="1" name="Agathion Teleport: Talking Island Village">
 		<!-- Teleport to the Talking Island Village. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
@@ -1126,7 +1119,6 @@
 	</skill>
 	<skill id="13854" toLevel="1" name="Agathion Teleport: Town of Goddard">
 		<!-- Teleport to the Town of Goddard. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>
@@ -1152,7 +1144,6 @@
 	</skill>
 	<skill id="13855" toLevel="1" name="Agathion Teleport: Town of Schuttgart">
 		<!-- Teleport to the Town of Schuttgart. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>1800000</reuseDelay>

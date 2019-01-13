@@ -229,7 +229,7 @@
 	</item>
 	<item id="36717" name="Augmentation Practice Weapon" type="Weapon">
 		<!-- Temporary practice weapon for learning about augmentation. Very inefficient as a weapon. -->
-		<set name="icon" val="icon.weapon_long_sword_i00" />
+		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
@@ -256,7 +256,7 @@
 	</item>
 	<item id="36718" name="Augmentation Practice Spirit Stone (46)" type="EtcItem">
 		<!-- Temporary Spirit Stone for learning about augmentation. -->
-		<set name="icon" val="icon.etc_mineral_general_i00" />
+		<set name="icon" val="icon.renewal_mineral_46" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -271,7 +271,7 @@
 	</item>
 	<item id="36719" name="Augmentation Practice Gemstone (D-grade)" type="EtcItem">
 		<!-- Temporary practice gemstone for learning about augmentation. -->
-		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
+		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -314,7 +314,7 @@
 	</item>
 	<item id="36721" name="Practice Green Soul Crystal - Stage 5" type="EtcItem">
 		<!-- Green crystal for practice containing the light of absorbed souls. Once saturated, it bestows special abilities on a weapon. -->
-		<set name="icon" val="icon.etc_soul_stone_i02" />
+		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -329,7 +329,7 @@
 	</item>
 	<item id="36722" name="Enhancement Practice Gemstone (C-grade)" type="EtcItem">
 		<!-- Temporary practice gemstone for learning about soul crystal enhancement. -->
-		<set name="icon" val="icon.etc_crystal_ball_green_i00" />
+		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -345,7 +345,7 @@
 	</item>
 	<item id="36723" name="Practice StormBringer" additionalName="Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases Critical by 86. -->
-		<set name="icon" val="icon.weapon_stormbringer_i00" />
+		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
@@ -442,6 +442,7 @@
 	</item>
 	<item id="36729" name="Dimensional Teleport Orb" type="EtcItem">
 		<!-- Scroll for dimensional teleport. Item required for dimensional teleport through Mermoden's Minion. 14-day. -->
+		<set name="icon" val="icon.etc_warding_orb_black_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -450,11 +451,11 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_warding_orb_black_i00" />
 		<set name="time" val="20160" />
 	</item>
 	<item id="36730" name="Used Dimensional Teleport Orb" type="EtcItem">
 		<!-- Mark received upon dimensional teleport. It disappears after 4 hr. -->
+		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -464,7 +465,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_warding_orb_blue_i00" />
 	</item>
 	<item id="36731" name="Life Stone Instilled with Giants' Power" type="EtcItem">
 		<!-- Mineral with mysterious power. Can get an advanced augmentation effect. Can be used by characters of level 85 or above. -->

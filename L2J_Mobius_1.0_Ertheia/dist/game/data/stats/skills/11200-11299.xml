@@ -159,12 +159,12 @@
 	</skill>
 	<skill id="11242" toLevel="1" name="Shadow Snare Zone">
 		<!-- Pulls nearby enemies to the center. -->
+		<icon>icon.skill1469</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<abnormalType>COMBINATION</abnormalType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill1469</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-709</effectPoint>
 		<basicProperty>NONE</basicProperty>
@@ -191,12 +191,12 @@
 	</skill>
 	<skill id="11245" toLevel="1" name="Sampling">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
-		<icon>icon.skill11032</icon>
 		<operateType>A4</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-696</effectPoint>
@@ -224,8 +224,8 @@
 	</skill>
 	<skill id="11247" toLevel="1" name="Heavy Hit">
 		<!-- Inflicts a powerful blow on target. -->
-		<attachToggleGroupId>1</attachToggleGroupId>
 		<icon>icon.skill10317</icon>
+		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<hitTime>3380</hitTime>
@@ -350,6 +350,7 @@
 	</skill>
 	<skill id="11251" toLevel="10" name="Superior Weapon Mastery">
 		<!-- Increases INT by 2, P. Atk. by 82.9, M. Atk. by 103.7, Casting Spd. by 23%, M. Atk. by 6% and M. Critical Rate by 6%. Decreases MP Consumption of magic skill by 6%. When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery by 20%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. When equipped with a two-handed blunt, additionally P. Atk. + 105% and P. Accuracy + 4. -->
+		<icon>icon.skill11251</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -362,7 +363,6 @@
 			<value level="9">104</value>
 			<value level="10">104</value>
 		</magicLvl>
-		<icon>icon.skill11251</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -433,6 +433,7 @@
 	</skill>
 	<skill id="11252" toLevel="10" name="Superior Robe Mastery">
 		<!-- INT + 2. Max HP + 4151, P. Def. + 845, and Casting Spd. + 5% when equipped with a Robe. -->
+		<icon>icon.skill11252</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -445,7 +446,6 @@
 			<value level="9">104</value>
 			<value level="10">104</value>
 		</magicLvl>
-		<icon>icon.skill11252</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -486,6 +486,7 @@
 	</skill>
 	<skill id="11253" toLevel="10" name="Superior Magic Mastery">
 		<!-- INT + 2, M. Def. + 139, Magic Attack Resistance + 35%, and Max MP + 313. Increases HP/MP Recovery Bonus. Magic skill Cooldown - 25%. -->
+		<icon>icon.skill11253</icon>
 		<skillType>BUFF</skillType>
 		<magicLvl>
 			<value level="1">85</value>
@@ -499,7 +500,6 @@
 			<value level="9">104</value>
 			<value level="10">104</value>
 		</magicLvl>
-		<icon>icon.skill11253</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -586,8 +586,8 @@
 	</skill>
 	<skill id="11255" toLevel="1" name="Superior Spirit Mastery">
 		<!-- INT + 2 and Hold/Sleep/Bleed/Poison/Mental Attack Resistance + 30. -->
-		<magicLvl>85</magicLvl>
 		<icon>icon.skill11255</icon>
+		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -2157,6 +2157,7 @@
 	</skill>
 	<skill id="11277" toLevel="4" name="Sense of Loyalty">
 		<!-- Servitor's Fury. P. Atk. + 35%, M. Atk. + 75%, P. Critical Rate + 30%, and P. Critical Damage by 35%. -->
+		<icon>icon.skill11277</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
@@ -2165,7 +2166,6 @@
 		</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>SUMMON_CONDITION</abnormalType>
-		<icon>icon.skill11277</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<basicProperty>NONE</basicProperty>
@@ -2986,7 +2986,6 @@
 	</skill>
 	<skill id="11292" toLevel="8" name="Cubic Cleanse">
 		<!-- Cancels debuffs on you. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>687</effectPoint>
@@ -3026,7 +3025,6 @@
 	</skill>
 	<skill id="11293" toLevel="8" name="Cubic Cancellation">
 		<!-- Cancels the enemy's buff. -->
-		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 		<effectPoint>-687</effectPoint>

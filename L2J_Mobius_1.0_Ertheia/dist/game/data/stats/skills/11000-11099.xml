@@ -38,6 +38,7 @@
 	</skill>
 	<skill id="11001" toLevel="10" name="Superior Weapon Mastery">
 		<!-- P. Atk. + 83, M. Atk. + 104, and Casting Spd. + 23%. Additionally, there is a chance the Cooldown of skills will reset or the duration double depending on your INT. -->
+		<icon>icon.skill11251</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -50,7 +51,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill11251</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -84,6 +84,7 @@
 	</skill>
 	<skill id="11002" toLevel="10" name="Superior Robe Mastery">
 		<!-- Max HP + 4447, P. Def. + 1126, and M. Def. + 610 when equipped with a Robe. -->
+		<icon>icon.skill11252</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -96,7 +97,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill11252</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -136,6 +136,7 @@
 	</skill>
 	<skill id="11003" toLevel="10" name="Superior Anti Magic">
 		<!-- INT + 2, M. Def. + 139, Magic Attack Resistance + 35%. When receiving damage, has a chance of increasing M. Def. and Attribute Resistance for 10 seconds. -->
+		<icon>icon.skill10004</icon>
 		<magicLvl>
 			<value level="1">85</value>
 			<value level="2">90</value>
@@ -148,7 +149,6 @@
 			<value level="9">108</value>
 			<value level="10">110</value>
 		</magicLvl>
-		<icon>icon.skill10004</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -179,8 +179,8 @@
 	</skill>
 	<skill id="11004" toLevel="1" name="Superior Sigil Mastery">
 		<!-- When a Sigil is equipped, increases M. Atk. by 5% and MP Recovery Bonus by 20%. -->
-		<magicLvl>85</magicLvl>
 		<icon>icon.skill11791</icon>
+		<magicLvl>85</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -202,9 +202,9 @@
 	</skill>
 	<skill id="11005" toLevel="1" name="Superior Wizard Mastery">
 		<!-- INT + 2 and increases M. Atk., Casting Spd., and M. Critical Rate + 6%. Decreases skill MP Consumption by 6%. -->
+		<icon>icon.skill11253</icon>
 		<magicLvl>90</magicLvl>
 		<operateType>P</operateType>
-		<icon>icon.skill11253</icon>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effects>
 			<effect name="MAtk">
@@ -232,8 +232,8 @@
 	</skill>
 	<skill id="11006" toLevel="1" name="Superior Mental Attack Resistance">
 		<!-- INT + 2 and Hold/Sleep/Bleed/Mind/Poison Resistance + 30. -->
-		<magicLvl>95</magicLvl>
 		<icon>icon.skill11006</icon>
+		<magicLvl>95</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<operateType>P</operateType>
 		<effects>
@@ -2397,6 +2397,7 @@
 	</skill>
 	<skill id="11033" toLevel="3" name="Damaged Area">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -2406,7 +2407,6 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>300</affectRange>
-		<icon>icon.skill11032</icon>
 		<operateType>A4</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-696</effectPoint>
@@ -2437,9 +2437,9 @@
 	</skill>
 	<skill id="11034" toLevel="8" name="Elemental Blast">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11034</reuseDelayGroup>
@@ -2548,9 +2548,9 @@
 	</skill>
 	<skill id="11035" toLevel="8" name="Elemental Blast (Fire)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2641,9 +2641,9 @@
 	</skill>
 	<skill id="11036" toLevel="8" name="Elemental Blast (Water)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2734,9 +2734,9 @@
 	</skill>
 	<skill id="11037" toLevel="8" name="Elemental Blast (Wind)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2827,9 +2827,9 @@
 	</skill>
 	<skill id="11038" toLevel="8" name="Elemental Blast (Earth)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>10</attributeValue>
 		<operateType>A1</operateType>
@@ -2920,9 +2920,9 @@
 	</skill>
 	<skill id="11039" toLevel="8" name="Elemental Blast (4 Elements)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 210 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
-		<icon>icon.skill11034</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11034</reuseDelayGroup>
 		<magicLvl>
@@ -3014,9 +3014,9 @@
 	</skill>
 	<skill id="11040" toLevel="8" name="Elemental Storm">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11040</reuseDelayGroup>
@@ -3125,9 +3125,9 @@
 	</skill>
 	<skill id="11041" toLevel="8" name="Elemental Storm (Fire)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>10</attributeValue> <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3218,9 +3218,9 @@
 	</skill>
 	<skill id="11042" toLevel="8" name="Elemental Storm (Water)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>10</attributeValue>  <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3311,9 +3311,9 @@
 	</skill>
 	<skill id="11043" toLevel="8" name="Elemental Storm (Wind)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>10</attributeValue>  <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3404,9 +3404,9 @@
 	</skill>
 	<skill id="11044" toLevel="8" name="Elemental Storm (Earth)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>10</attributeValue>  <!-- TODO : Check me, Glory days says no attribute -->
 		<operateType>A1</operateType>
@@ -3497,9 +3497,9 @@
 	</skill>
 	<skill id="11045" toLevel="8" name="Elemental Storm (4 Elements)">
 		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with 262 Power added to attribute damage. Over-hit. -->
+		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
-		<icon>icon.skill11040</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11040</reuseDelayGroup>
 		<magicLvl>
@@ -5058,6 +5058,7 @@
 	</skill>
 	<skill id="11067" toLevel="4" name="Death Mass Unleash Hell">
 		<!-- Inflicts magical damage on target and nearby enemies with 620 Power. Casts Fear and Burn and decreases target's Speed by 20%. Over-hit. -->
+		<icon>icon.skill11067</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>TURN_FLEE</abnormalType>
@@ -5069,7 +5070,6 @@
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
 		<basicProperty>NONE</basicProperty>
-		<icon>icon.skill11067</icon>
 		<operateType>A2</operateType>
 		<trait>DERANGEMENT</trait>
 		<magicLvl>
@@ -5656,6 +5656,7 @@
 	</skill>
 	<skill id="11088" toLevel="3" name="Elemental Crash (Water)">
 		<!-- Decreases target's Speed. -->
+		<icon>icon.skill11017</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -5663,7 +5664,6 @@
 			<value level="3">5</value>
 		</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
-		<icon>icon.skill11017</icon>
 		<activateRate>99</activateRate>
 		<basicProperty>NONE</basicProperty>
 		<operateType>A2</operateType>
@@ -5769,6 +5769,7 @@
 	</skill>
 	<skill id="11092" toLevel="3" name="Damaged Area">
 		<!-- Momentarily incurs damage. All speeds are decreased. -->
+		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
 			<value level="1">3</value>
@@ -5778,7 +5779,6 @@
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<affectRange>300</affectRange>
 		<affectLimit>5-12</affectLimit>
-		<icon>icon.skill11032</icon>
 		<operateType>A4</operateType>
 		<isMagic>1</isMagic>
 		<effectPoint>-711</effectPoint>

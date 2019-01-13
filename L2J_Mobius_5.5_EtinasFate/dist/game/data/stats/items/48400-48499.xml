@@ -160,7 +160,7 @@
 	</item>
 	<item id="48415" name="Clan Hall Belt Stage 1" type="Armor">
 		<!-- Belt imbued with the concentrated energies of Nurka, Gustav, and Lidia. Max HP/ MP/ CP +500, Damage +6%, Received Damage -6%, Weight +12800, and Inventory Slots +18. -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -171,7 +171,7 @@
 	</item>
 	<item id="48416" name="Clan Hall Belt Stage 2" type="Armor">
 		<!-- Belt imbued with the concentrated energies of Nurka, Gustav, and Lidia. Max HP/ MP/ CP +500, Damage +7%, Received Damage -7%, Weight +12800, Inventory Slots +18, and all Attribute Resistance +10. -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -182,7 +182,7 @@
 	</item>
 	<item id="48417" name="Enhanced Ruler's Authority" type="Armor">
 		<!-- Enhanced Ruler's Authority. Max HP/ MP/ CP +1000, Weight +25600, Damage +10%, Received Damage -10%, Damage Reflect Resistance +10%, Fixed Damage Resistance +10%, Inventory Slots +36, and all Attribute Resistance +20. -->
-		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
+		<set name="icon" val="icon.grankain_powerbelt2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="immediate_effect" val="true" />
@@ -259,7 +259,7 @@
 	</item>
 	<item id="48427" name="Talisman - Wind: P. Critical Damage" additionalName="30-day" type="Armor">
 		<!-- When equipped, P. Skill Critical Damage +10%. -->
-		<set name="icon" val="icon.npoint_talisman_stat" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -272,7 +272,7 @@
 	</item>
 	<item id="48428" name="Talisman - Wind: M. Critical Damage" additionalName="30-day" type="Armor">
 		<!-- When equipped, M. Skill Critical Damage +10%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
+		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -286,7 +286,7 @@
 	</item>
 	<item id="48429" name="Talisman - Wind: Defense" additionalName="30-day" type="Armor">
 		<!-- When used, Physical and Magic Def. are maximized for 15 sec. Cooldown of 20 min. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_pd_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -300,7 +300,7 @@
 	</item>
 	<item id="48430" name="Talisman - Wind: Debuff Resistance" additionalName="30-day" type="Armor">
 		<!-- When used, debuff resistance increases for 15 sec. Cooldown of 20 min. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -314,7 +314,7 @@
 	</item>
 	<item id="48431" name="PA Talisman - STR" additionalName="2-hour" type="Armor">
 		<!-- When equipped, STR +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aries_agathion_charm" />
+		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -327,7 +327,7 @@
 	</item>
 	<item id="48432" name="PA Talisman - INT" additionalName="2-hour" type="Armor">
 		<!-- When equipped, INT +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_tau_agathion_charm" />
+		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -340,7 +340,7 @@
 	</item>
 	<item id="48433" name="PA Talisman - DEX" additionalName="2-hour" type="Armor">
 		<!-- When equipped, DEX +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_leo_agathion_charm" />
+		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -353,7 +353,7 @@
 	</item>
 	<item id="48434" name="PA Talisman - WIT" additionalName="2-hour" type="Armor">
 		<!-- When equipped, WIT +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -366,7 +366,7 @@
 	</item>
 	<item id="48435" name="PA Talisman - CON" additionalName="2-hour" type="Armor">
 		<!-- When equipped, CON +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -379,7 +379,7 @@
 	</item>
 	<item id="48436" name="PA Talisman - MEN" additionalName="2-hour" type="Armor">
 		<!-- When equipped, MEN +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -392,7 +392,7 @@
 	</item>
 	<item id="48437" name="PA Talisman - Atk. Attribute Boost" additionalName="2-hour" type="Armor">
 		<!-- When equipped, Atk. Attribute +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -405,7 +405,7 @@
 	</item>
 	<item id="48438" name="PA Talisman - Attribute Defense Boost" additionalName="2-hour" type="Armor">
 		<!-- When equipped, P. Def. +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -418,7 +418,7 @@
 	</item>
 	<item id="48439" name="Fortress Talisman - Vitality" additionalName="15-day" type="Armor">
 		<!-- When equipped, Vitality Bonus +10%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -432,7 +432,7 @@
 	</item>
 	<item id="48440" name="Fortress Talisman - P. Skill Power" additionalName="15-day" type="Armor">
 		<!-- When equipped, P. Skill Power +5%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_virgo_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -446,7 +446,7 @@
 	</item>
 	<item id="48441" name="Fortress Talisman - M. Skill Power" additionalName="15-day" type="Armor">
 		<!-- When equipped, M. Skill Power +5%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_capr_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -460,7 +460,7 @@
 	</item>
 	<item id="48442" name="Fortress Talisman - P. Atk." additionalName="15-day" type="Armor">
 		<!-- When equipped, P. Atk. +5%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_lib_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -474,7 +474,7 @@
 	</item>
 	<item id="48443" name="Fortress Talisman - M. Atk." additionalName="15-day" type="Armor">
 		<!-- When equipped, M. Atk. +5%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aries_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -488,7 +488,7 @@
 	</item>
 	<item id="48444" name="Fortress Talisman - P. Def." additionalName="15-day" type="Armor">
 		<!-- When equipped, P. Def. +10%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_tau_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -502,7 +502,7 @@
 	</item>
 	<item id="48445" name="Fortress Talisman - M. Def." additionalName="15-day" type="Armor">
 		<!-- When equipped, M. Def. +10%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_leo_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -516,7 +516,7 @@
 	</item>
 	<item id="48446" name="Fortress Talisman - Atk. Spd." additionalName="15-day" type="Armor">
 		<!-- When equipped, Atk. Spd. +5%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_gem_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -530,7 +530,7 @@
 	</item>
 	<item id="48447" name="Fortress Talisman - Casting Spd." additionalName="15-day" type="Armor">
 		<!-- When equipped, Casting Spd. +5%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sco_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -544,7 +544,7 @@
 	</item>
 	<item id="48448" name="Fortress Talisman - P. Accuracy" additionalName="15-day" type="Armor">
 		<!-- When equipped, P. Accuracy +16. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_aqu_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -558,7 +558,7 @@
 	</item>
 	<item id="48449" name="Fortress Talisman - M. Accuracy" additionalName="15-day" type="Armor">
 		<!-- When equipped, M. Accuracy +16. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_pis_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -572,7 +572,7 @@
 	</item>
 	<item id="48450" name="Fortress Talisman - Shield Def." additionalName="15-day" type="Armor">
 		<!-- When equipped, Shield Def. +50%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_sag_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -586,7 +586,7 @@
 	</item>
 	<item id="48451" name="Fortress Talisman - Max HP" additionalName="15-day" type="Armor">
 		<!-- When equipped, Max HP +10%. -->
-		<set name="icon" val="BranchIcon.icon.g_bm_can_agathion_charm" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -600,7 +600,7 @@
 	</item>
 	<item id="48452" name="Fortress Talisman - Max MP" additionalName="15-day" type="Armor">
 		<!-- When equipped, Max MP +10%. -->
-		<set name="icon" val="icon.sayha2017_cat" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="alldress" />
@@ -614,7 +614,7 @@
 	</item>
 	<item id="48453" name="Fortress Talisman - Speed" additionalName="15-day" type="Armor">
 		<!-- When equipped, Movement Speed +15. -->
-		<set name="icon" val="icon.sayha2017_panda" />
+		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="bodypart" val="alldress" />
@@ -891,7 +891,7 @@
 	</item>
 	<item id="48483" name="+7 Shiny Elemental Shirt" additionalName="1-day" type="Armor">
 		<!-- A magical Shirt infused with Einhasad's energy. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Skill MP Consumption -3%. Damage Reflect Resistance +5. Vampiric Rage +5%. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. <Active Skills>. Einhasad's Wrath/ Einhasad's Protection. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. Cannot be enchanted. -->
-		<set name="icon" val="icon.Accessory_nose_of_rudolph_mask_i00" />
+		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -907,7 +907,7 @@
 	</item>
 	<item id="48484" name="+7 Reflect Attack Shirt" additionalName="1-day" type="Armor">
 		<!-- A magical Shirt specialized for physical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. P. Def. +8%, Received P. Critical Damage -12%, 7% chance to reflect physical skill debuffs. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. Cannot be enchanted. -->
-		<set name="icon" val="icon.bm_sayhas_talisman" />
+		<set name="icon" val="icon.reflect_attack_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="GOLD" />
@@ -923,7 +923,7 @@
 	</item>
 	<item id="48485" name="+7 Reflect Magical Shirt" additionalName="1-day" type="Armor">
 		<!-- A magical Shirt specialized for magical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. M. Def. +8%, Received M. Critical Damage -12%, 7% chance to reflect magical skill debuffs. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. Cannot be enchanted. -->
-		<set name="icon" val="icon.accessory_jindo_cap_i00" />
+		<set name="icon" val="icon.reflect_magic_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
@@ -940,7 +940,7 @@
 	</item>
 	<item id="48486" name="Sayha Talisman Stage 6" additionalName="1-day" type="Armor">
 		<!-- When equipped, Sayha's power increases P. Def. by 1126, M. Def. by 736, and Acquired XP/ SPed by 10%. Equipping it with Venir Talisman Stage 10 or higher increases Skill Power by 3% and reduces cooldown by 3%. <Active Skills>. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. When identical Talismans are equipped, only the effect of the highest level Talisman is applies. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. -->
-		<set name="icon" val="icon.accessory_sapsal_cap_i00" />
+		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
 		<set name="immediate_effect" val="true" />
@@ -998,7 +998,7 @@
 	</item>
 	<item id="48491" name="Dragon shirt" type="Armor">
 		<!-- A Dragon Shirt. <Upgrade Condition>. Can be upgraded to Dragon Leather Shirt when enhanced to +5. Level 85 or higher. -->
-		<set name="icon" val="icon.agathion_base" />
+		<set name="icon" val="icon.bm_dragon_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
@@ -1015,7 +1015,7 @@
 	</item>
 	<item id="48492" name="Dragon Leather Shirt" type="Armor">
 		<!-- A Dragon Leather Shirt. <Upgrade Condition>. Can be upgraded to Dragon Rind Leather Shirt when enhanced to +5. Level 99 or higher. -->
-		<set name="icon" val="icon.s_newbie_user_display" />
+		<set name="icon" val="icon.bm_dragon_leather_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
@@ -1031,7 +1031,7 @@
 	</item>
 	<item id="48493" name="Dragon Rind Leather Shirt" type="Armor">
 		<!-- A Dragon Rind Leather Shirt. Level 105 or higher. -->
-		<set name="icon" val="icon.s_dormant_user_display" />
+		<set name="icon" val="icon.bm_dragon_rind_leather_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />

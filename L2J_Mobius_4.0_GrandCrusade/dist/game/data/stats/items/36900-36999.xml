@@ -462,6 +462,7 @@
 	</item>
 	<item id="36949" name="Chaos Essence" type="EtcItem">
 		<!-- Mysterious essence with the power of chaos. Take it to Hardin at the Reliquary of the Giants to change your specialized awakened class. Cannot be used by Ertheia. Can be used only by the main class. 30-day. -->
+		<set name="icon" val="icon.etc_water_of_silen_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -471,7 +472,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
-		<set name="icon" val="icon.etc_water_of_silen_i00" />
 		<set name="time" val="43200" />
 	</item>
 	<item id="36950" name="Toma's Living Guide" type="EtcItem">
@@ -1125,6 +1125,7 @@
 	</item>
 	<item id="36999" name="9th Anniversary Cube (30-day) (Event)" type="EtcItem">
 		<!-- Lineage II's 9th Anniversary Cube. Double-click to obtain one of the following: Kaliel's Energy (Annihilation/Hellfire/Desire), Honey Wheat Cake, Honey Rice Cake, and Blessed Scroll of Resurrection. Can be used once a day. -->
+		<set name="icon" val="icon.special_cube_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
@@ -1134,7 +1135,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
-		<set name="icon" val="icon.special_cube_i00" />
 		<set name="time" val="43200" />
 	</item>
 </list>

@@ -2,12 +2,12 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="2900" toLevel="1" name="Ancient Herb - Slayer">
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to strike down your enemies with the strength of a bull. -->
+		<icon>icon.freed_soul_core_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SIGNAL_C</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.freed_soul_core_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -28,12 +28,12 @@
 	</skill>
 	<skill id="2901" toLevel="1" name="Ancient Herb - Immortal">
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb makes you temporarily impervious to your enemy's attacks. -->
+		<icon>icon.freed_soul_core_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.freed_soul_core_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -67,12 +67,12 @@
 	</skill>
 	<skill id="2902" toLevel="1" name="Ancient Herb - Terminator">
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to cast as fast as the wind. -->
+		<icon>icon.freed_soul_core_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>CASTING_TIME_DOWN</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.freed_soul_core_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -99,12 +99,12 @@
 	</skill>
 	<skill id="2903" toLevel="1" name="Ancient Herb - Guide">
 		<!-- Possessed by those spirits who existed during the beginning of the world, this herb allows you to move faster than any beast on the plains. -->
+		<icon>icon.freed_soul_core_i00</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<effectPoint>100</effectPoint>
-		<icon>icon.freed_soul_core_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A2</operateType>
@@ -2810,12 +2810,12 @@
 	</skill>
 	<skill id="2993" toLevel="1" name="Ancient herb - Deceiver">
 		<!-- You incur the wrath of the spirits who existed in the chaos of the beginning of the world by taking the ancient herb without permission. -->
+		<icon>icon.freed_soul_core_i00</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<abnormalVisualEffect>DOT_POISON</abnormalVisualEffect>
-		<icon>icon.freed_soul_core_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
@@ -2838,11 +2838,11 @@
 	</skill>
 	<skill id="2994" toLevel="1" name="Transformation Harp: Aqua Elf">
 		<!-- Transforms into an Aqua Elf in an alluring dress. -->
+		<icon>icon.skilltransform3</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>-1</abnormalTime>
 		<abnormalType>TRANSFORM</abnormalType>
 		<effectPoint>1</effectPoint>
-		<icon>icon.skilltransform3</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
