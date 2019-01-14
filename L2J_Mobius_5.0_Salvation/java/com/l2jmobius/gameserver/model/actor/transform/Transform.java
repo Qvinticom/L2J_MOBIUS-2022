@@ -68,7 +68,7 @@ public final class Transform implements IIdentifiable
 		_spawnHeight = set.getInt("spawn_height", 0);
 		_name = set.getString("setName", null);
 		_title = set.getString("setTitle", null);
-		_allowAllSkills = set.getInt("allow_all_skills", 0) == 1;
+		_allowAllSkills = set.getInt("allow_all_skills", 1) == 1;
 	}
 	
 	/**
