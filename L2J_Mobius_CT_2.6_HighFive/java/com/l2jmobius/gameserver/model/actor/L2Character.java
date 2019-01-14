@@ -3951,7 +3951,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 				}
 			}
 			// Prevent player moving on ledges.
-			if ((dz > 100) && (distance < 300))
+			if ((dz > 180) && (distance < 300))
 			{
 				_move.onGeodataPathIndex = -1;
 				stopMove(getActingPlayer().getLastServerPosition());
