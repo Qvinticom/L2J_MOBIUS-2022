@@ -53,7 +53,6 @@ public final class Transform implements IIdentifiable
 	private final boolean _canAttack;
 	private final String _name;
 	private final String _title;
-	private final boolean _allowAllSkills;
 	
 	private TransformTemplate _maleTemplate;
 	private TransformTemplate _femaleTemplate;
@@ -68,7 +67,6 @@ public final class Transform implements IIdentifiable
 		_spawnHeight = set.getInt("spawn_height", 0);
 		_name = set.getString("setName", null);
 		_title = set.getString("setTitle", null);
-		_allowAllSkills = set.getInt("allow_all_skills", 1) == 1;
 	}
 	
 	/**
@@ -146,14 +144,6 @@ public final class Transform implements IIdentifiable
 		{
 			_femaleTemplate = template;
 		}
-	}
-	
-	/**
-	 * @return Allow all skills for this transformation.
-	 */
-	public boolean allowAllSkills()
-	{
-		return _allowAllSkills;
 	}
 	
 	/**

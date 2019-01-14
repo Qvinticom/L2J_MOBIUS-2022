@@ -8385,12 +8385,6 @@ public final class L2PcInstance extends L2Playable
 			return false;
 		}
 		
-		if (isTransformed() && !hasTransformSkill(skill))
-		{
-			sendPacket(ActionFailed.STATIC_PACKET);
-			return false;
-		}
-		
 		// If Alternate rule Karma punishment is set to true, forbid skill Return to player with Karma
 		if (!Config.ALT_GAME_KARMA_PLAYER_CAN_TELEPORT && (getReputation() < 0) && skill.hasEffectType(L2EffectType.TELEPORT))
 		{
@@ -11780,11 +11774,6 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean hasTransformSkill(Skill skill)
 	{
-		if (checkTransformed(Transform::allowAllSkills))
-		{
-			return true;
-		}
-		
 		return (_transformSkills != null) && (_transformSkills.get(skill.getId()) == skill);
 	}
 	
@@ -11827,37 +11816,34 @@ public final class L2PcInstance extends L2Playable
 			final Map<Integer, Skill> transformSkills = _transformSkills;
 			if (transformSkills != null)
 			{
-				if (!checkTransformed(Transform::allowAllSkills))
+				// Include transformation skills and those skills that are allowed during transformation.
+				currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
+				
+				// Revelation skills.
+				if (isDualClassActive())
 				{
-					// Include transformation skills and those skills that are allowed during transformation.
-					currentSkills = currentSkills.stream().filter(Skill::allowOnTransform).collect(Collectors.toList());
-					
-					// Revelation skills.
-					if (isDualClassActive())
+					int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
+					if (revelationSkill != 0)
 					{
-						int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_DUAL_CLASS, 0);
-						if (revelationSkill != 0)
-						{
-							addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
-						}
-						revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
-						if (revelationSkill != 0)
-						{
-							addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
-						}
+						addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
 					}
-					else if (!isSubClassActive())
+					revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_DUAL_CLASS, 0);
+					if (revelationSkill != 0)
 					{
-						int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_MAIN_CLASS, 0);
-						if (revelationSkill != 0)
-						{
-							addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
-						}
-						revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_MAIN_CLASS, 0);
-						if (revelationSkill != 0)
-						{
-							addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
-						}
+						addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+					}
+				}
+				else if (!isSubClassActive())
+				{
+					int revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_1_MAIN_CLASS, 0);
+					if (revelationSkill != 0)
+					{
+						addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
+					}
+					revelationSkill = getVariables().getInt(PlayerVariables.REVELATION_SKILL_2_MAIN_CLASS, 0);
+					if (revelationSkill != 0)
+					{
+						addSkill(SkillData.getInstance().getSkill(revelationSkill, 1), false);
 					}
 				}
 				// Include transformation skills.
