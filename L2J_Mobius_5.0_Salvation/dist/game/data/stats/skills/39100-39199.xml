@@ -22,7 +22,6 @@
 		<mpConsume>1</mpConsume>
 		<abnormalType>STEALTH</abnormalType>
 		<abnormalVisualEffect>STEALTH</abnormalVisualEffect>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -60,7 +59,6 @@
 		<reuseDelay>60000</reuseDelay>
 		<stayAfterDeath>true</stayAfterDeath>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -93,7 +91,6 @@
 		<itemConsumeId>48282</itemConsumeId>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -119,7 +116,6 @@
 		<itemConsumeId>48283</itemConsumeId>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>RANGE</affectScope>
@@ -134,7 +130,6 @@
 		<coolTime>200</coolTime>
 		<itemConsumeId>48285</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
@@ -159,7 +154,6 @@
 		<coolTime>200</coolTime>
 		<itemConsumeId>48286</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>

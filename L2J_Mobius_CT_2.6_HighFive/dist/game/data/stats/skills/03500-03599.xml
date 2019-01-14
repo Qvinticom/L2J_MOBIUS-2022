@@ -1075,7 +1075,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1133,7 +1132,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="#magicLvl" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1192,7 +1190,6 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="HOLD" />
 		<for>
@@ -1230,7 +1227,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1260,7 +1256,6 @@
 	<skill id="3581" levels="1" name="Discord">
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<!-- FIXME: this should be "Distrust" effect -->
@@ -1322,7 +1317,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1363,7 +1357,6 @@
 		<set name="lvlBonusRate" val="2" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1404,7 +1397,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1447,7 +1439,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -1478,7 +1469,6 @@
 	<skill id="3592" levels="1" name="Dispell">
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DispelByCategory">
@@ -1515,7 +1505,6 @@
 		<set name="lvlBonusRate" val="1" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -1547,7 +1536,6 @@
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<!-- TODO: Remove this condition when proper target type is done -->
 		<cond msgId="113" addName="1">
@@ -1583,7 +1571,6 @@
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<!-- TODO: Remove this condition when proper target type is done -->
 		<cond>

@@ -94,7 +94,6 @@
 	<skill id="4513" toLevel="1" name="Squash - Level Up">
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -103,7 +102,6 @@
 	<skill id="4514" toLevel="1" name="Squash - Poisoned">
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -124,7 +122,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -147,7 +144,6 @@
 		<mpInitialConsume>16</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -160,7 +156,6 @@
 	<skill id="4517" toLevel="1" name="Shield">
 		<magicLvl>76</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
@@ -181,7 +176,6 @@
 	<skill id="4518" toLevel="1" name="Might">
 		<magicLvl>76</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
@@ -202,7 +196,6 @@
 	<skill id="4519" toLevel="1" name="Shield">
 		<magicLvl>76</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
@@ -218,7 +211,6 @@
 	<skill id="4520" toLevel="1" name="Might">
 		<magicLvl>76</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
@@ -259,7 +251,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -282,7 +273,6 @@
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -304,7 +294,6 @@
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -314,7 +303,6 @@
 	<skill id="4525" toLevel="1" name="Shield">
 		<magicLvl>76</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
@@ -335,7 +323,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -357,7 +344,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -382,7 +368,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -403,7 +388,6 @@
 		<magicLvl>76</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -421,7 +405,6 @@
 		<magicLvl>76</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -440,7 +423,6 @@
 		<magicLvl>76</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -455,7 +437,6 @@
 	<skill id="4532" toLevel="1" name="Reflect Damage">
 		<magicLvl>76</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
@@ -482,7 +463,6 @@
 		<isDebuff>true</isDebuff>
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -511,7 +491,6 @@
 		<isDebuff>true</isDebuff>
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -540,7 +519,6 @@
 		<isDebuff>true</isDebuff>
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -569,7 +547,6 @@
 		<isDebuff>true</isDebuff>
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -598,7 +575,6 @@
 		<isDebuff>true</isDebuff>
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -627,7 +603,6 @@
 		<isDebuff>true</isDebuff>
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -657,7 +632,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -687,7 +661,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -717,7 +690,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -769,7 +741,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>76</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -807,7 +778,6 @@
 	<skill id="4545" toLevel="1" name="Reflect Damage">
 		<magicLvl>76</magicLvl>
 		<operateType>T</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<effects>
@@ -831,7 +801,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -848,7 +817,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>-1</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -862,7 +830,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -878,7 +845,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -888,7 +854,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -920,7 +885,6 @@
 		<mpConsume>55</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -986,7 +950,6 @@
 		<mpConsume>55</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1052,7 +1015,6 @@
 		<mpConsume>55</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1118,7 +1080,6 @@
 		<mpConsume>55</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1180,7 +1141,6 @@
 		<mpConsume>55</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -1199,7 +1159,6 @@
 		<mpConsume>55</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -1218,7 +1177,6 @@
 		<mpConsume>55</mpConsume>
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>TARGET</targetType>
@@ -1240,7 +1198,6 @@
 		<effectRange>1100</effectRange>
 		<magicLvl>75</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1286,7 +1243,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1347,7 +1303,6 @@
 			<value level="12">20</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1423,7 +1378,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1497,7 +1451,6 @@
 			<value level="12">20</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>4.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1572,7 +1525,6 @@
 			<value level="12">20</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1635,7 +1587,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1697,7 +1648,6 @@
 			<value level="12">78</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>4.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1760,7 +1710,6 @@
 			<value level="12">78</value>
 		</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1838,7 +1787,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1914,7 +1862,6 @@
 			<value level="12">29</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>4.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1991,7 +1938,6 @@
 			<value level="12">29</value>
 		</mpInitialConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2.5</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2053,7 +1999,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -2112,7 +2057,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2172,7 +2116,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2232,7 +2175,6 @@
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>20000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -2284,7 +2226,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2331,7 +2272,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -2406,7 +2346,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>200</affectRange>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2449,7 +2388,6 @@
 		<mpConsume>58</mpConsume>
 		<mpInitialConsume>15</mpInitialConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2534,7 +2472,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>ENEMY</targetType>
@@ -2633,7 +2570,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2702,7 +2638,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>HOLD</trait>
 		<targetType>ENEMY</targetType>
@@ -2770,7 +2705,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>POISON</trait>
 		<targetType>ENEMY</targetType>
@@ -2852,7 +2786,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>17000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2947,7 +2880,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3007,7 +2939,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3132,7 +3063,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3214,7 +3144,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>200</affectRange>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3265,7 +3194,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3381,7 +3309,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -3466,7 +3393,6 @@
 			<value level="12">233</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<attributeType>FIRE</attributeType>
@@ -3552,7 +3478,6 @@
 			<value level="12">233</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2</hitCancelTime>
 		<attributeType>FIRE</attributeType>
@@ -3639,7 +3564,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -3722,7 +3646,6 @@
 			<value level="12">155</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<attributeType>FIRE</attributeType>
@@ -3806,7 +3729,6 @@
 			<value level="12">155</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2</hitCancelTime>
 		<attributeType>FIRE</attributeType>
@@ -3862,7 +3784,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -3947,7 +3868,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>8000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>BLEED</trait>
 		<targetType>ENEMY</targetType>
@@ -4031,7 +3951,6 @@
 			<value level="12">140</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>3.5</hitCancelTime>
 		<trait>BLEED</trait>
@@ -4116,7 +4035,6 @@
 			<value level="12">140</value>
 		</mpConsume>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>2</hitCancelTime>
 		<trait>BLEED</trait>
@@ -4199,7 +4117,6 @@
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<affectRange>20</affectRange>
 		<targetType>ENEMY</targetType>

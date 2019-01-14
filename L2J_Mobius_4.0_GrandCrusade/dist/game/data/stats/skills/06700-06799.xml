@@ -5,7 +5,6 @@
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -22,7 +21,6 @@
 		<icon>icon.skill_agathion_cute</icon>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -37,7 +35,6 @@
 	<skill id="6702" toLevel="1" name="Blessing of Cheers">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -60,7 +57,6 @@
 	</skill>
 	<skill id="6703" toLevel="1" name="Blessing of Cheers">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -83,7 +79,6 @@
 	</skill>
 	<skill id="6704" toLevel="1" name="Blessing of Cheers">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -114,7 +109,6 @@
 		<effectPoint>-1033</effectPoint>
 		<operateType>A2</operateType>
 		<abnormalType>STUN</abnormalType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>300</effectRange>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -144,7 +138,6 @@
 		<mpConsume>83</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<effectPoint>-1349</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitTime>2000</hitTime>
@@ -164,7 +157,6 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-1000</effectPoint>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<affectRange>200</affectRange>
@@ -177,7 +169,6 @@
 	<skill id="6708" toLevel="1" name="Self-destruction">
 		<operateType>A1</operateType>
 		<effectPoint>-1000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<affectRange>200</affectRange>
@@ -191,7 +182,6 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>-1000</effectPoint>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>500</effectRange>
 		<magicLvl>85</magicLvl>
@@ -211,7 +201,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>ATTACK_TIME_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>2</abnormalLvl>
@@ -227,7 +216,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>PA_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>
@@ -253,7 +241,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -279,7 +266,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -305,7 +291,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -331,7 +316,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -385,7 +369,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -411,7 +394,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -437,7 +419,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -463,7 +444,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -489,7 +469,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -515,7 +494,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -542,7 +520,6 @@
 		<hitTime>1500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -572,7 +549,6 @@
 		<hitTime>1000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -601,7 +577,6 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A1</operateType>
 		<reuseDelay>4000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<staticReuse>true</staticReuse>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
@@ -627,7 +602,6 @@
 		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -650,7 +624,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>3000</reuseDelay>
 		<targetType>TARGET</targetType>
@@ -674,7 +647,6 @@
 		<hitTime>500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -698,7 +670,6 @@
 		<hitTime>2000</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<reuseDelay>1000</reuseDelay>
@@ -715,7 +686,6 @@
 		<effectPoint>1000</effectPoint>
 		<abnormalType>STEALTH</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -740,7 +710,6 @@
 		<hitTime>3000</hitTime>
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<effectPoint>-10000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>2000</reuseDelay>
@@ -757,7 +726,6 @@
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>TIME_BOMB</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
 		<magicLvl>85</magicLvl>
@@ -780,7 +748,6 @@
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -802,7 +769,6 @@
 		<effectPoint>-1000</effectPoint>
 		<abnormalType>TURN_STONE</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -824,7 +790,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE</rideState>
 		<effectPoint>-1000</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<fanRange>0;0;500;40</fanRange>
@@ -846,7 +811,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>130</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<effectPoint>546</effectPoint>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<reuseDelay>1000</reuseDelay>
@@ -866,7 +830,6 @@
 		<effectPoint>-1000</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -886,7 +849,6 @@
 	<skill id="6739" toLevel="1" name="Presentation - Behemoth Leader Casting Preparation">
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<hitTime>45000</hitTime>
@@ -896,7 +858,6 @@
 	<skill id="6740" toLevel="1" name="Presentation - Behemoth Leader Casting">
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -907,7 +868,6 @@
 	<skill id="6741" toLevel="1" name="Presentation - Behemoth Leader Casting Failure">
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -919,7 +879,6 @@
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>CA1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>2000</effectRange>
@@ -953,7 +912,6 @@
 		<mpConsume>25</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -978,7 +936,6 @@
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>CASTING_TIME_UP</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1200</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1003,7 +960,6 @@
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<effectRange>1200</effectRange>
@@ -1028,7 +984,6 @@
 		<effectPoint>-10000</effectPoint>
 		<abnormalType>ARMOR_UNHOLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1200</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1051,7 +1006,6 @@
 		<icon>icon.skill1445</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-10000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>150</effectRange>
 		<magicLvl>85</magicLvl>
@@ -1082,7 +1036,6 @@
 		<mpConsume>33</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<lvlBonusRate>1</lvlBonusRate>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
@@ -1108,7 +1061,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1130,7 +1082,6 @@
 		<mpConsume>33</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1145,7 +1096,6 @@
 	<skill id="6751" toLevel="1" name="Blow Attack">
 		<operateType>A1</operateType>
 		<effectPoint>-1000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>300</effectRange>
 		<magicLvl>85</magicLvl>
@@ -1168,7 +1118,6 @@
 		<mpConsume>158</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1196,7 +1145,6 @@
 		<mpConsume>77</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DEATH</trait>
@@ -1228,7 +1176,6 @@
 		<mpConsume>100</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1255,7 +1202,6 @@
 		<mpConsume>78</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1276,7 +1222,6 @@
 		<mpConsume>155</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -1306,7 +1251,6 @@
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1331,7 +1275,6 @@
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1361,7 +1304,6 @@
 	<skill id="6759" toLevel="1" name="Death Shot">
 		<effectPoint>-897</effectPoint>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
@@ -1382,7 +1324,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1404,7 +1345,6 @@
 		<mpConsume>158</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1431,7 +1371,6 @@
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1467,7 +1406,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1490,7 +1428,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1507,7 +1444,6 @@
 		<magicLvl>85</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<castRange>900</castRange>
@@ -1531,7 +1467,6 @@
 		<mpConsume>78</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1544,7 +1479,6 @@
 	<skill id="6767" toLevel="1" name="Earthquake">
 		<operateType>A1</operateType>
 		<effectPoint>-10000</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<attributeType>EARTH</attributeType>
@@ -1573,7 +1507,6 @@
 		<mpConsume>158</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<lvlBonusRate>1</lvlBonusRate>
 		<attributeType>EARTH</attributeType>
@@ -1609,7 +1542,6 @@
 		<mpConsume>155</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1630,7 +1562,6 @@
 		<magicLvl>85</magicLvl>
 		<mpConsume>130</mpConsume>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<reuseDelay>5000</reuseDelay>
@@ -1654,7 +1585,6 @@
 		<mpConsume>79</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1676,7 +1606,6 @@
 		<mpConsume>33</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -1700,7 +1629,6 @@
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
@@ -1744,7 +1672,6 @@
 		<mpConsume>85</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<lvlBonusRate>1</lvlBonusRate>
 		<attributeType>DARK</attributeType>
@@ -1772,7 +1699,6 @@
 		<mpConsume>85</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<isDebuff>true</isDebuff>
 		<fanRange>0;0;150;60</fanRange>
@@ -1803,7 +1729,6 @@
 		<mpConsume>69</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>PARALYZE</abnormalType>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<abnormalLvl>1</abnormalLvl>
@@ -1853,7 +1778,6 @@
 		<mpConsume>89</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<attributeType>DARK</attributeType>
 		<attributeValue>120</attributeValue>
@@ -1884,7 +1808,6 @@
 		<mpConsume>89</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1905,7 +1828,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effectPoint>1</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1921,7 +1843,6 @@
 	<skill id="6780" toLevel="1" name="Presentation - Portal Ray Combined Light Maintenance">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1931,7 +1852,6 @@
 	<skill id="6781" toLevel="1" name="Presentation - Red Portal Ray">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1941,7 +1861,6 @@
 	<skill id="6782" toLevel="1" name="Presentation - Blue Portal Ray">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1951,7 +1870,6 @@
 	<skill id="6783" toLevel="1" name="Presentation - Portal 2_boom_up">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1961,7 +1879,6 @@
 	<skill id="6784" toLevel="1" name="Presentation - Eris' Suffering">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1972,7 +1889,6 @@
 	<skill id="6785" toLevel="1" name="Presentation - Dialogue with Etis 1">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1983,7 +1899,6 @@
 	<skill id="6786" toLevel="1" name="Presentation - Etis Transformation Effect">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1993,7 +1908,6 @@
 	<skill id="6787" toLevel="1" name="Presentation - Etis Pre-Transformation">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2004,7 +1918,6 @@
 	<skill id="6788" toLevel="1" name="Presentation - Etis Post-Transformation">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2015,7 +1928,6 @@
 	<skill id="6789" toLevel="1" name="Presentation - Etis' Defeat">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2026,7 +1938,6 @@
 	<skill id="6790" toLevel="1" name="Presentation - Etis Kneeling">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2037,7 +1948,6 @@
 	<skill id="6791" toLevel="1" name="Presentation - Dialogue with Elcadia 1">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2048,7 +1958,6 @@
 	<skill id="6792" toLevel="1" name="Presentation - Dialogue with Elcadia 2">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2059,7 +1968,6 @@
 	<skill id="6793" toLevel="1" name="Presentation - Dialogue with Elcadia 3">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2070,7 +1978,6 @@
 	<skill id="6794" toLevel="1" name="Presentation - Elcadia Casting 1">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2081,7 +1988,6 @@
 	<skill id="6795" toLevel="1" name="Presentation - Elcadia Casting 2">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2092,7 +1998,6 @@
 	<skill id="6796" toLevel="1" name="Presentation - Meteor Effect">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2102,7 +2007,6 @@
 	<skill id="6797" toLevel="1" name="Presentation - Eris Scatter Effect">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2112,7 +2016,6 @@
 	<skill id="6798" toLevel="1" name="Presentation - Etis Summon Effect">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2122,7 +2025,6 @@
 	<skill id="6799" toLevel="1" name="Presentation - Portal 2_boom_down">
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>

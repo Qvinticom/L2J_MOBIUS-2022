@@ -160,7 +160,6 @@
 		<effectPoint>100</effectPoint>
 		<abnormalType>PREMIUM_BUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
@@ -180,7 +179,6 @@
 	</skill>
 	<skill id="17050" toLevel="1" name="Scroll of Escape: Raider's Crossroads">
 		<!-- Return to Raider's Crossroads -->
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<hitTime>1500</hitTime>
@@ -189,7 +187,6 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -389,7 +386,6 @@
 		<magicLvl>99</magicLvl>
 		<isMagic>2</isMagic>
 		<magicCriticalRate>-5</magicCriticalRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<conditions>
 			<condition name="OpMainjob" />
 			<condition name="CheckLevel">
@@ -420,7 +416,6 @@
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<abnormalLvl>0</abnormalLvl>
@@ -474,7 +469,6 @@
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<abnormalLvl>0</abnormalLvl>
@@ -539,7 +533,6 @@
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<canBeDispelled>false</canBeDispelled>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<abnormalLvl>0</abnormalLvl>

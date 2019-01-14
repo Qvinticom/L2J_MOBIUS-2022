@@ -21,7 +21,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="3420" />
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="FatalBlow" />
@@ -37,7 +36,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="3420" />
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -49,7 +47,6 @@
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="30000" /> <!-- FIXME: value unconfirmed -->
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -64,7 +61,6 @@
 		<set name="mpConsume" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" /> <!-- FIXME: value unconfirmed -->
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -84,7 +80,6 @@
 		<set name="mpConsume" val="58" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="240000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="MaxHp">

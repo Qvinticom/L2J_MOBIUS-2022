@@ -16,7 +16,6 @@
 		<operateType>A1</operateType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ITEM</targetType>
@@ -28,7 +27,6 @@
 		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -198,7 +196,6 @@
 		<coolTime>500</coolTime>
 		<itemConsumeId>46535</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -234,7 +231,6 @@
 		<coolTime>500</coolTime>
 		<itemConsumeId>46536</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -258,7 +254,6 @@
 		</effects>
 	</skill>
 	<skill id="18534" toLevel="1" name="Scroll of Escape: Mystic Tavern">
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<hitTime>1000</hitTime>
@@ -267,7 +262,6 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -349,7 +343,6 @@
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>46560</itemConsumeId>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -416,7 +409,6 @@
 	<skill id="18558" toLevel="1" name="White Assassin Suit Appearance Stone">
 		<!-- An appearance stone that changes appearance to that of a White Assassin Suit. Can be used on upper and full-body costumes. -->
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -453,7 +445,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -856,7 +847,6 @@
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<cond msgId="113" addName="1">
@@ -948,7 +938,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<abnormalLvl>0</abnormalLvl>
@@ -1031,7 +1020,6 @@
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>687</effectPoint>
 		<magicLvl>85</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
@@ -1107,7 +1095,6 @@
 		<affectScope>SINGLE</affectScope>
 		<hitTime>400</hitTime>
 		<hitCancelTime>0</hitCancelTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<conditions>
 			<condition name="OpEncumbered">
 				<weightPercent>20</weightPercent>

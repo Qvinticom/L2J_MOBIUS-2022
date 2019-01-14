@@ -9,7 +9,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>NPC_FURY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>4</abnormalLvl>
@@ -38,7 +37,6 @@
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>1</specialLevel>
 		<abnormalLvl>1</abnormalLvl>
@@ -74,7 +72,6 @@
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -109,7 +106,6 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -138,7 +134,6 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -169,7 +164,6 @@
 		<effectPoint>-351</effectPoint>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -206,7 +200,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>PA_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>
@@ -237,7 +230,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>500</effectRange>
@@ -271,7 +263,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -304,7 +295,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>PARALYZE</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -340,7 +330,6 @@
 	<skill id="14210" toLevel="1" name="Teredor Hiding Presentation">
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>95</magicLvl>
@@ -351,7 +340,6 @@
 	<skill id="14211" toLevel="1" name="Teredor Appearance Presentation">
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>95</magicLvl>
@@ -364,7 +352,6 @@
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -379,7 +366,6 @@
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -394,7 +380,6 @@
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -414,7 +399,6 @@
 		<abnormalType>DMG_SHIELD</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>1</abnormalLvl>
@@ -440,7 +424,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>99</magicLvl>
@@ -462,7 +445,6 @@
 		<abnormalType>AIRBIND</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<effectRange>1400</effectRange>
@@ -492,7 +474,6 @@
 		<abnormalType>DEATH_CLACK</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -513,7 +494,6 @@
 		<castRange>500</castRange>
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>900</effectRange>
@@ -540,7 +520,6 @@
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>1</abnormalLvl>
@@ -571,7 +550,6 @@
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -584,7 +562,6 @@
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -597,7 +574,6 @@
 		<operateType>A1</operateType>
 		<effectPoint>-2</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -624,7 +600,6 @@
 		<hitTime>25000</hitTime>
 		<effectPoint>-2</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<magicLvl>99</magicLvl>
@@ -662,7 +637,6 @@
 		<effectPoint>100</effectPoint>
 		<abnormalType>SEIZURE_A</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -687,7 +661,6 @@
 		<effectPoint>100</effectPoint>
 		<abnormalType>PA_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -705,7 +678,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>LIFE_FORCE_ORC</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>10</abnormalLvl>
@@ -730,7 +702,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>LIFE_FORCE_ORC</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -751,7 +722,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>LIFE_FORCE_ORC</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -772,7 +742,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>LIFE_FORCE_ORC</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -792,7 +761,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -827,7 +795,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>700</effectRange>
@@ -852,7 +819,6 @@
 		<castRange>300</castRange>
 		<hitTime>2000</hitTime>
 		<effectPoint>-2</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>700</effectRange>
@@ -877,7 +843,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>MAX_HP_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1000</effectRange>
@@ -908,7 +873,6 @@
 		<castRange>50</castRange>
 		<effectPoint>100</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -927,7 +891,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<magicLvl>99</magicLvl>
@@ -960,7 +923,6 @@
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 		<abnormalLvl>2</abnormalLvl>
@@ -995,7 +957,6 @@
 		<effectPoint>-666</effectPoint>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>600</effectRange>
 		<magicLvl>99</magicLvl>
@@ -1027,7 +988,6 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1600</effectRange>
 		<magicLvl>99</magicLvl>
@@ -1059,7 +1019,6 @@
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>600</effectRange>
@@ -1095,7 +1054,6 @@
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>600</effectRange>
@@ -1127,7 +1085,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>900</effectRange>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -1158,7 +1115,6 @@
 		<hitTime>10000</hitTime>
 		<effectPoint>-355</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>2500</effectRange>
@@ -1181,7 +1137,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1219,7 +1174,6 @@
 		<effectPoint>-354</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1260,7 +1214,6 @@
 		<hitTime>3000</hitTime>
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>900</effectRange>
@@ -1286,7 +1239,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>FLY_AWAY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
@@ -1323,7 +1275,6 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>900</effectRange>
@@ -1355,7 +1306,6 @@
 		<abnormalType>PA_UP</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1393,7 +1343,6 @@
 		<effectPoint>-355</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>800</effectRange>
@@ -1424,7 +1373,6 @@
 		<castRange>45</castRange>
 		<effectPoint>-1</effectPoint>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>100</effectRange>
@@ -1450,7 +1398,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -1480,7 +1427,6 @@
 		<effectPoint>-352</effectPoint>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>98</magicLvl>
@@ -1502,7 +1448,6 @@
 	<skill id="14254" toLevel="1" name="Flash">
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1515,7 +1460,6 @@
 	<skill id="14255" toLevel="1" name="Large Flash">
 		<operateType>A1</operateType>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1532,7 +1476,6 @@
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -1556,7 +1499,6 @@
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -1582,7 +1524,6 @@
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -1609,7 +1550,6 @@
 		<castRange>40</castRange>
 		<hitTime>3000</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -1637,7 +1577,6 @@
 		<hitTime>3000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1000</effectRange>
@@ -1668,7 +1607,6 @@
 		<hitTime>3000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1000</effectRange>
@@ -1693,7 +1631,6 @@
 		<hitTime>1500</hitTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1000</effectRange>
@@ -1728,7 +1665,6 @@
 		<isMagic>1</isMagic>
 		<effectPoint>-1</effectPoint>
 		<abnormalType>STUN</abnormalType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<specialLevel>
@@ -1778,7 +1714,6 @@
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>93</magicLvl>
 		<abnormalLvl>3</abnormalLvl>
@@ -1805,7 +1740,6 @@
 		<hitTime>4000</hitTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>95</magicLvl>
 		<isMagic>1</isMagic>
@@ -1825,7 +1759,6 @@
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<lvlBonusRate>2</lvlBonusRate>
@@ -1851,7 +1784,6 @@
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -1883,7 +1815,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<magicLvl>97</magicLvl>
@@ -1916,7 +1847,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<magicLvl>98</magicLvl>
@@ -1949,7 +1879,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>TURN_FLEE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<magicLvl>98</magicLvl>
@@ -1979,7 +1908,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<magicLvl>98</magicLvl>
@@ -2013,7 +1941,6 @@
 		<castRange>40</castRange>
 		<hitTime>3000</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -2038,7 +1965,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>600</effectRange>
@@ -2069,7 +1995,6 @@
 		<hitTime>1500</hitTime>
 		<reuseDelay>5000</reuseDelay>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>2500</effectRange>
@@ -2090,7 +2015,6 @@
 		<castRange>2000</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>2500</effectRange>
@@ -2115,7 +2039,6 @@
 		<hitTime>1500</hitTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>2500</effectRange>
@@ -2138,7 +2061,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -2157,7 +2079,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -2180,7 +2101,6 @@
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -2201,7 +2121,6 @@
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -2222,7 +2141,6 @@
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -2240,7 +2158,6 @@
 		<castRange>1000</castRange>
 		<effectPoint>-1</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>99</magicLvl>
@@ -2258,7 +2175,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -2277,7 +2193,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -2299,7 +2214,6 @@
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -2315,7 +2229,6 @@
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -2328,7 +2241,6 @@
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -2341,7 +2253,6 @@
 		<!-- See the summoned spirit perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2361,7 +2272,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>ULTIMATE_DEBUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -2426,7 +2336,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>MIRAGE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -2454,7 +2363,6 @@
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
 		<effectPoint>-2</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -2488,7 +2396,6 @@
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-2</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>
@@ -2528,7 +2435,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -2575,7 +2481,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>1</lvlBonusRate>
@@ -2621,7 +2526,6 @@
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
 		<effectPoint>-2</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
@@ -2660,7 +2564,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>
@@ -2709,7 +2612,6 @@
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -2756,7 +2658,6 @@
 		<castRange>900</castRange>
 		<hitTime>1500</hitTime>
 		<effectPoint>-2</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1400</effectRange>

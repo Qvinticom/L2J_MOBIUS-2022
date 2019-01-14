@@ -10,7 +10,6 @@
 		<coolTime>300</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
@@ -32,7 +31,6 @@
 	</skill>
 	<skill id="12001" toLevel="1" name="Glimmer Crystal">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -54,7 +52,6 @@
 		<operateType>A1</operateType>
 		<castRange>150</castRange>
 		<hitTime>1000</hitTime>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>300</effectRange>
@@ -94,7 +91,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>800</effectRange>
@@ -115,7 +111,6 @@
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>72</magicLvl>
@@ -143,7 +138,6 @@
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -167,7 +161,6 @@
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -191,7 +184,6 @@
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -217,7 +209,6 @@
 		<effectPoint>-687</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<activateRate>99</activateRate>
@@ -250,7 +241,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>ABNORMAL_INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
@@ -272,7 +262,6 @@
 		<castRange>450</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>500</effectRange>
 		<magicLvl>1</magicLvl>
@@ -290,7 +279,6 @@
 		<effectPoint>2</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -303,7 +291,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -326,7 +313,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -349,7 +335,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -372,7 +357,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -395,7 +379,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -418,7 +401,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -441,7 +423,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -464,7 +445,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -487,7 +467,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -510,7 +489,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -533,7 +511,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -556,7 +533,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -579,7 +555,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -602,7 +577,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -625,7 +599,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -648,7 +621,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -671,7 +643,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -694,7 +665,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -717,7 +687,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -740,7 +709,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -763,7 +731,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -786,7 +753,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -809,7 +775,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -832,7 +797,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -855,7 +819,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -878,7 +841,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -901,7 +863,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -924,7 +885,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -947,7 +907,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -970,7 +929,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -993,7 +951,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1016,7 +973,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1039,7 +995,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1062,7 +1017,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1085,7 +1039,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1108,7 +1061,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1131,7 +1083,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1154,7 +1105,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1177,7 +1127,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1200,7 +1149,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1223,7 +1171,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1246,7 +1193,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1269,7 +1215,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1292,7 +1237,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1315,7 +1259,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1338,7 +1281,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1361,7 +1303,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1384,7 +1325,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1407,7 +1347,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1430,7 +1369,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1453,7 +1391,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1476,7 +1413,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1499,7 +1435,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1522,7 +1457,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1545,7 +1479,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1568,7 +1501,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1591,7 +1523,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1614,7 +1545,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1637,7 +1567,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1660,7 +1589,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1683,7 +1611,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1706,7 +1633,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1729,7 +1655,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1752,7 +1677,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1775,7 +1699,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1798,7 +1721,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1821,7 +1743,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1844,7 +1765,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1867,7 +1787,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1890,7 +1809,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1913,7 +1831,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1936,7 +1853,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1959,7 +1875,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1982,7 +1897,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2005,7 +1919,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2028,7 +1941,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2051,7 +1963,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2074,7 +1985,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2097,7 +2007,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2120,7 +2029,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2143,7 +2051,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2166,7 +2073,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2189,7 +2095,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2212,7 +2117,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2235,7 +2139,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2258,7 +2161,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2281,7 +2183,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -2304,7 +2205,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<itemConsumeCount>1</itemConsumeCount>

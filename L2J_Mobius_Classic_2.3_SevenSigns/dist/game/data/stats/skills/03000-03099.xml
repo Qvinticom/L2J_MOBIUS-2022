@@ -34,7 +34,6 @@
 		<lvlBonusRate>1</lvlBonusRate>
 		<magicLvl>40</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -354,7 +353,6 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -461,7 +459,6 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -509,7 +506,6 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -552,7 +548,6 @@
 			<value level="6">61</value>
 		</magicLvl>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitTime>3000</hitTime>
 		<targetType>ENEMY</targetType>
@@ -652,7 +647,6 @@
 			<value level="6">61</value>
 		</magicLvl>
 		<reuseDelay>12000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>POISON</trait>
@@ -690,7 +684,6 @@
 			<value level="5">58</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>NONE</targetType>
@@ -1172,7 +1165,6 @@
 			<value level="6">61</value>
 			<value level="7">70</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1238,7 +1230,6 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>
@@ -1304,7 +1295,6 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>
@@ -1946,7 +1936,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -1974,7 +1963,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -2004,7 +1992,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -2038,7 +2025,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -2072,7 +2058,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -2139,7 +2124,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2163,7 +2147,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY</targetType>
@@ -2194,7 +2177,6 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>
@@ -2232,7 +2214,6 @@
 		<isDebuff>true</isDebuff>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
 		<lvlBonusRate>1</lvlBonusRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>
@@ -2332,7 +2313,6 @@
 			<value level="3">70</value>
 			<value level="4">82</value>
 		</magicLvl>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -2398,7 +2378,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -2426,7 +2405,6 @@
 			<value level="1">64</value>
 			<value level="2">67</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
@@ -2537,7 +2515,6 @@
 			<value level="5">28</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -2570,7 +2547,6 @@
 			<value level="5">28</value>
 			<value level="6">61</value>
 		</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>PARALYZE</trait>
@@ -2644,7 +2620,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2685,7 +2660,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -2733,7 +2707,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2794,7 +2767,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2833,7 +2805,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2873,7 +2844,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -2921,7 +2891,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>HOLD</trait>
@@ -2962,7 +2931,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SLEEP</trait>
@@ -3002,7 +2970,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>PARALYZE</trait>
@@ -3059,7 +3026,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3096,7 +3062,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -3167,7 +3132,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>POISON</trait>
@@ -3262,7 +3226,6 @@
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>BLEED</trait>
@@ -3324,7 +3287,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -3362,7 +3324,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -3394,7 +3355,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3456,7 +3416,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3496,7 +3455,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>ENEMY_ONLY</targetType>
@@ -3537,7 +3495,6 @@
 			<value level="10">75</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>SHOCK</trait>
@@ -3586,7 +3543,6 @@
 			<value level="20">109</value>
 		</magicLvl>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>HOLD</trait>

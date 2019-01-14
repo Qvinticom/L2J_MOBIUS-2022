@@ -244,7 +244,6 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -269,7 +268,6 @@
 		<set name="magicLvl" val="-1" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -288,7 +286,6 @@
 		<set name="icon" val="icon.skilltransform2" />
 		<set name="magicLvl" val="56" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond>
 			<player canUntransform="true" />
@@ -314,7 +311,6 @@
 		<set name="mpConsume" val="366" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="600000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -335,7 +331,6 @@
 		<set name="mpConsume" val="38" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="150000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="129">
 			<and>
@@ -366,7 +361,6 @@
 		<set name="mpConsume" val="#mpConsume" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<cond msgId="113" addName="1">
 			<player flyMounted="false" />
@@ -388,7 +382,6 @@
 		<set name="mpConsume" val="67" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="TrapDetect">
@@ -406,7 +399,6 @@
 		<set name="mpConsume" val="17" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcType="L2TrapInstance" />
@@ -429,7 +421,6 @@
 		<set name="magicLvl" val="46" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<enchant1 name="hpConsume" val="#ench1hpConsume" />
@@ -511,7 +502,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="#power" />
 		<set name="reuseDelay" val="15000" />
-		<set name="rideState" val="NONE" />
 		<set name="soulMaxConsumeCount" val="5" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
@@ -548,7 +538,6 @@
 		<set name="mpInitialConsume" val="10" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="10000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Blink" />
@@ -565,7 +554,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="5000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AURA" />
 	</skill>
 	<skill id="630" levels="1" name="Rabbit Tornado">
@@ -579,7 +567,6 @@
 		<set name="magicLvl" val="85" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="60000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="109">
 			<target npcId="13098,900102" />
@@ -1001,7 +988,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1028,7 +1014,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1055,7 +1040,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1082,7 +1066,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1109,7 +1092,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1136,7 +1118,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1163,7 +1144,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="#reuseDelay" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1189,7 +1169,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1215,7 +1194,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1241,7 +1219,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1267,7 +1244,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1293,7 +1269,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1319,7 +1294,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1345,7 +1319,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1371,7 +1344,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1397,7 +1369,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1423,7 +1394,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1449,7 +1419,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1475,7 +1444,6 @@
 		<set name="mpConsume" val="31" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="14400000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="SELF" />
 		<cond>
@@ -1503,7 +1471,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="2904" />
 		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1523,7 +1490,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="2323" />
 		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1544,7 +1510,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="2323" />
 		<set name="reuseDelay" val="4000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1562,7 +1527,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="45000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">
@@ -1583,7 +1547,6 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
@@ -1618,7 +1581,6 @@
 		<set name="mpConsume" val="51" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="6000" />
-		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="ONE" />
 		<for>
@@ -1642,7 +1604,6 @@
 		<set name="mpConsume" val="144" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="40000" />
-		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="AURA" />
 		<for>
@@ -1672,7 +1633,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="1162" />
 		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1703,7 +1663,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="775" />
 		<set name="reuseDelay" val="5000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1724,7 +1683,6 @@
 		<set name="mpConsume" val="36" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="900000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="ImmobileBuff">
@@ -1747,7 +1705,6 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
@@ -1786,7 +1743,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="2323" />
 		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -1812,7 +1768,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="6195" />
 		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -1841,7 +1796,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="1549" />
 		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="BLEED" />
 		<for>
@@ -1867,7 +1821,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="6969" />
 		<set name="reuseDelay" val="3000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="FatalBlow" />
@@ -1891,7 +1844,6 @@
 		<set name="mpConsume" val="73" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
@@ -1912,7 +1864,6 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
@@ -1946,7 +1897,6 @@
 		<set name="operateType" val="A3" />
 		<set name="power" val="102" />
 		<set name="reuseDelay" val="1000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -1973,7 +1923,6 @@
 		<set name="overHit" val="true" />
 		<set name="power" val="128" />
 		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<cond msgId="144">
 			<target race="UNDEAD" />
@@ -1999,7 +1948,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="64" />
 		<set name="reuseDelay" val="4000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="MagicalAttack" />
@@ -2028,7 +1976,6 @@
 		<set name="operateType" val="A2" />
 		<set name="removedOnDamage" val="true" />
 		<set name="reuseDelay" val="8000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="AREA" />
 		<set name="trait" val="SLEEP" />
 		<for>
@@ -2057,7 +2004,6 @@
 		<set name="mpConsume" val="73" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="2000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -2079,7 +2025,6 @@
 		<set name="magicLvl" val="80" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="1800000" />
-		<set name="rideState" val="NONE" />
 		<set name="staticReuse" val="true" />
 		<set name="targetType" val="PARTY" />
 		<cond msgId="113" addName="1">
@@ -2108,7 +2053,6 @@
 		<set name="mpConsume" val="84" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal">
@@ -2128,7 +2072,6 @@
 		<set name="mpConsume" val="189" />
 		<set name="operateType" val="A1" />
 		<set name="reuseDelay" val="1000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Heal">

@@ -175,7 +175,6 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalType>STUN</abnormalType>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -201,7 +200,6 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -230,7 +228,6 @@
 		<effectPoint>-100</effectPoint>
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -340,7 +337,6 @@
 		<!-- Chance of inflicting damage again upon shooting. -->
 		<icon>icon.skill0256</icon>
 		<operateType>P</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 	</skill>
@@ -348,7 +344,6 @@
 		<!-- Great damage occurs if critical occurs while shooting. -->
 		<icon>icon.skill0256</icon>
 		<operateType>P</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 	</skill>
@@ -356,7 +351,6 @@
 		<!-- Chance of inflicting bleed if critical occurs while shooting. -->
 		<icon>icon.skill0256</icon>
 		<operateType>P</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>99</magicLvl>
 	</skill>
@@ -440,7 +434,6 @@
 		<effectPoint>669</effectPoint>
 		<abnormalType>ABILITY_CHANGE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>1</abnormalLvl>

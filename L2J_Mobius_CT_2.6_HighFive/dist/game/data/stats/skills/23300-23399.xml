@@ -11,7 +11,6 @@
 		<set name="isTriggeredSkill" val="true" />
 		<set name="magicLvl" val="83" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="5">
@@ -59,7 +58,6 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.totem_of_body" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
@@ -75,7 +73,6 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.totem_of_mind" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
@@ -90,7 +87,6 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.totem_of_bravery" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
@@ -105,7 +101,6 @@
 		<set name="blockedInOlympiad" val="true" />
 		<set name="icon" val="BranchSys2.icon.totem_of_fortitude" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AURA" />
 		<for>
 			<effect name="Buff">
@@ -124,7 +119,6 @@
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
 		<set name="canBeDispeled" val="false" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Buff">
@@ -181,7 +175,6 @@
 		<set name="operateType" val="A2" />
 		<set name="power" val="5000" />
 		<set name="reuseDelay" val="10000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -208,7 +201,6 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="10000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="DamOverTime" ticks="5">
@@ -237,7 +229,6 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="DERANGEMENT" />
 		<for>
@@ -263,7 +254,6 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="Debuff">
@@ -291,7 +281,6 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="ONE" />
 		<set name="trait" val="SHOCK" />
 		<for>
@@ -318,7 +307,6 @@
 		<set name="magicLvl" val="84" />
 		<set name="operateType" val="A2" />
 		<set name="reuseDelay" val="5000" />
-		<set name="rideState" val="NONE;STRIDER;WYVERN;WOLF" />
 		<set name="targetType" val="SELF" />
 		<for>
 			<effect name="Buff">

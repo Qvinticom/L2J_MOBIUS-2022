@@ -343,7 +343,6 @@
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>7200</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -431,7 +430,6 @@
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>7200</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -545,7 +543,6 @@
 		<mpInitialConsume>0</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>72000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -917,7 +914,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -943,7 +939,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1492,7 +1487,6 @@
 		<!-- Removes the Agathion's seal. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -1505,7 +1499,6 @@
 		<!-- Dismisses a summoned Agathion. -->
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -1525,7 +1518,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>SIGNAL_A</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>400</effectRange>
 		<magicLvl>99</magicLvl>
@@ -1550,7 +1542,6 @@
 		<castRange>600</castRange>
 		<hitTime>1000</hitTime>
 		<effectPoint>100</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -1572,7 +1563,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1598,7 +1588,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1618,7 +1607,6 @@
 		<!-- When used, it informs of the number of currently received gifts and number of remaining gifts. The gift delivery time will reset every day at 6:30 AM. -->
 		<icon>icon.skill5239</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1652,7 +1640,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1694,7 +1681,6 @@
 		<hitCancelTime>500</hitCancelTime>
 		<effectPoint>532</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -1731,7 +1717,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1770,7 +1755,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1809,7 +1793,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1848,7 +1831,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1887,7 +1869,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1926,7 +1907,6 @@
 		<effectPoint>532</effectPoint>
 		<abnormalType>TALISMAN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -2086,7 +2066,6 @@
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2109,7 +2088,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>EXP_BOTTLE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -2122,7 +2100,6 @@
 	</skill>
 	<skill id="13377" toLevel="1" name="Scroll: XP">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -2197,7 +2174,6 @@
 		<icon>icon.etc_unsummon_aga_agit_i01</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -2226,7 +2202,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>EXP_BOTTLE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -2244,7 +2219,6 @@
 		<abnormalType>SEED_TALISMAN1</abnormalType>
 		<abnormalVisualEffect>SEED_TALISMAN1</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -2264,7 +2238,6 @@
 		<abnormalType>SEED_TALISMAN1</abnormalType>
 		<abnormalVisualEffect>SEED_TALISMAN2</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -2284,7 +2257,6 @@
 		<abnormalType>SEED_TALISMAN1</abnormalType>
 		<abnormalVisualEffect>SEED_TALISMAN3</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -2304,7 +2276,6 @@
 		<abnormalType>SEED_TALISMAN1</abnormalType>
 		<abnormalVisualEffect>SEED_TALISMAN4</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -2324,7 +2295,6 @@
 		<abnormalType>SEED_TALISMAN1</abnormalType>
 		<abnormalVisualEffect>SEED_TALISMAN5</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -2344,7 +2314,6 @@
 		<abnormalType>SEED_TALISMAN1</abnormalType>
 		<abnormalVisualEffect>SEED_TALISMAN6</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -2362,7 +2331,6 @@
 		<icon>icon.accessory_immortal_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -2381,7 +2349,6 @@
 		<icon>icon.accessory_destruction_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -2400,7 +2367,6 @@
 		<icon>icon.accessory_extermination_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -2419,7 +2385,6 @@
 		<icon>icon.accessory_hellfire_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -2438,7 +2403,6 @@
 		<icon>icon.accessory_ocean_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>
@@ -2457,7 +2421,6 @@
 		<icon>icon.accessory_longing_talisman_i01</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>99</magicLvl>

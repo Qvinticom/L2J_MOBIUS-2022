@@ -37,7 +37,6 @@ import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.BasicProperty;
-import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.enums.NextActionType;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.handler.AffectScopeHandler;
@@ -48,7 +47,6 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.PcCondOverride;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.cubic.CubicInstance;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
@@ -167,7 +165,6 @@ public final class Skill implements IIdentifiable
 	
 	private final boolean _isTriggeredSkill; // If true the skill will take activation buff slot instead of a normal buff slot
 	private final int _effectPoint;
-	private Set<MountType> _rideState;
 	
 	private final Map<SkillConditionScope, List<ISkillCondition>> _conditionLists = new EnumMap<>(SkillConditionScope.class);
 	private final Map<EffectScope, List<AbstractEffect>> _effectLists = new EnumMap<>(EffectScope.class);
@@ -211,6 +208,13 @@ public final class Skill implements IIdentifiable
 	private final double _magicCriticalRate;
 	private final SkillBuffType _buffType;
 	private final boolean _displayInList;
+	
+	private final static List<Integer> MOUNT_ENABLED_SKILLS = new ArrayList<>();
+	static
+	{
+		MOUNT_ENABLED_SKILLS.add(4289); // Wyvern Breath
+		MOUNT_ENABLED_SKILLS.add(325); // Strider Siege Assault
+	}
 	
 	public Skill(StatsSet set)
 	{
@@ -282,26 +286,6 @@ public final class Skill implements IIdentifiable
 		_affectObject = set.getEnum("affectObject", AffectObject.class, AffectObject.ALL);
 		_affectRange = set.getInt("affectRange", 0);
 		
-		final String rideState = set.getString("rideState", null);
-		if (rideState != null)
-		{
-			final String[] state = rideState.split(";");
-			if (state.length > 0)
-			{
-				_rideState = new HashSet<>(state.length);
-				for (String s : state)
-				{
-					try
-					{
-						_rideState.add(MountType.valueOf(s));
-					}
-					catch (Exception e)
-					{
-						LOGGER.log(Level.WARNING, "Bad data in rideState for skill " + this + "!", e);
-					}
-				}
-			}
-		}
 		final String fanRange = set.getString("fanRange", null);
 		if (fanRange != null)
 		{
@@ -1087,7 +1071,7 @@ public final class Skill implements IIdentifiable
 			return true;
 		}
 		
-		if (activeChar.isPlayer() && !canBeUseWhileRiding((L2PcInstance) activeChar))
+		if (activeChar.isPlayer() && activeChar.getActingPlayer().isMounted() && isBad() && !MOUNT_ENABLED_SKILLS.contains(_id))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(_id);
@@ -1107,16 +1091,6 @@ public final class Skill implements IIdentifiable
 		}
 		
 		return true;
-	}
-	
-	/**
-	 * Checks if a player can use this skill while riding.
-	 * @param player the player
-	 * @return {@code true} if the player can use this skill, {@code false} otherwise
-	 */
-	public boolean canBeUseWhileRiding(L2PcInstance player)
-	{
-		return (_rideState == null) || _rideState.contains(player.getMountType());
 	}
 	
 	/**
@@ -1738,11 +1712,6 @@ public final class Skill implements IIdentifiable
 	public long getChannelingTickInitialDelay()
 	{
 		return _channelingStart;
-	}
-	
-	public Set<MountType> getRideState()
-	{
-		return _rideState;
 	}
 	
 	public boolean isMentoring()

@@ -5,7 +5,6 @@
 		<icon>BranchSys2.icon.br_s_hammerpunch_treasure1_i001</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -29,7 +28,6 @@
 		<magicLvl>85</magicLvl> <!-- FIXME: value unconfirmed -->
 		<operateType>A1</operateType> <!-- FIXME: value unconfirmed -->
 		<reuseDelay>7000</reuseDelay> <!-- FIXME: value unconfirmed -->
-		<rideState>NONE</rideState>
 		<effectPoint>-347</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>167</coolTime>
@@ -53,7 +51,6 @@
 		<magicLvl>85</magicLvl> <!-- FIXME: value unconfirmed -->
 		<operateType>A1</operateType>
 		<reuseDelay>7000</reuseDelay> <!-- FIXME: value unconfirmed -->
-		<rideState>NONE</rideState>
 		<effectPoint>-348</effectPoint>
 		<magicCriticalRate>5</magicCriticalRate>
 		<coolTime>167</coolTime>
@@ -74,7 +71,6 @@
 		<mpConsume>1</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>25000</reuseDelay> <!-- FIXME: value unconfirmed -->
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effectPoint>689</effectPoint>
 		<abnormalType>SPEED_UP_SPECIAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -99,7 +95,6 @@
 		<mpConsume>1</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay> <!-- FIXME: value unconfirmed -->
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effectPoint>635</effectPoint>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
@@ -128,7 +123,6 @@
 		<mpConsume>58</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>240000</reuseDelay>
-		<rideState>NONE</rideState>
 		<abnormalType>MAX_HP_UP_K</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>

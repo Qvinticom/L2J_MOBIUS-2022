@@ -30,7 +30,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -73,7 +72,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -116,7 +114,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -152,7 +149,6 @@
 		<mpConsume>10</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -190,7 +186,6 @@
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>6000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
@@ -230,7 +225,6 @@
 		</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -262,7 +256,6 @@
 		</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>12000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2333,7 +2326,6 @@
 		<mpConsume>1</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
@@ -2373,7 +2365,6 @@
 		<mpConsume>1</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>TARGET</targetType>
@@ -2392,7 +2383,6 @@
 		<mpConsume>1</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>40000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
@@ -2432,7 +2422,6 @@
 		<mpInitialConsume>17</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1800000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>PC_BODY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2455,7 +2444,6 @@
 		<mpInitialConsume>31</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>1800000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2480,7 +2468,6 @@
 		<magicLvl>1</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2497,7 +2484,6 @@
 		<mpInitialConsume>5</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2510,7 +2496,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2526,7 +2511,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>75</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2544,7 +2528,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2562,7 +2545,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>65</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -2587,7 +2569,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2614,7 +2595,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2638,7 +2618,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -2667,7 +2646,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2694,7 +2672,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2721,7 +2698,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2748,7 +2724,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2775,7 +2750,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2803,7 +2777,6 @@
 		<operateType>A2</operateType>
 		<removedOnDamage>true</removedOnDamage>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2837,7 +2810,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>240000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2867,7 +2839,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2905,7 +2876,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2943,7 +2913,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>300000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -2970,7 +2939,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>900000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -3001,7 +2969,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
@@ -3053,7 +3020,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -3075,7 +3041,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -3097,7 +3062,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -3119,7 +3083,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -3141,7 +3104,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -3163,7 +3125,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -3185,7 +3146,6 @@
 		<mpInitialConsume>10</mpInitialConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>360000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>

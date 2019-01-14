@@ -33,7 +33,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-709</effectPoint>
 		<reuseDelay>3000</reuseDelay>
-		<rideState>NONE</rideState>
 		<conditions>
 			<condition name="EquipWeapon">
 				<weaponType>
@@ -334,7 +333,6 @@
 		<isDebuff>true</isDebuff>
 		<reuseDelayGroup>11509</reuseDelayGroup>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicLvl>85</magicLvl>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<trait>SHOCK</trait>
@@ -377,7 +375,6 @@
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
-		<rideState>NONE</rideState>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
 		<reuseDelay>10000</reuseDelay>
@@ -408,7 +405,6 @@
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
-		<rideState>NONE</rideState>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
 		<reuseDelay>10000</reuseDelay>
@@ -1102,7 +1098,6 @@
 			<value level="11">-722</value>
 		</effectPoint>
 		<reuseDelay>7000</reuseDelay>
-		<rideState>NONE</rideState>
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1206,7 +1201,6 @@
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SQUARE</affectScope>
@@ -1303,7 +1297,6 @@
 			<value level="10">-720</value>
 			<value level="11">-723</value>
 		</effectPoint>
-		<rideState>NONE</rideState>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1391,7 +1384,6 @@
 			<value level="10">-719</value>
 			<value level="11">-722</value>
 		</effectPoint>
-		<rideState>NONE</rideState>
 		<effectRange>1500</effectRange>
 		<reuseDelay>7000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -1451,7 +1443,6 @@
 		<magicLvl>97</magicLvl>
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
-		<rideState>NONE</rideState>
 		<trait>SHOCK</trait>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1480,7 +1471,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>STUN</abnormalType>
 		<isDebuff>true</isDebuff>
-		<rideState>NONE</rideState>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -1507,7 +1497,6 @@
 		<magicLvl>97</magicLvl>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1526,7 +1515,6 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>97</magicLvl>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
@@ -1547,7 +1535,6 @@
 		<magicLvl>97</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE</rideState>
 		<trait>SHOCK</trait>
 		<!-- TODO cond {op_blink;_back;300} -->
 		<targetType>SELF</targetType>
@@ -1626,7 +1613,6 @@
 			<value level="9">-727</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
-		<rideState>NONE</rideState>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1724,7 +1710,6 @@
 			<value level="11">-723</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
-		<rideState>NONE</rideState>
 		<trait>KNOCKDOWN</trait>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1821,7 +1806,6 @@
 		</effectPoint>
 		<reuseDelay>7000</reuseDelay>
 		<fanRange>0;0;900;90</fanRange>
-		<rideState>NONE</rideState>
 		<targetType>ENEMY</targetType>
 		<affectScope>FAN</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1913,7 +1897,6 @@
 			<value level="11">-722</value>
 		</effectPoint>
 		<reuseDelay>15000</reuseDelay>
-		<rideState>NONE</rideState>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
@@ -1963,7 +1946,6 @@
 		<hitTime>2200</hitTime>
 		<coolTime>300</coolTime>
 		<effectPoint>-709</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>98</magicLvl>
@@ -2015,7 +1997,6 @@
 		<hitTime>700</hitTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>2</effectPoint>
-		<rideState>NONE</rideState>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
 		<targetType>SELF</targetType>
@@ -2054,7 +2035,6 @@
 		</mpConsume>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
-		<rideState>NONE</rideState>
 		<reuseDelay>600000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2141,7 +2121,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<reuseDelay>900000</reuseDelay>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2206,7 +2185,6 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY_ONLY</targetType>
@@ -2240,7 +2218,6 @@
 		<castRange>1400</castRange>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
-		<rideState>NONE</rideState>
 		<effectRange>1400</effectRange>
 		<reuseDelay>60000</reuseDelay>
 		<targetType>TARGET</targetType>
@@ -2282,7 +2259,6 @@
 		<coolTime>200</coolTime>
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<abnormalVisualEffect>REAL_TARGET</abnormalVisualEffect>
 		<reuseDelay>120000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -2368,7 +2344,6 @@
 			<value level="8">-721</value>
 			<value level="9">-725</value>
 		</effectPoint>
-		<rideState>NONE</rideState>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2425,7 +2400,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-706</effectPoint>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<magicLvl>93</magicLvl>
 		<isMagic>4</isMagic>
 		<staticReuse>true</staticReuse>
@@ -2477,7 +2451,6 @@
 		<reuseDelay>3600000</reuseDelay>
 		<effectPoint>-709</effectPoint>
 		<isMagic>4</isMagic>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>RANGE</affectScope>
@@ -2525,7 +2498,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>2</effectPoint>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<isMagic>4</isMagic>
 		<staticReuse>true</staticReuse>
@@ -2588,7 +2560,6 @@
 		<effectPoint>2</effectPoint>
 		<reuseDelay>300000</reuseDelay>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2627,7 +2598,6 @@
 		<mpConsume>70</mpConsume>
 		<hitTime>1200</hitTime>
 		<coolTime>300</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<isDebuff>true</isDebuff>
 		<reuseDelay>20000</reuseDelay>
 		<targetType>SELF</targetType>
@@ -2692,7 +2662,6 @@
 			<value level="6">-726</value>
 		</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
-		<rideState>NONE</rideState>
 		<lvlBonusRate>30</lvlBonusRate>
 		<activateRate>80</activateRate>
 		<isDebuff>true</isDebuff>
@@ -2747,7 +2716,6 @@
 		<hitTime>3000</hitTime>
 		<coolTime>200</coolTime>
 		<reuseDelay>60000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -2777,7 +2745,6 @@
 		<mpConsume>10</mpConsume>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>93</magicLvl>
 		<affectRange>300</affectRange>
@@ -2795,7 +2762,6 @@
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<effectPoint>-709</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -2825,7 +2791,6 @@
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<effectPoint>-709</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -2859,7 +2824,6 @@
 		<mpConsume>39</mpConsume>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -2898,7 +2862,6 @@
 		<mpConsume>39</mpConsume>
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<reuseDelay>45000</reuseDelay>
 		<staticReuse>true</staticReuse>
@@ -2934,7 +2897,6 @@
 		<effectPoint>689</effectPoint>
 		<abnormalType>MA_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2990,7 +2952,6 @@
 			<value level="7">-709</value>
 			<value level="8">-709</value>
 		</effectPoint>
-		<rideState>NONE</rideState>
 		<reuseDelay>10000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3012,7 +2973,6 @@
 		<hitTime>2500</hitTime>
 		<reuseDelay>180000</reuseDelay>
 		<effectPoint>687</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<isMagic>1</isMagic>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3045,7 +3005,6 @@
 		<reuseDelay>120000</reuseDelay>
 		<effectPoint>-687</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<abnormalTime>5</abnormalTime>
 		<affectRange>150</affectRange>
 		<isDebuff>true</isDebuff>
@@ -3108,7 +3067,6 @@
 			<value level="7">-709</value>
 			<value level="8">-709</value>
 		</effectPoint>
-		<rideState>NONE</rideState>
 		<reuseDelay>15000</reuseDelay>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -3175,7 +3133,6 @@
 			<value level="7">-709</value>
 			<value level="8">-709</value>
 		</effectPoint>
-		<rideState>NONE</rideState>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>

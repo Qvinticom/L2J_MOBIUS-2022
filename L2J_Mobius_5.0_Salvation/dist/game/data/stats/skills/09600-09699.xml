@@ -5,7 +5,6 @@
 		<operateType>A1</operateType>
 		<castRange>50</castRange>
 		<hitTime>50000</hitTime>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -29,7 +28,6 @@
 		<operateType>A1</operateType>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -56,7 +54,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -83,7 +80,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -110,7 +106,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -137,7 +132,6 @@
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -164,7 +158,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>EXP_BOTTLE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -183,7 +176,6 @@
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<operateType>A1</operateType>
 		<hitTime>17000</hitTime>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -196,7 +188,6 @@
 		<icon>icon.etc_cp_potion_i01</icon>
 		<operateType>A1</operateType>
 		<hitTime>17000</hitTime>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -214,7 +205,6 @@
 		<effectPoint>687</effectPoint>
 		<abnormalType>BUFF_SPECIAL_ATTACK</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -233,7 +223,6 @@
 		<effectPoint>687</effectPoint>
 		<abnormalType>BUFF_SPECIAL_DEFENCE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -252,7 +241,6 @@
 		<effectPoint>687</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -271,7 +259,6 @@
 		<effectPoint>687</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -290,7 +277,6 @@
 		<effectPoint>687</effectPoint>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -309,7 +295,6 @@
 		<effectPoint>687</effectPoint>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -323,7 +308,6 @@
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<hitTime>1000</hitTime>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -339,7 +323,6 @@
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<hitTime>1000</hitTime>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -353,7 +336,6 @@
 	<skill id="9617" toLevel="1" name="Scroll of Escape: Isle of Souls - Dystopia">
 		<!-- Return to Isle of Souls: Dystopia. -->
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
@@ -396,7 +378,6 @@
 		<itemConsumeId>36081</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -419,7 +400,6 @@
 	<skill id="9621" toLevel="1" name="Blessed Scroll of Escape: Gludio">
 		<!-- Return to the Town of Gludio. -->
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -439,7 +419,6 @@
 		<!-- Return to Talking Island Village. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -456,7 +435,6 @@
 		<!-- Return to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -473,7 +451,6 @@
 		<!-- Return to Ancient City Arcan of Magmeld. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -490,7 +467,6 @@
 		<!-- Return to Keucereus Alliance Base. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -509,7 +485,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<reuseDelay>72000000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -536,7 +511,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<magicLvl>1</magicLvl>
@@ -556,7 +530,6 @@
 		<itemConsumeId>36093</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -582,7 +555,6 @@
 	<skill id="9629" toLevel="1" name="Vitality Replenishing Star Candy">
 		<icon>BranchSys.br_rudolf_food_red_i00</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -600,7 +572,6 @@
 		<effectPoint>100</effectPoint>
 		<abnormalType>VP_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -629,7 +600,6 @@
 		<effectPoint>100</effectPoint>
 		<abnormalType>VP_KEEP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -647,7 +617,6 @@
 		<itemConsumeId>36102</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -680,7 +649,6 @@
 		<itemConsumeId>36103</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -711,7 +679,6 @@
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -731,7 +698,6 @@
 		<!-- Return to Talking Island Village. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -748,7 +714,6 @@
 		<!-- Return to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -765,7 +730,6 @@
 		<!-- Return to Ancient City Arcan of Magmeld. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -782,7 +746,6 @@
 		<!-- Return to Keucereus Alliance Base. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -801,7 +764,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<reuseDelay>72000000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -828,7 +790,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<magicLvl>1</magicLvl>
@@ -848,7 +809,6 @@
 		<!-- Return to Talking Island Village. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -865,7 +825,6 @@
 		<!-- Return to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -882,7 +841,6 @@
 		<!-- Return to Ancient City Arcan of Magmeld. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -899,7 +857,6 @@
 		<!-- Return to Keucereus Alliance Base. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -918,7 +875,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<reuseDelay>72000000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -945,7 +901,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<magicLvl>1</magicLvl>
@@ -965,7 +920,6 @@
 		<!-- Return to Talking Island Village. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -982,7 +936,6 @@
 		<!-- Return to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -999,7 +952,6 @@
 		<!-- Return to Ancient City Arcan of Magmeld. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -1016,7 +968,6 @@
 		<!-- Return to Keucereus Alliance Base. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -1035,7 +986,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<reuseDelay>72000000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1062,7 +1012,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<magicLvl>1</magicLvl>
@@ -1082,7 +1031,6 @@
 		<!-- Return to Talking Island Village. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -1099,7 +1047,6 @@
 		<!-- Return to the Town of Aden. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -1116,7 +1063,6 @@
 		<!-- Return to Ancient City Arcan of Magmeld. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -1133,7 +1079,6 @@
 		<!-- Return to Keucereus Alliance Base. -->
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -1152,7 +1097,6 @@
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
 		<reuseDelay>72000000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1179,7 +1123,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>STAR_AGATHION_EXP_SP_BUFF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<magicLvl>1</magicLvl>
@@ -1201,7 +1144,6 @@
 		<castRange>40</castRange>
 		<hitTime>1000</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -1224,7 +1166,6 @@
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1244,7 +1185,6 @@
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1264,7 +1204,6 @@
 		<effectPoint>100</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CLASS</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1284,7 +1223,6 @@
 		<effectPoint>100</effectPoint>
 		<abnormalType>INSTANT_EV_BUFF6</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1300,7 +1238,6 @@
 	<skill id="9664" toLevel="1" name="Kaliel's Treasure Chest (Low-grade)">
 		<!-- Kaliel's Treasure Chest skill (Low-grade). -->
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1311,7 +1248,6 @@
 	<skill id="9665" toLevel="1" name="Kaliel's Treasure Chest (Mid-grade)">
 		<!-- Kaliel's Treasure Chest skill (Mid-grade). -->
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1322,7 +1258,6 @@
 	<skill id="9666" toLevel="1" name="Kaliel's Treasure Chest (High-grade)">
 		<!-- Kaliel's Treasure Chest skill (High-grade). -->
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1335,7 +1270,6 @@
 		<itemConsumeId>35655</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1462,7 +1396,6 @@
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<hitTime>1000</hitTime>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1477,7 +1410,6 @@
 		<itemConsumeId>36131</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1501,7 +1433,6 @@
 		<itemConsumeId>36132</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1525,7 +1456,6 @@
 		<itemConsumeId>36133</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1549,7 +1479,6 @@
 		<itemConsumeId>36134</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1576,7 +1505,6 @@
 		<itemConsumeId>36135</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1603,7 +1531,6 @@
 		<itemConsumeId>36136</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1627,7 +1554,6 @@
 		<itemConsumeId>36143</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1669,7 +1595,6 @@
 		<itemConsumeId>36144</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1696,7 +1621,6 @@
 		<itemConsumeId>36145</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1723,7 +1647,6 @@
 		<itemConsumeId>36146</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1774,7 +1697,6 @@
 		<itemConsumeId>36147</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1825,7 +1747,6 @@
 		<itemConsumeId>36154</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1861,7 +1782,6 @@
 		<itemConsumeId>36155</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1897,7 +1817,6 @@
 		<itemConsumeId>36156</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1933,7 +1852,6 @@
 		<itemConsumeId>36165</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1969,7 +1887,6 @@
 		<itemConsumeId>36166</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -2034,7 +1951,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>VOTE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>1</abnormalLvl>
@@ -2059,7 +1975,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>INSTANT_EV_BUFF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalLvl>1</abnormalLvl>
@@ -2085,7 +2000,6 @@
 	</skill>
 	<skill id="9687" toLevel="1" name="Giant's Scroll: Enchant Weapon (R-grade)">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -2095,7 +2009,6 @@
 	</skill>
 	<skill id="9688" toLevel="1" name="Giant's Scroll: Enchant Armor (R-grade)">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -2110,7 +2023,6 @@
 		<hitTime>1000</hitTime>
 		<reuseDelay>12000</reuseDelay>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -2128,7 +2040,6 @@
 	</skill>
 	<skill id="9690" toLevel="1" name="Scroll of Escape: Fog of Blood Region">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
@@ -2145,7 +2056,6 @@
 	</skill>
 	<skill id="9691" toLevel="1" name="Scroll of Escape: Isle of Souls Harbor">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
@@ -2162,7 +2072,6 @@
 	</skill>
 	<skill id="9692" toLevel="1" name="Scroll of Escape: Ruins of Ye Sagira">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
@@ -2179,7 +2088,6 @@
 	</skill>
 	<skill id="9693" toLevel="1" name="Scroll of Escape: Guillotine Fortress">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
@@ -2196,7 +2104,6 @@
 	</skill>
 	<skill id="9694" toLevel="1" name="Scroll of Escape: Parnassus">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
@@ -2213,7 +2120,6 @@
 	</skill>
 	<skill id="9695" toLevel="1" name="Scroll of Escape: Seal of Shilen">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<isMagic>2</isMagic>
@@ -2232,7 +2138,6 @@
 		<!-- STR +5, DEX +5, CON +5, INT +5, WIT +5, MEN +5. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 	</skill>
@@ -2240,7 +2145,6 @@
 		<!-- STR +5, DEX +5, CON +5, INT +5, WIT +5, MEN +5. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 	</skill>
@@ -2248,7 +2152,6 @@
 		<!-- STR +5, DEX +5, CON +5, INT +5, WIT +5, MEN +5. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 	</skill>
@@ -2256,7 +2159,6 @@
 		<!-- STR +5, DEX +5, CON +5, INT +5, WIT +5, MEN +5. -->
 		<icon>icon.accessory_archer_hat2_i00</icon>
 		<operateType>P</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 	</skill>

@@ -12,7 +12,6 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<effectPoint>-1000</effectPoint>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -32,7 +31,6 @@
 		<!-- Summons a dimensional door that moves the PC to the Dimensional Door B. -->
 		<icon>Icon.skill1050</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<hitTime>4000</hitTime>
@@ -44,7 +42,6 @@
 		<!-- Summons a dimensional door that moves the PC to the Dimensional Door A. -->
 		<icon>Icon.skill1050</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<hitTime>4000</hitTime>
@@ -55,7 +52,6 @@
 	<skill id="23303" toLevel="1" name="Teleport">
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
 		<magicLvl>85</magicLvl>
@@ -69,7 +65,6 @@
 	<skill id="23304" toLevel="1" name="Teleport">
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<effectRange>2000</effectRange>
 		<magicLvl>85</magicLvl>
@@ -86,7 +81,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -112,7 +106,6 @@
 		<!-- Able to see the summoned Zinyanzi perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -128,7 +121,6 @@
 		<!-- Able to see the summoned Yanzi perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -147,7 +139,6 @@
 		<affectRange>400</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>ENERGY_OF_TOTEM_1</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -176,7 +167,6 @@
 		<affectRange>400</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>ENERGY_OF_TOTEM_2</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -201,7 +191,6 @@
 		<affectRange>400</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>ENERGY_OF_TOTEM_3</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -226,7 +215,6 @@
 		<affectRange>400</affectRange>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<abnormalType>ENERGY_OF_TOTEM_4</abnormalType>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -252,7 +240,6 @@
 		<isMagic>4</isMagic>
 		<abnormalType>VOTE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<effectRange>1500</effectRange>
@@ -281,7 +268,6 @@
 		<operateType>A4</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -310,7 +296,6 @@
 		<operateType>A4</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -332,7 +317,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -348,7 +332,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -364,7 +347,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>RESIST_SHOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -382,7 +364,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -415,7 +396,6 @@
 		<magicLvl>84</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<effectPoint>-100</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -455,7 +435,6 @@
 		<magicLvl>83</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE</rideState>
 		<effectPoint>-100</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -493,7 +472,6 @@
 		<magicLvl>82</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>DERANGEMENT</trait>
@@ -524,7 +502,6 @@
 		<magicLvl>82</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<trait>SHOCK</trait>
 		<targetType>ENEMY</targetType>
@@ -556,7 +533,6 @@
 		<magicLvl>82</magicLvl>
 		<operateType>A2</operateType>
 		<reuseDelay>10000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<trait>SHOCK</trait>
@@ -579,7 +555,6 @@
 		<abnormalTime>15</abnormalTime>
 		<blockedInOlympiad>false</blockedInOlympiad>
 		<effectPoint>800</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<isMagic>1</isMagic>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>71</magicLvl>
@@ -604,7 +579,6 @@
 	</skill>
 	<skill id="23325" toLevel="1" name="Enlarge - Luckpy">
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -614,7 +588,6 @@
 	</skill>
 	<skill id="23326" toLevel="1" name="Reduce - Luckpy">
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -627,7 +600,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -651,7 +623,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -672,7 +643,6 @@
 	</skill>
 	<skill id="23329" toLevel="1" name="Lantern Agathion's Gift1">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -694,7 +664,6 @@
 	</skill>
 	<skill id="23330" toLevel="1" name="Lantern Agathion's Gift2">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -716,7 +685,6 @@
 	</skill>
 	<skill id="23331" toLevel="1" name="Lantern Agathion's Gift3">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -738,7 +706,6 @@
 	</skill>
 	<skill id="23332" toLevel="1" name="Lantern Agathion's Gift4">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -764,7 +731,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>VP_KEEP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -788,7 +754,6 @@
 		<!-- Able to see the summoned Lantern's perform cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -806,7 +771,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>VP_KEEP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -830,7 +794,6 @@
 		<!-- You can see the summoned Juju's cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -844,7 +807,6 @@
 	</skill>
 	<skill id="23337" toLevel="1" name="Juju Agathion's Gift 1">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -866,7 +828,6 @@
 	</skill>
 	<skill id="23338" toLevel="1" name="Juju Agathion's Gift 2">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -888,7 +849,6 @@
 	</skill>
 	<skill id="23339" toLevel="1" name="Juju Agathion's Gift 3">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -910,7 +870,6 @@
 	</skill>
 	<skill id="23340" toLevel="1" name="Juju Agathion's Gift 4">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>55</magicLvl>
@@ -941,7 +900,6 @@
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalResists>TURN_FLEE;KNOCKDOWN;DEPORT;SILENCE;PARALYZE;ABSORB;DISARM;SILENCE_PHYSICAL;SILENCE_ALL;CHANGEBODY;TURN_STONE;DERANGEMENT;AIRBIND;SLEEP;OBLIVION;MIRAGE;MIRAGE_TRAP;ROOT_MAGICALLY;ROOT_PHYSICALLY;STUN;PUBLIC_SLOT</abnormalResists>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>300</effectRange>
@@ -966,7 +924,6 @@
 		<coolTime>2000</coolTime>
 		<abnormalType>BR_EVENT_BUF7</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -993,7 +950,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>DEATH_PENALTY_GD</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1013,7 +969,6 @@
 	</skill>
 	<skill id="23345" toLevel="1" name="Region Banishment">
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -1029,7 +984,6 @@
 		<!-- You can see the summoned Valakas' cute tricks. -->
 		<icon>icon.skill_agathion_cute</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -1044,7 +998,6 @@
 	<skill id="23347" toLevel="7" name="Valakas Agathion Special Skill: Valakas' Blessing">
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>T</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<abnormalVisualEffect>BR_SOUL_AVATAR</abnormalVisualEffect>
@@ -1062,7 +1015,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1087,7 +1039,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
@@ -1105,7 +1056,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
@@ -1123,7 +1073,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
@@ -1141,7 +1090,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
@@ -1159,7 +1107,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<magicLvl>-2</magicLvl>
@@ -1177,7 +1124,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1197,7 +1143,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1217,7 +1162,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1237,7 +1181,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1257,7 +1200,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BR_EVENT_BUF1</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1277,7 +1219,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1293,7 +1234,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>81</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1309,7 +1249,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>82</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1325,7 +1264,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>83</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1341,7 +1279,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_MOVE</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>84</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1357,7 +1294,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1373,7 +1309,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>81</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1389,7 +1324,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>82</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1405,7 +1339,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>83</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1421,7 +1354,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CONDITION</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>84</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1437,7 +1369,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1453,7 +1384,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>81</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1469,7 +1399,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>82</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1485,7 +1414,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>83</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1501,7 +1429,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_CRITICAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>84</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1517,7 +1444,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1533,7 +1459,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>81</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1549,7 +1474,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>82</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1565,7 +1489,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>83</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1581,7 +1504,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>BUFF_SPECIAL_HITAVOID</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>84</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1598,7 +1520,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1621,7 +1542,6 @@
 		<operateType>A1</operateType>
 		<castRange>1000</castRange>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1500</effectRange>
@@ -1642,7 +1562,6 @@
 		<reuseDelay>5000</reuseDelay>
 		<isMagic>1</isMagic>
 		<effectPoint>-1000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -1666,7 +1585,6 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>20000</reuseDelay>
 		<effectPoint>-1000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1200</effectRange>
@@ -1689,7 +1607,6 @@
 		<mpConsume>500</mpConsume>
 		<hitTime>500</hitTime>
 		<effectPoint>-800</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>90</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -1706,7 +1623,6 @@
 		<hitTime>1500</hitTime>
 		<reuseDelay>50000</reuseDelay>
 		<effectPoint>200</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<magicLvl>
@@ -1729,7 +1645,6 @@
 		<effectPoint>100</effectPoint>
 		<abnormalType>HP_REGEN_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1753,7 +1668,6 @@
 		<mpConsume>500</mpConsume>
 		<hitTime>500</hitTime>
 		<effectPoint>-800</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">88</value>
@@ -1775,7 +1689,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1801,7 +1714,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1827,7 +1739,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>TRANSFORM</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-3</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1853,7 +1764,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1873,7 +1783,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1893,7 +1802,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-2</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1911,7 +1819,6 @@
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>-100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>97</magicLvl>
 		<attributeType>DARK</attributeType>
@@ -1930,7 +1837,6 @@
 		<mpConsume>2000</mpConsume>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>-500</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>91</magicLvl>
@@ -1953,7 +1859,6 @@
 		<effectPoint>-800</effectPoint>
 		<abnormalType>DEATH_CLACK</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1982,7 +1887,6 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>25000</reuseDelay>
 		<effectPoint>-500</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -2001,7 +1905,6 @@
 		<hitTime>500</hitTime>
 		<reuseDelay>15000</reuseDelay>
 		<effectPoint>-800</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -2017,7 +1920,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>
@@ -2043,7 +1945,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>ARMOR_WATER</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>

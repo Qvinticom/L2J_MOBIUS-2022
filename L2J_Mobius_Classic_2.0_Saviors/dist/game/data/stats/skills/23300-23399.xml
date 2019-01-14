@@ -12,7 +12,6 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>80</magicLvl>
 		<operateType>A2</operateType>
-		<rideState>NONE</rideState>
 		<effectPoint>-1000</effectPoint>
 		<basicProperty>MAGIC</basicProperty>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -33,7 +32,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>MULTI_BUFF</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -49,7 +47,6 @@
 	</skill>
 	<skill id="23325" toLevel="1" name="Enlarge - Luckpy">
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -59,7 +56,6 @@
 	</skill>
 	<skill id="23326" toLevel="1" name="Reduce - Luckpy">
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>

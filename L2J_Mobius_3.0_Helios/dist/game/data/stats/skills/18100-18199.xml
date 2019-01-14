@@ -10,7 +10,6 @@
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -31,7 +30,6 @@
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -52,7 +50,6 @@
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -80,7 +77,6 @@
 		<itemConsumeId>40195</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<magicLvl>1</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<cond msgId="113" addName="1">
 			<player insideZoneId="10501, 10502, 10503, 10504, 10505, 10506, 10507, 10508" />
 		</cond>
@@ -272,7 +268,6 @@
 		<!-- When using the Blessed Scroll: Enchant Weapon to enchant R-grade weapons, the success rate is increased by 20%. Can be used only on 3-15 enchanted items. When enchantment fails, the enchant level is decreased by 1. -->
 		<icon>icon.freya_stone_i01</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -302,7 +297,6 @@
 		<!-- When enchanting armor (R-grade) with a blessed enchant scroll, success rate + 30%. Only for items enchanted between + 3 and + 15. Failure drops the enchant level by 1. -->
 		<icon>icon.freya_stone_i02</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -391,7 +385,6 @@
 	<skill id="18144" toLevel="1" name="Appearance Stone: Dark Assassin Suit">
 		<!-- Changes the appearance of your armor into that of a Dark Assassin Suit. -->
 		<operateType>A1</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>1</magicLvl>
@@ -451,7 +444,6 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>867</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -519,7 +511,6 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 		<hitTime>1000</hitTime>

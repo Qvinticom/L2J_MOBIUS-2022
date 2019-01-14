@@ -31,7 +31,6 @@ import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
-import com.l2jmobius.gameserver.enums.MountType;
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.geoengine.GeoEngine;
 import com.l2jmobius.gameserver.handler.ITargetTypeHandler;
@@ -180,7 +179,6 @@ public final class Skill implements IIdentifiable
 	// Condition lists
 	private List<Condition> _preCondition;
 	private List<Condition> _itemPreCondition;
-	private Set<MountType> _rideState;
 	// Function lists
 	private List<FuncTemplate> _funcTemplates;
 	
@@ -216,6 +214,13 @@ public final class Skill implements IIdentifiable
 	private final int _channelingTickInterval;
 	
 	private final boolean _isPvPOnly;
+	
+	private final static List<Integer> MOUNT_ENABLED_SKILLS = new ArrayList<>();
+	static
+	{
+		MOUNT_ENABLED_SKILLS.add(4289); // Wyvern Breath
+		MOUNT_ENABLED_SKILLS.add(325); // Strider Siege Assault
+	}
 	
 	public Skill(StatsSet set)
 	{
@@ -280,26 +285,6 @@ public final class Skill implements IIdentifiable
 		
 		_affectRange = set.getInt("affectRange", 0);
 		
-		final String rideState = set.getString("rideState", null);
-		if (rideState != null)
-		{
-			final String[] state = rideState.split(";");
-			if (state.length > 0)
-			{
-				_rideState = new HashSet<>(state.length);
-				for (String s : state)
-				{
-					try
-					{
-						_rideState.add(MountType.valueOf(s));
-					}
-					catch (Exception e)
-					{
-						LOGGER.warning("Bad data in rideState for skill " + this + " !\n" + e);
-					}
-				}
-			}
-		}
 		final String affectLimit = set.getString("affectLimit", null);
 		if (affectLimit != null)
 		{
@@ -1004,7 +989,7 @@ public final class Skill implements IIdentifiable
 			return true;
 		}
 		
-		if (activeChar.isPlayer() && !canBeUseWhileRiding((L2PcInstance) activeChar))
+		if (activeChar.isPlayer() && activeChar.getActingPlayer().isMounted() && isBad() && !MOUNT_ENABLED_SKILLS.contains(_id))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(_id);
@@ -1042,16 +1027,6 @@ public final class Skill implements IIdentifiable
 			}
 		}
 		return true;
-	}
-	
-	/**
-	 * Checks if a player can use this skill while riding.
-	 * @param player the player
-	 * @return {@code true} if the player can use this skill, {@code false} otherwise
-	 */
-	public boolean canBeUseWhileRiding(L2PcInstance player)
-	{
-		return (_rideState == null) || _rideState.contains(player.getMountType());
 	}
 	
 	public L2Object[] getTargetList(L2Character activeChar, boolean onlyFirst)
@@ -1866,11 +1841,6 @@ public final class Skill implements IIdentifiable
 	public int getChannelingTickInitialDelay()
 	{
 		return _channelingTickInitialDelay;
-	}
-	
-	public Set<MountType> getRideState()
-	{
-		return _rideState;
 	}
 	
 	public boolean isPvPOnly()

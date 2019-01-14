@@ -627,14 +627,12 @@
 		<set name="effectPoint" val="-100" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4990" levels="1" name="Npc - Hot Spring Mineral">
 		<set name="effectPoint" val="-100" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4991" levels="1" name="Hot Spring Sulfur">
@@ -647,7 +645,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4992" levels="1" name="Stun">
@@ -659,7 +656,6 @@
 		<set name="isDebuff" val="true" />
 		<set name="magicLvl" val="1" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 		<set name="trait" val="SHOCK" />
 	</skill>
@@ -673,7 +669,6 @@
 		<set name="mpConsume" val="88" />
 		<set name="operateType" val="A1" />
 		<set name="power" val="57742" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -690,7 +685,6 @@
 		<set name="operateType" val="A1" />
 		<set name="power" val="28871" />
 		<set name="reuseDelay" val="20000" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 		<for>
 			<effect name="PhysicalAttack" />
@@ -704,7 +698,6 @@
 		<set name="hitTime" val="2900" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="ONE" />
 	</skill>
 	<skill id="4996" levels="1" name="Venom - Range Teleport">
@@ -716,7 +709,6 @@
 		<set name="hitTime" val="2900" />
 		<set name="magicLvl" val="79" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="AREA" />
 	</skill>
 	<skill id="4997" levels="1" name="Lidia - Regen">
@@ -726,7 +718,6 @@
 		<set name="effectPoint" val="100" />
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A2" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4998" levels="1" name="Lidia - Twister">
@@ -735,7 +726,6 @@
 		<set name="hitTime" val="2500" />
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 	<skill id="4999" levels="1" name="Lidia - Range Life Drain">
@@ -743,7 +733,6 @@
 		<set name="hitTime" val="2000" />
 		<set name="magicLvl" val="77" />
 		<set name="operateType" val="A1" />
-		<set name="rideState" val="NONE" />
 		<set name="targetType" val="SELF" />
 	</skill>
 </list>

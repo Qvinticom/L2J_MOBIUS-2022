@@ -19,7 +19,6 @@
 		<affectScope>SINGLE</affectScope>
 		<isMagic>4</isMagic>
 		<isDebuff>true</isDebuff>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -135,7 +134,6 @@
 		<hitTime>3500</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<mpConsume>
 			<value level="1">483</value>
@@ -268,7 +266,6 @@
 		<activateRate>100</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<operateType>A2</operateType>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<isDebuff>true</isDebuff>
@@ -316,7 +313,6 @@
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
 		<isDebuff>2</isDebuff>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -343,7 +339,6 @@
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
 		<isDebuff>2</isDebuff>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -367,7 +362,6 @@
 		<operateType>A2</operateType>
 		<isMagic>1</isMagic>
 		<isDebuff>2</isDebuff>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -619,7 +613,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectRange>1000</affectRange>
 		<targetType>SELF</targetType>
@@ -659,7 +652,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<affectRange>1000</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -694,7 +686,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<affectRange>1000</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -729,7 +720,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<affectRange>1000</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -764,7 +754,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<affectRange>1000</affectRange>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
@@ -814,7 +803,6 @@
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<magicCriticalRate>5</magicCriticalRate>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>SELF</targetType>
 		<affectRange>1000</affectRange>
 		<targetType>SELF</targetType>
@@ -849,7 +837,6 @@
 		<effectPoint>687</effectPoint>
 		<abnormalType>RHAPSODY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>89</magicLvl>
 		<abnormalLvl>5</abnormalLvl>
@@ -918,7 +905,6 @@
 		<reuseDelay>2000</reuseDelay>
 		<magicLvl>85</magicLvl>
 		<effectPoint>687</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effects>
 		<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</dispel>
@@ -964,7 +950,6 @@
 		<reuseDelay>2000</reuseDelay>
 		<magicLvl>85</magicLvl>
 		<effectPoint>687</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effects>
 			<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</dispel>
@@ -1015,7 +1000,6 @@
 		<reuseDelay>2000</reuseDelay>
 		<magicLvl>85</magicLvl>
 		<effectPoint>687</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effects>
 		<effect name="DispelBySlotProbability">
 				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</dispel>
@@ -1062,7 +1046,6 @@
 		</abnormalLvl>
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<effectPoint>709</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<isTriggeredSkill>true</isTriggeredSkill>

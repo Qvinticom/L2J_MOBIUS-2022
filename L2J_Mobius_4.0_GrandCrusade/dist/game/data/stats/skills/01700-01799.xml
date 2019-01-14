@@ -9,7 +9,6 @@
 		<hitTime>4000</hitTime>
 		<reuseDelay>4000</reuseDelay>
 		<effectPoint>500</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<magicLvl>85</magicLvl>
@@ -30,7 +29,6 @@
 		<hitTime>4000</hitTime>
 		<reuseDelay>4000</reuseDelay>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<affectRange>1000</affectRange>
@@ -48,7 +46,6 @@
 		<icon>icon.skill01702</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>60</magicLvl>
 		<isMagic>2</isMagic>
@@ -64,7 +61,6 @@
 		<icon>icon.skill01703</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>60</magicLvl>
 		<isMagic>2</isMagic>
@@ -84,7 +80,6 @@
 		<effectPoint>-10330</effectPoint>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -108,7 +103,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>DANCE_OF_FURY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -134,7 +128,6 @@
 		<operateType>A1</operateType>
 		<hitTime>1800</hitTime>
 		<effectPoint>-679</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<affectRange>500</affectRange>
@@ -157,7 +150,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
@@ -185,7 +177,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
@@ -213,7 +204,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
@@ -244,7 +234,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>POISON</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
@@ -272,7 +261,6 @@
 		<hitTime>3000</hitTime>
 		<coolTime>800</coolTime>
 		<effectPoint>-333</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<magicLvl>85</magicLvl>
@@ -295,7 +283,6 @@
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<effectPoint>-1000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -316,7 +303,6 @@
 		<hitTime>800</hitTime>
 		<coolTime>200</coolTime>
 		<effectPoint>-1000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -340,7 +326,6 @@
 		<coolTime>200</coolTime>
 		<reuseDelay>6000</reuseDelay>
 		<effectPoint>-10000</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>900</effectRange>
@@ -361,7 +346,6 @@
 	<skill id="1716" toLevel="1" name="Wise Retainer's Resurrection">
 		<icon>icon.skill1271</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -382,7 +366,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
@@ -411,7 +394,6 @@
 	<skill id="1718" toLevel="1" name="Wise Retainer's Punishment">
 		<icon>icon.skill1271</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -428,7 +410,6 @@
 	<skill id="1719" toLevel="1" name="Wise Retainer's Price">
 		<icon>icon.skill1271</icon>
 		<operateType>P</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<effects>
@@ -442,7 +423,6 @@
 	<skill id="1720" toLevel="1" name="Lakcis' Protection">
 		<icon>icon.skill1271</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -467,7 +447,6 @@
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -488,7 +467,6 @@
 		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -506,7 +484,6 @@
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -526,7 +503,6 @@
 		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -545,7 +521,6 @@
 		<operateType>A1</operateType>
 		<castRange>40</castRange>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>400</effectRange>
@@ -567,7 +542,6 @@
 		<castRange>600</castRange>
 		<hitTime>500</hitTime>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>1100</effectRange>
@@ -586,7 +560,6 @@
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -611,7 +584,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
@@ -644,7 +616,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
@@ -675,7 +646,6 @@
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<effectRange>600</effectRange>
@@ -695,7 +665,6 @@
 		<icon>icon.skill0003</icon>
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -708,28 +677,24 @@
 	<skill id="1732" toLevel="1" name="Magmeld's Promise">
 		<icon>icon.skill0003</icon>
 		<operateType>P</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="1733" toLevel="1" name="Celestia's Wrath">
 		<icon>icon.skill0003</icon>
 		<operateType>P</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="1734" toLevel="1" name="Acheron's Penitence">
 		<icon>icon.skill0003</icon>
 		<operateType>P</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="1735" toLevel="3" name="Increase Skill Power">
 		<icon>icon.skill0003</icon>
 		<operateType>P</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">86</value>
@@ -740,7 +705,6 @@
 	<skill id="1736" toLevel="3" name="Increase M. Atk.">
 		<icon>icon.skill0003</icon>
 		<operateType>P</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>
 			<value level="1">86</value>
@@ -756,7 +720,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<activateRate>0</activateRate>
@@ -782,7 +745,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>PUBLIC_SLOT</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
 		<activateRate>0</activateRate>
@@ -808,7 +770,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<basicProperty>MAGIC</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>97</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -833,7 +794,6 @@
 		<castRange>1000</castRange>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>97</magicLvl>
@@ -872,7 +832,6 @@
 		<castRange>1000</castRange>
 		<abnormalType>INVINCIBILITY</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1500</effectRange>
 		<magicLvl>97</magicLvl>
@@ -895,7 +854,6 @@
 		<operateType>A2</operateType>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>97</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -919,7 +877,6 @@
 	<skill id="1753" toLevel="1" name="Mass Kill">
 		<operateType>A1</operateType>
 		<effectPoint>-100</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>97</magicLvl>
@@ -938,7 +895,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>BLEEDING</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>97</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -964,7 +920,6 @@
 		<icon>icon.skill0036</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>97</magicLvl>
@@ -983,7 +938,6 @@
 		<icon>icon.skill0011</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>97</magicLvl>
@@ -1003,7 +957,6 @@
 		<effectPoint>1</effectPoint>
 		<abnormalType>PA_UP</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>97</magicLvl>
 		<abnormalLvl>1</abnormalLvl>
@@ -1077,7 +1030,6 @@
 	<skill id="1758" toLevel="1" name="Monster Mass Kill">
 		<operateType>A1</operateType>
 		<effectPoint>-1</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>97</magicLvl>
@@ -1126,7 +1078,6 @@
 		<reuseDelay>2000</reuseDelay>
 		<abnormalType>ABSORB</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>
@@ -1231,7 +1182,6 @@
 		<effectPoint>-1</effectPoint>
 		<abnormalType>ABSORB</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>

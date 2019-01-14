@@ -28,7 +28,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>-700</effectPoint>
 		<reuseDelay>30000</reuseDelay>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -1181,7 +1180,6 @@
 		</effectPoint>
 		<reuseDelay>100</reuseDelay>
 		<affectLimit>5-12</affectLimit>
-		<rideState>NONE</rideState>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -1711,7 +1709,6 @@
 		<coolTime>500</coolTime>s
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-125</effectPoint>
-		<rideState>NONE</rideState>
 		<staticReuse>true</staticReuse>
 		<targetType>TARGET</targetType>
 		<affectScope>SQUARE_PB</affectScope>

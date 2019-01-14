@@ -18,7 +18,6 @@
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1100</effectRange>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -84,7 +83,6 @@
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
 		<reuseDelay>1</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effects>
 			<effect name="LimitSkill">
 			</effect>
@@ -99,7 +97,6 @@
 		<isDebuff>true</isDebuff>
 		<operateType>A2</operateType>
 		<reuseDelay>1</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<effects>
 			<effect name="LimitSkill" />
 		</effects>

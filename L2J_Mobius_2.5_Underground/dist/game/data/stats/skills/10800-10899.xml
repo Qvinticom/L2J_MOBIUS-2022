@@ -130,7 +130,6 @@
 			<value level="8">-723</value>
 		</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>
 			<value level="1">1100</value>
@@ -232,7 +231,6 @@
 		<reuseDelay>180000</reuseDelay>
 		<effectPoint>-714</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<effectRange>1400</effectRange>
 		<isDebuff>true</isDebuff>
@@ -278,7 +276,6 @@
 		<!-- Boom! -->
 		<icon>icon.skill0099</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>97</magicLvl>
@@ -301,7 +298,6 @@
 		<!-- Boom! -->
 		<icon>icon.skill0099</icon>
 		<operateType>A1</operateType>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>97</magicLvl>
@@ -353,7 +349,6 @@
 		<coolTime>400</coolTime>
 		<reuseDelay>30000</reuseDelay>
 		<effectPoint>2</effectPoint>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<isDebuff>true</isDebuff>
@@ -378,7 +373,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>ALL_SPEED_DOWN</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -416,7 +410,6 @@
 		<abnormalType>ROOT_MAGICALLY</abnormalType>
 		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -446,7 +439,6 @@
 		<effectPoint>-2</effectPoint>
 		<abnormalType>TARGET_LOCK</abnormalType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<activateRate>0</activateRate>
@@ -479,7 +471,6 @@
 		<reuseDelay>30000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
 		<hitCancelTime>0</hitCancelTime>

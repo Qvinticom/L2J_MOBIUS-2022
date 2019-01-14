@@ -146,7 +146,6 @@
 		<reuseDelay>15000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<rideState>NONE</rideState>
 		<targetConditions>
 			<condition name="OpTargetPc" />
 		</targetConditions>
@@ -163,7 +162,6 @@
 		<reuseDelay>15000</reuseDelay>
 		<staticReuse>true</staticReuse>
 		<isTriggeredSkill>true</isTriggeredSkill>
-		<rideState>NONE</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<targetConditions>
@@ -185,7 +183,6 @@
 		<chance>100</chance>
 		<reuseDelay>15000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<rideState>NONE</rideState>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>

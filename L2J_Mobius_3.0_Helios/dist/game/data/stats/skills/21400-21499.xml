@@ -23,7 +23,6 @@
 		<mpInitialConsume>14</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>2000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>TARGET</targetType>
@@ -43,7 +42,6 @@
 		<abnormalType>RACE_HUMAN1</abnormalType>
 		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -73,7 +71,6 @@
 		<abnormalType>RACE_ELF1</abnormalType>
 		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -106,7 +103,6 @@
 		<abnormalType>RACE_DARKELF1</abnormalType>
 		<effectPoint>867</effectPoint>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>-5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<staticReuse>true</staticReuse>
@@ -139,7 +135,6 @@
 		<hitTime>200</hitTime>
 		<basicProperty>NONE</basicProperty>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE</rideState>
 		<hitCancelTime>0.2</hitCancelTime>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -183,7 +178,6 @@
 		<hitTime>200</hitTime>
 		<basicProperty>NONE</basicProperty>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE</rideState>
 		<hitCancelTime>0.2</hitCancelTime>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
@@ -211,7 +205,6 @@
 		<effectPoint>2</effectPoint>
 		<basicProperty>NONE</basicProperty>
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE</rideState>
 		<hitCancelTime>0.2</hitCancelTime>
 		<activateRate>0</activateRate>
 		<staticReuse>true</staticReuse>
@@ -233,7 +226,6 @@
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>85</magicLvl>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -251,7 +243,6 @@
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<reuseDelay>600000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>

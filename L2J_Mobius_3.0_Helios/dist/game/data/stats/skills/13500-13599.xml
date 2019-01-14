@@ -63,7 +63,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>235</effectPoint>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -95,7 +94,6 @@
 		<coolTime>500</coolTime>
 		<effectPoint>235</effectPoint>
 		<reuseDelay>5000</reuseDelay>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -125,7 +123,6 @@
 		<staticReuse>true</staticReuse>
 		<effectPoint>867</effectPoint>
 		<isMagic>1</isMagic>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<basicProperty>NONE</basicProperty>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -156,7 +153,6 @@
 		<effectPoint>1</effectPoint>
 		<reuseDelay>600000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<rideState>NONE</rideState>
 		<basicProperty>NONE</basicProperty>
 		<isMagic>2</isMagic>
 		<targetType>SELF</targetType>
@@ -201,7 +197,6 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<basicProperty>MAGIC</basicProperty>
 		<effectPoint>-379</effectPoint>
@@ -232,7 +227,6 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 		<isMagic>1</isMagic>
@@ -264,7 +258,6 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>1</isMagic>
 		<magicLvl>85</magicLvl>
@@ -299,7 +292,6 @@
 		<coolTime>500</coolTime>
 		<reuseDelay>300000</reuseDelay>
 		<staticReuse>true</staticReuse>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<isMagic>4</isMagic>
 		<magicLvl>85</magicLvl>
@@ -446,7 +438,6 @@
 		<operateType>A2</operateType>
 		<hitTime>200</hitTime>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<magicLvl>85</magicLvl>
@@ -897,7 +888,6 @@
 		<icon>icon.accessory_earring_of_lind_i00</icon>
 		<operateType>A2</operateType>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE;STRIDER;WYVERN;WOLF</rideState>		
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalResists>KNOCKDOWN</abnormalResists>

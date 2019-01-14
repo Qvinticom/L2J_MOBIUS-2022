@@ -67,7 +67,6 @@
 		<effectRange>900</effectRange>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<hitTime>2500</hitTime>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>ZONE</trait>
@@ -150,7 +149,6 @@
 		<effectPoint>-709</effectPoint>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
-		<rideState>NONE</rideState>
 		<hitCancelTime>0</hitCancelTime>
 		<trait>ZONE</trait>
 		<targetType>SELF</targetType>
@@ -692,7 +690,6 @@
 			<value level="10">-712</value>
 			<value level="11">-712</value>
 		</effectPoint>
-		<rideState>NONE</rideState>
 		<nextAction>CAST</nextAction>
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">6</value>
