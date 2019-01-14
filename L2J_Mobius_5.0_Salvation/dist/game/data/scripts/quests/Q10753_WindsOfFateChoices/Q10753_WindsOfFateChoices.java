@@ -99,7 +99,6 @@ public final class Q10753_WindsOfFateChoices extends Quest
 	private static final int SAYHAS_BOX_W = 40268;
 	private static final int SAYHAS_BOX_M = 40269;
 	private static final int CHAOS_POMANDER = 37374;
-	private static final int MENTEE_CARTIFICATE = 33800;
 	// Location
 	private static final Location TELEPORT_LOC = new Location(-81948, 249635, -3371);
 	private static final Location[] BOX_SPAWNS =
@@ -367,7 +366,8 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					giveStoryQuestReward(npc, player);
 					giveItems(player, SAYHAS_BOX_W, 1);
 					giveItems(player, CHAOS_POMANDER, 2);
-					giveItems(player, MENTEE_CARTIFICATE, 1);
+					addExpAndSp(player, 0, 500000);
+					giveAdena(player, 2030400, false);
 					qs.exitQuest(false, true);
 				}
 				htmltext = event;
@@ -390,7 +390,8 @@ public final class Q10753_WindsOfFateChoices extends Quest
 					giveStoryQuestReward(npc, player);
 					giveItems(player, SAYHAS_BOX_M, 1);
 					giveItems(player, CHAOS_POMANDER, 2);
-					giveItems(player, MENTEE_CARTIFICATE, 1);
+					addExpAndSp(player, 0, 500000);
+					giveAdena(player, 2030400, false);
 					qs.exitQuest(false, true);
 				}
 				htmltext = event;
@@ -836,7 +837,7 @@ public final class Q10753_WindsOfFateChoices extends Quest
 		final L2PcInstance player = event.getActiveChar();
 		final QuestState qs = getQuestState(player, false);
 		
-		if ((qs == null) && player.getRace() == Race.ERTHEIA && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)))
+		if ((qs == null) && (player.getRace() == Race.ERTHEIA) && (player.getLevel() >= MIN_LEVEL) && (player.isInCategory(CategoryType.FOURTH_CLASS_GROUP)))
 		{
 			if (player.isMageClass())
 			{

@@ -221,12 +221,12 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 					player.broadcastUserInfo();
 					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 24));
-					giveAdena(player, 5_000_000, false);
+					giveAdena(player, 1599120, false);
 					giveItems(player, SOULSHOT, 8000);
 					giveItems(player, SPIRITSHOT, 8000);
 					giveItems(player, BLESSED_SCROLL_OF_RESURRECTION, 3);
 					giveItems(player, PAULINAS_EQUIPMENT_SET, 1);
-					addExpAndSp(player, 2_050_000, 0);
+					addExpAndSp(player, 42000000, 0);
 					qs.exitQuest(false, true);
 				}
 				break;
@@ -244,12 +244,12 @@ public final class Q10752_WindsOfFateAPromise extends Quest
 					player.broadcastUserInfo();
 					player.sendSkillList();
 					player.sendPacket(new SocialAction(player.getObjectId(), 24));
-					giveAdena(player, 5000000, false);
+					giveAdena(player, 1599120, false);
 					giveItems(player, SOULSHOT, 8000);
 					giveItems(player, SPIRITSHOT, 8000);
 					giveItems(player, BLESSED_SCROLL_OF_RESURRECTION, 3);
 					giveItems(player, PAULINAS_EQUIPMENT_SET, 1);
-					addExpAndSp(player, 2050000, 0);
+					addExpAndSp(player, 42000000, 0);
 					qs.exitQuest(false, true);
 				}
 				break;
