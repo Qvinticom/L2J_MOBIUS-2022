@@ -16792,9 +16792,12 @@ public final class L2PcInstance extends L2Playable
 			Olympiad.getInstance().notifyCompetitorDamage(this, damage, getOlympiadGameId());
 		}
 		
-		SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DID_S1_DMG);
-		sm.addNumber(damage);
-		sendPacket(sm);
+		if (this != target)
+		{
+			SystemMessage sm = new SystemMessage(SystemMessageId.YOU_DID_S1_DMG);
+			sm.addNumber(damage);
+			sendPacket(sm);
+		}
 	}
 	
 	/**

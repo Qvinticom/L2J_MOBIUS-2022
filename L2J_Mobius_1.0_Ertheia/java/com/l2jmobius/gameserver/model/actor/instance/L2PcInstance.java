@@ -11653,7 +11653,7 @@ public final class L2PcInstance extends L2Playable
 			OlympiadGameManager.getInstance().notifyCompetitorDamage(this, damage);
 		}
 		
-		final SystemMessage sm;
+		SystemMessage sm = null;
 		
 		if ((target.isHpBlocked() && !target.isNpc()) || (target.isPlayer() && target.isAffected(EffectFlag.DUELIST_FURY) && !isAffected(EffectFlag.FACEOFF)))
 		{
@@ -11664,7 +11664,7 @@ public final class L2PcInstance extends L2Playable
 			sm = SystemMessage.getSystemMessage(SystemMessageId.YOU_HIT_FOR_S1_DAMAGE);
 			sm.addInt(damage);
 		}
-		else
+		else if (this != target)
 		{
 			sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_INFLICTED_S3_DAMAGE_ON_C2);
 			sm.addPcName(this);
@@ -11672,7 +11672,11 @@ public final class L2PcInstance extends L2Playable
 			sm.addInt(damage);
 			sm.addPopup(target.getObjectId(), getObjectId(), -damage);
 		}
-		sendPacket(sm);
+		
+		if (sm != null)
+		{
+			sendPacket(sm);
+		}
 	}
 	
 	/**
