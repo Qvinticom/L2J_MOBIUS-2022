@@ -88,8 +88,7 @@ public final class Q10332_ToughRoad extends Quest
 			{
 				if (st.isCond(1))
 				{
-					giveAdena(player, 700, true);
-					addExpAndSp(player, 90000, 21);
+					addExpAndSp(player, 42250, 20);
 					st.exitQuest(false, true);
 					player.getVariables().remove(MOVIE_VAR);
 					break;

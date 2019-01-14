@@ -86,7 +86,6 @@ public final class Q10358_DividedSakumPoslof extends Quest
 			{
 				if (st.isCond(4))
 				{
-					giveAdena(player, 1050, true);
 					addExpAndSp(player, 750000, 180);
 					st.exitQuest(false, true);
 					htmltext = event;

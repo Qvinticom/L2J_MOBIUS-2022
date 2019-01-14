@@ -40,7 +40,6 @@ public class Q10415_KekropusLetterWithWisdom extends LetterQuest
 	// Items
 	private static final int SOE_WALL_OF_ARGOS = 37032; // Scroll of Escape: Wall of Argos
 	private static final int SOE_TOWN_OF_GODDARD = 37119; // Scroll of Escape: Town of Goddard
-	private static final int EAA = 730; // Scroll: Enchant Armor (A-grade)
 	// Requirements
 	private static final int MIN_LEVEL = 70;
 	private static final int MAX_LEVEL = 75;
@@ -93,11 +92,10 @@ public class Q10415_KekropusLetterWithWisdom extends LetterQuest
 				if (qs.isCond(2))
 				{
 					qs.exitQuest(false, true);
-					giveItems(player, EAA, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 1_088_640, 261);
+						addExpAndSp(player, 1088640, 261);
 					}
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_76, ExShowScreenMessage.TOP_CENTER, 6000);
 					htmltext = event;

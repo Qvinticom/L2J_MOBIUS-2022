@@ -42,7 +42,6 @@ public final class Q10392_FailureAndItsConsequences extends Quest
 	};
 	// Items
 	private static final int FRAGMENT = 36709; // Suspicious Fragment
-	private static final int EAC = 952; // Scroll: Enchant Armor (C-grade)
 	// Misc
 	private static final int MIN_LEVEL = 40;
 	private static final int MAX_LEVEL = 46;
@@ -99,9 +98,8 @@ public final class Q10392_FailureAndItsConsequences extends Quest
 				if (st.isCond(3))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAC, 5);
 					giveStoryQuestReward(npc, player);
-					addExpAndSp(player, 2329740, 559);
+					addExpAndSp(player, 4175045, 559);
 					htmltext = event;
 				}
 				break;

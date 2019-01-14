@@ -52,7 +52,6 @@ public final class Q10390_KekropusLetter extends Quest
 	private static final int KEKROPUS_LETTER = 36706;
 	private static final int HAINE_SOE = 37112; // Scroll of Escape: Heine
 	private static final int ALLIGATOR_ISLAND_SOE = 37025; // Scroll of Escape: Alligator Island
-	private static final int EWC = 951; // Scroll: Enchant Weapon (C-grade)
 	// Misc
 	private static final int MIN_LEVEL = 40;
 	private static final int MAX_LEVEL = 45;
@@ -149,7 +148,6 @@ public final class Q10390_KekropusLetter extends Quest
 			{
 				if (st.isCond(4))
 				{
-					giveItems(player, EWC, 3);
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 370440, 88);
 					st.exitQuest(false, true);

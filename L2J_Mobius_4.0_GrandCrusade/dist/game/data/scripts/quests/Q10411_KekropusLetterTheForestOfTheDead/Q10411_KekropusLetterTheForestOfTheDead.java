@@ -39,7 +39,6 @@ public final class Q10411_KekropusLetterTheForestOfTheDead extends LetterQuest
 	// Items
 	private static final int SOE_FOREST_OF_THE_DEAD = 37031; // Scroll of Escape: Forest of the Dead
 	private static final int SOE_TOWN_OF_RUNE = 37118; // Scroll of Escape: Town of Rune
-	private static final int EWA = 729; // Scroll: Enchant Weapon (A-grade)
 	// Location
 	private static final Location TELEPORT_LOC = new Location(42682, -47986, -792);
 	// Misc
@@ -92,11 +91,10 @@ public final class Q10411_KekropusLetterTheForestOfTheDead extends LetterQuest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EWA, 2);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 942_690, 226);
+						addExpAndSp(player, 942690, 226);
 					}
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_70, ExShowScreenMessage.TOP_CENTER, 6000);
 					htmltext = event;

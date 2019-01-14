@@ -39,7 +39,6 @@ public final class Q10710_LifeEnergyRepository extends Quest
 	private static final int EMBRYO = 27521;
 	// Items
 	private static final int FRAGMENT = 39512; // Shine Stone Fragment
-	private static final int EAA = 730; // Scroll: Enchant Armor (A-grade)
 	// Locations
 	private static final Location[] EMBRYO_LOC =
 	{
@@ -113,11 +112,10 @@ public final class Q10710_LifeEnergyRepository extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAA, 2);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 3_125_586, 750);
+						addExpAndSp(player, 15207327, 750);
 					}
 					htmltext = event;
 				}

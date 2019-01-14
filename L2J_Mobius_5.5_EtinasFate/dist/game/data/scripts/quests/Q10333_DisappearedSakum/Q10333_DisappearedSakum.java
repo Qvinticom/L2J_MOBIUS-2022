@@ -106,7 +106,6 @@ public final class Q10333_DisappearedSakum extends Quest
 			{
 				if (qs.isCond(3))
 				{
-					giveAdena(player, 800, true);
 					addExpAndSp(player, 180000, 43);
 					qs.exitQuest(false, true);
 					htmltext = event;

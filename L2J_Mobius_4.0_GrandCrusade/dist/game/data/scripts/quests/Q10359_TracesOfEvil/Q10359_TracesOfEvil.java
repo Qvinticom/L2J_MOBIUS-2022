@@ -122,8 +122,7 @@ public final class Q10359_TracesOfEvil extends Quest
 			{
 				if ((st.getCond() >= 4) && (st.getCond() <= 11))
 				{
-					giveAdena(player, 1080, true);
-					addExpAndSp(player, 900000, 216);
+					addExpAndSp(player, 1800000, 216);
 					st.exitQuest(false, true);
 					htmltext = event;
 				}

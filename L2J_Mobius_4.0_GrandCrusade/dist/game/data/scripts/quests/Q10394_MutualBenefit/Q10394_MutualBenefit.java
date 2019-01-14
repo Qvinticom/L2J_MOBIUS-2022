@@ -39,8 +39,6 @@ public final class Q10394_MutualBenefit extends Quest
 	private static final int GARGOYLE = 20241; // Hunter Gargoyle
 	private static final int BASILISK = 20573; // Tarlk Basilisk
 	private static final int ELDER_BASILISK = 20574; // Elder Tarlk Basilisk
-	// Items
-	private static final int EAC = 952; // Scroll: Enchant Armor (C-grade)
 	// Misc
 	private static final int MIN_LEVEL = 46;
 	private static final int MAX_LEVEL = 52;
@@ -84,11 +82,10 @@ public final class Q10394_MutualBenefit extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAC, 6);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 3_151_312, 756);
+						addExpAndSp(player, 6758129, 756);
 					}
 					htmltext = event;
 				}

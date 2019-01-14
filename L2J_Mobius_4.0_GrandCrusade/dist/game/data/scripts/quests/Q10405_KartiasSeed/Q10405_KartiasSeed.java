@@ -50,7 +50,6 @@ public final class Q10405_KartiasSeed extends Quest
 	};
 	// Items
 	private static final int KARTIA_SEED = 36714; // Kartia's Mutated Seed
-	private static final int EAA = 730; // Scroll: Enchant Armor (A-grade)
 	// Misc
 	private static final int MIN_LEVEL = 61;
 	private static final int MAX_LEVEL = 65;
@@ -95,11 +94,10 @@ public final class Q10405_KartiasSeed extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAA, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 6_251_174, 1_500);
+						addExpAndSp(player, 31303665, 1500);
 					}
 					htmltext = event;
 				}

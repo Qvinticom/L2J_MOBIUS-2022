@@ -45,7 +45,6 @@ public final class Q10403_TheGuardianGiant extends Quest
 	};
 	// Items
 	private static final int FRAGMENT = 36713; // Guardian Giant's Nucleus Fragment
-	private static final int EAB = 948; // Scroll: Enchant Armor (B-grade)
 	// Misc
 	private static final int MIN_LEVEL = 58;
 	private static final int MAX_LEVEL = 61;
@@ -92,11 +91,10 @@ public final class Q10403_TheGuardianGiant extends Quest
 				if (st.isCond(3))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAB, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 6_579_090, 1_578);
+						addExpAndSp(player, 9579090, 1578);
 					}
 					htmltext = event;
 				}
@@ -161,7 +159,7 @@ public final class Q10403_TheGuardianGiant extends Quest
 			}
 			else if (st.isCond(1))
 			{
-				if (giveItemRandomly(killer, FRAGMENT, 1, 50, 1, true))
+				if (giveItemRandomly(killer, FRAGMENT, 1, 90, 1, true))
 				{
 					st.setCond(2, true);
 					final L2Npc akum = addSpawn(AKUM, npc);

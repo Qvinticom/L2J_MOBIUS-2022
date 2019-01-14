@@ -39,7 +39,6 @@ public final class Q10397_KekropusLetterASuspiciousBadge extends LetterQuest
 	// Items
 	private static final int SOE_TOWN_OF_OREN = 37114; // Scroll of Escape: Town of Oren
 	private static final int SOE_SEA_OF_SPORES = 37027; // Scroll of Escape: Sea of Spores
-	private static final int EWB = 947; // Scroll: Enchant Weapon (B-grade)
 	// Location
 	private static final Location TELEPORT_LOC = new Location(81013, 56413, -1552);
 	// Misc
@@ -91,11 +90,10 @@ public final class Q10397_KekropusLetterASuspiciousBadge extends LetterQuest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EWB, 2);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 635_250, 152);
+						addExpAndSp(player, 635250, 152);
 					}
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_58, ExShowScreenMessage.TOP_CENTER, 6000);
 					htmltext = event;

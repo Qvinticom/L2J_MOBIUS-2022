@@ -47,8 +47,6 @@ public final class Q10395_NotATraitor extends Quest
 		20576, // Oel Mahum Shaman
 		21261, // Ol Mahum Transcender
 	};
-	// Items
-	private static final int EAC = 952; // Scroll: Enchant Armor (C-grade)
 	// Misc
 	private static final int MIN_LEVEL = 46;
 	private static final int MAX_LEVEL = 52;
@@ -93,11 +91,10 @@ public final class Q10395_NotATraitor extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAC, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 3_781_574, 907);
+						addExpAndSp(player, 8419210, 907);
 					}
 					htmltext = event;
 				}

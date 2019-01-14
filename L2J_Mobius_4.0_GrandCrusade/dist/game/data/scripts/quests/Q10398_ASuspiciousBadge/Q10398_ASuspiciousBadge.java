@@ -43,7 +43,6 @@ public final class Q10398_ASuspiciousBadge extends Quest
 	};
 	// Items
 	private static final int BADGE = 36666; // Unidentified Suspicious Badge
-	private static final int EAB = 948; // Scroll: Enchant Armor (B-grade)
 	// Misc
 	private static final int MIN_LEVEL = 52;
 	private static final int MAX_LEVEL = 58;
@@ -87,7 +86,6 @@ public final class Q10398_ASuspiciousBadge extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAB, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{

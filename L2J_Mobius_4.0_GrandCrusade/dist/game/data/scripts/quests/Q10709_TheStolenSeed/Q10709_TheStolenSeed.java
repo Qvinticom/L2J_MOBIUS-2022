@@ -125,9 +125,10 @@ public final class Q10709_TheStolenSeed extends Quest
 					giveItems(player, BLESSED_SCROLL_OF_ESCAPE, 3);
 					giveItems(player, PAULINA_EQUIPMENT_SET, 1);
 					giveStoryQuestReward(npc, player);
+					giveAdena(player, 990000, true);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 731_010, 175);
+						addExpAndSp(player, 5598386, 175);
 					}
 					htmltext = event;
 				}

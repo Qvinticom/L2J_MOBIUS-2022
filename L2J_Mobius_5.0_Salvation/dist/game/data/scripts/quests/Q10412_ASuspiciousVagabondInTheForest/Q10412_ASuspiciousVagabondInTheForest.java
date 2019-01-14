@@ -33,8 +33,6 @@ public final class Q10412_ASuspiciousVagabondInTheForest extends Quest
 	// NPCs
 	private static final int HATUBA = 33849;
 	private static final int VAGABOND = 33850; // Suspicious Vagabond Mortally Endangered
-	// Items
-	private static final int EAA = 730; // Scroll: Enchant Armor (A-grade)
 	// Misc
 	private static final int MIN_LEVEL = 65;
 	private static final int MAX_LEVEL = 70;
@@ -78,11 +76,10 @@ public final class Q10412_ASuspiciousVagabondInTheForest extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAA, 3);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 942_690, 226);
+						addExpAndSp(player, 7541520, 226);
 					}
 					htmltext = event;
 				}

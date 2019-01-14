@@ -96,8 +96,7 @@ public final class Q10337_SakumsImpact extends Quest
 			{
 				if (qs.isCond(3))
 				{
-					giveAdena(player, 1030, true);
-					addExpAndSp(player, 650000, 156);
+					addExpAndSp(player, 1000000, 156);
 					qs.exitQuest(false, true);
 					htmltext = event;
 				}

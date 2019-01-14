@@ -35,8 +35,6 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	private static final int EYE_OF_ARGOS = 31683;
 	private static final int JANITT = 33851;
 	private static final int DAIMON_THE_WHITEEYED = 27499;
-	// Items
-	private static final int EAA = 730; // Scroll: Enchant Armor (A-grade)
 	// Misc
 	private static final int MIN_LEVEL = 70;
 	private static final int MAX_LEVEL = 75;
@@ -90,11 +88,10 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 				if (st.isCond(3))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAA, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() > MIN_LEVEL)
 					{
-						addExpAndSp(player, 2_721_600, 653);
+						addExpAndSp(player, 306167814, 3265);
 					}
 					htmltext = event;
 				}

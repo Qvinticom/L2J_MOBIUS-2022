@@ -40,7 +40,6 @@ public final class Q10707_FlamesOfSorrow extends Quest
 	private static final int SPIRIT = 33959;
 	// Items
 	private static final int MARK = 39508; // Mark of Gratitude
-	private static final int EAC = 952; // Scroll: Enchant Armor (C-grade)
 	// Misc
 	private static final int MIN_LEVEL = 46;
 	private static final int MAX_LEVEL = 51;
@@ -91,11 +90,10 @@ public final class Q10707_FlamesOfSorrow extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAC, 2);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 483_840, 116);
+						addExpAndSp(player, 6049417, 378);
 					}
 					htmltext = event;
 				}

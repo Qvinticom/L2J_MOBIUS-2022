@@ -55,8 +55,6 @@ public final class Q10410_EmbryoInTheSwampOfScreams extends Quest
 		21517, // Needle Stakato Drone
 		21518, // Frenzied Stakato Soldier
 	};
-	// Items
-	private static final int EAA = 730; // Scroll: Enchant Armor (A-grade)
 	// Misc
 	private static final int MIN_LEVEL = 65;
 	private static final int MAX_LEVEL = 70;
@@ -103,11 +101,10 @@ public final class Q10410_EmbryoInTheSwampOfScreams extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAA, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 161_046_201, 4072);
+						addExpAndSp(player, 161046201, 4072);
 					}
 					htmltext = event;
 				}

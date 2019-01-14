@@ -96,7 +96,7 @@ public final class Q10416_InSearchOfTheEyeOfArgos extends Quest
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 178_732_196, 261);
+						addExpAndSp(player, 178732196, 261);
 						giveStoryQuestReward(npc, player);
 						st.exitQuest(QuestType.ONE_TIME, true);
 						htmltext = event;

@@ -39,8 +39,6 @@ public final class Q10406_BeforeDarknessBearsFruit extends Quest
 	// NPCs
 	private static final int SHUVANN = 33867;
 	private static final int KARTIAS_FLOWER = 19470;
-	// Items
-	private static final int EAA = 730; // Scroll: Enchant Armor (A-grade)
 	// Misc
 	private static final int MIN_LEVEL = 61;
 	private static final int MAX_LEVEL = 65;
@@ -85,11 +83,10 @@ public final class Q10406_BeforeDarknessBearsFruit extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAA, 3);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 3_125_586, 750);
+						addExpAndSp(player, 13561681, 750);
 					}
 					htmltext = event;
 				}

@@ -39,7 +39,6 @@ public final class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 	// Items
 	private static final int SOE_TOWN_OF_ADEN = 37116; // Scroll of Escape: Town of Aden
 	private static final int SOE_FIELDS_OF_MASSACRE = 37029; // Scroll of Escape: Fields of Massacre
-	private static final int EWA = 729; // Scroll: Enchant Weapon (A-grade)
 	// Location
 	private static final Location TELEPORT_LOC = new Location(147619, 24681, -1984);
 	// Misc
@@ -91,11 +90,10 @@ public final class Q10404_KekropusLetterAHiddenMeaning extends LetterQuest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EWA, 1);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 807_240, 193);
+						addExpAndSp(player, 807240, 193);
 					}
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_65, ExShowScreenMessage.TOP_CENTER, 6000);
 					htmltext = event;

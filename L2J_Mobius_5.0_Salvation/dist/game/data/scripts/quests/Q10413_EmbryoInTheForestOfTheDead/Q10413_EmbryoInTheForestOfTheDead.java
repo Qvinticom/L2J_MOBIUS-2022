@@ -84,8 +84,6 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 		21595, // Vampire Warlord
 		21599, // Requiem Priest
 	};
-	// Items
-	private static final int EAA = 730; // Scroll: Enchant Armor (A-grade)
 	// Misc
 	private static final int MIN_LEVEL = 65;
 	private static final int MAX_LEVEL = 70;
@@ -132,11 +130,10 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAA, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 16_968_420, 4072);
+						addExpAndSp(player, 161046201, 4072);
 					}
 					htmltext = event;
 				}
@@ -184,7 +181,7 @@ public final class Q10413_EmbryoInTheForestOfTheDead extends Quest
 			{
 				int count = st.getInt("KillCount");
 				st.set("KillCount", ++count);
-				if (count >= 50)
+				if (count >= 300)
 				{
 					st.setCond(2, true);
 				}

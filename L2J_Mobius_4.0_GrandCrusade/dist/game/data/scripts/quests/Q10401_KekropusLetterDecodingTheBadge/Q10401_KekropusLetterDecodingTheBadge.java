@@ -39,7 +39,6 @@ public final class Q10401_KekropusLetterDecodingTheBadge extends LetterQuest
 	// Items
 	private static final int SOE_TOWN_OF_ADEN = 37115; // Scroll of Escape: Town of Aden
 	private static final int SOE_FORSAKEN_PLAINS = 37028; // Scroll of Escape: Forsaken Plains
-	private static final int EAB = 948; // Scroll: Enchant Armor (B-grade)
 	// Location
 	private static final Location TELEPORT_LOC = new Location(147540, 24661, -1984);
 	// Misc
@@ -91,11 +90,10 @@ public final class Q10401_KekropusLetterDecodingTheBadge extends LetterQuest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAB, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 731_010, 175);
+						addExpAndSp(player, 731010, 175);
 					}
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_61, ExShowScreenMessage.TOP_CENTER, 6000);
 					htmltext = event;

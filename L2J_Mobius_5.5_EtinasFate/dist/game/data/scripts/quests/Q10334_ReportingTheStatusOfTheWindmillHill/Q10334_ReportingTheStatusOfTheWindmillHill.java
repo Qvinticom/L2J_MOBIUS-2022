@@ -78,7 +78,6 @@ public final class Q10334_ReportingTheStatusOfTheWindmillHill extends Quest
 			{
 				if (qs.isCond(1))
 				{
-					giveAdena(player, 850, true);
 					addExpAndSp(player, 200000, 48);
 					qs.exitQuest(false, true);
 					htmltext = event;
