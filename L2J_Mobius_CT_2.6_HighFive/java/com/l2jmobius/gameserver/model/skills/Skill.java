@@ -215,7 +215,7 @@ public final class Skill implements IIdentifiable
 	
 	private final boolean _isPvPOnly;
 	
-	private final static List<Integer> MOUNT_ENABLED_SKILLS = new ArrayList<>();
+	private final static List<Integer> MOUNT_ENABLED_SKILLS = new ArrayList<>(2);
 	static
 	{
 		MOUNT_ENABLED_SKILLS.add(4289); // Wyvern Breath

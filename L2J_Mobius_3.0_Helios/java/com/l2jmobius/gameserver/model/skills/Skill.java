@@ -209,7 +209,7 @@ public final class Skill implements IIdentifiable
 	private final SkillBuffType _buffType;
 	private final boolean _displayInList;
 	
-	private final static List<Integer> MOUNT_ENABLED_SKILLS = new ArrayList<>();
+	private final static List<Integer> MOUNT_ENABLED_SKILLS = new ArrayList<>(2);
 	static
 	{
 		MOUNT_ENABLED_SKILLS.add(4289); // Wyvern Breath
