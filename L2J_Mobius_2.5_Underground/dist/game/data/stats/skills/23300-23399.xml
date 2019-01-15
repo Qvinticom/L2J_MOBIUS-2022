@@ -540,8 +540,7 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>NOT_FRIEND</affectObject>
 		<effects>
-			<effect name="BlockActions">
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="PhysicalDefence">
 				<amount>-23</amount>
 				<mode>PER</mode>

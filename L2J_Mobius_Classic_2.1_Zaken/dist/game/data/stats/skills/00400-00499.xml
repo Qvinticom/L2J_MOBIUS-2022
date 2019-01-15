@@ -2788,8 +2788,7 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="BlockActions">
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="HealOverTime">
 				<power>60</power>
 				<ticks>5</ticks>

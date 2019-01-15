@@ -2783,8 +2783,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="ManaHealOverTime">
 				<power>27</power>
 				<ticks>5</ticks>

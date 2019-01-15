@@ -1234,8 +1234,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="BlockActions">
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="ManaHealOverTime">
 				<power>
 					<value level="1">27</value>
@@ -3783,8 +3782,7 @@
 				<power>200</power>
 				<ticks>1</ticks>
 			</effect>
-			<effect name="BlockActions">
-			</effect>
+			<effect name="BlockActions" />
 			<effect name="PhysicalDefence">
 				<amount>-90</amount>
 				<mode>PER</mode>
