@@ -209,13 +209,6 @@ public final class Skill implements IIdentifiable
 	private final SkillBuffType _buffType;
 	private final boolean _displayInList;
 	
-	private final static List<Integer> MOUNT_ENABLED_SKILLS = new ArrayList<>(2);
-	static
-	{
-		MOUNT_ENABLED_SKILLS.add(4289); // Wyvern Breath
-		MOUNT_ENABLED_SKILLS.add(325); // Strider Siege Assault
-	}
-	
 	public Skill(StatsSet set)
 	{
 		_id = set.getInt(".id");
@@ -1071,7 +1064,7 @@ public final class Skill implements IIdentifiable
 			return true;
 		}
 		
-		if (activeChar.isPlayer() && activeChar.getActingPlayer().isMounted() && isBad() && !MOUNT_ENABLED_SKILLS.contains(_id))
+		if (activeChar.isPlayer() && activeChar.getActingPlayer().isMounted() && isBad() && !MountEnabledSkillList.contains(_id))
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_CANNOT_BE_USED_DUE_TO_UNSUITABLE_TERMS);
 			sm.addSkillName(_id);
