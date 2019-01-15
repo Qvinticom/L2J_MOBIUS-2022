@@ -59,8 +59,6 @@ public final class Q10420_TheVarkaSilenosSupporters extends Quest
 		21357, // Varka Silenos Priest
 		27515, // Varka Backup Wizard
 	};
-	// Items
-	private static final int EAS = 26353; // Scroll: Enchant Armor (S-grade)
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	
@@ -105,11 +103,10 @@ public final class Q10420_TheVarkaSilenosSupporters extends Quest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EAS, 2);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 22_997_520, 5519);
+						addExpAndSp(player, 492760460, 5519);
 					}
 					htmltext = event;
 				}
@@ -160,33 +157,33 @@ public final class Q10420_TheVarkaSilenosSupporters extends Quest
 				
 				if (npc.getId() == EMBRYO_SHOOTER)
 				{
-					if (shooterCount < 50)
+					if (shooterCount < 100)
 					{
 						st.set("KillCount_" + EMBRYO_SHOOTER, ++shooterCount);
 						playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 					}
 				}
-				else if (wizardCount < 50)
+				else if (wizardCount < 100)
 				{
 					st.set("KillCount_" + EMBRYO_WIZARD, ++wizardCount);
 					playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 				}
 				
-				if ((shooterCount >= 50) && (wizardCount >= 50))
+				if ((shooterCount >= 100) && (wizardCount >= 100))
 				{
 					st.setCond(2, true);
 				}
 			}
 			else if (CommonUtil.contains(WIZARD_MONSTERS, npc.getId()))
 			{
-				if (st.getInt("KillCount_" + EMBRYO_WIZARD) < 50)
+				if (st.getInt("KillCount_" + EMBRYO_WIZARD) < 100)
 				{
 					final L2Npc embryo = addSpawn(EMBRYO_WIZARD, npc, false, 60000);
 					addAttackPlayerDesire(embryo, killer);
 					embryo.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.YOU_DARE_INTERFERE_WITH_EMBRYO_SURELY_YOU_WISH_FOR_DEATH);
 				}
 			}
-			else if (st.getInt("KillCount_" + EMBRYO_SHOOTER) < 50)
+			else if (st.getInt("KillCount_" + EMBRYO_SHOOTER) < 100)
 			{
 				final L2Npc embryo = addSpawn(EMBRYO_SHOOTER, npc, false, 60000);
 				addAttackPlayerDesire(embryo, killer);

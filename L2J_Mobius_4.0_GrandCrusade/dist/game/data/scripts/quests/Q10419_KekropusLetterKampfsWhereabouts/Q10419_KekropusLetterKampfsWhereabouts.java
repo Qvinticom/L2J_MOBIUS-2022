@@ -39,7 +39,6 @@ public final class Q10419_KekropusLetterKampfsWhereabouts extends LetterQuest
 	// Items
 	private static final int SOE_TOWN_OF_GODDARD = 37121; // Scroll of Escape: Town of Goddard
 	private static final int SOE_VARKA_SILENOS_BARRACKS = 37034; // Scroll of Escape: Varka Silenos Barracks
-	private static final int EWS = 959; // Scroll: Enchant Weapon (S-grade)
 	// Location
 	private static final Location TELEPORT_LOC = new Location(147491, -56633, -2776);
 	// Misc
@@ -92,11 +91,10 @@ public final class Q10419_KekropusLetterKampfsWhereabouts extends LetterQuest
 				if (st.isCond(2))
 				{
 					st.exitQuest(false, true);
-					giveItems(player, EWS, 1);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 1_277_640, 306);
+						addExpAndSp(player, 1277640, 306);
 					}
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_KEKROPUS_AT_LV_81, ExShowScreenMessage.TOP_CENTER, 6000);
 					htmltext = event;

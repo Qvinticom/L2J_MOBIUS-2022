@@ -36,8 +36,6 @@ public final class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
 	private static final int HANSEN = 33853;
 	private static final int CHIEF_HORUS = 27503;
 	private static final int KAMPF = 27516;
-	// Items
-	private static final int EAS = 26353; // Scroll: Enchant Armor (S-grade)
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	private static final int MAX_LEVEL = 80;
@@ -92,11 +90,10 @@ public final class Q10422_AssassinationOfTheVarkaSilenosChief extends Quest
 					final int stoneId = Integer.parseInt(event.replaceAll("reward_", ""));
 					st.exitQuest(false, true);
 					giveItems(player, stoneId, 15);
-					giveItems(player, EAS, 2);
 					giveStoryQuestReward(npc, player);
 					if ((player.getLevel() >= MIN_LEVEL) && (player.getLevel() <= MAX_LEVEL))
 					{
-						addExpAndSp(player, 7_665_840, 1839);
+						addExpAndSp(player, 351479151, 1839);
 					}
 					htmltext = "33853-07.html";
 				}

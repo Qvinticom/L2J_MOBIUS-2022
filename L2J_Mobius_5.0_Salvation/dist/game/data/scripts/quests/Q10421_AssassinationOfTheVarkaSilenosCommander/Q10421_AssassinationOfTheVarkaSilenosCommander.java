@@ -35,8 +35,6 @@ public final class Q10421_AssassinationOfTheVarkaSilenosCommander extends Quest
 	// NPCs
 	private static final int HANSEN = 33853;
 	private static final int COMMANDER_MOS = 27502;
-	// Items
-	private static final int EAS = 26353; // Scroll: Enchant Armor (S-grade)
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	
@@ -88,11 +86,10 @@ public final class Q10421_AssassinationOfTheVarkaSilenosCommander extends Quest
 					final int stoneId = Integer.parseInt(event.replaceAll("reward_", ""));
 					st.exitQuest(false, true);
 					giveItems(player, stoneId, 15);
-					giveItems(player, EAS, 2);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 7_665_840, 1839);
+						addExpAndSp(player, 327446943, 1839);
 					}
 					htmltext = "33853-07.html";
 				}
