@@ -181,7 +181,14 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9296" toLevel="1" name="Mysterious Soulshot (B-grade)">
+		<icon>icon.etc_spirit_bullet_blue_i00</icon>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9297" toLevel="1" name="Mysterious Soulshot (A-grade)">
 		<operateType>A1</operateType>

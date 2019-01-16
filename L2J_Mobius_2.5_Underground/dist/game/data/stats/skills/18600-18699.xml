@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="18646" toLevel="1" name="Freya's Scroll of Storm">
+		<!-- Vitality consumption +$s1 and XP/SP acquisition +$s2 while hunting. Remains after death. Duration is 10 min. Cooldown is 10 min. Only usable when 1 or more Vitality slot is full. -->
+		<icon>icon.bm_freya_storm_scroll</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>600</abnormalTime>
+		<itemConsumeId>27673</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<reuseDelay>600000</reuseDelay>
+		<isMagic>4</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="VitalityPointsRate">
+				<amount>150</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ExpModify">
+				<amount>150</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>150</amount>
+				<mode>PER</mode>
+			</effect>			
+		</effects>
+	</skill>
+</list>
