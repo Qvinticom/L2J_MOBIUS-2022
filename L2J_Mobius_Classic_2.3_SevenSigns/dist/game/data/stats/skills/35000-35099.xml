@@ -218,6 +218,10 @@
 		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<canCastWhileDisabled>true</canCastWhileDisabled>
+		<conditions>
+			<condition name="NotFeared" />
+		</conditions>
 		<effects>
 			<effect name="DispelByCategory">
 				<slot>DEBUFF</slot>

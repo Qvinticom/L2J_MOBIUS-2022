@@ -2571,7 +2571,9 @@
 					<value level="12">873</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4073" toLevel="12" name="Stun">
@@ -2640,7 +2642,9 @@
 					<value level="12">873</value>
 				</power>
 			</effect>
-			<effect name="BlockActions" />
+			<effect name="BlockActions">
+				<allowedSkills>35016</allowedSkills>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="4074" toLevel="2" name="Haste">

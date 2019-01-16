@@ -56,7 +56,8 @@ public enum EffectFlag
 	PROTECT_DEATH_PENALTY,
 	CHAT_BLOCK,
 	FAKE_DEATH,
-	DUELIST_FURY;
+	DUELIST_FURY,
+	FEAR;
 	
 	public long getMask()
 	{

@@ -192,7 +192,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	private boolean _isFlying = false;
 	
 	private boolean _blockActions = false;
-	private volatile Map<Integer, AtomicInteger> _blockActionsAllowedSkills;
+	private volatile Map<Integer, AtomicInteger> _blockActionsAllowedSkills = new ConcurrentHashMap<>();
 	
 	private CharStat _stat;
 	private CharStatus _status;
@@ -5196,30 +5196,17 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	
 	public void addBlockActionsAllowedSkill(int skillId)
 	{
-		if (_blockActionsAllowedSkills == null)
-		{
-			synchronized (this)
-			{
-				if (_blockActionsAllowedSkills == null)
-				{
-					_blockActionsAllowedSkills = new ConcurrentHashMap<>();
-				}
-			}
-		}
 		_blockActionsAllowedSkills.computeIfAbsent(skillId, k -> new AtomicInteger()).incrementAndGet();
 	}
 	
 	public void removeBlockActionsAllowedSkill(int skillId)
 	{
-		if (_blockActionsAllowedSkills != null)
-		{
-			_blockActionsAllowedSkills.computeIfPresent(skillId, (k, v) -> v.decrementAndGet() != 0 ? v : null);
-		}
+		_blockActionsAllowedSkills.computeIfPresent(skillId, (k, v) -> v.decrementAndGet() != 0 ? v : null);
 	}
 	
 	public boolean isBlockedActionsAllowedSkill(Skill skill)
 	{
-		return (_blockActionsAllowedSkills != null) && _blockActionsAllowedSkills.containsKey(skill.getId());
+		return _blockActionsAllowedSkills.containsKey(skill.getId());
 	}
 	
 	/**
