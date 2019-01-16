@@ -1599,6 +1599,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<stayAfterDeath>true</stayAfterDeath>
+		<itemConsumeId>35999</itemConsumeId> <!-- Heavenly P. Atk. Cookie -->
+		<itemConsumeCount>1</itemConsumeCount>
 		<effects>
 			<effect name="PAtk">
 				<amount>35</amount>
@@ -1648,6 +1650,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<stayAfterDeath>true</stayAfterDeath>
+		<itemConsumeId>36000</itemConsumeId> <!-- Heavenly P. Def. Cookie -->
+		<itemConsumeCount>1</itemConsumeCount>
 		<effects>
 			<effect name="PAtk">
 				<amount>35</amount>
@@ -1693,6 +1697,8 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<stayAfterDeath>true</stayAfterDeath>
+		<itemConsumeId>36001</itemConsumeId> <!-- Heavenly Magic Cookie -->
+		<itemConsumeCount>1</itemConsumeCount>
 		<effects>
 			<effect name="MAtk">
 				<amount>40</amount>

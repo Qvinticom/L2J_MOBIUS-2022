@@ -53,6 +53,22 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="9281" level="1" /> <!-- Drum Melody - Heavenly Cocktail -->
+			<skill id="9282" level="1" /> <!-- Lute Melody - Heavenly Cocktail -->
+			<skill id="9283" level="1" /> <!-- Pipe Organ Melody - Heavenly Cocktail -->
+			<skill id="9284" level="1" /> <!-- Guitar Melody - Heavenly Cocktail -->
+			<skill id="9285" level="1" /> <!-- Harp Melody - Heavenly Cocktail -->
+			<skill id="9280" level="1" /> <!-- Horn Melody - Heavenly Cocktail -->
+			<skill id="17297" level="1" /> <!-- Emperor's Cookie: Prevailing Sonata -->
+			<skill id="17298" level="1" /> <!-- Emperor's Cookie: Daring Sonata -->
+			<skill id="17299" level="1" /> <!-- Emperor's Cookie: Refreshing Sonata -->
+			<skill id="9569" level="1" /> <!-- Heavenly P. Atk. Cookie -->
+		</skills>
 	</item>
 	<item id="47403" name="Emperor's Dessert Set (Magic Type)" type="EtcItem">
 		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly Magic Attack, and Emperor's Cookie. Cannot be used in the Olympiad. -->
@@ -65,6 +81,22 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="9281" level="1" /> <!-- Drum Melody - Heavenly Cocktail -->
+			<skill id="9282" level="1" /> <!-- Lute Melody - Heavenly Cocktail -->
+			<skill id="9283" level="1" /> <!-- Pipe Organ Melody - Heavenly Cocktail -->
+			<skill id="9284" level="1" /> <!-- Guitar Melody - Heavenly Cocktail -->
+			<skill id="9285" level="1" /> <!-- Harp Melody - Heavenly Cocktail -->
+			<skill id="9280" level="1" /> <!-- Horn Melody - Heavenly Cocktail -->
+			<skill id="17297" level="1" /> <!-- Emperor's Cookie: Prevailing Sonata -->
+			<skill id="17298" level="1" /> <!-- Emperor's Cookie: Daring Sonata -->
+			<skill id="17299" level="1" /> <!-- Emperor's Cookie: Refreshing Sonata -->
+			<skill id="9571" level="1" /> <!-- Heavenly Magic Cookie -->
+		</skills>
 	</item>
 	<item id="47404" name="Emperor's Dessert Set (Defense Type)" type="EtcItem">
 		<!-- Use to feel the effects of the Heavenly Cocktail, Heavenly Defense Cookie, and Emperor's Cookie. Cannot be used in the Olympiad. -->
@@ -77,6 +109,22 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="handler" val="ItemSkills" />
+		<set name="immediate_effect" val="true" />
+		<skills>
+			<skill id="9281" level="1" /> <!-- Drum Melody - Heavenly Cocktail -->
+			<skill id="9282" level="1" /> <!-- Lute Melody - Heavenly Cocktail -->
+			<skill id="9283" level="1" /> <!-- Pipe Organ Melody - Heavenly Cocktail -->
+			<skill id="9284" level="1" /> <!-- Guitar Melody - Heavenly Cocktail -->
+			<skill id="9285" level="1" /> <!-- Harp Melody - Heavenly Cocktail -->
+			<skill id="9280" level="1" /> <!-- Horn Melody - Heavenly Cocktail -->
+			<skill id="17297" level="1" /> <!-- Emperor's Cookie: Prevailing Sonata -->
+			<skill id="17298" level="1" /> <!-- Emperor's Cookie: Daring Sonata -->
+			<skill id="17299" level="1" /> <!-- Emperor's Cookie: Refreshing Sonata -->
+			<skill id="9570" level="1" /> <!-- Heavenly P. Def. Cookie -->
+		</skills>
 	</item>
 	<item id="47405" name="Scroll of Experience - Lv1 (Main Class)" type="EtcItem">
 		<!-- Use to gain 31 billion EXP and 40 million SP. Can be used by main class of Lv. 85 or above. -->
