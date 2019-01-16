@@ -80,7 +80,7 @@ public final class Q10763_TerrifyingChertuba extends Quest
 				if (qs.isCond(2))
 				{
 					giveStoryQuestReward(npc, player);
-					addExpAndSp(player, 896996, 215);
+					addExpAndSp(player, 1529848, 215);
 					qs.exitQuest(false, true);
 				}
 				break;

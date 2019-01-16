@@ -40,8 +40,6 @@ public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 	// NPCs
 	private static final int JANSSEN = 30484;
 	private static final int MAGIC_OWL = 33991;
-	// Items
-	private static final int ENCHANT_ARMOR_C = 952;
 	// Location
 	private static final Location OWL_LOC = new Location(17698, 115064, -11736);
 	// Skill
@@ -110,9 +108,8 @@ public final class Q10772_ReportsFromCrumaTowerPart1 extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, ENCHANT_ARMOR_C, 2);
 					giveStoryQuestReward(npc, player);
-					addExpAndSp(player, 127575, 30);
+					addExpAndSp(player, 838290, 30);
 					qs.exitQuest(false, true);
 				}
 				break;

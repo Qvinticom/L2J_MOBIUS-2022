@@ -43,7 +43,6 @@ public final class Q10771_VolatilePower extends Quest
 	// Items
 	private static final int SHINING_MYSTERIOUS_FRAGMENT = 39713;
 	private static final int NORMAL_FRAGMENT_DUST = 39714;
-	private static final int ENCHANT_ARMOR_C = 952;
 	// Misc
 	private static final int MIN_LEVEL = 44;
 	
@@ -88,9 +87,8 @@ public final class Q10771_VolatilePower extends Quest
 			{
 				if (qs.isCond(3))
 				{
-					giveItems(player, ENCHANT_ARMOR_C, 5);
 					giveStoryQuestReward(npc, player);
-					addExpAndSp(player, 2708350, 650);
+					addExpAndSp(player, 4150144, 650);
 					qs.exitQuest(false, true);
 				}
 				break;

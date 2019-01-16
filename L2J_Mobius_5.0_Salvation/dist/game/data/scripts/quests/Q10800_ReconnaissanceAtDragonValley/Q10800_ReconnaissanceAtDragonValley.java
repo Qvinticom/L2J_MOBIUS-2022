@@ -52,8 +52,6 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 		23443, // Dark Grave Wizard
 		23444, // Dark Grave Knight
 	};
-	// Item
-	private static final int EAS = 960;
 	// Misc
 	private static final int MIN_LEVEL = 76;
 	private static final int MAX_LEVEL = 85;
@@ -102,9 +100,8 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 					final int itemId = Integer.parseInt(event.replace("giveReward_", ""));
 					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
-					giveItems(player, EAS, 10);
 					giveItems(player, itemId, 30);
-					addExpAndSp(player, 84722400, 20333);
+					addExpAndSp(player, 543080087, 30466);
 					htmltext = "33973-08.html";
 				}
 				break;
@@ -148,7 +145,7 @@ public class Q10800_ReconnaissanceAtDragonValley extends Quest
 		{
 			int count = qs.getInt(KILL_COUNT_VAR);
 			qs.set(KILL_COUNT_VAR, ++count);
-			if (count >= 100)
+			if (count >= 200)
 			{
 				qs.setCond(2, true);
 			}

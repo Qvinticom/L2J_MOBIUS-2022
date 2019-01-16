@@ -42,7 +42,6 @@ public final class Q10781_IngredientsToEnforcements extends Quest
 	};
 	// Items
 	private static final int WIND_SPIRIT_FRAGMENT = 39721;
-	private static final int ENCHANT_ARMOR_B = 948;
 	// Misc
 	private static final int MIN_LEVEL = 52;
 	private static final int MAX_LEVEL = 58;
@@ -86,7 +85,6 @@ public final class Q10781_IngredientsToEnforcements extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, ENCHANT_ARMOR_B, 5);
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 19688585, 914);
 					qs.exitQuest(false, true);

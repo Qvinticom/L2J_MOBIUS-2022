@@ -47,8 +47,6 @@ public final class Q10780_AWeakenedBarrier extends Quest
 		23307, // Corpse Spider
 		23308, // Explosive Spider
 	};
-	// Items
-	private static final int ENCHANT_ARMOR_B = 948;
 	// Misc
 	private static final int MIN_LEVEL = 52;
 	private static final int MAX_LEVEL = 58;
@@ -91,7 +89,6 @@ public final class Q10780_AWeakenedBarrier extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, ENCHANT_ARMOR_B, 5);
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 15108843, 914);
 					qs.exitQuest(false, true);

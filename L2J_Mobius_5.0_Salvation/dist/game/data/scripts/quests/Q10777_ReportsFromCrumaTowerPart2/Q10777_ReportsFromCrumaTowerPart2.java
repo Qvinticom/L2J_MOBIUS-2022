@@ -40,8 +40,6 @@ public final class Q10777_ReportsFromCrumaTowerPart2 extends Quest
 	// NPCs
 	private static final int BELKADHI = 30485;
 	private static final int MAGIC_OWL = 33991;
-	// Items
-	private static final int ENCHANT_ARMOR_C = 952;
 	// Location
 	private static final Location OWL_LOC = new Location(17666, 108589, -9072);
 	// Skill
@@ -112,9 +110,8 @@ public final class Q10777_ReportsFromCrumaTowerPart2 extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, ENCHANT_ARMOR_C, 2);
 					giveStoryQuestReward(npc, player);
-					addExpAndSp(player, 151263, 36);
+					addExpAndSp(player, 1257435, 36);
 					qs.exitQuest(false, true);
 				}
 				break;

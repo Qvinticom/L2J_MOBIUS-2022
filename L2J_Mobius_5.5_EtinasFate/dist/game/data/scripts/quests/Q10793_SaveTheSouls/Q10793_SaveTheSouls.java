@@ -52,8 +52,6 @@ public final class Q10793_SaveTheSouls extends Quest
 		21560, // Bone Shaper
 		21561, // Sacrificed Man
 	};
-	// Items
-	private static final int ENCHANT_ARMOR_A = 26351;
 	// Misc
 	private static final int MIN_LEVEL = 65;
 	private static final int MAX_LEVEL = 70;
@@ -97,11 +95,10 @@ public final class Q10793_SaveTheSouls extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, ENCHANT_ARMOR_A, 3);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 942690, 226);
+						addExpAndSp(player, 86636593, 226);
 					}
 					qs.exitQuest(false, true);
 				}

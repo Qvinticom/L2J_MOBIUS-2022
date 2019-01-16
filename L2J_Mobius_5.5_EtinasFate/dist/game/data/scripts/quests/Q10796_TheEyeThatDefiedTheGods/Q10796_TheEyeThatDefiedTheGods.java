@@ -50,8 +50,6 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 		21299, // Valley Buffalo Slave
 		21304 // Valley Grendel Slave
 	};
-	// Items
-	private static final int EAA = 730;
 	// Misc
 	private static final int MIN_LEVEL = 70;
 	private static final int MAX_LEVEL = 75;
@@ -95,9 +93,8 @@ public class Q10796_TheEyeThatDefiedTheGods extends Quest
 					
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 1088640, 261);
+						addExpAndSp(player, 178732196, 261);
 						giveStoryQuestReward(npc, player);
-						giveItems(player, EAA, 2);
 						qs.exitQuest(false, true);
 						htmltext = event;
 					}

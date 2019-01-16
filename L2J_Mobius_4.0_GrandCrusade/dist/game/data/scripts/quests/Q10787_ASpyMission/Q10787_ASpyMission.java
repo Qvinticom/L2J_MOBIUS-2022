@@ -39,7 +39,6 @@ public final class Q10787_ASpyMission extends Quest
 	// Monster
 	private static final int EMBRYO_PURIFIER = 27540;
 	// Items
-	private static final int ENCHANT_ARMOR_A = 26351;
 	private static final int EMBRYO_MISSIVES = 39724;
 	// Misc
 	private static final int MIN_LEVEL = 61;
@@ -103,11 +102,10 @@ public final class Q10787_ASpyMission extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, ENCHANT_ARMOR_A, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 3125586, 750);
+						addExpAndSp(player, 17234475, 750);
 					}
 					qs.exitQuest(false, true);
 				}

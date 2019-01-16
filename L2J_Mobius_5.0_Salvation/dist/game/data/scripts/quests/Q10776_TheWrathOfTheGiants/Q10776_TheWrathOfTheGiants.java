@@ -44,7 +44,6 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 	private static final int GIANT_MINION = 27535;
 	// Items
 	private static final int REGENERATION_DEVICE_CORE = 39716;
-	private static final int ENCHANT_ARMOR_C = 952;
 	// Location
 	private static final Location NARSIDES_LOC = new Location(16422, 113281, -9064);
 	private static final Location ENRAGED_NARSIDES_LOC = new Location(16422, 113281, -9064);
@@ -138,9 +137,8 @@ public final class Q10776_TheWrathOfTheGiants extends Quest
 			{
 				if (qs.isCond(4))
 				{
-					giveItems(player, ENCHANT_ARMOR_C, 4);
 					giveStoryQuestReward(npc, player);
-					addExpAndSp(player, 4838400, 1161);
+					addExpAndSp(player, 10046941, 1161);
 					qs.exitQuest(false, true);
 				}
 				break;

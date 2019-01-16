@@ -22,7 +22,6 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 	// Items
 	private static final int SOE_WAAL_OF_ARGOS = 39585;
 	private static final int SOE_GODDARD = 39584;
-	private static final int EAA = 730;
 	// Misc
 	private static final int MIN_LEVEL = 70;
 	private static final int MAX_LEVEL = 75;
@@ -73,7 +72,6 @@ public class Q10795_LettersFromTheQueenWallOfAgros extends LetterQuest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, EAA, 5);
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 1088640, 261);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_QUEEN_NAVARI_AT_LV_76, ExShowScreenMessage.TOP_CENTER, 8000);

@@ -51,7 +51,6 @@ public final class Q10783_TracesOfAnAmbush extends Quest
 	};
 	// Items
 	private static final int MISSIVE_SCRAPS = 39722;
-	private static final int ENCHANT_ARMOR_B = 948;
 	// Messages
 	private static final NpcStringId[] MESSAGES =
 	{
@@ -102,9 +101,8 @@ public final class Q10783_TracesOfAnAmbush extends Quest
 			}
 			case "33866-08.html":
 			{
-				giveItems(player, ENCHANT_ARMOR_B, 5);
 				giveStoryQuestReward(npc, player);
-				addExpAndSp(player, 5482574, 1315);
+				addExpAndSp(player, 12146608, 1315);
 				qs.exitQuest(false, true);
 				break;
 			}
@@ -154,7 +152,7 @@ public final class Q10783_TracesOfAnAmbush extends Quest
 				if (getRandom(100) < DROP_RATE)
 				{
 					giveItems(killer, MISSIVE_SCRAPS, 1);
-					if (getQuestItemsCount(killer, MISSIVE_SCRAPS) >= 10)
+					if (getQuestItemsCount(killer, MISSIVE_SCRAPS) >= 50)
 					{
 						qs.setCond(2, true);
 					}

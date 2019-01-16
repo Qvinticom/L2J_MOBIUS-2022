@@ -56,8 +56,6 @@ public class Q10790_AMercenaryHelper extends Quest
 		21518, // Frenzied Stakato Soldier
 		21519 // Frenzied Stakato Drone
 	};
-	// Items
-	private static final int EAA = 730;
 	// Misc
 	private static final int MIN_LEVEL = 65;
 	private static final int MAX_LEVEL = 70;
@@ -102,8 +100,7 @@ public class Q10790_AMercenaryHelper extends Quest
 				{
 					qs.exitQuest(false, true);
 					giveStoryQuestReward(npc, player);
-					giveItems(player, EAA, 3);
-					addExpAndSp(player, 942650, 226);
+					addExpAndSp(player, 134158421, 226);
 					htmltext = "33847-07.html";
 				}
 			}
@@ -146,7 +143,7 @@ public class Q10790_AMercenaryHelper extends Quest
 		{
 			int count = qs.getInt(KILL_COUNT_VAR);
 			qs.set(KILL_COUNT_VAR, ++count);
-			if (count >= 50)
+			if (count >= 300)
 			{
 				qs.setCond(2, true);
 			}

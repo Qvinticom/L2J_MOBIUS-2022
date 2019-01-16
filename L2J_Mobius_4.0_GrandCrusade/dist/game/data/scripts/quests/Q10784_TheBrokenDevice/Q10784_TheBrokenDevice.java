@@ -92,7 +92,7 @@ public final class Q10784_TheBrokenDevice extends Quest
 				if (qs.isCond(2))
 				{
 					giveStoryQuestReward(npc, player);
-					giveAdena(player, 990_000, true);
+					giveAdena(player, 990000, true);
 					giveItems(player, SOULSHOT, 6000);
 					giveItems(player, SPIRITSHOT, 6000);
 					giveItems(player, BLESSED_SCROLL_OF_ESCAPE, 3);
@@ -144,7 +144,7 @@ public final class Q10784_TheBrokenDevice extends Quest
 		if ((qs != null) && qs.isCond(1))
 		{
 			giveItems(killer, BROKE_MAGIC_DEVICE_FRAGMENT, 1);
-			if (getQuestItemsCount(killer, BROKE_MAGIC_DEVICE_FRAGMENT) >= 20)
+			if (getQuestItemsCount(killer, BROKE_MAGIC_DEVICE_FRAGMENT) >= 100)
 			{
 				qs.setCond(2, true);
 			}

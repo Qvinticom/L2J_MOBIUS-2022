@@ -37,7 +37,6 @@ public final class Q10792_LettersFromTheQueenForestOfTheDead extends LetterQuest
 	// Items
 	private static final int SOE_RUNE = 39582;
 	private static final int SOE_FOREST_OF_DEAD = 39583;
-	private static final int ENCHANT_WEAPON_A = 26350;
 	// Location
 	private static final Location TELEPORT_LOC = new Location(36563, -49178, -1128);
 	// Misc
@@ -86,7 +85,6 @@ public final class Q10792_LettersFromTheQueenForestOfTheDead extends LetterQuest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, ENCHANT_WEAPON_A, 2);
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 942690, 226);
 					showOnScreenMsg(player, NpcStringId.GROW_STRONGER_HERE_UNTIL_YOU_RECEIVE_THE_NEXT_LETTER_FROM_QUEEN_NAVARI_AT_LV_70, ExShowScreenMessage.TOP_CENTER, 8000);

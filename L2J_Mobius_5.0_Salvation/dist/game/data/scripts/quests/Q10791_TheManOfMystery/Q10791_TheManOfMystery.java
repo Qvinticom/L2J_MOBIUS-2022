@@ -45,8 +45,6 @@ public class Q10791_TheManOfMystery extends Quest
 	private static final int SUSPICIOUS_COCOON2 = 27538;
 	private static final int NEEDLE_STAKATO_CAPTAIN = 27542;
 	private static final int NEEDLE_STAKATO = 27543;
-	// Items
-	private static final int EAA = 730;
 	// Misc
 	private static final int MIN_LEVEL = 65;
 	private static final int MAX_LEVEL = 70;
@@ -99,9 +97,8 @@ public class Q10791_TheManOfMystery extends Quest
 			{
 				if (qs.isCond(3))
 				{
-					addExpAndSp(player, 16968420, 4072);
+					addExpAndSp(player, 46334481, 4072);
 					giveStoryQuestReward(npc, player);
-					giveItems(player, EAA, 2);
 					qs.exitQuest(false, true);
 					htmltext = "33847-07.html";
 					break;

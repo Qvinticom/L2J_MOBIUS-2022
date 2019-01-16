@@ -38,7 +38,6 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 	// Items
 	private static final int SOE_DRAGON_VALLEY = 39587;
 	private static final int SOE_TOWN_OF_GIRAN = 39586;
-	private static final int EWS = 959;
 	// Misc
 	private static final int MIN_LEVEL = 81;
 	private static final int MAX_LEVEL = 84;
@@ -88,7 +87,6 @@ public class Q10798_LettersFromTheQueenDragonValley extends LetterQuest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, EWS, 2);
 					giveStoryQuestReward(npc, player);
 					addExpAndSp(player, 1277640, 306);
 					showOnScreenMsg(player, NpcStringId.YOU_HAVE_COMPLETED_QUEEN_NAVARI_S_LETTER, ExShowScreenMessage.TOP_CENTER, 8000);

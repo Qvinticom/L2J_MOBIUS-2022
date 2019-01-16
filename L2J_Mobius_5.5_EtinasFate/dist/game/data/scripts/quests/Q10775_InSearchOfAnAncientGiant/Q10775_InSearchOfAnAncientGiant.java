@@ -47,7 +47,6 @@ public final class Q10775_InSearchOfAnAncientGiant extends Quest
 	};
 	// Items
 	private static final int ENERGY_OF_REGENERATION = 39715;
-	private static final int ENCHANT_ARMOR_C = 952;
 	// Misc
 	private static final int MIN_LEVEL = 46;
 	
@@ -92,9 +91,8 @@ public final class Q10775_InSearchOfAnAncientGiant extends Quest
 			{
 				if (qs.isCond(2))
 				{
-					giveItems(player, ENCHANT_ARMOR_C, 9);
 					giveStoryQuestReward(npc, player);
-					addExpAndSp(player, 4443600, 1066);
+					addExpAndSp(player, 10526523, 1066);
 					qs.exitQuest(false, true);
 				}
 				break;

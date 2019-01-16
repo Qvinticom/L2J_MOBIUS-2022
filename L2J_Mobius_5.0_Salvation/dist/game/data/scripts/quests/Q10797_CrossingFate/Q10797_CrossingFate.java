@@ -97,7 +97,7 @@ public class Q10797_CrossingFate extends Quest
 				{
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 306_167_814, 653);
+						addExpAndSp(player, 306167814, 653);
 						giveStoryQuestReward(npc, player);
 						qs.exitQuest(QuestType.ONE_TIME, true);
 						htmltext = event;

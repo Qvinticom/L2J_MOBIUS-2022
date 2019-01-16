@@ -78,7 +78,6 @@ public final class Q10794_InvestigateTheForest extends Quest
 	private static final int MAX_LEVEL = 70;
 	private static final String KILL_COUNT_VAR = "KillCount";
 	// Items
-	private static final int ENCHANT_ARMOR_A = 730;
 	private static final int OLD_JEWELRY_BOX = 39725;
 	
 	public Q10794_InvestigateTheForest()
@@ -131,11 +130,10 @@ public final class Q10794_InvestigateTheForest extends Quest
 				if (qs.isCond(4))
 				{
 					takeItems(player, OLD_JEWELRY_BOX, -1);
-					giveItems(player, ENCHANT_ARMOR_A, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() >= MIN_LEVEL)
 					{
-						addExpAndSp(player, 16968420, 4072);
+						addExpAndSp(player, 93856309, 4072);
 					}
 					htmltext = event;
 					qs.exitQuest(false, true);
@@ -171,7 +169,7 @@ public final class Q10794_InvestigateTheForest extends Quest
 					case TOMBSTONE:
 					{
 						final int count = qs.getInt(KILL_COUNT_VAR);
-						if ((count >= 50) && (getQuestItemsCount(player, OLD_JEWELRY_BOX) < 1))
+						if ((count >= 100) && (getQuestItemsCount(player, OLD_JEWELRY_BOX) < 1))
 						{
 							htmltext = "31531-01.html";
 						}
@@ -197,7 +195,7 @@ public final class Q10794_InvestigateTheForest extends Quest
 		{
 			final int count = qs.getInt(KILL_COUNT_VAR) + 1;
 			qs.set(KILL_COUNT_VAR, count);
-			if (count >= 50)
+			if (count >= 100)
 			{
 				qs.setCond(1, true);
 			}

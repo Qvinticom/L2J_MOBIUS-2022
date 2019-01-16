@@ -43,8 +43,6 @@ public final class Q10770_InSearchOfTheGrail extends Quest
 	};
 	// Items
 	private static final int MYSTERIOUS_FRAGMENT = 39711;
-	private static final int ENCHANT_WEAPON_C = 951;
-	private static final int ENCHANT_ARMOR_C = 952;
 	// Misc
 	private static final int MIN_LEVEL = 40;
 	private static final double DROP_RATE = 0.4;
@@ -97,10 +95,8 @@ public final class Q10770_InSearchOfTheGrail extends Quest
 			{
 				if (qs.isCond(3))
 				{
-					giveItems(player, ENCHANT_WEAPON_C, 2);
-					giveItems(player, ENCHANT_ARMOR_C, 5);
 					giveStoryQuestReward(npc, player);
-					addExpAndSp(player, 2342300, 562);
+					addExpAndSp(player, 4175045, 562);
 					qs.exitQuest(false, true);
 				}
 				break;
@@ -165,7 +161,7 @@ public final class Q10770_InSearchOfTheGrail extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, MYSTERIOUS_FRAGMENT, 1, 30, DROP_RATE, true))
+		if ((qs != null) && qs.isCond(1) && giveItemRandomly(killer, MYSTERIOUS_FRAGMENT, 1, 20, DROP_RATE, true))
 		{
 			qs.setCond(2, true);
 		}
