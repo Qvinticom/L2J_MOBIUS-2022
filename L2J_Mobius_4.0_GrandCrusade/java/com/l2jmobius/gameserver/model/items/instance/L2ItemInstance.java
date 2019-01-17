@@ -2407,6 +2407,14 @@ public final class L2ItemInstance extends L2Object
 	public void setVisualId(int visualId)
 	{
 		getVariables().set(ItemVariables.VISUAL_ID, visualId);
+		
+		// When removed, cancel existing lifetime task.
+		if ((visualId == 0) && (_appearanceLifeTimeTask != null))
+		{
+			_appearanceLifeTimeTask.cancel(true);
+			_appearanceLifeTimeTask = null;
+			onVisualLifeTimeEnd();
+		}
 	}
 	
 	public long getVisualLifeTime()
