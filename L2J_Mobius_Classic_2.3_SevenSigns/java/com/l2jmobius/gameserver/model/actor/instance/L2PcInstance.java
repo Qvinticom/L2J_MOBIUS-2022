@@ -7795,7 +7795,8 @@ public final class L2PcInstance extends L2Playable
 					// Task for henna duration
 					if (henna.getDuration() > 0)
 					{
-						final long remainingTime = getVariables().getLong("HennaDuration" + slot, 0) - System.currentTimeMillis();
+						final long currentTime = System.currentTimeMillis();
+						final long remainingTime = getVariables().getLong("HennaDuration" + slot, currentTime) - currentTime;
 						if (remainingTime < 0)
 						{
 							removeHenna(slot);
