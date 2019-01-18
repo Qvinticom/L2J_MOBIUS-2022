@@ -553,7 +553,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- SA: Magic Power -->
 			<add val="75" order="0x40" stat="mAtk"/>
-			<mul val="1.15" order="0x30" stat="MpConsume"/> 
+			<mul val="1.15" order="0x30" stat="MpConsume"/>
 		</for>
 	</item>
 	<item id="8113" type="Weapon" name="Mysterious Sword - Magic Weakness">
@@ -696,7 +696,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- SA: Magic Power -->
 			<add val="112" order="0x40" stat="mAtk"/>
-			<mul val="1.15" order="0x30" stat="MpConsume"/> 
+			<mul val="1.15" order="0x30" stat="MpConsume"/>
 		</for>
 	</item>
 	<item id="8116" type="Weapon" name="Ecliptic Sword - Magic Silence">
@@ -840,7 +840,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- SA: Magic Power -->
 			<add val="139" order="0x40" stat="mAtk"/>
-			<mul val="1.15" order="0x30" stat="MpConsume"/> 
+			<mul val="1.15" order="0x30" stat="MpConsume"/>
 		</for>
 	</item>
 	<item id="8119" type="Weapon" name="Wizard's Tear - Conversion">
@@ -1609,7 +1609,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- SA: Rsk. Focus -->
 			<add order="0x40" stat="rCrit" val="99">
-				<and>        
+				<and>
 					<player hp="60"/>
 				</and>
 			</add>
@@ -1855,7 +1855,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- SA: Magic Power -->
 			<add val="112" order="0x40" stat="mAtk"/>
-			<mul val="1.15" order="0x30" stat="MpConsume"/> 
+			<mul val="1.15" order="0x30" stat="MpConsume"/>
 		</for>
 	</item>
 	<item id="8140" type="Weapon" name="Ecliptic Axe - Magic Hold">

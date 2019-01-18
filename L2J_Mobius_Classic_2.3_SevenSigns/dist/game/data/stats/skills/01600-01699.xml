@@ -86,7 +86,7 @@
 			<value level="1">204</value>
 			<value level="2">379</value>
 			<value level="3">549</value>
-		</effectPoint>		
+		</effectPoint>
 		<hitTime>1500</hitTime>
 		<magicLvl>
 			<value level="1">7</value>
@@ -480,7 +480,7 @@
 			<value level="2">1</value>
 			<value level="3">1</value>
 			<value level="4">1</value>
-		</mpConsume>	
+		</mpConsume>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<targetType>NONE</targetType>
@@ -746,7 +746,7 @@
 					<value level="9">2652</value>
 					<value level="10">2942</value>
 					<value level="11">3232</value>
-				</power>	
+				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>15</criticalChance>
 				<overHit>true</overHit>
@@ -757,7 +757,7 @@
 				<max>1</max>
 			</effect>
 			<effect name="BlockActions" />
-		</effects>			
+		</effects>
 	</skill>
 	<skill id="1615" toLevel="4" name="Weapon Reinforcement">
 		<!-- For 5 min., enhances polearms and blunt weapons, P. Atk. +$s1. At a certain chance to decrease target s Atk. Spd. and Casting Spd. -$s2. -->
@@ -911,7 +911,7 @@
 		<abnormalType>SHIELD_PROB_UP</abnormalType>
 		<affectRange>1000</affectRange>
 		<effectPoint>673</effectPoint>
-		<hitTime>1000</hitTime>		
+		<hitTime>1000</hitTime>
 		<magicLvl>80</magicLvl>
 		<mpConsume>38</mpConsume>
 		<hpConsume>1115</hpConsume>
@@ -1209,7 +1209,7 @@
 			<effect name="HitNumber">
 				<amount>2</amount>
 				<mode>DIFF</mode>
-			</effect>	
+			</effect>
 		</effects>
 	</skill>
 	<skill id="1629" toLevel="1" name="Throw Dagger in Wrist">
@@ -1254,7 +1254,7 @@
 		<!-- Throws a dagger at an enemy with $s1 Power added to P. Atk. For $s2, with a certain probability, decreases target's HP when it tries to use skills. Requires a dagger. Over-hit. -->
 		<icon>icon.skill1630</icon>
 		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>10</abnormalTime>	
+		<abnormalTime>10</abnormalTime>
 		<abnormalType>CRITICAL_PROB_UP</abnormalType>
 		<activateRate>80</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>

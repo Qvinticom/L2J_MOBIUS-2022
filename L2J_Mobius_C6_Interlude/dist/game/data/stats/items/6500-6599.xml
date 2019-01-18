@@ -1849,7 +1849,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- Enhances damage to target during PvP -->
 			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
 		</for>
 	</item>
 	<item id="6589" type="Weapon" name="Imperial Staff - Magic Hold">
@@ -2097,10 +2097,10 @@
 			<enchant val="0" order="0x0C" stat="pAtk"/>
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- SA: Cheap Shot -->
-			<set val="1" order="0x08" stat="MpConsume"> 
+			<set val="1" order="0x08" stat="MpConsume">
 				<and>
-					<game skill="false" chance="26"/> 
-				</and> 
+					<game skill="false" chance="26"/>
+				</and>
 			</set>
 			<!-- Enhances damage to target during PvP -->
 			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
@@ -2245,7 +2245,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- Enhances damage to target during PvP -->
 			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
 		</for>
 	</item>
 	<item id="6597" type="Weapon" name="Dragon Hunter Axe - Health">
@@ -2343,7 +2343,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- add SA : absorbdmg - vampiric effect dmg -->
 			<!-- We have SA on SQL -->
-			<!-- <add val="8" order="0x40" stat="absorbDam"/> -->	
+			<!-- <add val="8" order="0x40" stat="absorbDam"/> -->
 			<!-- <mul val="1.05" order="0x30" stat="pvpPhysDmg"/> -->
 			<!-- <mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> -->
 		</for>

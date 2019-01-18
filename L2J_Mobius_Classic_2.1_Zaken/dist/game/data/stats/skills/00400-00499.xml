@@ -1495,7 +1495,7 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
-		</abnormalLvl>		
+		</abnormalLvl>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="8">120</value>
 			<value fromLevel="7" toLevel="8" fromSubLevel="1001" toSubLevel="1030">{base + subIndex * 15}</value>
@@ -2697,7 +2697,6 @@
 		<!-- Sings a Song of Silence. Blocks all the enemies' physical/magic skills for $s1. -->
 		<icon>icon.skill0437</icon>
 		<abnormalLvl>1</abnormalLvl>
-		
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>

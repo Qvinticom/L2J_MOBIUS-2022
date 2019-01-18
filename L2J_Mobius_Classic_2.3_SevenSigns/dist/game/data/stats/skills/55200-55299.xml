@@ -420,7 +420,7 @@
 		<effects>
 			<effect name="ExpModify">
 				<amount>
- 				    <value level="1">100</value> 
+ 				    <value level="1">100</value>
  				    <value level="2">100</value>
 				</amount>
 				<mode>DIFF</mode> <!-- FIX -->
@@ -487,7 +487,7 @@
 		<!-- For 20 min., recovers as HP 6% of the physical damage inflicted on the enemy with a certain probability. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>70104</itemConsumeId> <!-- Scroll: Vampiric Rage -->	
+		<itemConsumeId>70104</itemConsumeId> <!-- Scroll: Vampiric Rage -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>VAMPIRIC_ATTACK</abnormalType>
@@ -527,7 +527,7 @@
 		<!-- Increases MP Regeneration. Effect 4 -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
-		<itemConsumeId>70105</itemConsumeId> <!-- Scroll: Mana Regeneration lvl 1 -->	
+		<itemConsumeId>70105</itemConsumeId> <!-- Scroll: Mana Regeneration lvl 1 -->
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
 		<abnormalType>MP_REGEN_UP</abnormalType>
@@ -1846,7 +1846,7 @@
 		<icon>icon.ev_11th_rare_acc_earing</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="55294" toLevel="1" name="Devil's Necklace"> 
+	<skill id="55294" toLevel="1" name="Devil's Necklace">
 		<!-- P. Def. and M. Def. are increased. -->
 		<icon>icon.ev_11th_rare_acc_necklace</icon>
 	<!-- A 15-day item. Max MP +20, M. Def. +3, P. Def. +5. -->

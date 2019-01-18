@@ -347,10 +347,10 @@
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- SA: Cheap Shot -->
 			<!-- reduces MPconsume by only 1 MP... bad description  ??? -->
-			<sub val="1" order="0x40" stat="MpConsume"> 
+			<sub val="1" order="0x40" stat="MpConsume">
 				<and>
-					<game skill="false" chance="30"/> 
-				</and> 
+					<game skill="false" chance="30"/>
+				</and>
 			</sub>
 			<!-- Enhances damage to target during PvP -->
 			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>

@@ -2120,7 +2120,7 @@
 		<magicCriticalRate>
 			<value fromLevel="1" toLevel="11">11</value>
 			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2030">{base + base / 100 * subIndex}</value>
-		</magicCriticalRate>		
+		</magicCriticalRate>
 		<hitCancelTime>1</hitCancelTime>
 		<canDoubleCast>true</canDoubleCast>
 		<isDebuff>true</isDebuff>

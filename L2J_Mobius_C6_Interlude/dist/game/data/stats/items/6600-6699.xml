@@ -495,7 +495,7 @@
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- Enhances damage to target during PvP -->
 			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>
-			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/> 
+			<mul val="1.05" order="0x30" stat="pvpMagicalDmg"/>
 		</for>
 	</item>
 	<item id="6610" type="Weapon" name="Arcana Mace - Mana Up">
@@ -1599,7 +1599,7 @@
 			<add val="71" order="0x10" stat="mDef"/>
 			<add val="31" order="0x40" stat="maxMp"/>
 			<enchant val="0" order="0x0C" stat="mDef"/>
-		</for> 
+		</for>
 	</item>
 	<item id="6657" type="Armor" name="Necklace of Valakas">
 		<!-- Produces the following effects: MP+42, 80% increase in sleep resistance, HP +445, decrease in reuse delay, increase in P. Atk. and M. Atk. wild magic effect, damage shield effect and increase in resistance to flaming attack. -->

@@ -1131,8 +1131,8 @@
 				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
 			</attribute>
 			<speed>
-				<walk ground="60" /> 
-				<run ground="180" /> 
+				<walk ground="60" />
+				<run ground="180" />
 			</speed>
 		</stats>
 		<skillList>
@@ -1800,7 +1800,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3131" magical="2680" />	
+			<defence physical="3131" magical="2680" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
 			</attribute>
@@ -1849,7 +1849,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="403282" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3131" magical="2680" />	
+			<defence physical="3131" magical="2680" />
 			<attribute>
 				<defence fire="180" water="180" wind="180" earth="180" holy="227" dark="313" />
 			</attribute>
@@ -2200,7 +2200,7 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-	</npc>	
+	</npc>
 	<npc id="23570" level="100" type="L2Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
@@ -2358,7 +2358,7 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-	</npc>	
+	</npc>
 	<npc id="23574" level="103" type="L2Monster" name="Nymph Rose" title="Fancy">
 		<!-- Source: www.l2wiki.com -->
 		<race>PLANT</race>

@@ -475,16 +475,16 @@
 					</item>
 					<item chance="1.15">
 						<item id="35350" count="1" /> <!-- Eternal Tunic Ingredient -->
-					</item>	
+					</item>
 					<item chance="30.45">
 						<item id="30297" count="1" /> <!-- Superior Giant's Codex -->
-					</item>	
+					</item>
 					<item chance="21.5">
 						<item id="30299" count="1" /> <!-- Superior Giant's Codex - Discipline -->
-					</item>	
+					</item>
 					<item chance="15.5">
 						<item id="30298" count="1" /> <!-- Superior Giant's Codex - Mastery -->
-					</item>	
+					</item>
 				</items>
 			</effect>
 			<effect name="RestorationRandom" level="3">
@@ -545,16 +545,16 @@
 					</item>
 					<item chance="1.15">
 						<item id="35350" count="1" /> <!-- Eternal Tunic Ingredient -->
-					</item>	
+					</item>
 					<item chance="30.45">
 						<item id="30297" count="1" /> <!-- Superior Giant's Codex -->
-					</item>	
+					</item>
 					<item chance="21.5">
 						<item id="30299" count="1" /> <!-- Superior Giant's Codex - Discipline -->
-					</item>	
+					</item>
 					<item chance="15.5">
 						<item id="30298" count="1" /> <!-- Superior Giant's Codex - Mastery -->
-					</item>	
+					</item>
 				</items>
 			</effect>
 		</effects>
@@ -1017,7 +1017,7 @@
 			<effect name="MAtk">
 				<amount>10</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18636" toLevel="2" name="Duo - Energy of Blessing">
@@ -1052,7 +1052,7 @@
 			<effect name="ExpModify">
 				<amount>30</amount>
 				<mode>PER</mode>
-			</effect>		
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18637" toLevel="1" name="Duo Vital Compression Stone">
@@ -1069,7 +1069,7 @@
 			<effect name="VitalityExpRate">
 				<amount>20</amount>
 				<mode>PER</mode>
-			</effect>		
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18638" toLevel="1" name="PC Cafe Points Coupon (200 points)">
@@ -1132,7 +1132,7 @@
 			<effect name="SpModify">
 				<amount>150</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18647" toLevel="1" name="Freya's Bloody Rune">
@@ -1151,7 +1151,7 @@
 			<effect name="PvePhysicalSkillDamageBonus">
 				<amount>15</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="18648" toLevel="1" name="Freya's Rune">
@@ -1170,7 +1170,7 @@
 			<effect name="StatUp">
 				<amount>1</amount>
 				<stat>CON</stat>
-			</effect>		
+			</effect>
 			<effect name="StatUp">
 				<amount>1</amount>
 				<stat>INT</stat>
@@ -1182,7 +1182,7 @@
 			<effect name="StatUp">
 				<amount>1</amount>
 				<stat>MEN</stat>
-			</effect>	
+			</effect>
 			<effect name="DefenceTrait">
 				<PARALYZE>10</PARALYZE>
 			</effect>
@@ -1197,7 +1197,7 @@
 				<amount>50</amount>
 				<mode>PER</mode>
 			</effect>
-		</effects>			
+		</effects>
 	</skill>
 	<skill id="18650" toLevel="1" name="Mysterious Talisman - Attribute Defense">
 		<!-- Equipping this Talisman increases all defense attributes by $s1. -->

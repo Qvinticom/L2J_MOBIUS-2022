@@ -2281,7 +2281,7 @@
 			<value level="2">20</value>
 			<value level="3">15</value>
 		</abnormalTime>
-		<abnormalType>WEAPON_MASTER_SPECIAL</abnormalType>		
+		<abnormalType>WEAPON_MASTER_SPECIAL</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>95</magicLvl>
@@ -2304,7 +2304,7 @@
 				</weaponType>
 			</condition>
 		</conditions>
-		<effects>		
+		<effects>
 			<effect name="TriggerSkillByAttack">
 				<!-- Lightning Force -->
 				<isCritical>true</isCritical>
@@ -2324,7 +2324,7 @@
 					<value level="2">3</value>
 					<value level="3">0</value>
 				</skillLevel>
-			</effect>		
+			</effect>
 			<effect name="PAtk">
 				<amount>
 					<value level="1">10</value>

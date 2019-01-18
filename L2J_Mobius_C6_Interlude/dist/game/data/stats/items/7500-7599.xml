@@ -1246,10 +1246,10 @@
 			<enchant val="0" order="0x0C" stat="pAtk"/>
 			<enchant val="0" order="0x0C" stat="mAtk"/>
 			<!-- SA: Cheap Shot -->
-			<set val="1" order="0x08" stat="MpConsume"> 
+			<set val="1" order="0x08" stat="MpConsume">
 				<and>
-					<game skill="false" chance="26"/> 
-				</and> 
+					<game skill="false" chance="26"/>
+				</and>
 			</set>
 			<!-- Enhances damage to target during PvP -->
 			<mul val="1.05" order="0x30" stat="pvpPhysDmg"/>

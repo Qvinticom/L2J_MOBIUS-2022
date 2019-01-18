@@ -731,8 +731,8 @@
 			<!-- "Guessed" - Based on level -->
 			<defence physical="4431" magical="4000" />
 			<speed>
-				<walk ground="50" /> 
-				<run ground="200" /> 
+				<walk ground="50" />
+				<run ground="200" />
 			</speed>
 		</stats>
 		<status attackable="true" />
@@ -1191,7 +1191,7 @@
 			<!-- "Guessed" - Based on xp and sp reward -->
 			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
-			<defence physical="3131" magical="2680" />	
+			<defence physical="3131" magical="2680" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -1223,7 +1223,7 @@
 			<!-- "Guessed" - Based on xp and sp reward -->
 			<attack physical="9578" magical="5465" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<!-- "Guessed" - Based on level -->
-			<defence physical="3131" magical="2680" />	
+			<defence physical="3131" magical="2680" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -1444,7 +1444,7 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-	</npc>	
+	</npc>
 	<npc id="23570" level="100" type="L2Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
@@ -1540,7 +1540,7 @@
 			<radius normal="16" /> <!-- Need retail value -->
 			<height normal="13.25" /> <!-- Need retail value -->
 		</collision>
-	</npc>	
+	</npc>
 	<npc id="23574" level="103" type="L2Monster" name="Nymph Rose" title="Fancy">
 		<!-- Source: www.l2wiki.com -->
 		<race>PLANT</race>
@@ -1556,10 +1556,10 @@
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plant -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="12" /> 
-			<skill id="4411" level="12" /> 
-			<skill id="4412" level="12" /> 
-			<skill id="4413" level="12" /> 
+			<skill id="4410" level="12" />
+			<skill id="4411" level="12" />
+			<skill id="4412" level="12" />
+			<skill id="4413" level="12" />
 		</skillList>
 		<collision>
 			<radius normal="16" /> <!-- Need retail value -->

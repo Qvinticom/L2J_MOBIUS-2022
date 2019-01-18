@@ -477,7 +477,7 @@
 			<effect name="CriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="13528" toLevel="1" name="Enhanced Octavis' Earring (Warrior)">
@@ -501,7 +501,7 @@
 			<effect name="VampiricAttack">
 				<amount>9</amount>
 				<chance>80</chance>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="13529" toLevel="1" name="Enhanced Octavis' Necklace (Warrior)">
@@ -548,7 +548,7 @@
 			<effect name="CriticalDamage">
 				<amount>10</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="13531" toLevel="1" name="Enhanced Istina' Earring (Warrior)">
@@ -572,7 +572,7 @@
 			<effect name="VampiricAttack">
 				<amount>5</amount>
 				<chance>80</chance>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="13532" toLevel="1" name="Enhanced Istina' Necklace (Warrior)">
@@ -619,7 +619,7 @@
 			<effect name="MagicCriticalDamage">
 				<amount>10</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="13534" toLevel="1" name="Enhanced Octavis' Earring (Wizard)">
@@ -643,7 +643,7 @@
 			<effect name="VampiricAttack">
 				<amount>5</amount>
 				<chance>80</chance>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="13535" toLevel="1" name="Enhanced Octavis' Necklace (Wizard)">
@@ -690,7 +690,7 @@
 			<effect name="MagicCriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="13537" toLevel="1" name="Enhanced Istina' Earring (Wizard)">
@@ -714,7 +714,7 @@
 			<effect name="VampiricAttack">
 				<amount>5</amount>
 				<chance>80</chance>
-			</effect>			
+			</effect>
 		</effects>
 	</skill>
 	<skill id="13538" toLevel="1" name="Enhanced Istina' Necklace (Wizard)">
@@ -758,15 +758,15 @@
 			<effect name="MagicCriticalDamage">
 				<amount>15</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 			<effect name="PhysicalAttackSpeed">
 				<amount>5</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 			<effect name="MagicalAttackSpeed">
 				<amount>5</amount>
 				<mode>PER</mode>
-			</effect>			
+			</effect>
 			<effect name="Accuracy">
 				<amount>4</amount>
 				<mode>DIFF</mode>
@@ -876,7 +876,7 @@
 			<effect name="StatUp">
 				<stat>WIT</stat>
 				<amount>1</amount>
-			</effect>			
+			</effect>
 			<effect name="StatUp">
 				<stat>MEN</stat>
 				<amount>2</amount>
@@ -899,7 +899,7 @@
 		<canBeDispelled>false</canBeDispelled>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
-		<effects>			
+		<effects>
 			<effect name="DefenceTrait">
 				<KNOCKBACK>100</KNOCKBACK>
 				<KNOCKDOWN>100</KNOCKDOWN>
@@ -1307,7 +1307,7 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus"> 
+			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1338,7 +1338,7 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus"> 
+			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1369,7 +1369,7 @@
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PvpMagicalSkillDamageBonus"> 
+			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>15</amount>
 				<mode>PER</mode>
 			</effect>

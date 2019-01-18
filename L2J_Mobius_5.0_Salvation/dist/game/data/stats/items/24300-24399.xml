@@ -735,8 +735,8 @@
 		<set name="useSkillDisTime" val="1" />
 		<skills>
 			<skill id="21364" level="5" />
-			<skill id="21365" level="1" type="ON_EQUIP" /> 
-			<skill id="21373" level="1" type="ON_UNEQUIP" /> 
+			<skill id="21365" level="1" type="ON_EQUIP" />
+			<skill id="21373" level="1" type="ON_UNEQUIP" />
 		</skills>
 	</item>
 	<item id="24352" name="Talisman - Slaughterer" additionalName="Abundance / 3-day" type="Armor">
@@ -757,7 +757,7 @@
 		<skills>
 			<skill id="21364" level="6" />
 			<skill id="21370" level="1" type="ON_EQUIP" />
-			<skill id="21374" level="1" type="ON_UNEQUIP" /> 
+			<skill id="21374" level="1" type="ON_UNEQUIP" />
 		</skills>
 	</item>
 	<item id="24353" name="Talisman - Conquerer" additionalName="Abundance / 3-day" type="Armor">
@@ -778,7 +778,7 @@
 		<skills>
 			<skill id="21364" level="7" />
 			<skill id="21371" level="1" type="ON_EQUIP" />
-			<skill id="21375" level="1" type="ON_UNEQUIP" /> 
+			<skill id="21375" level="1" type="ON_UNEQUIP" />
 		</skills>
 	</item>
 	<item id="24354" name="Talisman - Outlaw" additionalName="Abundance / 3-day" type="Armor">
@@ -799,7 +799,7 @@
 		<skills>
 			<skill id="21364" level="8" />
 			<skill id="21372" level="1" type="ON_EQUIP" />
-			<skill id="21376" level="1" type="ON_UNEQUIP" /> 
+			<skill id="21376" level="1" type="ON_UNEQUIP" />
 		</skills>
 	</item>
 	<item id="24355" name="Premium Account: Art of Seduction" type="EtcItem">
@@ -840,7 +840,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
-		<set name="handler" val="ItemSkills" />			
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9516" level="1" /> <!-- Draco's Hat: Wizard -->
 			<skill id="9526" level="1" /> <!-- Draco's Wizard Hat - Blessed Resurrection -->
@@ -862,8 +862,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
-		<set name="handler" val="ItemSkills" />		
-		<skills>	
+		<set name="handler" val="ItemSkills" />
+		<skills>
 			<skill id="9515" level="1" /> <!-- Draco's Hat: Warrior -->
 			<skill id="9525" level="1" /> <!-- Draco's Warrior Hat - Blessed Resurrection -->
 		</skills>

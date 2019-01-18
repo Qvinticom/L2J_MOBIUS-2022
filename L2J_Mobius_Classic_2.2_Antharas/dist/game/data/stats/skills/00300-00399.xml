@@ -81,10 +81,10 @@
 			<value level="8">70</value>
 			<value level="9">74</value>
 			<value level="10">76</value>
-			<value level="11">78</value>	
-			<value level="12">80</value>	
-			<value level="13">82</value>	
-			<value level="14">84</value>	
+			<value level="11">78</value>
+			<value level="12">80</value>
+			<value level="13">82</value>
+			<value level="14">84</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">73</value>
@@ -98,9 +98,9 @@
 			<value level="9">204</value>
 			<value level="10">224</value>
 			<value level="11">225</value>
-			<value level="12">245</value>	
-			<value level="13">255</value>	
-			<value level="14">265</value>	
+			<value level="12">245</value>
+			<value level="13">255</value>
+			<value level="14">265</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -3361,7 +3361,7 @@
 			<effect name="Speed">
 				<amount>20</amount>
 				<mode>DIFF</mode>
-			</effect>	
+			</effect>
 			<effect name="ResistDispelByCategory">
 				<amount>-80</amount>
 				<slot>BUFF</slot>

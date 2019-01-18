@@ -425,7 +425,7 @@
 				<critical>true</critical>
 				<criticalLimit>1600</criticalLimit>
 			</effect>
-		</effects>	
+		</effects>
 	</skill>
 	<skill id="16616" toLevel="1" name="Helios' Overawing Gaze">
 		<!-- Helios' overawing gaze has petrified you and made you unable to move. Additional damage is received at regular intervals. -->
@@ -496,7 +496,7 @@
 			</effect>
 			<effect name="BlockActions" />
 		</effects>
-	</skill>		
+	</skill>
 	<skill id="16618" toLevel="1" name="Enuma Elish - Blue Lightning Spear">
 		<!-- Helios throws the Blue Lightning Spear, dealing great damage to the target and nearby enemies, and knocking them down. -->
 		<icon>icon.skill16618</icon>
@@ -643,8 +643,8 @@
 			<effect name="PhysicalDefence">
 				<amount>-50</amount>
 				<mode>PER</mode>
-			</effect>			
-		</effects>		
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16624" toLevel="1" name="Shield of Light - Pranarach (100%)">
 		<!-- Pranarach Shield of Light is summoned -->
@@ -725,7 +725,7 @@
 					<value level="4">200</value>
 				</amount>
 				<mode>PER</mode>
-			</effect>	
+			</effect>
 		</effects>
 	</skill>
 	<skill id="16626" toLevel="1" name="Giants Particle Dissolver">
@@ -997,7 +997,7 @@
 				<power>2000</power>
 				<ticks>1</ticks>
 			</effect>
-		</effects>	
+		</effects>
 	</skill>
 	<skill id="16637" toLevel="1" name="Origin Lightning Harpoon">
 		<!-- A harpoon of light is thrown at the target, dealing great physical damage and reducing P. Def. and Magic Resistance. -->
@@ -1029,7 +1029,7 @@
 				<amount>-50</amount>
 				<mode>PER</mode>
 			</effect>
-		</effects>	
+		</effects>
 	</skill>
 	<skill id="16638" toLevel="1" name="Delta Plasma Lightning">
 		<!-- When a skill hits one enemy, the skill seeks out the next target and continues attacking. Finds and attacks up to 10 targets. -->
@@ -1277,8 +1277,8 @@
 				<slot>BUFF</slot>
 				<rate>100</rate>
 				<max>5</max>
-			</effect>		
-		</effects>		
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16650" toLevel="1" name="Vertical Smash">
 		<!-- The weapon one currently holds is smashed down vertically, dealing damage to a single target -->

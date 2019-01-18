@@ -653,7 +653,7 @@
 	<npc id="23727" level="100" type="L2Monster" name="Shaqrima Bathus">
 		<race>GIANT</race>
 		<acquire exp="666656799" sp="666700" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78"> 
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1088861" hpRegen="10.5" mp="23928" mpRegen="3.6" />
 			<speed>
 				<walk ground="55" />
@@ -2440,7 +2440,7 @@
 			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
 			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
-		</stats>		
+		</stats>
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2500,7 +2500,7 @@
 			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
 			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<abnormalResist physical="10" magical="10" />
-		</stats>	
+		</stats>
 		<skillList>
 			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -2974,7 +2974,7 @@
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->			
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="14" />
@@ -3174,7 +3174,7 @@
 			<radius normal="22" />
 			<height normal="52" />
 		</collision>
-	</npc>	
+	</npc>
 	<npc id="23791" level="85" type="L2Npc" name="Bathus" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
@@ -3191,7 +3191,7 @@
 			<radius normal="24" />
 			<height normal="46" />
 		</collision>
-	</npc>	
+	</npc>
 	<npc id="23792" level="85" type="L2Npc" name="Carcass" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
@@ -3226,7 +3226,7 @@
 			<radius normal="24" />
 			<height normal="47.5" />
 		</collision>
-	</npc>	
+	</npc>
 	<npc id="23794" level="85" type="L2Npc" name="Lucas" title="Marred">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
@@ -3244,7 +3244,7 @@
 			<radius normal="24" />
 			<height normal="42.5" />
 		</collision>
-	</npc>		
+	</npc>
 	<npc id="23795" level="85" type="L2Npc" name="Viper Cherkia" title="Oasis Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
@@ -3261,7 +3261,7 @@
 			<radius normal="45" />
 			<height normal="97" />
 		</collision>
-	</npc>	
+	</npc>
 	<npc id="23796" level="85" type="L2Npc" name="Viper Cherkia" title="Oasis Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>

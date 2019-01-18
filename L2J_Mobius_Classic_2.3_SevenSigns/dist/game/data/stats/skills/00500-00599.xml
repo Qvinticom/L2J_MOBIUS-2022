@@ -1761,14 +1761,14 @@
 			<effect name="DefenceCriticalDamage">
 				<amount>
 					<value level="1">10</value>
-					<value level="2">10</value>				
+					<value level="2">10</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="FatalBlowRate">
 				<amount>
 					<value level="1">15</value>
-					<value level="2">20</value>				
+					<value level="2">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1904,7 +1904,6 @@
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
-			
 		</effects>
 	</skill>
 	<skill id="537" toLevel="1" name="Spoil Bomb">

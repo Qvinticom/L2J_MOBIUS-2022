@@ -1116,7 +1116,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="PvpMagicalSkillDamageBonus"> 
+			<effect name="PvpMagicalSkillDamageBonus">
 				<amount>1</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1697,7 +1697,7 @@
 			<value level="4">3600</value>
 			<value level="5">3600</value>
 		</abnormalTime>
-		<abnormalType>POSSESSION_SPECIAL</abnormalType>		
+		<abnormalType>POSSESSION_SPECIAL</abnormalType>
 		<isMagic>4</isMagic> <!-- Item Skill -->
 		<isTriggeredSkill>true</isTriggeredSkill>
 		<magicLvl>85</magicLvl>
@@ -1725,7 +1725,7 @@
 					<value level="4">5</value>
 					<value level="5">0</value>
 				</skillLevel>
-			</effect>		
+			</effect>
 			<effect name="PvpMagicalSkillDefenceBonus">
 				<amount>
 					<value level="1">2</value>
@@ -2027,7 +2027,7 @@
 				<amount>
 					<value level="1">200</value>
 					<value level="2">300</value>
-					<value level="3">400</value>			
+					<value level="3">400</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
