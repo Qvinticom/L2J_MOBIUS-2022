@@ -90,7 +90,6 @@ public class L2FortCommanderInstance extends L2DefenderInstance
 		if (getFort().getSiege().isInProgress())
 		{
 			getFort().getSiege().killedCommander(this);
-			
 		}
 		
 		return true;
