@@ -150,13 +150,13 @@ public class Q10801_TheDimensionalWarpPart1 extends Quest
 		
 		if ((qs != null) && qs.isCond(1) && (npc.calculateDistance3D(killer) <= Config.ALT_PARTY_RANGE))
 		{
-			int killedBugbear = qs.getInt("killed_" + DIMENSIONAL_BUGBEAR);
-			if (killedBugbear < 100)
+			int kills = qs.getInt("killed_" + DIMENSIONAL_BUGBEAR);
+			if (kills < 100)
 			{
-				qs.set("killed_" + DIMENSIONAL_BUGBEAR, ++killedBugbear);
+				qs.set("killed_" + DIMENSIONAL_BUGBEAR, ++kills);
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
-			if (killedBugbear >= 100)
+			if (kills >= 100)
 			{
 				qs.setCond(2, true);
 			}
