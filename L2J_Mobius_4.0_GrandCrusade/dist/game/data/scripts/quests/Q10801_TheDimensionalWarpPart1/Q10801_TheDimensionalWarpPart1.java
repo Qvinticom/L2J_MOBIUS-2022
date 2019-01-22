@@ -41,7 +41,7 @@ public class Q10801_TheDimensionalWarpPart1 extends Quest
 	private static final int RESED = 33974;
 	// Monsters
 	private static final int DIMENSIONAL_BUGBEAR = 23465;
-	// other
+	// Others
 	private static final int MIN_LEVEL = 99;
 	private static final int DIMENSIONAL_BRACELET_STAGE_1 = 39747;
 	private static final int WARP_CRYSTAL = 39597;
