@@ -300,7 +300,7 @@ public class Quest extends ManagedScript
 	
 	/**
 	 * @param player : The player instance to check.
-	 * @return true if the given player got an online clan member sponsor in a 1600 radius range.
+	 * @return true if the given player got an online clan member sponsor in a 1500 radius range.
 	 */
 	public static boolean getSponsor(L2PcInstance player)
 	{
@@ -335,7 +335,7 @@ public class Quest extends ManagedScript
 	
 	/**
 	 * @param player : The player instance to check.
-	 * @return the apprentice of the given player. He must be online, and in a 1600 radius range.
+	 * @return the apprentice of the given player. He must be online, and in a 1500 radius range.
 	 */
 	public static L2PcInstance getApprentice(L2PcInstance player)
 	{
@@ -1611,7 +1611,7 @@ public class Quest extends ManagedScript
 	 * @param npc : the instance of a L2Npc to compare distance
 	 * @param var : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @param value : a tuple specifying a quest condition that must be satisfied for a party member to be considered.
-	 * @return Player : Player for a random party member that matches the specified condition, or null if no match. If the var is null, null is returned (i.e. no condition is applied). The party member must be within 1600 distance from the npc. If npc is null, distance condition is ignored.
+	 * @return Player : Player for a random party member that matches the specified condition, or null if no match. If the var is null, null is returned (i.e. no condition is applied). The party member must be within 1500 distance from the npc. If npc is null, distance condition is ignored.
 	 */
 	public L2PcInstance getRandomPartyMember(L2PcInstance player, L2NpcInstance npc, String var, String value)
 	{
@@ -1647,8 +1647,8 @@ public class Quest extends ManagedScript
 	 * @param player the instance of a player whose party is to be searched
 	 * @param var a tuple specifying a quest condition that must be satisfied for a party member to be considered.
 	 * @param value
-	 * @return L2PcInstance: L2PcInstance for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied). The party member must be within 1600 distance from the target of the reference
-	 *         player, or if no target exists, 1600 distance from the player itself.
+	 * @return L2PcInstance: L2PcInstance for a random party member that matches the specified condition, or null if no match. If the var is null, any random party member is returned (i.e. no condition is applied). The party member must be within 1500 distance from the target of the reference
+	 *         player, or if no target exists, 1500 distance from the player itself.
 	 */
 	public L2PcInstance getRandomPartyMember(L2PcInstance player, String var, String value)
 	{

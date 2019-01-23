@@ -2460,7 +2460,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param value the value of the specified quest variable the random party member must have
 	 * @return a random party member that matches the specified conditions or {@code null} if no match was found.<br>
 	 *         If the {@code var} parameter is {@code null}, a random party member is selected without any conditions.<br>
-	 *         The party member must be within a range of 1600 ingame units of the target of the reference player, or, if no target exists, within the same range of the player itself
+	 *         The party member must be within a range of 1500 ingame units of the target of the reference player, or, if no target exists, within the same range of the player itself
 	 */
 	public L2PcInstance getRandomPartyMember(L2PcInstance player, String var, String value)
 	{

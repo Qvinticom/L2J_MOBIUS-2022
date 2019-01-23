@@ -1887,7 +1887,7 @@ public final class Config
 			ALT_CLAN_MEMBERS_FOR_WAR = Character.getInt("AltClanMembersForWar", 15);
 			ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH = Character.getBoolean("AltMembersCanWithdrawFromClanWH", false);
 			REMOVE_CASTLE_CIRCLETS = Character.getBoolean("RemoveCastleCirclets", true);
-			ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1600);
+			ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1500);
 			ALT_LEAVE_PARTY_LEADER = Character.getBoolean("AltLeavePartyLeader", false);
 			INITIAL_EQUIPMENT_EVENT = Character.getBoolean("InitialEquipmentEvent", false);
 			STARTING_ADENA = Character.getLong("StartingAdena", 0);

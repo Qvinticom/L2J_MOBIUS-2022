@@ -1600,7 +1600,7 @@ public final class Config
 			ALT_CLAN_MEMBERS_TIME_FOR_BONUS = Character.getDuration("AltClanMembersTimeForBonus", "30mins").toMillis();
 			REMOVE_CASTLE_CIRCLETS = Character.getBoolean("RemoveCastleCirclets", true);
 			ALT_PARTY_MAX_MEMBERS = Character.getInt("AltPartyMaxMembers", 7);
-			ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1600);
+			ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1500);
 			ALT_LEAVE_PARTY_LEADER = Character.getBoolean("AltLeavePartyLeader", false);
 			INITIAL_EQUIPMENT_EVENT = Character.getBoolean("InitialEquipmentEvent", false);
 			STARTING_ADENA = Character.getLong("StartingAdena", 0);
