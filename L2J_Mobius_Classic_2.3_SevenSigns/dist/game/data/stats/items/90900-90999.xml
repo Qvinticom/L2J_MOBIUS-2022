@@ -1009,10 +1009,13 @@
 		<!-- MP +9, Bleed Resistance/Atk. Rate +10%, Stun Resistance/Atk. Rate +5%, Mental Attack Resistance/Atk. Rate +5%, Healing Power +6%, Skill MP Consumption -3%, Vampiric Rage effect +2%. The effect does not stack if two identical earrings are equipped. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="hairall" />
+		<set name="bodypart" val="rear;lear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
+		<skills>
+			<skill id="3558" level="1" /> <!-- Antharas' Earring -->
+		</skills>
 		<stats>
 			<stat type="mDef">74</stat>
 		</stats>
