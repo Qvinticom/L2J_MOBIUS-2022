@@ -254,7 +254,6 @@ public final class Config
 	public static boolean ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH;
 	public static boolean REMOVE_CASTLE_CIRCLETS;
 	public static int ALT_PARTY_RANGE;
-	public static int ALT_PARTY_RANGE2;
 	public static boolean ALT_LEAVE_PARTY_LEADER;
 	public static boolean INITIAL_EQUIPMENT_EVENT;
 	public static long STARTING_ADENA;
@@ -1889,7 +1888,6 @@ public final class Config
 			ALT_MEMBERS_CAN_WITHDRAW_FROM_CLANWH = Character.getBoolean("AltMembersCanWithdrawFromClanWH", false);
 			REMOVE_CASTLE_CIRCLETS = Character.getBoolean("RemoveCastleCirclets", true);
 			ALT_PARTY_RANGE = Character.getInt("AltPartyRange", 1600);
-			ALT_PARTY_RANGE2 = Character.getInt("AltPartyRange2", 1400);
 			ALT_LEAVE_PARTY_LEADER = Character.getBoolean("AltLeavePartyLeader", false);
 			INITIAL_EQUIPMENT_EVENT = Character.getBoolean("InitialEquipmentEvent", false);
 			STARTING_ADENA = Character.getLong("StartingAdena", 0);

@@ -163,7 +163,7 @@ public class L2Party
 		
 		for (L2PcInstance member : _members)
 		{
-			if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
+			if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 			{
 				availableMembers.add(member);
 			}
@@ -195,7 +195,7 @@ public class L2Party
 			try
 			{
 				member = _members.get(_itemLastLoot);
-				if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
+				if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 				{
 					return member;
 				}
@@ -669,7 +669,7 @@ public class L2Party
 		
 		for (L2PcInstance member : membersList)
 		{
-			if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
+			if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 			{
 				continue;
 			}

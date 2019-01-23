@@ -636,7 +636,7 @@ public abstract class AbstractSagaQuest extends Quest
 					for (L2PcInstance player1 : party.getMembers())
 					{
 						final QuestState st1 = findQuest(player1);
-						if ((st1 != null) && player1.isInsideRadius2D(player, Config.ALT_PARTY_RANGE2))
+						if ((st1 != null) && player1.isInsideRadius2D(player, Config.ALT_PARTY_RANGE))
 						{
 							if (st1.isCond(15))
 							{

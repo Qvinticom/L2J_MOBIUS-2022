@@ -158,7 +158,7 @@ public class L2Party extends AbstractPlayerGroup
 		final List<L2PcInstance> availableMembers = new ArrayList<>();
 		for (L2PcInstance member : _members)
 		{
-			if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
+			if (member.getInventory().validateCapacityByItemId(itemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 			{
 				availableMembers.add(member);
 			}
@@ -184,7 +184,7 @@ public class L2Party extends AbstractPlayerGroup
 			try
 			{
 				member = _members.get(_itemLastLoot);
-				if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
+				if (member.getInventory().validateCapacityByItemId(ItemId) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 				{
 					return member;
 				}
@@ -714,7 +714,7 @@ public class L2Party extends AbstractPlayerGroup
 		final List<L2PcInstance> toReward = new LinkedList<>();
 		for (L2PcInstance member : _members)
 		{
-			if (Util.checkIfInRange(Config.ALT_PARTY_RANGE2, target, member, true))
+			if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, target, member, true))
 			{
 				toReward.add(member);
 			}

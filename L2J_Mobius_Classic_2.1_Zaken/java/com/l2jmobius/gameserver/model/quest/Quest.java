@@ -2418,7 +2418,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param value the value of the specified quest variable the random party member must have
 	 * @return a random party member that matches the specified conditions or {@code null} if no match was found.<br>
 	 *         If the {@code var} parameter is {@code null}, a random party member is selected without any conditions.<br>
-	 *         The party member must be within a range of 1500 ingame units of the target of the reference player, or, if no target exists, within the same range of the player itself
+	 *         The party member must be within a range of 1600 ingame units of the target of the reference player, or, if no target exists, within the same range of the player itself
 	 */
 	public L2PcInstance getRandomPartyMember(L2PcInstance player, String var, String value)
 	{
@@ -2464,7 +2464,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 				continue;
 			}
 			temp = partyMember.getQuestState(getName());
-			if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius3D(target, 1500))
+			if ((temp != null) && (temp.get(var) != null) && (temp.get(var)).equalsIgnoreCase(value) && partyMember.isInsideRadius3D(target, Config.ALT_PARTY_RANGE))
 			{
 				candidates.add(partyMember);
 			}
@@ -2527,7 +2527,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 				continue;
 			}
 			temp = partyMember.getQuestState(getName());
-			if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius3D(target, 1500))
+			if ((temp != null) && (temp.getState() == state) && partyMember.isInsideRadius3D(target, Config.ALT_PARTY_RANGE))
 			{
 				candidates.add(partyMember);
 			}
@@ -2658,7 +2658,7 @@ public class Quest extends AbstractScript implements IIdentifiable
 	
 	private static boolean checkDistanceToTarget(L2PcInstance player, L2Npc target)
 	{
-		return (target == null) || Util.checkIfInRange(1500, player, target, true);
+		return (target == null) || Util.checkIfInRange(Config.ALT_PARTY_RANGE, player, target, true);
 	}
 	
 	/**
