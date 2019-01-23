@@ -19,7 +19,6 @@ package quests.Q10807_TheDimensionalWarpPart7;
 import java.util.HashSet;
 import java.util.Set;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -146,21 +145,21 @@ public class Q10807_TheDimensionalWarpPart7 extends Quest
 	
 	private void onKill(L2Npc npc, L2PcInstance killer)
 	{
-		final QuestState qs = getQuestState(killer, false);
-		
-		if ((qs != null) && qs.isCond(1) && (npc.calculateDistance3D(killer) <= Config.ALT_PARTY_RANGE))
+		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
+		if (qs != null)
 		{
+			final L2PcInstance player = qs.getPlayer();
 			int kills = qs.getInt("killed_" + ABYSSAL_BINDER);
 			if (kills < 100)
 			{
 				qs.set("killed_" + ABYSSAL_BINDER, ++kills);
-				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);
 			}
 			if (kills >= 100)
 			{
 				qs.setCond(2, true);
 			}
-			sendNpcLogList(killer);
+			sendNpcLogList(player);
 		}
 	}
 	
