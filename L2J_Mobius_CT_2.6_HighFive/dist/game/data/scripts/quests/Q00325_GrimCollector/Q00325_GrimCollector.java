@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.holders.QuestItemHolder;
@@ -197,7 +198,7 @@ public final class Q00325_GrimCollector extends Quest
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		if (!Util.checkIfInRange(1500, killer, npc, true) || !hasQuestItems(killer, ANATOMY_DIAGRAM))
+		if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true) || !hasQuestItems(killer, ANATOMY_DIAGRAM))
 		{
 			return super.onKill(npc, killer, isSummon);
 		}

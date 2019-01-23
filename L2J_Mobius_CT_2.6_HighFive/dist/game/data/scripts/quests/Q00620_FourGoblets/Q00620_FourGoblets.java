@@ -19,6 +19,7 @@ package quests.Q00620_FourGoblets;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.FourSepulchersManager;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -233,7 +234,7 @@ public class Q00620_FourGoblets extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState st = getQuestState(player, false);
-		if ((st != null) && Util.checkIfInRange(1500, npc, player, false))
+		if ((st != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			switch (npc.getId())
 			{

@@ -16,6 +16,7 @@
  */
 package quests.Q10447_TimingIsEverything;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -147,7 +148,7 @@ public class Q10447_TimingIsEverything extends Quest
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
 		
-		if (!Util.checkIfInRange(1500, npc, killer, true))
+		if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
 		}

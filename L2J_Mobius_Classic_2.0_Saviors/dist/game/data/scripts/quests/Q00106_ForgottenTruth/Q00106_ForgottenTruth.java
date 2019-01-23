@@ -16,6 +16,7 @@
  */
 package quests.Q00106_ForgottenTruth;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -91,7 +92,7 @@ public final class Q00106_ForgottenTruth extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(2) && Util.checkIfInRange(1500, npc, killer, true))
+		if ((st != null) && st.isCond(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			if ((getRandom(100) < 20) && hasQuestItems(killer, ONYX_TALISMAN2))
 			{

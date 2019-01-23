@@ -21,6 +21,7 @@ import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.ChatType;
@@ -301,7 +302,7 @@ public final class Q00456_DontKnowDontCare extends Quest
 			if (attacker.isInParty() //
 				&& attacker.getParty().isInCommandChannel() //
 				&& attacker.getParty().getCommandChannel().equals(cc) // only players from the same cc are allowed
-				&& Util.checkIfInRange(1500, npc, attacker, true))
+				&& Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, attacker, true))
 			{
 				allowedPlayers.add(attacker.getObjectId());
 			}

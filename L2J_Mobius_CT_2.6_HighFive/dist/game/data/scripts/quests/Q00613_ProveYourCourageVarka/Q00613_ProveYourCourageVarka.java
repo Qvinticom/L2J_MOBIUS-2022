@@ -16,6 +16,7 @@
  */
 package quests.Q00613_ProveYourCourageVarka;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -53,7 +54,7 @@ public class Q00613_ProveYourCourageVarka extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			giveItems(player, HEKATON_HEAD, 1);
 			st.setCond(2, true);

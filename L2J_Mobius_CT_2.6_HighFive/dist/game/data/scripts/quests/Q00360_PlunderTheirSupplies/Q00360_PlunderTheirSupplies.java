@@ -19,6 +19,7 @@ package quests.Q00360_PlunderTheirSupplies;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -97,7 +98,7 @@ public final class Q00360_PlunderTheirSupplies extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isPet)
 	{
 		final QuestState st = getQuestState(killer, false);
-		if ((st == null) || !Util.checkIfInRange(1500, npc, killer, false))
+		if ((st == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false))
 		{
 			return super.onKill(npc, killer, isPet);
 		}

@@ -16,6 +16,7 @@
  */
 package quests.Q00906_TheCallOfValakas;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -55,7 +56,7 @@ public class Q00906_TheCallOfValakas extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && Util.checkIfInRange(1500, npc, player, false))
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			giveItems(player, LAVASAURUS_ALPHA_FRAGMENT, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

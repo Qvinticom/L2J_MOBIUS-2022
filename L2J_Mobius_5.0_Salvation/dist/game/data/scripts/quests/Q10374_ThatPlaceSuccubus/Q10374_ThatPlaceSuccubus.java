@@ -28,7 +28,6 @@ import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * That Place Succubus (10374)
@@ -193,7 +192,7 @@ public class Q10374_ThatPlaceSuccubus extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 3, 3, npc);
-		if ((qs != null) && qs.isCond(3) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		if (qs != null)
 		{
 			switch (npc.getId())
 			{

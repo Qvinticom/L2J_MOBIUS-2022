@@ -21,6 +21,7 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -748,7 +749,7 @@ public class Q00663_SeductiveWhispers extends Quest
 		if (!players.isEmpty())
 		{
 			final L2PcInstance rewardedPlayer = players.get(getRandom(players.size()));
-			if (Util.checkIfInRange(1500, npc, rewardedPlayer, false))
+			if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, rewardedPlayer, false))
 			{
 				final int rnd = getRandom(1000);
 				

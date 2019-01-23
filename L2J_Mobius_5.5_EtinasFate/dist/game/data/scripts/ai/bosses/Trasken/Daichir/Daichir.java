@@ -104,7 +104,7 @@ public class Daichir extends AbstractNpcAI
 				}
 				for (L2PcInstance member : members)
 				{
-					if (member.isInsideRadius3D(npc, 1500))
+					if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 					{
 						member.teleToLocation(ENTER_LOCATION, true);
 						GrandBossManager.getInstance().setBossStatus(TRASKEN, FIGHTING);

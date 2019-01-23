@@ -16,6 +16,7 @@
  */
 package quests.Q00604_DaimonTheWhiteEyedPart2;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SpawnTable;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
@@ -71,7 +72,7 @@ public final class Q00604_DaimonTheWhiteEyedPart2 extends Quest
 		final QuestState qs = getQuestState(player, false);
 		if ((qs != null) && (qs.getMemoState() >= 11) && (qs.getMemoState() <= 21))
 		{
-			if (Util.checkIfInRange(1500, npc, player, false))
+			if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 			{
 				if (hasQuestItems(player, ESSENCE_OF_DAIMON))
 				{

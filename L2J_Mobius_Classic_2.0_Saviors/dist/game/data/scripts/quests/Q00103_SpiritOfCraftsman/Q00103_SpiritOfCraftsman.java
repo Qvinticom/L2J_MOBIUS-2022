@@ -16,6 +16,7 @@
  */
 package quests.Q00103_SpiritOfCraftsman;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -227,7 +228,7 @@ public final class Q00103_SpiritOfCraftsman extends Quest
 		{
 			case MARSH_ZOMBIE:
 			{
-				if (hasQuestItems(killer, PRESERVE_OIL) && (getRandom(10) < 5) && Util.checkIfInRange(1500, npc, killer, true))
+				if (hasQuestItems(killer, PRESERVE_OIL) && (getRandom(10) < 5) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 				{
 					giveItems(killer, ZOMBIE_HEAD, 1);
 					takeItems(killer, PRESERVE_OIL, -1);

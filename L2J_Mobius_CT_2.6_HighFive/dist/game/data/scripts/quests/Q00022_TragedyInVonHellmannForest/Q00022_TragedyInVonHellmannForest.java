@@ -16,6 +16,7 @@
  */
 package quests.Q00022_TragedyInVonHellmannForest;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
@@ -352,7 +353,7 @@ public final class Q00022_TragedyInVonHellmannForest extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		if (Util.checkIfInRange(1500, killer, npc, true))
+		if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true))
 		{
 			if (npc.getId() == SOUL_OF_WELL)
 			{

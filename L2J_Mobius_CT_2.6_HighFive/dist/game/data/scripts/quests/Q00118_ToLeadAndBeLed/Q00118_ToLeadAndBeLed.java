@@ -16,6 +16,7 @@
  */
 package quests.Q00118_ToLeadAndBeLed;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -86,7 +87,7 @@ public final class Q00118_ToLeadAndBeLed extends Quest
 			{
 				case "sponsor":
 				{
-					if (!Util.checkIfInRange(1500, npc, apprentice, true))
+					if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, apprentice, true))
 					{
 						htmltext = "30298-09.html";
 					}
@@ -109,7 +110,7 @@ public final class Q00118_ToLeadAndBeLed extends Quest
 				}
 				case "30298-10.html":
 				{
-					if (Util.checkIfInRange(1500, npc, apprentice, true) && (q118 != null) && q118.isMemoState(2))
+					if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, apprentice, true) && (q118 != null) && q118.isMemoState(2))
 					{
 						switch (q118.getMemoStateEx(1))
 						{
@@ -246,7 +247,7 @@ public final class Q00118_ToLeadAndBeLed extends Quest
 						if (killer.getSponsor() > 0)
 						{
 							final L2PcInstance c0 = L2World.getInstance().getPlayer(killer.getSponsor());
-							if ((c0 != null) && Util.checkIfInRange(1500, npc, c0, true))
+							if ((c0 != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, c0, true))
 							{
 								if (giveItemRandomly(killer, npc, LEG_OF_KING_ARANEID, 1, 8, 7, true))
 								{
@@ -324,7 +325,7 @@ public final class Q00118_ToLeadAndBeLed extends Quest
 					else
 					{
 						final L2PcInstance c0 = L2World.getInstance().getPlayer(player.getSponsor());
-						if ((c0 != null) && Util.checkIfInRange(1500, npc, c0, true))
+						if ((c0 != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, c0, true))
 						{
 							htmltext = "30298-07.html";
 						}

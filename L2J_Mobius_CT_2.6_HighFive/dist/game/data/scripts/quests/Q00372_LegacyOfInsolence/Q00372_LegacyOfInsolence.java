@@ -19,6 +19,7 @@ package quests.Q00372_LegacyOfInsolence;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -466,7 +467,7 @@ public final class Q00372_LegacyOfInsolence extends Quest
 			return super.onKill(npc, killer, isSummon);
 		}
 		
-		if (Util.checkIfInRange(1500, npc, killer, true) && (getRandom(1000) < item.getChance()))
+		if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true) && (getRandom(1000) < item.getChance()))
 		{
 			L2PcInstance rewardedPlayer = null;
 			if (!killer.isInParty())
@@ -495,7 +496,7 @@ public final class Q00372_LegacyOfInsolence extends Quest
 				}
 			}
 			
-			if ((rewardedPlayer != null) && Util.checkIfInRange(1500, npc, rewardedPlayer, true))
+			if ((rewardedPlayer != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, rewardedPlayer, true))
 			{
 				giveItems(rewardedPlayer, item.getId(), item.getCount());
 				playSound(rewardedPlayer, QuestSound.ITEMSOUND_QUEST_ITEMGET);

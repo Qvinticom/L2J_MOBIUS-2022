@@ -16,6 +16,7 @@
  */
 package quests.Q10380_TheExecutionersExecution;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -137,7 +138,7 @@ public final class Q10380_TheExecutionersExecution extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && Util.checkIfInRange(1500, npc, player, false) && qs.isCond(1))
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false) && qs.isCond(1))
 		{
 			switch (npc.getId())
 			{

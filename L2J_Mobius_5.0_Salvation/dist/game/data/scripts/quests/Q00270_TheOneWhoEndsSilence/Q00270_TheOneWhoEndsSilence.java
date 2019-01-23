@@ -16,6 +16,7 @@
  */
 package quests.Q00270_TheOneWhoEndsSilence;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -445,7 +446,7 @@ public class Q00270_TheOneWhoEndsSilence extends Quest
 	 */
 	private static void giveItem(L2PcInstance player, L2Npc npc, int chance, boolean atLeastOne)
 	{
-		if ((player != null) && Util.checkIfInRange(1500, npc, player, false))
+		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			final int count = ((getRandom(1000) < chance) ? 1 : 0) + (atLeastOne ? 1 : 0);
 			if (count > 0)

@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -704,7 +705,7 @@ public final class Q00662_AGameOfCards extends Quest
 		}
 		
 		final L2PcInstance player = players.get(getRandom(players.size()));
-		if ((player != null) && Util.checkIfInRange(1500, npc, player, false))
+		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			if (MONSTERS.get(npc.getId()) < getRandom(1000))
 			{

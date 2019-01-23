@@ -16,6 +16,7 @@
  */
 package quests.Q00193_SevenSignsDyingMessage;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
@@ -219,7 +220,7 @@ public final class Q00193_SevenSignsDyingMessage extends Quest
 		}
 		
 		final QuestState qs = getQuestState(partyMember, false);
-		if (npc.isInsideRadius3D(partyMember, 1500))
+		if (npc.isInsideRadius3D(partyMember, Config.ALT_PARTY_RANGE))
 		{
 			giveItems(player, SCULPTURE_OF_DOUBT, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_FINISH);

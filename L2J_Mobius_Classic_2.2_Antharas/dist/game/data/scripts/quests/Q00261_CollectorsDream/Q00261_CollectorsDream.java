@@ -16,6 +16,7 @@
  */
 package quests.Q00261_CollectorsDream;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -74,7 +75,7 @@ public final class Q00261_CollectorsDream extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = getQuestState(killer, false);
-		if ((st != null) && st.isCond(1) && Util.checkIfInRange(1500, npc, killer, true))
+		if ((st != null) && st.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			if (giveItemRandomly(killer, SPIDER_LEG, 1, MAX_LEG_COUNT, 1, true))
 			{

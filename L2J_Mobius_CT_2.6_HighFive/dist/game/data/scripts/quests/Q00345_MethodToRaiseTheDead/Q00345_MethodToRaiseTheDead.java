@@ -16,6 +16,7 @@
  */
 package quests.Q00345_MethodToRaiseTheDead;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -196,7 +197,7 @@ public final class Q00345_MethodToRaiseTheDead extends Quest
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
 		
-		if ((qs == null) || !Util.checkIfInRange(1500, npc, killer, true))
+		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return null;
 		}

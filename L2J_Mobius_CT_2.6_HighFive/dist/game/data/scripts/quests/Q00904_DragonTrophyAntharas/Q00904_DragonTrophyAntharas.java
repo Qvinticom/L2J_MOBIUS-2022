@@ -16,6 +16,7 @@
  */
 package quests.Q00904_DragonTrophyAntharas;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -53,7 +54,7 @@ public final class Q00904_DragonTrophyAntharas extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			qs.setCond(2, true);
 		}

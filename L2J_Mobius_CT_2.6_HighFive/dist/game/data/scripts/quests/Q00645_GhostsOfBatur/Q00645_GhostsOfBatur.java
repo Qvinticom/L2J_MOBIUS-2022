@@ -16,6 +16,7 @@
  */
 package quests.Q00645_GhostsOfBatur;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -98,7 +99,7 @@ public class Q00645_GhostsOfBatur extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final L2PcInstance player = getRandomPartyMember(killer, 1);
-		if ((player != null) && Util.checkIfInRange(1500, npc, player, false) && (getRandom(1000) < CHANCES[npc.getId() - CONTAMINATED_MOREK_WARRIOR]))
+		if ((player != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false) && (getRandom(1000) < CHANCES[npc.getId() - CONTAMINATED_MOREK_WARRIOR]))
 		{
 			final QuestState qs = getQuestState(player, false);
 			giveItems(killer, CURSED_BURIAL_ITEMS, 1);

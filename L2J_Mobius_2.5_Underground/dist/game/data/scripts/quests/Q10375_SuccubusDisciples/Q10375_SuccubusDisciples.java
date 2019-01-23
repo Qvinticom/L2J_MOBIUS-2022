@@ -27,7 +27,6 @@ import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.network.NpcStringId;
 import com.l2jmobius.gameserver.network.serverpackets.ExQuestNpcLogList;
 import com.l2jmobius.gameserver.network.serverpackets.NpcSay;
-import com.l2jmobius.gameserver.util.Util;
 
 import quests.Q10374_ThatPlaceSuccubus.Q10374_ThatPlaceSuccubus;
 
@@ -159,7 +158,7 @@ public class Q10375_SuccubusDisciples extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		if ((qs != null) && qs.isCond(1))
 		{
 			switch (npc.getId())
 			{
@@ -198,8 +197,7 @@ public class Q10375_SuccubusDisciples extends Quest
 				playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
 			}
 		}
-		
-		else if ((qs != null) && qs.isCond(3) && Util.checkIfInRange(1500, npc, qs.getPlayer(), false))
+		else if ((qs != null) && qs.isCond(3))
 		{
 			switch (npc.getId())
 			{

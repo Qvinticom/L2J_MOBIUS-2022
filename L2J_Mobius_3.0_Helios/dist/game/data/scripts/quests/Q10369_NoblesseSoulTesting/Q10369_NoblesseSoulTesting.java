@@ -16,6 +16,7 @@
  */
 package quests.Q10369_NoblesseSoulTesting;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.enums.QuestSound;
@@ -443,7 +444,7 @@ public final class Q10369_NoblesseSoulTesting extends Quest
 		final L2PcInstance partyMember = getRandomPartyMember(killer);
 		final QuestState qs = getQuestState(partyMember, false);
 		
-		if (canProgress(partyMember) && (qs != null) && qs.isStarted() && (partyMember.calculateDistance2D(npc) <= 1500))
+		if (canProgress(partyMember) && (qs != null) && qs.isStarted() && (partyMember.calculateDistance2D(npc) <= Config.ALT_PARTY_RANGE))
 		{
 			switch (qs.getCond())
 			{

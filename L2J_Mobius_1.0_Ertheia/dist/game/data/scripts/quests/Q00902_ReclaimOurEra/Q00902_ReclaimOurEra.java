@@ -19,6 +19,7 @@ package quests.Q00902_ReclaimOurEra;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -67,7 +68,7 @@ public final class Q00902_ReclaimOurEra extends Quest
 	private void giveItem(L2Npc npc, L2PcInstance player)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isStarted() && !qs.isCond(5) && Util.checkIfInRange(1500, npc, player, false))
+		if ((qs != null) && qs.isStarted() && !qs.isCond(5) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			giveItems(player, MONSTER_DROPS.get(npc.getId()), 1);
 			qs.setCond(5, true);

@@ -16,6 +16,7 @@
  */
 package quests.Q00212_TrialOfDuty;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.CategoryType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -137,7 +138,7 @@ public final class Q00212_TrialOfDuty extends Quest
 	{
 		final QuestState qs = getQuestState(killer, false);
 		
-		if ((qs == null) || !Util.checkIfInRange(1500, killer, npc, true))
+		if ((qs == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, killer, npc, true))
 		{
 			return super.onKill(npc, killer, isSummon);
 		}

@@ -19,6 +19,7 @@ package quests.Q00334_TheWishingPotion;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -1074,7 +1075,7 @@ public final class Q00334_TheWishingPotion extends Quest
 			{
 				
 				final QuestState qss = pm.getQuestState(getName());
-				if ((qss != null) && qss.isStarted() && Util.checkIfInRange(1500, npc, pm, true))
+				if ((qss != null) && qss.isStarted() && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, pm, true))
 				{
 					candidates.add(qss);
 				}

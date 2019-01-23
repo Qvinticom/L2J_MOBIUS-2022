@@ -167,8 +167,8 @@ public class Q00823_DisappearedRaceNewFairy extends Quest
 	@Override
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
-		final QuestState qs = getRandomPartyMemberState(killer, -1, 3, npc);
-		if ((qs != null) && qs.isCond(1))
+		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
+		if (qs != null)
 		{
 			final int factionLevel = killer.getFactionLevel(Faction.MOTHER_TREE_GUARDIANS);
 			if (factionLevel == 0)

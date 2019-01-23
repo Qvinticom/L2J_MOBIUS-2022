@@ -20,6 +20,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.Location;
@@ -536,7 +537,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 		QuestState qs = getQuestState(player, false);
 		if (!player.isInParty())
 		{
-			if (!Util.checkIfInRange(1500, player, target, true))
+			if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, player, target, true))
 			{
 				return null;
 			}
@@ -572,7 +573,7 @@ public final class Q00501_ProofOfClanAlliance extends Quest
 		}
 		
 		qs = candidates.get(getRandom(candidates.size()));
-		if (!Util.checkIfInRange(1500, qs.getPlayer(), target, true))
+		if (!Util.checkIfInRange(Config.ALT_PARTY_RANGE, qs.getPlayer(), target, true))
 		{
 			return null;
 		}

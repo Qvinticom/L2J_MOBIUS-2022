@@ -16,6 +16,7 @@
  */
 package instances.PrisonOfDarkness;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.Movie;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -216,7 +217,7 @@ public final class PrisonOfDarkness extends AbstractInstance
 						{
 							for (L2PcInstance member : player.getParty().getMembers())
 							{
-								if (member.isInsideRadius3D(npc, 1500))
+								if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 								{
 									member.teleToLocation(ORBIS_LOCATION);
 								}

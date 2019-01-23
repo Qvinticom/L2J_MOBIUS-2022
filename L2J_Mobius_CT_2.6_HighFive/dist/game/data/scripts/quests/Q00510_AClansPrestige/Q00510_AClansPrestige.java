@@ -16,6 +16,7 @@
  */
 package quests.Q00510_AClansPrestige;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -94,7 +95,7 @@ public class Q00510_AClansPrestige extends Quest
 		else
 		{
 			final L2PcInstance pleader = player.getClan().getLeader().getPlayerInstance();
-			if ((pleader != null) && player.isInsideRadius3D(pleader, 1500))
+			if ((pleader != null) && player.isInsideRadius3D(pleader, Config.ALT_PARTY_RANGE))
 			{
 				qs = getQuestState(pleader, false);
 			}

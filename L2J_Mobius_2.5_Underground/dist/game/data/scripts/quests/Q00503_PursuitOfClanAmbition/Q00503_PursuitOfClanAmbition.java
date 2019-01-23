@@ -16,6 +16,7 @@
  */
 package quests.Q00503_PursuitOfClanAmbition;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -321,7 +322,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs == null) || !qs.isStarted() || !Util.checkIfInRange(1500, npc, killer, true))
+		if ((qs == null) || !qs.isStarted() || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, true))
 		{
 			return super.onKill(npc, killer, isSummon);
 		}
@@ -333,7 +334,7 @@ public final class Q00503_PursuitOfClanAmbition extends Quest
 		}
 		
 		final L2PcInstance leader = clan.getLeader().getPlayerInstance();
-		if ((leader == null) || !Util.checkIfInRange(1500, npc, leader, true))
+		if ((leader == null) || !Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, leader, true))
 		{
 			return super.onKill(npc, killer, isSummon);
 		}

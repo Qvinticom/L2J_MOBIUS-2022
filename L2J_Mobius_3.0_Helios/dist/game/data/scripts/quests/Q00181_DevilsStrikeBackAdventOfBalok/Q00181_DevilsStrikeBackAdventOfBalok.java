@@ -16,6 +16,7 @@
  */
 package quests.Q00181_DevilsStrikeBackAdventOfBalok;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
@@ -139,7 +140,7 @@ public class Q00181_DevilsStrikeBackAdventOfBalok extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			giveItems(player, CONTRACT, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

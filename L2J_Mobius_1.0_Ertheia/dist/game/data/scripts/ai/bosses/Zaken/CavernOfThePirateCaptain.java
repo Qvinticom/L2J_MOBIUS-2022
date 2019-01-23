@@ -19,6 +19,7 @@ package ai.bosses.Zaken;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -267,7 +268,7 @@ public final class CavernOfThePirateCaptain extends AbstractInstance
 			if (npc.getId() == ZAKEN_83)
 			{
 				final long time = world.getElapsedTime();
-				for (L2PcInstance playersInside : world.getPlayersInsideRadius(npc, 1500))
+				for (L2PcInstance playersInside : world.getPlayersInsideRadius(npc, Config.ALT_PARTY_RANGE))
 				{
 					for (int[] reward : VORPAL_JEWELS)
 					{

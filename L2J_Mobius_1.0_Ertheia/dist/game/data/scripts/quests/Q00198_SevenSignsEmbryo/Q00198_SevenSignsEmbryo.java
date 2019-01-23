@@ -16,6 +16,7 @@
  */
 package quests.Q00198_SevenSignsEmbryo;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.enums.Movie;
@@ -179,7 +180,7 @@ public final class Q00198_SevenSignsEmbryo extends Quest
 		}
 		
 		final QuestState st = getQuestState(partyMember, false);
-		if (npc.isInsideRadius3D(partyMember, 1500))
+		if (npc.isInsideRadius3D(partyMember, Config.ALT_PARTY_RANGE))
 		{
 			giveItems(partyMember, SCULPTURE_OF_DOUBT, 1);
 			st.setCond(2, true);

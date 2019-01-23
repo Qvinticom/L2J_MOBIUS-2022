@@ -19,6 +19,7 @@ package quests.Q00453_NotStrongEnoughAlone;
 import java.util.HashSet;
 import java.util.Set;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
@@ -95,7 +96,7 @@ public final class Q00453_NotStrongEnoughAlone extends Quest
 		
 		int npcId = npc.getId();
 		
-		if (Util.checkIfInRange(1500, npc, player, false))
+		if (Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			if (CommonUtil.contains(MONSTER1, npcId) && st.isCond(2))
 			{

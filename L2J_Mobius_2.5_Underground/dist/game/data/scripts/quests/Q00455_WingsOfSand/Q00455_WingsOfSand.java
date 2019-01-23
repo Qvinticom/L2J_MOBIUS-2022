@@ -19,6 +19,7 @@ package quests.Q00455_WingsOfSand;
 import java.util.Arrays;
 import java.util.List;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.QuestType;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -74,7 +75,7 @@ public class Q00455_WingsOfSand extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && Util.checkIfInRange(1500, npc, player, false) && (getRandom(1000) < CHANCE))
+		if ((qs != null) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false) && (getRandom(1000) < CHANCE))
 		{
 			giveItems(player, LARGE_BABY_DRAGON, 1);
 			playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

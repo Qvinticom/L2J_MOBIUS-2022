@@ -294,12 +294,9 @@ public class Q00144_PailakaInjuredDragon extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if (qs != null)
+		if (qs != null && qs.isCond(3))
 		{
-			if (qs.isCond(3) && (npc.calculateDistance2D(killer) <= 1500))
-			{
-				qs.setCond(4, true);
-			}
+			qs.setCond(4, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}

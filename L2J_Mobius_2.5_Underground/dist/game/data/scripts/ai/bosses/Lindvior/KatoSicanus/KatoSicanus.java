@@ -104,7 +104,7 @@ public class KatoSicanus extends AbstractNpcAI
 				}
 				for (L2PcInstance member : members)
 				{
-					if (member.isInsideRadius3D(npc, 1500))
+					if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 					{
 						member.teleToLocation(LINDVIOR_LOCATION, true);
 						addSpawn(INVISIBLE, 46707, -28586, -1400, 0, false, 0, false);

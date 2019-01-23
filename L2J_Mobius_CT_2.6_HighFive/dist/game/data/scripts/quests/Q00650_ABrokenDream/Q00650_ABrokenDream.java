@@ -21,6 +21,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -160,7 +161,7 @@ public final class Q00650_ABrokenDream extends Quest
 		if (!randomList.isEmpty())
 		{
 			final L2PcInstance player = randomList.get(getRandom(randomList.size()));
-			if ((getRandom(1000) < monsterChance) && Util.checkIfInRange(1500, npc, player, true))
+			if ((getRandom(1000) < monsterChance) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, true))
 			{
 				giveItems(player, REMNANTS_OF_OLD_DWARVES_DREAMS, 1);
 				playSound(player, QuestSound.ITEMSOUND_QUEST_ITEMGET);

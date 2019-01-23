@@ -16,6 +16,7 @@
  */
 package quests.Q10270_BirthOfTheSeed;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.Location;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
@@ -65,7 +66,7 @@ public final class Q10270_BirthOfTheSeed extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState st = getQuestState(player, false);
-		if ((st != null) && st.isMemoState(2) && Util.checkIfInRange(1500, npc, player, false))
+		if ((st != null) && st.isMemoState(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			switch (npc.getId())
 			{

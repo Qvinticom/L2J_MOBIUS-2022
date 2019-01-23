@@ -16,6 +16,7 @@
  */
 package quests.Q10504_JewelOfAntharas;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -55,7 +56,7 @@ public final class Q10504_JewelOfAntharas extends Quest
 	public void actionForEachPlayer(L2PcInstance player, L2Npc npc, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(player, false);
-		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(1500, npc, player, false))
+		if ((qs != null) && qs.isCond(1) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, player, false))
 		{
 			takeItems(player, CLEAR_CRYSTAL, -1);
 			giveItems(player, FILLED_CRYSTAL_ANTHARAS_ENERGY, 1);

@@ -19,6 +19,7 @@ package quests.Q00186_ContractExecution;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -147,7 +148,7 @@ public final class Q00186_ContractExecution extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getQuestState(killer, false);
-		if ((qs != null) && qs.isMemoState(2) && Util.checkIfInRange(1500, npc, killer, false) && (getRandom(100) < MONSTERS.get(npc.getId())) && !hasQuestItems(killer, LETO_LIZARDMAN_ACCESSORY))
+		if ((qs != null) && qs.isMemoState(2) && Util.checkIfInRange(Config.ALT_PARTY_RANGE, npc, killer, false) && (getRandom(100) < MONSTERS.get(npc.getId())) && !hasQuestItems(killer, LETO_LIZARDMAN_ACCESSORY))
 		{
 			giveItems(killer, LETO_LIZARDMAN_ACCESSORY, 1);
 			playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);

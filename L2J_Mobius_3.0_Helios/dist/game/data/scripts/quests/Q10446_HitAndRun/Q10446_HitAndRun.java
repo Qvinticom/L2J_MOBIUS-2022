@@ -133,7 +133,7 @@ public final class Q10446_HitAndRun extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState qs = getRandomPartyMemberState(killer, 1, 3, npc);
-		if ((qs != null) && qs.isCond(1))
+		if (qs != null)
 		{
 			int count = qs.getInt(KILL_COUNT_VAR);
 			qs.set(KILL_COUNT_VAR, ++count);
