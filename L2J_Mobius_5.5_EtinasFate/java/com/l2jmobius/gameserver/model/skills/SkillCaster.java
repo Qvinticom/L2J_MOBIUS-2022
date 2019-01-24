@@ -824,7 +824,7 @@ public class SkillCaster implements Runnable
 				if (!ignoreTargetType)
 				{
 					final L2Object objTarget = skill.getTarget(activeChar, false, false, false);
-					if (objTarget.isCharacter())
+					if ((objTarget != null) && objTarget.isCharacter())
 					{
 						target = objTarget;
 					}
