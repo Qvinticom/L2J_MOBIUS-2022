@@ -220,7 +220,7 @@ public enum SkillOperateType
 	 */
 	public boolean isHidingMesseges()
 	{
-		return (this == A5) || (this == A6) || (this == TG) || (this == P);
+		return (this == P) || (this == A5) || (this == A6) || (this == TG);
 	}
 	
 	/**
@@ -228,7 +228,7 @@ public enum SkillOperateType
 	 */
 	public boolean isNotBroadcastable()
 	{
-		return (this == A5) || (this == A6) || (this == AU) || (this == TG);
+		return (this == AU) || (this == A5) || (this == A6) || (this == TG) || (this == T);
 	}
 	
 	/**

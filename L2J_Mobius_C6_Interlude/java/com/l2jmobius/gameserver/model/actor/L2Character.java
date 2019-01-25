@@ -1793,8 +1793,8 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		// To turn local player in target direction
 		setHeading(Util.calculateHeadingFrom(getX(), getY(), target.getX(), target.getY()));
 		
-		// Like L2OFF after a skill the player must stop the movement, also with toggle
-		if (!skill.isPotion() && (this instanceof L2PcInstance))
+		// Like L2OFF after a skill the player must stop the movement, unless it is toggle or potion.
+		if (!skill.isToggle() && !skill.isPotion() && (this instanceof L2PcInstance))
 		{
 			((L2PcInstance) this).stopMove(null);
 		}
@@ -1805,9 +1805,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			callSkill(skill, targets);
 		}
 		
-		// Send a Server->Client packet MagicSkillUse with target, displayId, level, skillTime, reuseDelay
-		// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
-		broadcastPacket(new MagicSkillUse(this, target, displayId, level, hitTime, reuseDelay));
+		if (!skill.isToggle())
+		{
+			// Send a Server->Client packet MagicSkillUse with target, displayId, level, skillTime, reuseDelay
+			// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
+			broadcastPacket(new MagicSkillUse(this, target, displayId, level, hitTime, reuseDelay));
+		}
 		
 		// Send a system message USE_S1 to the L2Character
 		if ((activeChar instanceof L2PcInstance) && (magicId != 1312))

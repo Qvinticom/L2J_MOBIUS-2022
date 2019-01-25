@@ -1831,9 +1831,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			}
 		}
 		
-		// Send a Server->Client packet MagicSkillUser with target, displayId, level, skillTime, reuseDelay
-		// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
-		broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), skill.getDisplayLevel(), skillTime, reuseDelay));
+		if (!skill.isToggle())
+		{
+			// Send a Server->Client packet MagicSkillUser with target, displayId, level, skillTime, reuseDelay
+			// to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
+			broadcastPacket(new MagicSkillUse(this, target, skill.getDisplayId(), skill.getDisplayLevel(), skillTime, reuseDelay));
+		}
 		
 		// Send a system message to the player.
 		if (isPlayer() && !skill.isAbnormalInstant())
