@@ -642,19 +642,18 @@ public class SkillCaster implements Runnable
 							((L2Character) obj).getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, caster);
 						}
 					}
-					else if (((skill.getEffectPoint() > 0) && obj.isMonster()) //
-						|| (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) //
-							|| (((L2Character) obj).getReputation() < 0) //
-						)))
+					// Self casting should not increase PvP time.
+					else if (obj != player)
 					{
-						// Supporting players or monsters result in pvpflag.
-						if (!obj.isFakePlayer() //
-							|| (obj.isFakePlayer() //
-								&& (!((L2Npc) obj).isScriptValue(0) //
-									|| (((L2Npc) obj).getReputation() < 0))))
+						// Supporting monsters or players results in pvpflag.
+						if (((skill.getEffectPoint() > 0) && obj.isMonster()) //
+							|| (obj.isPlayable() && ((obj.getActingPlayer().getPvpFlag() > 0) //
+								|| (((L2Character) obj).getReputation() < 0) //
+							)))
 						{
-							// Self casting should not increase PvP time.
-							if (obj != player)
+							// Consider fake player PvP status.
+							if (!obj.isFakePlayer() //
+								|| (obj.isFakePlayer() && (!((L2Npc) obj).isScriptValue(0) || (((L2Npc) obj).getReputation() < 0))))
 							{
 								player.updatePvPStatus();
 							}
