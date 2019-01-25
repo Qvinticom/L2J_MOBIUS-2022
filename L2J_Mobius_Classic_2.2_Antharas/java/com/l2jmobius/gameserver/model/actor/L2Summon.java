@@ -410,6 +410,9 @@ public abstract class L2Summon extends L2Playable
 	{
 		if (isSpawned() && !isDead())
 		{
+			// Prevent adding effects while unsummoning.
+			setIsInvul(true);
+			
 			abortAttack();
 			abortCast();
 			storeMe();
