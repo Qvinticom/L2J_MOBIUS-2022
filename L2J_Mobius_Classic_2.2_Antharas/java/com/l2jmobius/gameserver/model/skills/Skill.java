@@ -934,9 +934,9 @@ public final class Skill implements IIdentifiable
 		return _operateType.isAura();
 	}
 	
-	public boolean isHidingMesseges()
+	public boolean isHidingMessages()
 	{
-		return _operateType.isHidingMesseges();
+		return _operateType.isHidingMessages();
 	}
 	
 	public boolean isNotBroadcastable()

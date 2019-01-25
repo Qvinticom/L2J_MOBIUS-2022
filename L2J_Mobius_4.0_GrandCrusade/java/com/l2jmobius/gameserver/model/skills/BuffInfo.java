@@ -239,7 +239,7 @@ public final class BuffInfo
 		_isInUse = val;
 		
 		// Send message that the effect is applied or removed.
-		if ((_skill != null) && !_skill.isHidingMesseges() && _effected.isPlayer())
+		if ((_skill != null) && !_skill.isHidingMessages() && _effected.isPlayer())
 		{
 			if (val)
 			{
@@ -312,7 +312,7 @@ public final class BuffInfo
 		}
 		
 		// When effects are initialized, the successfully landed.
-		if (!_hideStartMessage && _effected.isPlayer() && !_skill.isHidingMesseges() && !_skill.isAura())
+		if (!_hideStartMessage && _effected.isPlayer() && !_skill.isHidingMessages() && !_skill.isAura())
 		{
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_S_EFFECT_CAN_BE_FELT);
 			sm.addSkillName(_skill);
@@ -396,7 +396,7 @@ public final class BuffInfo
 		}
 		
 		// Set the proper system message.
-		if ((_skill != null) && !(_effected.isSummon() && !((L2Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMesseges())
+		if ((_skill != null) && !(_effected.isSummon() && !((L2Summon) _effected).getOwner().hasSummon()) && !_skill.isHidingMessages())
 		{
 			SystemMessageId smId = null;
 			if (_skill.isToggle())

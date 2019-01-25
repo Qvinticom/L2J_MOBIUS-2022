@@ -216,9 +216,9 @@ public enum SkillOperateType
 	}
 	
 	/**
-	 * @return {@code true} if the operate type skill type should not send messeges for start/finish, {@code false} otherwise
+	 * @return {@code true} if the operate type skill type should not send messages for start/finish, {@code false} otherwise
 	 */
-	public boolean isHidingMesseges()
+	public boolean isHidingMessages()
 	{
 		return (this == P) || (this == A5) || (this == A6) || (this == TG);
 	}
