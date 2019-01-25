@@ -653,7 +653,11 @@ public class SkillCaster implements Runnable
 								&& (!((L2Npc) obj).isScriptValue(0) //
 									|| (((L2Npc) obj).getReputation() < 0))))
 						{
-							player.updatePvPStatus();
+							// Self casting should not increase PvP time.
+							if (obj != player)
+							{
+								player.updatePvPStatus();
+							}
 						}
 					}
 				}
