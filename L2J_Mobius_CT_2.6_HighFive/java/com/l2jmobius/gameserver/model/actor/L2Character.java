@@ -5703,7 +5703,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 								}
 							}
 							// notify target AI about the attack
-							if (((L2Character) target).hasAI() && !skill.hasEffectType(L2EffectType.HATE))
+							if (((L2Character) target).hasAI() && !skill.hasEffectType(L2EffectType.HATE) && (skill.getAbnormalType() != AbnormalType.TURN_PASSIVE))
 							{
 								((L2Character) target).getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, this);
 							}

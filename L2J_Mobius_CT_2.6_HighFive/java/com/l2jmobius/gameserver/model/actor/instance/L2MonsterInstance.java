@@ -24,6 +24,7 @@ import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.skills.Skill;
 import com.l2jmobius.gameserver.util.MinionList;
 
@@ -94,7 +95,7 @@ public class L2MonsterInstance extends L2Attackable
 	@Override
 	public boolean isAggressive()
 	{
-		return getTemplate().isAggressive() && !isEventMob();
+		return getTemplate().isAggressive() && !isEventMob() && !isAffected(EffectFlag.PASSIVE);
 	}
 	
 	@Override

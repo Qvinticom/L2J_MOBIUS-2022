@@ -17,14 +17,14 @@
 package handlers.effecthandlers;
 
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 
 /**
  * Passive effect implementation.
- * @author Adry_85
+ * @author Mobius
  */
 public final class Passive extends AbstractEffect
 {
@@ -34,25 +34,14 @@ public final class Passive extends AbstractEffect
 	}
 	
 	@Override
-	public void onExit(BuffInfo info)
+	public int getEffectFlags()
 	{
-		info.getEffected().enableAllSkills();
-		info.getEffected().setIsImmobilized(false);
+		return EffectFlag.PASSIVE.getMask();
 	}
 	
 	@Override
 	public boolean canStart(BuffInfo info)
 	{
 		return info.getEffected().isAttackable();
-	}
-	
-	@Override
-	public void onStart(BuffInfo info)
-	{
-		final L2Attackable target = (L2Attackable) info.getEffected();
-		target.abortAttack();
-		target.abortCast();
-		target.disableAllSkills();
-		target.setIsImmobilized(true);
 	}
 }
