@@ -123,7 +123,7 @@ public class NotFriend implements IAffectObjectHandler
 				}
 				
 				// At this point summon should be prevented from attacking friendly targets.
-				if (activeChar.isSummon())
+				if (activeChar.isSummon() && (target == activeChar.getTarget()))
 				{
 					return true;
 				}
