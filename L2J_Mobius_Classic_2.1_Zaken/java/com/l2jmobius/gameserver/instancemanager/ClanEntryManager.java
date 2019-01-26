@@ -36,6 +36,7 @@ import java.util.stream.Collectors;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.CommonUtil;
+import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeApplicantInfo;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeRecruitInfo;
 import com.l2jmobius.gameserver.model.clan.entry.PledgeWaitingInfo;
@@ -97,7 +98,13 @@ public class ClanEntryManager
 		{
 			while (rs.next())
 			{
-				_clanList.put(rs.getInt("clan_id"), new PledgeRecruitInfo(rs.getInt("clan_id"), rs.getInt("karma"), rs.getString("information"), rs.getString("detailed_information"), rs.getInt("application_type"), rs.getInt("recruit_type")));
+				final int clanId = rs.getInt("clan_id");
+				_clanList.put(clanId, new PledgeRecruitInfo(clanId, rs.getInt("karma"), rs.getString("information"), rs.getString("detailed_information"), rs.getInt("application_type"), rs.getInt("recruit_type")));
+				// Remove non existing clan data.
+				if (ClanTable.getInstance().getClan(clanId) == null)
+				{
+					removeFromClanList(clanId);
+				}
 			}
 			LOGGER.info(getClass().getSimpleName() + ": Loaded: " + _clanList.size() + " clan entry");
 		}
