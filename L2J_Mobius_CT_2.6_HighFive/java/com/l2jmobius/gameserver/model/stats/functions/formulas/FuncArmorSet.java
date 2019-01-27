@@ -53,9 +53,10 @@ public class FuncArmorSet extends AbstractFunction
 	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
 	{
 		double value = initVal;
-		final L2PcInstance player = effector.getActingPlayer();
-		if (player != null)
+		// Should not apply armor set bonus to summons.
+		if (effector.isPlayer())
 		{
+			final L2PcInstance player = effector.getActingPlayer();
 			final L2ItemInstance chest = player.getChestArmorInstance();
 			if (chest != null)
 			{

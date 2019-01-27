@@ -49,10 +49,11 @@ public class FuncHenna extends AbstractFunction
 	@Override
 	public double calc(L2Character effector, L2Character effected, Skill skill, double initVal)
 	{
-		final L2PcInstance pc = effector.getActingPlayer();
 		double value = initVal;
-		if (pc != null)
+		// Should not apply henna bonus to summons.
+		if (effector.isPlayer())
 		{
+			final L2PcInstance pc = effector.getActingPlayer();
 			switch (getStat())
 			{
 				case STAT_STR:
