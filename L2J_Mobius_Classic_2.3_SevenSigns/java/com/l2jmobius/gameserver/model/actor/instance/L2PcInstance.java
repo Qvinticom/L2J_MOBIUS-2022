@@ -2359,6 +2359,16 @@ public final class L2PcInstance extends L2Playable
 				sendPacket(SystemMessageId.CONGRATULATIONS_YOU_VE_COMPLETED_A_CLASS_TRANSFER);
 			}
 			
+			// Remove class permitted hennas.
+			for (int slot = 1; slot < 4; slot++)
+			{
+				final L2Henna henna = getHenna(slot);
+				if ((henna != null) && !henna.isAllowedClass(getClassId()))
+				{
+					removeHenna(slot);
+				}
+			}
+			
 			// Update class icon in party and clan
 			if (isInParty())
 			{
