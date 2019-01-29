@@ -904,7 +904,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		}
 		try
 		{
-			if ((target == null) || isAttackingDisabled() || !target.isTargetable())
+			if ((target == null) || (isAttackingDisabled() && !isSummon()) || !target.isTargetable())
 			{
 				return;
 			}
