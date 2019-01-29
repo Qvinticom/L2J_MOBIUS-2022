@@ -424,6 +424,12 @@ public abstract class L2Summon extends L2Playable
 				getAI().stopAITask(); // Calls stopFollow as well.
 			}
 			
+			// Cancel running skill casters.
+			for (SkillCaster skillCaster : getSkillCasters())
+			{
+				skillCaster.stopCasting(true);
+			}
+			
 			stopAllEffects();
 			stopHpMpRegeneration();
 			
