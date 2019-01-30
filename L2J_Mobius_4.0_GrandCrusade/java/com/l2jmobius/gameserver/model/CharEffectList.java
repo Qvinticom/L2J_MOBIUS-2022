@@ -137,7 +137,7 @@ public final class CharEffectList
 	 */
 	public List<BuffInfo> getBuffs()
 	{
-		return _actives.stream().filter(b -> !b.getSkill().getBuffType().isBuff()).collect(Collectors.toList());
+		return _actives.stream().filter(b -> b.getSkill().getBuffType().isBuff()).collect(Collectors.toList());
 	}
 	
 	/**
