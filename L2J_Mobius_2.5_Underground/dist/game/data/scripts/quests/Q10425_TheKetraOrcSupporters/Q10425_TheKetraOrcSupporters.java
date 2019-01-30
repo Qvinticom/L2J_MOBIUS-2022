@@ -40,8 +40,8 @@ public final class Q10425_TheKetraOrcSupporters extends Quest
 {
 	// NPCs
 	private static final int LUGONNES = 33852;
-	private static final int EMBRYO_SHOOTER = 27514;
-	private static final int EMBRYO_WIZARD = 27515;
+	private static final int EMBRYO_SHOOTER = 27511;
+	private static final int EMBRYO_WIZARD = 27512;
 	private static final int[] SHOOTER_MONSTERS =
 	{
 		21327, // Ketra Orc Raider
