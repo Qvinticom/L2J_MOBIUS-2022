@@ -81,3 +81,9 @@ Shadow Weapons.
 Blood Sword Akamanah.
 Command Channel system.
 Dueling system.
+
+
+TODO:
+Use Java 10.
+Drop knownlists -> Use L2World.
+Drop MmoCore -> Use Netty.
