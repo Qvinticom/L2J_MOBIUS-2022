@@ -114,7 +114,6 @@ public class OlympiadManagerLink implements IBypassHandler
 					return false;
 				}
 				
-				int passes;
 				final int val = Integer.parseInt(command.substring(14));
 				switch (val)
 				{
@@ -196,8 +195,7 @@ public class OlympiadManagerLink implements IBypassHandler
 					}
 					case 6: // request tokens reward
 					{
-						passes = Olympiad.getInstance().getNoblessePasses(activeChar, false);
-						if (passes > 0)
+						if (activeChar.getVariables().getInt(Olympiad.UNCLAIMED_OLYMPIAD_PASSES_VAR, 0) > 0)
 						{
 							html.setFile(activeChar, Olympiad.OLYMPIAD_HTML_PATH + "noble_settle.htm");
 							html.replace("%objectId%", String.valueOf(target.getObjectId()));
@@ -232,9 +230,10 @@ public class OlympiadManagerLink implements IBypassHandler
 					}
 					case 10: // give tokens to player
 					{
-						passes = Olympiad.getInstance().getNoblessePasses(activeChar, true);
+						final int passes = activeChar.getVariables().getInt(Olympiad.UNCLAIMED_OLYMPIAD_PASSES_VAR, 0);
 						if (passes > 0)
 						{
+							activeChar.getVariables().remove(Olympiad.UNCLAIMED_OLYMPIAD_PASSES_VAR);
 							final L2ItemInstance item = activeChar.getInventory().addItem("Olympiad", GATE_PASS, passes, activeChar, target);
 							final InventoryUpdate iu = new InventoryUpdate();
 							iu.addModifiedItem(item);

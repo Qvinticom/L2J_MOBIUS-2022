@@ -171,7 +171,7 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			}
 			case "calculatePoints":
 			{
-				if (Olympiad.getInstance().getOlympiadTradePoint(player, false) > 0)
+				if (player.getVariables().getInt(Olympiad.UNCLAIMED_OLYMPIAD_POINTS_VAR, 0) > 0)
 				{
 					htmltext = "OlyManager-calculateEnough.html";
 				}
@@ -185,9 +185,10 @@ public final class OlyManager extends AbstractNpcAI implements IBypassHandler
 			{
 				if (player.isInventoryUnder80(false))
 				{
-					final int tradePoints = Olympiad.getInstance().getOlympiadTradePoint(player, true);
+					final int tradePoints = player.getVariables().getInt(Olympiad.UNCLAIMED_OLYMPIAD_POINTS_VAR, 0);
 					if (tradePoints > 0)
 					{
+						player.getVariables().remove(Olympiad.UNCLAIMED_OLYMPIAD_POINTS_VAR);
 						giveItems(player, Config.ALT_OLY_COMP_RITEM, tradePoints * Config.ALT_OLY_MARK_PER_POINT);
 					}
 				}

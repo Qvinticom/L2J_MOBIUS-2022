@@ -40,6 +40,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.instancemanager.AntiFeedManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Hero;
@@ -72,6 +73,10 @@ public class Olympiad extends ListenersContainer
 	private static final String GET_EACH_CLASS_LEADER_CURRENT = "SELECT characters.char_name from olympiad_nobles, characters WHERE characters.charId = olympiad_nobles.charId AND olympiad_nobles.class_id = ? AND olympiad_nobles.competitions_done >= " + Config.ALT_OLY_MIN_MATCHES + " ORDER BY olympiad_nobles.olympiad_points DESC, olympiad_nobles.competitions_done DESC, olympiad_nobles.competitions_won DESC LIMIT 10";
 	private static final String GET_EACH_CLASS_LEADER_SOULHOUND = "SELECT characters.char_name from olympiad_nobles_eom, characters WHERE characters.charId = olympiad_nobles_eom.charId AND (olympiad_nobles_eom.class_id = ? OR olympiad_nobles_eom.class_id = 133) AND olympiad_nobles_eom.competitions_done >= " + Config.ALT_OLY_MIN_MATCHES + " ORDER BY olympiad_nobles_eom.olympiad_points DESC, olympiad_nobles_eom.competitions_done DESC, olympiad_nobles_eom.competitions_won DESC LIMIT 10";
 	private static final String GET_EACH_CLASS_LEADER_CURRENT_SOULHOUND = "SELECT characters.char_name from olympiad_nobles, characters WHERE characters.charId = olympiad_nobles.charId AND (olympiad_nobles.class_id = ? OR olympiad_nobles.class_id = 133) AND olympiad_nobles.competitions_done >= " + Config.ALT_OLY_MIN_MATCHES + " ORDER BY olympiad_nobles.olympiad_points DESC, olympiad_nobles.competitions_done DESC, olympiad_nobles.competitions_won DESC LIMIT 10";
+	
+	private static final String REMOVE_UNCLAIMED_POINTS = "DELETE FROM character_variables WHERE charId=? AND var=?";
+	private static final String INSERT_UNCLAIMED_POINTS = "INSERT INTO character_variables (charId, var, val) VALUES (?, ?, ?)";
+	public static final String UNCLAIMED_OLYMPIAD_PASSES_VAR = "UNCLAIMED_OLYMPIAD_POINTS";
 	
 	private static final String OLYMPIAD_DELETE_ALL = "TRUNCATE olympiad_nobles";
 	private static final String OLYMPIAD_MONTH_CLEAR = "TRUNCATE olympiad_nobles_eom";
@@ -196,7 +201,7 @@ public class Olympiad extends ListenersContainer
 		
 		if (!loaded)
 		{
-			LOGGER.log(Level.INFO, "Olympiad System: failed to load data from database, trying to load from file.");
+			LOGGER.info("Olympiad System: Failed to load data from database, trying to load from file.");
 			
 			final Properties OlympiadProperties = new Properties();
 			try (InputStream is = new FileInputStream(Config.OLYMPIAD_CONFIG_FILE))
@@ -284,7 +289,7 @@ public class Olympiad extends ListenersContainer
 		
 		synchronized (this)
 		{
-			LOGGER.info("Olympiad System: Loading Olympiad System....");
+			LOGGER.info("Olympiad System: Loading....");
 			if (_period == 0)
 			{
 				LOGGER.info("Olympiad System: Currently in Olympiad Period");
@@ -370,6 +375,48 @@ public class Olympiad extends ListenersContainer
 				NOBLES_RANK.put(chr.getKey(), 5);
 			}
 		}
+		
+		// Store remaining hero reward points to player variables.
+		for (int noblesId : NOBLES.keySet())
+		{
+			final int points = getNoblessePasses(noblesId);
+			if (points > 0)
+			{
+				final L2PcInstance player = L2World.getInstance().getPlayer(noblesId);
+				if (player != null)
+				{
+					player.getVariables().set(UNCLAIMED_OLYMPIAD_PASSES_VAR, points);
+				}
+				else
+				{
+					// Remove previous record.
+					try (Connection con = DatabaseFactory.getConnection();
+						PreparedStatement statement = con.prepareStatement(REMOVE_UNCLAIMED_POINTS))
+					{
+						statement.setInt(1, noblesId);
+						statement.setString(2, UNCLAIMED_OLYMPIAD_PASSES_VAR);
+						statement.execute();
+					}
+					catch (SQLException e)
+					{
+						LOGGER.warning("Olympiad System: Couldn't remove unclaimed olympiad points from DB!");
+					}
+					// Add new value.
+					try (Connection con = DatabaseFactory.getConnection();
+						PreparedStatement statement = con.prepareStatement(INSERT_UNCLAIMED_POINTS))
+					{
+						statement.setInt(1, noblesId);
+						statement.setString(2, UNCLAIMED_OLYMPIAD_PASSES_VAR);
+						statement.setString(3, String.valueOf(points));
+						statement.execute();
+					}
+					catch (SQLException e)
+					{
+						LOGGER.warning("Olympiad System: Couldn't store unclaimed olympiad points to DB!");
+					}
+				}
+			}
+		}
 	}
 	
 	protected void init()
@@ -440,7 +487,6 @@ public class Olympiad extends ListenersContainer
 			sm.addInt(_currentCycle);
 			
 			Broadcast.toAllOnlinePlayers(sm);
-			Broadcast.toAllOnlinePlayers("Olympiad Validation Period has began");
 			
 			if (_scheduledWeeklyTask != null)
 			{
@@ -506,7 +552,7 @@ public class Olympiad extends ListenersContainer
 			
 			LOGGER.info("Olympiad System: Competition Period Starts in " + numDays + " days, " + numHours + " hours and " + numMins + " mins.");
 			
-			LOGGER.info("Olympiad System: Event starts/started : " + _compStart.getTime());
+			LOGGER.info("Olympiad System: Event starts/started: " + _compStart.getTime());
 		}
 		
 		_scheduledCompStart = ThreadPool.schedule(() ->
@@ -519,7 +565,7 @@ public class Olympiad extends ListenersContainer
 			_inCompPeriod = true;
 			
 			Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.SHARPEN_YOUR_SWORDS_TIGHTEN_THE_STITCHING_IN_YOUR_ARMOR_AND_MAKE_HASTE_TO_A_GRAND_OLYMPIAD_MANAGER_BATTLES_IN_THE_GRAND_OLYMPIAD_GAMES_ARE_NOW_TAKING_PLACE));
-			LOGGER.info("Olympiad System: Olympiad Game Started");
+			LOGGER.info("Olympiad System: Olympiad Games have started.");
 			LOGGER_OLYMPIAD.info("Result,Player1,Player2,Player1 HP,Player2 HP,Player1 Damage,Player2 Damage,Points,Classed");
 			
 			_gameManager = ThreadPool.scheduleAtFixedRate(OlympiadGameManager.getInstance(), 30000, 30000);
@@ -542,7 +588,7 @@ public class Olympiad extends ListenersContainer
 				}
 				_inCompPeriod = false;
 				Broadcast.toAllOnlinePlayers(SystemMessage.getSystemMessage(SystemMessageId.MUCH_CARNAGE_HAS_BEEN_LEFT_FOR_THE_CLEANUP_CREW_OF_THE_OLYMPIAD_STADIUM_BATTLES_IN_THE_GRAND_OLYMPIAD_GAMES_ARE_NOW_OVER));
-				LOGGER.info("Olympiad System: Olympiad Game Ended");
+				LOGGER.info("Olympiad System: Olympiad games have ended.");
 				
 				while (OlympiadGameManager.getInstance().isBattleStarted()) // cleared in game manager
 				{
@@ -944,7 +990,7 @@ public class Olympiad extends ListenersContainer
 		}
 		catch (Exception e)
 		{
-			LOGGER.log(Level.WARNING, "Olympiad System: Unable to save olympiad properties to file: ", e);
+			LOGGER.warning("Olympiad System: Unable to save olympiad properties to file: ", e);
 		}
 		*/
 		//@formatter:on
@@ -1120,28 +1166,28 @@ public class Olympiad extends ListenersContainer
 		return names;
 	}
 	
-	public int getNoblessePasses(L2PcInstance player, boolean clear)
+	public int getNoblessePasses(int objectId)
 	{
-		if ((player == null) || (_period != 1) || NOBLES_RANK.isEmpty())
+		if ((_period != 1) || NOBLES_RANK.isEmpty())
 		{
 			return 0;
 		}
 		
-		final int objId = player.getObjectId();
-		if (!NOBLES_RANK.containsKey(objId))
+		if (!NOBLES_RANK.containsKey(objectId))
 		{
 			return 0;
 		}
 		
-		final StatsSet noble = NOBLES.get(objId);
+		final StatsSet noble = NOBLES.get(objectId);
 		if ((noble == null) || (noble.getInt(POINTS) == 0))
 		{
 			return 0;
 		}
 		
-		final int rank = NOBLES_RANK.get(objId);
-		int points = player.isHero() || Hero.getInstance().isUnclaimedHero(player.getObjectId()) ? Config.ALT_OLY_HERO_POINTS : 0;
-		switch (rank)
+		// Hero point bonus
+		int points = Hero.getInstance().isHero(objectId) || Hero.getInstance().isUnclaimedHero(objectId) ? Config.ALT_OLY_HERO_POINTS : 0;
+		// Rank point bonus
+		switch (NOBLES_RANK.get(objectId))
 		{
 			case 1:
 			{
@@ -1169,11 +1215,13 @@ public class Olympiad extends ListenersContainer
 			}
 		}
 		
-		if (clear)
-		{
-			noble.set(POINTS, 0);
-		}
-		return points *= Config.ALT_OLY_GP_PER_POINT;
+		// Win/no win matches point bonus
+		points += getCompetitionWon(objectId) > 0 ? 10 : 5;
+		
+		// This is a one time calculation.
+		noble.set(POINTS, 0);
+		
+		return points;
 	}
 	
 	public int getNoblePoints(int objId)
