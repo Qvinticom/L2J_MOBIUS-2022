@@ -64,7 +64,7 @@ public final class Mp extends AbstractEffect
 			}
 			case PER:
 			{
-				amount = Math.min((effected.getCurrentMp() * _amount) / 100.0, effected.getMaxRecoverableMp() - effected.getCurrentMp());
+				amount = Math.min((effected.getMaxMp() * _amount) / 100.0, effected.getMaxRecoverableMp() - effected.getCurrentMp());
 				break;
 			}
 		}

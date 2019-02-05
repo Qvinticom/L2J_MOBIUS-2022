@@ -497,13 +497,17 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="etcitem_type" val="POTION" />
-		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="21355" level="1" /> <!-- Erupting Vitality XP Potion -->
+		</skills>
 	</item>
 	<item id="23729" name="Erupting Vitality Replenishing Potion" type="EtcItem">
 		<!-- For 1 hr., Vitality Recovery +100%. -->
@@ -512,13 +516,17 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="etcitem_type" val="POTION" />
-		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="21356" level="1" /> <!-- Erupting Vitality Replenishing Potion -->
+		</skills>
 	</item>
 	<item id="23730" name="Erupting Vitality Conservation Potion" type="EtcItem">
 		<!-- For 1 hr., Vitality consumption upon XP gain - 50%. -->
@@ -527,13 +535,17 @@
 		<set name="is_mailable" val="false" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
-		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="is_private_storeable" val="true" />
 		<set name="is_freightable" val="true" />
-		<set name="etcitem_type" val="POTION" />
-		<set name="is_stackable" val="true" />
+		<set name="reuse_delay" val="3600000" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="POTION" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_stackable" val="true" />		
+		<skills>
+			<skill id="21357" level="1" /> <!-- Erupting Vitality Conservation Potion -->
+		</skills>
 	</item>
 	<item id="23731" name="Divine Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- 100% Enchant success rate. Can be enchanted up to +4. When enchanted, P. Atk. for one-handed sword/ blunt, dagger, spear, etc. (A-grade) +4, and two-handed sword/ blunt/ fist, dagger, crossbow +5. P. Atk. for bows +8. M. Atk. for all weapons +3. From +4, P. Atk./ M. Atk. Increase twofold. -->

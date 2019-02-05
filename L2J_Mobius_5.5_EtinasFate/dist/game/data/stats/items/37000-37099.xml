@@ -133,6 +133,9 @@
 	<item id="37008" name="Strawberry Cake (HP)" type="EtcItem">
 		<!-- Restores HP by 50%. Cooldown is 2 min. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_3_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="120000" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -146,6 +149,9 @@
 	<item id="37009" name="Blueberry Cake (MP)" type="EtcItem">
 		<!-- Restores MP by 20%. Cooldown is 2 min. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_2_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="120000" />
 		<set name="weight" val="2" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -158,6 +164,9 @@
 	<item id="37010" name="Cheese Cake (CP)" type="EtcItem">
 		<!-- Restores CP by 50%. Cooldown is 2 min. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_cake_1_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="reuse_delay" val="120000" />
 		<set name="weight" val="2" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />

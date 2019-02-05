@@ -64,7 +64,7 @@ public final class Hp extends AbstractEffect
 			}
 			case PER:
 			{
-				amount = Math.min((effected.getCurrentHp() * _amount) / 100.0, effected.getMaxRecoverableHp() - effected.getCurrentHp());
+				amount = Math.min((effected.getMaxHp() * _amount) / 100.0, effected.getMaxRecoverableHp() - effected.getCurrentHp());
 				break;
 			}
 		}

@@ -933,23 +933,30 @@
 	<skill id="21355" toLevel="1" name="Erupting Vitality XP Potion">
 		<!-- For 1 hr., Vitality XP Bonus +100%. Cooldown is 1 hr. -->
 		<icon>icon.etc_potion_red_i00</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23728</itemConsumeId> <!-- Erupting Vitality XP Potion -->
 		<operateType>A2</operateType>
-		<hitTime>3000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<abnormalType>VP_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<hitCancelTime>0</hitCancelTime>
-		<activateRate>0</activateRate>
 		<abnormalLvl>26</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
-		<trait>ETC</trait>
+		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<blockActionUseSkill>true</blockActionUseSkill>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="OpCheckAbnormal">
+				<type>VP_UP</type>
+				<level>26</level>
+				<hasAbnormal>false</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="VitalityExpRate">
 				<amount>100</amount>
@@ -960,23 +967,30 @@
 	<skill id="21356" toLevel="1" name="Erupting Vitality Replenishing Potion">
 		<!-- For 1 hr., Vitality Recovery +100%. Cooldown is 1 hr. -->
 		<icon>icon.etc_potion_blue_i00</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23729</itemConsumeId> <!-- Erupting Vitality Replenishing Potion -->
 		<operateType>A2</operateType>
-		<hitTime>3000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<abnormalType>VP_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<hitCancelTime>0</hitCancelTime>
-		<activateRate>0</activateRate>
 		<abnormalLvl>26</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
-		<trait>ETC</trait>
+		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<blockActionUseSkill>true</blockActionUseSkill>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="OpCheckAbnormal">
+				<type>VP_UP</type>
+				<level>26</level>
+				<hasAbnormal>false</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>-100</amount>
@@ -987,23 +1001,30 @@
 	<skill id="21357" toLevel="1" name="Erupting Vitality Conservation Potion">
 		<!-- For 1 hr., Vitality consumption upon XP gain -50%. Cooldown is 1 hr. -->
 		<icon>icon.etc_potion_yellow_i00</icon>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>23730</itemConsumeId> <!-- Erupting Vitality Conservation Potion -->
 		<operateType>A2</operateType>
-		<hitTime>3000</hitTime>
 		<reuseDelay>3600000</reuseDelay>
 		<abnormalType>VP_UP</abnormalType>
-		<basicProperty>NONE</basicProperty>
-		<magicCriticalRate>5</magicCriticalRate>
 		<specialLevel>-1</specialLevel>
-		<hitCancelTime>0</hitCancelTime>
-		<activateRate>0</activateRate>
 		<abnormalLvl>26</abnormalLvl>
-		<abnormalTime>300</abnormalTime>
-		<trait>ETC</trait>
+		<abnormalTime>3600</abnormalTime>
 		<irreplacableBuff>true</irreplacableBuff>
-		<blockActionUseSkill>true</blockActionUseSkill>
+		<staticReuse>true</staticReuse>
+		<abnormalVisualEffect>VP_UP</abnormalVisualEffect>
 		<isMagic>4</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="CanRestoreVitalPoint" />
+			<condition name="CanUseVitalityConsumeItem" />
+			<condition name="OpCheckAbnormal">
+				<type>VP_UP</type>
+				<level>26</level>
+				<hasAbnormal>false</hasAbnormal>
+				<affectType>CASTER</affectType>
+			</condition>
+		</conditions>
 		<effects>
 			<effect name="VitalityPointsRate">
 				<amount>50</amount>

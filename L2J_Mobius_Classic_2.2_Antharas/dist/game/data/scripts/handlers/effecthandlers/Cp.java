@@ -64,7 +64,7 @@ public final class Cp extends AbstractEffect
 			}
 			case PER:
 			{
-				amount = Math.min((effected.getCurrentCp() * _amount) / 100.0, effected.getMaxRecoverableCp() - effected.getCurrentCp());
+				amount = Math.min((effected.getMaxCp() * _amount) / 100.0, effected.getMaxRecoverableCp() - effected.getCurrentCp());
 				break;
 			}
 		}
