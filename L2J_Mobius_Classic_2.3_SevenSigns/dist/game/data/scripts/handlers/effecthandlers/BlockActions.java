@@ -73,11 +73,18 @@ public final class BlockActions extends AbstractEffect
 			{
 				if ((effector != null) && !effector.isDead())
 				{
-					((L2Summon) effected).doAutoAttack(effector);
+					if (effector.isPlayable() && (effected.getActingPlayer().getPvpFlag() == 0))
+					{
+						effected.disableCoreAI(false);
+					}
+					else
+					{
+						((L2Summon) effected).doAutoAttack(effector);
+					}
 				}
 				else
 				{
-					effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, effected.getActingPlayer());
+					effected.disableCoreAI(false);
 				}
 			}
 			else

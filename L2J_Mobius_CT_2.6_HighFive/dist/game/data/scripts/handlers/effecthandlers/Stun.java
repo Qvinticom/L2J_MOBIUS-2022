@@ -59,7 +59,14 @@ public final class Stun extends AbstractEffect
 			final L2Character effector = info.getEffector();
 			if ((effector != null) && !effector.isDead())
 			{
-				((L2Summon) effected).doSummonAttack(effector);
+				if (effector.isPlayable() && (effected.getActingPlayer().getPvpFlag() == 0))
+				{
+					effected.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, effected.getActingPlayer());
+				}
+				else
+				{
+					((L2Summon) effected).doSummonAttack(effector);
+				}
 			}
 			else
 			{
