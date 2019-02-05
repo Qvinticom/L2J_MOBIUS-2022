@@ -37,7 +37,7 @@ public class CanSummonSkillCondition implements ISkillCondition
 	public boolean canUse(L2Character caster, Skill skill, L2Object target)
 	{
 		final L2PcInstance player = caster.getActingPlayer();
-		if (player == null)
+		if ((player == null) || player.isSpawnProtected() || player.isTeleportProtected())
 		{
 			return false;
 		}

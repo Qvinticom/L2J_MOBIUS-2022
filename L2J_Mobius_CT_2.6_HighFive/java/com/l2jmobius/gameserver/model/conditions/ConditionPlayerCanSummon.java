@@ -41,7 +41,7 @@ public class ConditionPlayerCanSummon extends Condition
 	public boolean testImpl(L2Character effector, L2Character effected, Skill skill, L2Item item)
 	{
 		final L2PcInstance player = effector.getActingPlayer();
-		if (player == null)
+		if ((player == null) || player.isSpawnProtected() || player.isTeleportProtected())
 		{
 			return false;
 		}
