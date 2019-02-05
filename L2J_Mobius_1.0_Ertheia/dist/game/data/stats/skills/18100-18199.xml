@@ -153,10 +153,22 @@
 	<skill id="18118" toLevel="1" name="Appearance Stone: Cat Fighter (Ertheia Only)">
 		<!-- Changes the appearance of a fist weapon into that of a Cat Fighter. -->
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18119" toLevel="1" name="Appearance Stone: Cat Staff (Ertheia Only)">
 		<!-- Changes the appearance of a staff into a Cat Staff. -->
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="18120" toLevel="1" name="Supply Box (R-grade)">
 		<!-- Double-click to obtain a random normal/blessed weapon/armor/accessory (R-grade). -->

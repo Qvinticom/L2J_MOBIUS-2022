@@ -1724,18 +1724,36 @@
 		<set name="icon" val="icon.shape_shifting_zariche_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<skills>
+			<skill id="17164" level="1" /> <!-- Demonic Sword Zariche Appearance Stone -->
+		</skills>
 	</item>
 	<item id="37675" name="Scroll: Modify Blood Sword Akamanah" type="EtcItem">
 		<!-- Scroll that modifies the appearance of a dual sword to that of the Blood Sword Akamanah. 30-day. -->
 		<set name="icon" val="icon.shape_shifting_aka_manaf_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_commissionable" val="false" />
+		<set name="is_private_storeable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SHAPE_SHIFTING_WP_FIXED" />
 		<set name="is_stackable" val="true" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<skills>
+			<skill id="17165" level="1" /> <!-- Blood Sword Akamanah Appearance Stone -->
+		</skills>
 	</item>
 	<item id="37676" name="Coin of Knowledge" type="EtcItem">
 		<!-- You are full of knowledge!. You can purchase useful items through the Adventurers' Guide. -->

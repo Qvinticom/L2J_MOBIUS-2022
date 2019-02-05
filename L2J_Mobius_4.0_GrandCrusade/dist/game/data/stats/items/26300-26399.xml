@@ -624,28 +624,23 @@
 	<item id="26359" name="Automatic Appearance Stone: Tears Weapon" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Tears Weapons of corresponding types for 30 days. Can be used on shields and sigils. Double-click to use. Note: Appearance may reset when the Change Weapon skill is used. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
-		<set name="is_stackable" val="true" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
-		<set name="time" val="43200" />
+		<set name="etcitem_type" val="SCROLL" />
+		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26360" name="Automatic Appearance Stone: Tears Weapon" type="EtcItem">
 		<!-- Changes the appearance of all weapons into those of Tears Weapons of corresponding types. Can be used on shields and sigils. Double-click to use. Note: Appearance may reset when the Change Weapon skill is used. -->
 		<set name="icon" val="BranchSys3.icon1.g_auto_shape_shift_stone" />
-		<set name="is_clan_depositable" val="false" />
-		<set name="is_mailable" val="false" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
-		<set name="is_private_storeable" val="false" />
+		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="26361" name="Metal Suit Hair Accessory Appearance Stone" additionalName="30-day" type="EtcItem">

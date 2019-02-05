@@ -623,9 +623,21 @@
 	</skill>
 	<skill id="17164" toLevel="1" name="Demonic Sword Zariche Appearance Stone">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="17165" toLevel="1" name="Blood Sword Akamanah Appearance Stone">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="17166" toLevel="1" name="GM's Blessing - Knight's Harmony">
 		<!-- The GM is always by your side. For $s1, P. Def +$s2, M. Def +$s3, P. Critical Rate/ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense Rate +$s6, and Shield Def. +$s7. -->
