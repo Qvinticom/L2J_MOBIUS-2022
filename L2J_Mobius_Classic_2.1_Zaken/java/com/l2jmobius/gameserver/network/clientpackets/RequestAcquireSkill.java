@@ -608,7 +608,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				{
 					for (SkillHolder skill : skillLearn.getPreReqSkills())
 					{
-						if (player.getSkillLevel(skill.getSkillId()) != skill.getSkillLevel())
+						if (player.getSkillLevel(skill.getSkillId()) < skill.getSkillLevel())
 						{
 							if (skill.getSkillId() == CommonSkill.ONYX_BEAST_TRANSFORMATION.getId())
 							{
