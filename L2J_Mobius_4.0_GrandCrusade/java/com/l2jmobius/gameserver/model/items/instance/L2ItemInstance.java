@@ -786,6 +786,10 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isDropable()
 	{
+		if (Config.ALT_ALLOW_AUGMENT_TRADE && isAugmented())
+		{
+			return true;
+		}
 		return !isAugmented() && _item.isDropable();
 	}
 	
@@ -795,6 +799,10 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isDestroyable()
 	{
+		if (!Config.ALT_ALLOW_AUGMENT_DESTROY && isAugmented())
+		{
+			return false;
+		}
 		return _item.isDestroyable();
 	}
 	
@@ -804,6 +812,10 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isTradeable()
 	{
+		if (Config.ALT_ALLOW_AUGMENT_TRADE && isAugmented())
+		{
+			return true;
+		}
 		return !isAugmented() && _item.isTradeable();
 	}
 	
@@ -813,6 +825,10 @@ public final class L2ItemInstance extends L2Object
 	 */
 	public boolean isSellable()
 	{
+		if (Config.ALT_ALLOW_AUGMENT_TRADE && isAugmented())
+		{
+			return true;
+		}
 		return !isAugmented() && _item.isSellable();
 	}
 	

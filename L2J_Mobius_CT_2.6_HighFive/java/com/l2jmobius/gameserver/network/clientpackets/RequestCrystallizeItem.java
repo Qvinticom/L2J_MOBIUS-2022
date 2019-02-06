@@ -95,14 +95,9 @@ public final class RequestCrystallizeItem implements IClientIncomingPacket
 		if (inventory != null)
 		{
 			final L2ItemInstance item = inventory.getItemByObjectId(_objectId);
-			if (item == null)
+			if ((item == null) || item.isHeroItem() || (!Config.ALT_ALLOW_AUGMENT_DESTROY && item.isAugmented()))
 			{
 				activeChar.sendPacket(ActionFailed.STATIC_PACKET);
-				return;
-			}
-			
-			if (item.isHeroItem())
-			{
 				return;
 			}
 			

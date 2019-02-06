@@ -86,13 +86,7 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		}
 		
 		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
-		if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem())
-		{
-			client.sendPacket(ActionFailed.STATIC_PACKET);
-			return;
-		}
-		
-		if (item.isHeroItem())
+		if ((item == null) || item.isShadowItem() || item.isTimeLimitedItem() || item.isHeroItem() || (!Config.ALT_ALLOW_AUGMENT_DESTROY && item.isAugmented()))
 		{
 			client.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -189,6 +183,5 @@ public class RequestCrystallizeEstimate implements IClientIncomingPacket
 		{
 			client.sendPacket(SystemMessageId.CRYSTALLIZATION_CANNOT_BE_PROCEEDED_BECAUSE_THERE_ARE_NO_ITEMS_REGISTERED);
 		}
-		
 	}
 }

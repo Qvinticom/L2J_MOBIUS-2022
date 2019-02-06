@@ -807,6 +807,8 @@ public final class Config
 	public static boolean DISABLE_OVER_ENCHANTING;
 	public static int[] AUGMENTATION_BLACKLIST;
 	public static boolean ALT_ALLOW_AUGMENT_PVP_ITEMS;
+	public static boolean ALT_ALLOW_AUGMENT_TRADE;
+	public static boolean ALT_ALLOW_AUGMENT_DESTROY;
 	public static double HP_REGEN_MULTIPLIER;
 	public static double MP_REGEN_MULTIPLIER;
 	public static double CP_REGEN_MULTIPLIER;
@@ -1578,6 +1580,8 @@ public final class Config
 			
 			Arrays.sort(AUGMENTATION_BLACKLIST);
 			ALT_ALLOW_AUGMENT_PVP_ITEMS = Character.getBoolean("AltAllowAugmentPvPItems", false);
+			ALT_ALLOW_AUGMENT_TRADE = Character.getBoolean("AltAllowAugmentTrade", false);
+			ALT_ALLOW_AUGMENT_DESTROY = Character.getBoolean("AltAllowAugmentDestroy", true);
 			ALT_GAME_KARMA_PLAYER_CAN_BE_KILLED_IN_PEACEZONE = Character.getBoolean("AltKarmaPlayerCanBeKilledInPeaceZone", false);
 			ALT_GAME_KARMA_PLAYER_CAN_SHOP = Character.getBoolean("AltKarmaPlayerCanShop", true);
 			ALT_GAME_KARMA_PLAYER_CAN_TELEPORT = Character.getBoolean("AltKarmaPlayerCanTeleport", true);
