@@ -65,7 +65,6 @@ public final class UseItem extends L2GameClientPacket
 		}
 		
 		final L2ItemInstance item = activeChar.getInventory().getItemByObjectId(_objectId);
-		
 		if (item == null)
 		{
 			return;
@@ -200,35 +199,35 @@ public final class UseItem extends L2GameClientPacket
 		// A shield that can only be used by the members of a clan that owns a castle.
 		if (((cl == null) || (cl.getHasCastle() == 0)) && (itemId == 7015) && Config.CASTLE_SHIELD && !activeChar.isGM())
 		{
-			activeChar.sendMessage("You can't equip that");
+			activeChar.sendMessage("You can't equip that.");
 			return;
 		}
 		
 		// A shield that can only be used by the members of a clan that owns a clan hall.
 		if (((cl == null) || (cl.getHasHideout() == 0)) && (itemId == 6902) && Config.CLANHALL_SHIELD && !activeChar.isGM())
 		{
-			activeChar.sendMessage("You can't equip that");
+			activeChar.sendMessage("You can't equip that.");
 			return;
 		}
 		
 		// Apella armor used by clan members may be worn by a Baron or a higher level Aristocrat.
 		if ((itemId >= 7860) && (itemId <= 7879) && Config.APELLA_ARMORS && ((cl == null) || (activeChar.getPledgeClass() < 5)) && !activeChar.isGM())
 		{
-			activeChar.sendMessage("You can't equip that");
+			activeChar.sendMessage("You can't equip that.");
 			return;
 		}
 		
 		// Clan Oath armor used by all clan members
 		if ((itemId >= 7850) && (itemId <= 7859) && Config.OATH_ARMORS && (cl == null) && !activeChar.isGM())
 		{
-			activeChar.sendMessage("You can't equip that");
+			activeChar.sendMessage("You can't equip that.");
 			return;
 		}
 		
 		// The Lord's Crown used by castle lords only
 		if ((itemId == 6841) && Config.CASTLE_CROWN && ((cl == null) || (cl.getHasCastle() == 0) || !activeChar.isClanLeader()) && !activeChar.isGM())
 		{
-			activeChar.sendMessage("You can't equip that");
+			activeChar.sendMessage("You can't equip that.");
 			return;
 		}
 		
@@ -243,14 +242,14 @@ public final class UseItem extends L2GameClientPacket
 		{
 			if (cl == null)
 			{
-				activeChar.sendMessage("You can't equip that");
+				activeChar.sendMessage("You can't equip that.");
 				return;
 			}
 			
 			final int circletId = CastleManager.getInstance().getCircletByCastleId(cl.getHasCastle());
 			if ((activeChar.getPledgeType() == -1) || (circletId != itemId))
 			{
-				activeChar.sendMessage("You can't equip that");
+				activeChar.sendMessage("You can't equip that.");
 				return;
 			}
 		}
