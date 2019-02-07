@@ -1456,7 +1456,7 @@ public final class SkillTreesData implements IGameXmlReader
 			final int maxLvl = SkillData.getInstance().getMaxLevel(skill.getId());
 			final long hashCode = SkillData.getSkillHashCode(skill.getId(), maxLvl);
 			
-			if (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isRemoveSkill(player.getClassId(), skill.getId()) && !isAwakenSaveSkill(player.getClassId(), skill.getId()))
+			if (!isCurrentClassSkillNoParent(player.getClassId(), hashCode) && !isRemoveSkill(player.getClassId(), skill.getId()) && !isAwakenSaveSkill(player.getClassId(), skill.getId()) && !isAlchemySkill(skill.getId(), skill.getLevel()))
 			{
 				player.removeSkill(skill, true, true);
 			}
