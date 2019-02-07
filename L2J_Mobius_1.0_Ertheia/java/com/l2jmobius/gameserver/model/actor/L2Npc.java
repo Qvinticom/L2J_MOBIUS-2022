@@ -505,7 +505,7 @@ public class L2Npc extends L2Character
 		{
 			return false;
 		}
-		else if (player.isSitting() && (getId() != 34200)) // Mystic Tavern Globe requires player sitting
+		else if (player.isSitting())
 		{
 			return false;
 		}
