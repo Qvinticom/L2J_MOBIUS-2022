@@ -55,26 +55,6 @@ public final class UseItem implements IClientIncomingPacket
 	private boolean _ctrlPressed;
 	private int _itemId;
 	
-	/** Weapon Equip Task */
-	private static class WeaponEquipTask implements Runnable
-	{
-		private final L2ItemInstance item;
-		private final L2PcInstance activeChar;
-		
-		protected WeaponEquipTask(L2ItemInstance it, L2PcInstance character)
-		{
-			item = it;
-			activeChar = character;
-		}
-		
-		@Override
-		public void run()
-		{
-			// Equip or unEquip
-			activeChar.useEquippableItem(item, false);
-		}
-	}
-	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
@@ -315,7 +295,18 @@ public final class UseItem implements IClientIncomingPacket
 			}
 			else if (activeChar.isAttackingNow())
 			{
-				ThreadPool.schedule(new WeaponEquipTask(item, activeChar), TimeUnit.MILLISECONDS.convert(activeChar.getAttackEndTime() - System.nanoTime(), TimeUnit.NANOSECONDS));
+				ThreadPool.schedule(() ->
+				{
+					// Check if the item is still on inventory.
+					final L2ItemInstance equipItem = activeChar.getInventory().getItemByObjectId(_objectId);
+					if (equipItem == null)
+					{
+						return;
+					}
+					
+					// Equip or unEquip.
+					activeChar.useEquippableItem(equipItem, false);
+				}, TimeUnit.MILLISECONDS.convert(activeChar.getAttackEndTime() - System.nanoTime(), TimeUnit.NANOSECONDS));
 			}
 			else
 			{

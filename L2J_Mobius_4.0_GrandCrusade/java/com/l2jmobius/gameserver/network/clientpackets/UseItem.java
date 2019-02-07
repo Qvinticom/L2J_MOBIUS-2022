@@ -243,21 +243,22 @@ public final class UseItem implements IClientIncomingPacket
 			
 			if (activeChar.isCastingNow())
 			{
-				// Create and Bind the next action to the AI
+				// Create and Bind the next action to the AI.
 				activeChar.getAI().setNextAction(new NextAction(CtrlEvent.EVT_FINISH_CASTING, CtrlIntention.AI_INTENTION_CAST, () -> activeChar.useEquippableItem(item, true)));
 			}
 			else if (activeChar.isAttackingNow())
 			{
 				ThreadPool.schedule(() ->
 				{
-					// Removed for preventing retail behavior.
-					// if (activeChar.isAttackingNow()) // If character is still engaged in strike we should not change weapon
-					// {
-					// return;
-					// }
+					// Check if the item is still on inventory.
+					final L2ItemInstance equipItem = activeChar.getInventory().getItemByObjectId(_objectId);
+					if (equipItem == null)
+					{
+						return;
+					}
 					
-					// Equip or unEquip
-					activeChar.useEquippableItem(item, false);
+					// Equip or unEquip.
+					activeChar.useEquippableItem(equipItem, false);
 				}, activeChar.getAttackEndTime() - TimeUnit.MILLISECONDS.toNanos(System.currentTimeMillis()));
 			}
 			else
