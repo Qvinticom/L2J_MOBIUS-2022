@@ -2844,7 +2844,7 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (checkCast && isCastingNow())
 		{
-			sendMessage("Cannot sit while casting");
+			sendMessage("Cannot sit while casting.");
 			return;
 		}
 		
