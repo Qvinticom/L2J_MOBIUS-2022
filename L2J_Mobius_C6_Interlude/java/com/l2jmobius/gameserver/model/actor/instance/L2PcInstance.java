@@ -18312,4 +18312,10 @@ public final class L2PcInstance extends L2Playable
 		}
 		_currentPetSkill = new SkillDat(currentSkill, ctrlPressed, shiftPressed);
 	}
+	
+	@Override
+	public boolean isPlayer()
+	{
+		return true;
+	}
 }

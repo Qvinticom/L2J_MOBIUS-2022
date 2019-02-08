@@ -135,12 +135,6 @@ public class WayPointNode extends L2Object
 		changeID(Config.SELECTED_NODE_ID, SELECTED);
 	}
 	
-	@Override
-	public boolean isMarker()
-	{
-		return true;
-	}
-	
 	public final String getTitle()
 	{
 		return _title;

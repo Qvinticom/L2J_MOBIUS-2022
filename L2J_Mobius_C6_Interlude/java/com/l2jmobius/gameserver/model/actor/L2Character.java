@@ -2313,26 +2313,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 	}
 	
 	/**
-	 * Return True if the L2Character is RaidBoss or his minion.
-	 * @return true, if is raid
-	 */
-	@Override
-	public boolean isRaid()
-	{
-		return false;
-	}
-	
-	/**
-	 * Return True if the L2Character is an Npc.
-	 * @return true, if is npc
-	 */
-	@Override
-	public boolean isNpc()
-	{
-		return false;
-	}
-	
-	/**
 	 * Return a list of L2Character that attacked.
 	 * @return the attack by list
 	 */

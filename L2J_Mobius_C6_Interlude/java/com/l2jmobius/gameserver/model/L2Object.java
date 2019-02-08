@@ -453,17 +453,7 @@ public abstract class L2Object
 		}
 	}
 	
-	public boolean isAttackable()
-	{
-		return false;
-	}
-	
 	public abstract boolean isAutoAttackable(L2Character attacker);
-	
-	public boolean isMarker()
-	{
-		return false;
-	}
 	
 	/**
 	 * <B><U> Concept</U> :</B><BR>
@@ -647,6 +637,11 @@ public abstract class L2Object
 	}
 	
 	public boolean isMinion()
+	{
+		return false;
+	}
+	
+	public boolean isAttackable()
 	{
 		return false;
 	}
