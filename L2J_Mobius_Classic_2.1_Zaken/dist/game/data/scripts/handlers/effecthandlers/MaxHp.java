@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -39,20 +40,26 @@ public class MaxHp extends AbstractStatEffect
 	@Override
 	public void continuousInstant(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
-		if (_heal && !effected.isHpBlocked())
+		if (_heal)
 		{
-			switch (_mode)
+			if (!effected.isHpBlocked())
 			{
-				case DIFF:
+				ThreadPool.schedule(() ->
 				{
-					effected.setCurrentHp(effected.getCurrentHp() + _amount);
-					break;
-				}
-				case PER:
-				{
-					effected.setCurrentHp(effected.getCurrentHp() + (effected.getMaxHp() * (_amount / 100)));
-					break;
-				}
+					switch (_mode)
+					{
+						case DIFF:
+						{
+							effected.setCurrentHp(effected.getCurrentHp() + _amount);
+							break;
+						}
+						case PER:
+						{
+							effected.setCurrentHp(effected.getCurrentHp() + (effected.getMaxHp() * (_amount / 100)));
+							break;
+						}
+					}
+				}, 100);
 			}
 		}
 	}
