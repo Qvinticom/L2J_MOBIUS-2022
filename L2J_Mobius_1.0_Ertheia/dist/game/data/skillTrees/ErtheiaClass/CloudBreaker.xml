@@ -2,6 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Cloud Breaker -->
 	<skillTree type="classSkillTree" classId="185" parentClassId="183">
+		<skill skillName="Alchemy Cube" skillId="17943" skillLvl="1" getLevel="40" autoGet="true" />
+		
 		<skill skillName="Eminent Ability" skillId="30045" skillLvl="1" getLevel="40" levelUpSp="42" />
 		<skill skillName="Eminent Ability" skillId="30045" skillLvl="2" getLevel="76" levelUpSp="3000" />
 		<skill skillName="Eminent Ability" skillId="30045" skillLvl="3" getLevel="85" levelUpSp="15000" />
