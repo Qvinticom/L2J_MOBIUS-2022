@@ -2,6 +2,8 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skillTrees.xsd">
 	<!-- Marauder -->
 	<skillTree type="classSkillTree" classId="184" parentClassId="182">
+		<skill skillName="Alchemy Cube" skillId="17943" skillLvl="1" getLevel="40" autoGet="true" />
+		
 		<skill skillName="Eminent Attack Movement" skillId="30522" skillLvl="1" getLevel="40" levelUpSp="42" />
 		<skill skillName="Eminent Ability" skillId="30545" skillLvl="1" getLevel="40" levelUpSp="42" />
 		<skill skillName="Eminent Ability" skillId="30545" skillLvl="2" getLevel="76" levelUpSp="3000" />
