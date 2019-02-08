@@ -34,7 +34,6 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.crypt.NewCrypt;
-import com.l2jmobius.commons.util.Util;
 import com.l2jmobius.loginserver.GameServerTable.GameServerInfo;
 import com.l2jmobius.loginserver.network.gameserverpackets.BlowFishKey;
 import com.l2jmobius.loginserver.network.gameserverpackets.ChangeAccessLevel;
@@ -153,11 +152,6 @@ public class GameServerThread extends Thread
 					return;
 				}
 				
-				if (Config.DEBUG)
-				{
-					LOGGER.warning("[C]\n" + Util.printData(data));
-				}
-				
 				final int packetType = data[0] & 0xff;
 				switch (packetType)
 				{
@@ -226,42 +220,19 @@ public class GameServerThread extends Thread
 	
 	private void onReceiveBlowfishKey(byte[] data)
 	{
-		/*
-		 * if (_blowfish == null) {
-		 */
 		BlowFishKey bfk = new BlowFishKey(data, _privateKey);
 		_blowfishKey = bfk.getKey();
 		_blowfish = new NewCrypt(_blowfishKey);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("New BlowFish key received, Blowfih Engine initialized:");
-		}
-		/*
-		 * } else { LOGGER.warning("GameServer attempted to re-initialize the blowfish key."); // TODO get a better reason this.forceClose(LoginServerFail.NOT_AUTHED); }
-		 */
 	}
 	
 	private void onGameServerAuth(byte[] data) throws IOException
 	{
-		GameServerAuth gsa = new GameServerAuth(data);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Auth request received");
-		}
-		
-		handleRegProcess(gsa);
+		handleRegProcess(new GameServerAuth(data));
 		
 		if (isAuthed())
 		{
 			AuthResponse ar = new AuthResponse(_gsi.getId());
 			sendPacket(ar);
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Authed: id: " + _gsi.getId());
-			}
 		}
 	}
 	
@@ -275,11 +246,6 @@ public class GameServerThread extends Thread
 			for (String account : newAccounts)
 			{
 				_accountsOnGameServer.add(account);
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Account " + account + " logged in GameServer: [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()));
-				}
 			}
 		}
 		else
@@ -294,11 +260,6 @@ public class GameServerThread extends Thread
 		{
 			PlayerLogout plo = new PlayerLogout(data);
 			_accountsOnGameServer.remove(plo.getAccount());
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Player " + plo.getAccount() + " logged out from gameserver [" + getServerId() + "] " + GameServerTable.getInstance().getServerNameById(getServerId()));
-			}
 		}
 		else
 		{
@@ -326,32 +287,15 @@ public class GameServerThread extends Thread
 		{
 			PlayerAuthRequest par = new PlayerAuthRequest(data);
 			PlayerAuthResponse authResponse;
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("auth request received for Player " + par.getAccount());
-			}
-			
 			SessionKey key = LoginController.getInstance().getKeyForAccount(par.getAccount());
 			
 			if ((key != null) && key.equals(par.getKey()))
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("auth request: OK");
-				}
-				
 				LoginController.getInstance().removeAuthedLoginClient(par.getAccount());
 				authResponse = new PlayerAuthResponse(par.getAccount(), true);
 			}
 			else
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("auth request: NO");
-					LOGGER.info("session key from self: " + key);
-					LOGGER.info("session key sent: " + par.getKey());
-				}
 				authResponse = new PlayerAuthResponse(par.getAccount(), false);
 			}
 			sendPacket(authResponse);
@@ -366,11 +310,7 @@ public class GameServerThread extends Thread
 	{
 		if (isAuthed())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("ServerStatus received");
-			}
-			/* ServerStatus ss = */new ServerStatus(data, getServerId()); // server status
+			new ServerStatus(data, getServerId()); // server status
 		}
 		else
 		{
@@ -536,11 +476,6 @@ public class GameServerThread extends Thread
 	{
 		byte[] data = sl.getContent();
 		NewCrypt.appendChecksum(data);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("[S] " + sl.getClass().getSimpleName() + ":\n" + Util.printData(data));
-		}
 		data = _blowfish.crypt(data);
 		
 		final int len = data.length + 2;

@@ -108,11 +108,6 @@ public final class Say2 extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Say2: Msg Type = '" + _type + "' Text = '" + _text + "'.");
-		}
-		
 		if ((_type < 0) || (_type >= CHAT_NAMES.length))
 		{
 			LOGGER.warning("Say2: Invalid type: " + _type);
@@ -168,10 +163,6 @@ public final class Say2 extends L2GameClientPacket
 		
 		if (_text.length() > Config.MAX_CHAT_LENGTH)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Say2: Msg Type = '" + _type + "' Text length more than " + Config.MAX_CHAT_LENGTH + " truncate them.");
-			}
 			_text = _text.substring(0, Config.MAX_CHAT_LENGTH);
 			// return;
 		}
@@ -473,10 +464,6 @@ public final class Say2 extends L2GameClientPacket
 					else
 					{
 						command = _text.substring(1);
-						if (Config.DEBUG)
-						{
-							LOGGER.info("Command: " + command);
-						}
 						vch = VoicedCommandHandler.getInstance().getVoicedCommandHandler(command);
 					}
 					if (vch != null)

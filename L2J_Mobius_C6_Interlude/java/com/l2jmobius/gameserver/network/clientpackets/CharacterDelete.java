@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameServer;
 import com.l2jmobius.gameserver.network.serverpackets.CharDeleteFail;
 import com.l2jmobius.gameserver.network.serverpackets.CharDeleteOk;
@@ -44,11 +43,6 @@ public final class CharacterDelete extends L2GameClientPacket
 		if (!getClient().getFloodProtectors().getCharacterSelect().tryPerformAction("CharacterDelete"))
 		{
 			return;
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("DEBUG " + getType() + ": deleting slot:" + _charSlot);
 		}
 		
 		try

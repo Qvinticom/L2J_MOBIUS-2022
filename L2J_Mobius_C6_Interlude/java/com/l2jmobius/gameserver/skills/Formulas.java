@@ -20,7 +20,6 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.commons.util.StringUtil;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import com.l2jmobius.gameserver.instancemanager.ClassDamageManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
@@ -1230,12 +1229,6 @@ public final class Formulas
 		
 		// Check the distance between the player and the player spawn point, in the center of the arena.
 		final double distToCenter = activeChar.getDistance(festivalCenter[0], festivalCenter[1]);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Distance: " + distToCenter + ", RegenMulti: " + ((distToCenter * 2.5) / 50));
-		}
-		
 		return 1.0 - (distToCenter * 0.0005); // Maximum Decreased Regen of ~ -65%;
 	}
 	
@@ -1291,14 +1284,6 @@ public final class Formulas
 			// double cAtkMultiplied = (damage) + attacker.calcStat(Stats.CRITICAL_DAMAGE, damage, target, skill);
 			final double improvedDamageByCriticalVuln = target.calcStat(Stats.CRIT_VULN, damage, target, skill);
 			final double improvedDamageByCriticalVulnAndAdd = (attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, improvedDamageByCriticalVuln, target, skill));
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Attacker '" + attacker.getName() + "' Dagger Critical Damage Debug:");
-				LOGGER.info("	-	Initial Damage:  " + damage);
-				LOGGER.info("	-	improvedDamageByCriticalVuln: " + improvedDamageByCriticalVuln);
-				LOGGER.info("	-	improvedDamageByCriticalVulnAndAdd: " + improvedDamageByCriticalVulnAndAdd);
-			}
 			
 			damage = improvedDamageByCriticalVulnAndAdd;
 			
@@ -1544,17 +1529,6 @@ public final class Formulas
 			final double cAtkVuln = target.calcStat(Stats.CRIT_VULN, 1, target, null);
 			final double improvedDamageByCriticalMulAndVuln = cAtkMultiplied * cAtkVuln;
 			final double improvedDamageByCriticalMulAndAdd = improvedDamageByCriticalMulAndVuln + attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, 0, target, skill);
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Attacker '" + attacker.getName() + "' Critical Damage Debug:");
-				LOGGER.info("	-	Initial Damage:  " + damage);
-				LOGGER.info("	-	Damage increased of mult:  " + cAtkMultiplied);
-				LOGGER.info("	-	cAtkVuln Mult:  " + cAtkVuln);
-				LOGGER.info("	-	improvedDamageByCriticalMulAndVuln: " + improvedDamageByCriticalMulAndVuln);
-				LOGGER.info("	-	improvedDamageByCriticalMulAndAdd: " + improvedDamageByCriticalMulAndAdd);
-			}
-			
 			damage = improvedDamageByCriticalMulAndAdd;
 		}
 		
@@ -2527,13 +2501,6 @@ public final class Formulas
 			rate = skill.getMinChance();
 		}
 		
-		if (Config.SKILLSDEBUG)
-		{
-			final StringBuilder stat = new StringBuilder(100);
-			StringUtil.append(stat, skill.getName(), " calcCubicSkillSuccess: ", " type:", skill.getSkillType().toString(), " power:", String.valueOf(value), " stat:", String.format("%1.2f", statModifier), " res:", String.format("%1.2f", resMod), "(", String.format("%1.2f", vulnModifier), ")", " mAtk:", String.format("%1.2f", mAtkModifier), " lvl:", String.valueOf(deltamod), " total:", String.valueOf(rate));
-			final String result = stat.toString();
-			LOGGER.info(result);
-		}
 		return (Rnd.get(100) < rate);
 	}
 	
@@ -2639,17 +2606,6 @@ public final class Formulas
 		// physics configuration addons
 		final float physics_mult = getChanceMultiplier(skill);
 		rate *= physics_mult;
-		
-		if (Config.SKILLSDEBUG)
-		{
-			final StringBuilder stat = new StringBuilder(100);
-			StringUtil.append(stat, " calcSkillSuccess: ", skill.getName(), " ID:", "" + skill.getId(), " type:", skill.getSkillType().toString(), " power:", String.valueOf(value), " stat:", String.format("%1.2f", statModifier), " res:", String.format("%1.2f", resMod), "(", String.format("%1.2f", vulnModifier), " mAtk:", String.format("%1.2f", mAtkModifier), " ss:", String.valueOf(ssModifier), " lvl:", String.valueOf(deltamod), " physics configuration multiplier:", String.valueOf(physics_mult), " total:", String.valueOf(rate));
-			final String result = stat.toString();
-			if (Config.DEVELOPER)
-			{
-				LOGGER.info(result);
-			}
-		}
 		
 		if ((attacker instanceof L2PcInstance) && Config.SEND_SKILLS_CHANCE_TO_PLAYERS)
 		{
@@ -2763,17 +2719,6 @@ public final class Formulas
 		// physics configuration addons
 		final float physics_mult = getChanceMultiplier(skill);
 		rate *= physics_mult;
-		
-		if (Config.SKILLSDEBUG)
-		{
-			final StringBuilder stat = new StringBuilder(100);
-			StringUtil.append(stat, " calcEffectSuccess: ", skill.getName(), " type:", skill.getSkillType().toString(), " power:", String.valueOf(value), " stat:", String.format("%1.2f", statModifier), " res:", String.format("%1.2f", resMod), "(", String.format("%1.2f", vulnModifier), " mAtk:", String.format("%1.2f", mAtkModifier), " ss:", String.valueOf(ssModifier), " lvl:", String.valueOf(deltamod), " physics configuration multiplier:", String.valueOf(physics_mult), " total:", String.valueOf(rate));
-			final String result = stat.toString();
-			if (Config.DEVELOPER)
-			{
-				LOGGER.info(result);
-			}
-		}
 		
 		if ((attacker instanceof L2PcInstance) && Config.SEND_SKILLS_CHANCE_TO_PLAYERS)
 		{
@@ -3187,17 +3132,7 @@ public final class Formulas
 		if (crit)
 		{
 			final double improvedDamageByCriticalVuln = target.calcStat(Stats.CRIT_VULN, damage, target, skill);
-			final double improvedDamageByCriticalVulnAndAdd = (attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, improvedDamageByCriticalVuln, target, skill));
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Attacker '" + attacker.getName() + "' Charge Skills Critical Damage Debug:");
-				LOGGER.info("	-	Initial Damage:  " + damage);
-				LOGGER.info("	-	improvedDamageByCriticalVuln: " + improvedDamageByCriticalVuln);
-				LOGGER.info("	-	improvedDamageByCriticalVulnAndAdd: " + improvedDamageByCriticalVulnAndAdd);
-			}
-			
-			damage = improvedDamageByCriticalVulnAndAdd;
+			damage = (attacker.calcStat(Stats.CRITICAL_DAMAGE_ADD, improvedDamageByCriticalVuln, target, skill));
 		}
 		
 		if (skill != null) // skill add is not influenced by criticals improvements, so it's applied later

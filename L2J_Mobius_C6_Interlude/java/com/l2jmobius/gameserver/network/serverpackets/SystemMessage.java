@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.Vector;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
@@ -38,10 +37,6 @@ public final class SystemMessage extends L2GameServerPacket
 	
 	public SystemMessage(SystemMessageId messageId)
 	{
-		if (Config.DEBUG && (messageId == SystemMessageId.TARGET_IS_INCORRECT))
-		{
-			Thread.dumpStack();
-		}
 		_messageId = messageId.getId();
 	}
 	

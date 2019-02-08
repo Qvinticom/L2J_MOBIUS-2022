@@ -30,8 +30,8 @@ import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.loginserver.GameServerTable;
-import com.l2jmobius.loginserver.LoginServer;
 import com.l2jmobius.loginserver.LoginController;
+import com.l2jmobius.loginserver.LoginServer;
 
 public class LoginStatusThread extends Thread
 {
@@ -79,11 +79,6 @@ public class LoginStatusThread extends Thread
 		telnetOutput(1, "Connection from: " + clientStringIP);
 		
 		// read and loop thru list of IPs, compare with newIP
-		if (Config.DEVELOPER)
-		{
-			telnetOutput(2, "");
-		}
-		
 		InputStream telnetIS = null;
 		try
 		{
@@ -92,11 +87,6 @@ public class LoginStatusThread extends Thread
 			telnetSettings.load(telnetIS);
 			
 			final String HostList = telnetSettings.getProperty("ListOfHosts", "127.0.0.1,localhost,::1");
-			
-			if (Config.DEVELOPER)
-			{
-				telnetOutput(3, "Comparing ip to list...");
-			}
 			
 			// compare
 			String ipToCompare = null;
@@ -109,19 +99,11 @@ public class LoginStatusThread extends Thread
 					{
 						result = true;
 					}
-					if (Config.DEVELOPER)
-					{
-						telnetOutput(3, clientStringIP + " = " + ipToCompare + "(" + ip + ") = " + result);
-					}
 				}
 			}
 		}
 		catch (IOException e)
 		{
-			if (Config.DEVELOPER)
-			{
-				telnetOutput(4, "");
-			}
 			telnetOutput(1, "Error: " + e);
 		}
 		finally
@@ -139,10 +121,6 @@ public class LoginStatusThread extends Thread
 			}
 		}
 		
-		if (Config.DEVELOPER)
-		{
-			telnetOutput(4, "Allow IP: " + result);
-		}
 		return result;
 	}
 	

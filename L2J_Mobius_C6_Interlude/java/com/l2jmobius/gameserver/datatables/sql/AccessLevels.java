@@ -148,14 +148,6 @@ public class AccessLevels
 		}
 		LOGGER.info("AccessLevels: Master Access Level is " + Config.MASTERACCESS_LEVEL);
 		LOGGER.info("AccessLevels: User Access Level is " + Config.USERACCESS_LEVEL);
-		if (Config.DEBUG)
-		{
-			for (int actual : _accessLevels.keySet())
-			{
-				final AccessLevel actual_access = _accessLevels.get(actual);
-				LOGGER.info("AccessLevels: " + actual_access.getName() + " Access Level is " + actual_access.getLevel());
-			}
-		}
 	}
 	
 	/**

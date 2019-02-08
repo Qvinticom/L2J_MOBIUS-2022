@@ -39,7 +39,6 @@ import com.l2jmobius.gameserver.instancemanager.CrownManager;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Manor;
 import com.l2jmobius.gameserver.model.L2Object;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2DoorInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.Announcements;
@@ -1234,15 +1233,6 @@ public class Castle
 	
 	public void oustAllPlayers()
 	{
-		if (Config.DEBUG && (_teleZone != null))
-		{
-			LOGGER.info("Castle Teleport Zone ID: " + _teleZone.getId());
-			LOGGER.info("Players Number in Castle Teleport Zone: " + _teleZone.getAllPlayers().size());
-			for (L2Character actual : _teleZone.getAllPlayers())
-			{
-				LOGGER.info("	Player Name: " + actual.getName());
-			}
-		}
 		_teleZone.oustAllPlayers();
 	}
 	

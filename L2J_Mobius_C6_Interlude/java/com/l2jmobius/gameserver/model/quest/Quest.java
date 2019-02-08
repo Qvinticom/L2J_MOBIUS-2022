@@ -389,24 +389,6 @@ public class Quest extends ManagedScript
 	 */
 	public synchronized void startQuestTimer(String name, long time, L2NpcInstance npc, L2PcInstance player, boolean repeating)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("StartingQuestTimer for Quest " + _name);
-			
-			String info = "Event:" + name + " Time:" + time;
-			if (npc != null)
-			{
-				info = info + " Npc:" + npc.getName();
-			}
-			
-			if (player != null)
-			{
-				info = info + " Player:" + player.getName();
-			}
-			
-			LOGGER.info(info + " Repeat:" + repeating);
-		}
-		
 		synchronized (_allEventTimers)
 		{
 			ArrayList<QuestTimer> timers = _allEventTimers.get(name);
@@ -1134,11 +1116,6 @@ public class Quest extends ManagedScript
 	 */
 	public static final void playerEnter(L2PcInstance player)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Quest.playerEnter " + player.getName());
-		}
-		
 		if (Config.ALT_DEV_NO_QUESTS)
 		{
 			return;
@@ -1167,10 +1144,6 @@ public class Quest extends ManagedScript
 				
 				if (q == null)
 				{
-					if (Config.DEVELOPER)
-					{
-						LOGGER.info("Unknown quest " + questId + " for player " + player.getName());
-					}
 					if (Config.AUTODELETE_INVALID_QUEST_DATA)
 					{
 						invalidQuestData.setInt(1, player.getObjectId());
@@ -1207,11 +1180,6 @@ public class Quest extends ManagedScript
 				
 				if (qs == null)
 				{
-					if (Config.DEVELOPER)
-					{
-						LOGGER.info("Lost variable " + var + " in quest " + questId + " for player " + player.getName());
-					}
-					
 					if (Config.AUTODELETE_INVALID_QUEST_DATA)
 					{
 						invalidQuestDataVar.setInt(1, player.getObjectId());

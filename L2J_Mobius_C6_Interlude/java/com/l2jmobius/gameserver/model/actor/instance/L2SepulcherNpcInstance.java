@@ -21,7 +21,6 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.concurrent.Future;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -106,11 +105,6 @@ public class L2SepulcherNpcInstance extends L2NpcInstance
 		// Check if the L2PcInstance already target the L2NpcInstance
 		if (this != player.getTarget())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("new target selected:" + getObjectId());
-			}
-			
 			// Set the target of the L2PcInstance player
 			player.setTarget(this);
 			

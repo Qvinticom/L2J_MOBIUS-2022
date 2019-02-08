@@ -902,11 +902,6 @@ public class SevenSigns
 				sevenDat.set("ancient_adena_amount", rset.getDouble("ancient_adena_amount"));
 				sevenDat.set("contribution_score", rset.getDouble("contribution_score"));
 				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("SevenSigns: Loaded data from DB for char ID " + charObjId + " (" + sevenDat.getString("cabal") + ")");
-				}
-				
 				_signsPlayerData.put(charObjId, sevenDat);
 			}
 			
@@ -965,11 +960,6 @@ public class SevenSigns
 	 */
 	public void saveSevenSignsData(L2PcInstance player, boolean updateSettings)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("SevenSigns: Saving data to disk.");
-		}
-		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = null;
@@ -996,11 +986,6 @@ public class SevenSigns
 				statement.execute();
 				
 				statement.close();
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("SevenSigns: Updated data in database for char ID " + sevenDat.getInteger("char_obj_id") + " (" + sevenDat.getString("cabal") + ")");
-				}
 			}
 			
 			if (updateSettings)
@@ -1042,11 +1027,6 @@ public class SevenSigns
 				statement.execute();
 				
 				statement.close();
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("SevenSigns: Updated data in database.");
-				}
 			}
 		}
 		catch (SQLException e)
@@ -1061,11 +1041,6 @@ public class SevenSigns
 	 */
 	protected void resetPlayerData()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("SevenSigns: Resetting player data for new event period.");
-		}
-		
 		// Reset each player's contribution data as well as seal and cabal.
 		for (StatsSet sevenDat : _signsPlayerData.values())
 		{
@@ -1135,11 +1110,6 @@ public class SevenSigns
 				statement.setInt(3, chosenSeal);
 				statement.execute();
 				statement.close();
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("SevenSigns: Inserted data in DB for char ID " + currPlayerData.getInteger("char_obj_id") + " (" + currPlayerData.getString("cabal") + ")");
-				}
 			}
 			catch (SQLException e)
 			{
@@ -1158,11 +1128,6 @@ public class SevenSigns
 		}
 		
 		saveSevenSignsData(player, true);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("SevenSigns: " + player.getName() + " has joined the " + getCabalName(chosenCabal) + " for the " + getSealName(chosenSeal, false) + "!");
-		}
 		
 		return chosenCabal;
 	}
@@ -1236,11 +1201,6 @@ public class SevenSigns
 		}
 		
 		saveSevenSignsData(player, true);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("SevenSigns: " + player.getName() + " contributed " + contribScore + " seal stone points to their cabal.");
-		}
 		
 		return contribScore;
 	}
@@ -1369,13 +1329,6 @@ public class SevenSigns
 	 */
 	protected void calcNewSealOwners()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("SevenSigns: (Avarice) Dawn = " + _signsDawnSealTotals.get(SEAL_AVARICE) + ", Dusk = " + _signsDuskSealTotals.get(SEAL_AVARICE));
-			LOGGER.info("SevenSigns: (Gnosis) Dawn = " + _signsDawnSealTotals.get(SEAL_GNOSIS) + ", Dusk = " + _signsDuskSealTotals.get(SEAL_GNOSIS));
-			LOGGER.info("SevenSigns: (Strife) Dawn = " + _signsDawnSealTotals.get(SEAL_STRIFE) + ", Dusk = " + _signsDuskSealTotals.get(SEAL_STRIFE));
-		}
-		
 		for (Integer currSeal : _signsDawnSealTotals.keySet())
 		{
 			final int prevSealOwner = _signsSealOwners.get(currSeal);

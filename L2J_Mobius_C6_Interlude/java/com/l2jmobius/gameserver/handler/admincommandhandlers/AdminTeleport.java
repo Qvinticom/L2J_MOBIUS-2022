@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
@@ -636,12 +635,6 @@ public class AdminTeleport implements IAdminCommandHandler
 				SystemMessage sm = new SystemMessage(SystemMessageId.S1_S2);
 				sm.addString("Created " + template1.name + " on " + target.getObjectId() + ".");
 				activeChar.sendPacket(sm);
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Spawn at X=" + spawn.getX() + " Y=" + spawn.getY() + " Z=" + spawn.getZ());
-					LOGGER.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") moved NPC " + target.getObjectId());
-				}
 			}
 			catch (Exception e)
 			{

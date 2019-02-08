@@ -17,9 +17,7 @@
 package com.l2jmobius.gameserver.util;
 
 import java.util.Collection;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -29,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.RelationChanged;
 
 public final class Broadcast
 {
-	private static Logger LOGGER = Logger.getLogger(Broadcast.class.getName());
-	
 	/**
 	 * Send a packet to all L2PcInstance in the _KnownPlayers of the L2Character that have the Character targeted.<BR>
 	 * <B><U> Concept</U> :</B><BR>
@@ -42,11 +38,6 @@ public final class Broadcast
 	 */
 	public static void toPlayersTargettingMyself(L2Character character, L2GameServerPacket mov)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("players to notify:" + character.getKnownList().getKnownPlayers().size() + " packet:" + mov.getClass().getSimpleName());
-		}
-		
 		for (L2PcInstance player : character.getKnownList().getKnownPlayers().values())
 		{
 			if ((player == null) || (player.getTarget() != character))
@@ -69,11 +60,6 @@ public final class Broadcast
 	 */
 	public static void toKnownPlayers(L2Character character, L2GameServerPacket mov)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("players to notify:" + character.getKnownList().getKnownPlayers().size() + " packet:" + mov.getClass().getSimpleName());
-		}
-		
 		final Collection<L2PcInstance> knownlist_players = character.getKnownList().getKnownPlayers().values();
 		
 		for (L2PcInstance player : knownlist_players)
@@ -188,11 +174,6 @@ public final class Broadcast
 	 */
 	public static void toAllOnlinePlayers(L2GameServerPacket packet)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Players to notify: " + L2World.getAllPlayersCount() + " (with packet " + packet.getClass().getSimpleName() + ")");
-		}
-		
 		for (L2PcInstance onlinePlayer : L2World.getInstance().getAllPlayers())
 		{
 			if (onlinePlayer == null)

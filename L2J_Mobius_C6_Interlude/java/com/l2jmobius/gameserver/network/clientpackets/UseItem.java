@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Arrays;
-import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -46,7 +45,6 @@ import com.l2jmobius.gameserver.util.Util;
 
 public final class UseItem extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(UseItem.class.getName());
 	private int _objectId;
 	
 	@Override
@@ -278,11 +276,6 @@ public final class UseItem extends L2GameClientPacket
 			sm.addItemName(itemId);
 			getClient().getActiveChar().sendPacket(sm);
 			return;
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(activeChar.getObjectId() + ": use item " + _objectId);
 		}
 		
 		if (item.isEquipable())
@@ -537,8 +530,7 @@ public final class UseItem extends L2GameClientPacket
 				final int tempBodyPart = item.getItem().getBodyPart();
 				L2ItemInstance tempItem = activeChar.getInventory().getPaperdollItemByL2ItemId(tempBodyPart);
 				
-				// remove augmentation stats for replaced items
-				// currently weapons only..
+				// remove augmentation stats for replaced items currently weapons only..
 				if ((tempItem != null) && tempItem.isAugmented())
 				{
 					tempItem.getAugmentation().removeBonus(activeChar);
@@ -646,8 +638,7 @@ public final class UseItem extends L2GameClientPacket
 			activeChar.abortAttack();
 			
 			activeChar.sendPacket(new EtcStatusUpdate(activeChar));
-			// if an "invisible" item has changed (Jewels, helmet),
-			// we dont need to send broadcast packet to all other users
+			// if an "invisible" item has changed (Jewels, helmet), we dont need to send broadcast packet to all other users
 			if ((((item.getItem().getBodyPart() & L2Item.SLOT_HEAD) <= 0) && ((item.getItem().getBodyPart() & L2Item.SLOT_NECK) <= 0) && ((item.getItem().getBodyPart() & L2Item.SLOT_L_EAR) <= 0) && ((item.getItem().getBodyPart() & L2Item.SLOT_R_EAR) <= 0) && ((item.getItem().getBodyPart() & L2Item.SLOT_L_FINGER) <= 0) && ((item.getItem().getBodyPart() & L2Item.SLOT_R_FINGER) <= 0)))
 			{
 				activeChar.broadcastUserInfo();
@@ -673,7 +664,6 @@ public final class UseItem extends L2GameClientPacket
 		{
 			final L2Weapon weaponItem = activeChar.getActiveWeaponItem();
 			final int itemid = item.getItemId();
-			// LOGGER.warning( "item not equipable id:"+ item.getItemId());
 			if (itemid == 4393)
 			{
 				activeChar.sendPacket(new ShowCalculator(4393));
@@ -690,14 +680,7 @@ public final class UseItem extends L2GameClientPacket
 			else
 			{
 				final IItemHandler handler = ItemHandler.getInstance().getItemHandler(itemId);
-				if (handler == null)
-				{
-					if (Config.DEBUG)
-					{
-						LOGGER.warning("No item handler registered for item ID " + itemId + ".");
-					}
-				}
-				else
+				if (handler != null)
 				{
 					handler.useItem(activeChar, item);
 				}

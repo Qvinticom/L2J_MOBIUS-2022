@@ -300,12 +300,6 @@ public class CursedWeapon
 		_player.addSkill(skill, false);
 		skill = SkillTable.getInstance().getInfo(3631, 1);
 		_player.addSkill(skill, false);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Player " + _player.getName() + " has been awarded with skill " + skill);
-		}
-		
 		_player.sendSkillList();
 	}
 	
@@ -450,11 +444,6 @@ public class CursedWeapon
 	
 	public void saveData()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("CursedWeapon: Saving data to disk.");
-		}
-		
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			// Delete previous datas

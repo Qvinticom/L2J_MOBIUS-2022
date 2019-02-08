@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.olympiad.Olympiad.COMP_TYPE;
@@ -121,11 +120,6 @@ class OlympiadManager implements Runnable
 								}
 								catch (Exception ex)
 								{
-									if (Config.DEBUG)
-									{
-										LOGGER.warning("Olympiad Manager: Stadium - " + i + " assignment, an error has been occurred: " + ex);
-									}
-									
 									if (_olympiadInstances.get(i) != null)
 									{
 										for (L2PcInstance player : _olympiadInstances.get(i).getPlayers())
@@ -159,11 +153,6 @@ class OlympiadManager implements Runnable
 								}
 								catch (Exception ex)
 								{
-									if (Config.DEBUG)
-									{
-										LOGGER.warning("Olympiad Manager: Stadium - " + i + " assignment, an error has been occurred: " + ex);
-									}
-									
 									if (_olympiadInstances.get(i) != null)
 									{
 										for (L2PcInstance player : _olympiadInstances.get(i).getPlayers())
@@ -197,11 +186,6 @@ class OlympiadManager implements Runnable
 							}
 							catch (Exception ex)
 							{
-								if (Config.DEBUG)
-								{
-									LOGGER.warning("Olympiad Manager: Stadium - " + i + " assignment, an error has been occurred: " + ex);
-								}
-								
 								if (_olympiadInstances.get(i) != null)
 								{
 									for (L2PcInstance player : _olympiadInstances.get(i).getPlayers())
@@ -234,11 +218,6 @@ class OlympiadManager implements Runnable
 							}
 							catch (Exception ex)
 							{
-								if (Config.DEBUG)
-								{
-									LOGGER.warning("Olympiad Manager: Stadium - " + i + " assignment, an error has been occurred: " + ex);
-								}
-								
 								if (_olympiadInstances.get(i) != null)
 								{
 									for (L2PcInstance player : _olympiadInstances.get(i).getPlayers())

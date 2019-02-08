@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.TradeController;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2TradeList;
@@ -87,15 +86,10 @@ public class AdminShop implements IAdminCommandHandler
 		if (list != null)
 		{
 			activeChar.sendPacket(new BuyList(list, activeChar.getAdena()));
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") opened GM shop id " + val);
-			}
 		}
 		else
 		{
-			LOGGER.warning("no buylist with id:" + val);
+			LOGGER.warning("No buylist with id:" + val);
 		}
 		
 		activeChar.sendPacket(ActionFailed.STATIC_PACKET);

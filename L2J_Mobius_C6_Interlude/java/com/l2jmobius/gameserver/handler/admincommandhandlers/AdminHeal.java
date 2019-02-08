@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
@@ -34,8 +31,6 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminHeal implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminRes.class.getName());
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_heal"
@@ -128,11 +123,6 @@ public class AdminHeal implements IAdminCommandHandler
 			if (target instanceof L2PcInstance)
 			{
 				target.setCurrentCp(target.getMaxCp());
-			}
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") healed character " + target.getName());
 			}
 		}
 		else

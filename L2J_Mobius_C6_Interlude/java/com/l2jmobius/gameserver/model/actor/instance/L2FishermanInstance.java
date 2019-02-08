@@ -67,10 +67,6 @@ public class L2FishermanInstance extends L2FolkInstance
 			taxRate = getCastle().getTaxRate();
 		}
 		player.tempInvetoryDisable();
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Showing buylist");
-		}
 		L2TradeList list = TradeController.getInstance().getBuyList(val);
 		
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
@@ -89,18 +85,7 @@ public class L2FishermanInstance extends L2FolkInstance
 	
 	private void showSellWindow(L2PcInstance player)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Showing selllist");
-		}
-		
 		player.sendPacket(new SellList(player));
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Showing sell window");
-		}
-		
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	

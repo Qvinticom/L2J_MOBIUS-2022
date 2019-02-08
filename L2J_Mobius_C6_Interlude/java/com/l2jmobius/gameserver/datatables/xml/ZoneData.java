@@ -120,15 +120,7 @@ public class ZoneData
 			factory.setIgnoringComments(true);
 			
 			File file = new File(Config.DATAPACK_ROOT + "/data/zones/zone.xml");
-			if (!file.exists())
-			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("The zone.xml file is missing.");
-				}
-				
-			}
-			else
+			if (file.exists())
 			{
 				Document doc = factory.newDocumentBuilder().parse(file);
 				
@@ -522,10 +514,6 @@ public class ZoneData
 										
 										if (temp.getZone().intersectsRectangle(ax, bx, ay, by))
 										{
-											if (Config.DEBUG)
-											{
-												LOGGER.info("Zone (" + zoneId + ") added to: " + x + " " + y);
-											}
 											worldRegions[x][y].addZone(temp);
 										}
 									}

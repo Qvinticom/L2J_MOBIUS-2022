@@ -38,12 +38,12 @@ public class L2NpcWalkerAI extends L2CharacterAI implements Runnable
 	 * home points for xyz
 	 */
 	int _homeX;
-
+	
 	/**
 	 * home points for xyz
 	 */
 	int _homeY;
-
+	
 	/**
 	 * home points for xyz
 	 */
@@ -154,10 +154,6 @@ public class L2NpcWalkerAI extends L2CharacterAI implements Runnable
 			if (delay < 0)
 			{
 				delay = DEFAULT_MOVE_DELAY;
-				if (Config.DEVELOPER)
-				{
-					LOGGER.warning("Wrong Delay Set in Npc Walker Functions = " + delay + " secs, using default delay: " + DEFAULT_MOVE_DELAY + " secs instead.");
-				}
 			}
 			
 			_nextMoveTime = System.currentTimeMillis() + delay;

@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 
@@ -87,11 +86,6 @@ public class L2Potion extends L2Object
 		}
 		
 		_potionhpRegTask = null;
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Potion HP regen stop");
-		}
 	}
 	
 	public void setCurrentHpPotion2()
@@ -183,11 +177,6 @@ public class L2Potion extends L2Object
 	private void startPotionMpRegeneration(L2Character activeChar)
 	{
 		_potionmpRegTask = ThreadPool.scheduleAtFixedRate(new PotionMpHealing(activeChar), 1000, _milliseconds);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Potion MP regen Started");
-		}
 	}
 	
 	public void stopPotionMpRegeneration()
@@ -198,11 +187,6 @@ public class L2Potion extends L2Object
 		}
 		
 		_potionmpRegTask = null;
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Potion MP regen stop");
-		}
 	}
 	
 	public void setCurrentMpPotion2()

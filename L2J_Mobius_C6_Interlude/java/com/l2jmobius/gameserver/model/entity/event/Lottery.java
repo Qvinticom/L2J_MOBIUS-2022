@@ -185,11 +185,6 @@ public class Lottery
 				LOGGER.warning("Lottery: Could not restore lottery data: " + e);
 			}
 			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Lottery: Starting ticket sell for lottery #" + _number + ".");
-			}
-			
 			_isSellingTickets = true;
 			_isStarted = true;
 			
@@ -242,13 +237,7 @@ public class Lottery
 		@Override
 		public void run()
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Lottery: Stopping ticket sell for lottery #" + _number + ".");
-			}
-			
 			_isSellingTickets = false;
-			
 			Announcements.getInstance().announceToAll(new SystemMessage(SystemMessageId.LOTTERY_TICKET_SALES_TEMP_SUSPENDED));
 		}
 	}
@@ -262,11 +251,6 @@ public class Lottery
 		@Override
 		public void run()
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Lottery: Ending lottery #" + _number + ".");
-			}
-			
 			final int[] luckynums = new int[5];
 			int luckynum = 0;
 			
@@ -291,11 +275,6 @@ public class Lottery
 				luckynums[i] = luckynum;
 			}
 			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Lottery: The lucky numbers are " + luckynums[0] + ", " + luckynums[1] + ", " + luckynums[2] + ", " + luckynums[3] + ", " + luckynums[4] + ".");
-			}
-			
 			int enchant = 0;
 			int type2 = 0;
 			
@@ -309,11 +288,6 @@ public class Lottery
 				{
 					type2 += Math.pow(2, luckynums[i] - 17);
 				}
-			}
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Lottery: Encoded lucky numbers are " + enchant + ", " + type2);
 			}
 			
 			int count1 = 0;
@@ -405,22 +379,9 @@ public class Lottery
 				prize3 = (int) (((_prize - prize4) * Config.ALT_LOTTERY_3_NUMBER_RATE) / count3);
 			}
 			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Lottery: " + count1 + " players with all FIVE numbers each win " + prize1 + ".");
-				LOGGER.info("Lottery: " + count2 + " players with FOUR numbers each win " + prize2 + ".");
-				LOGGER.info("Lottery: " + count3 + " players with THREE numbers each win " + prize3 + ".");
-				LOGGER.info("Lottery: " + count4 + " players with ONE or TWO numbers each win " + prize4 + ".");
-			}
-			
 			final int newprize = _prize - (prize1 + prize2 + prize3 + prize4);
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Lottery: Jackpot for next lottery is " + newprize + ".");
-			}
 			
 			SystemMessage sm;
-			
 			if (count1 > 0)
 			{
 				// There are winners.
@@ -580,11 +541,6 @@ public class Lottery
 						res[0] = 4;
 						res[1] = 200;
 					}
-				}
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.warning("count: " + count + ", id: " + id + ", enchant: " + enchant + ", type2: " + type2);
 				}
 			}
 			

@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.csv.RecipeTable;
 import com.l2jmobius.gameserver.model.L2RecipeList;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -29,8 +26,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class RecipeItemMakeInfo extends L2GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RecipeItemMakeInfo.class.getName());
-	
 	private final int _id;
 	private final L2PcInstance _activeChar;
 	private final boolean _success;
@@ -53,7 +48,6 @@ public class RecipeItemMakeInfo extends L2GameServerPacket
 	protected final void writeImpl()
 	{
 		final L2RecipeList recipe = RecipeTable.getInstance().getRecipeById(_id);
-		
 		if (recipe != null)
 		{
 			writeC(0xD7);
@@ -63,10 +57,6 @@ public class RecipeItemMakeInfo extends L2GameServerPacket
 			writeD((int) _activeChar.getCurrentMp());
 			writeD(_activeChar.getMaxMp());
 			writeD(_success ? 1 : 0); // item creation success/failed
-		}
-		else if (Config.DEBUG)
-		{
-			LOGGER.info("No recipe found with ID = " + _id);
 		}
 	}
 }

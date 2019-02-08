@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
@@ -665,12 +664,6 @@ public class L2CubicInstance
 						
 						if ((target != null) && (!target.isDead()))
 						{
-							if (Config.DEBUG)
-							{
-								LOGGER.info("L2CubicInstance: Action.run();");
-								LOGGER.info("Cubic Id: " + _id + " Target: " + target.getName() + " distance: " + Math.sqrt(target.getDistanceSq(owner.getX(), owner.getY(), owner.getZ())));
-							}
-							
 							owner.broadcastPacket(new MagicSkillUse(owner, target, skill.getId(), skill.getLevel(), 0, 0));
 							
 							final SkillType type = skill.getSkillType();
@@ -682,43 +675,23 @@ public class L2CubicInstance
 							
 							if ((type == SkillType.PARALYZE) || (type == SkillType.STUN) || (type == SkillType.ROOT) || (type == SkillType.AGGDAMAGE))
 							{
-								if (Config.DEBUG)
-								{
-									LOGGER.info("L2CubicInstance: Action.run() handler " + type);
-								}
 								useCubicDisabler(type, L2CubicInstance.this, skill, targets);
 							}
 							else if (type == SkillType.MDAM)
 							{
-								if (Config.DEBUG)
-								{
-									LOGGER.info("L2CubicInstance: Action.run() handler " + type);
-								}
 								useCubicMdam(L2CubicInstance.this, skill, targets);
 							}
 							else if ((type == SkillType.POISON) || (type == SkillType.DEBUFF) || (type == SkillType.DOT))
 							{
-								if (Config.DEBUG)
-								{
-									LOGGER.info("L2CubicInstance: Action.run() handler " + type);
-								}
 								useCubicContinuous(L2CubicInstance.this, skill, targets);
 							}
 							else if (type == SkillType.DRAIN)
 							{
-								if (Config.DEBUG)
-								{
-									LOGGER.info("L2CubicInstance: Action.run() skill " + type);
-								}
 								((L2SkillDrain) skill).useCubicSkill(L2CubicInstance.this, targets);
 							}
 							else
 							{
 								handler.useSkill(owner, skill, targets);
-								if (Config.DEBUG)
-								{
-									LOGGER.info("L2CubicInstance: Action.run(); other handler");
-								}
 							}
 						}
 					}
@@ -804,12 +777,6 @@ public class L2CubicInstance
 			
 			final boolean mcrit = Formulas.calcMCrit(activeCubic.getMCriticalHit(target, skill));
 			final int damage = (int) Formulas.calcMagicDam(activeCubic, target, skill, mcrit);
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("L2SkillMdam: useCubicSkill() -> damage = " + damage);
-			}
-			
 			if (damage > 0)
 			{
 				// Manage attack or cast break of the target (calculating rate, sending message...)
@@ -849,11 +816,6 @@ public class L2CubicInstance
 	 */
 	public void useCubicDisabler(SkillType type, L2CubicInstance activeCubic, L2Skill skill, L2Object[] targets)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Disablers: useCubicSkill()");
-		}
-		
 		for (L2Character target : (L2Character[]) targets)
 		{
 			if ((target == null) || target.isDead())
@@ -883,14 +845,6 @@ public class L2CubicInstance
 						{
 							skill.getEffects(activeCubic.getOwner(), target);
 						}
-						if (Config.DEBUG)
-						{
-							LOGGER.info("Disablers: useCubicSkill() -> success");
-						}
-					}
-					else if (Config.DEBUG)
-					{
-						LOGGER.info("Disablers: useCubicSkill() -> failed");
 					}
 					break;
 				}
@@ -914,14 +868,6 @@ public class L2CubicInstance
 						{
 							skill.getEffects(activeCubic.getOwner(), target);
 						}
-						if (Config.DEBUG)
-						{
-							LOGGER.info("Disablers: useCubicSkill() -> success");
-						}
-					}
-					else if (Config.DEBUG)
-					{
-						LOGGER.info("Disablers: useCubicSkill() -> failed");
 					}
 					break;
 				}
@@ -971,14 +917,6 @@ public class L2CubicInstance
 						{
 							skill.getEffects(activeCubic.getOwner(), target);
 						}
-						if (Config.DEBUG)
-						{
-							LOGGER.info("Disablers: useCubicSkill() -> success");
-						}
-					}
-					else if (Config.DEBUG)
-					{
-						LOGGER.info("Disablers: useCubicSkill() -> failed");
 					}
 					break;
 				}
@@ -991,14 +929,6 @@ public class L2CubicInstance
 							target.getAI().notifyEvent(CtrlEvent.EVT_AGGRESSION, activeCubic.getOwner(), (int) ((150 * skill.getPower()) / (target.getLevel() + 7)));
 						}
 						skill.getEffects(activeCubic.getOwner(), target);
-						if (Config.DEBUG)
-						{
-							LOGGER.info("Disablers: useCubicSkill() -> success");
-						}
-					}
-					else if (Config.DEBUG)
-					{
-						LOGGER.info("Disablers: useCubicSkill() -> failed");
 					}
 					break;
 				}

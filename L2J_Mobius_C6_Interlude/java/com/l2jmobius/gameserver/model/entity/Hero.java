@@ -26,7 +26,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -191,10 +190,6 @@ public class Hero
 		catch (SQLException e)
 		{
 			LOGGER.warning("Hero System: Couldnt load Heroes");
-			if (Config.DEBUG)
-			{
-				e.printStackTrace();
-			}
 		}
 		LOGGER.info("Hero System: Loaded " + _heroes.size() + " Heroes.");
 		LOGGER.info("Hero System: Loaded " + _completeHeroes.size() + " all time Heroes.");
@@ -204,12 +199,6 @@ public class Hero
 	{
 		try
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Adding new hero");
-				LOGGER.info("Name:" + player.getName());
-				LOGGER.info("ClassId:" + player.getClassId().getId());
-			}
 			final StatsSet newHero = new StatsSet();
 			newHero.set(Olympiad.CHAR_NAME, player.getName());
 			newHero.set(Olympiad.CLASS_ID, player.getClassId().getId());
@@ -486,10 +475,6 @@ public class Hero
 		catch (SQLException e)
 		{
 			LOGGER.warning("Hero System: Couldnt update Heroes");
-			if (Config.DEBUG)
-			{
-				e.printStackTrace();
-			}
 		}
 	}
 	

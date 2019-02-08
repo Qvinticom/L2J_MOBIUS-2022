@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.sql.L2PetDataTable;
 import com.l2jmobius.gameserver.handler.IItemHandler;
 import com.l2jmobius.gameserver.handler.ItemHandler;
@@ -83,11 +82,6 @@ public final class RequestPetUseItem extends L2GameClientPacket
 			sm.addItemName(item.getItemId());
 			activeChar.sendPacket(sm);
 			return;
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(activeChar.getObjectId() + ": pet use item " + _objectId);
 		}
 		
 		// check if the item matches the pet

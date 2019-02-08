@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2ControllableMobAI;
@@ -115,11 +114,6 @@ public class L2ControllableMobInstance extends L2MonsterInstance
 		if (isDead())
 		{
 			// first die (and calculate rewards), if currentHp < 0, then overhit may be calculated
-			if (Config.DEBUG)
-			{
-				LOGGER.info("char is dead.");
-			}
-			
 			stopMove(null);
 			
 			// Start the doDie process

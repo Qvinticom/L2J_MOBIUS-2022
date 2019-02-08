@@ -18,9 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -30,8 +28,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class WareHouseDepositList extends L2GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(WareHouseDepositList.class.getName());
-	
 	public static final int PRIVATE = 1;
 	public static final int CLAN = 2;
 	public static final int CASTLE = 3; // not sure
@@ -76,12 +72,7 @@ public class WareHouseDepositList extends L2GameServerPacket
 		 */
 		writeH(_whType);
 		writeD(_playerAdena);
-		final int count = _items.size();
-		if (Config.DEBUG)
-		{
-			LOGGER.info("count:" + count);
-		}
-		writeH(count);
+		writeH(_items.size());
 		
 		for (L2ItemInstance item : _items)
 		{

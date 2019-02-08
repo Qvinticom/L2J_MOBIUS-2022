@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
@@ -64,11 +63,6 @@ public class Sow implements ISkillHandler
 		if (targetList == null)
 		{
 			return;
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Casting sow");
 		}
 		
 		for (int index = 0; index < targetList.length; index++)

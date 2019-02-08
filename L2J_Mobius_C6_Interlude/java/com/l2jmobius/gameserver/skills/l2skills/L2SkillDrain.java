@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.skills.l2skills;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2Effect;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Skill;
@@ -177,11 +176,6 @@ public class L2SkillDrain extends L2Skill
 	
 	public void useCubicSkill(L2CubicInstance activeCubic, L2Object[] targets)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("L2SkillDrain: useCubicSkill()");
-		}
-		
 		for (L2Character target : (L2Character[]) targets)
 		{
 			if (target.isAlikeDead() && (getTargetType() != SkillTargetType.TARGET_CORPSE_MOB))
@@ -190,13 +184,7 @@ public class L2SkillDrain extends L2Skill
 			}
 			
 			final boolean mcrit = Formulas.calcMCrit(activeCubic.getMCriticalHit(target, this));
-			
 			final int damage = (int) Formulas.calcMagicDam(activeCubic, target, this, mcrit);
-			if (Config.DEBUG)
-			{
-				LOGGER.info("L2SkillDrain: useCubicSkill() -> damage = " + damage);
-			}
-			
 			final double hpAdd = _absorbAbs + (_absorbPart * damage);
 			final L2PcInstance owner = activeCubic.getOwner();
 			final double hp = ((owner.getCurrentHp() + hpAdd) > owner.getMaxHp() ? owner.getMaxHp() : (owner.getCurrentHp() + hpAdd));

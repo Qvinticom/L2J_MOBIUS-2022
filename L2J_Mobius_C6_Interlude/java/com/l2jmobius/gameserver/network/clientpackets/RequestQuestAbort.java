@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -29,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestQuestAbort extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestQuestAbort.class.getName());
-	
 	private int _questId;
 	
 	@Override
@@ -66,14 +62,6 @@ public final class RequestQuestAbort extends L2GameClientPacket
 				final QuestList ql = new QuestList();
 				activeChar.sendPacket(ql);
 			}
-			else if (Config.DEBUG)
-			{
-				LOGGER.info("Player '" + activeChar.getName() + "' try to abort quest " + qe.getName() + " but he didn't have it started.");
-			}
-		}
-		else if (Config.DEBUG)
-		{
-			LOGGER.warning("Quest (id='" + _questId + "') not found.");
 		}
 	}
 }

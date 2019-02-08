@@ -170,10 +170,7 @@ public class L2PetInstance extends L2Summon
 			}
 			catch (Throwable e)
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Pet [#" + getObjectId() + "] a feed task error has occurred: " + e);
-				}
+				LOGGER.info("Pet [#" + getObjectId() + "] a feed task error has occurred: " + e);
 			}
 		}
 	}
@@ -288,11 +285,6 @@ public class L2PetInstance extends L2Summon
 		}
 		else
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("new target selected:" + getObjectId());
-			}
-			
 			player.setTarget(this);
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);
@@ -474,14 +466,7 @@ public class L2PetInstance extends L2Summon
 	protected void doPickupItem(L2Object object)
 	{
 		getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
-		StopMove sm = new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading());
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Pet pickup pos: " + object.getX() + " " + object.getY() + " " + object.getZ());
-		}
-		
-		broadcastPacket(sm);
+		broadcastPacket(new StopMove(getObjectId(), getX(), getY(), getZ(), getHeading()));
 		
 		if (!(object instanceof L2ItemInstance))
 		{
@@ -964,10 +949,6 @@ public class L2PetInstance extends L2Summon
 		{
 			_feedTask.cancel(false);
 			_feedTask = null;
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Pet [#" + getObjectId() + "] feed task stop");
-			}
 		}
 	}
 	
@@ -978,7 +959,6 @@ public class L2PetInstance extends L2Summon
 	public synchronized void startFeed(boolean battleFeed)
 	{
 		// stop feeding task if its active
-		
 		stopFeed();
 		if (!isDead())
 		{

@@ -17,7 +17,6 @@
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.StringTokenizer;
-import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
@@ -36,8 +35,6 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminKill implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminKill.class.getName());
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_kill",
@@ -151,11 +148,6 @@ public class AdminKill implements IAdminCommandHandler
 		else
 		{
 			target.reduceCurrentHp(target.getMaxHp() + 1, activeChar);
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") killed character " + target.getObjectId());
 		}
 	}
 	

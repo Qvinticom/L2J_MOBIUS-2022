@@ -731,10 +731,6 @@ public class DM implements EventTask
 	{
 		if (!checkStartJoinOk())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(_eventName + " Engine[startJoin]: startJoinOk() = false");
-			}
 			return false;
 		}
 		
@@ -863,10 +859,6 @@ public class DM implements EventTask
 	{
 		if (!startEventOk())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(_eventName + " Engine[startEvent()]: startEventOk() = false");
-			}
 			return false;
 		}
 		
@@ -949,10 +941,6 @@ public class DM implements EventTask
 	{
 		if (!finishEventOk())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(_eventName + " Engine[finishEvent]: finishEventOk() = false");
-			}
 			return;
 		}
 		

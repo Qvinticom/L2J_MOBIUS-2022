@@ -18,11 +18,8 @@ package com.l2jmobius.gameserver.model.zone;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Character;
-import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
  * This class manages all zones for a given world region
@@ -30,7 +27,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class L2ZoneManager
 {
-	private final Logger LOGGER = Logger.getLogger(L2ZoneManager.class.getName());
 	private final List<L2ZoneType> _zones;
 	
 	/**
@@ -61,11 +57,6 @@ public class L2ZoneManager
 	
 	public void revalidateZones(L2Character character)
 	{
-		if (Config.ZONE_DEBUG && (character != null) && (character instanceof L2PcInstance) && (character.getName() != null))
-		{
-			LOGGER.info("ZONE: Revalidating Zone for character: " + character.getName());
-		}
-		
 		for (L2ZoneType e : _zones)
 		{
 			if (e != null)

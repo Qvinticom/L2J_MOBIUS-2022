@@ -28,7 +28,6 @@ import java.util.concurrent.ScheduledFuture;
 import java.util.concurrent.TimeUnit;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.commons.util.Rnd;
@@ -92,7 +91,6 @@ public class AutoSpawn
 	
 	private void restoreSpawnData()
 	{
-		int numLoaded = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement = null;
@@ -112,7 +110,6 @@ public class AutoSpawn
 				spawnInst.setSpawnCount(rs.getInt("count"));
 				spawnInst.setBroadcast(rs.getBoolean("broadcastSpawn"));
 				spawnInst.setRandomSpawn(rs.getBoolean("randomSpawn"));
-				numLoaded++;
 				
 				// Restore the spawn locations for this spawn group/instance.
 				statement2 = con.prepareStatement("SELECT * FROM random_spawn_loc WHERE groupId=?");
@@ -131,11 +128,6 @@ public class AutoSpawn
 			
 			statement.close();
 			rs.close();
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("AutoSpawnHandler: Loaded " + numLoaded + " spawn group(s) from the database.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -188,12 +180,6 @@ public class AutoSpawn
 		}
 		
 		setSpawnActive(newSpawn, true);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("AutoSpawnHandler: Registered auto spawn for NPC ID " + npcId + " (Object ID = " + newId + ").");
-		}
-		
 		return newSpawn;
 	}
 	
@@ -244,11 +230,6 @@ public class AutoSpawn
 					LOGGER.warning("AutoSpawnHandler: Could not auto spawn for NPC ID " + spawnInst._npcId + " (Object ID = " + spawnInst._objectId + "): " + e);
 					return false;
 				}
-			}
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("AutoSpawnHandler: Removed auto spawn for NPC ID " + spawnInst._npcId + " (Object ID = " + spawnInst._objectId + ").");
 			}
 		}
 		
@@ -585,11 +566,6 @@ public class AutoSpawn
 					Announcements.getInstance().announceToAll("The " + npcInst.getName() + " has spawned near " + nearestTown + "!");
 				}
 				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("AutoSpawnHandler: Spawned NPC ID " + spawnInst.getNpcId() + " at " + x + ", " + y + ", " + z + " (Near " + nearestTown + ") for " + (spawnInst.getRespawnDelay() / 60000) + " minute(s).");
-				}
-				
 				// If there is no despawn time, do not create a despawn task.
 				if (spawnInst.getDespawnDelay() > 0)
 				{
@@ -653,11 +629,6 @@ public class AutoSpawn
 					
 					npcInst.deleteMe();
 					spawnInst.removeNpcInstance(npcInst);
-					
-					if (Config.DEBUG)
-					{
-						LOGGER.info("AutoSpawnHandler: Spawns removed for spawn instance (Object ID = " + _objectId + ").");
-					}
 				}
 			}
 			catch (Exception e)

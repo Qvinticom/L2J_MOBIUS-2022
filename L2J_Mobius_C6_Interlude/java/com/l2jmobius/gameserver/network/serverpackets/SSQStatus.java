@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSigns;
 import com.l2jmobius.gameserver.model.entity.sevensigns.SevenSignsFestival;
@@ -31,8 +28,6 @@ import com.l2jmobius.gameserver.templates.StatsSet;
  */
 public class SSQStatus extends L2GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(SSQStatus.class.getName());
-	
 	private final L2PcInstance _activevChar;
 	private final int _page;
 	
@@ -141,24 +136,6 @@ public class SSQStatus extends L2GameServerPacket
 					duskPercent = Math.round(((float) duskTotalScore / totalOverallScore) * 100);
 				}
 				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Dusk Stone Score: " + duskStoneScore + " - Dawn Stone Score: " + dawnStoneScore);
-					LOGGER.info("Dusk Festival Score: " + duskFestivalScore + " - Dawn Festival Score: " + dawnFestivalScore);
-					LOGGER.info("Dusk Score: " + duskTotalScore + " - Dawn Score: " + dawnTotalScore);
-					LOGGER.info("Overall Score: " + totalOverallScore);
-					LOGGER.info("");
-					if (totalStoneScore == 0)
-					{
-						LOGGER.info("Dusk Prop: 0 - Dawn Prop: 0");
-					}
-					else
-					{
-						LOGGER.info("Dusk Prop: " + ((duskStoneScore / totalStoneScore) * 500) + " - Dawn Prop: " + ((dawnStoneScore / totalStoneScore) * 500));
-					}
-					LOGGER.info("Dusk %: " + duskPercent + " - Dawn %: " + dawnPercent);
-				}
-				
 				/* DUSK */
 				writeD(duskStoneScoreProp); // Seal Stone Score
 				writeD(duskFestivalScore); // Festival Score
@@ -230,10 +207,7 @@ public class SSQStatus extends L2GameServerPacket
 				{
 					final int dawnProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DAWN);
 					final int duskProportion = SevenSigns.getInstance().getSealProportion(i, SevenSigns.CABAL_DUSK);
-					if (Config.DEBUG)
-					{
-						LOGGER.info(SevenSigns.getSealName(i, true) + " = Dawn Prop: " + dawnProportion + "(" + ((dawnProportion / totalDawnMembers) * 100) + "%), Dusk Prop: " + duskProportion + "(" + ((duskProportion / totalDuskMembers) * 100) + "%)");
-					}
+					
 					writeC(i);
 					writeC(SevenSigns.getInstance().getSealOwner(i));
 					if (totalDuskMembers == 0)

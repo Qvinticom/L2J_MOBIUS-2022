@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.skills.l2skills;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.sql.NpcTable;
 import com.l2jmobius.gameserver.datatables.xml.ExperienceData;
@@ -197,10 +196,6 @@ public class L2SkillSummon extends L2Skill
 			}
 			if (activeChar.getCubics().size() > mastery)
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("player can't summon any more cubics. ignore summon skill");
-				}
 				activeChar.sendPacket(SystemMessageId.CUBIC_SUMMONING_FAILED);
 				return;
 			}
@@ -211,10 +206,6 @@ public class L2SkillSummon extends L2Skill
 		
 		if ((activeChar.getPet() != null) || activeChar.isMounted())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("player has a pet already. ignore summon skill");
-			}
 			return;
 		}
 		

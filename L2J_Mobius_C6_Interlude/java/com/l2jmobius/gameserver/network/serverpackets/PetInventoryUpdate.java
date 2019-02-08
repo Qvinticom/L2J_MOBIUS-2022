@@ -18,21 +18,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.ItemInfo;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 
 /**
- * This class ...
  * @author Yme
  * @version $Revision: 1.3.2.1.2.5 $ $Date: 2005/03/27 15:29:57 $ Rebuild 23.2.2006 by Advi
  */
 public class PetInventoryUpdate extends L2GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(InventoryUpdate.class.getName());
-	
 	private final List<ItemInfo> _items;
 	
 	/**
@@ -41,10 +36,6 @@ public class PetInventoryUpdate extends L2GameServerPacket
 	public PetInventoryUpdate(List<ItemInfo> items)
 	{
 		_items = items;
-		if (Config.DEBUG)
-		{
-			showDebug();
-		}
 	}
 	
 	public PetInventoryUpdate()
@@ -77,14 +68,6 @@ public class PetInventoryUpdate extends L2GameServerPacket
 		for (L2ItemInstance item : items)
 		{
 			_items.add(new ItemInfo(item));
-		}
-	}
-	
-	private void showDebug()
-	{
-		for (ItemInfo item : _items)
-		{
-			LOGGER.info("oid:" + Integer.toHexString(item.getObjectId()) + " item:" + item.getItem().getName() + " last change:" + item.getChange());
 		}
 	}
 	

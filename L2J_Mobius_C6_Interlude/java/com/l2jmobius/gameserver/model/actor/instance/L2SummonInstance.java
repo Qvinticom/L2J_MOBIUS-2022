@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2Skill;
@@ -90,19 +89,7 @@ public class L2SummonInstance extends L2Summon
 		
 		// When no item consume is defined task only need to check when summon life time has ended.
 		// Otherwise have to destroy items from owner's inventory in order to let summon live.
-		final int delay = 1000;
-		
-		if (Config.DEBUG && (_itemConsumeCount != 0))
-		{
-			LOGGER.warning("L2SummonInstance: Item Consume ID: " + _itemConsumeId + ", Count: " + _itemConsumeCount + ", Rate: " + _itemConsumeSteps + " times.");
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.warning("L2SummonInstance: Task Delay " + (delay / 1000) + " seconds.");
-		}
-		
-		_summonLifeTask = ThreadPool.scheduleAtFixedRate(new SummonLifetime(getOwner(), this), delay, delay);
+		_summonLifeTask = ThreadPool.scheduleAtFixedRate(new SummonLifetime(getOwner(), this), 1000, 1000);
 	}
 	
 	@Override
@@ -213,11 +200,6 @@ public class L2SummonInstance extends L2Summon
 			return false;
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.warning("L2SummonInstance: " + getTemplate().name + " (" + getOwner().getName() + ") has been killed.");
-		}
-		
 		if (_summonLifeTask != null)
 		{
 			_summonLifeTask.cancel(true);
@@ -240,11 +222,6 @@ public class L2SummonInstance extends L2Summon
 		@Override
 		public void run()
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning("L2SummonInstance: " + _summon.getTemplate().name + " (" + _activeChar.getName() + ") run task.");
-			}
-			
 			try
 			{
 				final double oldTimeRemaining = _summon.getTimeRemaining();
@@ -287,10 +264,7 @@ public class L2SummonInstance extends L2Summon
 			}
 			catch (Throwable e)
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.warning("Summon of player [#" + _activeChar.getName() + "] has encountered item consumption errors: " + e);
-				}
+				LOGGER.warning("Summon of player [#" + _activeChar.getName() + "] has encountered item consumption errors: " + e);
 			}
 		}
 	}
@@ -298,11 +272,6 @@ public class L2SummonInstance extends L2Summon
 	@Override
 	public synchronized void unSummon(L2PcInstance owner)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.warning("L2SummonInstance: " + getTemplate().name + " (" + owner.getName() + ") unsummoned.");
-		}
-		
 		if (_summonLifeTask != null)
 		{
 			_summonLifeTask.cancel(true);
@@ -321,11 +290,6 @@ public class L2SummonInstance extends L2Summon
 	@Override
 	public boolean destroyItemByItemId(String process, int itemId, int count, L2Object reference, boolean sendMessage)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.warning("L2SummonInstance: " + getTemplate().name + " (" + getOwner().getName() + ") consume.");
-		}
-		
 		return getOwner().destroyItemByItemId(process, itemId, count, reference, sendMessage);
 	}
 	

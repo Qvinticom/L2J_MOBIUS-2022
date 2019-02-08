@@ -199,11 +199,6 @@ public abstract class L2Summon extends L2Playable
 		}
 		else if (player.getTarget() != this)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("New target selected:" + getObjectId());
-			}
-			
 			player.setTarget(this);
 			MyTargetSelected my = new MyTargetSelected(getObjectId(), player.getLevel() - getLevel());
 			player.sendPacket(my);

@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -99,11 +98,6 @@ public class L2CommanderInstance extends L2Attackable
 		_homeX = getX();
 		_homeY = getY();
 		_homeZ = getZ();
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getObjectId() + ": Home location set to X:" + _homeX + " Y:" + _homeY + " Z:" + _homeZ);
-		}
 	}
 	
 	public int getHomeX()
@@ -123,10 +117,6 @@ public class L2CommanderInstance extends L2Attackable
 	{
 		if (!isInsideRadius(_homeX, _homeY, 40, false))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getObjectId() + ": moving home");
-			}
 			setisReturningToSpawnPoint(true);
 			clearAggroList();
 			

@@ -708,11 +708,6 @@ public class L2Clan
 			statement.setInt(9, _clanId);
 			statement.execute();
 			statement.close();
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("New clan leader saved in db: " + _clanId);
-			}
 		}
 		catch (Exception e)
 		{
@@ -737,11 +732,6 @@ public class L2Clan
 			statement.setInt(10, _allyCrestId);
 			statement.execute();
 			statement.close();
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("New clan saved in db: " + _clanId);
-			}
 		}
 		catch (Exception e)
 		{
@@ -760,11 +750,6 @@ public class L2Clan
 			statement.setInt(4, member.getObjectId());
 			statement.execute();
 			statement.close();
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("clan member removed in db: " + _clanId);
-			}
 			
 			statement = con.prepareStatement("UPDATE characters SET apprentice=0 WHERE apprentice=?");
 			statement.setInt(1, member.getObjectId());
@@ -859,11 +844,6 @@ public class L2Clan
 			
 			clanData.close();
 			statement.close();
-			
-			if (Config.DEBUG && (_name != null))
-			{
-				LOGGER.info("Restored clan data for \"" + _name + "\" from database.");
-			}
 			
 			restoreSubPledges();
 			restoreRankPrivs();
@@ -1562,11 +1542,6 @@ public class L2Clan
 			{
 				setReputationScore(_reputationScore - 2500, true);
 			}
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("New sub_clan saved in db: " + _clanId + "; " + pledgeType);
-			}
 		}
 		catch (Exception e)
 		{
@@ -1634,11 +1609,6 @@ public class L2Clan
 			
 			statement.execute();
 			statement.close();
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("New subpledge leader saved in db: " + _clanId);
-			}
 		}
 		catch (Exception e)
 		{
@@ -2117,11 +2087,6 @@ public class L2Clan
 		if (null == player)
 		{
 			return;
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(player.getObjectId() + "(" + player.getName() + ") requested ally creation from ");
 		}
 		
 		if (!player.isClanLeader())

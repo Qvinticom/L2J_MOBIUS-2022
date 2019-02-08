@@ -17,9 +17,7 @@
 package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.Arrays;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -28,8 +26,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestAutoSoulShot extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestAutoSoulShot.class.getName());
-	
 	// format cd
 	private int _itemId;
 	private int _type; // 1 = on : 0 = off;
@@ -85,13 +81,7 @@ public final class RequestAutoSoulShot extends L2GameClientPacket
 		
 		if ((activeChar.getPrivateStoreType() == 0) && (activeChar.getActiveRequester() == null) && !activeChar.isDead())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("AutoSoulShot:" + _itemId);
-			}
-			
 			final L2ItemInstance item = activeChar.getInventory().getItemByItemId(_itemId);
-			
 			if (item != null)
 			{
 				if (_type == 1)

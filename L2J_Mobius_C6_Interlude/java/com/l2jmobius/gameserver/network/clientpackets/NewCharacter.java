@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.sql.CharTemplateTable;
 import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.network.serverpackets.CharTemplates;
@@ -26,8 +23,6 @@ import com.l2jmobius.gameserver.templates.chars.L2PcTemplate;
 
 public final class NewCharacter extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(NewCharacter.class.getName());
-	
 	@Override
 	protected void readImpl()
 	{
@@ -36,11 +31,6 @@ public final class NewCharacter extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getType() + ": Create New Char");
-		}
-		
 		final CharTemplates ct = new CharTemplates();
 		
 		L2PcTemplate template = CharTemplateTable.getInstance().getTemplate(0);

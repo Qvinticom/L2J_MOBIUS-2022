@@ -18,9 +18,7 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.ItemInfo;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 
@@ -48,17 +46,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
  */
 public class InventoryUpdate extends L2GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(InventoryUpdate.class.getName());
-	
 	private final List<ItemInfo> _items;
 	
 	public InventoryUpdate()
 	{
 		_items = new ArrayList<>();
-		if (Config.DEBUG)
-		{
-			showDebug();
-		}
 	}
 	
 	/**
@@ -67,10 +59,6 @@ public class InventoryUpdate extends L2GameServerPacket
 	public InventoryUpdate(List<ItemInfo> items)
 	{
 		_items = items;
-		if (Config.DEBUG)
-		{
-			showDebug();
-		}
 	}
 	
 	public void addItem(L2ItemInstance item)
@@ -116,14 +104,6 @@ public class InventoryUpdate extends L2GameServerPacket
 					_items.add(new ItemInfo(item));
 				}
 			}
-		}
-	}
-	
-	private void showDebug()
-	{
-		for (ItemInfo item : _items)
-		{
-			LOGGER.info("oid:" + Integer.toHexString(item.getObjectId()) + " item:" + item.getItem().getName() + " last change:" + item.getChange());
 		}
 	}
 	

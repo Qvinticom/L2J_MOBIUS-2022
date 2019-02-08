@@ -79,11 +79,6 @@ public class BoatManager
 				L2BoatInstance boat = parseLine(line);
 				boat.spawn();
 				_staticItems.put(boat.getObjectId(), boat);
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Boat ID : " + boat.getObjectId());
-				}
 			}
 		}
 		catch (FileNotFoundException e)

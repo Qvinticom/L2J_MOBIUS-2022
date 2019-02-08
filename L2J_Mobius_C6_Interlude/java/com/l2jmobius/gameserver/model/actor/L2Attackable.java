@@ -1496,10 +1496,6 @@ public class L2Attackable extends L2NpcInstance
 		{
 			return new RewardItem(drop.getItemId(), itemCount);
 		}
-		else if ((itemCount == 0) && Config.DEBUG)
-		{
-			LOGGER.info("Roll produced 0 items to drop...");
-		}
 		
 		return null;
 	}
@@ -1799,10 +1795,6 @@ public class L2Attackable extends L2NpcInstance
 			{
 				return new RewardItem(drop.getItemId(), itemCount);
 			}
-			else if ((itemCount == 0) && Config.DEBUG)
-			{
-				LOGGER.info("Roll produced 0 items to drop...");
-			}
 		}
 		return null;
 	}
@@ -1912,11 +1904,6 @@ public class L2Attackable extends L2NpcInstance
 							continue;
 						}
 						
-						if (Config.DEBUG)
-						{
-							LOGGER.info("Item id to spoil: " + item.getItemId() + " amount: " + item.getCount());
-						}
-						
 						sweepList.add(item);
 					}
 					
@@ -1947,11 +1934,6 @@ public class L2Attackable extends L2NpcInstance
 				
 				if (item != null)
 				{
-					if (Config.DEBUG)
-					{
-						LOGGER.info("Item id to drop: " + item.getItemId() + " amount: " + item.getCount());
-					}
-					
 					// Check if the autoLoot mode is active
 					if (Config.AUTO_LOOT)
 					{

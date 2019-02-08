@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.model.L2Party;
@@ -32,8 +30,6 @@ import com.l2jmobius.gameserver.taskmanager.AttackStanceTaskManager;
 
 public final class Logout extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(Logout.class.getName());
-	
 	@Override
 	protected void readImpl()
 	{
@@ -67,11 +63,6 @@ public final class Logout extends L2GameClientPacket
 		
 		if (AttackStanceTaskManager.getInstance().getAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getType() + ": Player " + player.getName() + " tried to logout while Fighting");
-			}
-			
 			player.sendPacket(SystemMessageId.CANT_LOGOUT_WHILE_FIGHTING);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;

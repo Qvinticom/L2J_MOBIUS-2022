@@ -21,7 +21,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.SkillTable;
@@ -87,11 +86,6 @@ public final class RequestActionUse extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(activeChar.getName() + " request Action use: id " + _actionId + " 2:" + _ctrlPressed + " 3:" + _shiftPressed);
-		}
-		
 		// dont do anything if player is dead
 		if ((_actionId != 0) && activeChar.isAlikeDead())
 		{
@@ -109,10 +103,7 @@ public final class RequestActionUse extends L2GameClientPacket
 		// don't do anything if player is casting and the action is not a Pet one (skills too)
 		if ((_petActions.contains(_actionId) || (_actionId >= 1000)))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(activeChar.getName() + " request Pet Action use: id " + _actionId + " ctrl:" + _ctrlPressed + " shift:" + _shiftPressed);
-			}
+			// LOGGER.info(activeChar.getName() + " request Pet Action use: id " + _actionId + " ctrl:" + _ctrlPressed + " shift:" + _shiftPressed);
 		}
 		else if (activeChar.isCastingNow())
 		{
@@ -122,11 +113,6 @@ public final class RequestActionUse extends L2GameClientPacket
 		
 		final L2Summon pet = activeChar.getPet();
 		final L2Object target = activeChar.getTarget();
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Requested Action ID: " + _actionId);
-		}
 		
 		switch (_actionId)
 		{
@@ -152,10 +138,6 @@ public final class RequestActionUse extends L2GameClientPacket
 				{
 					activeChar.sitDown();
 				}
-				if (Config.DEBUG)
-				{
-					LOGGER.info("new wait type: " + (activeChar.isSitting() ? "SITTING" : "STANDING"));
-				}
 				break;
 			}
 			case 1:
@@ -167,10 +149,6 @@ public final class RequestActionUse extends L2GameClientPacket
 				else
 				{
 					activeChar.setRunning();
-				}
-				if (Config.DEBUG)
-				{
-					LOGGER.info("new move type: " + (activeChar.isRunning() ? "RUNNING" : "WALKIN"));
 				}
 				break;
 			}
@@ -736,10 +714,6 @@ public final class RequestActionUse extends L2GameClientPacket
 			
 			if (skill == null)
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.warning("Skill " + skillId + " missing from npcskills.sql for a summon id " + activeSummon.getNpcId());
-				}
 				return;
 			}
 			

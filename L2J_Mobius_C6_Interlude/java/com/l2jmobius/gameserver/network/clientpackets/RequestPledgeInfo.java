@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -26,8 +23,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PledgeInfo;
 
 public final class RequestPledgeInfo extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestPledgeInfo.class.getName());
-	
 	private int clanId;
 	
 	@Override
@@ -39,11 +34,6 @@ public final class RequestPledgeInfo extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("infos for clan " + clanId + " requested");
-		}
-		
 		final L2PcInstance activeChar = getClient().getActiveChar();
 		final L2Clan clan = ClanTable.getInstance().getClan(clanId);
 		
@@ -54,10 +44,6 @@ public final class RequestPledgeInfo extends L2GameClientPacket
 		
 		if (clan == null)
 		{
-			if (Config.DEBUG && (clanId > 0))
-			{
-				LOGGER.info("Clan data for clanId " + clanId + " is missing for player " + activeChar.getName());
-			}
 			return; // we have no clan data ?!? should not happen
 		}
 		activeChar.sendPacket(new PledgeInfo(clan));

@@ -240,10 +240,6 @@ public class ItemsOnGroundManager
 			
 			if (_items.isEmpty())
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.warning("ItemsOnGroundManager: nothing to save...");
-				}
 				return;
 			}
 			
@@ -290,10 +286,6 @@ public class ItemsOnGroundManager
 					LOGGER.warning("error while inserting into table ItemsOnGround " + e);
 					e.printStackTrace();
 				}
-			}
-			if (Config.DEBUG)
-			{
-				LOGGER.warning("ItemsOnGroundManager: " + _items.size() + " items on ground saved");
 			}
 		}
 	}

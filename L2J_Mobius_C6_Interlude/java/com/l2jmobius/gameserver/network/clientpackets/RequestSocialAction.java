@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -28,7 +26,6 @@ import com.l2jmobius.gameserver.util.Util;
 
 public class RequestSocialAction extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestSocialAction.class.getName());
 	private int _actionId;
 	
 	@Override
@@ -63,16 +60,8 @@ public class RequestSocialAction extends L2GameClientPacket
 		
 		if ((activeChar.getPrivateStoreType() == 0) && (activeChar.getActiveRequester() == null) && !activeChar.isAlikeDead() && (!activeChar.isAllSkillsDisabled() || activeChar.isInDuel()) && (activeChar.getAI().getIntention() == CtrlIntention.AI_INTENTION_IDLE))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Social Action:" + _actionId);
-			}
-			
 			final SocialAction atk = new SocialAction(activeChar.getObjectId(), _actionId);
 			activeChar.broadcastPacket(atk);
-			/*
-			 * // Schedule a social task to wait for the animation to finish ThreadPoolManager.scheduleGeneral(new SocialTask(this), 2600); activeChar.setIsParalyzed(true);
-			 */
 		}
 	}
 }

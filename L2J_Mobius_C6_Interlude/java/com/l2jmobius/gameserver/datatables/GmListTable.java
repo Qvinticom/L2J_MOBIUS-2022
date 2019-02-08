@@ -23,7 +23,6 @@ import java.util.Map.Entry;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
@@ -102,21 +101,11 @@ public class GmListTable
 	 */
 	public void addGm(L2PcInstance player, boolean hidden)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("added gm: " + player.getName());
-		}
-		
 		_gmList.put(player, hidden);
 	}
 	
 	public void deleteGm(L2PcInstance player)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("deleted gm: " + player.getName());
-		}
-		
 		_gmList.remove(player);
 	}
 	

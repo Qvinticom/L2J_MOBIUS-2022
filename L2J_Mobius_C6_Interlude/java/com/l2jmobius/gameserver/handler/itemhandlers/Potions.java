@@ -904,10 +904,6 @@ public class Potions implements IItemHandler
 						final L2ItemInstance item = activeChar.getInventory().getItemByItemId(potion);
 						activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
 					}
-					else if (Config.DEBUG)
-					{
-						LOGGER.warning("Attention: playable " + playable.getName() + " has not potions " + potion + "!");
-					}
 				}
 				else if (playable instanceof L2Summon)
 				{
@@ -917,10 +913,6 @@ public class Potions implements IItemHandler
 					{
 						final L2ItemInstance item = activeChar.getInventory().getItemByItemId(potion);
 						activeChar.destroyItem("Consume", item.getObjectId(), 1, null, false);
-					}
-					else if (Config.DEBUG)
-					{
-						LOGGER.warning("Attention: playable " + playable.getName() + " has not potions " + potion + "!");
 					}
 				}
 			}

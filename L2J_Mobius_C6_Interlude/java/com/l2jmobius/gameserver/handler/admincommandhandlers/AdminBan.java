@@ -330,10 +330,6 @@ public class AdminBan implements IAdminCommandHandler
 		catch (SQLException se)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "SQLException while chat-banning player");
-			if (Config.DEBUG)
-			{
-				se.printStackTrace();
-			}
 		}
 	}
 	
@@ -365,10 +361,6 @@ public class AdminBan implements IAdminCommandHandler
 		catch (SQLException se)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "SQLException while jailing player");
-			if (Config.DEBUG)
-			{
-				se.printStackTrace();
-			}
 		}
 	}
 	
@@ -398,10 +390,6 @@ public class AdminBan implements IAdminCommandHandler
 		catch (SQLException se)
 		{
 			BuilderUtil.sendSysMessage(activeChar, "SQLException while jailing player");
-			if (Config.DEBUG)
-			{
-				se.printStackTrace();
-			}
 		}
 	}
 	
@@ -460,10 +448,6 @@ public class AdminBan implements IAdminCommandHandler
 			catch (SQLException se)
 			{
 				BuilderUtil.sendSysMessage(activeChar, "SQLException while changing character's access level");
-				if (Config.DEBUG)
-				{
-					se.printStackTrace();
-				}
 			}
 		}
 		return output;

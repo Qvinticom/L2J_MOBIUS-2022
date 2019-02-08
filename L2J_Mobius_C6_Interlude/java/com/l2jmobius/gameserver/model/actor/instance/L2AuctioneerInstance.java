@@ -23,7 +23,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.csv.MapRegionTable;
 import com.l2jmobius.gameserver.instancemanager.AuctionManager;
@@ -184,21 +183,11 @@ public final class L2AuctioneerInstance extends L2FolkInstance
 				{
 					return;
 				}
-				if (Config.DEBUG)
-				{
-					player.sendMessage("bidding show successful");
-				}
 				
 				try
 				{
 					SimpleDateFormat format = new SimpleDateFormat("dd/MM/yyyy HH:mm");
 					final int auctionId = Integer.parseInt(val);
-					
-					if (Config.DEBUG)
-					{
-						player.sendMessage("auction test started");
-					}
-					
 					String filename = "data/html/auction/AgitAuctionInfo.htm";
 					Auction a = AuctionManager.getInstance().getAuction(auctionId);
 					
@@ -334,11 +323,6 @@ public final class L2AuctioneerInstance extends L2FolkInstance
 					limit *= Integer.parseInt(val);
 				}
 				
-				if (Config.DEBUG)
-				{
-					player.sendMessage("cmd list: auction test started");
-				}
-				
 				String items = "";
 				items += "<table width=280 border=0><tr>";
 				for (int j = 1; j <= npage; j++)
@@ -390,11 +374,6 @@ public final class L2AuctioneerInstance extends L2FolkInstance
 				else
 				{
 					auctionId = Integer.parseInt(val);
-				}
-				
-				if (Config.DEBUG)
-				{
-					player.sendMessage("cmd bidlist: auction test started");
 				}
 				
 				String biders = "";

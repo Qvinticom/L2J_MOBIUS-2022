@@ -123,11 +123,6 @@ public class L2TownZone extends L2ZoneType
 			{
 				return;
 			}
-			
-			if (Config.ZONE_DEBUG)
-			{
-				((L2PcInstance) character).sendMessage("You entered " + _townName);
-			}
 		}
 		
 		if (!_noPeace && (Config.ZONE_TOWN != 2))
@@ -144,15 +139,6 @@ public class L2TownZone extends L2ZoneType
 		{
 			character.setInsideZone(ZoneId.PEACE, false);
 		}
-		
-		if (Config.ZONE_DEBUG)
-		{
-			if (character instanceof L2PcInstance)
-			{
-				((L2PcInstance) character).sendMessage("You left " + _townName);
-			}
-		}
-		
 	}
 	
 	@Override

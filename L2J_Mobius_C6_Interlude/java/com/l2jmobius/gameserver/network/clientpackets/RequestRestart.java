@@ -85,11 +85,6 @@ public final class RequestRestart extends L2GameClientPacket
 		// Check if player is in combat
 		if (AttackStanceTaskManager.getInstance().getAttackStanceTask(player) && (!player.isGM() || !Config.GM_RESTART_FIGHTING))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Player " + player.getName() + " tried to logout while fighting.");
-			}
-			
 			player.sendPacket(SystemMessageId.CANT_RESTART_WHILE_FIGHTING);
 			sendPacket(RestartResponse.valueOf(false));
 			return;

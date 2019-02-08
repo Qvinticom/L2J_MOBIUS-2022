@@ -37,9 +37,7 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.crypt.NewCrypt;
 import com.l2jmobius.commons.util.Rnd;
-import com.l2jmobius.commons.util.Util;
 import com.l2jmobius.gameserver.GameServer;
-import com.l2jmobius.gameserver.GameTimeController;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
@@ -207,21 +205,12 @@ public class LoginServerThread extends Thread
 						break;
 					}
 					
-					if (Config.DEBUG)
-					{
-						LOGGER.warning("[C]\n" + Util.printData(decrypt));
-					}
-					
 					final int packetType = decrypt[0] & 0xff;
 					switch (packetType)
 					{
 						case 00:
 						{
 							final InitLS init = new InitLS(decrypt);
-							if (Config.DEBUG)
-							{
-								LOGGER.info("Init received");
-							}
 							if (init.getRevision() != REVISION)
 							{
 								// TODO: revision mismatch
@@ -234,10 +223,6 @@ public class LoginServerThread extends Thread
 								final BigInteger modulus = new BigInteger(init.getRSAKey());
 								final RSAPublicKeySpec kspec1 = new RSAPublicKeySpec(modulus, RSAKeyGenParameterSpec.F4);
 								_publicKey = (RSAPublicKey) kfac.generatePublic(kspec1);
-								if (Config.DEBUG)
-								{
-									LOGGER.info("RSA key set up");
-								}
 							}
 							catch (GeneralSecurityException e)
 							{
@@ -247,22 +232,12 @@ public class LoginServerThread extends Thread
 							// send the blowfish key through the rsa encryption
 							final BlowFishKey bfk = new BlowFishKey(_blowfishKey, _publicKey);
 							sendPacket(bfk);
-							if (Config.DEBUG)
-							{
-								LOGGER.info("Sent new blowfish key");
-							}
+							
 							// now, only accept paket with the new encryption
 							_blowfish = new NewCrypt(_blowfishKey);
-							if (Config.DEBUG)
-							{
-								LOGGER.info("Changed blowfish key");
-							}
+							
 							final AuthRequest ar = new AuthRequest(_requestID, _acceptAlternate, _hexID, _gameExternalHost, _gameInternalHost, _gamePort, _reserveHost, _maxPlayer);
 							sendPacket(ar);
-							if (Config.DEBUG)
-							{
-								LOGGER.info("Sent AuthRequest to login");
-							}
 							break;
 						}
 						case 01:
@@ -344,10 +319,6 @@ public class LoginServerThread extends Thread
 							{
 								if (par.isAuthed())
 								{
-									if (Config.DEBUG)
-									{
-										LOGGER.info("Login accepted player " + wcToRemove.account + " waited(" + (GameTimeController.getGameTicks() - wcToRemove.timestamp) + "ms)");
-									}
 									PlayerInGame pig = new PlayerInGame(par.getAccount());
 									sendPacket(pig);
 									wcToRemove.gameClient.setState(GameClientState.AUTHED);
@@ -432,11 +403,6 @@ public class LoginServerThread extends Thread
 	
 	public void addWaitingClientAndSendRequest(String acc, L2GameClient client, SessionKey key)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info(key.toString());
-		}
-		
 		final WaitingClient wc = new WaitingClient(acc, client, key);
 		
 		synchronized (_waitingClients)
@@ -504,17 +470,8 @@ public class LoginServerThread extends Thread
 		{
 			if (savedClient.isDetached())
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Old Client was disconnected: Offline or OfflineMode --> Login Again");
-				}
 				_accountsInGameServer.put(account, client);
-				
 				return true;
-			}
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Old Client was online --> Close Old Client Connection");
 			}
 			
 			savedClient.closeNow();
@@ -522,13 +479,7 @@ public class LoginServerThread extends Thread
 			return false;
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Client was not online --> New Client Connection");
-		}
-		
 		_accountsInGameServer.put(account, client);
-		
 		return true;
 	}
 	
@@ -555,11 +506,6 @@ public class LoginServerThread extends Thread
 		{
 			_accountsInGameServer.get(account).closeNow();
 			getInstance().sendLogout(account);
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("called [doKickPlayer], closing connection");
-			}
 		}
 	}
 	
@@ -567,10 +513,6 @@ public class LoginServerThread extends Thread
 	{
 		final byte[] array = new byte[size];
 		Rnd.nextBytes(array);
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Generated random String:  \"" + array + "\"");
-		}
 		return array;
 	}
 	
@@ -587,10 +529,6 @@ public class LoginServerThread extends Thread
 		
 		byte[] data = sl.getContent();
 		NewCrypt.appendChecksum(data);
-		if (Config.DEBUG)
-		{
-			LOGGER.info("[S]\n" + Util.printData(data));
-		}
 		data = _blowfish.crypt(data);
 		
 		final int len = data.length + 2;
@@ -745,7 +683,6 @@ public class LoginServerThread extends Thread
 	
 	private class WaitingClient
 	{
-		public int timestamp;
 		public String account;
 		public L2GameClient gameClient;
 		public SessionKey session;
@@ -753,7 +690,6 @@ public class LoginServerThread extends Thread
 		public WaitingClient(String acc, L2GameClient client, SessionKey key)
 		{
 			account = acc;
-			timestamp = GameTimeController.getGameTicks();
 			gameClient = client;
 			session = key;
 		}

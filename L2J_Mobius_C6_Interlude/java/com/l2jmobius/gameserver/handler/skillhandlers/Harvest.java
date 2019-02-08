@@ -67,11 +67,6 @@ public class Harvest implements ISkillHandler
 			return;
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Casting harvest");
-		}
-		
 		for (L2Object aTargetList : targetList)
 		{
 			if (!(aTargetList instanceof L2MonsterInstance))

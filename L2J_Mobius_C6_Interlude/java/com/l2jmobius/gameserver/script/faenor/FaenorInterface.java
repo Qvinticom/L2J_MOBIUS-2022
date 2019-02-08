@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.script.faenor;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2DropCategory;
 import com.l2jmobius.gameserver.model.L2DropData;
 import com.l2jmobius.gameserver.model.entity.Announcements;
@@ -81,10 +80,6 @@ public class FaenorInterface implements EngineInterface
 		final L2NpcTemplate npc = npcTable.getTemplate(npcID);
 		if (npc == null)
 		{
-			if (Config.DEBUG)
-			{
-				System.out.print("Npc doesnt Exist");
-			}
 			throw new NullPointerException();
 		}
 		final L2DropData drop = new L2DropData();

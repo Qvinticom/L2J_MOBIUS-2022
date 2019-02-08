@@ -104,10 +104,6 @@ public class DoorTable
 				{
 					clanhall.getDoors().add(door);
 					door.setClanHall(clanhall);
-					if (Config.DEBUG)
-					{
-						LOGGER.warning("door " + door.getDoorName() + " attached to ch " + clanhall.getName());
-					}
 				}
 			}
 			

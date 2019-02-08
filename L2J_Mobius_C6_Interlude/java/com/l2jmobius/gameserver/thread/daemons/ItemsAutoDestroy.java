@@ -63,11 +63,6 @@ public class ItemsAutoDestroy
 	
 	public synchronized void removeItems()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("[ItemsAutoDestroy] : " + _items.size() + " items to check.");
-		}
-		
 		if (_items.isEmpty())
 		{
 			return;
@@ -106,11 +101,6 @@ public class ItemsAutoDestroy
 					ItemsOnGroundManager.getInstance().removeObject(item);
 				}
 			}
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("[ItemsAutoDestroy] : " + _items.size() + " items remaining.");
 		}
 	}
 	

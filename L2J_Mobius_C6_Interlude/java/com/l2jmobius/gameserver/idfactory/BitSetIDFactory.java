@@ -20,7 +20,6 @@ import java.util.BitSet;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.PrimeFinder;
 
@@ -70,10 +69,6 @@ public class BitSetIDFactory extends IdFactory
 				final int objectID = usedObjectId - FIRST_OID;
 				if (objectID < 0)
 				{
-					if (Config.DEBUG)
-					{
-						LOGGER.warning("Object ID " + usedObjectId + " in DB is less than minimum ID of " + FIRST_OID);
-					}
 					continue;
 				}
 				_freeIds.set(usedObjectId - FIRST_OID);

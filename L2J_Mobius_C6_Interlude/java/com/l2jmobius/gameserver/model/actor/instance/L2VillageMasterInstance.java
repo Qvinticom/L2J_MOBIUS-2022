@@ -572,11 +572,6 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 	 */
 	public void dissolveClan(L2PcInstance player, int clanId)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info(player.getObjectId() + "(" + player.getName() + ") requested dissolve a clan from " + getObjectId() + "(" + getName() + ")");
-		}
-		
 		if (!player.isClanLeader())
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
@@ -648,11 +643,6 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 	 */
 	public void recoverClan(L2PcInstance player, int clanId)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info(player.getObjectId() + "(" + player.getName() + ") requested recover a clan from " + getObjectId() + "(" + getName() + ")");
-		}
-		
 		if (!player.isClanLeader())
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
@@ -671,11 +661,6 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 	 */
 	public void changeClanLeader(L2PcInstance player, String target)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info(player.getObjectId() + "(" + player.getName() + ") requested change a clan leader from " + getObjectId() + "(" + getName() + ")");
-		}
-		
 		if (!player.isClanLeader())
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
@@ -747,11 +732,6 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 	 */
 	public void createSubPledge(L2PcInstance player, String clanName, String leaderName, int pledgeType, int minClanLvl)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info(player.getObjectId() + "(" + player.getName() + ") requested sub clan creation from " + getObjectId() + "(" + getName() + ")");
-		}
-		
 		if (!player.isClanLeader())
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
@@ -904,11 +884,6 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 	 */
 	public void assignSubPledgeLeader(L2PcInstance player, String clanName, String leaderName)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info(player.getObjectId() + "(" + player.getName() + ") requested to assign sub clan" + clanName + "leader (" + leaderName + ")");
-		}
-		
 		if (!player.isClanLeader())
 		{
 			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
@@ -1050,10 +1025,6 @@ public final class L2VillageMasterInstance extends L2FolkInstance
 	 */
 	public void showPledgeSkillList(L2PcInstance player)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("PledgeSkillList activated on: " + getObjectId());
-		}
 		if (player.getClan() == null)
 		{
 			return;

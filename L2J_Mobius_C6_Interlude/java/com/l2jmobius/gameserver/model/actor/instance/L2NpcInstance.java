@@ -769,11 +769,6 @@ public class L2NpcInstance extends L2Character
 		// Check if the L2PcInstance already target the L2NpcInstance
 		if (this != player.getTarget())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("new target selected:" + getObjectId());
-			}
-			
 			// Set the target of the L2PcInstance player
 			player.setTarget(this);
 			
@@ -2016,18 +2011,6 @@ public class L2NpcInstance extends L2Character
 			final String stateId = State.getStateName(qs.getState());
 			final String path = Config.DATAPACK_ROOT + "/data/scripts/quests/" + questId + "/" + stateId + ".htm";
 			content = HtmCache.getInstance().getHtm(path);
-			
-			if (Config.DEBUG)
-			{
-				if (content != null)
-				{
-					LOGGER.info("Showing quest window for quest " + questId + " html path: " + path);
-				}
-				else
-				{
-					LOGGER.info("File not exists for quest " + questId + " html path: " + path);
-				}
-			}
 		}
 		
 		// Send a Server->Client packet NpcHtmlMessage to the L2PcInstance in order to display the message of the L2Npc

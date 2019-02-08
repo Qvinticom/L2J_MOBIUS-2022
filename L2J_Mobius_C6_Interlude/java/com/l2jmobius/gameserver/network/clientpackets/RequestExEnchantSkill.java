@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
@@ -44,7 +42,6 @@ import com.l2jmobius.gameserver.util.Util;
  */
 public final class RequestExEnchantSkill extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestAquireSkill.class.getName());
 	private int _skillId;
 	private int _skillLvl;
 	
@@ -162,12 +159,6 @@ public final class RequestExEnchantSkill extends L2GameClientPacket
 		if (Rnd.get(100) <= _rate)
 		{
 			player.addSkill(skill, true);
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Learned skill " + _skillId + " for " + _requiredSp + " SP.");
-			}
-			
 			player.getStat().removeExpAndSp(_requiredExp, _requiredSp);
 			
 			final StatusUpdate su = new StatusUpdate(player.getObjectId());

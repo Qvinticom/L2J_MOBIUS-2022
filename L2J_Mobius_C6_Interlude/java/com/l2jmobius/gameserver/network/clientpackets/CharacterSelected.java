@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.network.clientpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.crypt.nProtect;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
@@ -66,12 +65,6 @@ public class CharacterSelected extends L2GameClientPacket
 				// should always be null but if not then this is repeated packet and nothing should be done here
 				if (getClient().getActiveChar() == null)
 				{
-					// The L2PcInstance must be created here, so that it can be attached to the L2GameClient
-					if (Config.DEBUG)
-					{
-						LOGGER.info("DEBUG " + getType() + ": selected slot:" + _charSlot);
-					}
-					
 					// Load up character from disk
 					final L2PcInstance cha = getClient().loadCharFromDisk(_charSlot);
 					

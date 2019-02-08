@@ -27,7 +27,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.StringTokenizer;
 import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
@@ -94,8 +93,6 @@ public class TradeController
 		{
 			LOGGER.warning("Do, please, remove buylists from data folder and use SQL buylist instead");
 			String line = null;
-			int dummyItemCount = 0;
-			
 			FileReader reader = null;
 			BufferedReader buff = null;
 			LineNumberReader lnr = null;
@@ -112,12 +109,6 @@ public class TradeController
 					{
 						continue;
 					}
-					dummyItemCount += parseList(line);
-				}
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("created " + dummyItemCount + " Dummy-Items for buylists");
 				}
 				
 				LOGGER.info("TradeController: Loaded " + _lists.size() + " Buylists.");
@@ -172,7 +163,6 @@ public class TradeController
 			/**
 			 * Initialize Shop buylist
 			 */
-			int dummyItemCount = 0;
 			boolean LimitedItem = false;
 			
 			try (Connection con = DatabaseFactory.getConnection())
@@ -190,7 +180,6 @@ public class TradeController
 					if (rset.next())
 					{
 						LimitedItem = false;
-						dummyItemCount++;
 						L2TradeList buy1 = new L2TradeList(rset1.getInt("shop_id"));
 						
 						int itemId = rset.getInt("item_id");
@@ -240,7 +229,6 @@ public class TradeController
 						{
 							while (rset.next()) // TODO aici
 							{
-								dummyItemCount++;
 								itemId = rset.getInt("item_id");
 								price = rset.getInt("price");
 								count = rset.getInt("count");
@@ -302,13 +290,9 @@ public class TradeController
 				rset1.close();
 				statement1.close();
 				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("created " + dummyItemCount + " Dummy-Items for buylists");
-				}
-				
 				LOGGER.info("TradeController: Loaded " + _lists.size() + " Buylists.");
 				LOGGER.info("TradeController: Loaded " + _listsTaskItem.size() + " Limited Buylists.");
+				
 				/*
 				 * Restore Task for reinitialyze count of buy item
 				 */
@@ -373,7 +357,6 @@ public class TradeController
 						if (rset.next())
 						{
 							LimitedItem = false;
-							dummyItemCount++;
 							L2TradeList buy1 = new L2TradeList(rset1.getInt("shop_id"));
 							int itemId = rset.getInt("item_id");
 							int price = rset.getInt("price");
@@ -420,7 +403,6 @@ public class TradeController
 							{
 								while (rset.next())
 								{
-									dummyItemCount++;
 									itemId = rset.getInt("item_id");
 									price = rset.getInt("price");
 									count = rset.getInt("count");
@@ -478,11 +460,6 @@ public class TradeController
 					rset1.close();
 					statement1.close();
 					
-					if (Config.DEBUG)
-					{
-						LOGGER.info("created " + dummyItemCount + " Dummy-Items for buylists");
-					}
-					
 					LOGGER.info("TradeController: Loaded " + (_lists.size() - initialSize) + " Custom Buylists.");
 					
 					/**
@@ -527,34 +504,6 @@ public class TradeController
 				}
 			}
 		}
-	}
-	
-	private int parseList(String line)
-	{
-		int itemCreated = 0;
-		StringTokenizer st = new StringTokenizer(line, ";");
-		
-		final int listId = Integer.parseInt(st.nextToken());
-		L2TradeList buy1 = new L2TradeList(listId);
-		while (st.hasMoreTokens())
-		{
-			final int itemId = Integer.parseInt(st.nextToken());
-			int price = Integer.parseInt(st.nextToken());
-			final L2ItemInstance item = ItemTable.getInstance().createDummyItem(itemId);
-			
-			if (price < (item.getReferencePrice() / 2))
-			{
-				LOGGER.warning("L2TradeList " + listId + " itemId  " + itemId + " has an ADENA sell price lower then reference price.. Automatically Updating it..");
-				price = item.getReferencePrice();
-			}
-			
-			item.setPriceToSell(price);
-			buy1.addItem(item);
-			itemCreated++;
-		}
-		
-		_lists.put(new Integer(buy1.getListId()), buy1);
-		return itemCreated;
 	}
 	
 	public L2TradeList getBuyList(int listId)

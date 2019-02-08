@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2FortSiegeGuardAI;
@@ -112,10 +111,6 @@ public class L2FortSiegeGuardInstance extends L2Attackable
 		}
 		if (!isInsideRadius(getSpawn().getX(), getSpawn().getY(), 40, false))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getObjectId() + ": moving home");
-			}
 			setisReturningToSpawnPoint(true);
 			clearAggroList();
 			
@@ -141,11 +136,6 @@ public class L2FortSiegeGuardInstance extends L2Attackable
 		// Check if the L2PcInstance already target the L2NpcInstance
 		if (this != player.getTarget())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("new target selected:" + getObjectId());
-			}
-			
 			// Set the target of the L2PcInstance player
 			player.setTarget(this);
 			

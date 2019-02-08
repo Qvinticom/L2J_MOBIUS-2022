@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.L2World;
@@ -30,8 +28,6 @@ import com.l2jmobius.gameserver.util.Util;
 
 public final class TradeRequest extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(TradeRequest.class.getName());
-	
 	private int _objectId;
 	
 	@Override
@@ -254,11 +250,6 @@ public final class TradeRequest extends L2GameClientPacket
 		
 		if (player.isProcessingTransaction())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Already trading with someone");
-			}
-			
 			player.sendPacket(SystemMessageId.ALREADY_TRADING);
 			player.sendPacket(ActionFailed.STATIC_PACKET);
 			return;
@@ -266,11 +257,6 @@ public final class TradeRequest extends L2GameClientPacket
 		
 		if (partner.isProcessingRequest() || partner.isProcessingTransaction())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Transaction already in progress.");
-			}
-			
 			final SystemMessage sm = new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER);
 			sm.addString(partner.getName());
 			player.sendPacket(sm);

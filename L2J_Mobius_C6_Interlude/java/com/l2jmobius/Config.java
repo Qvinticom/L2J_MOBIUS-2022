@@ -641,11 +641,7 @@ public final class Config
 	public static boolean ALT_DEV_NO_SPAWNS;
 	public static boolean ALT_DEV_NO_SCRIPT;
 	public static boolean ALT_DEV_NO_RB;
-	public static boolean SKILLSDEBUG;
-	public static boolean DEBUG;
 	public static boolean ASSERT;
-	public static boolean DEVELOPER;
-	public static boolean ZONE_DEBUG;
 	public static boolean SERVER_LIST_TESTSERVER;
 	public static boolean BETASERVER;
 	public static boolean SERVER_LIST_BRACKET;
@@ -2300,11 +2296,7 @@ public final class Config
 			devSettings.load(is);
 			is.close();
 			
-			SKILLSDEBUG = Boolean.parseBoolean(devSettings.getProperty("SkillsDebug", "false"));
-			DEBUG = Boolean.parseBoolean(devSettings.getProperty("Debug", "false"));
 			ASSERT = Boolean.parseBoolean(devSettings.getProperty("Assert", "false"));
-			DEVELOPER = Boolean.parseBoolean(devSettings.getProperty("Developer", "false"));
-			ZONE_DEBUG = Boolean.parseBoolean(devSettings.getProperty("ZoneDebug", "false"));
 			SERVER_LIST_TESTSERVER = Boolean.parseBoolean(devSettings.getProperty("TestServer", "false"));
 			BETASERVER = Boolean.parseBoolean(devSettings.getProperty("BetaServer", "false"));
 			SERVER_LIST_BRACKET = Boolean.valueOf(devSettings.getProperty("ServerListBrackets", "false"));
@@ -3815,8 +3807,6 @@ public final class Config
 			NORMAL_CONNECTION_TIME = Integer.parseInt(serverSettings.getProperty("NormalConnectionTime", "700"));
 			FAST_CONNECTION_TIME = Integer.parseInt(serverSettings.getProperty("FastConnectionTime", "350"));
 			MAX_CONNECTION_PER_IP = Integer.parseInt(serverSettings.getProperty("MaxConnectionPerIP", "50"));
-			DEBUG = Boolean.parseBoolean(serverSettings.getProperty("Debug", "false"));
-			DEVELOPER = Boolean.parseBoolean(serverSettings.getProperty("Developer", "false"));
 			
 			NETWORK_IP_LIST = serverSettings.getProperty("NetworkList", "");
 			SESSION_TTL = Long.parseLong(serverSettings.getProperty("SessionTTL", "25000"));

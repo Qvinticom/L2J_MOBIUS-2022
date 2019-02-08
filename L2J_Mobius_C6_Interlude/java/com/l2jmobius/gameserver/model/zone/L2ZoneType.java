@@ -18,11 +18,9 @@ package com.l2jmobius.gameserver.model.zone;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
 
 import org.w3c.dom.Node;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -34,7 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.L2GameServerPacket;
  */
 public abstract class L2ZoneType
 {
-	private final Logger LOGGER = Logger.getLogger(L2ZoneType.class.getName());
 	private final int _id;
 	protected L2ZoneForm _zone;
 	public Map<Integer, L2Character> _characterList;
@@ -291,17 +288,6 @@ public abstract class L2ZoneType
 			}
 		}
 		
-		if (Config.ZONE_DEBUG && (character instanceof L2PcInstance) && ((L2PcInstance) character).isGM())
-		{
-			
-			LOGGER.info("ZONE: Character " + character.getName() + " has coords: ");
-			LOGGER.info("ZONE: 	X: " + character.getX());
-			LOGGER.info("ZONE: 	Y: " + character.getY());
-			LOGGER.info("ZONE: 	Z: " + character.getZ());
-			LOGGER.info("ZONE:  -  is inside zone " + _id + "?: " + _zone.isInsideZone(character.getX(), character.getY(), character.getZ()));
-			
-		}
-		
 		// If the object is inside the zone...
 		if (_zone.isInsideZone(character.getX(), character.getY(), character.getZ()))
 		{
@@ -315,25 +301,9 @@ public abstract class L2ZoneType
 		else // Was the character inside this zone?
 		if (_characterList.containsKey(character.getObjectId()))
 		{
-			if (Config.ZONE_DEBUG && (character instanceof L2PcInstance) && (character.getName() != null))
-			{
-				LOGGER.info("ZONE: Character " + character.getName() + " removed from zone.");
-			}
 			_characterList.remove(character.getObjectId());
 			onExit(character);
 		}
-		
-		if (Config.ZONE_DEBUG)
-		{
-			for (L2Character actual : _characterList.values())
-			{
-				if (actual instanceof L2PcInstance)
-				{
-					LOGGER.info("ZONE:	 -  " + actual.getName() + " is inside zone " + _id);
-				}
-			}
-		}
-		
 	}
 	
 	/**

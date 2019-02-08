@@ -1654,12 +1654,12 @@ public final class L2PcInstance extends L2Playable
 					continue;
 				}
 				
-				if (qs.isCompleted() && !Config.DEVELOPER)
+				if (qs.isCompleted())
 				{
 					continue;
 				}
 				
-				if (!qs.isStarted() && !Config.DEVELOPER)
+				if (!qs.isStarted())
 				{
 					continue;
 				}
@@ -1864,11 +1864,6 @@ public final class L2PcInstance extends L2Playable
 		
 		if (content != null)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Showing quest window for quest " + questId + " state " + stateId + " html path: " + path);
-			}
-			
 			NpcHtmlMessage npcReply = new NpcHtmlMessage(5);
 			npcReply.setHtml(content);
 			sendPacket(npcReply);
@@ -2922,10 +2917,6 @@ public final class L2PcInstance extends L2Playable
 				if (!effectSkill.getWeaponDependancy(this))
 				{
 					sendMessage(effectSkill.getName() + " cannot be used with this weapon.");
-					if (Config.DEBUG)
-					{
-						LOGGER.info("   | Skill " + effectSkill.getName() + " has been disabled for (" + getName() + "); Reason: Incompatible Weapon Type.");
-					}
 					currenteffect.exit();
 				}
 			}
@@ -2981,10 +2972,6 @@ public final class L2PcInstance extends L2Playable
 	public void setPvpKills(int pvpKills)
 	{
 		_pvpKills = pvpKills;
-		
-		/*
-		 * // Set hero aura if pvp kills > 100 if (pvpKills > 100) { isPermaHero = true; setHeroAura(true); }
-		 */
 	}
 	
 	/**
@@ -3183,11 +3170,6 @@ public final class L2PcInstance extends L2Playable
 		{
 			L2Skill skill = SkillTable.getInstance().getInfo(194, 1);
 			skill = removeSkill(skill);
-			
-			if (Config.DEBUG && (skill != null))
-			{
-				LOGGER.info("Removed skill 'Lucky' from " + getName());
-			}
 		}
 		
 		// Calculate the current higher Expertise of the L2PcInstance
@@ -3204,15 +3186,6 @@ public final class L2PcInstance extends L2Playable
 		{
 			L2Skill skill = SkillTable.getInstance().getInfo(239, getExpertiseIndex());
 			addSkill(skill, !restore);
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Awarded " + getName() + " with new expertise.");
-			}
-		}
-		else if (Config.DEBUG)
-		{
-			LOGGER.info("No skills awarded at lvl: " + lvl);
 		}
 		
 		// Active skill dwarven craft
@@ -4927,21 +4900,11 @@ public final class L2PcInstance extends L2Playable
 		// Pet is summoned and not the item that summoned the pet AND not the buggle from strider you're mounting
 		if (((getPet() != null) && (getPet().getControlItemId() == objectId)) || (getMountObjectID() == objectId))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getObjectId() + ": player tried to " + action + " item controling pet");
-			}
-			
 			return null;
 		}
 		
 		if ((getActiveEnchantItem() != null) && (getActiveEnchantItem().getObjectId() == objectId))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getObjectId() + ":player tried to " + action + " an enchant scroll he was using");
-			}
-			
 			return null;
 		}
 		
@@ -4960,11 +4923,6 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void setProtection(boolean protect)
 	{
-		if (Config.DEVELOPER && (protect || (_protectEndTime > 0)))
-		{
-			LOGGER.info(getName() + ": Protection " + (protect ? "ON " + (GameTimeController.getGameTicks() + (Config.PLAYER_SPAWN_PROTECTION * GameTimeController.TICKS_PER_SECOND)) : "OFF") + " (currently " + GameTimeController.getGameTicks() + ")");
-		}
-		
 		if (isInOlympiadMode())
 		{
 			return;
@@ -4984,11 +4942,6 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void setTeleportProtection(boolean protect)
 	{
-		if (Config.DEVELOPER && (protect || (_teleportProtectEndTime > 0)))
-		{
-			LOGGER.warning(getName() + ": Tele Protection " + (protect ? "ON " + (GameTimeController.getGameTicks() + (Config.PLAYER_TELEPORT_PROTECTION * GameTimeController.TICKS_PER_SECOND)) : "OFF") + " (currently " + GameTimeController.getGameTicks() + ")");
-		}
-		
 		_teleportProtectEndTime = protect ? GameTimeController.getGameTicks() + (Config.PLAYER_TELEPORT_PROTECTION * GameTimeController.TICKS_PER_SECOND) : 0;
 		
 		if (protect)
@@ -5689,10 +5642,6 @@ public final class L2PcInstance extends L2Playable
 		// Check if a party is in progress and party window update is usefull
 		if (isInParty() && (needCpUpdate(352) || super.needHpUpdate(352) || needMpUpdate(352)))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Send status for party window of " + getObjectId() + "(" + getName() + ") to his party. CP: " + getCurrentCp() + " HP: " + getCurrentHp() + " MP: " + getCurrentMp());
-			}
 			// Send the Server->Client packet PartySmallWindowUpdate with current HP, MP and Level to all other L2PcInstance of the Party
 			PartySmallWindowUpdate update = new PartySmallWindowUpdate(this);
 			getParty().broadcastToPartyMembers(this, update);
@@ -5705,10 +5654,6 @@ public final class L2PcInstance extends L2Playable
 			{
 				if ((player.getOlympiadGameId() == getOlympiadGameId()) && player.isOlympiadStart())
 				{
-					if (Config.DEBUG)
-					{
-						LOGGER.info("Send status for Olympia window of " + getObjectId() + "(" + getName() + ") to " + player.getObjectId() + "(" + player.getName() + "). CP: " + getCurrentCp() + " HP: " + getCurrentHp() + " MP: " + getCurrentMp());
-					}
 					player.sendPacket(new ExOlympiadUserInfo(this, 1));
 				}
 			}
@@ -5830,13 +5775,6 @@ public final class L2PcInstance extends L2Playable
 	{
 		// Send a Server->Client packet UserInfo to this L2PcInstance
 		sendPacket(new UserInfo(this));
-		
-		// Send a Server->Client packet CharInfo to all L2PcInstance in _KnownPlayers of the L2PcInstance
-		if (Config.DEBUG)
-		{
-			LOGGER.info("players to notify:" + getKnownList().getKnownPlayers().size() + " packet: [S] 03 CharInfo");
-		}
-		
 		Broadcast.toKnownPlayers(this, new CharInfo(this));
 	}
 	
@@ -5847,13 +5785,6 @@ public final class L2PcInstance extends L2Playable
 	{
 		// Send a Server->Client packet UserInfo to this L2PcInstance
 		sendPacket(new UserInfo(this));
-		
-		// Send a Server->Client packet TitleUpdate to all L2PcInstance in _KnownPlayers of the L2PcInstance
-		if (Config.DEBUG)
-		{
-			LOGGER.info("players to notify:" + getKnownList().getKnownPlayers().size() + " packet: [S] cc TitleUpdate");
-		}
-		
 		Broadcast.toKnownPlayers(this, new TitleUpdate(this));
 	}
 	
@@ -5996,12 +5927,7 @@ public final class L2PcInstance extends L2Playable
 		sendPacket(ActionFailed.STATIC_PACKET);
 		
 		// Send a Server->Client packet StopMove to this L2PcInstance
-		StopMove sm = new StopMove(this);
-		if (Config.DEBUG)
-		{
-			LOGGER.info("pickup pos: " + target.getX() + " " + target.getY() + " " + target.getZ());
-		}
-		sendPacket(sm);
+		sendPacket(new StopMove(this));
 		
 		synchronized (target)
 		{
@@ -8005,11 +7931,6 @@ public final class L2PcInstance extends L2Playable
 			setCharmOfCourage(false);
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getName() + " died and lost " + lostExp + " experience.");
-		}
-		
 		// Set the new Experience value of the L2PcInstance
 		getStat().addExp(-lostExp);
 	}
@@ -8500,22 +8421,10 @@ public final class L2PcInstance extends L2Playable
 	protected void reduceArrowCount()
 	{
 		L2ItemInstance arrows = getInventory().destroyItem("Consume", getInventory().getPaperdollObjectId(Inventory.PAPERDOLL_LHAND), 1, this, null);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("arrow count:" + (arrows == null ? 0 : arrows.getCount()));
-		}
-		
 		if ((arrows == null) || (arrows.getCount() == 0))
 		{
 			getInventory().unEquipItemInSlot(Inventory.PAPERDOLL_LHAND);
 			_arrowItem = null;
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("removed arrows count");
-			}
-			
 			sendPacket(new ItemList(this, false));
 		}
 		else if (!Config.FORCE_INVENTORY_UPDATE)
@@ -10368,12 +10277,6 @@ public final class L2PcInstance extends L2Playable
 				if (!foundskill)
 				{
 					removeSkill(skill);
-					
-					if (Config.DEBUG)
-					{
-						LOGGER.warning("Character " + getName() + " of Account " + getAccountName() + " got skill " + skill.getName() + ".. Removed!"/* + IllegalPlayerAction.PUNISH_KICK */);
-						
-					}
 				}
 			}
 			
@@ -11271,11 +11174,6 @@ public final class L2PcInstance extends L2Playable
 				return;
 			}
 			
-			if (Config.DEBUG && (getQueuedSkill() != null))
-			{
-				LOGGER.info(getQueuedSkill().getSkill().getName() + " is already queued for " + getName() + ".");
-			}
-			
 			// Create a new SkillDat object and queue it in the player _queuedSkill
 			setQueuedSkill(skill, forceUse, dontMove);
 			sendPacket(ActionFailed.STATIC_PACKET);
@@ -11295,19 +11193,6 @@ public final class L2PcInstance extends L2Playable
 		// triggered skills cannot be used directly
 		if (_triggeredSkills.size() > 0)
 		{
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Checking if Triggherable Skill: " + skill.getId());
-				LOGGER.info("Saved Triggherable Skills");
-				
-				for (Integer skillId : _triggeredSkills.keySet())
-				{
-					LOGGER.info("" + skillId);
-				}
-				
-			}
-			
 			if (_triggeredSkills.get(skill.getId()) != null)
 			{
 				sendPacket(ActionFailed.STATIC_PACKET);
@@ -12087,17 +11972,12 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void addCubic(int id, int level, double matk, int activationtime, int activationchance, int totalLifetime, boolean givenByOther)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("L2PcInstance(" + getName() + "): addCubic(" + id + "|" + level + "|" + matk + ")");
-		}
 		final L2CubicInstance cubic = new L2CubicInstance(this, id, level, (int) matk, activationtime, activationchance, totalLifetime, givenByOther);
 		
 		synchronized (_cubics)
 		{
 			_cubics.put(id, cubic);
 		}
-		
 	}
 	
 	/**
@@ -13617,14 +13497,8 @@ public final class L2PcInstance extends L2Playable
 		
 		if (output)
 		{
-			
 			// Commit after database INSERT incase exception is thrown.
 			getSubClasses().put(newClass.getClassIndex(), newClass);
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getName() + " added class ID " + classId + " as a sub class at index " + classIndex + ".");
-			}
 			
 			ClassId subTemplate = ClassId.values()[classId];
 			Collection<L2SkillLearn> skillTree = SkillTreeTable.getInstance().getAllowedSkills(subTemplate);
@@ -13652,11 +13526,6 @@ public final class L2PcInstance extends L2Playable
 					storeSkill(newSkill, prevSkill, classIndex);
 				}
 			}
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getName() + " was given " + getAllSkills().length + " skills for their new sub class.");
-			}
 		}
 		
 		return output;
@@ -13672,13 +13541,6 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public boolean modifySubClass(int classIndex, int newClassId)
 	{
-		final int oldClassId = getSubClasses().get(classIndex).getClassId();
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getName() + " has requested to modify sub class index " + classIndex + " from class ID " + oldClassId + " to " + newClassId + ".");
-		}
-		
 		boolean output = false;
 		
 		try (Connection con = DatabaseFactory.getConnection())
@@ -15097,21 +14959,11 @@ public final class L2PcInstance extends L2Playable
 		// Pet is summoned and not the item that summoned the pet AND not the buggle from strider you're mounting
 		if (((getPet() != null) && (getPet().getControlItemId() == objectId)) || (getMountObjectID() == objectId))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getObjectId() + ": player tried to " + action + " item controling pet");
-			}
-			
 			return false;
 		}
 		
 		if ((getActiveEnchantItem() != null) && (getActiveEnchantItem().getObjectId() == objectId))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getObjectId() + ":player tried to " + action + " an enchant scroll he was using");
-			}
-			
 			return false;
 		}
 		
@@ -16366,20 +16218,9 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (currentSkill == null)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Setting current skill: NULL for " + getName() + ".");
-			}
-			
 			_currentSkill = null;
 			return;
 		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Setting current skill: " + currentSkill.getName() + " (ID: " + currentSkill.getId() + ") for " + getName() + ".");
-		}
-		
 		_currentSkill = new SkillDat(currentSkill, ctrlPressed, shiftPressed);
 	}
 	
@@ -16403,20 +16244,9 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (queuedSkill == null)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Setting queued skill: NULL for " + getName() + ".");
-			}
-			
 			_queuedSkill = null;
 			return;
 		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Setting queued skill: " + queuedSkill.getName() + " (ID: " + queuedSkill.getId() + ") for " + getName() + ".");
-		}
-		
 		_queuedSkill = new SkillDat(queuedSkill, ctrlPressed, shiftPressed);
 	}
 	
@@ -16588,11 +16418,6 @@ public final class L2PcInstance extends L2Playable
 	 */
 	public void restoreCustomStatus()
 	{
-		if (Config.DEVELOPER)
-		{
-			LOGGER.info("Restoring character status " + getName() + " from database...");
-		}
-		
 		int hero = 0;
 		int noble = 0;
 		int donator = 0;
@@ -18482,20 +18307,9 @@ public final class L2PcInstance extends L2Playable
 	{
 		if (currentSkill == null)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Setting current pet skill: NULL for " + getName() + ".");
-			}
-			
 			_currentPetSkill = null;
 			return;
 		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Setting current Pet skill: " + currentSkill.getName() + " (ID: " + currentSkill.getId() + ") for " + getName() + ".");
-		}
-		
 		_currentPetSkill = new SkillDat(currentSkill, ctrlPressed, shiftPressed);
 	}
 }

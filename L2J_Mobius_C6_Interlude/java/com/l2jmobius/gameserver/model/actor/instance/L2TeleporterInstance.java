@@ -275,28 +275,16 @@ public final class L2TeleporterInstance extends L2FolkInstance
 			// Lilith and Anakim have BossZone, so players must be allowed to enter
 			else if (list.getTeleId() == 450)
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Teleporting player " + player.getName() + " to new location: " + list.getX() + ":" + list.getY() + ":" + list.getZ());
-				}
 				final L2BossZone _zone = GrandBossManager.getInstance().getZone(list.getX(), list.getY(), list.getZ());
 				_zone.allowPlayerEntry(player, 300);
 				player.teleToLocation(list.getX(), list.getY(), list.getZ(), true);
 			}
 			else if (!list.getIsForNoble() && (Config.ALT_GAME_FREE_TELEPORT || player.reduceAdena("Teleport", list.getPrice(), this, true)))
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Teleporting player " + player.getName() + " to new location: " + list.getX() + ":" + list.getY() + ":" + list.getZ());
-				}
 				player.teleToLocation(list.getX(), list.getY(), list.getZ(), true);
 			}
 			else if (list.getIsForNoble() && (Config.ALT_GAME_FREE_TELEPORT || player.destroyItemByItemId("Noble Teleport", 6651, list.getPrice(), this, true)))
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Teleporting player " + player.getName() + " to new location: " + list.getX() + ":" + list.getY() + ":" + list.getZ());
-				}
 				player.teleToLocation(list.getX(), list.getY(), list.getZ(), true);
 			}
 		}

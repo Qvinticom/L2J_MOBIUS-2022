@@ -78,20 +78,6 @@ public final class RequestPrivateStoreSell extends L2GameClientPacket
 			return;
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Player " + getClient().getActiveChar().getName() + " requested to sell to storeId " + _storePlayerId + " Items Number: " + _count);
-			
-			for (int i = 0; i < _count; i++)
-			{
-				LOGGER.info("Requested Item ObjectID: " + _items[i].getObjectId());
-				LOGGER.info("Requested Item Id: " + _items[i].getItemId());
-				LOGGER.info("Requested Item count: " + _items[i].getCount());
-				LOGGER.info("Requested Item enchant: " + _items[i].getCount());
-				LOGGER.info("Requested Item price: " + _items[i].getPrice());
-			}
-		}
-		
 		_price = (int) priceTotal;
 	}
 	

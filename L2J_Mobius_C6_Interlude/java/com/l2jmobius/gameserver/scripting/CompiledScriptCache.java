@@ -27,14 +27,11 @@ import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.logging.Logger;
 
 import javax.script.Compilable;
 import javax.script.CompiledScript;
 import javax.script.ScriptEngine;
 import javax.script.ScriptException;
-
-import com.l2jmobius.Config;
 
 /**
  * Cache of Compiled Scripts
@@ -42,8 +39,6 @@ import com.l2jmobius.Config;
  */
 public class CompiledScriptCache implements Serializable
 {
-	private static final Logger LOG = Logger.getLogger(CompiledScriptCache.class.getName());
-	
 	private final Map<String, CompiledScriptHolder> _compiledScriptCache = new HashMap<>();
 	private transient boolean _modified = false;
 	
@@ -55,16 +50,7 @@ public class CompiledScriptCache implements Serializable
 		final CompiledScriptHolder csh = _compiledScriptCache.get(relativeName);
 		if ((csh != null) && csh.matches(file))
 		{
-			if (Config.DEBUG)
-			{
-				LOG.info("Reusing cached compiled script: " + file);
-			}
 			return csh.getCompiledScript();
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOG.info("Compiling script: " + file);
 		}
 		
 		final Compilable eng = (Compilable) engine;

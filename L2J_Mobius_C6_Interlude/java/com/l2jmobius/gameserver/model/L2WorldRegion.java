@@ -184,15 +184,12 @@ public final class L2WorldRegion
 	
 	private void switchAI(Boolean isOn)
 	{
-		int c = 0;
-		
 		if (!isOn)
 		{
 			for (L2Object o : _visibleObjects)
 			{
 				if (o instanceof L2Attackable)
 				{
-					c++;
 					final L2Attackable mob = (L2Attackable) o;
 					
 					// Set target to null and cancel Attack or Cast
@@ -227,10 +224,6 @@ public final class L2WorldRegion
 					}
 				}
 			}
-			if (Config.DEBUG)
-			{
-				LOGGER.info(c + " mobs were turned off");
-			}
 		}
 		else
 		{
@@ -238,7 +231,6 @@ public final class L2WorldRegion
 			{
 				if (o instanceof L2Attackable)
 				{
-					c++;
 					// Start HP/MP/CP Regeneration task
 					((L2Attackable) o).getStatus().startHpMpRegeneration();
 				}
@@ -248,10 +240,6 @@ public final class L2WorldRegion
 					// L2Monsterinstance/L2Attackable socials are handled by AI (TODO: check the instances)
 					((L2NpcInstance) o).startRandomAnimationTask();
 				}
-			}
-			if (Config.DEBUG)
-			{
-				LOGGER.info(c + " mobs were turned on");
 			}
 		}
 	}
@@ -299,19 +287,6 @@ public final class L2WorldRegion
 		
 		// turn the AI on or off to match the region's activation.
 		switchAI(value);
-		
-		// TODO: turn the geodata on or off to match the region's activation.
-		if (Config.DEBUG)
-		{
-			if (value)
-			{
-				LOGGER.info("Starting Grid " + _tileX + "," + _tileY);
-			}
-			else
-			{
-				LOGGER.info("Stoping Grid " + _tileX + "," + _tileY);
-			}
-		}
 	}
 	
 	/**
@@ -464,10 +439,6 @@ public final class L2WorldRegion
 				
 				LOGGER.info("Removed NPC " + target.getObjectId());
 			}
-		}
-		if (Config.DEBUG)
-		{
-			LOGGER.info("All visible NPCs deleted in Region: " + getName());
 		}
 	}
 	

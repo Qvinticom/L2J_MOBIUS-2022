@@ -35,7 +35,6 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 	protected static final Logger LOGGER = Logger.getLogger(L2ObjectHashSet.class.getName());
 	
 	private static final boolean TRACE = false;
-	private static final boolean DEBUG = Config.DEBUG;
 	
 	private static final int[] PRIMES =
 	{
@@ -135,36 +134,20 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 		final int size = PRIMES[0];
 		_table = (T[]) new L2Object[size];
 		_collisions = new int[(size + 31) >> 5];
-		if (DEBUG)
-		{
-			check();
-		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.util.L2ObjectSet#size()
-	 */
 	@Override
 	public int size()
 	{
 		return _count;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.util.L2ObjectSet#isEmpty()
-	 */
 	@Override
 	public boolean isEmpty()
 	{
 		return _count == 0;
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.util.L2ObjectSet#clear()
-	 */
 	@Override
 	@SuppressWarnings("unchecked")
 	public synchronized void clear()
@@ -173,33 +156,8 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 		_table = (T[]) new L2Object[size];
 		_collisions = new int[(size + 31) >> 5];
 		_count = 0;
-		if (DEBUG)
-		{
-			check();
-		}
 	}
 	
-	private void check()
-	{
-		if (DEBUG)
-		{
-			int cnt = 0;
-			assert _collisions.length == ((_table.length + 31) >> 5);
-			for (T obj : _table)
-			{
-				if (obj != null)
-				{
-					cnt++;
-				}
-			}
-			assert cnt == _count;
-		}
-	}
-	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.util.L2ObjectSet#put(T)
-	 */
 	@Override
 	public synchronized void put(T obj)
 	{
@@ -243,10 +201,6 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 					{
 						LOGGER.warning("ht: put obj id=" + hashcode + " at slot=" + slot);
 					}
-					if (DEBUG)
-					{
-						check();
-					}
 					return;
 				}
 			}
@@ -272,10 +226,6 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 					{
 						LOGGER.warning("ht: put obj id=" + hashcode + " at slot=" + slot);
 					}
-					if (DEBUG)
-					{
-						check();
-					}
 					return;
 				}
 			}
@@ -286,17 +236,10 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 			seed += incr;
 		}
 		while (++ntry < _table.length);
-		if (DEBUG)
-		{
-			check();
-		}
+		
 		throw new IllegalStateException();
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.util.L2ObjectSet#remove(T)
-	 */
 	@Override
 	public synchronized void remove(T obj)
 	{
@@ -328,29 +271,18 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 				{
 					LOGGER.warning("ht: remove obj id=" + hashcode + " from slot=" + pos);
 				}
-				if (DEBUG)
-				{
-					check();
-				}
 				return;
 			}
 			// check for collision (if we previously deleted element)
 			if ((_table[pos] == null) && ((_collisions[pos >> 5] & (1 << (pos & 31))) == 0))
 			{
-				if (DEBUG)
-				{
-					check();
-				}
 				return; // throw new IllegalArgumentException();
 			}
 			// calculate next slot
 			seed += incr;
 		}
 		while (++ntry < _table.length);
-		if (DEBUG)
-		{
-			check();
-		}
+		
 		throw new IllegalStateException();
 	}
 	
@@ -444,16 +376,8 @@ public final class L2ObjectHashSet<T extends L2Object>extends L2ObjectSet<T>
 		}
 		_table = (T[]) newTable;
 		_collisions = newCollisions;
-		if (DEBUG)
-		{
-			check();
-		}
 	}
 	
-	/*
-	 * (non-Javadoc)
-	 * @see com.l2jmobius.util.L2ObjectSet#iterator()
-	 */
 	@Override
 	public Iterator<T> iterator()
 	{

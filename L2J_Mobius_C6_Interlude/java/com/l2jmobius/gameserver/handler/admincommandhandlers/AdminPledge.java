@@ -17,9 +17,7 @@
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.StringTokenizer;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -42,8 +40,6 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminPledge implements IAdminCommandHandler
 {
-	private final Logger LOGGER = Logger.getLogger(AdminPledge.class.getName());
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_pledge"
@@ -226,10 +222,6 @@ public class AdminPledge implements IAdminCommandHandler
 							return false;
 						}
 					}
-				}
-				if (Config.DEBUG)
-				{
-					LOGGER.info("fixme:action is null");
 				}
 			}
 			default:

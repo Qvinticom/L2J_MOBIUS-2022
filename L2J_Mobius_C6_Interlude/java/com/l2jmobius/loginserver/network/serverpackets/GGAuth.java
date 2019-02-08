@@ -16,16 +16,11 @@
  */
 package com.l2jmobius.loginserver.network.serverpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
-
 /**
  * Fromat: d d: response
  */
 public final class GGAuth extends L2LoginServerPacket
 {
-	static final Logger LOGGER = Logger.getLogger(GGAuth.class.getName());
 	public static final int SKIP_GG_AUTH_REQUEST = 0x0b;
 	
 	private final int _response;
@@ -33,11 +28,6 @@ public final class GGAuth extends L2LoginServerPacket
 	public GGAuth(int response)
 	{
 		_response = response;
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.warning("Reason Hex: " + Integer.toHexString(response));
-		}
 	}
 	
 	@Override

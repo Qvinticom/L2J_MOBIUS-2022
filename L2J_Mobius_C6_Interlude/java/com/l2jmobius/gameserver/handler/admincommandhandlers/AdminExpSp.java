@@ -17,9 +17,7 @@
 package com.l2jmobius.gameserver.handler.admincommandhandlers;
 
 import java.util.StringTokenizer;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -36,8 +34,6 @@ import com.l2jmobius.gameserver.util.BuilderUtil;
  */
 public class AdminExpSp implements IAdminCommandHandler
 {
-	private static Logger LOGGER = Logger.getLogger(AdminExpSp.class.getName());
-	
 	private static final String[] ADMIN_COMMANDS =
 	{
 		"admin_add_exp_sp_to_character",
@@ -164,11 +160,6 @@ public class AdminExpSp implements IAdminCommandHandler
 			player.addExpAndSp(expval, spval);
 			// Admin information
 			BuilderUtil.sendSysMessage(activeChar, "Added " + expval + " xp and " + spval + " sp to " + player.getName() + ".");
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") added " + expval + " xp and " + spval + " sp to " + player.getObjectId() + ".");
-			}
 		}
 		
 		return true;
@@ -219,11 +210,6 @@ public class AdminExpSp implements IAdminCommandHandler
 			player.removeExpAndSp(expval, spval);
 			// Admin information
 			BuilderUtil.sendSysMessage(activeChar, "Removed " + expval + " xp and " + spval + " sp from " + player.getName() + ".");
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("GM: " + activeChar.getName() + "(" + activeChar.getObjectId() + ") removed " + expval + " xp and " + spval + " sp from " + player.getObjectId() + ".");
-			}
 		}
 		
 		return true;

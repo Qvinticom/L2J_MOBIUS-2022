@@ -19,9 +19,7 @@ package com.l2jmobius.commons.crypt;
 import java.lang.reflect.InvocationTargetException;
 import java.lang.reflect.Method;
 import java.util.concurrent.ScheduledFuture;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.serverpackets.GameGuardQuery;
@@ -32,8 +30,6 @@ import com.l2jmobius.gameserver.network.serverpackets.GameGuardQuery;
  */
 public class nProtect
 {
-	private static Logger LOGGER = Logger.getLogger(nProtect.class.getName());
-	
 	public enum RestrictionType
 	{
 		RESTRICT_ENTER,
@@ -117,10 +113,7 @@ public class nProtect
 		}
 		catch (ClassNotFoundException e)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning("nProtect System will be not loaded due to ClassNotFoundException of 'com.l2jmobius.protection.main' class");
-			}
+			// LOGGER.warning("nProtect System will be not loaded due to ClassNotFoundException of 'com.l2jmobius.protection.main' class");
 		}
 		catch (SecurityException | InvocationTargetException | IllegalAccessException | IllegalArgumentException | NoSuchMethodException e)
 		{

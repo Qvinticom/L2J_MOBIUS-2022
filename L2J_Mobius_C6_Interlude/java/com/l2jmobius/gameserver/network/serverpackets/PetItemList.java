@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 
@@ -28,21 +25,11 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
  */
 public class PetItemList extends L2GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(PetItemList.class.getName());
-	
 	private final L2PetInstance _activeChar;
 	
 	public PetItemList(L2PetInstance character)
 	{
 		_activeChar = character;
-		if (Config.DEBUG)
-		{
-			final L2ItemInstance[] items = _activeChar.getInventory().getItems();
-			for (L2ItemInstance temp : items)
-			{
-				LOGGER.info("item:" + temp.getItem().getName() + " type1:" + temp.getItem().getType1() + " type2:" + temp.getItem().getType2());
-			}
-		}
 	}
 	
 	@Override

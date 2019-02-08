@@ -18,9 +18,7 @@ package com.l2jmobius.gameserver.handler.skillhandlers;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.handler.ISkillHandler;
@@ -45,8 +43,6 @@ import com.l2jmobius.gameserver.templates.item.L2WeaponType;
 
 public class Pdam implements ISkillHandler
 {
-	private static Logger LOGGER = Logger.getLogger(Pdam.class.getName());
-	
 	private static final SkillType[] SKILL_IDS =
 	{
 		SkillType.PDAM,
@@ -63,11 +59,6 @@ public class Pdam implements ISkillHandler
 		}
 		
 		int damage = 0;
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Begin Skill processing in Pdam.java " + skill.getSkillType());
-		}
 		
 		// Calculate targets based on vegeance
 		final List<L2Object> target_s = new ArrayList<>();

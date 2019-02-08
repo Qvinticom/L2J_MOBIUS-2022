@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.skills.effects;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2Effect;
 import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.L2Skill.SkillType;
@@ -46,12 +45,6 @@ public class EffectNegate extends L2Effect
 	public void onStart()
 	{
 		final L2Skill skill = getSkill();
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("effectNegate on " + getEffected().getName() + " with skill " + skill.getId());
-		}
-		
 		if (skill.getNegateId() != 0)
 		{
 			getEffected().stopSkillEffects(skill.getNegateId());
@@ -59,11 +52,6 @@ public class EffectNegate extends L2Effect
 		
 		for (String negateSkillType : skill.getNegateSkillTypes())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("effectNegate on Type " + negateSkillType + " with power " + skill.getPower());
-			}
-			
 			SkillType type = null;
 			try
 			{
@@ -81,11 +69,6 @@ public class EffectNegate extends L2Effect
 		
 		for (String negateEffectType : skill.getNegateEffectTypes())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("effectNegate on Effect Type " + negateEffectType + " with power " + skill.getPower());
-			}
-			
 			EffectType type = null;
 			try
 			{

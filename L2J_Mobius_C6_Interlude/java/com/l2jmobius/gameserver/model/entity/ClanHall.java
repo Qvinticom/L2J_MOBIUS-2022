@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.csv.DoorTable;
@@ -230,12 +229,6 @@ public class ClanHall
 						setEndTime(System.currentTimeMillis() + _rate);
 						dbSave(newfc);
 						getOwnerClan().getWarehouse().destroyItemByItemId("CH_function_fee", 57, fee, null, null);
-						
-						if (Config.DEBUG)
-						{
-							LOGGER.warning("deducted " + fee + " adena from " + _name + " owner's cwh for function id : " + _type);
-						}
-						
 						ThreadPool.schedule(new FunctionTask(), _rate);
 					}
 					else
@@ -305,12 +298,6 @@ public class ClanHall
 		_clanHallId = clanHallId;
 		_name = name;
 		_ownerId = ownerId;
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.warning("Init Owner : " + _ownerId);
-		}
-		
 		_lease = lease;
 		_desc = desc;
 		_location = location;
@@ -704,11 +691,6 @@ public class ClanHall
 	 */
 	public boolean updateFunctions(int type, int lvl, int lease, long rate, boolean addNew)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.warning("Called ClanHall.updateFunctions(int type, int lvl, int lease, long rate, boolean addNew) Owner : " + _ownerId);
-		}
-		
 		if (addNew)
 		{
 			if (ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().getAdena() < lease)
@@ -724,12 +706,6 @@ public class ClanHall
 		else
 		{
 			final int diffLease = lease - _functions.get(type).getLease();
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.warning("Called ClanHall.updateFunctions diffLease : " + diffLease);
-			}
-			
 			if (diffLease > 0)
 			{
 				if (ClanTable.getInstance().getClan(_ownerId).getWarehouse().getAdena() < diffLease)
@@ -834,12 +810,6 @@ public class ClanHall
 					}
 					
 					ClanTable.getInstance().getClan(getOwnerId()).getWarehouse().destroyItemByItemId("CH_rental_fee", 57, getLease(), null, null);
-					
-					if (Config.DEBUG)
-					{
-						LOGGER.warning("deducted " + getLease() + " adena from " + _name + " owner's cwh for ClanHall _paidUntil" + _paidUntil);
-					}
-					
 					ThreadPool.schedule(new FeeTask(), _paidUntil - System.currentTimeMillis());
 					_paid = true;
 					updateDb();

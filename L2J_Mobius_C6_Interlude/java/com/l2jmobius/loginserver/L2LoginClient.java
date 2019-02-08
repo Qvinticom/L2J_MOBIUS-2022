@@ -264,12 +264,6 @@ public final class L2LoginClient extends MMOClient<MMOConnection<L2LoginClient>>
 	@Override
 	public void onDisconnection()
 	{
-		// Closer.getInstance().close(this);
-		if (Config.DEBUG)
-		{
-			LOGGER.info("DISCONNECTED: " + this);
-		}
-		
 		LoginController.getInstance().removeLoginClient(this);
 		if (!_joinedGS && (_account != null))
 		{

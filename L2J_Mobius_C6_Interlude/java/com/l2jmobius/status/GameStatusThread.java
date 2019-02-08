@@ -98,30 +98,6 @@ public class GameStatusThread extends Thread
 	
 	private void telnetOutput(int type, String text)
 	{
-		if (Config.DEVELOPER)
-		{
-			if (type == 1)
-			{
-				LOGGER.info("TELNET | " + text);
-			}
-			else if (type == 2)
-			{
-				System.out.print("TELNET | " + text);
-			}
-			else if (type == 3)
-			{
-				System.out.print(text);
-			}
-			else if (type == 4)
-			{
-				LOGGER.info(text);
-			}
-			else
-			{
-				LOGGER.info("TELNET | " + text);
-			}
-		}
-		else // only print output if the message is rejected
 		if (type == 5)
 		{
 			LOGGER.info("TELNET | " + text);
@@ -139,11 +115,6 @@ public class GameStatusThread extends Thread
 		telnetOutput(1, "Connection from: " + clientStringIP);
 		
 		// read and loop thru list of IPs, compare with newIP
-		if (Config.DEVELOPER)
-		{
-			telnetOutput(2, "");
-		}
-		
 		InputStream telnetIS = null;
 		try
 		{
@@ -152,11 +123,6 @@ public class GameStatusThread extends Thread
 			telnetSettings.load(telnetIS);
 			
 			final String HostList = telnetSettings.getProperty("ListOfHosts", "127.0.0.1,localhost,::1");
-			
-			if (Config.DEVELOPER)
-			{
-				telnetOutput(3, "Comparing ip to list...");
-			}
 			
 			// compare
 			String ipToCompare = null;
@@ -169,19 +135,11 @@ public class GameStatusThread extends Thread
 					{
 						result = true;
 					}
-					if (Config.DEVELOPER)
-					{
-						telnetOutput(3, clientStringIP + " = " + ipToCompare + "(" + ip + ") = " + result);
-					}
 				}
 			}
 		}
 		catch (IOException e)
 		{
-			if (Config.DEVELOPER)
-			{
-				telnetOutput(4, "");
-			}
 			telnetOutput(1, "Error: " + e);
 		}
 		finally
@@ -199,10 +157,6 @@ public class GameStatusThread extends Thread
 			}
 		}
 		
-		if (Config.DEVELOPER)
-		{
-			telnetOutput(4, "Allow IP: " + result);
-		}
 		return result;
 	}
 	
@@ -676,10 +630,6 @@ public class GameStatusThread extends Thread
 					}
 					catch (Exception e)
 					{
-						if (Config.DEBUG)
-						{
-							e.printStackTrace();
-						}
 					}
 				}
 				else if (_usrCommand.startsWith("unjail"))
@@ -706,10 +656,6 @@ public class GameStatusThread extends Thread
 					}
 					catch (Exception e)
 					{
-						if (Config.DEBUG)
-						{
-							e.printStackTrace();
-						}
 					}
 				}
 				else if (_usrCommand.startsWith("debug") && (_usrCommand.length() > 6))
@@ -999,10 +945,6 @@ public class GameStatusThread extends Thread
 		catch (SQLException se)
 		{
 			_print.println("SQLException while jailing player");
-			if (Config.DEBUG)
-			{
-				se.printStackTrace();
-			}
 		}
 	}
 	
@@ -1034,10 +976,6 @@ public class GameStatusThread extends Thread
 		catch (SQLException se)
 		{
 			_print.println("SQLException while jailing player");
-			if (Config.DEBUG)
-			{
-				se.printStackTrace();
-			}
 		}
 	}
 	

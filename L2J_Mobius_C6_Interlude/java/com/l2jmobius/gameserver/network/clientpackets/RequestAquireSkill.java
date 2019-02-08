@@ -269,11 +269,6 @@ public class RequestAquireSkill extends L2GameClientPacket
 			player.getClan().setReputationScore(player.getClan().getReputationScore() - repCost, true);
 			player.getClan().addNewSkill(skill);
 			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Learned pledge skill " + _id + " for " + _requiredSp + " SP.");
-			}
-			
 			final SystemMessage cr = new SystemMessage(SystemMessageId.S1_DEDUCTED_FROM_CLAN_REP);
 			cr.addNumber(repCost);
 			player.sendPacket(cr);
@@ -295,7 +290,6 @@ public class RequestAquireSkill extends L2GameClientPacket
 			
 			return;
 		}
-		
 		else
 		{
 			LOGGER.warning("Recived Wrong Packet Data in Aquired Skill - unk1:" + _skillType);
@@ -303,12 +297,6 @@ public class RequestAquireSkill extends L2GameClientPacket
 		}
 		
 		player.addSkill(skill, true);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Learned skill " + _id + " for " + _requiredSp + " SP.");
-		}
-		
 		player.setSp(player.getSp() - _requiredSp);
 		
 		final StatusUpdate su = new StatusUpdate(player.getObjectId());

@@ -165,11 +165,6 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 	@Override
 	public void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("L2SiegeAI.changeIntention(" + intention + ", " + arg0 + ", " + arg1 + ")");
-		}
-		
 		((L2Attackable) _actor).setisReturningToSpawnPoint(false);
 		
 		if (intention == AI_INTENTION_IDLE /* || intention == AI_INTENTION_ACTIVE */) // active becomes idle if only a summon is present
@@ -567,11 +562,6 @@ public class L2SiegeGuardAI extends L2CharacterAI implements Runnable
 	 */
 	private void thinkAttack()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("L2SiegeGuardAI.thinkAttack(); timeout=" + (_attackTimeout - GameTimeController.getGameTicks()));
-		}
-		
 		if (_attackTimeout < GameTimeController.getGameTicks())
 		{
 			// Check if the actor is running

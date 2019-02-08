@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -27,7 +25,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
  */
 public final class DlgAnswer extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(DlgAnswer.class.getName());
 	private int _messageId;
 	private int _answer;
 	private int _requestId;
@@ -47,11 +44,6 @@ public final class DlgAnswer extends L2GameClientPacket
 		if (activeChar == null)
 		{
 			return;
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getType() + ": Answer acepted. Message ID " + _messageId + ", asnwer " + _answer + ", unknown field " + _requestId);
 		}
 		
 		final Long answerTime = getClient().getActiveChar().getConfirmDlgRequestTime(_requestId);

@@ -16,17 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.thread.LoginServerThread;
 import com.l2jmobius.gameserver.thread.LoginServerThread.SessionKey;
 
 public final class AuthLogin extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(AuthLogin.class.getName());
-	
 	// loginName + keys must match what the loginserver used.
 	private String _loginName;
 	private int _playKey1;
@@ -48,12 +43,6 @@ public final class AuthLogin extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final SessionKey key = new SessionKey(_loginKey1, _loginKey2, _playKey1, _playKey2);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("DEBUG " + getType() + ": user: " + _loginName + " key:" + key);
-		}
-		
 		final L2GameClient client = getClient();
 		
 		// avoid potential exploits

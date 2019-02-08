@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.StringTokenizer;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.TradeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.L2Clan;
@@ -118,10 +117,6 @@ public final class L2MercManagerInstance extends L2FolkInstance
 	private void showBuyWindow(L2PcInstance player, int val)
 	{
 		player.tempInvetoryDisable();
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Showing buylist");
-		}
 		L2TradeList list = TradeController.getInstance().getBuyList(val);
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{

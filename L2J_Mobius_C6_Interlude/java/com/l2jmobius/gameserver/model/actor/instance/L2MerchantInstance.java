@@ -70,12 +70,6 @@ public class L2MerchantInstance extends L2FolkInstance
 	private void showWearWindow(L2PcInstance player, int val)
 	{
 		player.tempInvetoryDisable();
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Showing wearlist");
-		}
-		
 		L2TradeList list = TradeController.getInstance().getBuyList(val);
 		
 		if (list != null)
@@ -106,13 +100,7 @@ public class L2MerchantInstance extends L2FolkInstance
 		
 		player.tempInvetoryDisable();
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Showing buylist");
-		}
-		
 		L2TradeList list = TradeController.getInstance().getBuyList(val);
-		
 		if ((list != null) && list.getNpcId().equals(String.valueOf(getNpcId())))
 		{
 			BuyList bl = new BuyList(list, player.getAdena(), taxRate);
@@ -133,18 +121,7 @@ public class L2MerchantInstance extends L2FolkInstance
 	 */
 	private void showSellWindow(L2PcInstance player)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Showing selllist");
-		}
-		
 		player.sendPacket(new SellList(player));
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Showing sell window");
-		}
-		
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
 	

@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.stat;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.L2Skill;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -29,8 +27,6 @@ import com.l2jmobius.gameserver.skills.Stats;
 
 public class CharStat
 {
-	private final Logger LOGGER = Logger.getLogger(CharStat.class.getName());
-	
 	private final L2Character _activeChar;
 	private long _exp = 0;
 	private int _sp = 0;
@@ -861,15 +857,7 @@ public class CharStat
 		{
 			return 1;
 		}
-		
-		final int range = (int) calcStat(Stats.POWER_ATTACK_RANGE, _activeChar.getTemplate().baseAtkRange, null, null);
-		
-		if (Config.DEBUG && (_activeChar instanceof L2PcInstance))
-		{
-			LOGGER.info("	Player 	- " + _activeChar.getName() + " - PhysicalAttackRange is - " + range + " -");
-		}
-		
-		return range;
+		return (int) calcStat(Stats.POWER_ATTACK_RANGE, _activeChar.getTemplate().baseAtkRange, null, null);
 	}
 	
 	/**

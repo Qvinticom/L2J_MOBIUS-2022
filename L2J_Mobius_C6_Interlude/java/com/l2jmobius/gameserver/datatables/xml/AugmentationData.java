@@ -104,15 +104,6 @@ public class AugmentationData
 		
 		// Use size*4: since theres 4 blocks of stat-data with equivalent size
 		LOGGER.info("AugmentationData: Loaded: " + (_augmentationStats[0].size() * 4) + " augmentation stats.");
-		
-		if (Config.DEBUG)
-		{
-			for (int i = 1; i <= 10; i++)
-			{
-				LOGGER.info("AugmentationData: Loaded: " + _blueSkills.get(i).size() + " blue, " + _purpleSkills.get(i).size() + " purple and " + _redSkills.get(i).size() + " red skills for lifeStoneLevel " + i);
-			}
-		}
-		
 	}
 	
 	public static void reload()
@@ -218,10 +209,6 @@ public class AugmentationData
 			File file = new File(Config.DATAPACK_ROOT + "/data/stats/augmentation/augmentation_skillmap.xml");
 			if (!file.exists())
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("The augmentation skillmap file is missing.");
-				}
 				return;
 			}
 			
@@ -262,19 +249,11 @@ public class AugmentationData
 							
 							if (skillId == 0)
 							{
-								if (Config.DEBUG)
-								{
-									LOGGER.warning("Bad skillId in augmentation_skillmap.xml in the augmentationId:" + augmentationId);
-								}
 								badAugmantData++;
 								continue;
 							}
-							else if (skillLvL == 0)
+							if (skillLvL == 0)
 							{
-								if (Config.DEBUG)
-								{
-									LOGGER.warning("Bad skillLevel in augmentation_skillmap.xml in the augmentationId:" + augmentationId);
-								}
 								badAugmantData++;
 								continue;
 							}
@@ -326,11 +305,6 @@ public class AugmentationData
 				
 				if (!file.exists())
 				{
-					if (Config.DEBUG)
-					{
-						LOGGER.info("The augmentation stat data file " + i + " is missing.");
-					}
-					
 					return;
 				}
 				
@@ -571,10 +545,6 @@ public class AugmentationData
 					break;
 				}
 			}
-		}
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Augmentation success: stat12=" + stat12 + "; stat34=" + stat34 + "; resultColor=" + resultColor + "; level=" + lifeStoneLevel + "; grade=" + lifeStoneGrade);
 		}
 		
 		return new L2Augmentation(item, ((stat34 << 16) + stat12), skill, true);

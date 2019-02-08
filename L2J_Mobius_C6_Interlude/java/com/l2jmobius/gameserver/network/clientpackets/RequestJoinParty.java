@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.L2World;
@@ -32,8 +29,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
 public final class RequestJoinParty extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestJoinParty.class.getName());
-	
 	private String _name;
 	private int _itemDistribution;
 	
@@ -175,11 +170,6 @@ public final class RequestJoinParty extends L2GameClientPacket
 			target.sendPacket(new AskJoinParty(requestor.getName(), _itemDistribution));
 			requestor.getParty().setPendingInvitation(true);
 			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("sent out a party invitation to:" + target.getName());
-			}
-			
 			msg = new SystemMessage(SystemMessageId.YOU_INVITED_S1_TO_PARTY);
 			msg.addString(target.getName());
 			requestor.sendPacket(msg);
@@ -189,11 +179,6 @@ public final class RequestJoinParty extends L2GameClientPacket
 			msg = new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER);
 			msg.addString(target.getName());
 			requestor.sendPacket(msg);
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(requestor.getName() + " already received a party invitation");
-			}
 		}
 	}
 	
@@ -213,11 +198,6 @@ public final class RequestJoinParty extends L2GameClientPacket
 			target.sendPacket(new AskJoinParty(requestor.getName(), _itemDistribution));
 			requestor.getParty().setPendingInvitation(true);
 			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("sent out a party invitation to:" + target.getName());
-			}
-			
 			msg = new SystemMessage(SystemMessageId.YOU_INVITED_S1_TO_PARTY);
 			msg.addString(target.getName());
 			requestor.sendPacket(msg);
@@ -227,11 +207,6 @@ public final class RequestJoinParty extends L2GameClientPacket
 			msg = new SystemMessage(SystemMessageId.S1_IS_BUSY_TRY_LATER);
 			msg.addString(target.getName());
 			requestor.sendPacket(msg);
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(requestor.getName() + " already received a party invitation");
-			}
 		}
 	}
 }

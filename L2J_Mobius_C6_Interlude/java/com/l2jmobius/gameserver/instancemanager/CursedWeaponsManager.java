@@ -96,11 +96,7 @@ public class CursedWeaponsManager
 	
 	private final void load()
 	{
-		LOGGER.info("Initializing CursedWeaponsManager");
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Loading data: ");
-		}
+		LOGGER.info("Initializing CursedWeaponsManager.");
 		try
 		{
 			final DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
@@ -110,10 +106,6 @@ public class CursedWeaponsManager
 			final File file = new File(Config.DATAPACK_ROOT + "/data/cursedWeapons.xml");
 			if (!file.exists())
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("NO FILE");
-				}
 				return;
 			}
 			

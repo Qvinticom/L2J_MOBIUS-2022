@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -53,14 +52,6 @@ public class WareHouseWithdrawalList extends L2GameServerPacket
 			return;
 		}
 		_items = _activeChar.getActiveWarehouse().getItems();
-		
-		if (Config.DEBUG)
-		{
-			for (L2ItemInstance item : _items)
-			{
-				LOGGER.info("item:" + item.getItem().getName() + " type1:" + item.getItem().getType1() + " type2:" + item.getItem().getType2());
-			}
-		}
 	}
 	
 	@Override

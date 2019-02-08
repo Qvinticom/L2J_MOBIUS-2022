@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
@@ -30,8 +27,6 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
  */
 public class ItemList extends L2GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(ItemList.class.getName());
-	
 	private final L2ItemInstance[] _items;
 	private final boolean _showWindow;
 	
@@ -39,28 +34,12 @@ public class ItemList extends L2GameServerPacket
 	{
 		_items = cha.getInventory().getItems();
 		_showWindow = showWindow;
-		if (Config.DEBUG)
-		{
-			showDebug();
-		}
 	}
 	
 	public ItemList(L2ItemInstance[] items, boolean showWindow)
 	{
 		_items = items;
 		_showWindow = showWindow;
-		if (Config.DEBUG)
-		{
-			showDebug();
-		}
-	}
-	
-	private void showDebug()
-	{
-		for (L2ItemInstance temp : _items)
-		{
-			LOGGER.info("item:" + temp.getItem().getName() + " type1:" + temp.getItem().getType1() + " type2:" + temp.getItem().getType2());
-		}
 	}
 	
 	@Override

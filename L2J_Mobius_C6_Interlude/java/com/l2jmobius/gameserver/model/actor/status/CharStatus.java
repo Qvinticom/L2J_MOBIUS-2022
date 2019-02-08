@@ -21,7 +21,6 @@ import java.util.concurrent.CopyOnWriteArraySet;
 import java.util.concurrent.Future;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -249,12 +248,6 @@ public class CharStatus
 				}
 			}
 			
-			// first die (and calculate rewards), if currentHp < 0, then overhit may be calculated
-			if (Config.DEBUG)
-			{
-				LOGGER.info("char is dead.");
-			}
-			
 			// Start the doDie process
 			_activeChar.doDie(attacker);
 			
@@ -319,11 +312,6 @@ public class CharStatus
 	{
 		if ((_regTask == null) && !_activeChar.isDead())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("HP/MP/CP regen started");
-			}
-			
 			// Get the Regeneration periode
 			final int period = Formulas.getRegeneratePeriod(_activeChar);
 			
@@ -345,11 +333,6 @@ public class CharStatus
 	{
 		if (_regTask != null)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("HP/MP/CP regen stop");
-			}
-			
 			// Stop the HP/MP/CP Regeneration task
 			_regTask.cancel(false);
 			_regTask = null;

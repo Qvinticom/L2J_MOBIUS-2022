@@ -330,10 +330,6 @@ public class VanHalter extends Quest
 			
 			rset.close();
 			statement.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("VanHalterManager.loadRoyalGuard: Loaded " + _royalGuardSpawn.size() + " Royal Guard spawn locations.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -405,10 +401,6 @@ public class VanHalter extends Quest
 			
 			rset.close();
 			statement.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("VanHalterManager.loadTriolRevelation: Loaded " + _triolRevelationSpawn.size() + " Triol's Revelation spawn locations.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -483,10 +475,6 @@ public class VanHalter extends Quest
 			
 			rset.close();
 			statement.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("VanHalterManager.loadRoyalGuardCaptain: Loaded " + _royalGuardCaptainSpawn.size() + " Royal Guard Captain spawn locations.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -558,10 +546,6 @@ public class VanHalter extends Quest
 			
 			rset.close();
 			statement.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("VanHalterManager.loadRoyalGuardHelper: Loaded " + _royalGuardHelperSpawn.size() + " Royal Guard Helper spawn locations.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -626,10 +610,6 @@ public class VanHalter extends Quest
 			
 			rset.close();
 			statement.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("VanHalterManager.loadGuardOfAltar: Loaded " + _guardOfAltarSpawn.size() + " Guard Of Altar spawn locations.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -700,10 +680,6 @@ public class VanHalter extends Quest
 			
 			rset.close();
 			statement.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("VanHalterManager.loadVanHalter: Loaded High Priestess van Halter spawn locations.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -765,10 +741,6 @@ public class VanHalter extends Quest
 			
 			rset.close();
 			statement.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("VanHalterManager.loadRitualOffering: Loaded Ritual Offering spawn locations.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -831,10 +803,6 @@ public class VanHalter extends Quest
 			
 			rset.close();
 			statement.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("VanHalterManager.loadRitualSacrifice: Loaded Ritual Sacrifice spawn locations.");
-			}
 		}
 		catch (Exception e)
 		{

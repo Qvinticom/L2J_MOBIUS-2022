@@ -40,11 +40,6 @@ public final class ProtocolVersion extends L2GameClientPacket
 		// this packet is never encrypted
 		if ((_version == 65534) || (_version == -2)) // Ping
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("DEBUG " + getType() + ": Ping received");
-			}
-			
 			getClient().close((L2GameServerPacket) null);
 		}
 		else if ((_version == 65533) || (_version == -3)) // RWHO
@@ -64,11 +59,6 @@ public final class ProtocolVersion extends L2GameClientPacket
 		}
 		else
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getType() + ": Client Protocol Revision is ok: " + _version);
-			}
-			
 			final KeyPacket pk = new KeyPacket(getClient().enableCrypt());
 			getClient().sendPacket(pk);
 		}

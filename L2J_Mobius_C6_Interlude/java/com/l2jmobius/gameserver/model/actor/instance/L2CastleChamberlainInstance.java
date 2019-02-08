@@ -19,7 +19,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 import java.util.NoSuchElementException;
 import java.util.StringTokenizer;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.TradeController;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.datatables.sql.ClanTable;
@@ -276,10 +275,6 @@ public class L2CastleChamberlainInstance extends L2FolkInstance
 					
 					player.tempInvetoryDisable();
 					
-					if (Config.DEBUG)
-					{
-						LOGGER.info("Showing chamberlain buylist");
-					}
 					int buy;
 					{
 						final int castleId = getCastle().getCastleId();

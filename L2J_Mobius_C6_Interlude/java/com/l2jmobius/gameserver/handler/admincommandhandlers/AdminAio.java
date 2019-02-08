@@ -199,12 +199,7 @@ public class AdminAio implements IAdminCommandHandler
 			}
 			catch (Exception e)
 			{
-				if (Config.DEBUG)
-				{
-					e.printStackTrace();
-				}
-				
-				LOGGER.warning("could not set Aio stats to char: " + e);
+				LOGGER.warning("Could not set Aio stats to char: " + e);
 			}
 		}
 		else
@@ -237,12 +232,7 @@ public class AdminAio implements IAdminCommandHandler
 		}
 		catch (Exception e)
 		{
-			if (Config.DEBUG)
-			{
-				e.printStackTrace();
-			}
-			
-			LOGGER.warning("could not remove Aio stats of char: " + e);
+			LOGGER.warning("Could not remove Aio stats of char: " + e);
 		}
 	}
 	

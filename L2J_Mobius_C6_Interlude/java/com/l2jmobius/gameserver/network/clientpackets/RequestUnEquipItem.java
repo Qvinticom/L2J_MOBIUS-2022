@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
@@ -30,9 +27,6 @@ import com.l2jmobius.gameserver.templates.item.L2Item;
 
 public class RequestUnEquipItem extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestUnEquipItem.class.getName());
-	
-	// cd
 	private int _slot;
 	
 	/**
@@ -47,11 +41,6 @@ public class RequestUnEquipItem extends L2GameClientPacket
 	@Override
 	protected void runImpl()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("request unequip slot " + _slot);
-		}
-		
 		final L2PcInstance activeChar = getClient().getActiveChar();
 		if (activeChar == null)
 		{

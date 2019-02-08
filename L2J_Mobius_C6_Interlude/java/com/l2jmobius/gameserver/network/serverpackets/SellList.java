@@ -18,20 +18,16 @@ package com.l2jmobius.gameserver.network.serverpackets;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2MerchantInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 
 /**
- * This class ...
  * @version $Revision: 1.4.2.3.2.4 $ $Date: 2005/03/27 15:29:39 $
  */
 public class SellList extends L2GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(SellList.class.getName());
 	private final L2PcInstance _activeChar;
 	private final L2MerchantInstance _lease;
 	private final int _money;
@@ -66,10 +62,6 @@ public class SellList extends L2GameServerPacket
 						(item.getObjectId() != _activeChar.getPet().getControlItemId()))) // Pet is summoned and not the item that summoned the pet
 				{
 					_selllist.add(item);
-					if (Config.DEBUG)
-					{
-						LOGGER.info("item added to selllist: " + item.getItem().getName());
-					}
 				}
 			}
 		}

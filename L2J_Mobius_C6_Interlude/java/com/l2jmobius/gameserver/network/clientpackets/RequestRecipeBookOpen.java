@@ -16,25 +16,16 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.RecipeController;
 
 public final class RequestRecipeBookOpen extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestRecipeBookOpen.class.getName());
-	
 	private boolean _isDwarvenCraft;
 	
 	@Override
 	protected void readImpl()
 	{
 		_isDwarvenCraft = readD() == 0;
-		if (Config.DEBUG)
-		{
-			LOGGER.info("RequestRecipeBookOpen : " + (_isDwarvenCraft ? "dwarvenCraft" : "commonCraft"));
-		}
 	}
 	
 	@Override

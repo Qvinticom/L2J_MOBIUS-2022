@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
@@ -41,8 +38,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public class L2SiegeGuardInstance extends L2Attackable
 {
-	private static Logger LOGGER = Logger.getLogger(L2GuardInstance.class.getName());
-	
 	private int _homeX;
 	private int _homeY;
 	private int _homeZ;
@@ -103,11 +98,6 @@ public class L2SiegeGuardInstance extends L2Attackable
 		_homeX = getX();
 		_homeY = getY();
 		_homeZ = getZ();
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getObjectId() + ": Home location set to X:" + _homeX + " Y:" + _homeY + " Z:" + _homeZ);
-		}
 	}
 	
 	public int getHomeX()
@@ -127,10 +117,6 @@ public class L2SiegeGuardInstance extends L2Attackable
 	{
 		if (!isInsideRadius(_homeX, _homeY, 40, false))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getObjectId() + ": moving home");
-			}
 			setisReturningToSpawnPoint(true);
 			clearAggroList();
 			
@@ -155,11 +141,6 @@ public class L2SiegeGuardInstance extends L2Attackable
 		// Check if the L2PcInstance already target the L2NpcInstance
 		if (this != player.getTarget())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("new target selected:" + getObjectId());
-			}
-			
 			// Set the target of the L2PcInstance player
 			player.setTarget(this);
 			

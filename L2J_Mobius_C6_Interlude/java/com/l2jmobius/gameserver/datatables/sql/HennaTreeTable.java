@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.datatables.csv.HennaTable;
 import com.l2jmobius.gameserver.model.actor.instance.L2HennaInstance;
@@ -99,10 +98,6 @@ public class HennaTreeTable
 				statement2.close();
 				
 				count += list.size();
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Henna Tree for Class: " + classId + " has " + list.size() + " Henna Templates.");
-				}
 			}
 			
 			classlist.close();

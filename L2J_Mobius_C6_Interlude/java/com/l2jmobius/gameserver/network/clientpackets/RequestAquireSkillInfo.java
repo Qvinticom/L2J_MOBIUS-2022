@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.datatables.SkillTable;
 import com.l2jmobius.gameserver.datatables.sql.SkillSpellbookTable;
@@ -32,8 +30,6 @@ import com.l2jmobius.gameserver.network.serverpackets.AquireSkillInfo;
 
 public class RequestAquireSkillInfo extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(RequestAquireSkillInfo.class.getName());
-	
 	private int _id;
 	private int _level;
 	private int _skillType;
@@ -70,10 +66,6 @@ public class RequestAquireSkillInfo extends L2GameClientPacket
 		final L2Skill skill = SkillTable.getInstance().getInfo(_id, _level);
 		if (skill == null)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning("skill id " + _id + " level " + _level + " is undefined. aquireSkillInfo failed.");
-			}
 			return;
 		}
 		

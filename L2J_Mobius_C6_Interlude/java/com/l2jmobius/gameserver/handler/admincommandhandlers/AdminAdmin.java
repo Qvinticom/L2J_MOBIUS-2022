@@ -276,10 +276,7 @@ public class AdminAdmin implements IAdminCommandHandler
 			}
 			catch (NumberFormatException e)
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.warning("Impossible to parse to integer the string " + mode_s + ", exception " + e.getMessage());
-				}
+				LOGGER.warning(e.getMessage());
 			}
 		}
 		

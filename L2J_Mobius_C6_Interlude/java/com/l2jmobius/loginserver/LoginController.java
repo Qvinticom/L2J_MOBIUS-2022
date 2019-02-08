@@ -606,11 +606,6 @@ public class LoginController
 				{
 					lastServer = 1; // minServerId is 1 in Interlude
 				}
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Account already exists.");
-				}
 			}
 			
 			rset.close();

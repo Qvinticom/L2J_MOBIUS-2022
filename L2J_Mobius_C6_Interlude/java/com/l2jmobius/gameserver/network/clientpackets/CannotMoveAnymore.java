@@ -16,16 +16,12 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.position.Location;
 
 public final class CannotMoveAnymore extends L2GameClientPacket
 {
-	private static Logger LOGGER = Logger.getLogger(CannotMoveAnymore.class.getName());
 	private int _x;
 	private int _y;
 	private int _z;
@@ -48,11 +44,6 @@ public final class CannotMoveAnymore extends L2GameClientPacket
 		if (player == null)
 		{
 			return;
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("DEBUG " + getType() + ": client: x:" + _x + " y:" + _y + " z:" + _z + " server x:" + player.getX() + " y:" + player.getY() + " z:" + player.getZ());
 		}
 		
 		if (player.getAI() != null)

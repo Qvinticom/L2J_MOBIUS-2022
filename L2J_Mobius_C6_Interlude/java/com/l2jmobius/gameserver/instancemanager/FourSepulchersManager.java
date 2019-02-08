@@ -447,10 +447,6 @@ public class FourSepulchersManager extends GrandBossManager
 				SpawnTable.getInstance().addNewSpawn(spawnDat, false);
 				spawnDat.doSpawn();
 				spawnDat.startRespawn();
-				if (Config.DEBUG)
-				{
-					LOGGER.info("FourSepulchersManager: spawned " + spawnDat.getTemplate().getName());
-				}
 			}
 			catch (SecurityException e)
 			{
@@ -587,10 +583,6 @@ public class FourSepulchersManager extends GrandBossManager
 			
 			rset.close();
 			statement.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("FourSepulchersManager: loaded " + _mysteriousBoxSpawns.size() + " Mysterious-Box spawns.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -637,7 +629,6 @@ public class FourSepulchersManager extends GrandBossManager
 	{
 		_physicalMonsters.clear();
 		
-		int loaded = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
@@ -671,7 +662,6 @@ public class FourSepulchersManager extends GrandBossManager
 						spawnDat.setRespawnDelay(rset2.getInt("respawn_delay"));
 						SpawnTable.getInstance().addNewSpawn(spawnDat, false);
 						_physicalSpawns.add(spawnDat);
-						loaded++;
 					}
 					else
 					{
@@ -686,10 +676,6 @@ public class FourSepulchersManager extends GrandBossManager
 			
 			rset1.close();
 			statement1.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("FourSepulchersManager: loaded " + loaded + " Physical type monsters spawns.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -702,7 +688,6 @@ public class FourSepulchersManager extends GrandBossManager
 	{
 		_magicalMonsters.clear();
 		
-		int loaded = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
@@ -736,7 +721,6 @@ public class FourSepulchersManager extends GrandBossManager
 						spawnDat.setRespawnDelay(rset2.getInt("respawn_delay"));
 						SpawnTable.getInstance().addNewSpawn(spawnDat, false);
 						_magicalSpawns.add(spawnDat);
-						loaded++;
 					}
 					else
 					{
@@ -751,10 +735,6 @@ public class FourSepulchersManager extends GrandBossManager
 			
 			rset1.close();
 			statement1.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("FourSepulchersManager: loaded " + loaded + " Magical type monsters spawns.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -768,7 +748,6 @@ public class FourSepulchersManager extends GrandBossManager
 		_dukeFinalMobs.clear();
 		_archonSpawned.clear();
 		
-		int loaded = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
@@ -802,7 +781,6 @@ public class FourSepulchersManager extends GrandBossManager
 						spawnDat.setRespawnDelay(rset2.getInt("respawn_delay"));
 						SpawnTable.getInstance().addNewSpawn(spawnDat, false);
 						_dukeFinalSpawns.add(spawnDat);
-						loaded++;
 					}
 					else
 					{
@@ -818,10 +796,6 @@ public class FourSepulchersManager extends GrandBossManager
 			
 			rset1.close();
 			statement1.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("FourSepulchersManager: loaded " + loaded + " Church of duke monsters spawns.");
-			}
 		}
 		catch (Exception e)
 		{
@@ -834,7 +808,6 @@ public class FourSepulchersManager extends GrandBossManager
 	{
 		_emperorsGraveNpcs.clear();
 		
-		int loaded = 0;
 		try (Connection con = DatabaseFactory.getConnection())
 		{
 			PreparedStatement statement1 = con.prepareStatement("SELECT Distinct key_npc_id FROM four_sepulchers_spawnlist Where spawntype = ? ORDER BY key_npc_id");
@@ -868,7 +841,6 @@ public class FourSepulchersManager extends GrandBossManager
 						spawnDat.setRespawnDelay(rset2.getInt("respawn_delay"));
 						SpawnTable.getInstance().addNewSpawn(spawnDat, false);
 						_emperorsGraveSpawns.add(spawnDat);
-						loaded++;
 					}
 					else
 					{
@@ -883,10 +855,6 @@ public class FourSepulchersManager extends GrandBossManager
 			
 			rset1.close();
 			statement1.close();
-			if (Config.DEBUG)
-			{
-				LOGGER.info("FourSepulchersManager: loaded " + loaded + " Emperor's grave NPC spawns.");
-			}
 		}
 		catch (Exception e)
 		{

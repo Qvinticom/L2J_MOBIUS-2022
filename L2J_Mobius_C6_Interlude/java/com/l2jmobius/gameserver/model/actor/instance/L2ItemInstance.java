@@ -1306,10 +1306,6 @@ public final class L2ItemInstance extends L2Object
 		}
 		catch (Exception e)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning("ATTENTION: Update Item instead of Insert one, check player with id " + _ownerId + " actions on item " + getObjectId());
-			}
 			updateInDb();
 		}
 	}

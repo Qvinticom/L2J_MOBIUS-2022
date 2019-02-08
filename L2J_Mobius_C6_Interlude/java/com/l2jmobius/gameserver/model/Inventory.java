@@ -1163,13 +1163,7 @@ public abstract class Inventory extends ItemContainer
 	 */
 	private void unEquipItemInBodySlot(int slot)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("--- unequip body slot:" + slot);
-		}
-		
 		int pdollSlot = -1;
-		
 		switch (slot)
 		{
 			case L2Item.SLOT_L_EAR:

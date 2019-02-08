@@ -139,15 +139,6 @@ public class EnterWorld extends L2GameClientPacket
 		// Register in flood protector
 		// FloodProtector.getInstance().registerNewPlayer(activeChar.getObjectId());
 		
-		if (L2World.getInstance().findObject(activeChar.getObjectId()) != null)
-		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning("DEBUG " + getType() + ": User already exist in OID map! User " + activeChar.getName() + " is character clone");
-				// activeChar.closeNetConnection(); // Do nothing?
-			}
-		}
-		
 		if (!activeChar.isGM() && !activeChar.isDonator() && Config.CHECK_NAME_ON_LOGIN)
 		{
 			if ((activeChar.getName().length() < 3) || (activeChar.getName().length() > 16) || !Util.isAlphaNumeric(activeChar.getName()) || !isValidName(activeChar.getName()))

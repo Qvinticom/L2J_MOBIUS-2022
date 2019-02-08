@@ -19,10 +19,8 @@ package com.l2jmobius.gameserver.model.entity.event.manager;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.Hashtable;
-import java.util.Iterator;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 
 /**
@@ -94,35 +92,6 @@ public class EventsGlobalTask implements Runnable
 		}
 		
 		eventid_to_tasks.put(event.getEventIdentifier(), savedTasksForId);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Added Event: " + event.getEventIdentifier());
-			
-			// check Info
-			for (String time : time_to_tasks.keySet())
-			{
-				final ArrayList<EventTask> tasks = time_to_tasks.get(time);
-				final Iterator<EventTask> taskIt = tasks.iterator();
-				while (taskIt.hasNext())
-				{
-					final EventTask actual_event = taskIt.next();
-					LOGGER.info("	--Registered Event: " + actual_event.getEventIdentifier());
-				}
-			}
-			
-			for (String event_id : eventid_to_tasks.keySet())
-			{
-				LOGGER.info("--Event: " + event_id);
-				final ArrayList<EventTask> times = eventid_to_tasks.get(event_id);
-				final Iterator<EventTask> timesIt = times.iterator();
-				while (timesIt.hasNext())
-				{
-					final EventTask actual_time = timesIt.next();
-					LOGGER.info("	--Registered Time: " + actual_time.getEventStartTime());
-				}
-			}
-		}
 	}
 	
 	public void clearEventTasksByEventName(String eventId)

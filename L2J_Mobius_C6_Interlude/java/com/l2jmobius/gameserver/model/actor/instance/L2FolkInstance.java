@@ -63,11 +63,6 @@ public class L2FolkInstance extends L2NpcInstance
 	 */
 	public void showSkillList(L2PcInstance player, ClassId classId)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("SkillList activated on: " + getObjectId());
-		}
-		
 		final int npcId = getTemplate().npcId;
 		
 		if (_classesToTeach == null)
@@ -150,11 +145,6 @@ public class L2FolkInstance extends L2NpcInstance
 	 */
 	public void showEnchantSkillList(L2PcInstance player, ClassId classId)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("EnchantSkillList activated on: " + getObjectId());
-		}
-		
 		final int npcId = getTemplate().npcId;
 		
 		if (_classesToTeach == null)

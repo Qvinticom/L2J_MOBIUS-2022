@@ -208,11 +208,6 @@ public class PcStat extends PlayableStat
 			if ((getActiveChar().getLevel() >= Config.MAX_LEVEL_NEWBIE_STATUS) && getActiveChar().isNewbie())
 			{
 				getActiveChar().setNewbie(false);
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Newbie character ended: " + getActiveChar().getCharId());
-				}
 			}
 			
 			QuestState qs = getActiveChar().getQuestState("255_Tutorial");

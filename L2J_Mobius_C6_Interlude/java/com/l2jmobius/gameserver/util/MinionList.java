@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
-import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
@@ -39,8 +38,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public class MinionList
 {
-	private static Logger LOGGER = Logger.getLogger(L2MonsterInstance.class.getName());
-	
 	/** List containing the current spawned minions for this L2MonsterInstance */
 	private final List<L2MinionInstance> minionReferences;
 	protected Map<Long, Integer> _respawnTasks = new ConcurrentHashMap<>();
@@ -259,10 +256,5 @@ public class MinionList
 		final int newY = master.getY() + spawnConstant;
 		
 		monster.spawnMe(newX, newY, master.getZ());
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Spawned minion template " + minionTemplate.npcId + " with objid: " + monster.getObjectId() + " to boss " + master.getObjectId() + " ,at: " + monster.getX() + " x, " + monster.getY() + " y, " + monster.getZ() + " z");
-		}
 	}
 }

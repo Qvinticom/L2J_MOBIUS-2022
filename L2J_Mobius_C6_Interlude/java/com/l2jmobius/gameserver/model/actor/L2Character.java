@@ -589,11 +589,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			return;
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Broadcast Status Update for " + getObjectId() + "(" + getName() + "). HP: " + getStatus().getCurrentHp());
-		}
-		
 		// Create the Server->Client packet StatusUpdate with current HP and MP
 		StatusUpdate su = null;
 		if (Config.FORCE_COMPLETE_STATUS_UPDATE && (this instanceof L2PcInstance))
@@ -718,11 +713,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 		
 		z += 5;
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Teleporting to: " + x + ", " + y + ", " + z);
-		}
-		
 		// Send a Server->Client packet TeleportToLocationt to the L2Character AND to all L2PcInstance in the _KnownPlayers of the L2Character
 		broadcastPacket(new TeleportToLocation(this, x, y, z));
 		
@@ -843,11 +833,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 	 */
 	protected void doAttack(L2Character target)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getName() + " doAttack: target=" + target);
-		}
-		
 		if (target == null)
 		{
 			return;
@@ -7336,11 +7321,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 				// if skill came with another one, we should delete the other one too.
 				if (oldSkill.triggerAnotherSkill())
 				{
-					if (Config.DEBUG)
-					{
-						LOGGER.info("Removing Triggherable Skill: " + oldSkill.getTriggeredId());
-					}
-					
 					_triggeredSkills.remove(oldSkill.getTriggeredId());
 					removeSkill(oldSkill.getTriggeredId(), true);
 				}
@@ -7367,10 +7347,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			
 			if (newSkill.triggerAnotherSkill())
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Adding Triggherable Skill: " + newSkill.getTriggeredId());
-				}
 				_triggeredSkills.put(newSkill.getTriggeredId(), SkillTable.getInstance().getInfo(newSkill.getTriggeredId(), newSkill.getTriggeredLevel()));
 			}
 		}
@@ -7473,10 +7449,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			// this is just a fail-safe againts buggers and gm dummies...
 			if (oldSkill.triggerAnotherSkill())
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Removing Triggherable Skill: " + oldSkill.getTriggeredId());
-				}
 				removeSkill(oldSkill.getTriggeredId(), true);
 				_triggeredSkills.remove(oldSkill.getTriggeredId());
 			}
@@ -8451,11 +8423,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 	 */
 	public void disableAllSkills()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("All skills disabled");
-		}
-		
 		_allSkillsDisabled = true;
 	}
 	
@@ -8465,11 +8432,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 	 */
 	public void enableAllSkills()
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("All skills enabled");
-		}
-		
 		_allSkillsDisabled = false;
 	}
 	
@@ -8933,11 +8895,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 			
 			if (Math.abs(angleDiff) <= maxAngleDiff)
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Char " + getName() + " is behind " + target.getName());
-				}
-				
 				return true;
 			}
 		}
@@ -9032,11 +8989,6 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 				if (isBehind(_target))
 				{
 					return false;
-				}
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Char " + getName() + " is side " + target.getName());
 				}
 				
 				return true;

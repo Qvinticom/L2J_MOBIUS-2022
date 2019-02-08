@@ -16,13 +16,10 @@
  */
 package com.l2jmobius.gameserver.handler;
 
-import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
-import com.l2jmobius.gameserver.datatables.sql.AdminCommandAccessRights;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminAdmin;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminAio;
 import com.l2jmobius.gameserver.handler.admincommandhandlers.AdminAnnouncements;
@@ -188,23 +185,6 @@ public class AdminCommandHandler
 		registerAdminCommandHandler(new AdminWho());
 		
 		LOGGER.info("AdminCommandHandler: Loaded " + _datatable.size() + " handlers.");
-		
-		if (Config.DEBUG)
-		{
-			String[] commands = new String[_datatable.keySet().size()];
-			
-			commands = _datatable.keySet().toArray(commands);
-			
-			Arrays.sort(commands);
-			
-			for (String command : commands)
-			{
-				if (AdminCommandAccessRights.getInstance().accessRightForCommand(command) < 0)
-				{
-					LOGGER.info("ATTENTION: admin command " + command + " has not an access right");
-				}
-			}
-		}
 	}
 	
 	public void registerAdminCommandHandler(IAdminCommandHandler handler)
@@ -212,11 +192,6 @@ public class AdminCommandHandler
 		String[] ids = handler.getAdminCommandList();
 		for (String element : ids)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Adding handler for command " + element);
-			}
-			
 			if (_datatable.keySet().contains(new String(element)))
 			{
 				LOGGER.warning("Duplicated command \"" + element + "\" definition in " + handler.getClass().getName() + ".");
@@ -235,11 +210,6 @@ public class AdminCommandHandler
 		if (adminCommand.indexOf(" ") != -1)
 		{
 			command = adminCommand.substring(0, adminCommand.indexOf(" "));
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("getting handler for command: " + command + " -> " + (_datatable.get(command) != null));
 		}
 		
 		return _datatable.get(command);

@@ -946,14 +946,6 @@ public class AdminEditChar implements IAdminCommandHandler
 			{
 				LOGGER.warning("listCharacters: found player null into L2World Instance..");
 			}
-			else if ((actual_player.isOnline() == 0) && Config.DEBUG)
-			{
-				LOGGER.warning("listCharacters: player " + actual_player.getName() + " not online into L2World Instance..");
-			}
-			else if (actual_player.isInOfflineMode() && Config.DEBUG)
-			{
-				LOGGER.warning("listCharacters: player " + actual_player.getName() + " offline into L2World Instance..");
-			}
 		}
 		
 		L2PcInstance[] players = online_players_list.toArray(new L2PcInstance[online_players_list.size()]);
@@ -1176,11 +1168,6 @@ public class AdminEditChar implements IAdminCommandHandler
 		
 		// Admin information
 		player.sendMessage("Changed stats of " + player.getName() + ".  HP: " + hpval + "  MP: " + mpval + "  CP: " + cpval + "  PvP: " + pvpflagval + " / " + pvpkillsval);
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.warning("[GM]" + activeChar.getName() + " changed stats of " + player.getName() + ".  HP: " + hpval + " MP: " + mpval + " CP: " + cpval + " PvP: " + pvpflagval + " / " + pvpkillsval);
-		}
 		
 		showCharacterInfo(activeChar, null); // Back to start
 		

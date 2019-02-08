@@ -58,11 +58,6 @@ public final class L2ClassMasterInstance extends L2FolkInstance
 	@Override
 	public void onAction(L2PcInstance player)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Class master activated!");
-		}
-		
 		player.setLastFolkNPC(this);
 		
 		// Check if the L2PcInstance already target the L2NpcInstance
@@ -685,10 +680,6 @@ public final class L2ClassMasterInstance extends L2FolkInstance
 	 */
 	private void changeClass(L2PcInstance player, int val)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Changing class to ClassId:" + val);
-		}
 		player.setClassId(val);
 		
 		if (player.isSubClassActive())

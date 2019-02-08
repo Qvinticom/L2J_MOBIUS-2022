@@ -84,21 +84,12 @@ public class UserCommandHandler
 		
 		for (int id : ids)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Adding handler for user command " + id);
-			}
 			_datatable.put(new Integer(id), handler);
 		}
 	}
 	
 	public IUserCommandHandler getUserCommandHandler(int userCommand)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("getting handler for user command: " + userCommand);
-		}
-		
 		return _datatable.get(new Integer(userCommand));
 	}
 	

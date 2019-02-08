@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.serverpackets;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.templates.item.L2Item;
 
@@ -29,8 +26,6 @@ import com.l2jmobius.gameserver.templates.item.L2Item;
  */
 public class EquipUpdate extends L2GameServerPacket
 {
-	private static Logger LOGGER = Logger.getLogger(EquipUpdate.class.getName());
-	
 	private final L2ItemInstance _item;
 	private final int _change;
 	
@@ -126,10 +121,6 @@ public class EquipUpdate extends L2GameServerPacket
 			}
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("body:" + bodypart);
-		}
 		writeD(bodypart);
 	}
 }

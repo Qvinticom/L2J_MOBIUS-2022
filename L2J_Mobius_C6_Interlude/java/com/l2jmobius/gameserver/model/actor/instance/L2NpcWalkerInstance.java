@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model.actor.instance;
 
 import java.util.Map;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
 import com.l2jmobius.gameserver.ai.L2NpcWalkerAI;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -77,10 +76,6 @@ public class L2NpcWalkerInstance extends L2NpcInstance
 		
 		if (_knownPlayers == null)
 		{
-			if (Config.DEVELOPER)
-			{
-				LOGGER.info("broadcastChat _players == null");
-			}
 			return;
 		}
 		

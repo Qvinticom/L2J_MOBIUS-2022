@@ -735,10 +735,6 @@ public class TvT implements EventTask
 	{
 		if (!checkStartJoinOk())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(_eventName + " Engine[startJoin]: startJoinOk() = false");
-			}
 			return false;
 		}
 		
@@ -848,10 +844,6 @@ public class TvT implements EventTask
 	{
 		if (!startEventOk())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(_eventName + " Engine[startEvent()]: startEventOk() = false");
-			}
 			return false;
 		}
 		
@@ -916,10 +908,6 @@ public class TvT implements EventTask
 	{
 		if (!finishEventOk())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(_eventName + " Engine[finishEvent]: finishEventOk() = false");
-			}
 			return;
 		}
 		
@@ -2386,10 +2374,6 @@ public class TvT implements EventTask
 	{
 		if (_inProgress)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(_eventName + " Engine[addTeam(" + teamName + ")]: checkTeamOk() = false");
-			}
 			return;
 		}
 		
@@ -2426,24 +2410,15 @@ public class TvT implements EventTask
 	{
 		if (_inProgress || _teams.isEmpty())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(_eventName + " Engine[removeTeam(" + teamName + ")]: checkTeamOk() = false");
-			}
 			return;
 		}
 		
 		if (teamPlayersCount(teamName) > 0)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning(_eventName + " Engine[removeTeam(" + teamName + ")]: teamPlayersCount(teamName) > 0");
-			}
 			return;
 		}
 		
 		final int index = _teams.indexOf(teamName);
-		
 		if (index == -1)
 		{
 			return;

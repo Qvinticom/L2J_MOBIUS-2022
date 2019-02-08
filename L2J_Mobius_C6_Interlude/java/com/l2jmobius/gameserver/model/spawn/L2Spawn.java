@@ -21,7 +21,6 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.sql.TerritoryTable;
@@ -560,11 +559,6 @@ public class L2Spawn
 			notifyNpcSpawned(mob);
 			
 			_lastSpawn = mob;
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("spawned Mob ID: " + _template.npcId + " ,at: " + mob.getX() + " x, " + mob.getY() + " y, " + mob.getZ() + " z");
-			}
 			
 			for (Quest quest : mob.getTemplate().getEventQuests(Quest.QuestEventType.ON_SPAWN))
 			{

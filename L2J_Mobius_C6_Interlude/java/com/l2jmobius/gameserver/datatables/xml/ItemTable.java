@@ -220,11 +220,6 @@ public class ItemTable
 			item.setItemLootShedule(itemLootShedule);
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("ItemTable: Item created  oid: " + item.getObjectId() + " itemid: " + itemId);
-		}
-		
 		// Add the L2ItemInstance object to _allObjects of L2world
 		L2World.getInstance().storeObject(item);
 		

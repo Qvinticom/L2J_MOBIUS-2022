@@ -20,7 +20,6 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Logger;
 
 import com.l2jmobius.Config;
 
@@ -29,7 +28,6 @@ import com.l2jmobius.Config;
  */
 public class GameServerListener extends FloodProtectedListener
 {
-	private static Logger LOGGER = Logger.getLogger(GameServerListener.class.getName());
 	private static List<GameServerThread> _gameServers = new ArrayList<>();
 	
 	public GameServerListener() throws IOException
@@ -43,15 +41,9 @@ public class GameServerListener extends FloodProtectedListener
 	@Override
 	public void addClient(Socket s)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("Received gameserver connection from: " + s.getInetAddress().getHostAddress());
-		}
-		
 		final GameServerThread gst = new GameServerThread(s);
 		gst.start();
 		_gameServers.add(gst);
-		
 	}
 	
 	public void removeGameServer(GameServerThread gst)

@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.logging.Logger;
-
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
@@ -42,8 +39,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public final class L2GuardInstance extends L2Attackable
 {
-	private static Logger LOGGER = Logger.getLogger(L2GuardInstance.class.getName());
-	
 	private static final int RETURN_INTERVAL = 60000;
 	private int _homeX;
 	private int _homeY;
@@ -115,11 +110,6 @@ public final class L2GuardInstance extends L2Attackable
 		_homeX = getX();
 		_homeY = getY();
 		_homeZ = getZ();
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getObjectId() + ": Home location set to X:" + _homeX + " Y:" + _homeY + " Z:" + _homeZ);
-		}
 	}
 	
 	/**
@@ -139,13 +129,7 @@ public final class L2GuardInstance extends L2Attackable
 	{
 		if (!isInsideRadius(_homeX, _homeY, 150, false))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(getObjectId() + ": moving hometo X:" + _homeX + " Y:" + _homeY + " Z:" + _homeZ);
-			}
-			
 			clearAggroList();
-			
 			getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(_homeX, _homeY, _homeZ, 0));
 		}
 	}
@@ -161,11 +145,6 @@ public final class L2GuardInstance extends L2Attackable
 		_homeX = getX();
 		_homeY = getY();
 		_homeZ = getZ();
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info(getObjectId() + ": Home location set to X:" + _homeX + " Y:" + _homeY + " Z:" + _homeZ);
-		}
 		
 		// check the region where this mob is, do not activate the AI if region is inactive.
 		L2WorldRegion region = L2World.getInstance().getRegion(getX(), getY());
@@ -234,11 +213,6 @@ public final class L2GuardInstance extends L2Attackable
 		// Check if the L2PcInstance already target the L2GuardInstance
 		if (getObjectId() != player.getTargetId())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(player.getObjectId() + ": Targetted guard " + getObjectId());
-			}
-			
 			// Set the target of the L2PcInstance player
 			player.setTarget(this);
 			
@@ -252,11 +226,6 @@ public final class L2GuardInstance extends L2Attackable
 		}
 		else if (containsTarget(player)) // Check if the L2PcInstance is in the _aggroList of the L2GuardInstance
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info(player.getObjectId() + ": Attacked guard " + getObjectId());
-			}
-			
 			// Set the L2PcInstance Intention to AI_INTENTION_ATTACK
 			player.getAI().setIntention(CtrlIntention.AI_INTENTION_ATTACK, this);
 		}

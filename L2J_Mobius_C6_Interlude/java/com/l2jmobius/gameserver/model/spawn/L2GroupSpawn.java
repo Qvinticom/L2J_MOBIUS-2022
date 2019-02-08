@@ -18,7 +18,6 @@ package com.l2jmobius.gameserver.model.spawn;
 
 import java.lang.reflect.Constructor;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.datatables.sql.TerritoryTable;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
@@ -104,11 +103,6 @@ public class L2GroupSpawn extends L2Spawn
 			mob.setSpawn(this);
 			mob.spawnMe(newlocx, newlocy, newlocz);
 			mob.onSpawn();
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("spawned Mob ID: " + _template.npcId + " ,at: " + mob.getX() + " x, " + mob.getY() + " y, " + mob.getZ() + " z");
-			}
 			
 			return mob;
 			

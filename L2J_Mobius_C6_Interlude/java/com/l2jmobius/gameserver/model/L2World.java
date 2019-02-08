@@ -24,7 +24,6 @@ import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.Point3D;
 import com.l2jmobius.commons.util.object.L2ObjectMap;
 import com.l2jmobius.commons.util.object.L2ObjectSet;
@@ -119,14 +118,8 @@ public final class L2World
 	{
 		if (_allObjects.get(object.getObjectId()) != null)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.warning("[L2World] objectId " + object.getObjectId() + " already exist in OID map!");
-			}
-			
 			return;
 		}
-		
 		_allObjects.put(object);
 	}
 	
@@ -414,10 +407,6 @@ public final class L2World
 			// Get all visible objects contained in the _visibleObjects of L2WorldRegions
 			// in a circular area of 2000 units
 			final List<L2Object> visibles = getVisibleObjects(object, 2000);
-			if (Config.DEBUG)
-			{
-				LOGGER.info("objects in range:" + visibles.size());
-			}
 			
 			// tell the player about the surroundings
 			// Go through the visible objects contained in the circular area
@@ -460,10 +449,6 @@ public final class L2World
 		
 		// Get all visible objects contained in the _visibleObjects of L2WorldRegions in a circular area of 2000 units
 		List<L2Object> visibles = getVisibleObjects(object, 2000);
-		if (Config.DEBUG)
-		{
-			LOGGER.info("objects in range:" + visibles.size());
-		}
 		
 		// tell the player about the surroundings
 		// Go through the visible objects contained in the circular area
@@ -503,10 +488,6 @@ public final class L2World
 	{
 		if ((cha != null) && !cha.isTeleporting())
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Removed player: " + cha.getName().toLowerCase());
-			}
 			_allPlayers.remove(cha.getName().toLowerCase());
 		}
 	}

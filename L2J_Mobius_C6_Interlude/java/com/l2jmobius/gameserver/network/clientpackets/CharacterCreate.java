@@ -89,18 +89,8 @@ public final class CharacterCreate extends L2GameClientPacket
 	{
 		if ((_name.length() < 3) || (_name.length() > 16) || !Util.isAlphaNumeric(_name) || !isValidName(_name))
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("DEBUG " + getType() + ": charname: " + _name + " is invalid. creation failed.");
-			}
-			
 			sendPacket(new CharCreateFail(CharCreateFail.REASON_16_ENG_CHARS));
 			return;
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("DEBUG " + getType() + ": charname: " + _name + " classId: " + _classId);
 		}
 		
 		L2PcInstance newChar = null;
@@ -111,32 +101,16 @@ public final class CharacterCreate extends L2GameClientPacket
 		{
 			if ((CharNameTable.getInstance().accountCharNumber(getClient().getAccountName()) >= Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT) && (Config.MAX_CHARACTERS_NUMBER_PER_ACCOUNT != 0))
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("DEBUG " + getType() + ": Max number of characters reached. Creation failed.");
-				}
-				
 				sendPacket(new CharCreateFail(CharCreateFail.REASON_TOO_MANY_CHARACTERS));
 				return;
 			}
 			else if (CharNameTable.getInstance().doesCharNameExist(_name))
 			{
-				if (Config.DEBUG)
-				{
-					LOGGER.info("DEBUG " + getType() + ": charname: " + _name + " already exists. creation failed.");
-				}
-				
 				sendPacket(new CharCreateFail(CharCreateFail.REASON_NAME_ALREADY_EXISTS));
 				return;
 			}
 			
 			template = CharTemplateTable.getInstance().getTemplate(_classId);
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("DEBUG " + getType() + ": charname: " + _name + " classId: " + _classId + " template: " + template);
-			}
-			
 			if ((template == null) || (template.classBaseLevel > 1))
 			{
 				sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
@@ -185,11 +159,6 @@ public final class CharacterCreate extends L2GameClientPacket
 	
 	private void initNewChar(L2GameClient client, L2PcInstance newChar)
 	{
-		if (Config.DEBUG)
-		{
-			LOGGER.info("DEBUG " + getType() + ": Character init start");
-		}
-		
 		L2World.getInstance().storeObject(newChar);
 		final L2PcTemplate template = newChar.getTemplate();
 		
@@ -311,11 +280,6 @@ public final class CharacterCreate extends L2GameClientPacket
 			{
 				newChar.registerShortCut(new L2ShortCut(10, 0, 2, startSkill.getId(), 1, 1));
 			}
-			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("DEBUG " + getType() + ": Adding starter skill:" + startSkill.getId() + " / " + startSkill.getLevel());
-			}
 		}
 		
 		startTutorialQuest(newChar);
@@ -333,11 +297,6 @@ public final class CharacterCreate extends L2GameClientPacket
 		final CharSelectInfo cl = new CharSelectInfo(client.getAccountName(), client.getSessionId().playOkID1);
 		client.getConnection().sendPacket(cl);
 		client.setCharSelection(cl.getCharInfo());
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("DEBUG " + getType() + ": Character init end");
-		}
 	}
 	
 	public void startTutorialQuest(L2PcInstance player)

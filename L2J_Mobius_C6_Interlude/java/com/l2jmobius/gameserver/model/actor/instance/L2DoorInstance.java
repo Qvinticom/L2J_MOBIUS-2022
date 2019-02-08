@@ -22,7 +22,6 @@ import java.util.List;
 import java.util.concurrent.ScheduledFuture;
 import java.util.logging.Logger;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.ai.CtrlIntention;
 import com.l2jmobius.gameserver.ai.L2CharacterAI;
@@ -169,22 +168,13 @@ public class L2DoorInstance extends L2Character
 		{
 			try
 			{
-				String doorAction;
-				
 				if (!_open)
 				{
-					doorAction = "opened";
 					openMe();
 				}
 				else
 				{
-					doorAction = "closed";
 					closeMe();
-				}
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("Auto " + doorAction + " door ID " + _doorId + " (" + _name + ") for " + (_autoActionDelay / 60000) + " minute(s).");
 				}
 			}
 			catch (Exception e)
@@ -539,28 +529,6 @@ public class L2DoorInstance extends L2Character
 			return;
 		}
 		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("player " + player.getObjectId());
-			LOGGER.info("Door " + getObjectId());
-			LOGGER.info("player clan " + player.getClan());
-			if (player.getClan() != null)
-			{
-				LOGGER.info("player clanid " + player.getClanId());
-				LOGGER.info("player clanleaderid " + player.getClan().getLeaderId());
-			}
-			LOGGER.info("clanhall " + _clanHall);
-			if (_clanHall != null)
-			{
-				LOGGER.info("clanhallID " + _clanHall.getId());
-				LOGGER.info("clanhallOwner " + _clanHall.getOwnerId());
-				for (L2DoorInstance door : _clanHall.getDoors())
-				{
-					LOGGER.info("clanhallDoor " + door.getObjectId());
-				}
-			}
-		}
-		
 		// Check if the L2PcInstance already target the L2NpcInstance
 		if (this != player.getTarget())
 		{
@@ -615,28 +583,6 @@ public class L2DoorInstance extends L2Character
 		if (player == null)
 		{
 			return;
-		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("player " + player.getObjectId());
-			LOGGER.info("Door " + getObjectId());
-			LOGGER.info("player clan " + player.getClan());
-			if (player.getClan() != null)
-			{
-				LOGGER.info("player clanid " + player.getClanId());
-				LOGGER.info("player clanleaderid " + player.getClan().getLeaderId());
-			}
-			LOGGER.info("clanhall " + _clanHall);
-			if (_clanHall != null)
-			{
-				LOGGER.info("clanhallID " + _clanHall.getId());
-				LOGGER.info("clanhallOwner " + _clanHall.getOwnerId());
-				for (L2DoorInstance door : _clanHall.getDoors())
-				{
-					LOGGER.info("clanhallDoor " + door.getObjectId());
-				}
-			}
 		}
 		
 		if (player.getAccessLevel().isGm())

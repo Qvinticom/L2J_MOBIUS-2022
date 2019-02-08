@@ -16,7 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.status;
 
-import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Playable;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
@@ -154,27 +153,13 @@ public class PcStatus extends PlayableStatus
 			// Send a System Message to the L2PcInstance
 			SystemMessage smsg = new SystemMessage(SystemMessageId.S1_GAVE_YOU_S2_DMG);
 			
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Attacker:" + attacker.getName());
-			}
-			
 			if (attacker instanceof L2NpcInstance)
 			{
-				final int mobId = ((L2NpcInstance) attacker).getTemplate().idTemplate;
-				
-				if (Config.DEBUG)
-				{
-					LOGGER.info("mob id:" + mobId);
-				}
-				
-				smsg.addNpcName(mobId);
+				smsg.addNpcName(((L2NpcInstance) attacker).getTemplate().idTemplate);
 			}
 			else if (attacker instanceof L2Summon)
 			{
-				final int mobId = ((L2Summon) attacker).getTemplate().idTemplate;
-				
-				smsg.addNpcName(mobId);
+				smsg.addNpcName(((L2Summon) attacker).getTemplate().idTemplate);
 			}
 			else
 			{

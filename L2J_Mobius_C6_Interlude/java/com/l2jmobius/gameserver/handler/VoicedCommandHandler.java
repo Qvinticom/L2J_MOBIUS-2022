@@ -111,14 +111,8 @@ public class VoicedCommandHandler
 	public void registerVoicedCommandHandler(IVoicedCommandHandler handler)
 	{
 		String[] ids = handler.getVoicedCommandList();
-		
 		for (String id : ids)
 		{
-			if (Config.DEBUG)
-			{
-				LOGGER.info("Adding handler for command " + id);
-			}
-			
 			_datatable.put(id, handler);
 		}
 	}
@@ -126,17 +120,10 @@ public class VoicedCommandHandler
 	public IVoicedCommandHandler getVoicedCommandHandler(String voicedCommand)
 	{
 		String command = voicedCommand;
-		
 		if (voicedCommand.indexOf(" ") != -1)
 		{
 			command = voicedCommand.substring(0, voicedCommand.indexOf(" "));
 		}
-		
-		if (Config.DEBUG)
-		{
-			LOGGER.info("getting handler for command: " + command + " -> " + (_datatable.get(command) != null));
-		}
-		
 		return _datatable.get(command);
 	}
 	
