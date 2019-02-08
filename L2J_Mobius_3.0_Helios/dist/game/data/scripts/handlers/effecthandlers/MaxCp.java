@@ -16,6 +16,7 @@
  */
 package handlers.effecthandlers;
 
+import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
@@ -41,19 +42,22 @@ public class MaxCp extends AbstractStatEffect
 	{
 		if (_heal)
 		{
-			switch (_mode)
+			ThreadPool.schedule(() ->
 			{
-				case DIFF: // DIFF
+				switch (_mode)
 				{
-					effected.setCurrentCp(effected.getCurrentCp() + _amount);
-					break;
+					case DIFF:
+					{
+						effected.setCurrentCp(effected.getCurrentCp() + _amount);
+						break;
+					}
+					case PER:
+					{
+						effected.setCurrentCp(effected.getCurrentCp() + (effected.getMaxCp() * (_amount / 100)));
+						break;
+					}
 				}
-				case PER: // PER
-				{
-					effected.setCurrentCp(effected.getCurrentCp() + (effected.getMaxCp() * (_amount / 100)));
-					break;
-				}
-			}
+			}, 100);
 		}
 	}
 }
