@@ -631,16 +631,6 @@ public abstract class L2Object
 		return false;
 	}
 	
-	public boolean isBoss()
-	{
-		return false;
-	}
-	
-	public boolean isTrap()
-	{
-		return false;
-	}
-	
 	public boolean isDoor()
 	{
 		return false;
@@ -651,17 +641,7 @@ public abstract class L2Object
 		return false;
 	}
 	
-	public boolean isSiegeGuard()
-	{
-		return false;
-	}
-	
 	public boolean isBoat()
-	{
-		return false;
-	}
-	
-	public boolean isVehicle()
 	{
 		return false;
 	}

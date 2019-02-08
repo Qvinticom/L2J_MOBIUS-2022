@@ -1199,4 +1199,10 @@ public class L2PetInstance extends L2Summon
 			Olympiad.getInstance().notifyCompetitorDamage(getOwner(), damage, getOwner().getOlympiadGameId());
 		}
 	}
+	
+	@Override
+	public boolean isPet()
+	{
+		return true;
+	}
 }

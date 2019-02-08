@@ -351,4 +351,10 @@ public class L2MonsterInstance extends L2Attackable
 		}
 		_minionList.clearRespawnList();
 	}
+	
+	@Override
+	public boolean isMonster()
+	{
+		return true;
+	}
 }

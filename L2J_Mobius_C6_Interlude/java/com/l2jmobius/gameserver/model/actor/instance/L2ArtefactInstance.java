@@ -122,4 +122,10 @@ public final class L2ArtefactInstance extends L2NpcInstance
 	{
 		player.sendPacket(ActionFailed.STATIC_PACKET);
 	}
+	
+	@Override
+	public boolean isArtefact()
+	{
+		return true;
+	}
 }

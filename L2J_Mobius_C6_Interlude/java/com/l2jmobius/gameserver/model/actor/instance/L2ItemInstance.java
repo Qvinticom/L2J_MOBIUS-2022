@@ -1558,4 +1558,10 @@ public final class L2ItemInstance extends L2Object
 	{
 		return (_item instanceof L2Weapon);
 	}
+	
+	@Override
+	public boolean isItem()
+	{
+		return true;
+	}
 }

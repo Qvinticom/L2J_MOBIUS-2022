@@ -110,4 +110,10 @@ public final class L2MinionInstance extends L2MonsterInstance
 		_master.notifyMinionDied(this);
 		return true;
 	}
+	
+	@Override
+	public boolean isMinion()
+	{
+		return true;
+	}
 }

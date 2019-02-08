@@ -975,4 +975,10 @@ public class L2DoorInstance extends L2Character
 		}
 		return true;
 	}
+	
+	@Override
+	public boolean isDoor()
+	{
+		return true;
+	}
 }

@@ -10497,4 +10497,10 @@ public abstract class L2Character extends L2Object implements ISkillsHolder
 	{
 		_cursorKeyMovement = value;
 	}
+	
+	@Override
+	public boolean isCharacter()
+	{
+		return true;
+	}
 }

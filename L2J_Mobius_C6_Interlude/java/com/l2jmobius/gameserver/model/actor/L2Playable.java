@@ -471,4 +471,10 @@ public abstract class L2Playable extends L2Character
 		}
 		return null;
 	}
+	
+	@Override
+	public boolean isPlayable()
+	{
+		return true;
+	}
 }

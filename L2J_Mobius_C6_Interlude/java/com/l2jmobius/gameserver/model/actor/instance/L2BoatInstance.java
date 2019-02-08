@@ -764,4 +764,10 @@ public class L2BoatInstance extends L2Character
 	{
 		return false;
 	}
+	
+	@Override
+	public boolean isBoat()
+	{
+		return true;
+	}
 }

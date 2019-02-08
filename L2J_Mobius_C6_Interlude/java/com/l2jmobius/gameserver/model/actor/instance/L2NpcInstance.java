@@ -3366,4 +3366,10 @@ public class L2NpcInstance extends L2Character
 	{
 		_customNpcInstance = arg;
 	}
+	
+	@Override
+	public boolean isNpc()
+	{
+		return true;
+	}
 }

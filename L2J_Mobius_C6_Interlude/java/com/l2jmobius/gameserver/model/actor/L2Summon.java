@@ -858,4 +858,10 @@ public abstract class L2Summon extends L2Playable
 	{
 		return _owner;
 	}
+	
+	@Override
+	public boolean isSummon()
+	{
+		return true;
+	}
 }
