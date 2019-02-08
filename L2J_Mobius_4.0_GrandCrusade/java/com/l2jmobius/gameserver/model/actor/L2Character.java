@@ -1073,6 +1073,12 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 			// also works: setHeading(Util.convertDegreeToClientHeading(Util.calculateAngleFrom(this, target)));
 			setHeading(Util.calculateHeadingFrom(this, target));
 			
+			// Always try to charge soulshots.
+			if (!isChargedShot(ShotType.SOULSHOTS))
+			{
+				rechargeShots(true, false, false);
+			}
+			
 			// Get the Attack Reuse Delay of the L2Weapon
 			final Attack attack = generateAttackTargetData(target, weaponItem, attackType);
 			boolean crossbow = false;
