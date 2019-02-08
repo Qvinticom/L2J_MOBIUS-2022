@@ -42,9 +42,9 @@ public class MaxHp extends AbstractStatEffect
 	{
 		if (_heal)
 		{
-			if (!effected.isHpBlocked())
+			ThreadPool.schedule(() ->
 			{
-				ThreadPool.schedule(() ->
+				if (!effected.isHpBlocked())
 				{
 					switch (_mode)
 					{
@@ -59,8 +59,8 @@ public class MaxHp extends AbstractStatEffect
 							break;
 						}
 					}
-				}, 100);
-			}
+				}
+			}, 100);
 		}
 	}
 }
