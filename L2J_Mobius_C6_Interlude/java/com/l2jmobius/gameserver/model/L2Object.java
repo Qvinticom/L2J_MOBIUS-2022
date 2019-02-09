@@ -570,13 +570,7 @@ public abstract class L2Object
 		return null;
 	}
 	
-	@Override
-	public String toString()
-	{
-		return "" + _objectId;
-	}
-	
-	public boolean isCharacter()
+	public boolean isPlayer()
 	{
 		return false;
 	}
@@ -586,7 +580,7 @@ public abstract class L2Object
 		return false;
 	}
 	
-	public boolean isPlayer()
+	public boolean isSummon()
 	{
 		return false;
 	}
@@ -596,7 +590,12 @@ public abstract class L2Object
 		return false;
 	}
 	
-	public boolean isSummon()
+	public boolean isCharacter()
+	{
+		return false;
+	}
+	
+	public boolean isAttackable()
 	{
 		return false;
 	}
@@ -611,27 +610,7 @@ public abstract class L2Object
 		return false;
 	}
 	
-	public boolean isItem()
-	{
-		return false;
-	}
-	
 	public boolean isRaid()
-	{
-		return false;
-	}
-	
-	public boolean isDoor()
-	{
-		return false;
-	}
-	
-	public boolean isArtefact()
-	{
-		return false;
-	}
-	
-	public boolean isBoat()
 	{
 		return false;
 	}
@@ -641,8 +620,29 @@ public abstract class L2Object
 		return false;
 	}
 	
-	public boolean isAttackable()
+	public boolean isArtefact()
 	{
 		return false;
+	}
+	
+	public boolean isDoor()
+	{
+		return false;
+	}
+	
+	public boolean isBoat()
+	{
+		return false;
+	}
+	
+	public boolean isItem()
+	{
+		return false;
+	}
+	
+	@Override
+	public String toString()
+	{
+		return "" + _objectId;
 	}
 }
