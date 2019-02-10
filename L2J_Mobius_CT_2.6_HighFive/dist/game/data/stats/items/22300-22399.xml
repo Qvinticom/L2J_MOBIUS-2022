@@ -329,10 +329,15 @@
 	<item id="22334" type="EtcItem" name="Rune of Experience Points 50% - 1 hours limited time">
 		<!-- Ancient characters that bestow a mysterious ability when possessed in the inventory. Increases acquired Exp. by 50%. The remaining period decreases even while logged off. Cannot be exchanged or dropped. Can be destroyed. Can be stored in a private warehouse. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
+		<set name="etcitem_type" val="RUNE" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="item_skill" val="22039-2" /> <!-- Rune of Experience Points -->
+		<set name="time" val="60" />
 	</item>
 	<item id="22335" type="EtcItem" name="Essence of Destruction">
 		<!-- An item filled with the essence of Shilen's followers that you have defeated. -->
