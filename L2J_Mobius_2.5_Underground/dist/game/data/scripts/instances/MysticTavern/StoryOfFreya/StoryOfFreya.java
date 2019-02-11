@@ -1,0 +1,473 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package instances.MysticTavern.StoryOfFreya;
+
+import java.util.List;
+
+import com.l2jmobius.Config;
+import com.l2jmobius.gameserver.enums.Movie;
+import com.l2jmobius.gameserver.instancemanager.QuestManager;
+import com.l2jmobius.gameserver.instancemanager.ZoneManager;
+import com.l2jmobius.gameserver.model.L2Party;
+import com.l2jmobius.gameserver.model.L2World;
+import com.l2jmobius.gameserver.model.Location;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.FriendlyNpcInstance;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.instancezone.Instance;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.zone.type.L2ScriptZone;
+import com.l2jmobius.gameserver.network.NpcStringId;
+import com.l2jmobius.gameserver.network.serverpackets.ExShowScreenMessage;
+import com.l2jmobius.gameserver.network.serverpackets.OnEventTrigger;
+
+import instances.AbstractInstance;
+import quests.Q00835_PitiableMelisa.Q00835_PitiableMelisa;
+
+/**
+ * Mystic Tavern Freya Instance
+ * @author Gigi
+ * @date 2019-02-05 - [19:54:29]
+ */
+public class StoryOfFreya extends AbstractInstance
+{
+	// NPCs
+	private static final int SAYAN = 34172;
+	private static final int KANNA = 34173;
+	private static final int SYRRA = 34174;
+	private static final int FREYA = 23689;
+	private static final int ICE_KNIGHT = 23703;
+	private static final int KNIGHT = 34175;
+	private static final int FROST_GOLEM = 23686;
+	private static final int FROST_KNIGHT = 23688;
+	private static final int GLACIER_GOLEM = 23718;
+	private static final int GLACIER_FROSTBRINGER = 23687;
+	// Other
+	private static final int TEMPLATE_ID = 261;
+	private static final int ICE_CRYSTAL_SHARD = 46594;
+	private static final Location CASTLE_TELEPORT = new Location(212410, -46728, -11225);
+	private static final Location LABIRYNTH_TELEPORT = new Location(213145, -43145, -872);
+	private static final L2ScriptZone FIRST_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80013, L2ScriptZone.class);
+	private static final L2ScriptZone SECOND_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80014, L2ScriptZone.class);
+	private static final L2ScriptZone THRID_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80015, L2ScriptZone.class);
+	private static final L2ScriptZone FOURTH_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80016, L2ScriptZone.class);
+	private static final L2ScriptZone FIFTH_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80017, L2ScriptZone.class);
+	private static final L2ScriptZone SIXTH_SPAWN_ZONE = ZoneManager.getInstance().getZoneById(80018, L2ScriptZone.class);
+	private static final int FREYA_SNOW = 26160228;
+	
+	public StoryOfFreya()
+	{
+		super(TEMPLATE_ID);
+		addTalkId(SAYAN, KANNA, SYRRA);
+		addFirstTalkId(SAYAN, KANNA, SYRRA);
+		addSpawnId(FREYA, ICE_KNIGHT);
+		addAttackId(FROST_GOLEM, GLACIER_FROSTBRINGER, FREYA);
+		addKillId(ICE_KNIGHT, FROST_GOLEM, GLACIER_FROSTBRINGER, FREYA);
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		String htmltext = null;
+		final Instance world = npc.getInstanceWorld();
+		
+		if (isInInstance(world))
+		{
+			switch (event)
+			{
+				case "34172-02.html":
+				case "34172-03.html":
+				{
+					htmltext = event;
+					break;
+				}
+				case "34172-01.html":
+				{
+					if (!player.isInParty() || !player.getParty().isLeader(player))
+					{
+						htmltext = "34172-04.html";
+						break;
+					}
+					htmltext = event;
+					break;
+				}
+				case "34172-06.html":
+				{
+					if (!player.isInParty() || !player.getParty().isLeader(player))
+					{
+						htmltext = "34172-04.html";
+						break;
+					}
+					final L2Party party = player.getParty();
+					final List<L2PcInstance> members = party.getMembers();
+					for (L2PcInstance member : members)
+					{
+						if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
+						{
+							QuestProgress(npc, member);
+						}
+					}
+					htmltext = event;
+					break;
+				}
+				case "start_story":
+				{
+					player.standUp();
+					enterInstance(player, null, TEMPLATE_ID);
+					if (player.getParty() != null)
+					{
+						for (L2PcInstance member : player.getParty().getMembers())
+						{
+							if (member != player)
+							{
+								member.standUp();
+								member.teleToLocation(player, player.getInstanceWorld());
+							}
+						}
+					}
+					break;
+				}
+				case "startInstance":
+				{
+					if (player.isInParty())
+					{
+						final L2Party party = player.getParty();
+						final List<L2PcInstance> members = party.getMembers();
+						for (L2PcInstance member : members)
+						{
+							if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
+							{
+								member.teleToLocation(LABIRYNTH_TELEPORT, world.getTemplateId());
+								world.setStatus(1);
+								QuestProgress(npc, member);
+							}
+						}
+						if (getRandom(10) < 5)
+						{
+							world.spawnGroup("knight");
+							world.broadcastPacket(new ExShowScreenMessage(NpcStringId.ICE_KNIGHTS_GOT_IN_DEFEAT_THE_ICE_KNIGHTS, ExShowScreenMessage.TOP_CENTER, 20000, true));
+						}
+						else
+						{
+							world.spawnGroup("knightSolo");
+						}
+					}
+					break;
+				}
+				case "openDoor":
+				{
+					if (world.isStatus(0))
+					{
+						if (!player.isInParty() || !player.getParty().isLeader(player))
+						{
+							htmltext = "34173-03.html";
+							break;
+						}
+						if (player.isInParty())
+						{
+							final L2Party party = player.getParty();
+							final List<L2PcInstance> members = party.getMembers();
+							for (L2PcInstance member : members)
+							{
+								if ((member == null) || (member.calculateDistance3D(npc) > 300))
+								{
+									htmltext = "34173-02.html";
+									break;
+								}
+							}
+						}
+						world.openCloseDoor(world.getTemplateParameters().getInt("1_st_door"), true);
+						startQuestTimer("closeDoor", 60000, npc, null);
+						break;
+					}
+					
+					else if (world.getStatus() > 0)
+					{
+						if (player.getInventory().getInventoryItemCount(ICE_CRYSTAL_SHARD, -1) == 10)
+						{
+							world.openCloseDoor(world.getTemplateParameters().getInt("1_st_door"), true);
+							startQuestTimer("closeDoor", 30000, npc, null);
+							break;
+						}
+						htmltext = "34173-03.html";
+						break;
+					}
+				}
+				case "closeDoor":
+				{
+					world.openCloseDoor(world.getTemplateParameters().getInt("1_st_door"), false);
+					break;
+				}
+				case "summerLabirynth":
+				{
+					player.teleToLocation(LABIRYNTH_TELEPORT, world.getTemplateId());
+					break;
+				}
+				case "backCastle":
+				{
+					if (!player.isInParty() || !player.getParty().isLeader(player))
+					{
+						htmltext = "34174-01.html";
+						break;
+					}
+					if (player.isInParty())
+					{
+						final L2Party party = player.getParty();
+						final List<L2PcInstance> members = party.getMembers();
+						for (L2PcInstance member : members)
+						{
+							if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
+							{
+								player.teleToLocation(CASTLE_TELEPORT, world.getTemplateId());
+							}
+						}
+					}
+					break;
+				}
+				case "startFreya":
+				{
+					world.despawnGroup("general");
+					playMovie(world.getPlayers(), Movie.EPIC_FREYA_SCENE);
+					startQuestTimer("freyaSpawn", 20000, npc, null);
+					break;
+				}
+				case "freyaSpawn":
+				{
+					world.spawnGroup("freya");
+					world.broadcastPacket(new OnEventTrigger(FREYA_SNOW, true));
+					break;
+				}
+				case "startAttack":
+				{
+					for (final L2Npc nearby : L2World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 300))
+					{
+						if (nearby.getId() == KNIGHT)
+						{
+							nearby.setIsInvul(true);
+							npc.reduceCurrentHp(1, nearby, null);
+							nearby.reduceCurrentHp(1, npc, null);
+							addAttackDesire(nearby, npc);
+						}
+					}
+					break;
+				}
+				case "finishInstance":
+				{
+					world.finishInstance(0);
+					break;
+				}
+			}
+		}
+		return htmltext;
+	}
+	
+	@Override
+	public String onAttack(L2Npc npc, L2PcInstance attacker, int damage, boolean isSummon)
+	{
+		final Instance world = npc.getInstanceWorld();
+		if (isInInstance(world))
+		{
+			switch (npc.getId())
+			{
+				case FROST_GOLEM:
+				{
+					if ((FIRST_SPAWN_ZONE.isInsideZone(npc) || SIXTH_SPAWN_ZONE.isInsideZone(npc)) && (npc.isScriptValue(0)))
+					{
+						npc.setScriptValue(1);
+						for (int i = 0; i < 6; i++)
+						{
+							final L2Npc knight = addSpawn(FROST_KNIGHT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
+							addAttackPlayerDesire(knight, attacker);
+						}
+					}
+					if (THRID_SPAWN_ZONE.isInsideZone(npc) && (npc.isScriptValue(0)))
+					{
+						npc.setScriptValue(1);
+						for (int a = 0; a < 8; a++)
+						{
+							final L2Npc golem = addSpawn(GLACIER_GOLEM, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
+							addAttackPlayerDesire(golem, attacker);
+						}
+					}
+					break;
+				}
+				case GLACIER_FROSTBRINGER:
+				{
+					if (npc.isScriptValue(0))
+					{
+						npc.setScriptValue(1);
+						for (int b = 0; b < 4; b++)
+						{
+							final L2Npc knight = addSpawn(FROST_KNIGHT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
+							addAttackPlayerDesire(knight, attacker);
+						}
+					}
+					break;
+				}
+				case FREYA:
+				{
+					if (npc.isScriptValue(0))
+					{
+						npc.setScriptValue(1);
+						for (int c = 0; c < 6; c++)
+						{
+							final L2Npc knight = addSpawn(FROST_KNIGHT, npc.getX() + getRandom(-100, 100), npc.getY() + getRandom(-100, 100), npc.getZ(), getRandom(64000), false, 300000, false, world.getId());
+							addAttackPlayerDesire(knight, attacker);
+						}
+					}
+					break;
+				}
+			}
+		}
+		return super.onAttack(npc, attacker, damage, isSummon);
+	}
+	
+	@Override
+	public String onKill(L2Npc npc, L2PcInstance player, boolean isSummon)
+	{
+		final Instance world = npc.getInstanceWorld();
+		if (isInInstance(world))
+		{
+			switch (npc.getId())
+			{
+				case FROST_GOLEM:
+				{
+					if (SECOND_SPAWN_ZONE.isInsideZone(npc))
+					{
+						world.spawnGroup("buffalo");
+					}
+					if (FOURTH_SPAWN_ZONE.isInsideZone(npc) && (world.getStatus() == 1))
+					{
+						world.setStatus(2);
+						world.broadcastPacket(new ExShowScreenMessage(NpcStringId.AN_INTENSE_COLD_IS_COMING_LOOK_AROUND, ExShowScreenMessage.TOP_CENTER, 7000, true));
+						world.spawnGroup("panthera");
+					}
+					if (FIFTH_SPAWN_ZONE.isInsideZone(npc))
+					{
+						world.spawnGroup("ursus");
+					}
+					break;
+				}
+				case GLACIER_FROSTBRINGER:
+				{
+					addSpawn(SYRRA, npc, false, 120000, false, world.getId());
+					break;
+				}
+				case FREYA:
+				{
+					startQuestTimer("finishInstance", 5000, npc, null);
+					if (player.isInParty())
+					{
+						final L2Party party = player.getParty();
+						final List<L2PcInstance> members = party.getMembers();
+						for (L2PcInstance member : members)
+						{
+							if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
+							{
+								QuestProgress(npc, member);
+							}
+						}
+					}
+					break;
+					
+				}
+			}
+		}
+		return super.onKill(npc, player, isSummon);
+	}
+	
+	@Override
+	public String onSpawn(L2Npc npc)
+	{
+		final Instance world = npc.getInstanceWorld();
+		if (isInInstance(world))
+		{
+			switch (npc.getId())
+			{
+				case FREYA:
+				{
+					npc.setCurrentHp(npc.getMaxHp() / 2);
+					break;
+				}
+				case ICE_KNIGHT:
+				{
+					startQuestTimer("startAttack", 2000, npc, null);
+					break;
+				}
+			}
+		}
+		return super.onSpawn(npc);
+	}
+	
+	@Override
+	public String onFirstTalk(L2Npc npc, L2PcInstance player)
+	{
+		final Instance world = npc.getInstanceWorld();
+		String htmltext = null;
+		if (isInInstance(world))
+		{
+			switch (npc.getId())
+			{
+				case SAYAN:
+				{
+					if (world.isStatus(0))
+					{
+						htmltext = "34172.html";
+						break;
+					}
+					htmltext = "34172-05.html";
+					break;
+				}
+				case KANNA:
+				{
+					if (world.isStatus(0))
+					{
+						htmltext = "34173.html";
+						break;
+					}
+					htmltext = "34173-01.html";
+					break;
+				}
+				case SYRRA:
+				{
+					htmltext = "34174.html";
+					break;
+				}
+			}
+		}
+		return htmltext;
+	}
+	
+	protected void QuestProgress(L2Npc npc, L2PcInstance player)
+	{
+		final QuestState qs = player.getQuestState(Q00835_PitiableMelisa.class.getSimpleName());
+		if ((qs != null) && qs.isStarted())
+		{
+			final Quest qs835 = QuestManager.getInstance().getQuest(Q00835_PitiableMelisa.class.getSimpleName());
+			if (qs835 != null)
+			{
+				qs835.notifyEvent("NOTIFY_Q835", npc, player);
+			}
+		}
+	}
+	
+	public static void main(String[] args)
+	{
+		new StoryOfFreya();
+	}
+}

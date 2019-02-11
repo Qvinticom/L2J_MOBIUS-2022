@@ -431,7 +431,7 @@
 				<knockDown>true</knockDown>
 			</effect>
 			<effect name="BlockActions">
-				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
 			</effect>
 		</effects>
 	</skill>
@@ -444,30 +444,80 @@
 		<coolTime>720</coolTime>
 		<effectPoint>-96</effectPoint>
 		<reuseDelay>3000</reuseDelay>
+		<attributeType>WATER</attributeType>
+		<attributeValue>20</attributeValue>
+		<magicCriticalRate>5</magicCriticalRate>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>210</power>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16552" toLevel="1" name="Ice Fist">
 		<!-- Freeze the opponent along with the damage from your first. -->
 		<icon>icon.skill11017</icon>
 		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
 		<mpConsume>19</mpConsume>
-		<castRange>40</castRange>
+		<castRange>100</castRange>
+		<effectRange>900</effectRange>
+		<affectRange>200</affectRange>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<hitCancelTime>2</hitCancelTime>
 		<hitTime>3000</hitTime>
 		<coolTime>720</coolTime>
 		<reuseDelay>3000</reuseDelay>
 		<effectPoint>-96</effectPoint>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="PhysicalAttack">
+				<power>9000</power>
+			</effect>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16553" toLevel="1" name="Ice Breath">
 		<!-- Freeze enemies in front of you with your breath. -->
 		<icon>icon.skill11017</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>FREEZING</abnormalType>
+		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
 		<operateType>A2</operateType>
+		<affectLimit>5-12</affectLimit>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
+		<effectRange>400</effectRange>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>10000</reuseDelay>
 		<effectPoint>-125</effectPoint>
 		<isDebuff>true</isDebuff>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>FAN</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<fanRange>0;0;200;180</fanRange>
+		<effects>
+			<effect name="BlockActions">
+				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912;30516</allowedSkills>
+			</effect>
+			<effect name="DamOverTime">
+				<power>115</power>
+				<ticks>5</ticks>
+			</effect>
+			<effect name="Speed">
+				<amount>-100</amount>
+				<mode>DIFF</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="16554" toLevel="1" name="Spinning Slash">
 		<!-- Inflicts damage and stuns enemies around. -->

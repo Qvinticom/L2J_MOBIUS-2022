@@ -393,21 +393,27 @@
 			<height normal="37.4" />
 		</collision>
 	</npc>
-	<npc id="23719" level="100" type="L2Npc" name="Frozen Knight">
+	<npc id="23719" level="100" type="L2Monster" name="Frozen Knight">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="53771.1" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6839.95121517957" magical="3066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="false" />
+		<ai clanHelpRange="1000" aggroRange="600">
+			<clanList>
+				<clan>FROST_GOLEM</clan>
+			</clanList>
+		</ai>
 		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
@@ -417,14 +423,67 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23720" level="56" type="L2Monster" name="Panthera">
+	<npc id="23720" level="100" type="L2Monster" name="Panthera">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="15841.04046242775" hpRegen="7.5" mp="2355.0" mpRegen="2.7" />
+			<attack physical="5731.52506" magical="1499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="4305.35947" magical="1203.311781207645" />
 			<speed>
 				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="false" />
+		<ai clanHelpRange="400" aggroRange="100">
+			<clanList>
+				<clan>FROST_ANIMAL</clan>
+			</clanList>
+		</ai>
+		<skillList>
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+		</skillList>
+		<collision>
+			<radius normal="34" />
+			<height normal="28" />
+		</collision>
+	</npc>
+	<npc id="23721" level="100" type="L2Npc" name="Maze Buffalo">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
+		<race>BEAST</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="15841.7282909073" hpRegen="7.5" mp="2355.0" mpRegen="2.7" />
+			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<attribute>
+			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
+			<speed>
+				<walk ground="20" />
 				<run ground="180" />
 			</speed>
 		</stats>
@@ -434,54 +493,28 @@
 			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
 		<collision>
-			<radius normal="34" />
-			<height normal="28" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="85" max="199" chance="70" /> <!-- Adena -->
-				<item id="36522" min="1" max="1" chance="2.179" /> <!-- Silver -->
-			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="32.68" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="23721" level="100" type="L2Npc" name="Maze Buffalo">
-		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="20" />
-				<run ground="180" />
-			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
-		</stats>
-		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-		</skillList>
-		<collision>
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
 		</collision>
 	</npc>
-	<npc id="23722" level="61" type="L2Monster" name="Frost Buffalo">
+	<npc id="23722" level="100" type="L2Monster" name="Frost Buffalo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="15841.7282909073" hpRegen="7.5" mp="2355.0" mpRegen="2.7" />
+			<attack physical="15731.52506" magical="1499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="5305.35947" magical="1203.311781207645" />
 			<speed>
 				<walk ground="20" />
 				<run ground="180" />
@@ -496,34 +529,19 @@
 			<radius normal="24" />
 			<height normal="34.7" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="96" max="225" chance="70" /> <!-- Adena -->
-				<item id="36527" min="1" max="1" chance="7.262" /> <!-- Synthetic Fiber -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="21.07" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky>
-		</dropLists>
 	</npc>
 	<npc id="23723" level="100" type="L2Npc" name="Frost Ursus">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -538,6 +556,12 @@
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
+		<status attackable="false" />
+		<ai clanHelpRange="400" aggroRange="100">
+			<clanList>
+				<clan>FROST_ANIMAL</clan>
+			</clanList>
+		</ai>
 		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="4" /> <!-- Animals -->
@@ -547,18 +571,34 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="23724" level="70" type="L2Monster" name="Buffalo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23724" level="100" type="L2Monster" name="Buffalo">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
 		<race>BEAST</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="15841.04046242775" hpRegen="7.5" mp="2355.0" mpRegen="2.7" />
+			<attack physical="5731.52506" magical="1499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="4305.35947" magical="1203.311781207645" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<ai clanHelpRange="400" aggroRange="100">
+			<clanList>
+				<clan>FROST_ANIMAL</clan>
+			</clanList>
+		</ai>
 		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -567,42 +607,35 @@
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="57" max="131" chance="70" /> <!-- Adena -->
-				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
-				<item id="36862" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Leather - Upgrade -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<spoil>
-				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky>
-		</dropLists>
 	</npc>
-	<npc id="23725" level="62" type="L2Monster" name="Ursus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23725" level="100" type="L2Monster" name="Ursus">
+		<parameters>
+			<param name="MoveAroundSocial" value="120" />
+			<param name="MoveAroundSocial1" value="30" />
+			<param name="MoveAroundSocial2" value="120" />
+			<param name="SoulShot" value="100" />
+			<param name="SoulShotRate" value="10" />
+			<param name="SpiritShot" value="100" />
+			<param name="SpiritShotRate" value="5" />
+			<param name="LongRangeGuardRate" value="5" />
+		</parameters>
 		<race>ANIMAL</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="15841.7282909073" hpRegen="7.5" mp="2355.0" mpRegen="2.7" />
+			<attack physical="5731.52506" magical="1499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
+			<defence physical="4305.35947" magical="1203.311781207645" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<ai clanHelpRange="400" aggroRange="100">
+			<clanList>
+				<clan>FROST_ANIMAL</clan>
+			</clanList>
+		</ai>
 		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="4" /> <!-- Animals -->
@@ -611,36 +644,24 @@
 			<radius normal="21" />
 			<height normal="40" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="105" max="245" chance="70" /> <!-- Adena -->
-				<item id="36518" min="1" max="1" chance="1.413" /> <!-- Durable Leather -->
-			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.75" /> <!-- Thin Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky>
-		</dropLists>
 	</npc>
-	<npc id="23726" level="100" type="L2Npc" name="Frost Glacier Golem">
-		<race>ELEMENTAL</race>
+	<npc id="23726" level="100" type="L2Monster" name="Frost Glacier Golem">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="524266" hpRegen="7.5" mp="23928" mpRegen="2.7" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
+			<vitals hp="524266.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
 			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3839.95121517957" magical="2066.69244923556" />
 			<attribute>
 			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
 		</stats>
+		<status attackable="false" />
 		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->
