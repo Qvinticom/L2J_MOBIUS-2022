@@ -85,144 +85,94 @@ public class StoryOfFreya extends AbstractInstance
 	{
 		String htmltext = null;
 		final Instance world = npc.getInstanceWorld();
-		
-		if (isInInstance(world))
+		switch (event)
 		{
-			switch (event)
+			case "34172-02.html":
+			case "34172-03.html":
 			{
-				case "34172-02.html":
-				case "34172-03.html":
+				htmltext = event;
+				break;
+			}
+			case "34172-01.html":
+			{
+				if (!player.isInParty() || !player.getParty().isLeader(player))
 				{
-					htmltext = event;
+					htmltext = "34172-04.html";
 					break;
 				}
-				case "34172-01.html":
+				htmltext = event;
+				break;
+			}
+			case "34172-06.html":
+			{
+				if (!player.isInParty() || !player.getParty().isLeader(player))
 				{
-					if (!player.isInParty() || !player.getParty().isLeader(player))
-					{
-						htmltext = "34172-04.html";
-						break;
-					}
-					htmltext = event;
+					htmltext = "34172-04.html";
 					break;
 				}
-				case "34172-06.html":
+				final L2Party party = player.getParty();
+				final List<L2PcInstance> members = party.getMembers();
+				for (L2PcInstance member : members)
 				{
-					if (!player.isInParty() || !player.getParty().isLeader(player))
+					if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 					{
-						htmltext = "34172-04.html";
-						break;
+						QuestProgress(npc, member);
 					}
+				}
+				htmltext = event;
+				break;
+			}
+			case "start_story":
+			{
+				player.standUp();
+				enterInstance(player, null, TEMPLATE_ID);
+				if (player.getParty() != null)
+				{
+					for (L2PcInstance member : player.getParty().getMembers())
+					{
+						if (member != player)
+						{
+							member.standUp();
+							member.teleToLocation(player, player.getInstanceWorld());
+						}
+					}
+				}
+				break;
+			}
+			case "startInstance":
+			{
+				if (player.isInParty())
+				{
 					final L2Party party = player.getParty();
 					final List<L2PcInstance> members = party.getMembers();
 					for (L2PcInstance member : members)
 					{
 						if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 						{
+							member.teleToLocation(LABIRYNTH_TELEPORT, world.getTemplateId());
+							world.setStatus(1);
 							QuestProgress(npc, member);
 						}
 					}
-					htmltext = event;
-					break;
-				}
-				case "start_story":
-				{
-					player.standUp();
-					enterInstance(player, null, TEMPLATE_ID);
-					if (player.getParty() != null)
+					if (getRandom(10) < 5)
 					{
-						for (L2PcInstance member : player.getParty().getMembers())
-						{
-							if (member != player)
-							{
-								member.standUp();
-								member.teleToLocation(player, player.getInstanceWorld());
-							}
-						}
+						world.spawnGroup("knight");
+						world.broadcastPacket(new ExShowScreenMessage(NpcStringId.ICE_KNIGHTS_GOT_IN_DEFEAT_THE_ICE_KNIGHTS, ExShowScreenMessage.TOP_CENTER, 20000, true));
 					}
-					break;
-				}
-				case "startInstance":
-				{
-					if (player.isInParty())
+					else
 					{
-						final L2Party party = player.getParty();
-						final List<L2PcInstance> members = party.getMembers();
-						for (L2PcInstance member : members)
-						{
-							if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
-							{
-								member.teleToLocation(LABIRYNTH_TELEPORT, world.getTemplateId());
-								world.setStatus(1);
-								QuestProgress(npc, member);
-							}
-						}
-						if (getRandom(10) < 5)
-						{
-							world.spawnGroup("knight");
-							world.broadcastPacket(new ExShowScreenMessage(NpcStringId.ICE_KNIGHTS_GOT_IN_DEFEAT_THE_ICE_KNIGHTS, ExShowScreenMessage.TOP_CENTER, 20000, true));
-						}
-						else
-						{
-							world.spawnGroup("knightSolo");
-						}
-					}
-					break;
-				}
-				case "openDoor":
-				{
-					if (world.isStatus(0))
-					{
-						if (!player.isInParty() || !player.getParty().isLeader(player))
-						{
-							htmltext = "34173-03.html";
-							break;
-						}
-						if (player.isInParty())
-						{
-							final L2Party party = player.getParty();
-							final List<L2PcInstance> members = party.getMembers();
-							for (L2PcInstance member : members)
-							{
-								if ((member == null) || (member.calculateDistance3D(npc) > 300))
-								{
-									htmltext = "34173-02.html";
-									break;
-								}
-							}
-						}
-						world.openCloseDoor(world.getTemplateParameters().getInt("1_st_door"), true);
-						startQuestTimer("closeDoor", 60000, npc, null);
-						break;
-					}
-					
-					else if (world.getStatus() > 0)
-					{
-						if (player.getInventory().getInventoryItemCount(ICE_CRYSTAL_SHARD, -1) == 10)
-						{
-							world.openCloseDoor(world.getTemplateParameters().getInt("1_st_door"), true);
-							startQuestTimer("closeDoor", 30000, npc, null);
-							break;
-						}
-						htmltext = "34173-03.html";
-						break;
+						world.spawnGroup("knightSolo");
 					}
 				}
-				case "closeDoor":
-				{
-					world.openCloseDoor(world.getTemplateParameters().getInt("1_st_door"), false);
-					break;
-				}
-				case "summerLabirynth":
-				{
-					player.teleToLocation(LABIRYNTH_TELEPORT, world.getTemplateId());
-					break;
-				}
-				case "backCastle":
+				break;
+			}
+			case "openDoor":
+			{
+				if (world.isStatus(0))
 				{
 					if (!player.isInParty() || !player.getParty().isLeader(player))
 					{
-						htmltext = "34174-01.html";
+						htmltext = "34173-03.html";
 						break;
 					}
 					if (player.isInParty())
@@ -231,46 +181,92 @@ public class StoryOfFreya extends AbstractInstance
 						final List<L2PcInstance> members = party.getMembers();
 						for (L2PcInstance member : members)
 						{
-							if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
+							if ((member == null) || (member.calculateDistance3D(npc) > 300))
 							{
-								player.teleToLocation(CASTLE_TELEPORT, world.getTemplateId());
+								htmltext = "34173-02.html";
+								break;
 							}
 						}
 					}
+					world.openCloseDoor(world.getTemplateParameters().getInt("1_st_door"), true);
+					startQuestTimer("closeDoor", 60000, npc, null);
 					break;
 				}
-				case "startFreya":
+				
+				else if (world.getStatus() > 0)
 				{
-					world.despawnGroup("general");
-					playMovie(world.getPlayers(), Movie.EPIC_FREYA_SCENE);
-					startQuestTimer("freyaSpawn", 20000, npc, null);
-					break;
-				}
-				case "freyaSpawn":
-				{
-					world.spawnGroup("freya");
-					world.broadcastPacket(new OnEventTrigger(FREYA_SNOW, true));
-					break;
-				}
-				case "startAttack":
-				{
-					for (final L2Npc nearby : L2World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 300))
+					if (player.getInventory().getInventoryItemCount(ICE_CRYSTAL_SHARD, -1) == 10)
 					{
-						if (nearby.getId() == KNIGHT)
+						world.openCloseDoor(world.getTemplateParameters().getInt("1_st_door"), true);
+						startQuestTimer("closeDoor", 30000, npc, null);
+						break;
+					}
+					htmltext = "34173-03.html";
+					break;
+				}
+			}
+			case "closeDoor":
+			{
+				world.openCloseDoor(world.getTemplateParameters().getInt("1_st_door"), false);
+				break;
+			}
+			case "summerLabirynth":
+			{
+				player.teleToLocation(LABIRYNTH_TELEPORT, world.getTemplateId());
+				break;
+			}
+			case "backCastle":
+			{
+				if (!player.isInParty() || !player.getParty().isLeader(player))
+				{
+					htmltext = "34174-01.html";
+					break;
+				}
+				if (player.isInParty())
+				{
+					final L2Party party = player.getParty();
+					final List<L2PcInstance> members = party.getMembers();
+					for (L2PcInstance member : members)
+					{
+						if (member.isInsideRadius3D(npc, Config.ALT_PARTY_RANGE))
 						{
-							nearby.setIsInvul(true);
-							npc.reduceCurrentHp(1, nearby, null);
-							nearby.reduceCurrentHp(1, npc, null);
-							addAttackDesire(nearby, npc);
+							player.teleToLocation(CASTLE_TELEPORT, world.getTemplateId());
 						}
 					}
-					break;
 				}
-				case "finishInstance":
+				break;
+			}
+			case "startFreya":
+			{
+				world.despawnGroup("general");
+				playMovie(world.getPlayers(), Movie.EPIC_FREYA_SCENE);
+				startQuestTimer("freyaSpawn", 20000, npc, null);
+				break;
+			}
+			case "freyaSpawn":
+			{
+				world.spawnGroup("freya");
+				world.broadcastPacket(new OnEventTrigger(FREYA_SNOW, true));
+				break;
+			}
+			case "startAttack":
+			{
+				for (final L2Npc nearby : L2World.getInstance().getVisibleObjectsInRange(npc, FriendlyNpcInstance.class, 300))
 				{
-					world.finishInstance(0);
-					break;
+					if (nearby.getId() == KNIGHT)
+					{
+						nearby.setIsInvul(true);
+						npc.reduceCurrentHp(1, nearby, null);
+						nearby.reduceCurrentHp(1, npc, null);
+						addAttackDesire(nearby, npc);
+					}
 				}
+				break;
+			}
+			case "finishInstance":
+			{
+				world.finishInstance(0);
+				break;
 			}
 		}
 		return htmltext;
