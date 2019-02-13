@@ -295,6 +295,8 @@ public class Fishing
 					final SystemMessage msg = SystemMessage.getSystemMessage(SystemMessageId.YOU_HAVE_EARNED_S1);
 					msg.addItemName(fishId);
 					_player.sendPacket(msg);
+					_player.unchargeShot(ShotType.FISH_SOULSHOTS);
+					_player.rechargeShots(false, false, true);
 				}
 				else
 				{
