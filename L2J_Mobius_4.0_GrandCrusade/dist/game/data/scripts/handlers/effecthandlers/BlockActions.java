@@ -29,6 +29,7 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.skills.SkillCaster;
 
 /**
  * Block Actions effect implementation.
@@ -61,6 +62,11 @@ public final class BlockActions extends AbstractEffect
 	{
 		_allowedSkills.stream().forEach(effected::addBlockActionsAllowedSkill);
 		effected.startParalyze();
+		// Cancel running skill casters.
+		for (SkillCaster skillCaster : effected.getSkillCasters())
+		{
+			skillCaster.stopCasting(true);
+		}
 	}
 	
 	@Override
