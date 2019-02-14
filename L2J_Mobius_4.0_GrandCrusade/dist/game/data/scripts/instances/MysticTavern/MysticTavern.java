@@ -42,9 +42,9 @@ public class MysticTavern extends AbstractNpcAI
 	// NPC
 	private static final int GLOBE = 34200;
 	// Instances
-	private static final int INSTANCE_FREYA = 261;
-	// private static final int INSTANCE_TAUTI = 262;
-	// private static final int INSTANCE_KELBIM = 263;
+	// private static final int INSTANCE_TAUTI = 261;
+	// private static final int INSTANCE_KELBIM = 262;
+	private static final int INSTANCE_FREYA = 263;
 	// Misc
 	private static final int MINIMUM_PLAYER_LEVEL = 99;
 	private static final int MINIMUM_PARTY_MEMBERS = 5;

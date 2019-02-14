@@ -58,7 +58,7 @@ public class StoryOfFreya extends AbstractInstance
 	private static final int GLACIER_GOLEM = 23718;
 	private static final int GLACIER_FROSTBRINGER = 23687;
 	// Other
-	private static final int TEMPLATE_ID = 261;
+	private static final int TEMPLATE_ID = 263;
 	private static final int ICE_CRYSTAL_SHARD = 46594;
 	private static final Location CASTLE_TELEPORT = new Location(212410, -46728, -11225);
 	private static final Location LABIRYNTH_TELEPORT = new Location(213145, -43145, -872);
