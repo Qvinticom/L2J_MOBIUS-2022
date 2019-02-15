@@ -155,7 +155,7 @@ public class AdminPledge implements IAdminCommandHandler
 						}
 						
 						final int level = Integer.parseInt(param);
-						if ((level >= 0) && (level < 12))
+						if ((level >= 0) && (level < 16))
 						{
 							clan.changeLevel(level);
 							for (L2PcInstance member : clan.getOnlineMembers(0))
