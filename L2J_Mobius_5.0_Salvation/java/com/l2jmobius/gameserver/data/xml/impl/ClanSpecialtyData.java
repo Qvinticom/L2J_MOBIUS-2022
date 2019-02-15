@@ -61,6 +61,7 @@ public class ClanSpecialtyData implements IGameXmlReader
 			final int skillId = set.getInt("skilId");
 			final int skillLevel = set.getInt("skillLevel");
 			final int clanLevel = set.getInt("clanLevel");
+			final int clanReputation = set.getInt("clanReputation");
 			final int previousSpecialty = set.getInt("previousSpecialty", 0);
 			final int previousSpecialtyAlt = set.getInt("previousSpecialtyAlt", 0);
 			
@@ -71,7 +72,7 @@ public class ClanSpecialtyData implements IGameXmlReader
 			}
 			else
 			{
-				_clanSpecialtyData.add(new ClanSpecialtyHolder(id, skill, clanLevel, previousSpecialty, previousSpecialtyAlt));
+				_clanSpecialtyData.add(new ClanSpecialtyHolder(id, skill, clanLevel, clanReputation, previousSpecialty, previousSpecialtyAlt));
 			}
 		}));
 	}

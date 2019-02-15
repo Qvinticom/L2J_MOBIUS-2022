@@ -26,14 +26,16 @@ public class ClanSpecialtyHolder
 	private final int _id;
 	private final Skill _skill;
 	private final int _clanLevel;
+	private final int _clanReputation;
 	private final int _previousSpecialty;
 	private final int _previousSpecialtyAlt;
 	
-	public ClanSpecialtyHolder(int id, Skill skill, int clanLevel, int previousSpecialty, int previousSpecialtyAlt)
+	public ClanSpecialtyHolder(int id, Skill skill, int clanLevel, int clanReputation, int previousSpecialty, int previousSpecialtyAlt)
 	{
 		_id = id;
 		_skill = skill;
 		_clanLevel = clanLevel;
+		_clanReputation = clanReputation;
 		_previousSpecialty = previousSpecialty;
 		_previousSpecialtyAlt = previousSpecialtyAlt;
 	}
@@ -51,6 +53,11 @@ public class ClanSpecialtyHolder
 	public int getClanLevel()
 	{
 		return _clanLevel;
+	}
+	
+	public int getClanReputation()
+	{
+		return _clanReputation;
 	}
 	
 	public int getPreviousSpecialty()

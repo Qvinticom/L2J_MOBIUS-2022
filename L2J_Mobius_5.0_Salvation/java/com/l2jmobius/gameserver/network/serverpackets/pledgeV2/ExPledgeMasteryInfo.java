@@ -17,7 +17,9 @@
 package com.l2jmobius.gameserver.network.serverpackets.pledgeV2;
 
 import com.l2jmobius.commons.network.PacketWriter;
+import com.l2jmobius.gameserver.data.xml.impl.ClanSpecialtyData;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.ClanSpecialtyHolder;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
 import com.l2jmobius.gameserver.network.serverpackets.AbstractItemPacket;
 
@@ -43,14 +45,19 @@ public class ExPledgeMasteryInfo extends AbstractItemPacket
 		
 		OutgoingPackets.EX_PLEDGE_MASTERY_INFO.writeId(packet);
 		
-		packet.writeD(10); // Consumed development points
-		packet.writeD(10); // Total development points
+		packet.writeD(0); // Consumed development points
+		packet.writeD(_player.getClan().getLevel() + 1); // Total development points
 		
-		packet.writeD(1); // Masteries count
-		
-		packet.writeD(10); // Mastery
-		packet.writeD(1); // Purchased
-		packet.writeC(1); // Availability
+		packet.writeD(16); // Masteries count
+		for (ClanSpecialtyHolder specialty : ClanSpecialtyData.getInstance().getSpecialties())
+		{
+			if (specialty.getId() < 16)
+			{
+				packet.writeD(specialty.getId()); // Mastery
+				packet.writeD(0); // Purchased?
+				packet.writeC(/* _player.getClan().getLevel() >= specialty.getClanLevel() ? 1 : */ 0); // Availability - TODO: Previous level requirement.
+			}
+		}
 		
 		return true;
 	}
