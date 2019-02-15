@@ -46,7 +46,7 @@ public class ExPledgeMasteryInfo extends AbstractItemPacket
 		OutgoingPackets.EX_PLEDGE_MASTERY_INFO.writeId(packet);
 		
 		packet.writeD(0); // Consumed development points
-		packet.writeD(_player.getClan().getLevel() + 1); // Total development points
+		packet.writeD(Math.max(0, _player.getClan().getLevel() - 4)); // Total development points
 		
 		packet.writeD(16); // Masteries count
 		for (ClanSpecialtyHolder specialty : ClanSpecialtyData.getInstance().getSpecialties())
