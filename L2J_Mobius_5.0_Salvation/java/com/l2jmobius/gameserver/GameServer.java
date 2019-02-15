@@ -50,9 +50,9 @@ import com.l2jmobius.gameserver.data.xml.impl.BeautyShopData;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.data.xml.impl.CategoryData;
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
-import com.l2jmobius.gameserver.data.xml.impl.ClanMasteryData;
 import com.l2jmobius.gameserver.data.xml.impl.ClanRewardData;
 import com.l2jmobius.gameserver.data.xml.impl.ClanShopData;
+import com.l2jmobius.gameserver.data.xml.impl.ClanSpecialtyData;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.CombinationItemsData;
 import com.l2jmobius.gameserver.data.xml.impl.CubicData;
@@ -307,7 +307,7 @@ public class GameServer
 		ClanHallData.getInstance();
 		ClanHallAuctionManager.getInstance();
 		ClanEntryManager.getInstance();
-		ClanMasteryData.getInstance();
+		ClanSpecialtyData.getInstance();
 		ClanShopData.getInstance();
 		
 		printSection("Geodata");

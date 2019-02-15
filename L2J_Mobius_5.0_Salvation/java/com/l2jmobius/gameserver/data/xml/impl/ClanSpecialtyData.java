@@ -25,19 +25,19 @@ import org.w3c.dom.Document;
 
 import com.l2jmobius.commons.util.IGameXmlReader;
 import com.l2jmobius.gameserver.model.StatsSet;
-import com.l2jmobius.gameserver.model.holders.ClanMasteryHolder;
+import com.l2jmobius.gameserver.model.holders.ClanSpecialtyHolder;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
  * @author Mobius
  */
-public class ClanMasteryData implements IGameXmlReader
+public class ClanSpecialtyData implements IGameXmlReader
 {
-	private static Logger LOGGER = Logger.getLogger(ClanMasteryData.class.getName());
+	private static Logger LOGGER = Logger.getLogger(ClanSpecialtyData.class.getName());
 	
-	private final List<ClanMasteryHolder> _clanMasteryData = new ArrayList<>();
+	private final List<ClanSpecialtyHolder> _clanSpecialtyData = new ArrayList<>();
 	
-	protected ClanMasteryData()
+	protected ClanSpecialtyData()
 	{
 		load();
 	}
@@ -45,10 +45,10 @@ public class ClanMasteryData implements IGameXmlReader
 	@Override
 	public void load()
 	{
-		_clanMasteryData.clear();
+		_clanSpecialtyData.clear();
 		
-		parseDatapackFile("data/ClanMasteryData.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _clanMasteryData.size() + " clan masteries.");
+		parseDatapackFile("data/ClanSpecialtyData.xml");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _clanSpecialtyData.size() + " clan specialties.");
 	}
 	
 	@Override
@@ -57,34 +57,37 @@ public class ClanMasteryData implements IGameXmlReader
 		forEach(doc, "list", listNode -> forEach(listNode, "clan", clanNode ->
 		{
 			final StatsSet set = new StatsSet(parseAttributes(clanNode));
-			final int mastery = set.getInt("mastery");
-			final int level = set.getInt("level");
-			final int previous = set.getInt("previous");
+			final int id = set.getInt("specialty");
+			final int skillId = set.getInt("skilId");
+			final int skillLevel = set.getInt("skillLevel");
+			final int clanLevel = set.getInt("clanLevel");
+			final int previousSpecialty = set.getInt("previousSpecialty");
+			final int previousSpecialtyAlt = set.getInt("previousSpecialtyAlt");
 			
-			final Skill skill = SkillData.getInstance().getSkill(mastery, level);
+			final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 			if (skill == null)
 			{
-				LOGGER.info(getClass().getSimpleName() + ": Could not create clan mastery, skill id " + mastery + " with level " + level + " does not exist.");
+				LOGGER.info(getClass().getSimpleName() + ": Could not create clan specialty, skill id " + skillId + " with level " + skillLevel + " does not exist.");
 			}
 			else
 			{
-				_clanMasteryData.add(new ClanMasteryHolder(skill, previous));
+				_clanSpecialtyData.add(new ClanSpecialtyHolder(id, skill, clanLevel, previousSpecialty, previousSpecialtyAlt));
 			}
 		}));
 	}
 	
-	public List<ClanMasteryHolder> getMasteries()
+	public List<ClanSpecialtyHolder> getSpecialties()
 	{
-		return _clanMasteryData;
+		return _clanSpecialtyData;
 	}
 	
-	public static ClanMasteryData getInstance()
+	public static ClanSpecialtyData getInstance()
 	{
 		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder
 	{
-		protected static final ClanMasteryData _instance = new ClanMasteryData();
+		protected static final ClanSpecialtyData _instance = new ClanSpecialtyData();
 	}
 }
