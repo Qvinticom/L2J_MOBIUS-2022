@@ -39,12 +39,20 @@
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<set name="capsuled_items" val="9546,1,1,8.3333;9547,1,1,8.3333;9548,1,1,8.3333;9549,1,1,8.3333;9550,1,1,8.3333;9551,1,1,8.3333;4342,1,1,8.3333;4343,1,1,8.3333;4344,1,1,8.3333;4345,1,1,8.3333;4346,1,1,8.3333;9557,1,1,8.3333"/>
 	</item>
 	<item id="22205" type="EtcItem" name="Attribute Crystal Box - Event">
 		<!-- Box containing an Attribute Crystal. Which one could it be? -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="PEEL" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<set name="capsuled_items" val="4342,1,1,16.6666;4343,1,1,16.6666;4344,1,1,16.6666;4345,1,1,16.6666;4346,1,1,16.6666;9557,1,1,16.6666"/>
 	</item>
 	<item id="22206" type="EtcItem" name="Soul Crystal - Stage 17 Box - Event">
 		<!-- Box containing a Soul Crystal - Stage 17. What color could it be? -->
