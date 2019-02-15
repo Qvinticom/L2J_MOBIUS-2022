@@ -1,24 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/ClanSpecialtyData.xsd">
-	<clan specialty="1" skilId="1" skillLevel="1" clanLevel="5" />
-	<clan specialty="2" skilId="1" skillLevel="1" clanLevel="6" previousSpecialty="1" />
-	<clan specialty="3" skilId="1" skillLevel="1" clanLevel="7" previousSpecialty="2" />
-	<clan specialty="4" skilId="1" skillLevel="1" clanLevel="8" previousSpecialty="3" />
-	<clan specialty="5" skilId="1" skillLevel="1" clanLevel="9" previousSpecialty="4" />
-	<clan specialty="6" skilId="1" skillLevel="1" clanLevel="10" previousSpecialty="5" />
-	<clan specialty="7" skilId="1" skillLevel="1" clanLevel="10" previousSpecialty="6" />
-	<clan specialty="8" skilId="1" skillLevel="1" clanLevel="8" previousSpecialty="3" />
-	<clan specialty="9" skilId="1" skillLevel="1" clanLevel="9" previousSpecialty="8" />
-	<clan specialty="10" skilId="1" skillLevel="1" clanLevel="10" previousSpecialty="9" />
-	<clan specialty="11" skilId="1" skillLevel="1" clanLevel="10" previousSpecialty="10" />
-	<clan specialty="12" skilId="1" skillLevel="1" clanLevel="11" previousSpecialty="7" previousSpecialtyAlt="11" />
-	<clan specialty="13" skilId="1" skillLevel="1" clanLevel="11" previousSpecialty="12" />
-	<clan specialty="14" skilId="1" skillLevel="1" clanLevel="12" previousSpecialty="12" />
-	<clan specialty="15" skilId="1" skillLevel="1" clanLevel="13" previousSpecialty="14" />
-	<clan specialty="16" skilId="1" skillLevel="1" clanLevel="13" previousSpecialty="15" />
-	<clan specialty="17" skilId="1" skillLevel="1" clanLevel="12" previousSpecialty="12" />
-	<clan specialty="18" skilId="1" skillLevel="1" clanLevel="13" previousSpecialty="17" />
-	<clan specialty="19" skilId="1" skillLevel="1" clanLevel="13" previousSpecialty="18" />
-	<clan specialty="20" skilId="1" skillLevel="1" clanLevel="14" previousSpecialty="15" previousSpecialtyAlt="18" />
-	<clan specialty="21" skilId="1" skillLevel="1" clanLevel="15" previousSpecialty="20" />
+	<clan specialty="1" skilId="1" skillLevel="1" clanLevel="5" /> <!-- middle -->
+	<clan specialty="2" skilId="1" skillLevel="1" clanLevel="6" previousSpecialty="1" /> <!-- middle -->
+	<clan specialty="3" skilId="1" skillLevel="1" clanLevel="7" previousSpecialty="2" /> <!-- middle -->
+	<clan specialty="4" skilId="1" skillLevel="1" clanLevel="8" previousSpecialty="3" /> <!-- left -->
+	<clan specialty="5" skilId="1" skillLevel="1" clanLevel="9" previousSpecialty="4" /> <!-- left -->
+	<clan specialty="6" skilId="1" skillLevel="1" clanLevel="10" previousSpecialty="5" /> <!-- left -->
+	<clan specialty="7" skilId="1" skillLevel="1" clanLevel="10" previousSpecialty="6" /> <!-- left extra -->
+	<clan specialty="8" skilId="1" skillLevel="1" clanLevel="8" previousSpecialty="3" /> <!-- right -->
+	<clan specialty="9" skilId="1" skillLevel="1" clanLevel="9" previousSpecialty="8" /> <!-- right -->
+	<clan specialty="10" skilId="1" skillLevel="1" clanLevel="10" previousSpecialty="9" /> <!-- right -->
+	<clan specialty="11" skilId="1" skillLevel="1" clanLevel="10" previousSpecialty="10" /> <!-- right extra -->
+	<clan specialty="12" skilId="1" skillLevel="1" clanLevel="11" previousSpecialty="6" previousSpecialtyAlt="10" /> <!-- middle -->
+	<clan specialty="13" skilId="1" skillLevel="1" clanLevel="11" previousSpecialty="12" /> <!-- middle extra -->
+	<clan specialty="14" skilId="1" skillLevel="1" clanLevel="12" previousSpecialty="12" /> <!-- left -->
+	<clan specialty="15" skilId="1" skillLevel="1" clanLevel="13" previousSpecialty="14" /> <!-- left -->
+	<clan specialty="16" skilId="1" skillLevel="1" clanLevel="13" previousSpecialty="15" /> <!-- left extra -->
+	<clan specialty="17" skilId="1" skillLevel="1" clanLevel="12" previousSpecialty="12" /> <!-- right -->
+	<clan specialty="18" skilId="1" skillLevel="1" clanLevel="13" previousSpecialty="17" /> <!-- right -->
+	<clan specialty="19" skilId="1" skillLevel="1" clanLevel="13" previousSpecialty="18" /> <!-- right extra -->
+	<clan specialty="20" skilId="1" skillLevel="1" clanLevel="14" previousSpecialty="15" previousSpecialtyAlt="18" /> <!-- middle -->
+	<clan specialty="21" skilId="1" skillLevel="1" clanLevel="15" previousSpecialty="20" /> <!-- middle -->
 </list>

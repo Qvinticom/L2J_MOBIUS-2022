@@ -61,8 +61,8 @@ public class ClanSpecialtyData implements IGameXmlReader
 			final int skillId = set.getInt("skilId");
 			final int skillLevel = set.getInt("skillLevel");
 			final int clanLevel = set.getInt("clanLevel");
-			final int previousSpecialty = set.getInt("previousSpecialty");
-			final int previousSpecialtyAlt = set.getInt("previousSpecialtyAlt");
+			final int previousSpecialty = set.getInt("previousSpecialty", 0);
+			final int previousSpecialtyAlt = set.getInt("previousSpecialtyAlt", 0);
 			
 			final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
 			if (skill == null)

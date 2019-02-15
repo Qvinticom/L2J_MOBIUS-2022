@@ -6,12 +6,12 @@
 					<xs:complexType>
 						<xs:simpleContent>
 							<xs:extension base="xs:string">
-								<xs:attribute type="xs:byte" name="specialty" use="optional"/>
-								<xs:attribute type="xs:short" name="skilId" use="optional"/>
-								<xs:attribute type="xs:byte" name="skillLevel" use="optional"/>
-								<xs:attribute type="xs:byte" name="clanLevel" use="optional"/>
-								<xs:attribute type="xs:byte" name="previousSpecialty" use="optional"/>
-								<xs:attribute type="xs:byte" name="previousSpecialtyAlt" use="optional"/>
+								<xs:attribute type="xs:int" name="specialty" use="required"/>
+								<xs:attribute type="xs:int" name="skilId" use="required"/>
+								<xs:attribute type="xs:int" name="skillLevel" use="required"/>
+								<xs:attribute type="xs:int" name="clanLevel" use="required"/>
+								<xs:attribute type="xs:int" name="previousSpecialty" use="optional"/>
+								<xs:attribute type="xs:int" name="previousSpecialtyAlt" use="optional"/>
 							</xs:extension>
 						</xs:simpleContent>
 					</xs:complexType>
