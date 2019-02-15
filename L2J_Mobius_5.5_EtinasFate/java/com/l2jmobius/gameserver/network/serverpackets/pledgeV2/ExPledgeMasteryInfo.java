@@ -51,7 +51,7 @@ public class ExPledgeMasteryInfo extends AbstractItemPacket
 		packet.writeD(16); // Masteries count
 		for (ClanSpecialtyHolder specialty : ClanSpecialtyData.getInstance().getSpecialties())
 		{
-			if (specialty.getId() < 16)
+			if (specialty.getId() < 17)
 			{
 				packet.writeD(specialty.getId()); // Mastery
 				packet.writeD(0); // Purchased?
