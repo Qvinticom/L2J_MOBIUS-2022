@@ -1281,6 +1281,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<set name="immediate_effect" val="true" />
+		<set name="capsuled_items" val="17283,15,15,100" />
 	</item>
 	<item id="21880" type="EtcItem" name="Pa'agrio's Warm Breeze - 4 hour">
 		<!-- Dimensional item. When used, you can feel the vitality recovery herb's effect for 4 hour(s). But there will be no effect when the "Birthday Joy" effect is applied. Re-use time is 60 minutes. Cannot be exchanged or dropped. Can be shared between characters within an account through the Dimensional Merchant. Can be stored in a private warehouse. -->

@@ -1350,13 +1350,35 @@
 	</skill>
 	<skill id="9181" levels="1" name="Nevit's Hourglass - 4 hour(s)">
 		<!-- Increases Nevit's blessing by 4 hour(s). -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="14400" />
+		<set name="abnormalType" val="VOTE" />
+		<set name="abnormalVisualEffect" val="VP_KEEP" />
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17284" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="NevitsHourglass" />
+		</for>
 	</skill>
 	<skill id="9182" levels="1" name="Nevit's Hourglass - 4 hour(s)">
 		<!-- Increases Nevit's blessing by 4 hour(s). -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="14400" />
+		<set name="abnormalType" val="VOTE" />
+		<set name="abnormalVisualEffect" val="VP_KEEP" />
+		<set name="icon" val="icon.etc_dragons_blood_i03" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="17283" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="NevitsHourglass" />
+		</for>
 	</skill>
 	<skill id="9183" levels="1" name="Freya's Refreshing Breeze - 4 hour(s)">
 		<!-- For 4 hours, recovers Vitality when Exp. is acquired through hunting. -->
