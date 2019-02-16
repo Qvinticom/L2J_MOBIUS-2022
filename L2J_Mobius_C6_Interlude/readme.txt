@@ -84,6 +84,8 @@ Dueling system.
 
 
 TODO:
+Rewrite Python scripts to Java.
 Use Java 10.
+Convert CSV files to XML.
 Drop knownlists -> Use L2World.
 Drop MmoCore -> Use Netty.
