@@ -826,6 +826,41 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="19438" toLevel="1" name="Triple Stroke">
+		<!-- Casts owned War Drum, Marching Drum and Relax Drum all at once. -->
+		<icon>icon.skill19433</icon>
+		<operateType>A1</operateType>
+		<mpConsume>0</mpConsume>
+		<reuseDelay>2000</reuseDelay>
+		<hitTime>4300</hitTime>
+		<abnormalTime>-1</abnormalTime>
+		<abnormalType>MULTI_BUFF</abnormalType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1200</abnormalTime>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectRange>1000</affectRange>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<isMagic>22</isMagic>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<magicLvl>99</magicLvl>
+		<effects>
+			<effect name="CallSkill"> <!-- War Drum -->
+				<skillId>19444</skillId> <!-- War Drumb -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="CallSkill"> <!-- Marching Drum -->
+				<skillId>19445</skillId> <!-- Marching Drum -->
+				<skillLevel>1</skillLevel>
+			</effect>
+			<effect name="CallSkill"> <!-- Soothing Drum -->
+				<skillId>19446</skillId> <!-- Soothing Drum -->
+				<skillLevel>1</skillLevel>
+			</effect>
+		</effects>
+	</skill>
 	<skill id="19439" toLevel="1" name="Overload's Dignity">
 		<icon>icon.skill19439</icon>
 		<abnormalTime>30</abnormalTime>
