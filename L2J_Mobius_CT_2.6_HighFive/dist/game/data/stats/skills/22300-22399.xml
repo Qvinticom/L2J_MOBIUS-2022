@@ -79,8 +79,20 @@
 	</skill>
 	<skill id="22313" levels="1" name="Pa'agrio's Warm Breeze - 4 hour">
 		<!-- For 4 hours, recovers Vitality when Exp. is acquired through hunting. -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="abnormalLvl" val="1" />
+		<set name="abnormalTime" val="14400" />
+		<set name="abnormalVisualEffect" val="VP_KEEP" />
+		<set name="icon" val="BranchSys2.Icon.pi_wind_of_paagrio" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="itemConsumeCount" val="1" />
+		<set name="itemConsumeId" val="21880" />
+		<set name="operateType" val="A2" />
+		<set name="targetType" val="SELF" />
+		<for>
+			<effect name="Buff">
+				<sub stat="vitalityConsumeRate" val="10" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22314" levels="1" name="Treasure Sack 1st Place">
 		<set name="operateType" val="P" />
