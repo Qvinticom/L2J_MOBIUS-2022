@@ -85,8 +85,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>1</reuseDelay>
 		<effects>
-			<effect name="LimitSkill">
-			</effect>
+			<effect name="LimitSkill" />
 		</effects>
 	</skill>
 	<skill id="19527" toLevel="3" name="Limit of Iss">
@@ -100,6 +99,482 @@
 		<reuseDelay>1</reuseDelay>
 		<effects>
 			<effect name="LimitSkill" />
+		</effects>
+	</skill>
+	<skill id="19531" toLevel="4" name="Clan Hunter">
+		<!-- Clan members' P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, and M. Def +$s4. -->
+		<icon>icon.skill19531</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">3</value>
+					<value level="3">5</value>
+					<value level="4">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">1</value>
+					<value level="2">2</value>
+					<value level="3">3</value>
+					<value level="4">4</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19532" toLevel="3" name="Clan Elemental">
+		<!-- All clan members' defense attributes +$s1. -->
+		<icon>icon.skill19003</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">10</value>
+					<value level="2">20</value>
+					<value level="3">30</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19533" toLevel="1" name="Clan Rating">
+		<!-- Points gained at the end of the Throne of Heroes Boss Battle +$s1. -->
+		<icon>icon.skill19533</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+	</skill>
+	<skill id="19534" toLevel="2" name="Clan Barrier">
+		<!-- Clan members' P. Def and M. Def. +$s1. -->
+		<icon>icon.skill19534</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">5</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19535" toLevel="3" name="Clan Resistance">
+		<!-- Clan members' Resistance to Stun/ Paralysis/ MEN/ Aerial Yoke/ Knock Back/ Knock Down +$s1. -->
+		<icon>icon.skill19004</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</SHOCK>
+				<PARALYZE>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</PARALYZE>
+				<DERANGEMENT>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</DERANGEMENT>
+				<AIRBIND>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</AIRBIND>
+				<KNOCKBACK>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</KNOCKBACK>
+				<KNOCKDOWN>
+					<value level="1">10</value>
+					<value level="2">15</value>
+					<value level="3">20</value>
+				</KNOCKDOWN>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19536" toLevel="1" name="Clan Battlefield">
+		<!-- For $s1, Max HP/ MP/ CP +$s2, P. Atk. +$s3, M. Atk. +$s4, and Speed +$s5. Consumes $s6 Spirit Ore. Only available in the battlefield. -->
+		<icon>icon.skill19536</icon>
+		<itemConsumeId>3031</itemConsumeId>
+		<itemConsumeCount>5</itemConsumeCount>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<hitTime>1000</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>300000</reuseDelay>
+		<effectPoint>100</effectPoint>
+	</skill>
+	<skill id="19537" toLevel="2" name="Clan Iron">
+		<!-- Clan members' PVP Damage Received -$s1. -->
+		<icon>icon.skill0386</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpPhysicalAttackDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDefenceBonus">
+				<amount>
+					<value level="1">5</value>
+					<value level="2">7</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19538" toLevel="1" name="Clan Vitality">
+		<!-- Clan members' XP and SP gain +$s1. -->
+		<icon>icon.skill19538</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19539" toLevel="1" name="Clan Battle">
+		<!-- Clan members' P. Atk. +$s1 and M. Atk. +$s2. -->
+		<icon>icon.skill19539</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PAtk">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19540" toLevel="1" name="Clan Blood">
+		<!-- Clan members' PvE Damage +$s1. -->
+		<icon>icon.skill19540</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PveMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvePhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19541" toLevel="1" name="Clan Cry">
+		<!-- Clan members' Skill Power +$s1. -->
+		<icon>icon.skill19541</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalSkillPower">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19542" toLevel="1" name="Clan Darkness">
+		<!-- Clan members' PvP Damage +$s1. -->
+		<icon>icon.skill19542</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PvpPhysicalAttackDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpMagicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PvpPhysicalSkillDamageBonus">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19543" toLevel="11" name="Clan Combat">
+		<!-- Clan members' P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, and M. Def +$s4. -->
+		<icon>icon.skill19543</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="PAtk">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">7</value>
+					<value level="5">9</value>
+					<value level="6">11</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">11</value>
+					<value level="10">12</value>
+					<value level="11">13</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">6</value>
+					<value level="2">8</value>
+					<value level="3">10</value>
+					<value level="4">14</value>
+					<value level="5">18</value>
+					<value level="6">22</value>
+					<value level="7">18</value>
+					<value level="8">20</value>
+					<value level="9">22</value>
+					<value level="10">24</value>
+					<value level="11">26</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">7</value>
+					<value level="5">9</value>
+					<value level="6">11</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">11</value>
+					<value level="10">12</value>
+					<value level="11">13</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>
+					<value level="1">4</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">7</value>
+					<value level="5">9</value>
+					<value level="6">11</value>
+					<value level="7">9</value>
+					<value level="8">10</value>
+					<value level="9">11</value>
+					<value level="10">12</value>
+					<value level="11">13</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19544" toLevel="6" name="Clan Will">
+		<!-- Clan members' XP and SP gain +$s1. -->
+		<icon>icon.skill19544</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="ExpModify">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19545" toLevel="6" name="Clan Condition">
+		<!-- Clan members' Max HP/ MP/ CP +$s1 and HP/ MP/ CP Recovery +$s2. -->
+		<icon>icon.skill19545</icon>
+		<operateType>P</operateType>
+		<targetType>SELF</targetType>
+		<effects>
+			<effect name="MaxHp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxCp">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="HpRegen">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CpRegen">
+				<amount>
+					<value level="1">3</value>
+					<value level="2">4</value>
+					<value level="3">5</value>
+					<value level="4">6</value>
+					<value level="5">8</value>
+					<value level="6">10</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
 		</effects>
 	</skill>
 </list>

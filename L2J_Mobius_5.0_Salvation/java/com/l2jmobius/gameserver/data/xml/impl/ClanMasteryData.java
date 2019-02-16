@@ -58,22 +58,56 @@ public class ClanMasteryData implements IGameXmlReader
 		{
 			final StatsSet set = new StatsSet(parseAttributes(clanNode));
 			final int id = set.getInt("mastery");
-			final int skillId = set.getInt("skilId");
-			final int skillLevel = set.getInt("skillLevel");
+			final int skill1Id = set.getInt("skill1Id");
+			final int skill1Level = set.getInt("skill1Level");
+			final Skill skill1 = SkillData.getInstance().getSkill(skill1Id, skill1Level);
+			if (skill1 == null)
+			{
+				LOGGER.info(getClass().getSimpleName() + ": Could not create clan mastery, skill id " + skill1Id + " with level " + skill1Level + " does not exist.");
+				return;
+			}
+			final int skill2Id = set.getInt("skill2Id", 0);
+			final int skill2Level = set.getInt("skill2Level", 0);
+			Skill skill2 = null;
+			if (skill2Id > 0)
+			{
+				skill2 = SkillData.getInstance().getSkill(skill2Id, skill2Level);
+				if (skill2 == null)
+				{
+					LOGGER.info(getClass().getSimpleName() + ": Could not create clan mastery, skill id " + skill2Id + " with level " + skill2Level + " does not exist.");
+					return;
+				}
+			}
+			final int skill3Id = set.getInt("skill3Id", 0);
+			final int skill3Level = set.getInt("skill3Level", 0);
+			Skill skill3 = null;
+			if (skill3Id > 0)
+			{
+				skill3 = SkillData.getInstance().getSkill(skill3Id, skill3Level);
+				if (skill3 == null)
+				{
+					LOGGER.info(getClass().getSimpleName() + ": Could not create clan mastery, skill id " + skill3Id + " with level " + skill3Level + " does not exist.");
+					return;
+				}
+			}
+			final int skill4Id = set.getInt("skill4Id", 0);
+			final int skill4Level = set.getInt("skill4Level", 0);
+			Skill skill4 = null;
+			if (skill4Id > 0)
+			{
+				skill4 = SkillData.getInstance().getSkill(skill4Id, skill4Level);
+				if (skill4 == null)
+				{
+					LOGGER.info(getClass().getSimpleName() + ": Could not create clan mastery, skill id " + skill4Id + " with level " + skill4Level + " does not exist.");
+					return;
+				}
+			}
 			final int clanLevel = set.getInt("clanLevel");
 			final int clanReputation = set.getInt("clanReputation");
 			final int previousMastery = set.getInt("previousMastery", 0);
 			final int previousMasteryAlt = set.getInt("previousMasteryAlt", 0);
 			
-			final Skill skill = SkillData.getInstance().getSkill(skillId, skillLevel);
-			if (skill == null)
-			{
-				LOGGER.info(getClass().getSimpleName() + ": Could not create clan mastery, skill id " + skillId + " with level " + skillLevel + " does not exist.");
-			}
-			else
-			{
-				_clanMasteryData.add(new ClanMasteryHolder(id, skill, clanLevel, clanReputation, previousMastery, previousMasteryAlt));
-			}
+			_clanMasteryData.add(new ClanMasteryHolder(id, skill1, skill2, skill3, skill4, clanLevel, clanReputation, previousMastery, previousMasteryAlt));
 		}));
 	}
 	
