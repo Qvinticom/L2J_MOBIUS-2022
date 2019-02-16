@@ -65,6 +65,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("BonusSpoilRate", BonusSpoilRate::new);
 		EffectHandler.getInstance().registerHandler("Breath", Breath::new);
 		EffectHandler.getInstance().registerHandler("BuffBlock", BuffBlock::new);
+		EffectHandler.getInstance().registerHandler("CallLearnedSkill", CallLearnedSkill::new);
 		EffectHandler.getInstance().registerHandler("CallParty", CallParty::new);
 		EffectHandler.getInstance().registerHandler("CallPc", CallPc::new);
 		EffectHandler.getInstance().registerHandler("CallRandomSkill", CallRandomSkill::new);

@@ -605,38 +605,31 @@
 		<!-- Casts owned Horn, Drum, Organ, and Guitar Melodies, all at once. -->
 		<icon>icon.skill19421</icon>
 		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
 		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>4300</hitTime>
-		<abnormalTime>-1</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectRange>1000</affectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<isMagic>22</isMagic>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>103</magicLvl>
+		<affectRange>1000</affectRange>
 		<effects>
-			<effect name="CallSkill"> <!-- Horn Melody -->
+			<effect name="CallLearnedSkill">
 				<skillId>11517</skillId> <!-- Horn Melody -->
-				<skillLevel>0</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Drum Melody -->
+			<effect name="CallLearnedSkill">
 				<skillId>11518</skillId> <!-- Drum Melody -->
-				<skillLevel>0</skillLevel>
 			</effect>
-			<effect name="CallSkill">	<!-- Pipe Organ Melody -->
+			<effect name="CallLearnedSkill">
 				<skillId>11519</skillId> <!-- Pipe Organ Melody -->
-				<skillLevel>0</skillLevel>
 			</effect>
-			<effect name="CallSkill">	<!-- Guitar Melody -->
+			<effect name="CallLearnedSkill">
 				<skillId>11520</skillId> <!-- Guitar Melody -->
-				<skillLevel>0</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -644,33 +637,28 @@
 		<!-- Casts owned Combat, Marching, and Refreshing Sonatas, all at once. -->
 		<icon>icon.skill19422</icon>
 		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
 		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>4300</hitTime>
-		<abnormalTime>-1</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<magicCriticalRate>5</magicCriticalRate>
-		<affectRange>1000</affectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<isMagic>22</isMagic>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>101</magicLvl>
+		<affectRange>1000</affectRange>
 		<effects>
-			<effect name="CallSkill"> <!-- Prevailing Sonata -->
+			<effect name="CallLearnedSkill">
 				<skillId>11529</skillId> <!-- Prevailing Sonata -->
-				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Daring Sonata -->
+			<effect name="CallLearnedSkill">
 				<skillId>11530</skillId> <!-- Daring Sonata -->
-				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill">	<!-- Refreshing Sonata -->
+			<effect name="CallLearnedSkill">
 				<skillId>11532</skillId> <!-- Refreshing Sonata -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -678,33 +666,28 @@
 		<!-- Casts owned Prevailing Song, Marching Song, and Relax Song, all at once. -->
 		<icon>icon.skill19423</icon>
 		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
 		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>4300</hitTime>
-		<abnormalTime>-1</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<magicCriticalRate>5</magicCriticalRate>
-		<affectRange>1000</affectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<isMagic>22</isMagic>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>101</magicLvl>
+		<affectRange>1000</affectRange>
 		<effects>
-			<effect name="CallSkill"> <!-- Prevailing Song -->
+			<effect name="CallLearnedSkill">
 				<skillId>11607</skillId> <!-- Prevailing Song -->
-				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Daring Song -->
+			<effect name="CallLearnedSkill">
 				<skillId>11608</skillId> <!-- Daring Song -->
-				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill">	<!-- Refreshing Song -->
+			<effect name="CallLearnedSkill">
 				<skillId>11609</skillId> <!-- Refreshing Song -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -712,33 +695,28 @@
 		<!-- Casts owned Prevailing Dance, Marching Dance, and Relax Dance, all at once. -->
 		<icon>icon.skill19424</icon>
 		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
 		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>4300</hitTime>
-		<abnormalTime>-1</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<magicCriticalRate>5</magicCriticalRate>
-		<affectRange>1000</affectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<isMagic>22</isMagic>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>101</magicLvl>
+		<affectRange>1000</affectRange>
 		<effects>
-			<effect name="CallSkill"> <!-- Prevailing Dance -->
+			<effect name="CallLearnedSkill">
 				<skillId>11610</skillId> <!-- Prevailing Dance -->
-				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Daring Dance -->
+			<effect name="CallLearnedSkill">
 				<skillId>11611</skillId> <!-- Daring Dance -->
-				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill">	<!-- Refreshing Dance -->
+			<effect name="CallLearnedSkill">
 				<skillId>11612</skillId> <!-- Refreshing Dance -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -746,33 +724,26 @@
 		<!-- Casts owned Elemental Resistance, Debuff Resistance, and Mental Attack Resistance, all at once. -->
 		<icon>icon.skill19425</icon>
 		<operateType>A1</operateType>
-		<mpConsume>0</mpConsume>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
+		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>4300</hitTime>
-		<abnormalTime>-1</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<magicCriticalRate>5</magicCriticalRate>
-		<affectRange>1000</affectRange>
-		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
-		<isMagic>22</isMagic>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>99</magicLvl>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="CallSkill"> <!-- Elemental Resistance -->
+			<effect name="CallLearnedSkill">
 				<skillId>11565</skillId> <!-- Elemental Resistance -->
-				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Holy Attack Resistance -->
+			<effect name="CallLearnedSkill">
 				<skillId>11566</skillId> <!-- Resistance Debuff -->
-				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill">	<!-- Mental Attack Resistance -->
+			<effect name="CallLearnedSkill">
 				<skillId>11567</skillId> <!-- Mental Attack Resistance -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
@@ -782,6 +753,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19431" toLevel="9" name="Sforzando Sting">
+		<!-- Rushes at the target to reduce Speed by $s2 for $s1 and gives the Swift Praise effect to allies. Requires a sword, blunt, dual sword or dual blunt to be equipped. -->
 		<icon>icon.skill19431</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -792,76 +764,41 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 	</skill>
 	<skill id="19433" toLevel="11" name="Alluring Conduct">
-		<!-- Casts owned War Drum, Marching Drum and Relax Drum all at once. -->
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P. Def/ M. Def by $s3 for $s2. Increases cooldown of all skills by $s4and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt, dual sword or dual blunt to be equipped. -->
 		<icon>icon.skill19433</icon>
 		<operateType>A1</operateType>
-		<mpConsume>0</mpConsume>
-		<reuseDelay>2000</reuseDelay>
-		<hitTime>4300</hitTime>
-		<abnormalTime>-1</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectRange>1000</affectRange>
-		<targetType>SELF</targetType>
-		<affectScope>PARTY</affectScope>
-		<affectObject>FRIEND</affectObject>
-		<isMagic>22</isMagic>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>99</magicLvl>
-		<effects>
-			<effect name="CallSkill"> <!-- War Drum -->
-				<skillId>19444</skillId> <!-- War Drum -->
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="CallSkill"> <!-- Marching Drum -->
-				<skillId>19445</skillId> <!-- Marching Drum -->
-				<skillLevel>1</skillLevel>
-			</effect>
-			<effect name="CallSkill">	<!-- Soothing Drum -->
-				<skillId>19446</skillId> <!-- Soothing Drum -->
-				<skillLevel>1</skillLevel>
-			</effect>
-		</effects>
 	</skill>
 	<skill id="19438" toLevel="1" name="Triple Stroke">
 		<!-- Casts owned War Drum, Marching Drum and Relax Drum all at once. -->
-		<icon>icon.skill19433</icon>
+		<icon>icon.skill19438</icon>
 		<operateType>A1</operateType>
-		<mpConsume>0</mpConsume>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
+		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
 		<reuseDelay>2000</reuseDelay>
-		<hitTime>4300</hitTime>
-		<abnormalTime>-1</abnormalTime>
-		<abnormalType>MULTI_BUFF</abnormalType>
-		<abnormalLvl>1</abnormalLvl>
-		<abnormalTime>1200</abnormalTime>
-		<magicCriticalRate>5</magicCriticalRate>
-		<targetType>SELF</targetType>
-		<affectRange>1000</affectRange>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
-		<isMagic>22</isMagic>
-		<isMagic>1</isMagic> <!-- Magic Skill -->
-		<magicLvl>99</magicLvl>
+		<affectRange>1000</affectRange>
 		<effects>
-			<effect name="CallSkill"> <!-- War Drum -->
+			<effect name="CallLearnedSkill">
 				<skillId>19444</skillId> <!-- War Drumb -->
-				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Marching Drum -->
+			<effect name="CallLearnedSkill">
 				<skillId>19445</skillId> <!-- Marching Drum -->
-				<skillLevel>1</skillLevel>
 			</effect>
-			<effect name="CallSkill"> <!-- Soothing Drum -->
+			<effect name="CallLearnedSkill">
 				<skillId>19446</skillId> <!-- Soothing Drum -->
-				<skillLevel>1</skillLevel>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="19439" toLevel="1" name="Overload's Dignity">
+		<!-- For $s1, increases nearby party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. $s2 times. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill19439</icon>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -927,6 +864,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19444" toLevel="1" name="War Drum">
+		<!-- For $s1, party members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -972,6 +910,7 @@
 		</effects>
 	</skill>
 	<skill id="19445" toLevel="1" name="Marching Drum">
+		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
 		<icon>icon.skill19445</icon>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -1022,6 +961,7 @@
 		</effects>
 	</skill>
 	<skill id="19446" toLevel="1" name="Soothing Drum">
+		<!-- For $s1, party members' HP Recovery Bonus +$s2, MP Recovery Bonus +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill19446</icon>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>150</abnormalTime>
