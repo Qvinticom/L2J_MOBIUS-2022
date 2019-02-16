@@ -21,23 +21,23 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 /**
  * @author Mobius
  */
-public class ClanSpecialtyHolder
+public class ClanMasteryHolder
 {
 	private final int _id;
 	private final Skill _skill;
 	private final int _clanLevel;
 	private final int _clanReputation;
-	private final int _previousSpecialty;
-	private final int _previousSpecialtyAlt;
+	private final int _previousMastery;
+	private final int _previousMasteryAlt;
 	
-	public ClanSpecialtyHolder(int id, Skill skill, int clanLevel, int clanReputation, int previousSpecialty, int previousSpecialtyAlt)
+	public ClanMasteryHolder(int id, Skill skill, int clanLevel, int clanReputation, int previousMastery, int previousMasteryAlt)
 	{
 		_id = id;
 		_skill = skill;
 		_clanLevel = clanLevel;
 		_clanReputation = clanReputation;
-		_previousSpecialty = previousSpecialty;
-		_previousSpecialtyAlt = previousSpecialtyAlt;
+		_previousMastery = previousMastery;
+		_previousMasteryAlt = previousMasteryAlt;
 	}
 	
 	public int getId()
@@ -60,13 +60,13 @@ public class ClanSpecialtyHolder
 		return _clanReputation;
 	}
 	
-	public int getPreviousSpecialty()
+	public int getPreviousMastery()
 	{
-		return _previousSpecialty;
+		return _previousMastery;
 	}
 	
-	public int getPreviousSpecialtyAlt()
+	public int getPreviousMasteryAlt()
 	{
-		return _previousSpecialtyAlt;
+		return _previousMasteryAlt;
 	}
 }
