@@ -100,7 +100,7 @@ public class BufferTable
 		{
 			DocumentBuilderFactory dbf = DocumentBuilderFactory.newInstance();
 			DocumentBuilder db = dbf.newDocumentBuilder();
-			Document doc = db.parse(new File("./data/buffer_skills.xml"));
+			Document doc = db.parse(new File("./data/SchemeBufferSkills.xml"));
 			
 			final Node n = doc.getFirstChild();
 			
