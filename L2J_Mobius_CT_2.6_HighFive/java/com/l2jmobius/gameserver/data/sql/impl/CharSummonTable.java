@@ -189,12 +189,13 @@ public class CharSummonTable
 					final int curMp = rs.getInt("curMp");
 					final int time = rs.getInt("time");
 					
-					removeServitor(activeChar);
 					skill = SkillData.getInstance().getSkill(skillId, activeChar.getSkillLevel(skillId));
 					if (skill == null)
 					{
+						removeServitor(activeChar);
 						return;
 					}
+					
 					skill.applyEffects(activeChar, activeChar);
 					
 					if (activeChar.hasServitor())
