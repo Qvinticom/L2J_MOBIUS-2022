@@ -425,10 +425,7 @@ public abstract class L2Summon extends L2Playable
 			}
 			
 			// Cancel running skill casters.
-			for (SkillCaster skillCaster : getSkillCasters())
-			{
-				skillCaster.stopCasting(true);
-			}
+			abortAllSkillCasters();
 			
 			stopAllEffects();
 			stopHpMpRegeneration();

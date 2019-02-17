@@ -26,7 +26,6 @@ import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.model.effects.EffectFlag;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.skills.SkillCaster;
 import com.l2jmobius.gameserver.util.MinionList;
 
 /**
@@ -249,10 +248,7 @@ public class L2MonsterInstance extends L2Attackable
 		// Might need some exceptions here, but it will prevent the monster buffing player bug.
 		if (!skill.isBad() && (getTarget() != null) && getTarget().isPlayer())
 		{
-			for (SkillCaster skillCaster : getSkillCasters())
-			{
-				skillCaster.stopCasting(true);
-			}
+			abortAllSkillCasters();
 			return;
 		}
 		super.doCast(skill, item, ctrlPressed, shiftPressed);

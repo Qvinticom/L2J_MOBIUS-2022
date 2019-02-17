@@ -2837,6 +2837,21 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	}
 	
 	/**
+	 * Abort the cast of all skills.
+	 */
+	public final void abortAllSkillCasters()
+	{
+		for (SkillCaster skillCaster : getSkillCasters())
+		{
+			skillCaster.stopCasting(true);
+			if (isPlayer())
+			{
+				getActingPlayer().setQueuedSkill(null, null, false, false);
+			}
+		}
+	}
+	
+	/**
 	 * Abort the cast of normal non-simultaneous skills.
 	 * @return {@code true} if a skill casting has been aborted, {@code false} otherwise.
 	 */
