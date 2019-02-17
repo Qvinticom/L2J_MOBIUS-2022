@@ -3245,8 +3245,8 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill02_ID" id="14519" level="1" />
-			<skill name="Skill03_ID" id="14520" level="1" />
+			<skill name="Skill01_ID" id="23707" level="4" />
+			<skill name="Skill02_ID" id="16979" level="1" />
 			<param name="Attack_BoostValue" value="146" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -3276,9 +3276,9 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14520" level="1" /> <!-- Ice Box of Hell -->
-			<skill id="14519" level="1" /> <!-- Fire Pit of Hell -->
+			<skill id="16979" level="1" /> <!-- Hellfire -->
+			<skill id="23707" level="4" /> <!-- Chaos fire -->
+			<skill id="16980" level="1" /> <!-- Infernal Icicles -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
@@ -3287,7 +3287,7 @@
 			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
 			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
 		</skillList>
-		<ai clanHelpRange="300" aggroRange="300">
+		<ai clanHelpRange="400" aggroRange="400">
 			<clanList>
 				<clan>EMBRYO_BOSS</clan>
 			</clanList>
@@ -3403,8 +3403,8 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14521" level="1" />
-			<skill name="Skill02_ID" id="14194" level="1" />
+			<skill name="Skill01_ID" id="16982" level="1" /> <!-- Devil Horns of Shield -->
+			<skill name="Skill02_ID" id="16981" level="1" /> <!-- Fallen Execution -->
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -3429,10 +3429,12 @@
 		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14194" level="1" /> <!-- Range Stun -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16982" level="1" /> <!-- Devil Horns of Shield -->
+			<skill id="16981" level="1" /> <!-- Fallen Execution -->
+			<skill id="14194" level="1" /> <!-- Range Stun -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
@@ -3453,8 +3455,9 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14522" level="1" />
-			<skill name="Skill02_ID" id="14084" level="6" />
+			<skill name="Skill01_ID" id="16983" level="1" /> <!-- Embryo's Blessing -->
+			<skill name="Skill02_ID" id="23707" level="4" /> <!-- Chaos Fire -->
+			<skill name="Skill02_ID" id="16984" level="1" /> <!-- Blind Spark -->
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -3475,13 +3478,16 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" undying="false" randomWalk="false" />
 		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16983" level="1" /> <!-- Embryo's Blessing -->
+			<skill id="23707" level="1" /> <!-- Chaos Fire -->
+			<skill id="16984" level="1" /> <!-- Blind Spark -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
@@ -4128,7 +4134,7 @@
 		<acquire exp="169922991147" sp="169922929" raidPoints="7" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="2081767" hpRegen="8.5" mp="33087" mpRegen="30" />
+			<vitals hp="881767.0" hpRegen="8.5" mp="33087.0" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />

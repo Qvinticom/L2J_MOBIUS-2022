@@ -2294,19 +2294,19 @@
 			<height normal="60" />
 		</collision>
 	</npc>
-	<npc id="25856" level="96" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
+	<npc id="25856" level="104" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill02_ID" id="14519" level="1" />
-			<skill name="Skill03_ID" id="14520" level="1" />
+			<skill name="Skill01_ID" id="23707" level="4" />
+			<skill name="Skill02_ID" id="16979" level="1" />
 			<param name="Attack_BoostValue" value="146" />
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
-			<vitals hp="530201" hpRegen="8.5" mp="2242" mpRegen="30" />
+			<vitals hp="2081767" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -2329,9 +2329,9 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14520" level="1" /> <!-- Ice Box of Hell -->
-			<skill id="14519" level="1" /> <!-- Fire Pit of Hell -->
+			<skill id="16979" level="1" /> <!-- Hellfire -->
+			<skill id="23707" level="4" /> <!-- Chaos fire -->
+			<skill id="16980" level="1" /> <!-- Infernal Icicles -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
@@ -2340,7 +2340,7 @@
 			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
 			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
 		</skillList>
-		<ai clanHelpRange="300" aggroRange="300">
+		<ai clanHelpRange="400" aggroRange="400">
 			<clanList>
 				<clan>EMBRYO_BOSS</clan>
 			</clanList>
@@ -2349,21 +2349,123 @@
 			<radius normal="24" />
 			<height normal="60" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="61.17" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="50.91" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="36586" min="1" max="1" chance="48.8" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="39.83" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35352" min="1" max="1" chance="1.945" /> <!-- Eternal Glove Ingredient -->
+				<item id="35346" min="1" max="1" chance="1.944" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="35344" min="1" max="1" chance="1.921" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="35342" min="1" max="1" chance="1.92" /> <!-- Eternal Boot Ingredient -->
+				<item id="35345" min="1" max="1" chance="1.906" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="35348" min="1" max="1" chance="1.901" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="35339" min="1" max="1" chance="1.896" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="35351" min="1" max="1" chance="1.895" /> <!-- Eternal Stocking Ingredient -->
+				<item id="35338" min="1" max="1" chance="1.894" /> <!-- Eternal Helmet Ingredient -->
+				<item id="35343" min="1" max="1" chance="1.889" /> <!-- Eternal Shield Ingredient -->
+				<item id="35353" min="1" max="1" chance="1.884" /> <!-- Eternal Shoe Ingredient -->
+				<item id="35349" min="1" max="1" chance="1.875" /> <!-- Eternal Circlet Ingredient -->
+				<item id="35340" min="1" max="1" chance="1.867" /> <!-- Eternal Gaiter Ingredient -->
+				<item id="35347" min="1" max="1" chance="1.864" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="35350" min="1" max="1" chance="1.858" /> <!-- Eternal Tunic Ingredient -->
+				<item id="35354" min="1" max="1" chance="1.854" /> <!-- Eternal Sigil Ingredient -->
+				<item id="35341" min="1" max="1" chance="1.825" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="35328" min="1" max="1" chance="0.75" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="35329" min="1" max="1" chance="0.75" /> <!-- Amaranthine Slasher Fragment -->
+				<item id="35327" min="1" max="1" chance="0.75" /> <!-- Amaranthine Shaper Fragment -->
+				<item id="35331" min="1" max="1" chance="0.75" /> <!-- Amaranthine Fighter Fragment -->
+				<item id="35337" min="1" max="1" chance="0.75" /> <!-- Amaranthine Retributer Fragment -->
+				<item id="35332" min="1" max="1" chance="0.75" /> <!-- Amaranthine Stormer Fragment -->
+				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Amaranthine Thrower Fragment -->
+				<item id="35335" min="1" max="1" chance="0.75" /> <!-- Amaranthine Buster Fragment -->
+				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Amaranthine Shooter Fragment -->
+				<item id="35336" min="1" max="1" chance="0.75" /> <!-- Amaranthine Caster Fragment -->
+				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Amaranthine Avenger Fragment -->
+				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Cutter (60%) -->
+				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shaper (60%) -->
+				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Avenger (60%) -->
+				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Fighter (60%) -->
+				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Stormer (60%) -->
+				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Thrower (60%) -->
+				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shooter (60%) -->
+				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Buster (60%) -->
+				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Caster (60%) -->
+				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Slasher (60%) -->
+				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Retributer (60%) -->
+				<item id="46493" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46478" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46446" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46447" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46462" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46461" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46448" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46495" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46494" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46509" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="46510" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="46480" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46479" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46463" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46449" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46465" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<!-- FIXME: Also drops herbs. -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky>
+		</dropLists>
 	</npc>
-	<npc id="25857" level="95" type="L2Monster" name="Corrupted Captain">
+	<npc id="25857" level="103" type="L2Monster" name="Corrupted Captain" title="Guardian of the Altar">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14521" level="1" />
-			<skill name="Skill02_ID" id="14194" level="1" />
+			<skill name="Skill01_ID" id="16982" level="1" /> <!-- Devil Horns of Shield -->
+			<skill name="Skill02_ID" id="16981" level="1" /> <!-- Fallen Execution -->
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="49522881" sp="11885" />
+		<acquire exp="38462527312" sp="38462505" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="560294" hpRegen="8.5" mp="22058" mpRegen="30" />
+			<vitals hp="1705440" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="120" />
@@ -2380,10 +2482,12 @@
 		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="14194" level="1" /> <!-- Range Stun -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16982" level="1" /> <!-- Devil Horns of Shield -->
+			<skill id="16981" level="1" /> <!-- Fallen Execution -->
+			<skill id="14194" level="1" /> <!-- Range Stun -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
@@ -2400,20 +2504,21 @@
 			<height normal="45" />
 		</collision>
 	</npc>
-	<npc id="25858" level="95" type="L2Monster" name="Corrupted High Priest">
+	<npc id="25858" level="103" type="L2Monster" name="Corrupted High Priest" title="Guardian of the Altar">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="14522" level="1" />
-			<skill name="Skill02_ID" id="14084" level="6" />
+			<skill name="Skill01_ID" id="16983" level="1" /> <!-- Embryo's Blessing -->
+			<skill name="Skill02_ID" id="23707" level="4" /> <!-- Chaos Fire -->
+			<skill name="Skill02_ID" id="16984" level="1" /> <!-- Blind Spark -->
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="49522881" sp="11885" />
+		<acquire exp="51283369715" sp="51283269" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="560294" hpRegen="8.5" mp="33087" mpRegen="30" />
+			<vitals hp="1705440" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
 				<run ground="120" />
@@ -2426,13 +2531,16 @@
 			</attribute>
 			<abnormalResist physical="10" magical="10" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="false" undying="false" randomWalk="false" />
 		<skillList>
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="16983" level="1" /> <!-- Embryo's Blessing -->
+			<skill id="23707" level="1" /> <!-- Chaos Fire -->
+			<skill id="16984" level="1" /> <!-- Blind Spark -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
@@ -2837,7 +2945,7 @@
 			<height normal="53" />
 		</collision>
 	</npc>
-	<npc id="25866" level="94" type="L2Monster" name="Apherus">
+	<npc id="25866" level="94" type="L2RaidBoss" name="Apherus">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<skill name="Skill01_ID" id="14462" level="1" />

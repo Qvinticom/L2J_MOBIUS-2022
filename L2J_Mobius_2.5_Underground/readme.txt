@@ -31,6 +31,7 @@ Goddess of Destruction:
 -Kartia
 -Fortuna
 -Nursery
+-Altar of Shilen
 -Kimerian
 -Istina
 -Octavis
