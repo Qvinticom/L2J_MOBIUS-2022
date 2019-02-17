@@ -2462,6 +2462,20 @@
 		<point X="42630" Y="-48231" Z="-792" delay="0" run="true" />
 		<point X="45069" Y="-48034" Z="-792" delay="0" run="true" />
 	</route>
+	<route name="etina_bladesmen_1" repeat="true" repeatStyle="cycle">
+		<target id="23138" spawnX="182409" spawnY="18255" spawnZ="-10304" />
+		<point X="182409" Y="18255" Z="-10304" delay="1" run="true" />
+		<point X="181993" Y="17960" Z="-10304" delay="2" run="true" />
+		<point X="182479" Y="17267" Z="-10304" delay="1" run="true" />
+		<point X="182920" Y="17560" Z="-10304" delay="3" run="true" />
+	</route>
+	<route name="etina_bladesmen_2" repeat="true" repeatStyle="cycle">
+		<target id="23138" spawnX="182000" spawnY="17922" spawnZ="-10304" />
+		<point X="182200" Y="17922" Z="-10304" delay="2" run="true" />
+		<point X="182459" Y="17263" Z="-10304" delay="1" run="true" />
+		<point X="182894" Y="17577" Z="-10304" delay="2" run="true" />
+		<point X="182426" Y="18210" Z="-10304" delay="3" run="true" />
+	</route>
 	<route name="FPC_Giran_Evi" repeat="true" repeatStyle="cycle">
 		<target id="80000" spawnX="83485" spawnY="147998" spawnZ="-3407" />
 		<point X="83485" Y="147998" Z="-3407" delay="10" run="true" /> <!-- Gatekeeper -->

@@ -2,7 +2,7 @@
 	<time duration="60" empty="1" />
 	<locations>
 		<enter type="RANDOM">
-			<location x="179400" y="13683" z="-7396"/><!-- First Room -->
+			<location x="179400" y="13683" z="-7396"/> <!-- First Room -->
 		</enter>
 		<exit type="ORIGIN" />
 	</locations>
@@ -211,16 +211,8 @@
 			<npc id="23126" x="181747" y="18063" z="-10304" heading="6737" /> <!-- Embryo Elite Escort -->
 			<npc id="23126" x="182486" y="17168" z="-10304" heading="5041" /> <!-- Embryo Elite Escort -->
 			<npc id="23126" x="183333" y="17391" z="-10304" heading="38209" /> <!-- Embryo Elite Escort -->
-			<npc id="23138" x="182409" y="18255" z="-10304" heading="30021"> <!-- Etina Bladesmen -->
-				<parameters>
-				<param name="SuperPointName" value="etina_bladesmen_1" />
-				</parameters>
-				</npc>
-			<npc id="23138" x="182000" y="17922" z="-10304" heading="22511"> <!-- Etina Bladesmen -->
-			<parameters>
-				<param name="SuperPointName" value="etina_bladesmen_2" />
-				</parameters>
-			</npc>
+			<npc id="23138" x="182409" y="18255" z="-10304" heading="30021" /> <!-- Etina Bladesmen -->
+			<npc id="23138" x="182000" y="17922" z="-10304" heading="22511" /> <!-- Etina Bladesmen -->
 			<!-- 2st floor 3st room -->
 			<npc id="23130" x="179540" y="19060" z="-10568" heading="53859" /> <!-- Embryo Elite High Priest -->
 			<npc id="23130" x="178546" y="18123" z="-10568" heading="55565" /> <!-- Embryo Elite High Priest -->
