@@ -16,6 +16,7 @@
  */
 package com.l2jmobius.gameserver.model.instancezone.conditions;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -35,8 +36,8 @@ public final class ConditionLevel extends Condition
 	{
 		super(template, parameters, onlyLeader, showMessageAndHtml);
 		// Load params
-		_min = parameters.getInt("min", 1);
-		_max = parameters.getInt("max", Integer.MAX_VALUE);
+		_min = Math.min(Config.PLAYER_MAXIMUM_LEVEL, parameters.getInt("min", 1));
+		_max = Math.min(Config.PLAYER_MAXIMUM_LEVEL, parameters.getInt("max", Integer.MAX_VALUE));
 		// Set message
 		setSystemMessage(SystemMessageId.C1_S_LEVEL_DOES_NOT_CORRESPOND_TO_THE_REQUIREMENTS_FOR_ENTRY, (msg, player) -> msg.addString(player.getName()));
 	}
