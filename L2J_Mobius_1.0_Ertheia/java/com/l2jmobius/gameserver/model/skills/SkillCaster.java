@@ -1152,7 +1152,7 @@ public class SkillCaster implements Runnable
 			}
 		}
 		
-		final Location destination = GeoEngine.getInstance().canMoveToTargetLoc(creature.getX(), creature.getY(), creature.getZ(), x, y, z, creature.getInstanceWorld());
+		final Location destination = creature.isFlying() ? new Location(x, y, z) : GeoEngine.getInstance().canMoveToTargetLoc(creature.getX(), creature.getY(), creature.getZ(), x, y, z, creature.getInstanceWorld());
 		
 		creature.getAI().setIntention(CtrlIntention.AI_INTENTION_IDLE);
 		creature.broadcastPacket(new FlyToLocation(creature, destination, flyType, 0, 0, 333));

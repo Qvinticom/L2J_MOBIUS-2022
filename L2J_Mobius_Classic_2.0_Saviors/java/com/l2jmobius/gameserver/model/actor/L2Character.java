@@ -1863,7 +1863,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 	 */
 	public boolean isAttackingDisabled()
 	{
-		return _isFlying || hasBlockActions() || isAttackingNow() || isAlikeDead() || isPhysicalAttackMuted() || _AIdisabled;
+		return hasBlockActions() || isAttackingNow() || isAlikeDead() || isPhysicalAttackMuted() || _AIdisabled;
 	}
 	
 	public final boolean isConfused()
@@ -2950,7 +2950,7 @@ public abstract class L2Character extends L2Object implements ISkillsHolder, IDe
 		// Z coordinate will follow client values
 		dz = m._zDestination - zPrev;
 		
-		if (isPlayer())
+		if (isPlayer() && !_isFlying)
 		{
 			final double distance = Math.hypot(dx, dy);
 			if (_cursorKeyMovement // In case of cursor movement, avoid moving through obstacles.

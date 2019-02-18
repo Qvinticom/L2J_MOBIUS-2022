@@ -361,7 +361,7 @@ public class GeoEngine
 	 */
 	public final boolean canSeeTarget(L2Object origin, L2Object target)
 	{
-		if (target.isDoor())
+		if (target.isDoor() || (target.isCharacter() && ((L2Character) target).isFlying()))
 		{
 			return true;
 		}
