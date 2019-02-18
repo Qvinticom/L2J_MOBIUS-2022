@@ -2500,7 +2500,7 @@ public class L2Clan implements IIdentifiable, INamable
 		
 		boolean increaseClanLevel = false;
 		
-		// Such as https://l2wiki.com/classic/Clans_�_Clan_Level
+		// Such as https://l2wiki.com/classic/Clans_%E2%80%93_Clan_Level
 		switch (_level)
 		{
 			case 0:
