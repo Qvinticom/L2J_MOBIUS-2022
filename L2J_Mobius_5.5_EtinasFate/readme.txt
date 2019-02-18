@@ -1,7 +1,7 @@
 L2J-Mobius Etina's Fate
 
 Client: https://drive.google.com/uc?id=1qctEGMiiJaTgHeNcJ0li0hBjrUf8lBg_&export=download
-Geodata: https://www.mediafire.com/file/7322ignybgc1urc/mobius_geodata_salvation_l2d.zip
+Geodata: https://www.mediafire.com/file/1rf4vhawua9tlk4/mobius_geodata_salvation_l2d.zip
 JDK: http://www.mediafire.com/file/514ah8a77dk5j7a/jdk-10.0.2_windows-x64_bin.exe
 
 
