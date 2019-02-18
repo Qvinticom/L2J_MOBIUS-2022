@@ -14,8 +14,16 @@
 		</for>
 	</skill>
 	<skill id="22301" levels="1" name="Party Cake">
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="targetType" val="SELF" />
+		<set name="abnormalTime" val="1200" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A1" />
+		<for>
+			<effect name="SummonNpc">
+				<param npcId="147" npcCount="1" despawnDelay="1200000" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22302" levels="1" name="Sweet Chocolate - 4 hour">
 		<!-- For 4 hours, recovers energy when Exp. is acquired through hunting. -->
@@ -24,8 +32,20 @@
 	</skill>
 	<skill id="22303" levels="1" name="Party Cake">
 		<!-- Party Cake's Vitality effect. Maintains Vitality for 20 minutes. -->
-		<set name="operateType" val="P" />
-		<set name="targetType" val="NONE" />
+		<set name="icon" val="br_birthday_cake_i00" />
+		<set name="targetType" val="PARTY" />
+		<set name="affectRange" val="500" />
+		<set name="castRange" val="500" />
+		<set name="abnormalTime" val="1200" />
+		<set name="canBeDispeled" val="false" />
+		<set name="isMagic" val="2" /> <!-- Static Skill -->
+		<set name="magicLvl" val="1" />
+		<set name="operateType" val="A2" />
+		<for>
+			<effect name="Buff">
+				<mul stat="vitalityConsumeRate" val="0" />
+			</effect>
+		</for>
 	</skill>
 	<skill id="22304" levels="1" name="Campfire's Warmth">
 		<!-- The campfire's warmth can be felt. Increases HP regeneration by 80%, CP regeneration by 60%, and MP regeneration by 40%. -->
