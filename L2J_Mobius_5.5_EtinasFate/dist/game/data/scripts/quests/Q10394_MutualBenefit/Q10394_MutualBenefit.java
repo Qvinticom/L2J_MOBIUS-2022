@@ -144,7 +144,7 @@ public final class Q10394_MutualBenefit extends Quest
 			{
 				case GARGOYLE:
 				{
-					if (killedGargoyle < 30)
+					if (killedGargoyle < 15)
 					{
 						killedGargoyle++;
 						st.set("killed_" + GARGOYLE, killedGargoyle);
@@ -154,7 +154,7 @@ public final class Q10394_MutualBenefit extends Quest
 				}
 				case BASILISK:
 				{
-					if (killedBasilisk < 40)
+					if (killedBasilisk < 20)
 					{
 						killedBasilisk++;
 						st.set("killed_" + BASILISK, killedBasilisk);
@@ -164,7 +164,7 @@ public final class Q10394_MutualBenefit extends Quest
 				}
 				case ELDER_BASILISK:
 				{
-					if (killedElderBasilisk < 40)
+					if (killedElderBasilisk < 20)
 					{
 						killedElderBasilisk++;
 						st.set("killed_" + ELDER_BASILISK, killedElderBasilisk);
