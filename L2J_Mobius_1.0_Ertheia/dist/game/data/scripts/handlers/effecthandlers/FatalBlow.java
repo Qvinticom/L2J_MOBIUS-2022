@@ -22,6 +22,7 @@ import java.util.Set;
 
 import com.l2jmobius.gameserver.enums.ShotType;
 import com.l2jmobius.gameserver.model.StatsSet;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
@@ -41,12 +42,14 @@ public final class FatalBlow extends AbstractEffect
 	private final double _criticalChance;
 	private final Set<AbnormalType> _abnormals;
 	private final double _abnormalPower;
+	private final boolean _overHit;
 	
 	public FatalBlow(StatsSet params)
 	{
 		_power = params.getDouble("power");
 		_chanceBoost = params.getDouble("chanceBoost");
 		_criticalChance = params.getDouble("criticalChance", 0);
+		_overHit = params.getBoolean("overHit", false);
 		
 		String abnormals = params.getString("abnormalType", null);
 		if ((abnormals != null) && !abnormals.isEmpty())
@@ -88,6 +91,11 @@ public final class FatalBlow extends AbstractEffect
 		if (effector.isAlikeDead())
 		{
 			return;
+		}
+		
+		if (_overHit && effected.isAttackable())
+		{
+			((L2Attackable) effected).overhitEnabled(true);
 		}
 		
 		double power = _power;
