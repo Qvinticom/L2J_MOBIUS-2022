@@ -174,7 +174,7 @@ public final class Q10394_MutualBenefit extends Quest
 				}
 			}
 			
-			if ((killedGargoyle == 30) && (killedBasilisk == 40) && (killedElderBasilisk == 40))
+			if ((killedGargoyle == 15) && (killedBasilisk == 20) && (killedElderBasilisk == 20))
 			{
 				st.setCond(2, true);
 			}
