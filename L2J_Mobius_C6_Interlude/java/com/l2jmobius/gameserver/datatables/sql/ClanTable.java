@@ -227,7 +227,7 @@ public class ClanTable
 		
 		LOGGER.info("New clan created: {" + clan.getClanId() + "} {" + clan.getName() + "}");
 		
-		_clans.put(new Integer(clan.getClanId()), clan);
+		_clans.put(clan.getClanId(), clan);
 		
 		// should be update packet only
 		player.sendPacket(new PledgeShowInfoUpdate(clan));

@@ -43,35 +43,35 @@ public class ConfirmDlg extends L2GameServerPacket
 	
 	public ConfirmDlg addString(String text)
 	{
-		_types.add(new Integer(TYPE_TEXT));
+		_types.add(TYPE_TEXT);
 		_values.add(text);
 		return this;
 	}
 	
 	public ConfirmDlg addNumber(int number)
 	{
-		_types.add(new Integer(TYPE_NUMBER));
-		_values.add(new Integer(number));
+		_types.add(TYPE_NUMBER);
+		_values.add(number);
 		return this;
 	}
 	
 	public ConfirmDlg addNpcName(int id)
 	{
-		_types.add(new Integer(TYPE_NPC_NAME));
-		_values.add(new Integer(1000000 + id));
+		_types.add(TYPE_NPC_NAME);
+		_values.add(1000000 + id);
 		return this;
 	}
 	
 	public ConfirmDlg addItemName(int id)
 	{
-		_types.add(new Integer(TYPE_ITEM_NAME));
-		_values.add(new Integer(id));
+		_types.add(TYPE_ITEM_NAME);
+		_values.add(id);
 		return this;
 	}
 	
 	public ConfirmDlg addZoneName(int x, int y, int z)
 	{
-		_types.add(new Integer(TYPE_ZONE_NAME));
+		_types.add(TYPE_ZONE_NAME);
 		final int[] coord =
 		{
 			x,
@@ -89,8 +89,8 @@ public class ConfirmDlg extends L2GameServerPacket
 	
 	public ConfirmDlg addSkillName(int id, int lvl)
 	{
-		_types.add(new Integer(TYPE_SKILL_NAME));
-		_values.add(new Integer(id));
+		_types.add(TYPE_SKILL_NAME);
+		_values.add(id);
 		_skillLvL = lvl;
 		return this;
 	}

@@ -512,7 +512,7 @@ public final class L2GameClient extends MMOClient<MMOConnection<L2GameClient>> i
 		{
 			final int objectId = c.getObjectId();
 			
-			_charSlotMapping.add(new Integer(objectId));
+			_charSlotMapping.add(objectId);
 		}
 	}
 	

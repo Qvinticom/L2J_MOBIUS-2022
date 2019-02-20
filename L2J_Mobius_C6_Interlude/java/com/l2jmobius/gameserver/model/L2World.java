@@ -316,7 +316,7 @@ public final class L2World
 	 */
 	public L2PetInstance getPet(int ownerId)
 	{
-		return _petsInstance.get(new Integer(ownerId));
+		return _petsInstance.get(ownerId);
 	}
 	
 	/**
@@ -328,7 +328,7 @@ public final class L2World
 	 */
 	public L2PetInstance addPet(int ownerId, L2PetInstance pet)
 	{
-		return _petsInstance.put(new Integer(ownerId), pet);
+		return _petsInstance.put(ownerId, pet);
 	}
 	
 	/**
@@ -338,7 +338,7 @@ public final class L2World
 	 */
 	public void removePet(int ownerId)
 	{
-		_petsInstance.remove(new Integer(ownerId));
+		_petsInstance.remove(ownerId);
 	}
 	
 	/**

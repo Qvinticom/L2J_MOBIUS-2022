@@ -189,7 +189,7 @@ public class RecipeTable extends RecipeController
 			{
 				recipeList.addRecipe(recipePart);
 			}
-			_lists.put(new Integer(_lists.size()), recipeList);
+			_lists.put(_lists.size(), recipeList);
 		}
 		catch (Exception e)
 		{
@@ -211,7 +211,7 @@ public class RecipeTable extends RecipeController
 	{
 		for (int i = 0; i < _lists.size(); i++)
 		{
-			final L2RecipeList find = _lists.get(new Integer(i));
+			final L2RecipeList find = _lists.get(i);
 			if (find.getRecipeId() == itemId)
 			{
 				return find;
@@ -224,7 +224,7 @@ public class RecipeTable extends RecipeController
 	{
 		for (int i = 0; i < _lists.size(); i++)
 		{
-			final L2RecipeList find = _lists.get(new Integer(i));
+			final L2RecipeList find = _lists.get(i);
 			if (find.getId() == recId)
 			{
 				return find;

@@ -87,7 +87,7 @@ public class LevelUpData
 				lvlDat.setClassMpAdd(rset.getFloat(MP_ADD));
 				lvlDat.setClassMpModifier(rset.getFloat(MP_MOD));
 				
-				lvlTable.put(new Integer(lvlDat.getClassid()), lvlDat);
+				lvlTable.put(lvlDat.getClassid(), lvlDat);
 			}
 			
 			statement.close();

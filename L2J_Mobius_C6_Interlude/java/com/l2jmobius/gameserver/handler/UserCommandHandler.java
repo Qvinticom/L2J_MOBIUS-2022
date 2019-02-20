@@ -80,17 +80,15 @@ public class UserCommandHandler
 	
 	public void registerUserCommandHandler(IUserCommandHandler handler)
 	{
-		int[] ids = handler.getUserCommandList();
-		
-		for (int id : ids)
+		for (int id : handler.getUserCommandList())
 		{
-			_datatable.put(new Integer(id), handler);
+			_datatable.put(id, handler);
 		}
 	}
 	
 	public IUserCommandHandler getUserCommandHandler(int userCommand)
 	{
-		return _datatable.get(new Integer(userCommand));
+		return _datatable.get(userCommand);
 	}
 	
 	public int size()

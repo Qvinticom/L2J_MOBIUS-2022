@@ -224,7 +224,7 @@ public final class L2NpcTemplate extends L2CharTemplate
 	
 	public void addVulnerability(Stats id, double vuln)
 	{
-		_vulnerabilities.put(id, new Double(vuln));
+		_vulnerabilities.put(id, vuln);
 	}
 	
 	public double getVulnerability(Stats id)
