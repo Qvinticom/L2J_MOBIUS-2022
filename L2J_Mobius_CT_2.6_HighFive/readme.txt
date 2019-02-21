@@ -1,7 +1,7 @@
 L2J-Mobius High Five
 
 Client: https://mega.nz/#!BZVjgI7L!bIJp-VpomuUGkqUZSGBE-VUXs_eLEpX21s_IaIM6g8E
-Geodata: http://www.mediafire.com/file/41cpkch7kyhhzqy/mobius_geodata_h5_l2d.zip
+Geodata: http://www.mediafire.com/file/5p879luoumrflun/mobius_geodata_h5_l2d.zip
 JDK: http://www.mediafire.com/file/514ah8a77dk5j7a/jdk-10.0.2_windows-x64_bin.exe
 
 What is done

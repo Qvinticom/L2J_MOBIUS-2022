@@ -1,7 +1,7 @@
 L2J-Mobius Interlude
 
 Client: https://drive.google.com/uc?id=1LcKCQTbRXJvteJcuvc_rnX8i2gT1fcHB&export=download
-Geodata: http://www.mediafire.com/file/8m6vosu7h5p23j1/mobius_geodata_interlude_l2d.zip
+Geodata: http://www.mediafire.com/file/1upqk3ccvbgvj45/mobius_geodata_interlude_l2d.zip
 JDK: http://www.mediafire.com/file/ffc3trl5axsl2kt/jdk-8u181-windows-x64.exe
 
 
