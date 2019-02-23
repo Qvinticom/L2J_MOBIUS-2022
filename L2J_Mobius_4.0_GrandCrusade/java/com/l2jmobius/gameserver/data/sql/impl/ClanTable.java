@@ -106,7 +106,7 @@ public class ClanTable
 		
 		LOGGER.info(getClass().getSimpleName() + ": Restored " + cids.size() + " clans from the database.");
 		allianceCheck();
-		restorewars();
+		restoreClanWars();
 	}
 	
 	/**
@@ -149,17 +149,17 @@ public class ClanTable
 	 */
 	public L2Clan createClan(L2PcInstance player, String clanName)
 	{
-		if (null == player)
+		if (player == null)
 		{
 			return null;
 		}
 		
-		if (10 > player.getLevel())
+		if (player.getLevel() < 10)
 		{
 			player.sendPacket(SystemMessageId.YOU_DO_NOT_MEET_THE_CRITERIA_IN_ORDER_TO_CREATE_A_CLAN);
 			return null;
 		}
-		if (0 != player.getClanId())
+		if (player.getClanId() != 0)
 		{
 			player.sendPacket(SystemMessageId.YOU_HAVE_FAILED_TO_CREATE_A_CLAN);
 			return null;
@@ -169,18 +169,18 @@ public class ClanTable
 			player.sendPacket(SystemMessageId.YOU_MUST_WAIT_10_DAYS_BEFORE_CREATING_A_NEW_CLAN);
 			return null;
 		}
-		if (!Util.isAlphaNumeric(clanName) || (2 > clanName.length()))
+		if (!Util.isAlphaNumeric(clanName) || (clanName.length() < 2))
 		{
 			player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
 			return null;
 		}
-		if (16 < clanName.length())
+		if (clanName.length() > 16)
 		{
 			player.sendPacket(SystemMessageId.CLAN_NAME_S_LENGTH_IS_INCORRECT);
 			return null;
 		}
 		
-		if (null != getClanByName(clanName))
+		if (getClanByName(clanName) != null)
 		{
 			// clan name is already taken
 			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
@@ -354,7 +354,7 @@ public class ClanTable
 		return false;
 	}
 	
-	public void storeclanswars(ClanWar war)
+	public void storeClanWars(ClanWar war)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("REPLACE INTO clan_wars (clan1, clan2, clan1Kill, clan2Kill, winnerClan, startTime, endTime, state) VALUES(?,?,?,?,?,?,?,?)"))
@@ -375,7 +375,7 @@ public class ClanTable
 		}
 	}
 	
-	public void deleteclanswars(int clanId1, int clanId2)
+	public void deleteClanWars(int clanId1, int clanId2)
 	{
 		final L2Clan clan1 = getInstance().getClan(clanId1);
 		final L2Clan clan2 = getInstance().getClan(clanId2);
@@ -400,7 +400,7 @@ public class ClanTable
 		}
 	}
 	
-	private void restorewars()
+	private void restoreClanWars()
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			Statement statement = con.createStatement();

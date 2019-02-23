@@ -107,7 +107,7 @@ public class ClanTable
 		
 		LOGGER.info(getClass().getSimpleName() + ": Restored " + cids.size() + " clans from the database.");
 		allianceCheck();
-		restorewars();
+		restoreClanWars();
 	}
 	
 	/**
@@ -369,7 +369,7 @@ public class ClanTable
 		return false;
 	}
 	
-	public void storeclanswars(int clanId1, int clanId2)
+	public void storeClanWars(int clanId1, int clanId2)
 	{
 		final L2Clan clan1 = getClan(clanId1);
 		final L2Clan clan2 = getClan(clanId2);
@@ -408,7 +408,7 @@ public class ClanTable
 		clan2.broadcastToOnlineMembers(msg);
 	}
 	
-	public void deleteclanswars(int clanId1, int clanId2)
+	public void deleteClanWars(int clanId1, int clanId2)
 	{
 		final L2Clan clan1 = getClan(clanId1);
 		final L2Clan clan2 = getClan(clanId2);
@@ -455,11 +455,11 @@ public class ClanTable
 		{
 			clan1.deleteEnemyClan(clan2);
 			clan2.deleteEnemyClan(clan1);
-			deleteclanswars(clan1.getId(), clan2.getId());
+			deleteClanWars(clan1.getId(), clan2.getId());
 		}
 	}
 	
-	private void restorewars()
+	private void restoreClanWars()
 	{
 		L2Clan clan1;
 		L2Clan clan2;

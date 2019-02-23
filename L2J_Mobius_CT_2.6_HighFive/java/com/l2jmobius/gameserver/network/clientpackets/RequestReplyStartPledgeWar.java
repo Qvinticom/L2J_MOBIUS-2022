@@ -55,7 +55,7 @@ public final class RequestReplyStartPledgeWar implements IClientIncomingPacket
 		
 		if (_answer == 1)
 		{
-			ClanTable.getInstance().storeclanswars(requestor.getClanId(), activeChar.getClanId());
+			ClanTable.getInstance().storeClanWars(requestor.getClanId(), activeChar.getClanId());
 		}
 		else
 		{

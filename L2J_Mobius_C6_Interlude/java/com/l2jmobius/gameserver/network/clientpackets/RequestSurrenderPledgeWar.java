@@ -75,6 +75,6 @@ public final class RequestSurrenderPledgeWar extends L2GameClientPacket
 		msg.addString(_pledgeName);
 		_activeChar.sendPacket(msg);
 		_activeChar.deathPenalty(false);
-		ClanTable.getInstance().deleteclanswars(_clan.getClanId(), clan.getClanId());
+		ClanTable.getInstance().deleteClanWars(_clan.getClanId(), clan.getClanId());
 	}
 }

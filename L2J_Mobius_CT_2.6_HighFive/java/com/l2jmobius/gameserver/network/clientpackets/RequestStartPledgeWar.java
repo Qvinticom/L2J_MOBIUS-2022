@@ -94,7 +94,7 @@ public final class RequestStartPledgeWar implements IClientIncomingPacket
 			return;
 		}
 		
-		ClanTable.getInstance().storeclanswars(player.getClanId(), clan.getId());
+		ClanTable.getInstance().storeClanWars(player.getClanId(), clan.getId());
 		
 		for (L2PcInstance member : _clan.getOnlineMembers(0))
 		{

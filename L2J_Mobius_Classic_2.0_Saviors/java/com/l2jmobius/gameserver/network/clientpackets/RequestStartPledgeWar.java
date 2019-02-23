@@ -131,7 +131,7 @@ public final class RequestStartPledgeWar implements IClientIncomingPacket
 		
 		final ClanWar newClanWar = new ClanWar(clanDeclaringWar, clanDeclaredWar);
 		
-		ClanTable.getInstance().storeclanswars(newClanWar);
+		ClanTable.getInstance().storeClanWars(newClanWar);
 		
 		clanDeclaringWar.getMembers().stream().filter(Objects::nonNull).filter(L2ClanMember::isOnline).forEach(p -> p.getPlayerInstance().broadcastUserInfo(UserInfoType.CLAN));
 		

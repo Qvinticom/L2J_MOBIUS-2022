@@ -49,7 +49,7 @@ public final class RequestReplyStopPledgeWar extends L2GameClientPacket
 		
 		if (_answer == 1)
 		{
-			ClanTable.getInstance().deleteclanswars(requestor.getClanId(), activeChar.getClanId());
+			ClanTable.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
 		}
 		else
 		{

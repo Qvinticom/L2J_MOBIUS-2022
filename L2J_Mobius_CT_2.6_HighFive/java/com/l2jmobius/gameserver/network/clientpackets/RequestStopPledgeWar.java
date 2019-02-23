@@ -107,7 +107,7 @@ public final class RequestStopPledgeWar implements IClientIncomingPacket
 			}
 		}
 		
-		ClanTable.getInstance().deleteclanswars(playerClan.getId(), clan.getId());
+		ClanTable.getInstance().deleteClanWars(playerClan.getId(), clan.getId());
 		
 		for (L2PcInstance member : playerClan.getOnlineMembers(0))
 		{

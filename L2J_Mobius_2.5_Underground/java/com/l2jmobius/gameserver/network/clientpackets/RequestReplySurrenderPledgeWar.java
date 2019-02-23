@@ -50,7 +50,7 @@ public final class RequestReplySurrenderPledgeWar implements IClientIncomingPack
 		
 		if (_answer == 1)
 		{
-			ClanTable.getInstance().deleteclanswars(requestor.getClanId(), activeChar.getClanId());
+			ClanTable.getInstance().deleteClanWars(requestor.getClanId(), activeChar.getClanId());
 		}
 		else
 		{

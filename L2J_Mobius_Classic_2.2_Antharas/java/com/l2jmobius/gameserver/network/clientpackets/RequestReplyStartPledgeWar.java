@@ -65,7 +65,7 @@ public final class RequestReplyStartPledgeWar implements IClientIncomingPacket
 				if (clanWar.getState() == ClanWarState.BLOOD_DECLARATION)
 				{
 					clanWar.mutualClanWarAccepted(attacker, attacked);
-					ClanTable.getInstance().storeclanswars(clanWar);
+					ClanTable.getInstance().storeClanWars(clanWar);
 				}
 			}
 		}

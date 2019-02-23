@@ -152,7 +152,7 @@ public class ClanTable
 			LOGGER.warning("Data error on ClanTable " + e);
 		}
 		
-		restorewars();
+		restoreClanWars();
 	}
 	
 	/**
@@ -452,7 +452,7 @@ public class ClanTable
 		return false;
 	}
 	
-	public void storeclanswars(int clanId1, int clanId2)
+	public void storeClanWars(int clanId1, int clanId2)
 	{
 		final L2Clan clan1 = getInstance().getClan(clanId1);
 		final L2Clan clan2 = getInstance().getClan(clanId2);
@@ -486,7 +486,7 @@ public class ClanTable
 		clan2.broadcastToOnlineMembers(msg);
 	}
 	
-	public void deleteclanswars(int clanId1, int clanId2)
+	public void deleteClanWars(int clanId1, int clanId2)
 	{
 		final L2Clan clan1 = getInstance().getClan(clanId1);
 		final L2Clan clan2 = getInstance().getClan(clanId2);
@@ -534,11 +534,11 @@ public class ClanTable
 		{
 			clan1.deleteEnemyClan(clan2);
 			clan2.deleteEnemyClan(clan1);
-			deleteclanswars(clan1.getClanId(), clan2.getClanId());
+			deleteClanWars(clan1.getClanId(), clan2.getClanId());
 		}
 	}
 	
-	private void restorewars()
+	private void restoreClanWars()
 	{
 		try (Connection con = DatabaseFactory.getConnection())
 		{
