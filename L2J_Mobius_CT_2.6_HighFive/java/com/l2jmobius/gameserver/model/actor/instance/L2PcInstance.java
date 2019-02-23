@@ -5371,7 +5371,17 @@ public final class L2PcInstance extends L2Playable
 			}
 			else if (targetPlayer.getPvpFlag() == 0) // Target player doesn't have karma
 			{
-				increasePkKillsAndKarma(target);
+				if (Config.FACTION_SYSTEM_ENABLED)
+				{
+					if ((_isGood && targetPlayer.isGood()) || (_isEvil && targetPlayer.isEvil()))
+					{
+						increasePkKillsAndKarma(target);
+					}
+				}
+				else
+				{
+					increasePkKillsAndKarma(target);
+				}
 				checkItemRestriction(); // Unequip adventurer items
 			}
 		}

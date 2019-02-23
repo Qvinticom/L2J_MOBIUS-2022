@@ -5234,11 +5234,21 @@ public final class L2PcInstance extends L2Playable
 			setReputation(0);
 			setPkKills(getPkKills() + 1);
 		}
-		else
+		else // Calculate new karma and increase pk count
 		{
-			// Calculate new karma and increase pk count
-			setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), killedPlayable.isSummon()));
-			setPkKills(getPkKills() + 1);
+			if (Config.FACTION_SYSTEM_ENABLED)
+			{
+				if ((_isGood && killedPlayer.isGood()) || (_isEvil && killedPlayer.isEvil()))
+				{
+					setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), killedPlayable.isSummon()));
+					setPkKills(getPkKills() + 1);
+				}
+			}
+			else
+			{
+				setReputation(getReputation() - Formulas.calculateKarmaGain(getPkKills(), killedPlayable.isSummon()));
+				setPkKills(getPkKills() + 1);
+			}
 		}
 		
 		final UserInfo ui = new UserInfo(this, false);
