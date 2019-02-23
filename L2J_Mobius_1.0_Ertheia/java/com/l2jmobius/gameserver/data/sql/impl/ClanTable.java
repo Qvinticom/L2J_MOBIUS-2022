@@ -301,15 +301,6 @@ public class ClanTable
 				ps.execute();
 			}
 			
-			if (castleId != 0)
-			{
-				try (PreparedStatement ps = con.prepareStatement("UPDATE castle SET taxPercent = 0 WHERE id = ?"))
-				{
-					ps.setInt(1, castleId);
-					ps.execute();
-				}
-			}
-			
 			if (fortId != 0)
 			{
 				final Fort fort = FortManager.getInstance().getFortById(fortId);
