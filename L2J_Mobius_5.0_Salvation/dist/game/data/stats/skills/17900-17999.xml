@@ -1247,7 +1247,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>39572</itemId>
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="17981" toLevel="1" name="Scroll of Escape: Gludin Village">
