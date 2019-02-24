@@ -1164,13 +1164,7 @@
 			<value level="5">50-50</value>
 		</affectLimit>
 		<targetType>SELF</targetType>
-		<affectScope>
-			<value level="1">PARTY</value>
-			<value level="2">PARTY</value>
-			<value level="3">PARTY</value>
-			<value level="4">PARTY_PLEDGE</value>
-			<value level="5">PARTY_PLEDGE</value>
-		</affectScope>
+		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -1268,13 +1262,7 @@
 			<value level="5">50-50</value>
 		</affectLimit>
 		<targetType>SELF</targetType>
-		<affectScope>
-			<value level="1">PARTY</value>
-			<value level="2">PARTY</value>
-			<value level="3">PARTY</value>
-			<value level="4">PARTY_PLEDGE</value>
-			<value level="5">PARTY_PLEDGE</value>
-		</affectScope>
+		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="TriggerSkillByDamage">
@@ -1383,13 +1371,7 @@
 			<value level="5">50-50</value>
 		</affectLimit>
 		<targetType>SELF</targetType>
-		<affectScope>
-			<value level="1">PARTY</value>
-			<value level="2">PARTY</value>
-			<value level="3">PARTY</value>
-			<value level="4">PARTY_PLEDGE</value>
-			<value level="5">PARTY_PLEDGE</value>
-		</affectScope>
+		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -1487,13 +1469,7 @@
 			<value level="5">50-50</value>
 		</affectLimit>
 		<targetType>SELF</targetType>
-		<affectScope>
-			<value level="1">PARTY</value>
-			<value level="2">PARTY</value>
-			<value level="3">PARTY</value>
-			<value level="4">PARTY_PLEDGE</value>
-			<value level="5">PARTY_PLEDGE</value>
-		</affectScope>
+		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -1602,12 +1578,7 @@
 			<value level="4">50-50</value>
 		</affectLimit>
 		<targetType>SELF</targetType>
-		<affectScope>
-			<value level="1">PARTY</value>
-			<value level="2">PARTY</value>
-			<value level="3">PARTY</value>
-			<value level="4">PARTY_PLEDGE</value>
-		</affectScope>
+		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -1706,12 +1677,7 @@
 			<value level="4">50-50</value>
 		</affectLimit>
 		<targetType>SELF</targetType>
-		<affectScope>
-			<value level="1">PARTY</value>
-			<value level="2">PARTY</value>
-			<value level="3">PARTY</value>
-			<value level="4">PARTY_PLEDGE</value>
-		</affectScope>
+		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<effects>
 			<effect name="DispelBySlotProbability">
@@ -3498,10 +3464,7 @@
 		<isMagic>1</isMagic>
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
-		<affectScope>
-			<value level="1">PARTY</value>
-			<value level="2">PARTY_PLEDGE</value>
-		</affectScope>
+		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
 		<removedOnAnyActionExceptMove>true</removedOnAnyActionExceptMove>
 		<effects>
