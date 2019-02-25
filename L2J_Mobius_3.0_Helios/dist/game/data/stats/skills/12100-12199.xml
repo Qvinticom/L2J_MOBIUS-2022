@@ -2859,7 +2859,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="1124" count="1" /> <!-- Boots of Strength -->
+					</item>
+					<item chance="98">
+						<item id="30434" count="1" /> <!-- Bound Boots of Strength -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12189" toLevel="1" name="Check Item">
@@ -2881,7 +2890,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="880" count="1" /> <!-- Black Pearl Ring -->
+					</item>
+					<item chance="98">
+						<item id="30435" count="1" /> <!-- Bound Black Pearl Ring -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12190" toLevel="1" name="Check Item">
@@ -2903,7 +2921,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="880" count="1" /> <!-- Black Pearl Ring -->
+					</item>
+					<item chance="98">
+						<item id="30435" count="1" /> <!-- Bound Black Pearl Ring -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12191" toLevel="1" name="Check Item">
@@ -2925,7 +2952,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="895" count="1" /> <!-- Black Ore Ring -->
+					</item>
+					<item chance="98">
+						<item id="30437" count="1" /> <!-- Bound Black Ore Ring -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12192" toLevel="1" name="Check Item">
@@ -2947,7 +2983,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="926" count="1" /> <!-- Black Ore Necklace -->
+					</item>
+					<item chance="98">
+						<item id="30438" count="1" /> <!-- Bound Black Ore Necklace -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12193" toLevel="1" name="Check Item">
@@ -2969,7 +3014,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="864" count="1" /> <!-- Black Ore Earring -->
+					</item>
+					<item chance="98">
+						<item id="30439" count="1" /> <!-- Bound Black Ore Earring -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12194" toLevel="1" name="Check Item">
@@ -2991,7 +3045,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="188" count="1" /> <!-- Ghost Staff -->
+					</item>
+					<item chance="98">
+						<item id="30440" count="1" /> <!-- Bound Ghost Staff -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12195" toLevel="1" name="Check Item">
@@ -3013,7 +3076,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="188" count="1" /> <!-- Ghost Staff -->
+					</item>
+					<item chance="98">
+						<item id="30440" count="1" /> <!-- Bound Ghost Staff -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12196" toLevel="1" name="Check Item">
@@ -3035,7 +3107,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="628" count="1" /> <!-- Hoplon -->
+					</item>
+					<item chance="98">
+						<item id="30442" count="1" /> <!-- Bound Hoplon -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12197" toLevel="1" name="Check Item">
@@ -3057,7 +3138,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="2402" count="1" /> <!-- Stockings of Zubei -->
+					</item>
+					<item chance="98">
+						<item id="30443" count="1" /> <!-- Bound Stockings of Zubei -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12198" toLevel="1" name="Check Item">
@@ -3079,7 +3169,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="2404" count="1" /> <!-- Stockings of Doom -->
+					</item>
+					<item chance="98">
+						<item id="30444" count="1" /> <!-- Bound Stockings of Doom -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12199" toLevel="1" name="Check Item">
@@ -3101,7 +3200,22 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="84" count="1" /> <!-- Homunkulus' Sword -->
+					</item>
+					<item chance="32">
+						<item id="30446" count="1" /> <!-- Bound Homunkulus' Sword - Acumen -->
+					</item>
+					<item chance="33">
+						<item id="30447" count="1" /> <!-- Bound Homunkulus' Sword - Conversion -->
+					</item>
+					<item chance="33">
+						<item id="30448" count="1" /> <!-- Bound Homunkulus' Sword - Magic Paralyze -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 </list>
