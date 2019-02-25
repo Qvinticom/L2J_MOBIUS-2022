@@ -19,6 +19,7 @@ package quests.Q00500_BrothersBoundInChains;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.QuestType;
+import com.l2jmobius.gameserver.model.actor.L2Attackable;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventType;
@@ -186,23 +187,47 @@ public class Q00500_BrothersBoundInChains extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_MONSTERS)
 	public void onAttackableKill(OnAttackableKill event)
 	{
-		final QuestState qs = getQuestState(event.getAttacker(), false);
+		final L2PcInstance player = event.getAttacker();
+		if (player == null)
+		{
+			return;
+		}
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return;
 		}
+		final L2Attackable target = event.getTarget();
+		if (target == null)
+		{
+			return;
+		}
 		
-		if (event.getAttacker().getEffectList().isAffectedBySkill(HOUR_OF_PENITENCE))
+		// Retail prohibitions.
+		if ((target.getLevel() - player.getLevel()) < -6)
+		{
+			return;
+		}
+		if (target.isRaid() || target.isRaidMinion())
+		{
+			return;
+		}
+		if (player.getCommandChannel() != null)
+		{
+			return;
+		}
+		
+		if (player.getEffectList().isAffectedBySkill(HOUR_OF_PENITENCE))
 		{
 			// The quest item drops from every 20th mob you kill, in total you need to kill 700 mobs.
 			final int killCount = qs.getInt(KILL_COUNT_VAR);
 			if (killCount >= 20)
 			{
 				// Player can drop more than 35 Crumbs of Penitence but there's no point in getting more than 35 (retail)
-				giveItems(event.getAttacker(), CRUMBS_OF_PENITENCE, 1);
+				giveItems(player, CRUMBS_OF_PENITENCE, 1);
 				qs.set(KILL_COUNT_VAR, 0);
 				
-				if (!qs.isCond(2) && (getQuestItemsCount(event.getAttacker(), CRUMBS_OF_PENITENCE) >= 35))
+				if (!qs.isCond(2) && (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 35))
 				{
 					qs.setCond(2, true);
 				}
