@@ -1,7 +1,7 @@
 L2J-Mobius Salvation
 
 Client: https://drive.google.com/uc?id=1BxapnPqFunwb3_ZXWuyB51b2HyI-KMrj&export=download
-Geodata: http://www.mediafire.com/file/z8y5kmithym8ec6/mobius_geodata_salvation_l2d.zip
+Geodata: https://www.mediafire.com/file/fumq91wlih3fra5/mobius_geodata_salvation_l2d.zip
 JDK: http://www.mediafire.com/file/514ah8a77dk5j7a/jdk-10.0.2_windows-x64_bin.exe
 
 
