@@ -60,6 +60,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.skills.CommonSkill;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
+import com.l2jmobius.gameserver.network.ConnectionState;
 import com.l2jmobius.gameserver.network.Disconnection;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -134,6 +135,8 @@ public class EnterWorld implements IClientIncomingPacket
 			Disconnection.of(client).defaultSequence(false);
 			return;
 		}
+		
+		client.setConnectionState(ConnectionState.IN_GAME);
 		
 		final String[] adress = new String[5];
 		for (int i = 0; i < 5; i++)

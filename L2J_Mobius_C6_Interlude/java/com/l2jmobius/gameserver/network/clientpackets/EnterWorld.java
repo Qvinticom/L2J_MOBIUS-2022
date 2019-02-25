@@ -71,6 +71,7 @@ import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.zone.ZoneId;
 import com.l2jmobius.gameserver.network.Disconnection;
+import com.l2jmobius.gameserver.network.L2GameClient.GameClientState;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.ClientSetTime;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
@@ -125,13 +126,14 @@ public class EnterWorld extends L2GameClientPacket
 	protected void runImpl()
 	{
 		final L2PcInstance activeChar = getClient().getActiveChar();
-		
 		if (activeChar == null)
 		{
 			LOGGER.warning("EnterWorld failed! activeChar is null...");
 			getClient().closeNow();
 			return;
 		}
+		
+		getClient().setState(GameClientState.IN_GAME);
 		
 		// Set lock at login
 		activeChar.setLocked(true);

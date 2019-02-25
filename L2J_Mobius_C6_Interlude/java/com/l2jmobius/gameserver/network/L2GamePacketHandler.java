@@ -138,6 +138,23 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 				}
 				break;
 			}
+			case ENTERING:
+			{
+				switch (opcode)
+				{
+					case 0x03:
+					{
+						msg = new EnterWorld();
+						break;
+					}
+					default:
+					{
+						printDebug(opcode, buf, state, client);
+						break;
+					}
+				}
+				break;
+			}
 			case IN_GAME:
 			{
 				switch (opcode)
@@ -150,11 +167,6 @@ public final class L2GamePacketHandler implements IPacketHandler<L2GameClient>, 
 					// case 0x02:
 					// Say ... not used any more ??
 					// break;
-					case 0x03:
-					{
-						msg = new EnterWorld();
-						break;
-					}
 					case 0x04:
 					{
 						msg = new Action();

@@ -27,5 +27,6 @@ public enum ConnectionState implements IConnectionState
 	DISCONNECTED,
 	CLOSING,
 	AUTHENTICATED,
+	ENTERING,
 	IN_GAME
 }

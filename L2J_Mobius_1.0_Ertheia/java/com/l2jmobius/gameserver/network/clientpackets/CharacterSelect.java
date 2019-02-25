@@ -166,7 +166,7 @@ public class CharacterSelect implements IClientIncomingPacket
 						return;
 					}
 					
-					client.setConnectionState(ConnectionState.IN_GAME);
+					client.setConnectionState(ConnectionState.ENTERING);
 					client.sendPacket(new CharSelected(cha, client.getSessionId().playOkID1));
 				}
 			}
