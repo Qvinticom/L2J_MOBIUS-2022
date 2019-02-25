@@ -325,7 +325,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17928" count="1" /> <!-- Bound Seraph Shoes - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18064" count="1" /> <!-- Blessed Seraph Shoes - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17411" count="1" /> <!-- Seraph Shoes - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12110" toLevel="1" name="Check Item">
@@ -347,7 +359,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17929" count="1" /> <!-- Bound Seraph Sigil - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18065" count="1" /> <!-- Blessed Seraph Sigil - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17412" count="1" /> <!-- Seraph Sigil - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12111" toLevel="1" name="Check Item">
@@ -369,7 +393,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17930" count="1" /> <!-- Bound Seraph Necklace -->
+					</item>
+					<item chance="1">
+						<item id="18066" count="1" /> <!-- Blessed Seraph Necklace -->
+					</item>
+					<item chance="4">
+						<item id="17413" count="1" /> <!-- Seraph Necklace -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12112" toLevel="1" name="Check Item">
@@ -391,7 +427,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17931" count="1" /> <!-- Bound Seraph Earring -->
+					</item>
+					<item chance="1">
+						<item id="18067" count="1" /> <!-- Blessed Seraph Earring -->
+					</item>
+					<item chance="4">
+						<item id="17414" count="1" /> <!-- Seraph Earring -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12113" toLevel="1" name="Check Item">
@@ -413,7 +461,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17932" count="1" /> <!-- Bound Seraph Ring -->
+					</item>
+					<item chance="1">
+						<item id="18068" count="1" /> <!-- Blessed Seraph Ring -->
+					</item>
+					<item chance="4">
+						<item id="17415" count="1" /> <!-- Seraph Ring -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12114" toLevel="1" name="Check Item">
@@ -435,7 +495,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17933" count="1" /> <!-- Bound Helios Shaper -->
+					</item>
+					<item chance="1">
+						<item id="18069" count="1" /> <!-- Blessed Helios Shaper -->
+					</item>
+					<item chance="4">
+						<item id="17416" count="1" /> <!-- Helios Shaper -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12115" toLevel="1" name="Check Item">
@@ -457,7 +529,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17934" count="1" /> <!-- Bound Helios Cutter -->
+					</item>
+					<item chance="1">
+						<item id="18070" count="1" /> <!-- Blessed Helios Cutter -->
+					</item>
+					<item chance="4">
+						<item id="17417" count="1" /> <!-- Helios Cutter -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12116" toLevel="1" name="Check Item">
@@ -479,7 +563,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17935" count="1" /> <!-- Bound Helios Slasher -->
+					</item>
+					<item chance="1">
+						<item id="18071" count="1" /> <!-- Blessed Helios Slasher -->
+					</item>
+					<item chance="4">
+						<item id="17418" count="1" /> <!-- Helios Slasher -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12117" toLevel="1" name="Check Item">
@@ -501,7 +597,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17936" count="1" /> <!-- Bound Helios Avenger -->
+					</item>
+					<item chance="1">
+						<item id="18072" count="1" /> <!-- Blessed Helios Avenger -->
+					</item>
+					<item chance="4">
+						<item id="17419" count="1" /> <!-- Helios Avenger -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12118" toLevel="1" name="Check Item">
@@ -523,7 +631,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17937" count="1" /> <!-- Bound Helios Fighter -->
+					</item>
+					<item chance="1">
+						<item id="18073" count="1" /> <!-- Blessed Helios Fighter -->
+					</item>
+					<item chance="4">
+						<item id="17420" count="1" /> <!-- Helios Fighter -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12119" toLevel="1" name="Check Item">
@@ -545,7 +665,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17938" count="1" /> <!-- Bound Helios Stormer -->
+					</item>
+					<item chance="1">
+						<item id="18074" count="1" /> <!-- Blessed Helios Stormer -->
+					</item>
+					<item chance="4">
+						<item id="17421" count="1" /> <!-- Helios Stormer -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12120" toLevel="1" name="Check Item">
@@ -567,7 +699,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17939" count="1" /> <!-- Bound Helios Thrower -->
+					</item>
+					<item chance="1">
+						<item id="18075" count="1" /> <!-- Blessed Helios Thrower -->
+					</item>
+					<item chance="4">
+						<item id="17422" count="1" /> <!-- Helios Thrower -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12121" toLevel="1" name="Check Item">
@@ -589,7 +733,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17940" count="1" /> <!-- Bound Helios Shooter -->
+					</item>
+					<item chance="1">
+						<item id="18076" count="1" /> <!-- Blessed Helios Shooter -->
+					</item>
+					<item chance="4">
+						<item id="17423" count="1" /> <!-- Helios Shooter -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12122" toLevel="1" name="Check Item">
@@ -611,7 +767,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17941" count="1" /> <!-- Bound Helios Buster -->
+					</item>
+					<item chance="1">
+						<item id="18077" count="1" /> <!-- Blessed Helios Buster -->
+					</item>
+					<item chance="4">
+						<item id="17424" count="1" /> <!-- Helios Buster -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12123" toLevel="1" name="Check Item">
@@ -633,7 +801,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17942" count="1" /> <!-- Bound Helios Caster -->
+					</item>
+					<item chance="1">
+						<item id="18078" count="1" /> <!-- Blessed Helios Caster -->
+					</item>
+					<item chance="4">
+						<item id="17425" count="1" /> <!-- Helios Caster -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12124" toLevel="1" name="Check Item">
@@ -655,7 +835,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17943" count="1" /> <!-- Bound Helios Retributer -->
+					</item>
+					<item chance="1">
+						<item id="18079" count="1" /> <!-- Blessed Helios Retributer -->
+					</item>
+					<item chance="4">
+						<item id="17426" count="1" /> <!-- Helios Retributer -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12125" toLevel="1" name="Check Item">
@@ -677,7 +869,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17944" count="1" /> <!-- Bound Helios Dual Sword -->
+					</item>
+					<item chance="1">
+						<item id="18080" count="1" /> <!-- Blessed Helios Dual Sword -->
+					</item>
+					<item chance="4">
+						<item id="17427" count="1" /> <!-- Helios Dual Sword -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12126" toLevel="1" name="Check Item">
@@ -699,7 +903,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17945" count="1" /> <!-- Bound Helios Dual Dagger -->
+					</item>
+					<item chance="1">
+						<item id="18081" count="1" /> <!-- Blessed Helios Dual Dagger -->
+					</item>
+					<item chance="4">
+						<item id="17428" count="1" /> <!-- Helios Dual Dagger -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12127" toLevel="1" name="Check Item">
@@ -721,7 +937,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17946" count="1" /> <!-- Bound Helios Dual Blunt Weapon -->
+					</item>
+					<item chance="1">
+						<item id="18082" count="1" /> <!-- Blessed Helios Dual Blunt Weapon -->
+					</item>
+					<item chance="4">
+						<item id="17429" count="1" /> <!-- Helios Dual Blunt Weapon -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12128" toLevel="1" name="Check Item">
@@ -743,7 +971,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17947" count="1" /> <!-- Bound Eternal Helmet - Heavy Armor -->
+					</item>
+					<item chance="1">
+						<item id="18083" count="1" /> <!-- Blessed Eternal Helmet - Heavy Armor -->
+					</item>
+					<item chance="4">
+						<item id="17430" count="1" /> <!-- Eternal Helmet - Heavy Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12129" toLevel="1" name="Check Item">
@@ -765,7 +1005,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17948" count="1" /> <!-- Bound Eternal Breastplate - Heavy Armor -->
+					</item>
+					<item chance="1">
+						<item id="18084" count="1" /> <!-- Blessed Eternal Breastplate - Heavy Armor -->
+					</item>
+					<item chance="4">
+						<item id="17431" count="1" /> <!-- Eternal Breastplate - Heavy Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12130" toLevel="1" name="Check Item">
@@ -787,7 +1039,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17949" count="1" /> <!-- Bound Eternal Gaiters - Heavy Armor -->
+					</item>
+					<item chance="1">
+						<item id="18085" count="1" /> <!-- Blessed Eternal Gaiters - Heavy Armor -->
+					</item>
+					<item chance="4">
+						<item id="17432" count="1" /> <!-- Eternal Gaiters - Heavy Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12131" toLevel="1" name="Check Item">
@@ -809,7 +1073,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17950" count="1" /> <!-- Bound Eternal Gauntlets - Heavy Armor -->
+					</item>
+					<item chance="1">
+						<item id="18086" count="1" /> <!-- Blessed Eternal Gauntlets - Heavy Armor -->
+					</item>
+					<item chance="4">
+						<item id="17433" count="1" /> <!-- Eternal Gauntlets - Heavy Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12132" toLevel="1" name="Check Item">
@@ -831,7 +1107,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17951" count="1" /> <!-- Bound Eternal Boots - Heavy Armor -->
+					</item>
+					<item chance="1">
+						<item id="18087" count="1" /> <!-- Blessed Eternal Boots - Heavy Armor -->
+					</item>
+					<item chance="4">
+						<item id="17434" count="1" /> <!-- Eternal Boots - Heavy Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12133" toLevel="1" name="Check Item">
@@ -853,7 +1141,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17952" count="1" /> <!-- Bound Eternal Shield - Heavy Armor -->
+					</item>
+					<item chance="1">
+						<item id="18088" count="1" /> <!-- Blessed Eternal Shield - Heavy Armor -->
+					</item>
+					<item chance="4">
+						<item id="17435" count="1" /> <!-- Eternal Shield - Heavy Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12134" toLevel="1" name="Check Item">
@@ -875,7 +1175,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17953" count="1" /> <!-- Bound Eternal Leather Helmet - Light Armor -->
+					</item>
+					<item chance="1">
+						<item id="18089" count="1" /> <!-- Blessed Eternal Leather Helmet - Light Armor -->
+					</item>
+					<item chance="4">
+						<item id="17436" count="1" /> <!-- Eternal Leather Helmet - Light Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12135" toLevel="1" name="Check Item">
@@ -897,7 +1209,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17954" count="1" /> <!-- Bound Eternal Leather Armor - Light Armor -->
+					</item>
+					<item chance="1">
+						<item id="18090" count="1" /> <!-- Blessed Eternal Leather Armor - Light Armor -->
+					</item>
+					<item chance="4">
+						<item id="17437" count="1" /> <!-- Eternal Leather Armor - Light Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12136" toLevel="1" name="Check Item">
@@ -919,7 +1243,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17955" count="1" /> <!-- Bound Eternal Leather Leggings - Light Armor -->
+					</item>
+					<item chance="1">
+						<item id="18091" count="1" /> <!-- Blessed Eternal Leather Leggings - Light Armor -->
+					</item>
+					<item chance="4">
+						<item id="17438" count="1" /> <!-- Eternal Leather Leggings - Light Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12137" toLevel="1" name="Check Item">
@@ -941,7 +1277,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17956" count="1" /> <!-- Bound Eternal Leather Gloves - Light Armor -->
+					</item>
+					<item chance="1">
+						<item id="18092" count="1" /> <!-- Blessed Eternal Leather Gloves - Light Armor -->
+					</item>
+					<item chance="4">
+						<item id="17439" count="1" /> <!-- Eternal Leather Gloves - Light Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12138" toLevel="1" name="Check Item">
@@ -963,7 +1311,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17957" count="1" /> <!-- Bound Eternal Leather Boots - Light Armor -->
+					</item>
+					<item chance="1">
+						<item id="18093" count="1" /> <!-- Blessed Eternal Leather Boots - Light Armor -->
+					</item>
+					<item chance="4">
+						<item id="17440" count="1" /> <!-- Eternal Leather Boots - Light Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12139" toLevel="1" name="Check Item">
@@ -985,7 +1345,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17958" count="1" /> <!-- Bound Eternal Circlet - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18094" count="1" /> <!-- Blessed Eternal Circlet - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17441" count="1" /> <!-- Eternal Circlet - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12140" toLevel="1" name="Check Item">
@@ -1007,7 +1379,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17959" count="1" /> <!-- Bound Eternal Tunic - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18095" count="1" /> <!-- Blessed Eternal Tunic - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17442" count="1" /> <!-- Eternal Tunic - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12141" toLevel="1" name="Check Item">
@@ -1029,7 +1413,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17960" count="1" /> <!-- Bound Eternal Stockings - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18096" count="1" /> <!-- Blessed Eternal Stockings - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17443" count="1" /> <!-- Eternal Stockings - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12142" toLevel="1" name="Check Item">
@@ -1051,7 +1447,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17961" count="1" /> <!-- Bound Eternal Gloves - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18097" count="1" /> <!-- Blessed Eternal Gloves - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17444" count="1" /> <!-- Eternal Gloves - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12143" toLevel="1" name="Check Item">
@@ -1073,7 +1481,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17962" count="1" /> <!-- Bound Eternal Shoes - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18098" count="1" /> <!-- Blessed Eternal Shoes - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17445" count="1" /> <!-- Eternal Shoes - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12144" toLevel="1" name="Check Item">
@@ -1095,7 +1515,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17963" count="1" /> <!-- Bound Eternal Sigil - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18099" count="1" /> <!-- Blessed Eternal Sigil - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17446" count="1" /> <!-- Eternal Sigil - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12145" toLevel="1" name="Check Item">
@@ -1117,7 +1549,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17964" count="1" /> <!-- Bound Eternal Necklace -->
+					</item>
+					<item chance="1">
+						<item id="18100" count="1" /> <!-- Blessed Eternal Necklace -->
+					</item>
+					<item chance="4">
+						<item id="17447" count="1" /> <!-- Eternal Necklace -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12146" toLevel="1" name="Check Item">
@@ -1139,7 +1583,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17965" count="1" /> <!-- Bound Eternal Earring -->
+					</item>
+					<item chance="1">
+						<item id="18101" count="1" /> <!-- Blessed Eternal Earring -->
+					</item>
+					<item chance="4">
+						<item id="17448" count="1" /> <!-- Eternal Earring -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12147" toLevel="1" name="Check Item">
@@ -1161,7 +1617,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17966" count="1" /> <!-- Bound Eternal Ring -->
+					</item>
+					<item chance="1">
+						<item id="18102" count="1" /> <!-- Blessed Eternal Ring -->
+					</item>
+					<item chance="4">
+						<item id="17449" count="1" /> <!-- Eternal Ring -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12148" toLevel="1" name="Check Item">
@@ -1183,7 +1651,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17450</itemId> <!-- Blessed Kaliel Shaper -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12149" toLevel="1" name="Check Item">
@@ -1205,7 +1676,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17451</itemId> <!-- Blessed Kaliel Cutter -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12150" toLevel="1" name="Check Item">
@@ -1227,7 +1701,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17452</itemId> <!-- Blessed Kaliel Slasher -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12151" toLevel="1" name="Check Item">
@@ -1249,7 +1726,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17453</itemId> <!-- Blessed Kaliel Avenger -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12152" toLevel="1" name="Check Item">
@@ -1271,7 +1751,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17454</itemId> <!-- Blessed Kaliel Fighter -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12153" toLevel="1" name="Check Item">
@@ -1293,7 +1776,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17455</itemId> <!-- Blessed Kaliel Stormer -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12154" toLevel="1" name="Check Item">
@@ -1315,7 +1801,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17456</itemId> <!-- Blessed Kaliel Thrower -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12155" toLevel="1" name="Check Item">
@@ -1337,7 +1826,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17457</itemId> <!-- Blessed Kaliel Shooter -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12156" toLevel="1" name="Check Item">
@@ -1359,7 +1851,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17458</itemId> <!-- Blessed Kaliel Buster -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12157" toLevel="1" name="Check Item">
@@ -1381,7 +1876,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17459</itemId> <!-- Blessed Kaliel Caster -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12158" toLevel="1" name="Check Item">
@@ -1403,7 +1901,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17460</itemId> <!-- Blessed Kaliel Retributer -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12159" toLevel="1" name="Check Item">
@@ -1425,7 +1926,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17461</itemId> <!-- Blessed Kaliel Dual Sword -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12160" toLevel="1" name="Check Item">
@@ -1447,7 +1951,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17462</itemId> <!-- Blessed Kaliel Dual Dagger -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12161" toLevel="1" name="Check Item">
@@ -1469,7 +1976,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17463</itemId> <!-- Blessed Kaliel Dual Blunt Weapon -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12162" toLevel="1" name="Check Item">
@@ -1491,7 +2001,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17464</itemId> <!-- Blessed Durandia Helmet - Heavy Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12163" toLevel="1" name="Check Item">
@@ -1513,7 +2026,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17465</itemId> <!-- Blessed Durandia Breastplate - Heavy Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12164" toLevel="1" name="Check Item">
@@ -1535,7 +2051,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17466</itemId> <!-- Blessed Durandia Gaiters - Heavy Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12165" toLevel="1" name="Check Item">
@@ -1557,7 +2076,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17467</itemId> <!-- Blessed Durandia Gauntlets - Heavy Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12166" toLevel="1" name="Check Item">
@@ -1579,7 +2101,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17468</itemId> <!-- Blessed Durandia Boots - Heavy Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12167" toLevel="1" name="Check Item">
@@ -1601,7 +2126,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17469</itemId> <!-- Blessed Durandia Shield - Heavy Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12168" toLevel="1" name="Check Item">
@@ -1623,7 +2151,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17470</itemId> <!-- Blessed Durandia Leather Helmet - Light Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12169" toLevel="1" name="Check Item">
@@ -1645,7 +2176,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17471</itemId> <!-- Blessed Durandia Leather Armor - Light Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12170" toLevel="1" name="Check Item">
@@ -1667,7 +2201,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17472</itemId> <!-- Blessed Durandia Leather Leggings - Light Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12171" toLevel="1" name="Check Item">
@@ -1689,7 +2226,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17473</itemId> <!-- Blessed Durandia Leather Gloves - Light Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12172" toLevel="1" name="Check Item">
@@ -1711,7 +2251,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17474</itemId> <!-- Blessed Durandia Leather Boots - Light Armor -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12173" toLevel="1" name="Check Item">
@@ -1733,7 +2276,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17475</itemId> <!-- Blessed Durandia Circlet - Robe -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12174" toLevel="1" name="Check Item">
@@ -1755,7 +2301,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17476</itemId> <!-- Blessed Durandia Tunic - Robe -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12175" toLevel="1" name="Check Item">
@@ -1777,7 +2326,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17477</itemId> <!-- Blessed Durandia Stockings - Robe -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12176" toLevel="1" name="Check Item">
@@ -1799,7 +2351,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17478</itemId> <!-- Blessed Durandia Gloves - Robe -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12177" toLevel="1" name="Check Item">
@@ -1821,7 +2376,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17479</itemId> <!-- Blessed Durandia Shoes - Robe -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12178" toLevel="1" name="Check Item">
@@ -1843,7 +2401,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17480</itemId> <!-- Blessed Durandia Sigil - Robe -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12179" toLevel="1" name="Check Item">
@@ -1865,7 +2426,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17481</itemId> <!-- Blessed Durandia Necklace -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12180" toLevel="1" name="Check Item">
@@ -1887,7 +2451,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17482</itemId> <!-- Blessed Durandia Earring -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12181" toLevel="1" name="Check Item">
@@ -1909,7 +2476,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>17483</itemId> <!-- Blessed Durandia Ring -->
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12182" toLevel="1" name="Wig Box">
