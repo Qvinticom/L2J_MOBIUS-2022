@@ -44,7 +44,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	private static final int PENITENT_MANACLES = 70806;
 	private static final int CRUMBS_OF_PENITENCE = 70807;
 	// Skill
-	private static final int HOUR_OF_PENITENCE = 55702;
+	private static final int HOUR_OF_PENITENCE = 15325;
 	// Agathion
 	private static final int SIN_EATER = 9021;
 	// Other
@@ -74,7 +74,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 			{
 				if (player != null)
 				{
-					final Skill skill = SkillData.getInstance().getSkill(15325, 1); // Hour of Penitence
+					final Skill skill = SkillData.getInstance().getSkill(HOUR_OF_PENITENCE, 1); // Hour of Penitence
 					skill.activateSkill(player, player);
 					startQuestTimer("buff", 270000, null, player); // Rebuff every 4min30 (retail like)
 				}
