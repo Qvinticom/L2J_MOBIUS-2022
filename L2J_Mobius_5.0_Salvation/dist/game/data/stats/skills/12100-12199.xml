@@ -19,7 +19,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17919" count="1" /> <!-- Bound Seraph Leather Helmet - Light Armor -->
+					</item>
+					<item chance="1">
+						<item id="18055" count="1" /> <!-- Blessed Seraph Leather Helmet - Light Armor -->
+					</item>
+					<item chance="4">
+						<item id="17402" count="1" /> <!-- Seraph Leather Helmet - Light Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12101" toLevel="1" name="Check Item">
@@ -41,7 +53,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17920" count="1" /> <!-- Bound Seraph Leather Armor - Light Armor -->
+					</item>
+					<item chance="1">
+						<item id="18056" count="1" /> <!-- Blessed Seraph Leather Armor - Light Armor -->
+					</item>
+					<item chance="4">
+						<item id="17403" count="1" /> <!-- Seraph Leather Armor - Light Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12102" toLevel="1" name="Check Item">
@@ -63,7 +87,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17921" count="1" /> <!-- Bound Seraph Leather Leggings - Light Armor -->
+					</item>
+					<item chance="1">
+						<item id="18057" count="1" /> <!-- Blessed Seraph Leather Leggings - Light Armor -->
+					</item>
+					<item chance="4">
+						<item id="17404" count="1" /> <!-- Seraph Leather Leggings - Light Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12103" toLevel="1" name="Check Item">
@@ -85,7 +121,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17922" count="1" /> <!-- Bound Seraph Leather Gloves - Light Armor -->
+					</item>
+					<item chance="1">
+						<item id="18058" count="1" /> <!-- Blessed Seraph Leather Gloves - Light Armor -->
+					</item>
+					<item chance="4">
+						<item id="17405" count="1" /> <!-- Seraph Leather Gloves - Light Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12104" toLevel="1" name="Check Item">
@@ -107,7 +155,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17923" count="1" /> <!-- Bound Seraph Leather Boots - Light Armor -->
+					</item>
+					<item chance="1">
+						<item id="18059" count="1" /> <!-- Blessed Seraph Leather Boots - Light Armor -->
+					</item>
+					<item chance="4">
+						<item id="17406" count="1" /> <!-- Seraph Leather Boots - Light Armor -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12105" toLevel="1" name="Check Item">
@@ -129,7 +189,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17924" count="1" /> <!-- Bound Seraph Circlet - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18060" count="1" /> <!-- Blessed Seraph Circlet - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17407" count="1" /> <!-- Seraph Circlet - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12106" toLevel="1" name="Check Item">
@@ -151,7 +223,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17925" count="1" /> <!-- Bound Seraph Tunic - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18061" count="1" /> <!-- Blessed Seraph Tunic - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17408" count="1" /> <!-- Seraph Tunic - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12107" toLevel="1" name="Check Item">
@@ -173,7 +257,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17926" count="1" /> <!-- Bound Seraph Stockings - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18062" count="1" /> <!-- Blessed Seraph Stockings - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17409" count="1" /> <!-- Seraph Stockings - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12108" toLevel="1" name="Check Item">
@@ -195,7 +291,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="95">
+						<item id="17927" count="1" /> <!-- Bound Seraph Gloves - Robe -->
+					</item>
+					<item chance="1">
+						<item id="18063" count="1" /> <!-- Blessed Seraph Gloves - Robe -->
+					</item>
+					<item chance="4">
+						<item id="17410" count="1" /> <!-- Seraph Gloves - Robe -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12109" toLevel="1" name="Check Item">

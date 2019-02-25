@@ -2573,7 +2573,10 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="Restoration">
+				<itemId>8059</itemId>
+				<itemCount>1</itemCount>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="2261" toLevel="9" name="Small Green Nimble Fish (High-grade)">

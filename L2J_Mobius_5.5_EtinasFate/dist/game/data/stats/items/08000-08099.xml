@@ -765,9 +765,9 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
-		<createItems>
-			<item id="8059" count="1" chance="100" /> <!-- Research Report -->
-		</createItems>
+		<skills>
+			<skill id="2260" level="1" /> <!-- Key of Enigma -->
+		</skills>
 	</item>
 	<item id="8059" name="Research Report" type="EtcItem">
 		<!-- Unlock the padlock to read Dr. Chaos' research report. -->
@@ -803,9 +803,6 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
-		<createItems>
-			<item id="8059" count="1" chance="100" /> <!-- Research Report -->
-		</createItems>
 		<skills>
 			<skill id="2260" level="1" /> <!-- Key of Enigma -->
 		</skills>
