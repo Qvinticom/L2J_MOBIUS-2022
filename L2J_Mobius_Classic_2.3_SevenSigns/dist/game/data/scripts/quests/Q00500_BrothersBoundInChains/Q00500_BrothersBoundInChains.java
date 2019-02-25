@@ -1,0 +1,216 @@
+/*
+ * This file is part of the L2J Mobius project.
+ * 
+ * This program is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ * 
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
+ * General Public License for more details.
+ * 
+ * You should have received a copy of the GNU General Public License
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+ */
+package quests.Q00500_BrothersBoundInChains;
+
+import com.l2jmobius.commons.util.Rnd;
+import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.enums.QuestType;
+import com.l2jmobius.gameserver.model.actor.L2Npc;
+import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.EventType;
+import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
+import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
+import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
+import com.l2jmobius.gameserver.model.quest.Quest;
+import com.l2jmobius.gameserver.model.quest.QuestState;
+import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.model.skills.Skill;
+
+/**
+ * @author Mobius (Based on GoD quest.)
+ * @URL https://l2wiki.com/classic/Brothers_Bound_in_Chains
+ */
+public class Q00500_BrothersBoundInChains extends Quest
+{
+	// NPC
+	private static final int DARK_JUDGE = 30981;
+	// Items
+	private static final int GEMSTONE_B = 2132;
+	private static final int PENITENT_MANACLES = 70806;
+	private static final int CRUMBS_OF_PENITENCE = 70807;
+	// Skill
+	private static final int HOUR_OF_PENITENCE = 55702;
+	// Agathion
+	private static final int SIN_EATER = 9021;
+	// Other
+	private static final String KILL_COUNT_VAR = "killCount";
+	
+	public Q00500_BrothersBoundInChains()
+	{
+		super(500);
+		addStartNpc(DARK_JUDGE);
+		addTalkId(DARK_JUDGE);
+		addSummonAgathion();
+		registerQuestItems(PENITENT_MANACLES, CRUMBS_OF_PENITENCE);
+	}
+	
+	@Override
+	public String onAdvEvent(String event, L2Npc npc, L2PcInstance player)
+	{
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
+		{
+			return getNoQuestMsg(player);
+		}
+		
+		switch (event)
+		{
+			case "buff":
+			{
+				if (player != null)
+				{
+					final Skill skill = SkillData.getInstance().getSkill(15325, 1); // Hour of Penitence
+					skill.activateSkill(player, player);
+					startQuestTimer("buff", 270000, null, player); // Rebuff every 4min30 (retail like)
+				}
+				return null;
+			}
+			case "30981-02.htm":
+			case "30981-03.htm":
+			{
+				break;
+			}
+			case "30981-04.htm":
+			{
+				if (getQuestItemsCount(player, GEMSTONE_B) >= 30)
+				{
+					takeItems(player, GEMSTONE_B, 30);
+					giveItems(player, PENITENT_MANACLES, 1);
+				}
+				else
+				{
+					event = "30981-05.html";
+				}
+				break;
+			}
+			case "30981-06.htm":
+			{
+				qs.startQuest();
+				break;
+			}
+			case "30981-09.html": // not retail html.
+			{
+				if (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 35)
+				{
+					takeItems(player, CRUMBS_OF_PENITENCE, -1);
+					player.setPkKills(Math.max(0, player.getPkKills() - Rnd.get(1, 3)));
+					qs.unset(KILL_COUNT_VAR);
+					qs.exitQuest(QuestType.DAILY, true);
+				}
+				else
+				{
+					// If player delete QuestItems: Need check how it work on retail.
+					qs.setCond(1);
+					event = "30981-07.html";
+				}
+				break;
+			}
+			default:
+			{
+				event = getNoQuestMsg(player);
+			}
+		}
+		
+		return event;
+	}
+	
+	@Override
+	public String onTalk(L2Npc npc, L2PcInstance talker)
+	{
+		final QuestState qs = getQuestState(talker, true);
+		String htmltext = getNoQuestMsg(talker);
+		
+		switch (qs.getState())
+		{
+			case State.CREATED:
+			{
+				htmltext = (talker.getPkKills() > 0) && (talker.getReputation() >= 0) ? "30981-01.htm" : "30981-nopk.htm";
+				break;
+			}
+			case State.STARTED:
+			{
+				switch (qs.getCond())
+				{
+					case 1:
+					{
+						htmltext = "30981-07.html";
+						break;
+					}
+					case 2:
+					{
+						htmltext = "30981-08.html"; // not retail html.
+						break;
+					}
+				}
+				break;
+			}
+			case State.COMPLETED:
+			{
+				if (qs.isNowAvailable())
+				{
+					qs.setState(State.CREATED);
+					htmltext = "30981-01.htm";
+				}
+				break;
+			}
+		}
+		
+		return htmltext;
+	}
+	
+	@Override
+	public void onSummonAgathion(L2PcInstance player, int agathionId)
+	{
+		if (SIN_EATER == agathionId)
+		{
+			startQuestTimer("buff", 2500, null, player);
+		}
+	}
+	
+	@RegisterEvent(EventType.ON_ATTACKABLE_KILL)
+	@RegisterType(ListenerRegisterType.GLOBAL_MONSTERS)
+	public void onAttackableKill(OnAttackableKill event)
+	{
+		final QuestState qs = getQuestState(event.getAttacker(), false);
+		if (qs == null)
+		{
+			return;
+		}
+		
+		if (event.getAttacker().getEffectList().isAffectedBySkill(HOUR_OF_PENITENCE))
+		{
+			// The quest item drops from every 20th mob you kill, in total you need to kill 700 mobs.
+			final int killCount = qs.getInt(KILL_COUNT_VAR);
+			if (killCount >= 20)
+			{
+				// Player can drop more than 35 Crumbs of Penitence but there's no point in getting more than 35 (retail)
+				giveItems(event.getAttacker(), CRUMBS_OF_PENITENCE, 1);
+				qs.set(KILL_COUNT_VAR, 0);
+				
+				if (!qs.isCond(2) && (getQuestItemsCount(event.getAttacker(), CRUMBS_OF_PENITENCE) >= 35))
+				{
+					qs.setCond(2, true);
+				}
+			}
+			else
+			{
+				qs.set(KILL_COUNT_VAR, killCount + 1);
+			}
+		}
+	}
+}
