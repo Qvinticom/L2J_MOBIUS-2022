@@ -19,7 +19,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="912" count="1" /> <!-- Near Forest Necklace -->
+					</item>
+					<item chance="98">
+						<item id="30814" count="1" /> <!-- Bound Near Forest Necklace -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12401" toLevel="1" name="Check Item">
@@ -41,7 +50,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="912" count="1" /> <!-- Near Forest Necklace -->
+					</item>
+					<item chance="98">
+						<item id="30814" count="1" /> <!-- Bound Near Forest Necklace -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12402" toLevel="1" name="Check Item">
@@ -63,7 +81,22 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="289" count="1" /> <!-- Soul Bow -->
+					</item>
+					<item chance="32">
+						<item id="30819" count="1" /> <!-- Bound Soul Bow - Critical Poison -->
+					</item>
+					<item chance="33">
+						<item id="30817" count="1" /> <!-- Bound Soul Bow - Cheap Shot -->
+					</item>
+					<item chance="33">
+						<item id="30818" count="1" /> <!-- Bound Soul Bow - Quick Recovery -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12403" toLevel="1" name="Check Item">
@@ -85,7 +118,22 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="7894" count="1" /> <!-- Spiritual Eye -->
+					</item>
+					<item chance="32">
+						<item id="30823" count="1" /> <!-- Bound Spiritual Eye - Acumen -->
+					</item>
+					<item chance="33">
+						<item id="30821" count="1" /> <!-- Bound Spiritual Eye - Mana Up -->
+					</item>
+					<item chance="33">
+						<item id="30822" count="1" /> <!-- Bound Spiritual Eye - Magic Poison -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12404" toLevel="1" name="Check Item">
@@ -107,7 +155,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="885" count="1" /> <!-- Ring of Ages -->
+					</item>
+					<item chance="98">
+						<item id="30824" count="1" /> <!-- Bound Ring of Ages -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12405" toLevel="1" name="Check Item">
@@ -129,7 +186,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="885" count="1" /> <!-- Ring of Ages -->
+					</item>
+					<item chance="98">
+						<item id="30824" count="1" /> <!-- Bound Ring of Ages -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12406" toLevel="1" name="Check Item">
@@ -151,7 +217,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="325" count="1" /> <!-- Horn of Glory -->
+					</item>
+					<item chance="98">
+						<item id="30826" count="1" /> <!-- Bound Horn of Glory -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12407" toLevel="1" name="Check Item">
@@ -173,7 +248,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="181" count="1" /> <!-- Mace of Miracle -->
+					</item>
+					<item chance="98">
+						<item id="30827" count="1" /> <!-- Bound Mace of Miracle -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12408" toLevel="1" name="Check Item">
@@ -195,7 +279,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="466" count="1" /> <!-- Elven Stockings -->
+					</item>
+					<item chance="98">
+						<item id="30828" count="1" /> <!-- Bound Elven Stockings -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12409" toLevel="1" name="Check Item">
