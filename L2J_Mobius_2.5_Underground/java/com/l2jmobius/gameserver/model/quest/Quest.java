@@ -1001,19 +1001,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 		return false;
 	}
 	
-	public final void notifySummonAgathion(L2PcInstance player, int npcId)
-	{
-		try
-		{
-			onSummonAgathion(player, npcId);
-		}
-		catch (Exception e)
-		{
-			LOGGER.log(Level.WARNING, "Exception on onSummonAgathion() in notifySummonAgathion(): " + e.getMessage(), e);
-			return;
-		}
-	}
-	
 	// These are methods that java calls to invoke scripts.
 	
 	/**
@@ -1493,10 +1480,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	 * @param npc NPC which will be despawned
 	 */
 	public void onNpcDespawn(L2Npc npc)
-	{
-	}
-	
-	public void onSummonAgathion(L2PcInstance player, int agathionId)
 	{
 	}
 	
@@ -2412,11 +2395,6 @@ public class Quest extends AbstractScript implements IIdentifiable
 	public void addInstanceLeaveId(Collection<Integer> templateIds)
 	{
 		setInstanceLeaveId(event -> onInstanceLeave(event.getPlayer(), event.getInstanceWorld()), templateIds);
-	}
-	
-	public void addSummonAgathion()
-	{
-		setPlayerSummonAgathion(event -> notifySummonAgathion(event.getPlayer(), event.getAgathionId()));
 	}
 	
 	/**

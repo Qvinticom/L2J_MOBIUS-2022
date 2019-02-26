@@ -16,28 +16,28 @@
  */
 package quests.Q00500_BrothersBoundInChains;
 
-import java.util.stream.IntStream;
-
-import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.enums.QuestType;
-import com.l2jmobius.gameserver.model.CharEffectList;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterEvent;
 import com.l2jmobius.gameserver.model.events.annotations.RegisterType;
 import com.l2jmobius.gameserver.model.events.impl.character.npc.OnAttackableKill;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSummonAgathion;
+import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerUnsummonAgathion;
+import com.l2jmobius.gameserver.model.events.listeners.ConsumerEventListener;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
 /**
- * @author Mathael
+ * Brothers Bound in Chains (500)
+ * @author Mathael, Mobius
  * @URL https://l2wiki.com/Brothers_Bound_in_Chains
- * @version Infinite Odyssey
  */
 public class Q00500_BrothersBoundInChains extends Quest
 {
@@ -47,26 +47,12 @@ public class Q00500_BrothersBoundInChains extends Quest
 	private static final int GEMSTONE_B = 2132;
 	private static final int PENITENT_MANACLES = 36060;
 	private static final int CRUMBS_OF_PENITENCE = 36077;
-	// Skills
-	private static final int HOUR_OF_PENITENCE[] =
-	{
-		15325,
-		15326,
-		15327,
-		15328,
-		15329
-	};
-	// Agathions
-	private static final int SIN_EATERS[] =
-	{
-		16098,
-		16099,
-		16100,
-		16101,
-		16102
-	};
-	// Misc
-	private static final int DROP_QI_CHANCE = 5; // in % TODO: check that value
+	// Skill
+	private static final int HOUR_OF_PENITENCE = 15325;
+	// Agathion
+	private static final int SIN_EATER = 16098;
+	// Others
+	private static final int DROP_QI_CHANCE = 5;
 	private static final int MIN_LEVEL = 85;
 	
 	public Q00500_BrothersBoundInChains()
@@ -74,9 +60,11 @@ public class Q00500_BrothersBoundInChains extends Quest
 		super(500);
 		addStartNpc(DARK_JUDGE);
 		addTalkId(DARK_JUDGE);
-		addSummonAgathion();
 		registerQuestItems(PENITENT_MANACLES, CRUMBS_OF_PENITENCE);
 		addCondMinLevel(MIN_LEVEL, "30981-nopk.htm");
+		
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_SUMMON_AGATHION, (OnPlayerSummonAgathion event) -> OnPlayerSummonAgathion(event), this));
+		Containers.Global().addListener(new ConsumerEventListener(Containers.Global(), EventType.ON_PLAYER_UNSUMMON_AGATHION, (OnPlayerUnsummonAgathion event) -> OnPlayerUnsummonAgathion(event), this));
 	}
 	
 	@Override
@@ -92,9 +80,9 @@ public class Q00500_BrothersBoundInChains extends Quest
 		{
 			case "buff":
 			{
-				if (player != null)
+				if ((player != null) && (player.getAgathionId() == SIN_EATER))
 				{
-					final Skill skill = SkillData.getInstance().getSkill(15325, 1); // Hour of Penitence
+					final Skill skill = SkillData.getInstance().getSkill(HOUR_OF_PENITENCE, 1); // Hour of Penitence
 					skill.activateSkill(player, player);
 					startQuestTimer("buff", 270000, null, player); // Rebuff every 4min30 (retail like)
 				}
@@ -128,7 +116,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 				if (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 10)
 				{
 					takeItems(player, CRUMBS_OF_PENITENCE, -1);
-					player.setPkKills(Math.max(0, player.getPkKills() - Rnd.get(1, 10)));
+					player.setPkKills(Math.max(0, player.getPkKills() - getRandom(1, 10)));
 					qs.exitQuest(QuestType.DAILY, true);
 				}
 				else
@@ -192,12 +180,42 @@ public class Q00500_BrothersBoundInChains extends Quest
 		return htmltext;
 	}
 	
-	@Override
-	public void onSummonAgathion(L2PcInstance player, int agathionId)
+	private void OnPlayerSummonAgathion(OnPlayerSummonAgathion event)
 	{
-		if (IntStream.of(SIN_EATERS).anyMatch(x -> x == agathionId)) // TODO: Register IDs
+		final L2PcInstance player = event.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
+		{
+			return;
+		}
+		
+		if (event.getAgathionId() == SIN_EATER)
 		{
 			startQuestTimer("buff", 2500, null, player);
+		}
+	}
+	
+	private void OnPlayerUnsummonAgathion(OnPlayerUnsummonAgathion event)
+	{
+		final L2PcInstance player = event.getPlayer();
+		if (player == null)
+		{
+			return;
+		}
+		final QuestState qs = getQuestState(player, false);
+		if (qs == null)
+		{
+			return;
+		}
+		
+		if (event.getAgathionId() == SIN_EATER)
+		{
+			cancelQuestTimer("buff", null, player);
+			player.getEffectList().stopSkillEffects(true, HOUR_OF_PENITENCE);
 		}
 	}
 	
@@ -205,32 +223,23 @@ public class Q00500_BrothersBoundInChains extends Quest
 	@RegisterType(ListenerRegisterType.GLOBAL_MONSTERS)
 	public void onAttackableKill(OnAttackableKill event)
 	{
-		final QuestState qs = getQuestState(event.getAttacker(), false);
+		final L2PcInstance player = event.getAttacker();
+		if (player == null)
+		{
+			return;
+		}
+		final QuestState qs = getQuestState(player, false);
 		if (qs == null)
 		{
 			return;
 		}
 		
-		// Player can drop more than 10 Crumbs of Penitence but there's no point in getting more than 10 (retail)
-		boolean isAffectedByHourOfPenitence = false;
-		final CharEffectList effects = event.getAttacker().getEffectList();
-		for (int i = 0; !isAffectedByHourOfPenitence && (i < HOUR_OF_PENITENCE.length); i++)
+		if (player.getEffectList().isAffectedBySkill(HOUR_OF_PENITENCE) && (getRandom(100) < DROP_QI_CHANCE))
 		{
-			if (effects.isAffectedBySkill(HOUR_OF_PENITENCE[i]))
+			giveItems(player, CRUMBS_OF_PENITENCE, 1);
+			if (!qs.isCond(2) && (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 10))
 			{
-				isAffectedByHourOfPenitence = true;
-			}
-		}
-		
-		if (isAffectedByHourOfPenitence)
-		{
-			if (Rnd.get(1, 100) <= DROP_QI_CHANCE)
-			{
-				giveItems(event.getAttacker(), CRUMBS_OF_PENITENCE, 1);
-				if (!qs.isCond(2) && (getQuestItemsCount(event.getAttacker(), CRUMBS_OF_PENITENCE) >= 10))
-				{
-					qs.setCond(2, true);
-				}
+				qs.setCond(2, true);
 			}
 		}
 	}

@@ -64,6 +64,6 @@ public final class SummonAgathion extends AbstractEffect
 		player.sendPacket(new ExUserInfoCubic(player));
 		player.broadcastCharInfo();
 		
-		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonAgathion(effector.getActingPlayer(), _npcId));
+		EventDispatcher.getInstance().notifyEventAsync(new OnPlayerSummonAgathion(player, _npcId));
 	}
 }

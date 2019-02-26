@@ -101,7 +101,6 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerLogou
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionCancel;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerProfessionChange;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSkillLearn;
-import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSummonAgathion;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSummonSpawn;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSummonTalk;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnTrapAction;
@@ -1505,13 +1504,6 @@ public abstract class AbstractScript extends ManagedScript implements IEventTime
 	protected final List<AbstractEventListener> setInstanceStatusChangeId(Consumer<OnInstanceStatusChange> callback, Collection<Integer> templateIds)
 	{
 		return registerConsumer(callback, EventType.ON_INSTANCE_STATUS_CHANGE, ListenerRegisterType.INSTANCE, templateIds);
-	}
-	
-	// ---------------------------------------------------------------------------------------------------------------------------
-	
-	protected final List<AbstractEventListener> setPlayerSummonAgathion(Consumer<OnPlayerSummonAgathion> callback)
-	{
-		return registerConsumer(callback, EventType.ON_PLAYER_SUMMON_AGATHION, ListenerRegisterType.GLOBAL);
 	}
 	
 	// --------------------------------------------------------------------------------------------------
