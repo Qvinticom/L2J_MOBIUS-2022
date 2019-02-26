@@ -19,7 +19,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="889" count="1" /> <!-- Tateossian Ring -->
+					</item>
+					<item chance="98">
+						<item id="30628" count="1" /> <!-- Bound Tateossian Ring -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12301" toLevel="1" name="Check Item">
@@ -41,7 +50,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="920" count="1" /> <!-- Tateossian Necklace -->
+					</item>
+					<item chance="98">
+						<item id="30629" count="1" /> <!-- Bound Tateossian Necklace -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12302" toLevel="1" name="Check Item">
@@ -63,7 +81,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="849" count="1" /> <!-- Tiger's Eye -->
+					</item>
+					<item chance="98">
+						<item id="30630" count="1" /> <!-- Bound Tiger's Eye -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12303" toLevel="1" name="Check Item">
@@ -85,7 +112,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="849" count="1" /> <!-- Tiger's Eye -->
+					</item>
+					<item chance="98">
+						<item id="30630" count="1" /> <!-- Bound Tiger's Eye -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12304" toLevel="1" name="Check Item">
@@ -107,7 +143,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="103" count="1" /> <!-- Tower Shield -->
+					</item>
+					<item chance="98">
+						<item id="30632" count="1" /> <!-- Bound Tower Shield -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12305" toLevel="1" name="Check Item">
@@ -129,7 +174,22 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="9288" count="1" /> <!-- Tathlum -->
+					</item>
+					<item chance="32">
+						<item id="30634" count="1" /> <!-- Bound Tathlum - Guidance -->
+					</item>
+					<item chance="33">
+						<item id="30635" count="1" /> <!-- Bound Tathlum - Evasion -->
+					</item>
+					<item chance="33">
+						<item id="30636" count="1" /> <!-- Bound Tathlum - Miser -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12306" toLevel="1" name="Check Item">
@@ -151,7 +211,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="158" count="1" /> <!-- Tarbar -->
+					</item>
+					<item chance="98">
+						<item id="30637" count="1" /> <!-- Bound Tarbar -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12307" toLevel="1" name="Check Item">
@@ -173,7 +242,16 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="70" count="1" /> <!-- Claymore -->
+					</item>
+					<item chance="98">
+						<item id="30638" count="1" /> <!-- Bound Claymore -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12308" toLevel="1" name="Check Item">
@@ -195,7 +273,22 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="2">
+						<item id="89" count="1" /> <!-- Big Hammer -->
+					</item>
+					<item chance="32">
+						<item id="30642" count="1" /> <!-- Bound Big Hammer - Haste -->
+					</item>
+					<item chance="33">
+						<item id="30640" count="1" /> <!-- Bound Big Hammer - Health -->
+					</item>
+					<item chance="33">
+						<item id="30641" count="1" /> <!-- Bound Big Hammer - Rsk. Focus -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="12309" toLevel="1" name="Check Item">
