@@ -53,7 +53,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	private static final int SIN_EATER = 16098;
 	// Others
 	private static final int DROP_QI_CHANCE = 5;
-	private static final int MIN_LEVEL = 85;
+	private static final int MIN_LEVEL = 61;
 	
 	public Q00500_BrothersBoundInChains()
 	{
