@@ -52,7 +52,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	// Agathion
 	private static final int SIN_EATER = 16098;
 	// Others
-	private static final int DROP_QI_CHANCE = 5;
+	private static final int DROP_CHANCE = 5;
 	private static final int MIN_LEVEL = 85;
 	
 	public Q00500_BrothersBoundInChains()
@@ -182,6 +182,10 @@ public class Q00500_BrothersBoundInChains extends Quest
 	
 	private void OnPlayerSummonAgathion(OnPlayerSummonAgathion event)
 	{
+		if (event.getAgathionId() != SIN_EATER)
+		{
+			return;
+		}
 		final L2PcInstance player = event.getPlayer();
 		if (player == null)
 		{
@@ -193,14 +197,15 @@ public class Q00500_BrothersBoundInChains extends Quest
 			return;
 		}
 		
-		if (event.getAgathionId() == SIN_EATER)
-		{
-			startQuestTimer("buff", 2500, null, player);
-		}
+		startQuestTimer("buff", 2500, null, player);
 	}
 	
 	private void OnPlayerUnsummonAgathion(OnPlayerUnsummonAgathion event)
 	{
+		if (event.getAgathionId() != SIN_EATER)
+		{
+			return;
+		}
 		final L2PcInstance player = event.getPlayer();
 		if (player == null)
 		{
@@ -212,11 +217,8 @@ public class Q00500_BrothersBoundInChains extends Quest
 			return;
 		}
 		
-		if (event.getAgathionId() == SIN_EATER)
-		{
-			cancelQuestTimer("buff", null, player);
-			player.getEffectList().stopSkillEffects(true, HOUR_OF_PENITENCE);
-		}
+		cancelQuestTimer("buff", null, player);
+		player.getEffectList().stopSkillEffects(true, HOUR_OF_PENITENCE);
 	}
 	
 	@RegisterEvent(EventType.ON_ATTACKABLE_KILL)
@@ -224,7 +226,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	public void onAttackableKill(OnAttackableKill event)
 	{
 		final L2PcInstance player = event.getAttacker();
-		if (player == null)
+		if ((player == null) || (player.getAgathionId() != SIN_EATER) || !player.getEffectList().isAffectedBySkill(HOUR_OF_PENITENCE))
 		{
 			return;
 		}
@@ -234,8 +236,9 @@ public class Q00500_BrothersBoundInChains extends Quest
 			return;
 		}
 		
-		if (player.getEffectList().isAffectedBySkill(HOUR_OF_PENITENCE) && (getRandom(100) < DROP_QI_CHANCE))
+		if (getRandom(100) < DROP_CHANCE)
 		{
+			// Player can drop more than 10 Crumbs of Penitence but there's no point in getting more than 10 (retail).
 			giveItems(player, CRUMBS_OF_PENITENCE, 1);
 			if (!qs.isCond(2) && (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 10))
 			{

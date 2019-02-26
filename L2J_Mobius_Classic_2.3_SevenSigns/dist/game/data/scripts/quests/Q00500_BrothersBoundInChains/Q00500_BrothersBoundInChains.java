@@ -183,6 +183,10 @@ public class Q00500_BrothersBoundInChains extends Quest
 	
 	private void OnPlayerSummonAgathion(OnPlayerSummonAgathion event)
 	{
+		if (event.getAgathionId() != SIN_EATER)
+		{
+			return;
+		}
 		final L2PcInstance player = event.getPlayer();
 		if (player == null)
 		{
@@ -194,14 +198,15 @@ public class Q00500_BrothersBoundInChains extends Quest
 			return;
 		}
 		
-		if (event.getAgathionId() == SIN_EATER)
-		{
-			startQuestTimer("buff", 2500, null, player);
-		}
+		startQuestTimer("buff", 2500, null, player);
 	}
 	
 	private void OnPlayerUnsummonAgathion(OnPlayerUnsummonAgathion event)
 	{
+		if (event.getAgathionId() != SIN_EATER)
+		{
+			return;
+		}
 		final L2PcInstance player = event.getPlayer();
 		if (player == null)
 		{
@@ -213,11 +218,8 @@ public class Q00500_BrothersBoundInChains extends Quest
 			return;
 		}
 		
-		if (event.getAgathionId() == SIN_EATER)
-		{
-			cancelQuestTimer("buff", null, player);
-			player.getEffectList().stopSkillEffects(true, HOUR_OF_PENITENCE);
-		}
+		cancelQuestTimer("buff", null, player);
+		player.getEffectList().stopSkillEffects(true, HOUR_OF_PENITENCE);
 	}
 	
 	@RegisterEvent(EventType.ON_ATTACKABLE_KILL)
@@ -225,7 +227,7 @@ public class Q00500_BrothersBoundInChains extends Quest
 	public void onAttackableKill(OnAttackableKill event)
 	{
 		final L2PcInstance player = event.getAttacker();
-		if (player == null)
+		if ((player == null) || (player.getAgathionId() != SIN_EATER) || !player.getEffectList().isAffectedBySkill(HOUR_OF_PENITENCE))
 		{
 			return;
 		}
@@ -254,25 +256,22 @@ public class Q00500_BrothersBoundInChains extends Quest
 			return;
 		}
 		
-		if (player.getEffectList().isAffectedBySkill(HOUR_OF_PENITENCE))
+		// The quest item drops from every 20th mob you kill, in total you need to kill 700 mobs.
+		final int killCount = qs.getInt(KILL_COUNT_VAR);
+		if (killCount >= 20)
 		{
-			// The quest item drops from every 20th mob you kill, in total you need to kill 700 mobs.
-			final int killCount = qs.getInt(KILL_COUNT_VAR);
-			if (killCount >= 20)
+			// Player can drop more than 35 Crumbs of Penitence but there's no point in getting more than 35 (retail).
+			giveItems(player, CRUMBS_OF_PENITENCE, 1);
+			qs.set(KILL_COUNT_VAR, 0);
+			
+			if (!qs.isCond(2) && (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 35))
 			{
-				// Player can drop more than 35 Crumbs of Penitence but there's no point in getting more than 35 (retail)
-				giveItems(player, CRUMBS_OF_PENITENCE, 1);
-				qs.set(KILL_COUNT_VAR, 0);
-				
-				if (!qs.isCond(2) && (getQuestItemsCount(player, CRUMBS_OF_PENITENCE) >= 35))
-				{
-					qs.setCond(2, true);
-				}
+				qs.setCond(2, true);
 			}
-			else
-			{
-				qs.set(KILL_COUNT_VAR, killCount + 1);
-			}
+		}
+		else
+		{
+			qs.set(KILL_COUNT_VAR, killCount + 1);
 		}
 	}
 }
