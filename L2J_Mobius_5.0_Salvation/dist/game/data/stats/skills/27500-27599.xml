@@ -113,6 +113,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27458</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -326,6 +328,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27459</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -539,6 +543,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27460</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -752,6 +758,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27461</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -965,6 +973,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27462</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1178,6 +1188,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27463</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1391,6 +1403,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27464</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1604,6 +1618,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27465</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1817,6 +1833,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27466</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2030,6 +2048,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27467</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2243,6 +2263,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27468</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2456,6 +2478,8 @@
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27469</itemConsumeId>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2729,11 +2753,15 @@
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="ExpModify" level="6">
-				<amount>10</amount>
+			<effect name="ExpModify">
+				<amount>
+					<value level="6">10</value>
+				</amount>
 			</effect>
-			<effect name="VitalityExpRate" level="6">
-				<amount>10</amount>
+			<effect name="VitalityExpRate">
+				<amount>
+					<value level="6">10</value>
+				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -3960,6 +3988,7 @@
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -4113,6 +4142,8 @@
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>27524</itemConsumeId>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
