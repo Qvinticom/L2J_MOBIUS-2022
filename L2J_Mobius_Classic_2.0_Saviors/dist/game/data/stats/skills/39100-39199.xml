@@ -1045,12 +1045,70 @@
 	</skill>
 	<skill id="39170" toLevel="1" name="Balthus Knights Supply Items">
 		<icon>icon.special_cube_i00</icon>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<reuseDelay>86400000</reuseDelay>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="49784" count="3" /> <!-- Balthus Knight Mark -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39171" toLevel="1" name="Member of Balthus Knights">
 		<!-- Transformation into a Balthus Knight for 1 h. 1 h. Received XP and SP +10%. -->
 		<icon>icon.ev_balthus_token</icon>
-		<operateType>A1</operateType>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>49784</itemConsumeId>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3600</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>CHANGESHAPE_TRANSFORM</abnormalVisualEffect>
+		<stayAfterDeath>true</stayAfterDeath>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>56</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>60000</reuseDelay>
+		<stayAfterDeath>true</stayAfterDeath>
+		<hitTime>3000</hitTime>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<passiveConditions>
+			<condition name="CheckLevel">
+				<minLevel>20</minLevel>
+				<maxLevel>85</maxLevel>
+				<affectType>CASTER</affectType>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="ExpModify">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="SpModify">
+				<amount>10</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39172" toLevel="1" name="Weapon Supply Box (A-grade)">
 		<icon>icon.etc_treasure_box_i07</icon>
