@@ -412,6 +412,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9786" level="1" /> <!-- Adrenaline Energy Drink -->
@@ -425,6 +426,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9787" level="1" /> <!-- Caffeine Energy Drink -->
@@ -437,6 +439,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9788" level="1" /> <!-- Protein Energy Drink -->
@@ -449,6 +452,7 @@
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="is_oly_restricted" val="true" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9789" level="1" /> <!-- DHA Energy Drink -->
@@ -462,6 +466,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="9790" level="1" /> <!-- Omega 3 Energy Drink -->
