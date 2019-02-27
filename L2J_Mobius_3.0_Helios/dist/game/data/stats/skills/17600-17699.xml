@@ -805,15 +805,103 @@
 	</skill>
 	<skill id="17691" toLevel="1" name="Blessed High-grade Lucky Enchant Stone: Weapon (R-grade)">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="TargetItemCrystalType">
+				<itemType>
+					<item>WEAPON</item>
+				</itemType>
+				<crystalType>R</crystalType>
+			</condition>
+			<condition name="OpEnchantRange">
+				<minEnchant>3</minEnchant>
+				<maxEnchant>9</maxEnchant>
+				<type>NORMAL</type>
+			</condition>
+			<condition name="OpEnchantRange">
+				<minEnchant>3</minEnchant>
+				<maxEnchant>9</maxEnchant>
+				<type>MAGIC</type>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="17692" toLevel="1" name="Blessed High-grade Lucky Enchant Stone: Armor (R-grade)">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="TargetItemCrystalType">
+				<itemType>
+					<item>ARMOR</item>
+					<item>ACCESORY</item>
+				</itemType>
+				<crystalType>R</crystalType>
+			</condition>
+			<condition name="OpEnchantRange">
+				<minEnchant>3</minEnchant>
+				<maxEnchant>9</maxEnchant>
+				<type>NONE</type>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="17693" toLevel="1" name="Blessed High-grade Lucky Enchant Stone: Weapon (S-grade)">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="TargetItemCrystalType">
+				<itemType>
+					<item>WEAPON</item>
+				</itemType>
+				<crystalType>S</crystalType>
+			</condition>
+			<condition name="OpEnchantRange">
+				<minEnchant>3</minEnchant>
+				<maxEnchant>9</maxEnchant>
+				<type>NORMAL</type>
+			</condition>
+			<condition name="OpEnchantRange">
+				<minEnchant>3</minEnchant>
+				<maxEnchant>9</maxEnchant>
+				<type>MAGIC</type>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="17694" toLevel="1" name="Blessed High-grade Lucky Enchant Stone: Armor (S-grade)">
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>1</magicLvl>
+		<isMagic>2</isMagic>
+		<targetType>ITEM</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="TargetItemCrystalType">
+				<itemType>
+					<item>ARMOR</item>
+					<item>ACCESORY</item>
+				</itemType>
+				<crystalType>S</crystalType>
+			</condition>
+			<condition name="OpEnchantRange">
+				<minEnchant>3</minEnchant>
+				<maxEnchant>9</maxEnchant>
+				<type>NONE</type>
+			</condition>
+		</conditions>
 	</skill>
 	<skill id="17695" toLevel="1" name="Summon Squash">
 		<!-- Invisible NPC skill for summoning the 10th Anniversary event squash. -->

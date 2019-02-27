@@ -890,7 +890,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="21247" toLevel="1" name="Santa's Gift">
+	<skill id="21247" toLevel="1" name="Santa's Gift"> <!-- TODO: Not Using ? -->
 		<!-- Receives a gift from Santa. It can be used only once a day, and the reuse time is reset every morning at 6:30 AM. -->
 		<icon>icon.etc_pi_gift_box_i04</icon>
 		<operateType>A1</operateType>
