@@ -69,6 +69,8 @@
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>10408</itemConsumeId>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
@@ -248,6 +250,8 @@
 		<reuseDelay>-1</reuseDelay> <!-- TODO: Daily Reuse Reset ? -->
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>10632</itemConsumeId> <!-- TODO: Also Item 14728 -->
 		<staticReuse>true</staticReuse>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
