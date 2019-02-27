@@ -2298,8 +2298,6 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="23707" level="4" />
-			<skill name="Skill02_ID" id="16979" level="1" />
 			<param name="Attack_BoostValue" value="146" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -2329,9 +2327,6 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="16979" level="1" /> <!-- Hellfire -->
-			<skill id="23707" level="4" /> <!-- Chaos fire -->
-			<skill id="16980" level="1" /> <!-- Infernal Icicles -->
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
@@ -2393,49 +2388,6 @@
 				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
 				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
 				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
-				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Cutter (60%) -->
-				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shaper (60%) -->
-				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Avenger (60%) -->
-				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Stormer (60%) -->
-				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Thrower (60%) -->
-				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shooter (60%) -->
-				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Buster (60%) -->
-				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Caster (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Slasher (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Retributer (60%) -->
-				<item id="46493" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
-				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<item id="46478" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="46477" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46446" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46447" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46462" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46461" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46448" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 5 -->
-				<item id="46495" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
-				<item id="46494" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
-				<item id="46509" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 6 -->
-				<item id="46510" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 7 -->
-				<item id="46480" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 7 -->
-				<item id="46479" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 6 -->
-				<item id="46463" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
-				<item id="46464" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
-				<item id="46449" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<item id="46465" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
-				<item id="46450" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 7 -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -2456,8 +2408,6 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="16982" level="1" /> <!-- Devil Horns of Shield -->
-			<skill name="Skill02_ID" id="16981" level="1" /> <!-- Fallen Execution -->
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -2485,8 +2435,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="16982" level="1" /> <!-- Devil Horns of Shield -->
-			<skill id="16981" level="1" /> <!-- Fallen Execution -->
 			<skill id="14194" level="1" /> <!-- Range Stun -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
@@ -2508,9 +2456,6 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
-			<skill name="Skill01_ID" id="16983" level="1" /> <!-- Embryo's Blessing -->
-			<skill name="Skill02_ID" id="23707" level="4" /> <!-- Chaos Fire -->
-			<skill name="Skill02_ID" id="16984" level="1" /> <!-- Blind Spark -->
 			<param name="Attack_BoostValue" value="144" />
 		</parameters>
 		<race>HUMANOID</race>
@@ -2538,9 +2483,6 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="16983" level="1" /> <!-- Embryo's Blessing -->
-			<skill id="23707" level="1" /> <!-- Chaos Fire -->
-			<skill id="16984" level="1" /> <!-- Blind Spark -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
