@@ -196,7 +196,19 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="33">
+						<item id="70024" count="1" /> <!-- Daily Coin -->
+					</item>
+					<item chance="33">
+						<item id="1419" count="1" /> <!-- Proof of Blood -->
+					</item>
+					<item chance="34">
+						<item id="29648" count="1" /> <!-- XP/SP Scroll - Normal -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="51039" toLevel="1" name="Battle Box Lv. 2">
@@ -218,7 +230,25 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="20">
+						<item id="49758" count="1" /> <!-- Blood Crystal -->
+					</item>
+					<item chance="20">
+						<item id="90012" count="1" /> <!-- Common Life Stone -->
+					</item>
+					<item chance="20">
+						<item id="70024" count="2" /> <!-- Daily Coin -->
+					</item>
+					<item chance="20">
+						<item id="1419" count="2" /> <!-- Proof of Blood -->
+					</item>
+					<item chance="20">
+						<item id="29648" count="2" /> <!-- XP/SP Scroll - Normal -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="51040" toLevel="1" name="Battle Box Lv. 3">
@@ -240,7 +270,22 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="25">
+						<item id="90012" count="1" /> <!-- Common Life Stone -->
+					</item>
+					<item chance="25">
+						<item id="70024" count="3" /> <!-- Daily Coin -->
+					</item>
+					<item chance="25">
+						<item id="29649" count="4" /> <!-- XP/SP Scroll - Medium -->
+					</item>
+					<item chance="25">
+						<item id="29648" count="4" /> <!-- XP/SP Scroll - Normal -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="51041" toLevel="1" name="Battle Box Lv. 4">
@@ -262,7 +307,37 @@
 			</condition>
 		</conditions>
 		<effects>
-			<effect name="CreateItemRandom" />
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="11">
+						<item id="49756" count="1" /> <!-- Cloth Piece -->
+					</item>
+					<item chance="11">
+						<item id="90012" count="1" /> <!-- Common Life Stone -->
+					</item>
+					<item chance="11">
+						<item id="70024" count="5" /> <!-- Daily Coin -->
+					</item>
+					<item chance="11">
+						<item id="90013" count="1" /> <!-- Mid-grade Life Stone -->
+					</item>
+					<item chance="11">
+						<item id="730" count="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
+					</item>
+					<item chance="11">
+						<item id="948" count="1" /> <!-- Scroll: Enchant Armor (B-grade) -->
+					</item>
+					<item chance="11">
+						<item id="729" count="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+					</item>
+					<item chance="11">
+						<item id="947" count="1" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+					</item>
+					<item chance="11">
+						<item id="29649" count="1" /> <!-- XP/SP Scroll - Medium -->
+					</item>
+				</items>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="51042" toLevel="1" name="Battle Box">

@@ -8,10 +8,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="20822" />
-		<createItems>
-			<item id="2378" count="1" chance="2" /> <!-- Brigandine Gaiters -->
-			<item id="31210" count="1" chance="98" /> <!-- Bound Brigandine Gaiters -->
-		</createItems>
 		<skills>
 			<skill id="12609" level="1" /> <!-- Check Item -->
 		</skills>
@@ -24,10 +20,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="33306" />
-		<createItems>
-			<item id="352" count="1" chance="2" /> <!-- Brigandine -->
-			<item id="31211" count="1" chance="98" /> <!-- Bound Brigandine -->
-		</createItems>
 		<skills>
 			<skill id="12610" level="1" /> <!-- Check Item -->
 		</skills>
@@ -40,10 +32,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="17965" />
-		<createItems>
-			<item id="2457" count="1" chance="2" /> <!-- Gloves of Seal -->
-			<item id="31212" count="1" chance="98" /> <!-- Bound Gloves of Seal -->
-		</createItems>
 		<skills>
 			<skill id="12611" level="1" /> <!-- Check Item -->
 		</skills>
@@ -56,10 +44,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="14079" />
-		<createItems>
-			<item id="2433" count="1" chance="2" /> <!-- Boots of Seal -->
-			<item id="31213" count="1" chance="98" /> <!-- Bound Boots of Seal -->
-		</createItems>
 		<skills>
 			<skill id="12612" level="1" /> <!-- Check Item -->
 		</skills>
@@ -72,10 +56,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="31494" />
-		<createItems>
-			<item id="886" count="1" chance="2" /> <!-- Ring of Seal -->
-			<item id="31214" count="1" chance="98" /> <!-- Bound Ring of Seal -->
-		</createItems>
 		<skills>
 			<skill id="12613" level="1" /> <!-- Check Item -->
 		</skills>
@@ -88,10 +68,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="62988" />
-		<createItems>
-			<item id="119" count="1" chance="2" /> <!-- Necklace of Seal -->
-			<item id="31215" count="1" chance="98" /> <!-- Bound Necklace of Seal -->
-		</createItems>
 		<skills>
 			<skill id="12614" level="1" /> <!-- Check Item -->
 		</skills>
@@ -104,10 +80,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="87565" />
-		<createItems>
-			<item id="440" count="1" chance="2" /> <!-- Robe of Seal -->
-			<item id="31216" count="1" chance="98" /> <!-- Bound Robe of Seal -->
-		</createItems>
 		<skills>
 			<skill id="12615" level="1" /> <!-- Check Item -->
 		</skills>
@@ -120,10 +92,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="32857" />
-		<createItems>
-			<item id="854" count="1" chance="2" /> <!-- Earring of Seal -->
-			<item id="31217" count="1" chance="98" /> <!-- Bound Earring of Seal -->
-		</createItems>
 		<skills>
 			<skill id="12616" level="1" /> <!-- Check Item -->
 		</skills>
@@ -136,10 +104,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="32857" />
-		<createItems>
-			<item id="854" count="1" chance="2" /> <!-- Earring of Seal -->
-			<item id="31217" count="1" chance="98" /> <!-- Bound Earring of Seal -->
-		</createItems>
 		<skills>
 			<skill id="12617" level="1" /> <!-- Check Item -->
 		</skills>
@@ -152,10 +116,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="201115" />
-		<createItems>
-			<item id="159" count="1" chance="2" /> <!-- Bonebreaker -->
-			<item id="31219" count="1" chance="98" /> <!-- Bound Bonebreaker -->
-		</createItems>
 		<skills>
 			<skill id="12618" level="1" /> <!-- Check Item -->
 		</skills>
@@ -168,10 +128,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="45675" />
-		<createItems>
-			<item id="314" count="1" chance="2" /> <!-- Proof of Revenge -->
-			<item id="31220" count="1" chance="98" /> <!-- Bound Proof of Revenge -->
-		</createItems>
 		<skills>
 			<skill id="12619" level="1" /> <!-- Check Item -->
 		</skills>
@@ -184,12 +140,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="1463253" />
-		<createItems>
-			<item id="268" count="1" chance="2" /> <!-- Bellion Cestus -->
-			<item id="31222" count="1" chance="32" /> <!-- Bound Bellion Cestus - Critical Drain -->
-			<item id="31223" count="1" chance="33" /> <!-- Bound Bellion Cestus - Critical Poison -->
-			<item id="31224" count="1" chance="33" /> <!-- Bound Bellion Cestus - Rsk. Haste -->
-		</createItems>
 		<skills>
 			<skill id="12620" level="1" /> <!-- Check Item -->
 		</skills>
@@ -202,12 +152,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="683457" />
-		<createItems>
-			<item id="5286" count="1" chance="2" /> <!-- Berserker Blade -->
-			<item id="31226" count="1" chance="32" /> <!-- PA - Apocalypse Thrower (Water) - Focus (PA exclusive) -->
-			<item id="31227" count="1" chance="33" /> <!-- PA - Apocalypse Thrower (Wind) - Focus (PA exclusive) -->
-			<item id="31228" count="1" chance="33" /> <!-- PA - Apocalypse Thrower (Fire) - Focus (PA exclusive) -->
-		</createItems>
 		<skills>
 			<skill id="12621" level="1" /> <!-- Check Item -->
 		</skills>
@@ -220,12 +164,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="255620" />
-		<createItems>
-			<item id="160" count="1" chance="2" /> <!-- Battle Axe -->
-			<item id="31232" count="1" chance="32" /> <!-- Bound Battle Axe - Haste -->
-			<item id="31230" count="1" chance="33" /> <!-- Bound Battle Axe - Anger -->
-			<item id="31231" count="1" chance="33" /> <!-- Bound Battle Axe - Rsk. Focus -->
-		</createItems>
 		<skills>
 			<skill id="12622" level="1" /> <!-- Check Item -->
 		</skills>
@@ -238,12 +176,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="320406" />
-		<createItems>
-			<item id="94" count="1" chance="2" /> <!-- Bec de Corbin -->
-			<item id="31234" count="1" chance="32" /> <!-- Bound Bec de Corbin - Critical Stun -->
-			<item id="31235" count="1" chance="33" /> <!-- Bound Bec de Corbin - Long Blow -->
-			<item id="31236" count="1" chance="33" /> <!-- Bound Bec de Corbin - Light Armor -->
-		</createItems>
 		<skills>
 			<skill id="12623" level="1" /> <!-- Check Item -->
 		</skills>
@@ -256,12 +188,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="320406" />
-		<createItems>
-			<item id="9256" count="1" chance="2" /> <!-- Ballista -->
-			<item id="31239" count="1" chance="32" /> <!-- Bound Ballista - Guidance -->
-			<item id="31240" count="1" chance="33" /> <!-- Bound Ballista - Miser -->
-			<item id="31241" count="1" chance="33" /> <!-- Bound Ballista - Quick Recovery -->
-		</createItems>
 		<skills>
 			<skill id="12624" level="1" /> <!-- Check Item -->
 		</skills>
@@ -274,10 +200,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="320406" />
-		<createItems>
-			<item id="9256" count="1" chance="2" /> <!-- Ballista -->
-			<item id="31237" count="1" chance="98" /> <!-- Bound Ballista -->
-		</createItems>
 		<skills>
 			<skill id="12625" level="1" /> <!-- Check Item -->
 		</skills>
@@ -290,10 +212,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="236350" />
-		<createItems>
-			<item id="2531" count="1" chance="2" /> <!-- Bastard Sword*Sword of Revolution -->
-			<item id="31245" count="1" chance="98" /> <!-- Bound Bastard Sword*Sword of Revolution -->
-		</createItems>
 		<skills>
 			<skill id="12626" level="1" /> <!-- Check Item -->
 		</skills>
@@ -306,10 +224,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="184976" />
-		<createItems>
-			<item id="2529" count="1" chance="2" /> <!-- Bastard Sword*Crimson Sword -->
-			<item id="31246" count="1" chance="98" /> <!-- Bound Bastard Sword*Crimson Sword -->
-		</createItems>
 		<skills>
 			<skill id="12627" level="1" /> <!-- Check Item -->
 		</skills>
@@ -322,10 +236,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="155730" />
-		<createItems>
-			<item id="2527" count="1" chance="2" /> <!-- Bastard Sword*Artisan's Sword -->
-			<item id="31247" count="1" chance="98" /> <!-- Bound Bastard Sword*Artisan's Sword -->
-		</createItems>
 		<skills>
 			<skill id="12628" level="1" /> <!-- Check Item -->
 		</skills>
@@ -338,10 +248,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="184976" />
-		<createItems>
-			<item id="2530" count="1" chance="2" /> <!-- Bastard Sword*Elven Sword -->
-			<item id="31248" count="1" chance="98" /> <!-- Bound Bastard Sword*Elven Sword -->
-		</createItems>
 		<skills>
 			<skill id="12629" level="1" /> <!-- Check Item -->
 		</skills>
@@ -354,10 +260,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="276007" />
-		<createItems>
-			<item id="2532" count="1" chance="2" /> <!-- Bastard Sword*Elven Long Sword -->
-			<item id="31249" count="1" chance="98" /> <!-- Bound Bastard Sword*Elven Long Sword -->
-		</createItems>
 		<skills>
 			<skill id="12630" level="1" /> <!-- Check Item -->
 		</skills>
@@ -370,10 +272,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="155730" />
-		<createItems>
-			<item id="2526" count="1" chance="2" /> <!-- Bastard Sword*Spinebone Sword -->
-			<item id="31250" count="1" chance="98" /> <!-- Bound Bastard Sword*Spinebone Sword -->
-		</createItems>
 		<skills>
 			<skill id="12631" level="1" /> <!-- Check Item -->
 		</skills>
@@ -386,10 +284,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="155730" />
-		<createItems>
-			<item id="2525" count="1" chance="2" /> <!-- Bastard Sword*Bastard Sword -->
-			<item id="31251" count="1" chance="98" /> <!-- Bound Bastard Sword*Bastard Sword -->
-		</createItems>
 		<skills>
 			<skill id="12632" level="1" /> <!-- Check Item -->
 		</skills>
@@ -402,10 +296,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="155730" />
-		<createItems>
-			<item id="2528" count="1" chance="2" /> <!-- Bastard Sword*Knight's Sword -->
-			<item id="31252" count="1" chance="98" /> <!-- Bound Bastard Sword*Knight's Sword -->
-		</createItems>
 		<skills>
 			<skill id="12633" level="1" /> <!-- Check Item -->
 		</skills>
@@ -418,10 +308,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="71847" />
-		<createItems>
-			<item id="69" count="1" chance="2" /> <!-- Bastard Sword -->
-			<item id="31253" count="1" chance="98" /> <!-- Bound Bastard Sword -->
-		</createItems>
 		<skills>
 			<skill id="12634" level="1" /> <!-- Check Item -->
 		</skills>
@@ -434,12 +320,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="6200113" />
-		<createItems>
-			<item id="6365" count="1" chance="2" /> <!-- Basalt Battlehammer -->
-			<item id="31255" count="1" chance="32" /> <!-- Bound Basalt Battlehammer - HP Drain -->
-			<item id="31256" count="1" chance="33" /> <!-- Bound Basalt Battlehammer - Health -->
-			<item id="31257" count="1" chance="33" /> <!-- Bound Basalt Battlehammer - HP Regeneration -->
-		</createItems>
 		<skills>
 			<skill id="12635" level="1" /> <!-- Check Item -->
 		</skills>
@@ -452,12 +332,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="255620" />
-		<createItems>
-			<item id="302" count="1" chance="2" /> <!-- Body Slasher -->
-			<item id="31259" count="1" chance="32" /> <!-- Bound Body Slasher - Critical Stun -->
-			<item id="31260" count="1" chance="33" /> <!-- Bound Body Slasher - Long Blow -->
-			<item id="31261" count="1" chance="33" /> <!-- Bound Body Slasher - Wide Blow -->
-		</createItems>
 		<skills>
 			<skill id="12636" level="1" /> <!-- Check Item -->
 		</skills>
@@ -470,10 +344,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="45675" />
-		<createItems>
-			<item id="258" count="1" chance="2" /> <!-- Bagh-Nakh -->
-			<item id="31262" count="1" chance="98" /> <!-- Bound Bagh-Nakh -->
-		</createItems>
 		<skills>
 			<skill id="12637" level="1" /> <!-- Check Item -->
 		</skills>
@@ -486,12 +356,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="479123" />
-		<createItems>
-			<item id="76" count="1" chance="2" /> <!-- Sword of Delusion -->
-			<item id="31264" count="1" chance="32" /> <!-- Bound Sword of Delusion - Focus -->
-			<item id="31265" count="1" chance="33" /> <!-- Bound Sword of Delusion - Health -->
-			<item id="31266" count="1" chance="33" /> <!-- Bound Sword of Delusion - Rsk. Haste -->
-		</createItems>
 		<skills>
 			<skill id="12638" level="1" /> <!-- Check Item -->
 		</skills>
@@ -504,12 +368,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="2044210" />
-		<createItems>
-			<item id="2504" count="1" chance="2" /> <!-- Meteor Shower -->
-			<item id="31268" count="1" chance="32" /> <!-- Bound Meteor Shower - Focus -->
-			<item id="31269" count="1" chance="33" /> <!-- Bound Meteor Shower - Critical Bleed -->
-			<item id="31270" count="1" chance="33" /> <!-- Bound Meteor Shower - Rsk. Haste -->
-		</createItems>
 		<skills>
 			<skill id="12639" level="1" /> <!-- Check Item -->
 		</skills>
@@ -522,10 +380,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="71847" />
-		<createItems>
-			<item id="183" count="1" chance="2" /> <!-- Mystic Staff -->
-			<item id="31271" count="1" chance="98" /> <!-- Bound Mystic Staff -->
-		</createItems>
 		<skills>
 			<skill id="12640" level="1" /> <!-- Check Item -->
 		</skills>
@@ -538,10 +392,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="107807" />
-		<createItems>
-			<item id="239" count="1" chance="2" /> <!-- Mystic Knife -->
-			<item id="31272" count="1" chance="98" /> <!-- Bound Mystic Knife -->
-		</createItems>
 		<skills>
 			<skill id="12641" level="1" /> <!-- Check Item -->
 		</skills>
@@ -554,12 +404,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="255620" />
-		<createItems>
-			<item id="7887" count="1" chance="2" /> <!-- Mysterious Sword -->
-			<item id="31274" count="1" chance="32" /> <!-- Bound Mysterious Sword - Acumen -->
-			<item id="31275" count="1" chance="33" /> <!-- Bound Mysterious Sword - M. Atk. -->
-			<item id="31276" count="1" chance="33" /> <!-- Bound Mysterious Sword - Magic Weakness -->
-		</createItems>
 		<skills>
 			<skill id="12642" level="1" /> <!-- Check Item -->
 		</skills>
@@ -572,10 +416,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="20459" />
-		<createItems>
-			<item id="58" count="1" chance="2" /> <!-- Mithril Breastplate -->
-			<item id="31277" count="1" chance="98" /> <!-- Bound Mithril Breastplate -->
-		</createItems>
 		<skills>
 			<skill id="12643" level="1" /> <!-- Check Item -->
 		</skills>
@@ -588,10 +428,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="15616" />
-		<createItems>
-			<item id="470" count="1" chance="2" /> <!-- Mithril Stockings -->
-			<item id="31278" count="1" chance="98" /> <!-- Bound Mithril Stockings -->
-		</createItems>
 		<skills>
 			<skill id="12644" level="1" /> <!-- Check Item -->
 		</skills>
@@ -607,10 +443,6 @@
 		<set name="crystal_type" val="D" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="470" count="1" chance="2" /> <!-- Mithril Stockings -->
-			<item id="31278" count="1" chance="98" /> <!-- Bound Mithril Stockings -->
-		</createItems>
 		<skills>
 			<skill id="12645" level="1" /> <!-- Check Item -->
 		</skills>
@@ -623,10 +455,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="24940" />
-		<createItems>
-			<item id="437" count="1" chance="2" /> <!-- Mithril Tunic -->
-			<item id="31280" count="1" chance="98" /> <!-- Bound Mithril Tunic -->
-		</createItems>
 		<skills>
 			<skill id="12646" level="1" /> <!-- Check Item -->
 		</skills>
@@ -642,10 +470,6 @@
 		<set name="crystal_type" val="D" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="437" count="1" chance="2" /> <!-- Mithril Tunic -->
-			<item id="31280" count="1" chance="98" /> <!-- Bound Mithril Tunic -->
-		</createItems>
 		<skills>
 			<skill id="12647" level="1" /> <!-- Check Item -->
 		</skills>
@@ -658,10 +482,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="10904" />
-		<createItems>
-			<item id="61" count="1" chance="2" /> <!-- Mithril Gloves -->
-			<item id="31282" count="1" chance="98" /> <!-- Bound Mithril Gloves -->
-		</createItems>
 		<skills>
 			<skill id="12648" level="1" /> <!-- Check Item -->
 		</skills>
@@ -677,10 +497,6 @@
 		<set name="crystal_type" val="D" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="61" count="1" chance="2" /> <!-- Mithril Gloves -->
-			<item id="31282" count="1" chance="98" /> <!-- Bound Mithril Gloves -->
-		</createItems>
 		<skills>
 			<skill id="12649" level="1" /> <!-- Check Item -->
 		</skills>
@@ -693,10 +509,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="20822" />
-		<createItems>
-			<item id="2377" count="1" chance="2" /> <!-- Mithril Scale Gaiters -->
-			<item id="31284" count="1" chance="98" /> <!-- Bound Mithril Scale Gaiters -->
-		</createItems>
 		<skills>
 			<skill id="12650" level="1" /> <!-- Check Item -->
 		</skills>
@@ -709,10 +521,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="16965" />
-		<createItems>
-			<item id="393" count="1" chance="2" /> <!-- Mithril Banded Mail -->
-			<item id="31285" count="1" chance="98" /> <!-- Bound Mithril Banded Mail -->
-		</createItems>
 		<skills>
 			<skill id="12651" level="1" /> <!-- Check Item -->
 		</skills>
@@ -725,10 +533,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="10614" />
-		<createItems>
-			<item id="415" count="1" chance="2" /> <!-- Mithril Banded Gaiters -->
-			<item id="31286" count="1" chance="98" /> <!-- Bound Mithril Banded Gaiters -->
-		</createItems>
 		<skills>
 			<skill id="12652" level="1" /> <!-- Check Item -->
 		</skills>
@@ -741,10 +545,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="9019" />
-		<createItems>
-			<item id="882" count="1" chance="2" /> <!-- Mithril Ring -->
-			<item id="31287" count="1" chance="98" /> <!-- Bound Mithril Ring -->
-		</createItems>
 		<skills>
 			<skill id="12653" level="1" /> <!-- Check Item -->
 		</skills>
@@ -757,10 +557,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="201115" />
-		<createItems>
-			<item id="225" count="1" chance="2" /> <!-- Mithril Dagger -->
-			<item id="31288" count="1" chance="98" /> <!-- Bound Mithril Dagger -->
-		</createItems>
 		<skills>
 			<skill id="12654" level="1" /> <!-- Check Item -->
 		</skills>
@@ -773,10 +569,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="27376" />
-		<createItems>
-			<item id="608" count="1" chance="2" /> <!-- Mithril Gauntlets -->
-			<item id="31289" count="1" chance="98" /> <!-- Bound Mithril Gauntlets -->
-		</createItems>
 		<skills>
 			<skill id="12655" level="1" /> <!-- Check Item -->
 		</skills>
@@ -789,10 +581,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="14152" />
-		<createItems>
-			<item id="59" count="1" chance="2" /> <!-- Mithril Gaiters -->
-			<item id="31290" count="1" chance="98" /> <!-- Bound Mithril Gaiters -->
-		</createItems>
 		<skills>
 			<skill id="12656" level="1" /> <!-- Check Item -->
 		</skills>
@@ -805,10 +593,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="17298" />
-		<createItems>
-			<item id="852" count="1" chance="2" /> <!-- Moonstone Earring -->
-			<item id="31291" count="1" chance="98" /> <!-- Bound Moonstone Earring -->
-		</createItems>
 		<skills>
 			<skill id="12657" level="1" /> <!-- Check Item -->
 		</skills>
@@ -821,10 +605,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="17298" />
-		<createItems>
-			<item id="852" count="1" chance="2" /> <!-- Moonstone Earring -->
-			<item id="31291" count="1" chance="98" /> <!-- Bound Moonstone Earring -->
-		</createItems>
 		<skills>
 			<skill id="12658" level="1" /> <!-- Check Item -->
 		</skills>
@@ -837,10 +617,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="3625" />
-		<createItems>
-			<item id="9578" count="1" chance="2" /> <!-- Linen Shirt -->
-			<item id="31293" count="1" chance="98" /> <!-- Bound Linen Shirt -->
-		</createItems>
 		<skills>
 			<skill id="12659" level="1" /> <!-- Check Item -->
 		</skills>
@@ -853,10 +629,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="155730" />
-		<createItems>
-			<item id="88" count="1" chance="2" /> <!-- Morning Star -->
-			<item id="31294" count="1" chance="98" /> <!-- Bound Morning Star -->
-		</createItems>
 		<skills>
 			<skill id="12660" level="1" /> <!-- Check Item -->
 		</skills>
@@ -869,10 +641,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="155730" />
-		<createItems>
-			<item id="224" count="1" chance="2" /> <!-- Maingauche -->
-			<item id="31295" count="1" chance="98" /> <!-- Bound Maingauche -->
-		</createItems>
 		<skills>
 			<skill id="12661" level="1" /> <!-- Check Item -->
 		</skills>
@@ -885,10 +653,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="694985" />
-		<createItems>
-			<item id="6386" count="1" chance="2" /> <!-- Major Arcana Circlet -->
-			<item id="31296" count="1" chance="98" /> <!-- Bound Major Arcana Circlet -->
-		</createItems>
 		<skills>
 			<skill id="12662" level="1" /> <!-- Check Item -->
 		</skills>
@@ -901,10 +665,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="463275" />
-		<createItems>
-			<item id="6385" count="1" chance="2" /> <!-- Major Arcana Boots -->
-			<item id="31297" count="1" chance="98" /> <!-- Bound Major Arcana Boots -->
-		</createItems>
 		<skills>
 			<skill id="12663" level="1" /> <!-- Check Item -->
 		</skills>
@@ -917,10 +677,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="2258665" />
-		<createItems>
-			<item id="6383" count="1" chance="2" /> <!-- Major Arcana Robe -->
-			<item id="31298" count="1" chance="98" /> <!-- Bound Major Arcana Robe -->
-		</createItems>
 		<skills>
 			<skill id="12664" level="1" /> <!-- Check Item -->
 		</skills>
@@ -933,10 +689,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="463275" />
-		<createItems>
-			<item id="6384" count="1" chance="2" /> <!-- Major Arcana Gloves -->
-			<item id="31299" count="1" chance="98" /> <!-- Bound Major Arcana Gloves -->
-		</createItems>
 		<skills>
 			<skill id="12665" level="1" /> <!-- Check Item -->
 		</skills>
@@ -949,12 +701,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="479123" />
-		<createItems>
-			<item id="202" count="1" chance="2" /> <!-- Mace of Underworld -->
-			<item id="31301" count="1" chance="32" /> <!-- Bound Mace of Underworld - Mana Up -->
-			<item id="31302" count="1" chance="33" /> <!-- Bound Mace of Underworld - Magic Silence -->
-			<item id="31303" count="1" chance="33" /> <!-- Bound Mace of Underworld - Conversion -->
-		</createItems>
 		<skills>
 			<skill id="12666" level="1" /> <!-- Check Item -->
 		</skills>
@@ -967,10 +713,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="8323" />
-		<createItems>
-			<item id="2448" count="1" chance="2" /> <!-- Manticore Skin Gloves -->
-			<item id="31304" count="1" chance="98" /> <!-- Bound Manticore Skin Gloves -->
-		</createItems>
 		<skills>
 			<skill id="12667" level="1" /> <!-- Check Item -->
 		</skills>
@@ -983,10 +725,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="24940" />
-		<createItems>
-			<item id="395" count="1" chance="2" /> <!-- Manticore Skin Shirt -->
-			<item id="31305" count="1" chance="98" /> <!-- Bound Manticore Skin Shirt -->
-		</createItems>
 		<skills>
 			<skill id="12668" level="1" /> <!-- Check Item -->
 		</skills>
@@ -999,10 +737,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="8323" />
-		<createItems>
-			<item id="2424" count="1" chance="2" /> <!-- Manticore Skin Boots -->
-			<item id="31306" count="1" chance="98" /> <!-- Bound Manticore Skin Boots -->
-		</createItems>
 		<skills>
 			<skill id="12669" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1015,10 +749,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="15616" />
-		<createItems>
-			<item id="417" count="1" chance="2" /> <!-- Manticore Skin Gaiters -->
-			<item id="31307" count="1" chance="98" /> <!-- Bound Manticore Skin Gaiters -->
-		</createItems>
 		<skills>
 			<skill id="12670" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1031,12 +761,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="683457" />
-		<createItems>
-			<item id="204" count="1" chance="2" /> <!-- Deadman's Staff -->
-			<item id="31309" count="1" chance="32" /> <!-- Bound Deadman's Staff - Magic Regeneration -->
-			<item id="31310" count="1" chance="33" /> <!-- Bound Deadman's Staff - Magic Mental Shield -->
-			<item id="31311" count="1" chance="33" /> <!-- Bound Deadman's Staff - Magic Hold -->
-		</createItems>
 		<skills>
 			<skill id="12671" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1049,10 +773,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="1276580" />
-		<createItems>
-			<item id="2383" count="1" chance="2" /> <!-- Majestic Plate Armor -->
-			<item id="31312" count="1" chance="98" /> <!-- Bound Majestic Plate Armor -->
-		</createItems>
 		<skills>
 			<skill id="12672" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1065,10 +785,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="217210" />
-		<createItems>
-			<item id="862" count="1" chance="2" /> <!-- Majestic Earring -->
-			<item id="31313" count="1" chance="98" /> <!-- Bound Majestic Earring -->
-		</createItems>
 		<skills>
 			<skill id="12673" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1081,10 +797,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="294640" />
-		<createItems>
-			<item id="2419" count="1" chance="2" /> <!-- Majestic Circlet -->
-			<item id="31314" count="1" chance="98" /> <!-- Bound Majestic Circlet -->
-		</createItems>
 		<skills>
 			<skill id="12674" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1097,10 +809,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="196475" />
-		<createItems>
-			<item id="5319" count="1" chance="2" /> <!-- Sealed Majestic Boots -->
-			<item id="32813" count="1" chance="98" /> <!-- Sealed Bound Majestic Boots -->
-		</createItems>
 		<skills>
 			<skill id="12675" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1113,10 +821,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="144855" />
-		<createItems>
-			<item id="893" count="1" chance="2" /> <!-- Majestic Ring -->
-			<item id="31318" count="1" chance="98" /> <!-- Bound Majestic Ring -->
-		</createItems>
 		<skills>
 			<skill id="12676" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1129,10 +833,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="957435" />
-		<createItems>
-			<item id="2409" count="1" chance="2" /> <!-- Majestic Robe -->
-			<item id="31319" count="1" chance="98" /> <!-- Bound Majestic Robe -->
-		</createItems>
 		<skills>
 			<skill id="12677" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1145,10 +845,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="957435" />
-		<createItems>
-			<item id="2395" count="1" chance="2" /> <!-- Majestic Leather Armor -->
-			<item id="31320" count="1" chance="98" /> <!-- Bound Majestic Leather Armor -->
-		</createItems>
 		<skills>
 			<skill id="12678" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1161,10 +857,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="289710" />
-		<createItems>
-			<item id="924" count="1" chance="2" /> <!-- Majestic Necklace -->
-			<item id="31321" count="1" chance="98" /> <!-- Bound Majestic Necklace -->
-		</createItems>
 		<skills>
 			<skill id="12679" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1177,10 +869,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="196475" />
-		<createItems>
-			<item id="5318" count="1" chance="2" /> <!-- Sealed Majestic Gauntlets -->
-			<item id="32809" count="1" chance="98" /> <!-- Sealed Bound Majestic Gauntlets -->
-		</createItems>
 		<skills>
 			<skill id="12680" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1193,12 +881,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="320406" />
-		<createItems>
-			<item id="242" count="1" chance="2" /> <!-- Soulfire Dirk -->
-			<item id="31326" count="1" chance="32" /> <!-- Bound Soulfire Dirk - Mana Up -->
-			<item id="31327" count="1" chance="33" /> <!-- Bound Soulfire Dirk - Magic Hold -->
-			<item id="31328" count="1" chance="33" /> <!-- Bound Soulfire Dirk - Magic Silence -->
-		</createItems>
 		<skills>
 			<skill id="12681" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1211,10 +893,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="6960" />
-		<createItems>
-			<item id="468" count="1" chance="2" /> <!-- Wizard Stockings -->
-			<item id="31329" count="1" chance="98" /> <!-- Bound Wizard Stockings -->
-		</createItems>
 		<skills>
 			<skill id="12682" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1227,10 +905,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="11150" />
-		<createItems>
-			<item id="435" count="1" chance="2" /> <!-- Wizard Tunic -->
-			<item id="31330" count="1" chance="98" /> <!-- Bound Wizard Tunic -->
-		</createItems>
 		<skills>
 			<skill id="12683" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1243,10 +917,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="107807" />
-		<createItems>
-			<item id="186" count="1" chance="2" /> <!-- Staff of Magic -->
-			<item id="31331" count="1" chance="98" /> <!-- Bound Staff of Magic -->
-		</createItems>
 		<skills>
 			<skill id="12684" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1259,10 +929,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="3161" />
-		<createItems>
-			<item id="879" count="1" chance="2" /> <!-- Ring of Magic -->
-			<item id="31332" count="1" chance="98" /> <!-- Bound Ring of Magic -->
-		</createItems>
 		<skills>
 			<skill id="12685" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1275,10 +941,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="3161" />
-		<createItems>
-			<item id="879" count="1" chance="2" /> <!-- Ring of Magic -->
-			<item id="31332" count="1" chance="98" /> <!-- Bound Ring of Magic -->
-		</createItems>
 		<skills>
 			<skill id="12686" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1291,10 +953,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="6336" />
-		<createItems>
-			<item id="911" count="1" chance="2" /> <!-- Magic Necklace -->
-			<item id="31334" count="1" chance="98" /> <!-- Bound Magic Necklace -->
-		</createItems>
 		<skills>
 			<skill id="12687" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1307,10 +965,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="6336" />
-		<createItems>
-			<item id="911" count="1" chance="2" /> <!-- Magic Necklace -->
-			<item id="31334" count="1" chance="98" /> <!-- Bound Magic Necklace -->
-		</createItems>
 		<skills>
 			<skill id="12688" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1323,10 +977,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="4756" />
-		<createItems>
-			<item id="848" count="1" chance="2" /> <!-- Earring of Magic -->
-			<item id="31336" count="1" chance="98" /> <!-- Bound Earring of Magic -->
-		</createItems>
 		<skills>
 			<skill id="12689" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1339,10 +989,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="4756" />
-		<createItems>
-			<item id="848" count="1" chance="2" /> <!-- Earring of Magic -->
-			<item id="31336" count="1" chance="98" /> <!-- Bound Earring of Magic -->
-		</createItems>
 		<skills>
 			<skill id="12690" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1355,10 +1001,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="71847" />
-		<createItems>
-			<item id="185" count="1" chance="2" /> <!-- Staff of Mana -->
-			<item id="31338" count="1" chance="98" /> <!-- Bound Staff of Mana -->
-		</createItems>
 		<skills>
 			<skill id="12691" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1371,10 +1013,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="107807" />
-		<createItems>
-			<item id="238" count="1" chance="2" /> <!-- Dagger of Mana -->
-			<item id="31339" count="1" chance="98" /> <!-- Bound Dagger of Mana -->
-		</createItems>
 		<skills>
 			<skill id="12692" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1387,10 +1025,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="9310" />
-		<createItems>
-			<item id="347" count="1" chance="2" /> <!-- Ring Breastplate -->
-			<item id="31340" count="1" chance="98" /> <!-- Bound Ring Breastplate -->
-		</createItems>
 		<skills>
 			<skill id="12693" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1403,10 +1037,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="71847" />
-		<createItems>
-			<item id="275" count="1" chance="2" /> <!-- Longbow -->
-			<item id="31341" count="1" chance="98" /> <!-- Bound Longbow -->
-		</createItems>
 		<skills>
 			<skill id="12694" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1419,10 +1049,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="45675" />
-		<createItems>
-			<item id="9209" count="1" chance="2" /> <!-- Rapier -->
-			<item id="31342" count="1" chance="98" /> <!-- Bound Rapier -->
-		</createItems>
 		<skills>
 			<skill id="12695" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1435,10 +1061,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="683457" />
-		<createItems>
-			<item id="2599" count="1" chance="2" /> <!-- Raid Sword*Raid Sword -->
-			<item id="31343" count="1" chance="98" /> <!-- Bound Raid Sword*Raid Sword -->
-		</createItems>
 		<skills>
 			<skill id="12696" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1451,12 +1073,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="320406" />
-		<createItems>
-			<item id="133" count="1" chance="2" /> <!-- Raid Sword -->
-			<item id="31345" count="1" chance="32" /> <!-- Bound Raid Sword - Focus -->
-			<item id="31346" count="1" chance="33" /> <!-- Bound Raid Sword - Critical Drain -->
-			<item id="31347" count="1" chance="33" /> <!-- Bound Raid Sword - Critical Poison -->
-		</createItems>
 		<skills>
 			<skill id="12697" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1469,10 +1085,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="3001" />
-		<createItems>
-			<item id="847" count="1" chance="2" /> <!-- Red Crescent -->
-			<item id="31352" count="1" chance="98" /> <!-- Bound Red Crescent -->
-		</createItems>
 		<skills>
 			<skill id="12698" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1485,10 +1097,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="437465" />
-		<createItems>
-			<item id="2392" count="1" chance="2" /> <!-- Leather Armor of Doom -->
-			<item id="31353" count="1" chance="98" /> <!-- Bound Leather Armor of Doom -->
-		</createItems>
 		<skills>
 			<skill id="12699" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1501,10 +1109,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="242150" />
-		<createItems>
-			<item id="2389" count="1" chance="2" /> <!-- Dark Crystal Leggings -->
-			<item id="31354" count="1" chance="98" /> <!-- Bound Dark Crystal Leggings -->
-		</createItems>
 		<skills>
 			<skill id="12700" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1517,12 +1121,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="1463253" />
-		<createItems>
-			<item id="97" count="1" chance="2" /> <!-- Lance -->
-			<item id="31357" count="1" chance="32" /> <!-- Bound Lance - Critical Stun -->
-			<item id="31356" count="1" chance="33" /> <!-- Bound Lance - Anger -->
-			<item id="31358" count="1" chance="33" /> <!-- Bound Lance - Long Blow -->
-		</createItems>
 		<skills>
 			<skill id="12701" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1535,10 +1133,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="17965" />
-		<createItems>
-			<item id="2434" count="1" chance="2" /> <!-- Rind Leather Boots -->
-			<item id="31359" count="1" chance="98" /> <!-- Bound Rind Leather Boots -->
-		</createItems>
 		<skills>
 			<skill id="12702" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1551,10 +1145,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="53940" />
-		<createItems>
-			<item id="399" count="1" chance="2" /> <!-- Rind Leather Armor -->
-			<item id="31360" count="1" chance="98" /> <!-- Bound Rind Leather Armor -->
-		</createItems>
 		<skills>
 			<skill id="12703" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1567,10 +1157,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="17965" />
-		<createItems>
-			<item id="2458" count="1" chance="2" /> <!-- Rind Leather Gloves -->
-			<item id="31361" count="1" chance="98" /> <!-- Bound Rind Leather Gloves -->
-		</createItems>
 		<skills>
 			<skill id="12704" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1583,10 +1169,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="33683" />
-		<createItems>
-			<item id="419" count="1" chance="2" /> <!-- Rind Leather Gaiters -->
-			<item id="31362" count="1" chance="98" /> <!-- Bound Rind Leather Gaiters -->
-		</createItems>
 		<skills>
 			<skill id="12705" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1599,10 +1181,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="71847" />
-		<createItems>
-			<item id="295" count="1" chance="2" /> <!-- Dwarven Trident -->
-			<item id="31371" count="1" chance="98" /> <!-- Bound Dwarven Trident -->
-		</createItems>
 		<skills>
 			<skill id="12706" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1615,12 +1193,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="683457" />
-		<createItems>
-			<item id="7897" count="1" chance="2" /> <!-- Dwarven Hammer -->
-			<item id="31373" count="1" chance="32" /> <!-- Bound Dwarven Hammer - Health -->
-			<item id="31374" count="1" chance="33" /> <!-- Bound Dwarven Hammer - Anger -->
-			<item id="31375" count="1" chance="33" /> <!-- Bound Dwarven Hammer - Critical Bleed -->
-		</createItems>
 		<skills>
 			<skill id="12707" level="1" /> <!-- Check Item -->
 		</skills>
@@ -1633,10 +1205,6 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
 		<set name="price" val="107807" />
-		<createItems>
-			<item id="296" count="1" chance="2" /> <!-- Dwarven Pike -->
-			<item id="31376" count="1" chance="98" /> <!-- Bound Dwarven Pike -->
-		</createItems>
 		<skills>
 			<skill id="12708" level="1" /> <!-- Check Item -->
 		</skills>

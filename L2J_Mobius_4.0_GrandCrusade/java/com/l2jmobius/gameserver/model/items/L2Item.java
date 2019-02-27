@@ -42,7 +42,6 @@ import com.l2jmobius.gameserver.model.ceremonyofchaos.CeremonyOfChaosEvent;
 import com.l2jmobius.gameserver.model.commission.CommissionItemType;
 import com.l2jmobius.gameserver.model.conditions.Condition;
 import com.l2jmobius.gameserver.model.events.ListenersContainer;
-import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.interfaces.IIdentifiable;
 import com.l2jmobius.gameserver.model.items.enchant.attribute.AttributeHolder;
@@ -163,7 +162,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 	protected List<FuncTemplate> _funcTemplates;
 	protected List<Condition> _preConditions;
 	private List<ItemSkillHolder> _skills;
-	private List<ItemChanceHolder> _createItems;
 	
 	private int _useSkillDisTime;
 	private int _reuseDelay;
@@ -757,20 +755,6 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			_skills = new ArrayList<>();
 		}
 		_skills.add(holder);
-	}
-	
-	public List<ItemChanceHolder> getCreateItems()
-	{
-		return _createItems != null ? _createItems : Collections.emptyList();
-	}
-	
-	public void addCreateItem(ItemChanceHolder item)
-	{
-		if (_createItems == null)
-		{
-			_createItems = new ArrayList<>();
-		}
-		_createItems.add(item);
 	}
 	
 	public boolean checkCondition(L2Character activeChar, L2Object object, boolean sendMessage)

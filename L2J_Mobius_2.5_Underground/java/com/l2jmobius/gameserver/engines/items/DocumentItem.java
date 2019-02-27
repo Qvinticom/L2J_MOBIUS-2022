@@ -33,7 +33,6 @@ import com.l2jmobius.gameserver.enums.ItemSkillType;
 import com.l2jmobius.gameserver.model.L2ExtractableProduct;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.conditions.Condition;
-import com.l2jmobius.gameserver.model.holders.ItemChanceHolder;
 import com.l2jmobius.gameserver.model.holders.ItemSkillHolder;
 import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.stats.Stats;
@@ -179,20 +178,6 @@ public final class DocumentItem extends DocumentBase implements IGameXmlReader
 						final int minEnchant = parseInteger(b.getAttributes(), "minEnchant", 0);
 						final int maxEnchant = parseInteger(b.getAttributes(), "maxEnchant", 0);
 						_currentItem.item.addCapsuledItem(new L2ExtractableProduct(id, min, max, chance, minEnchant, maxEnchant));
-					}
-				}
-			}
-			else if ("createItems".equalsIgnoreCase(n.getNodeName()))
-			{
-				makeItem();
-				for (Node b = n.getFirstChild(); b != null; b = b.getNextSibling())
-				{
-					if ("item".equals(b.getNodeName()))
-					{
-						final int id = parseInteger(b.getAttributes(), "id");
-						final int count = parseInteger(b.getAttributes(), "count");
-						final double chance = parseDouble(b.getAttributes(), "chance");
-						_currentItem.item.addCreateItem(new ItemChanceHolder(id, chance, count));
 					}
 				}
 			}

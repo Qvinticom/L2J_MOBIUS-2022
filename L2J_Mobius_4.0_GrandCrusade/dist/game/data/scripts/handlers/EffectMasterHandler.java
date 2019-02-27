@@ -94,7 +94,6 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("CraftingCritical", CraftingCritical::new);
 		EffectHandler.getInstance().registerHandler("CreateCommonItem", CreateCommonItem::new);
 		EffectHandler.getInstance().registerHandler("CreateItem", CreateItem::new);
-		EffectHandler.getInstance().registerHandler("CreateItemRandom", CreateItemRandom::new);
 		EffectHandler.getInstance().registerHandler("CriticalDamage", CriticalDamage::new);
 		EffectHandler.getInstance().registerHandler("CriticalDamagePosition", CriticalDamagePosition::new);
 		EffectHandler.getInstance().registerHandler("CriticalRate", CriticalRate::new);

@@ -8,12 +8,6 @@
 		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="81" count="1" chance="10" /> <!-- Dragon Slayer -->
-			<item id="31400" count="1" chance="30" /> <!-- Bound Dragon Slayer - Health -->
-			<item id="31401" count="1" chance="30" /> <!-- Bound Dragon Slayer - Critical Bleed -->
-			<item id="31402" count="1" chance="30" /> <!-- Bound Dragon Slayer - Critical Drain -->
-		</createItems>
 		<skills>
 			<skill id="12985" level="1" /> <!-- Check Item -->
 		</skills>
@@ -26,12 +20,6 @@
 		<set name="commissionItemType" val="BOW" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="289" count="1" chance="10" /> <!-- Soul Bow -->
-			<item id="30819" count="1" chance="30" /> <!-- Bound Soul Bow - Critical Poison -->
-			<item id="30817" count="1" chance="30" /> <!-- Bound Soul Bow - Cheap Shot -->
-			<item id="30818" count="1" chance="30" /> <!-- Bound Soul Bow - Quick Recovery -->
-		</createItems>
 		<skills>
 			<skill id="12986" level="1" /> <!-- Check Item -->
 		</skills>
@@ -44,12 +32,6 @@
 		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="164" count="1" chance="10" /> <!-- Elysian -->
-			<item id="30847" count="1" chance="30" /> <!-- Bound Elysian - Health -->
-			<item id="30848" count="1" chance="30" /> <!-- Bound Elysian - Anger -->
-			<item id="30849" count="1" chance="30" /> <!-- Bound Elysian - Critical Drain -->
-		</createItems>
 		<skills>
 			<skill id="12987" level="1" /> <!-- Check Item -->
 		</skills>
@@ -62,12 +44,6 @@
 		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="7895" count="1" chance="10" /> <!-- Flaming Dragon Skull -->
-			<item id="31396" count="1" chance="30" /> <!-- Bound Flaming Dragon Skull - Acumen -->
-			<item id="31397" count="1" chance="30" /> <!-- Bound Flaming Dragon Skull - M. Atk. -->
-			<item id="31398" count="1" chance="30" /> <!-- Bound Flaming Dragon Skull - Magic Silence -->
-		</createItems>
 		<skills>
 			<skill id="12988" level="1" /> <!-- Check Item -->
 		</skills>
@@ -80,12 +56,6 @@
 		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="213" count="1" chance="10" /> <!-- Branch of the Mother Tree -->
-			<item id="31129" count="1" chance="30" /> <!-- Bound Branch of the Mother Tree - Acumen -->
-			<item id="31127" count="1" chance="30" /> <!-- Bound Branch of the Mother Tree - Conversion -->
-			<item id="31128" count="1" chance="30" /> <!-- Bound Branch of the Mother Tree - Magic Damage -->
-		</createItems>
 		<skills>
 			<skill id="12989" level="1" /> <!-- Check Item -->
 		</skills>
@@ -98,12 +68,6 @@
 		<set name="commissionItemType" val="TWO_HAND_BLUNT_WEAPON" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="7902" count="1" chance="10" /> <!-- Doom Crusher -->
-			<item id="31419" count="1" chance="30" /> <!-- Bound Doom Crusher - Health -->
-			<item id="31420" count="1" chance="30" /> <!-- Bound Doom Crusher - Anger -->
-			<item id="31421" count="1" chance="30" /> <!-- Bound Doom Crusher - Rsk. Haste -->
-		</createItems>
 		<skills>
 			<skill id="12990" level="1" /> <!-- Check Item -->
 		</skills>
@@ -116,12 +80,6 @@
 		<set name="commissionItemType" val="SPEAR" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="305" count="1" chance="10" /> <!-- Tallum Glaive -->
-			<item id="30625" count="1" chance="30" /> <!-- Bound Tallum Glaive - Health -->
-			<item id="30624" count="1" chance="30" /> <!-- Bound Tallum Glaive - Guidance -->
-			<item id="30626" count="1" chance="30" /> <!-- Bound Tallum Glaive - Wide Blow -->
-		</createItems>
 		<skills>
 			<skill id="12991" level="1" /> <!-- Check Item -->
 		</skills>
@@ -134,12 +92,6 @@
 		<set name="commissionItemType" val="FIST_WEAPON" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="270" count="1" chance="10" /> <!-- Dragon Grinder -->
-			<item id="31406" count="1" chance="30" /> <!-- Bound Dragon Grinder - Health -->
-			<item id="31404" count="1" chance="30" /> <!-- Bound Dragon Grinder - Rsk. Evasion -->
-			<item id="31405" count="1" chance="30" /> <!-- Bound Dragon Grinder - Guidance -->
-		</createItems>
 		<skills>
 			<skill id="12992" level="1" /> <!-- Check Item -->
 		</skills>
@@ -152,10 +104,6 @@
 		<set name="commissionItemType" val="DUALSWORD" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="8938" count="1" chance="10" /> <!-- Tallum Blade*Damascus -->
-			<item id="33545" count="1" chance="90" /> <!-- Bound Tallum Blade*Damascus - Event -->
-		</createItems>
 		<skills>
 			<skill id="12933" level="1" /> <!-- Check Item -->
 		</skills>
@@ -168,10 +116,6 @@
 		<set name="commissionItemType" val="HELMET" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="2418" count="1" chance="10" /> <!-- Helm of Nightmare -->
-			<item id="30891" count="1" chance="90" /> <!-- Bound Helm of Nightmare -->
-		</createItems>
 		<skills>
 			<skill id="12993" level="1" /> <!-- Check Item -->
 		</skills>
@@ -184,10 +128,6 @@
 		<set name="commissionItemType" val="SHIELD" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="2498" count="1" chance="10" /> <!-- Shield of Nightmare -->
-			<item id="30892" count="1" chance="90" /> <!-- Bound Shield of Nightmare -->
-		</createItems>
 		<skills>
 			<skill id="12994" level="1" /> <!-- Check Item -->
 		</skills>
@@ -200,10 +140,6 @@
 		<set name="commissionItemType" val="FEET" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="5314" count="1" chance="10" /> <!-- Sealed Boots of Nightmare -->
-			<item id="32812" count="1" chance="90" /> <!-- Sealed Bound Boots of Nightmare -->
-		</createItems>
 		<skills>
 			<skill id="12995" level="1" /> <!-- Check Item -->
 		</skills>
@@ -216,10 +152,6 @@
 		<set name="commissionItemType" val="FULL_BODY" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="2408" count="1" chance="10" /> <!-- Robe of Nightmare -->
-			<item id="30896" count="1" chance="90" /> <!-- Bound Robe of Nightmare -->
-		</createItems>
 		<skills>
 			<skill id="12996" level="1" /> <!-- Check Item -->
 		</skills>
@@ -232,10 +164,6 @@
 		<set name="commissionItemType" val="FULL_BODY" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="2394" count="1" chance="10" /> <!-- Leather Armor of Nightmare -->
-			<item id="30897" count="1" chance="90" /> <!-- Bound Leather Armor of Nightmare -->
-		</createItems>
 		<skills>
 			<skill id="12997" level="1" /> <!-- Check Item -->
 		</skills>
@@ -248,10 +176,6 @@
 		<set name="commissionItemType" val="GLOVES" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="5313" count="1" chance="10" /> <!-- Sealed Gauntlets of Nightmare -->
-			<item id="32808" count="1" chance="90" /> <!-- Sealed Bound Gauntlets of Nightmare -->
-		</createItems>
 		<skills>
 			<skill id="12998" level="1" /> <!-- Check Item -->
 		</skills>
@@ -264,10 +188,6 @@
 		<set name="commissionItemType" val="FULL_BODY" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="374" count="1" chance="10" /> <!-- Armor of Nightmare -->
-			<item id="30905" count="1" chance="90" /> <!-- Bound Armor of Nightmare -->
-		</createItems>
 		<skills>
 			<skill id="12999" level="1" /> <!-- Check Item -->
 		</skills>
@@ -280,12 +200,6 @@
 		<set name="commissionItemType" val="BOW" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="9445" count="1" chance="10" /> <!-- Dynasty Bow -->
-			<item id="33556" count="1" chance="30" /> <!-- Bound Dynasty Bow - Cheap Shot - Event -->
-			<item id="33557" count="1" chance="30" /> <!-- Bound Dynasty Bow - Guidance - Event -->
-			<item id="33558" count="1" chance="30" /> <!-- Bound Dynasty Bow - Focus - Event -->
-		</createItems>
 		<skills>
 			<skill id="12934" level="1" /> <!-- Check Item -->
 		</skills>

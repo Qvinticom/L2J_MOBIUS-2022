@@ -207,11 +207,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="70024" count="1" chance="33" /> <!-- Daily Coin -->
-			<item id="1419" count="1" chance="33" /> <!-- Proof of Blood -->
-			<item id="29648" count="1" chance="34" /> <!-- XP/SP Scroll - Normal -->
-		</createItems>
 		<skills>
 			<skill id="51038" level="1" /> <!-- Battle Box Lv. 1 -->
 		</skills>
@@ -227,13 +222,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="49758" count="1" chance="20" /> <!-- Blood Crystal -->
-			<item id="90012" count="1" chance="20" /> <!-- Common Life Stone -->
-			<item id="70024" count="2" chance="20" /> <!-- Daily Coin -->
-			<item id="1419" count="2" chance="20" /> <!-- Proof of Blood -->
-			<item id="29648" count="2" chance="20" /> <!-- XP/SP Scroll - Normal -->
-		</createItems>
 		<skills>
 			<skill id="51039" level="1" /> <!-- Battle Box Lv. 2 -->
 		</skills>
@@ -249,12 +237,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="90012" count="1" chance="25" /> <!-- Common Life Stone -->
-			<item id="70024" count="3" chance="25" /> <!-- Daily Coin -->
-			<item id="29649" count="4" chance="25" /> <!-- XP/SP Scroll - Medium -->
-			<item id="29648" count="4" chance="25" /> <!-- XP/SP Scroll - Normal -->
-		</createItems>
 		<skills>
 			<skill id="51040" level="1" /> <!-- Battle Box Lv. 3 -->
 		</skills>
@@ -270,17 +252,6 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
-		<createItems>
-			<item id="49756" count="1" chance="11" /> <!-- Cloth Piece -->
-			<item id="90012" count="1" chance="11" /> <!-- Common Life Stone -->
-			<item id="70024" count="5" chance="11" /> <!-- Daily Coin -->
-			<item id="90013" count="1" chance="11" /> <!-- Mid-grade Life Stone -->
-			<item id="730" count="1" chance="11" /> <!-- Scroll: Enchant Armor (A-grade) -->
-			<item id="948" count="1" chance="11" /> <!-- Scroll: Enchant Armor (B-grade) -->
-			<item id="729" count="1" chance="11" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-			<item id="947" count="1" chance="11" /> <!-- Scroll: Enchant Weapon (B-grade) -->
-			<item id="29649" count="1" chance="11" /> <!-- XP/SP Scroll - Medium -->
-		</createItems>
 		<skills>
 			<skill id="51041" level="1" /> <!-- Battle Box Lv. 4 -->
 		</skills>
