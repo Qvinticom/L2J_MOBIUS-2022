@@ -601,7 +601,7 @@
 		</stats>
 	</item>
 	<item id="23124" name="Vorpal Heavy Armor of Fortune Set Pack (S80-grade)" additionalName="90-day" type="EtcItem">
-		<!-- Double-click to obtain a Vorpal Heavy Armor Set of Fortune. Disappears after 90 days. -->
+		<!-- Wrapped Pack containing Vorpal Heavy Armor Set of Fortune. Disappears after 90 days. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -624,7 +624,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23125" name="Vorpal Light Armor of Fortune Set Pack (S80-grade)" additionalName="90-day" type="EtcItem">
-		<!-- Double-click to obtain a Vorpal Light Armor Set of Fortune. Disappears after 90 days. -->
+		<!-- Wrapped Pack containing Vorpal Light Armor Set of Fortune. Disappears after 90 days. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -646,7 +646,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23126" name="Vorpal Robe of Fortune Set Pack (S80-grade)" additionalName="90-day" type="EtcItem">
-		<!-- Double-click to obtain a Vorpal Robe Set of Fortune. Disappears after 90 days. -->
+		<!-- Wrapped Pack containing Vorpal Robe Set of Fortune. Disappears after 90 days. -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -669,7 +669,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23127" name="Armor Pack (S80-grade) (90-day)" type="EtcItem">
-		<!-- Double-click to obtain an Armor of Fortune (S80-grade) (90-day). -->
+		<!-- Wrapped Pack containing Armor of Fortune (S80-grade) (90-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -690,7 +690,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23128" name="Weapon Pack (S80-grade) (90-day)" type="EtcItem">
-		<!-- Double-click to obtain Weapons of Fortune (S80-grade) (90-day). -->
+		<!-- Wrapped Pack containing Weapons of Fortune (S80-grade) (90-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -724,7 +724,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23129" name="Accessory Pack (S80-grade) (90-day)" type="EtcItem">
-		<!-- Double-click to obtain an Accessories of Fortune (S80-grade) (90-day). -->
+		<!-- Wrapped Pack containing Accessories of Fortune (S80-grade) (90-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -745,7 +745,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23130" name="Vorpal Ring of Fortune" additionalName="90-day" type="Armor">
-		<!-- MP+ 26. -->
+		<!-- MP+26. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -766,7 +766,7 @@
 		</stats>
 	</item>
 	<item id="23131" name="Vorpal Earring of Fortune" additionalName="90-day" type="Armor">
-		<!-- MP+ 38. -->
+		<!-- MP+38. -->
 		<set name="icon" val="icon.accessary_ponshrnoen_earring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1102,7 +1102,7 @@
 		</skills>
 	</item>
 	<item id="23147" name="Ghost Potion" additionalName="Event" type="EtcItem">
-		<!-- Ghost Potion. P. Atk. +20%, M. Atk. +85%, and Speed +20 for 2 hr. Cooldown is 60 min. -->
+		<!-- Ghost Potion. P. Atk. +20%, M. Atk. +85%, and Speed +20 for 2 h. Cooldown is 60 min. -->
 		<set name="icon" val="icon.etc_water_potion_i00" />
 		<set name="weight" val="5" />
 		<set name="is_stackable" val="true" />
@@ -1170,7 +1170,7 @@
 		</skills>
 	</item>
 	<item id="23152" name="Soul Avatar - Lancet" type="Armor">
-		<!-- Bracelet that summons the image of Lancet as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for M. Def. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Lancet as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for M. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1194,7 +1194,7 @@
 		</skills>
 	</item>
 	<item id="23153" name="Soul Avatar - Liposa" type="Armor">
-		<!-- Bracelet that summons the image of Liposa as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for M. Def. Cannot be exchanged, dropped, sold or used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Liposa as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for M. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_a_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1218,7 +1218,7 @@
 		</skills>
 	</item>
 	<item id="23154" name="Soul Avatar - Velarin" type="Armor">
-		<!-- Bracelet that summons the image of Velarin as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Excellent for improving the caster's skills. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Velarin as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_f_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1242,7 +1242,7 @@
 		</skills>
 	</item>
 	<item id="23155" name="Soul Avatar - Dulcinel" type="Armor">
-		<!-- Bracelet that summons the image of Dulcinel as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Excellent for improving the caster's skills. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Dulcinel as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_e_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1266,7 +1266,7 @@
 		</skills>
 	</item>
 	<item id="23156" name="Soul Avatar - Chimeros" type="Armor">
-		<!-- Bracelet that summons the image of Chimeros as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for M. Atk. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Chimeros as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for M. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_d_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1290,7 +1290,7 @@
 		</skills>
 	</item>
 	<item id="23157" name="Soul Avatar - Niveri" type="Armor">
-		<!-- Bracelet that summons the image of Niveri as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for M. Atk. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Niveri as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for M. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_c_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1314,7 +1314,7 @@
 		</skills>
 	</item>
 	<item id="23158" name="Soul Avatar - Hamell" type="Armor">
-		<!-- Bracelet that summons the image of Hamell as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for P. Def. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Hamell as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for P. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_h_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1338,7 +1338,7 @@
 		</skills>
 	</item>
 	<item id="23159" name="Soul Avatar - Joriya" type="Armor">
-		<!-- Bracelet that summons the image of Joriya as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for P. Def. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Joriya as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for P. Def. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_g_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1362,7 +1362,7 @@
 		</skills>
 	</item>
 	<item id="23160" name="Soul Avatar - Ralmak" type="Armor">
-		<!-- Bracelet that summons the image of Ralmak as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for P. Atk. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Ralmak as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for P. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_i_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1386,7 +1386,7 @@
 		</skills>
 	</item>
 	<item id="23161" name="Soul Avatar - Goras" type="Armor">
-		<!-- Bracelet that summons the image of Goras as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for P. Atk. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Goras as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Effective for P. Atk. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_j_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1410,7 +1410,7 @@
 		</skills>
 	</item>
 	<item id="23162" name="Soul Avatar - Vensar" type="Armor">
-		<!-- Bracelet that summons the image of Vensar as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Excellent for improving the caster's skills. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Vensar as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1434,7 +1434,7 @@
 		</skills>
 	</item>
 	<item id="23163" name="Soul Avatar - Kiela" type="Armor">
-		<!-- Bracelet that summons the image of Kiela as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Excellent for improving the caster's skills. Cannot be used in the Olympiad. -->
+		<!-- Bracelet that summons the image of Kiela as a Soul Avatar through the red Dimensional Door. Increases 6 Attribute Resistance by 10. Excellent for improving the caster's skills. Cannot use the Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_aga_local2009_k_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1509,7 +1509,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23169" name="Sweet Summer Slushie" additionalName="Event" type="EtcItem">
-		<!-- Summer Slushie made by Herina. Use it to change into a Beach Swimsuit. For 1 hr., Atk. Spd. +5%, Casting Spd. +5%, Speed +5, and Max HP/ MP +5%. Cooldown is 1 hr. -->
+		<!-- Summer Slushie made by Herina. Use it to change into a Beach Swimsuit. For 1 h., Atk. Spd. +5%, Casting Spd. +5%, Speed +5, and Max HP/ MP +5%. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_sweet_icewater" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1524,7 +1524,7 @@
 		</skills>
 	</item>
 	<item id="23170" name="Fantastic Summer Slushie" additionalName="Event" type="EtcItem">
-		<!-- Summer Slushie made by Herina. Use this top-quality slushie to change into an Alluring Swimsuit. For 1 hr., Atk. Spd. +10%, Casting Spd. +10%, Speed. +10, and Max HP/ MP +10%. Cooldown is 1 hr. -->
+		<!-- Summer Slushie made by Herina. Use this top-quality slushie to change into an Alluring Swimsuit. For 1 h., Atk. Spd. +10%, Casting Spd. +10%, Speed. +10, and Max HP/ MP +10%. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys3.icon1.g_ev_sweet_icewater" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1650,7 +1650,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="23177" name="Brilliant Beach Sun Cap Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Brilliant Beach Sun Cap (30-day). -->
+		<!-- Wrapped Pack containing Brilliant Beach Sun Cap (30-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1670,7 +1670,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23178" name="Stylish Straw Hat Pack (30-day)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Stylish Straw Hat (30-day). -->
+		<!-- Wrapped Pack containing Stylish Straw Hat (30-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1930,7 +1930,7 @@
 		</skills>
 	</item>
 	<item id="23193" name="Ninja Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots. -->
+		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots. Cannot be exchanged or dropped. Can be destroyed and stored in a private warehouse. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -2050,7 +2050,7 @@
 		</skills>
 	</item>
 	<item id="23199" name="Ninja Outfit Appearance Stone Pack" type="EtcItem">
-		<!-- Double-click to obtain a Ninja Top/ Pants/ Gloves/ Shoes/ Hair Accessory Appearance Stone. -->
+		<!-- Wrapped Pack containing Ninja Top/ Pants/ Gloves/ Shoes/ Hair Accessory Appearance Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

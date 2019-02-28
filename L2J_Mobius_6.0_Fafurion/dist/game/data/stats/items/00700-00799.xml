@@ -577,7 +577,7 @@
 		</skills>
 	</item>
 	<item id="730" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_AM" />

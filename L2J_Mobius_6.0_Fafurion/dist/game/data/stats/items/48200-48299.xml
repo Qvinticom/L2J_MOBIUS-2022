@@ -68,7 +68,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48203" name="Noble Circlet of Authority" type="Armor">
-		<!-- Noble Warrior's Circlet. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Warrior's Circlet. Can be augmented. -->
+		<!-- Noble Warrior's Circlet.. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Warrior's Circlet. Can be augmented. -->
 		<set name="icon" val="icon.bm_pattack_circlet_02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -102,7 +102,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48206" name="Noble Circlet of Foresight" type="Armor">
-		<!-- Noble Wizard's Circlet. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Wizard's Circlet. Can be augmented. -->
+		<!-- Noble Wizard's Circlet. <Upgrade Requirement>. Enchant to +5 to upgrade to a Rdiant Wizard's Circlet. Can be augmented. -->
 		<set name="icon" val="icon.bm_mattack_circlet_02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair2" />
@@ -179,7 +179,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48214" name="Reconstruction Society's Enchantment Pack" type="EtcItem">
-		<!-- Double-click to obtain 1 Blessed Circlet Enchant S?roll. Has a chance to obtain one of the following items: 1 Circlet Spirit Stone, 1 Noble Circlet Upgrade Stone or 1 Radiant Circlet Upgrade Stone. -->
+		<!-- Double-click to obtain 1 Blessed Circlet Enchant Scroll. Has a chance to obtain one of the following items: 1 Circlet Spirit Stone, 1 Noble Circlet Upgrade Stone, or 1 Radiant Circlet Upgrade Stone. -->
 		<set name="icon" val="icon.bm_aden_renewal_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -203,7 +203,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48217" name="High-grade Balthus Knight Mark" type="EtcItem">
-		<!-- Box containing Balthus Knights' supplies. -->
+		<!-- Box containing Balthus Knights supplies. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -215,7 +215,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48218" name="Veteran Duo Bracelet Pack" additionalName="Event" type="EtcItem">
-		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
+		<!-- Box containing Balthus Knights supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -228,7 +228,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48219" name="Returned Duo Bracelet Pack" additionalName="Event" type="EtcItem">
-		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
+		<!-- Box containing Balthus Knights supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -241,7 +241,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="48220" name="NoItemName" type="EtcItem">
-		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
+		<!-- Box containing Balthus Knights supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -264,7 +264,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48222" name="New Year's Gift Package" additionalName="Event" type="EtcItem">
-		<!-- A package filled with New Year's gifts, received from Chorong. Use to obtain a Lucky Bag and a Hanbok costume. Will be deleted on Wednesday, February 8, 2017, after regular maintenance. -->
+		<!-- A package filled with New Year's gifts, received from Chorong. Use to obtain a Lucky Bag and a Hanbok costume. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -276,7 +276,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48223" name="Lucky Gift Coupon" additionalName="3 Hours" type="EtcItem">
-		<!-- Use it to change into the Hanbok appearance for 3 hr. and enter the Lucky Gift Draw. Can be used above level 85. The buff is deleted when you change to dual or subclass. Will be deleted on Wednesday, February 8, 2017, after regular maintenance. -->
+		<!-- Use it to change into the Hanbok appearance for 3 hours and enter the Lucky Gift Draw. Can be used above level 85. The buff is deleted when you change to dual or subclass. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -287,7 +287,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48224" name="Lucky Gift Coupon" additionalName="6 Hours" type="EtcItem">
-		<!-- Use it to change into the Hanbok appearance for 6 hr. and enter the Lucky Gift Draw. Can be used above level 85. The buff is deleted when you change to dual or subclass. Will be deleted on Wednesday, February 8, 2017, after regular maintenance. -->
+		<!-- Use it to change into the Hanbok appearance for 6 hours and enter the Lucky Gift Draw. Can be used above level 85. The buff is deleted when you change to dual or subclass. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -298,7 +298,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48225" name="Chorong's Lucky Scroll" additionalName="Event" type="EtcItem">
-		<!-- When used, increases Acquired XP/ SP by 30%, Acquired XP/ SP in Vitality state by 30%, and P. Atk./ P. Def./ M. Atk./ M. Def. by 15% for 30 min. Will be deleted after the event. -->
+		<!-- When used, Acquired XP/ SP +30%, Vitality Bonus +30%, and P. Atk./ P. Def./ M. Atk./ M. Def. +15% for 30 min. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_charm_of_luck_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -306,7 +306,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48226" name="Lucky Bait" type="EtcItem">
-		<!-- A very lucky-looking bait. Will be deleted on Wednesday, February 8, 2017, after regular maintenance. -->
+		<!-- A very lucky-looking bait. -->
 		<set name="icon" val="icon.etc_gludio_fish_lure_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -318,7 +318,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48227" name="+7 Zodiac Agathion Charm Box" type="EtcItem">
-		<!-- Freya's Lucky Gift. Use it to obtain one of +7 Zodiac Agathion Charms. Will be deleted after the event. -->
+		<!-- Freya's Lucky Gift. Use it to obtain one of +7 Zodiac Agathion Charms. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -716,7 +716,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48254" name="Giant Trackers Basic Treasure Chest" additionalName="Superion" type="EtcItem">
-		<!-- A basic supply box received in exchange for helping the Giant Trackers with their mission in Superion. Double click to view the item. -->
+		<!-- A basic supply box received in exchange for helping the Giant Trackers with their mission in Superion. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -727,7 +727,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48255" name="Giant Trackers Intermediate Treasure Chest" additionalName="Superion" type="EtcItem">
-		<!-- An intermediate supply box received in exchange for helping the Giant Trackers with their mission in Superion. Double click to view the item. -->
+		<!-- An intermediate supply box received in exchange for helping the Giant Trackers with their mission in Superion. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -738,7 +738,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48256" name="Giant Trackers Advanced Treasure Chest" additionalName="Superion" type="EtcItem">
-		<!-- An advanced supply box received in exchange for helping the Giant Trackers with their mission in Superion. Double click to view the item. -->
+		<!-- An advanced supply box received in exchange for helping the Giant Trackers with their mission in Superion. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -749,7 +749,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48257" name="Clan Point Token" type="EtcItem">
-		<!-- Old Clan Point, an item that proves the glorious past of the clan. You can exchange it for another item through Clan Trader Ilia in the Town of Aden or Mulia in the Town of Rune. Will be deleted after the event. -->
+		<!-- Old Clan Point, an item that proves the glorious past of the clan. You can exchange it for another item through Clan Trader Ilia in the Town of Aden or Mulia in the Town of Rune. -->
 		<set name="icon" val="icon.etc_bloodpledge_point_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -912,7 +912,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48272" name="Personal Fame Token" type="EtcItem">
-		<!-- Obsolete Personal Fame. Can be exchanged for other items with the Fame Managers Rapidus in the Town of Aden or Scipio in the Town of Rune. Will be deleted on Wednesday, May 31 8, 2017, after regular maintenance. -->
+		<!-- Obsolete Personal Fame. Can be exchanged for other items with the Fame Managers Rapidus in the Town of Aden or Scipio in the Town of Rune. -->
 		<set name="icon" val="icon.etc_pvp_point_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

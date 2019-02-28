@@ -84,7 +84,7 @@
 		</skills>
 	</item>
 	<item id="36311" name="Battleground Scroll: Damage Reflect Resistance" type="EtcItem">
-		<!-- Becomes resistant to Damage Reflect. Battleground only. -->
+		<!-- Becomes resistant to Damage Reflection. Battleground only. -->
 		<set name="icon" val="icon.etc_roll_of_paper_black_i00" />
 		<set name="weight" val="5" />
 		<set name="is_oly_restricted" val="true" />
@@ -273,7 +273,7 @@
 		</skills>
 	</item>
 	<item id="36327" name="Birthday Vitality Potion" additionalName="1-hour" type="EtcItem">
-		<!-- Upon use, for 1 hr., Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
+		<!-- Upon use, for 1 hour, Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="weight" val="80" />
 		<set name="is_stackable" val="true" />
@@ -292,7 +292,7 @@
 		</skills>
 	</item>
 	<item id="36328" name="Freya's Refreshing Breeze" additionalName="1-hour" type="EtcItem">
-		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
+		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="weight" val="1" />
 		<set name="is_stackable" val="true" />
@@ -313,7 +313,7 @@
 		</skills>
 	</item>
 	<item id="36329" name="Pa'agrio's Warm Breeze (1-hour)" type="EtcItem">
-		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
+		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="BranchSys2.Icon.pi_wind_of_paagrio" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -332,7 +332,7 @@
 		</skills>
 	</item>
 	<item id="36330" name="Sweet Chocolate (1-hour)" type="EtcItem">
-		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
+		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -352,7 +352,7 @@
 		</skills>
 	</item>
 	<item id="36331" name="Returning Hero's Vitality Replenishing Juice" additionalName="1-hour" type="EtcItem">
-		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality recovery effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality recovery effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
@@ -372,7 +372,7 @@
 		</skills>
 	</item>
 	<item id="36332" name="Pirate Elixir (1-hour)" type="EtcItem">
-		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
+		<!-- Upon use, for 1 hour, you can temporarily feel the Vitality-replenishing effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -405,7 +405,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36334" name="Adrenaline Energy Drink" additionalName="Event" type="EtcItem">
-		<!-- Energy drink meant to make one run like the wind. Speed +15. Formulated for special events, the recipe remains a secret. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
+		<!-- Pump-up drink that increases Movement Speed by 15. Formulated to train track and field athletes for Olympiad, it makes them run like slow wild horses. The recipe remains a secret. For fair play, it is prohibited in Olympiad matches. It is so potent that the body does not remember the effect of the previous drink. -->
 		<set name="icon" val="icon.etc_oblivion_yellow_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -419,7 +419,7 @@
 		</skills>
 	</item>
 	<item id="36335" name="Caffeine Energy Drink" additionalName="Event" type="EtcItem">
-		<!-- Energy drink that boosts dexterity and clears one's mind with a single cup. DEX +10. Formulated for special events, this energy drink should be used with care as it can raise pulse rate and blood pressure. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
+		<!-- Caffeine drink that increases DEX by 10. Formulated to train archers for Olympiad, it boosts dexterity and refreshes them with a single cup. This energy drink should be used with care as it can raise pulse rate and blood pressure. For the safety of athletes, it is prohibited in Olympiad matches. It is so potent that the body does not remember the effect of the previous drink. -->
 		<set name="icon" val="icon.etc_oblivion_green_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -433,7 +433,7 @@
 		</skills>
 	</item>
 	<item id="36336" name="Protein Energy Drink" additionalName="Event" type="EtcItem">
-		<!-- Energy drink that creates monstrous muscle mass. STR +10. Formulated for special events, this energy drink makes one extremely powerful. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
+		<!-- Protein drink that increases STR by 10. Formulated to train wrestlers for Olympiad, it creates monstrous muscle mass, making them extremely powerful. Due to serious side effects, it is prohibited in Olympiad matches. It is so potent that the body does not remember the effect of the previous drink. -->
 		<set name="icon" val="icon.etc_oblivion_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -446,7 +446,7 @@
 		</skills>
 	</item>
 	<item id="36337" name="DHA Energy Drink" additionalName="Event" type="EtcItem">
-		<!-- Energy drink that increases brain power. INT +10. Formulated for special events, this energy drink sharpens Mental/ magical attacks unto one's enemy while strengthening the brain from the resulting whiplash. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
+		<!-- High-volume drink that increases INT by 10. Formulated to train taekwondo players for Olympiad, it enables them to shout at a high pitch and sharpen mental/ magical attacks unto one's enemy while strengthening the brain from the resulting whiplash. To protect auditory organs, it is prohibited in Olympiad matches. It is so potent that the body does not remember the effect of the previous drink. -->
 		<set name="icon" val="icon.etc_oblivion_violet_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="ELIXIR" />
@@ -459,7 +459,7 @@
 		</skills>
 	</item>
 	<item id="36338" name="Omega3 Energy Drink" additionalName="Event" type="EtcItem">
-		<!-- Energy drink that stimulates the nerves, activating the neurons in the brain. WIT +10. Formulated for special events, this energy drink is said to help with Mental activity. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
+		<!-- Omega 3 drink that increases WIT by 10. Formulated to train swimmers for Olympiad, it is known to make them smarter. Although the relationship between omega 3 and swimming remains a mystery, statistics show that those who take omega 3 swim better. For fair play, it is prohibited in Olympiad matches. It is so potent that the body does not remember the effect of the previous drink. -->
 		<set name="icon" val="icon.etc_oblivion_white_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -494,7 +494,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36342" name="Agathion Bracelet" additionalName="Jr. Cocoring" type="Armor">
-		<!-- Bracelet received from Event Manager Cocoring. When you wear it, you can summon Jr. Cocoring Agathion. This Agathion can take away one of the three medals (the Medal of Glory, the Medal of Victory and the Medal of Friendship) from a monster every hr. for 5 hr. after being summoned. Your Vitality recovers when stay in a Peaceful Zone wearing this bracelet. -->
+		<!-- Bracelet received from Event Manager Cocoring. When you wear it, you can summon Jr. Cocoring Agathion. This Agathion can take away one of the three medals (the Medal of Glory, the Medal of Victory and the Medal of Friendship) from a monster every hour for 5 hours after being summoned. Your Vitality recovers when stay in a Peaceful Zone wearing this bracelet. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -888,7 +888,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36386" name="Giant's Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. Random enchantment from +1 to +3. -->
+		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. Random enchantment from +1 to +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_r" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />

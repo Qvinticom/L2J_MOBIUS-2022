@@ -101,7 +101,7 @@
 		</skills>
 	</item>
 	<item id="37705" name="Chocolate Truffle" type="EtcItem">
-		<!-- Double click to cast Decadence (For 2 hr., STR +2, INT +2, and Attribute Resistance +20) on the entire party. Can be stacked with Sugar Rush and Forever Alone effects. -->
+		<!-- Double-click to cast Decadence (for 2 hr., STR +2, INT +2, and Attribute Resistance +20) on the entire party. Can be stacked with Sugar Rush and Forever Alone effects. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -122,7 +122,7 @@
 		</skills>
 	</item>
 	<item id="37706" name="Candy Heart" type="EtcItem">
-		<!-- Double click to cast Sugar Rush (For 2 hr., STR +2, INT +2, DEX +2, and WIT +2) on the entire party. Can be stacked with Decadence and Forever Alone effects. -->
+		<!-- Double-click to cast Sugar Rush (for 2 hr., STR +2, INT +2, DEX +2, and WIT +2) on the entire party. Can be stacked with Decadence and Forever Alone effects. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -143,7 +143,7 @@
 		</skills>
 	</item>
 	<item id="37707" name="Comfort Cookie" type="EtcItem">
-		<!-- Double click to cast Forever Alone (For 2 hr., STR +2, INT +2, CON +2, and MEN +2) on the entire party. Can be stacked with Decadence and Sugar Rush effects. -->
+		<!-- Double-click to cast Forever Alone (for 2 hr., STR +2, INT +2, CON +2, and MEN +2) on the entire party. Can be stacked with Decadence and Sugar Rush effects. -->
 		<set name="icon" val="icon.etc_whiteday_cookie" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -284,7 +284,7 @@
 		</skills>
 	</item>
 	<item id="37714" name="Talisman - Lilith" type="Armor">
-		<!-- When equipped, M. Def. +552, MP Recovery by 3, Dark Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Anakim or Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
+		<!-- When equipped, M. Def. +552, MP Recovery by 3, Dark Resistance by 10, and Damage Reflection Resistance by 6. No effect if equipped with Talisman - Anakim or Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
 		<set name="icon" val="icon.lilith_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -300,7 +300,7 @@
 		</skills>
 	</item>
 	<item id="37715" name="Talisman - Anakim" type="Armor">
-		<!-- When equipped, P. Def. +971, HP Recovery by 6, Dark Resistance and Holy Resistance by 10, and Damage Reflect Resistance by 6. No effect if equipped with Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
+		<!-- When equipped, P. Def. +971, HP Recovery by 6, Dark Resistance and Holy Resistance by 10, and Damage Reflection Resistance by 6. No effect if equipped with Talisman - Seven Signs. Equipping two talismans will give the effect of one. -->
 		<set name="icon" val="icon.anakim_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -321,7 +321,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37717" name="Talisman - Seven Signs" type="Armor">
-		<!-- When equipped, M. Def. +736, P. Def. by 1126, MP Recovery by 4, HP Recovery by 8, Attribute Resistance by 10, and Damage Reflect Resistance by 14. When equipped with Talisman - Longing, Attribute Attack increases by 50 and all weapon resistance increases by 3%. Equipping two talismans will give the effect of one. -->
+		<!-- When equipped, M. Def. +736, P. Def. + 1126, MP Recovery +4, HP Recovery +8, Attribute Resistance +10, and Damage Reflection Resistance +14. When equipped with Talisman - Longing, Attribute Attack +50 and all weapon resistance +3%. Equipping two talismans will give the effect of one. -->
 		<set name="icon" val="icon.sevensign_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -372,7 +372,7 @@
 		</stats>
 	</item>
 	<item id="37719" name="Pa'agrio's Special Pack" type="EtcItem">
-		<!-- Double-click to obtain a Pa'agrio's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Pa'agrio's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i02" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -387,7 +387,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37720" name="Maphr's Special Pack" type="EtcItem">
-		<!-- Double-click to obtain a Maphr's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Maphr's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i01" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -402,7 +402,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37721" name="Sayha's Special Pack" type="EtcItem">
-		<!-- Double-click to obtain a Sayha's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Sayha's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i03" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -417,7 +417,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37722" name="Eva's Special Pack" type="EtcItem">
-		<!-- Double-click to obtain an Eva's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
+		<!-- Wrapped Pack containing Eva's Shirt. There is also a low chance or acquiring a Shiny Elemental Shirt.. Warning: The shirt acquired after opening the box is restored to the character and cannot be moved. -->
 		<set name="icon" val="icon.shirt_special_box_i00" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -432,7 +432,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37723" name="Shiny Elemental Shirt Exchange Stone" type="EtcItem">
-		<!-- Bring this to the Fantasy Isle Paddy to exchange your +8 shirt for the same shirt but enchanted to +10. Note: the shirt cannot be traded after exchange. -->
+		<!-- Bring Pa'agrio's Shirt, Maphr's Shirt, Sayha's Shirt, or Eva's Shirt to the Fantasy Isle Paddy to exchange for a Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.shirt_stone" />
 		<set name="is_dropable" val="false" />
 		<set name="is_sellable" val="false" />
@@ -458,7 +458,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37727" name="Dandy's Gift Box" type="EtcItem">
-		<!-- Double-click to obtain Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Blessed Zaken's Earring, and Ruler's Authority Belt, all with 7-day limit. Will be deleted after the event. -->
+		<!-- Double-click to obtain Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Blessed Zaken's Earring, and Ruler's Authority Belt, all with 7-day limit. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -481,7 +481,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37728" name="Dandy's Challenge Box" type="EtcItem">
-		<!-- Double click to acquire Dandy's Challenge Scroll and the NC Dinos Uniform. -->
+		<!-- Double-click to acquire Dandy's Challenge Scroll and the NC Dinos Uniform. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -500,7 +500,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37729" name="Dandy's Scroll: Faith" type="EtcItem">
-		<!-- For 60 min., increases P. Atk. by 5%, Atk. Spd. by 5%, P. Critical Rate by 30, M. Atk. by 10%, Casting Spd. by 5%, M. Critical Rate by 20, MP consumption by 3%, and cooldown by 3%. Dandy's Cheer and Dandy's Passion buffs are not applied at the same time. -->
+		<!-- For 60 min., decreases P. Atk. by 5%, Atk. Spd. by 5%, P. Critical Rate by 30, M. Atk. by 10%, Casting Spd. by 5%, M. Critical Rate by 20, MP consumption by 3%, and cooldown by 3%. Dandy's Cheer and Dandy's Passion buffs are not applied at the same time. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -655,7 +655,7 @@
 		</stats>
 	</item>
 	<item id="37736" name="Blessed Zaken's Earring" additionalName="7-day" type="Armor">
-		<!-- MP +37, Bleed Resistance 30% increase, Bleed Attack Rate 30% increase, Heal Amount 15% increase, Vampiric Rage Effect, Stun/ Mental resistance 30% increase, Stun/ Mental attack rate 30% increase, Dark Resistance 15 increase. Only one effect is applied even when the same two earrings are worn. When equipped with a normal Zaken's Earring, only the effects of the Blessed Zaken's Earring are applied. Cannot be used in the Olympiad. -->
+		<!-- MP +37, Bleed Resistance +30%, Bleed Attack Rate +30%, Heal Amount +15%, Vampiric Rage Effect, Stun/ Mental Resistance +30%, Stun/ Mental Attack Rate +30%, Dark Attribute Resistance +15. Only one effect is applied even when the same two earrings are worn. When equipped with a normal Zaken's Earring, only the effects of the Blessed Zaken's Earring are applied. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -677,7 +677,7 @@
 		</stats>
 	</item>
 	<item id="37737" name="Ruler's Authority" additionalName="7-day" type="Armor">
-		<!-- An item awarded to the winner of the Ceremony of Chaos held in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 1000, Weight by 25600, and Damage by 8%. Decreases damage received by 9%. Increases Damage Reflect Resistance by 5%, inventory slots by 36, and all Attribute Resistance by 15. Cannot be used in Olympiad. -->
+		<!-- An item awarded to the winner of the Ceremony of Chaos held in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 1000, Weight by 25600, and Damage by 8%. Decreases damage received by 9%. Increases Damage Reflection Resistance by 5%, inventory slots by 36, and all Attribute Resistance by 15. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.belt_rulers_authority" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1060,7 +1060,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37772" name="Scroll of Blessing: Weapon (R99-grade)" type="EtcItem">
-		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Helios equipment for Blessed equipment. -->
+		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Helios equipment for Blessed equipment. Can be exchanged, dropped, or sold. Can be stored in the private warehouse. Can not be shared within the same account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="weight" val="100" />
 		<set name="price" val="155659040" />
@@ -1141,7 +1141,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 	</item>
 	<item id="37781" name="Scroll of Blessing: Armor (R99-grade)" type="EtcItem">
-		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Eternal equipment for Blessed equipment. -->
+		<!-- There is a small chance that the Blacksmith of Mammon will exchange for you standard Eternal equipment for Blessed equipment. Can be exchanged, dropped, or sold. Can be stored in the private warehouse. Can not be shared within the same account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.bless_scroll_r99" />
 		<set name="weight" val="100" />
 		<set name="price" val="42227840" />

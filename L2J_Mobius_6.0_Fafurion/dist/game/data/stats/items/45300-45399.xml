@@ -28,7 +28,7 @@
 		</skills>
 	</item>
 	<item id="45373" name="Agathion - Blessed Pisces Pack" type="EtcItem">
-		<!-- Double-click to obtain a Super Advanced Seed Bracelet (30-day). -->
+		<!-- Wrapped Pack containing a Super Advanced Seed Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="150" />
 		<set name="is_stackable" val="true" />
@@ -47,7 +47,7 @@
 		</capsuled_items>
 	</item>
 	<item id="45374" name="Laser Gun" additionalName="Event" type="Weapon">
-		<!-- Use this and its active skill Pew Pew to defeat Alien Researchers! Deleted after event. -->
+		<!-- Use this and its active skill Pew Pew to defeat Alien Researchers! -->
 		<set name="icon" val="icon.invasion_gun" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -108,7 +108,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45380" name="Depleted Plasma Gun" additionalName="1-hour" type="Weapon">
-		<!-- Looks like the energy pack is nearly drained, but it can use a Knock Back skill! 1-hr. -->
+		<!-- Looks like the energy pack is nearly drained, but it can use a Knock Back skill! 1-hour. -->
 		<set name="icon" val="icon.invasion_gun" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />
@@ -131,7 +131,7 @@
 		</stats>
 	</item>
 	<item id="45381" name="Charged Plasma Gun" additionalName="1-hour" type="Weapon">
-		<!-- Be careful, this one is set to the highest power! Use this and you can also use the Spirit Hit skill. 1-hr. -->
+		<!-- Be careful, this one is set to the highest power! Use this and you can also use the Spirit Hit skill. 1-hour. -->
 		<set name="icon" val="icon.invasion_gun" />
 		<set name="weapon_type" val="CROSSBOW" />
 		<set name="default_action" val="EQUIP" />

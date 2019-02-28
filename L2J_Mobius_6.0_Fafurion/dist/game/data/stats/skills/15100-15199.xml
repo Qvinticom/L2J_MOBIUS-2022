@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="15100" toLevel="1" name="Noblesse Blessing">
-		<!-- For 6 hr., buffs and debuffs do not disappear but remain upon death. -->
+		<!-- For 6 h., buffs and debuffs do not disappear but remain upon death. -->
 		<icon>icon.skill1323</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1171,7 +1171,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15145" toLevel="1" name="Ruler's Authority">
-		<!-- When equipped, Max HP/ MP/ CP +$s1, weight +$s2, damage dealt +$s3, damage received -$s4, Damage Reflect Resistance +$s5, inventory slot +$s6, and all attribute resistance +$s7. -->
+		<!-- When equipped, Max HP/ MP/ CP +$s1, weight +$s2, damage dealt +$s3, Received Damage -$s4, Damage Reflection Resistance +$s5, Inventory Slots +$s6, and all attribute resistance +$s7. -->
 		<icon>icon.belt_rulers_authority</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -1239,7 +1239,7 @@
 		</effects>
 	</skill>
 	<skill id="15146" toLevel="1" name="Mysterious Belt">
-		<!-- Max HP/ MP/ CP +500, PvP Damage +6%, Damage Reflect Resistance +5%, and Received PvP Damage -7%. -->
+		<!-- Max HP/ MP/ CP +500, PvP Damage +6%, Damage Reflection Resistance +5%, and Received PvP Damage -7%. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -2435,7 +2435,7 @@
 		</effects>
 	</skill>
 	<skill id="15194" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 282 HP per sec. -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 282 HP per second. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2480,7 +2480,7 @@
 		</effects>
 	</skill>
 	<skill id="15195" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 296 HP per sec. -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 296 HP per second. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2525,7 +2525,7 @@
 		</effects>
 	</skill>
 	<skill id="15196" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 313 HP per sec. -->
+		<!-- Banishes enemies near the target to another dimension. The exiled target becomes incapacitated and invincible to some attacks, skills, and debuffs. Decreases 313 HP per second. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>

@@ -482,7 +482,7 @@
 		</effects>
 	</skill>
 	<skill id="6723" toLevel="1" name="Concentration of Elcadia">
-		<!-- Decreases magic cancel rate by 53 for 20 min. -->
+		<!-- Decreases magic cancel damage by 53 for 20 min. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -615,7 +615,7 @@
 		</effects>
 	</skill>
 	<skill id="6728" toLevel="1" name="Recharge of Elcadia">
-		<!-- Recovers MP up to 136 power depending on the target's Lv. -->
+		<!-- Recovers MP up to 136 power depending on the target's Lv.. -->
 		<icon>icon.skill1013</icon>
 		<castRange>400</castRange>
 		<effectPoint>655</effectPoint>
@@ -741,7 +741,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6734" toLevel="1" name="Energy of Destruction">
-		<!-- For 5 sec., inflicted with poison with 800 HP decrease per sec. -->
+		<!-- For 5 sec., inflicted with poison with 800 HP decrease per second. -->
 		<icon>icon.skill0129</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-100</effectPoint>
@@ -1158,7 +1158,7 @@
 		</effects>
 	</skill>
 	<skill id="6754" toLevel="1" name="Bleed">
-		<!-- Inflicted with bleed and 200 HP decreases every sec. -->
+		<!-- Inflicted with bleed and 200 HP decreases every second. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1760,7 +1760,7 @@
 		</endEffects>
 	</skill>
 	<skill id="6777" toLevel="1" name="Bleeding Gash">
-		<!-- For 20 sec., slows down Speed and inflicts bleed so that 200 HP is decreased every sec. Inflicted with paralysis for 10 sec. -->
+		<!-- For 20 sec., slows down Speed and inflicts bleed so that 200 HP is decreased every second. Inflicted with paralysis for 10 sec. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>20</abnormalTime>

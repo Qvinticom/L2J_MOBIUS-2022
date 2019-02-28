@@ -636,7 +636,7 @@
 		</skills>
 	</item>
 	<item id="14045" name="Stone of Invincibility" type="EtcItem">
-		<!-- P. Def. Increases for 20 min. during use. Item exclusively for flying transformed objects. -->
+		<!-- P. Def. increases for 20 min. during use. Item exclusively for flying transformed objects. -->
 		<set name="icon" val="icon.stone_2_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1005,7 +1005,7 @@
 		</skills>
 	</item>
 	<item id="14061" name="Toy Knight Summon Whistle" type="EtcItem">
-		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 hr. Cannot feed pet to refill hunger gauge. -->
+		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1030,7 +1030,7 @@
 		</skills>
 	</item>
 	<item id="14062" name="Spirit Shaman Summon Whistle" type="EtcItem">
-		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 hr. -->
+		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 hours. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1080,7 +1080,7 @@
 		</skills>
 	</item>
 	<item id="14064" name="Turtle Ascetic Summon Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a Turtle Ascetic. Hunger gauge lasts 5 hr. -->
+		<!-- Item that allows you to summon a Turtle Ascetic. Hunger gauge lasts 5 hours. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -1105,7 +1105,7 @@
 		</skills>
 	</item>
 	<item id="14065" name="Superior Minion Coupon" additionalName="5-hour" type="EtcItem">
-		<!-- Coupon that can be exchanged for a necklace (5-hr.) that summons a Superior Minion. -->
+		<!-- Coupon that can be exchanged for a necklace (5-hour) that summons a Superior Minion. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1331,7 +1331,7 @@
 		</skills>
 	</item>
 	<item id="14074" name="Superior Minion Coupon (Event)" additionalName="5-hour" type="EtcItem">
-		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hr.). -->
+		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />

@@ -656,7 +656,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="9546" name="Fire Stone" type="EtcItem">
-		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water Attribute Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water defense attribute increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Fire Crystals. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -672,7 +672,7 @@
 		</skills>
 	</item>
 	<item id="9547" name="Water Stone" type="EtcItem">
-		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire Attribute Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire defense attribute increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Water Crystals. -->
 		<set name="icon" val="icon.etc_water_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -688,7 +688,7 @@
 		</skills>
 	</item>
 	<item id="9548" name="Earth Stone" type="EtcItem">
-		<!-- Earth attack attribute increases by 5 when bestowed on a weapon. Wind Attribute Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Earth attack attribute increases by 5 when bestowed on a weapon and earth defense attribute by 6 when bestowed on armor, thereby increasing wind resistance. The maximum attribute level is 3. Additionally, a maximum of three types of elemental Attribute Resistance can be bestowed on armor, and opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Earth Crystals. -->
 		<set name="icon" val="icon.etc_earth_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -704,7 +704,7 @@
 		</skills>
 	</item>
 	<item id="9549" name="Wind Stone" type="EtcItem">
-		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth Attribute Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth defense attribute increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Wind Crystal. -->
 		<set name="icon" val="icon.etc_wind_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -720,7 +720,7 @@
 		</skills>
 	</item>
 	<item id="9550" name="Dark Stone" type="EtcItem">
-		<!-- Dark attack attribute increases by 5 when bestowed on a weapon. Holy Attribute Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Dark attack attribute increases by 5 when bestowed on a weapon. Holy defense attribute increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Dark Crystals. -->
 		<set name="icon" val="icon.etc_unholy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -736,7 +736,7 @@
 		</skills>
 	</item>
 	<item id="9551" name="Holy Stone" type="EtcItem">
-		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Dark Attribute Resistance increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Dark defense attribute increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Holy Crystals. -->
 		<set name="icon" val="icon.etc_holy_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -752,7 +752,7 @@
 		</skills>
 	</item>
 	<item id="9552" name="Fire Crystal" type="EtcItem">
-		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water Attribute Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water defense attribute increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Fire Jewel. -->
 		<set name="icon" val="icon.etc_fire_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -768,7 +768,7 @@
 		</skills>
 	</item>
 	<item id="9553" name="Water Crystal" type="EtcItem">
-		<!-- Water attack attribute increases by 5 when bestowed on a weapon. Fire Attribute Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- This Attribute Crystal increases water attack attribute by 5 when bestowed on a weapon and water defense attribute by 6 when bestowed on armor, thereby increasing fire resistance. The maximum attribute level is 6. Additionally, a maximum of three types of elemental Attribute Resistance can be bestowed on armor, and opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Water Jewels. -->
 		<set name="icon" val="icon.etc_water_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -784,7 +784,7 @@
 		</skills>
 	</item>
 	<item id="9554" name="Earth Crystal" type="EtcItem">
-		<!-- Earth attack attribute increases by 5 when bestowed on a weapon. Wind Attribute Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- This Attribute Crystal increases earth attack attribute by 5 when bestowed on a weapon and earth defense attribute by 6 when bestowed on armor, thereby increasing wind resistance. The maximum attribute level is 6. Additionally, a maximum of three types of elemental Attribute Resistance can be bestowed on armor, and opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Earth Jewels. -->
 		<set name="icon" val="icon.etc_earth_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -800,7 +800,7 @@
 		</skills>
 	</item>
 	<item id="9555" name="Wind Crystal" type="EtcItem">
-		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth Attribute Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth defense attribute increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Wind Jewels. -->
 		<set name="icon" val="icon.etc_wind_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -816,7 +816,7 @@
 		</skills>
 	</item>
 	<item id="9556" name="Dark Crystal" type="EtcItem">
-		<!-- Dark attack attribute increases by 5 when bestowed on a weapon. Holy Attribute Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Dark attack attribute increases by 5 when bestowed on a weapon. Holy defense attribute increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Dark Jewel. -->
 		<set name="icon" val="icon.etc_unholy_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -832,7 +832,7 @@
 		</skills>
 	</item>
 	<item id="9557" name="Holy Crystal" type="EtcItem">
-		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Dark Attribute Resistance increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Dark defense attribute increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Yin in the Town of Aden and Yang in the Town of Rune exchange the crystals for Holy Jewel. -->
 		<set name="icon" val="icon.etc_holy_crystal_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -848,7 +848,7 @@
 		</skills>
 	</item>
 	<item id="9558" name="Fire Jewel" type="EtcItem">
-		<!-- Fire attack attribute increases by % when bestowed on a weapon. Water Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 9. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- This Attribute Crystal increases fire attack attribute by 5 when bestowed on a weapon and fire defense attribute by 6 when bestowed on armor, thereby increasing water resistance. The maximum attribute level is 9. Additionally, a maximum of three types of elemental Attribute Resistance can be bestowed on armor, and opposite attributes cannot be bestowed together. Can only be used on Grade-R110 equipment. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -863,7 +863,7 @@
 		</skills>
 	</item>
 	<item id="9559" name="Water Jewel" type="EtcItem">
-		<!-- Water attack attribute increases by % when bestowed on a weapon. Fire Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 9. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- This Attribute Crystal increases water attack attribute by 5 when bestowed on a weapon and water defense attribute by 6 when bestowed on armor, thereby increasing fire resistance. The maximum attribute level is 9. Additionally, a maximum of three types of elemental Attribute Resistance can be bestowed on armor, and opposite attributes cannot be bestowed together. Can only be used on Grade-R110 equipment. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -878,7 +878,7 @@
 		</skills>
 	</item>
 	<item id="9560" name="Earth Jewel" type="EtcItem">
-		<!-- Earth attack attribute increases by % when bestowed on a weapon. Wind Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 9. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- This Attribute Crystal increases earth attack attribute by 5 when bestowed on a weapon and earth defense attribute by 6 when bestowed on armor, thereby increasing wind resistance. The maximum attribute level is 9. Additionally, a maximum of three types of elemental Attribute Resistance can be bestowed on armor, and opposite attributes cannot be bestowed together. Can only be used on Grade-R110 equipment. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -893,7 +893,7 @@
 		</skills>
 	</item>
 	<item id="9561" name="Wind Jewel" type="EtcItem">
-		<!-- Wind attack attribute increases by % when bestowed on a weapon. Earth Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 9. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- Wind attack attribute increases by 5 when bestowed on a weapon. Earth defense attribute increases by 6 when bestowed on an armor. The maximum attribute level is 9. Additionally, a maximum of three types of elemental Attribute Resistance can be bestowed on armor, and opposite attributes cannot be bestowed together. Can only be used on Grade-R110 equipment. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -908,7 +908,7 @@
 		</skills>
 	</item>
 	<item id="9562" name="Dark Jewel" type="EtcItem">
-		<!-- Dark attack attribute increases by % when bestowed on a weapon. Holy Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 9. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- Dark attack attribute increases by 5 when bestowed on a weapon. Holy defense attribute increases by 9 when bestowed on an armor. Attribute Crystals can be used up to attribute level 6. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Can only be used on Grade-R110 equipment. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -923,7 +923,7 @@
 		</skills>
 	</item>
 	<item id="9563" name="Holy Jewel" type="EtcItem">
-		<!-- Holy attack attribute increases by % when bestowed on a weapon. Dark Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 9. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- Holy attack attribute increases by 5 when bestowed on a weapon. Dark defense attribute increases by 6 when bestowed on an armor. Attribute Crystals can be used up to attribute level 9. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. Can only be used on Grade-R110 equipment. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -938,7 +938,7 @@
 		</skills>
 	</item>
 	<item id="9564" name="Energy of Fire" type="EtcItem">
-		<!-- Fire attack attribute increases by % when bestowed on a weapon. Water Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- Fire attack attribute increases by % when bestowed on a weapon. Water defense attribute increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -953,7 +953,7 @@
 		</skills>
 	</item>
 	<item id="9565" name="Energy of Water" type="EtcItem">
-		<!-- Water attack attribute increases by % when bestowed on a weapon. Fire Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- Water attack attribute increases by % when bestowed on a weapon. Fire defense attribute increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -968,7 +968,7 @@
 		</skills>
 	</item>
 	<item id="9566" name="Energy of Earth" type="EtcItem">
-		<!-- Earth attack attribute increases by % when bestowed on a weapon. Wind Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- Earth attack attribute increases by % when bestowed on a weapon. Wind defense attribute increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -983,7 +983,7 @@
 		</skills>
 	</item>
 	<item id="9567" name="Energy of Wind" type="EtcItem">
-		<!-- Wind attack attribute increases by % when bestowed on a weapon. Earth Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- Wind attack attribute increases by % when bestowed on a weapon. Earth defense attribute increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -998,7 +998,7 @@
 		</skills>
 	</item>
 	<item id="9568" name="Dark Energy" type="EtcItem">
-		<!-- Dark attack attribute increases by % when bestowed on a weapon. Holy Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- Dark attack attribute increases by % when bestowed on a weapon. Holy defense attribute increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -1013,7 +1013,7 @@
 		</skills>
 	</item>
 	<item id="9569" name="Holy Energy" type="EtcItem">
-		<!-- Holy attack attribute increases by % when bestowed on a weapon. Dark Attribute Resistance increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
+		<!-- Holy attack attribute increases by % when bestowed on a weapon. Dark defense attribute increases by % when bestowed on an armor. Attribute Stones can be used up to attribute level 12. Additionally, a maximum of three types of Elemental attribute can be bestowed on an armor. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />
@@ -1073,7 +1073,7 @@
 		</skills>
 	</item>
 	<item id="9573" name="Life Stone - Lv. 80" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 80 or above. -->
+		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 80 or above. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1086,7 +1086,7 @@
 		</cond>
 	</item>
 	<item id="9574" name="Mid-grade Life Stone - Lv. 80" type="EtcItem">
-		<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 80 or above. -->
+		<!-- Mid-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 80 or above. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1099,7 +1099,7 @@
 		</cond>
 	</item>
 	<item id="9575" name="High-grade Life Stone - Lv. 80" type="EtcItem">
-		<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 80 or above. -->
+		<!-- High-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 80 or above. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -1112,7 +1112,7 @@
 		</cond>
 	</item>
 	<item id="9576" name="Top-grade Life Stone - Lv. 80" type="EtcItem">
-		<!-- This is the highest-grade mineral available, having been petrified by a creature's physical or magical force. Key component used in weapon Augmentation by characters level 80 or above. -->
+		<!-- This is the highest-grade mineral available, having been petrified by a creature's physical or magical force. Key component used in weapon augmentation by characters level 80 or above. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />

@@ -1,9 +1,9 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="26100" toLevel="1" name="Tears Dualsword Appearance Stone">
+	<skill id="26100" toLevel="1" name="Tears Appearance Stone: Dual Sword">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26101" toLevel="1" name="Tears Dual Dagger Appearance Stone">
+	<skill id="26101" toLevel="1" name="Tears Appearance Stone: Dual Dagger">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="26102" toLevel="1" name="Tears Dual Blunt Weapon Appearance Stone">
@@ -44,7 +44,7 @@
 		</effects>
 	</skill>
 	<skill id="26107" toLevel="1" name="Angel Cat's Blessing">
-		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, Atk. Spd. +5%, Casting Spd. +5%, and SP/ XP gain through hunt +30%. -->
+		<!-- For 60min., P. Atk. +5%, M. Atk. +20%, Atk. Spd. +5%, Casting Spd. +5%, and SP/ XP gain through hunt +30%. -->
 		<icon>icon.accessory_cat_the_cat_cap_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -132,8 +132,8 @@
 	<skill id="26113" toLevel="1" name="Kamaloka Chest">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="26114" toLevel="1" name="Daily PC Support">
-		<!-- For 1 hr., STR/ DEX/ CON/ INT/ WIT/ MEN +3, Atk. Attribute Bonus +30, and Attribute Resistance +30. -->
+	<skill id="26114" toLevel="1" name="Daily PA Support">
+		<!-- For 1 h., STR/ DEX/ CON/ INT/ WIT/ MEN +3, Attack Attribute Bonus +30, and Attribute Resistance +30. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<isMagic>4</isMagic>
@@ -456,7 +456,7 @@
 			<effect name="DeleteHate" />
 		</effects>
 	</skill>
-	<skill id="26122" toLevel="12" name="Mad Cow">
+	<skill id="26122" toLevel="12" name="Battle Rhapsody">
 		<!-- For $s1, P./ M. Atk., and Atk./ Casting Spd. x $s2. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_skill_i00</icon>
 		<operateType>A2</operateType>
@@ -503,7 +503,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="26123" toLevel="12" name="Maiden's Prayer">
+	<skill id="26123" toLevel="12" name="Nemean Lion's Defense">
 		<!-- Invincible for $s1. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_april_july_i00</icon>
 		<operateType>A2</operateType>
@@ -586,7 +586,7 @@
 		</effects>
 	</skill>
 	<skill id="26125" toLevel="12" name="Scorpion's Mass Exile">
-		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and standard attacks, and lose $s1 HP/ sec. -->
+		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and standard attacks, and lose $s1 HP/ second. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_oct_i00</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -645,7 +645,7 @@
 		</effects>
 	</skill>
 	<skill id="26126" toLevel="12" name="Mass Binding Flood">
-		<!-- Immobilizes target and nearby enemies midair for $s1 and inflicts $s2 damage per sec. -->
+		<!-- Immobilizes target and nearby enemies midair for $s1 and inflicts $s2 damage per second. -->
 		<icon>BranchIcon.Icon.accessary_sign_agathion_jan_i00</icon>
 		<operateType>A1</operateType>
 		<castRange>1100</castRange>

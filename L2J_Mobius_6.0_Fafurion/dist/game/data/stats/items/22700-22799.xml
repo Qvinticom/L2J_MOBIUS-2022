@@ -169,7 +169,7 @@
 		</skills>
 	</item>
 	<item id="22708" name="Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which is destroyed after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. Consumes 125000 adena for a 1-slot hair accessory and 200000 adena for a 2-slot hair accessory. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2_stone" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -190,7 +190,7 @@
 		</skills>
 	</item>
 	<item id="22709" name="Blessed Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
+		<!-- Item that can change a hair accessory's appearance. Works for item with the same number of slots. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. Warning: When changed to the appearance of a female-only hair accessory, it cannot be equipped by a male character. -->
 		<set name="icon" val="BranchSys3.Icon.g_bless_shape_shifting_hair2_stone" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1075,7 +1075,7 @@
 		</skills>
 	</item>
 	<item id="22744" name="Vitality Suspending Potion Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vitality Suspending Potion. -->
+		<!-- Wrapped Pack containing Vitality Suspending Potion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="36" />
 		<set name="is_clan_depositable" val="false" />
@@ -1117,7 +1117,7 @@
 		</skills>
 	</item>
 	<item id="22746" name="Scroll: Increase Vitality Pack" type="EtcItem">
-		<!-- Double-click to obtain a Scroll: increase Vitality. -->
+		<!-- Wrapped Pack containing Scroll: increase Vitality. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1159,7 +1159,7 @@
 		</skills>
 	</item>
 	<item id="22748" name="Scroll: Increase Vitality Pack (High-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Scroll: increase Vitality (High-grade). -->
+		<!-- Wrapped Pack containing Scroll: increase Vitality (High-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1201,7 +1201,7 @@
 		</skills>
 	</item>
 	<item id="22750" name="Scroll: Increase Vitality Pack (Top-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Scroll: increase Vitality (Top-grade). -->
+		<!-- Wrapped Pack containing Scroll: increase Vitality (Top-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="30" />
 		<set name="is_clan_depositable" val="false" />
@@ -1426,7 +1426,7 @@
 		</skills>
 	</item>
 	<item id="22763" name="Drop Rate Rune 30% Pack (3-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 30% (3-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 30% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1443,11 +1443,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22751" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (3-hr.) -->
+			<item id="22751" min="1" max="1" chance="100" /> <!-- Maphr's Rune 30% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22764" name="Drop Rate Rune 30% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 30% (5-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 30% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1464,11 +1464,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22752" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (5-hr.) -->
+			<item id="22752" min="1" max="1" chance="100" /> <!-- Maphr's Rune 30% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22765" name="Drop Rate Rune 30% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 30% (7-day. -->
+		<!-- Wrapped Pack containing Maphr's Rune 30% (7-day. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1485,11 +1485,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22753" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (7-day) -->
+			<item id="22753" min="1" max="1" chance="100" /> <!-- Maphr's Rune 30% (7-day) -->
 		</capsuled_items>
 	</item>
 	<item id="22766" name="Drop Rate Rune 50% Pack (3-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 50% (3-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 50% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1506,11 +1506,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22754" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (3-hr.) -->
+			<item id="22754" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22767" name="Drop Rate Rune 50% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 50% (5-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 50% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1527,11 +1527,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22755" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (5-hr.) -->
+			<item id="22755" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22768" name="Drop Rate Rune 50% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 50% (7-day. -->
+		<!-- Wrapped Pack containing Maphr's Rune 50% (7-day. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1548,11 +1548,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22756" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (7-day) -->
+			<item id="22756" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% (7-day) -->
 		</capsuled_items>
 	</item>
 	<item id="22769" name="Drop Rate Rune 100% Pack (3-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 100% (3-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1569,11 +1569,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22757" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (3-hr.) -->
+			<item id="22757" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22770" name="Drop Rate Rune 100% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 100% (5-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1590,11 +1590,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22758" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (5-hr.) -->
+			<item id="22758" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22771" name="Drop Rate Rune 100% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 100% (7-day. -->
+		<!-- Wrapped Pack containing Maphr's Rune 100% (7-day. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1611,11 +1611,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22759" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (7-day) -->
+			<item id="22759" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% (7-day) -->
 		</capsuled_items>
 	</item>
 	<item id="22772" name="Drop Rate Rune 200% Pack (3-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 200% (3-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1632,11 +1632,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22760" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (3-hr.) -->
+			<item id="22760" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22773" name="Drop Rate Rune 200% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 200% (5-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1653,11 +1653,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22761" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (5-hr.) -->
+			<item id="22761" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22774" name="Drop Rate Rune 200% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 200% (7-day). -->
+		<!-- Wrapped Pack containing Maphr's Rune 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1674,7 +1674,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22762" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (7-day) -->
+			<item id="22762" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% (7-day) -->
 		</capsuled_items>
 	</item>
 	<item id="22775" name="Drake Maul" type="Weapon">

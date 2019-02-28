@@ -57,7 +57,7 @@
 		</skills>
 	</item>
 	<item id="37905" name="Kat the Cat's Surprise Gift" type="EtcItem">
-		<!-- Box containing Kat the Cat's gift. Double click to acquire 1 of the following at random: 150 Heavenly Recovery Potions, 1 Kat the Cat's Box of Roses, or 1 Emperor's Rune Box. Can be shared within the same account through the Dimensional Merchant. To be deleted on 30.10.13. -->
+		<!-- Box containing Kat the Cat's gift. Double-click to acquire 1 of the following at random: 150 Heavenly Recovery Potions, 1 Kat the Cat's Box of Roses, or 1 Emperor's Rune Box. Can be shared within the same account through the Dimensional Merchant. To be deleted on 30.10.13. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -71,7 +71,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="37906" name="Kat the Cat's Box of Roses" type="EtcItem">
-		<!-- Double click to acquire 1 Enhanced Rose Spirit Coupon (5 hr.) and 150 Rose Essences. -->
+		<!-- Double-click to acquire 1 Enhanced Rose Spirit Coupon (5 hours) and 150 Rose Essences. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -240,7 +240,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37921" name="Chrono Unitus Appearance Stone: Fist Weapon" additionalName="15-day" type="EtcItem">
-		<!-- Changes the appearance of a fist weapon sword into that of a Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
+		<!-- Changes the appearance of a fist weapon into that of a Chrono Unitus. It has been retouched by Celdion, the master of the Black Anvil Guild. 15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualfist" />
 		<set name="is_stackable" val="true" />
 		<set name="immediate_effect" val="true" />
@@ -317,7 +317,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="37928" name="Player Commendation - Art of Seduction" type="EtcItem">
-		<!-- When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/ M. Def 30% for 30 min. Cooldown time is 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
+		<!-- When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P./ M. Def. 30% for 30 min. Cooldown time is 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -716,7 +716,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="37944" name="Emperor's Cookie" type="EtcItem">
-		<!-- For 1 hr., Prevailing/ Combat/ Refreshing Sonata buffs are applied. Cooldown is 60min. Double-click to use. Buff remains even after death. -->
+		<!-- For 1 h., Prevailing/ Combat/ Refreshing Sonata buffs are applied. Cooldown is 60min. Double-click to use. Buff remains even after death. -->
 		<set name="icon" val="icon.etc_bm_sonata_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -820,7 +820,7 @@
 		</stats>
 	</item>
 	<item id="37950" name="Requiem Shaper Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Shaper. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -839,7 +839,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37951" name="Requiem Cutter Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Cutter. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -857,7 +857,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37952" name="Requiem Slasher Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Slasher. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -875,7 +875,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37953" name="Requiem Avenger Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Avenger. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -894,7 +894,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37954" name="Requiem Fighter Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Fighter. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -912,7 +912,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37955" name="Requiem Stormer Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Stormer. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -931,7 +931,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37956" name="Requiem Thrower Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Thrower. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -949,7 +949,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37957" name="Requiem Shooter Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Shooter. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -967,7 +967,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37958" name="Requiem Buster Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Buster. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -985,7 +985,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37959" name="Requiem Caster Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Caster. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1003,7 +1003,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37960" name="Requiem Retributer Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Requiem Retributer. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Requiem Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1022,7 +1022,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37961" name="Immortal Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Helmet. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1040,7 +1040,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37962" name="Immortal Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Breastplate. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1059,7 +1059,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37963" name="Immortal Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Gaiters. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gaiters. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1077,7 +1077,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37964" name="Immortal Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Gauntlets. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1095,7 +1095,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37965" name="Immortal Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Boots. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1132,7 +1132,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37967" name="Immortal Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Helmet. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1150,7 +1150,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37968" name="Immortal Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Armor. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1169,7 +1169,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37969" name="Immortal Leather Leggings Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Leggings. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Leggings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1187,7 +1187,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37970" name="Immortal Leather Gloves Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Gloves. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1205,7 +1205,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37971" name="Immortal Leather Boots Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Leather Boots. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Leather Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1224,7 +1224,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37972" name="Immortal Circlet Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Circlet. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Circlet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1242,7 +1242,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37973" name="Immortal Tunic Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Tunic. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Tunic. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1260,7 +1260,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37974" name="Immortal Stockings Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Stockings. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Stockings. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1278,7 +1278,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37975" name="Immortal Gloves Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Gloves. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Gloves. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1297,7 +1297,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37976" name="Immortal Shoes Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Shoes. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Shoes. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1316,7 +1316,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37977" name="Immortal Sigil Crafting Pack" additionalName="Robe" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Sigil. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Sigil. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1335,7 +1335,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37978" name="Immortal Necklace Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Necklace. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Necklace. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1352,7 +1352,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37979" name="Immortal Earring Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Earring. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Earring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1369,7 +1369,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37980" name="Immortal Ring Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Immortal Ring. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Immortal Ring. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1386,7 +1386,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37981" name="Apocalypse Shaper Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Shaper. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shaper. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1405,7 +1405,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37982" name="Apocalypse Cutter Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Cutter. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Cutter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1424,7 +1424,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37983" name="Apocalypse Slasher Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Slasher. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Slasher. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1443,7 +1443,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37984" name="Apocalypse Avenger Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Avenger. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Avenger. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1462,7 +1462,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37985" name="Apocalypse Fighter Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Fighter. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Fighter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1481,7 +1481,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37986" name="Apocalypse Stormer Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Stormer. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Stormer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1500,7 +1500,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37987" name="Apocalypse Thrower Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Thrower. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Thrower. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1519,7 +1519,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37988" name="Apocalypse Shooter Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Shooter. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Shooter. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1537,7 +1537,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37989" name="Apocalypse Buster Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Buster. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Buster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1556,7 +1556,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37990" name="Apocalypse Caster Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Caster. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Caster. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1575,7 +1575,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37991" name="Apocalypse Retributer Crafting Pack" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Apocalypse Retributer. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Apocalypse Retributer. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1593,7 +1593,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37992" name="Twilight Helmet Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Twilight Helmet. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1612,7 +1612,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37993" name="Twilight Breastplate Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Twilight Breastplate. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Breastplate. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1631,7 +1631,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37994" name="Twilight Gaiters Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Twilight Gaiters. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gaiters. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1649,7 +1649,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37995" name="Twilight Gauntlets Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Twilight Gauntlets. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Gauntlets. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="is_sellable" val="false" />
@@ -1667,7 +1667,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37996" name="Twilight Boots Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Twilight Boots. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Boots. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1705,7 +1705,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37998" name="Twilight Leather Helmet Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Twilight Leather Helmet. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Helmet. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -1724,7 +1724,7 @@
 		</capsuled_items>
 	</item>
 	<item id="37999" name="Twilight Leather Armor Crafting Pack" additionalName="Light Armor" type="EtcItem">
-		<!-- Double-click to obtain all ingredients needed for crafting Twilight Leather Armor. -->
+		<!-- Wrapped Pack containing all ingredients needed for crafting Twilight Leather Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />

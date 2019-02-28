@@ -130,7 +130,7 @@
 		</effects>
 	</skill>
 	<skill id="808" toLevel="1" name="Golem Punch">
-		<!-- Throws a strong punch to inflict damage and Stun. Over-hit. 11205 power. -->
+		<!-- Throws a strong punch to inflict damage and Stun. Over-hit is possible. 11205 power. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -162,7 +162,7 @@
 		</effects>
 	</skill>
 	<skill id="809" toLevel="1" name="Golem Tornado Swing">
-		<!-- Spinning attack strikes enemy with 6199 Power. Over-hit. -->
+		<!-- Spinning attack strikes enemy with 6199 Power. Over-hit is possible. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>200</affectRange>
 		<coolTime>660</coolTime>
@@ -350,7 +350,7 @@
 		</effects>
 	</skill>
 	<skill id="814" toLevel="43" name="Full Swing">
-		<!-- Widely swings a weapon to attack nearby enemies with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Widely swings a weapon to attack nearby enemies with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
 		<icon>icon.skill0814</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -559,7 +559,7 @@
 		</effects>
 	</skill>
 	<skill id="815" toLevel="43" name="Blade Hurricane">
-		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Over-hit and Critical are possible. -->
 		<icon>icon.skill0815</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -768,7 +768,7 @@
 		</effects>
 	</skill>
 	<skill id="816" toLevel="43" name="Cleave">
-		<!-- Inflicts a powerful blow on the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Inflicts a powerful blow on the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
 		<icon>icon.skill0816</icon>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
@@ -978,7 +978,7 @@
 		</effects>
 	</skill>
 	<skill id="817" toLevel="43" name="Double Attack">
-		<!-- Uses two swords to inflict a powerful blow on the enemy with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Uses two swords to inflict a powerful blow on the enemy with $s1 Power added to P. Atk. Requires a dual sword. Ignores Shield Defense. Over-hit and Critical are possible. -->
 		<icon>icon.skill0817</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -1489,7 +1489,7 @@
 		</effects>
 	</skill>
 	<skill id="827" toLevel="1" name="Bowstring">
-		<!-- Enhances the string of a bow or crossbow to increase P. Atk. by 5% and range by 100 for 20 min.(s). -->
+		<!-- Enhances the string of a bow or crossbow to increase P. Atk. by 5% and range by 100 for 20 min. -->
 		<icon>icon.skill0827</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1527,7 +1527,7 @@
 		</effects>
 	</skill>
 	<skill id="828" toLevel="1" name="Encase Armor">
-		<!-- Thickens the surface of heavy armor to increase P. Def. by 10% for 20 min.(s). -->
+		<!-- Thickens the surface of heavy armor to increase P. Def. by 10% for 20 min. -->
 		<icon>icon.skill0828</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -1730,7 +1730,7 @@
 		</effects>
 	</skill>
 	<skill id="835" toLevel="4" name="Imbue Seed of Destruction">
-		<!-- Plants a Seed of Destruction in the enemy's body. The seed grows inside the enemy, draining $s1 mana per sec. When fully grown, the seed blocks the enemy from using any skills. Consumes $s2 Dark Seeds. -->
+		<!-- Plants a Seed of Destruction in the enemy's body. The seed grows inside the enemy, draining $s1 mana per second. When fully grown, the seed blocks the enemy from using any skills. Consumes $s2 Dark Seeds. -->
 		<icon>icon.skill0835</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2796,7 +2796,7 @@
 		</effects>
 	</skill>
 	<skill id="872" toLevel="8" name="Archer Captain Power Shot">
-		<!-- Uses a bow to attack a distant enemy with $s1 Power added to P. Atk. Over-hit. -->
+		<!-- Uses a bow to attack a distant enemy with $s1 Power added to P. Atk. Over-hit is possible. -->
 		<icon>icon.skill0056</icon>
 		<castRange>700</castRange>
 		<coolTime>800</coolTime>
@@ -4231,7 +4231,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="899" toLevel="6" name="Cat Roar">
-		<!-- Uses the cry of danger to decrease P./ M. Def./ Speed/ Atk. Spd. of nearby enemies and decreases Magic Spd. Power $s1. -->
+		<!-- Uses the cry of danger to decrease P. Def./ M. Def./ Speed/ Atk. Spd. of nearby enemies and decreases Magic Spd. Power $s1. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

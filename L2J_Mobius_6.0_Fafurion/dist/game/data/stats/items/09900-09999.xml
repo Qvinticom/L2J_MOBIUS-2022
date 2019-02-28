@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="9900" name="Stealth Ring" type="Armor">
-		<!-- You can avoid the first attack by monsters when equipped. Lasts for 400 min. Shadow item. Only one effect is applied when two identical rings are worn. -->
+		<!-- You can avoid the first attack by monsters when equipped. Lasts for 400 min. Shadow item. Effect does not stack with additional rings. -->
 		<set name="icon" val="icon.accessary_ring_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -958,7 +958,7 @@
 		</skills>
 	</item>
 	<item id="9944" name="Yellow Talisman - Critical Dodging" type="Armor">
-		<!-- When used, it decreases received P. Critical Damage possibility. Effect does not stack with additional Talismans of the same type. -->
+		<!-- When used, it decreases P. Critical Damage possibility. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />

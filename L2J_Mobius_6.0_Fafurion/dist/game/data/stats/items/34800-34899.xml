@@ -325,7 +325,7 @@
 		</capsuled_items>
 	</item>
 	<item id="34831" name="Squash Ring (Wizard)" additionalName="Event" type="Armor">
-		<!-- Squash ring for wizards. Increases M. Critical Rate by 2% and M. Accuracy by 2. 15-day. Only one effect is applied when two identical rings are worn. -->
+		<!-- Squash ring for wizards. Increases M. Critical Rate by 2% and M. Accuracy by 2. 15-day. Wearing 2 of these rings will give the effect of 1. -->
 		<set name="icon" val="icon.accessory_ring_of_gourd_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -558,7 +558,7 @@
 		</skills>
 	</item>
 	<item id="34846" name="Bard's Gift" type="EtcItem">
-		<!-- Double-click to obtain a Bard's heart. -->
+		<!-- Wrapped Pack containing Bard's heart. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -577,18 +577,18 @@
 			<item id="33794" min="5000" max="5000" chance="2" /> <!-- Blessed Spiritshot (R-grade) - Event -->
 			<item id="33819" min="1" max="1" chance="7" /> <!-- Life Stone: Hair Accessory - Event -->
 			<item id="33862" min="5" max="5" chance="32" /> <!-- Elixir of Blessing - Event -->
-			<item id="33863" min="1" max="1" chance="1" /> <!-- Fire Stone (+ 60) - Event -->
-			<item id="33864" min="1" max="1" chance="1" /> <!-- Water Stone (+ 60) - Event -->
-			<item id="33865" min="1" max="1" chance="1" /> <!-- Earth Stone (+ 60) - Event -->
-			<item id="33866" min="1" max="1" chance="1" /> <!-- Wind Stone (+ 60) - Event -->
-			<item id="33867" min="1" max="1" chance="1" /> <!-- Dark Stone (+ 60) - Event -->
-			<item id="33868" min="1" max="1" chance="1" /> <!-- Holy Stone (+ 60) - Event -->
-			<item id="33869" min="1" max="1" chance="0.5" /> <!-- Fire Stone (+ 150) - Event -->
-			<item id="33870" min="1" max="1" chance="0.5" /> <!-- Water Stone (+ 150) - Event -->
-			<item id="33871" min="1" max="1" chance="0.5" /> <!-- Earth Stone (+ 150) - Event -->
-			<item id="33872" min="1" max="1" chance="0.5" /> <!-- Wind Stone (+ 150) - Event -->
-			<item id="33873" min="1" max="1" chance="0.5" /> <!-- Dark Stone (+ 150) - Event -->
-			<item id="33874" min="1" max="1" chance="0.5" /> <!-- Holy Stone (+ 150) - Event -->
+			<item id="33863" min="1" max="1" chance="1" /> <!-- Fire Stone (+60) - Event -->
+			<item id="33864" min="1" max="1" chance="1" /> <!-- Water Stone (+60) - Event -->
+			<item id="33865" min="1" max="1" chance="1" /> <!-- Earth Stone (+60) - Event -->
+			<item id="33866" min="1" max="1" chance="1" /> <!-- Wind Stone (+60) - Event -->
+			<item id="33867" min="1" max="1" chance="1" /> <!-- Dark Stone (+60) - Event -->
+			<item id="33868" min="1" max="1" chance="1" /> <!-- Holy Stone (+60) - Event -->
+			<item id="33869" min="1" max="1" chance="0.5" /> <!-- Fire Stone (+150) - Event -->
+			<item id="33870" min="1" max="1" chance="0.5" /> <!-- Water Stone (+150) - Event -->
+			<item id="33871" min="1" max="1" chance="0.5" /> <!-- Earth Stone (+150) - Event -->
+			<item id="33872" min="1" max="1" chance="0.5" /> <!-- Wind Stone (+150) - Event -->
+			<item id="33873" min="1" max="1" chance="0.5" /> <!-- Dark Stone (+150) - Event -->
+			<item id="33874" min="1" max="1" chance="0.5" /> <!-- Holy Stone (+150) - Event -->
 			<item id="34001" min="1" max="1" chance="12" /> <!-- High-grade Life Stone (R-grade) - Event -->
 			<item id="34002" min="1" max="1" chance="2" /> <!-- Top-grade Life Stone (R-grade) - Event -->
 			<item id="34003" min="1" max="1" chance="6" /> <!-- High-grade Life Stone (R95-grade) - Event -->
@@ -596,7 +596,7 @@
 		</capsuled_items>
 	</item>
 	<item id="34847" name="Pirate Elixir (2-hour)" type="EtcItem">
-		<!-- When used, you can temporarily feel the Vitality recovery herb's effect for 2 hr. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<!-- When used, you can temporarily feel the Vitality recovery herb's effect for 2 hours. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />

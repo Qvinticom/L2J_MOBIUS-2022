@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10000" toLevel="1" name="Steel Door Guild Reward Box  (Top-grade)">
+	<skill id="10000" toLevel="1" name="Steel Door Guild Reward Box (Top-grade)">
 		<operateType>A1</operateType>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>37394</itemConsumeId>
@@ -31,8 +31,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10001" toLevel="10" name="Superior Sword/Blunt Weapon Mastery">
-		<!-- PVE Damage +$s1. P. Atk. $s2, additional P. Atk. +$s3 when a Sword or Blunt weapon is equipped. P. Accuracy +$s4. Increases aggression toward yourself on standard attack. STR +$s5. There is a chance the skill cooldown will reset or the duration will become $s6 depending on your STR. -->
+	<skill id="10001" toLevel="10" name="Superior Sword/ Blunt Weapon Mastery">
+		<!-- PvE Damage +$s1. P. Atk. $s2, additional P. Atk. +$s3 when a Sword or Blunt weapon is equipped. P. Accuracy +$s4. Increases aggression toward yourself on standard attack. STR +$s5. There is a chance the skill cooldown will reset or the duration will become $s6 depending on your STR. -->
 		<icon>icon.skill10001</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -201,7 +201,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10004" toLevel="10" name="Superior M. Def.">
+	<skill id="10004" toLevel="10" name="Superior Magic Resistance">
 		<!-- M. Def. +$s1, Magic Damage Resistance +$s2, STR +$s3. -->
 		<icon>icon.skill10004</icon>
 		<operateType>P</operateType>
@@ -361,7 +361,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10006" toLevel="1" name="Last Patience">
+	<skill id="10006" toLevel="1" name="Grand Fortress">
 		<!-- When receiving damage, increases Shield Def. and reduces Raise Shield/ Focus Shield cooldown by $s2 for $s1. Increases the level of effect stacking and increases the duration of Shield Block by $s3. Additionally increases STR by $s4. -->
 		<icon>icon.skill10006</icon>
 		<magicLevel>85</magicLevel>
@@ -385,7 +385,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10007" toLevel="3" name="Last Patience">
+	<skill id="10007" toLevel="3" name="Grand Fortress">
 		<!-- For $s1, Shield Def. +$s2, cooldown of Raise Shield/ Focus Shield -$s3. -->
 		<icon>icon.skill10006</icon>
 		<abnormalLvl>2</abnormalLvl>
@@ -420,6 +420,7 @@
 		</effects>
 	</skill>
 	<skill id="10008" toLevel="11" name="Shield Charge">
+		<!-- Uses a shield to rush target with $s1 Power added, reducing their Speed by $s3 for $s2. Can be used while a shield is equipped. -->
 		<icon>icon.skill10008</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="11">80</value>
@@ -538,7 +539,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10009" toLevel="11" name="Last Judgment">
+	<skill id="10009" toLevel="11" name="Shield Bash">
+		<!-- Attacks target with $s1 Power added to P. Atk. and Stuns for $s2. In PvP, Restrains standard attacks. Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
 		<icon>icon.skill10011</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -638,7 +640,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10010" toLevel="11" name="Justice Punishment">
+	<skill id="10010" toLevel="11" name="Vanishing Stun">
+		<!-- Attacks target with $s1 Power added to P. Atk, and Atk. Spd./ Casting Spd. -$s2 for $s3 Has a chance to Silence target. If in a Two-Hand Stance, Decreases P. Def. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10010</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -749,6 +752,7 @@
 		</effects>
 	</skill>
 	<skill id="10011" toLevel="8" name="Shield Impact">
+		<!-- With the wave of the shield, attacks enemies in front with $s1 Power added to P. Atk., pushes them away a short distance, and releases the target with a certain probability. Requires a shield to be equipped. -->
 		<icon>icon.skill10012</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -835,6 +839,7 @@
 		</effects>
 	</skill>
 	<skill id="10012" toLevel="10" name="Shield Wave">
+		<!-- Attacks the targets near you with $s1 power added to P. Atk. and inflicts Stun for $s2 Grants Wave Barrier effect for $s3. Requires a shield. -->
 		<icon>icon.skill3584</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -930,7 +935,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10013" toLevel="11" name="Gust Blade">
+	<skill id="10013" toLevel="11" name="Rising Smash">
+		<!-- Attacks nearby targets with $s1 Power added to P. Atk. and Received Healing -$s3 for $s2 Can be used while a sword or blunt weapon is equipped. Over-hit. Critical. -->
 		<icon>icon.skill10013</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -1025,7 +1031,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10014" toLevel="11" name="Chain Galaxy">
+	<skill id="10014" toLevel="11" name="Chain Gust">
+		<!-- Swings the chain to attack nearby enemies with $s1 Power added to P. Atk. and holds them for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10014</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1119,6 +1126,7 @@
 		</effects>
 	</skill>
 	<skill id="10015" toLevel="9" name="Chain Strike">
+		<!-- Swings a chain to draw the target to you. Requires a sword/ blunt weapon to be equipped. -->
 		<icon>icon.skill10015</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1192,6 +1200,7 @@
 		</effects>
 	</skill>
 	<skill id="10016" toLevel="9" name="Chain Hydra">
+		<!-- Pulls target and nearby enemies to make them attack you.Requires a shield. -->
 		<icon>icon.skill10016</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -1267,6 +1276,7 @@
 		</effects>
 	</skill>
 	<skill id="10017" toLevel="7" name="Final Ultimate Defense">
+		<!-- Activates Shield Block for $s1 and reduces the maximum damage received to approximately $s2 in inverse proportion to your P. Def. Impossible to use Raise Shield/ Focus Shield. Requires a shield to be equipped. -->
 		<icon>icon.skill10097</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1382,6 +1392,7 @@
 		</effects>
 	</skill>
 	<skill id="10018" toLevel="2" name="Noble Sacrifice">
+		<!-- For $s1, receives $s2 of the damage received by the ally and activates the Last Patience effect during that HP does not decrease below 1. -->
 		<icon>icon.skill10020</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1434,6 +1445,7 @@
 		</effects>
 	</skill>
 	<skill id="10019" toLevel="5" name="Protection of Faith">
+		<!-- For $s1, reduces the maximum damage received by party members to approximately $s2 in inverse proportion to your P. Def. and increases Speed by $s3. Makes you immune to Hold and Stun. This effect cannot be stacked with the same effect or Nigh Aegis, and a limit applies after its duration is over. Requires a shield to be equipped. -->
 		<icon>icon.skill10019</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>2</abnormalLvl>
@@ -1518,6 +1530,7 @@
 		</effects>
 	</skill>
 	<skill id="10020" toLevel="7" name="Focus Shield">
+		<!-- For $s1, activates the Shield Block buff. Increases M. Def. by $s2 and decreases chance of receiving M. Critical Hit by $s3. Using Shield Charge, Shield Bash or Shield Boomerang cancels the skill. Requires a shield to be equipped. -->
 		<icon>icon.skill10020_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1577,6 +1590,7 @@
 		</effects>
 	</skill>
 	<skill id="10021" toLevel="7" name="Raise Shield">
+		<!-- For $s1, activates the Shield Block buff. Increases P. Def. by $s2 and decreases chance of receiving P. Critical Hit by $s3. Using Shield Charge, Shield Bash or Shield Boomerang cancels the skill. Requires a shield to be equipped. -->
 		<icon>icon.skill10021_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1649,7 +1663,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10022" toLevel="1" name="Ignore Death">
+	<skill id="10022" toLevel="1" name="Last Patience">
+		<!-- For $s1, HP does not decrease below 1. -->
 		<icon>
 			<value level="1">icon.skill10020</value>
 			<value level="2">icon.skill10022</value>
@@ -1749,6 +1764,7 @@
 		</effects>
 	</skill>
 	<skill id="10023" toLevel="5" name="King of Beasts">
+		<!-- Summons the King of Beasts to attack nearby and frontal targets with $s1 Power added to P. Atk. Requires a shield. Over-hit. -->
 		<icon>icon.skill10023</icon>
 		<affectLimit>5-12</affectLimit>
 		<nextAction>ATTACK</nextAction>
@@ -1813,6 +1829,7 @@
 		</effects>
 	</skill>
 	<skill id="10024" toLevel="1" name="Nine Aegis">
+		<!-- Creates the Protection Barrier for $s1 with 9 shields, which increases P. Def/ M. Def/ Bow/ Crossbow Resistance of allies within the area of effect by $s2 and their Reflect Magic by $s3 and makes them immune to Pull Up/ Knock Back/ Knock Down/ Danger Zone debuffs. This effect cannot be stacked with the same effect or Protection of Faith, and a limit applies after its duration is over. Requires a shield to be equipped. -->
 		<icon>icon.skill10024</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -1969,7 +1986,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10026" toLevel="9" name="Superior Aggression">
+	<skill id="10026" toLevel="9" name="Shield Boomerang">
+		<!-- Throws the shield at the target to attack it with $s1 Power added to P. Atk. and provoke it into attacking you for $s2. In PvP, it also decreases Speed by $s3. Requires a shield to be equipped. -->
 		<icon>icon.skill10018</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2043,6 +2061,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10027" toLevel="8" name="Superior Aggression Aura">
+		<!-- Provokes nearby enemies into attacking you. -->
 		<icon>icon.skill10027</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2122,8 +2141,8 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="10028" toLevel="1" name="Rage Aura">
-		<!-- Increases your Movement Speed by 20 and attract nearby monsters' attention to you. -->
+	<skill id="10028" toLevel="1" name="Provoke Aura">
+		<!-- Increases your Speed by 20 and attract nearby monsters' attention to you. -->
 		<icon>icon.skill10026</icon>
 		<abnormalVisualEffect>AURA_DEBUFF_SELF</abnormalVisualEffect>
 		<magicLvl>85</magicLvl>
@@ -2160,7 +2179,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10029" toLevel="1" name="Rage Aura">
+	<skill id="10029" toLevel="1" name="Provoke Aura">
 		<!-- You have been spotted. -->
 		<icon>icon.skill10026</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2201,7 +2220,7 @@
 		</effects>
 	</skill>
 	<skill id="10030" toLevel="1" name="Challenge Aura">
-		<!-- For you and your allies, Skill MP Consumption -$s1, Skill Cooldown -$s2 and Speed +$s3. Only one Knight's Aura can be active at any time. -->
+		<!-- For you and your allies, Skill MP Consumption -$s1, Skill Cooldown -$s2, and Speed +$s3. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10030</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2309,7 +2328,7 @@
 		</effects>
 	</skill>
 	<skill id="10032" toLevel="1" name="Iron Aura">
-		<!-- For you and your allies, P. Def/ M. Def +$s1 and P. Critical Damage/ M. Critical Damage Received -$s2. Only one Knight's Aura can be active at any time. -->
+		<!-- For you and your allies, P./ M. Def. +$s1 and P. Critical Damage/ M. Critical Damage Received -$s2. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10032</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicLvl>85</magicLvl>
@@ -2335,7 +2354,7 @@
 		</effects>
 	</skill>
 	<skill id="10033" toLevel="1" name="Iron Aura">
-		<!-- P. Def/ M. Def +$s1 and P. Critical Damage/ M. Critical Damage Received -$s2. Only one Knight's Aura can be active at any time. -->
+		<!-- P./ M. Def. +$s1 and P. Critical Damage/ M. Critical Damage Received -$s2. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>11</abnormalTime>
@@ -2365,7 +2384,7 @@
 		</effects>
 	</skill>
 	<skill id="10034" toLevel="1" name="Aura Resistance">
-		<!-- M. Def. +15%, and Attribute Resistance +30. Additionally, party members' M. Def +10%, and Attribute Resistance +20. Only one Knight's Aura can be active at any time. -->
+		<!-- M. Def. +15%, and Attribute Resistance +30. Additionally, party members' M. Def. +10%, and Attribute Resistance +20. Only one Knight's Aura can be active at any time. -->
 		<icon>icon.skill10034</icon>
 		<abnormalVisualEffect>AURA_BUFF_SELF</abnormalVisualEffect>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2640,7 +2659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10042" toLevel="3" name="Summon Cubic of Life">
+	<skill id="10042" toLevel="3" name="Summon Phoenix Cubic">
 		<!-- Summons the Phoenix Cubic, which recovers your HP by $s2 every $s1, releases debuffs, and increase debuff resistance by $s3. It also prevents death in critical condition once for $s4. -->
 		<icon>icon.skill19565</icon>
 		<operateType>A1</operateType>
@@ -3240,6 +3259,7 @@
 		</effects>
 	</skill>
 	<skill id="10051" toLevel="6" name="Lion Roar">
+		<!-- Attack the nearby enemies and block the physical skills. -->
 		<icon>icon.skill0217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
@@ -3293,6 +3313,7 @@
 		</effects>
 	</skill>
 	<skill id="10052" toLevel="6" name="Lion Claw">
+		<!-- Flourishes claws to attack enemies at the front. -->
 		<icon>icon.skill0217</icon>
 		<affectLimit>5-12</affectLimit>
 		<fanRange>0;0;80;150</fanRange>
@@ -3337,6 +3358,7 @@
 		</effects>
 	</skill>
 	<skill id="10053" toLevel="6" name="Lion Dash">
+		<!-- Charges toward the enemy to inflict damage and inflict Stun. -->
 		<icon>icon.skill0217</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -3391,6 +3413,7 @@
 		</effects>
 	</skill>
 	<skill id="10054" toLevel="6" name="Lion Flame">
+		<!-- Spews flames at the enemy to inflict damage. -->
 		<icon>icon.skill0217</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -3733,7 +3756,7 @@
 		</effects>
 	</skill>
 	<skill id="10062" toLevel="4" name="Phoenix Spirit">
-		<!-- P./ M. Def. +$s1. Has a $s2 chance of doing the same to all party members for $s3 when attacked. -->
+		<!-- P. Def./ M. Def. +$s1. Has a $s2 chance of doing the same to all party members for $s3 when attacked. -->
 		<icon>icon.skill11829</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3780,7 +3803,7 @@
 		</effects>
 	</skill>
 	<skill id="10063" toLevel="4" name="Phoenix Spirit">
-		<!-- For $s1, P. Def/ M. Def +$s2 and Heal Received +$s3. -->
+		<!-- For $s1, P./ M. Def. +$s2 and Heal Received +$s3. -->
 		<icon>icon.skill11829</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3857,8 +3880,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10065" toLevel="4" name="Fortress Shield">
-		<!-- P. Def/ M. Def +$s1, Shield Def. +$s2, and Shield Def. Rate +$s3. If Shield Block is cast as well, Phoenix Spirit is activated on allies. -->
+	<skill id="10065" toLevel="4" name="Grand Immortal Guardian">
+		<!-- P./ M. Def. +$s1, Shield Def. +$s2, and Shield Def. Rate +$s3. If Shield Block is cast as well, Phoenix Spirit is activated on allies. -->
 		<icon>icon.skill10065</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3889,7 +3912,7 @@
 		</effects>
 	</skill>
 	<skill id="10066" toLevel="4" name="Spirit of Revenge">
-		<!-- P./ M. Atk. +$s1. Has a $s2 chance of doing the same to all party members for $s3 when attacked. -->
+		<!-- P. Atk./ M. Atk. +$s1. Has a $s2 chance of doing the same to all party members for $s3 when attacked. -->
 		<icon>icon.skill11830</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3936,7 +3959,7 @@
 		</effects>
 	</skill>
 	<skill id="10067" toLevel="4" name="Spirit of Revenge">
-		<!-- Removes debuffs and for $s1 P. Atk./ M. Atk. +$s2 and Damage Reflection +$s3. -->
+		<!-- Removes debuffs and for $s1 P. Atk./ M. Atk. +$s2 and Damage Reflectionion +$s3. -->
 		<icon>icon.skill11830</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4025,7 +4048,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10069" toLevel="4" name="Vampirism">
+	<skill id="10069" toLevel="4" name="Grand Thorn of Vengeance">
 		<!-- P. Atk. +$s1 and Reflect Damage/ Reflect Magic +$s2. Activates the Avenging Will with a chance of $s3 on you when you attack, and activates the Spirit of Revenge with a certain chance when you're hit. -->
 		<icon>icon.skill10069_2</icon>
 		<operateType>P</operateType>
@@ -4056,7 +4079,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10070" toLevel="4" name="Vampirism">
+	<skill id="10070" toLevel="4" name="Avenging Will">
 		<!-- For $s2, recovers $s1 HP, P. Critical Damage +$s3, and makes immune to debuff. -->
 		<icon>icon.skill10069</icon>
 		<operateType>A1</operateType>
@@ -4130,7 +4153,7 @@
 		</effects>
 	</skill>
 	<skill id="10072" toLevel="4" name="Eva's Presence">
-		<!-- For $s1, P. Def/ M. Def +$s2 and Attribute Resistance +$s3. -->
+		<!-- For $s1, P./ M. Def. +$s2 and all Attribute Resistance +$s3. -->
 		<icon>icon.skill10071</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4175,7 +4198,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10073" toLevel="7" name="Summon Buff Cubic">
+	<skill id="10073" toLevel="7" name="Summon Othellot Cubic">
 		<!-- Summons the Othellot Cubic, which recovers the summoner's HP by $s2 and MP by $s3 every $s1 and removes debuffs. -->
 		<icon>icon.skill10073_2</icon>
 		<operateType>A1</operateType>
@@ -4237,8 +4260,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10076" toLevel="4" name="Superior Guard Stance">
-		<!-- P. Def/ M. Def +$s1, Shield Def. +$s2, Attribute Resistance +$s3, and Skill Cooldown -$s4. If Shield Block is cast as well, Eva's Presence is activated on allies. -->
+	<skill id="10076" toLevel="4" name="Grand Othellot's Wave">
+		<!-- P./ M. Def. +$s1, Shield Def. +$s2, all Attribute Resistance +$s3, and Skill Cooldown -$s4. If Shield Block is cast as well, Eva's Presence is activated on allies. -->
 		<icon>icon.skill10076</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -4270,7 +4293,7 @@
 		</effects>
 	</skill>
 	<skill id="10077" toLevel="4" name="Shilen's Presence">
-		<!-- P./ M. Atk. +$s1. Has a $s2 chance of doing the same to all party members for $s3 when attacked. -->
+		<!-- P. Atk./ M. Atk. +$s1. Has a $s2 chance of doing the same to all party members for $s3 when attacked. -->
 		<icon>icon.skill11832</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -4317,7 +4340,7 @@
 		</effects>
 	</skill>
 	<skill id="10078" toLevel="4" name="Shilen's Presence">
-		<!-- For $s1, P. Atk./ M. Atk. +$s2 and Atk. Attribute +$s3. -->
+		<!-- For $s1, P. Atk./ M. Atk. +$s2 and Attack Attribute +$s3. -->
 		<icon>icon.skill11832</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4362,7 +4385,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10079" toLevel="7" name="Summon Phantom Cubic">
+	<skill id="10079" toLevel="7" name="Summon Death Cubic">
 		<!-- Summons the Death Cubic, which recovers the summoner's HP by $s2 every $s1, removes debuffs and increases Debuff Resistance by $s3. In addition, Shillien Shadow is activated on the summoner if he defeats the enemy. -->
 		<icon>icon.skill10079_2</icon>
 		<operateType>A1</operateType>
@@ -4401,7 +4424,7 @@
 		</effects>
 	</skill>
 	<skill id="10080" toLevel="7" name="Summon Hex Cubic">
-		<!-- Summons the Hex Cubic, which uses magic to decrease the enemy's P. Def. and M. Def by $s2 every $s1. -->
+		<!-- Summons the Hex Cubic, which uses magic to decrease the enemy's P. Def. and M. Def. by $s2 every $s1. -->
 		<icon>icon.skill10080</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -4489,8 +4512,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10082" toLevel="7" name="Strong Cubic Heal">
-		<!-- For $s1, through the protection of Spirit Hawk P. Def/ M. Def +$s2, Speed +$s3, and Shield Def. +$s4, and makes you immune to debuff. -->
+	<skill id="10082" toLevel="7" name="Cubic Hawk Protection">
+		<!-- For $s1, through the protection of Spirit Hawk P./ M. Def. +$s2, Speed +$s3, and Shield Def. +$s4, and makes you immune to debuff. -->
 		<icon>icon.skill10092_2</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -4571,7 +4594,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10084" toLevel="4" name="Basic Cubic Mind">
+	<skill id="10084" toLevel="4" name="Cubic Healing Wave">
 		<!-- Recover HP/ MP and Remove Mesmerizing Debuff -->
 		<icon>icon.skill10073_2</icon>
 		<operateType>A1</operateType>
@@ -4596,7 +4619,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10085" toLevel="7" name="Cubic Falter">
+	<skill id="10085" toLevel="7" name="Cubic Gain Soul">
 		<!-- Restores HP by $s1 and Debuff Resistance +$s3 for $s2 by removing debuffs. In addition, Shillien Shadow is activated on the summoner if he defeats the enemy. -->
 		<icon>icon.skill1206</icon>
 		<operateType>A2</operateType>
@@ -4643,7 +4666,7 @@
 		</effects>
 	</skill>
 	<skill id="10086" toLevel="7" name="Cubic Hex">
-		<!-- For $s1, P./ M. Def. -$s2. -->
+		<!-- For $s1, P. Def./ M. Def. -$s2. -->
 		<icon>icon.skill0122</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -4689,7 +4712,7 @@
 		</effects>
 	</skill>
 	<skill id="10087" toLevel="7" name="Blood Panther Roar">
-		<!-- Inflicts $s1 damage onto nearby enemies, and blocks the enemy's physical skills for $s2. -->
+		<!-- Inflicts $s1 damage onto nearby enemies, and blocks the enemy's physical skills for $s2 -->
 		<icon>icon.skill1336</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4882,6 +4905,7 @@
 		</effects>
 	</skill>
 	<skill id="10091" toLevel="1" name="Templar's Will">
+		<!-- Removes your debuff. -->
 		<icon>icon.skll10092</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -4971,8 +4995,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10092" toLevel="7" name="Summon Guardian Cubic">
-		<!-- Summons the Spirit Hawk Cubic, which recovers every $s1 the summoner's P. Def/ M. Def by $s2, Movement Speed by $s3 and Shield Def. by $s4 and makes immune to debuffs. -->
+	<skill id="10092" toLevel="7" name="Summon Spirit Hawk Cubic">
+		<!-- Summons the Spirit Hawk Cubic, which recovers every $s1 the summoner's P./ M. Def. by $s2, Speed by $s3 and Shield Def. by $s4 and makes immune to debuffs. -->
 		<icon>icon.skill10092_2</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -5058,6 +5082,7 @@
 		</effects>
 	</skill>
 	<skill id="10094" toLevel="7" name="Mass Lightning Strike">
+		<!-- Strikes the Lightning of Darkness on the target and nearby enemies with $s1 Power added to P. Atk. and paralyzes them for $s2. Consumes $s3 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10094_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -5135,8 +5160,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10095" toLevel="1" name="Blood Panther's Death Touch">
-		<!-- Becomes immune to debuffs, Speed +150, and recovers your HP. For $s1, target's Movement Speed -$s2 and P. Critical Damage Received +$s3. -->
+	<skill id="10095" toLevel="1" name="Blood Thirst">
+		<!-- Becomes immune to debuffs, Speed +150, and recovers your HP. For $s1, target's Speed -$s2 and P. Critical Damage Received +$s3. -->
 		<icon>icon.skill11853</icon>
 		<operateType>P</operateType>
 		<isMagic>1</isMagic>
@@ -5163,8 +5188,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10096" toLevel="1" name="Death Touch">
-		<!-- For $s1, Movement Speed -$s2 as chased by the Blood Panther and P. Critical Damage Received +$s3. -->
+	<skill id="10096" toLevel="1" name="Blood Chase">
+		<!-- For $s1, Speed -$s2 as chased by the Blood Panther and P. Critical Damage Received +$s3. -->
 		<icon>icon.skill11853</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime> <!-- Guessed -->
@@ -5190,7 +5215,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10097" toLevel="6" name="Riot Shield">
+	<skill id="10097" toLevel="6" name="Phoenix Glide">
+		<!-- Sends the Phoenix to attack the target and nearby enemies with $s1 Power added to P. Atk. and provokes them into attacking you for $s2. Decreases standard attack ranges of Bow and Crossbow by $s3. Consumes $s4 Soulstones. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10097_2</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -5260,6 +5286,7 @@
 		</effects>
 	</skill>
 	<skill id="10098" toLevel="4" name="Paladin's Frenzy">
+		<!-- For $s1, Shield Def. +$s2, M. Def. +$s3, Atk. Spd. +$s4, P. Critical Rate/ P. Critical Damage +$s5, and Debuff Resistances +$s6. Additionally increases the duration of Last Patience by $s7. -->
 		<icon>icon.skill10098</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -5385,6 +5412,7 @@
 		</effects>
 	</skill>
 	<skill id="10099" toLevel="4" name="Avenger's Frenzy">
+		<!-- For $s1, Shield Def. +$s2, M. Def. +$s3, Atk. Spd. +$s4, Speed +$s5, P. Critical Rate/ P. Critical Damage +$s6, and Damage Reflectionion +$s7. -->
 		<icon>icon.skill10099</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>

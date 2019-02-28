@@ -1459,7 +1459,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="2841" toLevel="1" name="PC Points">
+	<skill id="2841" toLevel="1" name="PA Points">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>14559</itemConsumeId> <!-- PC Points -->
@@ -1971,7 +1971,7 @@
 		</effects>
 	</skill>
 	<skill id="2856" toLevel="1" name="Santa's Buff Gift Set">
-		<!-- For 1 hr., receives help from a great spirit to increase Max MP by 20%, MP Recovery Bonus by 20%, HP Recovery Bonus by 20%, the chance of prominent magic damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
+		<!-- For 1 h., receives help from a great spirit to increase Max MP by 20%, MP Recovery Bonus by 20%, HP Recovery Bonus by 20%, the chance of prominent magic damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2060,7 +2060,7 @@
 		</effects>
 	</skill>
 	<skill id="2857" toLevel="1" name="Holiday Event - Enchant Scroll (Wizard)">
-		<!-- For 1 hr., receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP Recovery Bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
+		<!-- For 1 h., receives help from a great spirit to increase the chance of prominent damage occurring through magic damage by 2, MP Recovery Bonus by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
 		<icon>icon.etc_scroll_white_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -3183,7 +3183,7 @@
 		</effects>
 	</skill>
 	<skill id="2891" toLevel="6" name="Concentration">
-		<!-- For 60 min., decreases magic cancel rate by 53. -->
+		<!-- For 60 min., decreases magic cancel damage by 53. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -3294,11 +3294,11 @@
 					</item>
 					<item chance="40">
 						<item id="14769" count="5" /> <!-- Valentine's Day Candy -->
-						<item id="14773" count="1" /> <!-- Formal Wear - 14-day -->
+						<item id="14773" count="1" /> <!-- Formal Wear (14-day) - 14-day -->
 					</item>
 					<item chance="50">
 						<item id="14769" count="5" /> <!-- Valentine's Day Candy -->
-						<item id="14776" count="1" /> <!-- Agathion - Juju - 14-day -->
+						<item id="14776" count="1" /> <!-- Agathion - Juju (14-day) - 14-day -->
 					</item>
 				</items>
 			</effect>
@@ -3365,7 +3365,7 @@
 		</effects>
 	</skill>
 	<skill id="2898" toLevel="1" name="Cream Puff Herb">
-		<!-- For 10 min., increases Max HP/ Max HP/ Casting Spd./ P./ M. Def. and Debuff Resistance by 10%. Increases Atk. Spd. by 15% and Moving Spd. by 10. Weapon and hair appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But, weapons don't change their abilities. -->
+		<!-- For 10 min., increases Max HP/ Max HP/ Casting Spd./ P. Def./ M. Def. and Debuff Resistance by 10%. Increases Atk. Spd. by 15% and Moving Spd. by 10. Weapon and hair appearances change through the effect of the "Fake Tears" that were scattered by "Pierre Baguette." But, weapons don't change their abilities. -->
 		<icon>icon.etc_herb_of_cream</icon>
 		<abnormalInstant>true</abnormalInstant>
 		<abnormalLvl>1</abnormalLvl>

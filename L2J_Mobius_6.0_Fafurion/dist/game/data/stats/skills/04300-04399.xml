@@ -683,7 +683,7 @@
 		</effects>
 	</skill>
 	<skill id="4330" toLevel="1" name="Adventurer's Concentration">
-		<!-- Decreases magic cancel rate by 18 for 60 min. -->
+		<!-- Decreases magic cancel damage by 18 for 60 min. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1099,7 +1099,7 @@
 		</effects>
 	</skill>
 	<skill id="4347" toLevel="6" name="Blessed Body">
-		<!-- Momentarily increases Max HP. Effect $s1. -->
+		<!-- Momentarily increases maximum HP. Effect $s1. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2577,7 +2577,7 @@
 		</effects>
 	</skill>
 	<skill id="4394" toLevel="6" name="Blessed Body">
-		<!-- Momentarily increases Max HP. Effect $s1. -->
+		<!-- Momentarily increases maximum HP. Effect $s1. -->
 		<icon>icon.skill1045</icon>
 		<abnormalLvl>
 			<value level="1">2</value>

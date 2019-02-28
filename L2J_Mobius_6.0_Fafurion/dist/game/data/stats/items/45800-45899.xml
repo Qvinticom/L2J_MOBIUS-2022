@@ -254,7 +254,7 @@
 		</stats>
 	</item>
 	<item id="45809" name="Returning Warrior's Soulshot Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 1 Soulshot (Grade C~R). Will be deleted once the event ends. -->
+		<!-- Wrapped Pack containing 1 Soulshot (Grade C~R). -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -265,7 +265,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45810" name="Returning Warrior's Blessed Spiritshot Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 1 Blessed Spiritshot (Grade C~R). Will be deleted once the event ends. -->
+		<!-- Wrapped Pack containing 1 Blessed Spiritshot (Grade C~R). -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -276,7 +276,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45811" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 16 Vitality Replenishing Star Candies.\r. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 16 Vitality Replenishing Star Candies. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -288,7 +288,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45812" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 17 Vitality Replenishing Star Candies.\r. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 17 Vitality Replenishing Star Candies. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -300,7 +300,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45813" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 18 Vitality Replenishing Star Candies.\r. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 18 Vitality Replenishing Star Candies. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -312,7 +312,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45814" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 19 Vitality Replenishing Star Candies.\r. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 19 Vitality Replenishing Star Candies. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -324,7 +324,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45815" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 20 Vitality Replenishing Star Candies.\r. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 20 Vitality Replenishing Star Candies. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -336,7 +336,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45816" name="Clan Reward" type="EtcItem">
-		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 21 Vitality Replenishing Star Candies.\r. -->
+		<!-- Alliance made with blood! Reward given to those who worked hard for the growth of their clans. Use it to receive 21 Vitality Replenishing Star Candies. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -348,7 +348,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45817" name="Weapon Attribute Change Crystal (R-grade)" type="EtcItem">
-		<!-- Double-click to change the attribute of R, R95, and R99-grade weapons. It can be used when there is an R-grade weapon bestowed in the inventory. -->
+		<!-- Double-click to change the attributes of R, R95, R99 and R110-grade weapons. It can be used when there is an R-grade weapon bestowed in the inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -712,7 +712,7 @@
 		</stats>
 	</item>
 	<item id="45833" name="Apocalypse Retributer - Acumen" additionalName="30-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_herencia_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -913,7 +913,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45843" name="Mark of Trust (Mid-grade)" type="EtcItem">
-		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -927,7 +927,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45844" name="Mark of Trust (Mid-grade)" type="EtcItem">
-		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -941,7 +941,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45845" name="Mark of Trust (Mid-grade)" type="EtcItem">
-		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -955,7 +955,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45846" name="Mark of Trust (Mid-grade)" type="EtcItem">
-		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -969,7 +969,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45847" name="Mark of Trust (Mid-grade)" type="EtcItem">
-		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_gold_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -983,7 +983,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="45848" name="Mark of Trust (High-grade)" type="EtcItem">
-		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- An item obtained by winning the trust of Ferin and his men. It is no longer used. You can exchange it for a reward item through Master Cyphona at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_jewel_red_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1309,7 +1309,7 @@
 		</stats>
 	</item>
 	<item id="45861" name="Specter Retributer - Acumen" additionalName="30-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase.. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_rupe_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1423,7 +1423,7 @@
 		</stats>
 	</item>
 	<item id="45865" name="Festival Coin" additionalName="Event" type="EtcItem">
-		<!-- A coin that can be used to enjoy the various attractions in the Talkity Talk Talk Truope Festival. Will be deleted once the event ends. -->
+		<!-- A coin that can be used to enjoy the various attractions in the Talkity Talk Talk Truope Festival. -->
 		<set name="icon" val="icon.ev_festival_coin" />
 		<set name="weight" val="1" />
 		<set name="is_depositable" val="false" />
@@ -1438,7 +1438,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45866" name="Golden Festival Coin" additionalName="Event" type="EtcItem">
-		<!-- A golden festival coin that can be obtained from Kableon's game in the Talkity Talk Talk Troupe Festival. Take it to Nostra Gibbs to exchange for a Lucky Tarot Card. Will be deleted once the event ends. -->
+		<!-- A golden festival coin that can be obtained from Kableon's game in the Talkity Talk Talk Troupe Festival. Take it to Nostra Gibbs to exchange for a Lucky Tarot Card. -->
 		<set name="icon" val="icon.ev_festival_goldcoin" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -1447,7 +1447,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45867" name="Summon Scroll: Kableon" additionalName="Event" type="EtcItem">
-		<!-- Summon Kableon to get a star rating. If you get 5 stars, you'll receive a Golden Festival Coin. It can only be used in a Peaceful Zone. Will be deleted once the event ends. -->
+		<!-- Summon Kableon to get a star rating. If you get 5 stars, you'll receive a Golden Festival Coin. It can only be used in a Peaceful Zone. -->
 		<set name="icon" val="icon.ev_festival_summon" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -1461,7 +1461,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45868" name="Regular Lucky Tarot Card" additionalName="Event" type="EtcItem">
-		<!-- An item needed to play the Regular Lucky Game. It looks like a tarot card. Play a Regular Lucky Game through Nostra Gibbs. Will be deleted once the event ends. -->
+		<!-- An item needed to play the Regular Lucky Game. It looks like a tarot card. Play a Regular Lucky Game through Nostra Gibbs. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1469,7 +1469,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45869" name="Premium Lucky Tarot Card" additionalName="Event" type="EtcItem">
-		<!-- An item needed to play the Premium Lucky Game. It looks like a tarot card. Play a Premium Lucky Game through Nostra Gibbs. Will be deleted once the event ends. -->
+		<!-- An item needed to play the Premium Lucky Game. It looks like a tarot card. Play a Premium Lucky Game through Nostra Gibbs. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1564,7 +1564,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="45876" name="Kokko's Fishing Shot Support Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get a Fishing Shot. Will be deleted once the event ends. -->
+		<!-- Double-click to get a Fishing Shot. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1577,7 +1577,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="45877" name="Kokko's Bait Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get bait to fish. Will be deleted once the event ends. -->
+		<!-- Double-click to get bait to fish. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1590,7 +1590,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="45878" name="Mysterious Aid Pack" additionalName="Event" type="EtcItem">
-		<!-- A mysterious box with an unidentified item along with Tomas' Support Box. Double-click to find out what it is. Will be deleted once the event ends. -->
+		<!-- A mysterious box with an unidentified item along with Tomas' Support Box. Double-click to find out what it is. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1886,7 +1886,7 @@
 		</stats>
 	</item>
 	<item id="45889" name="Amaranthine Retributer - Acumen" additionalName="30-day" type="Weapon">
-		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. No Soul Crystal option. -->
+		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -2011,7 +2011,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45894" name="Filled Necklace (Valakas Energy)" additionalName="30-day" type="Armor">
-		<!-- MP +62, Sleep Resistance +40%, Sleep Atk. Rate +40%, HP +445, Skill Cooldown decreases, P./ M. Atk. Increases, Wild Magic Effect, Damage Shield Effect, and Fire Resistance increases. -->
+		<!-- MP +62, Sleep Resistance +40%, Sleep Atk. Rate +40%, HP +445, Skill Cooldown decreases, P./ M. Atk. Increases, Wild Magic Effect, Damage Reflection Effect, and Fire Resistance increases. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2033,7 +2033,7 @@
 		</stats>
 	</item>
 	<item id="45895" name="Filled Necklace (Frintezza Energy)" additionalName="30-day" type="Armor">
-		<!-- MP +62, Sleep/ Paralysis/ Stun Resistance +15%, Sleep/ Paralysis/ Stun Atk. Rate +15%, Poison/ Bleed Resistance +25%, Poison/ Bleed Atk. Rate +25%, Skill Cooldown decreases, Damage Shield Effect and Dark Resistance increases. -->
+		<!-- MP +62, Sleep/ Paralysis/ Stun Resistance +15%, Sleep/ Paralysis/ Stun Atk. Rate +15%, Poison/ Bleed Resistance +25%, Poison/ Bleed Atk. Rate +25%, Skill Cooldown decreases, Damage Reflection Effect and Dark Resistance increases. -->
 		<set name="icon" val="icon.accessory_necklace_of_frintessa_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -2099,7 +2099,7 @@
 		</stats>
 	</item>
 	<item id="45898" name="Filled Ring (Baium Energy)" additionalName="30-day" type="Armor">
-		<!-- MP +31, Poison Resistance +40%, Poison Atk. Rate +40%, Accuracy increases, P. Critical Damage increases, Hold Resistance +30%, Hold Atk. Rate +30%, P./ M. Atk. increases. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP +31, Poison Resistance +40%, Poison Atk. Rate +40%, Accuracy increases, P. Critical Damage increases, Hold Resistance +30%, Hold Atk. Rate +30%, P./ M. Atk. increases. Only one effect is applied even when wearing two rings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2121,7 +2121,7 @@
 		</stats>
 	</item>
 	<item id="45899" name="Filled Ring (Queen Ant Energy)" additionalName="30-day" type="Armor">
-		<!-- MP +31, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increases, P. Critical Damage increases, Hold Resistance +20%, Hold Atk. Rate +20%. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP +31, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increases, P. Critical Damage increases, Hold Resistance +20%, Hold Atk. Rate +20%. Only one effect is applied even when wearing two rings with the same effect. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

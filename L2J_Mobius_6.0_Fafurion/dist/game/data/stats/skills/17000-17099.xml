@@ -45,7 +45,7 @@
 	<skill id="17012" toLevel="1" name="Blessed Armor Appearance Stone (D-grade) (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17013" toLevel="1" name="Emerald Weapon Appearance Stone: Sword (15-day)">
+	<skill id="17013" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Sword (15-day)">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17014" toLevel="1" name="Emerald Weapon Appearance Stone: Dagger (15-day)">
@@ -72,13 +72,13 @@
 	<skill id="17021" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Blunt (15-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17022" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt (15-day)">
+	<skill id="17022" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Staff (15-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17023" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt (15-day)">
+	<skill id="17023" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Staff (15-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17024" toLevel="1" name="Emerald Weapon Appearance Stone: Dualsword (15-day)">
+	<skill id="17024" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Sword (15-day)">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17025" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Dagger (15-day)">
@@ -93,7 +93,7 @@
 	<skill id="17028" toLevel="1" name="Emerald Weapon Appearance Stone: Sigil (15-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17029" toLevel="1" name="Emerald Weapon Appearance Stone: Sword">
+	<skill id="17029" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Sword">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17030" toLevel="1" name="Emerald Weapon Appearance Stone: Dagger">
@@ -120,13 +120,13 @@
 	<skill id="17037" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Blunt">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17038" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt">
+	<skill id="17038" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Staff">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17039" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt">
+	<skill id="17039" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Staff">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17040" toLevel="1" name="Emerald Weapon Appearance Stone: Dualsword">
+	<skill id="17040" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Sword">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17041" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Dagger">
@@ -231,15 +231,15 @@
 		<!-- Double-click to obtain 1 of 17 main Eternal ingredients, including those for: Breastplate, Helmet, Gaiters, Gauntlets, Boots, Shield, etc. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17057" toLevel="1" name="Energy of Dimensions">
-		<!-- Blessing given by the dimensional wizard to commemorate the victory in the dimensional space. For 1 hr., Atk. Spd. and Casting Spd. +10%, Speed +10, and HP, MP, and CP +10%. -->
+	<skill id="17057" toLevel="1" name="Faint Energy of Dimensions">
+		<!-- Blessing given by the dimensional wizard to commemorate the victory in the dimensional space. For 1 h., Atk. Spd. and Casting Spd. +10%, Speed +10, and HP/ MP/ CP +10%. -->
 		<icon>icon.tersi_specter_seed</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17058" toLevel="1" name="Dimensional Blessing (Event)">
-		<!-- Blessing bestowed by the Dimensional Wizard for your victory in the Dimensional Space. For 4 hr., obtained XP +100%. -->
+		<!-- Blessing bestowed by the Dimensional Wizard for your victory in the Dimensional Space. For 4 h., obtained XP +100%. -->
 		<icon>icon.skill14216</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
@@ -459,8 +459,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17083" toLevel="1" name="Mentor's Daring Sonata">
-		<!-- With your Mentor's help, your Atk. Spd. +$s1, Casting Spd. +$s2, Movement Speed +$s3, Damage Reflection +$s4, and Skill Cooldown -$s5. The buff disappears when the Mentee contract ends. -->
+	<skill id="17083" toLevel="1" name="Daring Sonata - Mentor">
+		<!-- With your Mentor's help, your Atk. Spd. +$s1, Casting Spd. +$s2, Speed +$s3, Damage Reflectionion +$s4, and Skill Cooldown -$s5. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -523,8 +523,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17084" toLevel="1" name="Mentor's Refreshing Sonata">
-		<!-- With your Mentor's help, your HP Recovery +$s1, MP Recovery +$s2, P. Evasion/M. Evasion +$s3, and Skill MP Consumption -$s4. The buff disappears when the Mentee contract ends. -->
+	<skill id="17084" toLevel="1" name="Refreshing Sonata - Mentor">
+		<!-- With your Mentor's help, your HP Recovery +$s1, MP Recovery +$s2, P. Evasion/ M. Evasion +$s3, and Skill MP Consumption -$s4. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -588,7 +588,7 @@
 		</effects>
 	</skill>
 	<skill id="17085" toLevel="1" name="Kisung's Power Up">
-		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
+		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<itemConsumeId>37554</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -597,14 +597,14 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17086" toLevel="1" name="Release Agathion's Seal - Bae Kisung">
+	<skill id="17086" toLevel="1" name="Agathion Summon - Bae Kisung">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="17087" toLevel="1" name="Kisung's Power Up (Event)">
-		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
+		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>

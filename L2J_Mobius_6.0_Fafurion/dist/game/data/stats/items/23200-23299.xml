@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="23200" name="Tribal Warrior Costume Appearance Stone Pack" type="EtcItem">
-		<!-- Double-click to obtain a Tribal Warrior Top/ Pants/ Gloves/ Shoes/ Hair Accessory Appearance Stone. -->
+		<!-- Wrapped Pack containing Tribal Warrior Top/ Pants/ Gloves/ Shoes/ Hair Accessory Appearance Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -138,7 +138,7 @@
 		</skills>
 	</item>
 	<item id="23207" name="Playful Hair Accessory Pack" type="EtcItem">
-		<!-- Gives a hair accessory perfect for a fun festival. -->
+		<!-- Gives a hair accessory perfect for a fun summer festival. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -152,7 +152,7 @@
 		</skills>
 	</item>
 	<item id="23208" name="Red Potion of Regeneration" type="EtcItem">
-		<!-- Restores 3000 HP and the remaining power restores CP. Instant effect with no cooldown. -->
+		<!-- Restores 3000 HP and the remaining power restores CP. Instant effect with no duration. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -170,7 +170,7 @@
 		</skills>
 	</item>
 	<item id="23209" name="Blue Potion of Recovery" type="EtcItem">
-		<!-- Magic potion that instantly restores Mana. Instant effect with no cooldown. -->
+		<!-- Magic potion that instantly restores Mana. Instant effect with no duration. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -373,7 +373,7 @@
 		</skills>
 	</item>
 	<item id="23219" name="Tiat's Claw of Destruction Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a one-handed blunt into that of Tiat's Claw of Destruction. -->
+		<!-- Changes the appearance of a one-handed blunt into that of Tiat's Tiat's Tiatenon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -394,7 +394,7 @@
 		</skills>
 	</item>
 	<item id="23220" name="Aenkinel's Blades of Delusion Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a dual sword into that of Aenkinel's Blades of Delusion. -->
+		<!-- Changes the appearance of a dual sword into that of Aenkinel's Aenkinel's Astaroth. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -415,7 +415,7 @@
 		</skills>
 	</item>
 	<item id="23221" name="Yehan Klanikus' Blood Brother Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a two-handed sword to that of the Blood Brother. -->
+		<!-- Changes the appearance of a two-handed sword to that of the Yehan Klanikus' Tirbing. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -436,7 +436,7 @@
 		</skills>
 	</item>
 	<item id="23222" name="Mardil's Fan Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a one-handed sword to that of Mardil's Fan. -->
+		<!-- Changes the appearance of a one-handed sword to that of Mardil's Wind. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -457,7 +457,7 @@
 		</skills>
 	</item>
 	<item id="23223" name="Monster Weapon Appearance Stone Pack A" type="EtcItem">
-		<!-- Double-click to obtain an Appearance Stone for either Drake Maul, Spezion's Claw, Steregos' Dagger, Darion's Hellblade, Tiat's Claw of Destruction, or Yehan Klanikus' Blood Brother. -->
+		<!-- Wrapped Pack containing Appearance Stone for either Drake Maul, Spezion's Claw, Steregos' Dagger, Darion's Hellblade, Tiat's Tiat's Tiatenon, or Yehan Klanikus' Yehan Klanikus' Tirbing. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -471,7 +471,7 @@
 		</skills>
 	</item>
 	<item id="23224" name="Monster Weapon Appearance Stone Pack B" type="EtcItem">
-		<!-- Double-click to obtain an Appearance Stone for either Freya's Staff, Maliss Stormer, Ron's Dual Blunt, Doll Blader's Butcher Blades, Aenkinel's Blades of Delusion or Mardil's Fan. -->
+		<!-- Wrapped Pack containing Appearance Stone for either Freya's Staff, Maliss Stormer, Ron's Dual Blunt, Doll Blader's Butcher Blades, Aenkinel's Aenkinel's Astaroth or Mardil's Wind. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -559,7 +559,7 @@
 		</skills>
 	</item>
 	<item id="23229" name="Pretzel" type="EtcItem">
-		<!-- Nutritious pretzel. Increases XP gain by 50% for 1 hr. -->
+		<!-- Nutritious pretzel. Increases XP gain by 50% for 1 h. -->
 		<set name="icon" val="BranchSys3.icon1.g_brezel_germany" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -720,7 +720,7 @@
 		</skills>
 	</item>
 	<item id="23238" name="Blessed Scroll: Enchant Elemental Shirt Pack" additionalName="Pa'agrio" type="EtcItem">
-		<!-- Double-click to obtain 30 Blessed Scroll: Enchant Elemental Shirt. Has a very low chance of acquiring a +7 Pa'agrio's Shirt. -->
+		<!-- Wrapped Pack containing 30 Blessed Scroll: Enchant Elemental Shirt. Has a very low chance of acquiring a +7 Pa'agrio's Shirt. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -739,7 +739,7 @@
 		</skills>
 	</item>
 	<item id="23239" name="Enchanted Pa'agrio's Shirt Pack" type="EtcItem">
-		<!-- Double-click to obtain a Pa'agrio's Shirt enchanted to +7. -->
+		<!-- Wrapped Pack containing Pa'agrio's Shirt enchanted to +7. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -786,7 +786,7 @@
 		</stats>
 	</item>
 	<item id="23241" name="Blessed Scroll: Enchant Elemental Shirt" type="EtcItem">
-		<!-- Enchant Scroll exclusive to Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, Shiny Elemental Shirt, Physical Reflect Shirt, and Magical Reflect Shirt. When enchanted, P. Def. and M. Def. +1. From +3, resistance to corresponding element +5, and from +4, P. Def. +3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant value starting from +4. At +5, +6, +7, +8, +9, and +10, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
+		<!-- Enchant Scroll exclusive to Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, and the Shiny Elemental Shirt. When enchanted, increases P. Def. and M. Def. by 1. From +3, Elemental defense increases by 5, and from +4, P. Def. increases by 3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +6, +7, +8, +9, and +10, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1416,7 +1416,7 @@
 		</skills>
 	</item>
 	<item id="23276" name="XP Rune III (Lv. 1-100+) 50% Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 50% (30-day). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1435,7 +1435,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23277" name="XP Rune III (Lv. 1-100+) 100% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 100% (1-hr.). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1450,11 +1450,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% - 1-hr. -->
+			<item id="23254" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23278" name="XP Rune III (Lv. 1-100+) 100% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 100% (7-day). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1473,7 +1473,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23279" name="XP Rune III (Lv. 1-100+) 100% Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 100% (30-day). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1492,7 +1492,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23280" name="XP Rune III (Lv. 1-100+) 200% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 200% (1-hr.). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1507,11 +1507,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23257" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 200% - 1-hr. -->
+			<item id="23257" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 200% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23281" name="XP Rune III (Lv. 1-100+) 200% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 200% (7-day). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 200% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1530,7 +1530,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23282" name="XP Rune III (Lv. 1-100+) 200% Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 200% (30-day). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 200% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1549,7 +1549,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23283" name="SP Rune 50% Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 50% (30-day). -->
+		<!-- Wrapped Pack containing SP Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1568,7 +1568,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23284" name="SP Rune 100% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 100% (1-hr.). -->
+		<!-- Wrapped Pack containing SP Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1583,11 +1583,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hr. -->
+			<item id="23261" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23285" name="SP Rune 100% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 100% (7-day). -->
+		<!-- Wrapped Pack containing SP Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1606,7 +1606,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23286" name="SP Rune 100% Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 100% (30-day). -->
+		<!-- Wrapped Pack containing SP Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1625,7 +1625,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23287" name="SP Rune 200% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 200% (1-hr.). -->
+		<!-- Wrapped Pack containing SP Rune 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1640,11 +1640,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23264" min="1" max="1" chance="100" /> <!-- SP Rune 200% - 1-hr. -->
+			<item id="23264" min="1" max="1" chance="100" /> <!-- SP Rune 200% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23288" name="SP Rune 200% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 200% (7-day). -->
+		<!-- Wrapped Pack containing SP Rune 200% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1663,7 +1663,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23289" name="SP Rune 200% Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 200% (30-day). -->
+		<!-- Wrapped Pack containing SP Rune 200% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1682,7 +1682,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23290" name="Eva's Rune Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain an Eva's Rune (1-hr.). -->
+		<!-- Wrapped Pack containing Eva's Rune (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1697,11 +1697,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23267" min="1" max="1" chance="100" /> <!-- Eva's Rune - 1-hr. -->
+			<item id="23267" min="1" max="1" chance="100" /> <!-- Eva's Rune - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23291" name="Eva's Rune Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain an Eva's Rune (7-day). -->
+		<!-- Wrapped Pack containing Eva's Rune (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1720,7 +1720,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23292" name="Eva's Rune Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain an Eva's Rune (30-day). -->
+		<!-- Wrapped Pack containing Eva's Rune (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1739,7 +1739,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23293" name="Drop Rate Rune 50% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 50% (1-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 50% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1754,11 +1754,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23270" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% - 1-hr. -->
+			<item id="23270" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23294" name="Drop Rate Rune 100% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 100% (1-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1773,11 +1773,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23271" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% - 1-hr. -->
+			<item id="23271" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23295" name="Drop Rate Rune 200% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 200% (1-hr.). -->
+		<!-- Wrapped Pack containing Maphr's Rune 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1792,11 +1792,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23272" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% - 1-hr. -->
+			<item id="23272" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23296" name="Drop Rate Rune 50% Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 50% (30-day). -->
+		<!-- Wrapped Pack containing Maphr's Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1811,11 +1811,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23273" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% - 30-day -->
+			<item id="23273" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="23297" name="Drop Rate Rune 100% Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 100% (30-day). -->
+		<!-- Wrapped Pack containing Maphr's Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1830,11 +1830,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23274" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% - 30-day -->
+			<item id="23274" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="23298" name="Drop Rate Rune 200% Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 200% (30-day). -->
+		<!-- Wrapped Pack containing Maphr's Rune 200% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1849,11 +1849,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23275" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% - 30-day -->
+			<item id="23275" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% - 30-day -->
 		</capsuled_items>
 	</item>
 	<item id="23299" name="Blessed Scroll: Enchant Elemental Shirt Pack" additionalName="Sayha" type="EtcItem">
-		<!-- Double-click to obtain 30 Blessed Scroll: Enchant Elemental Shirt. Has a very low chance of acquiring a +7 Sayha's Shirt. -->
+		<!-- Wrapped Pack containing 30 Blessed Scroll: Enchant Elemental Shirt. Has a very low chance of acquiring a +7 Sayha's Shirt. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

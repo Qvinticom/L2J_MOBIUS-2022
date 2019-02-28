@@ -1179,7 +1179,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9661" toLevel="1" name="Heavenly P. Def. Cookie (Event)">
-		<!-- For $s1, increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
 		<icon>icon.etc_bm_defence_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1217,7 +1217,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9663" toLevel="1" name="Heavenly CP Cookie (Event)">
-		<!-- For 1 hr., Max CP +20%. Buff remains even after death. -->
+		<!-- For 1 h., Max CP +20%. Buff remains even after death. -->
 		<icon>icon.etc_bm_cp_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1352,40 +1352,40 @@
 						<item id="9557" count="1" /> <!-- Holy Crystal -->
 					</item>
 					<item chance="0.5">
-						<item id="34661" count="1" /> <!-- Fire Stone (+ 60) -->
+						<item id="34661" count="1" /> <!-- Fire Stone (+60) -->
 					</item>
 					<item chance="0.5">
-						<item id="34662" count="1" /> <!-- Water Stone (+ 60) -->
+						<item id="34662" count="1" /> <!-- Water Stone (+60) -->
 					</item>
 					<item chance="0.5">
-						<item id="34663" count="1" /> <!-- Earth Stone (+ 60) -->
+						<item id="34663" count="1" /> <!-- Earth Stone (+60) -->
 					</item>
 					<item chance="0.5">
-						<item id="34664" count="1" /> <!-- Wind Stone (+ 60) -->
+						<item id="34664" count="1" /> <!-- Wind Stone (+60) -->
 					</item>
 					<item chance="0.5">
-						<item id="34665" count="1" /> <!-- Dark Stone (+ 60) -->
+						<item id="34665" count="1" /> <!-- Dark Stone (+60) -->
 					</item>
 					<item chance="0.5">
-						<item id="34666" count="1" /> <!-- Holy Stone (+ 60) -->
+						<item id="34666" count="1" /> <!-- Holy Stone (+60) -->
 					</item>
 					<item chance="0.1">
-						<item id="34667" count="1" /> <!-- Fire Stone (+ 150) -->
+						<item id="34667" count="1" /> <!-- Fire Stone (+150) -->
 					</item>
 					<item chance="0.1">
-						<item id="34668" count="1" /> <!-- Water Stone (+ 150) -->
+						<item id="34668" count="1" /> <!-- Water Stone (+150) -->
 					</item>
 					<item chance="0.1">
-						<item id="34669" count="1" /> <!-- Earth Stone (+ 150) -->
+						<item id="34669" count="1" /> <!-- Earth Stone (+150) -->
 					</item>
 					<item chance="0.1">
-						<item id="34670" count="1" /> <!-- Wind Stone (+ 150) -->
+						<item id="34670" count="1" /> <!-- Wind Stone (+150) -->
 					</item>
 					<item chance="0.1">
-						<item id="34671" count="1" /> <!-- Dark Stone (+ 150) -->
+						<item id="34671" count="1" /> <!-- Dark Stone (+150) -->
 					</item>
 					<item chance="0.1">
-						<item id="34672" count="1" /> <!-- Holy Stone (+ 150) -->
+						<item id="34672" count="1" /> <!-- Holy Stone (+150) -->
 					</item>
 				</items>
 			</effect>
@@ -1564,28 +1564,28 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="12.5">
-						<item id="30233" count="1" /> <!-- Blessed Helios Shaper - Haste + Focus -->
+						<item id="30233" count="1" /> <!-- Blessed Helios Shaper - Haste +Focus -->
 					</item>
 					<item chance="12.5">
-						<item id="30235" count="1" /> <!-- Blessed Helios Cutter - Haste + Focus -->
+						<item id="30235" count="1" /> <!-- Blessed Helios Cutter - Haste +Focus -->
 					</item>
 					<item chance="12.5">
-						<item id="30238" count="1" /> <!-- Blessed Helios Slasher - Focus + Damage -->
+						<item id="30238" count="1" /> <!-- Blessed Helios Slasher - Focus +Damage -->
 					</item>
 					<item chance="12.5">
-						<item id="30243" count="1" /> <!-- Blessed Helios Avenger - Focus + Haste -->
+						<item id="30243" count="1" /> <!-- Blessed Helios Avenger - Focus +Haste -->
 					</item>
 					<item chance="12.5">
-						<item id="30246" count="1" /> <!-- Blessed Helios Fighter - Haste + Focus -->
+						<item id="30246" count="1" /> <!-- Blessed Helios Fighter - Haste +Focus -->
 					</item>
 					<item chance="12.5">
-						<item id="30249" count="1" /> <!-- Blessed Helios Stormer - Damage Up + HP Drain -->
+						<item id="30249" count="1" /> <!-- Blessed Helios Stormer - Damage Up +HP Drain -->
 					</item>
 					<item chance="12.5">
-						<item id="30250" count="1" /> <!-- Blessed Helios Thrower - Damage Up + Focus -->
+						<item id="30250" count="1" /> <!-- Blessed Helios Thrower - Damage Up +Focus -->
 					</item>
 					<item chance="12.5">
-						<item id="30255" count="1" /> <!-- Blessed Helios Shooter - Haste + Focus -->
+						<item id="30255" count="1" /> <!-- Blessed Helios Shooter - Haste +Focus -->
 					</item>
 				</items>
 			</effect>
@@ -1605,13 +1605,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33">
-						<item id="30258" count="1" /> <!-- Blessed Helios Buster - Mana Up + Acumen -->
+						<item id="30258" count="1" /> <!-- Blessed Helios Buster - Mana Up +Acumen -->
 					</item>
 					<item chance="33">
-						<item id="30259" count="1" /> <!-- Blessed Helios Caster - Empower + Acumen -->
+						<item id="30259" count="1" /> <!-- Blessed Helios Caster - Empower +Acumen -->
 					</item>
 					<item chance="34">
-						<item id="30263" count="1" /> <!-- Blessed Helios Retributer - Acumen + Empower -->
+						<item id="30263" count="1" /> <!-- Blessed Helios Retributer - Acumen +Empower -->
 					</item>
 				</items>
 			</effect>
@@ -1631,13 +1631,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="33">
-						<item id="30265" count="1" /> <!-- Blessed Helios Dual Sword - Haste + Damage Up -->
+						<item id="30265" count="1" /> <!-- Blessed Helios Dual Sword - Haste +Damage Up -->
 					</item>
 					<item chance="33">
-						<item id="30268" count="1" /> <!-- Blessed Helios Dual Dagger - Damage Up + Focus -->
+						<item id="30268" count="1" /> <!-- Blessed Helios Dual Dagger - Damage Up +Focus -->
 					</item>
 					<item chance="34">
-						<item id="30273" count="1" /> <!-- Blessed Helios Dual Blunt Weapon - Damage Up + Focus -->
+						<item id="30273" count="1" /> <!-- Blessed Helios Dual Blunt Weapon - Damage Up +Focus -->
 					</item>
 				</items>
 			</effect>
@@ -1936,10 +1936,10 @@
 						<item id="34777" count="1" /> <!-- Scroll of Blessing: (R99-grade) - Event -->
 					</item>
 					<item chance="0.053">
-						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) - Event -->
 					</item>
 					<item chance="0.106">
-						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) - Event -->
 					</item>
 				</items>
 			</effect>

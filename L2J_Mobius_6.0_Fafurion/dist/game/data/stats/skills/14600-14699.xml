@@ -85,7 +85,7 @@
 		</effects>
 	</skill>
 	<skill id="14603" toLevel="1" name="Cry of Destiny - Exile">
-		<!-- Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per sec. -->
+		<!-- Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per second. -->
 		<icon>icon.skill11273</icon>
 		<operateType>A2</operateType>
 		<trait>TURN_STONE</trait>
@@ -142,7 +142,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14605" toLevel="1" name="Cry of Destiny - Crippling Attack">
-		<!-- Attacks the target with 5175 power added to P. Atk. For 5 sec., decreases the enemy's P./ M. Def. by 70% and evasion by 10. -->
+		<!-- Attacks the target with 5175 power added to P. Atk. For 5 sec., decreases the enemy's P. Def./ M. Def. by 70% and evasion by 10. -->
 		<icon>icon.skill11509</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -509,7 +509,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14617" toLevel="1" name="Knock Down Resistance">
+	<skill id="14617" toLevel="1" name="Knock Down/ Knock Back Resistance">
 		<!-- Knock Down/ Knock Back Immunity -->
 		<icon>icon.skill10262</icon>
 		<operateType>P</operateType>
@@ -521,7 +521,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14618" toLevel="1" name="Knock Back Resistance">
+	<skill id="14618" toLevel="1" name="Knock Down/ Knock Back Resistance">
 		<!-- Knock Down/ Knock Back Immunity -->
 		<icon>icon.skill10262</icon>
 		<operateType>P</operateType>
@@ -557,7 +557,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14621" toLevel="1" name="Pulling Resistance">
+	<skill id="14621" toLevel="1" name="Pull Resistance">
 		<!-- Pull Immunity -->
 		<icon>icon.skill10015</icon>
 		<operateType>P</operateType>
@@ -2002,7 +2002,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="14677" toLevel="1" name="Cry of Destiny - Giant Punch">
-		<!-- Strikes down at the ground with a fist to knock down nearby enemies for 3 sec. Dual sword/ two-handed sword/ spear/ blunt weapon must be equipped. -->
+		<!-- Strikes down at the ground with a fist to knock down nearby enemies for 3 sec. Requires a dual sword, two-handed sword, spear, or fist weapon. -->
 		<icon>icon.skill10266</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2425,7 +2425,7 @@
 		</effects>
 	</skill>
 	<skill id="14690" toLevel="1" name="Cry of Destiny - Exile">
-		<!-- Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per sec. -->
+		<!-- Kicks out the target to another dimension. The exiled target becomes incapacitated and loses 167 HP per second. -->
 		<icon>icon.skill11273</icon>
 		<operateType>A2</operateType>
 		<trait>TURN_STONE</trait>
@@ -2468,7 +2468,7 @@
 		</effects>
 	</skill>
 	<skill id="14691" toLevel="1" name="Cry of Destiny - Crippling Attack">
-		<!-- Attacks the target with 1300 power added to P. Atk. For 5 sec., decreases the enemy's P./ M. Def. by 30% and evasion by 10. -->
+		<!-- Attacks the target with 1300 power added to P. Atk. For 5 sec., decreases the enemy's P. Def./ M. Def. by 30% and evasion by 10. -->
 		<icon>icon.skill11509</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>

@@ -1331,7 +1331,7 @@
 		</stats>
 	</item>
 	<item id="30368" name="T-shirt" type="Armor">
-		<!-- Shirt -->
+		<!-- T-shirt -->
 		<set name="icon" val="icon.etc_stripe_shirts_s_i05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="crystal_type" val="R" />
@@ -1395,7 +1395,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15211" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
-			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hr.) -->
+			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
 			<item id="15426" min="1" max="1" chance="100" /> <!-- Hero's Escape Point - Event -->
 		</capsuled_items>
 		<skills>
@@ -1403,7 +1403,7 @@
 		</skills>
 	</item>
 	<item id="30372" name="Hero's Cloak" type="Armor">
-		<!-- The cloak of an Olympiad Hero. STR/ DEX/ CON/ INT/ WIT/ MEN +3 when equipped. Received PvP Damage -15%. -->
+		<!-- The cloak of an Olympiad Hero. STR/ DEX/ CON/ INT/ WIT/ MEN +3 when equipped. Decreases PvP Damage by 15%. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1428,7 +1428,7 @@
 		</stats>
 	</item>
 	<item id="30373" name="Glorious Cloak" type="Armor">
-		<!-- Olympiad Cloak of Glory. STR/ DEX/ CON/ INT/ WIT/ MEN +2 when equipped. Received PvP Damage -5%. -->
+		<!-- Glorious Cloak of an Olympiad Hero. STR/ DEX/ CON/ INT/ WIT/ MEN +2 when equipped. Decreases PvP Damage by 5%. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1469,7 +1469,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="15211" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
-			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hr.) -->
+			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
 			<item id="15426" min="1" max="1" chance="100" /> <!-- Hero's Escape Point - Event -->
 		</capsuled_items>
 		<skills>

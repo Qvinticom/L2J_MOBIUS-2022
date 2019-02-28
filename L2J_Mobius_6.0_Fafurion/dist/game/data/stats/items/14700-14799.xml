@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="14700" name="Superior Healing Potion" type="EtcItem">
-		<!-- Magical, liquid medicine that greatly restores HP for 15 seconds. -->
+		<!-- Magical, liquid medicine that greatly restores HP for 15 sec. -->
 		<set name="icon" val="icon.etc_reagent_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -24,7 +24,7 @@
 		</skills>
 	</item>
 	<item id="14701" name="Superior Quick Healing Potion" type="EtcItem">
-		<!-- Magic potion that instantly restores a significant amount of HP. Instant effect with no cooldown. Cannot be used when HP is full. -->
+		<!-- Magic potion that instantly restores a significant amount of HP. Instant effect with no duration. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -121,7 +121,7 @@
 		</skills>
 	</item>
 	<item id="14707" name="Lucky Enchant Stone: Armor (D-grade)" type="EtcItem">
-		<!-- Enchant success rate +35% for armor (D-grade).Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<!-- Enchant success rate +35% for armor (D-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -136,7 +136,7 @@
 		</skills>
 	</item>
 	<item id="14708" name="Lucky Enchant Stone: Armor (C-grade)" type="EtcItem">
-		<!-- Enchant success rate +27% for armor (C-grade).Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<!-- Enchant success rate +27% for armor (C-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i01" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -151,7 +151,7 @@
 		</skills>
 	</item>
 	<item id="14709" name="Lucky Enchant Stone: Armor (B-grade)" type="EtcItem">
-		<!-- Enchant success rate +23% for armor (B-grade).Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<!-- Enchant success rate +23% for armor (B-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i02" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -166,7 +166,7 @@
 		</skills>
 	</item>
 	<item id="14710" name="Lucky Enchant Stone: Armor (A-grade)" type="EtcItem">
-		<!-- Enchant success rate +18% for armor (A-grade).Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
+		<!-- Enchant success rate +18% for armor (A-grade). Only for items enchanted between +3 and +9. For one-piece armor, enchant must be between +4 and +9. -->
 		<set name="icon" val="icon.ench_am_stone_i03" />
 		<set name="etcitem_type" val="ENCHT_ATTR_INC_PROP_ENCHT_AM" />
 		<set name="immediate_effect" val="true" />
@@ -346,7 +346,7 @@
 		</capsuled_items>
 	</item>
 	<item id="14719" name="Full Vitality Event Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Neolithica. -->
+		<!-- Wrapped Pack containing Agathion - Neolithica. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -589,7 +589,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="14739" name="Event - Fresh Milk" type="EtcItem">
-		<!-- Freshly collected milk. When used, you can feel the effects of Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hr. The effect disappears if a higher skill is acquired. -->
+		<!-- Freshly collected milk. When used, you can feel the effects of Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. The effect disappears if a higher skill is acquired. -->
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -620,7 +620,7 @@
 		</skills>
 	</item>
 	<item id="14740" name="Event - Save the Cow Event Pack" type="EtcItem">
-		<!-- Even pack that can be obtained once every 12 hr. per account. In order to use this item, Double-click it and you will obtain the Summon Scroll: Milk Cow and 'Cupid's Fatigue Relief Potion' that are needed for the event. -->
+		<!-- Even pack that can be obtained once every 12 hours per account. In order to use this item, Double-click it and you will obtain the Summon Scroll: Milk Cow and 'Cupid's Fatigue Relief Potion' that are needed for the event. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

@@ -183,6 +183,7 @@
 		</effects>
 	</skill>
 	<skill id="11752" toLevel="11" name="Sustain">
+		<!-- For $s1, Heals the selected party member by $s2 per second. Further increases incoming Healing power by $s3. Also increases your Healing power. -->
 		<icon>icon.skill11752</icon>
 		<abnormalTime>15</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
@@ -333,6 +334,7 @@
 		</effects>
 	</skill>
 	<skill id="11754" toLevel="5" name="Fairy of Life">
+		<!-- Summons a fairy that follows and periodically heals the selected party member for $s1. Has a chance of recovering HP when attacked. -->
 		<icon>icon.skill11754</icon>
 		<abnormalTime>
 			<value fromLevel="1" toLevel="5">60</value>
@@ -426,6 +428,7 @@
 		</effects>
 	</skill>
 	<skill id="11755" toLevel="11" name="Radiant Heal">
+		<!-- Heals target with $s1 Power added to M. Atk. If HP is full, CP is restored. -->
 		<icon>icon.skill11755</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -526,6 +529,7 @@
 		</effects>
 	</skill>
 	<skill id="11756" toLevel="11" name="Panic Heal">
+		<!-- Heals target with $s1 Power added to M. Atk. If HP is full, CP is restored. -->
 		<icon>icon.skill11756</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -612,6 +616,7 @@
 		</effects>
 	</skill>
 	<skill id="11757" toLevel="11" name="Brilliant Heal">
+		<!-- Heals yourself and nearby party members with $s1 Power added to M. Atk. If HP is full, CP is restored. -->
 		<icon>icon.skill11757</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -686,6 +691,7 @@
 		</effects>
 	</skill>
 	<skill id="11758" toLevel="1" name="Celestial Protection">
+		<!-- Renders the selected party member invincible for $s1. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill11758</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -755,6 +761,7 @@
 		</effects>
 	</skill>
 	<skill id="11759" toLevel="1" name="Celestial Party Protection">
+		<!-- Renders all party members invincible for $s1. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill11759</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -817,6 +824,7 @@
 		</effects>
 	</skill>
 	<skill id="11760" toLevel="11" name="Radiant Recharge">
+		<!-- Instantly recovers target's MP with a maximum of $s1 Power depending on target's level. Also, for $s2, recovers $s3 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<icon>icon.skill11760</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>MP_RECOVER</abnormalType>
@@ -938,6 +946,7 @@
 		</effects>
 	</skill>
 	<skill id="11761" toLevel="8" name="Brilliant Recharge">
+		<!-- Instantly recovers party members' MP with a maximum of $s1 Power depending on their level. Also, for $s2, recovers $s3 MP per second. -->
 		<icon>icon.skill11761</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>MP_RECOVER</abnormalType>
@@ -1049,6 +1058,7 @@
 		</effects>
 	</skill>
 	<skill id="11762" toLevel="1" name="Balance Heal">
+		<!-- Equalizes the entire party's HP and restores $s2 HP/ second for $s1. -->
 		<icon>icon.skill11762</icon>
 		<abnormalTime>15</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -1086,6 +1096,7 @@
 		</effects>
 	</skill>
 	<skill id="11763" toLevel="1" name="Radiant Purge">
+		<!-- Dispels target's debuffs. Allies only. -->
 		<icon>icon.skill11763</icon>
 		<castRange>600</castRange>
 		<effectPoint>867</effectPoint>
@@ -1134,6 +1145,7 @@
 		</effects>
 	</skill>
 	<skill id="11764" toLevel="1" name="Brilliant Purge">
+		<!-- Cancels all party members' debuffs and makes them immune to debuffs for $s1. -->
 		<icon>icon.skill11764</icon>
 		<abnormalTime>7</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
@@ -1189,6 +1201,7 @@
 		</effects>
 	</skill>
 	<skill id="11765" toLevel="7" name="Crystal Regeneration">
+		<!-- Crystallize yourself and become immune to damage and debuffs for $s1. Recover $s2 HP and $s3 MP every second. -->
 		<icon>icon.skill11765</icon>
 		<abnormalTime>10</abnormalTime>
 		<abnormalTime>
@@ -1277,6 +1290,7 @@
 		</effects>
 	</skill>
 	<skill id="11766" toLevel="11" name="Dark Blast">
+		<!-- Attacks target with $s1 Power added to M. Atk. -->
 		<icon>icon.skill11766</icon>
 		<effectPoint>
 			<value level="1">-867</value>
@@ -1363,6 +1377,7 @@
 		</effects>
 	</skill>
 	<skill id="11767" toLevel="11" name="Mass Dark Veil">
+		<!-- Inflicts damage on target and nearby enemies with $s1 Power added to M. Atk. and decreases aggression toward yourself. -->
 		<icon>icon.skill11767</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
@@ -1455,6 +1470,7 @@
 		</effects>
 	</skill>
 	<skill id="11768" toLevel="1" name="Rebirth">
+		<!-- Restores all party members' HP/ MP/ CP and has a chance of dispelling their debuffs. -->
 		<icon>icon.skill11768</icon>
 		<affectRange>1000</affectRange>
 		<operateType>A1</operateType>
@@ -1493,6 +1509,7 @@
 		</effects>
 	</skill>
 	<skill id="11769" toLevel="9" name="Dark Backfire">
+		<!-- For $s1, target's MP Consumption +$s2, and Casting Spd. and Atk. Spd. -$s3. -->
 		<icon>icon.skill11769</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="9">80</value>
@@ -1647,6 +1664,7 @@
 		</effects>
 	</skill>
 	<skill id="11770" toLevel="1" name="Dissolve">
+		<!-- Removes the aggression of nearby enemies toward you and increases speed by $s1. -->
 		<icon>icon.skill11770</icon>
 		<affectRange>500</affectRange>
 		<operateType>A1</operateType>
@@ -1701,6 +1719,7 @@
 		</effects>
 	</skill>
 	<skill id="11772" toLevel="7" name="Giant's Favor">
+		<!-- Performs an ancient secret technique of the Giants to increase P. Def., M. Def., and Healing power by $s2 for $s1. -->
 		<icon>icon.skill11772</icon>
 		<abnormalTime>30</abnormalTime>
 		<abnormalTime>
@@ -1946,6 +1965,7 @@
 		</effects>
 	</skill>
 	<skill id="11777" toLevel="8" name="Mark of Lumi">
+		<!-- Leaves a mark that decreases target's P. Def. and M. Def. by $s2, and consumes $s3 HP every second for $s1. -->
 		<icon>icon.skill11777</icon>
 		<abnormalTime>60</abnormalTime>
 		<abnormalLvl>3</abnormalLvl>
@@ -2051,6 +2071,7 @@
 		</effects>
 	</skill>
 	<skill id="11778" toLevel="9" name="Fatal Sleep">
+		<!-- For $s1, inflicts Sleep on target. When Sleep ends, decreases Atk. Spd., Casting Spd., and Speed by $s2. -->
 		<icon>icon.skill11778</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2196,6 +2217,7 @@
 		</effects>
 	</skill>
 	<skill id="11780" toLevel="9" name="Dark Devour">
+		<!-- Decreases target's Recovery by $s1. -->
 		<icon>icon.skill11780</icon>
 		<abnormalTime>60</abnormalTime>
 		<abnormalLvl>3</abnormalLvl>
@@ -2480,7 +2502,7 @@
 		</effects>
 	</skill>
 	<skill id="11787" toLevel="10" name="Superior Armor Mastery">
-		<!-- Max HP +$s1, P. Def. +$s2, M. Def +$s3, HP Recovery Bonus +$s4, MP Recovery Bonus +$s5 when equipped with a Robe/ Light Armor. INT +$s6. -->
+		<!-- Max HP +$s1, P. Def. +$s2, M. Def. +$s3, HP Recovery Bonus +$s4, MP Recovery Bonus +$s5 when equipped with a Robe/ Light Armor. INT +$s6. -->
 		<icon>icon.skill11787</icon>
 		<operateType>P</operateType>
 		<magicLvl>
@@ -2622,7 +2644,7 @@
 		</effects>
 	</skill>
 	<skill id="11789" toLevel="10" name="Superior Anti Magic">
-		<!-- M. Def. +$s1, Magic Damage Resistance +$s2. INT +$s3. -->
+		<!-- M. Def. +$s1, Attack Magic Resistance +$s2. INT +$s3. -->
 		<icon>icon.skill10004</icon>
 		<operateType>P</operateType>
 		<magicLvl>

@@ -59,7 +59,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23606" toLevel="1" name="Flame Launch">
-		<!-- Lights target and nearby enemies on fire, causing magic damage, and inflicts a damage of 1500 HP per second for 10 sec. -->
+		<!-- Lights target and nearby enemies on fire, causing magic damage, and inflicts a damage of 1500 HP per second for 10sec. -->
 		<icon>icon.skill4279_new</icon>
 		<operateType>A2</operateType>
 		<castRange>450</castRange>
@@ -136,7 +136,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23614" toLevel="1" name="Timber Burst">
-		<!-- Lights the target and nearby enemies on fire for continuous HP damage for 10 sec. -->
+		<!-- Lights the target and nearby enemies on fire for continuous HP damage for 10sec. -->
 		<icon>icon.skill4279_new</icon>
 		<operateType>A2</operateType>
 		<coolTime>300</coolTime>
@@ -282,7 +282,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23632" toLevel="1" name="Agathion's Blessing: Meditation">
-		<!-- For 30 sec., P. Def. -90% and restores MP by 134 per sec. The status is canceled when damage is incurred. Cooldown is 30 min. -->
+		<!-- For 30 sec., P. Def. -90% and restores MP by 134 per second. Effect removed when hit. Cooldown is 30 min. -->
 		<icon>icon.skill1430</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -576,7 +576,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>800</reuseDelay>
 	</skill>
-	<skill id="23660" toLevel="1" name="Holy  Fatal Strike">
+	<skill id="23660" toLevel="1" name="Holy Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -584,7 +584,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>800</reuseDelay>
 	</skill>
-	<skill id="23661" toLevel="1" name="Earth  Fatal Strike">
+	<skill id="23661" toLevel="1" name="Earth Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -592,7 +592,7 @@
 		<effectPoint>-100</effectPoint>
 		<reuseDelay>800</reuseDelay>
 	</skill>
-	<skill id="23662" toLevel="1" name="Dark  Fatal Strike">
+	<skill id="23662" toLevel="1" name="Dark Fatal Strike">
 		<operateType>A1</operateType>
 		<mpConsume>10</mpConsume>
 		<castRange>40</castRange>
@@ -850,7 +850,7 @@
 		<reuseDelay>10000</reuseDelay>
 	</skill>
 	<skill id="23688" toLevel="1" name="Reflection Armor">
-		<!-- Gains Damage Reflect effect. -->
+		<!-- Gains Damage Reflection effect. -->
 		<icon>icon.kelbim_buff_fury</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>

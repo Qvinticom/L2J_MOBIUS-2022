@@ -73,7 +73,7 @@
 		</effects>
 	</skill>
 	<skill id="9403" toLevel="1" name="Pirate Elixir">
-		<!-- For 2 hr., Vitality replenished if XP is gained through hunting. Buff remains even after death. -->
+		<!-- For 2 h., Vitality replenished if XP is gained through hunting. Buff remains even after death. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
@@ -1222,47 +1222,47 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="8.7">
-						<item id="7117" count="1" /> <!-- Scroll of Escape: Talking Island Village -->
+						<item id="7117" count="1" /> <!-- Scroll of Escape - Talking Island Village -->
 					</item>
 					<item chance="8.3">
-						<item id="7122" count="1" /> <!-- Scroll of Escape: Gludin Village -->
+						<item id="7122" count="1" /> <!-- Scroll of Escape - Gludin Village -->
 					</item>
 					<item chance="8.3">
-						<item id="7123" count="1" /> <!-- Scroll of Escape: Town of Gludio -->
+						<item id="7123" count="1" /> <!-- Scroll of Escape - Town of Gludio -->
 					</item>
 					<item chance="8.3">
-						<item id="7124" count="1" /> <!-- Scroll of Escape: Town of Dion -->
+						<item id="7124" count="1" /> <!-- Scroll of Escape - Town of Dion -->
 					</item>
 					<item chance="8.3">
-						<item id="7126" count="1" /> <!-- Scroll of Escape: Town of Giran -->
+						<item id="7126" count="1" /> <!-- Scroll of Escape - Town of Giran -->
 					</item>
 					<item chance="8.3">
-						<item id="7128" count="1" /> <!-- Scroll of Escape: Heine -->
+						<item id="7128" count="1" /> <!-- Scroll of Escape - Heine -->
 					</item>
 					<item chance="8.3">
-						<item id="7129" count="1" /> <!-- Scroll of Escape: Town of Oren -->
+						<item id="7129" count="1" /> <!-- Scroll of Escape - Town of Oren -->
 					</item>
 					<item chance="8.3">
-						<item id="7131" count="1" /> <!-- Scroll of Escape: Hunter's Village -->
+						<item id="7131" count="1" /> <!-- Scroll of Escape - Hunter's Village -->
 					</item>
 					<item chance="8.3">
-						<item id="7132" count="1" /> <!-- Scroll of Escape: Town of Aden -->
+						<item id="7132" count="1" /> <!-- Scroll of Escape - Town of Aden -->
 					</item>
 					<item chance="8.3">
-						<item id="7133" count="1" /> <!-- Scroll of Escape: Town of Goddard -->
+						<item id="7133" count="1" /> <!-- Scroll of Escape - Town of Goddard -->
 					</item>
 					<item chance="8.3">
-						<item id="7134" count="1" /> <!-- Scroll of Escape: Town of Rune -->
+						<item id="7134" count="1" /> <!-- Scroll of Escape - Town of Rune -->
 					</item>
 					<item chance="8.3">
-						<item id="7135" count="1" /> <!-- Scroll of Escape: Town of Schuttgart -->
+						<item id="7135" count="1" /> <!-- Scroll of Escape - Town of Schuttgart -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
 	<skill id="9438" toLevel="1" name="Letter Collector's Gift (9th Anniversary)">
-		<!-- For 1 hr., Atk. Spd. +10%, Casting Spd. +10%, Max HP/ MP +10%, and Speed +10. -->
+		<!-- For 1 h., Atk. Spd. +10%, Casting Spd. +10%, Max HP/ MP +10%, and Speed +10. -->
 		<icon>icon.shield_bread_i02</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -1745,7 +1745,7 @@
 			<effect name="DisableTargeting" />
 		</effects>
 	</skill>
-	<skill id="9456" toLevel="3" name="Item Skill: Damage Reflect Resistance">
+	<skill id="9456" toLevel="3" name="Item Skill: Damage Reflection Resistance">
 		<!-- For $s1, Damage Reflection Resistance +$s2. -->
 		<icon>icon.active_damage_shield1</icon>
 		<abnormalLvl>
@@ -1833,7 +1833,7 @@
 		</effects>
 	</skill>
 	<skill id="9460" toLevel="1" name="Frenzied Tauti's Authority">
-		<!-- Relies on Tauti's Authority to attack nearby enemies with $s1 power added to P. Atk., inflicting Knock Down. Consumes 4 Spirit Ore. -->
+		<!-- Relies on Tauti's Authority to attack nearby enemies with $s1 power added to P. Attack, inflicting Knock Down. Consumes 4 Spirit Ore. -->
 		<icon>icon.tauti_weapon_one_hand_axe_high</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1926,7 +1926,7 @@
 						<item id="19446" count="1" /> <!-- Unbind Scroll (R99-grade) -->
 					</item>
 					<item chance="0.36">
-						<item id="35566" count="1" /> <!-- Dark Helios Enhancement Stone -->
+						<item id="35566" count="1" /> <!-- Dark Weapon Enhancement Stone -->
 					</item>
 				</items>
 			</effect>
@@ -2374,7 +2374,7 @@
 						<item id="19446" count="1" /> <!-- Unbind Scroll (R99-grade) -->
 					</item>
 					<item chance="0.36">
-						<item id="35566" count="1" /> <!-- Dark Helios Enhancement Stone -->
+						<item id="35566" count="1" /> <!-- Dark Weapon Enhancement Stone -->
 					</item>
 				</items>
 			</effect>
@@ -2475,22 +2475,22 @@
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="0.142">
-						<item id="35735" count="1" /> <!-- Fire Stone (+ 150) - Event -->
+						<item id="35735" count="1" /> <!-- Fire Stone (+150) - Event -->
 					</item>
 					<item chance="0.142">
-						<item id="35736" count="1" /> <!-- Water Stone (+ 150) - Event -->
+						<item id="35736" count="1" /> <!-- Water Stone (+150) - Event -->
 					</item>
 					<item chance="0.142">
-						<item id="35737" count="1" /> <!-- Earth Stone (+ 150) - Event -->
+						<item id="35737" count="1" /> <!-- Earth Stone (+150) - Event -->
 					</item>
 					<item chance="0.142">
-						<item id="35738" count="1" /> <!-- Wind Stone (+ 150) - Event -->
+						<item id="35738" count="1" /> <!-- Wind Stone (+150) - Event -->
 					</item>
 					<item chance="0.142">
-						<item id="35739" count="1" /> <!-- Dark Stone (+ 150) - Event -->
+						<item id="35739" count="1" /> <!-- Dark Stone (+150) - Event -->
 					</item>
 					<item chance="0.142">
-						<item id="35740" count="1" /> <!-- Holy Stone (+ 150) - Event -->
+						<item id="35740" count="1" /> <!-- Holy Stone (+150) - Event -->
 					</item>
 					<item chance="0.119">
 						<item id="30297" count="1" /> <!-- Superior Giant's Codex -->
@@ -4193,7 +4193,7 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="9487" toLevel="1" name="Angel Cat's Blessing">
-		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P./ M. Def. +5%, Atk. Spd./ Casting Spd. +5%, Max HP/ MP +5%, and Acquired XP/ SP +30%. -->
+		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P. Def./ M. Def. +5%, Atk. Spd./ Casting Spd. +5%, Max HP/ MP +5%, and Acquired XP/ SP +30%. -->
 		<icon>icon.skilltransform4</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -4320,7 +4320,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9493" toLevel="1" name="Lingering Holiday Blessing Stage 1">
-		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 1 again. -->
+		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Stage 1 again. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -4339,7 +4339,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9494" toLevel="1" name="Lingering Holiday Blessing Stage 2">
-		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 2 again. -->
+		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Stage 2 again. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -4358,7 +4358,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9495" toLevel="1" name="Lingering Holiday Blessing Stage 3">
-		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 3 again. -->
+		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Stage 3 again. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -4377,7 +4377,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9496" toLevel="1" name="Lingering Holiday Blessing Stage 4">
-		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 4 again. -->
+		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Stage 4 again. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -4396,7 +4396,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9497" toLevel="1" name="Lingering Holiday Blessing Stage 5">
-		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 hr. to receive the Holiday Blessing Stage 5 again. -->
+		<!-- Feeling the lingering glow of the Holiday Blessing. Seems you need 3 h. to receive the Holiday Blessing Stage 5 again. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>

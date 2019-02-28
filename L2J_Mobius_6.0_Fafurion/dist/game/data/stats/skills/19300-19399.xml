@@ -13,8 +13,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19301" toLevel="9" name="Acid Swarm">
-		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for $s1. Enemies within the area suffer P. Def/ M. Def -$s2 and Atk. Spd./ Movement Speed/ Shield Def. -$s3 and cannot use magic skills. -->
+	<skill id="19301" toLevel="9" name="Istina Acid Swarm">
+		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for $s1. Enemies within the area suffer P./ M. Def. -$s2 and Atk. Spd./ Speed/ Shield Def. -$s3 and cannot use magic skills. -->
 		<icon>icon.skill19301</icon>
 		Enemies within the area suffer P. Def/ M. Def -30% and Atk. Spd./ Speed/ Shield Def. -50% and cannot use magic skills. -->
 		<operateType>A1</operateType>
@@ -112,8 +112,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19302" toLevel="9" name="Thrown Acid Sworm">
-		<!-- Damaged by acid. P. Def/ M. Def -$s1 and, Atk. Spd./ Movement Speed/ Shield Def. -$s2, cannot use magic skills, and HP -$s3 per sec. -->
+	<skill id="19302" toLevel="9" name="Thrown Acid Swarm">
+		<!-- Damaged by acid. P./ M. Def. -$s1 and, Atk. Spd./ Speed/ Shield Def. -$s2, cannot use magic skills, and HP -$s3 per second. -->
 		<icon>icon.skill19301</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -195,7 +195,7 @@
 		</effects>
 	</skill>
 	<skill id="19303" toLevel="7" name="Right Angle Reverse">
-		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk and stun the target for $s2. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
+		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk. and stun the target for $s2. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill19303</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -276,7 +276,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19304" toLevel="2" name="Easterly Wind Strike">
+	<skill id="19304" toLevel="2" name="Easterly Wind">
 		<!-- Critical Rate/ Critical Damage inflicted from the flank +$s1 and Critical Rate/ Critical Damage inflicted from behind +$s2, and also resets cooldown of Right Angle Reverse and Easterly Wind Strike. -->
 		<icon>icon.skill10705</icon>
 		<abnormalLvl>
@@ -319,7 +319,7 @@
 		</effects>
 	</skill>
 	<skill id="19305" toLevel="7" name="Shadow Reverse">
-		<!-- Teleports to the back of the target and attempts Deadly Attack with $s1 power added to P. Atk. Additionally, target Accuracy -$s3 for $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
+		<!-- Attempts Deadly Attack on the target with $s1 power added to P. Attack and moves backward. Additionally, decreases Accuracy by $s3 for $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19305</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -388,7 +388,7 @@
 		</effects>
 	</skill>
 	<skill id="19306" toLevel="1" name="Coin of Maphr">
-		<!-- Each party member will receive a random set of effects based on a coin flip: Increased P./ M. Atk and P./ M. Skill Power OR Increased Head size and P./ M. Def. Consumes 7777 Adena. Requires dagger/ dual dagger. -->
+		<!-- Each party member will receive a random set of effects based on a coin flip: Increased P./ M. Atk. and P./ M. Skill Power OR Increased Head size and P./ M. Def. Consumes 7777 Adena. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19306</icon>
 		<operateType>A1</operateType>
 		<itemConsumeCount>7777</itemConsumeCount>
@@ -416,7 +416,7 @@
 		</effects>
 	</skill>
 	<skill id="19307" toLevel="2" name="Lucky Coin: Attack">
-		<!-- Maphr's Blessing increases P. Atk. by $s2, M. Atk. by $s3, and P./ M. Skill Power by $s4 for $s1. -->
+		<!-- Maphr's Blessing increases Attack by $s2, M. Atk. by $s3, and P./ M. Skill Power by $s4 for $s1. -->
 		<icon>icon.skill19307</icon>
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
@@ -444,7 +444,7 @@
 		</effects>
 	</skill>
 	<skill id="19308" toLevel="1" name="Lucky Coin: Defense">
-		<!-- Maphr's Blessing increases allly's P. Def./ M. Def. by $s2 and enlarges their head size for $s1. -->
+		<!-- Maphr's Blessing increases allly's P. Defense/ M. Def. by $s2 and enlarges their head size for $s1. -->
 		<icon>icon.skill19308</icon>
 		<effectPoint>669</effectPoint>
 		<operateType>A2</operateType>
@@ -466,7 +466,7 @@
 		</effects>
 	</skill>
 	<skill id="19309" toLevel="7" name="Reverse Plunder">
-		<!-- Attempts Deadly Attack with $s1 power added to P. Atk. and steals an item. Requires dagger/ dual dagger. -->
+		<!-- Attempts Deadly Attack and item looting with $s1 power added to P. Attack. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19309</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -643,6 +643,7 @@
 		</effects>
 	</skill>
 	<skill id="19314" toLevel="11" name="Elemental Spike (Dark)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11011</reuseDelayGroup>
@@ -732,7 +733,7 @@
 		</effects>
 	</skill>
 	<skill id="19315" toLevel="4" name="Mana Burst">
-		<!-- For $s1, increases M. Atk. by $s2. Able to cast Quadruple Elemental Blast if reached level 4. -->
+		<!-- Increases M. Atk. by $s2 for $s1. Able to cast Quadruple Elemental Blaster if reached level 4. -->
 		<icon>icon.skill11046</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -789,6 +790,7 @@
 		</endEffects>
 	</skill>
 	<skill id="19316" toLevel="8" name="Elemental Final Storm (Dark)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>

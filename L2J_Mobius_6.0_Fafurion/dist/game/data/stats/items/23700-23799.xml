@@ -491,7 +491,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="23728" name="Erupting Vitality XP Potion" type="EtcItem">
-		<!-- For 1 hr., Vitality Bonus +100% if vitality is present. Note that Vitality Bonus does not apply to boss monsters. Cooldown is 1 hr. -->
+		<!-- For 1 h., Vitality Bonus +100% if vitality is present. Note that Vitality Bonus does not apply to boss monsters. Cooldown is 1 h. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -510,7 +510,7 @@
 		</skills>
 	</item>
 	<item id="23729" name="Erupting Vitality Replenishing Potion" type="EtcItem">
-		<!-- For 1 hr., Vitality Recovery +100%. -->
+		<!-- For 1 h., Vitality Recovery +100%. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -529,7 +529,7 @@
 		</skills>
 	</item>
 	<item id="23730" name="Erupting Vitality Conservation Potion" type="EtcItem">
-		<!-- For 1 hr., Vitality Consumption -50%. -->
+		<!-- For 1 h., Vitality consumption upon XP gain - 50%. -->
 		<set name="icon" val="icon.etc_potion_yellow_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -588,7 +588,7 @@
 		</skills>
 	</item>
 	<item id="23733" name="Divine Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- 100% enchant success rate. Can be enchanted up to +4. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. -->
+		<!-- 100% enchant success rate. Can be enchanted up to +4. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -700,7 +700,7 @@
 		</skills>
 	</item>
 	<item id="23739" name="Divine Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- 100% enchant success rate. Can be enchanted up to +4. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. -->
+		<!-- 100% enchant success rate. Can be enchanted up to +4. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -812,7 +812,7 @@
 		</skills>
 	</item>
 	<item id="23746" name="Prestige Rune 30% Pack" additionalName="3-hour" type="EtcItem">
-		<!-- Pack containing Drop Rate Rune 30% (3-hr.). -->
+		<!-- Pack containing High-grade Maphr's Rune 30% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -827,11 +827,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23743" min="1" max="1" chance="100" /> <!-- Prestige Rune 30% - 3-hr. -->
+			<item id="23743" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 30% - 3-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23747" name="Prestige Rune 30% Pack" additionalName="10-hour" type="EtcItem">
-		<!-- Pack containing Drop Rate Rune 30% (10-hr.). -->
+		<!-- Pack containing High-grade Maphr's Rune 30% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -846,11 +846,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23744" min="1" max="1" chance="100" /> <!-- Prestige Rune 30% - 10-hr. -->
+			<item id="23744" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 30% - 10-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23748" name="Prestige Rune 30% Pack" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 30% (7-day). -->
+		<!-- Pack containing High-grade Maphr's Rune 30% (7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -865,7 +865,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23745" min="1" max="1" chance="100" /> <!-- Prestige Rune 30% - 7-day -->
+			<item id="23745" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 30% - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="23749" name="Prestige Rune 50%" additionalName="3-hour" type="EtcItem">
@@ -917,7 +917,7 @@
 		</skills>
 	</item>
 	<item id="23752" name="Prestige Rune 50% Pack" additionalName="3-hour" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 50% (3-hr.). -->
+		<!-- Pack containing High-grade Maphr's Rune 50% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -932,11 +932,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23749" min="1" max="1" chance="100" /> <!-- Prestige Rune 50% - 3-hr. -->
+			<item id="23749" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 50% - 3-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23753" name="Prestige Rune 50% Pack" additionalName="10-hour" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 50% (10-hr.). -->
+		<!-- Pack containing High-grade Maphr's Rune 50% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -950,11 +950,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23750" min="1" max="1" chance="100" /> <!-- Prestige Rune 50% - 10-hr. -->
+			<item id="23750" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 50% - 10-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23754" name="Prestige Rune 50% Pack" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to obtain a Drop Rate Rune 50% (7-day). -->
+		<!-- Pack containing High-grade Maphr's Rune 50% (7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -969,7 +969,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23751" min="1" max="1" chance="100" /> <!-- Prestige Rune 50% - 7-day -->
+			<item id="23751" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 50% - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="23755" name="Prestige Rune 100%" additionalName="3-hour" type="EtcItem">
@@ -1021,7 +1021,7 @@
 		</skills>
 	</item>
 	<item id="23758" name="Prestige Rune 100% Pack" additionalName="3-hour" type="EtcItem">
-		<!-- Double-click to obtain a Prestige Rune 100% (3-hr.). -->
+		<!-- Wrapped Pack containing High-grade Maphr's Rune 100% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -1036,11 +1036,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23755" min="1" max="1" chance="100" /> <!-- Prestige Rune 100% - 3-hr. -->
+			<item id="23755" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 3-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23759" name="Prestige Rune 100% Pack" additionalName="10-hour" type="EtcItem">
-		<!-- Double-click to obtain a Prestige Rune 100% (10-hr.). -->
+		<!-- Wrapped Pack containing High-grade Maphr's Rune 100% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -1055,11 +1055,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23756" min="1" max="1" chance="100" /> <!-- Prestige Rune 100% - 10-hr. -->
+			<item id="23756" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 10-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23760" name="Prestige Rune 100% Pack" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to obtain a Prestige Rune 100% (7-day). -->
+		<!-- Wrapped Pack containing High-grade Maphr's Rune 100% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -1074,7 +1074,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="immediate_effect" val="true" />
 		<capsuled_items>
-			<item id="23757" min="1" max="1" chance="100" /> <!-- Prestige Rune 100% - 7-day -->
+			<item id="23757" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 7-day -->
 		</capsuled_items>
 	</item>
 	<item id="23761" name="Prestige Cube" additionalName="30-day" type="EtcItem">
@@ -1107,8 +1107,8 @@
 		<set name="extractableCountMax" val="1" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35675" min="5" max="5" chance="100" /> <!-- High-grade Elixir of Life (R-grade) -->
-			<item id="35676" min="5" max="5" chance="100" /> <!-- High-grade Elixir of Mind (R-grade) -->
+			<item id="35675" min="5" max="5" chance="100" /> <!-- High-grade Elixir of Life (R-grade) - Event -->
+			<item id="35676" min="5" max="5" chance="100" /> <!-- High-grade Elixir of Mind (R-grade) - Event -->
 			<item id="35677" min="5" max="5" chance="100" /> <!-- High-grade Elixir of CP (R-grade) -->
 	</capsuled_items>
 	</item>

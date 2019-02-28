@@ -1046,7 +1046,7 @@
 		</effects>
 	</skill>
 	<skill id="3224" toLevel="10" name="Item Skill: Wild Magic">
-		<!-- Chance: Temporarily increases M. Critical Rate when attacked. -->
+		<!-- Chance: Temporarily increases Critical Rate of magic attacks when attacked. -->
 		<icon>icon.skill3080</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -2046,7 +2046,7 @@
 		</effects>
 	</skill>
 	<skill id="3250" toLevel="10" name="Item Skill: Wild Magic">
-		<!-- Passive: Increases M. Critical Rate when equipped. -->
+		<!-- Passive: Increases Critical Rate of magic attacks when equipped. -->
 		<icon>icon.skill3238</icon>
 		<magicLvl>
 			<value level="1">46</value>
@@ -2504,7 +2504,7 @@
 			<effect name="UnsummonAgathion" />
 		</effects>
 	</skill>
-	<skill id="3268" toLevel="1" name="Release Agathion's Seal - Castle">
+	<skill id="3268" toLevel="1" name="Agathion Summon - Castle">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2521,7 +2521,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3269" toLevel="1" name="Release Agathion's Seal - Rainbow Clan Hall">
+	<skill id="3269" toLevel="1" name="Agathion Summon - Rainbow Clan Hall">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2538,7 +2538,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3270" toLevel="1" name="Release Agathion's Seal - Beast Farm">
+	<skill id="3270" toLevel="1" name="Agathion Summon - Beast Farm">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2556,7 +2556,7 @@
 		</effects>
 	</skill>
 	<skill id="3271" toLevel="1" name="Blue Talisman - P. Atk.">
-		<!-- Increases P. Atk with the power of Talisman. -->
+		<!-- Increases P. Atk. with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2711,7 +2711,7 @@
 		</effects>
 	</skill>
 	<skill id="3277" toLevel="1" name="Blue Talisman - M. Critical Rate">
-		<!-- Increases M. Critical Rate with the power of Talisman. -->
+		<!-- Increases Critical Rate of magic attacks with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2955,7 +2955,7 @@
 		</effects>
 	</skill>
 	<skill id="3285" toLevel="1" name="Blue Talisman - Berserker">
-		<!-- Temporarily decrease P./ M. Def./ Evasion and increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd./ speed with the power of Talisman. -->
+		<!-- Temporarily decrease P. Def./ M. Def./ Evasion and increases P. Atk./ M. Atk./ Atk. Spd./ Casting Spd./ speed with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -3156,7 +3156,7 @@
 		</effects>
 	</skill>
 	<skill id="3293" toLevel="1" name="Yellow Talisman - P. Atk.">
-		<!-- Increases P. Atk when equipped. -->
+		<!-- Increases P. Atk. when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>
@@ -3169,7 +3169,7 @@
 		</effects>
 	</skill>
 	<skill id="3294" toLevel="1" name="Yellow Talisman - M. Atk.">
-		<!-- Increases M. Atk when equipped. -->
+		<!-- Increases M. Atk. when equipped. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<magicLvl>55</magicLvl>
 		<operateType>P</operateType>

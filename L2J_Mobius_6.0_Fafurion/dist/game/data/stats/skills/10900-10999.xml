@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10903" toLevel="4" name="Hawk Eye">
+		<!-- For $s1 when a bow or crossbow is equipped, P. Atk. +$s2, Skill Power +$s3, and received M. Critical Damage -$s4. -->
 		<icon>icon.skill11872</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -112,7 +113,7 @@
 		</effects>
 	</skill>
 	<skill id="10905" toLevel="3" name="Fatal Arrow">
-		<!-- Fires an agony-inducing arrow at the target with $s1 Power added to P. Atk. The power of the attack increases as the enemy's HP decreases. Requires a bow. Over-hit. -->
+		<!-- Fires an agony-inducing arrow at the target with $s1 Power added to P. Atk. The power of the attack increases as the enemy's HP decreases. Requires a bow. Over-hit is possible. -->
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -149,6 +150,7 @@
 		</effects>
 	</skill>
 	<skill id="10950" toLevel="4" name="Vengeful Sniper">
+		<!-- For $s1 when a bow or crossbow is equipped, P. Atk. +$s2, PvP damage +$s3, received magic skill damage during PvP -$s4. -->
 		<icon>icon.skill11873</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -330,6 +332,7 @@
 		</effects>
 	</skill>
 	<skill id="10952" toLevel="1" name="Survival Instinct">
+		<!-- For $s1, own P. Atk. +$s2, P. Skill Power +$s3, Atk. Spd. +$s4, P. Def. +$s5, M. Def. +$s6. Consumes $s7 Soulstones. -->
 		<icon>icon.skill10952</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -378,6 +381,7 @@
 		</effects>
 	</skill>
 	<skill id="10953" toLevel="1" name="Hunting Instinct">
+		<!-- For $s1, own P. Atk. +$s2, P. Skill Power +$s3, P. Skill Critical Rate +$s4, P. Skill Critical Damage +$s5. Consumes $s6 Soulstones. -->
 		<icon>icon.skill10953</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -422,6 +426,7 @@
 		</effects>
 	</skill>
 	<skill id="10954" toLevel="1" name="Counter Instinct">
+		<!-- For $s1, own P. Atk. +$s2, P. Skill Power +$s3, P. Skill Critical Damage +$s4. $s5 Soul Stones consumed. -->
 		<icon>icon.skill10954</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -462,6 +467,7 @@
 		</effects>
 	</skill>
 	<skill id="10955" toLevel="1" name="Bloody Instinct">
+		<!-- For $s1, own PvP damage +$s2, P. Atk. +$s3, P. Skill Damage +$s4. $s5 Soul Stones consumed. -->
 		<icon>icon.skill10955</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>

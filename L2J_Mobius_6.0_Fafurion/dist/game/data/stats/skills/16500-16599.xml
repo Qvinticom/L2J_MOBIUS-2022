@@ -1,56 +1,56 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="16500" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16500" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Part of the Bamonti was affected by the darkness of Nemis and was reborn as Vengeful Edaire. Currently aiming for Gludin from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16501" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16501" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Part of the Weiss was affected by the darkness of Nemis and was reborn as Vengeful Agonia. Currently aiming for Gludin from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16502" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16502" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Triol took Pa'agrio's form to control warriors of the Nerva Orc. Currently aiming for Schuttgart from another dimension under Triol's orders. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16503" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16503" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Amden Orc Turahot was cursed by Nemis and is currently aiming for Schuttgart from another dimension under Nemi's orders. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16504" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16504" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Hero of the noble Orc royalty. Currently aiming for Schuttgart from another dimension under Triol's orders. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16505" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16505" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Originally a half-orc hero, but now turned to a demon due to excessive dark energy. Only dictated by primal instinct, and is currently aiming for Gainak from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16506" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16506" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Originally a half-orc hero, but now turned to a demon due to excessive dark energy. Only dictated by primal instinct, and is currently aiming for Gainak from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16507" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16507" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Originally a half-orc hero, but now turned to a demon due to excessive dark energy. Only dictated by primal instinct, and is currently aiming for Gainak from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16508" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16508" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- A mechanical minion for Garamor. Has achieved its current form by devouring the resentful soul and stealing the body of a peasant revolutionary. Currently aiming for Oren from another dimension under Garamor's orders. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16509" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16509" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- A mechanical minion for Garamor. Has achieved its current form by devouring the resentful soul and stealing the body of a peasant revolutionary. Currently aiming for Oren from another dimension under Garamor's orders. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16510" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16510" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- A mechanical minion for Garamor. Has achieved its current form by devouring the resentful soul and stealing the body of a peasant revolutionary. Currently aiming for Oren from another dimension under Garamor's orders. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
@@ -105,7 +105,7 @@
 		<effectPoint>-100</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16520" toLevel="4" name="Shild of Atelia">
+	<skill id="16520" toLevel="4" name="Shield of Atelia">
 		<!-- Increases P./ M. Def. by $s1. -->
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
@@ -129,7 +129,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="16522" toLevel="1" name="Shield Swing">
-		<!-- Inflicts great physical damage and decreases P./ M. Def by 50% for 15 sec. -->
+		<!-- Inflicts great physical damage and decreases P./ M. Def. by 50% for 15 sec. -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -151,7 +151,7 @@
 		<reuseDelay>15000</reuseDelay>
 	</skill>
 	<skill id="16524" toLevel="4" name="Full Swing Crusher">
-		<!-- Inflicts great physical damage to target and decreases P./ M. Def by $s2 for $s1. -->
+		<!-- Inflicts great physical damage to target and decreases P./ M. Def. by $s2 for $s1. -->
 		<icon>icon.skill1418</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>
@@ -318,7 +318,7 @@
 		<effectPoint>679</effectPoint>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="16541" toLevel="1" name="Burstein's Stigma">
+	<skill id="16541" toLevel="1" name="Burnstein's Stigma">
 		<!-- Stigma that proves that Commander Burnstein in Atelia Fortress' 3rd floor has withdrawn. -->
 		<icon>icon.skill0015</icon>
 		<operateType>A2</operateType>
@@ -402,7 +402,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16550" toLevel="1" name="Zellaka's Quake">
-		<!-- 2-sec. Knock Back effect and broad physical damage to surroundings. -->
+		<!-- 2-second Knock Back effect and broad physical damage to surroundings. -->
 		<icon>icon.skill1172</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>2</abnormalTime>
@@ -562,7 +562,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16558" toLevel="1" name="Kelbim Mortality">
-		<!-- Increases your Vital Spot Attack Rate. -->
+		<!-- Increases your deadly attack rate. -->
 		<icon>icon.skill0410</icon>
 		<operateType>A2</operateType>
 		<mpConsume>27</mpConsume>
@@ -796,7 +796,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="16579" toLevel="1" name="Dragonclaw Vortex">
-		<!-- A cyclone leading to the Fire Dimension is caused, dealing fire attribute damage to the enemy. For 30 sec., Movement Speed 10%, Atk. Spd. 10%, Magic Speed 10%, and Fire Attribute resistance 20 down. -->
+		<!-- A cyclone leading to the Fire Dimension is caused, dealing fire attribute damage to the enemy. For 30 sec., Speed 10%, Atk. Spd. 10%, Magic Speed 10%, and Fire Attribute resistance 20 down. -->
 		<icon>icon.skill1339</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>

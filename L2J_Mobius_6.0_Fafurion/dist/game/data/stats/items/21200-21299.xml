@@ -25,7 +25,7 @@
 		</skills>
 	</item>
 	<item id="21201" name="Magic Glasses Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a pair of magic glasses (30-day). -->
+		<!-- Wrapped Pack containing pair of magic glasses (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -70,7 +70,7 @@
 		</stats>
 	</item>
 	<item id="21203" name="Queen Ant's Ring Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Queen Ant's Ring (30-day). -->
+		<!-- Wrapped Pack containing Queen Ant's Ring (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -90,7 +90,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21204" name="Baium's Ring Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Baium's Ring (30-day). -->
+		<!-- Wrapped Pack containing Baium's Ring (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -110,7 +110,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21205" name="Zaken's Earring Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Zaken's Earring (30-day). Cannot be used in Olympiad. -->
+		<!-- Wrapped Pack containing Zaken's Earring (30-day). Cannot be used in Olympiad. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -130,7 +130,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21206" name="Queen Ant's Ring" additionalName="30-day" type="Armor">
-		<!-- MP +21, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increase, P. Critical Damage increase, hold tolerance 20% increase, and hold Atk. Rate 20% increase. Only one effect is applied when two identical rings are worn. 30-day. -->
+		<!-- MP +21, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increase, P. Critical Damage increase, hold tolerance 20% increase, and hold Atk. Rate 20% increase. Only one effect is applied even when two identical rings are worn. 30-day. -->
 		<set name="icon" val="icon.bm_ring_of_queen_ant" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -158,7 +158,7 @@
 		</stats>
 	</item>
 	<item id="21207" name="Baium's Ring" additionalName="30-day" type="Armor">
-		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Accuracy increase, P. Critical Damage increase, hold tolerance +30%, hold Atk. Rate +30%, attack increase, and Casting Spd. Increase. Only one effect is applied when two identical rings are worn. 30-day. -->
+		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Accuracy increase, P. Critical Damage increase, hold tolerance +30%, hold Atk. Rate +30%, attack increase, and Casting Spd. Increase. Only one effect is applied even when two identical rings are worn. 30-day. -->
 		<set name="icon" val="icon.bm_ring_of_baium" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -214,7 +214,7 @@
 		</stats>
 	</item>
 	<item id="21209" name="MP Recovery Potion Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 MP Recovery (+ 50%) potions. -->
+		<!-- Wrapped Pack containing 3 MP Recovery (+50%) potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -257,7 +257,7 @@
 		</skills>
 	</item>
 	<item id="21211" name="Vitality Recovering Potion 10-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 10 Vitality Recovering Potion (30-min.). -->
+		<!-- Wrapped Pack containing 10 Vitality Recovering Potion (30-min.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -299,7 +299,7 @@
 		</skills>
 	</item>
 	<item id="21213" name="Queen Ant's Ring Pack (180-day)" type="EtcItem">
-		<!-- Double-click to obtain a Queen Ant's Ring (180-day). -->
+		<!-- Wrapped Pack containing Queen Ant's Ring (180-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -319,7 +319,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21214" name="Baium's Ring Pack (180-day)" type="EtcItem">
-		<!-- Double-click to obtain a Baium's Ring (180-day). -->
+		<!-- Wrapped Pack containing Baium's Ring (180-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -339,7 +339,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21215" name="Zaken's Earring Pack (180-day)" type="EtcItem">
-		<!-- Double-click to obtain a Zaken's Earring (180-day). -->
+		<!-- Wrapped Pack containing Zaken's Earring (180-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -359,7 +359,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21216" name="Valakas' Necklace Pack (180-day)" type="EtcItem">
-		<!-- Double-click to obtain a Valakas' Necklace (180-day). -->
+		<!-- Wrapped Pack containing Valakas' Necklace (180-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -379,7 +379,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21217" name="Antharas' Earring Pack (180-day)" type="EtcItem">
-		<!-- Double-click to obtain a Antharas' Earring (180-day). -->
+		<!-- Wrapped Pack containing Antharas' Earring (180-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -399,7 +399,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21218" name="Queen Ant's Ring" additionalName="180-day" type="Armor">
-		<!-- MP +21, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increase, P. Critical Damage increase, hold tolerance 20% increase, and hold Atk. Rate 20% increase. Only one effect is applied when two identical rings are worn. 180 days. -->
+		<!-- MP +21, Poison Resistance +30%, Poison Atk. Rate +30%, Accuracy increase, P. Critical Damage increase, hold tolerance 20% increase, and hold Atk. Rate 20% increase. Only one effect is applied even when two identical rings are worn. 180 days. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -427,7 +427,7 @@
 		</stats>
 	</item>
 	<item id="21219" name="Baium's Ring" additionalName="180-day" type="Armor">
-		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Accuracy increase, P. Critical Damage increase, hold tolerance +30%, hold Atk. Rate +30%, attack increase, and Casting Spd. Increase. Only one effect is applied when two identical rings are worn. 180 days. -->
+		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Accuracy increase, P. Critical Damage increase, hold tolerance +30%, hold Atk. Rate +30%, attack increase, and Casting Spd. Increase. Only one effect is applied even when two identical rings are worn. 180 days. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -483,7 +483,7 @@
 		</stats>
 	</item>
 	<item id="21221" name="Valakas' Necklace" additionalName="180-day" type="Armor">
-		<!-- MP +50, Sleep Resistance +40%, Sleep Attack Rate +40%, HP +445, cooldown decrease, P. Atk. and M. Atk. Increase, Wild Magic Effect, Damage Reflect effect, and Fire Resistance increases. 180 days. -->
+		<!-- MP +50, Sleep Resistance +40%, Sleep Attack Rate +40%, HP +445, cooldown decrease, P. Atk. and M. Atk. Increase, Wild Magic Effect, Damage Reflection effect, and Fire Resistance increases. 180 days. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -539,7 +539,7 @@
 		</stats>
 	</item>
 	<item id="21223" name="Transformation Scroll: Anakim Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Anakim Transformation Scrolls. -->
+		<!-- Wrapped Pack containing 5 Anakim Transformation Scrolls. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -581,7 +581,7 @@
 		</skills>
 	</item>
 	<item id="21225" name="Sweet Concentrated Fruit Cocktail Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 Sweet Concentrated Fruit Cocktails. -->
+		<!-- Wrapped Pack containing 3 Sweet Concentrated Fruit Cocktails. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -601,7 +601,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21226" name="Sweet Concentrated Fruit Cocktail Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 3 Sweet Concentrated Fruit Cocktails. -->
+		<!-- Wrapped Pack containing 3 Sweet Concentrated Fruit Cocktails. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -689,7 +689,7 @@
 		</skills>
 	</item>
 	<item id="21229" name="Fresh Concentrated Fruit Cocktail Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 Fresh Concentrated Fruit Cocktails. -->
+		<!-- Wrapped Pack containing 3 Fresh Concentrated Fruit Cocktails. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -709,7 +709,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21230" name="Fresh Concentrated Fruit Cocktail Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 3 Fresh Concentrated Fruit Cocktails. -->
+		<!-- Wrapped Pack containing 3 Fresh Concentrated Fruit Cocktails. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -793,7 +793,7 @@
 		</skills>
 	</item>
 	<item id="21233" name="Fresh Milk Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 fresh milks. -->
+		<!-- Wrapped Pack containing 3 fresh milks. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -813,7 +813,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21234" name="Fresh Milk Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 3 fresh milks. -->
+		<!-- Wrapped Pack containing 3 fresh milks. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -833,7 +833,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21235" name="Fresh Milk" type="EtcItem">
-		<!-- Freshly collected milk. When used, you can feel the effects of Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration (1-hr.). The effect disappears if a higher level version of the buff is acquired. -->
+		<!-- Freshly collected milk. When used, you can feel the effects of Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration (1-hour). The effect disappears if a higher level version of the buff is acquired. -->
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -870,7 +870,7 @@
 		</skills>
 	</item>
 	<item id="21236" name="Fresh Milk" additionalName="Event" type="EtcItem">
-		<!-- Freshly collected milk. When used, you can feel the effects of Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hr. The effect disappears if a higher skill is acquired. -->
+		<!-- Freshly collected milk. When used, you can feel the effects of Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. The effect disappears if a higher skill is acquired. -->
 		<set name="icon" val="icon.etc_fresh_milk_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -907,7 +907,7 @@
 		</skills>
 	</item>
 	<item id="21237" name="Super Healthy Juice Pack (HP)" type="EtcItem">
-		<!-- Double-click to obtain 3 Super Healthy Juices (HP). -->
+		<!-- Wrapped Pack containing 3 Super Healthy Juices (HP). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -927,7 +927,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21238" name="Super Healthy Juice Pack (HP)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 3 super healthy juices (HP). -->
+		<!-- Wrapped Pack containing 3 super healthy juices (HP). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -990,7 +990,7 @@
 		</skills>
 	</item>
 	<item id="21241" name="Super Healthy Juice Pack (CP)" type="EtcItem">
-		<!-- Double-click to obtain 5 Super Healthy Juices (CP). -->
+		<!-- Wrapped Pack containing 5 Super Healthy Juices (CP). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1010,7 +1010,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21242" name="Super Healthy Juice Pack (CP)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 5 super healthy juices (CP). -->
+		<!-- Wrapped Pack containing 5 super healthy juices (CP). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1073,7 +1073,7 @@
 		</skills>
 	</item>
 	<item id="21245" name="Vitality Replenishing Potion Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vitality Replenishing Potion. -->
+		<!-- Wrapped Pack containing Vitality Replenishing Potion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1093,7 +1093,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21246" name="Vitality Replenishing Potion Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Vitality Replenishing Potion. -->
+		<!-- Wrapped Pack containing Vitality Replenishing Potion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1155,7 +1155,7 @@
 		</skills>
 	</item>
 	<item id="21249" name="Vitality Maintaining Potion (30-minute) Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vitality Maintaining Potion (30-min.). -->
+		<!-- Wrapped Pack containing Vitality Maintaining Potion (30-min.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1175,7 +1175,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21250" name="Vitality Maintaining Potion (30-minute) Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Vitality Maintaining Potion. -->
+		<!-- Wrapped Pack containing Vitality Maintaining Potion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1237,7 +1237,7 @@
 		</skills>
 	</item>
 	<item id="21253" name="Gludio Homemade Cookie Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Gludio Homemade Cookies. -->
+		<!-- Wrapped Pack containing 5 Gludio Homemade Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1257,7 +1257,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21254" name="Gludio Homemade Cookie Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 5 Gludio Homemade Cookies. -->
+		<!-- Wrapped Pack containing 5 Gludio Homemade Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1321,7 +1321,7 @@
 		</skills>
 	</item>
 	<item id="21257" name="Dion Homemade Cookie Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Dion Homemade Cookies. -->
+		<!-- Wrapped Pack containing 5 Dion Homemade Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1341,7 +1341,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21258" name="Dion Homemade Cookie Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 5 Dion Homemade Cookies. -->
+		<!-- Wrapped Pack containing 5 Dion Homemade Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1405,7 +1405,7 @@
 		</skills>
 	</item>
 	<item id="21261" name="Aden Homemade Cookie Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 Aden Homemade Cookies. -->
+		<!-- Wrapped Pack containing 3 Aden Homemade Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1425,7 +1425,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21262" name="Aden Homemade Cookie Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 3 Aden Homemade Cookies. -->
+		<!-- Wrapped Pack containing 3 Aden Homemade Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1489,7 +1489,7 @@
 		</skills>
 	</item>
 	<item id="21265" name="Giran Homemade Cookie Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 Giran Homemade Cookies. -->
+		<!-- Wrapped Pack containing 3 Giran Homemade Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1509,7 +1509,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21266" name="Giran Homemade Cookie Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 3 Giran Homemade Cookies. -->
+		<!-- Wrapped Pack containing 3 Giran Homemade Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1573,7 +1573,7 @@
 		</skills>
 	</item>
 	<item id="21269" name="Rune Homemade Cookie Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 Rune Homemade Cookies. -->
+		<!-- Wrapped Pack containing 3 Rune Homemade Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1593,7 +1593,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21270" name="Rune Homemade Cookie Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 3 Rune Homemade Cookies. -->
+		<!-- Wrapped Pack containing 3 Rune Homemade Cookies. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1657,7 +1657,7 @@
 		</skills>
 	</item>
 	<item id="21273" name="Minion Coupon Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 Minion coupons. -->
+		<!-- Wrapped Pack containing 3 Minion coupons. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1673,11 +1673,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="13273" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hr.) -->
+			<item id="13273" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="21274" name="Minion Coupon Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 3 Minion coupons. -->
+		<!-- Wrapped Pack containing 3 Minion coupons. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1693,11 +1693,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="13383" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hr.) (Event) -->
+			<item id="13383" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) (Event) -->
 		</capsuled_items>
 	</item>
 	<item id="21275" name="Minion Coupon" type="EtcItem">
-		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hr.). -->
+		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1716,7 +1716,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21276" name="Minion Coupon" additionalName="Event" type="EtcItem">
-		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hr.). -->
+		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1735,7 +1735,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21277" name="Superior Minion Coupon Pack" type="EtcItem">
-		<!-- Double-click to obtain 2 Superior Minion coupons. -->
+		<!-- Wrapped Pack containing 2 Superior Minion coupons. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1751,11 +1751,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="14065" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon - 5-hr. -->
+			<item id="14065" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
 		</capsuled_items>
 	</item>
 	<item id="21278" name="Superior Minion Coupon Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 2 Superior Minion coupons. -->
+		<!-- Wrapped Pack containing 2 Superior Minion coupons. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1771,11 +1771,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="14074" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon (Event) - 5-hr. -->
+			<item id="14074" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon (Event) - 5-hour -->
 		</capsuled_items>
 	</item>
 	<item id="21279" name="Superior Minion Coupon" type="EtcItem">
-		<!-- Coupon that can be exchanged for a whistle at the Dimensional Merchant that allows you to summon a Superior Minion for 5 hr. -->
+		<!-- Coupon that can be exchanged for a whistle at the Dimensional Merchant that allows you to summon a Superior Minion for 5 hours. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1794,7 +1794,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21280" name="Superior Minion Coupon" additionalName="Event" type="EtcItem">
-		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hr.). -->
+		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1813,7 +1813,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="21281" name="Feather of Blessing Pack" type="EtcItem">
-		<!-- Double-click to obtain a Feather of Blessing. -->
+		<!-- Wrapped Pack containing a Feather of Blessing. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1833,7 +1833,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21282" name="Feather of Blessing Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Feather of Blessing. -->
+		<!-- Wrapped Pack containing a Feather of Blessing. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1853,7 +1853,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21283" name="My Teleport Book Pack" type="EtcItem">
-		<!-- Double-click to obtain a My Teleport Scroll. -->
+		<!-- Wrapped Pack containing a My Teleport Scroll. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1873,7 +1873,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21284" name="My Teleport Book Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a My Teleport Scroll. -->
+		<!-- Wrapped Pack containing a My Teleport Scroll. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1893,7 +1893,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21285" name="My Teleport Scroll Pack" type="EtcItem">
-		<!-- Double-click to obtain 30 My Teleport Scrolls. -->
+		<!-- Wrapped Pack containing 30 My Teleport Scrolls. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1913,7 +1913,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21286" name="My Teleport Scroll Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 30 My Teleport Scrolls. -->
+		<!-- Wrapped Pack containing 30 My Teleport Scrolls. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1933,7 +1933,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21287" name="Extra Pass: Near Kamaloka Pack" type="EtcItem">
-		<!-- Double-click to obtain 15 Entrance Passes: Near Kamaloka. -->
+		<!-- Wrapped Pack containing 15 Entrance Passes: Near Kamaloka. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1953,7 +1953,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21288" name="Extra Pass: Near Kamaloka Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 15 Entrance Passes: Near Kamaloka. -->
+		<!-- Wrapped Pack containing 15 Entrance Passes: Near Kamaloka. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1973,7 +1973,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21289" name="Extra Pass: Kamaloka (Hall of the Abyss) Pack" type="EtcItem">
-		<!-- Double-click to obtain 15 Entrance Passes: Kamaloka (Hall of the Abyss). -->
+		<!-- Wrapped Pack containing 15 Entrance Passes: Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1993,7 +1993,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21290" name="Extra Pass: Kamaloka (Hall of the Abyss) Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 15 Entrance Passes: Kamaloka (Hall of the Abyss). -->
+		<!-- Wrapped Pack containing 15 Entrance Passes: Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2013,7 +2013,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21291" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) Pack" type="EtcItem">
-		<!-- Double-click to obtain 15 Entrance Passes: Kamaloka (Labyrinth of the Abyss). -->
+		<!-- Wrapped Pack containing 15 Entrance Passes: Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2033,7 +2033,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21292" name="Extra Pass: Kamaloka (Labyrinth of the Abyss) Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 15 Entrance Passes: Kamaloka (Labyrinth of the Abyss). -->
+		<!-- Wrapped Pack containing 15 Entrance Passes: Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2053,7 +2053,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21293" name="Lucky Enchant Stone: Weapon Pack (A-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Lucky Enchant Stone: Weapon (A-grade). -->
+		<!-- Wrapped Pack containing Lucky Enchant Stone: Weapon (A-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2073,7 +2073,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21294" name="Lucky Enchant Stone: Weapon Pack (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Lucky Enchant Stone: Weapon (A-grade). -->
+		<!-- Wrapped Pack containing Lucky Enchant Stone: Weapon (A-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2093,7 +2093,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21295" name="Lucky Enchant Stone: Weapon Pack (S-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Lucky Enchant Stone: Weapon (S-grade). -->
+		<!-- Wrapped Pack containing Lucky Enchant Stone: Weapon (S-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2113,7 +2113,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21296" name="Lucky Enchant Stone: Weapon Pack (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Lucky Enchant Stone: Weapon (S-grade). -->
+		<!-- Wrapped Pack containing Lucky Enchant Stone: Weapon (S-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2133,7 +2133,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21297" name="Lucky Enchant Stone: Armor Pack (A-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Lucky Enchant Stone: Armor (A-grade). -->
+		<!-- Wrapped Pack containing Lucky Enchant Stone: Armor (A-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2153,7 +2153,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21298" name="Lucky Enchant Stone: Armor Pack (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Lucky Enchant Stone: Armor (A-grade). -->
+		<!-- Wrapped Pack containing Lucky Enchant Stone: Armor (A-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2173,7 +2173,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21299" name="Lucky Enchant Stone: Armor Pack (S-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Lucky Enchant Stone: Armor (S-grade). -->
+		<!-- Wrapped Pack containing Lucky Enchant Stone: Armor (S-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />

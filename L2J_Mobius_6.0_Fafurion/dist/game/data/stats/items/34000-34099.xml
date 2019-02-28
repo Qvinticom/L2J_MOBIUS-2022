@@ -15,7 +15,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34001" name="High-grade Life Stone (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- A high-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 85 or above. Cannot be exchanged or dropped. -->
+		<!-- A high-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 85 or above. Cannot be exchanged or dropped. -->
 		<set name="icon" val="icon.r_mineral_rare_i00" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -122,7 +122,7 @@
 		</skills>
 	</item>
 	<item id="34008" name="Drum Melody Scroll" additionalName="Event" type="EtcItem">
-		<!-- For 30 min., increases Max MP by 20%, HP Recovery bonus by 20%, M. Critical Rate by 20, Critical Damage during a normal attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and P. Def. upon receiving a critical attack. Decreases speed by 15%. Additionally increases Critical Damage during a normal attack when receiving more than a certain amount of damage. -->
+		<!-- For 30 min., increases Max MP by 20%, HP Recovery bonus by 20%, M. Critical Rate by 20, Critical Damage during a standard attack by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and P. Def. upon receiving a critical attack. Decreases speed by 15%. Additionally increases Critical Damage during a standard attack when receiving more than a certain amount of damage. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_sellable" val="false" />
@@ -693,7 +693,7 @@
 		</skills>
 	</item>
 	<item id="34041" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (3-hr.). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -707,11 +707,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hr.) -->
+			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34042" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (5-hr.). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -725,11 +725,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34036" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (5-hr.) -->
+			<item id="34036" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34043" name="XP Rune I (Lv. 1-85) 100% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (7-day). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -747,7 +747,7 @@
 		</capsuled_items>
 	</item>
 	<item id="34044" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (3-hr.). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -761,11 +761,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hr.) -->
+			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34045" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (5-hr.). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -779,11 +779,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34039" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (5-hr.) -->
+			<item id="34039" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34046" name="XP Rune I (Lv. 1-85) 200% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (7-day). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -801,7 +801,7 @@
 		</capsuled_items>
 	</item>
 	<item id="34047" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (3-hr.). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -818,11 +818,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hr.) -->
+			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34048" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (5-hr.). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -839,11 +839,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34036" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (5-hr.) -->
+			<item id="34036" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34049" name="XP Rune I (Lv. 1-85) 100% Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (7-day). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -864,7 +864,7 @@
 		</capsuled_items>
 	</item>
 	<item id="34050" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (3-hr.). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (3-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -881,11 +881,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hr.) -->
+			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34051" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (5-hr.). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -902,11 +902,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34039" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (5-hr.) -->
+			<item id="34039" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="34052" name="XP Rune I (Lv. 1-85) 200% Pack (7-day)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (7-day). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1050,7 +1050,7 @@
 		<capsuled_items>
 			<item id="6656" min="1" max="1" chance="100" /> <!-- Antharas' Earring -->
 			<item id="6658" min="1" max="1" chance="100" /> <!-- Baium's Ring -->
-			<item id="6659" min="1" max="1" chance="100" /> <!-- Zaken's Earring -->
+			<item id="6659" min="1" max="1" chance="100" /> <!-- Zaken's Earring -  -->
 			<item id="6660" min="1" max="1" chance="100" /> <!-- Queen Ant's Ring -->
 		</capsuled_items>
 	</item>
@@ -1189,7 +1189,7 @@
 		</skills>
 	</item>
 	<item id="34067" name="Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1231,7 +1231,7 @@
 		</skills>
 	</item>
 	<item id="34069" name="Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for armor and accessories (B-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for armor and accessories (B-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1273,7 +1273,7 @@
 		</skills>
 	</item>
 	<item id="34071" name="Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for armor and accessories (C-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for armor and accessories (C-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1315,7 +1315,7 @@
 		</skills>
 	</item>
 	<item id="34073" name="Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for armor and accessories (D-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for armor and accessories (D-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1357,7 +1357,7 @@
 		</skills>
 	</item>
 	<item id="34075" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for armor and accessories (S-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for armor and accessories (S-grade). Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1378,7 +1378,7 @@
 		</skills>
 	</item>
 	<item id="34076" name="Scroll: Enchant Weapon (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. -->
+		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />

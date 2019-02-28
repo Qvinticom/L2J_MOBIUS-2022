@@ -354,7 +354,7 @@
 		</effects>
 	</skill>
 	<skill id="23017" toLevel="1" name="Winter Holiday Festival">
-		<!-- Max HP/ MP/ CP, Physical/ Defense Power, Speed and Physical/ Magic P. Atk. are increased, and MP consumption for skills is decreased. Effectiveness 1. -->
+		<!-- Maximum HP/ MP/ CP, Physical/ Defense Power, Speed and Physical/ Magic P. Atk. are increased, and MP consumption for skills is decreased. Effectiveness 1. -->
 		<icon>BranchSys.icon.br_xmas_reward_buff_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -423,7 +423,7 @@
 		</effects>
 	</skill>
 	<skill id="23018" toLevel="1" name="Stupid Turkey's Mistake">
-		<!-- Max HP/ MP/ CP, Physical/ Defense Power, Speed and Physical/ Magic P. Atk. are increased, and MP consumption for skills is decreased. Effectiveness 2. -->
+		<!-- Maximum HP/ MP/ CP, Physical/ Defense Power, Speed and Physical/ Magic P. Atk. are increased, and MP consumption for skills is decreased. Effectiveness 2. -->
 		<icon>BranchSys.icon.br_turkey_buff_i00</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -608,7 +608,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23024" toLevel="1" name="Love Agathion Special Skill: Vitality Recovery Ability">
-		<!-- Recovers Vitality when acquiring XP for 20 min. Cooldown is 12 hr. -->
+		<!-- Recovers Vitality when acquiring XP for 20 min. Cooldown is 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -715,7 +715,7 @@
 		</conditions>
 	</skill>
 	<skill id="23030" toLevel="1" name="White Maneki Neko Agathion Special Skill: Ability of Blessed Resurrection">
-		<!-- Can use the ability of Blessed Resurrection. Cooldown is 12 hr. -->
+		<!-- Can use the ability of Blessed Resurrection. Cooldown is 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -740,7 +740,7 @@
 		</effects>
 	</skill>
 	<skill id="23031" toLevel="1" name="Black Maneki Neko Agathion Special Skill: Ability of Blessed Escape">
-		<!-- Can use the ability of Blessed Escape. Cooldown is 12 hr. -->
+		<!-- Can use the ability of Blessed Escape. Cooldown is 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
@@ -763,7 +763,7 @@
 		</effects>
 	</skill>
 	<skill id="23032" toLevel="1" name="Brown Maneki Neko Agathion Special Skill: Ability of Vitality Recovery">
-		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 hr. -->
+		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -810,7 +810,7 @@
 		</conditions>
 	</skill>
 	<skill id="23034" toLevel="1" name="One-eyed Bat Drove Agathion Special Skill: Ability of Dark Attack Resistance">
-		<!-- Increases Dark Attack Resistance by 30 for 5 min. Cooldown is 1 hr. -->
+		<!-- Increases Dark Attack Resistance by 30 for 5 min. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -841,7 +841,7 @@
 		</effects>
 	</skill>
 	<skill id="23035" toLevel="1" name="One-eyed Bat Drove Agathion Special Skill: Ability of Vitality Recovery">
-		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 hr. -->
+		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -888,7 +888,7 @@
 		</conditions>
 	</skill>
 	<skill id="23037" toLevel="1" name="Pegasus Agathion Special Skill: Ability of Wind Walk">
-		<!-- Increases Speed by 33 for 5 min. Cooldown is 4 hr. -->
+		<!-- Increases Speed by 33 for 5 min. Cooldown is 4 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -919,7 +919,7 @@
 		</effects>
 	</skill>
 	<skill id="23038" toLevel="1" name="Pegasus Agathion Special Skill: Ability of Blessed Escape">
-		<!-- Can use the ability of Blessed Resurrection. Cooldown is 12 hr. -->
+		<!-- Can use the ability of Blessed Resurrection. Cooldown is 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
@@ -987,7 +987,7 @@
 		</conditions>
 	</skill>
 	<skill id="23042" toLevel="1" name="Yellow-robed Tojigong Agathion Special Skill: Ability of Greater Heal">
-		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 sec. Cooldown is 4 hr. -->
+		<!-- Recovers HP by 444 and increases HP Recovery by 30 for 15 sec. Cooldown is 4 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1021,7 +1021,7 @@
 		</effects>
 	</skill>
 	<skill id="23043" toLevel="1" name="Blue-robed Tojigong Agathion Special Skill: Ability of Reflect Damage">
-		<!-- For 5 min., returns 20% of the damage back to the enemy. Cooldown is 1 hr. -->
+		<!-- For 5 min., returns 20% of the damage back to the enemy. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1052,7 +1052,7 @@
 		</effects>
 	</skill>
 	<skill id="23044" toLevel="1" name="Green-robed Tojigong Agathion Special Skill: Ability of Mana Regeneration">
-		<!-- Increases MP Regeneration by 3% for 5 min. Cooldown is 1 hr. -->
+		<!-- Increases MP Regeneration by 3% for 5 min. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1263,7 +1263,7 @@
 		</conditions>
 	</skill>
 	<skill id="23057" toLevel="1" name="Red Sumo Wrestler Agathion Special Skill: Death Whisper Ability">
-		<!-- Increases Critical Damage by 35% for 5 min. Cooldown is 1 hr. -->
+		<!-- Increases Critical Damage by 35% for 5 min. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1291,7 +1291,7 @@
 		</effects>
 	</skill>
 	<skill id="23058" toLevel="1" name="Blue Sumo Wrestler Agathion Special Skill: Wild Magic Ability">
-		<!-- For 5 min., increases by 2 the occurrence rate of damage that is caused by magic damage. Cooldown is 1 hr. -->
+		<!-- For 5 min., increases by 2 the occurrence rate of damage that is caused by magic damage. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1319,7 +1319,7 @@
 		</effects>
 	</skill>
 	<skill id="23059" toLevel="1" name="Great Sumo Match Agathion Special Skill: Mysterious Power">
-		<!-- A mysterious power that no one knows. Use with caution! Cooldown is 1 hr. -->
+		<!-- A mysterious power that no one knows. Use with caution! Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>0</abnormalLvl>
 		<abnormalTime>600</abnormalTime>
@@ -1360,7 +1360,7 @@
 		</conditions>
 	</skill>
 	<skill id="23061" toLevel="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Blessed Escape">
-		<!-- Can use the ability of Blessed Escape. Cooldown is 12 hr. -->
+		<!-- Can use the ability of Blessed Escape. Cooldown is 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
@@ -1383,7 +1383,7 @@
 		</effects>
 	</skill>
 	<skill id="23062" toLevel="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Blessed Resurrection">
-		<!-- Can use the ability of Blessed Resurrection. Cooldown is 12 hr. -->
+		<!-- Can use the ability of Blessed Resurrection. Cooldown is 12 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<castRange>400</castRange>
@@ -1408,7 +1408,7 @@
 		</effects>
 	</skill>
 	<skill id="23063" toLevel="1" name="Button-eyed Bear Doll Agathion Special Skill: Ability of Vitality Recovery">
-		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 hr. -->
+		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1440,7 +1440,7 @@
 		</effects>
 	</skill>
 	<skill id="23064" toLevel="1" name="God of Fortune Agathion Special Skill: Vitality Recovery Ability">
-		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 hr. -->
+		<!-- Recovers Vitality when acquiring XP for 5 min. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1472,7 +1472,7 @@
 		</effects>
 	</skill>
 	<skill id="23065" toLevel="1" name="Wonboso Agathion Special Skill: Wind Walk Ability">
-		<!-- Increases Speed by 20 for 5 min. Cooldown is 1 hr. -->
+		<!-- Increases Speed by 20 for 5 min. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -1500,7 +1500,7 @@
 		</effects>
 	</skill>
 	<skill id="23066" toLevel="1" name="Daewoonso Agathion Special Skill: New Year's Gift Ability">
-		<!-- Can receive a New Year's Gift. Cooldown is 1 hr. -->
+		<!-- Can receive a New Year's Gift. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -1550,7 +1550,7 @@
 		</conditions>
 	</skill>
 	<skill id="23068" toLevel="1" name="Pomona Agathion Special Skill: Mental Shield">
-		<!-- Increases Hold/ Sleep/ Mental Attack Resistance by 50 for 10 min. Cooldown is 1 hr. -->
+		<!-- Increases Hold/ Sleep/ Mental Attack Resistance by 50 for 10 min. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>600</abnormalTime>

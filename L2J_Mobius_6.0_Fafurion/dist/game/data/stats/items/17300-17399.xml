@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="17300" name="Requiem Retributer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_grangkaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -143,7 +143,7 @@
 		</stats>
 	</item>
 	<item id="17305" name="Immortal Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -257,7 +257,7 @@
 		</stats>
 	</item>
 	<item id="17311" name="Immortal Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -356,7 +356,7 @@
 		</stats>
 	</item>
 	<item id="17316" name="Immortal Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -819,7 +819,7 @@
 		</stats>
 	</item>
 	<item id="17334" name="Apocalypse Retributer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_herencia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -961,7 +961,7 @@
 		</stats>
 	</item>
 	<item id="17339" name="Twilight Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1075,7 +1075,7 @@
 		</stats>
 	</item>
 	<item id="17345" name="Twilight Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1174,7 +1174,7 @@
 		</stats>
 	</item>
 	<item id="17350" name="Twilight Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1415,7 +1415,7 @@
 		</stats>
 	</item>
 	<item id="17362" name="Ring of Insolence I" type="Armor">
-		<!-- Has the effect of MP +15. Only one effect is applied when two identical rings are worn. -->
+		<!-- Has the effect of MP +15. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_of_oman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1436,7 +1436,7 @@
 		</stats>
 	</item>
 	<item id="17363" name="Ring of Insolence II" type="Armor">
-		<!-- Has the effect of MP +15 and resistance to Poison increased by 10%. Only one effect is applied when two identical rings are worn. -->
+		<!-- Has the effect of MP +15 and resistance to Poison increased by 10%. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_of_oman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1460,7 +1460,7 @@
 		</stats>
 	</item>
 	<item id="17364" name="Ring of Insolence III" type="Armor">
-		<!-- Has the effect of MP +15, and increased Poison Resistance by 10% and Poison Atk. Rate by 10%. Only one effect is applied when two identical rings are worn. -->
+		<!-- Has the effect of MP +15, and increased Poison Resistance by 10% and Poison Atk. Rate by 10%. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_of_oman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1484,7 +1484,7 @@
 		</stats>
 	</item>
 	<item id="17365" name="Ring of Insolence IV" type="Armor">
-		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, and Hold Resistance by 10%. Only one effect is applied when two identical rings are worn. -->
+		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, and Hold Resistance by 10%. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_of_oman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1508,7 +1508,7 @@
 		</stats>
 	</item>
 	<item id="17366" name="Ring of Insolence V" type="Armor">
-		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, and hold Atk. Rate by 10%. Only one effect is applied when two identical rings are worn. -->
+		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, and hold Atk. Rate by 10%. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_of_oman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1532,7 +1532,7 @@
 		</stats>
 	</item>
 	<item id="17367" name="Ring of Insolence VI" type="Armor">
-		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, and increased Accuracy. Only one effect is applied when two identical rings are worn. -->
+		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, and increased Accuracy. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_of_oman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1556,7 +1556,7 @@
 		</stats>
 	</item>
 	<item id="17368" name="Ring of Insolence VII" type="Armor">
-		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, increased Accuracy, and increased Atk. Spd. Only one effect is applied when two identical rings are worn. -->
+		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, increased Accuracy, and increased Atk. Spd. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_of_oman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1580,7 +1580,7 @@
 		</stats>
 	</item>
 	<item id="17369" name="Ring of Insolence VIII" type="Armor">
-		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, increased Accuracy, increased Atk. Spd, and increased Casting Spd. Only one effect is applied when two identical rings are worn. -->
+		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, increased Accuracy, increased Atk. Spd, and increased Casting Spd. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_of_oman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1604,7 +1604,7 @@
 		</stats>
 	</item>
 	<item id="17370" name="Ring of Insolence IX" type="Armor">
-		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, increased Accuracy, Atk. Spd, Casting Spd., and P. Critical Damage. Only one effect is applied when two identical rings are worn. -->
+		<!-- Has the effect of MP +15, increased Poison Resistance by 10%, Poison Atk. Rate by 10%, Hold Resistance by 10%, hold Atk. Rate by 10%, increased Accuracy, Atk. Spd, Casting Spd., and P. Critical Damage. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.ring_of_oman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2103,7 +2103,7 @@
 		</stats>
 	</item>
 	<item id="17392" name="Specter Retributer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2245,7 +2245,7 @@
 		</stats>
 	</item>
 	<item id="17397" name="Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />

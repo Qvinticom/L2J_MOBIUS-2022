@@ -154,7 +154,7 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18517" toLevel="1" name="Top-grade Love Potion - Party">
-		<!-- An Unknown Power hangs over your body. P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. of party members are increased instantaneously for 15 sec. An Unknown Power changes the appearance of your weapon. Cannot be used together with the Battle Rhapsody buff. -->
+		<!-- An Unknown Power hangs over your body. P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. are increased instantaneously for 15 sec. An Unknown Power changes the appearance of your weapon. Cannot be used together with the Battle Rhapsody Dance buff. -->
 		<icon>icon.love_potion_party</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -175,7 +175,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="18523" toLevel="1" name="Hansel's Weapon Crafting Potion">
-		<!-- Use to change the appearance of your weapon into that of a White Day weapon for 1 hr. -->
+		<!-- Use to change the appearance of your weapon into that of a White Day weapon for 1 h. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -192,7 +192,7 @@
 		<reuseDelay>1800000</reuseDelay>
 	</skill>
 	<skill id="18531" toLevel="1" name="Rare Accessory Pack">
-		<!-- Double click to receive one of the following 7-day accessory chests: Blessed Antharas Earring/ Blessed Valakas Necklace/ Tauti's Ring/ Earth Wyrm Heart Ring/ Blessed Zaken's Earring. Cannot use in Olympiad. -->
+		<!-- Double click to receive one of the following 7-day accessory chests: Blessed Antharas Earring/ Blessed Valakas Necklace/ Tauti's Ring/ Earth Wyrm Heart Ring/ Blessed Zaken's Earring. Cannot use in Olympiad. Will be deleted at the time of the scheduled server check on June 3, 2015. -->
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
 		<coolTime>500</coolTime>
@@ -525,7 +525,7 @@
 		</effects>
 	</skill>
 	<skill id="18566" toLevel="6" name="Garnet">
-		<!-- Resistance to Debuffs +$s1. -->
+		<!-- Increases All Debuff Defense Success Rates by $s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_garnet</value>
 			<value level="2">icon.etc_bm_jewel_garnet</value>
@@ -610,7 +610,7 @@
 		</effects>
 	</skill>
 	<skill id="18568" toLevel="6" name="Vital Stone">
-		<!-- Vitality Bonus +$s1. -->
+		<!-- Increases Bonus XP gain in Vitality state by $s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_vital</value>
 			<value level="2">icon.etc_bm_jewel_vital</value>
@@ -663,8 +663,8 @@
 	<skill id="18569" toLevel="1" name="Reward Fishing Rod Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18570" toLevel="1" name="Function Test Item">
-		<!-- Increases XP and SP acquisition by $s2 for $s1 min.(s). -->
+	<skill id="18570" toLevel="1" name="Scroll: Energy of Harmony">
+		<!-- Increases XP and SP acquisition by $s2 for $s1 min. -->
 		<icon>icon.etc_london_olympic_scroll_i01</icon>
 		<operateType>A1</operateType>
 		<hitTime>500</hitTime>
@@ -830,7 +830,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18581" toLevel="1" name="Pa'agrio's Blessing">
-		<!-- Receives the following effects for 30 min.: increased Max HP/ MP/ CP by 10%, Attack by 20%, M. Atk. by 30%, P. Def./ M. Def. by 10%, P. Accuracy by 4, M. Accuracy by 4, Atk./ Casting Spd. by 10%, Speed by 10, Atk. Attribute by 100 with decreased MP consumption by skills by 10%. This buff remains effective even when you're dead. -->
+		<!-- Receives the following effects for 30 min.: increased Maximum HP/ MP/ CP by 10%, Attack by 20%, M. Atk. by 30%, P. Defense/ M. Def. by 10%, P. Accuracy by 4, M. Accuracy by 4, Atk. Spd./ Casting Spd. by 10%, Speed by 10, Attack attribute by 100 with decreased MP consumption by skills by 10%. This buff remains effective even when you're dead. -->
 		<icon>icon.nshop_bless_of_paagrio</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -930,7 +930,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18593" toLevel="1" name="Mentor's Harmony">
-		<!-- With your mentor's help, increases your P. Atk. by $s1, M. Atk. by $s2, P./ M. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd./ Casting Spd. by $s5, and decreases Skill Cooldown by $s6, and all Skill MP Consumption by $s7. Buff is triggered only when your mentor is online. Buff persists for 5 min after your mentor goes offline. -->
+		<!-- With your mentor's help, increases your P. Atk. by $s1, M. Atk. by $s2, P./ M. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd./ Casting Spd. by $s5, and decreases Skill Cooldown by $s6, and all Skill MP Consumption by $s7. Buff is triggered only when your mentor is online. Effect remains for 5 min after your mentor goes offline. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<abnormalTime>-1</abnormalTime>
@@ -1013,7 +1013,7 @@
 		</effects>
 	</skill>
 	<skill id="18594" toLevel="1" name="Mentor's Art of Seduction">
-		<!-- For 2 hr., Max HP/ MP/ CP +15%, P. Def. +15%, M. Def. +15%, P. Atk. +10%, M. Atk. +10%, and Speed +10 for the selected mentee. -->
+		<!-- For 2 h., Max HP/ MP/ CP +15%, P. Def. +15%, M. Def. +15%, P. Atk. +10%, M. Atk. +10%, and Speed +10 for the selected mentee. -->
 		<icon>icon.bm_freya_rose_red_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1070,12 +1070,12 @@
 		</effects>
 	</skill>
 	<skill id="18595" toLevel="1" name="Blue Dynasty Transformation">
-		<!-- Armor is transformed into the Blue Dynasty for 1 hr. -->
+		<!-- Armor is transformed into the Blue Dynasty for 1 h. -->
 		<icon>icon.general_stone_i01</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18596" toLevel="1" name="Red Zubei Transformation">
-		<!-- Armor is transformed into the Red Zubei for 1 hr. -->
+		<!-- Armor is transformed into the Red Zubei for 1 h. -->
 		<icon>icon.general_stone_i00</icon>
 		<operateType>A1</operateType>
 	</skill>

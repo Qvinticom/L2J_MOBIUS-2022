@@ -39,7 +39,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="17202" name="Mark of Cheers 10-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 10 proofs of cheers. -->
+		<!-- Wrapped Pack containing 10 proofs of cheers. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -577,7 +577,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="17232" name="Agathion - Ball Trapping Gnosian Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Ball Trapping Gnosian. -->
+		<!-- Wrapped Pack containing Agathion - Ball Trapping Gnosian. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -596,7 +596,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17233" name="Agathion - Ball Trapping Orodriel Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Ball Trapping Orodriel. -->
+		<!-- Wrapped Pack containing Agathion - Ball Trapping Orodriel. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -615,7 +615,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17234" name="Agathion - Penalty Kick Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Penalty Kick. -->
+		<!-- Wrapped Pack containing Agathion - Penalty Kick. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -663,7 +663,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17208" min="1" max="1" chance="100" /> <!-- XP Buff 50% (2-hr.) -->
+			<item id="17208" min="1" max="1" chance="100" /> <!-- XP Buff 50% (2-hour) -->
 			<item id="17212" min="1" max="1" chance="100" /> <!-- Nevit's Voice -->
 		</capsuled_items>
 	</item>
@@ -683,7 +683,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17211" min="1" max="1" chance="100" /> <!-- XP Buff 50% (4-hr.) -->
+			<item id="17211" min="1" max="1" chance="100" /> <!-- XP Buff 50% (4-hour) -->
 			<item id="17212" min="1" max="1" chance="100" /> <!-- Nevit's Voice -->
 		</capsuled_items>
 	</item>
@@ -965,7 +965,7 @@
 		</skills>
 	</item>
 	<item id="17256" name="Blessed Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for A-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -997,7 +997,7 @@
 		</skills>
 	</item>
 	<item id="17258" name="Blessed Scroll: Enchant Armor (B-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1029,7 +1029,7 @@
 		</skills>
 	</item>
 	<item id="17260" name="Blessed Scroll: Enchant Armor (C-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_c_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1061,7 +1061,7 @@
 		</skills>
 	</item>
 	<item id="17262" name="Blessed Scroll: Enchant Armor (D-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_d_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1093,7 +1093,7 @@
 		</skills>
 	</item>
 	<item id="17264" name="Blessed Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- When enchanted, P. Def. Increases by 1 for S-grade armor and accessories. Starting at +4, P. Def. Increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Def. increases by 1 for S-grade armor and accessories. Starting at +4, P. Def. increases by 3 and a HP bonus is granted. Enchanting is safe up to +3, but one-piece body armor can be safely enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -1140,7 +1140,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="17268" name="Antharas Blood Crystal" type="EtcItem">
-		<!-- Using the power held within the blood of Antharas, this crystal can revive and fully restore XP of all dead characters in the Command Channel. Can only be used while inside the Lair of Antharas. Cooldown is 1 hr. -->
+		<!-- Using the power held within the blood of Antharas, this crystal can revive and fully restore XP of all dead characters in the Command Channel. Can only be used while inside the Lair of Antharas. Cooldown is 1 hour. -->
 		<set name="icon" val="icon.etc_fire_crystal_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LIQUID" />
@@ -1325,7 +1325,7 @@
 		</skills>
 	</item>
 	<item id="17278" name="Strider Pet Exchange Pack" type="EtcItem">
-		<!-- Double-click to obtain a Strider pet coupon. -->
+		<!-- Wrapped Pack containing Strider pet coupon. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1344,7 +1344,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17279" name="Transformation Scroll: Anakim Pack" type="EtcItem">
-		<!-- Double-click to obtain an Anakim Transformation Scroll. When used, you can obtain a Transformation Sealbook: Anakim. -->
+		<!-- Wrapped Pack containing Anakim Transformation Scroll. When used, you can obtain a Transformation Sealbook: Anakim. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1363,7 +1363,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17280" name="Transformation Sealbook: Anakim Pack" type="EtcItem">
-		<!-- Double-click to obtain an Anakim Transformation Sealbook. When used, you can obtain a Transformation Sealbook: Anakim. -->
+		<!-- Wrapped Pack containing Anakim Transformation Sealbook. When used, you can obtain a Transformation Sealbook: Anakim. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1398,7 +1398,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="17282" name="2010 Summer Special Pack" type="EtcItem">
-		<!-- Double-click to obtain a XP Buff 50%, Freya's Refreshing Breeze, and Ice Watermelon Hat. -->
+		<!-- Wrapped Pack containing XP Buff 50%, Freya's Refreshing Breeze, and Ice Watermelon Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1414,13 +1414,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17283" min="5" max="5" chance="100" /> <!-- XP Buff 50% (4-hr.) -->
-			<item id="17285" min="5" max="5" chance="100" /> <!-- Freya's Refreshing Breeze -->
+			<item id="17283" min="5" max="5" chance="100" /> <!-- XP Buff 50% (4-hour) -->
+			<item id="17285" min="5" max="5" chance="100" /> <!-- Freya's Refreshing Breeze -  -->
 			<item id="17289" min="1" max="1" chance="100" /> <!-- Ice Watermelon Hat -->
 		</capsuled_items>
 	</item>
 	<item id="17283" name="XP Buff 50% (4-hour)" type="EtcItem">
-		<!-- Hourglass that increases acquired XP by an additional 50% for 4 hr. All levels. -->
+		<!-- Hourglass that increases acquired XP by an additional 50% for 4 hours. All levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1442,7 +1442,7 @@
 		</skills>
 	</item>
 	<item id="17284" name="XP Buff 50% (4-hour)" additionalName="Event" type="EtcItem">
-		<!-- Hourglass that increases acquired XP by an additional 50% for 4 hr. All levels. -->
+		<!-- Hourglass that increases acquired XP by an additional 50% for 4 hours. All levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1464,7 +1464,7 @@
 		</skills>
 	</item>
 	<item id="17285" name="Freya's Refreshing Breeze" type="EtcItem">
-		<!-- Upon use, for 4 hr., you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1486,7 +1486,7 @@
 		</skills>
 	</item>
 	<item id="17286" name="Freya's Refreshing Breeze" additionalName="Event" type="EtcItem">
-		<!-- Upon use, for 4 hr., you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
+		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Will not be deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -1508,7 +1508,7 @@
 		</skills>
 	</item>
 	<item id="17287" name="2010 Summer Special Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a XP Buff 50%, Freya's Refreshing Breeze, and Ice Watermelon Hat. -->
+		<!-- Wrapped Pack containing XP Buff 50%, Freya's Refreshing Breeze, and Ice Watermelon Hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1524,7 +1524,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17284" min="5" max="5" chance="100" /> <!-- XP Buff 50% (4-hr.) - Event -->
+			<item id="17284" min="5" max="5" chance="100" /> <!-- XP Buff 50% (4-hour) - Event -->
 			<item id="17286" min="5" max="5" chance="100" /> <!-- Freya's Refreshing Breeze - Event -->
 			<item id="17288" min="1" max="1" chance="100" /> <!-- Ice Watermelon Hat - Event -->
 		</capsuled_items>

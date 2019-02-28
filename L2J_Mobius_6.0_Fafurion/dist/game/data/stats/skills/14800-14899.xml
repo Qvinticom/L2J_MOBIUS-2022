@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="14800" toLevel="1" name="Master's Blessing - Elemental Resistance">
-		<!-- The GM is always by your side. For $s1, this blessing increases Attribute Resistance +$s2. -->
+	<skill id="14800" toLevel="1" name="Elemental Resistance - GM's Blessing">
+		<!-- The GM is always by your side. For $s1, this blessing increases all Attribute Resistance +$s2. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -45,7 +45,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14801" toLevel="1" name="Master's Blessing - Holy Attack Resistance">
+	<skill id="14801" toLevel="1" name="Resistance Debuff - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, this blessing increases Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +$s2. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
@@ -86,7 +86,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14802" toLevel="1" name="Master's Blessing - Mental Attack Resistance">
+	<skill id="14802" toLevel="1" name="Mental Attack Resistance - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, this blessing increases Resistance to buff-canceling/ debuff attacks +$s2. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
@@ -154,8 +154,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14804" toLevel="10" name="Damage Reflect Attack Resistance">
-		<!-- Slightly resistant to Damage Reflect attack. -->
+	<skill id="14804" toLevel="10" name="Damage Reflection Attack Resistance">
+		<!-- Slightly resistant to Damage Reflection attack. -->
 		<icon>icon.skill0350</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -512,7 +512,7 @@
 		</effects>
 	</skill>
 	<skill id="14827" toLevel="9" name="Lovely Fire">
-		<!-- Uses magic power filled with love to attack to attack the target with $s1 power. -->
+		<!-- Uses magic power filled with love to attack the target with $s1 power. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -1138,7 +1138,7 @@
 		</effects>
 	</skill>
 	<skill id="14846" toLevel="1" name="Adolph's Justice Punishment">
-		<!-- Attacks the selected target with 13673 power added to P. Atk and decreases P. Atk./ M. Atk. by 20%. -->
+		<!-- Attacks the selected target with 13673 power added to P. Atk. and decreases P. Atk./ M. Atk. by 20%. -->
 		<icon>icon.skill10010</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1178,7 +1178,7 @@
 		</effects>
 	</skill>
 	<skill id="14847" toLevel="1" name="Adolph's Justice Punishment">
-		<!-- Attacks the selected target with 16034 power added to P. Atk and decreases P. Atk./ M. Atk. by 20%. -->
+		<!-- Attacks the selected target with 16034 power added to P. Atk. and decreases P. Atk./ M. Atk. by 20%. -->
 		<icon>icon.skill10010</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1218,7 +1218,7 @@
 		</effects>
 	</skill>
 	<skill id="14848" toLevel="1" name="Adolph's Justice Punishment">
-		<!-- Attacks the selected target with 18395 power added to P. Atk and decreases P. Atk./ M. Atk. by 20%. -->
+		<!-- Attacks the selected target with 18395 power added to P. Atk. and decreases P. Atk./ M. Atk. by 20%. -->
 		<icon>icon.skill10010</icon>
 		<operateType>A2</operateType>
 		<castRange>40</castRange>
@@ -1258,7 +1258,7 @@
 		</effects>
 	</skill>
 	<skill id="14849" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the targets in the front with 9516 power added to P. Atk. and inflicts Stun for 9 sec. -->
+		<!-- Attacks the targets in the front with 9516 power added to P. Attack and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1292,7 +1292,7 @@
 		</effects>
 	</skill>
 	<skill id="14850" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the targets in the front with 11162 power added to P. Atk. and inflicts Stun for 9 sec. -->
+		<!-- Attacks the targets in the front with 11162 power added to P. Attack and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1326,7 +1326,7 @@
 		</effects>
 	</skill>
 	<skill id="14851" toLevel="1" name="Adolph's Shield Wave">
-		<!-- Attacks the targets in the front with 12809 power added to P. Atk. and inflicts Stun for 9 sec. -->
+		<!-- Attacks the targets in the front with 12809 power added to P. Attack and inflicts Stun for 9 sec. -->
 		<icon>icon.skill10012</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -2350,7 +2350,7 @@
 		</effects>
 	</skill>
 	<skill id="14883" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 282 per sec. -->
+		<!-- Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 282 per second. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2390,7 +2390,7 @@
 		</effects>
 	</skill>
 	<skill id="14884" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 296 per sec. -->
+		<!-- Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 296 per second. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -2431,7 +2431,7 @@
 		</effects>
 	</skill>
 	<skill id="14885" toLevel="1" name="Eliyah's Mass Exile">
-		<!-- Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 313 per sec. -->
+		<!-- Banishes the target and nearby enemies to another dimension. The exiled targets become incapacitated and invincible to some attacks, skills, and debuffs. Decreases HP by 313 per second. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>

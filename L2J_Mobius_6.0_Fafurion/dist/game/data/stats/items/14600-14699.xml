@@ -27,7 +27,7 @@
 		</stats>
 	</item>
 	<item id="14601" name="Ancient Cloak" additionalName="Kamaels Only" type="Armor">
-		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 hr. Cannot feed pet to refill hunger gauge. -->
+		<!-- Item that allows you to summon a Toy Knight. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -56,7 +56,7 @@
 		</stats>
 	</item>
 	<item id="14602" name="Ancient Cloak" type="Armor">
-		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 hr. -->
+		<!-- Item that allows you to summon a Spirit Shaman. Hunger gauge lasts 5 hours. -->
 		<set name="icon" val="icon.vesper_cloack_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -327,7 +327,7 @@
 		</skills>
 	</item>
 	<item id="14614" name="Santa's Buff Gift Set" type="EtcItem">
-		<!-- Santa's buff gift set. When used, can feel yourself becoming stronger by Santa's blessing for 1 hr. -->
+		<!-- Santa's buff gift set. When used, can feel yourself becoming stronger by Santa's blessing for 1 hour. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

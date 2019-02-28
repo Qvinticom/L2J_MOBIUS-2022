@@ -1081,7 +1081,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="29074" name="Jack O'Lantern" type="EtcItem">
-		<!-- Jack O'Lantern made with love. Go find NPC Rico with it in your inventory to receive the Halloween Blessing. Will be deleted after the event. -->
+		<!-- Jack O'Lantern made with love. Go find NPC Rico with it in your inventory to receive the Halloween Blessing. -->
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="material" val="LEATHER" />
 		<set name="is_tradable" val="false" />
@@ -1092,7 +1092,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29075" name="Halloween Gift" type="EtcItem">
-		<!-- Double-click to receive a random item. Will be deleted after the event. -->
+		<!-- Double-click to receive a random item. -->
 		<set name="icon" val="icon.event_halloween_king_pumpkini00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -1100,7 +1100,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29076" name="Halloween Candy" additionalName="Event" type="EtcItem">
-		<!-- Sweet Hallowen candy from the Halloween Gift. Take it to Rico to exchange for another item. Will be deleted after the event. -->
+		<!-- Sweet Hallowen candy from the Halloween Gift. Take it to Rico to exchange for another item. -->
 		<set name="icon" val="BranchSys.br_hallowinday_candy_i00" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
@@ -1115,7 +1115,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29078" name="Greater Vital Stone" type="Armor">
-		<!-- Vitality Bonus +30% and Vitality Consumption -15%. Acquired XP/ SP +10% as well. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- Vitality Bonus +30% and Vitality Point Consumption Speed -15%. Acquired XP/ SP +10% as well. Can use Vital Wind skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -1142,7 +1142,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="29080" name="Wondrous Jewelry Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain (1) of the following types of item randomly: Lv. 1 La Vie En Rose? Jewelry Box, Radiant Gemstone Fragment, La Vie En Rose's Radiant Brooch Chest, or a very small chance to win a Lv. 3 Jewelry Box. -->
+		<!-- Double-click to obtain (1) of the following types of item randomly: Lv. 1 La Vie En Rose s Jewelry Box, Radiant Gemstone Fragment, La Vie En Rose's Radiant Brooch Chest, or a very small chance to win a Lv. 3 Jewelry Box. -->
 		<set name="icon" val="icon.bm_sayha_blessed_box" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1151,7 +1151,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29081" name="Dimensional Talisman - Attack Attribute" additionalName="30-day" type="Armor">
-		<!-- When equipped, Atk. Attribute increases by 50. The effect does not stack when two or more identical Talismans are equipped. -->
+		<!-- When equipped, Attack Attribute increases by 50. The effect does not stack when two or more identical Talismans are equipped. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
@@ -1166,7 +1166,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="29082" name="Dimensional Talisman - Attack Attribute Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Dimensional Talisman - Atk. Attribute (30-day). -->
+		<!-- Double-click to obtain a Dimensional Talisman - Attack Attribute (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

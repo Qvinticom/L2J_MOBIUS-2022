@@ -420,7 +420,7 @@
 		<set name="handler" val="Recipes" />
 	</item>
 	<item id="36946" name="Lindvior's Earring" type="Armor">
-		<!-- MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attack Def. +30, Petrify Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Resistance +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Skills Used: Immediately disables Knock Back/ Knock Down effects when used, and gives Knock Back/ Knock Down Resistance for 5 seconds. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Resistance +30, Petrify Resistance/ Atk. Rate +50%, Knock Back/ Knock Down/ Pull Resistance/ Atk. Rate +40%, Danger Zone Def. Atk. Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Skills Used: Immediately disables Knock Back/ Knock Down effects when used, and gives Knock Back/ Knock Down Resistance for 5 sec. EWhen two identical earrings are equipped, only one effect is applied. Can be crafted. -->
 		<set name="icon" val="icon.accessory_earring_of_lind_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -475,7 +475,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="36950" name="Toma's Living Guide" type="EtcItem">
-		<!-- Lineage II Living Guide written by Master Toma with great efforts. -->
+		<!-- A welcome guide to help warriors start a new journey. -->
 		<set name="icon" val="icon.etc_letter_in_bottle_white_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="handler" val="Book" />
@@ -512,7 +512,7 @@
 		</stats>
 	</item>
 	<item id="36952" name="Air Bike" type="EtcItem">
-		<!-- Masterpiece perfected by a Dwarven Artisan after long hr. of work. Double-click the Spellbook to learn the skill of getting on the Air Bike. Can be used only by characters who belong to a clan of level 5 or higher. Can be obtained in the main class status. -->
+		<!-- Masterpiece perfected by a Dwarven Artisan after long hours of work. Double-click the Spellbook to learn the skill of getting on the Air Bike. Can be used only by characters who belong to a clan of level 5 or higher. Can be obtained in the main class status. -->
 		<set name="icon" val="icon.etc_spell_books_assistance_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="weight" val="20" />

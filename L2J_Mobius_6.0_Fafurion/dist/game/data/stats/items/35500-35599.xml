@@ -762,7 +762,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="35556" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" additionalName="1-day" type="EtcItem">
-		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 85 solo dungeon using the pass. Cannot be used if you are not in an Instance Zone. Can be used only once outside an Instance Zone. -->
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 85 solo dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -779,7 +779,7 @@
 		</skills>
 	</item>
 	<item id="35557" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Solo" additionalName="1-day" type="EtcItem">
-		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 90 solo dungeon using the pass. Cannot be used if you are not in an Instance Zone. Can be used only once outside an Instance Zone. -->
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 90 solo dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -796,7 +796,7 @@
 		</skills>
 	</item>
 	<item id="35558" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Solo" additionalName="1-day" type="EtcItem">
-		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 95 solo dungeon using the pass. Cannot be used if you are not in an Instance Zone. Can be used only once outside an Instance Zone. -->
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 95 solo dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -813,7 +813,7 @@
 		</skills>
 	</item>
 	<item id="35559" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party" additionalName="1-day" type="EtcItem">
-		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 85 party dungeon using the pass. Cannot be used if you are not in an Instance Zone. Can be used only once outside an Instance Zone. -->
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 85 party dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -830,7 +830,7 @@
 		</skills>
 	</item>
 	<item id="35560" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Party" additionalName="1-day" type="EtcItem">
-		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 90 party dungeon using the pass. Cannot be used if you are not in an Instance Zone. Can be used only once outside an Instance Zone. -->
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 90 party dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -847,7 +847,7 @@
 		</skills>
 	</item>
 	<item id="35561" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party" additionalName="1-day" type="EtcItem">
-		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 95 party dungeon using the pass. Cannot be used if you are not in an Instance Zone. Can be used only once outside an Instance Zone. -->
+		<!-- Kartia's Labyrinth Entrance Pass given to adventurers by Kartia Research Center. You can reset your return to the level 95 party dungeon using the pass. Cannot be used if you are not in an Instanced Zone. Can be used only once outside an Instanced Zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -888,7 +888,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35564" name="Ruler's Authority" type="Armor">
-		<!-- Item given to the winner of the Ceremony of Chaos that takes place in the Mysterious Mansion. When equipped, Max HP, MP, and CP +1000, weight +25600, and damage +8%. Received damage -9% and Damage Reflect Resistance -5%. Number of inventory slots +36, and Attribute Resistance +15. -->
+		<!-- Item given to the winner of the Ceremony of Chaos that takes place in the Mysterious Mansion. When equipped, Max HP, MP, and CP +1000, weight +25600, and damage +8%. Received damage -9% and Damage Reflection Resistance -5%. Number of inventory slots +36, and Attribute Resistance +15. -->
 		<set name="icon" val="icon.belt_rulers_authority" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -913,7 +913,7 @@
 		</stats>
 	</item>
 	<item id="35565" name="Mysterious Belt" additionalName="3-day" type="Armor">
-		<!-- Item acquired after winning the Ceremony of Chaos Tournament in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 500, PvP damage by 6%, and Damage Reflect Resistance by 5%. Decreases damage received during PvP by 7%. -->
+		<!-- Item acquired after winning the Ceremony of Chaos Tournament in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 500, PvP damage by 6%, and Damage Reflection Resistance by 5%. Decreases damage received during PvP by 7%. -->
 		<set name="icon" val="icon.belt_rulers_authority" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -937,7 +937,7 @@
 		</stats>
 	</item>
 	<item id="35566" name="Dark Amaranthine Enhancement Stone" type="EtcItem">
-		<!-- Bestows the PvP option on a Helios weapon through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are required. -->
+		<!-- Bestows the PvP option on a Helios/ Krishna weapon through a Blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are required. -->
 		<set name="icon" val="icon.energy_condenser_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -945,7 +945,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35567" name="Dark Eternal Enhancement Stone" type="EtcItem">
-		<!-- Bestows the PvP option on Eternal armor through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are required. -->
+		<!-- Bestows the PvP option on Eternal/ Leviathan armor through a Blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are required. -->
 		<set name="icon" val="icon.energy_condenser_i04" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -953,7 +953,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35568" name="Bloody Amaranthine Enhancement Stone" type="EtcItem">
-		<!-- Bestows the PvE option on a Helios weapon through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are required. -->
+		<!-- Bestows the PvE option on a Helios/ Krishna weapon through a Blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are required. -->
 		<set name="icon" val="icon.energy_condenser_i05" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
@@ -961,7 +961,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
 	<item id="35569" name="Bloody Eternal Enhancement Stone" type="EtcItem">
-		<!-- Bestows the PvE option on Eternal armor through the blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are required. -->
+		<!-- Bestows the PvE option on Eternal/ Leviathan armor through a Blacksmith. When the option is bestowed, Energy of Destruction and Giant's Energy are required. -->
 		<set name="icon" val="icon.energy_condenser_i06" />
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />

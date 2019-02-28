@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="28300" name="Transcendent Eternal Tunic" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
-		<!-- Enhanced Eternal armor. Decreases Damage Received by 8%. Increases P. Atk. by 1.5% and M. Atk. by 3%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases received P. Critical Damage and the chance of receiving P. Critical Attack. Aeore Healers only. -->
+		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.5% and M. Atk. by 3%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -28,7 +28,7 @@
 		</stats>
 	</item>
 	<item id="28301" name="Transcendent Eternal Stockings" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
-		<!-- Enhanced Eternal armor. Decreases Damage Received by 5%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Aeore Healers only. -->
+		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.5% and M. Atk. by 3%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -51,7 +51,7 @@
 		</stats>
 	</item>
 	<item id="28302" name="Transcendent Eternal Gloves" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
-		<!-- Enhanced Eternal armor. Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Aeore Healers only. -->
+		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -71,7 +71,7 @@
 		</stats>
 	</item>
 	<item id="28303" name="Transcendent Eternal Shoes" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
-		<!-- Enhanced Eternal armor. Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Aeore Healers only. -->
+		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -211,7 +211,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="28316" name="Scroll: Shilen's Ring" type="EtcItem">
-		<!-- Enchant scroll exclusive to Shilen's Ring. Unlike regular items, there's a chance of failing from +1 enchant value, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/ INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
+		<!-- Enchant scroll exclusive to Shilen's Ring. Unlike regular items, there's a chance of failing from +1 enchant level, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/ INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="10" />
@@ -219,7 +219,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28317" name="Scroll: Shilen's Necklace" type="EtcItem">
-		<!-- Enchant scroll exclusive to Shilen's Necklace. Unlike regular items, there's a chance of failing from +1 enchant value, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/ INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
+		<!-- Enchant scroll exclusive to Shilen's Necklace. Unlike regular items, there's a chance of failing from +1 enchant level, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/ INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="10" />
@@ -227,7 +227,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28318" name="Scroll: Shilen's Earring" type="EtcItem">
-		<!-- Enchant scroll exclusive to Shilen's Earring. Unlike regular items, there's a chance of failing from +1 enchant value, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/ INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
+		<!-- Enchant scroll exclusive to Shilen's Earring. Unlike regular items, there's a chance of failing from +1 enchant level, and it can be enchanted up to +5. If it succeeds, M. Def., Dark Resistance, STR/ INT and other various stats will increase gradually. Staring from +3, there's a special effect, and from +4, you can obtain a special skill for each accessory. If it fails, the item will disappear. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="10" />
@@ -535,7 +535,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="28356" name="Prestige Cube Pack" additionalName="7-day" type="EtcItem">
-		<!-- Double-click to obtain 1 Prestige Cube (7-day). -->
+		<!-- Wrapped Pack containing 1 Prestige Cube (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -571,7 +571,7 @@
 		</stats>
 	</item>
 	<item id="28359" name="La Vie En Rose's Gemstone Powder" type="EtcItem">
-		<!-- La Vie En Rose's refined jewel powder. Go find Shadai to use it when exchanging for various jewels. -->
+		<!-- La Vie En Rose's refined gemstone powder. Go find Shadai to use it when exchanging for gemstones. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_powder_jewel" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -609,7 +609,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28364" name="Jewel Grinder" type="EtcItem">
-		<!-- A grinder used for refining La Vie En Rose's jewels. Ask Shadai to grind jewels. -->
+		<!-- A grinder used for refining La Vie En Rose's jewels. Ask Shadai to grind gemstones. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_jewel_grinder" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
@@ -703,7 +703,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28376" name="Greater Cat's Eye" type="Armor">
-		<!-- Decreases damage received from Reflect Damage by 50 and there's a 10% chance of reflecting debuffs to the enemy. Can use the invincibility skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- Damage Reflection Resistance +50 and there's a 10% chance of reflecting debuffs to the enemy. Can use the invincibility skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -715,7 +715,7 @@
 		</skills>
 	</item>
 	<item id="28377" name="Greater Amethyst" type="Armor">
-		<!-- PvP Damage +15%, chance of receiving a critical attack -25%. Can remove invincibility and debuff invincibility. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- PvP Damage +15%, chance of receiving a critical attack -25%. Can remove invincibility and debuff invincibility. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -727,7 +727,7 @@
 		</skills>
 	</item>
 	<item id="28378" name="Greater Vital Stone" type="Armor">
-		<!-- Vitality Bonus +50% and Vitality Consumption -15%. Acquired XP/ SP +10%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- Vitality Bonus +50% and Vitality Point Consumption Speed -15%. Acquired XP/ SP +10%. Can use Vital Wind skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -739,7 +739,7 @@
 		</skills>
 	</item>
 	<item id="28379" name="Greater Garnet" type="Armor">
-		<!-- Debuff Resistance +30%, and when receiving PvP Damage, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 seconds. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- Debuff Resistance +30%, and when receiving damage to a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -752,7 +752,7 @@
 		</skills>
 	</item>
 	<item id="28380" name="Greater Tanzanite" type="Armor">
-		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds. Recover 15% of Max HP instantly. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- Creates a protection shield that absorbs 50,000 damage for 15 sec. Recover 15% of Max HP instantly. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -780,7 +780,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28383" name="Greater Garnet" type="Armor">
-		<!-- Increases Resistance to all Debuffs by 30%, and when receiving PvP Damage, Stun/ Silence are canceled. When used, all debuffs are canceled and you become immune to debuffs for 7 seconds. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
+		<!-- Increases Resistance to all Debuffs by 30%, and when receiving damage to a PC, Stun/ Silence are canceled. When used, all debuffs are canceled and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -865,7 +865,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28389" name="Heine Exclusive Bait (85-89)" type="EtcItem">
-		<!-- Bait is used to obtain a Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 85 - 89. -->
+		<!-- Bait is used to obtain a Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 85-89. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -878,7 +878,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28390" name="Heine Exclusive Bait (90-94)" type="EtcItem">
-		<!-- Bait is used to obtain a Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 90 - 94. -->
+		<!-- Bait is used to obtain a Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 90-94. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -891,7 +891,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28391" name="Heine Exclusive Bait (95-98)" type="EtcItem">
-		<!-- Bait is used to obtain a Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 95 - 98. -->
+		<!-- Bait is used to obtain a Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 95-98. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -904,7 +904,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="28392" name="Heine Exclusive Bait (99-)" type="EtcItem">
-		<!-- Bait is used to obtain a Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 95 or above. -->
+		<!-- Bait is used to obtain a Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 99 or above. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />

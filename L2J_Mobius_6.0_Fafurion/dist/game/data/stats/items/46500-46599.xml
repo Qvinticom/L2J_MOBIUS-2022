@@ -49,13 +49,13 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46508" name="Lionel's Soul Crystal - Stage 5" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46509" name="Lionel's Soul Crystal - Stage 6" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
@@ -180,7 +180,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46527" name="Agathion - Shiny" type="Armor">
-		<!-- Can summon an Agathion - Shiny when equipped. <Active Skill>. 1. Agathion Teleport: Lets you teleport to Town of Aden/ Town of Rune/ Talking Island Village/ Town of Giran/ Town of Goddard/ Town of Schuttgart. (Cooldown 30 min.). <Item Skill>. 1. Chase Down: Increases Speed by 66 for 15 seconds. <Item Skill>. 2. Sneak: Protected from preemptive attacks from monsters. -->
+		<!-- Can summon an Agathion - Shiny when equipped. <Active Skill>. 1. Agathion Teleport: Lets you teleport to Town of Aden/ Town of Rune/ Talking Island Village/ Town of Giran/ Town of Goddard/ Town of Schuttgart. (Cooldown 30 min.). <Item Skill>. 1. Chase Down: Increases Speed by 66 for 15 sec. <Item Skill>. 2. Sneak: Protected from preemptive attacks from monsters. -->
 		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -232,7 +232,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="46530" name="Top-grade Love Potion - Party" type="EtcItem">
-		<!-- For 15 sec., P./ M. Atk. and Atk. Spd./ Casting Spd of party members are increased. A strange power changes the appearance of your weapon. Does not stack with Battle Rhapsody. Cannot be used in the Olympiad. -->
+		<!-- For 15 sec., P./ M. Atk. and Atk./ Casting Spd. of party members are increased. A strange power changes the appearance of your weapon. Does not stack with Battle Rhapsody Dance. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.love_potion_party" />
 		<set name="weight" val="2" />
 		<set name="is_clan_depositable" val="false" />
@@ -269,7 +269,7 @@
 		</stats>
 	</item>
 	<item id="46533" name="Hansel's Weapon Crafting Potion" additionalName="Event" type="EtcItem">
-		<!-- Changes the appearance of a weapon to that of White Day for 1 hr. Deleted after event. -->
+		<!-- Changes the appearance of a weapon to that of White Day for 1 hour. -->
 		<set name="icon" val="icon.etc_whiteday_herb" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -283,7 +283,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46534" name="Gretel's Friend Summon Candy" additionalName="Event" type="EtcItem">
-		<!-- Item imbued with Gretel's magic. Can summon a friend every 30 min. Target a party member and double-click to use the skill. Deleted after event. -->
+		<!-- Item imbued with Gretel's magic. Can summon a friend every 30 min. Target a party member and double-click to use the skill. -->
 		<set name="icon" val="icon.etc_whiteday_candy" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -319,7 +319,7 @@
 		</skills>
 	</item>
 	<item id="46536" name="Expertise Rune Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to get one of the following: Expertise Rune Pack R, R95, or R99. Deleted after event. -->
+		<!-- Double-click to get one of the following: Expertise Rune Pack R, R95, or R99. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -487,7 +487,7 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46554" name="Flame Flower" type="EtcItem">
-		<!-- Mystic Tavern - Item that can only be used in Tauti's dungeon. Use it near the Sealed Tablet to reduce the defense of the tablet. Deleted 1 hr. after acquisition. -->
+		<!-- Mystic Tavern - Item that can only be used in Tauti's dungeon. Use it near the Sealed Tablet to reduce the defense of the tablet. Deleted 1 hour after acquisition. -->
 		<set name="icon" val="icon.etc_flower_i01" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />

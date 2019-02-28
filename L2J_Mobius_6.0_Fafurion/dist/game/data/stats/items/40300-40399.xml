@@ -58,7 +58,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40305" name="Dual Expertise Rune (R99-grade)" additionalName="30-day" type="EtcItem">
-		<!-- While possessed, allows you to equip R99-grade items without penalties. 30-day. -->
+		<!-- Gives Expertise R99 Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -74,7 +74,7 @@
 		</skills>
 	</item>
 	<item id="40306" name="Dual Expertise Rune Pack" additionalName="R99-grade" type="EtcItem">
-		<!-- Double-click to obtain a Expertise Rune Box (R99-grade) (30-day). -->
+		<!-- Open the box to obtain an Expertise Rune (R99-grade) (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -93,7 +93,7 @@
 		</capsuled_items>
 	</item>
 	<item id="40307" name="Dynamic Dual Master Gift Pack" type="EtcItem">
-		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day) and a Mysterious Friend Summon Bracelet Pack (30-day). -->
+		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day) and a Mysterious Friend Summon Bracelet Pack (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -107,7 +107,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40308" name="Dynamic Dual Knight Gift Pack" type="EtcItem">
-		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day), a Mysterious Friend Summon Bracelet Pack (30-day), and 2 Ertheia's Rare Accessory Packs. -->
+		<!-- Double-click to obtain a Dual Expertise Rune Pack (R99-grade) (30-day), a Mysterious Friend Summon Bracelet Pack (30-day), and 2 Ertheia's Rare Accessory Packs. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -154,7 +154,7 @@
 		<set name="handler" val="Appearance" />
 	</item>
 	<item id="40311" name="Noelle's Gift" type="EtcItem">
-		<!-- Double-click to recover Vitality while in peaceful zones. A set amount of Vitality is also restored when the buff is about to expire. 6-hr. -->
+		<!-- Double-click to recover Vitality while in peaceful zones. A set amount of Vitality is also restored when the buff is about to expire. 6-hour. -->
 		<set name="icon" val="icon.etc_whiteday_choco" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -965,7 +965,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40362" name="Agathion - Joon Pack (30-day)" type="Armor">
-		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Active Skill>. 1. Joon's Magic: For 30 min., Acquired XP/ SP +10%, Atk. Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk. Spd./ Casting Spd +10%, P./ M. Accuracy +4, Speed +10, Max. HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction or Mysterious Wind Scroll. Buff remains after death. <Active Skill>. 2. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
+		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Active Skill>. 1. Joon's Magic: For 30 min., Acquired XP/ SP +10%, Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk./ Casting Spd. +10%, P./ M. Accuracy +4, Speed +10, Max. HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction or Mysterious Wind Scroll. Buff remains after death. <Active Skill>. 2. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 h. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1048,7 +1048,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="40367" name="Angel Cat's Blessing Pack" type="EtcItem">
-		<!-- Double-click to obtain an Angel Cat's Blessing (1-hr.). Cannot be used in the Olympiad. -->
+		<!-- Double-click to obtain an Angel Cat's Blessing (1-hour). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

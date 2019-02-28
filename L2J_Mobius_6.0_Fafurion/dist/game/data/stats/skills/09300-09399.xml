@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9300" toLevel="1" name="Player Commendation - Blessed Spiritshot (No-grade)">
+	<skill id="9300" toLevel="1" name="PA - Blessed Spiritshot (No-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -9,7 +9,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9301" toLevel="1" name="Player Commendation - Blessed Spiritshot (D-grade)">
+	<skill id="9301" toLevel="1" name="PA - Blessed Spiritshot (D-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -18,7 +18,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9302" toLevel="1" name="Player Commendation - Blessed Spiritshot (C-grade)">
+	<skill id="9302" toLevel="1" name="PA - Blessed Spiritshot (C-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -27,7 +27,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9303" toLevel="1" name="Player Commendation - Blessed Spiritshot (B-grade)">
+	<skill id="9303" toLevel="1" name="PA - Blessed Spiritshot (B-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -36,7 +36,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9304" toLevel="1" name="Player Commendation - Blessed Spiritshot (A-grade)">
+	<skill id="9304" toLevel="1" name="PA - Blessed Spiritshot (A-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -45,7 +45,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9305" toLevel="1" name="Player Commendation - Blessed Spiritshot (S-grade)">
+	<skill id="9305" toLevel="1" name="PA - Blessed Spiritshot (S-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -54,7 +54,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9306" toLevel="1" name="Player Commendation - Blessed Spiritshot (R-grade)">
+	<skill id="9306" toLevel="1" name="PA - Blessed Spiritshot (R-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -63,7 +63,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9307" toLevel="1" name="Release Agathion's Seal">
+	<skill id="9307" toLevel="1" name="Summon Agathion">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -80,7 +80,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9308" toLevel="1" name="Release Agathion's Seal">
+	<skill id="9308" toLevel="1" name="Summon Agathion">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -97,7 +97,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9309" toLevel="1" name="Release Agathion's Seal">
+	<skill id="9309" toLevel="1" name="Summon Agathion">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -114,7 +114,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9310" toLevel="1" name="Release Agathion's Seal">
+	<skill id="9310" toLevel="1" name="Summon Agathion">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -260,7 +260,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9318" toLevel="1" name="Open PC Points Coupon">
+	<skill id="9318" toLevel="1" name="Open PA Points Coupon">
 		<!-- Use PA Point Coupon. -->
 		<itemConsumeId>34617</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -282,7 +282,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9319" toLevel="1" name="Use PC Points Coupon">
+	<skill id="9319" toLevel="1" name="Use PA Points Coupon">
 		<!-- Use PA Point Coupon. -->
 		<operateType>A1</operateType>
 		<hitTime>2700</hitTime>
@@ -296,7 +296,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9320" toLevel="1" name="Player Commendation - Mount: Black Bear">
+	<skill id="9320" toLevel="1" name="PA - Mount: Black Bear">
 		<!-- Mount Black Bear. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -349,7 +349,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9323" toLevel="1" name="Player Commendation - Transform Rose (Male)">
+	<skill id="9323" toLevel="1" name="PA - Transform Rose (Male)">
 		<!-- For 10 min., transform into Rose (Male) -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -371,7 +371,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9324" toLevel="1" name="Player Commendation - Transform Rose (Female)">
+	<skill id="9324" toLevel="1" name="PA - Transform Rose (Female)">
 		<!-- For 10 min., transform into Rose (Female) -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -782,40 +782,40 @@
 						<item id="9557" count="1" /> <!-- Holy Crystal -->
 					</item>
 					<item chance="1.1">
-						<item id="33863" count="1" /> <!-- Fire Stone (+ 60) - Event -->
+						<item id="33863" count="1" /> <!-- Fire Stone (+60) - Event -->
 					</item>
 					<item chance="1.1">
-						<item id="33864" count="1" /> <!-- Water Stone (+ 60) - Event -->
+						<item id="33864" count="1" /> <!-- Water Stone (+60) - Event -->
 					</item>
 					<item chance="1.2">
-						<item id="33866" count="1" /> <!-- Wind Stone (+ 60) - Event -->
+						<item id="33866" count="1" /> <!-- Wind Stone (+60) - Event -->
 					</item>
 					<item chance="1.2">
-						<item id="33865" count="1" /> <!-- Earth Stone (+ 60) - Event -->
+						<item id="33865" count="1" /> <!-- Earth Stone (+60) - Event -->
 					</item>
 					<item chance="1.2">
-						<item id="33868" count="1" /> <!-- Holy Stone (+ 60) - Event -->
+						<item id="33868" count="1" /> <!-- Holy Stone (+60) - Event -->
 					</item>
 					<item chance="1.2">
-						<item id="33867" count="1" /> <!-- Dark Stone (+ 60) - Event -->
+						<item id="33867" count="1" /> <!-- Dark Stone (+60) - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="33869" count="1" /> <!-- Fire Stone (+ 150) - Event -->
+						<item id="33869" count="1" /> <!-- Fire Stone (+150) - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="33870" count="1" /> <!-- Water Stone (+ 150) - Event -->
+						<item id="33870" count="1" /> <!-- Water Stone (+150) - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="33871" count="1" /> <!-- Earth Stone (+ 150) - Event -->
+						<item id="33871" count="1" /> <!-- Earth Stone (+150) - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="33872" count="1" /> <!-- Wind Stone (+ 150) - Event -->
+						<item id="33872" count="1" /> <!-- Wind Stone (+150) - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="33873" count="1" /> <!-- Dark Stone (+ 150) - Event -->
+						<item id="33873" count="1" /> <!-- Dark Stone (+150) - Event -->
 					</item>
 					<item chance="0.5">
-						<item id="33874" count="1" /> <!-- Holy Stone (+ 150) - Event -->
+						<item id="33874" count="1" /> <!-- Holy Stone (+150) - Event -->
 					</item>
 				</items>
 			</effect>
@@ -1062,7 +1062,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="9348" toLevel="1" name="Player Commendation - Mount: Black Bear">
+	<skill id="9348" toLevel="1" name="PA - Mount: Black Bear">
 		<!-- Mount Black Bear. -->
 		<icon>icon.skilltransform3</icon>
 		<operateType>A2</operateType>
@@ -1199,8 +1199,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9357" toLevel="1" name="Party Hat - Critical Rate">
-		<!-- Critical Rate +50. -->
+	<skill id="9357" toLevel="1" name="Party Hat - P. Critical Rate">
+		<!-- P. Critical Rate +50. -->
 		<icon>icon.accessory_party_hat_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1245,8 +1245,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9361" toLevel="1" name="Refined Angel Ring - Evasion">
-		<!-- Evasion +5. -->
+	<skill id="9361" toLevel="1" name="Refined Angel Ring - P. Evasion">
+		<!-- P. Evasion +5. -->
 		<icon>icon.accessory_angel_ring_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1284,7 +1284,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9364" toLevel="1" name="Refined Devil Horn - Accuracy">
+	<skill id="9364" toLevel="1" name="Refined Devil Horn - P. Accuracy">
 		<!-- P. Accuracy +5. -->
 		<icon>icon.accessory_devil_horn_i00</icon>
 		<operateType>P</operateType>
@@ -1332,7 +1332,7 @@
 		</effects>
 	</skill>
 	<skill id="9367" toLevel="2" name="Power of Pa'agrio">
-		<!-- Cancels all your debuffs. Invincible for $s1. Cannot be used when immobile. Can be used in the Olympiad. -->
+		<!-- Cancels all your debuffs. Invincible for $s1 Cannot be used when immobile. Can be used in the Olympiad. -->
 		<icon>icon.pi_shirt_of_wolf_2nd_fire</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -1442,7 +1442,7 @@
 		</effects>
 	</skill>
 	<skill id="9375" toLevel="1" name="Einhasad's Energy">
-		<!-- For 1 hr., Vitality replenished if XP is gained through hunting. Buff remains even after death. -->
+		<!-- For 1 h., Vitality replenished if XP is gained through hunting. Buff remains even after death. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i05</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
@@ -1470,8 +1470,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9376" toLevel="1" name="Mentor's Knight's Harmony">
-		<!-- For 2 hr., increases the selected mentee's P. Atk. by 12%, P. Critical Damage by 35%, P. Critical Rate by 100%, P. Def. by 45%, Shield Defense Rate by 30%, and Shield Defense by 50%. Buff persists for 5 min. after the mentor goes offline. -->
+	<skill id="9376" toLevel="1" name="Knight's Harmony - Mentor">
+		<!-- For 2 h., increases the selected mentee's P. Atk. by 12%, P. Critical Damage by 35%, P. Critical Rate by 100%, P. Def. by 45%, Shield Defense Rate by 30%, and Shield Defense by 50%. Effect remains for 5 min. after the mentor goes offline. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -1495,8 +1495,8 @@
 			<condition name="TargetMyMentee" />
 		</conditions>
 	</skill>
-	<skill id="9377" toLevel="1" name="Mentor's Wizard's Harmony">
-		<!-- For 2 hr., the selected mentee's M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +8%, P. Atk. +8%, Atk. Spd. +8%, Speed +8, M. Def. +14%, MP Recovery Bonus +20%, M. Skill MP Consumption -15%, P. Skill MP Consumption -5%, and Skill Cooldown -20%. Buff is maintained for 5 min. when the Mentor goes offline. -->
+	<skill id="9377" toLevel="1" name="Wizard's Harmony - Mentor">
+		<!-- For 2 h., the selected mentee's M. Atk. +40%, M. Critical Rate +100%, Casting Spd. +8%, P. Atk. +8%, Atk. Spd. +8%, Speed +8, M. Def. +14%, MP Recovery Bonus +20%, M. Skill MP Consumption -15%, P. Skill MP Consumption -5%, and Skill Cooldown -20%. Buff is maintained for 5 min. when the Mentor goes offline. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>
@@ -1520,8 +1520,8 @@
 			<condition name="TargetMyMentee" />
 		</conditions>
 	</skill>
-	<skill id="9378" toLevel="1" name="Mentor's Warrior's Harmony">
-		<!-- For 2 hr., increases the selected mentee's P. Atk. by 35%, P. Critical Damage by 35%, P. Critical Rate by 100%, Atk. Spd. by 8%, M. Atk. by 16%, Casting Spd. by 8%, and Speed by 8. Buff persists for 5 min. after the mentor goes offline. -->
+	<skill id="9378" toLevel="1" name="Warrior's Harmony - Mentor">
+		<!-- For 2 h., increases the selected mentee's P. Atk. by 35%, P. Critical Damage by 35%, P. Critical Rate by 100%, Atk. Spd. by 8%, M. Atk. by 16%, Casting Spd. by 8%, and Speed by 8. Effect remains for 5 min. after the mentor goes offline. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
 		<mpConsume>140</mpConsume>

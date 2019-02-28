@@ -1161,7 +1161,7 @@
 		<set name="commissionItemType" val="SOUL_CRYSTAL" />
 	</item>
 	<item id="18563" name="Life Stone (R-grade)" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon Augmentation by characters level 85 or above. -->
+		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 85 or above. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1197,7 +1197,7 @@
 		</cond>
 	</item>
 	<item id="18566" name="Top-grade Life Stone (R-grade)" type="EtcItem">
-		<!-- Top-grade mineral that has been petrified by a creature's physical or magical damage. Key component used in weapon augmentation by characters level 85 or above. Can be exchanged or dropped. -->
+		<!-- Top-grade mineral that has been petrified by a creature's physical or magical damage. May be used as an ingredient in weapon augmentation at level 85 or above. Can be exchanged or dropped. -->
 		<set name="icon" val="icon.r_mineral_unique_i00" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />
@@ -1209,7 +1209,7 @@
 		</cond>
 	</item>
 	<item id="18567" name="Legendary Life Stone (R-grade)" type="EtcItem">
-		<!-- This is a legendary mineral, having been petrified by a creature's physical or magical force. Key component used in weapon augmentation by characters level 85 or above. -->
+		<!-- This is a legendary mineral, having been petrified by a creature's physical or magical force. May be used as an ingredient in weapon augmentation by characters higher than level 85. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="is_stackable" val="true" />

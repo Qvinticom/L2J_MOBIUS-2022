@@ -23,7 +23,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47503" name="High-grade Spirit Stone" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon Augmentation by characters with Lv. 95 or above. -->
+		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon augmentation by characters level 95 or above. -->
 		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="weight" val="2" />
 		<set name="is_tradable" val="false" />
@@ -284,7 +284,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47521" name="Request - The Fields" type="EtcItem">
-		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Field of Silence and the Field of Whispers. The request can be accepted by characters between Lv. 92-102. Double-click to receive the request -->
+		<!-- A request from the Hunter Guild calling on you to defeat the giant monsters in the Field of Silence and the Field of Whispers. Characters of level 102 or higher can receive the request by double-clicking the item. -->
 		<set name="icon" val="icon.hunter_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
 		<set name="immediate_effect" val="true" />
@@ -610,13 +610,13 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47552" name="Powerful Fish" type="EtcItem">
-		<!-- Can be exchanged for a Hair Accessory or other items through a Fishing Guild member. -->
+		<!-- Can be exchanged for Elcyum Powder, Expertise Rune or another item through a Fishing Guild Member. -->
 		<set name="icon" val="icon.etc_bream_i01" />
 		<set name="price" val="1000000" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47553" name="Blueish Box" type="EtcItem">
-		<!-- Double click to obtain the item. -->
+		<!-- Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -634,7 +634,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47554" name="Reddish Box" type="EtcItem">
-		<!-- Double click to obtain the item. -->
+		<!-- Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -646,7 +646,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47555" name="Purplish Box" type="EtcItem">
-		<!-- Double click to obtain the item. -->
+		<!-- Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -665,7 +665,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47557" name="Master Fishing Rod" additionalName="Stage 1" type="Weapon">
-		<!-- Fishing time reduced by: 10 seconds. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
+		<!-- Fishing time reduced by: 10 sec. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.fishing_rod01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -688,7 +688,7 @@
 		</stats>
 	</item>
 	<item id="47558" name="Master Fishing Rod" additionalName="Stage 2" type="Weapon">
-		<!-- Fishing time reduced by: 15 seconds. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
+		<!-- Fishing time reduced by: 15 sec. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.fishing_rod02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -711,7 +711,7 @@
 		</stats>
 	</item>
 	<item id="47559" name="Master Fishing Rod" additionalName="Stage 3" type="Weapon">
-		<!-- Fishing time reduced by: 20 seconds. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
+		<!-- Fishing time reduced by: 20 sec. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.fishing_rod03" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -734,7 +734,7 @@
 		</stats>
 	</item>
 	<item id="47560" name="Master Fishing Rod" additionalName="Stage 4" type="Weapon">
-		<!-- Fishing time reduced by: 25 seconds. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
+		<!-- Fishing time reduced by: 25 sec. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.fishing_rod04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -757,7 +757,7 @@
 		</stats>
 	</item>
 	<item id="47561" name="Master Fishing Rod" additionalName="Stage 5" type="Weapon">
-		<!-- Fishing time reduced by: 30 seconds. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
+		<!-- Fishing time reduced by: 30 sec. A fishing rod modified personally by Santiago, head of the Fishing Guild. Engraved with the name of a legendary master angler of the east. Fishing Shots consumed: 1 -->
 		<set name="icon" val="icon.fishing_rod05" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="FISHINGROD" />
@@ -791,7 +791,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47563" name="Zodiac Agathion Box" type="EtcItem">
-		<!-- Double click to obtain one of the twelve Agathions Stage 1. -->
+		<!-- Double-click to obtain one of the twelve Agathions Stage 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -799,7 +799,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47564" name="Reward for Defeating the Giant Monsters" type="EtcItem">
-		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
+		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -811,7 +811,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47565" name="Reward for Defeating the Giant Monsters" type="EtcItem">
-		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
+		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -823,7 +823,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47566" name="Reward for Defeating the Giant Monsters" type="EtcItem">
-		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
+		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -835,7 +835,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47567" name="Reward for Defeating the Giant Monsters" type="EtcItem">
-		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
+		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -847,7 +847,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47568" name="Reward for Defeating the Giant Monsters" type="EtcItem">
-		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
+		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -859,7 +859,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47569" name="Reward for Defeating the Giant Monsters" type="EtcItem">
-		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
+		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -871,7 +871,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47570" name="Reward for Defeating the Giant Monsters" type="EtcItem">
-		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double click to obtain the item. -->
+		<!-- A reward given by the Hunter Guild for completing the mission to defeat the giant monsters. Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -883,7 +883,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47571" name="Basic Supply Box" additionalName="Fishing Guild" type="EtcItem">
-		<!-- A supply box given by Santiago, head of the Fishing Guild, for your hard work in reviving the Fishing Guild. Double click to obtain the item. -->
+		<!-- A supply box given by Santiago, head of the Fishing Guild, for your hard work in reviving the Fishing Guild. Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -903,7 +903,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47572" name="Intermediate Supply Box" additionalName="Fishing Guild" type="EtcItem">
-		<!-- A supply box given by Santiago, head of the Fishing Guild, for your sustained effort toward reviving the Fishing Guild. Double click to obtain the item. -->
+		<!-- A supply box given by Santiago, head of the Fishing Guild, for your sustained effort toward reviving the Fishing Guild. Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -935,7 +935,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47574" name="PC Cafe Treasure Chest" type="EtcItem">
-		<!-- Double click to obtain the item. -->
+		<!-- Double-click to obtain the item. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -947,19 +947,19 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47575" name="Royal White Save Ticket (R)" type="EtcItem">
-		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
+		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47576" name="Royal White Save Ticket (R95)" type="EtcItem">
-		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R95 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
+		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R95 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47577" name="Royal White Save Ticket (R99)" type="EtcItem">
-		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
+		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />

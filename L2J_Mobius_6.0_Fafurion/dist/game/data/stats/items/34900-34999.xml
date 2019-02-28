@@ -82,7 +82,7 @@
 		</skills>
 	</item>
 	<item id="34905" name="Clan-exclusive Pet (Raccoon)" type="EtcItem">
-		<!-- An item that summons a nurture-type clan pet (Rakun). You have a chance of obtaining an additional item for 72 hr. after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
+		<!-- An item that summons a nurture-type clan pet (Rakun). You have a chance of obtaining an additional item for 72 hours after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="weight" val="10" />
 		<set name="is_oly_restricted" val="true" />
@@ -99,7 +99,7 @@
 		</skills>
 	</item>
 	<item id="34906" name="Clan-exclusive Pet (White Cat)" type="EtcItem">
-		<!-- An item that summons a nurture-type clan pet (White Cat). You have a chance of obtaining an additional item for 72 hr. after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
+		<!-- An item that summons a nurture-type clan pet (White Cat). You have a chance of obtaining an additional item for 72 hours after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="weight" val="10" />
 		<set name="is_oly_restricted" val="true" />
@@ -116,7 +116,7 @@
 		</skills>
 	</item>
 	<item id="34907" name="Clan-exclusive Pet (Desert Fox)" type="EtcItem">
-		<!-- An item that summons a nurture-type clan pet (Desert Fox). You have a chance of obtaining an additional item for 72 hr. after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
+		<!-- An item that summons a nurture-type clan pet (Desert Fox). You have a chance of obtaining an additional item for 72 hours after the pet is summoned. Only clan member PCs of level 5 and higher can summon it. -->
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="weight" val="10" />
 		<set name="is_oly_restricted" val="true" />
@@ -133,7 +133,7 @@
 		</skills>
 	</item>
 	<item id="34908" name="Clan-exclusive Pet for Training" type="EtcItem">
-		<!-- Item that summons a Clan-exclusive Pet for Training. If the pet's HP becomes 0 within 30 seconds, you gain 50 Clan Reputation and 10 Individual Fame. -->
+		<!-- Item that summons a Clan-exclusive Pet for Training. If the pet's HP becomes 0 within 30 sec., you gain 50 Clan Reputation and 10 Individual Fame. -->
 		<set name="icon" val="icon.accessory_necklace_of_pet_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -185,7 +185,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34911" name="Ruler's Authority" additionalName="Not in Use" type="EtcItem">
-		<!-- Item given to the winner of the tournament held in the Mysterious Mansion. Increases Max HP/ MP/ CP by 500, Weight Gauge by 12000, damage inflicted during PvP by 5%, Damage Reflect Resistance by 5, and Attribute Resistance by 10. Also increases HP/ MP Recovery Rate and Inventory Slot numbers. Decreases damage received during PvP by 6%. You can use these item skills only during the week of victory. -->
+		<!-- Item given to the winner of the tournament held in the Mysterious Mansion. Increases Max HP/ MP/ CP by 500, Weight Gauge by 12000, damage inflicted during PvP by 5%, Damage Reflection Resistance by 5, and Attribute Resistance by 10. Also increases HP/ MP Recovery Rate and Inventory Slot numbers. Decreases damage received during PvP by 6%. You can use these item skills only during the week of victory. -->
 		<set name="icon" val="icon.etc_spell_books_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -498,7 +498,7 @@
 		</stats>
 	</item>
 	<item id="34925" name="Cloak of Light" type="Armor">
-		<!-- Cloak that symbolizes glory and light. STR/ MEN/ DEX/ WIT/ INT/ CON/ LUC/ CHA +2, and Damage Received -5%. Can use Escape: Castle skill. Cannot be used while in a chaotic state. Can only be equipped by marquis or higher. Cannot be transferred between servers. -->
+		<!-- A cloak that symbolizes glory and light. When equipped, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +2, and Damage Received -5%. Can use the Escape: Castle skill. Cannot be used while in a chaotic state. Can be equipped only by marquis or higher. Cannot be used in the Olympiad and dimensional servers. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -539,7 +539,7 @@
 		</stats>
 	</item>
 	<item id="34926" name="Cloak of Darkness" type="Armor">
-		<!-- Cloak that symbolizes avarice and darkness. STR/ MEN/ DEX/ WIT/ INT/ CON/ LUC/ CHA +2, and Damage Received -5%. Can use Escape: Castle skill. Can only be equipped by marquis or higher. Cannot be transferred between servers. -->
+		<!-- A cloak that symbolizes avarice and darkness. When equipped, STR/ MEN/ DEX/ WIT/ INT/ CON/ LUC/ CHA +2, and Damage Received -5%. Can use the Escape: Castle skill. Can be equipped only by marquis or higher. Cannot be used in the Olympiad and dimensional servers. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1034,7 +1034,7 @@
 		</skills>
 	</item>
 	<item id="34949" name="Letter Collector's Gift" additionalName="Event" type="EtcItem">
-		<!-- When Letter Collector's Gift is. used, for 1 hr. it increases Atk. Spd. by 10%, Casting Spd. by 10%, Spd. by 10, Max HP and Max MP by 10%, and the appearance of the equipped weapon and armor change to that of Memorable items. Cooldown is 30 min. Will be deleted after the event. -->
+		<!-- When Letter Collector's Gift is. used, for 1 hour it increases Atk. Spd. by 10%, Casting Spd. by 10%, Spd. by 10, Max HP and Max MP by 10%, and the appearance of the equipped weapon and armor change to that of Memorable items. Cooldown is 30 min. -->
 		<set name="icon" val="icon.shield_bread_i02" />
 		<set name="weight" val="5" />
 		<set name="is_oly_restricted" val="true" />
@@ -1649,7 +1649,7 @@
 		</skills>
 	</item>
 	<item id="34987" name="Talisman - Hellfire" type="Armor">
-		<!-- When equipped, increases Max HP, MP, and CP by 400, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 30, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, M. Atk. by 156, Skill Power by 1%, Damage Reflect Resistance by 10, and P. and M. Def. by 20. -->
+		<!-- When equipped, increases Max HP, MP, and CP by 400, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 30, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 103, M. Atk. by 156, Skill Power by 1%, Damage Reflection Resistance by 10, and P. and M. Def. by 20. -->
 		<set name="icon" val="icon.accessory_hellfire_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1670,7 +1670,7 @@
 		</skills>
 	</item>
 	<item id="34988" name="Talisman - Desire" type="Armor">
-		<!-- When equipped, increases Max HP, MP, and CP by 500, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 40, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 203, M. Atk. by 256, Skill Power by 2%, Damage Reflect Resistance by 20, and P. and M. Def. by 40. MP consumption decreases by 1%. -->
+		<!-- When equipped, increases Max HP, MP, and CP by 500, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 40, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 203, M. Atk. by 256, Skill Power by 2%, Damage Reflection Resistance by 20, and P. and M. Def. by 40. MP consumption decreases by 1%. -->
 		<set name="icon" val="icon.accessory_ocean_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1691,7 +1691,7 @@
 		</skills>
 	</item>
 	<item id="34989" name="Talisman - Longing" type="Armor">
-		<!-- When equipped, increases Max HP, MP, and CP by 600, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 50, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 303, M. Atk. by 356, Skill Power by 4%, Damage Reflect Resistance by 30, and P. M. Def. by 60, and STR/ INT/ CON/ MEN/ DEX/ WIT by 2. MP consumption decreases by 3%. -->
+		<!-- When equipped, increases Max HP, MP, and CP by 600, P. and M. Accuracy by 2, P. and M. Evasion by 2, Vampiric Rage 3% effect, Atk. Spd. and Casting Spd. by 50, Critical Rate by 30, M. Critical Rate by 10, P. Atk. by 303, M. Atk. by 356, Skill Power by 4%, Damage Reflection Resistance by 30, and P. M. Def. by 60, and STR/ INT/ CON/ MEN/ DEX/ WIT by 2. MP consumption decreases by 3%. -->
 		<set name="icon" val="icon.accessory_longing_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1769,7 +1769,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="34996" name="Cloak of Radiant Light" type="Armor">
-		<!-- Cloak that symbolizes glory and light. STR/ MEN/ DEX/ WIT/ INT/ CON/ LUC/ CHA +4, and Damage Received -15%. Can use Escape: Castle skill. Cannot be used while in a chaotic state. Can only be equipped by a lord. Cannot be transferred between servers. -->
+		<!-- A cloak that symbolizes glory and light. When equipped, STR/ DEX/ CON/ INT/ WIT/ MEN/ LUC/ CHA +4, and Damage Received -15%. Can use the Escape: Castle skill. Cannot be used while in a chaotic state. Can be equipped only by marquis or higher. Cannot be used in the Olympiad and dimensional servers. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_goodness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1810,7 +1810,7 @@
 		</stats>
 	</item>
 	<item id="34997" name="Cloak of Cold Darkness" type="Armor">
-		<!-- Cloak that symbolizes avarice and darkness. STR/ MEN/ DEX/ WIT/ INT/ CON/ LUC/ CHA +4, and Damage Received -15%. Can use Escape: Castle skill. Can only be equipped by a lord. Cannot be transferred between servers. -->
+		<!-- A cloak that symbolizes avarice and darkness. When equipped, STR/ MEN/ DEX/ WIT/ INT/ CON/ LUC/ CHA +4, and Damage Received -15%. Can use the Escape: Castle skill. Can be equipped only by marquis or higher. Cannot be used in the Olympiad and dimensional servers. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.amor_evilness_cloak" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="back" />
@@ -1851,7 +1851,7 @@
 		</stats>
 	</item>
 	<item id="34998" name="Tauti's One-handed Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill Tauti's Wrath can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill Tauti's Wrath' can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1880,7 +1880,7 @@
 		</stats>
 	</item>
 	<item id="34999" name="Tauti's Two-handed Axe" type="Weapon">
-		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill Tauti's Wrath can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
+		<!-- A weapon made using Tauti's Fragment Augment. When equipped, increases PVP Damage by 15%, Max HP by 25%, P. Atk. by 10%, Atk. Spd. by 15%, and P. Critical Rate by 150. In addition, the Active Skill Tauti's Wrath' can be used. Enchantment, Augment, Appearance Modification, Crystallization, Attribute Assignment are not allowed. 1 special Soul Crystal can be used. -->
 		<set name="icon" val="icon.weapon_tauti_one_hand_magic_axe_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

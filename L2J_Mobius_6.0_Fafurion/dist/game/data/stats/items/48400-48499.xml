@@ -181,7 +181,7 @@
 		</stats>
 	</item>
 	<item id="48417" name="Enhanced Ruler's Authority" type="Armor">
-		<!-- Enhanced Ruler's Authority. Max HP/ MP/ CP +1000, Weight +25600, Damage +10%, Received Damage -10%, Damage Reflect Resistance +10%, Fixed Damage Resistance +10%, Inventory Slots +36, and all Attribute Resistance +20. -->
+		<!-- Enhanced Ruler's Authority. Max HP/ MP/ CP +1000, Weight +25600, Damage +10%, Received Damage -10%, Damage Reflection Resistance +10%, Fixed Damage Resistance +10%, Inventory Slots +36, and all Attribute Resistance +20. -->
 		<set name="icon" val="icon.grankain_powerbelt2" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="brooch_jewel" />
@@ -391,7 +391,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48437" name="PA Talisman - Atk. Attribute Boost" additionalName="2-hour" type="Armor">
-		<!-- When equipped, Atk. Attribute +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
+		<!-- When equipped, Attack Attribute +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -783,7 +783,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48473" name="Night Goblin Coin (500) Box" additionalName="Event" type="EtcItem">
-		<!-- Use it to obtain 500 Night Goblin Coins. Will be deleted after the event. -->
+		<!-- Use it to obtain 500 Night Goblin Coins. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -795,7 +795,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48474" name="Night Goblin Coin (800) Box" additionalName="Event" type="EtcItem">
-		<!-- Use to obtain 800 Night Goblin Coins. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. -->
+		<!-- Use to obtain 800 Night Goblin Coins. -->
 		<set name="icon" val="icon.etc_treasure_box_i09" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -807,7 +807,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48475" name="Night Goblin Coin (2000) Box" additionalName="Event" type="EtcItem">
-		<!-- Use to obtain 2000 Night Goblin Coins. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. -->
+		<!-- Use to obtain 2000 Night Goblin Coins. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -819,7 +819,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48476" name="Dark/ Bloody Helios Enhancement Stone Treasure Chest" type="EtcItem">
-		<!-- Use it to obtain a Dark Helios Enhancement Stone or Bloody Helios Enhancement Stone. Will be deleted after the event. -->
+		<!-- Use it to obtain a Dark Weapon Enhancement Stone or Bloody Weapon Enhancement Stone. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -872,7 +872,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48481" name="+8 Reflect Attack Shirt Pack" type="EtcItem">
-		<!-- Double-click to obtain a +8 Reflect Attack Shirt. -->
+		<!-- Double-click to obtain a +8 Reflect Attack T-shirt. -->
 		<set name="icon" val="icon.reflect_attack_shirt_box_2" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -881,7 +881,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48482" name="+8 Reflect Magical Shirt Pack" type="EtcItem">
-		<!-- Double-click to obtain a +8 Reflect Magic Shirt. -->
+		<!-- Double-click to obtain a +8 Reflect Magic T-shirt. -->
 		<set name="icon" val="icon.reflect_magic_shirt_box_3" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -890,7 +890,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48483" name="+7 Shiny Elemental Shirt" additionalName="1-day" type="Armor">
-		<!-- A magical Shirt infused with Einhasad's energy. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Skill MP Consumption -3%. Damage Reflect Resistance +5. Vampiric Rage +5%. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. <Active Skills>. Einhasad's Wrath/ Einhasad's Protection. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. Cannot be enchanted. -->
+		<!-- A magical t-shirt infused with Einhasad's energy. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Skill MP Consumption -3%. Damage Reflection Resistance +5. Vampiric Rage +5%. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. <Active Skills>. Einhasad's Wrath/ Einhasad's Protection.. Cannot be enchanted. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -906,7 +906,7 @@
 		</stats>
 	</item>
 	<item id="48484" name="+7 Reflect Attack Shirt" additionalName="1-day" type="Armor">
-		<!-- A magical Shirt specialized for physical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. P. Def. +8%, Received P. Critical Damage -12%, 7% chance to reflect physical skill debuffs. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. Cannot be enchanted. -->
+		<!-- A magical t-shirt specialized for physical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. P. Def. +8%, Received P. Critical Damage -12%, 7% chance to reflect physical skill debuffs.. Cannot be enchanted. -->
 		<set name="icon" val="icon.reflect_attack_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -922,7 +922,7 @@
 		</stats>
 	</item>
 	<item id="48485" name="+7 Reflect Magical Shirt" additionalName="1-day" type="Armor">
-		<!-- A magical Shirt specialized for magical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. M. Def. +8%, Received M. Critical Damage -12%, 7% chance to reflect magical skill debuffs. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. Cannot be enchanted. -->
+		<!-- A magical t-shirt specialized for magical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. M. Def. +8%, Received M. Critical Damage -12%, 7% chance to reflect magical skill debuffs.. Cannot be enchanted. -->
 		<set name="icon" val="icon.reflect_magic_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -939,7 +939,7 @@
 		</stats>
 	</item>
 	<item id="48486" name="Sayha Talisman Stage 6" additionalName="1-day" type="Armor">
-		<!-- When equipped, Sayha's power increases P. Def. by 1126, M. Def. by 736, and Acquired XP/ SPed by 10%. Equipping it with Venir Talisman Stage 10 or higher increases Skill Power by 3% and reduces cooldown by 3%. <Active Skills>. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. When identical Talismans are equipped, only the effect of the highest level Talisman is applies. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. -->
+		<!-- When equipped, Sayha's power increases P. Def. by 1126, M. Def. by 736, and Acquired XP/ SP by 10%. Equipping it with Venir Talisman Stage 10 or higher increases Skill Power by 3% and reduces cooldown by 3%. <Active Skills>. Sayha's Protection Lv. 1. Sayha's Encouragement Lv. 1. When identical Talismans are equipped, only the effect of the highest level Talisman is applies. -->
 		<set name="icon" val="icon.bm_sayhas_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -953,7 +953,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="48487" name="Merlot's Promise" type="EtcItem">
-		<!-- A certificate stating Merlot's promise to help you during crisis. Take it to Merlot before facing a great challenge. Will be deleted during maintenance on Wednesday, January 24th, 2018. -->
+		<!-- A certificate stating Merlot's promise to help you during crisis. Take it to Merlot before facing a great challenge. -->
 		<set name="icon" val="icon.etc_paper_blue_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -964,7 +964,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48488" name="Merlot's Special Order" type="EtcItem">
-		<!-- Merlot's special order that radiates the aura of Honor Force. Take it to Merlot in the Hunters Village. Will be deleted during maintenance on Wednesday, January 24th, 2018. -->
+		<!-- Merlot's special order that radiates the aura of Honor Force. Take it to Merlot in the Hunters Village. -->
 		<set name="icon" val="icon.fairy_encounter_letter" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -986,7 +986,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48490" name="Merlot's Gift" type="EtcItem">
-		<!-- Merlot's gift that can be used as long as the influence of Honor Force remains. Recovers two of the four Vitality Gauge bars. The usage limit of 5 times per week does not apply. Will be deleted during maintenance on Wednesday, January 24th, 2018. -->
+		<!-- Merlot's gift that can be used as long as the influence of Honor Force remains. Recovers two of the four Vitality Gauge bars. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -997,7 +997,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48491" name="Dragon shirt" type="Armor">
-		<!-- A Dragon Shirt. <Upgrade Condition>. Can be upgraded to Dragon Leather Shirt when enhanced to +5. Level 85 or higher. -->
+		<!-- A Dragon Skin Shirt. <Upgrade Condition>. Can be upgraded to a Dragon Leather Shirt when enchanted to +5. For characters Lv. 85 or above. -->
 		<set name="icon" val="icon.bm_dragon_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -1014,7 +1014,7 @@
 		</stats>
 	</item>
 	<item id="48492" name="Dragon Leather Shirt" type="Armor">
-		<!-- A Dragon Leather Shirt. <Upgrade Condition>. Can be upgraded to Dragon Rind Leather Shirt when enhanced to +5. Level 99 or higher. -->
+		<!-- A Dragon Leather Shirt. <Upgrade Condition>. Can be upgraded to a Dragon Rind Leather Shirt when enchanted to +5. For characters Lv. 99 or above. -->
 		<set name="icon" val="icon.bm_dragon_leather_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1030,7 +1030,7 @@
 		</stats>
 	</item>
 	<item id="48493" name="Dragon Rind Leather Shirt" type="Armor">
-		<!-- A Dragon Rind Leather Shirt. Level 105 or higher. -->
+		<!-- A Dragon Rind Leather Shirt. For characters Lv. 105 or above. -->
 		<set name="icon" val="icon.bm_dragon_rind_leather_shirt" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1043,7 +1043,7 @@
 		</stats>
 	</item>
 	<item id="48494" name="Mysterious Dragon Slayer" type="Weapon">
-		<!-- The Mysterious Dragon Slayer contains the power of an ancient dragon, which can be drawn by enchanting. Enchant it to a high level and take it to Event NPC Luna to receive a special reward. Will be deleted on Wednesday, May 17, 2017, after regular maintenance. -->
+		<!-- The Mysterious Dragon Slayer contains the power of an ancient dragon, which can be drawn by enchanting. Enchant it to a high level and take it to Event NPC Luna to receive a special reward. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1064,7 +1064,7 @@
 		</stats>
 	</item>
 	<item id="48495" name="Noble Leather Upgrade Stone" type="EtcItem">
-		<!-- Material needed to upgrade a Dragon Shirt to a Dragon Leather Shirt. Talk to Head Blacksmith Ferris at Aden Castle to upgrade a +5 Dragon Shirt to a Dragon Leather Shirt. -->
+		<!-- Material needed to upgrade a Dragon Skin Shirt to a Dragon Leather Shirt. Talk to Head Blacksmith Ferris in the Town of Aden to upgrade a +5 Dragon Skin Shirt to a Dragon Leather Shirt. -->
 		<set name="icon" val="icon.bm_dragon_shirt_upgrade_1" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="material" val="PAPER" />
@@ -1080,7 +1080,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48497" name="Glowing Dragon's Attribute Potion" additionalName="EXP" type="EtcItem">
-		<!-- When used, Atk. Attribute +70, all Attribute Resistance +70, and Acquired XP/ SPed +30% for 30 min. Buff effect persists through death. Cooldown of 5 min. Cannot be used in Olympiad. Cannot be stacked with Art of Seduction. -->
+		<!-- When used, Attack Attribute +70, all Attribute Resistance +70, and Acquired XP/ SP +30% for 30 min. Effect remains after death. Cooldown is 5 min. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_dragon_posion_special" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -1098,7 +1098,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48499" name="Relics of the Dragons" type="EtcItem">
-		<!-- Use it to obtain 2 Dragon Attribute Tonic (XP). There is a chance to obtain a Dragon's Relic Chest or Shining Dragon's Relic Chest. Will be deleted after the event. -->
+		<!-- Use it to obtain 2 Dragon Attribute Tonic (XP). There is a chance to obtain a Dragon's Relic Chest or Shining Dragon's Relic Chest. -->
 		<set name="icon" val="icon.bm_dragon_present_poket" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />

@@ -128,7 +128,7 @@
 		<hitTime>1500</hitTime>
 	</skill>
 	<skill id="23717" toLevel="5" name="Pollen Spray">
-		<!-- Leaves a mark to the killer when dying. -->
+		<!-- Leaves a mark to the killer when dying.. -->
 		<icon>icon.etc_powder_orange_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>1500</castRange>
@@ -344,7 +344,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23739" toLevel="1" name="Heart Breaker">
-		<!-- Stabs target's heart with 29472 Power added to P. Atk. to inflict a powerful vital spot attack. Increases Spd. +40, Evasion +5, and Rear Critical Damage +30%. Over-hit. Critical. Half-kill. -->
+		<!-- Stabs target's heart with 29472 Power added to P. Atk. to inflict a powerful vital spot attack. Increases Spd. +40, Evasion +5, and Rear Critical Damage +30%. Over-hit. Critical hit. Half-kill. -->
 		<icon>icon.skill10509</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -365,7 +365,7 @@
 		<reuseDelay>600000</reuseDelay>
 	</skill>
 	<skill id="23741" toLevel="1" name="Razor Rain">
-		<!-- Calls down a rain of blades to attack nearby enemies and inflicts Bleed. Requires a dagger or dual dagger. Over-hit. Critical. -->
+		<!-- Calls down a rain of blades to attack nearby enemies and inflicts Bleed. Requires a dagger or dual dagger. Over-hit. Critical hit. -->
 		<icon>icon.skill10513</icon>
 		<operateType>A2</operateType>
 		<mpConsume>1</mpConsume>
@@ -469,7 +469,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23750" toLevel="1" name="Mass Hell Binding">
-		<!-- Immobilizes target and nearby enemies midair for 9 sec. and inflicts 100 damage per sec. -->
+		<!-- Immobilizes target and nearby enemies midair for 9 sec. and inflicts 100 damage per second. -->
 		<icon>icon.skill11052</icon>
 		<operateType>A1</operateType>
 		<mpConsume>2</mpConsume>
@@ -575,7 +575,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23759" toLevel="1" name="Mass Exile">
-		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and standard attacks, and lose 282 HP/ sec. -->
+		<!-- Banishes enemies near target into another dimension. They become immobile and invincible against debuffs, skills, and standard attacks, and lose 282 HP/ second. -->
 		<icon>icon.skill11296</icon>
 		<operateType>A2</operateType>
 		<trait>DEPORT</trait>
@@ -730,7 +730,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="23774" toLevel="1" name="Clan Teamwork - Stage 1">
-		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +8% and Vitality Consumption -3% for 3 hr. -->
+		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +8% and Vitality Consumption Speed -3% for 3 h. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<abnormalTime>10800</abnormalTime>
@@ -756,7 +756,7 @@
 		</effects>
 	</skill>
 	<skill id="23775" toLevel="1" name="Clan Teamwork - Stage 2">
-		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +16%, PvE Damage +2%, and Vitality Consumption -3% for 3 hr. -->
+		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +16%, PvE Damage +2%, and Vitality Consumption Speed -3% for 3 h. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<abnormalTime>10800</abnormalTime>
@@ -794,7 +794,7 @@
 		</effects>
 	</skill>
 	<skill id="23776" toLevel="1" name="Clan Teamwork - Stage 3">
-		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +24%, PvE Damage +5%, and Vitality Consumption -5% for 3 hr. -->
+		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +24%, PvE Damage +5%, and Vitality Consumption Speed -5% for 3 h. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<abnormalTime>10800</abnormalTime>
@@ -832,7 +832,7 @@
 		</effects>
 	</skill>
 	<skill id="23777" toLevel="1" name="Clan Teamwork - Stage 4">
-		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +35%, PvE Damage +8%, Vitality Consumption -3%, and Damage Received from Raid/ Boss Monsters -8% for 3 hr. -->
+		<!-- Teamwork achieved thanks to the clan activities. Acquired XP/ SP +35%, PvE Damage +8%, Vitality Consumption Speed -3%, and Damage Received from Raid/ Boss Monsters -8% for 3 h. -->
 		<icon>icon.skill19011</icon>
 		<abnormalType>CLAN_TEAMWORK</abnormalType>
 		<abnormalTime>10800</abnormalTime>

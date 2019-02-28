@@ -1819,7 +1819,7 @@
 		</effects>
 	</skill>
 	<skill id="4631" toLevel="3" name="Acumen Shield Wild Magic">
-		<!-- Increases Casting Spd. By $s1, P. Def. by $s2, and M. Critical Rate by $s3. -->
+		<!-- Increases Casting Spd. By $s1, P. Def. by $s2, and critical rate of damage attack magic by $s3. -->
 		<icon>icon.skill1085</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4897,7 +4897,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="4688" toLevel="1" name="Valakas Stun">
+	<skill id="4688" toLevel="1" name="Valakas Tail Rash">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill4688</icon>
 		<abnormalLvl>1</abnormalLvl>

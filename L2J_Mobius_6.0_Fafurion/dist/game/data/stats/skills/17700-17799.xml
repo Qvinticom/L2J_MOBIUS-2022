@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="17701" toLevel="6" name="Topaz: Spiritshot">
+	<skill id="17701" toLevel="6" name="Topaz - Spiritshot">
 		<!-- Disrupts the target's skill casting. When used during PvP, inflicts fixed damage of $s1 and ignores CP. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_topaz_i00</value>
@@ -142,7 +142,7 @@
 		</effects>
 	</skill>
 	<skill id="17705" toLevel="6" name="Opal">
-		<!-- Increases Atk. Attribute by $s1. -->
+		<!-- Increases Attack Attribute by $s1. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_opal_i00</value>
 			<value level="2">icon.etc_bm_jewel_opal_i00</value>
@@ -324,7 +324,7 @@
 		</effects>
 	</skill>
 	<skill id="17709" toLevel="6" name="Pearl">
-		<!-- M. Def. +$s1, and Received M. Critical Damage -$s2. -->
+		<!-- M. Def. +$s1, Received M. Critical Damage -$s2. -->
 		<icon>
 			<value level="1">icon.etc_bm_jewel_pearl_i00</value>
 			<value level="2">icon.etc_bm_jewel_pearl_i00</value>
@@ -381,7 +381,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17711" toLevel="24" name="10th Anniversary Blessing - Stage 1">
-		<!-- You can obtain an item in $s1 hr. $s2 stages total. <Note:> If you're dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
+		<!-- You can obtain an item in $s1 h. $s2 stages total. <Note:> If you're dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
 		<icon>icon.ev_10th</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -419,7 +419,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17713" toLevel="24" name="10th Anniversary Special Blessing - Stage 1">
-		<!-- You can obtain an item in $s1 hr. $s2 stages total. <Note:> If you're dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
+		<!-- You can obtain an item in $s1 h. $s2 stages total. <Note:> If you're dead while the item is given, you cannot acquire the $s3th Anniversary Blessing buff or items. You also cannot acquire the cards if your inventory is full. -->
 		<icon>icon.ev_10th</icon>
 		<operateType>A2</operateType>
 		<castRange>
@@ -452,7 +452,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="17714" toLevel="1" name="Dancing Cat's Steps">
-		<!-- For 1 hr., Max HP/ MP/ CP +30%, P./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill Cooldown -10%, and Skill MP Consumption -15%. (Same slot as Art of Seduction buff) -->
+		<!-- For 1 h., Max HP/ MP/ CP +30%, P./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill Cooldown -10%, and Skill MP Consumption -15%. (Same slot as Art of Seduction buff) -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -472,7 +472,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17718" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Antharas Shaper (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Shaper (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -492,7 +492,7 @@
 		</effects>
 	</skill>
 	<skill id="17719" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Sealed Antharas Slasher (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Sealed Antharas Slasher (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -512,7 +512,7 @@
 		</effects>
 	</skill>
 	<skill id="17720" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Sealed Antharas Thrower (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Sealed Antharas Thrower (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -532,7 +532,7 @@
 		</effects>
 	</skill>
 	<skill id="17721" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Sealed Antharas Buster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Sealed Antharas Buster (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -553,7 +553,7 @@
 		</effects>
 	</skill>
 	<skill id="17722" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Antharas Cutter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Cutter (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -573,7 +573,7 @@
 		</effects>
 	</skill>
 	<skill id="17723" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Antharas Stormer (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Stormer (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -593,7 +593,7 @@
 		</effects>
 	</skill>
 	<skill id="17724" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Antharas Fighter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Fighter (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -613,7 +613,7 @@
 		</effects>
 	</skill>
 	<skill id="17725" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Antharas Avenger (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Avenger (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -633,7 +633,7 @@
 		</effects>
 	</skill>
 	<skill id="17726" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Antharas Dual Blunt Weapon (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Dual Blunt Weapon (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -653,7 +653,7 @@
 		</effects>
 	</skill>
 	<skill id="17727" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Antharas Dual Sword (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Antharas Dual Sword (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -673,7 +673,7 @@
 		</effects>
 	</skill>
 	<skill id="17728" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Valakas Shaper (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Shaper (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -693,7 +693,7 @@
 		</effects>
 	</skill>
 	<skill id="17729" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Valakas Cutter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Cutter (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -713,7 +713,7 @@
 		</effects>
 	</skill>
 	<skill id="17730" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Valakas Slasher (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Slasher (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -733,7 +733,7 @@
 		</effects>
 	</skill>
 	<skill id="17731" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Valakas Thrower (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Thrower (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -753,7 +753,7 @@
 		</effects>
 	</skill>
 	<skill id="17732" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Valakas Buster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Buster (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -773,7 +773,7 @@
 		</effects>
 	</skill>
 	<skill id="17733" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Valakas Caster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Caster (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -793,7 +793,7 @@
 		</effects>
 	</skill>
 	<skill id="17734" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Valakas Retributer (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Valakas Retributer (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -813,7 +813,7 @@
 		</effects>
 	</skill>
 	<skill id="17735" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Lindvior Shaper (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Shaper (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -833,7 +833,7 @@
 		</effects>
 	</skill>
 	<skill id="17736" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Lindvior Thrower (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Thrower (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -853,7 +853,7 @@
 		</effects>
 	</skill>
 	<skill id="17737" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Lindvior Slasher (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Slasher (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -873,7 +873,7 @@
 		</effects>
 	</skill>
 	<skill id="17738" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Lindvior Caster (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Caster (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -893,7 +893,7 @@
 		</effects>
 	</skill>
 	<skill id="17739" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Lindvior Cutter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Cutter (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -913,7 +913,7 @@
 		</effects>
 	</skill>
 	<skill id="17740" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Lindvior Shooter (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Shooter (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -933,7 +933,7 @@
 		</effects>
 	</skill>
 	<skill id="17741" toLevel="1" name="Dandy's Breath">
-		<!-- Can obtain Lindvior Dual Dagger (1-hr.). (Need Dandy's Scroll: Release Seal) -->
+		<!-- Can obtain Lindvior Dual Dagger (1-h.). (Need Dandy's Scroll: Release Seal) -->
 		<icon>icon.ev_10th_dandi1</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>38847</itemConsumeId> <!-- Dandy's Scroll: Release Seal -->
@@ -952,7 +952,7 @@
 			<effect name="ConvertItem" />
 		</effects>
 	</skill>
-	<skill id="17742" toLevel="1" name="Dandy's Strength">
+	<skill id="17742" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -980,7 +980,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17743" toLevel="1" name="Dandy's Strength">
+	<skill id="17743" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1008,7 +1008,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17744" toLevel="1" name="Dandy's Strength">
+	<skill id="17744" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1036,7 +1036,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17745" toLevel="1" name="Dandy's Strength">
+	<skill id="17745" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1064,7 +1064,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17746" toLevel="1" name="Dandy's Strength">
+	<skill id="17746" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1092,7 +1092,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17747" toLevel="1" name="Dandy's Strength">
+	<skill id="17747" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1120,7 +1120,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17748" toLevel="1" name="Dandy's Strength">
+	<skill id="17748" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1148,7 +1148,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17749" toLevel="1" name="Dandy's Strength">
+	<skill id="17749" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1176,7 +1176,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17750" toLevel="1" name="Dandy's Strength">
+	<skill id="17750" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1204,7 +1204,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17751" toLevel="1" name="Dandy's Strength">
+	<skill id="17751" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1232,7 +1232,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17752" toLevel="1" name="Dandy's Strength">
+	<skill id="17752" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1260,7 +1260,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17753" toLevel="1" name="Dandy's Strength">
+	<skill id="17753" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1288,7 +1288,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17754" toLevel="1" name="Dandy's Strength">
+	<skill id="17754" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1316,7 +1316,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17755" toLevel="1" name="Dandy's Strength">
+	<skill id="17755" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1344,7 +1344,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17756" toLevel="1" name="Dandy's Strength">
+	<skill id="17756" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1372,7 +1372,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17757" toLevel="1" name="Dandy's Strength">
+	<skill id="17757" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1400,7 +1400,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17758" toLevel="1" name="Dandy's Strength">
+	<skill id="17758" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1428,7 +1428,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17759" toLevel="1" name="Dandy's Strength">
+	<skill id="17759" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1456,7 +1456,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17760" toLevel="1" name="Dandy's Strength">
+	<skill id="17760" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1484,7 +1484,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17761" toLevel="1" name="Dandy's Strength">
+	<skill id="17761" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1512,7 +1512,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17762" toLevel="1" name="Dandy's Strength">
+	<skill id="17762" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1540,7 +1540,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17763" toLevel="1" name="Dandy's Strength">
+	<skill id="17763" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1568,7 +1568,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17764" toLevel="1" name="Dandy's Strength">
+	<skill id="17764" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>
@@ -1596,7 +1596,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17765" toLevel="1" name="Dandy's Strength">
+	<skill id="17765" toLevel="1" name="Toy Knight's Strength">
 		<!-- PvP damage +5%, HP +15%, and Atk. Spd. +15%. -->
 		<icon>icon.karma</icon>
 		<operateType>P</operateType>

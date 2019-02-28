@@ -108,7 +108,7 @@
 		</effects>
 	</skill>
 	<skill id="14905" toLevel="1" name="Elise' Radiant Recharge">
-		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv. Also, for 10 sec., recovers 12 MP per sec. Ineffective on classes that have the Recharge skill. -->
+		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 sec., recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -138,7 +138,7 @@
 		</effects>
 	</skill>
 	<skill id="14906" toLevel="1" name="Elise' Radiant Recharge">
-		<!-- Instantly recovers the target's MP with a maximum of 174 power depending on the target's Lv. Also, for 10 sec., recovers 12 MP per sec. Ineffective on classes that have the Recharge skill. -->
+		<!-- Instantly recovers the target's MP with a maximum of 174 power depending on the target's Lv.. Also, for 10 sec., recovers 12 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -168,7 +168,7 @@
 		</effects>
 	</skill>
 	<skill id="14907" toLevel="1" name="Elise' Radiant Recharge">
-		<!-- Instantly recovers the target's MP with a maximum of 183 power depending on the target's Lv. Also, for 10 sec., recovers 13 MP per sec. Ineffective on classes that have the Recharge skill. -->
+		<!-- Instantly recovers the target's MP with a maximum of 183 power depending on the target's Lv.. Also, for 10 sec., recovers 13 MP per second. Ineffective on classes that have the Recharge skill. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -1540,7 +1540,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14964" toLevel="1" name="Rush">
-		<!-- Charges toward the enemy to inflict Stun for 1 sec. -->
+		<!-- Charges toward the enemy to inflict Stun for 1 second. -->
 		<icon>icon.skill11508</icon>
 		<operateType>DA2</operateType>
 		<castRange>600</castRange>
@@ -1848,7 +1848,7 @@
 		</effects>
 	</skill>
 	<skill id="14976" toLevel="1" name="Mysterious Speed Buff">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<castRange>2000</castRange>
@@ -2106,7 +2106,7 @@
 		</effects>
 	</skill>
 	<skill id="14982" toLevel="1" name="HP Drain">
-		<!-- For 10 sec., HP is absorbed by 10% every sec. If untreated while inflicted with absorption, this will lead to death. -->
+		<!-- For 10 sec., HP is absorbed by 10% every second. If untreated while inflicted with absorption, this will lead to death. -->
 		<icon>icon.skill1042</icon>
 		<operateType>CA1</operateType>
 		<castRange>900</castRange>
@@ -2128,7 +2128,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="14983" toLevel="1" name="HP Drain">
-		<!-- For 10 sec., HP is absorbed by 10% every sec. If untreated while inflicted with absorption, this will lead to death. -->
+		<!-- For 10 sec., HP is absorbed by 10% every second. If untreated while inflicted with absorption, this will lead to death. -->
 		<icon>icon.skill1042</icon>
 		<operateType>CA1</operateType>
 		<castRange>900</castRange>
@@ -2150,7 +2150,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="14984" toLevel="1" name="HP Drain">
-		<!-- For 10 sec., HP is absorbed by 10% every sec. If untreated while inflicted with absorption, this will lead to death. -->
+		<!-- For 10 sec., HP is absorbed by 10% every second. If untreated while inflicted with absorption, this will lead to death. -->
 		<icon>icon.skill1042</icon>
 		<operateType>CA1</operateType>
 		<castRange>900</castRange>
@@ -2360,7 +2360,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14993" toLevel="1" name="Master's Blessing - Prevailing Sonata">
+	<skill id="14993" toLevel="1" name="War Drum - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<operateType>A2</operateType>
@@ -2413,8 +2413,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14994" toLevel="1" name="Master's Blessing - Daring Sonata">
-		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+	<skill id="14994" toLevel="1" name="Marching Drum - GM's Blessing">
+		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2477,7 +2477,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14995" toLevel="1" name="Master's Blessing - Refreshing Sonata">
+	<skill id="14995" toLevel="1" name="Soothing Drum - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, HP Recovery +$s2, MP Recovery +$s3, P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill19446</icon>
 		<operateType>A2</operateType>
@@ -2541,7 +2541,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14996" toLevel="1" name="Master's Blessing - Prevailing Sonata">
+	<skill id="14996" toLevel="1" name="War Drum - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<operateType>A2</operateType>
@@ -2595,8 +2595,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14997" toLevel="1" name="Master's Blessing - Daring Sonata">
-		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+	<skill id="14997" toLevel="1" name="Marching Drum - GM's Blessing">
+		<!-- The GM is always by your side. For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
 		<icon>icon.skill19445</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>
@@ -2660,7 +2660,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="14998" toLevel="1" name="Master's Blessing - Refreshing Sonata">
+	<skill id="14998" toLevel="1" name="Soothing Drum - GM's Blessing">
 		<!-- The GM is always by your side. For $s1, HP Recovery +$s2, MP Recovery +$s3, P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill19446</icon>
 		<operateType>A2</operateType>

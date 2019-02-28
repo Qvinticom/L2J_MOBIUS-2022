@@ -40,7 +40,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20902" name="Queen Ant's Ring Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain the Queen Ant's Ring (7-day). -->
+		<!-- Wrapped Pack containing the Queen Ant's Ring (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -262,7 +262,7 @@
 		</skills>
 	</item>
 	<item id="20914" name="Enhanced Rose Spirit Coupon (5-hour)" type="EtcItem">
-		<!-- Coupon that can be exchanged for a necklace (5-hr.) that summons an Enhanced Rose Spirit. -->
+		<!-- Coupon that can be exchanged for a necklace (5-hour) that summons an Enhanced Rose Spirit. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -279,7 +279,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="20915" name="Enhanced Rose Necklace: Desheloph" additionalName="5-hour Summon Duration" type="EtcItem">
-		<!-- Summons Enhanced Rose Spirit Desheloph. Hunger gauge lasts 5 hr. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
+		<!-- Summons Enhanced Rose Spirit Desheloph. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -304,7 +304,7 @@
 		</skills>
 	</item>
 	<item id="20916" name="Enhanced Rose Necklace: Hyum" additionalName="5-hour Summon Duration" type="EtcItem">
-		<!-- Summons Enhanced Rose Spirit Hyum. Hunger gauge lasts 5 hr. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
+		<!-- Summons Enhanced Rose Spirit Hyum. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -329,7 +329,7 @@
 		</skills>
 	</item>
 	<item id="20917" name="Enhanced Rose Necklace: Lekang" additionalName="5-hour Summon Duration" type="EtcItem">
-		<!-- Summons Enhanced Rose Spirit Lekang. Hunger gauge lasts 5 hr. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
+		<!-- Summons Enhanced Rose Spirit Lekang. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -354,7 +354,7 @@
 		</skills>
 	</item>
 	<item id="20918" name="Enhanced Rose Necklace: Lilias" additionalName="5-hour Summon Duration" type="EtcItem">
-		<!-- Summons Enhanced Rose Spirit Lilias. Hunger gauge lasts 5 hr. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
+		<!-- Summons Enhanced Rose Spirit Lilias. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -379,7 +379,7 @@
 		</skills>
 	</item>
 	<item id="20919" name="Enhanced Rose Necklace: Lapham" additionalName="5-hour Summon Duration" type="EtcItem">
-		<!-- Summons Enhanced Rose Spirit Lapham. Hunger gauge lasts 5 hr. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
+		<!-- Summons Enhanced Rose Spirit Lapham. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -404,7 +404,7 @@
 		</skills>
 	</item>
 	<item id="20920" name="Enhanced Rose Necklace: Mafum" additionalName="5-hour Summon Duration" type="EtcItem">
-		<!-- Summons Enhanced Rose Spirit Mafum. Hunger gauge lasts 5 hr. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
+		<!-- Summons Enhanced Rose Spirit Mafum. Hunger gauge lasts 5 hours. Cannot feed pet to refill hunger gauge. Special Abilities require Rose Essence to use. -->
 		<set name="icon" val="BranchSys2.icon.br_necklace_of_rose_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -429,7 +429,7 @@
 		</skills>
 	</item>
 	<item id="20921" name="Rose Spirit Test Report" additionalName="24-hour" type="EtcItem">
-		<!-- Report in which you can record your findings while testing the Enhanced Rose Spirit. You can only return it 24 hr. after receiving it. It cannot be destroyed. -->
+		<!-- Report in which you can record your findings while testing the Enhanced Rose Spirit. You can only return it 24 hours after receiving it. It cannot be destroyed. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
@@ -785,7 +785,7 @@
 		</skills>
 	</item>
 	<item id="20940" name="Agathion - Phoenix" additionalName="Nirvana Rebirth (7-day)" type="Armor">
-		<!-- Can summon an Agathion - Phoenix when equipped. 7-day. Cooldown is 12 hr. -->
+		<!-- Can summon an Agathion - Phoenix when equipped. 7-day. Cooldown is 12 hours. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_china_phoenix_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -810,7 +810,7 @@
 		</skills>
 	</item>
 	<item id="20941" name="Agathion - Phoenix" additionalName="Mountain Echoes (7-day)" type="Armor">
-		<!-- Can summon an Agathion - Phoenix. Cooldown is 4 hr. 7-day. -->
+		<!-- Can summon an Agathion - Phoenix. Cooldown is 4 h. 7-day. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_china_phoenix_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -856,7 +856,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20943" name="Fox Mask" additionalName="Silent Move (7-day)" type="Armor">
-		<!-- Fox Mask This mask automatically covers your face during battle. Uses 2 hair accessory slots. Cooldown is 4 hr. -->
+		<!-- Fox Mask This mask automatically covers your face during battle. Uses 2 hair accessory slots. Cooldown is 4 hours. -->
 		<set name="icon" val="BranchSys2.icon.br_fox_japan_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -899,7 +899,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20945" name="Paiwan Hat" additionalName="Power of Guardian Deity (7-day)" type="Armor">
-		<!-- Traditional Paiwan Hat. When the Power of Guardian Deity, Critical Damage is increased by 35% for 10 min. Uses 2 hair accessory slots. Cooldown is 1 hr. -->
+		<!-- Traditional Paiwan Hat. When the Power of Guardian Deity, Critical Damage is increased by 35% for 10 min. Uses 2 hair accessory slots. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_paiwan_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -987,7 +987,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20949" name="Agathion - Phoenix Pack (7-day)" additionalName="Mountain Echoes" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Phoenix (7-day). -->
+		<!-- Wrapped Pack containing Agathion - Phoenix (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1139,7 +1139,7 @@
 		</skills>
 	</item>
 	<item id="20956" name="Agathion - Zombie" additionalName="Soul Stealth (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Zombie. Invisible effect for 5 seconds after resurrection, and will not receive preemptive attack from the monsters for 2 min. Speed is decreased by 50% while the skill effect is operative. Cooldown is 12 hr. -->
+		<!-- Bracelet that summons Agathion - Zombie. Invisible effect for 5 sec. after resurrection, and will not receive preemptive attack from the monsters for 2 min. Speed is decreased by 50% while the skill effect is operative. Cooldown is 12 hours. -->
 		<set name="icon" val="BranchSys.icon.br_aga_gangsi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1202,7 +1202,7 @@
 		</skills>
 	</item>
 	<item id="20959" name="Vesper Royal Crown Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vesper Royal Crown. -->
+		<!-- Wrapped Pack containing Vesper Royal Crown. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1224,7 +1224,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20960" name="Vesper Royal Circlet Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vesper Royal Circlet. -->
+		<!-- Wrapped Pack containing Vesper Royal Circlet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1246,7 +1246,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20961" name="Vesper Noble Mask Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vesper Noble Mask. -->
+		<!-- Wrapped Pack containing Vesper Noble Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1268,7 +1268,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20962" name="Vesper Royal Crown Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Vesper Royal Crown (30-day). -->
+		<!-- Wrapped Pack containing Vesper Royal Crown (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1290,7 +1290,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20963" name="Vesper Royal Circlet Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Vesper Royal Circlet (30-day). -->
+		<!-- Wrapped Pack containing Vesper Royal Circlet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1312,7 +1312,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20964" name="Vesper Noble Mask Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Vesper Noble Mask (30-day). -->
+		<!-- Wrapped Pack containing Vesper Noble Mask (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1334,7 +1334,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20965" name="Vesper Royal Crown Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vesper Royal Crown. -->
+		<!-- Wrapped Pack containing Vesper Royal Crown. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1356,7 +1356,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20966" name="Vesper Royal Circlet Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vesper Royal Circlet. -->
+		<!-- Wrapped Pack containing Vesper Royal Circlet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1378,7 +1378,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20967" name="Vesper Noble Mask Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vesper Noble Mask. -->
+		<!-- Wrapped Pack containing Vesper Noble Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1423,7 +1423,7 @@
 		</skills>
 	</item>
 	<item id="20969" name="Agathion - Guangong Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Guangong. -->
+		<!-- Wrapped Pack containing Agathion - Guangong. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1470,7 +1470,7 @@
 		</skills>
 	</item>
 	<item id="20971" name="Trejuo Transformation Stick" additionalName="Blessed Child Transformation" type="Weapon">
-		<!-- Stick that transforms you into a the Blessed Child Trejuo. The transformation ends when you de-equip the item. Cooldown is 4 hr. -->
+		<!-- Stick that transforms you into a the Blessed Child Trejuo. The transformation ends when you de-equip the item. Cooldown is 4 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_blessed_taiboy_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1503,7 +1503,7 @@
 		</stats>
 	</item>
 	<item id="20972" name="Sujin Transformation Stick" additionalName="Blessed Child Transformation" type="Weapon">
-		<!-- Stick that transforms you into a the Blessed Child Sujin. The transformation ends when you de-equip the item. Cooldown is 4 hr. -->
+		<!-- Stick that transforms you into a the Blessed Child Sujin. The transformation ends when you de-equip the item. Cooldown is 4 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_blessed_taigirl_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1729,7 +1729,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20982" name="Dragon Boat" additionalName="Haste (7-day)" type="Armor">
-		<!-- Hat shaped like a dragon boat. Uses 2 hair accessory slots. Cooldown is 1 hr. -->
+		<!-- Hat shaped like a dragon boat. Uses 2 hair accessory slots. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_dragonboat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1751,7 +1751,7 @@
 		</skills>
 	</item>
 	<item id="20983" name="Agathion - Ball Trapping Gnosian" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
-		<!-- Bracelet that summons a ball-trapping Gnosian. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons a ball-trapping Gnosian. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_male_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1777,7 +1777,7 @@
 		</skills>
 	</item>
 	<item id="20984" name="Agathion - Ball Trapping Orodriel" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
-		<!-- Bracelet that summons a ball-trapping Orodriel. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons a ball-trapping Orodriel. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_female_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1803,7 +1803,7 @@
 		</skills>
 	</item>
 	<item id="20985" name="Agathion - Penalty Kick" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
-		<!-- Bracelet that summons Gnosian and Orodriel who are practicing penalty kicks. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons Gnosian and Orodriel who are practicing penalty kicks. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_ball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1829,7 +1829,7 @@
 		</skills>
 	</item>
 	<item id="20986" name="Agathion - Ball Trapping Gnosian" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
-		<!-- Bracelet that summons a ball-trapping Gnosian. Wearing a blue uniform. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons a ball-trapping Gnosian. Wearing a blue uniform. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_male_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1855,7 +1855,7 @@
 		</skills>
 	</item>
 	<item id="20987" name="Agathion - Ball Trapping Orodriel" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
-		<!-- Bracelet that summons a ball-trapping Orodriel. Wearing a blue uniform. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons a ball-trapping Orodriel. Wearing a blue uniform. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_female_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1881,7 +1881,7 @@
 		</skills>
 	</item>
 	<item id="20988" name="Agathion - Penalty Kick" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
-		<!-- Bracelet that summons Gnosian and Orodriel who are practicing penalty kicks. All are wearing blue uniforms. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons Gnosian and Orodriel who are practicing penalty kicks. All are wearing blue uniforms. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_jball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1907,7 +1907,7 @@
 		</skills>
 	</item>
 	<item id="20989" name="Agathion - Ball Trapping Gnosian" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
-		<!-- Bracelet that summons a ball-trapping Gnosian. Wearing a red uniform. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons a ball-trapping Gnosian. Wearing a red uniform. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_male_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1933,7 +1933,7 @@
 		</skills>
 	</item>
 	<item id="20990" name="Agathion - Ball Trapping Orodriel" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
-		<!-- Bracelet that summons a ball-trapping Orodriel. Wearing a red uniform. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons a ball-trapping Orodriel. Wearing a red uniform. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_female_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1959,7 +1959,7 @@
 		</skills>
 	</item>
 	<item id="20991" name="Agathion - Penalty Kick" additionalName="Soccer Ball of Cheers, Buff of Cheers" type="Armor">
-		<!-- Bracelet that summons Gnosian and Orodriel who are practicing penalty kicks. All are wearing red uniforms. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons Gnosian and Orodriel who are practicing penalty kicks. All are wearing red uniforms. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_kball_kick_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -2029,7 +2029,7 @@
 		</skills>
 	</item>
 	<item id="20994" name="Agathion - Three-headed Dragon Pack" additionalName="Wind Walk" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Three-headed Dragon. -->
+		<!-- Wrapped Pack containing Agathion - Three-headed Dragon. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2051,7 +2051,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20995" name="Liu Bei Opera Mask Pack" additionalName="Buff of Virtue, Age of the Three Kingdoms" type="EtcItem">
-		<!-- Double-click to obtain a Liu Bei Opera Mask. -->
+		<!-- Wrapped Pack containing Liu Bei Opera Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2073,7 +2073,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20996" name="Guan Yu Opera Mask Pack" additionalName="Silence of Fidelity, Age of the Three Kingdoms" type="EtcItem">
-		<!-- Double-click to obtain a Guan Yu Opera Mask. -->
+		<!-- Wrapped Pack containing Guan Yu Opera Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2095,7 +2095,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20997" name="Zhang Fei Opera Mask Pack" additionalName="Vitality of Courage, Age of the Three Kingdoms" type="EtcItem">
-		<!-- Double-click to obtain a Zhang Fei Opera Mask. -->
+		<!-- Wrapped Pack containing Zhang Fei Opera Mask. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2117,7 +2117,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20998" name="Dragon Boat Pack" type="EtcItem">
-		<!-- Double-click to obtain a Dragon Boat. -->
+		<!-- Wrapped Pack containing Dragon Boat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2139,7 +2139,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20999" name="Dragon Boat Pack (7-day)" additionalName="Haste" type="EtcItem">
-		<!-- Double-click to obtain a Dragon Boat (7-day). -->
+		<!-- Wrapped Pack containing Dragon Boat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

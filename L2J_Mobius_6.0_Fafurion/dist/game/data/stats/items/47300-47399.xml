@@ -239,7 +239,7 @@
 		</stats>
 	</item>
 	<item id="47314" name="Bloody Eternal Breastplate" additionalName="Attack Type / Heavy Armor" type="Armor">
-		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, P. Critical Damage decreased and P. Def increased additionally. Tyrr, Sigel and Iss classes only. -->
+		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, P. Critical Damage decreased and P. Def. increased additionally. Tyrr, Sigel and Iss classes only. -->
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -499,7 +499,7 @@
 		</stats>
 	</item>
 	<item id="47330" name="Bloody Eternal Breastplate" additionalName="Defense Type / Heavy Armor" type="Armor">
-		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, P. Critical Damage decreased and P. Def increased additionally. Sigel classes only. -->
+		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, P. Critical Damage decreased and P. Def. increased additionally. Sigel classes only. -->
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -761,7 +761,7 @@
 		</stats>
 	</item>
 	<item id="47346" name="+8 Bloody Eternal Set Pack" additionalName="Attack Type / Heavy Armor" type="EtcItem">
-		<!-- Double click to obtain a +8 enchanted Bloody Eternal Attack Type Heavy Armor Set. -->
+		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Attack Type Heavy Armor Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -773,7 +773,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47347" name="+8 Bloody Eternal Set Pack" additionalName="Assassin Type / Light Armor" type="EtcItem">
-		<!-- Double click to obtain a +8 enchanted Bloody Eternal Assassin Type Light Armor Set. -->
+		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Assassin Type Light Armor Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -785,7 +785,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47348" name="+8 Bloody Eternal Set Pack" additionalName="Magic Type / Robe" type="EtcItem">
-		<!-- Double click to obtain a +8 enchanted Bloody Eternal Magic Type Robe Set. -->
+		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Magic Type Robe Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -797,7 +797,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47349" name="+8 Bloody Eternal Set Pack" additionalName="Defense Type / Heavy Armor" type="EtcItem">
-		<!-- Double click to obtain a +8 enchanted Bloody Eternal Defense Type Heavy Armor Set. -->
+		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Defense Type Heavy Armor Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -809,7 +809,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47350" name="+8 Bloody Eternal Set Pack" additionalName="Enchant Type / Light Armor" type="EtcItem">
-		<!-- Double click to obtain a +8 enchanted Bloody Eternal Enchant Type Light Armor Set. -->
+		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Enchant Type Light Armor Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -821,7 +821,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47351" name="+8 Bloody Eternal Set Pack" additionalName="Recovery Type / Robe" type="EtcItem">
-		<!-- Double click to obtain a +8 enchanted Bloody Eternal Recovery Type Robe Set. -->
+		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Recovery Type Robe Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -833,7 +833,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47352" name="+8 Bloody Eternal Pack" type="EtcItem">
-		<!-- Double click to obtain a +8 Eternal Enchant Type Set Pack. -->
+		<!-- Double-click to obtain a +8 Eternal Enchant Type Set Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -844,7 +844,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47353" name="Rare Accessory Pack" type="EtcItem">
-		<!-- Double click to obtain the Blessed Lindvior's Earring, Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
+		<!-- Double-click to obtain the Blessed Lindvior's Earring, Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -863,7 +863,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47354" name="Emperor Shunaiman's Weapon Set Pack" type="EtcItem">
-		<!-- Double click to obtain Emperor Shunaiman's weapons. -->
+		<!-- Double-click to obtain Emperor Shunaiman's weapons. -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -892,7 +892,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47355" name="Superion Support Box" type="EtcItem">
-		<!-- Double click to obtain Emperor Shunaiman's Weapon Set Pack x1, +8 Bloody Eternal Pack x1, 2,000,000,000 Adena, Rare Accessory Pack x1, Talisman - Longing x1, Enhanced Tauti's Bracelet x1, Refined Romantic Chapeau containing the GM's Blessing x3, Old Elemental Shirt x1, Nurka's Belt x1, Lv. 5 Legendary Dye Pack x1, Mysterious No-grade Soulshot x20,000, and Mysterious Blessed No-grade Spiritshot x20,000. -->
+		<!-- Double-click to obtain Emperor Shunaiman's Weapon Set Pack x1, +8 Bloody Eternal Pack x1, 2,000,000,000 Adena, Rare Accessory Pack x1, Talisman - Longing x1, Enhanced Tauti's Bracelet x1, Refined Romantic Chapeau containing the GM's Blessing x3, Old Elemental Shirt x1, Nurka's Belt x1, Lv. 5 Legendary Dye Pack x1, Mysterious No-grade Soulshot x20,000, and Mysterious Blessed No-grade Spiritshot x20,000. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -905,7 +905,7 @@
 		<set name="handler" val="ExtractableItems" />
 	</item>
 	<item id="47356" name="Basic Supply Box" additionalName="Blackbird Clan" type="EtcItem">
-		<!-- A basic supply box received in exchange for helping the Blackbird Clan with their mission in the Phantasmal Ridge's Magic Circle area. Double click to view the item. -->
+		<!-- A basic supply box received in exchange for helping the Blackbird Clan with their mission in the Phantasmal Ridge's Magic Circle area. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_mailable" val="false" />
@@ -921,7 +921,7 @@
 		</skills>
 	</item>
 	<item id="47357" name="Intermediate Supply Box" additionalName="Blackbird Clan" type="EtcItem">
-		<!-- An intermediate supply box received in exchange for helping the Blackbird Clan with their mission at the Phantasmal Ridge. Double click to view the item. -->
+		<!-- An intermediate supply box received in exchange for helping the Blackbird Clan with their mission at the Phantasmal Ridge. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_mailable" val="false" />
@@ -937,7 +937,7 @@
 		</skills>
 	</item>
 	<item id="47358" name="Advanced Supply Box" additionalName="Blackbird Clan" type="EtcItem">
-		<!-- An advanced supply box received in exchange for helping the Blackbird Clan with their mission at the Phantasmal Ridge. Double click to view the item. -->
+		<!-- An advanced supply box received in exchange for helping the Blackbird Clan with their mission at the Phantasmal Ridge. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_mailable" val="false" />
@@ -953,7 +953,7 @@
 		</skills>
 	</item>
 	<item id="47359" name="Basic Supply Box" additionalName="Giant Trackers" type="EtcItem">
-		<!-- A basic supply box received in exchange for helping the Giant Trackers with their mission in the lower level of the Giant's Cave. Double click to view the item. -->
+		<!-- A basic supply box received in exchange for helping the Giant Trackers with their mission in the lower level of the Giant's Cave. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_mailable" val="false" />
@@ -969,7 +969,7 @@
 		</skills>
 	</item>
 	<item id="47360" name="Intermediate Supply Box" additionalName="Giant Trackers" type="EtcItem">
-		<!-- An intermediate supply box received in exchange for helping the Giant Trackers with their mission in the lower level of the Giant's Cave. Double click to view the item. -->
+		<!-- An intermediate supply box received in exchange for helping the Giant Trackers with their mission in the lower level of the Giant's Cave. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_mailable" val="false" />
@@ -985,7 +985,7 @@
 		</skills>
 	</item>
 	<item id="47361" name="Advanced Supply Box" additionalName="Giant Trackers" type="EtcItem">
-		<!-- An advanced supply box received in exchange for helping the Giant Trackers with their mission in the lower level of the Giant's Cave. Double click to view the item. -->
+		<!-- An advanced supply box received in exchange for helping the Giant Trackers with their mission in the lower level of the Giant's Cave. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_mailable" val="false" />
@@ -1001,7 +1001,7 @@
 		</skills>
 	</item>
 	<item id="47362" name="Supply Box" additionalName="Kingdom's Royal Guard" type="EtcItem">
-		<!-- A supply box received in exchange for helping the Kingdom's Royal Guard with their mission at Atelia Fortress. Double click to view the item. -->
+		<!-- A supply box received in exchange for helping the Kingdom's Royal Guard with their mission at Atelia Fortress. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_stackable" val="true" />
@@ -1017,7 +1017,7 @@
 		</skills>
 	</item>
 	<item id="47363" name="Red Noblesse Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-body armor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Garment. -->
+		<!-- Use to change the appearance of your upper or full-bodyarmor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Garment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1027,7 +1027,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47364" name="White Noblesse Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-body armor into a White Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a White Noblesse Garment. -->
+		<!-- Use to change the appearance of your upper or full-bodyarmor into a White Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a White Noblesse Garment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1037,7 +1037,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47365" name="Blue Musketeer Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-body armor into a Blue Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Blue Musketeer Garment. -->
+		<!-- Use to change the appearance of your upper or full-bodyarmor into a Blue Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Blue Musketeer Garment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1047,7 +1047,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47366" name="Red Musketeer Appearance Stone" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-body armor into a Red Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Musketeer Garment. -->
+		<!-- Use to change the appearance of your upper or full-bodyarmor into a Red Musketeer Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Musketeer Garment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
@@ -1057,35 +1057,35 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="47367" name="Royal Save Ticket Box" type="EtcItem">
-		<!-- Double click to obtain an R~R99 Red or Blue Royal Save Card. -->
+		<!-- Double-click to obtain an R~R99 Red or Blue Royal Save Card. -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47368" name="Agathion Box" type="EtcItem">
-		<!-- Double click to obtain one of the following: Zodiac Agathion Pack (15-day), Radiant Zodiac Agathion Pack (30-day), Twinkling Zodiac Agathion Pack (30-day), Agathion- Anakim Holy Barrier Pack. -->
+		<!-- Double-click to obtain one of the following: Zodiac Agathion Pack (15-day), Radiant Zodiac Agathion Pack (30-day), Twinkling Zodiac Agathion Pack (30-day), Agathion- Anakim Holy Barrier Pack. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47369" name="Superion Dye Pack" type="EtcItem">
-		<!-- Double click to obtain one of the following: Legendary Dye, Windy LUC Dye, Windy CHA Dye, Alchemic Tome. -->
+		<!-- Double-click to obtain one of the following: Legendary Dye, Windy LUC Dye, Windy CHA Dye, Alchemic Tome. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47370" name="Superion Elcyum Box" type="EtcItem">
-		<!-- Double click to obtain one of a bundle of 80/ 100/ 150 Elcyum Powder. -->
+		<!-- Double-click to obtain one of a bundle of 80/ 100/ 150 Elcyum Powder. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47371" name="Superion Codex Box" type="EtcItem">
-		<!-- Double click to obtain Superior Giant's Codex Chapter 1 x5. Additionally, you can obtain one of the following with a random probability: Mastery Codex x3, Master Chapter 1 x1, Chaos Essence Box. -->
+		<!-- Double-click to obtain Superior Giant's Codex Chapter 1 x5. Additionally, you can obtain one of the following with a random probability: Mastery Codex x3, Master Chapter 1 x1, Chaos Essence Box. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
@@ -1111,7 +1111,7 @@
 		</skills>
 	</item>
 	<item id="47373" name="Mammon's Talisman" additionalName="Attack Attribute" type="Armor">
-		<!-- When equipped, Atk. Attribute Bonus +40. -->
+		<!-- When equipped, Attack Attribute Bonus +40. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />
@@ -1149,7 +1149,7 @@
 		</skills>
 	</item>
 	<item id="47375" name="Mammon's Talisman Box - Skill Power" additionalName="30-day" type="EtcItem">
-		<!-- Double click to obtain Mammon's Talisman - Skill Power 30-day. -->
+		<!-- Double-click to obtain Mammon's Talisman - Skill Power 30-day. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1158,7 +1158,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="47376" name="Mammon's Talisman Box - Attack Attribute" additionalName="30-day" type="EtcItem">
-		<!-- Double click to obtain Mammon's Talisman Box - Atk. Attribute 30-day. -->
+		<!-- Double-click to obtain Mammon's Talisman Box - Attack Attribute 30-day. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1167,7 +1167,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="47377" name="Mammon's Talisman Box - Skill Cooldown" additionalName="30-day" type="EtcItem">
-		<!-- Double click to obtain Mammon's Talisman Box - Skill Cooldown 30-day. -->
+		<!-- Double-click to obtain Mammon's Talisman Box - Skill Cooldown 30-day. -->
 		<set name="icon" val="icon.bm_pirate_king_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1189,7 +1189,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47380" name="Blessed Lucky Weapon Enchant Stone Chest - R" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-only Item. Double click to obtain one of the following: Blessed Lucky Enchant Stone: Weapon (R-grade), Blessed High-grade Lucky Enchant Stone: Weapon (R-grade). -->
+		<!-- Red Libra-only Item. Double-click to obtain one of the following: Blessed Lucky Enchant Stone: Weapon (R-grade), Blessed High-grade Lucky Enchant Stone: Weapon (R-grade). -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -1197,7 +1197,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47381" name="Blessed Lucky Armor Enchant Stone Chest - R" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-only Item. Double click to obtain one of the following: Blessed Lucky Enchant Stone: Armor (R-grade), Blessed High-grade Lucky Enchant Stone: Armor (R-grade). -->
+		<!-- Red Libra-only Item. Double-click to obtain one of the following: Blessed Lucky Enchant Stone: Armor (R-grade), Blessed High-grade Lucky Enchant Stone: Armor (R-grade). -->
 		<set name="icon" val="icon.event_orc_coinbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_dropable" val="false" />
@@ -1205,7 +1205,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47382" name="Freya's Wind Scroll (High-grade)" additionalName="Temporary Name" type="EtcItem">
-		<!-- Vitality consumption +100%, Acquired XP/ SP +100% while hunting. Remains after death. Duration is 10 min. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<!-- Vitality consumption +100%, Acquired XP/ SP +100%. Remains after death. Duration is 10 min. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1254,7 +1254,7 @@
 		</skills>
 	</item>
 	<item id="47385" name="Balthus Knight Mark" type="EtcItem">
-		<!-- Makes you eligible to receive a Member of the Balthus Knight disguise for 1 hr. Can be used only by characters of Level 85 or higher. Buff gets deleted upon Subclass/ Dual Class change. Will be deleted after the event. -->
+		<!-- Makes you eligible to receive a Member of the Balthus Knight disguise for 1 hour. Can be used only by characters of Level 85 or higher. Buff gets deleted upon Subclass/ Dual Class change. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_tradable" val="false" />
@@ -1266,7 +1266,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="47386" name="Sibis' Letter" additionalName="Event" type="EtcItem">
-		<!-- Letter from the Vice-Chief of the Balthus Knights. Will be deleted after the event. -->
+		<!-- Letter from the Vice-Chief of the Balthus Knights. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="default_action" val="SHOW_HTML" />
 		<set name="immediate_effect" val="true" />
@@ -1278,7 +1278,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47387" name="Balthus Knights Supply Items" type="EtcItem">
-		<!-- Double-click to receive 3 Balthus Knight Marks. (Can be used only once a day). Will be deleted after the event. -->
+		<!-- Double-click to receive 3 Balthus Knight Marks. Can be used only once a day. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1306,7 +1306,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47389" name="12th Anniversary Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Item. Use to obtain 12th Anniversary Souvenir x10. Will be deleted when the event ends. -->
+		<!-- Top-grade Balthus Knight Supply Item. Use to obtain 12th Anniversary Souvenir x10. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1318,7 +1318,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47390" name="Forever/Longing Talisman/Energy of Longing Supply Items" type="EtcItem">
-		<!-- Top-grade Balthus Knights' Supply Box. When used, an Insanity Talisman/ Longing Talisman/ Energy of Longing can be obtained. Will be deleted after the event. -->
+		<!-- Top-grade Balthus Knights Supply Box. When used, an Insanity Talisman/ Longing Talisman/ Energy of Longing can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1336,7 +1336,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47391" name="Venir Stage 11/12/13 Talisman Supply Items" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Box. When used, a Venir Talisman Stage 11/ 12/ 13 can be obtained. Will be deleted after the event. -->
+		<!-- Top-grade Balthus Knight Supply Box. When used, a Venir Talisman Stage 11/ 12/ 13 can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1362,7 +1362,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="47393" name="Dark Assassin/White Assassin Suit Supply Items" type="EtcItem">
-		<!-- Top-grade Balthus Knights' Supply Box. When used, a Dark/ White Assassin Suit Appearance Stone can be obtained. Will be deleted after the event. -->
+		<!-- Top-grade Balthus Knights Supply Box. When used, a Dark/ White Assassin Suit Appearance Stone can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1380,7 +1380,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47394" name="Scroll of Blessing R99/R95/R(2) Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knight Supply Item. Use to obtain an R99/ R95/ R(2) Grade Scroll of Blessing. Will be deleted when the event ends. -->
+		<!-- Top-grade Balthus Knight Supply Item. Use to obtain an R99/ R95/ R(2) Grade Scroll of Blessing. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1391,7 +1391,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47395" name="Bottle of Antharas/Valakas/Baium's Soul Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knights' Supply Box. When used, an Antharas/ Valakas/ Baium Soul Bottle can be obtained. Will be deleted after the event. -->
+		<!-- Top-grade Balthus Knights Supply Box. When used, an Antharas/ Valakas/ Baium Soul Bottle can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1410,7 +1410,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47396" name="Nurka/Rydel/Gustav's Belt Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knights' Supply Box. When used, a Nurka/ Lydia/ Gustav's Belt can be obtained. Will be deleted after the event. -->
+		<!-- Top-grade Sibi's Lucky Draw Supply Items. When used, a Nurka/ Lydia/ Gustav's Belt can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1421,7 +1421,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="47397" name="Seven Signs/Anakim/Lilith Talisman Supply Item" type="EtcItem">
-		<!-- Top-grade Balthus Knights' Supply Box. When used, a Seven Signs/ Anakim/ Lilith's Talisman can be obtained. Will be deleted after the event. -->
+		<!-- Top-grade Balthus Knights Supply Box. When used, a Seven Signs/ Anakim/ Lilith's Talisman can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1440,7 +1440,7 @@
 		</capsuled_items>
 	</item>
 	<item id="47398" name="Bloody Eternal Enhancement Stone - x2" type="EtcItem">
-		<!-- Top-grade Balthus Knights' Supply Box. When used, 2 Bloody Eternal Enhancement Stones can be obtained. Will be deleted after the event. -->
+		<!-- Top-grade Sibi's Lucky Draw Supply Items. When used, 2 Bloody Eternal Enhancement Stones can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -1451,11 +1451,11 @@
 		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="35569" min="2" max="2" chance="75" /> <!-- Bloody Eternal Enhancement Stone -->
+			<item id="35569" min="2" max="2" chance="75" /> <!-- Bloody Armor Enhancement Stone -->
 		</capsuled_items>
 	</item>
 	<item id="47399" name="Sibis Coin Box" type="EtcItem">
-		<!-- Top-grade Balthus Knights' Supply Items. When used, 1500 Sibi's Coins can be obtained. Will be deleted after the event. -->
+		<!-- Top-grade Balthus Knights Supply Items. When used, 1500 Sibi's Coins can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

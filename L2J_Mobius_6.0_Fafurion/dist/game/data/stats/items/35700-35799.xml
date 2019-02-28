@@ -267,7 +267,7 @@
 		</skills>
 	</item>
 	<item id="35715" name="Refined Romantic Chapeau containing the GM's Blessing" additionalName="Warriors Only" type="Armor">
-		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. P. Atk. +5% and Critical Rate +50 when equipped. -->
+		<!-- Refined Romantic Chapeau containing the GM's blessing. It uses 2 hair accessory slots. P. Atk. +5% and P. Critical Rate +50 when equipped. -->
 		<set name="icon" val="icon.accessory_archer_hat2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -835,7 +835,7 @@
 		</skills>
 	</item>
 	<item id="35743" name="Draco's Health Potion" additionalName="Event" type="EtcItem">
-		<!-- Upon use, it restores 3000 HP and the remaining power restores CP instantly. Instant effect with no cooldown. -->
+		<!-- Upon use, it restores 3000 HP and the remaining power restores CP instantly. Instant effect with no duration. -->
 		<set name="icon" val="icon.etc_ev_draco_hp_bottle" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -854,7 +854,7 @@
 		</skills>
 	</item>
 	<item id="35744" name="Draco's Mana Potion" additionalName="Event" type="EtcItem">
-		<!-- Magical potion that restores MP by 100. Instant effect with no cooldown. Cannot be used when MP is full. -->
+		<!-- Magical potion that restores MP by 100. Instant effect with no duration. Cannot be used when MP is full. -->
 		<set name="icon" val="icon.etc_ev_draco_mp_bottle" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
@@ -883,7 +883,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="35746" name="Draco's Hat: Warrior (7-day)" additionalName="Event" type="Armor">
-		<!-- A cute Draco's Hat. 7-day. STR +2, DEX +2, CON +2. Can use the blessed resurrection skill (1 hr. cooldown). Temporary event item. -->
+		<!-- A cute Draco's Hat. 7-day. STR +2, DEX +2, CON +2. Can use the blessed resurrection skill (1 hour cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -903,7 +903,7 @@
 		</skills>
 	</item>
 	<item id="35747" name="Draco's Hat: Wizard (7-day)" additionalName="Event" type="Armor">
-		<!-- A cute Draco's Hat. 7-day. INT +2, WIT +2, MEN +2. Can use the blessed resurrection skill (1 hr. cooldown). Temporary event item. -->
+		<!-- A cute Draco's Hat. 7-day. INT +2, WIT +2, MEN +2. Can use the blessed resurrection skill (1 hour cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -935,7 +935,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="35749" name="Weapon Attribute Change Crystal (R-grade)" additionalName="Event" type="EtcItem">
-		<!-- Double-click to change the attribute of R, R95, and R99-grade weapons. It can be used when there is an R-grade weapon bestowed in the inventory. -->
+		<!-- Double-click to change the attributes of R, R95, R99 and R110-grade weapons. It can be used when there is an R-grade weapon bestowed in the inventory. -->
 		<set name="icon" val="icon.change_elemental_crystal" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -960,7 +960,7 @@
 		</skills>
 	</item>
 	<item id="35751" name="Draco's Shiny Accessory Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to acquire one of the following:Antharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, or Bottle of Valakas' Soul. -->
+		<!-- Double-click to acquire one of the following: Antharas' Earring, Valakas' Necklace, Earth Wyrm Heart Ring, Bottle of Antharas' Soul, or Bottle of Valakas' Soul. -->
 		<set name="icon" val="icon.etc_ev_draco_gift_box" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -1063,7 +1063,7 @@
 		</skills>
 	</item>
 	<item id="35758" name="Draco's Blessing (1-hour)" additionalName="Event" type="EtcItem">
-		<!-- For 1 hr., increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
+		<!-- For 1 hour, increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -1077,7 +1077,7 @@
 		</skills>
 	</item>
 	<item id="35759" name="Draco's Blessing (1-hour)" additionalName="Event" type="EtcItem">
-		<!-- For 1 hr., increases XP and SP acquired in hunt by 100% when used by characters level 1 - 95. Temporary event item. -->
+		<!-- For 1 hour, increases XP and SP acquired in hunt by 100% when used by characters level 1 - 95. Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -1091,7 +1091,7 @@
 		</skills>
 	</item>
 	<item id="35760" name="Draco's Blessing (3-hour)" additionalName="Event" type="EtcItem">
-		<!-- For 3 hr., increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
+		<!-- For 3 hours, increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />

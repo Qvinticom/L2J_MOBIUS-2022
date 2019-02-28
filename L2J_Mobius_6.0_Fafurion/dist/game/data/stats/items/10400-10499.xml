@@ -144,7 +144,7 @@
 		</skills>
 	</item>
 	<item id="10411" name="Full Bottle of Souls - 5 Souls (Battleground)" type="EtcItem">
-		<!-- Bottle containing 5 Souls. Usable only in combat. Kamael-exclusive Weapon. Disappears without effect if used by other races. -->
+		<!-- A bottle containing 5 souls. Usable only in combat. Kamael-exclusive item. Disappears without effect if used by other races. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i11" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -2121,7 +2121,7 @@
 		</skills>
 	</item>
 	<item id="10483" name="Life Stone - Lv. 82" type="EtcItem">
-		<!-- General mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
+		<!-- General mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_general_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2134,7 +2134,7 @@
 		</cond>
 	</item>
 	<item id="10484" name="Mid-grade Life Stone - Lv. 82" type="EtcItem">
-		<!-- Mid-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
+		<!-- Mid-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_special_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2147,7 +2147,7 @@
 		</cond>
 	</item>
 	<item id="10485" name="High-grade Life Stone - Lv. 82" type="EtcItem">
-		<!-- High-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
+		<!-- High-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_rare_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />
@@ -2160,7 +2160,7 @@
 		</cond>
 	</item>
 	<item id="10486" name="Top-grade Life Stone - Lv. 82" type="EtcItem">
-		<!-- Top-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon Augmentation by characters level 82 or above. -->
+		<!-- Top-grade mineral created when a stone in a monster is solidified by a physical or magic hit. Key component used in weapon augmentation by characters level 82 or above. -->
 		<set name="icon" val="icon.etc_mineral_unique_i03" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="LIQUID" />

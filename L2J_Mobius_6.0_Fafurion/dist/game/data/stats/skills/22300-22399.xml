@@ -46,8 +46,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22302" toLevel="1" name="Sweet Chocolate (4-hour)">
-		<!-- For 4 hr., recovers Vitality while hunting. -->
+	<skill id="22302" toLevel="1" name="Sweet Chocolate (4-h.)">
+		<!-- For 4 h., recovers Vitality while hunting. -->
 		<icon>BranchSys.icon.br_valentine_darkchoco_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -242,7 +242,7 @@
 		</conditions>
 	</skill>
 	<skill id="22312" toLevel="1" name="Birthday Vitality Buff">
-		<!-- Birthday gift received once a year. Increases your Vitality whenever you gain XP. This buff is active for 4 hr. and is not lost upon death. However, it will disappear if you change to a subclass. -->
+		<!-- Birthday gift received once a year. Increases your Vitality whenever you gain XP. This buff is active for 4 h. and is not lost upon death. However, it will disappear if you change to a subclass. -->
 		<icon>icon.etc_potion_blue_i00</icon>
 		<abnormalTime>14400</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -276,8 +276,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22313" toLevel="1" name="Pa'agrio's Warm Breeze (4-hour)">
-		<!-- For 4 hr., recovers Vitality when XP is acquired through hunting. Will not be deleted upon death. -->
+	<skill id="22313" toLevel="1" name="Pa'agrio's Warm Breeze (4-h.)">
+		<!-- For 4 h., recovers Vitality when XP is acquired through hunting. Will not be deleted upon death. -->
 		<icon>BranchSys2.Icon.pi_wind_of_paagrio</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1122,7 +1122,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22353" toLevel="6" name="Concentration">
-		<!-- Decreases magic cancel rate by 53 for 60 min. -->
+		<!-- Decreases magic cancel damage by 53 for 60 min. -->
 		<icon>icon.etc_fresh_milk_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1708,10 +1708,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20">
-						<item id="14773" count="1" /> <!-- Formal Wear - 14-day -->
+						<item id="14773" count="1" /> <!-- Formal Wear (14-day) - 14-day -->
 					</item>
 					<item chance="20">
-						<item id="14776" count="1" /> <!-- Agathion - Juju - 14-day -->
+						<item id="14776" count="1" /> <!-- Agathion - Juju (14-day) - 14-day -->
 					</item>
 					<item chance="20">
 						<item id="14774" count="1" /> <!-- Wild Rose Pig Candy - 14-day -->
@@ -1938,8 +1938,8 @@
 				<items>
 					<item chance="100">
 						<item id="1540" count="3" /> <!-- Quick Healing Potion -->
-						<item id="21850" count="360" /> <!-- Mysterious Soulshot (S-grade) -->
-						<item id="21856" count="360" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
+						<item id="21850" count="360" /> <!-- Mysterious Soulshot (S-grade) - ] -->
+						<item id="21856" count="360" /> <!-- Mysterious Blessed Spiritshot (S-grade) - ] -->
 						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
 						<item id="14687" count="1" /> <!-- Superior Elixir of Life (S-grade) -->
 						<item id="14693" count="1" /> <!-- Superior Elixir of Mind (S-grade) -->
@@ -1963,8 +1963,8 @@
 				<items>
 					<item chance="100">
 						<item id="1540" count="5" /> <!-- Quick Healing Potion -->
-						<item id="21850" count="360" /> <!-- Mysterious Soulshot (S-grade) -->
-						<item id="21856" count="360" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
+						<item id="21850" count="360" /> <!-- Mysterious Soulshot (S-grade) - ] -->
+						<item id="21856" count="360" /> <!-- Mysterious Blessed Spiritshot (S-grade) - ] -->
 						<item id="22346" count="1" /> <!-- Enchanting Tool Box -->
 						<item id="14687" count="3" /> <!-- Superior Elixir of Life (S-grade) -->
 						<item id="14693" count="3" /> <!-- Superior Elixir of Mind (S-grade) -->
@@ -1988,8 +1988,8 @@
 				<items>
 					<item chance="100">
 						<item id="1540" count="8" /> <!-- Quick Healing Potion -->
-						<item id="21850" count="360" /> <!-- Mysterious Soulshot (S-grade) -->
-						<item id="21856" count="360" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
+						<item id="21850" count="360" /> <!-- Mysterious Soulshot (S-grade) - ] -->
+						<item id="21856" count="360" /> <!-- Mysterious Blessed Spiritshot (S-grade) - ] -->
 						<item id="22346" count="1" /> <!-- Enchanting Tool Box -->
 						<item id="960" count="1" /> <!-- Scroll: Enchant Armor (S-grade) -->
 						<item id="14687" count="5" /> <!-- Superior Elixir of Life (S-grade) -->
@@ -1999,7 +1999,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22386" toLevel="1" name="Player Commendation - Transformation Scroll Pack">
+	<skill id="22386" toLevel="1" name="PA - Transformation Scroll Pack">
 		<itemConsumeId>22274</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2046,7 +2046,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22387" toLevel="1" name="Player Commendation - Gift Box">
+	<skill id="22387" toLevel="1" name="PA - Gift Box">
 		<itemConsumeId>22275</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2060,16 +2060,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="50">
-						<item id="22280" count="1" /> <!-- PA - Blessing (1-hr.) - Event -->
+						<item id="22280" count="1" /> <!-- PA - Blessing (1-hour) - Event -->
 					</item>
 					<item chance="50">
-						<item id="22279" count="1" /> <!-- PA Vitality (1-hr.) - Event -->
+						<item id="22279" count="1" /> <!-- PA Vitality (1-hour) - Event -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22388" toLevel="1" name="Player Commendation - Transformation Stick Pack">
+	<skill id="22388" toLevel="1" name="PA - Transformation Stick Pack">
 		<itemConsumeId>22276</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2092,7 +2092,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22389" toLevel="1" name="Player Commendation - Hair Accessory Pack">
+	<skill id="22389" toLevel="1" name="PA - Hair Accessory Pack">
 		<itemConsumeId>22277</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2112,7 +2112,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22390" toLevel="1" name="Player Commendation - Luxury Gift Box">
+	<skill id="22390" toLevel="1" name="PA - Luxury Gift Box">
 		<itemConsumeId>22278</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
@@ -2651,10 +2651,10 @@
 						<item id="15440" count="1" /> <!-- Vitality Maintaining Potion (30-min.) -->
 					</item>
 					<item chance="4.5">
-						<item id="21085" count="1" /> <!-- XP Rune III (Lv. 1-100+) 30% Pack (1-hr.) -->
+						<item id="21085" count="1" /> <!-- XP Rune III (Lv. 1-100+) 30% Pack (1-hour) -->
 					</item>
 					<item chance="4.1">
-						<item id="20336" count="1" /> <!-- XP Rune III (Lv. 1-100+) 50% - 5-hr. -->
+						<item id="20336" count="1" /> <!-- XP Rune III (Lv. 1-100+) 50% - 5-hour -->
 					</item>
 					<item chance="7">
 						<item id="20220" count="1" /> <!-- Agathion - Brown Maneki Neko Pack (7-day) - Vitality -->

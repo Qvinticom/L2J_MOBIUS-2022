@@ -347,35 +347,35 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="29131" name="Matchstick" type="EtcItem">
-		<!-- Part of the matchsticks that the Match Girls are looking for. It looks like a monster has broken them. Combine with match heads to fix them. Will be deleted after the event. -->
+		<!-- Part of the matchsticks that the Match Girls are looking for. It looks like a monster has broken them. Combine with match heads to fix them. -->
 		<set name="icon" val="BranchIcon.icon.g_event_match_body" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29132" name="Match Head" type="EtcItem">
-		<!-- Part of the matchsticks that the Match Girls are looking for. It looks like a monster has broken them. Combine with match heads to fix them. Will be deleted after the event. -->
+		<!-- Part of the matchsticks that the Match Girls are looking for. It looks like a monster has broken them. Combine with match heads to fix them. -->
 		<set name="icon" val="BranchIcon.icon.g_event_match_head" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29133" name="Well-made Matchstick" type="EtcItem">
-		<!-- A well-made matchstick. Take it to the older match girl. Will be deleted after the event. -->
+		<!-- A well-made matchstick. Take it to the older match girl. -->
 		<set name="icon" val="BranchIcon.icon.g_event_match" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29134" name="Powerful Matchstick" type="EtcItem">
-		<!-- A powerful matchstick. It's too strong to use regularly. Take it to the younger match sister who will exchange it for a bonfire. Will be deleted after the event. -->
+		<!-- A powerful matchstick. It's too strong to use regularly. Take it to the younger match sister who will exchange it for a bonfire. -->
 		<set name="icon" val="BranchIcon.icon.g_event_white_match" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29135" name="Bonfire" type="EtcItem">
-		<!-- Bonfire made with a powerful matchstick. Use to have a bonfire for 30 seconds. Use cooking ingredients on the bonfire to make delicious food. Will be deleted after the event. -->
+		<!-- Bonfire made with a powerful matchstick. Use to have a bonfire for 30 sec. Use cooking ingredients on the bonfire to make delicious food. -->
 		<set name="icon" val="icon.etc_torchlight_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -383,7 +383,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29136" name="Regular Dish" type="EtcItem">
-		<!-- Regular dish. It looks edible. STR/ DEX/ CON/ INT/ WIT/ MEN +1 and Acquired XP/ SP +10% for 30 min. Cooldown is 5 min. Will be deleted after the event. -->
+		<!-- Regular dish. It looks edible. STR/ DEX/ CON/ INT/ WIT/ MEN +1 and Acquired XP/ SP +10% for 30 min. Cooldown is 5 min. -->
 		<set name="icon" val="icon.etc_food_dish_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -391,14 +391,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29137" name="Very Delicious Dish" type="EtcItem">
-		<!-- Very delicious food. Take it to the younger match sister. Will be deleted after the event. -->
+		<!-- Very delicious food. Take it to the younger match sister. -->
 		<set name="icon" val="BranchIcon.icon.g_event_excellent_cuisine" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29138" name="Match Girls' Gift" type="EtcItem">
-		<!-- A gift with various items from the match sisters who are thankful for your help. Will be deleted after the event. -->
+		<!-- A gift with various items from the match sisters who are thankful for your help. -->
 		<set name="icon" val="icon.etc_pouch_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -406,7 +406,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29139" name="Match Girls' Gratitude" type="EtcItem">
-		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P./ M. Atk. And P./ M. Def +15%. Will be deleted after the event. -->
+		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P./ M. Atk. And P./ M. Def. +15%. -->
 		<set name="icon" val="icon.etc_candle_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -414,7 +414,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29140" name="Cooking Ingredient" type="EtcItem">
-		<!-- Cooking ingredients of the Match Sisters. Use it on the bonfire to cook food. <Note> If you use it on a bonfire made by someone else, the ingredients will disappear. Will be deleted after the event. -->
+		<!-- Cooking ingredients of the Match Sisters. Use it on the bonfire to cook food. <Note> If you use it on a bonfire made by someone else, the ingredients will disappear. -->
 		<set name="icon" val="icon.etc_meat_of_monstereye_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -422,7 +422,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29141" name="Freya's Charisma Potion" additionalName="Cat Transformation" type="EtcItem">
-		<!-- Changes the appearance to that of a cat doll, and CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown: 5 min. Buff effect persists through death. Cannot be used in the Olympiad. -->
+		<!-- Changes the appearance to that of a cat doll, and CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown: 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_charisma_potion1" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -430,7 +430,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29142" name="Freya's Charisma Potion" additionalName="Panda Transformation" type="EtcItem">
-		<!-- Changes the appearance to that of a panda doll, and CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown: 5 min. Buff effect persists through death. Cannot be used in the Olympiad. -->
+		<!-- Changes the appearance to that of a panda doll, and CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown: 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_charisma_potion1" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -542,7 +542,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="29154" name="Mochi" additionalName="Event" type="EtcItem">
-		<!-- Rice cake that restores a certain amount of Vitality. Cooldown is 1 min. No weekly usage limit. Will be deleted after the event. -->
+		<!-- Rice cake that restores a certain amount of Vitality. Cooldown is 1 min.. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_mochi_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -618,7 +618,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="29161" name="Prestige Rune 300% Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a Prestige Rune (30-day). -->
+		<!-- Double-click to obtain a High-grade Maphr's Rune (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -631,7 +631,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="29162" name="Falling Stars Chest" type="EtcItem">
-		<!-- A chest containing a starlight. Double-click to obtain one of the following items: Lindvior's Earring, Blessed Antharas' Earring, Seven Signs' Energy, Ring of Creation, Dark Helios/ Eternal Enhancement Stone, Mystic Soul Crystal, Mystic Soul Crystal Fragment, Bottle of Baium's Soul, Dragon Claw, Destruction Scroll: Enchant Elemental Shirt, Freya's Lucky Enchant Stone: Weapon/ Armor (R-grade), Blessed Scroll: Enchant Weapon (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Source of the Emperor, Frenzied Tauti's Small Fragment, Insane Kelbim's Small Fragment, Life Stone Instilled with Giants' Power, Ancient Zodiac Agathion Charm Book of Growth, Low-grade/ Mid-grade/ High-grade Zodiac Agathion Pack, Red Starlight Jar, Agathion Evolution Stone, Starlight Jar, Superior Giant's Codex - Mastery/ Mastery Chapter 1, Superior Giant's Codex - Chapter 1, Ancient Book: Divine Inspiration (Beginner/ Intermediate), Freya's Bloody/ Dark Rune (2-hr.) Box, Eva's Rune (3-day) Pack, Elcyum, Giant's Energy 100-unit Pack, Bottle Fragment of Baium's/ Antharas'/ Valakas' Soul (x5), Giant's Energy (x2), Gemstone (R-grade) (x10). -->
+		<!-- A chest containing a starlight. Double-click to obtain one of the following items: Lindvior's Earring, Blessed Antharas' Earring, Seven Signs' Energy, Ring of Creation, Dark Helios/ Eternal Enhancement Stone, Mystic Soul Crystal, Mystic Soul Crystal Fragment, Bottle of Baium's Soul, Dragon Claw, Destruction Scroll: Enchant Elemental Shirt, Freya's Lucky Enchant Stone: Weapon/ Armor (R-grade), Blessed Scroll: Enchant Weapon (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Source of the Emperor, Frenzied Tauti's Small Fragment, Insane Kelbim's Small Fragment, Life Stone Instilled with Giants' Power, Ancient Zodiac Agathion Charm Book of Growth, Low-grade/ Mid-grade/ High-grade Zodiac Agathion Pack, Red Starlight Jar, Agathion Evolution Stone, Starlight Jar, Superior Giant's Codex - Mastery/ Mastery Chapter 1, Superior Giant's Codex - Chapter 1, Ancient Book: Divine Inspiration (Beginner/ Intermediate), Freya's Bloody/ Dark Rune (2-hour) Box, Eva's Rune (3-day) Pack, Elcyum, Giant's Energy 100-unit Pack, Bottle Fragment of Baium's/ Antharas'/ Valakas' Soul x5, Giant's Energy x2, Gemstone (R-grade) x10. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -639,7 +639,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29163" name="Stable Cloak Enchantment Scroll" type="EtcItem">
-		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +1-+10. Enchant value goes up by 1 when it succeeds, and if it fails, the enchant value remains the same. -->
+		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted between +1-+10. Enchant level goes up by 1 when it succeeds, and if it fails, the enchant level remains the same. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -653,35 +653,35 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29165" name="High-grade Spirit Stone - Ancient Kingdom" type="EtcItem">
-		<!-- High-grade Spirit Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant value is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- High-grade Spirit Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_normal" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29166" name="High-grade Spirit Stone - Elmoreden" type="EtcItem">
-		<!-- High-grade Legendary Spirit Stone for the Elmoreden Cloak. Can augment Legendary Elmoreden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant value is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- High-grade Legendary Spirit Stone for the Elmoreden Cloak. Can augment Legendary Elmoreden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmoreden" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29167" name="High-grade Spirit Stone - Aden" type="EtcItem">
-		<!-- High-grade Legendary Spirit Stone for the Aden Cloak. Can augment Legendary Aden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant value is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- High-grade Legendary Spirit Stone for the Aden Cloak. Can augment Legendary Aden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_aden" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29168" name="High-grade Spirit Stone - Elmore" type="EtcItem">
-		<!-- High-grade Legendary Spirit Stone for the Elmore Cloak. Can augment Legendary Elmore kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant value is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- High-grade Legendary Spirit Stone for the Elmore Cloak. Can augment Legendary Elmore kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmore" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29169" name="High-grade Spirit Stone - Ferios" type="EtcItem">
-		<!-- High-grade Legendary Spirit Stone for the Ferios Cloak. Can augment Legendary Ferios kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant value is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- High-grade Legendary Spirit Stone for the Ferios Cloak. Can augment Legendary Ferios kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_perios" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -711,7 +711,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29173" name="Prestige Rune 300% Pack" additionalName="7-day" type="EtcItem">
-		<!-- Dimensional item Pack. Double click the item obtain 1 High-grade Drop Rate Rune 300% - 7-day. -->
+		<!-- Dimensional item. Double-click the item to obtain 1 High-grade Maphr's Rune 300% - 7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -734,7 +734,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="29175" name="Prestige Rune 300% Pack" additionalName="1-day" type="EtcItem">
-		<!-- Dimensional item Pack. Double click the item obtain 1 High-grade Drop Rate Rune 300% - 1-day. -->
+		<!-- Dimensional item. Double-click the item to obtain 1 High-grade Maphr's Rune 300% - 1-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -757,7 +757,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="29177" name="Prestige Cube Pack" additionalName="1-day" type="EtcItem">
-		<!-- Double click on the box to obtain 1 Prestige Cube - 1-day. -->
+		<!-- Double-click on the box to obtain 1 Prestige Cube - 1-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -770,7 +770,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="29178" name="Prestige Cube" additionalName="1-day" type="EtcItem">
-		<!-- Prestige Cube. Double click it to obtain one of Dark/ Bloody Eternal Enhancement Stone, Scroll: Enchant Weapon Class S to R, Blessed Scroll of Resurrection, High-grade Elixir Pack, Energy of Destruction, Giant's Energy. Can be used once per day. Cannot be used in Olympiad. -->
+		<!-- Prestige Cube. Double-click it to obtain one of Dark/ Bloody Eternal Enhancement Stone, Scroll: Enchant Weapon Class S to R, Blessed Scroll of Resurrection, High-grade Elixir Pack, Energy of Destruction, Giant's Energy. Can be used once per day. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.etc_dkbrown_crystal_cube_pc_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -845,7 +845,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29185" name="Master's Fishing Potion" additionalName="1-hr" type="EtcItem">
-		<!-- When used, increases Successful Fishing XP by 50% for 1 hr. Applied to all bait. Can be stacked with Angler's Blessing. -->
+		<!-- When used, increases Successful Fishing Acquired XP/ SP by 50% for 1 h. Applied to all bait. Can be stacked with Angler's Blessing. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

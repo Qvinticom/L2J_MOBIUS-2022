@@ -211,7 +211,7 @@
 		</effects>
 	</skill>
 	<skill id="6205" toLevel="19" name="Strider Bite">
-		<!-- Commands the mounted strider to bite the enemies at the front. Attacks the enemy with $s1 Power added to P. Atk., causes bleed for $s2, and makes him consume $s3 HP every sec. Over-hit. Critical. -->
+		<!-- Commands the mounted strider to bite the enemies at the front. Attacks the enemy with $s1 Power added to P. Atk., causes bleed for $s2, and makes him consume $s3 HP every second. Over-hit and Critical are possible. -->
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -1375,7 +1375,7 @@
 		</effects>
 	</skill>
 	<skill id="6269" toLevel="1" name="Trojan Poison">
-		<!-- Poisons the enemy for 10 sec. and inflicts 345 HP damage per sec. -->
+		<!-- Poisons the enemy for 10 sec. and inflicts 345 HP damage per second. -->
 		<icon>icon.skill4036</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

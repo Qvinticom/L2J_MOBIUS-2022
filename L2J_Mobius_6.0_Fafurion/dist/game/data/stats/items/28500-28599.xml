@@ -114,7 +114,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="28510" name="Red Noblesse Appearance Stone" additionalName="30-day" type="EtcItem">
-		<!-- Use to change the appearance of your upper or full-body armor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Outfit. -->
+		<!-- Use to change the appearance of your upper or full-bodyarmor into a Red Noblesse Garment. The stone modifies the appearance of all armor, and all armor appears as a Red Noblesse Garment. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -635,7 +635,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28557" name="Galup's Special Gift" type="EtcItem">
-		<!-- A special gift form Galup. Double-click to obtain one of the following items at a certain rate: Ruler's Authority, Mystic Soul Crystal, Seven Signs' Energy, Destruction Scroll: Enchant Weapon (R-grade), Freya's Lucky Enchant Stone: Weapon/ Armor (R-grade), Sealed Talisman - Longing, Kaliel's Energy (Longing), Mystic Soul Crystal Fragment, Transformation Sealbook: Part-time Seller, Source of the Emperor, Rabbit Ears Box, Raccoon Ears Box, Cat Ears Box, Romantic Chapeau Box, Angel Circlet Box, Demon Circlet Box, Pirate's Eyepatch Box, Outlaw's Eyepatch Box, Eyepatch Box, Party Hat Box, Refined Angel Ring Box, Refined Devil Horn Box, Giant's Energy 20-unit Pack, Lv. 5 Windy LUC/ CHA Dye, Life Stone: Hair Accessory, Rune Stone, Energy of Destruction 20-unit Pack, Blessed/ Giant's Scroll: Enchant Armor (R-grade), Lv. 4 Windy LUC/ CHA Dye, Enchant Armor (R-grade) (X3), Crafting Ingredients Pack (X4), Gemstone (R-grade) (X5). -->
+		<!-- A special gift form Galup. Double-click to obtain one of the following items at a certain rate: Ruler's Authority, Mystic Soul Crystal, Seven Signs' Energy, Destruction Scroll: Enchant Weapon (R-grade), Freya's Lucky Enchant Stone: Weapon/ Armor (R-grade), Sealed Talisman - Longing, Kaliel's Energy (Longing), Mystic Soul Crystal Fragment, Transformation Sealbook: Part-time Seller, Source of the Emperor, Rabbit Ears Box, Raccoon Ears Box, Cat Ears Box, Romantic Chapeau Box, Angel Circlet Box, Demon Circlet Box, Pirate's Eyepatch Box, Outlaw's Eyepatch Box, Eyepatch Box, Party Hat Box, Refined Angel Ring Box, Refined Devil Horn Box, Giant's Energy 20-unit Pack, Lv. 5 Windy LUC/ CHA Dye, Life Stone: Hair Accessory, Rune Stone, Energy of Destruction 20-unit Pack, Blessed/ Giant's Scroll: Enchant Armor (R-grade), Lv. 4 Windy LUC/ CHA Dye, Enchant Armor (R-grade) x3, Crafting Ingredients Pack x4, Gemstone (R-grade) x5. -->
 		<set name="icon" val="icon.card_event_luck_pocket" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -704,7 +704,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28565" name="Vital Stone Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Vital Stones. -->
+		<!-- Double-click to obtain one of Level 1-5 Vital Stones. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -712,7 +712,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28566" name="Tanzanite Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Tanzanites. -->
+		<!-- Double-click to obtain one of Level 1-5 Tanzanites. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -720,7 +720,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28567" name="Amethyst Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Amethysts. -->
+		<!-- Double-click to obtain one of Level 1-5 Amethysts. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_amethyst_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -728,7 +728,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28568" name="Garnet Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Garnets. -->
+		<!-- Double-click to obtain one of Level 1-5 Garnets. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -736,7 +736,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28569" name="Secret Embryo Bait (85)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 85. -->
+		<!-- Fishing Time: 45 sec. Fishing Waiting Time: 15 sec. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 85. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -745,7 +745,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28570" name="Secret Embryo Bait (95)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 95. -->
+		<!-- Fishing Time: 45 sec. Fishing Waiting Time: 15 sec. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 95. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -754,7 +754,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28571" name="Secret Embryo Bait (99)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 99. -->
+		<!-- Fishing Time: 45 sec. Fishing Waiting Time: 15 sec. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 99. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -763,7 +763,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28572" name="Secret Embryo Bait (102)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 102. -->
+		<!-- Fishing Time: 45 sec. Fishing Waiting Time: 15 sec. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 102. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -772,7 +772,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28573" name="Secret Embryo Bait (105)" type="EtcItem">
-		<!-- Fishing Time: 45s. Fishing Waiting Time: 15s. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 105. -->
+		<!-- Fishing Time: 45 sec. Fishing Waiting Time: 15 sec. Fishing Bait. Used to acquire a Smuggled Embryo Chest. Can be used only above level 105. -->
 		<set name="icon" val="icon.bm_gold_lure" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -1214,7 +1214,7 @@
 		</stats>
 	</item>
 	<item id="28593" name="Scroll: Enchant Cloak" type="EtcItem">
-		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted up to +10. Enchant value goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be enchanted up to +10. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_normal" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
@@ -1228,7 +1228,7 @@
 		</skills>
 	</item>
 	<item id="28594" name="Scroll: Enchant Cloak - Legendary" type="EtcItem">
-		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant value is at least +10, up to +20. Enchant value goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant level is at least +10, up to +20. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
@@ -1242,7 +1242,7 @@
 		</skills>
 	</item>
 	<item id="28595" name="Scroll: Ancient Cloak - Legendary" type="EtcItem">
-		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant value is at least +7, up to +20. Success rate is 10% better than normal Cloak Scrolls. Enchant value goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
+		<!-- Enchant scroll for the Ancient Kingdom's Cloak. Can be used when the enchant level is at least +7, up to +20. Success rate is 10% better than normal Cloak Scrolls. Enchant level goes up by 1 when it succeeds, and if it fails, the item remains and the level goes down by 1. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_enchant_scroll_legend" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
@@ -1263,21 +1263,21 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28597" name="Spirit Stone - Ancient Kingdom" type="EtcItem">
-		<!-- Spirit Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant value is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- Spirit Stone for the Ancient Kingdom's Cloak. Can augment all ancient kingdom cloaks when they have been enchanted to +10, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +10 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_normal" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28598" name="Spirit Stone - Elmoreden" type="EtcItem">
-		<!-- Legendary Spirit Stone for the Elmoreden Cloak. Can augment Legendary Elmoreden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant value is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- Legendary Spirit Stone for the Elmoreden Cloak. Can augment Legendary Elmoreden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmoreden" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28599" name="Spirit Stone - Aden" type="EtcItem">
-		<!-- Legendary Spirit Stone for the Aden Cloak. Can augment Legendary Aden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant value is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- Legendary Spirit Stone for the Aden Cloak. Can augment Legendary Aden kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_aden" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="100" toLevel="15" name="Stun Attack">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., inflicting Stun for $s2. Requires a blunt weapon. Over-hit is possible. -->
 		<icon>icon.skill0100</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -105,6 +105,7 @@
 		</effects>
 	</skill>
 	<skill id="101" toLevel="40" name="Stun Shot">
+		<!-- Fires arrows with $s1 power added to P. Attack. Inflicts Stun on the enemy for $s2. Requires a bow weapon. Over-hit is possible. Cancels target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -442,7 +443,7 @@
 		</effects>
 	</skill>
 	<skill id="103" toLevel="4" name="Corpse Plague">
-		<!-- Causes a poison cloud to pour out of a corpse. Inflicts poison on enemies near the corpse for $s1, and makes them consume $s2 HP every sec. -->
+		<!-- Causes a poison cloud to pour out of a corpse. Inflicts poison on enemies near the corpse for $s1, and makes them consume $s2 HP every second. -->
 		<icon>icon.skill0103</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -803,7 +804,7 @@
 		</effects>
 	</skill>
 	<skill id="109" toLevel="1" name="Ogre Spirit Totem">
-		<!-- Becomes possessed by an Ogre's soul. Increases one's own P. Atk./ P./ M. Def. by 30% and Critical Damage by 10% for 5 min. Requires a fist weapon. -->
+		<!-- Becomes possessed by an Ogre's soul. Increases one's own P. Atk./ P. Def./ M. Def. by 30% and Critical Damage by 10% for 5 min. Requires a fist weapon. -->
 		<icon>icon.skill0109</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -851,7 +852,7 @@
 		</effects>
 	</skill>
 	<skill id="110" toLevel="2" name="Ultimate Defense">
-		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, and Buff-canceling Attack Resistance by $s4, and restricts movement. -->
+		<!-- For $s1., increases P. Def. by $s2, M. Def. by $s3, and Buff-canceling Attack Resistance by $s4, and restricts movement. -->
 		<icon>icon.skill0110</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1256,7 +1257,7 @@
 		</effects>
 	</skill>
 	<skill id="120" toLevel="15" name="Stunning Fist">
-		<!-- Attacks the enemy with $s1 power added to P. Atk. and inflicts Stun for $s2. Requires a fist weapon. Over-hit. -->
+		<!-- Attacks the enemy with $s1 power added to P. Attack and inflicts Stun for $s2. Requires a fist weapon. Over-hit is possible. -->
 		<icon>icon.skill0120</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1829,6 +1830,7 @@
 		</effects>
 	</skill>
 	<skill id="139" toLevel="9" name="Guts">
+		<!-- For $s1, P. Def. +$s2 and Debuff Resistance +$s3. Available when HP is $s4 or lower. -->
 		<icon>icon.skill0139</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2284,7 +2286,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="147" toLevel="51" name="M. Def.">
+	<skill id="147" toLevel="51" name="Magic Resistance">
 		<!-- Increases M. Def. by $s1. -->
 		<icon>icon.skill0147</icon>
 		<magicLvl>
@@ -2781,6 +2783,7 @@
 		</effects>
 	</skill>
 	<skill id="176" toLevel="9" name="Frenzy">
+		<!-- For $s1, P. Atk. +$s2, Atk. Spd. +$s3, P. Critical Rate +$s4, P. Critical Damage +$s5, and Spd. +$s6. Additionally Accuracy +$s7 and P. Atk. +$s8 when using a two-handed sword, two-handed blunt, or spear. Available when HP is $s9 or below. -->
 		<icon>icon.skill0176</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3018,7 +3021,7 @@
 		</effects>
 	</skill>
 	<skill id="190" toLevel="37" name="Fatal Strike">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. Critical. Ignores Shield Defense. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit and Critical are possible. Ignores Shield Defense. -->
 		<icon>icon.skill0190</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>

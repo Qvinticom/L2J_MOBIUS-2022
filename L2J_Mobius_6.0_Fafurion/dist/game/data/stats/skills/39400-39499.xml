@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="39400" toLevel="1" name="Soccer Ball of Victory">
+		<!-- Acquired XP/ SP +$s2 for $s1. Cannot be stacked with the Fall of the Dragon Buff, Nevit's Hourglass, or Dandy's Home Run Ball. -->
+		<icon>icon.ev_2018_soccer_homerunball</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39401" toLevel="1" name="White Potion">
+		<!-- For $s1, Max HP/ MP/ CP +$s2, P. Atk./ M. Atk./ P./ M. Def. +$s3, Atk. Spd./ Casting Spd. +$s4, Speed +$s5, Attack/ Attribute Resistance +$s6, Skill MP Consumption -$s7. Additionally Acquired XP/ SP +$s8. Cooldown 5 min. The buff remains active after subclass transition but is deleted when the character participates in the Olympiad or Ceremony of Chaos. -->
+		<icon>icon.ev_bm_white_buff</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39402" toLevel="1" name="+5 Shiny Elemental Shirt Box">
+		<!-- Use to obtain a +5 Enchanted Shiny Einhasad T-shirt. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39403" toLevel="1" name="+5 Reflect Attack T-shirt Box">
+		<!-- Use to obtain a +5 Enchanted Reflect Attack T-shirt. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39404" toLevel="1" name="+5 Reflect Magic T-shirt Box">
+		<!-- Use to obtain a +5 Enchanted Reflect Magic T-shirt. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39405" toLevel="1" name="Challenger's Scroll of Growth">
+		<!-- A scroll for challengers' growth. Acquired XP/ SP +$s1. Remains active after death. Duration 10 min. Cooldown 9 min. -->
+		<icon>icon.bm_challenger_scroll</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39406" toLevel="1" name="Entrance Pass: Shilen's Altar of the Emperor">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39407" toLevel="3" name="Horn Melody - Emperor's Special Cocktail">
+		<!-- For$s1, P. Atk. +$s2, P. Def. +$s3, M. Atk. +$s4, and M. Def. +$s5. It will not be deleted or cannot be forcefully deleted upon death. -->
+		<icon>icon.cocktail_heaven_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39408" toLevel="3" name="Drum Melody - Emperor's Special Cocktail">
+		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and Received P. Critical Damage -$s5. Also has a chance to increase Critical Damage when hit. Buff remains even after death and cannot be forcefully deleted. -->
+		<icon>icon.cocktail_heaven_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39409" toLevel="3" name="Pipe Organ Melody - Emperor's Special Cocktail">
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, Max CP +$s4, and a chance to apply $s5 Vampiric Rage. Remains active after death and cannot be deleted forcefully. -->
+		<icon>icon.cocktail_heaven_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39410" toLevel="3" name="Guitar Melody - Emperor's Special Cocktail">
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, all Skill MP Consumption -$s5. Remains active after death and cannot be deleted forcefully. -->
+		<icon>icon.cocktail_heaven_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39411" toLevel="3" name="Elemental Resistance - Emperor's Special Cocktail">
+		<!-- For $s1, all Attribute Resistance +$s2. Remains active after death and cannot be deleted forcefully. -->
+		<icon>icon.cocktail_heaven_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39412" toLevel="3" name="Resistance Debuff - Emperor's Special Cocktail">
+		<!-- For $s1, Poison/ Bleed/ Hold/ Sleep/ Mental Attack Resistance +$s2. Remains active after death and cannot be deleted forcefully. -->
+		<icon>icon.cocktail_heaven_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39413" toLevel="3" name="Mental Attack Resistance - Emperor's Special Cocktail">
+		<!-- For $s1, buff cancellation/ debuff attack resistance +$s2. Remains active after death and cannot be deleted forcefully. -->
+		<icon>icon.cocktail_heaven_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39414" toLevel="3" name="War Drum - Emperor's Special Cocktail">
+		<!-- For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, Magic Cancellation Rate -$s5. A chance to apply $s6 Vampiric Rage. Remains active after death and cannot be deleted forcefully. -->
+		<icon>icon.cocktail_heaven_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39415" toLevel="3" name="Marching Drum - Emperor's Special Cocktail">
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, Skill Cooldown -$s6. Remains active after death and cannot be deleted forcefully. -->
+		<icon>icon.cocktail_heaven_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39416" toLevel="3" name="Soothing Drum - Emperor's Special Cocktail">
+		<!-- For $s1, HP Recovery +$s2, MP Recovery +$s3, P./ M. Evasion +$s4, and all Skill MP Consumption -$s5. Remains active after death and cannot be deleted forcefully. -->
+		<icon>icon.cocktail_heaven_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39417" toLevel="3" name="Knight's Harmony - Emperor's Special Cocktail">
+		<!-- For $s1, P. Def. +$s2, M. Def. +$s3, P./ M. Critical Rate +$s4, P. Critical Damage +$s5, Shield Defense Rate/ P. Def. +$s6, and chance of receiving P./ M. Critical Hit -$s7. It will not be deleted or cannot be forcefully deleted upon death. -->
+		<icon>icon.bm_special_cocktail_of_king_d</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39418" toLevel="3" name="Warrior's Harmony - Emperor's Special Cocktail">
+		<!-- For $s1, P. Atk. +$s2, P. Critical Rate +$s3, P. Critical Damage +$s4, Atk. Spd. +$s5, and Speed +$s6. Also has a chance to add the Spectral Slash effect to the target. It will not be deleted or cannot be forcefully deleted upon death. -->
+		<icon>icon.bm_special_cocktail_of_king_p</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39419" toLevel="3" name="Wizard's Harmony - Emperor's Special Cocktail">
+		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, M. Critical Damage +$s4, Casting Spd. +$s5, Attack Attribute +$s6, and Skill Cooldown -$s7 and Skill MP Consumption -$s8. It will not be deleted or cannot be forcefully deleted upon death. -->
+		<icon>icon.bm_special_cocktail_of_king_m</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39420" toLevel="2" name="Eva's Summer Light Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39421" toLevel="1" name="Water Dragon Lucky Coupon">
+		<!-- For $s1, Acquired XP/ SP +$s2. The buff even remains active after death. -->
+		<icon>icon.blue_save_ticket</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39422" toLevel="5" name="Mammon's Adena Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39423" toLevel="1" name="Giant's Armor Enchant Stone - Bloody">
+		<icon>icon.giant_ench_armor_stone_r_i01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39424" toLevel="1" name="Giant's Weapon Enchant Stone - Bloody">
+		<icon>icon.giant_ench_wp_stone_r_i01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39425" toLevel="1" name="Cool Summer Herb Chest">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39426" toLevel="1" name="Cool Summer Herb Chest">
+		<!-- Contains cool energy to beat the heat. Recovers Vitality. For $s1, P. Atk./ M. Atk./ P. Def/ M. Def/ Atk. Spd./ Casting Spd./ Normal Attack/ P. Skill/ M. Skill Critical Rate +$s2, Speed +$s3, Acquired XP/ SP +$s4. Changes the appearance to a swimsuit. -->
+		<icon>icon.event_six_party_box_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39427" toLevel="1" name="Cool Summer Herb Chest">
+		<!-- Contains cool energy to beat the heat. Recovers Vitality. For $s1, P. Atk./ M. Atk./ P. Def/ M. Def/ Atk. Spd./ Casting Spd./ Normal Attack/ P. Skill/ M. Skill Critical Rate +$s2, Speed +$s3, Acquired XP/ SP +$s4. Changes the appearance to a swimsuit. -->
+		<icon>icon.event_six_party_box_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39428" toLevel="5" name="Artifact Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39429" toLevel="2" name="+1 Fight Artifact Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39430" toLevel="2" name="+1 Protection Artifact Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39431" toLevel="2" name="+1 Support Artifact Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39432" toLevel="2" name="+1 Balance Artifact Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39433" toLevel="2" name="Stage 4 Soul Crystal Box">
+		<!-- Double-click to obtain a reward with a certain chance. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39434" toLevel="3" name="Maestro's Gift Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39435" toLevel="1" name="Royal Black Save Card">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39436" toLevel="2" name="Stage 3 Soul Crystal Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39437" toLevel="4" name="+7 Agathion Charm Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39438" toLevel="4" name="Fight Artifact Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39439" toLevel="1" name="Red Libra Artifact Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39440" toLevel="1" name="Stage 5-7 Soul Crystal Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39446" toLevel="1" name="Royal Gold Save Card">
+		<operateType>A1</operateType>
+	</skill>
+</list>

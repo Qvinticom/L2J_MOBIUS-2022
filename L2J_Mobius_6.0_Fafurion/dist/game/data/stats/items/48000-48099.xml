@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="48000" name="Fish Cream Stew - MEN" additionalName="Event" type="EtcItem">
-		<!-- When used, MEN +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, MEN +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -9,7 +9,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48001" name="Fish Cream Stew - DEX" additionalName="Event" type="EtcItem">
-		<!-- When used, DEX +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, DEX +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -17,7 +17,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48002" name="Fish Cream Stew - MEN" additionalName="Event" type="EtcItem">
-		<!-- When used, STR +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, STR +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -25,7 +25,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48003" name="Fish Cream Stew - CON" additionalName="Event" type="EtcItem">
-		<!-- When used, CON +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
+		<!-- When used, CON +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -33,7 +33,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48004" name="Scroll: Energy of Harmony" type="EtcItem">
-		<!-- A scroll that contains harmony between races. Use it to increase your XP and SP by 50% for 30 min. Cannot be used with Fall of the Dragon/ Nevit's Hourglass/ Dandy's Home Run Ball. Will be deleted when the event has concluded. -->
+		<!-- A scroll that contains harmony between races. For 30 min., Acquired XP/ SP +50%. Cannot be used with Fall of the Dragon/ XP Buff 50%/ Dandy's Home Run Ball. -->
 		<set name="icon" val="icon.etc_london_olympic_scroll_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LEATHER" />
@@ -77,7 +77,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="48008" name="Freya's Ice Crystal" type="EtcItem">
-		<!-- Take it along with a Freya's Wind Scroll to NPC Freya in Schuttgart Castle to receive a present of destiny from Freya. Will be deleted on Wednesday, January 18, 2017, after regular maintenance. -->
+		<!-- Take it along with a Freya's Wind Scroll to NPC Freya in Schuttgart Castle to receive a present of destiny from Freya. -->
 		<set name="icon" val="icon.bm_freya_crystal" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -127,7 +127,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48014" name="Freya's Dark Rune (2-hour) Box" type="EtcItem">
-		<!-- Double-click to obtain Freya's Dark Rune (2-hr.). Freya's Dark Rune effects do not apply in the Olympiad. -->
+		<!-- Double-click to obtain Freya's Dark Rune (2-hour). Freya's Dark Rune effects do not apply in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_dark_rune_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -284,7 +284,7 @@
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="48029" name="Freya's CHA Potion" type="EtcItem">
-		<!-- Changes the appearance to that of a teddy bear, and CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown: 5 min. Buff effect persists through death. Cannot be used in the Olympiad. -->
+		<!-- Changes the appearance to that of a teddy bear, and CHA +5 for 30 min. Cannot be stacked with Einhasad's CHA Potion or Maphr's Luck Potion. Cooldown: 5 min. Effect remains after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_charisma_potion1" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -292,14 +292,14 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48030" name="Faction Amity Token" type="EtcItem">
-		<!-- Token that strengthens the amity with a faction. Use it at the completion of a faction quest to gain extra quest XP and Amity Points. However, no further rewards will be gained if the quest rewards do not include XP or Amity Points. -->
+		<!-- Token that strengthens the amity with a faction. Use it at the completion of a faction quest to gain extra quest XP and Faction Points. However, no further rewards will be gained if the quest rewards do not include XP or Faction Points. -->
 		<set name="icon" val="icon.faction_boost_reward" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48031" name="Entrance Pass: Shilen's Altar" type="EtcItem">
-		<!-- Extra Pass for Shilen's Altar. Double-click to reset cooldown to Shilen's Altar. Cannot use if locked out from Instance Zone. Can only be used once a day outside of the instance zone. -->
+		<!-- Extra Pass for Shilen's Altar. Double-click to reset cooldown to Shilen's Altar. Cannot use if locked out from Instanced Zone. Can only be used once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="LEATHER" />
@@ -417,7 +417,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48046" name="Zodiac Agathion Book of Growth" type="EtcItem">
-		<!-- Zodiac Agathion growth scroll. Increases M. Def. when the Agathion grows, adding a special ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the Agathion's unique ability gradually from +1. -->
+		<!-- Zodiac Agathion growth book. Increases M. Def. when the Agathion grows, adding a special ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the Agathion's unique ability gradually from +1. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -425,7 +425,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48047" name="Ancient Zodiac Agathion Book of Growth" type="EtcItem">
-		<!-- Zodiac Agathion growth scroll. Increases M. Def. when the Agathion grows, adding a Special Ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the agathion's Unique Ability gradually from +1. If successful, the Agathion randomly grows to between +1 and +3. Cannot be used past +7. -->
+		<!-- Zodiac Agathion growth book. Increases M. Def. when the Agathion grows, adding a Special Ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the agathion's Unique Ability gradually from +1. If successful, the Agathion randomly grows to between +1 and +3. Cannot be used past +7. -->
 		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

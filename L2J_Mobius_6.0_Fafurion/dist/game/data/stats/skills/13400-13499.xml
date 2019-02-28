@@ -569,7 +569,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13424" toLevel="1" name="Dualsword Sealed with Heroes' Power">
+	<skill id="13424" toLevel="1" name="Dual Sword Sealed with Heroes' Power">
 		<!-- Max HP +25%, P. Atk. +612, Atk. Spd. +15%. -->
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>
@@ -1090,7 +1090,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13438" toLevel="1" name="Dualsword Imbued with Heroes' Power">
+	<skill id="13438" toLevel="1" name="Dual Sword Imbued with Heroes' Power">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +612, Atk. Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>
@@ -1519,7 +1519,7 @@
 		</effects>
 	</skill>
 	<skill id="13462" toLevel="1" name="Resistance Earring A">
-		<!-- Increases Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Resistance by 8. -->
+		<!-- Increases Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Defense by 8. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1587,7 +1587,7 @@
 		</effects>
 	</skill>
 	<skill id="13466" toLevel="1" name="Resistance Earring E">
-		<!-- Increases Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Atk. Attribute Resistance by 8. -->
+		<!-- Increases Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Attack Attribute Resistance by 8. -->
 		<icon>icon.accessary_inferno_earing_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1672,7 +1672,7 @@
 		</effects>
 	</skill>
 	<skill id="13471" toLevel="1" name="Resistance Earring A (Top-grade)">
-		<!-- Increases Maximum CP by 5%, Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1756,7 +1756,7 @@
 		</effects>
 	</skill>
 	<skill id="13475" toLevel="1" name="Resistance Earring E (Top-grade)">
-		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Atk. Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Attack Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1777,7 +1777,7 @@
 		</effects>
 	</skill>
 	<skill id="13476" toLevel="1" name="Resistance Earring F (Top-grade)">
-		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Sleep attack bonus by 15%, and Water Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Sleep attack bonus by 15%, and Water Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1798,7 +1798,7 @@
 		</effects>
 	</skill>
 	<skill id="13477" toLevel="1" name="Resistance Earring G (Top-grade)">
-		<!-- Increases Maximum CP by 5%, Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1861,7 +1861,7 @@
 		</effects>
 	</skill>
 	<skill id="13480" fromLevel="2" toLevel="2" name="Royal Guard Earring A">
-		<!-- Increases Maximum CP by 5%, Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1945,7 +1945,7 @@
 		</effects>
 	</skill>
 	<skill id="13484" fromLevel="2" toLevel="2" name="Royal Guard Earring E">
-		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Atk. Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Attack Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1966,7 +1966,7 @@
 		</effects>
 	</skill>
 	<skill id="13485" fromLevel="2" toLevel="2" name="Royal Guard Earring F">
-		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Sleep attack bonus by 15%, and Water Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Sleep attack bonus by 15%, and Water Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1987,7 +1987,7 @@
 		</effects>
 	</skill>
 	<skill id="13486" fromLevel="2" toLevel="2" name="Royal Guard Earring G">
-		<!-- Increases Maximum CP by 5%, Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2132,7 +2132,7 @@
 	<skill id="13497" toLevel="1" name="Monster Weapon Appearance Stone: Tegaffe's Dual Sword">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="13498" toLevel="1" name="Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword">
+	<skill id="13498" toLevel="1" name="Monster Weapon Appearance Stone: Seknus' Magic Sword">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13499" toLevel="1" name="Monster Weapon Appearance Stone: Tebot's Axe">

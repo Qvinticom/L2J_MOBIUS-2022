@@ -566,7 +566,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="46141" name="Mid-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -633,7 +633,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="46146" name="Atelia Fortress Stronghold I Teleport Device" additionalName="24-hr" type="EtcItem">
-		<!-- A teleport device that takes you to Stronghold I. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hr. -->
+		<!-- A teleport device that takes you to Stronghold I. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -647,7 +647,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="46147" name="Atelia Fortress Stronghold II Teleport Device" additionalName="24-hr" type="EtcItem">
-		<!-- A teleport device that takes you to Stronghold II. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hr. -->
+		<!-- A teleport device that takes you to Stronghold II. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -661,7 +661,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="46148" name="Atelia Fortress Stronghold III Teleport Device" additionalName="24-hr" type="EtcItem">
-		<!-- A teleport device that takes you to Stronghold III. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hr. -->
+		<!-- A teleport device that takes you to Stronghold III. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -675,7 +675,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="46149" name="Atelia Fortress Stronghold IV Teleport Device" additionalName="24-hr" type="EtcItem">
-		<!-- A teleport device that takes you to Stronghold IV. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hr. -->
+		<!-- A teleport device that takes you to Stronghold IV. It was brought from Aden in order to facilitate movement. Because of the instability in the Atelia Fortress, it can only be used for 24 hours. -->
 		<set name="icon" val="icon.etc_mechanic_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -689,28 +689,28 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="46150" name="Superior Giant's Codex Chapter 1" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +11~+ 20 after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +11~+20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46151" name="Superior Giant's Codex - Mastery Chapter 1" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for +11~+ 20 blessed skill enchantment after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for +21~+30 blessed skill enchantment after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46152" name="Superior Giant's Codex - Discipline Chapter 1" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between +11~+ 20 after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between +11~+20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46153" name="Immortal Scroll Chapter 1" type="EtcItem">
-		<!-- Enchants a skill between +11~+ 20 to the next grade with a success rate of 100% without consuming extra materials. -->
+		<!-- Enchants a skill between +11~+20 to the next grade with a success rate of 100% without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -724,28 +724,28 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46154" name="Superior Giant's Codex Chapter 2" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +21~+ 30 after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +21~+30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46155" name="Superior Giant's Codex - Mastery Chapter 2" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for +21~+ 30 blessed skill enchantment after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for +21~+30 blessed skill enchantment after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_dexterity" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46156" name="Superior Giant's Codex - Discipline Chapter 2" type="EtcItem">
-		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between +21~+ 30 after Awakening. -->
+		<!-- Superior Giant's Codex. Rare item needed for changing enchantment paths for skills between +21~+30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse_training" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46157" name="Immortal Scroll Chapter 2" type="EtcItem">
-		<!-- Enchants a skill between +21~+ 30 to the next grade with a success rate of 100% without consuming extra materials. -->
+		<!-- Enchants a skill between +21~+30 to the next grade with a success rate of 100% without consuming extra materials. -->
 		<set name="icon" val="icon.esagira_telepo_01" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -776,7 +776,7 @@
 		</skills>
 	</item>
 	<item id="46159" name="Mid-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -790,7 +790,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="46160" name="Mid-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -804,7 +804,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="46161" name="Mid-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -818,7 +818,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="46162" name="Mid-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_silver" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -832,7 +832,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="46163" name="High-grade Honorary Member Certificate" type="EtcItem">
-		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. Will be deleted after the event. -->
+		<!-- A certificate that identifies the Honorary Member of Aden Vanguard. It is not recognized by the Kingdom's Royal Guard and is no longer used. You can exchange it for a reward item through Dinford at the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_london_olympic_gold" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -918,7 +918,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="46170" name="Atelia Fortress Protection Box" additionalName="Event" type="EtcItem">
-		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
+		<!-- Reward for Drew's Golden Dice event. -->
 		<set name="icon" val="BranchSys.br_bright_gold_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -930,7 +930,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46171" name="Garden of the Spirits Protection Box" additionalName="Event" type="EtcItem">
-		<!-- Reward for Drew's Golden Dice event. Will be deleted once the event ends. -->
+		<!-- Reward for Drew's Golden Dice event. -->
 		<set name="icon" val="BranchSys.br_gold_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -942,7 +942,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46172" name="Drew Protection Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Scroll: Enchant Weapon (R-grade), Scroll: Enchant Armor (R-grade), Scroll: Enchant Weapon (S-grade), Scroll: Enchant Armor (S-grade), Blessed Scroll of Escape, Blessed Scroll of Resurrection, or Elixir Pack (R-grade). Will be deleted after the event. -->
+		<!-- Double-click to obtain a Scroll: Enchant Weapon (R-grade), Scroll: Enchant Armor (R-grade), Scroll: Enchant Weapon (S-grade), Scroll: Enchant Armor (S-grade), Blessed Scroll of Escape, Blessed Scroll of Resurrection, or Elixir Pack (R-grade). -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1018,7 +1018,7 @@
 		</skills>
 	</item>
 	<item id="46177" name="Soul Bottle Pack" type="EtcItem">
-		<!-- Double-click to obtain 1 bottle containing Antharas, Valakas, Queen Ant, Orfen, Frintezza, or Baium's soul. -->
+		<!-- Wrapped Pack containing 1 bottle containing Antharas, Valakas, Queen Ant, Orfen, Frintezza, or Baium's soul. -->
 		<set name="icon" val="icon.etc_elite_marguene_collection_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1097,7 +1097,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46185" name="Agathion - Anakim Holy Barrier" type="Armor">
-		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakim Spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30. 3. Anakim Blessing: Acquired XP and SP +3%. -->
+		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakim Spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30. 3. Anakim Blessing : Acquired XP and SP +3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1113,7 +1113,7 @@
 		</skills>
 	</item>
 	<item id="46186" name="Agathion - Anakim Holy Barrier" additionalName="30-day" type="Armor">
-		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakim Spheres. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30. 3. Anakim Blessing: Acquired XP and SP +3%. -->
+		<!-- Summons Anakim Holy Barrier, which is comprised of 5 Anakim Sphere. <Item Skill>. 1. Balanced Power: STR/ INT/ CON/ DEX/ WIT/ MEN increases by 1. 2. Attribute Enchant: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. increases by 30. 3. Anakim Blessing : Acquired XP and SP +3%. -->
 		<set name="icon" val="BranchSys3.iconItem.g_agathion_anakim" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1135,7 +1135,7 @@
 		</skills>
 	</item>
 	<item id="46187" name="Agathion - Anakim Holy Barrier Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a Holy Barrier Agathion Charm (30-day). -->
+		<!-- Wrapped Pack containing Holy Barrier Agathion Charm (30-day). -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1150,7 +1150,7 @@
 		</capsuled_items>
 	</item>
 	<item id="46188" name="Agathion - Anakim Holy Barrier Pack" type="EtcItem">
-		<!-- Double-click to obtain an Anakim Holy Barrier Agathion Charm (30-day) or an Agathion Charm - Anakim Holy Barrier. -->
+		<!-- Wrapped Pack containing an Anakim Holy Barrier Agathion Charm (30-day) or an Agathion Charm - Anakim Holy Barrier. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="weight" val="10" />
@@ -1198,7 +1198,7 @@
 		</skills>
 	</item>
 	<item id="46191" name="Vampiric Style Appearance Stone Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vampiric Style Appearance Stone (30-day) or a Vampiric Style Appearance Stone. -->
+		<!-- Wrapped Pack containing a Vampiric Style Appearance Stone (30-day) or a Vampiric Style Appearance Stone. -->
 		<set name="icon" val="icon.event_high_oriental_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />

@@ -405,8 +405,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9519" toLevel="1" name="Draco's Blessing (1-hour)">
-		<!-- For 1 hr., Acquired XP/ SP+ 200%. -->
+	<skill id="9519" toLevel="1" name="Draco's Blessing (1-h.)">
+		<!-- For 1 h., Acquired XP/ SP+200%. -->
 		<icon>icon.etc_ev_draco_exp_up</icon>
 		<operateType>A2</operateType>
 		<abnormalType>INSTANT_EV_BUFF1</abnormalType>
@@ -434,8 +434,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9520" toLevel="1" name="Draco's Blessing (1-hour)">
-		<!-- For 1 hr., Acquired XP/ SP+ 100%. -->
+	<skill id="9520" toLevel="1" name="Draco's Blessing (1-h.)">
+		<!-- For 1 h., Acquired XP/ SP+100%. -->
 		<icon>icon.etc_ev_draco_exp_up</icon>
 		<operateType>A2</operateType>
 		<abnormalType>INSTANT_EV_BUFF1</abnormalType>
@@ -463,8 +463,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9521" toLevel="1" name="Draco's Blessing (3-hour)">
-		<!-- For 3 hr., Acquired XP/ SP+ 200%. -->
+	<skill id="9521" toLevel="1" name="Draco's Blessing (3-h.)">
+		<!-- For 3 h., Acquired XP/ SP+200%. -->
 		<icon>icon.etc_ev_draco_exp_up</icon>
 		<operateType>A2</operateType>
 		<abnormalType>INSTANT_EV_BUFF1</abnormalType>
@@ -512,7 +512,7 @@
 			<condition name="TargetMyPledge" />
 		</conditions>
 	</skill>
-	<skill id="9523" toLevel="1" name="Mysterious Incantation">
+	<skill id="9523" toLevel="1" name="Mysterious Scroll">
 		<!-- Suddenly teleported to town due to a mysterious curse. -->
 		<icon>icon.skill1570</icon>
 		<operateType>A2</operateType>
@@ -667,7 +667,7 @@
 		<specialLevel>-1</specialLevel>
 	</skill>
 	<skill id="9531" toLevel="1" name="Jang Heejin Agathion's Blessed Escape">
-		<!-- Can use Blessed Escape. Cooldown is 1 hr. -->
+		<!-- Can use Blessed Escape. Cooldown is 1 h. -->
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -689,7 +689,7 @@
 		<specialLevel>-1</specialLevel>
 	</skill>
 	<skill id="9533" toLevel="1" name="Jang Hyuk Agathion's Blessed Escape">
-		<!-- Can use Blessed Escape. Cooldown is 1 hr. -->
+		<!-- Can use Blessed Escape. Cooldown is 1 h. -->
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -711,7 +711,7 @@
 		<specialLevel>-1</specialLevel>
 	</skill>
 	<skill id="9535" toLevel="1" name="Kim Sooro Agathion's Blessed Escape">
-		<!-- Can use Blessed Escape. Cooldown is 1 hr. -->
+		<!-- Can use Blessed Escape. Cooldown is 1 h. -->
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -733,7 +733,7 @@
 		<specialLevel>-1</specialLevel>
 	</skill>
 	<skill id="9537" toLevel="1" name="Park Jaebum Agathion's Blessed Escape">
-		<!-- Can use Blessed Escape. Cooldown is 1 hr. -->
+		<!-- Can use Blessed Escape. Cooldown is 1 h. -->
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -755,7 +755,7 @@
 		<specialLevel>-1</specialLevel>
 	</skill>
 	<skill id="9539" toLevel="1" name="Kim Shinyoung Agathion's Blessed Escape">
-		<!-- Can use Blessed Escape. Cooldown is 1 hr. -->
+		<!-- Can use Blessed Escape. Cooldown is 1 h. -->
 		<operateType>A1</operateType>
 		<hitTime>200</hitTime>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1172,8 +1172,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9551" toLevel="1" name="Ceremony of Chaos - Knight's Harmony">
-		<!-- For $s1, increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+	<skill id="9551" toLevel="1" name="Knight's Harmony - Ceremony of Chaos">
+		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -1222,7 +1222,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9552" toLevel="1" name="Ceremony of Chaos - Warrior's Harmony">
+	<skill id="9552" toLevel="1" name="Warrior's Harmony - Ceremony of Chaos">
 		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -1276,7 +1276,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9553" toLevel="1" name="Ceremony of Chaos - Wizard's Harmony">
+	<skill id="9553" toLevel="1" name="Wizard's Harmony - Ceremony of Chaos">
 		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
@@ -1467,7 +1467,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9562" toLevel="1" name="Hair Accessory Circlet: P. Def.">
+	<skill id="9562" toLevel="1" name="Hair Accessory: P. Def.">
 		<!-- P. Def. +5%. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
@@ -1493,7 +1493,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9564" toLevel="1" name="Hair Accessory: Evasion">
+	<skill id="9564" toLevel="1" name="Hair Accessory: P. Evasion">
 		<!-- P. Evasion +5. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
@@ -1532,7 +1532,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9567" toLevel="1" name="Hair Accessory: Accuracy">
+	<skill id="9567" toLevel="1" name="Hair Accessory: P. Accuracy">
 		<!-- P. Accuracy +5. -->
 		<icon>icon.etc_hairacc_pandent_i00</icon>
 		<operateType>P</operateType>
@@ -1568,7 +1568,7 @@
 						<item id="19446" count="1" /> <!-- Unbind Scroll (R99-grade) -->
 					</item>
 					<item chance="5">
-						<item id="35568" count="1" /> <!-- Bloody Helios Enhancement Stone -->
+						<item id="35568" count="1" /> <!-- Bloody Weapon Enhancement Stone -->
 					</item>
 					<item chance="1">
 						<item id="35570" count="1" /> <!-- Tauti's Ring -->
@@ -1635,7 +1635,7 @@
 		</effects>
 	</skill>
 	<skill id="9570" toLevel="1" name="Heavenly P. Def. Cookie">
-		<!-- For $s1, increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
 		<icon>icon.etc_bm_defence_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1761,7 +1761,7 @@
 		</effects>
 	</skill>
 	<skill id="9572" toLevel="1" name="Heavenly CP Cookie">
-		<!-- For 1 hr., Max CP +20%. Buff remains even after death. -->
+		<!-- For 1 h., Max CP +20%. Buff remains even after death. -->
 		<icon>icon.etc_bm_cp_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1840,7 +1840,7 @@
 		</effects>
 	</skill>
 	<skill id="9577" toLevel="1" name="Returning Hero's Vitality Replenishing Juice">
-		<!-- Vitality Recovery for 4 hr. No effect when Birthday Vitality Buff is applied. Cooldown is 60 min. -->
+		<!-- Vitality Recovery for 4 h. No effect when Birthday Vitality Buff is applied. Cooldown is 60 min. -->
 		<icon>BranchSys2.icon.br_breath_of_hero_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>

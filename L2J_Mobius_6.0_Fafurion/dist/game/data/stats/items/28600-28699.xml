@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="28600" name="Spirit Stone - Elmore" type="EtcItem">
-		<!-- Legendary Spirit Stone for the Elmore Cloak. Can augment Legendary Elmore kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant value is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- Legendary Spirit Stone for the Elmore Cloak. Can augment Legendary Elmore kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_elmore" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28601" name="Spirit Stone - Ferios" type="EtcItem">
-		<!-- Legendary Spirit Stone for the Ferios Cloak. Can augment Legendary Ferios kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant value is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
+		<!-- Legendary Spirit Stone for the Ferios Cloak. Can augment Legendary Ferios kingdom cloaks when they have been enchanted to +15, and a random effect will be added when augmented. Effects bestowed through augmentation will be applied when the enchant level is +15 or higher. Once augmented, it cannot be canceled, but it can be augmented again. -->
 		<set name="icon" val="BranchIcon.icon.g_bm_cloak_mineral_perios" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
@@ -23,7 +23,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28603" name="Dragon's Treasure Chest" type="EtcItem">
-		<!-- Double click to receive a random item. -->
+		<!-- Double-click to receive a random item. -->
 		<set name="icon" val="icon.bm_dragon_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="LEATHER" />
@@ -83,7 +83,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28609" name="High-grade Balthus Knight Mark" type="EtcItem">
-		<!-- Put you in a disguise for 2 hr. Can be used only by characters of Level 85 or higher. The effect is deleted if you switch to a different class. Will be deleted when Sibi's Lucky Draw event ends. -->
+		<!-- Put you in a disguise for 2 hours. Can be used only by characters of Level 85 or higher. The effect is deleted if you switch to a different class. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -118,7 +118,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="28612" name="Royal White Save Ticket (R99)" additionalName="Event" type="EtcItem">
-		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
+		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />

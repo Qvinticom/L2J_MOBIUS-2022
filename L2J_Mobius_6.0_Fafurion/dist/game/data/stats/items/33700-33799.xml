@@ -1647,7 +1647,7 @@
 		</skills>
 	</item>
 	<item id="33768" name="Talisman (R-grade) - Damage Reflect Resistance (Active)" type="Armor">
-		<!-- Increases resistance to Damage Reflect when equipped. Shadow weapon. -->
+		<!-- Increases Damage Reflection Resistance when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1687,7 +1687,7 @@
 		</skills>
 	</item>
 	<item id="33770" name="Talisman (R-grade) - Damage Reflect Resistance (Active)" type="Armor">
-		<!-- Increases resistance to Damage Reflect upon use. Shadow weapon. -->
+		<!-- Increases Damage Reflection Resistance upon use. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2192,7 +2192,7 @@
 		</skills>
 	</item>
 	<item id="33795" name="Returning Hero's Vitality Replenishing Juice 3-unit Pack" additionalName="Event" type="EtcItem">
-		<!-- Contains 3 Returning Hero's Vitality Replenishing Juices that replenish your vitality for 4 hr. -->
+		<!-- Contains 3 Returning Hero's Vitality Replenishing Juices that replenish your vitality for 4 hours. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -2208,7 +2208,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="33512" min="3" max="3" chance="100" /> <!-- Returning Hero's Vitality Replenishing Juice -->
+			<item id="33512" min="3" max="3" chance="100" /> <!-- Returning Hero's Vitality Replenishing Juice -  -->
 		</capsuled_items>
 	</item>
 	<item id="33796" name="Returning Hero's Gold Chest" additionalName="Event" type="EtcItem">

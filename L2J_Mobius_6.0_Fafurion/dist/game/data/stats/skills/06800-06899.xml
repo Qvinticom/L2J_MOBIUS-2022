@@ -136,7 +136,7 @@
 		</effects>
 	</skill>
 	<skill id="6807" toLevel="1" name="Arena Concentration">
-		<!-- Decreases magic cancel rate by 53 for 5 min. -->
+		<!-- Decreases magic cancel damage by 53 for 5 min. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -421,7 +421,7 @@
 		</effects>
 	</skill>
 	<skill id="6815" toLevel="16" name="Deadly Poison">
-		<!-- Poison seeps deeper and for $s1, $s2 HP is decreased every sec. If not treated, the poison will worsen. -->
+		<!-- Poison seeps deeper and for $s1, $s2 HP is decreased every second. If not treated, the poison will worsen. -->
 		<icon>icon.skill6815</icon>
 		<operateType>A2</operateType>
 		<subordinationAbnormalType>POISON</subordinationAbnormalType>
@@ -458,7 +458,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6816" toLevel="16" name="Deadly Bleed">
-		<!-- Bleed becomes deeper and for $s1, $s2 HP is decreased every sec. If not treated, the bleed will worsen. -->
+		<!-- Bleed becomes deeper and for $s1, $s2 HP is decreased every second. If not treated, the bleed will worsen. -->
 		<icon>icon.skill6816</icon>
 		<operateType>A2</operateType>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -670,7 +670,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="6825" toLevel="2" name="Bleed">
-		<!-- For $s1, inflicts bleed and decreases $s2 HP every sec. -->
+		<!-- For $s1, inflicts bleed and decreases $s2 HP every second. -->
 		<icon>icon.skill0096</icon>
 		<abnormalTime>8</abnormalTime>
 		<activateRate>100</activateRate>
@@ -767,7 +767,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6830" toLevel="1" name="Bleed">
-		<!-- For 5 sec., inflicts bleed and decreases 100 HP every sec. Decreases the effect of recovery magic by 600. -->
+		<!-- For 5 sec., inflicts bleed and decreases 100 HP every second. Decreases the effect of recovery magic by 600. -->
 		<icon>icon.skill0096</icon>
 		<abnormalTime>5</abnormalTime>
 		<activateRate>80</activateRate>
@@ -1368,7 +1368,7 @@
 		</effects>
 	</skill>
 	<skill id="6862" toLevel="1" name="Poison">
-		<!-- For 6 sec., inflicts poison and decreases 100 HP every sec. -->
+		<!-- For 6 sec., inflicts poison and decreases 100 HP every second. -->
 		<icon>icon.skill0129</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>6</abnormalTime>
@@ -1399,7 +1399,7 @@
 		</effects>
 	</skill>
 	<skill id="6863" toLevel="1" name="Poison">
-		<!-- For 10 sec., inflicts poison and decreases 120 HP every sec. -->
+		<!-- For 10 sec., inflicts poison and decreases 120 HP every second. -->
 		<icon>icon.skill0129</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1441,7 +1441,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6865" toLevel="1" name="Poison">
-		<!-- For 8 sec., inflicts bleed and decreases 100 HP every sec. -->
+		<!-- For 8 sec., inflicts bleed and decreases 100 HP every second. -->
 		<icon>icon.skill0129</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
@@ -1669,7 +1669,7 @@
 		</effects>
 	</skill>
 	<skill id="6875" toLevel="2" name="Poison">
-		<!-- For $s1, inflicts bleed and decreases $s2 HP every sec. -->
+		<!-- For $s1, inflicts bleed and decreases $s2 HP every second. -->
 		<icon>icon.skill0129</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>8</abnormalTime>
@@ -2088,7 +2088,7 @@
 		</effects>
 	</skill>
 	<skill id="6890" toLevel="1" name="Bleed">
-		<!-- For 10 sec., inflicts bleed and decreases 100 HP every sec. -->
+		<!-- For 10 sec., inflicts bleed and decreases 100 HP every second. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-10000</effectPoint>

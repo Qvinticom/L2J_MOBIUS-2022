@@ -134,7 +134,7 @@
 		</effects>
 	</skill>
 	<skill id="8509" toLevel="1" name="Blessed Escape">
-		<!-- Able to perform the High Angel Circlet power every hour -->
+		<!-- Able to perform the High Angel Circlet power every h. -->
 		<icon>icon.accessory_highangel_circlet_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<hitTime>200</hitTime>
@@ -208,27 +208,27 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="50.5549">
-						<item id="17186" count="1" /> <!-- Olympic Athlete's Ring - 3-day -->
+						<item id="17186" count="1" /> <!-- Olympic Athlete's Ring - 3-day] -->
 						<item id="17187" count="1" /> <!-- Olympic Athlete's Necklace - 3-day -->
 						<item id="17188" count="1" /> <!-- Olympic Athlete's Earring - 3-day -->
 					</item>
 					<item chance="29.7381">
-						<item id="17189" count="1" /> <!-- Olympic Athlete's Ring - 7-day -->
+						<item id="17189" count="1" /> <!-- Olympic Athlete's Ring - 7-day] -->
 						<item id="17190" count="1" /> <!-- Olympic Athlete's Necklace - 7-day -->
 						<item id="17191" count="1" /> <!-- Olympic Athlete's Earring - 7-day -->
 					</item>
 					<item chance="16.6667">
-						<item id="17192" count="1" /> <!-- Olympic Athlete's Ring - 10-day -->
+						<item id="17192" count="1" /> <!-- Olympic Athlete's Ring - 10-day] -->
 						<item id="17193" count="1" /> <!-- Olympic Athlete's Necklace - 10-day -->
 						<item id="17194" count="1" /> <!-- Olympic Athlete's Earring - 10-day -->
 					</item>
 					<item chance="3.0303">
-						<item id="17195" count="1" /> <!-- Olympic Athlete's Ring - 30-day -->
+						<item id="17195" count="1" /> <!-- Olympic Athlete's Ring - 30-day] -->
 						<item id="17196" count="1" /> <!-- Olympic Athlete's Necklace - 30-day -->
 						<item id="17197" count="1" /> <!-- Olympic Athlete's Earring - 30-day -->
 					</item>
 					<item chance="0.01">
-						<item id="17198" count="1" /> <!-- Olympic Athlete's Ring -->
+						<item id="17198" count="1" /> <!-- Olympic Athlete's Ring - ] -->
 						<item id="17199" count="1" /> <!-- Olympic Athlete's Necklace -->
 						<item id="17200" count="1" /> <!-- Olympic Athlete's Earring -->
 					</item>
@@ -282,7 +282,7 @@
 		</effects>
 	</skill>
 	<skill id="8514" toLevel="1" name="Olympic Athlete's Energy of Victory">
-		<!-- When used, you can obtain at random one XP Buff 50% 1 (4-hr.) and Nevit's Voice. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked. -->
+		<!-- When used, you can obtain at random one XP Buff 50% 1 (4-h.) and Nevit's Voice. Upon skill use, 10 Proofs of Cheers are consumed, and it can be cancelled when attacked. -->
 		<icon>BranchSys2.icon.br_obsession_of_winning_i00</icon>
 		<itemConsumeId>17201</itemConsumeId>
 		<itemConsumeCount>10</itemConsumeCount>
@@ -302,27 +302,27 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20.9127">
-						<item id="17206" count="1" /> <!-- XP Buff 50% (1-hr.) -->
+						<item id="17206" count="1" /> <!-- XP Buff 50% (1-hour) -->
 						<item id="17212" count="1" /> <!-- Nevit's Voice -->
 					</item>
 					<item chance="20.9127">
-						<item id="17207" count="1" /> <!-- XP Buff 50% (1.5-hr.) -->
+						<item id="17207" count="1" /> <!-- XP Buff 50% (1.5-hour) -->
 						<item id="17212" count="1" /> <!-- Nevit's Voice -->
 					</item>
 					<item chance="19.2262">
-						<item id="17208" count="1" /> <!-- XP Buff 50% (2-hr.) -->
+						<item id="17208" count="1" /> <!-- XP Buff 50% (2-hour) -->
 						<item id="17212" count="1" /> <!-- Nevit's Voice -->
 					</item>
 					<item chance="18.5516">
-						<item id="17209" count="1" /> <!-- XP Buff 50% (2.5-hr.) -->
+						<item id="17209" count="1" /> <!-- XP Buff 50% (2.5-hour) -->
 						<item id="17212" count="1" /> <!-- Nevit's Voice -->
 					</item>
 					<item chance="17.5397">
-						<item id="17210" count="1" /> <!-- XP Buff 50% (3-hr.) -->
+						<item id="17210" count="1" /> <!-- XP Buff 50% (3-hour) -->
 						<item id="17212" count="1" /> <!-- Nevit's Voice -->
 					</item>
 					<item chance="2.8571">
-						<item id="17211" count="1" /> <!-- XP Buff 50% (4-hr.) -->
+						<item id="17211" count="1" /> <!-- XP Buff 50% (4-hour) -->
 						<item id="17212" count="1" /> <!-- Nevit's Voice -->
 					</item>
 				</items>
@@ -428,7 +428,7 @@
 			<condition name="OpNeedAgathion" />
 		</conditions>
 	</skill>
-	<skill id="8521" toLevel="1" name="Release Agathion's Seal - Antharas">
+	<skill id="8521" toLevel="1" name="Agathion Summon - Antharas">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -445,7 +445,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8522" toLevel="1" name="Release Agathion's Seal - Nevit's Messenger Kanna">
+	<skill id="8522" toLevel="1" name="Agathion Summon - Nevit's Messenger Kanna">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -517,7 +517,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8527" toLevel="1" name="Release Agathion's Seal - Magmeld Fairy">
+	<skill id="8527" toLevel="1" name="Agathion Summon - Magmeld Fairy">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -900,7 +900,7 @@
 		</effects>
 	</skill>
 	<skill id="8542" toLevel="1" name="Touch of Eva">
-		<!-- Restores HP of party members by 50%. For 1 min., increases Buff-canceling Attack Resistance by 100% and the power of received HP recovery magic by 30%. Restores 50 HP every sec. Use requirements are complete through the ring's power. -->
+		<!-- Restores HP of party members by 50%. For 1 min., increases Buff-canceling Attack Resistance by 100% and the power of received HP recovery magic by 30%. Restores 50 HP every second. Use requirements are complete through the ring's power. -->
 		<icon>icon.skill0787</icon>
 		<operateType>A2</operateType>
 		<hpConsume>1253</hpConsume>
@@ -1092,7 +1092,7 @@
 		</effects>
 	</skill>
 	<skill id="8546" toLevel="1" name="Arcane Wisdom">
-		<!-- Maximizes magic efficiency by decreasing MP Consumption by 30% and Casting Spd. by 10%. 50 HP is consumed per sec. -->
+		<!-- Maximizes magic efficiency by decreasing MP Consumption by 30% and Casting Spd. by 10%. 50 HP is consumed per second. -->
 		<icon>icon.skill0336</icon>
 		<operateType>T</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1381,7 +1381,7 @@
 		</effects>
 	</skill>
 	<skill id="8552" toLevel="1" name="Onslaught of Pa'agrio">
-		<!-- Attacks near the enemy with 4563 Power added to P. Atk., causes burns for 15 sec., and makes him consume 92 HP every sec. Requires a blunt weapon. Over-hit. -->
+		<!-- Attacks near the enemy with 4563 Power added to P. Atk., causes burns for 15 sec., and makes him consume 92 HP every second. Requires a blunt weapon. Over-hit is possible. -->
 		<icon>icon.skill0949</icon>
 		<operateType>A2</operateType>
 		<mpConsume>35</mpConsume>
@@ -1451,7 +1451,7 @@
 		</effects>
 	</skill>
 	<skill id="8554" toLevel="1" name="Lethal Blow">
-		<!-- Attacks the target's vital points with 5773 Power added to P. Atk. Requires a dagger. Over-hit. Half-kill. -->
+		<!-- Attacks the target's vital points with 5773 Power added to P. Atk. Requires a dagger. Over-hit is possible. Half-kill. -->
 		<icon>icon.skill0344</icon>
 		<operateType>A1</operateType>
 		<mpConsume>77</mpConsume>
@@ -1681,7 +1681,7 @@
 		</effects>
 	</skill>
 	<skill id="8560" toLevel="1" name="Flame Hawk">
-		<!-- Shoots an arrow filled with the energy of the phoenix to attack the enemies with 6084 Power added to P. Atk. Requires a bow. Over-hit. Critical. -->
+		<!-- Shoots an arrow filled with the energy of the phoenix to attack the enemies with 6084 Power added to P. Atk. Requires a bow. Over-hit and critical hit are possible. -->
 		<icon>icon.skill0771</icon>
 		<operateType>A1</operateType>
 		<mpConsume>164</mpConsume>
@@ -1755,7 +1755,7 @@
 		</effects>
 	</skill>
 	<skill id="8562" toLevel="1" name="Ghost Piercing">
-		<!-- Shoots an arrow filled with the energy of a ghost to attack the enemies with 6388 Power added to P. Atk. Requires a bow. Over-hit. Critical. -->
+		<!-- Shoots an arrow filled with the energy of a ghost to attack the enemies with 6388 Power added to P. Atk. Requires a bow. Over-hit and critical hit are possible. -->
 		<icon>icon.skill0773</icon>
 		<operateType>A1</operateType>
 		<mpConsume>164</mpConsume>
@@ -1824,7 +1824,7 @@
 		</effects>
 	</skill>
 	<skill id="8564" toLevel="1" name="Rush Impact">
-		<!-- Charges forward to attack the enemies in front with 4040 power added to P. Atk. and inflicts Stun for 9 sec. The power of the ring made it easier to use. -->
+		<!-- Charges forward to attack the enemies in front with 4040 power added to P. Attack and inflicts Stun for 9 sec. The power of the ring made it easier to use. -->
 		<icon>icon.skill0793</icon>
 		<operateType>DA2</operateType>
 		<mpConsume>83</mpConsume>
@@ -1898,7 +1898,7 @@
 		</effects>
 	</skill>
 	<skill id="8566" toLevel="1" name="Earthquake">
-		<!-- Wields a spear at neary by enemies with 4848 Power added to P. Atk. Requires a polearm. Over-hit. Critical. Ignores Shield Defense. Target may be canceled. -->
+		<!-- Wields a spear at neary by enemies with 4848 Power added to P. Atk. Requires a polearm. Over-hit and critical hit are possible. Ignores Shield Defense. Target may be canceled. -->
 		<icon>icon.skill0347</icon>
 		<operateType>A1</operateType>
 		<hpConsume>340</hpConsume>
@@ -1988,7 +1988,7 @@
 		</effects>
 	</skill>
 	<skill id="8569" toLevel="1" name="Sonic Rage">
-		<!-- Attacks the enemy with a devastating momentum burst. Requires a dual sword. Possible up to stage 7. Over-hit. Critical. -->
+		<!-- Attacks the enemy with a devastating momentum burst. Requires a dual sword. Possible up to stage 7. Over-hit and critical hit are possible. -->
 		<icon>icon.skill0345</icon>
 		<operateType>A1</operateType>
 		<hpConsume>50</hpConsume>
@@ -2024,7 +2024,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="8570" toLevel="1" name="Raging Force">
-		<!-- Attacks the enemy with a devastating burst of energy of wind. Requires a fist weapon. Possible up to stage 7. Over-hit. Critical. -->
+		<!-- Attacks the enemy with a devastating burst of energy of wind. Requires a fist weapon. Possible up to stage 7. Over-hit and critical hit are possible. -->
 		<icon>icon.skill0346</icon>
 		<operateType>A1</operateType>
 		<hpConsume>50</hpConsume>
@@ -2059,7 +2059,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="8571" toLevel="1" name="Demolition Impact">
-		<!-- Unleashes a destructive shock to attack enemies in front with 6084 Power added to P. Atk. Requires a two-handed sword or two-handed blunt. Over-hit. Critical. -->
+		<!-- Unleashes a destructive shock to attack enemies in front with 6084 Power added to P. Atk. Requires a two-handed sword or two-handed blunt. Over-hit and Critical are possible. -->
 		<icon>icon.skill0777</icon>
 		<operateType>A1</operateType>
 		<mpConsume>164</mpConsume>
@@ -2093,7 +2093,7 @@
 		</effects>
 	</skill>
 	<skill id="8572" toLevel="1" name="Armor Crush">
-		<!-- Attacks the enemy with 3295 Power added to P. Atk. For 9 sec., inflicts Stun and decreases P. Def. by 30% and M. Def. by 30%. Requires a sword, blunt weapon, two-handed sword, or two-handed blunt weapon. Over-hit. Critical. Ignores Shield Defense. -->
+		<!-- Attacks the enemy with 3295 Power added to P. Atk. For 9 sec., inflicts Stun and decreases P. Def. by 30% and M. Def. by 30%. Requires a sword, blunt weapon, two-handed sword, or two-handed blunt weapon. Over-hit and Critical are possible. Ignores Shield Defense. -->
 		<icon>icon.skill0362</icon>
 		<operateType>A2</operateType>
 		<hpConsume>338</hpConsume>
@@ -2173,7 +2173,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="8574" toLevel="1" name="Enuma Elish">
-		<!-- Attacks enemies in front using the mighty Sword of Creation with 6468 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Over-hit. -->
+		<!-- Attacks enemies in front using the mighty Sword of Creation with 6468 Power added to P. Atk. Increases Power upon the consumption of up to 5 souls. Over-hit is possible. -->
 		<icon>icon.skill0526</icon>
 		<operateType>A1</operateType>
 		<mpConsume>80</mpConsume>
@@ -2200,7 +2200,7 @@
 		</effects>
 	</skill>
 	<skill id="8575" toLevel="1" name="Soul Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with 112 Power added to M. Atk. For 30 sec., decreases Speed by 20%, Atk. Spd. by 30%, and Casting Spd. by 30%. Consumes 12 MP every sec. Over-hit. -->
+		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with 112 Power added to M. Atk. For 30 sec., decreases Speed by 20%, Atk. Spd. by 30%, and Casting Spd. by 30%. Consumes 12 MP every second. Over-hit is possible. -->
 		<icon>icon.skill1512</icon>
 		<operateType>A2</operateType>
 		<mpConsume>105</mpConsume>
@@ -2277,7 +2277,7 @@
 		</effects>
 	</skill>
 	<skill id="8577" toLevel="1" name="Wild Shot">
-		<!-- Fires bolt at random to attack enemies in front with 6084 Power added to P. Atk. Requires a crossbow. Over-hit. Critical. Increases Power upon the consumption of up to 5 souls. -->
+		<!-- Fires bolt at random to attack enemies in front with 6084 Power added to P. Atk. Requires a crossbow. Over-hit and Critical are possible. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill0790</icon>
 		<operateType>A1</operateType>
 		<mpConsume>123</mpConsume>
@@ -2312,7 +2312,7 @@
 		</effects>
 	</skill>
 	<skill id="8578" toLevel="1" name="Multiple Shot">
-		<!-- Attacks multiple enemies with 16667 Power added to P. Atk. Over-hit. Critical. Requires a bow/ crossbow. -->
+		<!-- Attacks multiple enemies with 16667 Power added to P. Atk. Over-hit and Critical hit are possible. Requires a bow/ crossbow. -->
 		<icon>icon.skill0987</icon>
 		<operateType>A1</operateType>
 		<mpConsume>83</mpConsume>
@@ -2348,7 +2348,7 @@
 		</effects>
 	</skill>
 	<skill id="8579" toLevel="1" name="Fire Vortex">
-		<!-- Summons a dimensional vortex that inflicts Fire damage on the enemy, supplementing user's M. Atk. with 140 Power. For 30 sec., decreases Speed by 10%, Atk. Spd. by 30%, Casting Spd. by 10%, and Fire Resistance by 20. Consumes 12 MP every sec. Over-hit. -->
+		<!-- Summons a dimensional vortex that inflicts Fire damage on the enemy, supplementing user's M. Atk. with 140 Power. For 30 sec., decreases Speed by 10%, Atk. Spd. by 30%, Casting Spd. by 10%, and Fire Resistance by 20. Consumes 12 MP every second. Over-hit is possible. -->
 		<icon>icon.skill1339</icon>
 		<operateType>A2</operateType>
 		<mpConsume>105</mpConsume>
@@ -2461,7 +2461,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="8582" toLevel="1" name="Dark Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of darkness and inflicts dark damage on the enemy with 139 Power added to M. Atk. Absorbs 25% as HP. For 30 sec., decreases Accuracy by 6 and Dark Resistance by 30. Consumes 12 MP every sec. -->
+		<!-- Stirs up a vortex connecting to the dimension of darkness and inflicts dark damage on the enemy with 139 Power added to M. Atk. Absorbs 25% as HP. For 30 sec., decreases Accuracy by 6 and Dark Resistance by 30. Consumes 12 MP every second. -->
 		<icon>icon.skill1343</icon>
 		<operateType>A2</operateType>
 		<mpConsume>105</mpConsume>
@@ -2542,7 +2542,7 @@
 		</effects>
 	</skill>
 	<skill id="8584" toLevel="1" name="Ice Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of Water and inflicts Water damage on the enemy with 140 Power added to M. Atk. For 30 sec., decreases Speed by 30%, Atk. Spd. by 10%, Casting Spd. by 10%, and resistance against Water by 20. Consumes 12 MP every sec. Over-hit. -->
+		<!-- Stirs up a vortex connecting to the dimension of Water and inflicts Water damage on the enemy with 140 Power added to M. Atk. For 30 sec., decreases Speed by 30%, Atk. Spd. by 10%, Casting Spd. by 10%, and resistance against Water by 20. Consumes 12 MP every second. Over-hit is possible. -->
 		<icon>icon.skill1340</icon>
 		<operateType>A2</operateType>
 		<mpConsume>105</mpConsume>
@@ -2653,7 +2653,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="8587" toLevel="1" name="Wind Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of Wind and inflicts Wind damage on the enemy with 140 Power added to M. Atk. For 30 sec., decreases Speed by 10%, Atk. Spd. by 10%, Casting Spd. by 30%, and resistance against Wind by 20. Consumes 12 MP every sec. Over-hit. -->
+		<!-- Stirs up a vortex connecting to the dimension of Wind and inflicts Wind damage on the enemy with 140 Power added to M. Atk. For 30 sec., decreases Speed by 10%, Atk. Spd. by 10%, Casting Spd. by 30%, and resistance against Wind by 20. Consumes 12 MP every second. Over-hit is possible. -->
 		<icon>icon.skill1341</icon>
 		<operateType>A2</operateType>
 		<mpConsume>105</mpConsume>
@@ -3108,7 +3108,7 @@
 		</effects>
 	</skill>
 	<skill id="8597" toLevel="1" name="Dance of Siren">
-		<!-- Increases M. Critical Rate of all party members' by 100% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Increases the Critical Rate of all party members' damage attack magic by 100% for 2 min. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0365</icon>
 		<operateType>A2</operateType>
 		<mpConsume>60</mpConsume>

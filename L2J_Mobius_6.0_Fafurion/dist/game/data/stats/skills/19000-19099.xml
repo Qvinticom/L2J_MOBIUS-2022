@@ -201,7 +201,7 @@
 			<effect name="CallPc" />
 		</effects>
 	</skill>
-	<skill id="19008" toLevel="1" name="Clan Guardian">
+	<skill id="19008" toLevel="1" name="Clan Rebirth">
 		<!-- Uses the clan guardian's power to restore nearby clan members' HP/ MP/ CP. Consumes 1000 Spirit Ore. Only available for the clan leader. -->
 		<icon>icon.skill19008</icon>
 		<operateType>A1</operateType>
@@ -233,7 +233,7 @@
 		</effects>
 	</skill>
 	<skill id="19009" toLevel="1" name="Clan Advent">
-		<!-- Clan members' P. Atk. +$s1, M. Atk. +$s2, P. Def/ M. Def +$s3, and HP/ MP Recovery bonus +$s4. This effect is activated only when the clan leader and/ or an elite clan member's online. -->
+		<!-- Clan members' P. Atk. +$s1, M. Atk. +$s2, P./ M. Def. +$s3, and HP/ MP Recovery bonus +$s4. This effect is activated only when the clan leader and/ or an elite clan member's online. -->
 		<icon>icon.skill19009</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -355,7 +355,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19013" toLevel="1" name="Clan Un-debuff">
+	<skill id="19013" toLevel="1" name="Clan Purge">
 		<!-- Removes all debuffs from nearby clan members. Consumes 300 Spirit Ore. Available only for the clan leader and elite clan members. -->
 		<icon>icon.skill19013</icon>
 		<operateType>A1</operateType>
@@ -766,7 +766,7 @@
 		</conditions>
 	</skill>
 	<skill id="19028" toLevel="2" name="Revolution Spirit">
-		<!-- Increases Max CP by $s2, P. Def. by $s3, and M. Def. by $s4 for $s1. Can only be used in a castle siege area by characters between Lv. $s5 - $s6. Soulshots and Spiritshots are not consumed. -->
+		<!-- Increases Max CP by $s2, P. Def. by $s3, and M. Def. by $s4 for $s1. Can only be used in a castle siege area by characters between Lv. $s5 -$s6. Soulshots and Spiritshots are not consumed. -->
 		<icon>BranchSys2.icon.skill20006</icon>
 		<operateType>A2</operateType>
 		<hitTime>1000</hitTime>
@@ -1061,7 +1061,7 @@
 		</effects>
 	</skill>
 	<skill id="19038" toLevel="1" name="Cold Cloak of Darkness">
-		<!-- All stats +$s1 and damage received -$s2. Ineffective in Chaotic state. -->
+		<!-- All stats +$s1 and damage received -$s2. -->
 		<icon>icon.amor_evilness_cloak</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1151,7 +1151,7 @@
 		</effects>
 	</skill>
 	<skill id="19040" toLevel="1" name="Cloak of Darkness">
-		<!-- All stats +$s1 and damage received -$s2. Ineffective in Chaotic state. -->
+		<!-- All stats +$s1 and damage received -$s2. -->
 		<icon>icon.amor_evilness_cloak</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1692,7 +1692,7 @@
 			<condition name="OpCanEscape" />
 		</conditions>
 	</skill>
-	<skill id="19093" toLevel="1" name="Added Blow Quiver">
+	<skill id="19093" toLevel="1" name="Additional Hit Quiver">
 		<!-- Chance of inflicting damage again upon shooting. -->
 		<icon>icon.skill0256</icon>
 		<operateType>T</operateType>
@@ -1725,7 +1725,7 @@
 		<reuseDelay>30000</reuseDelay>
 		<targetType>NONE</targetType>
 	</skill>
-	<skill id="19096" toLevel="1" name="Added Blow">
+	<skill id="19096" toLevel="1" name="Additional Hit">
 		<icon>icon.skill0056</icon>
 		<operateType>A1</operateType>
 		<effectPoint>-2</effectPoint>

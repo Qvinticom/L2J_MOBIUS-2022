@@ -529,7 +529,7 @@
 		</skills>
 	</item>
 	<item id="22024" name="Quick Healing Potion" type="EtcItem">
-		<!-- Magic potion that instantly restores HP by 435. Instant effect with no cooldown. Very light. Cannot be used when HP is full. -->
+		<!-- Magic potion that instantly restores HP by 435. Instant effect with no duration. Very light. Cannot be used when HP is full. -->
 		<set name="icon" val="br_cashtex.item.br_cash_quick_healing_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -556,7 +556,7 @@
 		</skills>
 	</item>
 	<item id="22025" name="Major Healing Potion" type="EtcItem">
-		<!-- Magic potion which quickly recovers HP. Lasts for 15 seconds. Very light. -->
+		<!-- Magic potion which quickly recovers HP. Lasts for 15 sec. Very light. -->
 		<set name="icon" val="br_cashtex.item.br_cash_greater_healing_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -583,7 +583,7 @@
 		</skills>
 	</item>
 	<item id="22026" name="Major Healing Potion" type="EtcItem">
-		<!-- Magic potion which slowly recovers HP. It lasts for 15 seconds. It is very light. -->
+		<!-- Magic potion which slowly recovers HP. It lasts for 15 sec. It is very light. -->
 		<set name="icon" val="br_cashtex.item.br_cash_healing_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />

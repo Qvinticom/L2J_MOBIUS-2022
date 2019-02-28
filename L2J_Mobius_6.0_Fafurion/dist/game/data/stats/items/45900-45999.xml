@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="45900" name="Kokko's Egg" type="EtcItem">
-		<!-- Kokko's egg. Double-click to find out what it is. Will be deleted once the event ends. -->
+		<!-- Kokko's egg. Double-click to find out what it is. -->
 		<set name="icon" val="icon.egg_white" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -14,7 +14,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45901" name="Kokko's Shiny Egg" type="EtcItem">
-		<!-- Kokko's shiny egg prepared by Maphr. Double-click to find out what it is. Will be deleted once the event ends. <Warning> The item you get after double-clicking cannot be shared between accounts. -->
+		<!-- Kokko's shiny egg prepared by Maph. Double-click to find out what it is. <Warning> The item you get after double-clicking cannot be shared between accounts. -->
 		<set name="icon" val="icon.egg_twinkle" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -27,7 +27,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="45902" name="Kokko's Golden Egg" type="EtcItem">
-		<!-- Kokko's golden egg prepared by Maphr. Double-click to find out what it is. Will be deleted once the event ends. <Warning> The item you get after double-clicking cannot be shared between accounts. -->
+		<!-- Kokko's golden egg prepared by Maph. Double-click to find out what it is. <Warning> The item you get after double-clicking cannot be shared between accounts. -->
 		<set name="icon" val="icon.egg_gold" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -40,7 +40,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="45903" name="Apocalypse Weapon Pack Coupon" type="EtcItem">
-		<!-- Take it to Maphr's agent Yuna to get a box containing an Apocalypse weapon. Will be deleted once the event ends. -->
+		<!-- Take it to Maphr's agent Yuna to get a box containing an Apocalypse weapon. -->
 		<set name="icon" val="icon.fairy_encounter_letter" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -429,7 +429,7 @@
 		</skills>
 	</item>
 	<item id="45929" name="Spirit Stone" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon Augmentation by characters level 46 or above. -->
+		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon augmentation by characters level 46 or above. -->
 		<set name="icon" val="icon.renewal_mineral_46" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="immediate_effect" val="true" />
@@ -442,7 +442,7 @@
 		</cond>
 	</item>
 	<item id="45930" name="Mid-grade Spirit Stone" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon Augmentation by characters level 85 or above. -->
+		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon augmentation by characters level 85 or above. -->
 		<set name="icon" val="icon.renewal_mineral_r" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="immediate_effect" val="true" />
@@ -455,7 +455,7 @@
 		</cond>
 	</item>
 	<item id="45931" name="High-grade Spirit Stone" type="EtcItem">
-		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon Augmentation by characters level 95 or above. -->
+		<!-- Ordinary mineral that has been petrified by a creature's physical or magical damage and dimensional anomalies. Key component used in weapon augmentation by characters level 95 or above. -->
 		<set name="icon" val="icon.renewal_mineral_r95" />
 		<set name="commissionItemType" val="LIFE_STONE" />
 		<set name="immediate_effect" val="true" />
@@ -622,7 +622,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45944" name="Dimensional Hero's Supply Box" type="EtcItem">
-		<!-- Double-click to obtain gifts for Dimensional Raid heroes. Double-click to get 1 of the following: Top-grade Spirit Stone, Elcyum, Blessed Scroll: Enchant Weapon (R-grade), Blessed Scroll: Enchant Armor (R-grade), Bloody Helios Enhancement Stone, or Bloody Eternal Enhancement Stone. -->
+		<!-- Treasure Chest containing gifts for Dimensional Raid heroes. Double-click to get 1 of the following: Top-grade Spirit Stone, Elcyum, Blessed Scroll: Enchant Weapon (R-grade), Blessed Scroll: Enchant Armor (R-grade), Bloody Weapon Enhancement Stone, or Bloody Armor Enhancement Stone. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -635,7 +635,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45945" name="Decisive Recovery Potion" type="EtcItem">
-		<!-- Restores 3000 HP, and the remaining power restores CP. Instant effect with no cooldown. -->
+		<!-- Restores 3000 HP, and the remaining power restores CP. Instant effect with no duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
@@ -1178,7 +1178,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45994" name="Apocalypse Shaper Focus Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to create +6 Enchanted Apocalypse Shaper Focus (30-day). Will be deleted after the event. -->
+		<!-- Double-click to create +6 Enchanted Apocalypse Shaper Focus (30-day). -->
 		<set name="icon" val="icon.weapon_phasian_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1189,7 +1189,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45995" name="Apocalypse Cutter Focus Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to create +6 Enchanted Apocalypse Cutter Focus (30-day). Will be deleted after the event. -->
+		<!-- Double-click to create +6 Enchanted Apocalypse Cutter Focus (30-day). -->
 		<set name="icon" val="icon.weapon_pasis_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1200,7 +1200,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45996" name="Apocalypse Slasher Focus Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to create +6 Enchanted Apocalypse Slasher Focus (30-day). Will be deleted after the event. -->
+		<!-- Double-click to create +6 Enchanted Apocalypse Slasher Focus (30-day). -->
 		<set name="icon" val="icon.weapon_volver_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1211,7 +1211,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45997" name="Apocalypse Dualsword Damage Up Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to create +6 Enchanted Apocalypse Dual Sword Damage Up (30-day). Will be deleted after the event. -->
+		<!-- Double-click to create +6 Enchanted Apocalypse Dual Sword Damage Up (30-day). -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1222,7 +1222,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45998" name="Apocalypse Dual Dagger Focus Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to create +6 Enchanted Apocalypse Dual Dagger Focus (30-day). Will be deleted after the event. -->
+		<!-- Double-click to create +6 Enchanted Apocalypse Dual Dagger Focus (30-day). -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1233,7 +1233,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="45999" name="Apocalypse Dual Blunt Weapon Damage Up Capsule" additionalName="Event" type="EtcItem">
-		<!-- Double-click to create +6 Enchanted Apocalypse Dual Blunt Weapon Damage Up (30-day). Will be deleted after the event. -->
+		<!-- Double-click to create +6 Enchanted Apocalypse Dual Blunt Weapon Damage Up (30-day). -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

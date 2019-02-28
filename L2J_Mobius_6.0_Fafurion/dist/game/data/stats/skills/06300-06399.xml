@@ -27,7 +27,7 @@
 		</effects>
 	</skill>
 	<skill id="6301" toLevel="2" name="Cold Mana Fragment">
-		<!-- Recovers MP by $s1 per sec. -->
+		<!-- Recovers MP by $s1 per second. -->
 		<icon>icon.skill6301</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -161,7 +161,7 @@
 		</effects>
 	</skill>
 	<skill id="6306" toLevel="1" name="Solina Strike">
-		<!-- Causes profuse bleeding for 10 sec., causing 139 HP damage per sec. -->
+		<!-- Causes profuse bleeding for 10 sec., causing 139 HP damage per second. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -827,7 +827,7 @@
 		</effects>
 	</skill>
 	<skill id="6333" toLevel="1" name="Electric Bolt 1">
-		<!-- Causes bleeding for 3 sec., draining 200 HP per sec. -->
+		<!-- Causes bleeding for 3 sec., draining 200 HP per second. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -976,7 +976,7 @@
 		</effects>
 	</skill>
 	<skill id="6339" toLevel="1" name="Divine Hammer Attack">
-		<!-- Causes bleeding for 3 sec., draining 200 HP per sec. -->
+		<!-- Causes bleeding for 3 sec., draining 200 HP per second. -->
 		<icon>icon.skill0096</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1440,7 +1440,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="6376" toLevel="9" name="Sonic Strike">
-		<!-- For $s1, 10% of max HP, $s2 of max MP and $s3 HP per second decrease from Dopagen's Sonic Strike. -->
+		<!-- For $s1, 10% of Max HP, $s2 of Max MP and $s3 HP per second decrease from Dopagen's Sonic Strike. -->
 		<icon>icon.skill1417</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

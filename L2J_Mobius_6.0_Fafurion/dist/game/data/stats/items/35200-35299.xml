@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="35200" name="Bloody Amaranthine Shooter" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Atk. Spd. Increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -36,7 +36,7 @@
 		</stats>
 	</item>
 	<item id="35201" name="Bloody Amaranthine Buster" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Accuracy and M. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -70,7 +70,7 @@
 		</stats>
 	</item>
 	<item id="35202" name="Bloody Amaranthine Caster" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Accuracy and M. Critical Damage increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -105,7 +105,7 @@
 		</stats>
 	</item>
 	<item id="35203" name="Bloody Amaranthine Retributer" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -141,7 +141,7 @@
 		</stats>
 	</item>
 	<item id="35204" name="Bloody Amaranthine Dualsword" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -174,7 +174,7 @@
 		</stats>
 	</item>
 	<item id="35205" name="Bloody Amaranthine Dual Dagger" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -208,7 +208,7 @@
 		</stats>
 	</item>
 	<item id="35206" name="Bloody Amaranthine Dual Blunt Weapon" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -242,7 +242,7 @@
 		</stats>
 	</item>
 	<item id="35207" name="Bloody Amaranthine Shaper" additionalName="Guidance" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -277,7 +277,7 @@
 		</stats>
 	</item>
 	<item id="35208" name="Bloody Amaranthine Shaper" additionalName="Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -312,7 +312,7 @@
 		</stats>
 	</item>
 	<item id="35209" name="Bloody Amaranthine Shaper" additionalName="Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +81.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +81.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -347,7 +347,7 @@
 		</stats>
 	</item>
 	<item id="35210" name="Bloody Amaranthine Cutter" additionalName="Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -381,7 +381,7 @@
 		</stats>
 	</item>
 	<item id="35211" name="Bloody Amaranthine Cutter" additionalName="Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -415,7 +415,7 @@
 		</stats>
 	</item>
 	<item id="35212" name="Bloody Amaranthine Cutter" additionalName="Health" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -449,7 +449,7 @@
 		</stats>
 	</item>
 	<item id="35213" name="Bloody Amaranthine Slasher" additionalName="Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -483,7 +483,7 @@
 		</stats>
 	</item>
 	<item id="35214" name="Bloody Amaranthine Slasher" additionalName="Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -517,7 +517,7 @@
 		</stats>
 	</item>
 	<item id="35215" name="Bloody Amaranthine Slasher" additionalName="Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -551,7 +551,7 @@
 		</stats>
 	</item>
 	<item id="35216" name="Bloody Amaranthine Avenger" additionalName="Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -586,7 +586,7 @@
 		</stats>
 	</item>
 	<item id="35217" name="Bloody Amaranthine Avenger" additionalName="Critical Damage" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 1232 during a critical attack. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 1232 during a critical attack. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -621,7 +621,7 @@
 		</stats>
 	</item>
 	<item id="35218" name="Bloody Amaranthine Avenger" additionalName="Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -656,7 +656,7 @@
 		</stats>
 	</item>
 	<item id="35219" name="Bloody Amaranthine Fighter" additionalName="Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +75.5. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +75.5. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -691,7 +691,7 @@
 		</stats>
 	</item>
 	<item id="35220" name="Bloody Amaranthine Fighter" additionalName="Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -726,7 +726,7 @@
 		</stats>
 	</item>
 	<item id="35221" name="Bloody Amaranthine Fighter" additionalName="Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -761,7 +761,7 @@
 		</stats>
 	</item>
 	<item id="35222" name="Bloody Amaranthine Stormer" additionalName="HP Drain" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Recovers 4% of standard physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Recovers 4% of standard physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -796,7 +796,7 @@
 		</stats>
 	</item>
 	<item id="35223" name="Bloody Amaranthine Stormer" additionalName="Guidance" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -831,7 +831,7 @@
 		</stats>
 	</item>
 	<item id="35224" name="Bloody Amaranthine Stormer" additionalName="Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -866,7 +866,7 @@
 		</stats>
 	</item>
 	<item id="35225" name="Bloody Amaranthine Thrower" additionalName="Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -902,7 +902,7 @@
 		</stats>
 	</item>
 	<item id="35226" name="Bloody Amaranthine Thrower" additionalName="Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -938,7 +938,7 @@
 		</stats>
 	</item>
 	<item id="35227" name="Bloody Amaranthine Thrower" additionalName="Long Blow" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Attack range increases. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Attack range increases. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -974,7 +974,7 @@
 		</stats>
 	</item>
 	<item id="35228" name="Bloody Amaranthine Shooter" additionalName="Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1010,7 +1010,7 @@
 		</stats>
 	</item>
 	<item id="35229" name="Bloody Amaranthine Shooter" additionalName="Critical Slow" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1047,7 +1047,7 @@
 		</stats>
 	</item>
 	<item id="35230" name="Bloody Amaranthine Shooter" additionalName="Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1083,7 +1083,7 @@
 		</stats>
 	</item>
 	<item id="35231" name="Bloody Amaranthine Buster" additionalName="Acumen" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1118,7 +1118,7 @@
 		</stats>
 	</item>
 	<item id="35232" name="Bloody Amaranthine Buster" additionalName="Magic Hold" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1154,7 +1154,7 @@
 		</stats>
 	</item>
 	<item id="35233" name="Bloody Amaranthine Buster" additionalName="Mana Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max MP increases by 30%. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max MP increases by 30%. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1189,7 +1189,7 @@
 		</stats>
 	</item>
 	<item id="35234" name="Bloody Amaranthine Caster" additionalName="Empower" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Damage increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1225,7 +1225,7 @@
 		</stats>
 	</item>
 	<item id="35235" name="Bloody Amaranthine Caster" additionalName="Acumen" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Damage increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1261,7 +1261,7 @@
 		</stats>
 	</item>
 	<item id="35236" name="Bloody Amaranthine Caster" additionalName="Magic Hold" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Damage increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1298,7 +1298,7 @@
 		</stats>
 	</item>
 	<item id="35237" name="Bloody Amaranthine Retributer" additionalName="MP Regeneration" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. MP Recovery Rate increases. Increases damage inflicted during PvP.When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. MP Recovery Rate increases. Increases damage inflicted during PvP. When enchanted to +4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1335,7 +1335,7 @@
 		</stats>
 	</item>
 	<item id="35238" name="Bloody Amaranthine Retributer" additionalName="Acumen" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1372,7 +1372,7 @@
 		</stats>
 	</item>
 	<item id="35239" name="Bloody Amaranthine Retributer" additionalName="Empower" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to +4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1409,7 +1409,7 @@
 		</stats>
 	</item>
 	<item id="35240" name="Bloody Amaranthine Dualsword" additionalName="Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1443,7 +1443,7 @@
 		</stats>
 	</item>
 	<item id="35241" name="Bloody Amaranthine Dualsword" additionalName="Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1477,7 +1477,7 @@
 		</stats>
 	</item>
 	<item id="35242" name="Bloody Amaranthine Dualsword" additionalName="Health" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1511,7 +1511,7 @@
 		</stats>
 	</item>
 	<item id="35243" name="Bloody Amaranthine Dual Dagger" additionalName="Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1546,7 +1546,7 @@
 		</stats>
 	</item>
 	<item id="35244" name="Bloody Amaranthine Dual Dagger" additionalName="Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1581,7 +1581,7 @@
 		</stats>
 	</item>
 	<item id="35245" name="Bloody Amaranthine Dual Dagger" additionalName="Guidance" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1616,7 +1616,7 @@
 		</stats>
 	</item>
 	<item id="35246" name="Bloody Amaranthine Dual Blunt Weapon" additionalName="Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1651,7 +1651,7 @@
 		</stats>
 	</item>
 	<item id="35247" name="Bloody Amaranthine Dual Blunt Weapon" additionalName="Guidance" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1686,7 +1686,7 @@
 		</stats>
 	</item>
 	<item id="35248" name="Bloody Amaranthine Dual Blunt Weapon" additionalName="Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1721,7 +1721,7 @@
 		</stats>
 	</item>
 	<item id="35249" name="Bloody Amaranthine Shaper" additionalName="Guidance + Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 8. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 8. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1757,7 +1757,7 @@
 		</stats>
 	</item>
 	<item id="35250" name="Bloody Amaranthine Shaper" additionalName="Haste + Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical +81.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical +81.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1793,7 +1793,7 @@
 		</stats>
 	</item>
 	<item id="35251" name="Bloody Amaranthine Shaper" additionalName="Focus + Guidance" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1829,7 +1829,7 @@
 		</stats>
 	</item>
 	<item id="35252" name="Bloody Amaranthine Cutter" additionalName="Haste + Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1864,7 +1864,7 @@
 		</stats>
 	</item>
 	<item id="35253" name="Bloody Amaranthine Cutter" additionalName="Focus + Health" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +75.4. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +75.4. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1899,7 +1899,7 @@
 		</stats>
 	</item>
 	<item id="35254" name="Bloody Amaranthine Cutter" additionalName="Health + Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Accuracy and P. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1934,7 +1934,7 @@
 		</stats>
 	</item>
 	<item id="35255" name="Bloody Amaranthine Slasher" additionalName="Focus + Damage" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1969,7 +1969,7 @@
 		</stats>
 	</item>
 	<item id="35256" name="Bloody Amaranthine Slasher" additionalName="Damage Up + Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2004,7 +2004,7 @@
 		</stats>
 	</item>
 	<item id="35257" name="Bloody Amaranthine Slasher" additionalName="Haste + Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_twohand_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2039,7 +2039,7 @@
 		</stats>
 	</item>
 	<item id="35258" name="Bloody Amaranthine Avenger" additionalName="Haste + Critical Damage" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. P. Atk. Increases by 1232 during a critical attack. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. P. Atk. Increases by 1232 during a critical attack. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2075,7 +2075,7 @@
 		</stats>
 	</item>
 	<item id="35259" name="Bloody Amaranthine Avenger" additionalName="Critical Damage + Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 1232 during a critical attack. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 1232 during a critical attack. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2111,7 +2111,7 @@
 		</stats>
 	</item>
 	<item id="35260" name="Bloody Amaranthine Avenger" additionalName="Focus + Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases. -->
 		<set name="icon" val="icon.weapon_R99_onehand_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2147,7 +2147,7 @@
 		</stats>
 	</item>
 	<item id="35261" name="Bloody Amaranthine Fighter" additionalName="Focus + Damage" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +81.9. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +81.9. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2183,7 +2183,7 @@
 		</stats>
 	</item>
 	<item id="35262" name="Bloody Amaranthine Fighter" additionalName="Damage Up + Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2219,7 +2219,7 @@
 		</stats>
 	</item>
 	<item id="35263" name="Bloody Amaranthine Fighter" additionalName="Haste + Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical +75.5. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical +75.5. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_fist_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2255,7 +2255,7 @@
 		</stats>
 	</item>
 	<item id="35264" name="Bloody Amaranthine Stormer" additionalName="HP Drain + Guidance" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2292,7 +2292,7 @@
 		</stats>
 	</item>
 	<item id="35265" name="Bloody Amaranthine Stormer" additionalName="Guidance + Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.8. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.8. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2329,7 +2329,7 @@
 		</stats>
 	</item>
 	<item id="35266" name="Bloody Amaranthine Stormer" additionalName="Damage Up + HP Drain" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Recovers 4% of standard melee physical damage inflicted upon the enemy as HP. Increases damage inflicted during PvP. When enchanted to +4, Multi-attack additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_spear_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2366,7 +2366,7 @@
 		</stats>
 	</item>
 	<item id="35267" name="Bloody Amaranthine Thrower" additionalName="Damage Up + Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2403,7 +2403,7 @@
 		</stats>
 	</item>
 	<item id="35268" name="Bloody Amaranthine Thrower" additionalName="Focus + Long Blow" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Attack range increases. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Attack range increases. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2440,7 +2440,7 @@
 		</stats>
 	</item>
 	<item id="35269" name="Bloody Amaranthine Thrower" additionalName="Long Blow + Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Attack range increases. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Attack range increases. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases. -->
 		<set name="icon" val="icon.weapon_R99_bow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2477,7 +2477,7 @@
 		</stats>
 	</item>
 	<item id="35270" name="Bloody Amaranthine Shooter" additionalName="Focus + Critical Slow" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +78.7. Chance of casting Slow during a Critical Attack. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2515,7 +2515,7 @@
 		</stats>
 	</item>
 	<item id="35271" name="Bloody Amaranthine Shooter" additionalName="Critical Slow + Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Chance of casting Slow during a Critical Attack. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Chance of casting Slow during a Critical Attack. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2553,7 +2553,7 @@
 		</stats>
 	</item>
 	<item id="35272" name="Bloody Amaranthine Shooter" additionalName="Haste + Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, Atk. Spd. Increases. -->
 		<set name="icon" val="icon.weapon_R99_crossbow_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2590,7 +2590,7 @@
 		</stats>
 	</item>
 	<item id="35273" name="Bloody Amaranthine Buster" additionalName="Acumen + Magic Hold" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2627,7 +2627,7 @@
 		</stats>
 	</item>
 	<item id="35274" name="Bloody Amaranthine Buster" additionalName="Magic Hold + Mana Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. Max MP increases by 30%. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. Max MP increases by 30%. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2664,7 +2664,7 @@
 		</stats>
 	</item>
 	<item id="35275" name="Bloody Amaranthine Buster" additionalName="Mana Up + Acumen" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max MP increases by 30%. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Rate increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max MP increases by 30%. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Rate increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2700,7 +2700,7 @@
 		</stats>
 	</item>
 	<item id="35276" name="Bloody Amaranthine Caster" additionalName="Empower + Acumen" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. M. Atk. Increases by 460. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Damage increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. M. Atk. Increases by 460. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2737,7 +2737,7 @@
 		</stats>
 	</item>
 	<item id="35277" name="Bloody Amaranthine Caster" additionalName="Acumen + Magic Hold" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Damage increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2775,7 +2775,7 @@
 		</stats>
 	</item>
 	<item id="35278" name="Bloody Amaranthine Caster" additionalName="Magic Hold + Empower" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to +4, M. Accuracy and M. Critical Damage increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. 20% chance of casting Dryad Root on the target during magic use. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to +4, Magical Accuracy and M. Critical Damage increase. -->
 		<set name="icon" val="icon.weapon_R99_onehand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -2813,7 +2813,7 @@
 		</stats>
 	</item>
 	<item id="35279" name="Bloody Amaranthine Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. MP Recovery Rate increases. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. MP Recovery Rate increases. Magic Casting Spd. Increases by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2851,7 +2851,7 @@
 		</stats>
 	</item>
 	<item id="35280" name="Bloody Amaranthine Retributer" additionalName="Acumen + Empower" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Casting Spd. Increases by 15%. M. Atk. Increases by 460. Increases damage inflicted during PvP. When enchanted to +4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2889,7 +2889,7 @@
 		</stats>
 	</item>
 	<item id="35281" name="Bloody Amaranthine Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. M. Atk. Increases by 322. MP Recovery rate increases. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. M. Atk. Increases by 322. MP Recovery rate increases. Increases damage inflicted during PvP. When enchanted to +4, M. Atk. M. Critical Damage, and Casting Spd. Increase. -->
 		<set name="icon" val="icon.weapon_R99_twohand_magic_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2927,7 +2927,7 @@
 		</stats>
 	</item>
 	<item id="35282" name="Bloody Amaranthine Dualsword" additionalName="Haste + Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Atk. Spd. Increases by about 15%. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2962,7 +2962,7 @@
 		</stats>
 	</item>
 	<item id="35283" name="Bloody Amaranthine Dualsword" additionalName="Damage Up + Health" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Max HP increases by 25%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2997,7 +2997,7 @@
 		</stats>
 	</item>
 	<item id="35284" name="Bloody Amaranthine Dualsword" additionalName="Health + Haste" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Max HP increases by 25%. Atk. Spd. Increases by about 15%. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Rate increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_sword_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3032,7 +3032,7 @@
 		</stats>
 	</item>
 	<item id="35285" name="Bloody Amaranthine Dual Dagger" additionalName="Damage Up + Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3068,7 +3068,7 @@
 		</stats>
 	</item>
 	<item id="35286" name="Bloody Amaranthine Dual Dagger" additionalName="Focus + Guidance" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3104,7 +3104,7 @@
 		</stats>
 	</item>
 	<item id="35287" name="Bloody Amaranthine Dual Dagger" additionalName="Guidance + Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.9. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Critical Damage increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_dagger_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3140,7 +3140,7 @@
 		</stats>
 	</item>
 	<item id="35288" name="Bloody Amaranthine Dual Blunt Weapon" additionalName="Focus + Guidance" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Critical +79.2. Accuracy increases by 7.9. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3176,7 +3176,7 @@
 		</stats>
 	</item>
 	<item id="35289" name="Bloody Amaranthine Dual Blunt Weapon" additionalName="Guidance + Damage Up" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.8. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. Accuracy increases by 7.8. P. Atk. Increases by 415. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3212,7 +3212,7 @@
 		</stats>
 	</item>
 	<item id="35290" name="Bloody Amaranthine Dual Blunt Weapon" additionalName="Damage Up + Focus" type="Weapon">
-		<!-- PvE enchant type item. When equipped, PvE Damage +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
+		<!-- PvE enchant type item. When equipped, damage to an NPC +15% and Max HP/ MP/ CP +10%. <Soul Crystal Enhancement>. P. Atk. Increases by 415. Critical +78.7. Increases damage inflicted during PvP. When enchanted to +4, P. Skill Power increases and P. Atk. additionally increases. -->
 		<set name="icon" val="icon.weapon_R99_dual_blunt_pve_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -3248,7 +3248,7 @@
 		</stats>
 	</item>
 	<item id="35291" name="Glorious T-shirt" type="Armor">
-		<!-- Glorious Shirt. HP increases by 465. -->
+		<!-- Glorious T-shirt. HP increases by 465. -->
 		<set name="icon" val="icon.honor_shirt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="130" />

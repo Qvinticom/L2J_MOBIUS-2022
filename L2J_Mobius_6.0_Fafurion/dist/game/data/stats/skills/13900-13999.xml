@@ -74,7 +74,7 @@
 		</effects>
 	</skill>
 	<skill id="13904" toLevel="1" name="Roa's Assistance">
-		<!-- A special buff prepared by Roa for the returning war veterans. Find Roa during a guerilla event to obtain. $s1 hr.: Acquired XP/ SP +$s2. -->
+		<!-- A special buff prepared by Roa for the returning war veterans. Find Roa during a guerilla event to obtain. $s1 h.: Acquired XP/ SP +$s2. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
@@ -143,7 +143,7 @@
 		</effects>
 	</skill>
 	<skill id="13907" toLevel="1" name="Red Libra Talisman - Cancel">
-		<!-- Dispels debuffs of all party members, and grants 7-sec. debuff immunity. -->
+		<!-- Dispels debuffs of all party members, and grants 7-second debuff immunity. -->
 		<icon>BranchSys2.icon.g_giant_gem</icon>
 		<abnormalTime>7</abnormalTime>
 		<abnormalLvl>1</abnormalLvl>
@@ -643,7 +643,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13921" toLevel="1" name="Elysium Dualsword">
+	<skill id="13921" toLevel="1" name="Elysium Dual Sword">
 		<!-- P. Atk. +6%, Atk. Spd. +15%, P. Critical Rate +82, P. Critical Damage +7%, P. Skill Critical Damage +10%, Max HP/ MP/ CP +15%. -->
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>
@@ -1120,7 +1120,7 @@
 		</effects>
 	</skill>
 	<skill id="13935" toLevel="3" name="Paulina's Earrings - Vampiric Rage">
-		<!-- Restores HP by using some of the damage inflicted upon the enemy with a certain probability. -->
+		<!-- Recover HP by a portion of damage dealt to the enemy, with a certain rate. -->
 		<icon>icon.skill1268</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1424,7 +1424,7 @@
 		</effects>
 	</skill>
 	<skill id="13947" toLevel="10" name="PvP Othell">
-		<!-- Skill Power +$s1 -->
+		<!-- Skill power +$s1. -->
 		<icon>icon.bm_ensoul_stone_pvp</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1495,7 +1495,7 @@
 		</effects>
 	</skill>
 	<skill id="13948" toLevel="10" name="PvP. Iss">
-		<!-- Atk. Attribute Bonus +$s1 -->
+		<!-- Attack Attribute Bonus +$s1. -->
 		<icon>icon.bm_ensoul_stone_pvp</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1623,7 +1623,7 @@
 		</effects>
 	</skill>
 	<skill id="13950" toLevel="10" name="PvE. Othell">
-		<!-- Skill Power +$s1 -->
+		<!-- Skill power +$s1. -->
 		<icon>icon.bm_ensoul_stone_pve</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1697,7 +1697,7 @@
 		</effects>
 	</skill>
 	<skill id="13951" toLevel="10" name="PvE. Iss">
-		<!-- Atk. Attribute Bonus +$s1 -->
+		<!-- Attack Attribute Bonus +$s1. -->
 		<icon>icon.bm_ensoul_stone_pve</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2260,7 +2260,7 @@
 		</effects>
 	</skill>
 	<skill id="13959" toLevel="1" name="Mammon's Talisman - Skill Power">
-		<!-- Skill Power +$s1 -->
+		<!-- Skill power +$s1. -->
 		<icon>icon.bm_magic_square_talisman</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2276,7 +2276,7 @@
 		</effects>
 	</skill>
 	<skill id="13960" toLevel="1" name="Mammon's Talisman Box - Attack Attribute">
-		<!-- Atk. Attribute Bonus +$s1. -->
+		<!-- Attack Attribute Bonus +$s1. -->
 		<icon>icon.bm_magic_square_talisman</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2320,8 +2320,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13963" toLevel="1" name="Protector's Guardian Earrings">
-		<!-- Max MP +49, Maximum CP +10%, Defense/ Magical Resistance +3%, Stun/ Mental attack and defense success rate +30%, Vampiric Rage +4% -->
+	<skill id="13963" toLevel="1" name="Warrior's Earring">
+		<!-- Maximum MP +49, Maximum CP +10%, Defense/ Magical Resistance +3%, Stun/ Mental attack and defense success rate +30%, Vampiric Rage +4% -->
 		<icon>icon.accessory_earring_of_hero_i01</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2363,7 +2363,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="13970" toLevel="10" name="Sayha's Talisman">
-		<!-- Receives a boosting effect for P. Defense by $s1, M. Defense by $s2, and Acquired XP/ SP by $s3. -->
+		<!-- Receives a boosting effect for P. Defense by $s1, M. Def. by $s2, and Acquired XP/ SP by $s3. -->
 		<icon>icon.bm_sayhas_talisman</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2680,5 +2680,14 @@
 				<stat>CHA</stat>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="13976" toLevel="3" name="La Vie En Rose's Glorious Brooch">
+		<!-- Equips up to 6 Jewels and adds 12 inventory slots. -->
+		<icon>
+			<value level="1">icon.etc_bm_brooch_lavianrose_i04</value>
+			<value level="2">icon.etc_bm_brooch_lavianrose_i05</value>
+			<value level="3">icon.etc_bm_brooch_lavianrose_i06</value>
+		</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

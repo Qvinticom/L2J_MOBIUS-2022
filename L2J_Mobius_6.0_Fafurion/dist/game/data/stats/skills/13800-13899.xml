@@ -476,7 +476,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13820" toLevel="1" name="Kelbim's Shout">
+	<skill id="13820" toLevel="1" name="Spirit of Kelbim">
 		<!-- Ignores the target's CP and inflicts $s1 power at a fixed rate. Consumes 4 Spirit Ore. -->
 		<icon>icon.kelbim_weapon_cutter_high</icon>
 		<operateType>A1</operateType>
@@ -610,7 +610,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13828" toLevel="1" name="Christmas Talisman - P. Skill Critical Damage">
+	<skill id="13828" toLevel="1" name="Christmas Talisman - Critical Damage">
 		<!-- P. Skill Critical Damage +7% with the power of Talisman. -->
 		<icon>icon.etc_talisman_i02</icon>
 		<operateType>P</operateType>
@@ -1505,7 +1505,7 @@
 		</effects>
 	</skill>
 	<skill id="13848" toLevel="1" name="Blessed Resurrection">
-		<!-- Allows the use of Blessed Resurrection. Cooldown is 12 hr. -->
+		<!-- Allows the use of Blessed Resurrection. Cooldown is 12 h. -->
 		<icon>icon.accessory_sheep_cap_white_i00</icon>
 		<operateType>A1</operateType>
 		<castRange>400</castRange>
@@ -1655,7 +1655,7 @@
 		</effects>
 	</skill>
 	<skill id="13856" toLevel="15" name="Might">
-		<!-- P. Atk +$s1 -->
+		<!-- P. Atk. +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1680,7 +1680,7 @@
 		</effects>
 	</skill>
 	<skill id="13857" toLevel="15" name="Fury">
-		<!-- Atk. Spd. +$s1 -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1705,7 +1705,7 @@
 		</effects>
 	</skill>
 	<skill id="13858" toLevel="15" name="Focus">
-		<!-- P. Critical Rate +$s1 -->
+		<!-- P. Critical Rate +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1730,7 +1730,7 @@
 		</effects>
 	</skill>
 	<skill id="13859" toLevel="15" name="Death">
-		<!-- P. Critical Damage +$s1 -->
+		<!-- P. Critical Damage +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1755,7 +1755,7 @@
 		</effects>
 	</skill>
 	<skill id="13860" toLevel="15" name="Hunter">
-		<!-- P. Skill Critical Rate +$s1 -->
+		<!-- P. Skill Critical Rate +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1780,7 +1780,7 @@
 		</effects>
 	</skill>
 	<skill id="13861" toLevel="15" name="Fire">
-		<!-- P. Skill Critical Damage +$s1 -->
+		<!-- P. Skill Critical Damage +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1805,7 +1805,7 @@
 		</effects>
 	</skill>
 	<skill id="13862" toLevel="15" name="Body">
-		<!-- Max HP +$s1 -->
+		<!-- Max HP +$s1. -->
 		<icon>icon.ensoul_big_p</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1830,7 +1830,7 @@
 		</effects>
 	</skill>
 	<skill id="13863" toLevel="15" name="Empower">
-		<!-- Magic Damage +$s1 -->
+		<!-- Magic Damage +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1855,7 +1855,7 @@
 		</effects>
 	</skill>
 	<skill id="13864" toLevel="15" name="Acumen">
-		<!-- Casting Spd. +$s1 -->
+		<!-- Casting Spd. +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1880,7 +1880,7 @@
 		</effects>
 	</skill>
 	<skill id="13865" toLevel="15" name="Wild">
-		<!-- M. Critical Rate +$s1 -->
+		<!-- M. Critical Rate +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1905,7 +1905,7 @@
 		</effects>
 	</skill>
 	<skill id="13866" toLevel="15" name="Mystic">
-		<!-- M. Critical Damage +$s1 -->
+		<!-- M. Critical Damage +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1930,7 +1930,7 @@
 		</effects>
 	</skill>
 	<skill id="13867" toLevel="15" name="Soul">
-		<!-- Max MP +$s1 -->
+		<!-- Max MP +$s1. -->
 		<icon>icon.ensoul_big_m</icon>
 		<operateType>P</operateType>
 		<effects>

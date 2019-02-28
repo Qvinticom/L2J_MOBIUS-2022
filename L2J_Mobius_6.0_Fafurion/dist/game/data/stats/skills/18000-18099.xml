@@ -137,14 +137,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18008" toLevel="1" name="Scroll of Escape: The Cemetary">
+	<skill id="18008" toLevel="1" name="Scroll of Escape: The Cemetery">
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="18009" toLevel="1" name="Tempest Stone">
-		<!-- Double-click for a chance to obtain either a Low/ Mid/ High-grade Dye Pack, or Talisman -Wind Pack. -->
+		<!-- Double-click for a chance to obtain either a Low/ Mid/ High-grade Dye Pack, or Talisman - Wind Pack. -->
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
@@ -191,7 +191,7 @@
 		<operateType>A2</operateType>
 		<reuseDelay>600000</reuseDelay>
 	</skill>
-	<skill id="18017" toLevel="1" name="Fortune Pocket - Stage 1">
+	<skill id="18017" toLevel="1" name="Fortune Bag">
 		<!-- Use to obtain 400,000 XP. Can combine 2 Lv. 1 pouches. Below Lv. 85 only. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -209,7 +209,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18018" toLevel="1" name="Fortune Pocket - Stage 2">
+	<skill id="18018" toLevel="1" name="Fortune Bag">
 		<!-- Use to obtain 1,600,000 XP. Can combine 2 Lv. 2 pouches. Below Lv. 85 only. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -227,7 +227,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18019" toLevel="1" name="Maphr's Pouch">
+	<skill id="18019" toLevel="1" name="Fortune Bag">
 		<!-- Use to obtain 6,400,000 XP. Below Lv. 85 only. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -245,7 +245,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18020" toLevel="2" name="Maphr's Pouch">
+	<skill id="18020" toLevel="2" name="Fortune Bag">
 		<!-- Random Prize. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -260,7 +260,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="1">
-						<item id="39631" count="10" /> <!-- Fortune Bag - Stage 3 -->
+						<item id="39631" count="10" /> <!-- Fortune Pocket - Stage 3 -->
 					</item>
 					<item chance="4.5">
 						<item id="39386" count="1" /> <!-- Lv. 1 Windy LUC Dye - LUC +1 -->
@@ -287,7 +287,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18021" toLevel="1" name="Fortune Pocket - Stage 4">
+	<skill id="18021" toLevel="1" name="Fortune Bag">
 		<!-- Use to obtain 80,000 XP. Can combine 2 Lv. 4 pouches. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -305,7 +305,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18022" toLevel="1" name="Maphr's Pouch">
+	<skill id="18022" toLevel="1" name="Fortune Bag">
 		<!-- Use to obtain 256,000 SP. -->
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -323,7 +323,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18023" toLevel="2" name="Maphr's Pouch">
+	<skill id="18023" toLevel="2" name="Fortune Bag">
 		<!-- Random Prize. -->
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -338,7 +338,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="4.5">
-						<item id="39633" count="10" /> <!-- Fortune Bag - Stage 5 -->
+						<item id="39633" count="10" /> <!-- Fortune Pocket - Stage 5 -->
 					</item>
 					<item chance="2">
 						<item id="39389" count="1" /> <!-- Lv. 4 Windy LUC Dye - LUC +4 -->
@@ -652,7 +652,7 @@
 		</effects>
 	</skill>
 	<skill id="18051" toLevel="1" name="Prevailing Sonata - Dance">
-		<!-- For 1 hr., Atk. Spd. +15%, Casting Spd. +30%, Max HP +30%, MP Recovery Bonus +20%, and M. Skill MP Consumption -10%. Decreases chance of being interrupted mid-spell. Cooldown is 1 hr. Remains after death. -->
+		<!-- For 1 h., Atk. Spd. +15%, Casting Spd. +30%, Max HP +30%, MP Recovery Bonus +20%, and M. Skill MP Consumption -10%. Decreases chance of being interrupted mid-spell. Cooldown is 1 h. Remains after death. -->
 		<icon>icon.etc_bm_sonata_cookie</icon>
 		<affectRange>1000</affectRange>
 		<abnormalLvl>1</abnormalLvl>

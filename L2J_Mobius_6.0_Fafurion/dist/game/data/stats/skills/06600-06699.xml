@@ -2107,7 +2107,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6650" toLevel="1" name="Tacrakahn's Alienation">
+	<skill id="6650" toLevel="1" name="Taklacan's Alienation">
 		<!-- All actions are sealed by Taklacan's special ability. Impossible to dispel. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLvl>99</abnormalLvl>
@@ -2171,7 +2171,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
-	<skill id="6656" toLevel="1" name="Lavasaurus Alpha Attack">
+	<skill id="6656" toLevel="1" name="Lavasaurus Fireball">
 		<effectPoint>-100</effectPoint>
 		<magicLvl>99</magicLvl>
 		<operateType>A1</operateType>
@@ -2228,7 +2228,7 @@
 		<magicCriticalRate>-5</magicCriticalRate>
 	</skill>
 	<skill id="6662" toLevel="2" name="Freeze">
-		<!-- All actions are prohibited for $s1, and you lose $s2 HP per sec. -->
+		<!-- All actions are prohibited for $s1, and you lose $s2 HP per second. -->
 		<icon>icon.skill6274</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2841,7 +2841,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="6689" toLevel="1" name="HP/MP Drain">
+	<skill id="6689" toLevel="1" name="HP/ MP Drain">
 		<coolTime>2000</coolTime>
 		<effectPoint>-100</effectPoint>
 		<magicLvl>83</magicLvl>
@@ -2886,7 +2886,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6691" toLevel="1" name="Dualsword Deadly Move">
+	<skill id="6691" toLevel="1" name="Dual Sword Deadly Move">
 		<coolTime>900</coolTime>
 		<effectPoint>-100</effectPoint>
 		<magicLvl>83</magicLvl>
@@ -2898,7 +2898,7 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="6692" toLevel="1" name="Dualsword Range Deadly Move">
+	<skill id="6692" toLevel="1" name="Dual Sword Range Deadly Move">
 		<coolTime>1500</coolTime>
 		<effectPoint>-100</effectPoint>
 		<magicLvl>83</magicLvl>
@@ -3027,7 +3027,7 @@
 		</effects>
 	</skill>
 	<skill id="6698" toLevel="1" name="Freeze - Eternal Ice">
-		<!-- Actions prohibited for 15 sec. HP decreases by 115 and MP decreases by 5% per sec. -->
+		<!-- Actions prohibited for 15 sec. HP decreases by 115 and MP decreases by 5% per second. -->
 		<icon>icon.skill6274</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>15</abnormalTime>

@@ -547,13 +547,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6667">
-						<item id="8664" count="1" /> <!-- Facelifting Potion - A (Event) -->
+						<item id="8664" count="1" /> <!-- Facelifting Potion - A (Event) - ] -->
 					</item>
 					<item chance="16.6667">
-						<item id="8665" count="1" /> <!-- Facelifting Potion - B (Event) -->
+						<item id="8665" count="1" /> <!-- Facelifting Potion - B (Event) - ] -->
 					</item>
 					<item chance="16.6667">
-						<item id="8666" count="1" /> <!-- Facelifting Potion - C (Event) -->
+						<item id="8666" count="1" /> <!-- Facelifting Potion - C (Event) - ] -->
 					</item>
 					<item chance="49.9999">
 						<item id="14739" count="1" /> <!-- Event - Fresh Milk -->
@@ -584,16 +584,16 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="16.6667">
-						<item id="8667" count="1" /> <!-- Dye Potion - A (Event) -->
+						<item id="8667" count="1" /> <!-- Dye Potion - A (Event) - ] -->
 					</item>
 					<item chance="16.6667">
-						<item id="8668" count="1" /> <!-- Dye Potion - B (Event) -->
+						<item id="8668" count="1" /> <!-- Dye Potion - B (Event) - ] -->
 					</item>
 					<item chance="16.6667">
-						<item id="8669" count="1" /> <!-- Dye Potion - C (Event) -->
+						<item id="8669" count="1" /> <!-- Dye Potion - C (Event) - ] -->
 					</item>
 					<item chance="16.6667">
-						<item id="8670" count="1" /> <!-- Dye Potion - D (Event) -->
+						<item id="8670" count="1" /> <!-- Dye Potion - D (Event) - ] -->
 					</item>
 					<item chance="33.3332">
 						<item id="14739" count="1" /> <!-- Event - Fresh Milk -->
@@ -624,25 +624,25 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="10">
-						<item id="8671" count="1" /> <!-- Hair Style Change Potion - A (Event) -->
+						<item id="8671" count="1" /> <!-- Hair Style Change Potion - A (Event) - ] -->
 					</item>
 					<item chance="10">
-						<item id="8672" count="1" /> <!-- Hair Style Change Potion - B (Event) -->
+						<item id="8672" count="1" /> <!-- Hair Style Change Potion - B (Event) - ] -->
 					</item>
 					<item chance="10">
-						<item id="8673" count="1" /> <!-- Hair Style Change Potion - C (Event) -->
+						<item id="8673" count="1" /> <!-- Hair Style Change Potion - C (Event) - ] -->
 					</item>
 					<item chance="10">
-						<item id="8674" count="1" /> <!-- Hair Style Change Potion - D (Event) -->
+						<item id="8674" count="1" /> <!-- Hair Style Change Potion - D (Event) - ] -->
 					</item>
 					<item chance="10">
-						<item id="8675" count="1" /> <!-- Hair Style Change Potion - E (Event) -->
+						<item id="8675" count="1" /> <!-- Hair Style Change Potion - E (Event) - ] -->
 					</item>
 					<item chance="10">
-						<item id="8676" count="1" /> <!-- Hair Style Change Potion - F (Event) -->
+						<item id="8676" count="1" /> <!-- Hair Style Change Potion - F (Event) - ] -->
 					</item>
 					<item chance="10">
-						<item id="8677" count="1" /> <!-- Hair Style Change Potion - G (Event) -->
+						<item id="8677" count="1" /> <!-- Hair Style Change Potion - G (Event) - ] -->
 					</item>
 					<item chance="30">
 						<item id="14739" count="1" /> <!-- Event - Fresh Milk -->
@@ -746,7 +746,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9115" toLevel="1" name="XP Buff 50% (1-hour)">
+	<skill id="9115" toLevel="1" name="XP Buff 50% (1-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -773,7 +773,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9116" toLevel="1" name="XP Buff 50% (1.5-hour)">
+	<skill id="9116" toLevel="1" name="XP Buff 50% (1.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -800,7 +800,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9117" toLevel="1" name="XP Buff 50% (2-hour)">
+	<skill id="9117" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -827,7 +827,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9118" toLevel="1" name="XP Buff 50% (2.5-hour)">
+	<skill id="9118" toLevel="1" name="XP Buff 50% (2.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -854,7 +854,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9119" toLevel="1" name="XP Buff 50% (3-hour)">
+	<skill id="9119" toLevel="1" name="XP Buff 50% (3-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -881,7 +881,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9120" toLevel="1" name="XP Buff 50% (1-hour)">
+	<skill id="9120" toLevel="1" name="XP Buff 50% (1-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -908,7 +908,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9121" toLevel="1" name="XP Buff 50% (1.5-hour)">
+	<skill id="9121" toLevel="1" name="XP Buff 50% (1.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -935,7 +935,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9122" toLevel="1" name="XP Buff 50% (2-hour)">
+	<skill id="9122" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -962,7 +962,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9123" toLevel="1" name="XP Buff 50% (2.5-hour)">
+	<skill id="9123" toLevel="1" name="XP Buff 50% (2.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -989,7 +989,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9124" toLevel="1" name="XP Buff 50% (3-hour)">
+	<skill id="9124" toLevel="1" name="XP Buff 50% (3-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1016,7 +1016,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9125" toLevel="1" name="XP Buff 50% (1-hour)">
+	<skill id="9125" toLevel="1" name="XP Buff 50% (1-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1043,7 +1043,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9126" toLevel="1" name="XP Buff 50% (1.5-hour)">
+	<skill id="9126" toLevel="1" name="XP Buff 50% (1.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1070,7 +1070,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9127" toLevel="1" name="XP Buff 50% (2-hour)">
+	<skill id="9127" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1097,7 +1097,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9128" toLevel="1" name="XP Buff 50% (2.5-hour)">
+	<skill id="9128" toLevel="1" name="XP Buff 50% (2.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1124,7 +1124,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9129" toLevel="1" name="XP Buff 50% (3-hour)">
+	<skill id="9129" toLevel="1" name="XP Buff 50% (3-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1151,7 +1151,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9130" toLevel="1" name="XP Buff 50% (1-hour)">
+	<skill id="9130" toLevel="1" name="XP Buff 50% (1-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1178,7 +1178,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9131" toLevel="1" name="XP Buff 50% (1.5-hour)">
+	<skill id="9131" toLevel="1" name="XP Buff 50% (1.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1205,7 +1205,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9132" toLevel="1" name="XP Buff 50% (2-hour)">
+	<skill id="9132" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1232,7 +1232,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9133" toLevel="1" name="XP Buff 50% (2.5-hour)">
+	<skill id="9133" toLevel="1" name="XP Buff 50% (2.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1259,7 +1259,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9134" toLevel="1" name="XP Buff 50% (3-hour)">
+	<skill id="9134" toLevel="1" name="XP Buff 50% (3-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1286,7 +1286,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9135" toLevel="1" name="XP Buff 50% (1-hour)">
+	<skill id="9135" toLevel="1" name="XP Buff 50% (1-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1313,7 +1313,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9136" toLevel="1" name="XP Buff 50% (1.5-hour)">
+	<skill id="9136" toLevel="1" name="XP Buff 50% (1.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1340,7 +1340,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9137" toLevel="1" name="XP Buff 50% (2-hour)">
+	<skill id="9137" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1367,7 +1367,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9138" toLevel="1" name="XP Buff 50% (2.5-hour)">
+	<skill id="9138" toLevel="1" name="XP Buff 50% (2.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1394,7 +1394,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9139" toLevel="1" name="XP Buff 50% (3-hour)">
+	<skill id="9139" toLevel="1" name="XP Buff 50% (3-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1421,7 +1421,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9140" toLevel="1" name="XP Buff 50% (1-hour)">
+	<skill id="9140" toLevel="1" name="XP Buff 50% (1-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1448,7 +1448,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9141" toLevel="1" name="XP Buff 50% (1.5-hour)">
+	<skill id="9141" toLevel="1" name="XP Buff 50% (1.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1475,7 +1475,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9142" toLevel="1" name="XP Buff 50% (2-hour)">
+	<skill id="9142" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1502,7 +1502,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9143" toLevel="1" name="XP Buff 50% (2.5-hour)">
+	<skill id="9143" toLevel="1" name="XP Buff 50% (2.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1529,7 +1529,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9144" toLevel="1" name="XP Buff 50% (3-hour)">
+	<skill id="9144" toLevel="1" name="XP Buff 50% (3-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1556,7 +1556,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9145" toLevel="1" name="XP Buff 50% (1-hour)">
+	<skill id="9145" toLevel="1" name="XP Buff 50% (1-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1583,7 +1583,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9146" toLevel="1" name="XP Buff 50% (1.5-hour)">
+	<skill id="9146" toLevel="1" name="XP Buff 50% (1.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1610,7 +1610,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9147" toLevel="1" name="XP Buff 50% (2-hour)">
+	<skill id="9147" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1637,7 +1637,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9148" toLevel="1" name="XP Buff 50% (2.5-hour)">
+	<skill id="9148" toLevel="1" name="XP Buff 50% (2.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1664,7 +1664,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9149" toLevel="1" name="XP Buff 50% (3-hour)">
+	<skill id="9149" toLevel="1" name="XP Buff 50% (3-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1691,7 +1691,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9150" toLevel="1" name="Freesia Bouquet (Event)">
+	<skill id="9150" toLevel="1" name="Freesia Bouquet (Event)]">
 		<!-- Bouquet of freesia flowers, which stand for "Innocence." -->
 		<icon>icon.etc_flower_bouquet_i02</icon>
 		<castRange>500</castRange>
@@ -1709,7 +1709,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9151" toLevel="1" name="Baby's Breath Bouquet (Event)">
+	<skill id="9151" toLevel="1" name="Baby's Breath Bouquet (Event)]">
 		<!-- Bouquet of baby's breath flowers, which stand for "Sorrow." -->
 		<icon>icon.etc_flower_bouquet_i03</icon>
 		<castRange>500</castRange>
@@ -1727,7 +1727,7 @@
 		<targetType>TARGET</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9152" toLevel="1" name="Pink Lady (Event)">
+	<skill id="9152" toLevel="1" name="Pink Lady (Event)]">
 		<!-- This cocktail drink was first made in London, England in 1912, as a tribute to the leading heroine in the play "Pink Lady," which was a great hit at the time. -->
 		<icon>icon.etc_fruit_cocktail_i02</icon>
 		<castRange>500</castRange>
@@ -2132,7 +2132,7 @@
 		</effects>
 	</skill>
 	<skill id="9165" toLevel="1" name="Leaf of Appreciation">
-		<!-- For 1 hr., the effects of Leaf of Appreciation increases Max MP by 20%, MP Recovery Bonus by 20%, HP Recovery Bonus by 20%, the chance of prominent magic damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption needed for skill use by 5%. -->
+		<!-- For 1 h., the effects of Leaf of Appreciation increases Max MP by 20%, MP Recovery Bonus by 20%, HP Recovery Bonus by 20%, the chance of prominent magic damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption needed for skill use by 5%. -->
 		<icon>icon.etc_leaf_green_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2181,7 +2181,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9167" toLevel="1" name="XP Buff 50% (1-hour)">
+	<skill id="9167" toLevel="1" name="XP Buff 50% (1-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -2205,7 +2205,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9168" toLevel="1" name="XP Buff 50% (1.5-hour)">
+	<skill id="9168" toLevel="1" name="XP Buff 50% (1.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -2229,7 +2229,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9169" toLevel="1" name="XP Buff 50% (2-hour)">
+	<skill id="9169" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -2253,7 +2253,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9170" toLevel="1" name="XP Buff 50% (2.5-hour)">
+	<skill id="9170" toLevel="1" name="XP Buff 50% (2.5-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -2277,7 +2277,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9171" toLevel="1" name="XP Buff 50% (3-hour)">
+	<skill id="9171" toLevel="1" name="XP Buff 50% (3-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -2301,7 +2301,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9172" toLevel="1" name="XP Buff 50% (4-hour)">
+	<skill id="9172" toLevel="1" name="XP Buff 50% (4-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -2851,7 +2851,7 @@
 					</item>
 					<item chance="0.49">
 						<item id="13722" count="200" /> <!-- Olympiad Token -->
-						<item id="13751" count="1" /> <!-- Warrior's Shirt -->
+						<item id="13751" count="1" /> <!-- Warrior's T-shirt -->
 					</item>
 					<item chance="0.59">
 						<item id="13722" count="200" /> <!-- Olympiad Token -->
@@ -3074,7 +3074,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9181" toLevel="1" name="XP Buff 50% (4-hour)">
+	<skill id="9181" toLevel="1" name="XP Buff 50% (4-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -3099,7 +3099,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9182" toLevel="1" name="XP Buff 50% (4-hour)">
+	<skill id="9182" toLevel="1" name="XP Buff 50% (4-h.)">
 		<!-- Additional 50% XP is acquired while in effect. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -3124,8 +3124,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9183" toLevel="1" name="Freya's Refreshing Breeze (4-hour)">
-		<!-- For 4 hr., recovers Vitality when XP is acquired through hunting. Will not be deleted upon death. -->
+	<skill id="9183" toLevel="1" name="Freya's Refreshing Breeze (4-h.)">
+		<!-- For 4 h., recovers Vitality when XP is acquired through hunting. Will not be deleted upon death. -->
 		<icon>icon.etc_I.etc_hot_spring_mineral_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -3153,8 +3153,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9184" toLevel="1" name="Freya's Refreshing Breeze (4-hour) (Event)">
-		<!-- For 4 hr., recovers Vitality when XP is acquired through hunting. Will not be deleted upon death. -->
+	<skill id="9184" toLevel="1" name="Freya's Refreshing Breeze (4-h.) (Event)">
+		<!-- For 4 h., recovers Vitality when XP is acquired through hunting. Will not be deleted upon death. -->
 		<icon>icon.etc_I.etc_hot_spring_mineral_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -3209,7 +3209,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9188" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (R-grade)">
+	<skill id="9188" toLevel="1" name="PA - Scroll: Enchant Weapon (R-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3218,7 +3218,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9189" toLevel="1" name="Player Commendation - Scroll: Enchant Armor (R-grade)">
+	<skill id="9189" toLevel="1" name="PA - Scroll: Enchant Armor (R-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3227,7 +3227,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9190" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (R-grade)">
+	<skill id="9190" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (R-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

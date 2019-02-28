@@ -84,6 +84,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="11106" toLevel="7" name="Elemental Burst">
+		<!-- Explodes Destruction to deal M. Atk. of $s1 power on the target and the nearby enemies. Effect: Fire - Ignite, Water - Frozen on a single target, Wind - Knock Back, Earth - Hold. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<abnormalTime>
@@ -152,7 +153,7 @@
 			</item>
 			<item>
 				<requiredSkillId>19313</requiredSkillId> <!-- Dark Stance -->
-				<skillId>11111</skillId> <!-- Elemental Mass Burst: 4 Attributes -->
+				<skillId>11111</skillId> <!-- Elemental Burst: Dark -->
 			</item>
 		</attachSkillList>
 		<conditions>
@@ -196,6 +197,7 @@
 		</effects>
 	</skill>
 	<skill id="11107" toLevel="7" name="Elemental Burst: Fire">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Fire - Ignite, Water - Frozen on a single target, Wind - Knock Back, Earth - Hold. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>FIRE</attributeType>
@@ -282,6 +284,7 @@
 		</effects>
 	</skill>
 	<skill id="11108" toLevel="7" name="Elemental Burst: Water">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Fire - Ignite, Water - Frozen on a single target, Wind - Knock Back, Earth - Hold. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>WATER</attributeType>
@@ -391,6 +394,7 @@
 		</effects>
 	</skill>
 	<skill id="11109" toLevel="7" name="Elemental Burst: Wind">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Fire - Ignite, Water - Frozen on a single target, Wind - Knock Back, Earth - Hold. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>WIND</attributeType>
@@ -499,6 +503,7 @@
 		</effects>
 	</skill>
 	<skill id="11110" toLevel="7" name="Elemental Burst: Earth">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Fire - Ignite, Water - Frozen on a single target, Wind - Knock Back, Earth - Hold. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11106</reuseDelayGroup>
 		<attributeType>EARTH</attributeType>
@@ -607,6 +612,7 @@
 		</effects>
 	</skill>
 	<skill id="11111" toLevel="7" name="Elemental Burst: Dark">
+		<!-- Detonates an Elemental Destruction to inflict damage on nearby enemies with $s1 Power. For $s2, M. Def. -$s3. -->
 		<icon>icon.skill11865</icon>
 		<abnormalTime>
 			<value level="1">15</value>
@@ -701,6 +707,7 @@
 		</effects>
 	</skill>
 	<skill id="11112" toLevel="7" name="Elemental Burst">
+		<!-- Explodes Destruction on the target to inflict damage with $s1 power added to M. Atk. on the target and the enemies near it. Effect: Water - Frozen, Holy - Stun. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11112</reuseDelayGroup>
@@ -790,6 +797,7 @@
 		</effects>
 	</skill>
 	<skill id="11113" toLevel="7" name="Elemental Burst: Holy">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Water - Frozen, Holy - Stun. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11112</reuseDelayGroup>
 		<attributeType>HOLY</attributeType>
@@ -898,6 +906,7 @@
 		</effects>
 	</skill>
 	<skill id="11114" toLevel="7" name="Elemental Burst: Water">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Water - Frozen, Holy - Stun. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11112</reuseDelayGroup>
 		<attributeType>WATER</attributeType>
@@ -1006,6 +1015,7 @@
 		</effects>
 	</skill>
 	<skill id="11115" toLevel="7" name="Elemental Burst">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target. Effect: Fire-Ranged Ignite, Dark-Teleports to a single target, cancels target's targeting, and resets Teleport cooldown. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11115</reuseDelayGroup>
@@ -1095,6 +1105,7 @@
 		</effects>
 	</skill>
 	<skill id="11116" toLevel="7" name="Elemental Burst: Fire">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target. Effect: Fire -Ranged Ignite, Dark -Teleports to a single target, Cancels target's targeting, and resets Teleport cooldown. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11115</reuseDelayGroup>
 		<attributeType>FIRE</attributeType>
@@ -1180,6 +1191,7 @@
 		</effects>
 	</skill>
 	<skill id="11117" toLevel="7" name="Elemental Burst: Dark">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target. Effect: Fire -Ranged Ignite, Dark -Teleports to a single target, Cancels target's targeting, and resets Teleport cooldown. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11115</reuseDelayGroup>
 		<attributeType>DARK</attributeType>
@@ -1264,6 +1276,7 @@
 		</effects>
 	</skill>
 	<skill id="11118" toLevel="7" name="Elemental Burst">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Wind -Cancel Target/ Faint, Dark -Increased M. Critical Rate Received on a single target. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11118</reuseDelayGroup>
@@ -1352,6 +1365,7 @@
 		</effects>
 	</skill>
 	<skill id="11119" toLevel="7" name="Elemental Burst: Wind">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Wind -Cancel Target/ Faint, Dark -Increased M. Critical Rate Received on a single target. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11118</reuseDelayGroup>
 		<attributeType>WIND</attributeType>
@@ -1460,6 +1474,7 @@
 		</effects>
 	</skill>
 	<skill id="11120" toLevel="7" name="Elemental Burst: Dark">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Wind -Cancel Target/ Faint, Dark -Increased M. Critical Rate Received on a single target. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11118</reuseDelayGroup>
 		<attributeType>DARK</attributeType> <!-- Dark -->
@@ -1544,6 +1559,7 @@
 		</effects>
 	</skill>
 	<skill id="11121" toLevel="7" name="Elemental Burst">
+		<!-- Explodes Destruction on the target to inflict damage with $s1 power added to M. Atk. on the target and the enemies near it. Effect: Earth - Knock Down, Dark - Additional Damage on a single target. -->
 		<icon>icon.skill11865</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<reuseDelayGroup>11121</reuseDelayGroup>
@@ -1633,6 +1649,7 @@
 		</effects>
 	</skill>
 	<skill id="11122" toLevel="7" name="Elemental Burst: Earth">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Earth -Knock Down, Dark -Additional Damage on a single target. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11121</reuseDelayGroup>
 		<attributeType>EARTH</attributeType> <!-- Earth -->
@@ -1741,6 +1758,7 @@
 		</effects>
 	</skill>
 	<skill id="11123" toLevel="7" name="Elemental Burst: Dark">
+		<!-- Explodes Destruction cast on the target to deal M. Atk. of $s1 power on the target and the enemies near it. Effect: Earth -Knock Down, Dark -Additional Damage on a single target. -->
 		<icon>icon.skill11865</icon>
 		<reuseDelayGroup>11121</reuseDelayGroup>
 		<attributeType>DARK</attributeType> <!-- Dark -->
@@ -1821,7 +1839,7 @@
 		</effects>
 	</skill>
 	<skill id="11124" toLevel="7" name="Superior Elemental Master">
-		<!-- Increases M. Atk. by $s1, P. Defense by $s2 and M. Critical Damage by $s3. -->
+		<!-- Increases M. Atk. by $s1, P. Defense by $s2 and Magical Critical Damage by $s3. -->
 		<icon>icon.skill10044</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -1862,7 +1880,7 @@
 		</effects>
 	</skill>
 	<skill id="11125" toLevel="7" name="Superior Spirit Eye">
-		<!-- M. Atk. +$s1, M. Critical Damage +$s2. -->
+		<!-- M. Atk. +$s1 and M. Critical Damage +$s2. -->
 		<icon>icon.skill0945</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -2192,6 +2210,7 @@
 		</effects>
 	</skill>
 	<skill id="11134" toLevel="1" name="Meteor">
+		<!-- Drops meteors to attack surrounding enemies and deals great damage. Inflicts abnormal state and deals continuous damage. The higher the level of the abnormal state, the greater the damage. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill11134</icon>
 		<affectRange>250</affectRange>
 		<channelingSkillId>11134</channelingSkillId> <!-- Meteor -->
@@ -2239,6 +2258,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11135" toLevel="1" name="Black Pool">
+		<!-- Forms Black Swampland in a specified location to constantly inflict powerful damage on the enemies and absorbs $s1 of the damage inflicted on the target as your HP. Triggers additional abnormal state to decelerate. Its power increases as per the level of abnormal state. Once it reaches the final level, the Stun is inflicted. Consumes $s2 Spirit Ore. -->
 		<icon>icon.skill11135</icon>
 		<affectRange>250</affectRange>
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2278,6 +2298,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11136" toLevel="1" name="Snow Storm">
+		<!-- Creates an ice storm in the selected location, dealing continuous damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, Freezes the target. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill11136</icon>
 		<affectRange>250</affectRange>
 		<abnormalLvl>1</abnormalLvl>
@@ -2328,6 +2349,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11137" toLevel="1" name="Tornado">
+		<!-- Creates a tornado in the selected location, dealing great damage. Decreases Speed. The higher the level of the abnormal state, the greater the damage, and at the last stage, locks the target in an Aerial Yoke. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill11137</icon>
 		<affectRange>250</affectRange>
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2375,7 +2397,8 @@
 			</effect>
 		</channelingEffects>
 	</skill>
-	<skill id="11138" toLevel="1" name="Soul Barrage">
+	<skill id="11138" toLevel="1" name="Soul Bomber">
+		<!-- Detonates the soul in the selected location to deal great damage to surrounding enemies. Increases PvP Damage Received. The effect becomes greater as the level of the debuff increases. Consumes $s1 Spirit Ore. -->
 		<icon>icon.skill11138</icon>
 		<affectRange>250</affectRange> <!-- Guessed -->
 		<channelingTickInterval>1</channelingTickInterval>
@@ -2406,7 +2429,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11139" toLevel="5" name="Ignite">
-		<!-- Damage is inflicted with $s1 power added to M. Atk. as you're engulfed in flames and the Healing received decreases by $s2. -->
+		<!-- Damage is inflicted by $s1 power added to M. Atk. as you're engulfed in flames and the Healing received decreases by $s2. -->
 		<icon>icon.skill11134</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2690,6 +2713,7 @@
 		</effects>
 	</skill>
 	<skill id="11150" toLevel="11" name="Elemental Crash (Dark)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases M. Def. by $s2. -->
 		<icon>
 			<value level="1">icon.skill11018</value>
 			<value level="2">icon.skill11018</value>
@@ -2902,6 +2926,50 @@
 			<value level="209">icon.skill11867</value>
 			<value level="210">icon.skill11867</value>
 			<value level="211">icon.skill11867</value>
+			<value level="212">icon.skill11018</value>
+			<value level="213">icon.skill11867</value>
+			<value level="214">icon.skill11867</value>
+			<value level="215">icon.skill11867</value>
+			<value level="216">icon.skill11867</value>
+			<value level="217">icon.skill11867</value>
+			<value level="218">icon.skill11867</value>
+			<value level="219">icon.skill11867</value>
+			<value level="220">icon.skill11867</value>
+			<value level="221">icon.skill11867</value>
+			<value level="222">icon.skill11867</value>
+			<value level="223">icon.skill11867</value>
+			<value level="224">icon.skill11867</value>
+			<value level="225">icon.skill11867</value>
+			<value level="226">icon.skill11867</value>
+			<value level="227">icon.skill11867</value>
+			<value level="228">icon.skill11867</value>
+			<value level="229">icon.skill11867</value>
+			<value level="230">icon.skill11867</value>
+			<value level="231">icon.skill11867</value>
+			<value level="232">icon.skill11867</value>
+			<value level="233">icon.skill11867</value>
+			<value level="234">icon.skill11867</value>
+			<value level="235">icon.skill11867</value>
+			<value level="236">icon.skill11867</value>
+			<value level="237">icon.skill11867</value>
+			<value level="238">icon.skill11867</value>
+			<value level="239">icon.skill11867</value>
+			<value level="240">icon.skill11867</value>
+			<value level="241">icon.skill11867</value>
+			<value level="242">icon.skill11867</value>
+			<value level="243">icon.skill11867</value>
+			<value level="244">icon.skill11867</value>
+			<value level="245">icon.skill11867</value>
+			<value level="246">icon.skill11867</value>
+			<value level="247">icon.skill11867</value>
+			<value level="248">icon.skill11867</value>
+			<value level="249">icon.skill11867</value>
+			<value level="250">icon.skill11867</value>
+			<value level="251">icon.skill11867</value>
+			<value level="252">icon.skill11867</value>
+			<value level="253">icon.skill11018</value>
+			<value level="254">icon.skill11867</value>
+			<value level="255">icon.skill11867</value>
 		</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2999,7 +3067,7 @@
 		</effects>
 	</skill>
 	<skill id="11151" toLevel="7" name="Superior Necromancy">
-		<!-- M. Atk. +$s1, P. Def. +$s2. Additionally, casting Elemental Spike (Dark) activates Curse Gloom which decreases the target's M. Def. and Attribute Resistance. -->
+		<!-- M. Atk. +$s1, P. Def. +$s2. Additionally, casting Elemental Spike (Dark) activates Curse Gloom which decreases the target's M. Def. and all Attribute Resistance. -->
 		<icon>icon.skill11151</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -3039,6 +3107,7 @@
 		</effects>
 	</skill>
 	<skill id="11152" toLevel="1" name="Sacrificial Soul">
+		<!-- Sacrifices your Servitor to become immune against debuff for $s1. -->
 		<icon>icon.skill1395</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3137,6 +3206,7 @@
 		</effects>
 	</skill>
 	<skill id="11153" toLevel="1" name="Chain Blaze">
+		<!-- Attacks the target and nearby enemies with 349 Power added to M. Atk. The damage increases incrementally. Consumes 2 Spirit Ore. -->
 		<icon>icon.skill11153</icon>
 		<itemConsumeCount>2</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId> <!-- Spirit Ore -->
@@ -3297,6 +3367,7 @@
 		</effects>
 	</skill>
 	<skill id="11177" toLevel="7" name="Aqua Crash">
+		<!-- Inflicts damage with $s1 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for $s2. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for $s3. Over-hit. -->
 		<icon>icon.skill10879</icon>
 		<reuseDelayGroup>11177</reuseDelayGroup>
 		<allStanceSkillId>11189</allStanceSkillId> <!-- Double Casting skill Id -->
@@ -3774,6 +3845,7 @@
 		</effects>
 	</skill>
 	<skill id="11189" toLevel="7" name="Aqua Crash">
+		<!-- Inflicts damage with $s1 Power to target. Applies a stacking debuff that decreases Speed. At 5 stacks target will be frozen for $s2. When Double Casting is active, the debuff will not stack. Instead, there is a chance target will be frozen for $s3. Over-hit. -->
 		<icon>icon.skill10879</icon>
 		<reuseDelayGroup>11177</reuseDelayGroup>
 		<attributeType>WATER</attributeType>

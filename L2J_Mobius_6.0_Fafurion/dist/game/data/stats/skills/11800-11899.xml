@@ -193,6 +193,7 @@
 		<magicLvl>97</magicLvl>
 	</skill>
 	<skill id="11806" toLevel="4" name="Blessing of Tree">
+		<!-- Recovers HP and removes bad abnormal statuses. -->
 		<icon>icon.skill1258</icon>
 		<operateType>A1</operateType>
 		<reuseDelay>7000</reuseDelay>
@@ -411,6 +412,7 @@
 		</effects>
 	</skill>
 	<skill id="11814" toLevel="11" name="Dark Force">
+		<!-- Inflicts damage on target with $s1 Power added to M. Atk. Has a chance of pushing back target. -->
 		<icon>icon.skill11814</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -595,6 +597,7 @@
 		</effects>
 	</skill>
 	<skill id="11817" toLevel="11" name="Dark Rain">
+		<!-- Inflicts damage on nearby enemies with $s1 Power added to M. Atk. and decreases aggression toward yourself. -->
 		<icon>icon.skill11817</icon>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>300</affectRange>
@@ -923,7 +926,7 @@
 		</effects>
 	</skill>
 	<skill id="11824" toLevel="1" name="Resistance of Saha">
-		<!-- For $s1, Attribute Resistance of party members +$s2. -->
+		<!-- For $s1, all Defense attributes of party members +$s2. -->
 		<icon>icon.skill11567</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -1006,6 +1009,7 @@
 		</effects>
 	</skill>
 	<skill id="11826" toLevel="1" name="Emblem of Salvation">
+		<!-- Resurrects from death fully recovered. Buffs/ debuffs remain in death, but Noblesse Blessing and Lucky Charm disappear. -->
 		<icon>icon.skill11826</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>RESURRECTION_SPECIAL</abnormalType>
@@ -1218,6 +1222,7 @@
 		</effects>
 	</skill>
 	<skill id="11832" toLevel="9" name="Mass Fatal Sleep">
+		<!-- Casts Sleep on nearby enemies for $s1. -->
 		<icon>icon.skill1072</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1338,6 +1343,7 @@
 		</effects>
 	</skill>
 	<skill id="11835" toLevel="1" name="Dissolve">
+		<!-- Increases Speed. -->
 		<icon>icon.skill11770</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1392,6 +1398,7 @@
 		</effects>
 	</skill>
 	<skill id="11850" toLevel="4" name="Miraculous Benediction">
+		<!-- Restores clan members' CP/ HP. Can only be used when MP is $s1 or below. -->
 		<icon>icon.skill11850new</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -1460,6 +1467,7 @@
 		</effects>
 	</skill>
 	<skill id="11851" toLevel="4" name="Divine Prayer">
+		<!-- For $s1, party members' HP heal amount +$s2. -->
 		<icon>icon.skill11859</icon>
 		<abnormalLvl>
 			<value level="1">4</value>
@@ -1528,6 +1536,7 @@
 		</effects>
 	</skill>
 	<skill id="11852" toLevel="4" name="Mass Mana Gain">
+		<!-- For $s1, party members' MP heal amount +$s2. -->
 		<icon>icon.skill11852new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1619,6 +1628,7 @@
 		</effects>
 	</skill>
 	<skill id="11854" toLevel="4" name="Mass Mana Gain">
+		<!-- For $s1, party members' MP heal amount +$s2. -->
 		<icon>icon.skill11852new</icon>
 		<abnormalLvl>
 			<value level="1">2</value>
@@ -1818,6 +1828,7 @@
 		</effects>
 	</skill>
 	<skill id="11861" toLevel="1" name="Elemental Resistance">
+		<!-- For $s1, increases party member's Elemental Resistance by $s2. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill11861</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -1873,7 +1884,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11862" toLevel="1" name="Limited Melee Weapon Resistance">
+	<skill id="11862" toLevel="1" name="Melee Weapon Resistance">
+		<!-- For $s1, increases party member's resistance to melee weapons by $s2. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill11862</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -1928,7 +1940,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11863" toLevel="1" name="Limited Ranged Weapon Resistance">
+	<skill id="11863" toLevel="1" name="Ranged Weapon Resistance">
+		<!-- For $s1, increases party member's resistance to ranged weapons by $s2. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill11863</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>

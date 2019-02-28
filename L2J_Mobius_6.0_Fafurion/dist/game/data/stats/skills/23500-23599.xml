@@ -2025,7 +2025,7 @@
 		</conditions>
 	</skill>
 	<skill id="23565" toLevel="1" name="Griffin Agathion Special Skill: Wind Walk">
-		<!-- For 20 min., Speed +33. Cooldown is 1 hr. -->
+		<!-- For 20 min., Speed +33. Cooldown is 1 h. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>A2</operateType>
 		<hitTime>4000</hitTime>
@@ -2110,7 +2110,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23569" toLevel="1" name="Uthanka's Soul">
-		<!-- For 1 hr., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Speed +5%, Casting Spd. +5%, Max HP/ MP +5%. Acquired XP/ SP +30%. -->
+		<!-- For 1 h., P. Atk. +5%, M. Atk. +20%, P. Def. +5%, M. Def. +5%, Speed +5%, Casting Spd. +5%, Max HP/ MP +5%. Acquired XP/ SP +30%. -->
 		<icon>BranchSys3.icon1.s_g_ev_uthanka_buff</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2172,7 +2172,7 @@
 		<hitTime>3000</hitTime>
 	</skill>
 	<skill id="23579" toLevel="1" name="Poison Blast">
-		<!-- Poison Zone created after the explosion of a Poison Seed. In the Poison Zone, HP -10% and Speed -30% every sec. If the number of targets inflicted with the Poison Seed increases, a Dimensional Poison effect occurs. -->
+		<!-- Poison Zone created after the explosion of a Poison Seed. In the Poison Zone, HP -10% and Speed -30% every second. If the number of targets inflicted with the Poison Seed increases, a Dimensional Poison effect occurs. -->
 		<icon>icon.skill1170</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-1</effectPoint>
@@ -2253,7 +2253,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="23589" toLevel="1" name="Lunatic Poison Blast">
-		<!-- Inflicts a powerful attack on enemies near the target and gives Poison damage of 2000 HP per sec. -->
+		<!-- Inflicts a powerful attack on enemies near the target and gives Poison damage of 2000 HP per second. -->
 		<icon>icon.skill4035</icon>
 		<operateType>A2</operateType>
 		<mpConsume>10</mpConsume>

@@ -1,5 +1,30 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="11400" toLevel="30" name="Forgotten Power - Physical Attack">
+		<!-- Increases P. Atk. by $s1. -->
+		<icon>icon.skill11400</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="11401" toLevel="30" name="Forgotten Power - Magical Attack">
+		<!-- Increases M. Atk. by $s1. -->
+		<icon>icon.skill11401</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="11402" toLevel="30" name="Forgotten Power - Armor Defense">
+		<!-- Increases P. Def./ M. Def. by $s1. -->
+		<icon>icon.skill11402</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="11403" toLevel="30" name="Forgotten Power - Vitalizing">
+		<!-- Vitality +$s1. -->
+		<icon>icon.skill11403</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="11404" toLevel="30" name="Forgotten Power - Elemental Guard">
+		<!-- All defense attributes +$s1. -->
+		<icon>icon.skill11404</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="11496" toLevel="2" name="Summoner Boss Penalty">
 		<!-- Decreases P. Atk. Toward bosses by $s1. -->
 		<icon>icon.skill0217</icon>

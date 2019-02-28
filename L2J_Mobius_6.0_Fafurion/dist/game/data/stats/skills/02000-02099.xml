@@ -1,5 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="2000" toLevel="1" name="Dual Certification - Death">
+		<!-- Increases P. Critical Damage and P./ M. Skill Critical Damage by $s1. -->
+		<icon>icon.skill10655</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="2001" toLevel="1" name="Red Potion">
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>

@@ -657,7 +657,7 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="15331" toLevel="1" name="Headquarters' Effect">
-		<!-- P./ M. Atk. +200%. Skill Cooldown -50%. -->
+		<!-- P. Atk./ M. Atk. +200%. Skill Cooldown -50%. -->
 		<icon>icon.skill11544</icon>
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
@@ -760,7 +760,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15336" toLevel="1" name="Trouble Benefit">
-		<!-- P./ M. Atk. +10%. -->
+		<!-- P. Atk./ M. Atk. +10%. -->
 		<operateType>A2</operateType>
 		<castRange>400</castRange>
 		<hitTime>1000</hitTime>
@@ -908,7 +908,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="15343" toLevel="1" name="Trouble Ability">
-		<!-- P./ M. Atk. +30%. -->
+		<!-- P. Atk./ M. Atk. +30%. -->
 		<icon>icon.skill1068</icon>
 		<operateType>A2</operateType>
 		<castRange>500</castRange>
@@ -1600,7 +1600,7 @@
 		<affectScope>SINGLE</affectScope>
 		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="15374" toLevel="2" name="Clan Hall - Horn Melody">
+	<skill id="15374" toLevel="2" name="Horn Melody - Clan Hall">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
@@ -1659,7 +1659,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15375" toLevel="2" name="Clan Hall - Drum Melody">
+	<skill id="15375" toLevel="2" name="Drum Melody - Clan Hall">
 		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
@@ -1764,7 +1764,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15376" toLevel="2" name="Clan Hall - Pipe Organ Melody">
+	<skill id="15376" toLevel="2" name="Pipe Organ Melody - Clan Hall">
 		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -1826,7 +1826,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15377" toLevel="2" name="Clan Hall - Guitar Melody">
+	<skill id="15377" toLevel="2" name="Guitar Melody - Clan Hall">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -1885,7 +1885,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15378" toLevel="2" name="Clan Hall - Harp Melody">
+	<skill id="15378" toLevel="2" name="Harp Melody - Clan Hall">
 		<!-- For $s1, P. Accuracy +$s2, P. Evasion/ M. Evasion +$s3, and Speed +$s4. Also, Critical Damage Received -$s5. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -1951,7 +1951,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15379" toLevel="2" name="Clan Hall - Lute Melody">
+	<skill id="15379" toLevel="2" name="Lute Melody - Clan Hall">
 		<!-- For $s1, Atk. Spd. and Casting Spd. +$s2 and $s3, respectively, and applies the Vampiric Rage effect for $s4 at a certain probability. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -2003,8 +2003,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15380" toLevel="1" name="Clan Hall - Knight's Harmony">
-		<!-- For $s1, increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+	<skill id="15380" toLevel="1" name="Knight's Harmony - Clan Hall">
+		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -2061,7 +2061,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15381" toLevel="1" name="Clan Hall - Warrior's Harmony">
+	<skill id="15381" toLevel="1" name="Warrior's Harmony - Clan Hall">
 		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -2123,7 +2123,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15382" toLevel="1" name="Clan Hall - Wizard's Harmony">
+	<skill id="15382" toLevel="1" name="Wizard's Harmony - Clan Hall">
 		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>

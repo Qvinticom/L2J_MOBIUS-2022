@@ -290,7 +290,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13017" name="White Weasel Minion Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a minion who temporarily casts warrior support magic. Hunger gauge lasts 5 hr. -->
+		<!-- Item that allows you to summon a minion who temporarily casts warrior support magic. Hunger gauge lasts 5 hours. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -315,7 +315,7 @@
 		</skills>
 	</item>
 	<item id="13018" name="Fairy Princess Minion Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. Hunger gauge lasts 5 hr. -->
+		<!-- Item that allows you to summon a minion who temporarily casts magician support magic. Hunger gauge lasts 5 hours. -->
 		<set name="icon" val="icon.pet_controler_i00" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -340,7 +340,7 @@
 		</skills>
 	</item>
 	<item id="13019" name="Wild Beast Fighter Minion Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a warrior minion that uses physical attacks. Hunger gauge lasts 5 hr. -->
+		<!-- Item that allows you to summon a warrior minion that uses physical attacks. Hunger gauge lasts 5 hours. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -365,7 +365,7 @@
 		</skills>
 	</item>
 	<item id="13020" name="Fox Shaman Minion Necklace" type="EtcItem">
-		<!-- Item that allows you to summon a magician minion that uses magic attacks. Hunger gauge lasts 5 hr. -->
+		<!-- Item that allows you to summon a magician minion that uses magic attacks. Hunger gauge lasts 5 hours. -->
 		<set name="icon" val="icon.pet_controler_i01" />
 		<set name="default_action" val="SKILL_MAINTAIN" />
 		<set name="etcitem_type" val="PET_COLLAR" />
@@ -589,7 +589,7 @@
 		<set name="material" val="PAPER" />
 	</item>
 	<item id="13032" name="Pailaka Instant Shield" type="EtcItem">
-		<!-- Potion of temporary invincibility created with the light of Spirits. Can only be used in the Pailaka Instance Zone dungeon. -->
+		<!-- Potion of temporary invincibility created with the light of Spirits. Can only be used in the Pailaka instanced zone dungeon. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1666,7 +1666,7 @@
 		</stats>
 	</item>
 	<item id="13079" name="My Teleport Book Pack" type="EtcItem">
-		<!-- Double-click to obtain a Free Teleporter's Scroll. -->
+		<!-- Wrapped Pack containing Free Teleporter's Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1687,7 +1687,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13080" name="My Teleport Scroll 30-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 30 sheets of Free Teleporter's Spellbooks. -->
+		<!-- Wrapped Pack containing 30 sheets of Free Teleporter's Spellbooks. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1708,7 +1708,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13081" name="Entrance Pass: Kamaloka Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 sheets of the Feather of Blessing. -->
+		<!-- Wrapped Pack containing 3 sheets of the Feather of Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1724,7 +1724,7 @@
 		<set name="is_premium" val="true" />
 	</item>
 	<item id="13082" name="Feather of Blessing 3-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain a Love Agathion Seal Bracelet (30-day). -->
+		<!-- Wrapped Pack containing Love Agathion Seal Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1766,7 +1766,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13084" name="Pumpkin Transformation Stick Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Kat the Cat Hat (30-day). -->
+		<!-- Wrapped Pack containing Kat the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1787,7 +1787,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13085" name="Entrance Pass: Kamaloka 3-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Sheets of Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). -->
+		<!-- Wrapped Pack containing 5 Sheets of Extra Entrances Passes each to Kamaloka (Hall of the Abyss), Near Kamaloka, and Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1810,7 +1810,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13086" name="Kat the Cat Hat Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Monster Eye Hat (30-day). -->
+		<!-- Wrapped Pack containing Monster Eye Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1831,7 +1831,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13087" name="Feline Queen Hat Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Brown Bear Hat (30-day). -->
+		<!-- Wrapped Pack containing Brown Bear Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1852,7 +1852,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13088" name="Monster Eye Hat Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Fungus Hat (30-day). -->
+		<!-- Wrapped Pack containing Fungus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1873,7 +1873,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13089" name="Brown Bear Hat Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Skull Hat (30-day). -->
+		<!-- Wrapped Pack containing Skull Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1894,7 +1894,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13090" name="Fungus Hat Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Ornithomimus Hat (30-day). -->
+		<!-- Wrapped Pack containing Ornithomimus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1915,7 +1915,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13091" name="Skull Hat Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Feline King Hat (30-day). -->
+		<!-- Wrapped Pack containing Feline King Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1936,7 +1936,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13092" name="Ornithomimus Hat Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Kai the Cat Hat (30-day). -->
+		<!-- Wrapped Pack containing Kai the Cat Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1957,7 +1957,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13093" name="Feline King Hat Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain an OX Stick (30-day). -->
+		<!-- Wrapped Pack containing OX Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1978,7 +1978,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13094" name="Kai the Cat Hat Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Rock-Paper-Scissors Stick (30-day). -->
+		<!-- Wrapped Pack containing Rock-Paper-Scissors Stick (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1999,7 +1999,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13095" name="OX Stick Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a bracelet that summons a Darkmane Pacer (7-day). -->
+		<!-- Wrapped Pack containing bracelet that summons a Darkmane Pacer (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2021,7 +2021,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13096" name="Rock-Paper-Scissors Stick Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Color Title. -->
+		<!-- Wrapped Pack containing Color Title. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2044,7 +2044,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13097" name="Darkmane Pacer Bracelet Pack" type="EtcItem">
-		<!-- Double-click to obtain a bracelet that summons a Darkmane Pacer (7-day). -->
+		<!-- Wrapped Pack containing bracelet that summons a Darkmane Pacer (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2065,7 +2065,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13098" name="Color Title 3-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain a Color Title. -->
+		<!-- Wrapped Pack containing Color Title. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2082,7 +2082,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="13021" min="3" max="3" chance="100" /> <!-- Color Title -->
+			<item id="13021" min="3" max="3" chance="100" /> <!-- Color Title -  -->
 		</capsuled_items>
 	</item>
 	<item id="13099" name="Sealed Arcana Sigil Piece" type="EtcItem">

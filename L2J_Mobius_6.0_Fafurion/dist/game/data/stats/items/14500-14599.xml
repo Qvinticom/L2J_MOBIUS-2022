@@ -1136,7 +1136,7 @@
 		</stats>
 	</item>
 	<item id="14530" name="Maxwell House Pack" type="EtcItem">
-		<!-- The wrapped pack containing 3 sheets of Feather of Resurrection, 3 sheets of Minion Pet Coupon (5-hr.), 1 Mount - Darkmane Pacer (7-day) and one of Ornithomimus Hat (30-day). -->
+		<!-- The wrapped pack containing 3 sheets of Feather of Resurrection, 3 sheets of Minion Pet Coupon (5-hour), 1 Mount - Darkmane Pacer (7-day) and one of Ornithomimus Hat (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1154,7 +1154,7 @@
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
 			<item id="13300" min="3" max="3" chance="100" /> <!-- Feather of Blessing (Event) -->
-			<item id="13383" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hr.) (Event) -->
+			<item id="13383" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) (Event) -->
 			<item id="13308" min="1" max="1" chance="100" /> <!-- Mount - Darkmane Pacer (Event) - 7-day -->
 			<item id="13316" min="1" max="1" chance="100" /> <!-- Ornithomimus Hat (Event) - 30-day -->
 		</capsuled_items>

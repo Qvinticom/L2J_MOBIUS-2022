@@ -90,7 +90,7 @@
 		</stats>
 	</item>
 	<item id="22304" name="Baium's Ring" additionalName="3-day (Event)" type="Armor">
-		<!-- MP +21, Poison Resistance +40%, Poison Attack Rate +40%, Hold Resistance +30%, Hold attack rate +30%, and increases Accuracy, Critical Damage, P. Atk., and Casting Spd. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP +21, Poison Resistance +40%, Poison Attack Rate +40%, Hold Resistance +30%, Hold attack rate +30%, and increases Accuracy, Critical Damage, P. Atk., and Casting Spd. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -116,7 +116,7 @@
 		</stats>
 	</item>
 	<item id="22305" name="Baium's Ring" additionalName="7-day (Event)" type="Armor">
-		<!-- MP +21, Poison Resistance +40%, Poison Attack Rate +40%, Hold Resistance +30%, Hold attack rate +30%, and increases Accuracy, Critical Damage, P. Atk., and Casting Spd. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP +21, Poison Resistance +40%, Poison Attack Rate +40%, Hold Resistance +30%, Hold attack rate +30%, and increases Accuracy, Critical Damage, P. Atk., and Casting Spd. Only one effect is applied when two of the same ring are equipped. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -172,7 +172,7 @@
 		</skills>
 	</item>
 	<item id="22308" name="Scroll: Enchant Armor (S-grade)" additionalName="Event" type="EtcItem">
-		<!-- P. Def. +1 for S-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for S-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -187,7 +187,7 @@
 		</skills>
 	</item>
 	<item id="22309" name="Scroll: Enchant Armor (A-grade)" additionalName="Event" type="EtcItem">
-		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -309,7 +309,7 @@
 		</skills>
 	</item>
 	<item id="22315" name="Blessed Scroll: Enchant Armor (S-grade)" type="EtcItem">
-		<!-- P. Def. +1 for S-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for S-grade armor and accessories when enchanted. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_s_i05" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -375,7 +375,7 @@
 		</skills>
 	</item>
 	<item id="22318" name="Blessed Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- P. Def. +1 for A-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for A-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_a_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -397,7 +397,7 @@
 		</skills>
 	</item>
 	<item id="22319" name="Blessed Scroll: Enchant Armor (B-grade)" type="EtcItem">
-		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_blessed_scrl_of_ench_am_b_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -463,7 +463,7 @@
 		</skills>
 	</item>
 	<item id="22322" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
-		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- Increases P. Def. by 1 for A-grade armor and accessories. Starting from +4, increases P. Def. by 3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -485,7 +485,7 @@
 		</skills>
 	</item>
 	<item id="22323" name="Scroll: Enchant Armor (B-grade)" type="EtcItem">
-		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for B-grade armor and accessories. Starting from +4, P. Def. +3. Can be safely enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i03" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -817,7 +817,7 @@
 		</skills>
 	</item>
 	<item id="22338" name="Extra Pass: Rim Kamaloka Pack" type="EtcItem">
-		<!-- Double-click to obtain an extra entrance pass that lets you enter Rim Kamaloka. -->
+		<!-- Wrapped Pack containing extra entrance pass that lets you enter Rim Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
@@ -899,7 +899,7 @@
 		</skills>
 	</item>
 	<item id="22343" name="Scroll: Enchant Armor (C-grade)" type="EtcItem">
-		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for C-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i02" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
@@ -943,7 +943,7 @@
 		</skills>
 	</item>
 	<item id="22345" name="Scroll: Enchant Armor (D-grade)" type="EtcItem">
-		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant value starting from +4. -->
+		<!-- P. Def. +1 for D-grade armor and accessories. Increases by 3 starting from +4. It can safely be enchanted up to +3. For one-piece armor, it can safely be enchanted up to +4. HP gradually increases with each enchant level starting from +4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="120" />
@@ -991,7 +991,7 @@
 		<set name="is_dropable" val="false" />
 	</item>
 	<item id="22348" name="Adventurer's Song - Energy of Recovery" type="EtcItem">
-		<!-- Receives the power of a mysterious song of a great adventurer to resurrect with reduced XP when killed by an NPC. -->
+		<!-- Receives the power of a mysterious song of a great adventurer to resurrect with reduced XP when killed by an NPC. <Warning>. The Adventurer's Song button in the resurrection menu is available only in the current game session. -->
 		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_recovery" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1005,7 +1005,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="22349" name="Adventurer's Song - Eva's Protection" type="EtcItem">
-		<!-- Receives the power of a mysterious song of a great adventurer to decrease the duration of the 'Shilen's Breath' de-buff upon death. The effect lasts for 1 hr. upon use. Can only be used by characters level 1 - 84. -->
+		<!-- Receives the power of a mysterious song of a great adventurer to decrease the duration of the 'Shilen's Breath' de-buff upon death. The effect lasts for 1 hour upon use. Can only be used by characters level 1 - 84. -->
 		<set name="icon" val="BranchSys3.Icon.g_sing_of_adventurer_eva_r" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -1147,7 +1147,7 @@
 		</skills>
 	</item>
 	<item id="22357" name="Mount - Tame Princess Ant Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Mount - Tame Princess Ant (7-day). -->
+		<!-- Wrapped Pack containing Mount - Tame Princess Ant (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1167,7 +1167,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22358" name="Mount - Tame Princess Ant Pack" type="EtcItem">
-		<!-- Double-click to obtain a Mount - Tame Princess Ant. -->
+		<!-- Wrapped Pack containing Mount - Tame Princess Ant. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1187,7 +1187,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22359" name="Weapon Conversion Scroll: Emerald Sword" type="EtcItem">
-		<!-- When used, the equipped weapon changes into an Emerald Sword for 2 hr. Cooldown is 60 min. Only applies when a one-handed sword is equipped. -->
+		<!-- When used, the equipped weapon changes into an Emerald Sword for 2 hours. Cooldown is 60 min. Only applies when a one-handed sword is equipped. -->
 		<set name="icon" val="BranchSys3.Icon.g_scroll_beam_1h_sword" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -1208,7 +1208,7 @@
 		</skills>
 	</item>
 	<item id="22360" name="Weapon Conversion Scroll: Emerald Dualsword" type="EtcItem">
-		<!-- When used, the equipped weapon changes into an Emerald Dual Sword for 2 hr. Cooldown is 60 min. Only applies when a dual sword is equipped. -->
+		<!-- When used, the equipped weapon changes into an Emerald Dual Sword for 2 hours. Cooldown is 60 min. Only applies when a dual sword is equipped. -->
 		<set name="icon" val="BranchSys3.Icon.g_scroll_beam_1h_sword" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -1410,7 +1410,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="22369" name="Mount - Black Bear Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Mount - Black Bear (7-day). -->
+		<!-- Wrapped Pack containing Mount - Black Bear (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1430,7 +1430,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22370" name="Mount - Black Bear Pack" type="EtcItem">
-		<!-- Double-click to obtain a Mount - Black Bear. -->
+		<!-- Wrapped Pack containing Mount - Black Bear. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1450,7 +1450,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22371" name="Black Bear Claw Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Black Bear Claws (7-day). -->
+		<!-- Wrapped Pack containing Black Bear Claws (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1470,7 +1470,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22372" name="Black Bear Claw Pack" type="EtcItem">
-		<!-- Double-click to obtain a Black Bear Claws. -->
+		<!-- Wrapped Pack containing Black Bear Claws. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1490,7 +1490,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22373" name="Black Bear Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Black Bear Hat (7-day). -->
+		<!-- Wrapped Pack containing Black Bear Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1510,7 +1510,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22374" name="Black Bear Hat Pack" type="EtcItem">
-		<!-- Double-click to obtain a Black Bear Hat (7-day). -->
+		<!-- Wrapped Pack containing Black Bear Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1602,7 +1602,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="22379" name="Brilliant Beach Sun Cap Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Brilliant Beach Sun Cap (7-day). -->
+		<!-- Wrapped Pack containing Brilliant Beach Sun Cap (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1622,7 +1622,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22380" name="Brilliant Beach Sun Cap Pack" type="EtcItem">
-		<!-- Double-click to obtain a Brilliant Beach Sun Cap. -->
+		<!-- Wrapped Pack containing Brilliant Beach Sun Cap. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1642,7 +1642,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22381" name="Stylish Straw Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Stylish Straw Hat (7-day). -->
+		<!-- Wrapped Pack containing Stylish Straw Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1662,7 +1662,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22382" name="Stylish Straw Hat Pack" type="EtcItem">
-		<!-- Double-click to obtain a Stylish Straw Hat. -->
+		<!-- Wrapped Pack containing Stylish Straw Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />

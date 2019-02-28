@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="13700" toLevel="12" name="Item Skill: Damage Reflect">
+	<skill id="13700" toLevel="12" name="Item Skill: Damage Reflection">
 		<!-- For $s1, Damage Reflection +$s2. -->
 		<icon>icon.skill3123</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2224,7 +2224,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13735" toLevel="12" name="Item Skill: Damage Reflect">
+	<skill id="13735" toLevel="12" name="Item Skill: Damage Reflection">
 		<!-- Reflects $s1 of Received Damage when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -2734,7 +2734,7 @@
 		</effects>
 	</skill>
 	<skill id="13753" toLevel="40" name="Item Skill: Attack Attribute Bonus">
-		<!-- Increases Atk. Attribute Bonus by $s1 when equipped. -->
+		<!-- Increases Attack Attribute Bonus by $s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2834,7 +2834,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13756" toLevel="6" name="Item Skill: Knock Back/Knock Down, Petrification Resistance">
+	<skill id="13756" toLevel="6" name="Item Skill: Knock Back/ Knock Down, Petrification Resistance">
 		<!-- Increases Knock Back/ Knock Down, Petrification Resistance by $s1 when equipped. -->
 		<icon>icon.skill3238</icon>
 		<operateType>P</operateType>
@@ -3257,7 +3257,7 @@
 		</effects>
 	</skill>
 	<skill id="13770" toLevel="1" name="Exalted Tiara">
-		<!-- Increases Atk. Attribute Bonus by 50. -->
+		<!-- Increases Attack Attribute Bonus by 50. -->
 		<icon>icon.accessory_noblesse2_tiara_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3310,7 +3310,7 @@
 		</effects>
 	</skill>
 	<skill id="13772" toLevel="1" name="Replica Tiara">
-		<!-- Increases Atk. Attribute Bonus by 30. -->
+		<!-- Increases Attack Attribute Bonus by 30. -->
 		<icon>icon.accessory_noblesse2_tiara_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

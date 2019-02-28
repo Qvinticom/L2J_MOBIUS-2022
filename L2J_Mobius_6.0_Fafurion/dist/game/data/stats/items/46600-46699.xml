@@ -243,7 +243,7 @@
 		</skills>
 	</item>
 	<item id="46622" name="1,000,000,000 Adana" additionalName="Event" type="EtcItem">
-		<!-- Adena? No, this is Adana. Receive the Abundant Blessing buff from Miss Patch when in possession of this Adana. Lv. 85 or above. Deleted after event. -->
+		<!-- Adena? No, this is Adana. Receive the Abundant Blessing buff from Miss Patch when in possession of this Adana. Lv. 85 or above. -->
 		<set name="icon" val="icon.fairy_adena_joke" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -257,7 +257,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46623" name="5,000,000,000 Adana" additionalName="Event" type="EtcItem">
-		<!-- Adena? No, this is Adana. Take it to Event Manager Miss Patch to exchange for a 30-day Armor Set (R-grade or above), or a Weapon (R-grade or above). Lv. 85 or above. Deleted after event. -->
+		<!-- Adena? No, this is Adana. Take it to Event Manager Miss Patch to exchange for a 30-day Armor Set (R-grade or above), or a Weapon (R-grade or above). Lv. 85 or above. -->
 		<set name="icon" val="icon.fairy_adena_joke" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -271,7 +271,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46624" name="Entrance Pass: Embryo Command Post" additionalName="1-day" type="EtcItem">
-		<!-- Dimensional item. Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. Can only be used when on a cooldown to the instance zone. -->
+		<!-- Dimensional item. Extra pass to a daily instanced zone. Double-click to unbind the Embryo Command Post. Cannot be used if the instanced zone is not bound. Can be used only once a day outside of the instanced zone. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -283,7 +283,7 @@
 		<set name="time" val="1440" />
 	</item>
 	<item id="46625" name="Entrance Pass: Nightmare Kamaloka" additionalName="1-day" type="EtcItem">
-		<!-- Double-click to reset cooldown to Nightmare Kamaloka. Can only be used once a day outside of the instance zone. Can only be used when on a cooldown to the instance zone. -->
+		<!-- Entrance Pass to Nightmare Kamaloka received from Captain Kurtiz. Double-click to reset cooldown to Nightmare Kamaloka. Can only be used once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -525,7 +525,7 @@
 		</stats>
 	</item>
 	<item id="46639" name="Roa's Lost Item" additionalName="Event" type="EtcItem">
-		<!-- Roa's lost item. Exchange it for Assistant Roa's Gift when you are lucky enough to run into NPC Roa. Can only exchange 1 item per day. Deleted after event. -->
+		<!-- Roa's lost item. Exchange it for Assistant Roa's Gift when you are lucky enough to run into NPC Roa. Can only exchange 1 item per day. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -557,7 +557,7 @@
 		<set name="is_sellable" val="false" />
 	</item>
 	<item id="46642" name="Proof of Red" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-exclusive item. A certificate given to those who complete requests of the Red Libra Merchants. It is used to change a dual class through Elder Green or exchange a weapon through Artisan Black. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A certificate given to those who complete requests of the Red Libra Merchants. It is used to change a dual class through Elder Green or exchange a weapon through Artisan Black. -->
 		<set name="icon" val="icon.event_mahum_memo" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -577,7 +577,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46644" name="Red Libra Supplies Lv. 1" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-exclusive item. A box that Bodyguard Blue gave in return for your help. Double-click to obtain one of various items at random. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A box that Bodyguard Blue gave in return for your help. Double-click to obtain one of various items at random. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -589,7 +589,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46645" name="Red Libra Supplies Lv. 2" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-exclusive item. A box that Bodyguard Blue gave in return for your help. Double-click to obtain one of various items at random. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A box that Bodyguard Blue gave in return for your help. Double-click to obtain one of various items at random. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -601,7 +601,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46646" name="Red Libra Supplies Lv. 3" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-exclusive item. A box that Bodyguard Blue gave in return for your help. Double-click to obtain one of various items at random. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A box that Bodyguard Blue gave in return for your help. Double-click to obtain one of various items at random. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -613,7 +613,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46647" name="Red Libra Supplies Lv. 4" additionalName="Event" type="EtcItem">
-		<!-- Red Libra-exclusive item. A box that Bodyguard Blue gave in return for your help. Double-click to obtain one of various items at random. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A box that Bodyguard Blue gave in return for your help. Double-click to obtain one of various items at random. -->
 		<set name="icon" val="icon.event_mahum_coinbox" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -625,7 +625,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46648" name="Red Libra Talisman - Resurrection" additionalName="Event" type="Armor">
-		<!-- Red Libra-exclusive item. When used, it resurrects all dead party members and additionally restores 100% XP. Cannot be used in Olympiad.Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. When used, it resurrects all dead party members and additionally restores 100% XP. Cannot be used in Olympiad. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
@@ -634,7 +634,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46649" name="Red Libra Talisman - Restoration" additionalName="Event" type="Armor">
-		<!-- Red Libra-exclusive item. When used, it restores all party members' HP/ MP/ CP completely and has a chance to remove debuffs from them. Cannot be used in Olympiad.Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. When used, it restores all party members' HP/ MP/ CP completely and has a chance to dispel debuffs from them. Cannot be used in Olympiad. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
@@ -643,7 +643,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46650" name="Red Libra Talisman - Cancel" additionalName="Event" type="Armor">
-		<!-- Red Libra-exclusive item. When used, it removes debuffs from all party members and makes them immune to debuffs for 7 sec. Cannot be used in Olympiad.Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. When used, it dispels debuffs from all party members and makes them immune to debuffs for 7 sec. Cannot be used in Olympiad. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
@@ -652,7 +652,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46651" name="Red Libra Talisman - Speed" additionalName="Event" type="Armor">
-		<!-- Red Libra-exclusive item. When used, it increases all party members' Speed by 70 for 10 sec. Cannot be used in Olympiad.Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. When used, it increases all party members' Speed by 70 for 10 sec. Cannot be used in Olympiad. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
@@ -661,7 +661,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46652" name="Red Libra Talisman - Resistance" additionalName="Event" type="Armor">
-		<!-- Red Libra-exclusive item. When equipped, it decreases damage received by 10%. Cannot be used in Olympiad.Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. When equipped, it decreases damage received by 10%. Cannot be used in Olympiad. -->
 		<set name="icon" val="BranchSys2.icon.g_giant_gem" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_dropable" val="false" />
@@ -670,7 +670,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="46653" name="Elysium Shaper" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -692,7 +692,7 @@
 		</stats>
 	</item>
 	<item id="46654" name="Elysium Cutter" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -714,7 +714,7 @@
 		</stats>
 	</item>
 	<item id="46655" name="Elysium Slasher" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -736,7 +736,7 @@
 		</stats>
 	</item>
 	<item id="46656" name="Elysium Avenger" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -759,7 +759,7 @@
 		</stats>
 	</item>
 	<item id="46657" name="Elysium Fighter" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -782,7 +782,7 @@
 		</stats>
 	</item>
 	<item id="46658" name="Elysium Stormer" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -808,7 +808,7 @@
 		</stats>
 	</item>
 	<item id="46659" name="Elysium Thrower" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -831,7 +831,7 @@
 		</stats>
 	</item>
 	<item id="46660" name="Elysium Shooter" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -853,7 +853,7 @@
 		</stats>
 	</item>
 	<item id="46661" name="Elysium Buster" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -875,7 +875,7 @@
 		</stats>
 	</item>
 	<item id="46662" name="Elysium Caster" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -898,7 +898,7 @@
 		</stats>
 	</item>
 	<item id="46663" name="Elysium Retributer" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -922,7 +922,7 @@
 		</stats>
 	</item>
 	<item id="46664" name="Elysium Dualsword" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
@@ -944,7 +944,7 @@
 		</stats>
 	</item>
 	<item id="46665" name="Elysium Dual Dagger" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -967,7 +967,7 @@
 		</stats>
 	</item>
 	<item id="46666" name="Elysium Dual Blunt Weapon" additionalName="Event" type="Weapon">
-		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. Will be deleted after the event. -->
+		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -1070,7 +1070,7 @@
 		<set name="weight" val="5" />
 	</item>
 	<item id="46673" name="Vital Stone" additionalName="Lv. 4" type="Armor">
-		<!-- Vitality Bonus +20% and Vitality Consumption -7%. Effect does not stack with additional jewels of the same type. -->
+		<!-- Vitality Bonus +20% and Vitality Point Consumption Speed -7%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1084,7 +1084,7 @@
 		<set name="weight" val="5" />
 	</item>
 	<item id="46674" name="Vital Stone" additionalName="Lv. 5" type="Armor">
-		<!-- Vitality Bonus +30% and Vitality Consumption -15%. Effect does not stack with additional jewels of the same type. -->
+		<!-- Vitality Bonus +30% and Vitality Point Consumption Speed -15%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1174,7 +1174,7 @@
 		</skills>
 	</item>
 	<item id="46680" name="Tanzanite" additionalName="Lv. 1" type="Armor">
-		<!-- Creates a protection shield that absorbs 5,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protection shield that absorbs 5,000 damage for 5 sec. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1191,7 +1191,7 @@
 		</skills>
 	</item>
 	<item id="46681" name="Tanzanite" additionalName="Lv. 2" type="Armor">
-		<!-- Creates a protection shield that absorbs 10,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protection shield that absorbs 10,000 damage for 5 sec. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1208,7 +1208,7 @@
 		</skills>
 	</item>
 	<item id="46682" name="Tanzanite" additionalName="Lv. 3" type="Armor">
-		<!-- Creates a protection shield that absorbs 15,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protection shield that absorbs 15,000 damage for 10 sec. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1225,7 +1225,7 @@
 		</skills>
 	</item>
 	<item id="46683" name="Tanzanite" additionalName="Lv. 4" type="Armor">
-		<!-- Creates a protection shield that absorbs 30,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protection shield that absorbs 30,000 damage for 10 sec. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1242,7 +1242,7 @@
 		</skills>
 	</item>
 	<item id="46684" name="Tanzanite" additionalName="Lv. 5" type="Armor">
-		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protection shield that absorbs 50,000 damage for 15 sec. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1358,7 +1358,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46692" name="Entrance Pass: Embryo Command Post" type="EtcItem">
-		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. Can only be used when on a cooldown to the instance zone. -->
+		<!-- Double-click to reset cooldown to Embryo Command Post. Can only be used once a day outside of the instance zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

@@ -241,7 +241,7 @@
 		</effects>
 	</skill>
 	<skill id="22615" toLevel="1" name="Honeymoon Ticket - Joy of Vitality">
-		<!-- Maintains Vitality Lv. -->
+		<!-- Maintains Vitality Lv.. -->
 		<icon>BranchSys2.Icon.br_weddin_ticket_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>
@@ -708,13 +708,13 @@
 						<item id="34954" count="1" /> <!-- Lv. 5 Legendary Dye Pack - Event -->
 					</item>
 					<item chance="1.1765">
-						<item id="22279" count="1" /> <!-- PA Vitality (1-hr.) - Event -->
+						<item id="22279" count="1" /> <!-- PA Vitality (1-hour) - Event -->
 					</item>
 					<item chance="2.2059">
 						<item id="22968" count="1" /> <!-- Mount - Black Bear Pack (30-day) -->
 					</item>
 					<item chance="4.4118">
-						<item id="13383" count="1" /> <!-- Minion Coupon (5-hr.) (Event) -->
+						<item id="13383" count="1" /> <!-- Minion Coupon (5-hour) (Event) -->
 					</item>
 					<item chance="5.8824">
 						<item id="21185" count="1" /> <!-- Transformation Scroll: Zaken - Event -->
@@ -778,22 +778,22 @@
 						<item id="3936" count="1" /> <!-- Blessed Scroll of Resurrection -->
 					</item>
 					<item chance="0.42">
-						<item id="35735" count="1" /> <!-- Fire Stone (+ 150) - Event -->
+						<item id="35735" count="1" /> <!-- Fire Stone (+150) - Event -->
 					</item>
 					<item chance="0.42">
-						<item id="35736" count="1" /> <!-- Water Stone (+ 150) - Event -->
+						<item id="35736" count="1" /> <!-- Water Stone (+150) - Event -->
 					</item>
 					<item chance="0.42">
-						<item id="35737" count="1" /> <!-- Earth Stone (+ 150) - Event -->
+						<item id="35737" count="1" /> <!-- Earth Stone (+150) - Event -->
 					</item>
 					<item chance="0.42">
-						<item id="35738" count="1" /> <!-- Wind Stone (+ 150) - Event -->
+						<item id="35738" count="1" /> <!-- Wind Stone (+150) - Event -->
 					</item>
 					<item chance="0.42">
-						<item id="35739" count="1" /> <!-- Dark Stone (+ 150) - Event -->
+						<item id="35739" count="1" /> <!-- Dark Stone (+150) - Event -->
 					</item>
 					<item chance="0.42">
-						<item id="35740" count="1" /> <!-- Holy Stone (+ 150) - Event -->
+						<item id="35740" count="1" /> <!-- Holy Stone (+150) - Event -->
 					</item>
 					<item chance="3.1">
 						<item id="30297" count="1" /> <!-- Superior Giant's Codex -->
@@ -986,7 +986,7 @@
 		</effects>
 	</skill>
 	<skill id="22630" toLevel="1" name="Ghost Potion">
-		<!-- For 2 hr., P. Atk. +20%, M. Atk. +85%, and Speed +20. -->
+		<!-- For 2 h., P. Atk. +20%, M. Atk. +85%, and Speed +20. -->
 		<icon>icon.etc_int_symbol_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1006,7 +1006,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22631" toLevel="2" name="Sweet Summer Slushie">
-		<!-- Change into the Beach Swimsuit. For $s1 hr., Atk. Spd. +$s2, Casting Spd. +$s3, Speed +4, and Max HP/ MP +$s5. Cooldown is $s6 hr. -->
+		<!-- Change into the Beach Swimsuit. For $s1 h., Atk. Spd. +$s2, Casting Spd. +$s3, Speed +4, and Max HP/ MP +$s5. Cooldown is $s6 h. -->
 		<icon>BranchSys3.icon1.g_ev_sweet_icewater</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1182,7 +1182,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="22646" toLevel="1" name="Super Strong Giant's Mask">
+	<skill id="22646" toLevel="1" name="Shiny Reanimated Corpse Mask">
 		<!-- STR +1, CON +1, and DEX +1. -->
 		<icon>icon.etc_ev_draco_hair_acc</icon>
 		<operateType>P</operateType>
@@ -1329,7 +1329,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22659" toLevel="1" name="Doll Blader's Butcher Blades Appearance Stone">
+	<skill id="22659" toLevel="1" name="Doll's Butcher Blades Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1338,7 +1338,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22660" toLevel="1" name="Tiat's Claw of Destruction Appearance Stone">
+	<skill id="22660" toLevel="1" name="Tiat's Tiatenon Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1347,7 +1347,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22661" toLevel="1" name="Aenkinel's Blades of Delusion Appearance Stone">
+	<skill id="22661" toLevel="1" name="Aenkinel's Astaroth Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1356,7 +1356,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22662" toLevel="1" name="Yehan Klanikus' Blood Brother Appearance Stone">
+	<skill id="22662" toLevel="1" name="Yehan Klanikus' Tirbing Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1365,7 +1365,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22663" toLevel="1" name="Mardil's Fan Appearance Stone">
+	<skill id="22663" toLevel="1" name="Mardil's Wind Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1399,13 +1399,13 @@
 						<item id="23215" count="1" /> <!-- Steregos' Dagger Appearance Stone -->
 					</item>
 					<item chance="16">
-						<item id="23221" count="1" /> <!-- Yehan Klanikus' Blood Brother Appearance Stone -->
+						<item id="23221" count="1" /> <!-- Yehan Klanikus' Appearance Stone -->
 					</item>
 					<item chance="16">
 						<item id="23217" count="1" /> <!-- Darion's Hellblade Appearance Stone -->
 					</item>
 					<item chance="16">
-						<item id="23219" count="1" /> <!-- Tiat's Claw of Destruction Appearance Stone -->
+						<item id="23219" count="1" /> <!-- Tiat's Tiatenon Appearance Stone -->
 					</item>
 				</items>
 			</effect>
@@ -1430,7 +1430,7 @@
 						<item id="23212" count="1" /> <!-- Freya's Staff Appearance Stone -->
 					</item>
 					<item chance="14">
-						<item id="23222" count="1" /> <!-- Mardil's Fan Appearance Stone -->
+						<item id="23222" count="1" /> <!-- Mardil's Wind Appearance Stone -->
 					</item>
 					<item chance="16">
 						<item id="23214" count="1" /> <!-- Maliss Stormer Appearance Stone -->
@@ -1439,10 +1439,10 @@
 						<item id="23216" count="1" /> <!-- Ron's Dual Blunt Weapon Appearance Stone -->
 					</item>
 					<item chance="16">
-						<item id="23218" count="1" /> <!-- Doll Blader's Butcher Blades Appearance Stone -->
+						<item id="23218" count="1" /> <!-- Doll's Butcher Blades Appearance Stone -->
 					</item>
 					<item chance="16">
-						<item id="23220" count="1" /> <!-- Aenkinel's Blades of Delusion Appearance Stone -->
+						<item id="23220" count="1" /> <!-- Aenkinel's Astaroth Appearance Stone -->
 					</item>
 				</items>
 			</effect>
@@ -1513,7 +1513,7 @@
 		</conditions>
 	</skill>
 	<skill id="22669" toLevel="1" name="Pretzel">
-		<!-- For 1 hr., obtained XP +50%. -->
+		<!-- For 1 h., obtained XP +50%. -->
 		<icon>BranchSys3.icon1.g_brezel_germany</icon>
 		<operateType>A2</operateType>
 		<abnormalType>VOTE</abnormalType>
@@ -2390,7 +2390,7 @@
 		</effects>
 	</skill>
 	<skill id="22689" toLevel="1" name="Raid's Blessing">
-		<!-- For 1 hr., Acquired XP/ SP +10%. -->
+		<!-- For 1 h., Acquired XP/ SP +10%. -->
 		<icon>BranchSys2.icon.br_vitality_day_i00</icon>
 		<operateType>A2</operateType>
 		<castRange>1500</castRange>

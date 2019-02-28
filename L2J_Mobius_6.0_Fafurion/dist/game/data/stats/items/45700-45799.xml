@@ -18,7 +18,7 @@
 		</stats>
 	</item>
 	<item id="45701" name="Twilight Leather Armor" additionalName="Enchant Type / Light (30-day)" type="Armor">
-		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -110,7 +110,7 @@
 		</stats>
 	</item>
 	<item id="45706" name="Twilight Tunic" additionalName="Magic Type / Robe (30-day)" type="Armor">
-		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -225,7 +225,7 @@
 		</stats>
 	</item>
 	<item id="45712" name="Twilight Tunic" additionalName="Recovery Type / Robe (30-day)" type="Armor">
-		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -304,7 +304,7 @@
 		</stats>
 	</item>
 	<item id="45716" name="Returning Warrior's Support Goods Coupon" additionalName="Event" type="EtcItem">
-		<!-- Give it to Pippi or Kokko to get a timed weapon, bolt, or arrow. Will be deleted once the event ends. -->
+		<!-- Give it to Pippi or Kokko to get a timed weapon, bolt, or arrow. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -317,7 +317,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45717" name="Eternal Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive +6 Enchanted Eternal Attack Type Heavy Armor Set (30-day). Will be deleted after the event. -->
+		<!-- Double-click to receive +6 Enchanted Eternal Attack Type Heavy Armor Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -329,7 +329,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45718" name="Eternal Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive +6 Enchanted Eternal Defense Type Heavy Armor Set (30-day). Will be deleted after the event. -->
+		<!-- Double-click to receive +6 Enchanted Eternal Defense Type Heavy Armor Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -341,7 +341,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45719" name="Eternal Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive +6 Enchanted Eternal Assassin Type Light Armor Set (30-day). Will be deleted after the event. -->
+		<!-- Double-click to receive +6 Enchanted Eternal Assassin Type Light Armor Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -353,7 +353,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45720" name="Eternal Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive +6 Enchanted Eternal Enchant Type Light Armor Set (30-day). Will be deleted after the event. -->
+		<!-- Double-click to receive +6 Enchanted Eternal Enchant Type Light Armor Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -365,7 +365,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45721" name="Eternal Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive +6 Enchanted Eternal Magic Type Robe Set (30-day). Will be deleted after the event. -->
+		<!-- Double-click to receive +6 Enchanted Eternal Magic Type Robe Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -377,7 +377,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45722" name="Eternal Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to receive +6 Enchanted Eternal Recovery Type Robe Set (30-day). Will be deleted after the event. -->
+		<!-- Double-click to receive +6 Enchanted Eternal Recovery Type Robe Set (30-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -406,7 +406,7 @@
 		</stats>
 	</item>
 	<item id="45724" name="Eternal Breastplate" additionalName="Attack Type / Heavy (30-day)" type="Armor">
-		<!-- Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -514,7 +514,7 @@
 		</stats>
 	</item>
 	<item id="45730" name="Eternal Breastplate" additionalName="Defense Type / Heavy (30-day)" type="Armor">
-		<!-- Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -622,7 +622,7 @@
 		</stats>
 	</item>
 	<item id="45736" name="Eternal Leather Armor" additionalName="Assassin Type / Light (30-day)" type="Armor">
-		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -714,7 +714,7 @@
 		</stats>
 	</item>
 	<item id="45741" name="Eternal Leather Armor" additionalName="Enchant Type / Light (30-day)" type="Armor">
-		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -806,7 +806,7 @@
 		</stats>
 	</item>
 	<item id="45746" name="Eternal Tunic" additionalName="Magic Type / Robe (30-day)" type="Armor">
-		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -921,7 +921,7 @@
 		</stats>
 	</item>
 	<item id="45752" name="Eternal Tunic" additionalName="Recovery Type / Robe (30-day)" type="Armor">
-		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1019,7 +1019,7 @@
 		</stats>
 	</item>
 	<item id="45757" name="Seraph Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Seraph Attack Type Heavy set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Seraph Attack Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1031,7 +1031,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45758" name="Seraph Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Seraph Defense Type Heavy set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Seraph Defense Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1043,7 +1043,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45759" name="Seraph Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Seraph Assassin Type Light set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Seraph Assassin Type Light set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1055,7 +1055,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45760" name="Seraph Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Seraph Enchant Type Light set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Seraph Enchant Type Light set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1067,7 +1067,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45761" name="Seraph Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Seraph Magic Type Robe set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Seraph Magic Type Robe set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1079,7 +1079,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45762" name="Seraph Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Seraph Recovery Type Robe set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Seraph Recovery Type Robe set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1108,7 +1108,7 @@
 		</stats>
 	</item>
 	<item id="45764" name="Seraph Breastplate" additionalName="Attack Type / Heavy (30-day)" type="Armor">
-		<!-- Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1216,7 +1216,7 @@
 		</stats>
 	</item>
 	<item id="45770" name="Seraph Breastplate" additionalName="Defense Type / Heavy (30-day)" type="Armor">
-		<!-- Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1324,7 +1324,7 @@
 		</stats>
 	</item>
 	<item id="45776" name="Seraph Leather Armor" additionalName="Assassin Type / Light (30-day)" type="Armor">
-		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1416,7 +1416,7 @@
 		</stats>
 	</item>
 	<item id="45781" name="Seraph Leather Armor" additionalName="Enchant Type / Light (30-day)" type="Armor">
-		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1508,7 +1508,7 @@
 		</stats>
 	</item>
 	<item id="45786" name="Seraph Tunic" additionalName="Magic Type / Robe (30-day)" type="Armor">
-		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1623,7 +1623,7 @@
 		</stats>
 	</item>
 	<item id="45792" name="Seraph Tunic" additionalName="Recovery Type / Robe (30-day)" type="Armor">
-		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />

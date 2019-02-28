@@ -181,7 +181,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9923" toLevel="3" name="Mentor's Encouragement: Death Whisper">
-		<!-- Increases Critical Damage by $s1. Buff persists for $s2 after the mentor goes offline. -->
+		<!-- Increases Critical Damage by $s1. Effect remains for $s2 after the mentor goes offline. -->
 		<icon>icon.skill1242</icon>
 		<operateType>A2</operateType>
 		<effectPoint>
@@ -204,7 +204,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9925" toLevel="1" name="Mentor's Encouragement: Prophecy of Water">
-		<!-- For 2 h., selected mentee's M. Critical Rate +20, MP Recovery Bonus +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%, and Skill MP Consumption -5%. -->
+		<!-- For 2 h., selected mentee's M. Critical Rate +2, MP Recovery Bonus +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%, and Skill MP Consumption -5%. -->
 		<icon>icon.skill1355</icon>
 		<operateType>A2</operateType>
 		<mpConsume>120</mpConsume>
@@ -226,7 +226,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9927" toLevel="1" name="Mentor's Encouragement: Prophecy of Wind">
-		<!-- For 2 hr., selected mentee's Max HP +20%, P. Critical Rate +20%, M. Critical Rate +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%. Has a chance of absorbing 5% of damage inflicted on the enemy as HP. -->
+		<!-- For 2 h., selected mentee's Max HP +20%, P. Critical Rate +20%, M. Critical Rate +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, and Debuff Resistance +10%. Speed -20%. Has a chance of absorbing 5% of damage inflicted on the enemy as HP. -->
 		<icon>icon.skill1357</icon>
 		<operateType>A2</operateType>
 		<mpConsume>120</mpConsume>
@@ -445,19 +445,19 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="9941" toLevel="3" name="Super Stone: Wind">
-		<!-- Wind Attribute +$s1 -->
+		<!-- Wind Attribute +$s1. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="9942" toLevel="3" name="Super Stone: Earth">
-		<!-- Earth Attribute +$s1 -->
+		<!-- Earth Attribute +$s1. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="9943" toLevel="3" name="Super Stone: Holy">
-		<!-- Holy Attribute +$s1 -->
+		<!-- Holy Attribute +$s1. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="9944" toLevel="3" name="Super Stone: Dark">
-		<!-- Dark Attribute +$s1 -->
+		<!-- Dark Attribute +$s1. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="9945" toLevel="1" name="Scroll: Enchant Hair Accessory">
@@ -580,7 +580,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9959" toLevel="1" name="Drum Melody (9th Anniversary)">
-		<!-- For $s1, P. Critical Rate +$s2, P. Critical Damage +$s3, M. Critical Rate +$s4, and Received P. Critical Damage -$s5. Also has a chance to increase Critical Damage when hit. -->
+		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -628,7 +628,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9965" toLevel="1" name="Knight's Harmony (9th Anniversary)">
-		<!-- For $s1, increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -1073,7 +1073,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="9989" toLevel="1" name="Elixir of Protection">
-		<!-- For $s1, increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
 		<icon>icon.skill11523</icon>
 		<itemConsumeId>37100</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>

@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="11300" toLevel="6" name="Yoke Status">
+		<!-- Momentarily immobilized. P./ M. Def. -$s1. -->
 		<icon>icon.skill1042</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -81,6 +82,7 @@
 		</effects>
 	</skill>
 	<skill id="11302" toLevel="11" name="Servitor Major Heal">
+		<!-- Heals the servitor with $s1 Power. -->
 		<icon>icon.skill1127</icon>
 		<operateType>A1</operateType>
 		<mpConsume>70</mpConsume>
@@ -306,6 +308,7 @@
 		</effects>
 	</skill>
 	<skill id="11309" toLevel="1" name="Mass Servitor Blessing">
+		<!-- Dispels debuffs on all servitors and makes them immune to debuffs for $s1. -->
 		<icon>icon.skill1301</icon>
 		<abnormalTime>5</abnormalTime>
 		<operateType>A2</operateType>
@@ -380,7 +383,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11310" toLevel="2" name="Mass Servitor Ultimate Defense">
+	<skill id="11310" toLevel="2" name="Servitor Immortality">
+		<!-- For $s1, increases the Servitor's P. Def. by $s2 and M. Def. by $s3 and prevents its HP from dropping below 1. -->
 		<icon>icon.skill1299</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -1760,6 +1764,7 @@
 		</effects>
 	</skill>
 	<skill id="11347" toLevel="7" name="Greater Servitor Haste">
+		<!-- For $s1, all servitor's Atk. Spd. +$s2. -->
 		<icon>icon.skill11347</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1861,6 +1866,7 @@
 		</effects>
 	</skill>
 	<skill id="11348" toLevel="7" name="Servitor Death Whisper">
+		<!-- For $s1, all servitor's Critical Damage +$s2. -->
 		<icon>icon.skill11348</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1974,6 +1980,7 @@
 		</effects>
 	</skill>
 	<skill id="11349" toLevel="7" name="Greater Servitor Might">
+		<!-- For $s1, all servitor's P. Atk. +$s2. -->
 		<icon>icon.skill11349</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2063,6 +2070,7 @@
 		</effects>
 	</skill>
 	<skill id="11350" toLevel="7" name="Arcane Rage">
+		<!-- Use Arcana Wrath to inflict severe damage on a target with $s1 Power added to M. Atk. -->
 		<icon>icon.skill11350</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2234,6 +2242,7 @@
 		</effects>
 	</skill>
 	<skill id="11353" toLevel="7" name="Elemental Rage">
+		<!-- Use Elemental Wrath to inflict severe damage on a target with $s1 Power added to M. Atk. -->
 		<icon>icon.skill11353</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2363,6 +2372,7 @@
 		</effects>
 	</skill>
 	<skill id="11356" toLevel="7" name="Spectral Rage">
+		<!-- Use Spectral Wrath to inflict severe damage on a target with $s1 Power added to M. Atk. -->
 		<icon>icon.skill11356</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -2714,7 +2724,7 @@
 		</effects>
 	</skill>
 	<skill id="11365" toLevel="4" name="Summon Demonic Crucifix">
-		<!-- Attacks target and nearby enemies with $s1 Power added to M. Atk. and casts a curse. Atk./ Casting Spd. -$s2 and Speed -$s3. Consumes $s4 Spirit Ore. -->
+		<!-- Attacks target and nearby enemies with $s1 Power added to M. Atk. and casts a curse. Atk. Spd./ Casting Spd. -$s2 and Speed -$s3. Consumes $s4 Spirit Ores. -->
 		<icon>icon.skill11365</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2948,6 +2958,7 @@
 		</effects>
 	</skill>
 	<skill id="11369" toLevel="6" name="Summon Commando Cat">
+		<!-- Summons Commando Cat. Consumes $s1 summon points. -->
 		<icon>icon.skill11369</icon>
 		<magicLvl>
 			<value level="1">100</value>
@@ -2993,6 +3004,7 @@
 		</effects>
 	</skill>
 	<skill id="11370" toLevel="6" name="Summon Witch Cat">
+		<!-- Summons Witch Cat. Consumes $s1 summon points. -->
 		<icon>icon.skill11370</icon>
 		<magicLvl>
 			<value level="1">100</value>
@@ -3038,6 +3050,7 @@
 		</effects>
 	</skill>
 	<skill id="11371" toLevel="6" name="Summon Unicorn Lancer">
+		<!-- Summons Unicorn Lancer. Consumes $s1 summon points. -->
 		<icon>icon.skill11371</icon>
 		<magicLvl>
 			<value level="1">100</value>
@@ -3083,6 +3096,7 @@
 		</effects>
 	</skill>
 	<skill id="11372" toLevel="6" name="Summon Unicorn Cherub">
+		<!-- Summons Unicorn Cherub. Consumes $s1 summon points. -->
 		<icon>icon.skill11372</icon>
 		<magicLvl>
 			<value level="1">100</value>
@@ -3128,6 +3142,7 @@
 		</effects>
 	</skill>
 	<skill id="11373" toLevel="6" name="Summon Dark Crusader">
+		<!-- Summons Dark Crusader. Consumes $s1 summon points. -->
 		<icon>icon.skill11373</icon>
 		<magicLvl>
 			<value level="1">100</value>
@@ -3173,6 +3188,7 @@
 		</effects>
 	</skill>
 	<skill id="11374" toLevel="6" name="Summon Banshee Queen">
+		<!-- Summons Banshee Queen. Consumes $s1 summon points. -->
 		<icon>icon.skill11374</icon>
 		<magicLvl>
 			<value level="1">100</value>
@@ -3267,7 +3283,7 @@
 		</effects>
 	</skill>
 	<skill id="11376" toLevel="3" name="Commando Double Smash">
-		<!-- Inflicts damage with $s1 Power added to P. Atk. and knocks down for $s2. -->
+		<!-- Inflicts damage with $s1 Power added to P. Atk. and knocks down for $s2 -->
 		<icon>icon.skill10546</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3383,7 +3399,7 @@
 		</effects>
 	</skill>
 	<skill id="11379" toLevel="3" name="Lancer Rush">
-		<!-- Charges forward to inflict damage on the target with $s1 power added to P. Atk. and inflicts Stun for $s2. -->
+		<!-- Charges forward to inflict damage on the target with $s1 power added to P. Attack and inflicts Stun for $s2. -->
 		<icon>icon.skill0121</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3678,7 +3694,7 @@
 		</effects>
 	</skill>
 	<skill id="11387" toLevel="1" name="Arcana's Call">
-		<!-- The power of nature is used to increase P. Atk./ P. Def./ M. Atk./ M. Def. by $s2 for $s1. Additionally, P. Atk. +$s3, P. Accuracy +$s4, Knock Back/ Knock Down Success Rate +$s5 for servitors. The Servitor also becomes immune to debuffs. Consumes 10 Spirit Ore. -->
+		<!-- The power of nature is used to increase P. Atk./ P. Def./ M. Atk./ M. Def. by $s2 for $s1 Additionally, P. Atk. +$s3, P. Accuracy +$s4, Knock Back/ Knock Down Success Rate +$s5 for servitors. The Servitor also becomes immune to debuffs. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11387</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3758,7 +3774,7 @@
 		</effects>
 	</skill>
 	<skill id="11389" toLevel="1" name="Elemental's Call">
-		<!-- The power of nature is used to increase P. Atk./ P. Def./ M. Atk./ M. Def. by $s2 for $s1. Additionally, P. Atk. +$s3, Atk. Spd. +$s4, and Skill Cooldown -$s5 for servitors. The Servitor also becomes immune to debuffs. Consumes 10 Spirit Ore. -->
+		<!-- The power of nature is used to increase P. Atk./ P. Def./ M. Atk./ M. Def. by $s2 for $s1 Additionally, P. Atk. +$s3, Atk. Spd. +$s4, and Skill Cooldown -$s5 for servitors. The Servitor also becomes immune to debuffs. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11388</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3843,7 +3859,7 @@
 		</effects>
 	</skill>
 	<skill id="11391" toLevel="1" name="Spectral's Call">
-		<!-- The power of demons is used to increase P. Atk./ P. Def./ M. Atk./ M. Def. by $s2 for $s1. Additionally, P. Atk. +$s3 and P. Critical Damage +$s4 for servitors. The Servitor also becomes immune to debuffs. Consumes 10 Spirit Ore. -->
+		<!-- The power of demons is used to increase P. Atk./ P. Def./ M. Atk./ M. Def. by $s2 for $s1 Additionally, P. Atk. +$s3 and P. Critical Damage +$s4 for servitors. The Servitor also becomes immune to debuffs. Consumes 10 Spirit Ore. -->
 		<icon>icon.skill11389</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3918,6 +3934,7 @@
 		</effects>
 	</skill>
 	<skill id="11393" toLevel="4" name="Freezing Invoke">
+		<!-- Attacks the target and nearby enemies with $s1 Power added to M. Atk. For $s2, P./ M. Def. -$s3. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill11393</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3984,6 +4001,7 @@
 		</effects>
 	</skill>
 	<skill id="11394" toLevel="4" name="Surrender to the Elemental">
+		<!-- Attacks the target with $s1 Power added to M. Atk. For $s2, all Attribute Resistance -$s3. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill11394</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -4066,6 +4084,7 @@
 		</effects>
 	</skill>
 	<skill id="11395" toLevel="4" name="Curse Exposure">
+		<!-- Attacks the target with $s1 Power added to M. Atk. For $s2, Deadly Attack Def. -$s3. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill11395</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

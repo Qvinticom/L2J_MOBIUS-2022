@@ -810,7 +810,7 @@
 		</effects>
 	</skill>
 	<skill id="717" toLevel="4" name="Zaken Concentrated Attack">
-		<!-- Focuses on one specific place and attacks. Over-hit. Power $s1. -->
+		<!-- Focuses on one specific place and attacks. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>50</castRange>
 		<coolTime>900</coolTime>
@@ -852,7 +852,7 @@
 		</effects>
 	</skill>
 	<skill id="718" toLevel="4" name="Zaken Dancing Sword">
-		<!-- Uses Dancing Swords to attack all at once. Over-hit. Power $s1. -->
+		<!-- Uses Dancing Swords to attack all at once. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>100</affectRange>
 		<coolTime>1500</coolTime>
@@ -921,7 +921,7 @@
 		</effects>
 	</skill>
 	<skill id="720" toLevel="2" name="Anakim Holy Light Burst">
-		<!-- Strong pound attack. Over-hit. Power $s1. -->
+		<!-- Strong pound attack. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -1077,7 +1077,7 @@
 		</effects>
 	</skill>
 	<skill id="725" toLevel="2" name="Venom Power Smash">
-		<!-- Unleashes a powerful strike. Over-hit. Power $s1. -->
+		<!-- Unleashes a powerful strike. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -1158,7 +1158,7 @@
 		</effects>
 	</skill>
 	<skill id="728" toLevel="1" name="Gordon Beast Attack">
-		<!-- Inflicts a beast attack. Over-hit. Power 2957. -->
+		<!-- Inflicts a beast attack. Over-hit is possible. Power 2957. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -1180,7 +1180,7 @@
 		</effects>
 	</skill>
 	<skill id="729" toLevel="1" name="Gordon Sword Stab">
-		<!-- Attacks the enemies in front of the player. Over-hit. Power 2957. -->
+		<!-- Attacks the enemies in front of the player. Over-hit is possible. Power 2957. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>150</affectRange>
 		<castRange>500</castRange>
@@ -1267,7 +1267,7 @@
 		</effects>
 	</skill>
 	<skill id="732" toLevel="1" name="Ranku Stun Attack">
-		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit. 1 power. -->
+		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. 1 power. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1300,7 +1300,7 @@
 		</effects>
 	</skill>
 	<skill id="733" toLevel="1" name="Kechi Double Cutter">
-		<!-- Attacks by crossing a sword. Over-hit. Power 2957. -->
+		<!-- Attacks by crossing a sword. Over-hit is possible. Power 2957. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -1322,7 +1322,7 @@
 		</effects>
 	</skill>
 	<skill id="734" toLevel="1" name="Kechi Air Blade">
-		<!-- Strikes a distant enemy by using Momentum. Critical. Over-hit. Power 1812. -->
+		<!-- Strikes a distant enemy by using Momentum. Critical hit is possible. Over-hit is possible. Power 1812. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>-342</effectPoint>
@@ -1407,7 +1407,7 @@
 		</endEffects>
 	</skill>
 	<skill id="737" toLevel="1" name="Devil Ultimate Defense">
-		<!-- Momentarily and drastically increases resistance to attacks that decreases P./ M. Def. or cancels buffs. The player cannot move while the effect lasts. Effect 2. -->
+		<!-- Momentarily and drastically increases resistance to attacks that decreases P. Def./ M. Def. or cancels buffs. The player cannot move while the effect lasts. Effect 2. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1777,7 +1777,7 @@
 		</effects>
 	</skill>
 	<skill id="746" toLevel="3" name="Saber Tooth Tiger Bite">
-		<!-- Bites ferociously. Over-hit. Power $s1. -->
+		<!-- Bites ferociously. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>660</coolTime>
@@ -1812,7 +1812,7 @@
 		</effects>
 	</skill>
 	<skill id="747" toLevel="3" name="Saber Tooth Tiger Fear">
-		<!-- Inflicts damage on surrounding enemies and causes them to flee. Over-hit. Power $s1. -->
+		<!-- Inflicts damage on surrounding enemies and causes them to flee. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1886,7 +1886,7 @@
 		</effects>
 	</skill>
 	<skill id="749" toLevel="3" name="Oel Mahum Stun Attack">
-		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit. $s1 power. -->
+		<!-- Deals damage and shock simultaneously. Momentarily inflicts Stun on the enemy. Over-hit is possible. $s1 power. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -1935,7 +1935,7 @@
 		</effects>
 	</skill>
 	<skill id="750" toLevel="1" name="Oel Mahum Ultimate Defense">
-		<!-- Momentarily and drastically increases resistance to attacks that decreases P./ M. Def. or cancels buffs. The player cannot move while the effect lasts. Effect 2. -->
+		<!-- Momentarily and drastically increases resistance to attacks that decreases P. Def./ M. Def. or cancels buffs. The player cannot move while the effect lasts. Effect 2. -->
 		<icon>icon.skill_transform_buff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1967,7 +1967,7 @@
 		</effects>
 	</skill>
 	<skill id="751" toLevel="3" name="Oel Mahum Arm Flourish">
-		<!-- Flourish weapons to attack surrounding enemy. Over-hit. Power $s1. -->
+		<!-- Flourish weapons to attack surrounding enemy. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
@@ -2010,7 +2010,7 @@
 		</effects>
 	</skill>
 	<skill id="752" toLevel="3" name="Doll Blader Sting">
-		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit. Power $s1. Effect $s2. -->
+		<!-- Causes injury by deadly attacks. Momentarily causes the enemies to bleed. Over-hit is possible. Power $s1. Effect $s2. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2063,7 +2063,7 @@
 		</effects>
 	</skill>
 	<skill id="753" toLevel="3" name="Doll Blader Throwing Knife">
-		<!-- Throw a dagger to attack enemy in the distance. Over-hit. Power $s1. -->
+		<!-- Throw a dagger to attack enemy in the distance. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>700</castRange>
 		<coolTime>800</coolTime>
@@ -2690,7 +2690,7 @@
 		</effects>
 	</skill>
 	<skill id="771" toLevel="1" name="Flame Hawk">
-		<!-- Shoots an arrow filled with the energy of the phoenix to attack the enemies with 8049 Power added to P. Atk. For 10 sec., inflicts 300 fire damage every sec. Requires a bow. Over-hit. Critical. -->
+		<!-- Shoots an arrow filled with the energy of the phoenix to attack the enemies with 8049 Power added to P. Atk. For 10 sec., inflicts 300 fire damage every second. Requires a bow. Over-hit and Critical are possible. -->
 		<icon>icon.skill0771</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
@@ -2728,7 +2728,7 @@
 		</effects>
 	</skill>
 	<skill id="772" toLevel="1" name="Arrow Rain">
-		<!-- Causes arrows to rain down from the sky to attack near the enemy with 7043 Power added to P. Atk. For 10 sec., inflicts 300 wind damage every sec. Requires a bow. Over-hit. Critical. -->
+		<!-- Causes arrows to rain down from the sky to attack near the enemy with 7043 Power added to P. Atk. For 10 sec., inflicts 300 wind damage every second. Requires a bow. Over-hit and Critical are possible. -->
 		<icon>icon.skill0772</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -2765,7 +2765,7 @@
 		</effects>
 	</skill>
 	<skill id="773" toLevel="1" name="Ghost Piercing">
-		<!-- Shoots an arrow mixed with the energy of a ghost to attack the enemies in front with 8452 Power added to P. Atk. For 10 sec., inflicts 300 dark damage every sec. Requires a bow. Over-hit. Critical. -->
+		<!-- Shoots an arrow mixed with the energy of a ghost to attack the enemies in front with 8452 Power added to P. Atk. For 10 sec., inflicts 300 dark damage every second. Requires a bow. Over-hit and Critical are possible. -->
 		<icon>icon.skill0773</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
@@ -2889,7 +2889,7 @@
 		</effects>
 	</skill>
 	<skill id="776" toLevel="1" name="Force of Destruction">
-		<!-- Attacks the enemy with 4500 Power added to P. Atk. Penetrates the target with destructive energy, dealing $s1 damage per sec. Stage 2 Momentum Recharge needed. Requires a fist weapon. Over-hit. Critical. -->
+		<!-- Attacks the enemy with 4500 Power added to P. Atk. Penetrates the target with destructive energy, dealing $s1 damage per second. Stage 2 Momentum Recharge needed. Requires a fist weapon. Over-hit and Critical are possible. -->
 		<icon>icon.skill0776</icon>
 		<abnormalLvl>10</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -2934,7 +2934,7 @@
 		</effects>
 	</skill>
 	<skill id="777" toLevel="1" name="Demolition Impact">
-		<!-- Unleashes a shock of destruction to attack nearby enemies with 7475 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. Critical. -->
+		<!-- Unleashes a shock of destruction to attack nearby enemies with 7475 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit and Critical are possible. -->
 		<icon>icon.skill0777</icon>
 		<affectRange>500</affectRange>
 		<castRange>150</castRange>
@@ -3269,7 +3269,7 @@
 		</effects>
 	</skill>
 	<skill id="787" toLevel="1" name="Touch of Eva">
-		<!-- Restores HP of party members by 50%. For 1 min., increases Buff-canceling Attack Resistance by 100%, the Healing power received by 30%, and received HP Recovery Magic Power by 30%. Restores 50 HP every sec. -->
+		<!-- Restores HP of party members by 50%. For 1 min., increases Buff-canceling Attack Resistance by 100%, the Healing power received by 30%, and received HP Recovery Magic Power by 30%. Restores 50 HP every second. -->
 		<icon>icon.skill0787</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -3422,7 +3422,7 @@
 		</effects>
 	</skill>
 	<skill id="790" toLevel="1" name="Wild Shot">
-		<!-- Fires bolt at random to attack enemies in front with 7475 Power added to P. Atk. Requires a crossbow. Over-hit. Critical. Increases Power upon the consumption of up to 5 souls. -->
+		<!-- Fires bolt at random to attack enemies in front with 7475 Power added to P. Atk. Requires a crossbow. Over-hit and Critical are possible. Increases Power upon the consumption of up to 5 souls. -->
 		<icon>icon.skill0790</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>900</affectRange>
@@ -3458,6 +3458,7 @@
 		</effects>
 	</skill>
 	<skill id="791" toLevel="8" name="Lightning Shock">
+		<!-- Sends an electric current to attack nearby enemies with $s1 Power added to M. Atk. Paralyzes for $s2. Decreases received HP Recovery Rate -$s3. Over-hit. -->
 		<icon>icon.skill0791</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -3584,6 +3585,7 @@
 		</effects>
 	</skill>
 	<skill id="793" toLevel="8" name="Rush Impact">
+		<!-- Charges forward to attack the enemies in front with $s1 power added to P. Attack and inflicts Stun for $s2. Requires an ancient sword/ sword/ blunt/ spear/ fist weapon/ dual blunt/ dual sword weapon. -->
 		<icon>icon.skill0793</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3722,7 +3724,7 @@
 		</effects>
 	</skill>
 	<skill id="795" toLevel="1" name="Divine Knight Brandish">
-		<!-- Attacks the enemies in front by flourishing an ax. Over-hit. Power 2322. -->
+		<!-- Attacks the enemies in front by flourishing an ax. Over-hit is possible. Power 2322. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>200</affectRange>
@@ -3770,7 +3772,7 @@
 		</effects>
 	</skill>
 	<skill id="797" toLevel="1" name="Divine Rogue Piercing Attack">
-		<!-- Attacks all enemies, even the enemies behind you, with a strong thrust. Over-hit. Power 2111. -->
+		<!-- Attacks all enemies, even the enemies behind you, with a strong thrust. Over-hit is possible. Power 2111. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>250</affectRange>

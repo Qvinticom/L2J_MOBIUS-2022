@@ -49,7 +49,7 @@
 		</effects>
 	</skill>
 	<skill id="17504" toLevel="1" name="Fairy Antennae: Accuracy">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5. -->
 		<icon>icon.accessory_hair_feeler_i00</icon>
 		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
@@ -221,7 +221,7 @@
 		</effects>
 	</skill>
 	<skill id="17518" toLevel="1" name="Chapeau: Accuracy">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5. -->
 		<icon>icon.accessory_archer_hat_i00</icon>
 		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
@@ -393,7 +393,7 @@
 		</effects>
 	</skill>
 	<skill id="17532" toLevel="1" name="Artisan's Goggles: Accuracy">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5. -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
@@ -565,7 +565,7 @@
 		</effects>
 	</skill>
 	<skill id="17546" toLevel="1" name="Arrow-pierced Apple: Accuracy">
-		<!-- Accuracy +5. -->
+		<!-- P. Accuracy +5. -->
 		<icon>icon.accessory_arrow_apple_i00</icon>
 		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
@@ -700,7 +700,7 @@
 		</effects>
 	</skill>
 	<skill id="17552" toLevel="1" name="Attribute Enchant">
-		<!-- Increases Atk. Spd. by $s1 and Attribute Resistance by $s2. -->
+		<!-- Increases attack speed by $s1 and all defense attributes by $s2. -->
 		<icon>icon.skill_agathion_special</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1902,7 +1902,7 @@
 		</effects>
 	</skill>
 	<skill id="17569" toLevel="1" name="Expertise Rune (D-grade)">
-		<!-- When possessed, you get Expertise D skill. -->
+		<!-- When stored in the inventory, it enables you to equip D-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
 		<magicLvl>20</magicLvl>
@@ -1917,7 +1917,7 @@
 		</effects>
 	</skill>
 	<skill id="17570" toLevel="1" name="Expertise Rune (C-grade)">
-		<!-- When possessed, you get Expertise C skill. -->
+		<!-- When stored in the inventory, it enables you to equip C-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
 		<magicLvl>40</magicLvl>
@@ -1932,7 +1932,7 @@
 		</effects>
 	</skill>
 	<skill id="17571" toLevel="1" name="Expertise Rune (B-grade)">
-		<!-- When possessed, you get Expertise B skill. -->
+		<!-- When stored in the inventory, it enables you to equip B-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
 		<magicLvl>52</magicLvl>
@@ -1947,7 +1947,7 @@
 		</effects>
 	</skill>
 	<skill id="17572" toLevel="1" name="Expertise Rune (A-grade)">
-		<!-- When possessed, you get Expertise A skill. -->
+		<!-- When stored in the inventory, it enables you to equip A-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
 		<magicLvl>61</magicLvl>
@@ -1962,7 +1962,7 @@
 		</effects>
 	</skill>
 	<skill id="17573" toLevel="1" name="Expertise Rune (S-grade)">
-		<!-- When possessed, you get Expertise S skill. -->
+		<!-- When stored in the inventory, it enables you to equip S-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
 		<magicLvl>76</magicLvl>
@@ -1977,7 +1977,7 @@
 		</effects>
 	</skill>
 	<skill id="17574" toLevel="1" name="Expertise Rune (S80-grade)">
-		<!-- When possessed, you get Expertise S80 skill. -->
+		<!-- When stored in the inventory, it enables you to equip S80-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
 		<magicLvl>80</magicLvl>
@@ -1992,7 +1992,7 @@
 		</effects>
 	</skill>
 	<skill id="17575" toLevel="1" name="Expertise Rune (R-grade)">
-		<!-- When possessed, you get Expertise R skill. -->
+		<!-- When stored in the inventory, it enables you to equip R-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
 		<magicLvl>85</magicLvl>
@@ -2007,7 +2007,7 @@
 		</effects>
 	</skill>
 	<skill id="17576" toLevel="1" name="Expertise Rune (R95-grade)">
-		<!-- When possessed, you get Expertise R95 skill. -->
+		<!-- When stored in the inventory, it enables you to equip R95-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
 		<magicLvl>95</magicLvl>
@@ -2022,7 +2022,7 @@
 		</effects>
 	</skill>
 	<skill id="17577" toLevel="1" name="Expertise Rune (R99-grade)">
-		<!-- When possessed, you get Expertise R99 skill. -->
+		<!-- When stored in the inventory, it enables you to equip R99-grade items without any penalty. -->
 		<icon>br_cashtex.skill.br_cash_rune_of_exp_buff_1</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -2048,7 +2048,7 @@
 	<skill id="17581" toLevel="1" name="Squid Appearance Stone: Spear (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17582" toLevel="1" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon (30-day)">
+	<skill id="17582" toLevel="1" name="Sea Horse Appearance Stone: Two-handed Staff (30-day)">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17583" toLevel="1" name="Lobster Appearance Stone: Fist Weapon (30-day)">
@@ -2066,7 +2066,7 @@
 	<skill id="17587" toLevel="1" name="Turtle Appearance Stone: Shield (30-day)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17588" toLevel="1" name="Blue Mackerel Appearance Stone: Dualsword (30-day)">
+	<skill id="17588" toLevel="1" name="Blue Mackerel Appearance Stone: Dual Sword (30-day)">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17589" toLevel="1" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon (30-day)">
@@ -2090,7 +2090,7 @@
 	<skill id="17595" toLevel="1" name="Squid Appearance Stone: Spear">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17596" toLevel="1" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon">
+	<skill id="17596" toLevel="1" name="Sea Horse Appearance Stone: Two-handed Staff">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17597" toLevel="1" name="Lobster Appearance Stone: Fist Weapon">

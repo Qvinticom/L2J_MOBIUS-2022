@@ -440,7 +440,7 @@
 		</effects>
 	</skill>
 	<skill id="5014" toLevel="3" name="Frintezza Demon Attack">
-		<!-- Demon $s1 standard attack. -->
+		<!-- Demon $s1 general attack. -->
 		<affectRange>150</affectRange>
 		<castRange>150</castRange>
 		<coolTime>1200</coolTime>
@@ -3025,7 +3025,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5094" toLevel="1" name="Antharas Self-destruction">
+	<skill id="5094" toLevel="1" name="Suicide Bomb">
 		<affectRange>250</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>
@@ -3045,7 +3045,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5095" toLevel="1" name="Antharas Strike">
+	<skill id="5095" toLevel="1" name="Dragon Strike">
 		<castRange>40</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>200</effectRange>
@@ -3062,7 +3062,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5096" toLevel="1" name="Antharas Power Shot">
+	<skill id="5096" toLevel="1" name="Dragon Power Shot">
 		<castRange>600</castRange>
 		<effectPoint>-100</effectPoint>
 		<effectRange>1100</effectRange>
@@ -3079,7 +3079,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5097" toLevel="1" name="Antharas Self-destruction">
+	<skill id="5097" toLevel="1" name="Suicide Big Bomb">
 		<affectRange>150</affectRange>
 		<effectPoint>-100</effectPoint>
 		<attributeType>FIRE</attributeType>

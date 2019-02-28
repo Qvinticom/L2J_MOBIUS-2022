@@ -112,7 +112,7 @@
 		</skills>
 	</item>
 	<item id="20505" name="Agathion - Pomona Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Pomona. -->
+		<!-- Wrapped Pack containing Agathion - Pomona. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -135,7 +135,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20506" name="Agathion - Pomona Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Pomona (7-day). -->
+		<!-- Wrapped Pack containing Agathion - Pomona (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -158,7 +158,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20507" name="Mother's Wreath Pack (24-hour) (Event)" type="EtcItem">
-		<!-- Wrapped Pack for events containing Mother's Wreath (24-hr.). -->
+		<!-- Wrapped Pack for events containing Mother's Wreath (24-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -177,11 +177,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20497" min="1" max="1" chance="100" /> <!-- Mother's Wreath (Event) - Blessing of Love (24-hr.) -->
+			<item id="20497" min="1" max="1" chance="100" /> <!-- Mother's Wreath (Event) - Blessing of Love (24-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="20508" name="Mother's Wreath Pack (3-day)" type="EtcItem">
-		<!-- Double-click to obtain a Mother's Wreath (3-day). -->
+		<!-- Wrapped Pack containing Mother's Wreath (3-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -204,7 +204,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20509" name="Feline Queen Hat Pack" type="EtcItem">
-		<!-- Double-click to obtain a Feline Queen Hat. -->
+		<!-- Wrapped Pack containing Feline Queen Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -227,7 +227,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20510" name="Feline King Hat Pack" type="EtcItem">
-		<!-- Double-click to obtain a Feline King Hat. -->
+		<!-- Wrapped Pack containing Feline King Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -250,7 +250,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20511" name="Kai the Cat Hat Pack" type="EtcItem">
-		<!-- Double-click to obtain a Kai the Cat Hat. -->
+		<!-- Wrapped Pack containing Kai the Cat Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -273,7 +273,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20512" name="Mount - Gold Maned Lion Pack" type="EtcItem">
-		<!-- Double-click to obtain a Mount - Gold Maned Lion. -->
+		<!-- Wrapped Pack containing Mount - Gold Maned Lion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -296,7 +296,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20513" name="Mount - Gold Maned Lion Pack (30-day)" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a Mount - Gold Maned Lion (30-day). -->
+		<!-- Wrapped Pack containing Mount - Gold Maned Lion (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -319,7 +319,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20514" name="Mount - Steam Beetle Pack (30-day)" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain a Mount - Steam Beetle (30-day). -->
+		<!-- Wrapped Pack containing Mount - Steam Beetle (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -692,7 +692,7 @@
 		</skills>
 	</item>
 	<item id="20530" name="Scroll: Concentration" type="EtcItem">
-		<!-- Decreases magic cancel rate by 36. -->
+		<!-- Decreases damage that is cancelled by magic by 36. -->
 		<set name="icon" val="br_cashtex.item.br_cash_scroll_of_wind_walk_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -856,7 +856,7 @@
 		</skills>
 	</item>
 	<item id="20537" name="Afro Hair" additionalName="Vitality (7-day)" type="Armor">
-		<!-- Afro style hair. Uses 2 hair accessory slots. Vitality cooldown 12 hr. Vitality item with limited usage. -->
+		<!-- Afro style hair. Uses 2 hair accessory slots. Vitality cooldown 12 hour. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Afro_hair_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -878,7 +878,7 @@
 		</skills>
 	</item>
 	<item id="20538" name="Horn-rimmed Glasses" additionalName="Vitality (7-day)" type="Armor">
-		<!-- Magic horn-rimmed glasses with mysterious power. Vitality cooldown 12 hr. Vitality item with limited usage. -->
+		<!-- Magic horn-rimmed glasses with mysterious power. Vitality cooldown 12 hour. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Eye_Glasses_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hair" />
@@ -900,7 +900,7 @@
 		</skills>
 	</item>
 	<item id="20539" name="Assassin's Bamboo Hat" additionalName="Vitality (7-day)" type="Armor">
-		<!-- Wide brimmed hat made of bamboo. Uses 2 hair accessory slots. Vitality cooldown 12 hr. Vitality item with limited usage. -->
+		<!-- Wide brimmed hat made of bamboo. Uses 2 hair accessory slots. Vitality cooldown 12 hour. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_Bamboo_Hat_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -922,7 +922,7 @@
 		</skills>
 	</item>
 	<item id="20540" name="Mount - Steam Beetle Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Mount - Steam Beetle (30-day). -->
+		<!-- Wrapped Pack containing Mount - Steam Beetle (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -944,7 +944,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20541" name="Mount - Gold Maned Lion Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Mount - Gold Maned Lion (30-day). -->
+		<!-- Wrapped Pack containing Mount - Gold Maned Lion (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -966,7 +966,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20542" name="Afro Hair Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain an Afro Hair (7-day). -->
+		<!-- Wrapped Pack containing Afro Hair (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -988,7 +988,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20543" name="Horn-rimmed Glasses Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Horn-rimmed Glasses (7-day). -->
+		<!-- Wrapped Pack containing Horn-rimmed Glasses (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1010,7 +1010,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20544" name="Assassin's Bamboo Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain an Assassin's Bamboo Hat (7-day). -->
+		<!-- Wrapped Pack containing Assassin's Bamboo Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1116,7 +1116,7 @@
 		</skills>
 	</item>
 	<item id="20548" name="XP Rune III (Lv. 1-100+) 30% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 30% (5-hr.). Timer starts once package is opened. -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 30% (5-hour). Timer starts once package is opened. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1134,11 +1134,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20335" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 5-hr. -->
+			<item id="20335" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 5-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20549" name="XP Rune III (Lv. 1-100+) 50% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 50% (5-hr.). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1156,11 +1156,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20336" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 5-hr. -->
+			<item id="20336" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 5-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20550" name="XP Rune III (Lv. 1-100+) 30% Pack (10-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 30% (10-hr.). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 30% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1178,11 +1178,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20337" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 10-hr. -->
+			<item id="20337" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 10-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20551" name="XP Rune III (Lv. 1-100+) 50% Pack (10-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 50% (10-hr.). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1200,11 +1200,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20338" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 10-hr. -->
+			<item id="20338" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 10-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20552" name="XP Rune III (Lv. 1-100+) 30% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 30% (7-day). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 30% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1226,7 +1226,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20553" name="XP Rune III (Lv. 1-100+) 50% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 50% (7-day). -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1248,7 +1248,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20554" name="SP Rune 30% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 30% (5-hr.). -->
+		<!-- Wrapped Pack containing SP Rune 30% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1266,11 +1266,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20341" min="1" max="1" chance="100" /> <!-- SP Rune 30% - 5-hr. -->
+			<item id="20341" min="1" max="1" chance="100" /> <!-- SP Rune 30% - 5-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20555" name="SP Rune 50% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 50% (5-hr.). -->
+		<!-- Wrapped Pack containing SP Rune 50% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1288,11 +1288,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20342" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 5-hr. -->
+			<item id="20342" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 5-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20556" name="SP Rune 30% Pack (10-hour)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 30% (10-hr.). -->
+		<!-- Wrapped Pack containing SP Rune 30% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1310,11 +1310,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20343" min="1" max="1" chance="100" /> <!-- SP Rune 30% - 10-hr. -->
+			<item id="20343" min="1" max="1" chance="100" /> <!-- SP Rune 30% - 10-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20557" name="SP Rune 50% Pack (10-hour)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 50% (10-hr.). -->
+		<!-- Wrapped Pack containing SP Rune 50% (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1332,11 +1332,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20344" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 10-hr. -->
+			<item id="20344" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 10-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20558" name="SP Rune 30% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 30% (7-day). -->
+		<!-- Wrapped Pack containing SP Rune 30% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1358,7 +1358,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20559" name="SP Rune 50% Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 50% (7-day). -->
+		<!-- Wrapped Pack containing SP Rune 50% (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1380,7 +1380,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20560" name="Rune of Crystal (Lv. 3) Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Rune of Crystal (Lv. 3) (5-hr.). -->
+		<!-- Wrapped Pack containing Rune of Crystal (Lv. 3) (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1398,11 +1398,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20347" min="1" max="1" chance="100" /> <!-- Rune of Crystal (Lv. 3) - 5-hr. -->
+			<item id="20347" min="1" max="1" chance="100" /> <!-- Rune of Crystal (Lv. 3) - 5-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20561" name="Rune of Crystal (Lv. 5) Pack (5-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Rune of Crystal (Lv. 5) (5-hr.). -->
+		<!-- Wrapped Pack containing Rune of Crystal (Lv. 5) (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1420,11 +1420,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20348" min="1" max="1" chance="100" /> <!-- Rune of Crystal (Lv. 5) - 5-hr. -->
+			<item id="20348" min="1" max="1" chance="100" /> <!-- Rune of Crystal (Lv. 5) - 5-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20562" name="Rune of Crystal (Lv. 3) Pack (10-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Rune of Crystal (Lv. 3) (10-hr.). -->
+		<!-- Wrapped Pack containing Rune of Crystal (Lv. 3) (10-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1442,11 +1442,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20349" min="1" max="1" chance="100" /> <!-- Rune of Crystal (Lv. 3) - 10-hr. -->
+			<item id="20349" min="1" max="1" chance="100" /> <!-- Rune of Crystal (Lv. 3) - 10-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20563" name="Rune of Crystal (Lv. 5) Pack (10-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Rune of Crystal (Lv. 5) (5-hr.). -->
+		<!-- Wrapped Pack containing Rune of Crystal (Lv. 5) (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1464,11 +1464,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20350" min="1" max="1" chance="100" /> <!-- Rune of Crystal (Lv. 5) - 10-hr. -->
+			<item id="20350" min="1" max="1" chance="100" /> <!-- Rune of Crystal (Lv. 5) - 10-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20564" name="Rune of Crystal (Lv. 3) Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Rune of Crystal (Lv. 3) (7-day). -->
+		<!-- Wrapped Pack containing Rune of Crystal (Lv. 3) (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1490,7 +1490,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20565" name="Rune of Crystal (Lv. 5) Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Rune of Crystal (Lv. 5) (7-day). -->
+		<!-- Wrapped Pack containing Rune of Crystal (Lv. 5) (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1512,7 +1512,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20566" name="Rune of Feather Pack (24-hour)" type="EtcItem">
-		<!-- Double-click to obtain a Rune of Feather (24-hr.). -->
+		<!-- Wrapped Pack containing Rune of Feather (24-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1530,7 +1530,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="22066" min="1" max="1" chance="100" /> <!-- Rune of Feather - 24-hr. -->
+			<item id="22066" min="1" max="1" chance="100" /> <!-- Rune of Feather - 24-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20567" name="Eva's Circlet (Event)" additionalName="3-day" type="Armor">
@@ -1697,7 +1697,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20341" min="1" max="1" chance="100" /> <!-- SP Rune 30% - 5-hr. -->
+			<item id="20341" min="1" max="1" chance="100" /> <!-- SP Rune 30% - 5-hour -->
 			<item id="20392" min="4" max="4" chance="100" /> <!-- Vitality Replenishing Potion -->
 		</capsuled_items>
 	</item>
@@ -1718,12 +1718,12 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20342" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 5-hr. -->
-			<item id="20336" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 5-hr. -->
+			<item id="20342" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 5-hour -->
+			<item id="20336" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 5-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20576" name="Eva's Circlet Pack (3-day) (Event)" type="EtcItem">
-		<!-- Double-click to obtain an Eva's Circlet (3-day). The timer starts once the box is opened. -->
+		<!-- Wrapped Pack containing Eva's Circlet (3-day). The timer starts once the box is opened. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1737,7 +1737,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20577" name="Eva's Circlet Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain an Eva's Circlet (7-day). -->
+		<!-- Wrapped Pack containing Eva's Circlet (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1759,7 +1759,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20578" name="Eva's Circlet Pack" type="EtcItem">
-		<!-- Double-click to obtain an Eva's Circlet. -->
+		<!-- Wrapped Pack containing Eva's Circlet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1781,7 +1781,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20579" name="Eva's Rune Pack (5-hour) (Event)" type="EtcItem">
-		<!-- Double-click to obtain an Eva's Rune (5-hr.). The timer start once the box is opened. -->
+		<!-- Wrapped Pack containing Eva's Rune (5-hour). The timer starts once the box is opened. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1791,11 +1791,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<capsuled_items>
-			<item id="20570" min="1" max="1" chance="100" /> <!-- Eva's Rune (Event) - 5-hr. -->
+			<item id="20570" min="1" max="1" chance="100" /> <!-- Eva's Rune (Event) - 5-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20580" name="Eva's Rune Pack (3-day) (Event)" type="EtcItem">
-		<!-- Double-click to obtain an Eva's Rune (3-day). The timer starts once the box is opened. -->
+		<!-- Wrapped Pack containing Eva's Rune (3-day). The timer starts once the box is opened. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1809,7 +1809,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20581" name="XP Rune III (Lv. 1-100+) 30% Pack (3-hour) (Event)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 30% (3-hr.). The timer starts once the box is opened. -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 30% (3-hour). The timer starts once the box is opened. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1825,7 +1825,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20572" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 3-hr. -->
+			<item id="20572" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 30% - 3-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20582" name="P. Atk. Potion" type="EtcItem">
@@ -1916,7 +1916,7 @@
 		</skills>
 	</item>
 	<item id="20587" name="Agathion - Weaver Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Weaver. -->
+		<!-- Wrapped Pack containing Agathion - Weaver. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1935,7 +1935,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20588" name="Agathion - Weaver Pack (24-hour)" additionalName="Power of the Golden Calf" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Weaver (24-hr.). -->
+		<!-- Wrapped Pack containing Agathion - Weaver (24-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1950,11 +1950,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<capsuled_items>
-			<item id="20592" min="1" max="1" chance="100" /> <!-- Agathion - Weaver - Power of the Golden Calf (24-hr.) -->
+			<item id="20592" min="1" max="1" chance="100" /> <!-- Agathion - Weaver - Power of the Golden Calf (24-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="20589" name="Agathion - Weaver Pack (3-day)" additionalName="Power of the Golden Calf" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Weaver (3-day). -->
+		<!-- Wrapped Pack containing Agathion - Weaver (3-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1973,7 +1973,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20590" name="Summon of Love Bracelet Pack (24-hour) (Event)" type="EtcItem">
-		<!-- Double-click to obtain a Summon of Love Bracelet (24-hr.). -->
+		<!-- Wrapped Pack containing Summon of Love Bracelet (24-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1989,7 +1989,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20594" min="1" max="1" chance="100" /> <!-- Summon of Love Bracelet (Event) - 24-hr. -->
+			<item id="20594" min="1" max="1" chance="100" /> <!-- Summon of Love Bracelet (Event) - 24-hour -->
 		</capsuled_items>
 	</item>
 	<item id="20591" name="Agathion - Weaver" type="Armor">
@@ -2131,7 +2131,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="20598" name="Twilight Staff Pack (7-day)" additionalName="Dance of Shadow" type="EtcItem">
-		<!-- Double-click to obtain a Shadow Staff (7-day). -->
+		<!-- Wrapped Pack containing Shadow Staff (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2153,7 +2153,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20599" name="Anniversary Hat Pack (7-day)" additionalName="Soul of Phoenix" type="EtcItem">
-		<!-- Double-click to obtain an Anniversary Hat (7-day). -->
+		<!-- Wrapped Pack containing Anniversary Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

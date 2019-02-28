@@ -505,7 +505,7 @@
 		</capsuled_items>
 	</item>
 	<item id="27536" name="+ 8 Reflect Attack T-shirt Pack" type="EtcItem">
-		<!-- Double-click to get a +8 enchanted Reflect Attack Shirt. -->
+		<!-- Double-click to get a +8 Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -517,7 +517,7 @@
 		</capsuled_items>
 	</item>
 	<item id="27537" name="+ 8 Reflect Magic T-shirt Pack" type="EtcItem">
-		<!-- Double-click to get a +8 enchanted Reflect Magic Shirt. -->
+		<!-- Double-click to get a +8 enchanted Reflect Magic T-shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -681,7 +681,7 @@
 		</capsuled_items>
 	</item>
 	<item id="27552" name="Ruler's Authority" additionalName="30-day" type="Armor">
-		<!-- Item given to the winner of the Ceremony of Chaos that takes place in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 1000, weight by 25600, and damage by 8%. Decreases received damage by 9% and Damage Reflect Resistance by 5%. Increases the number of inventory slots by 36, and Attribute Resistance by 15. Cannot be used in the Olympiad. -->
+		<!-- Item given to the winner of the Ceremony of Chaos that takes place in the Mysterious Mansion. When equipped, increases Max HP, MP, and CP by 1000, weight by 25600, and damage by 8%. Decreases received damage by 9% and Damage Reflection Resistance by 5%. Increases the number of inventory slots by 36, and Attribute Resistance by 15. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.belt_rulers_authority" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1125,7 +1125,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27578" name="XP Rune III (Lv. 1-100+) 100% Pack (1-hour)" type="EtcItem">
-		<!-- Premium User Only. Double-click to obtain a XP Rune III (Lv. 1-100+) 100% (1-hr.). -->
+		<!-- Premium User Only. Wrapped Pack containing XP Rune III (Lv. 1-100+) 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1142,11 +1142,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_tradable" val="false" />
 		<capsuled_items>
-			<item id="27581" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% Pack (30-day) - 1-hr. -->
+			<item id="27581" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% Pack (30-day) - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="27579" name="SP Rune 100% Pack (1-hour)" type="EtcItem">
-		<!-- Premium User Only. Double-click to obtain a SP Rune 100% (1-hr.). -->
+		<!-- Premium User Only. Wrapped Pack containing SP Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1163,11 +1163,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_tradable" val="false" />
 		<capsuled_items>
-			<item id="27582" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hr. -->
+			<item id="27582" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="27580" name="Prestige Rune 100% Pack" type="EtcItem">
-		<!-- Premium User Only. Double-click to obtain a Prestige Rune 100% (1-hr.). -->
+		<!-- Premium User Only. Wrapped Pack containing High-grade Maphr's Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1184,7 +1184,7 @@
 		<set name="handler" val="ExtractableItems" />
 		<set name="is_tradable" val="false" />
 		<capsuled_items>
-			<item id="27583" min="1" max="1" chance="100" /> <!-- Prestige Rune 100% - 1-hr. -->
+			<item id="27583" min="1" max="1" chance="100" /> <!-- High-grade Maphr's Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="27581" name="XP Rune III (Lv. 1-100+) 100% Pack (30-day)" additionalName="1-hour" type="EtcItem">
@@ -1222,7 +1222,7 @@
 		</skills>
 	</item>
 	<item id="27583" name="Prestige Rune 100%" additionalName="1-hour" type="EtcItem">
-		<!-- Premium User Only. When carried during a hunt, Adena/ item drop rate/ item acquisition through Spoil +30%.100%. -->
+		<!-- Premium User Only. When carried during a hunt, Adena/ item drop rate/ item acquisition through Spoil +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="is_depositable" val="false" />
@@ -1406,7 +1406,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="27594" name="Maphr's Wind Scroll" type="EtcItem">
-		<!-- Vitality consumption +200% and Acquired XP/ SP +200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<!-- Vitality consumption +200% and Acquired XP/ SP +200%. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="default_action" val="SKILL_REDUCE" />

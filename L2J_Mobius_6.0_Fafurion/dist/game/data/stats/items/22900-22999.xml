@@ -73,7 +73,7 @@
 		</skills>
 	</item>
 	<item id="22904" name="Scroll: Enchant Power Shirt" type="EtcItem">
-		<!-- Enchant Scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from +4, P. Def. +3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant value starting from +4. At +5, +7, +8, and +9, additional bonuses are also applied. -->
+		<!-- Enchant Scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from +4, P. Def. +3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +7, +8, and +9, additional bonuses are also applied. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -92,7 +92,7 @@
 		</skills>
 	</item>
 	<item id="22905" name="Blessed Scroll: Enchant Power Shirt" type="EtcItem">
-		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from +4, P. Def. +3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant value starting from +4. At +5, +7, +8, and +9, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
+		<!-- Enchant scroll exclusive to Power Shirts. Increases the Power Shirt P. Def. and M. Def. by 1. Starting from +4, P. Def. +3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +7, +8, and +9, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -111,7 +111,7 @@
 		</skills>
 	</item>
 	<item id="22906" name="XP Rune III (Lv. 1-100+) 50% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune III (Lv. 1-100+) 50% (1-hr.). Cannot be exchanged once opened. -->
+		<!-- Wrapped Pack containing XP Rune III (Lv. 1-100+) 50% (1-hour). Cannot be exchanged once opened. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -126,7 +126,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22944" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 1-hr. -->
+			<item id="22944" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 50% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="22907" name="Straw Hat" type="Armor">
@@ -182,7 +182,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="22910" name="Wedding Cake Pack" type="EtcItem">
-		<!-- Double-click to obtain a Honeymoon Ticket and a Big Wedding Cake. -->
+		<!-- Wrapped Pack containing Honeymoon Ticket and a Big Wedding Cake. -->
 		<set name="icon" val="BranchSys2.Icon.br_wedding_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -218,7 +218,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="22912" name="Formal Wear Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Formal Wear. 30-day. -->
+		<!-- Wrapped Pack containing Formal Wear. 30-day. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -865,7 +865,7 @@
 		</skills>
 	</item>
 	<item id="22945" name="Honeymoon Ticket (7-day)" additionalName="7-day" type="EtcItem">
-		<!-- Honeymoon ticket given to the bride and groom as a gift. When used, Vitality is maintained for 1 hr. Vitality item with limited usage. -->
+		<!-- Honeymoon ticket given to the bride and groom as a gift. When used, Vitality is maintained for 1 hour. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.Icon.br_weddin_ticket_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1088,7 +1088,7 @@
 		</skills>
 	</item>
 	<item id="22957" name="Pink Paper Mask Set" additionalName="Blessed Soul (30-day)" type="Armor">
-		<!-- Fancy mask and hat made of pink paper. Cooldown is 1 hr. -->
+		<!-- Fancy mask and hat made of pink paper. Cooldown is 1 h. -->
 		<set name="icon" val="BranchSys.icon.br_party_hat_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1245,7 +1245,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="22966" name="Vitality Maintaining Potion (1-hour)" type="EtcItem">
-		<!-- Maintains Vitality for 1 hr. Vitality item with limited usage. -->
+		<!-- Maintains Vitality for 1 h. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.br_essence_rose_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1265,7 +1265,7 @@
 		</skills>
 	</item>
 	<item id="22967" name="Agathion - Singer and Dancer Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Singer & Dancer (30-day). -->
+		<!-- Wrapped Pack containing Singer & Dancer (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1284,7 +1284,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22968" name="Mount - Black Bear Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Black Bear (30-day). -->
+		<!-- Wrapped Pack containing Black Bear (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1303,7 +1303,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22969" name="Black Gem Mask Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Black Gem Mask (30-day). -->
+		<!-- Wrapped Pack containing Black Gem Mask (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1322,7 +1322,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22970" name="Refined Angel Ring Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Refined Angel Ring (30-day). -->
+		<!-- Wrapped Pack containing Refined Angel Ring (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1341,7 +1341,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22971" name="Refined Devil Horn Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Devil Horn (30-day). -->
+		<!-- Wrapped Pack containing Devil Horn (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1360,7 +1360,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22972" name="Ruthless Tribe Mask Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Ruthless Tribe Mask (30-day). -->
+		<!-- Wrapped Pack containing Ruthless Tribe Mask (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1379,7 +1379,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22973" name="Agathion - Uthanka Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain an Uthanka (30-day). -->
+		<!-- Wrapped Pack containing Uthanka (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1398,7 +1398,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22974" name="Agathion - Cheerleader Orodriel Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Cheerleader Orodriel (30-day). -->
+		<!-- Wrapped Pack containing Cheerleader Orodriel (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1417,7 +1417,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22975" name="Mount - Tame Princess Ant Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Tame Princess Ant (30-day). -->
+		<!-- Wrapped Pack containing Tame Princess Ant (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1436,7 +1436,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22976" name="Agathion - Dryad Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Dryad (30-day). -->
+		<!-- Wrapped Pack containing Dryad (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1455,7 +1455,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22977" name="Pink Paper Mask Set Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain a Pink Paper Mask Set (30-day). -->
+		<!-- Wrapped Pack containing Pink Paper Mask Set (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1474,7 +1474,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22978" name="Arrow-pierced Apple Pack (30-day)" type="EtcItem">
-		<!-- Double-click to obtain an Arrow-pierced Apple (30-day). -->
+		<!-- Wrapped Pack containing Arrow-pierced Apple (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1493,7 +1493,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22979" name="SP Rune 50% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 50% (1-hr.). Cannot be exchanged once open. -->
+		<!-- Wrapped Pack containing SP Rune 50% (1-hour). Cannot be exchanged once open. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1508,11 +1508,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hr. -->
+			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="22980" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (1-hr.). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1527,11 +1527,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22960" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% - 1-hr. -->
+			<item id="22960" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="22981" name="XP Rune I (Lv. 1-85) 200% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (1-hr.). -->
+		<!-- Wrapped Pack containing XP Rune I (Lv. 1-85) 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1546,7 +1546,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22961" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% - 1-hr. -->
+			<item id="22961" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="22982" name="Lv. 1 Giant STR Dye" additionalName="STR + 3 / DEX - 2" type="EtcItem">

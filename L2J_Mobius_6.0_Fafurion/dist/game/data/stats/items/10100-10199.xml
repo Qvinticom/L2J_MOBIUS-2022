@@ -634,7 +634,7 @@
 		</skills>
 	</item>
 	<item id="10140" name="Blessed Ring of Escape" type="Armor">
-		<!-- Makes Blessed Scroll of Escape available for up to 250 min., with a 60-second cooldown for Escape. Only one effect is applied when two identical rings are worn. -->
+		<!-- Makes Blessed Scroll of Escape available for up to 250 min., with a 60-sec. cooldown for Escape. Only one effect is applied, even if you wear 2 identical rings. -->
 		<set name="icon" val="icon.accessary_ring_of_mana_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -886,7 +886,7 @@
 		</skills>
 	</item>
 	<item id="10151" name="Transformation Scroll (Battleground)" type="EtcItem">
-		<!-- When used, it transforms you into a pixy for a certain amount of time. It can only be used on the battleground during a siege battle or a fortress battle. It will have no effect if used while in a transformed state. -->
+		<!-- When used, it transforms you into a pixie for a certain amount of time. It can only be used on the battleground during a siege battle or a fortress battle. It will have no effect if used while in a transformed state. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="SCROLL" />

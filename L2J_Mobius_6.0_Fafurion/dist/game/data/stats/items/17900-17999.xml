@@ -327,7 +327,7 @@
 		</stats>
 	</item>
 	<item id="17909" name="Bound Specter Retributer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -494,7 +494,7 @@
 		</stats>
 	</item>
 	<item id="17914" name="Bound Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -638,7 +638,7 @@
 		</stats>
 	</item>
 	<item id="17920" name="Bound Seraph Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -762,7 +762,7 @@
 		</stats>
 	</item>
 	<item id="17925" name="Bound Seraph Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1316,7 +1316,7 @@
 		</stats>
 	</item>
 	<item id="17943" name="Bound Amaranthine Retributer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. Can use an Unbind Scroll to change this item into a Standard item. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. Can use an Unbind Scroll to change this item into a Standard item. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1483,7 +1483,7 @@
 		</stats>
 	</item>
 	<item id="17948" name="Bound Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Bestows an attack or defense type set option. Can use an Unbind Scroll to change this item into a Standard item. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1627,7 +1627,7 @@
 		</stats>
 	</item>
 	<item id="17954" name="Bound Eternal Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- Bestows an assassin or enchant type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1751,7 +1751,7 @@
 		</stats>
 	</item>
 	<item id="17959" name="Bound Eternal Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- Bestows a magic or recovery type set option. Can use an Unbind Scroll to change this item into a Standard item. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2262,7 +2262,7 @@
 		</stats>
 	</item>
 	<item id="17977" name="Blessed Requiem Retributer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_grangkaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2409,7 +2409,7 @@
 		</stats>
 	</item>
 	<item id="17982" name="Blessed Immortal Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2529,7 +2529,7 @@
 		</stats>
 	</item>
 	<item id="17988" name="Blessed Immortal Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2633,7 +2633,7 @@
 		</stats>
 	</item>
 	<item id="17993" name="Blessed Immortal Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />

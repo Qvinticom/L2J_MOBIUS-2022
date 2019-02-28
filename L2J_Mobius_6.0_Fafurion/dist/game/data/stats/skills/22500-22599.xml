@@ -29,7 +29,7 @@
 						<item id="22626" count="1" /> <!-- Elixir of CP - 1-day -->
 					</item>
 					<item chance="4">
-						<item id="22621" count="1" /> <!-- Vitality Recovery Potion - 1-hr. -->
+						<item id="22621" count="1" /> <!-- Vitality Recovery Potion - 1-hour -->
 					</item>
 					<item chance="0.1">
 						<item id="22628" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
@@ -482,7 +482,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22529" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Blunt">
+	<skill id="22529" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Blunt Weapon">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -491,7 +491,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22530" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Blunt">
+	<skill id="22530" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Blunt Weapon">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -500,7 +500,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22531" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt">
+	<skill id="22531" toLevel="1" name="Emerald Weapon Appearance Stone: One-handed Staff">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -509,7 +509,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22532" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt">
+	<skill id="22532" toLevel="1" name="Emerald Weapon Appearance Stone: Two-handed Staff">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -518,7 +518,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22533" toLevel="1" name="Emerald Weapon Appearance Stone: Dualsword">
+	<skill id="22533" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Sword">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -536,7 +536,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22535" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Blunt">
+	<skill id="22535" toLevel="1" name="Emerald Weapon Appearance Stone: Dual Blunt Weapon">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -895,7 +895,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22574" toLevel="1" name="Japanese Blunt Appearance Stone">
+	<skill id="22574" toLevel="1" name="Japanese Appearance Stone: One-handed Blunt">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -913,7 +913,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22576" toLevel="1" name="Japanese Magic Blunt Appearance Stone">
+	<skill id="22576" toLevel="1" name="Japanese Appearance Stone: One-handed Staff">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -922,7 +922,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22577" toLevel="1" name="Japanese Giant Magic Blunt Appearance Stone">
+	<skill id="22577" toLevel="1" name="Japanese Appearance Stone: Giant Two-handed Staff">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -931,7 +931,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22578" toLevel="1" name="Japanese Dualsword Appearance Stone">
+	<skill id="22578" toLevel="1" name="Japanese Dual Sword Appearance Stone">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -1012,7 +1012,7 @@
 			<condition name="CanChangeVitalItemCount" />
 		</conditions>
 	</skill>
-	<skill id="22587" toLevel="4" name="Drop Rate Rune">
+	<skill id="22587" toLevel="4" name="Maphr's Rune">
 		<!-- Item drop rate +$s1. -->
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>
@@ -1030,7 +1030,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22588" toLevel="3" name="High-grade Drop Rate Rune">
+	<skill id="22588" toLevel="3" name="High-grade Maphr's Rune">
 		<!-- Drop and Spoil rate, amount of dropped Adena +$s1. -->
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>

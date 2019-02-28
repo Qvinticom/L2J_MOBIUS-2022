@@ -60,7 +60,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29205" name="Vitality Beer" type="EtcItem">
-		<!-- Popular beer at Mystic Tavern. Recovers vitality when used. Take it to Dimensional Merchant to exchange it for even more special beer. Cannot be used in Olympiad. The usage limit of 5 times per week does not apply. -->
+		<!-- Popular beer at Mystic Tavern. Recovers vitality when used. Take it to Dimensional Merchant to exchange it for even more special beer. Cannot be used in Olympiad. No weekly usage limit. -->
 		<set name="icon" val="icon.bm_honey_beer" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -68,7 +68,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29206" name="Honey Vitality Beer" type="EtcItem">
-		<!-- Honey Vitality Beer made from Mystic Tavern's special recipe. Instantly recovers vitality when used and increases CON/ MEN/ LUC/ CHA by 1 for 10 minutes. When additional Honey Vitality Beer is used when Buff effects are still in effect, the buff will stack up to Lv. 3.. Honey Vitality Beer Lv. 2: Increases CON/ MEN/ LUC/ CHA by 2 and Acquired XP/ SP by 10% for 10 minutes. Honey Vitality Beer Lv. 3: Increases CON/ MEN/ LUC/ CHA by 3 and Acquired XP/ SP by 30% for 10 minutes. Unable to be used by Olympiad. -->
+		<!-- Honey Vitality Beer made from Mystic Tavern's special recipe. Instantly recovers vitality when used and increases CON/ MEN/ LUC/ CHA by +1 for 10 min. When additional Honey Vitality Beer is used when Buff effects are still in effect, the buff will stack up to Lv. 3.. Honey Vitality Beer Lv. 2: Increases CON/ MEN/ LUC/ CHA by +2 and XP gain by 10% for 10 min. Honey Vitality Beer Lv. 3: Increases CON/ MEN/ LUC/ CHA by +3 and earns +30% XP for 10 min. Unable to be used by Olympiad. -->
 		<set name="icon" val="icon.bm_royal_honey_beer" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -100,7 +100,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29210" name="Dark Eternal Ingredient Set" type="EtcItem">
-		<!-- Double click to obtain ingredients required to produce Dark Eternal armor. -->
+		<!-- Double-click to obtain the ingredients for crafting Dark Eternal armor. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -109,7 +109,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29211" name="Bloody Eternal Ingredient Set" type="EtcItem">
-		<!-- Double click to obtain ingredients required to produce Bloody Eternal armor. -->
+		<!-- Double-click to obtain the ingredients for crafting Bloody Eternal armor. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -136,7 +136,7 @@
 		</stats>
 	</item>
 	<item id="29213" name="Adventurer's Bracelet" type="Armor">
-		<!-- Bracelet for adventurers. STR/ DEX/ CON/ INT/ WIT/ MEN +1 when equipped and activates three talisman slots. -->
+		<!-- Bracelet for adventurers. Increases STR/ DEX/ CON/ INT/ WIT/ MEN by +1 when equipped and activates three talisman slots. -->
 		<set name="icon" val="BranchIcon.icon.bracelet_of_explorer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
@@ -154,7 +154,7 @@
 		</stats>
 	</item>
 	<item id="29214" name="Shirt Box" type="EtcItem">
-		<!-- Double click to obtain one of Shirt of Pagrio/ Sayha/ Eva/ Maphr. -->
+		<!-- Double-click to obtain one of T-shirt of Pagrio/ Sayha/ Eva/ Maph. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -189,7 +189,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="29217" name="Starter Kit" additionalName="Lv. 99" type="EtcItem">
-		<!-- Double-click to obtain 5 Prestige Rune 100% Packs (1-hr), 10 Mysterious Wind Scrolls, 10 Dandy's Scrolls: Challenge, 3 XP Buffs 50% (1-hr), Entrance Pass: Nightmare Kamaloka, 5 Feathers of Blessing, 10 Top-grade Love Potions - Party, 5 Tarot Card Coupons, La Vie En Rose's Brilliant Brooch, Ruby Lv. 1, Sapphire Lv. 1, Emerald Lv. 1, Vital Stone Lv. 1, Talisman - Abundance Pack. -->
+		<!-- Double-click to obtain 5 High-grade Maphr's Rune 100% Packs (1-hr), 10 Mysterious Wind Scrolls, 10 Dandy's Scrolls: Challenge, 3 XP Buffs 50% (1-hr), Entrance Pass: Nightmare Kamaloka, 5 Feathers of Blessing, 10 Top-grade Love Potions - Party, 5 Tarot Card Coupons, La Vie En Rose's Brilliant Brooch, Ruby Lv. 1, Sapphire Lv. 1, Emerald Lv. 1, Vital Stone Lv. 1, Talisman - Abundance Pack. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -273,7 +273,7 @@
 		<set name="time" val="60" />
 	</item>
 	<item id="29226" name="14th Anniversary Rune 100% Pack (1 hour)" type="EtcItem">
-		<!-- 14th Anniversary Item Pack. Pack which includes 14th Anniversary Rune 100% (1 hr.). -->
+		<!-- 14th Anniversary Item Pack. Pack which includes 14th Anniversary Rune 100% (1 hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -289,5 +289,798 @@
 		<set name="icon" val="BranchSys.icon.br_valentine_cream_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29228" name="Babayaga Agathion Charm" additionalName="Luxury" type="Armor">
+		<!-- A charm that can summon Babayaga Agathion. -->
+		<set name="icon" val="BranchIcon.icon.br_babayaga_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29229" name="Minion Eye Agathion Charm" type="Armor">
+		<!-- A charm that can summon Minion Eye Agathion. -->
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29230" name="Minion Eye Agathion Charm" additionalName="7-day" type="Armor">
+		<!-- A charm that can summon Minion Eye Agathion. Minion Eye's Encouragement effect (CON +3, MEN +3, increases weight gauge by 10000, maximum HP/ MP/ CP by 300, and decreases cooldown delay by 3%, Skill MP Consumption by 3%.). Skill used: Minion Eye Blessed Resurrection -->
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="29231" name="Minion Eye Agathion Charm" additionalName="30-day" type="Armor">
+		<!-- A charm that can summon Minion Eye Agathion. Minion Eye's Encouragement effect (CON +3, MEN +3, increases weight gauge by 10000, maximum HP/ MP/ CP by 300, and decreases cooldown delay by 3%, Skill MP Consumption by 3%.). Skill used: Minion Eye Blessed Resurrection -->
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29232" name="Matryoshka Agathion Charm" type="Armor">
+		<!-- A charm that can summon Matryoshka Agathion. -->
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29233" name="Matryoshka Agathion Charm" additionalName="7-day" type="Armor">
+		<!-- A charm that can summon Matryoshka Agathion. Skill used: Talking Island Village, Aden Castle Town, Ancient City Arcan, Xerces Alliance Base Teleport. Matryoshka's Gift - You can receive a special gift from Matryoshka every 12 hours,. Matryoshka's Blessing - Increases Acquired XP/ SP by 30% for 60 min. -->
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="10080" />
+	</item>
+	<item id="29234" name="Matryoshka Agathion Charm" additionalName="30-day" type="Armor">
+		<!-- A charm that can summon Matryoshka Agathion. Skill used: Talking Island Village, Aden Castle Town, Ancient City Arcan, Xerces Alliance Base Teleport. Matryoshka's Gift - You can receive a special gift from Matryoshka every 12 hours,. Matryoshka's Blessing - Increases Acquired XP/ SP by 30% for 60 min. -->
+		<set name="icon" val="icon.etc_rbracelet_aga_agit_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="time" val="43200" />
+	</item>
+	<item id="29235" name="Minion Eye Agathion Charm 7-Day Pack" type="EtcItem">
+		<!-- Dimensional Item Pack. Pack containing a Minion Eye Agathion Charm (7-day). -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29236" name="Minion Eye Agathion Charm 30-Day Pack" type="EtcItem">
+		<!-- Dimensional Item Pack. Pack containing a Minion Eye Agathion Charm (30-day). -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29237" name="Matryoshka Agathion Charm 7-Day Pack" type="EtcItem">
+		<!-- Dimensional Item Pack. Pack containing a Matryoshka Agathion Charm (7-day) -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29238" name="Matryoshka Agathion Charm 30-Day Pack" type="EtcItem">
+		<!-- Dimensional Item Pack. Pack containing a Matryoshka Agathion Charm (30-day) -->
+		<set name="icon" val="icon.etc_pi_box_joy_pack" />
+		<set name="default_action" val="PEEL" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29239" name="Stabilized Agathion Charm Book of Growth" type="EtcItem">
+		<!-- Exclusive Book of Growth for Agathion Charm. Maintains the enchant level when enchantment fails. Cannot be useds on Agathions above +7. -->
+		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="PAPER" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29240" name="Red Light Cheer" additionalName="Event" type="Weapon">
+		<!-- A cheering item used to support favorite athletes. Allows to use the Cheer Firecracker skill. -->
+		<set name="icon" val="BranchIcon.icon.ev_cheering_weapon_00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="150" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">200</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29241" name="Blue Light Cheer" additionalName="Event" type="Weapon">
+		<!-- A cheering item used to support favorite athletes. Allows to use the Cheer Firecracker skill. -->
+		<set name="icon" val="BranchIcon.icon.ev_cheering_weapon_01" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="150" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">200</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29242" name="Silver Light Cheer" additionalName="Event" type="Weapon">
+		<!-- A cheering item used to support favorite athletes. Allows to use the Cheer Firecracker skill. -->
+		<set name="icon" val="BranchIcon.icon.ev_cheering_weapon_02" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="150" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">200</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29243" name="Green Light Cheer" additionalName="Event" type="Weapon">
+		<!-- A cheering item used to support favorite athletes. Allows to use the Cheer Firecracker skill. -->
+		<set name="icon" val="BranchIcon.icon.ev_cheering_weapon_03" />
+		<set name="default_action" val="EQUIP" />
+		<set name="weapon_type" val="ANCIENTSWORD" />
+		<set name="bodypart" val="lrhand" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="STEEL" />
+		<set name="weight" val="150" />
+		<set name="soulshots" val="2" />
+		<set name="spiritshots" val="2" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<stats>
+			<stat type="pAtk">12</stat>
+			<stat type="mAtk">12</stat>
+			<stat type="rCrit">8</stat>
+			<stat type="pAtkSpd">200</stat>
+			<stat type="randomDamage">1</stat>
+			<stat type="pAtkRange">40</stat>
+		</stats>
+	</item>
+	<item id="29244" name="+7 Elmoreden Cloak Box" type="EtcItem">
+		<!-- Double-click to obtain a +7 Elmoreden Cloak. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29245" name="+7 Aden Cloak Box" type="EtcItem">
+		<!-- Double-click to obtain a +7 Aden Cloak. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29246" name="+7 Elmore Cloak Box" type="EtcItem">
+		<!-- Double-click to obtain a +7 Elmore Cloak. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29247" name="+7 Ferios Cloak Box" type="EtcItem">
+		<!-- Double-click to obtain a +7 Ferios Cloak. -->
+		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29248" name="Reconstruction Society's Enchantment Pack" type="EtcItem">
+		<!-- Double-click to obtain Blessed Circlet Enchant Scroll. Has a chance to obtain Circlet Spirit Stone, Noble Circlet Upgrade Stone or Radiant Circlet Upgrade Stone. -->
+		<set name="icon" val="icon.bm_aden_renewal_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29249" name="Agathion Charm - Ball Trapping Gnosian" type="Armor">
+		<!-- Charm that summons a ball trapping Gnosian. It wears a red uniform. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_kball_male_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29250" name="Agathion Charm - Ball Trapping Orodriel" type="Armor">
+		<!-- Charm that summons a ball trapping Orodriel. It wears a red uniform. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_kball_female_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29251" name="Agathion Charm - Penalty Kick" type="Armor">
+		<!-- Charm that summons a Gnosian and Orodriel who are practicing penalty kicks. All are wearing red uniforms. -->
+		<set name="icon" val="BranchSys2.icon.br_aga_kball_kick_i00" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="lbracelet" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="150" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29252" name="Freya's Deluxe Shopping Bag" type="EtcItem">
+		<!-- Double-click Freya's Deluxe Shopping Bag to obtain 1 Freya's Art of Seduction, 2 Freya's Recovery Potions, and 1 Freya's Frozen Scroll. There is also a chance to additionally obtain one Freya, Sirra, or Snowman Special Card. -->
+		<set name="icon" val="icon.bm_freya_bag_01" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29253" name="Freya Special Card" type="EtcItem">
+		<!-- Double-click to randomly obtain an item from a selection of rare items including rare accessories. -->
+		<set name="icon" val="icon.bm_freya_winter_card" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29254" name="Sirra Special Card" type="EtcItem">
+		<!-- Double-click to randomly obtain an item from a selection of various equipment enchantment items. -->
+		<set name="icon" val="icon.bm_freya_sirr_winter_card" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29255" name="Snowman Special Card" type="EtcItem">
+		<!-- Double-click to randomly obtain an item from a selection of various character growth and enhancement items. -->
+		<set name="icon" val="icon.bm_freya_snowman_winter_card" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29256" name="Seven Deadly Sins Card: Meliodas" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29257" name="Seven Deadly Sins Card: Meliodas 2" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_fish" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29258" name="Seven Deadly Sins Card: Diane" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_dian" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29259" name="Seven Deadly Sins Card: Ban" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_van" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29260" name="Seven Deadly Sins Card: King" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_king" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29261" name="Seven Deadly Sins Card: Gowther" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_go" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29262" name="Seven Deadly Sins Card: Merlin" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_merlin" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29263" name="Seven Deadly Sins Card: Escanor" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_esca" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29264" name="Lioneth Kingdom Card: Elizabeth" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_eli" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29265" name="Dreyfus Card: Gil Sanda" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_gil" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29266" name="Dreyfus Card: Howzer" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_how" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29267" name="Handsen Card: Yurigo" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_yuri" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29268" name="Ten Commandments Card: Jerudoris" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_jeru" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29269" name="Ten Commandments Card: Estarossa" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_rotsa" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29270" name="Ten Commandments Card: Galan" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_tung" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29271" name="Brittania" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_bri" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29272" name="Pet Card: Hawk" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_hawk" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29273" name="Legendary Knights Card: Seven Deadly Sins" type="EtcItem">
+		<set name="icon" val="BranchIcon.icon.icon_card_sin_meli_legend" />
+		<set name="material" val="PAPER" />
+		<set name="weight" val="120" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29274" name="Sibi's Suspicious Supply Items" type="EtcItem">
+		<!-- Supply Items prepared by Golden Girl Sibi. When used, an item can be obtained. -->
+		<set name="icon" val="icon.etc_treasure_box_i11" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29275" name="Water Dragon's Treasure Chest" type="EtcItem">
+		<!-- Double-click to obtain a random item. -->
+		<set name="icon" val="icon.bm_freya_gift_box" />
+		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
+		<set name="material" val="PAPER" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+	<item id="29276" name="Meliodas Agathion Charm" additionalName="Stage 1" type="Armor">
+		<!-- A charm that activates the power of the Meliodas Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Meliodas Agathion +7 to upgrade to Stage 2. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29277" name="Elizabeth Agathion Charm" additionalName="Stage 1" type="Armor">
+		<!-- A charm that activates the power of the Elizabeth Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Elizabeth Agathion +7 to upgrade to Stage 2. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29278" name="Hawk Agathion Charm" additionalName="Stage 1" type="Armor">
+		<!-- A charm that activates the power of the Hawk Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Hawk Agathion +7 to upgrade to Stage 2. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29279" name="Ban Agathion Charm" additionalName="Stage 1" type="Armor">
+		<!-- A charm that activates the power of the Ban Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Ban Agathion +7 to upgrade to Stage 2. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29280" name="Diane Agathion Charm" additionalName="Stage 1" type="Armor">
+		<!-- A charm that activates the power of the Diane Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Diane Agathion +7 to upgrade to Stage 2. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29281" name="King Agathion Charm" additionalName="Stage 1" type="Armor">
+		<!-- A charm that activates the power of the King Agathion.. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. King Agathion +7 to upgrade to Stage 2. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29282" name="Merlin Agathion Charm" additionalName="Stage 1" type="Armor">
+		<!-- A charm that activates the power of the Merlin Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Merlin Agathion +7 to upgrade to Stage 2. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29283" name="Gowther Agathion Charm" additionalName="Stage 1" type="Armor">
+		<!-- A charm that activates the power of the Gowther Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Gowther Agathion +7 to upgrade to Stage 2. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29284" name="Escanor Agathion Charm" additionalName="Stage 1" type="Armor">
+		<!-- A charm that activates the power of the Escanor Agathion. Equipping it in the main slot summons the Agathion and activates the Special Ability option. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Escanor Agathion +7 to upgrade to Stage 2. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29285" name="Meliodas Agathion Charm" additionalName="Stage 2" type="Armor">
+		<!-- A charm that activates the power of the Meliodas Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Meliodas Agathion +7 to upgrade to Stage 3. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29286" name="Elizabeth Agathion Charm" additionalName="Stage 2" type="Armor">
+		<!-- A charm that activates the power of the Elizabeth Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Elizabeth Agathion +7 to upgrade to Stage 3. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29287" name="Hawk Agathion Charm" additionalName="Stage 2" type="Armor">
+		<!-- A charm that activates the power of the Hawk Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Hawk Agathion +7 to upgrade to Stage 3. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29288" name="Ban Agathion Charm" additionalName="Stage 2" type="Armor">
+		<!-- A charm that activates the power of the Ban Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Ban Agathion +7 to upgrade to Stage 3. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29289" name="Diane Agathion Charm" additionalName="Stage 2" type="Armor">
+		<!-- A charm that activates the power of the Diane Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. DianeAgathion +7 to upgrade to Stage 3. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29290" name="King Agathion Charm" additionalName="Stage 2" type="Armor">
+		<!-- A charm that activates the power of the King Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. King Agathion +7 to upgrade to Stage 3. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29291" name="Merlin Agathion Charm" additionalName="Stage 2" type="Armor">
+		<!-- A charm that activates the power of the Merlin Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Merlin Agathion +7 to upgrade to Stage 3. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_merlin_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29292" name="Gowther Agathion Charm" additionalName="Stage 2" type="Armor">
+		<!-- A charm that activates the power of the Gowther Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. Gowther Agathion +7 to upgrade to Stage 3. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_gowther_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29293" name="Escanor Agathion Charm" additionalName="Stage 2" type="Armor">
+		<!-- A charm that activates the power of the Escanor Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. <Upgrade Requirement>. EscanorAgathion +7 to upgrade to Stage 3. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_escanor_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_depositable" val="false" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29294" name="Meliodas Agathion Charm" additionalName="Stage 3" type="Armor">
+		<!-- A charm that activates the power of the Meliodas Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_meliodas_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29295" name="Elizabeth Agathion Charm" additionalName="Stage 3" type="Armor">
+		<!-- A charm that activates the power of the Elizabeth Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_elizabeth_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29296" name="Hawk Agathion Charm" additionalName="Stage 3" type="Armor">
+		<!-- A charm that activates the power of the Hawk Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_hawk_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29297" name="Ban Agathion Charm" additionalName="Stage 3" type="Armor">
+		<!-- A charm that activates the power of the Ban Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_ban_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29298" name="Diane Agathion Charm" additionalName="Stage 3" type="Armor">
+		<!-- A charm that activates the power of the Diane Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_diane_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
+	</item>
+	<item id="29299" name="King Agathion Charm" additionalName="Stage 3" type="Armor">
+		<!-- A charm that activates the power of the King Agathion. Equipping it in the main slot summons the Agathion and activates the Special and Unique abilities. When equipped in a sub slot, only the unique ability is applied. Upgrade to +7 by using Seven Deadly Sins Agathion Book of Growth. -->
+		<set name="icon" val="BranchIcon.icon.g_bm_king_agathion_charm_lv1_jp" />
+		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="SILVER" />
+		<set name="weight" val="5" />
+		<set name="is_sellable" val="false" />
 	</item>
 </list>

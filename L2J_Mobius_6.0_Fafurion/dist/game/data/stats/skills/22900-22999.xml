@@ -297,7 +297,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22926" toLevel="1" name="Top-grade Drop Rate Rune">
+	<skill id="22926" toLevel="1" name="High-grade Drop Rate Rune">
 		<!-- Item acquisition through monster drop rates, amount, and Spoil +200%. -->
 		<icon>BranchSys3.lcon.g_rune_itemdrop_up</icon>
 		<operateType>P</operateType>
@@ -416,7 +416,7 @@
 		</effects>
 	</skill>
 	<skill id="22930" toLevel="2" name="Drum Melody - Heavenly Cocktail">
-		<!-- For $s1, increases your P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. Effect remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, increases your P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -511,7 +511,7 @@
 		</effects>
 	</skill>
 	<skill id="22931" toLevel="1" name="Drum Melody - Heavenly Cocktail">
-		<!-- For $s1, increases your P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. Effect remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, increases your P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>

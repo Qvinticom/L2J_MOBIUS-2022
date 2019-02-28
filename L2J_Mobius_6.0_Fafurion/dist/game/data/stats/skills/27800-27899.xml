@@ -37,7 +37,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27808" toLevel="3" name="Opal Augment">
-		<!-- When Opal Lv. 4 or higher is equipped, Atk. Attribute Bonus +$s1. -->
+		<!-- When Opal Lv. 4 or higher is equipped, Attack Attribute Bonus +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -52,7 +52,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27811" toLevel="3" name="Diamond Augment">
-		<!-- When Diamond Lv. 4 or higher is equipped, P. Def +$s1. -->
+		<!-- When Diamond Lv. 4 or higher is equipped, P. Def. +$s1. -->
 		<icon>icon.etc_bm_brooch_lavianrose_i05</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -107,7 +107,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27822" toLevel="3" name="Opal Augment">
-		<!-- Atk. Attribute Bonus +$s1. -->
+		<!-- Attack Attribute Bonus +$s1. -->
 		<icon>icon.etc_bm_jewel_opal_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -156,7 +156,7 @@
 		<icon>Icon.bm_jewel_blue_catseye</icon>
 		<operateType>A1</operateType>
 	</skill>
-<skill id="27832" toLevel="3" name="La Vie En Rose's Radiant Brooch">
+<skill id="27832" toLevel="3" name="La Vie En Rose's Magnificent Brooch">
 		<!-- 6 Jewels can be equipped. Inventory Slots +12. -->
 		<icon>
 			<value level="1">icon.etc_bm_brooch_lavianrose_i04</value>
@@ -251,7 +251,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27840" toLevel="3" name="Cat's Eye Augment">
-		<!-- Damage Reflection + $s1. -->
+		<!-- Damage Reflection +$s1. -->
 		<icon>BranchIcon.Icon.etc_bm_jewel_catseye_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -280,17 +280,17 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27846" toLevel="1" name="Compassion">
-		<!-- You feel like helping those around you. For 2 hr., Acquired XP/ SP +10%, STR +2, INT +2, Attribute Resistance +20. -->
+		<!-- You feel like helping those around you. For 2 h., Acquired XP/ SP +10%, STR +2, INT +2, Attribute Resistance +20. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27847" toLevel="1" name="Devotion">
-		<!-- You realize that the people around you're the most precious people. For 2 hr., Acquired XP/ SP +10%, STR +2, INT +2, DEX +2, WIT +2. -->
+		<!-- You realize that the people around you're the most precious people. For 2 h., Acquired XP/ SP +10%, STR +2, INT +2, DEX +2, WIT +2. -->
 		<icon>icon.etc_whiteday_candy</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27848" toLevel="1" name="Longing">
-		<!-- You want the people around you to acknowledge your worth. For 2 hr., Acquired XP/ SP +10%, STR +2, INT +2, CON +2, MEN +2. -->
+		<!-- You want the people around you to acknowledge your worth. For 2 h., Acquired XP/ SP +10%, STR +2, INT +2, CON +2, MEN +2. -->
 		<icon>icon.etc_whiteday_cookie</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -335,8 +335,8 @@
 		<!-- Double-click to obtain random lost treasures of Messiah's Castle. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27859" toLevel="1" name="High-grade Balthus Knight Mark">
-		<!-- Grants you a disguise for 2 hr. You'll have a chance to receive special supplies. Acquired XP/ SP Acquired +50%. -->
+	<skill id="27859" toLevel="1" name="High-Grade Sibi's Disguised Clothing">
+		<!-- Grants you a disguise for 2 h. You'll have a chance to receive special supplies. Acquired XP/ SP +50%. -->
 		<icon>icon.ev_balthus_token</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -353,12 +353,12 @@
 		<icon>icon.card_event_luck_pocket</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27864" toLevel="1" name="13th Anniversary Blessing">
+	<skill id="27864" toLevel="1" name="Blessing of Bliss">
 		<icon>icon.ev_L2_soul_ore</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27865" toLevel="24" name="13th Anniversary Blessing - Stage 1">
-		<!-- You can obtain the item after $s1 hr. There are $s2 stages. <Notice> If you die when you receive the item, you cannot obtain the $s3 anniversary blessing buff and items. You also cannot obtain the item if you do not have space in your inventory. -->
+	<skill id="27865" toLevel="24" name="Blessing of Bliss - Stage 1">
+		<!-- You can obtain the item after $s1 h. There are $s2 stages. <Notice> If you die when you receive the item, you cannot obtain the $s3 anniversary blessing buff and items. You also cannot obtain the item if you do not have space in your inventory. -->
 		<icon>icon.ev_L2_soul_ore</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -723,7 +723,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="27874" toLevel="20" name="Aden Cloak Enchant Effect">
-		<!-- Magic PvE Damage to normal monsters +$s1 -->
+		<!-- Magic PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_aden_cloak_normal</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -890,7 +890,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="27876" toLevel="20" name="Elmore Cloak Enchant Effect">
-		<!-- Physical PvE Damage to normal monsters +$s1 -->
+		<!-- Physical PvE Damage to normal monsters +$s1. -->
 		<icon>BranchIcon.icon.g_bm_elmore_cloak_normal</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1082,7 +1082,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="27878" toLevel="20" name="Ferios Cloak Enchant Effect">
-		<!-- All Attribute Resistance +$s1 -->
+		<!-- All Attribute Resistance +$s1. -->
 		<icon>BranchIcon.icon.g_bm_perios_cloak_normal</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1877,27 +1877,27 @@
 		</effects>
 	</skill>
 	<skill id="27895" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- P. Atk. +$s1 -->
+		<!-- P. Atk. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27896" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- M. Atk. +$s1 -->
+		<!-- M. Atk. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27897" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- Atk. Spd. +$s1 -->
+		<!-- Atk. Spd. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27898" toLevel="10" name="Empire Cloak Augmentation">
-		<!-- Casting Spd. +$s1 -->
+		<!-- Casting Spd. +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27899" toLevel="5" name="Empire Cloak Augmentation">
-		<!-- P. Accuracy +$s1 -->
+		<!-- P. Accuracy +$s1. -->
 		<icon>BranchIcon.icon.g_bm_cloak_mineral_normal</icon>
 		<operateType>A1</operateType>
 	</skill>

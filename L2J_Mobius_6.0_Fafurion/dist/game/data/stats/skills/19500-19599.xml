@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="19503" toLevel="1" name="Crier's Harmony">
+		<!-- For $s1, increases selected party member's P. Atk. by $s2, M. Atk. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, and Atk. Spd./ Casting Spd. by $s6, and decreases Skill Cooldown by $s7 and Skill MP Consumption by $s8. -->
 		<icon>icon.skill19503</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1800</abnormalTime>
@@ -74,6 +75,56 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="19504" toLevel="1" name="Tempted">
+		<!-- Seduction by the Chaos Symphony for $s1 -->
+		<icon>icon.skill11533</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19506" toLevel="1" name="Spectral Wound">
+		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. -->
+		<icon>icon.skill19435</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19507" toLevel="1" name="Beat Extension">
+		<!-- Resets the duration of allies' Drum buffs. -->
+		<icon>icon.skill19432</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19509" toLevel="1" name="Elemental Endurance">
+		<!-- For $s1, all defense attributes of nearby clan members +$s2. -->
+		<icon>icon.skill19509</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19510" toLevel="1" name="Debuff Endurance">
+		<!-- For $s1, nearby clan members' Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +$s2. -->
+		<icon>icon.skill19510</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19511" toLevel="1" name="Mental Endurance">
+		<!-- For $s1, nearby clan members' Resistance to buff-canceling attacks/ debuff attacks +$s2. -->
+		<icon>icon.skill19511</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19522" toLevel="13" name="Repeat Mark Somersault">
+		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P./ M. Def. by $s3 and Speed by $s4 for $s2, and moves $s5 back. Can be cast by consuming Triad. -->
+		<icon>icon.skill19434</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19523" toLevel="1" name="Maximum Blow">
+		<!-- Resets the cooldown of Heart Breaker/ Chain Blow. -->
+		<icon>icon.skill11877</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19524" toLevel="1" name="Immortal Soul">
+		<!-- Immune to damage caused by Soul Bomber. Cannot receive other Invincibility effects. -->
+		<icon>icon.skill11758</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19525" toLevel="1" name="Resonant Halo">
+		<!-- Resonant Halo Ending Skill -->
+		<icon>icon.skill11046</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="19526" toLevel="3" name="Limit of Sigel">
 		<!-- Decreases the duration of Protection of Faith/ Nine Aegis by $s2 that is applied within $s1. -->
 		<icon>icon.skill10019</icon>
@@ -88,7 +139,7 @@
 		</effects>
 	</skill>
 	<skill id="19527" toLevel="3" name="Limit of Iss">
-		<!-- Decreases the duration of Battle Rhapsody/ Overload's Dignity by $s2 if it is shorter than $s1. -->
+		<!-- Decreases the duration of Battle Rhapsody/ Overlord's Dignity by $s2 if it is shorter than $s1. -->
 		<icon>icon.skill11544</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -100,8 +151,23 @@
 			<effect name="LimitSkill" />
 		</effects>
 	</skill>
+	<skill id="19528" toLevel="9" name="Right Angle Reverse">
+		<!-- Stunned by the Right Angle Reverse for $s1. -->
+		<icon>icon.skill19303</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19529" toLevel="1" name="Elemental Burst: Dark">
+		<!-- Resets the cooldown of Magical Evasion/ Warp. -->
+		<icon>icon.skill11865</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19530" toLevel="1" name="Battle Prelude">
+		<!-- For $s1, all party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. +$s2. -->
+		<icon>icon.skill11544</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="19531" toLevel="4" name="Clan Hunter">
-		<!-- Clan members' P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, and M. Def +$s4. -->
+		<!-- Clan members' P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, and M. Def. +$s4. -->
 		<icon>icon.skill19531</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -145,7 +211,7 @@
 		</effects>
 	</skill>
 	<skill id="19532" toLevel="3" name="Clan Elemental">
-		<!-- All clan members' Attribute Resistance +$s1. -->
+		<!-- All clan members' defense attributes +$s1. -->
 		<icon>icon.skill19003</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -207,7 +273,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="19534" toLevel="2" name="Clan Barrier">
-		<!-- Clan members' P. Def and M. Def. +$s1. -->
+		<!-- Clan members' P./ M. Def. +$s1. -->
 		<icon>icon.skill19534</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -229,7 +295,7 @@
 		</effects>
 	</skill>
 	<skill id="19535" toLevel="3" name="Clan Resistance">
-		<!-- Clan members' Resistance to Stun/ Paralysis/ Mental/ Aerial Yoke/ Knock Back/ Knock Down +$s1. -->
+		<!-- Clan members' Resistance to Stun/ Paralysis/ MEN/ Aerial Yoke/ Knock Back/ Knock Down +$s1. -->
 		<icon>icon.skill19004</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -401,7 +467,7 @@
 		</effects>
 	</skill>
 	<skill id="19543" toLevel="11" name="Clan Combat">
-		<!-- Clan members' P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, and M. Def +$s4. -->
+		<!-- Clan members' P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, and M. Def. +$s4. -->
 		<icon>icon.skill19543</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -575,5 +641,160 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="19546" toLevel="1" name="Clan Creation">
+		<!-- Presentation Skill for creating a clan. -->
+		<icon>icon.etc_alliance_flag_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19547" toLevel="1" name="Clan Flag">
+		<!-- Summons the Clan Flag, which applies buffs to nearby allies and debuffs to nearby enemies. Consumes 2,000 Spirit Ore. Only available for the clan leader. -->
+		<icon>icon.etc_alliance_flag_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19548" toLevel="1" name="Clan Flag">
+		<!-- Summons the Clan Flag, which applies buffs to nearby allies and debuffs to nearby enemies. Consumes 2,000 Spirit Ore. Only available for the clan leader. -->
+		<icon>icon.etc_alliance_flag_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19549" toLevel="1" name="Clan Flag">
+		<!-- Summons the Clan Flag, which applies buffs to nearby allies and debuffs to nearby enemies. Consumes 2,000 Spirit Ore. Only available for the clan leader. -->
+		<icon>icon.etc_alliance_flag_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19550" toLevel="1" name="Clan Flag">
+		<!-- Summons the Clan Flag, which applies buffs to nearby allies and debuffs to nearby enemies. Consumes 2,000 Spirit Ore. Only available for the clan leader. -->
+		<icon>icon.etc_alliance_flag_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19551" toLevel="1" name="Superior Summon Mastery">
+		<!-- Allows summoning a Servitor when summon points are below $s1. -->
+		<icon>icon.skill11254</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19552" toLevel="11" name="Burning Chain Lash">
+		<!-- Wields the Burning Chain to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Also puts them into the Ignite state for $s2. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill19556</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19553" toLevel="7" name="Revenging Thorn">
+		<!-- Shoots Revenging Thorns to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Recovers $s2 HP and has longer range and stronger effect if cast with Lv. 5 Grand Fortress. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill19553</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19554" toLevel="7" name="Revenging Black Thorn">
+		<!-- Shoots Revenging Thorns to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Recovers $s2 HP and has longer range and stronger effect if cast with Lv. 5 Grand Fortress. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill19553</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19555" toLevel="7" name="Maelstrom">
+		<!-- Creates a cyclone to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill19554</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19556" toLevel="7" name="Inhale Soul">
+		<!-- Creates a pit of darkness to draw nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill19555</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19557" toLevel="5" name="Inhale Soul">
+		<!-- Creates a pit of darkness to draw nearby enemies to you. Requires a sword/ blunt weapon to be equipped. -->
+		<icon>icon.skill19555</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19558" toLevel="7" name="Flame Feather">
+		<!-- Fires the Flame of Phoenix to attack nearby enemies with $s1 Power added to P. Atk. and provoke them into attacking you for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill19552</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19559" toLevel="11" name="Black Thorn Chain Strike">
+		<!-- Swings the Black Thorn Chain to attack the target and enemies on the path with $s1 Power added to P. Atk. and draw them to you. Also recovers your HP by $s2. Requires a sword/ blunt weapon to be equipped. -->
+		<icon>icon.skill19557</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19560" toLevel="9" name="Rising Tide Circle">
+		<!-- Creates a circular wave to draw enemies close and decrease Atk. Spd./ Casting Spd. by $s1 and Speed by $s2. Requires a sword/ blunt weapon to be equipped. -->
+		<icon>icon.skill19558</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19561" toLevel="11" name="Chained Death Scythe">
+		<!-- Summons a scythe to attack the target and nearby enemies with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. -->
+		<icon>icon.skill19559</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19562" toLevel="7" name="Reborn from Ashes">
+		<!-- Becomes invincible for $s1 and recovers $s2 HP under the Protection of Phoenix. -->
+		<icon>icon.skill19565</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19563" toLevel="1" name="Wave Reflection">
+		<!-- Damage Reflection Trigger -->
+		<icon>icon.skill3584</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19564" toLevel="1" name="Wave Barrier">
+		<!-- For $s1, P. Def. +$s2 and reflects damage when hit. Cannot be applied together with any Shield Block skill. -->
+		<icon>icon.skill3584</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19565" toLevel="13" name="Shield Bash">
+		<!-- Disables standard attack skills for $s1 after hit by the shield. -->
+		<icon>icon.skill1462</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19566" toLevel="4" name="Grand Shillien Shadow">
+		<!-- P. Atk. +$s1, Shield Def. +$s2, and Attack Attribute +$s3, and activates Shillien Shadow on the caster. $s4 chance to activate Shilen's Presence on allies. -->
+		<icon>icon.skill19560</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19567" toLevel="11" name="Gigantic Wave">
+		<!-- Summons a huge wave to attack the target and enemies on the path with $s1 Power added to P. Atk. and draw them to you. Requires a sword/ blunt weapon to be equipped. -->
+		<icon>icon.skill19558</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19568" toLevel="1" name="Nine Aegis">
+		<!-- P. Def/ M. Def/ Bow Resistance +$s1 and Reflect Magic +$s2 under the Protection of Barrier, and becomes immune to Pull Up/ Knock Back/ Knock Down/ Danger Zone debuffs. -->
+		<icon>icon.skill10107</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19569" toLevel="8" name="Aggression Aura">
+		<!-- Provokes nearby enemies into attacking you and decreases their Atk. Spd. and Casting Spd. by $s1. Your P. Def. and M. Def. +$s2 and Speed +$s3. Only one Knight's Aura can be active at any time. -->
+		<icon>icon.skill10027</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19570" toLevel="1" name="Release Guard">
+		<!-- Deactivates the Raise Shield/ Focus Shield if a shield skill is cast. -->
+		<icon>icon.skill10073</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19571" toLevel="1" name="Lightning Strike">
+		<!-- Paralyzed by Vanishing Shock for $s1. -->
+		<icon>icon.skill0279</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19572" toLevel="1" name="Shillien Shadow">
+		<!-- Removes debuffs and limits the maximum damage received for $s1 to 6666. -->
+		<icon>icon.skill5242</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19573" toLevel="9" name="Cubic Fire Bless">
+		<!-- Removes debuffs, recovering $s1 CON and increasing Debuff Resistance by $s3 for $s2. Activates the Reborn from Ashes, which recovers $s4 HP to prevent death in critical condition once for 30 min. -->
+		<icon>icon.skill19565</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19574" toLevel="1" name="Shield Grab Stance">
+		<!-- If this stance is reused in the two-hand stance or if the shield is equipped or unequipped, the two-hand stance effect will disappear. It is set as unequip_skill for all shield items. -->
+		<icon>icon.skill10073</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19575" toLevel="13" name="Vanishing Stun">
+		<!-- Silenced by Vanishing shock for $s1. -->
+		<icon>icon.skill10010</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19576" toLevel="1" name="Two-Hand Smash">
+		<!-- Strikes hard to decrease P. Def. by $s2 for $s1. -->
+		<icon>icon.skill10009</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

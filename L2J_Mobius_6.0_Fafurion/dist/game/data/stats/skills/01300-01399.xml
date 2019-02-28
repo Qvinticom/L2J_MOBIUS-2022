@@ -483,7 +483,7 @@
 		</effects>
 	</skill>
 	<skill id="1311" toLevel="6" name="Body of Avatar">
-		<!-- Restores HP of all party members by $s1 and increases Max HP by $s3 for $s2. -->
+		<!-- Restores HP of all party members by $s2 and increases Max HP by $s3 for $s1. -->
 		<icon>icon.skill1311</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -804,7 +804,7 @@
 		</effects>
 	</skill>
 	<skill id="1326" toLevel="1" name="Noblesse Harmony">
-		<!-- Advances to the frontline of the battleground. For 15 sec., increases P. Def. by 3000, Speed by 25%, Buff-canceling Attack Resistance by 80%, Bow Resistance by 10, and Crossbow Resistance by 6. Decreases CP by 20%. Can only be used on the battleground when CP is above 50%. Consumes 5 Spirit Ore. Maximum CP and HP are limited. -->
+		<!-- Advances to the frontline of the battleground. For 15 sec., increases P. Def. by 3000, Speed by 25%, Buff-canceling Attack Resistance by 80%, Bow Resistance by 10, and Crossbow Resistance by 6. Decreases CP by 20%. Can only be used on the battleground when CP is above 50%. Consumes 5 Spirit Ore. Maximum fighting spirit and HP are limited. -->
 		<icon>icon.skill1326</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -864,7 +864,7 @@
 		</effects>
 	</skill>
 	<skill id="1327" toLevel="1" name="Noblesse Symphony">
-		<!-- Advances to the frontline of the battleground. For 15 sec., increases M. Def. by 4500, Speed by 25%, Buff-canceling Attack Resistance by 80%, Bow Resistance by 10, and Crossbow Resistance by 6. Decreases CP by 20%. Can only be used on the battleground when CP is above 50%. Consumes 5 Spirit Ore. Maximum CP and HP are limited. -->
+		<!-- Advances to the frontline of the battleground. For 15 sec., increases M. Def. by 4500, Speed by 25%, Buff-canceling Attack Resistance by 80%, Bow Resistance by 10, and Crossbow Resistance by 6. Decreases CP by 20%. Can only be used on the battleground when CP is above 50%. Consumes 5 Spirit Ore. Maximum fighting spirit and HP are limited. -->
 		<icon>icon.skill1327</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1672,7 +1672,7 @@
 		</effects>
 	</skill>
 	<skill id="1338" toLevel="1" name="Arcane Chaos">
-		<!-- For $s1, decreases Buff-canceling Attack Resistance by $s2, Debuff Resistance by $s3 and drains $s4 MP every sec. Increases physical skill MP Consumption by $s5 and magic skill MP Consumption by $s6. -->
+		<!-- For $s1, decreases Buff-canceling Attack Resistance by $s2, Debuff Resistance by $s3 and drains $s4 MP every second. Increases physical skill MP Consumption by $s5 and magic skill MP Consumption by $s6. -->
 		<icon>icon.skill1338</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1721,7 +1721,7 @@
 		</effects>
 	</skill>
 	<skill id="1339" toLevel="1" name="Fire Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of Fire and inflicts Fire damage on the enemy with $s1 Power added to M. Atk. for $s2, decreases Speed by $s3, Atk. Spd. by $s4, Casting Spd. by $s5, and Fire Resistance by $s6. Consumes $s7 MP every sec. Over-hit. -->
+		<!-- Stirs up a vortex connecting to the dimension of Fire and inflicts Fire damage on the enemy with $s1 Power added to M. Atk. for $s2, decreases Speed by $s3, Atk. Spd. by $s4, Casting Spd. by $s5, and Fire Resistance by $s6. Consumes $s7 MP every second. Over-hit is possible. -->
 		<icon>icon.skill1339</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1773,7 +1773,7 @@
 		</effects>
 	</skill>
 	<skill id="1340" toLevel="1" name="Ice Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of Water and inflicts Water damage on the enemy with $s1 Power added to M. Atk. for $s2 sec., decreases Speed by $s3, Atk. Spd. by $s4, Casting Spd. by $s5, and resistance against Water by $s6. Consumes $s7 MP every sec. Over-hit. -->
+		<!-- Stirs up a vortex connecting to the dimension of Water and inflicts Water damage on the enemy with $s1 Power added to M. Atk. for $s2 sec., decreases Speed by $s3, Atk. Spd. by $s4, Casting Spd. by $s5, and resistance against Water by $s6. Consumes $s7 MP every second. Over-hit is possible. -->
 		<icon>icon.skill1340</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1825,7 +1825,7 @@
 		</effects>
 	</skill>
 	<skill id="1341" toLevel="1" name="Wind Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of Wind and inflicts Wind damage on the enemy with $s1 Power added to M. Atk. for $s2., decreases Speed by $s3, Atk. Spd. by $s4, Casting Spd. by $s5, and resistance against Wind by $s6. Consumes $s7 MP every sec. Over-hit. -->
+		<!-- Stirs up a vortex connecting to the dimension of Wind and inflicts Wind damage on the enemy with $s1 Power added to M. Atk. for $s2., decreases Speed by $s3, Atk. Spd. by $s4, Casting Spd. by $s5, and resistance against Wind by $s6. Consumes $s7 MP every second. Over-hit is possible. -->
 		<icon>icon.skill1341</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1877,7 +1877,7 @@
 		</effects>
 	</skill>
 	<skill id="1342" toLevel="1" name="Light Vortex">
-		<!-- Stirs up a vortex connecting to the holy dimension and inflicts Holy damage on the enemy with $s1 Power added to M. Atk. for $s2, decreases Accuracy by $s3 and Holy Attack Resistance by $s4. Consumes $s5 MP every sec. -->
+		<!-- Stirs up a vortex connecting to the holy dimension and inflicts Holy damage on the enemy with $s1 Power added to M. Atk. for $s2, decreases Accuracy by $s3 and Holy Attack Resistance by $s4. Consumes $s5 MP every second. -->
 		<icon>icon.skill1342</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1920,7 +1920,7 @@
 		</effects>
 	</skill>
 	<skill id="1343" toLevel="1" name="Dark Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of darkness and inflicts dark damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 as HP. For $s3, decreases Accuracy by $s4 and Dark Attack Resistance by $s5. Consumes $s6 MP every sec. -->
+		<!-- Stirs up a vortex connecting to the dimension of darkness and inflicts dark damage on the enemy with $s1 Power added to M. Atk. Absorbs $s2 as HP. For $s3, decreases Accuracy by $s4 and Dark Attack Resistance by $s5. Consumes $s6 MP every second. -->
 		<icon>icon.skill1343</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>

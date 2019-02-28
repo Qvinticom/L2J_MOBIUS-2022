@@ -22,7 +22,7 @@
 		</stats>
 	</item>
 	<item id="33901" name="Immortal Tunic" additionalName="Robe (Event)" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1288,7 +1288,7 @@
 		</stats>
 	</item>
 	<item id="33939" name="Requiem Retributer" additionalName="MP Regeneration (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Rate. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1326,7 +1326,7 @@
 		</stats>
 	</item>
 	<item id="33940" name="Requiem Retributer" additionalName="Acumen (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1364,7 +1364,7 @@
 		</stats>
 	</item>
 	<item id="33941" name="Requiem Retributer" additionalName="Empower (Event)" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +296. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. +296. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1743,7 +1743,7 @@
 		</stats>
 	</item>
 	<item id="33952" name="Immortal Breastplate" additionalName="Attack Type / Heavy (Event)" type="Armor">
-		<!-- Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1880,7 +1880,7 @@
 		</stats>
 	</item>
 	<item id="33958" name="Immortal Leather Armor" additionalName="Assassin Type / Light (Event)" type="Armor">
-		<!-- When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1995,7 +1995,7 @@
 		</stats>
 	</item>
 	<item id="33963" name="Immortal Tunic" additionalName="Magic Type / Robe (Event)" type="Armor">
-		<!-- When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t503_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2110,7 +2110,7 @@
 		</stats>
 	</item>
 	<item id="33968" name="Immortal Breastplate" additionalName="Defense Type / Heavy (Event)" type="Armor">
-		<!-- Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t501_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2247,7 +2247,7 @@
 		</stats>
 	</item>
 	<item id="33974" name="Immortal Leather Armor" additionalName="Enchant Type / Light (Event)" type="Armor">
-		<!-- When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t502_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />

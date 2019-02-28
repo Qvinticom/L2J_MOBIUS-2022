@@ -945,7 +945,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="13750" name="Warrior's Recovery Potion" type="EtcItem">
-		<!-- Restores 5000 HP, and the remaining power restores CP. Instant effect with no cooldown. -->
+		<!-- Restores 5000 HP, and the remaining power restores CP. Instant effect with no duration. -->
 		<set name="icon" val="icon.pvp_battle_quick_healing_potion1" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -973,7 +973,7 @@
 		</skills>
 	</item>
 	<item id="13751" name="Warrior's T-shirt" type="Armor">
-		<!-- Olympiad Warrior's Shirt. Bestows an option that increases Max CP by 672 when enchanted by 4 or more. -->
+		<!-- Olympiad Warrior's T-shirt. Bestows an option that increases Max CP by 672 when enchanted by 4 or more. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -997,7 +997,7 @@
 		</stats>
 	</item>
 	<item id="13752" name="Olympiad Warrior's Ring" type="Armor">
-		<!-- MP+ 21, increased Accuracy, increased P. Critical Damage, Hold Resistance +30%, and Hold Atk. Rate +30%. 60-day. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP+21, increased Accuracy, increased P. Critical Damage, Hold Resistance +30%, and Hold Atk. Rate +30%. 60-day. Only one effect is applied even when two identical rings are worn. -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1022,7 +1022,7 @@
 		</stats>
 	</item>
 	<item id="13753" name="Olympiad Warrior's Necklace" type="Armor">
-		<!-- MP+ 42, Sleep/ Paralysis/ Stun Resistance +15%. Sleep/ Paralysis/ Stun Atk. Rate +15%. Damage Reflect effect. Decreased skill cooldown. 60-day. -->
+		<!-- MP+42, Sleep/ Paralysis/ Stun Resistance +15%. Sleep/ Paralysis/ Stun Atk. Rate +15%. Damage Reflection effect. Decreased skill cooldown. 60-day. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />

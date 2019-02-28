@@ -1406,7 +1406,7 @@
 		</skills>
 	</item>
 	<item id="38397" name="Expertise Rune (D-grade)" additionalName="2-hour" type="EtcItem">
-		<!-- 2-hr. When possessed, gives Expertise D Skill. -->
+		<!-- 2-hour item. Gives Expertise D-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1422,7 +1422,7 @@
 		</skills>
 	</item>
 	<item id="38398" name="Expertise Rune Pack" additionalName="D-grade" type="EtcItem">
-		<!-- Double-click to obtain an Expertise Rune (D-grade) (2-hr.). -->
+		<!-- Wrapped Pack containing Expertise Rune (D-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1432,11 +1432,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38397" min="1" max="1" chance="100" /> <!-- Expertise Rune (D-grade) - 2-hr. -->
+			<item id="38397" min="1" max="1" chance="100" /> <!-- Expertise Rune (D-grade) - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="38399" name="Expertise Rune (C-grade)" additionalName="2-hour" type="EtcItem">
-		<!-- 2-hr. When possessed, gives Expertise C Skill. -->
+		<!-- 2-hour item. Gives Expertise C-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

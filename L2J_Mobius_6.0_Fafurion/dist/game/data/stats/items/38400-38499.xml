@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="38400" name="Expertise Rune Pack" additionalName="C-grade" type="EtcItem">
-		<!-- Double-click to obtain an Expertise Rune (C-grade) (2-hr.). -->
+		<!-- Wrapped Pack containing Expertise Rune (C-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -11,11 +11,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38399" min="1" max="1" chance="100" /> <!-- Expertise Rune (C-grade) - 2-hr. -->
+			<item id="38399" min="1" max="1" chance="100" /> <!-- Expertise Rune (C-grade) - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="38401" name="Expertise Rune (B-grade)" additionalName="2-hour" type="EtcItem">
-		<!-- 2-hr. When possessed, gives Expertise B Skill. -->
+		<!-- 2-hour item. Gives Expertise B-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -31,7 +31,7 @@
 		</skills>
 	</item>
 	<item id="38402" name="Expertise Rune Pack" additionalName="B-grade" type="EtcItem">
-		<!-- Double-click to obtain an Expertise Rune (B-grade) (2-hr.). -->
+		<!-- Wrapped Pack containing Expertise Rune (B-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -41,11 +41,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38401" min="1" max="1" chance="100" /> <!-- Expertise Rune (B-grade) - 2-hr. -->
+			<item id="38401" min="1" max="1" chance="100" /> <!-- Expertise Rune (B-grade) - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="38403" name="Expertise Rune (A-grade)" additionalName="2-hour" type="EtcItem">
-		<!-- 2-hr. When possessed, gives Expertise A Skill. -->
+		<!-- 2-hour item. Gives Expertise A-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -61,7 +61,7 @@
 		</skills>
 	</item>
 	<item id="38404" name="Expertise Rune Pack" additionalName="A-grade" type="EtcItem">
-		<!-- Double-click to obtain an Expertise Rune (A-grade) (2-hr.). -->
+		<!-- Wrapped Pack containing Expertise Rune (A-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -71,11 +71,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38403" min="1" max="1" chance="100" /> <!-- Expertise Rune (A-grade) - 2-hr. -->
+			<item id="38403" min="1" max="1" chance="100" /> <!-- Expertise Rune (A-grade) - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="38405" name="Expertise Rune (S-grade)" additionalName="2-hour" type="EtcItem">
-		<!-- 2-hr. When possessed, gives Expertise S Skill. -->
+		<!-- 2-hour item. Gives Expertise S-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -91,7 +91,7 @@
 		</skills>
 	</item>
 	<item id="38406" name="Expertise Rune Pack" additionalName="S-grade" type="EtcItem">
-		<!-- Double-click to obtain an Expertise Rune (S-grade) (2-hr.). -->
+		<!-- Wrapped Pack containing Expertise Rune (S-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -101,11 +101,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38405" min="1" max="1" chance="100" /> <!-- Expertise Rune (S-grade) - 2-hr. -->
+			<item id="38405" min="1" max="1" chance="100" /> <!-- Expertise Rune (S-grade) - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="38407" name="Expertise Rune (S80-grade)" additionalName="2-hour" type="EtcItem">
-		<!-- 2-hr. When possessed, gives Expertise S80 Skill. -->
+		<!-- 2-hour item. Gives Expertise S80 Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -121,7 +121,7 @@
 		</skills>
 	</item>
 	<item id="38408" name="Expertise Rune Pack" additionalName="S80-grade" type="EtcItem">
-		<!-- Double-click to obtain an Expertise Rune (S80-grade) (2-hr.). -->
+		<!-- Wrapped Pack containing Expertise Rune (S80-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -131,11 +131,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38407" min="1" max="1" chance="100" /> <!-- Expertise Rune (S80-grade) - 2-hr. -->
+			<item id="38407" min="1" max="1" chance="100" /> <!-- Expertise Rune (S80-grade) - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="38409" name="Expertise Rune (R-grade)" additionalName="2-hour" type="EtcItem">
-		<!-- 2-hr. When possessed, gives Expertise R Skill. -->
+		<!-- 2-hour item. Gives Expertise R-grade Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -151,7 +151,7 @@
 		</skills>
 	</item>
 	<item id="38410" name="Expertise Rune Pack" additionalName="R-grade" type="EtcItem">
-		<!-- Double-click to obtain an Expertise Rune (R-grade) (2-hr.). -->
+		<!-- Wrapped Pack containing Expertise Rune (R-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -161,11 +161,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38409" min="1" max="1" chance="100" /> <!-- Expertise Rune (R-grade) - 2-hr. -->
+			<item id="38409" min="1" max="1" chance="100" /> <!-- Expertise Rune (R-grade) - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="38411" name="Expertise Rune (R95-grade)" additionalName="2-hour" type="EtcItem">
-		<!-- 2-hr. When possessed, gives Expertise R95 Skill. -->
+		<!-- 2-hour item. Gives Expertise R95 Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -181,7 +181,7 @@
 		</skills>
 	</item>
 	<item id="38412" name="Expertise Rune Pack" additionalName="R95-grade" type="EtcItem">
-		<!-- Double-click to obtain an Expertise Rune (R95-grade) (2-hr.). -->
+		<!-- Wrapped Pack containing Expertise Rune (R95-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -191,11 +191,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38411" min="1" max="1" chance="100" /> <!-- Expertise Rune (R95-grade) - 2-hr. -->
+			<item id="38411" min="1" max="1" chance="100" /> <!-- Expertise Rune (R95-grade) - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="38413" name="Expertise Rune (R99-grade)" additionalName="2-hour" type="EtcItem">
-		<!-- 2-hr. When possessed, gives Expertise R99 Skill. -->
+		<!-- 2-hour item. Gives Expertise R99 Skill while in possession. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -211,7 +211,7 @@
 		</skills>
 	</item>
 	<item id="38414" name="Expertise Rune Pack" additionalName="R99-grade" type="EtcItem">
-		<!-- Double-click to obtain an Expertise Rune (R99-grade) (2-hr.). -->
+		<!-- Wrapped Pack containing Expertise Rune (R99-grade) (2-hour). -->
 		<set name="icon" val="icon.etc_equip_item_box_i03" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -221,7 +221,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="38413" min="1" max="1" chance="100" /> <!-- Expertise Rune (R99-grade) - 2-hr. -->
+			<item id="38413" min="1" max="1" chance="100" /> <!-- Expertise Rune (R99-grade) - 2-hour -->
 		</capsuled_items>
 	</item>
 	<item id="38415" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon" additionalName="30-day" type="EtcItem">
@@ -733,7 +733,7 @@
 		</stats>
 	</item>
 	<item id="38438" name="Agathion - Blessed Virgo Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Blessed Virgo -->
+		<!-- Wrapped Pack containing Agathion - Blessed Virgo -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -742,7 +742,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="38439" name="Agathion - Twinkling Virgo Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Twinkling Virgo -->
+		<!-- Wrapped Pack containing Agathion - Twinkling Virgo -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -751,7 +751,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="38440" name="Agathion - Radiant Virgo Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Radiant Virgo -->
+		<!-- Wrapped Pack containing Agathion - Radiant Virgo -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -760,7 +760,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="38441" name="Agathion - Virgo Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Virgo. -->
+		<!-- Wrapped Pack containing Agathion - Virgo. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -769,7 +769,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="38442" name="Agathion - Faint Virgo Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Faint Virgo. -->
+		<!-- Wrapped Pack containing Agathion - Faint Virgo. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />

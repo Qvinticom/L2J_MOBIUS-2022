@@ -37,7 +37,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37606" name="Promise Cube Pack" additionalName="Event" type="EtcItem">
-		<!-- Double click to acquire a Promise Cube (100-day). Cannot be used in the Olympiad. -->
+		<!-- Double-click to acquire a Promise Cube (100-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -314,18 +314,18 @@
 			<item id="9552" min="1" max="1" chance="10.6" /> <!-- Fire Crystal -->
 			<item id="9557" min="1" max="1" chance="10.6" /> <!-- Holy Crystal -->
 			<item id="9556" min="1" max="1" chance="11" /> <!-- Dark Crystal -->
-			<item id="33872" min="1" max="1" chance="2" /> <!-- Wind Stone (+ 150) - Event -->
-			<item id="33866" min="1" max="1" chance="4" /> <!-- Wind Stone (+ 60) - Event -->
-			<item id="33870" min="1" max="1" chance="2" /> <!-- Water Stone (+ 150) - Event -->
-			<item id="33864" min="1" max="1" chance="4" /> <!-- Water Stone (+ 60) - Event -->
-			<item id="33871" min="1" max="1" chance="2" /> <!-- Earth Stone (+ 150) - Event -->
-			<item id="33865" min="1" max="1" chance="4" /> <!-- Earth Stone (+ 60) - Event -->
-			<item id="33869" min="1" max="1" chance="2" /> <!-- Fire Stone (+ 150) - Event -->
-			<item id="33863" min="1" max="1" chance="4" /> <!-- Fire Stone (+ 60) - Event -->
-			<item id="33874" min="1" max="1" chance="2" /> <!-- Holy Stone (+ 150) - Event -->
-			<item id="33868" min="1" max="1" chance="4" /> <!-- Holy Stone (+ 60) - Event -->
-			<item id="33873" min="1" max="1" chance="2" /> <!-- Dark Stone (+ 150) - Event -->
-			<item id="33867" min="1" max="1" chance="4" /> <!-- Dark Stone (+ 60) - Event -->
+			<item id="33872" min="1" max="1" chance="2" /> <!-- Wind Stone (+150) - Event -->
+			<item id="33866" min="1" max="1" chance="4" /> <!-- Wind Stone (+60) - Event -->
+			<item id="33870" min="1" max="1" chance="2" /> <!-- Water Stone (+150) - Event -->
+			<item id="33864" min="1" max="1" chance="4" /> <!-- Water Stone (+60) - Event -->
+			<item id="33871" min="1" max="1" chance="2" /> <!-- Earth Stone (+150) - Event -->
+			<item id="33865" min="1" max="1" chance="4" /> <!-- Earth Stone (+60) - Event -->
+			<item id="33869" min="1" max="1" chance="2" /> <!-- Fire Stone (+150) - Event -->
+			<item id="33863" min="1" max="1" chance="4" /> <!-- Fire Stone (+60) - Event -->
+			<item id="33874" min="1" max="1" chance="2" /> <!-- Holy Stone (+150) - Event -->
+			<item id="33868" min="1" max="1" chance="4" /> <!-- Holy Stone (+60) - Event -->
+			<item id="33873" min="1" max="1" chance="2" /> <!-- Dark Stone (+150) - Event -->
+			<item id="33867" min="1" max="1" chance="4" /> <!-- Dark Stone (+60) - Event -->
 		</capsuled_items>
 	</item>
 	<item id="37619" name="PK Pack" additionalName="Western Winds" type="EtcItem">
@@ -437,7 +437,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37626" name="Mysterious Blessed Spiritshot Pack (R-grade)" type="EtcItem">
-		<!-- The power of a high level spirit is bestowed on a weapon causing its M. Atk. to momentarily increase. Double click to acquire 10,000 rounds of Mysterious Blessed Spiritshots. Can be used with R-grade weapons. -->
+		<!-- The power of a high level spirit is bestowed on a weapon causing its M. Atk. to momentarily increase. Double-click to acquire 10,000 rounds of Mysterious Blessed Spiritshots. Can be used with R-grade weapons. -->
 		<set name="icon" val="icon.br_cash_pack_of_spiritshot_r_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -452,7 +452,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="37627" name="Mysterious Soulshot Pack (R-grade)" type="EtcItem">
-		<!-- The power of a high level spirit is bestowed on a weapon causing its M. Atk. to momentarily increase. Double click to acquire 20,000 rounds of Mysterious Blessed Soulshots. Can be used with R-grade weapons. -->
+		<!-- The power of a high level spirit is bestowed on a weapon causing its M. Atk. to momentarily increase. Double-click to acquire 20,000 rounds of Mysterious Blessed Soulshots. Can be used with R-grade weapons. -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1438,7 +1438,7 @@
 		</stats>
 	</item>
 	<item id="37658" name="Mysterious Healthy Juice Pack (HP/CP)" type="EtcItem">
-		<!-- Double click to acquire 3 Mysterious Healthy Juices (HP/ CP). -->
+		<!-- Double-click to acquire 3 Mysterious Healthy Juices (HP/ CP). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1573,7 +1573,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="37666" name="Rare Accessory Pack" additionalName="30-day" type="EtcItem">
-		<!-- Double click to acquire 30-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
+		<!-- Double-click to acquire 30-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1586,7 +1586,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="37667" name="Blessed Antharas' Earring" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, Bleed Resistance +50%, Bleed Atk./ Def. Success Rate +50%, Heal Amount +10%, Vampiric Rage Effect +4%, Stun/ Mental Atk.Resistance +40%, Stun/ Mental Attack Rate +40%, P./ M. Skill MP Consumption decreased, Earth/ Holy Attribute Resistance +30, CON +3, MEN +3, P./ M. Def +15%. Active Skill: Cancels Stun and gives Stun Resistance for 5 secs. Effect does not stack with identical ones. -->
+		<!-- Dimensional Item. MP +59, Bleed Resistance +50%, Bleed Atk./ Def. Success Rate +50%, Heal Amount +10%, Vampiric Rage Effect +4%, Stun/ Mental Atk.Resistance +40%, Stun/ Mental Attack Rate +40%, P./ M. Skill MP Consumption decreased, Earth/ Holy Attribute Resistance +30, CON +3, MEN +3, P./ M. Def. +15%. Active Skill: Cancels Stun and gives Stun Resistance for 5 secs. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1609,7 +1609,7 @@
 		</stats>
 	</item>
 	<item id="37668" name="Blessed Valakas' Necklace" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. HP +625, MP +79, M. Critical Rate +20, Sleep Resistance +50%, Sleep Atk. Rate +50%, P./ M. Skill Cooldown -10%, Wild Magic effect, Damage Reflect effect, Fire Attribute Resistance +30, Dark Attribute Resistance +20, STR +3, INT +3, P. Skill Power +5%, P. Atk. +10%, M. Atk. +20%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. -->
+		<!-- Dimensional Item. HP +625, MP +79, M. Critical Rate +20, Sleep Resistance +50%, Sleep Atk. Rate +50%, P./ M. Skill Cooldown -10%, Wild Magic effect, Damage Reflection effect, Fire Attribute Resistance +30, Dark Attribute Resistance +20, STR +3, INT +3, P. Skill Power +5%, P. Atk. +10%, M. Atk. +20%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. -->
 		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1681,7 +1681,7 @@
 		</stats>
 	</item>
 	<item id="37671" name="Heavenly Recovery Potion" type="EtcItem">
-		<!-- When used, recovers 2500 HP and the remaining power is recovered as CP. There is no cooldown. Cannot be used in an auction house or the Olympiad. Can be shared within the same account through the Dimensional Merchant. -->
+		<!-- When used, recovers 2500 HP and the remaining power is recovered as CP. There is no duration. Cannot be used in an auction house or the Olympiad. Can be shared within the same account through the Dimensional Merchant. -->
 		<set name="icon" val="icon.etc_recall_potion2" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1706,7 +1706,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37673" name="Mysterious Friend Summon Bracelet Pack (30-day)" type="EtcItem">
-		<!-- Double click to obtain 1 Mysterious Friend Summon Bracelet (30-day). -->
+		<!-- Double-click to obtain 1 Mysterious Friend Summon Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

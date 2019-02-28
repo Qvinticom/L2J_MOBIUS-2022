@@ -331,7 +331,7 @@
 		</effects>
 	</skill>
 	<skill id="27615" toLevel="1" name="Maphr's Wind Scroll">
-		<!-- Vitality consumption +200% and Acquired XP/ SP +200%. Remains after death. Duration is 30 sec. Cooldown is 1 min. -->
+		<!-- Vitality consumption +200% and Acquired XP/ SP +200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. -->
 		<icon>icon.freya_scroll</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>27594</itemConsumeId>
@@ -517,7 +517,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27634" toLevel="1" name="Gran Kain's Necklace">
-		<!-- MP +107, STR +3, INT +3, CON +3, Skill Cooldown -10%, Damage Reflection +5%, P. Atk. +15%, M. Atk +10%, Skill Power +15%, Max HP +3%, Max MP +5%. Resistance to the following abnormal statuses: Stun +25%, Aggression +25%, Windstorm +25%, Banishment +25%, Disarm +15%, Sleep +15% -->
+		<!-- MP +107, STR +3, INT +3, CON +3, Skill Cooldown -10%, Damage Reflectionion +5%, P. Atk. +15%, M. Atk. +10%, Skill Power +15%, Max HP +3%, Max MP +5%. Resistance to the following abnormal statuses: Stun +25%, Aggression +25%, Windstorm +25%, Banishment +25%, Disarm +15%, Sleep +15% -->
 		<icon>BranchIcon.Icon.necklace_of_grankein_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -901,7 +901,7 @@
 		</effects>
 	</skill>
 	<skill id="27640" toLevel="1" name="Einhasad's Necklace">
-		<!-- MP +107, STR +3, INT +3, CON +3, Skill Cooldown -10%, Damage Reflection +5%, P. Atk. +10%, M. Atk. +15%, Skill Power +15%, Max HP +5%, Max MP +3%. Resistance to the following abnormal statuses: Stun +25%, Aggression +25%, Disarm +25%, Sleep +25%, Windstorm +15%, Banishment +15% -->
+		<!-- MP +107, STR +3, INT +3, CON +3, Skill Cooldown -10%, Damage Reflectionion +5%, P. Atk. +10%, M. Atk. +15%, Skill Power +15%, Max HP +5%, Max MP +3%. Resistance to the following abnormal statuses: Stun +25%, Aggression +25%, Disarm +25%, Sleep +25%, Windstorm +15%, Banishment +15% -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1285,7 +1285,7 @@
 		</effects>
 	</skill>
 	<skill id="27646" toLevel="1" name="Pa'agrio's Earring">
-		<!-- MP +80, DEX +3, WIT +3, MEN +3, Vampiric effect 5%, MP Consumption -5%, P. Def +15%, M. Def +10%, Physical and Magic Abnormal Status Reflection +13%, Reflect Damage Magic chance +13%, Physical Skill Evasion +5%, P. Skill Power +2%, Speed +2, Received Heal +10%, Recovery Skill Power +80. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Sleep +10%, Aerial Yoke/ Mutation +10%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +30%, Petrify Bleed +40%. -->
+		<!-- MP +80, DEX +3, WIT +3, MEN +3, Vampiric effect 5%, MP Consumption -5%, P. Def. +15%, M. Def. +10%, Physical and Magic Abnormal Status Reflection +13%, Reflect Damage Magic chance +13%, Physical Skill Evasion +5%, P. Skill Power +2%, Speed +2, Received Heal +10%, Recovery Skill Power +80. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Sleep +10%, Aerial Yoke/ Mutation +10%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +30%, Petrify Bleed +40%. -->
 		<icon>BranchIcon.Icon.earring_of_paagrio_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1801,7 +1801,7 @@
 		</effects>
 	</skill>
 	<skill id="27652" toLevel="1" name="Eva's Earring">
-		<!-- MP +80, DEX +3, WIT +3, MEN +3, Vampiric effect 5%, MP Consumption -5%, P. Def +10%, M. Def +15%, Physical and Magic Abnormal Status Reflection +13%, Reflect Damage Magic chance +13%, Physical Skill Evasion +5%, P. Skill Power +2%, Speed +2, Received Heal +5%, Recovery Skill Power +160. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Aerial Yoke +10%, Sleep/ Mutation +10%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +30%, Petrify Bleed +40%. -->
+		<!-- MP +80, DEX +3, WIT +3, MEN +3, Vampiric effect 5%, MP Consumption -5%, P. Def. +10%, M. Def. +15%, Physical and Magic Abnormal Status Reflection +13%, Reflect Damage Magic chance +13%, Physical Skill Evasion +5%, P. Skill Power +2%, Speed +2, Received Heal +5%, Recovery Skill Power +160. Resistance to the following abnormal statuses: Paralysis/ Bluff/ Aerial Yoke +10%, Sleep/ Mutation +10%, Stun/ Knock Back/ Pull/ Danger Zone/ MEN +30%, Petrify Bleed +40%. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -3246,7 +3246,7 @@
 	<skill id="27679" toLevel="1" name="+7 Maphr's Shirt Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27680" toLevel="1" name="PC Progression Support - Event">
+	<skill id="27680" toLevel="1" name="PA Progression Support - Event">
 		<!-- Acquired XP/ SP +50%, Item Acquisition rate +100%. Not for pets/ servitors. Only applied during PA event. -->
 		<icon>icon.etc_pccafe_exp_i00</icon>
 		<operateType>A1</operateType>

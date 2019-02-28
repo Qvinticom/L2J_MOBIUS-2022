@@ -45,7 +45,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33503" name="Hero's Blessed Buff Scroll" type="EtcItem">
-		<!-- When used, HP Recovery Bonus, Max MP, and Critical Atk. Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hr. -->
+		<!-- When used, HP Recovery Bonus, Max MP, and Critical Atk. Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hour. -->
 		<set name="icon" val="icon.etc_piece_of_paper_white_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -81,7 +81,7 @@
 		</skills>
 	</item>
 	<item id="33504" name="Hero's Blessed Buff Scroll 5-unit Pack" type="EtcItem">
-		<!-- Contains 5 scrolls that have the following effects for 1 hr.: HP Recovery Bonus, Max MP, and Critical Atk. Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration. -->
+		<!-- Contains 5 scrolls that have the following effects for 1 hour: HP Recovery Bonus, Max MP, and Critical Atk. Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -178,7 +178,7 @@
 		</capsuled_items>
 	</item>
 	<item id="33509" name="Returning Hero's Shirt" type="Armor">
-		<!-- Shirt for a returning hero. When equipped, STR +1 and Int +1. -->
+		<!-- T-shirt for a returning hero. When equipped, STR +1 and Int +1. -->
 		<set name="icon" val="icon.shirt_of_destination_event" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -235,7 +235,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="33512" name="Returning Hero's Vitality Replenishing Juice" type="EtcItem">
-		<!-- Recovers Vitality while acquiring XP through hunting for 4 hr. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- Recovers Vitality while acquiring XP through hunting for 4 hours. No effect applies when used while the "Birthday Vitality" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -256,7 +256,7 @@
 		</skills>
 	</item>
 	<item id="33513" name="Returning Hero's Vitality Replenishing Juice 5-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Vitality Recovering Cakes (4-hr.) that recover Vitality of nearby party members while acquiring XP through hunting. -->
+		<!-- Wrapped Pack containing 5 Vitality Recovering Cakes (4-hour) that recover Vitality of nearby party members while acquiring XP through hunting. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -272,7 +272,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="33512" min="5" max="5" chance="100" /> <!-- Returning Hero's Vitality Replenishing Juice -->
+			<item id="33512" min="5" max="5" chance="100" /> <!-- Returning Hero's Vitality Replenishing Juice -  -->
 		</capsuled_items>
 	</item>
 	<item id="33514" name="Hero's Gift Box" type="EtcItem">
@@ -355,7 +355,7 @@
 		</skills>
 	</item>
 	<item id="33519" name="Scroll: Enchant Weapon (R-grade)" additionalName="Campaign" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. -->
+		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. -->
 		<set name="icon" val="icon.scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -696,7 +696,7 @@
 		</skills>
 	</item>
 	<item id="33536" name="Talisman - Critical Evasion (Active)" additionalName="Campaign" type="Armor">
-		<!-- The rate of receiving a physical Critical Attacks -4% when used. Shadow weapon. -->
+		<!-- The rate of receiving a physical Critical Attacks - 4% when used. Shadow weapon. -->
 		<set name="icon" val="icon.r_talisman_cm_up_active" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />

@@ -64,7 +64,7 @@
 		</effects>
 	</skill>
 	<skill id="8302" toLevel="1" name="Vesper Noble Heavy Armor Set - PvP">
-		<!-- When equipped, increases P. Atk./ P. Def. by 5.57%, Max HP by 540, Sleep/ Hold Resistance by 70%, Accuracy by 4, Speed by 5, and Magic Damage Resistance by 1%. Decreases damage received during PvP and decreases all Speeds of the attacker by a certain rate when attacked. Can equip a cloak. -->
+		<!-- When equipped, increases P. Atk./ P. Def. by 5.57%, Max HP by 540, Sleep/ Hold Resistance by 70%, Accuracy by 4, Speed by 5, and M. Def. by 1%. Decreases damage received during PvP and decreases all Speeds of the attacker by a certain rate when attacked. Can equip a cloak. -->
 		<icon>icon.armor_t94_u_i01</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -291,7 +291,7 @@
 		</effects>
 	</skill>
 	<skill id="8306" toLevel="1" name="Vesper Noble Robe Set - PvP">
-		<!-- When equipped, increases M. Atk. by 8.47%, Casting Spd. by 15%, MP Recovery by 5%, Stun Resistance by 50%, and Speed by 7. Decreases magic cancel rate by 30 and MP Consumption for magic skills by 3%. Decreases damage received during PvP, Critical Rate received when attack at a fixed rate, and the damage incurred on a critical attack. Can equip a cloak. -->
+		<!-- When equipped, increases M. Atk. by 8.47%, Casting Spd. by 15%, MP Recovery by 5%, Stun Resistance by 50%, and Speed by 7. Decreases magic cancelling damage by 30 and MP Consumption for magic skills by 3%. Decreases damage received during PvP, Critical Rate received when attack at a fixed rate, and the damage incurred on a critical attack. Can equip a cloak. -->
 		<icon>icon.armor_t96_u_i01</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -352,7 +352,7 @@
 		</effects>
 	</skill>
 	<skill id="8307" toLevel="1" name="Boing Hammer's Mysterious Effect">
-		<!-- Has a chance to increase the size of the target's head during a standard attack. -->
+		<!-- Has a chance to increase the size of the target's head during a general attack. -->
 		<icon>icon.weapon_bbyong_hammer_a_i00</icon>
 		<magicLvl>1</magicLvl>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -432,7 +432,7 @@
 		</effects>
 	</skill>
 	<skill id="8310" toLevel="1" name="Arcana Sigil">
-		<!-- Increases Magic Damage Resistance by 2% and decreases magic canceling damage by 13. -->
+		<!-- Increases M. Def. by 2% and decreases magic canceling damage by 13. -->
 		<icon>icon.arcana_sigil_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -449,7 +449,7 @@
 		</effects>
 	</skill>
 	<skill id="8311" toLevel="1" name="Dynasty Sigil">
-		<!-- Increases Magic Damage Resistance by 2% and Dark Resistance by 2. -->
+		<!-- Increases Magic Resistance by 2% and Dark Resistance by 2. -->
 		<icon>icon.dynasty_sigil_i00</icon>
 		<magicLvl>80</magicLvl>
 		<operateType>P</operateType>
@@ -804,7 +804,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="8327" toLevel="1" name="Release Agathion's Seal - Juju">
+	<skill id="8327" toLevel="1" name="Agathion Summon - Juju">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1345,7 +1345,7 @@
 		</effects>
 	</skill>
 	<skill id="8348" toLevel="2" name="Resistance Earring - Gludio">
-		<!-- Increases Bleed Resistance by $s1, Stun attack bonus by $s2, and Water Attribute Resistance by $s3. -->
+		<!-- Increases Bleed Resistance by $s1, Stun attack bonus by $s2, and Water Attribute Defense by $s3. -->
 		<icon>
 			<value level="1">icon.accessary_inferno_earing_i00</value>
 			<value level="2">icon.accessory_earring_of_domi_protection_i00</value>
@@ -1808,7 +1808,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="8372" toLevel="1" name="Super Strong Giant's Mask">
+	<skill id="8372" toLevel="1" name="Shiny Reanimated Corpse Mask">
 		<!-- Mask's effect. For 60 min., increases Max HP and Max MP by 10%, P. Atk. by 5%, and Earth Resistance by 5. -->
 		<icon>icon.ev_frankenstein_mask_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2279,7 +2279,7 @@
 		</effects>
 	</skill>
 	<skill id="8397" toLevel="1" name="Moirai Heavy Armor Set">
-		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Magic Damage Resistance by 2%, Stun Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 3. Cloak equip possible. STR+ 2. CON-2 -->
+		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, M. Def. by 2%, Stun Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 3. Cloak equip possible. STR+2. CON-2 -->
 		<icon>icon.armor_t100_u_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -2327,7 +2327,7 @@
 		</effects>
 	</skill>
 	<skill id="8398" toLevel="1" name="Moirai Light Armor Set">
-		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Moving Spd. by 3%, Hold Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 3. Cloak equip possible. DEX+ 2, CON-2 -->
+		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Moving Spd. by 3%, Hold Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 3. Cloak equip possible. DEX+2, CON-2 -->
 		<icon>icon.armor_t101_u_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -2375,7 +2375,7 @@
 		</effects>
 	</skill>
 	<skill id="8399" toLevel="1" name="Moirai Robe Set">
-		<!-- Increases M. Atk. by 8.11%, Casting Spd. by 15%, Paralysis Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 5. Cloak equip possible. WIT+ 2, MEN-2 -->
+		<!-- Increases M. Atk. by 8.11%, Casting Spd. by 15%, Paralysis Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 5. Cloak equip possible. WIT+2, MEN-2 -->
 		<icon>icon.armor_t102_u_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>

@@ -1434,7 +1434,7 @@
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
 	<item id="37498" name="Energy of Dimensions" type="EtcItem">
-		<!-- Buff for people who share a world with the victorious clan in a dimensional siege. Atk. Spd. +10%, Casting Spd. +10%, Speed +10, and Max HP/ MP/ CP +10%. Cooldown is 60 min. Cannot be used in the Olympiad. -->
+		<!-- A blessing that the Dimensional Wizard grants to the winner of a dimensional siege. Atk. Spd. +10%, Casting Spd. +10%, Movement Speed +10, and MAX HP/ MP/ CP +10%. Cooldown: 60 min. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.tersi_specter_seed" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -1449,7 +1449,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="37499" name="Fire Stone" additionalName="Event" type="EtcItem">
-		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water Attribute Resistance increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Fire attack attribute increases by 5 when bestowed on a weapon. Water defense attribute increases by 6 when bestowed on armor. Attribute Stones. levels 1- 3. Additionally, a maximum of three types of Elemental defense attribute can be bestowed, and one type of Elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR" />

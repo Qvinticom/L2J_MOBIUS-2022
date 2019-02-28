@@ -79,7 +79,7 @@
 		<isMagic>1</isMagic>
 		<isDebuff>1</isDebuff>
 	</skill>
-	<skill id="16707" toLevel="2" name="Dwelling - Horn Melody">
+	<skill id="16707" toLevel="2" name="Horn Melody - Residence">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLvl>
@@ -131,7 +131,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16708" toLevel="2" name="Dwelling - Guitar Melody">
+	<skill id="16708" toLevel="2" name="Guitar Melody - Residence">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>
@@ -149,7 +149,7 @@
 			<value level="2">698</value>
 		</effectPoint>
 	</skill>
-	<skill id="16709" toLevel="2" name="Dwelling - Drum Melody">
+	<skill id="16709" toLevel="2" name="Drum Melody - Residence">
 		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
@@ -161,7 +161,7 @@
 			<value level="2">698</value>
 		</effectPoint>
 	</skill>
-	<skill id="16710" toLevel="2" name="Dwelling - Harp Melody">
+	<skill id="16710" toLevel="2" name="Harp Melody - Residence">
 		<!-- For $s1, P. Accuracy +$s2, P. Evasion/ M. Evasion +$s3, and Speed +$s4. Also, Critical Damage Received -$s5. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -173,7 +173,7 @@
 			<value level="2">698</value>
 		</effectPoint>
 	</skill>
-	<skill id="16711" toLevel="2" name="Dwelling - Lute Melody">
+	<skill id="16711" toLevel="2" name="Lute Melody - Residence">
 		<!-- For $s1, Atk. Spd. and Casting Spd. +$s2 and $s3, respectively, and applies the Vampiric Rage effect for $s4 at a certain probability. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -185,7 +185,7 @@
 			<value level="2">698</value>
 		</effectPoint>
 	</skill>
-	<skill id="16712" toLevel="2" name="Dwelling - Pipe Organ Melody">
+	<skill id="16712" toLevel="2" name="Pipe Organ Melody - Residence">
 		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -197,7 +197,7 @@
 			<value level="2">698</value>
 		</effectPoint>
 	</skill>
-	<skill id="16713" toLevel="1" name="Dwelling - Prevailing Sonata">
+	<skill id="16713" toLevel="1" name="Prevailing Sonata - Residence">
 		<!-- For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to add $s6 Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
@@ -206,8 +206,8 @@
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="16714" toLevel="1" name="Dwelling - Daring Sonata">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+	<skill id="16714" toLevel="1" name="Daring Sonata - Residence">
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -215,7 +215,7 @@
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="16715" toLevel="1" name="Dwelling - Refreshing Sonata">
+	<skill id="16715" toLevel="1" name="Refreshing Sonata - Residence">
 		<!-- For $s1, HP Recovery +$s2, MP Recovery +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
@@ -224,8 +224,8 @@
 		<reuseDelay>1000</reuseDelay>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="16716" toLevel="1" name="Dwelling - Knight's Harmony">
-		<!-- For $s1, increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+	<skill id="16716" toLevel="1" name="Knight's Harmony - Residence">
+		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -234,7 +234,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16717" toLevel="1" name="Dwelling - Warrior's Harmony">
+	<skill id="16717" toLevel="1" name="Warrior's Harmony - Residence">
 		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -244,7 +244,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16718" toLevel="1" name="Dwelling - Wizard's Harmony">
+	<skill id="16718" toLevel="1" name="Wizard's Harmony - Residence">
 		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
@@ -254,8 +254,8 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16719" toLevel="1" name="Dwelling - Elemental Resistance">
-		<!-- For $s1, Attribute Resistance +$s2. -->
+	<skill id="16719" toLevel="1" name="Elemental Resistance - Residence">
+		<!-- For $s1, all Attribute Resistance +$s2. -->
 		<icon>icon.skill11565</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -264,7 +264,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16720" toLevel="1" name="Dwelling - Holy Attack Resistance">
+	<skill id="16720" toLevel="1" name="Resistance Debuff - Residence">
 		<!-- For $s1, Resistance to Poison/ Bleed/ Hold/ Sleep/ Mental +$s2. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
@@ -274,7 +274,7 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16721" toLevel="1" name="Dwelling - Elemental Resistance">
+	<skill id="16721" toLevel="1" name="Mental Attack Resistance - Residence">
 		<!-- For$s1, Resistance to buff-canceling attacks/ debuff attacks +$s2. -->
 		<icon>icon.skill11824</icon>
 		<operateType>A2</operateType>
@@ -284,8 +284,8 @@
 		<reuseDelay>2000</reuseDelay>
 		<effectPoint>687</effectPoint>
 	</skill>
-	<skill id="16722" toLevel="1" name="Dwelling - Resistance of Saha">
-		<!-- For $s1, Attribute Resistance +$s2. -->
+	<skill id="16722" toLevel="1" name="Resistance of Saha - Residence">
+		<!-- For $s1, all Attribute Resistance +$s2. -->
 		<icon>icon.skill11567</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -454,7 +454,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16730" toLevel="1" name="Faction Level-up">
+	<skill id="16730" toLevel="1" name="Amity Level-up">
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<hitTime>500</hitTime>
@@ -591,13 +591,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16737" toLevel="10" name="Inherent Abilities - Blackbird Clan Talisman">
+	<skill id="16737" toLevel="10" name="Inherent Abilities - Kingdom's Royal Guard Talisman">
 		<!-- Damage received from Embryo -$s1. -->
 		<icon>etc_royalgurad_talisman</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
 	</skill>
-	<skill id="16738" toLevel="10" name="Inherent Abilities - Mother Tree Guardians Talisman">
+	<skill id="16738" toLevel="10" name="Inherent Abilities - Unworldly Visitors Talisman">
 		<!-- Damage received from Spirits -$s1. -->
 		<icon>etc_stranger_talisman</icon>
 		<operateType>P</operateType>
@@ -701,7 +701,7 @@
 		<targetType>SELF</targetType>
 	</skill>
 	<skill id="16747" toLevel="1" name="Ring of the Beginning">
-		<!-- Max MP +42, P. Atk./ M. Atk. +3%, P./ M. Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +15%, Additional Giant Damage +5% -->
+		<!-- Max MP +42, P./ M. Atk. +3%, P./ M. Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +15%, Additional Damage to the Giants +5% -->
 		<icon>icon.accessory_ring_of_helios_Black</icon>
 	<!-- Emperor of the Giant Empire, during the Ancient Age of Giants. He was responsible for the golden age. In his heyday, Helios was so powerful that even the gods had to be careful around him, and he ruled as master of the Material Realm. He is the creator of the Grail, and the Grail itself. -->
 	<operateType>P</operateType>
@@ -739,7 +739,7 @@
 		</effects>
 	</skill>
 	<skill id="16748" toLevel="2" name="Ring of Authority">
-		<!-- Max MP +43, P. Atk. +4%, P. Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +25%, Additional Giant Damage +5% -->
+		<!-- Max MP +43, P. Atk. +4%, P. Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +25%, Additional Damage to the Giants +5% -->
 		<icon>
 			<value level="1">icon.accessory_ring_of_helios_red</value>
 			<value level="2">icon.accessory_ring_of_helios_enchant_red</value>
@@ -824,7 +824,7 @@
 		</effects>
 	</skill>
 	<skill id="16749" toLevel="2" name="Ring of the Truth">
-		<!-- Max MP +43, M. Atk. +4%, M. Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +25%, Additional Giant Damage +5% -->
+		<!-- Max MP +43, M. Atk. +4%, Magical Critical Damage +15%, Stun/ Paralyze/ Knock Back attack and defense success rate +25%, Additional Damage to the Giants +5% -->
 		<icon>
 			<value level="1">icon.accessory_ring_of_helios</value>
 			<value level="2">icon.accessory_ring_of_helios_enchant</value>
@@ -940,7 +940,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="16752" toLevel="1" name="Harnak's Deformed Necklace">
+	<skill id="16752" toLevel="1" name="Harnak's Transformed Necklace">
 		<!-- Max MP +79, Skill Cooldown -10%, Additional Damage to the Giants +5% -->
 		<icon>icon.transform_necklace_of_harnak</icon>
 	<!-- Take it to Rafforty to exchange for the Source of the Emperor Exchange. MP +79, Additional Damage to the Giants +5%, Skill Cooldown -10%. Enchantment, Augment, Crystallization not possible -->
@@ -1063,7 +1063,7 @@
 		</effects>
 	</skill>
 	<skill id="16757" toLevel="4" name="Superion Barrier">
-		<!-- Due to the Battle Fortress Superion, Atk. Spd., Casting Spd., and Movement Speed decreased, and Skill Cooldown increased. -->
+		<!-- Due to the Battle Fortress Superion, Atk. Spd., Casting Spd., and Speed decreased, and Skill Cooldown increased. -->
 		<icon>
 			<value level="1">icon.skill1230</value>
 			<value level="2">icon.etc_black_freezing_core_i00</value>
@@ -1102,7 +1102,7 @@
 		<targetType>SELF</targetType>
 		<castRange>1200</castRange>
 	</skill>
-	<skill id="16761" toLevel="50" name="Dissolving Shield of Light Particles - 98%">
+	<skill id="16761" toLevel="50" name="Dissolving Shield of Light Particles - 2%">
 		<!-- The Particle Dissolver is being used to dissolve Helios' Shield of Light. -->
 		<icon>icon.giant_item_equip</icon>
 		<operateType>A2</operateType>
@@ -1264,7 +1264,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16777" toLevel="1" name="Reprieve">
-		<!-- There has been a stay?of the execution... For $s1... -->
+		<!-- There has been a stay..of the execution... For $s1... -->
 		<icon>icon.skill11056</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1332,7 +1332,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16782" toLevel="1" name="Violent Charge">
-		<!-- Makkum suddenly charges toward the target to inflict $s1 power added to P. Atk. and inflicts Stun for $s2. -->
+		<!-- Makkum suddenly charges toward the target to inflict $s1 power added to P. Attack and inflicts Stun for $s2. -->
 		<icon>icon.skill10318</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -1359,7 +1359,7 @@
 		<isDebuff>1</isDebuff>
 	</skill>
 	<skill id="16784" toLevel="1" name="Guillotine Chopping">
-		<!-- Makkum's barrage of attacks inflict $s1 power added to P. Atk. and inflict severe Bleed for $s2. -->
+		<!-- Makkum's barrage of attacks inflict $s1 power added to P. Attack and inflict severe Bleed for $s2. -->
 		<icon>icon.skill1298</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1412,7 +1412,7 @@
 		<isMagic>6</isMagic>
 		<isDebuff>1</isDebuff>
 	</skill>
-	<skill id="16788" toLevel="16" name="Level 101 Raid Boss">
+	<skill id="16788" toLevel="16" name="Raid Boss (Lv. 101)">
 		<!-- Dorgon used to be a valiant warrior of the Lizardmen, but was forced to hide in the backwoods by the Humans. His resentment of the Humans caused him to sell his soul to the Demons, a deed for which he was dismissed by the Lizardman Tribe. Since he has been banished, he has not been seen anywhere. However, when the energy of another dimension began spreading throughout the material realm, he was lured out of hiding. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>

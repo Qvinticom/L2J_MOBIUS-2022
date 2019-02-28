@@ -349,7 +349,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4106" toLevel="1" name="Antharas Stun">
+	<skill id="4106" toLevel="1" name="Antharas Jumping Slam">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill4106</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -379,7 +379,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="4107" toLevel="1" name="Antharas Stun">
+	<skill id="4107" toLevel="1" name="Antharas Tail Swing">
 		<!-- Momentarily immobile due to the Stun effect. -->
 		<icon>icon.skill4107</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -513,7 +513,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4110" toLevel="2" name="Breath Attack">
+	<skill id="4110" toLevel="2" name="Antharas Earthquake">
 		<affectRange>1200</affectRange>
 		<castRange>
 			<value level="1">500</value>
@@ -542,7 +542,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4111" toLevel="1" name="Antharas Petrify">
+	<skill id="4111" toLevel="1" name="Antharas Dragon Breath">
 		<!-- Petrified and unable to move temporarily. -->
 		<icon>icon.skill4111</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -579,7 +579,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4112" toLevel="1" name="Antharas Attack">
+	<skill id="4112" toLevel="1" name="Antharas Smash">
 		<affectRange>100</affectRange>
 		<castRange>50</castRange>
 		<coolTime>800</coolTime>
@@ -601,7 +601,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="4113" toLevel="1" name="Antharas Attack">
+	<skill id="4113" toLevel="1" name="Antharas Smash">
 		<affectRange>100</affectRange>
 		<castRange>50</castRange>
 		<coolTime>800</coolTime>
@@ -666,7 +666,7 @@
 		</effects>
 	</skill>
 	<skill id="4116" toLevel="10" name="Magic Attack Resistance">
-		<!-- Increases Magic Damage Resistance. -->
+		<!-- Increases M. Def. -->
 		<icon>icon.skill4116_new</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

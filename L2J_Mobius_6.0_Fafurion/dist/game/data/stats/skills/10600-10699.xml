@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="10606" toLevel="1" name="Gust Movement">
+		<!-- Evades all physical attack skills for $s1 Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill11862</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -76,7 +77,7 @@
 		</effects>
 	</skill>
 	<skill id="10608" toLevel="4" name="Superior Haste">
-		<!-- Physical skill cooldown -$s1 and the bleed attack success rate +$s2. Also doubles the duration of Shadow Dash. -->
+		<!-- Physical skill cooldown +$s1 and the Bleed attack success rate +$s2. Also doubles the duration of Shadow Dash. -->
 		<icon>icon.skill10608</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -108,6 +109,7 @@
 		</effects>
 	</skill>
 	<skill id="10609" toLevel="1" name="Critical Chances">
+		<!-- For $s1, increases Critical Damage by $s2, Deadly Atk. Rate by $s3, Critical Rate/ Damage from the flank and back by $s4 and $s5, respectively. Decreases Critical Damage from the front by $s6. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10878</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -178,6 +180,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="10653" toLevel="1" name="Shadow Evasion">
+		<!-- For $s1, becomes immune from all disruption effects and evades Physical and Magic skills at a $s2 probability. Unable to cast Shadow Hide. Requires dagger/ dual dagger. -->
 		<icon>icon.skill5242</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -283,6 +286,7 @@
 		</effects>
 	</skill>
 	<skill id="10656" toLevel="1" name="Shadow Hunter">
+		<!-- For $s1, increases Critical Damage by $s2, Deadly Atk. Rate by $s3, Critical Rate/ Damage from the flank by $s4, Critical Rate from the back by $s5 and Critical Damage by $s6. Decreases Critical Damage from the front by $s7. Requires dagger/ dual dagger. -->
 		<icon>icon.skill10656</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>

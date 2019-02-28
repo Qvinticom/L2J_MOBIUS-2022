@@ -357,7 +357,7 @@
 		</stats>
 	</item>
 	<item id="6611" name="Infinity Blade" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, casts a P. Def.-decreasing de-buff on the target. Also causes damage shield, increases Max HP/ Max MP/ Max CP, and Shield Reflect. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. During a Critical Attack, casts a P. Def.-decreasing de-buff on the target. Also causes Damage Reflection, increases Max HP/ Max MP/ Max CP, and Damage Reflection. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -438,7 +438,7 @@
 		</stats>
 	</item>
 	<item id="6613" name="Infinity Axe" type="Weapon">
-		<!-- Divine hero's weapon. During a Critical Attack, inflicts discord on the target. Also causes Damage Reflect. Increases Max HP/ Max MP/ Max CP and shield rate. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
+		<!-- Divine hero's weapon. During a Critical Attack, inflicts discord on the target. Also causes Damage Reflection. Increases Max HP/ Max MP/ Max CP and shield rate. Adds holy P. Atk. Increases damage inflicted during PvP. Cannot be transferred between servers. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1289,7 +1289,7 @@
 		</stats>
 	</item>
 	<item id="6657" name="Valakas' Necklace" type="Armor">
-		<!-- MP +50, Sleep Resistance +40%, Sleep Attack Rate +40%, HP +445. Decreases skill cooldown. Increases P. Atk. and M. Atk. Wild Magic Effect and Damage Reflect effect. Increases Fire Resistance. -->
+		<!-- MP +50, Sleep Resistance +40%, Sleep Attack Rate +40%, HP +445. Decreases skill cooldown. Increases P. Atk. and M. Atk. Wild Magic Effect and Damage Reflection effect. Increases Fire Resistance. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1310,7 +1310,7 @@
 		</stats>
 	</item>
 	<item id="6658" name="Baium's Ring" type="Armor">
-		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Hold Resistance +30%, Hold Atk. Rate +30%, increases Accuracy, P. Critical Damage, Atk. Spd. and Casting Spd. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP +21, Poison Resistance +40%, Poison Atk. Rate +40%, Hold Resistance +30%, Hold Atk. Rate +30%, increases Accuracy, P. Critical Damage, Atk. Spd. and Casting Spd. When two identical rings are equipped, the effect of only one ring will be applied. -->
 		<set name="icon" val="icon.accessory_ring_of_baium_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1331,7 +1331,7 @@
 		</stats>
 	</item>
 	<item id="6659" name="Zaken's Earring" type="Armor">
-		<!-- MP+ 31 -->
+		<!-- MP+31 -->
 		<set name="icon" val="icon.accessory_earring_of_zaken_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -1353,7 +1353,7 @@
 		</stats>
 	</item>
 	<item id="6660" name="Queen Ant's Ring" type="Armor">
-		<!-- MP +21, Poison Resistance +30%, Poison Atk. Rate +30%, increases Accuracy, increases P. Critical Damage, Hold Resistance +20%, and Hold Atk. Rate +20%. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP +21, Poison Resistance +30%, Poison Atk. Rate +30%, increases Accuracy, increases P. Critical Damage, Hold Resistance +20%, and Hold Atk. Rate +20%. When two identical rings are equipped, the effect of only one ring will be applied. -->
 		<set name="icon" val="icon.accessory_ring_of_queen_ant_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1395,7 +1395,7 @@
 		</stats>
 	</item>
 	<item id="6662" name="Ring of Core" type="Armor">
-		<!-- MP +21, Poison Resistance +20%, Poison Atk. Rate +20%. Increases Accuracy. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP +21, Poison Resistance +20%, Poison Atk. Rate +20%. Increases Accuracy. When equipped with two identical rings, the effect of only one ring will be applied. -->
 		<set name="icon" val="icon.accessory_ring_of_core_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

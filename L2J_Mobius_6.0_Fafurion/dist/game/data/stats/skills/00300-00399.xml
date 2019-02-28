@@ -591,7 +591,7 @@
 		</effects>
 	</skill>
 	<skill id="314" toLevel="16" name="Fatal Counter">
-		<!-- Fires an agony-inducing arrow at the target with $s1 Power added to P. Atk. The power of the attack increases as the enemy's HP decreases. Requires a bow. Over-hit. -->
+		<!-- Fires an agony-inducing arrow at the target with $s1 Power added to P. Atk. The power of the attack increases as the enemy's HP decreases. Requires a bow. Over-hit is possible. -->
 		<icon>icon.skill0314</icon>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
@@ -688,7 +688,7 @@
 		</effects>
 	</skill>
 	<skill id="315" toLevel="16" name="Crush of Doom">
-		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
 		<icon>icon.skill0315</icon>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
@@ -1003,7 +1003,7 @@
 		</effects>
 	</skill>
 	<skill id="321" toLevel="10" name="Blinding Blow">
-		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. and turns his/ her back to you. Increases Speed by $s2. Requires a dagger. Over-hit. Half-kill. -->
+		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. and turns his/ her back to you. Increases Speed by $s2. Requires a dagger. Over-hit and Half-kill are possible. -->
 		<icon>icon.skill0321</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -1412,7 +1412,7 @@
 		</effects>
 	</skill>
 	<skill id="336" toLevel="1" name="Arcane Wisdom">
-		<!-- Maximizes magic efficiency by decreasing MP Consumption by $s1 and Casting Spd. by $s2. 50 HP is consumed per sec. -->
+		<!-- Maximizes magic efficiency by decreasing MP Consumption by $s1 and Casting Spd. by $s2. 50 HP is consumed per second. -->
 		<icon>icon.skill0336</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -1460,7 +1460,7 @@
 		</effects>
 	</skill>
 	<skill id="338" toLevel="1" name="Arcane Agility">
-		<!-- Maximizes magic efficiency by increasing Casting Spd. by $s1 and magic MP Consumption by $s2, and by decreasing magic Cooldown by $s3. $s4 HP is consumed per sec. -->
+		<!-- Maximizes magic efficiency by increasing Casting Spd. by $s1 and magic MP Consumption by $s2, and by decreasing magic Cooldown by $s3. $s4 HP is consumed per second. -->
 		<icon>icon.skill0338</icon>
 		<magicLvl>78</magicLvl>
 		<mpConsume>36</mpConsume>
@@ -1563,7 +1563,7 @@
 		</effects>
 	</skill>
 	<skill id="341" toLevel="1" name="Touch of Life">
-		<!-- Gives a divine blessing by sacrificing oneself. Restores HP by $s1, and for $s2, increases Buff-canceling Attack Resistance by $s3, Debuff Resistance by $s4, and the Healing power received by $s5. Restores $s6 HP every sec. -->
+		<!-- Gives a divine blessing by sacrificing oneself. Restores HP by $s1, and for $s2, increases Buff-canceling Attack Resistance by $s3, Debuff Resistance by $s4, and the Healing power received by $s5. Restores $s6 HP every second. -->
 		<icon>icon.skill0341</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1685,7 +1685,7 @@
 		</effects>
 	</skill>
 	<skill id="344" toLevel="1" name="Lethal Blow">
-		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Requires a dagger. Over-hit. Half-kill. -->
+		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Requires a dagger. Over-hit and Half-kill are possible. -->
 		<icon>icon.skill0344</icon>
 		<castRange>40</castRange>
 		<effectPoint>-337</effectPoint>
@@ -1723,6 +1723,7 @@
 		</effects>
 	</skill>
 	<skill id="345" toLevel="15" name="Sonic Rage">
+		<!-- Attacks the target with a deadly energy storm, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0345</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1827,6 +1828,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="346" toLevel="15" name="Raging Force">
+		<!-- Attacks the enemy with a devastating burst of wind and gathers Momentum while cutting their defenses. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0346</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1928,7 +1930,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="347" toLevel="1" name="Earthquake">
-		<!-- Wields a spear at the enemy with $s1 Power added to P. Atk. Requires a polearm. Over-hit. Critical. Ignores Shield Defense. Target may be canceled. -->
+		<!-- Wields a spear at the enemy with $s1 Power added to P. Atk. Requires a polearm. Over-hit and Critical are possible. Ignores Shield Defense. Target may be canceled. -->
 		<icon>icon.skill0347</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -1966,7 +1968,7 @@
 		</effects>
 	</skill>
 	<skill id="348" toLevel="1" name="Spoil Crush">
-		<!-- Causes a change inside the monster while attacking the enemy and permits use of the Sweeper skill. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Causes a change inside the monster while attacking the enemy and permits use of the Sweeper skill. Requires a sword or blunt weapon to be equipped. Over-hit and Critical are possible. -->
 		<icon>icon.skill0348</icon>
 		<castRange>40</castRange>
 		<coolTime>100</coolTime>
@@ -2183,7 +2185,7 @@
 		</effects>
 	</skill>
 	<skill id="354" toLevel="1" name="Hamstring Shot">
-		<!-- Shoots an arrow at the enemy with $s1 Power added to P. Atk., and decreases the enemy's Speed by $s3 for $s2. Requires a bow. Over-hit. Critical. -->
+		<!-- Shoots an arrow at the enemy with $s1 Power added to P. Atk., and decreases the enemy's Speed by $s3 for $s2. Requires a bow. Over-hit and Critical are possible. -->
 		<icon>icon.skill0354</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
@@ -2223,7 +2225,7 @@
 		</effects>
 	</skill>
 	<skill id="355" toLevel="1" name="Focus Death">
-		<!-- For $s1, decreases Critical Rate by $s2 and frontal Critical Damage by $s3. Increases the Vital Spot Attack Rate by $s4 and rear Critical Damage by $s5. Requires a dagger. -->
+		<!-- For $s1, decreases Critical Rate by $s2 and frontal Critical Damage by $s3. Increases the chance of deadly attack by $s4 and rear Critical Damage by $s5. Requires a dagger. -->
 		<icon>icon.skill0355</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2445,7 +2447,7 @@
 		</effects>
 	</skill>
 	<skill id="361" toLevel="1" name="Stun Blast">
-		<!-- Creates a powerful shock wave to inflict damage on the target and nearby enemies with $s1 Power added to P. Atk. Inflicts Stun for $s2 and decreases P. Def. by $s3 and M. Def. by $s4. Requires a spear weapon. Over-hit. Critical. Ignores Shield Defense. Cancels target. -->
+		<!-- Creates a powerful shock wave to inflict damage on the target and nearby enemies with $s1 power added to P. Atk. Inflicts Stun for $s2 and decreases P. Def. by $s3 and M. Def. by $s4. Requires a spear weapon. Over-hit. Critical. Ignores Shield Defense. Cancels target. -->
 		<icon>icon.skill0361</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2500,7 +2502,7 @@
 		</effects>
 	</skill>
 	<skill id="362" toLevel="1" name="Armor Crush">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Inflicts Stun and decreases enemy's P. Def. by $s3 and M. Def. by $s4 for $s2. Requires a sword, blunt weapon, two-handed sword, or two-handed blunt weapon. Over-hit. Critical. Ignores Shield Defense. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Inflicts Stun and decreases enemy's P. Def. by $s3 and M. Def. by $s4 for $s2. Requires a sword, blunt weapon, two-handed sword, or two-handed blunt weapon. Over-hit and Critical are possible. Ignores Shield Defense. -->
 		<icon>icon.skill0362</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2625,7 +2627,7 @@
 		</effects>
 	</skill>
 	<skill id="365" toLevel="1" name="Dance of Siren">
-		<!-- For $s1, increases all party members' M. Critical Rate by $s2. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- For $s1, increases all party members' magic damage by $s2. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0365</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -2732,6 +2734,7 @@
 		</effects>
 	</skill>
 	<skill id="367" toLevel="11" name="Dance of Medusa">
+		<!-- Dances to stir up the illusion of Medusa. Petrifies nearby enemies for $s1. Requires a dual sword. -->
 		<icon>icon.skill0367</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2857,7 +2860,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="369" toLevel="1" name="Evade Shot">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. and increases Evasion by $s3 for $s2. Requires a bow. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. and increases Evasion by $s3 for $s2. Requires a bow. Over-hit is possible. -->
 		<icon>icon.skill0369</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -3047,7 +3050,7 @@
 		</effects>
 	</skill>
 	<skill id="378" toLevel="5" name="Clan Empower">
-		<!-- Increases clan members' M. Atk by $s1. It only affects those who are of a Elder rank or higher. -->
+		<!-- Increases clan members' M. Atk. by $s1. It only affects those who are of a Elder rank or higher. -->
 		<icon>icon.skill0378</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -3398,7 +3401,7 @@
 		</effects>
 	</skill>
 	<skill id="396" toLevel="1" name="Heroic Berserker">
-		<!-- For 1 min., Atk. Spd. and Casting Spd. +30%, Speed +60, standard attack and Skill Critical Damage +30%, Skill Cooldown -15%. Grants complete debuff immunity. Consumes 80 Soulstones. Cannot be stacked with other Hero Buffs. Cannot be used in the Olympiad. -->
+		<!-- For 1 min., Atk. Spd. and Casting Spd. +30%, Speed +60, P. Critical Damage and P./ M. Skill Critical Damage +30%, Skill Cooldown -15%. Grants complete debuff immunity. Consumes 80 Soulstones. Cannot be stacked with other Hero Debuffs. Cannot be used in the Olympiad. -->
 		<icon>icon.skill0396</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>60</abnormalTime>

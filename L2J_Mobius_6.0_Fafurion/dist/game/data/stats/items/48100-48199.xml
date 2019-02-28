@@ -442,7 +442,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48133" name="Agathion - Joon Charm (30-day)" type="Armor">
-		<!-- Charm that summons an Agathion - Joon. 30-day limited item. Cannot be used in the Olympiad.. <Item Skill>. 1. Joon's Magic: For 30 min, Acquired XP/ SPed +10%, Atk. Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk. Spd. +10%, Casting Spd. +10%, P. Accuracy +4, M. Accuracy +4, Movement Speed +10, Max HP/ MP/ CP +10%, P. Def. +10%, M. Def. +10%, Skill MP consumption -10%. Cannot be stacked with Art of Seduction. Buff effect persists through death. <Active Skill>. 1. Joon's Resurrection: Enables using Blessed Resurrection. Cooldown of 3 hr. -->
+		<!-- Charm that summons an Agathion - Joon. 30-day limited item. Cannot be used in the Olympiad.. <Item Skill>. 1. Joon's Magic: For 30 min, Acquired XP/ SPed +10%, Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk. Spd. +10%, Casting Spd. +10%, P. Accuracy +4, M. Accuracy +4, Movement Speed +10, Max HP/ MP/ CP +10%, P. Def. +10%, M. Def. +10%, Skill MP consumption -10%. Cannot be stacked with Art of Seduction. Effect remains after death. <Active Skill>. 1. Joon's Resurrection: Enables using Blessed Resurrection. Cooldown of 3 hours. -->
 		<set name="icon" val="icon.bm_agathion_base" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -791,7 +791,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="48160" name="Elysium Special Stew" additionalName="Event" type="EtcItem">
-		<!-- When used, all basic stats +3 and Acquired XP/ SP +30% for 30 mins. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, January 18, 2017, after regular maintenance. -->
+		<!-- When used, P. Atk. +3%, M. Atk. +3%, Atk./ Casting Spd. +3%, Max HP/ MP +3%, and XP gain +30% for 30 min. The effects do not stack even when several different types of fish stew are used. Cooldown 5 min. -->
 		<set name="icon" val="icon.red_libra_pochouse" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -901,7 +901,7 @@
 		</stats>
 	</item>
 	<item id="48169" name="Attribute Practice Fire Stone" type="EtcItem">
-		<!-- Fire elemental attack attribute increases by 5 when bestowed on a weapon. Water Attribute Resistance attribute increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of elemental defense attribute can be bestowed, and one type of elemental attack attribute. Opposite attributes cannot be bestowed together. -->
+		<!-- Fire elemental attack attribute increases by 5 when bestowed on a weapon. Water elemental defense attribute increases by 6 when bestowed on an armor. Attribute Stones can be used up to attribute level 3. Additionally, a maximum of three types of elemental defense attribute can be bestowed, and one type of elemental attack attribute. Opposite attributes cannot be bestowed together. -->
 		<set name="icon" val="icon.etc_fire_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />

@@ -37,7 +37,7 @@
 		</effects>
 	</skill>
 	<skill id="19403" toLevel="3" name="Elemental Harmony">
-		<!-- For $s1, harmony of attributes increases all Atk. Attributes by $s2. -->
+		<!-- For $s1, harmony of attributes increases all attack attributes by $s2. -->
 		<icon>icon.skill10044</icon>
 		<abnormalTime>
 			<value level="1">5</value>
@@ -258,7 +258,7 @@
 		</effects>
 	</skill>
 	<skill id="19409" toLevel="1" name="Curse Gloom">
-		<!-- M. Defense and Attribute Resistance -$s2 and -$s3, respectively, for $s1. -->
+		<!-- For $s1, M. Def. and Attribute Resistance -$s2 and -$s3, respectively. -->
 		<icon>icon.skill1263</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
@@ -518,7 +518,7 @@
 		</effects>
 	</skill>
 	<skill id="19418" toLevel="7" name="Elemental Burst: Wind">
-		<!-- Elemental Burst cancel target and inflicts Faint for $s1. -->
+		<!-- Elemental Burst cancels target and inflicts Faint for $s1 -->
 		<icon>icon.skill11865</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -747,12 +747,33 @@
 			</effect>
 		</effects>
 	</skill>
+	<skill id="19426" toLevel="13" name="Shadow Blade">
+		<!-- Attacks the target with $s1 Power added to P. Atk., decreasing its P./ M. Def. by $s3 for $s2. Requires a sword, blunt weapon, dual sword or dual blunt to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill11510</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19427" toLevel="9" name="Hands of Einhasad">
+		<!-- For $s1, P. Atk./ M. Atk. +$s2 and default attack range +$s3. Inflicts divine magic damage dealt by standard attacks with $s4 Power added to M. Atk. -->
+		<icon>icon.skill19427</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19428" toLevel="3" name="Divine Meditation">
+		<!-- Focuses your mind for $s1 to recover total $s2 MP and resets the duration of Prophecy of Might applied to allies. -->
+		<icon>icon.skill19428</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19429" toLevel="1" name="Introspection">
+		<!-- Recovers MP by 5% during meditation. -->
+		<icon>icon.skill19428</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="19430" toLevel="11" name="Resonant Halo">
 		<!-- Increases P. Atk. by $s1 and Atk. Spd. by $s2 and allows casting Radiant Crash/ Resolving Bash over an area, which increases MP Consumption by $s3. Using the skill again cancels the effect. -->
 		<icon>icon.skill19430</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19431" toLevel="9" name="Sforzando Sting">
+		<!-- Rushes at the target to reduce Speed by $s2 for $s1 and gives the Swift Praise effect to allies. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
 		<icon>icon.skill19431</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -763,8 +784,28 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 	</skill>
 	<skill id="19433" toLevel="11" name="Alluring Conduct">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P. Def/ M. Def by $s3 for $s2. Increases Skill Cooldown by $s4 and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P./ M. Def. by $s3 for $s2 Increases Skill Cooldown by $s4 and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
 		<icon>icon.skill19433</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19434" toLevel="13" name="Repeat Mark Somersault">
+		<!-- Attacks the target with $s1 Power added to P. Atk., decreases P. Def./ M. Def. by $s3 and Speed by $s4 for $s2, and moves $s5 back. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
+		<icon>icon.skill19434</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19435" toLevel="5" name="Spectral Slash">
+		<!-- The Spectral Sword attacks the target with $s1 Power added to P. Atk. and decreases P./ M. Def. by $s3 for $s2. -->
+		<icon>icon.skill19435</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19436" toLevel="13" name="Dancing Phantom Blade">
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. to make them unable to target you and decrease their P. Atk./ M. Atk./ P. Def./ M. Def./ Speed by $s3 for $s2. Enemies with the Spectral Slash Stage 3 or higher can remove these debuffs. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill19436</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19437" toLevel="1" name="Vanguard of Baylor">
+		<!-- Summons the Dominant Flag. If used near the Dominant Flag, it applies the effects of Melody, Harmony, Drum, Ditty and Rhapsody buff skills to clan members and enhances Seal Mesmerizing skills (Lv. 4 or higher). Also makes the caster immune to Pull. Consumes $s1 Spirit Ore. -->
+		<icon>icon.skill19437</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19438" toLevel="1" name="Triple Stroke">
@@ -796,7 +837,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19439" toLevel="1" name="Overload's Dignity">
+	<skill id="19439" toLevel="1" name="Overlord's Dignity">
+		<!-- For $s1, increases nearby party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. $s2 times. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill19439</icon>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -852,6 +894,16 @@
 			<effect name="TrackLimitedSkill" />
 		</effects>
 	</skill>
+	<skill id="19440" toLevel="1" name="Divine Strike">
+		<!-- Deals divine damage with $s1 Power added to M. Atk. -->
+		<icon>icon.skill0049</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19441" toLevel="4" name="Grand Soul Cry">
+		<!-- P. Atk., P. Def, M. Atk. and M. Def. +$s1 and P. Skill Power +$s2. Increases the chance to activate additional effect when the Rampageous Beat is cast. -->
+		<icon>icon.skill19441</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="19442" toLevel="3" name="Single Note">
 		<!-- For $s1, P. Atk. and Atk. Spd. +$s2. -->
 		<icon>
@@ -861,7 +913,13 @@
 		</icon>
 		<operateType>A1</operateType>
 	</skill>
+	<skill id="19443" toLevel="9" name="Melody of Refection">
+		<!-- Instantly recovers your MP and nearby allies' MP up to $s1 according to their levels and decreases remaining cooldown of Alluring Conduct by $s2. Can be cast in the Triad state. -->
+		<icon>icon.skill11761</icon>
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="19444" toLevel="1" name="War Drum">
+		<!-- For $s1, party members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -907,6 +965,7 @@
 		</effects>
 	</skill>
 	<skill id="19445" toLevel="1" name="Marching Drum">
+		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
 		<icon>icon.skill19445</icon>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -957,6 +1016,7 @@
 		</effects>
 	</skill>
 	<skill id="19446" toLevel="1" name="Soothing Drum">
+		<!-- For $s1, party members' HP Recovery +$s2, MP Recovery +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill19446</icon>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -1024,5 +1084,15 @@
 		<targetType>SELF</targetType>
 		<affectScope>PARTY</affectScope>
 		<affectObject>FRIEND</affectObject>
+	</skill>
+	<skill id="19448" toLevel="13" name="Rampageous Beat">
+		<!-- Attacks the target with $s1 Power added to P. Atk. and resets the durations of nearby allies' War/ Marching/ Relax buffs with a certain probability. Requires a sword, blunt weapon, dual sword, or dual blunt weapon to be equipped. Over-hit. Critical. -->
+		<icon>icon.skill11511</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19449" toLevel="1" name="Vanguard of Baylor">
+		<!-- Recovers $s1 CP and enhanced Melody/ Harmony/ Drum/ Ditty/ Rhapsody buff skills and Seal Mesmerizing skills (Lv. 4 or higher). Immune to Pull. -->
+		<icon>icon.skill19437</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

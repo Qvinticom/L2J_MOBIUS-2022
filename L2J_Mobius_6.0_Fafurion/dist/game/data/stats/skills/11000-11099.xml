@@ -134,7 +134,7 @@
 		</effects>
 	</skill>
 	<skill id="11003" toLevel="10" name="Superior Anti Magic">
-		<!-- M. Def. +$s1, Magic Damage Resistance +$s2. INT +$s3. -->
+		<!-- M. Def. +$s1, Magic Attack Resistance +$s2. INT +$s3. -->
 		<icon>icon.skill10004</icon>
 		<magicLvl>
 			<value level="1">85</value>
@@ -300,7 +300,7 @@
 		</effects>
 	</skill>
 	<skill id="11009" toLevel="1" name="Wind Stance">
-		<!-- Increases M. Critical Damage by $s1 and Wind defense by $s2, and applies Wind to attribute magic. -->
+		<!-- Increases Magical Critical Damage by $s1 and Wind defense by $s2, and applies Wind to attribute magic. -->
 		<icon>icon.skill10307</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -325,7 +325,7 @@
 		</effects>
 	</skill>
 	<skill id="11010" toLevel="1" name="Earth Stance">
-		<!-- Increases P. Defense by $s1 and Earth defense by $s2, and applies Earth to attribute magic. -->
+		<!-- Increases Defense by $s1 and Earth defense by $s2, and applies Earth to attribute magic. -->
 		<icon>icon.skill10304</icon>
 		<toggleGroupId>1</toggleGroupId>
 		<isNecessaryToggle>true</isNecessaryToggle>
@@ -350,6 +350,7 @@
 		</effects>
 	</skill>
 	<skill id="11011" toLevel="11" name="Elemental Spike">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
@@ -464,6 +465,7 @@
 		</effects>
 	</skill>
 	<skill id="11012" toLevel="11" name="Elemental Spike (Fire)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -553,6 +555,7 @@
 		</effects>
 	</skill>
 	<skill id="11013" toLevel="11" name="Elemental Spike (Water)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
@@ -642,6 +645,7 @@
 		</effects>
 	</skill>
 	<skill id="11014" toLevel="11" name="Elemental Spike (Wind)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
@@ -731,6 +735,7 @@
 		</effects>
 	</skill>
 	<skill id="11015" toLevel="11" name="Elemental Spike (Earth)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
@@ -820,6 +825,7 @@
 		</effects>
 	</skill>
 	<skill id="11016" toLevel="11" name="Elemental Spike (Holy)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and decreases the corresponding Attribute Resistance. Over-hit is possible. -->
 		<icon>icon.skill11011</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11011</reuseDelayGroup>
@@ -909,6 +915,7 @@
 		</effects>
 	</skill>
 	<skill id="11017" toLevel="11" name="Elemental Crash">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target. Each attribute decreases a certain effect as follows: Fire - Ignite, Water - Slow/ Frozen, Wind - Knock Back, Earth - Hold, Holy - Stun, Dark - M. Def. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
@@ -1025,6 +1032,7 @@
 		</effects>
 	</skill>
 	<skill id="11018" toLevel="11" name="Elemental Crash (Fire)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and inflicts Ignite. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>FIRE</attributeType>
 		<attributeValue>20</attributeValue>
@@ -1114,6 +1122,7 @@
 		</effects>
 	</skill>
 	<skill id="11019" toLevel="11" name="Elemental Crash (Water)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and inflicts Slow. Overlapped Slow effects result in Frozen. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>WATER</attributeType>
 		<attributeValue>20</attributeValue>
@@ -1203,6 +1212,7 @@
 		</effects>
 	</skill>
 	<skill id="11020" toLevel="11" name="Elemental Crash (Wind)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and pushes it. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>WIND</attributeType>
 		<attributeValue>20</attributeValue>
@@ -1292,6 +1302,7 @@
 		</effects>
 	</skill>
 	<skill id="11021" toLevel="11" name="Elemental Crash (Earth)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and inflicts Hold. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
 		<attributeType>EARTH</attributeType>
 		<attributeValue>20</attributeValue>
@@ -1381,6 +1392,7 @@
 		</effects>
 	</skill>
 	<skill id="11022" toLevel="11" name="Elemental Crash (Holy)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and inflicts Stun. Over-hit is possible. -->
 		<icon>icon.skill11018</icon>
 		<operateType>A1</operateType>
 		<reuseDelayGroup>11017</reuseDelayGroup>
@@ -1471,6 +1483,7 @@
 		</effects>
 	</skill>
 	<skill id="11023" toLevel="11" name="Elemental Destruction">
+		<!-- Inflicts a magic attack imbued with elemental properties on target with $s2 power added to attribute damage. Over-hit. -->
 		<icon>icon.skill11023</icon>
 		<attachToggleGroupId>1</attachToggleGroupId>
 		<operateType>A1</operateType>
@@ -1579,6 +1592,7 @@
 		</effects>
 	</skill>
 	<skill id="11024" toLevel="11" name="Volcanic Destruction">
+		<!-- Inflicts M. Atk. of $s1 power added with Fire damage on the target and the enemies in the route and decreases M. Def. by $s3 for $s2. Additionally, inflicts Ignite effect. Over-hit is possible. -->
 		<icon>icon.skill11024</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1685,6 +1699,7 @@
 		</effects>
 	</skill>
 	<skill id="11025" toLevel="11" name="Icicle Destruction">
+		<!-- Deals M. Atk. of $s1 power added with Water damage on the target. Decreases M. Def. by $s3 and Atk.Spd./ Speed by $s4 for $s2. Over-hit is possible. -->
 		<icon>icon.skill11025</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1792,6 +1807,7 @@
 		</effects>
 	</skill>
 	<skill id="11026" toLevel="11" name="Updraft Destruction">
+		<!-- Deals M. Atk. of $s1 power added with Wind damage on the target and the enemies near it. Decreases M. Def. by $s3 for $s2. Over-hit is possible. -->
 		<icon>icon.skill11017</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1892,7 +1908,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11027" toLevel="11" name="Lockshard Destruction">
+	<skill id="11027" toLevel="11" name="Bedrock Destruction">
+		<!-- Inflicts earth damage on the target with $s1 Power added to M. Atk. M. Def. -$s3 and all Attribute Resistances -$s4 for $s2 -->
 		<icon>icon.skill11027</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2015,6 +2032,7 @@
 		</effects>
 	</skill>
 	<skill id="11028" toLevel="11" name="Void Destruction">
+		<!-- Deals M. Atk. of $s1 power added with Dark damage on the target. Additionally, decreases M. Def. by $s3 and increases M. Critical Rate Received by $s4 for $s2. Over-hit is possible. -->
 		<icon>icon.skill19316</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2117,6 +2135,7 @@
 		</effects>
 	</skill>
 	<skill id="11029" toLevel="5" name="Death Breath">
+		<!-- For $s1, decreases target's HP by $s2 per second. -->
 		<icon>icon.skill11029</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -2178,6 +2197,7 @@
 		</effects>
 	</skill>
 	<skill id="11030" toLevel="4" name="Death Lord">
+		<!-- For $s1, drains target's life with $s2 Power per second. Absorbs $s3 of the damage inflicted as HP. -->
 		<icon>icon.skill11030</icon>
 		<channelingTickInterval>1</channelingTickInterval>
 		<channelingStart>1.2</channelingStart>
@@ -2230,6 +2250,7 @@
 		</channelingEffects>
 	</skill>
 	<skill id="11032" toLevel="7" name="Death Howl">
+		<!-- Attacks nearby targets with $s1 Power and pushes them back. Over-hit. -->
 		<icon>icon.skill11032</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -2353,6 +2374,7 @@
 		</effects>
 	</skill>
 	<skill id="11034" toLevel="8" name="Elemental Blast">
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
 		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
@@ -2452,6 +2474,7 @@
 		</effects>
 	</skill>
 	<skill id="11035" toLevel="8" name="Elemental Blast (Fire)">
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
 		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
@@ -2534,6 +2557,7 @@
 		</effects>
 	</skill>
 	<skill id="11036" toLevel="8" name="Elemental Blast (Water)">
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
 		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
@@ -2616,6 +2640,7 @@
 		</effects>
 	</skill>
 	<skill id="11037" toLevel="8" name="Elemental Blast (Wind)">
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
 		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
@@ -2698,6 +2723,7 @@
 		</effects>
 	</skill>
 	<skill id="11038" toLevel="8" name="Elemental Blast (Earth)">
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
 		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
@@ -2780,6 +2806,7 @@
 		</effects>
 	</skill>
 	<skill id="11039" toLevel="8" name="Elemental Blast (4 Elements)">
+		<!-- Inflicts a magic attack imbued with elemental properties on target and surrounding enemies with $s2 Power added to attribute damage. Over-hit. -->
 		<icon>icon.skill11034</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>100</affectRange>
@@ -2861,7 +2888,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11040" toLevel="8" name="Elemental Storm">
+	<skill id="11040" toLevel="8" name="Elemental Final Storm">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -2960,7 +2988,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11041" toLevel="8" name="Elemental Storm (Fire)">
+	<skill id="11041" toLevel="8" name="Elemental Final Storm (Fire)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3042,7 +3071,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11042" toLevel="8" name="Elemental Storm (Water)">
+	<skill id="11042" toLevel="8" name="Elemental Final Storm (Water)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3124,7 +3154,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11043" toLevel="8" name="Elemental Storm (Wind)">
+	<skill id="11043" toLevel="8" name="Elemental Final Storm (Wind)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3207,6 +3238,7 @@
 		</effects>
 	</skill>
 	<skill id="11044" toLevel="8" name="Elemental Final Storm (Earth)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3289,6 +3321,7 @@
 		</effects>
 	</skill>
 	<skill id="11045" toLevel="8" name="Elemental Final Storm (Holy)">
+		<!-- Deals M. Atk. of $s1 power added with attribute damage on the target and the enemies near it. -->
 		<icon>icon.skill11040</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -3370,6 +3403,7 @@
 		</effects>
 	</skill>
 	<skill id="11046" toLevel="3" name="Wizard Spirit">
+		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, P./ M. Def. +$s4, and M. Skill MP Consumption -$s5. -->
 		<icon>icon.skill11046</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3454,6 +3488,7 @@
 		</effects>
 	</skill>
 	<skill id="11047" toLevel="9" name="Ruin">
+		<!-- Attacks the target with $s1 Power added to M. Atk. P./ M. Skill Power -$s3, P./ M. Def. -$s4 and Speed -$s5 for $s2 -->
 		<icon>icon.skill11047</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3572,6 +3607,7 @@
 		</effects>
 	</skill>
 	<skill id="11048" toLevel="9" name="Mass Ruin">
+		<!-- Attacks the target and nearby enemies with $s1 Power added to M. Atk. P./ M. Skill Power -$s3, P./ M. Def. -$s4 and Speed -$s5 for $s2 -->
 		<icon>icon.skill11048</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -3666,6 +3702,7 @@
 		</effects>
 	</skill>
 	<skill id="11049" toLevel="5" name="Ignore Divinity">
+		<!-- Cancels one of target's buffs. -->
 		<icon>icon.skill11049</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -3719,6 +3756,7 @@
 		</effects>
 	</skill>
 	<skill id="11050" toLevel="7" name="Hell Binding">
+		<!-- Immobilizes target midair. -->
 		<icon>icon.skill11050</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -3801,6 +3839,7 @@
 		</effects>
 	</skill>
 	<skill id="11051" toLevel="7" name="Hell Binding">
+		<!-- Immobilizes target midair. -->
 		<icon>icon.skill11050</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -3883,6 +3922,7 @@
 		</effects>
 	</skill>
 	<skill id="11052" toLevel="7" name="Mass Hell Binding">
+		<!-- Thrusts target and nearby enemies into the air and immobilizes them for $s1. -->
 		<icon>icon.skill11052</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="7">100</value>
@@ -3963,6 +4003,7 @@
 		</effects>
 	</skill>
 	<skill id="11053" toLevel="7" name="Mass Hell Binding">
+		<!-- Thrusts target and nearby enemies into the air and immobilizes them for $s1. -->
 		<icon>icon.skill1042</icon>
 		<activateRate>
 			<value fromLevel="1" toLevel="7">100</value>
@@ -4087,6 +4128,7 @@
 		</effects>
 	</skill>
 	<skill id="11055" toLevel="10" name="Death Fear">
+		<!-- For $s1, inflicts Fear on target and decreases Speed by $s2. -->
 		<icon>icon.skill11055</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -4189,6 +4231,7 @@
 		</effects>
 	</skill>
 	<skill id="11056" toLevel="11" name="Mass Death Fear">
+		<!-- For $s1, inflicts Fear on target and nearby enemies and decreases Speed by $s2. -->
 		<icon>icon.skill11056</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -4298,6 +4341,7 @@
 		</effects>
 	</skill>
 	<skill id="11057" toLevel="9" name="Magical Evasion">
+		<!-- Attacks nearby enemies with $s1 Power added to M. Atk., inflicting Stun and canceling their targets. Teleports you to the back. -->
 		<icon>icon.skill11057</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -4400,7 +4444,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="11058" toLevel="6" name="Shadow Snare">
-		<!-- Pulls enemies in a selected area to the center of a Danger Zone for $s1. -->
+		<!-- Creates Danger Zone for $s1 to pull nearby enemies. -->
 		<icon>icon.skill11058</icon>
 		<operateType>A1</operateType>
 		<magicLvl>
@@ -4452,7 +4496,7 @@
 		</effects>
 	</skill>
 	<skill id="11059" toLevel="4" name="Shadow Snare Zone"> <!-- Client Levels only 1 and 4 -->
-		<!-- Pulls the enemies near you to a Danger Zone. -->
+		<!-- Pulls the enemies near you to the center. -->
 		<icon>icon.skill1469</icon>
 		<abnormalTime>1</abnormalTime>
 		<abnormalLvl>5</abnormalLvl>
@@ -4487,6 +4531,7 @@
 		</effects>
 	</skill>
 	<skill id="11062" toLevel="4" name="Air Rider">
+		<!-- For $s1, increases Speed by $s2. The effect disappears when attacked. -->
 		<icon>icon.skill11062</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -4570,6 +4615,7 @@
 		</effects>
 	</skill>
 	<skill id="11064" toLevel="11" name="Ultimate Body To Mind">
+		<!-- Sacrifices $s1 HP to recover $s2 MP. -->
 		<icon>icon.skill11064</icon>
 		<operateType>A1</operateType>
 		<hpConsume>
@@ -4639,6 +4685,7 @@
 		</effects>
 	</skill>
 	<skill id="11065" toLevel="1" name="Arcane Barrier">
+		<!-- For $s1, materializes a Mana Armor that reflects $s2 of the damage received, reduces damage received by $s3, and blocks the rest by consuming MP. The skill effect is removed when MP reaches $s4. -->
 		<icon>icon.skill11065</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -4682,6 +4729,7 @@
 		</effects>
 	</skill>
 	<skill id="11066" toLevel="4" name="Arcane Comet Strike">
+		<!-- Inflicts M. Atk. of $s1 power on the target and the enemies in the route. Additionally, decreases Speed by $s3 for $s2 Decreases 15 sec. from the remaining cooldown if Mana Burst level increases. Over-hit is possible. -->
 		<icon>icon.skill11066</icon>
 		<abnormalLvl>7</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -4756,6 +4804,7 @@
 		</effects>
 	</skill>
 	<skill id="11067" toLevel="4" name="Quadruple Elemental Blast">
+		<!-- Attacks the target and nearby enemies with M. Atk. of $s1. And for $s2, deals damage over time with $s3 Power added to M. Atk. and inflicts Knock Down on the enemies. Over-hit is possible. Available at Mana Burst Stage 4. -->
 		<icon>icon.skill11067</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -4851,6 +4900,7 @@
 		</effects>
 	</skill>
 	<skill id="11068" toLevel="4" name="Burst Casting">
+		<!-- For $s1, decreases magic skill MP Consumption by $s2 and magic skill Cooldown by $s3. Eliminates magic cancel during magic use. M. Atk. and Casting Spd. increase with the level of Mana Burst. -->
 		<icon>icon.skill11068</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -4920,7 +4970,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11072" toLevel="1" name="Elemental Spike / Elemental Crash - Additional Effect">
+	<skill id="11072" toLevel="1" name="Elemental Spike/ Elemental Crash - Additional Effect">
 		<!-- Using Elemental Spike decreases the target's corresponding Attribute Resistance. Using Elemental Crash activates additional effects. -->
 		<icon>icon.skill11011</icon>
 		<operateType>P</operateType>
@@ -5543,6 +5593,7 @@
 		</effects>
 	</skill>
 	<skill id="11093" toLevel="1" name="Crystal Form">
+		<!-- Cancels Poison/ Bleed/ Hold/ Stun effect. Becomes invincible for $s1 and rapidly recovers HP and MP. -->
 		<icon>icon.skill11093</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -5585,6 +5636,7 @@
 		</effects>
 	</skill>
 	<skill id="11094" toLevel="9" name="Magical Charge">
+		<!-- Attacks nearby enemies with $s1 Power added to M. Atk., inflicting Stun and canceling their targets. Teleports you to the front. -->
 		<icon>icon.skill11094</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
@@ -5707,7 +5759,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11096" toLevel="1" name="Elemental Destruction: Fire">
+	<skill id="11096" toLevel="1" name="Elemental Destruction - Additional Effect">
 		<!-- Additional Destruction Effect -->
 		<icon>icon.skill11017</icon>
 		<operateType>P</operateType>

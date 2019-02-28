@@ -33,7 +33,7 @@
 		</stats>
 	</item>
 	<item id="46404" name="Emergency Whistle - Aden Vanguard" type="EtcItem">
-		<!-- The party leader can use it during the battle against Burnstein inside the Command Post on the 3rd floor to randomly summon one of the 5 Aden Vanguard members as reinforcement. Does not work on the 1st and 2nd floors. 30-min. Can only be used inside the Command Post. -->
+		<!-- The party leader can use it during the battle against Burnstein inside the Command Post on the 3rd floor to randomly summon one of the 5 Aden Vanguard members as reinforcement. Does not work on the 1st and 2nd floors. 30-min.. Can only be used inside the Command Post. -->
 		<set name="icon" val="icon.etc_dragon_flute_i00" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -45,7 +45,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46405" name="Mr. K's Gift Basket" type="EtcItem">
-		<!-- Mr. K's gift basket. Obtain 50 My Teleport Scrolls, 1 My Teleport Book, 10 Feathers of Blessing, 5 Emperor's Vitality Tonics, 5 Emperor's Rune 2-hr. Boxes, 25 Vitality Replenishing Potions. Also, randomly get one of the following: Chic Silver Chapeau/ White Uniform Hat/ Ribbon Hairband. -->
+		<!-- Mr. K's gift basket. Obtain 50 My Teleport Scrolls, 1 My Teleport Book, 10 Feathers of Blessing, 5 Emperor's Vitality Tonics, 5 Emperor's Rune 2-hour Boxes, 25 Vitality Replenishing Potions. Also, randomly get one of the following: Chic Silver Chapeau/ White Uniform Hat/ Ribbon Hairband. -->
 		<set name="icon" val="icon.mrk_basket_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -171,7 +171,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46414" name="Sheep Hat - Physical" additionalName="7-day" type="Armor">
-		<!-- STR +3, P. Atk. +3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
+		<!-- STR +3, P. Atk. +3% when equipped. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -185,7 +185,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="46415" name="Sheep Hat - Magic" additionalName="7-day" type="Armor">
-		<!-- INT +3, M. Atk. +5% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
+		<!-- INT +3, M. Atk. +5% when equipped. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -199,7 +199,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="46416" name="Sheep Hat - Defense" additionalName="7-day" type="Armor">
-		<!-- CON +3, P./ M. Def +3% when equipped. Uses 2 hair accessory slots. Deleted after event. -->
+		<!-- CON +3, P./ M. Def. +3% when equipped. Uses 2 hair accessory slots. -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -225,7 +225,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46418" name="Perfect Charm" additionalName="14-day" type="EtcItem">
-		<!-- If stored in the inventory, will receive STR, INT, CON, DEX, WIT, MEN, LUC, CHA +1. Will be deleted after the event. -->
+		<!-- If stored in the inventory, will receive STR, INT, CON, DEX, WIT, MEN, LUC, CHA +1. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -247,7 +247,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="46420" name="Sheep Bait" type="EtcItem">
-		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters below level 85. Will be deleted after the event. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters below level 85. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -262,7 +262,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46421" name="R Sheep Bait" type="EtcItem">
-		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters level 85-94. Will be deleted after the event. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters level 85-94. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -277,7 +277,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46422" name="R95 Sheep Bait" type="EtcItem">
-		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters from level 95-98. Will be deleted after the event. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters from level 95-98. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -292,7 +292,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46423" name="R99 Sheep Bait" type="EtcItem">
-		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters level 99 or higher. Will be deleted after the event. -->
+		<!-- Fishing bait. Fishing with this bait catches the same item as fishing with normal bait but rewards greater XP. Available for characters level 99 or higher. -->
 		<set name="icon" val="icon.etc_night_normal_lure" />
 		<set name="bodypart" val="lhand" />
 		<set name="is_clan_depositable" val="false" />
@@ -307,7 +307,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46424" name="Sheep Hat" additionalName="14-day" type="Armor">
-		<!-- A sheep-shaped hat. Occupies 2 Hair Accessory slots. <Active Skill>. 1. Blessed Resurrection (Cooldown: 60 min). 2. Baa~: Use the skill to obtain 2 Sheep Bait Coupons (can be used only once a day). Will be deleted after the event. -->
+		<!-- A sheep-shaped hat. Occupies 2 Hair Accessory slots. <Active Skill>. 1. Blessed Resurrection (Cooldown: 60 min). 2. Baa~: Use the skill to obtain 2 Sheep Bait Coupons (can be used only once a day). -->
 		<set name="icon" val="icon.accessory_sheep_cap_white_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
@@ -321,7 +321,7 @@
 		<set name="time" val="20160" />
 	</item>
 	<item id="46425" name="Sheep Bait Coupon" type="EtcItem">
-		<!-- Can be exchanged for 30 Sheep Bait of your level through the Fishing Guild Member in each town. Will be deleted after the event. -->
+		<!-- Can be exchanged for 30 Sheep Bait of your level through the Fishing Guild Member in each town. -->
 		<set name="icon" val="branchsys2.action5016" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -590,13 +590,13 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46448" name="Kain's Soul Crystal - Stage 5" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46449" name="Kain's Soul Crystal - Stage 6" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
@@ -680,13 +680,13 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46463" name="Mermoden's Soul Crystal - Stage 5" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46464" name="Mermoden's Soul Crystal - Stage 6" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_m" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
@@ -770,13 +770,13 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46478" name="Leona's Soul Crystal - Stage 5" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46479" name="Leona's Soul Crystal - Stage 6" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_pp" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
@@ -860,13 +860,13 @@
 		<set name="weight" val="20" />
 	</item>
 	<item id="46493" name="Pantheon's Soul Crystal - Stage 5" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />
 	</item>
 	<item id="46494" name="Pantheon's Soul Crystal - Stage 6" type="EtcItem">
-		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. -->
+		<!-- Crystal containing the soul of a monster. Can bestow special abilities to weapons. Can be compounded to upgrade and if it succeeds, the power of the soul sealed within the Soul Crystal will be enhanced. -->
 		<set name="icon" val="icon.ensoul_big_mm" />
 		<set name="etcitem_type" val="ENSOUL_STONE" />
 		<set name="weight" val="20" />

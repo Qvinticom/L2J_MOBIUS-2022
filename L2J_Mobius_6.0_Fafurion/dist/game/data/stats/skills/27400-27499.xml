@@ -341,7 +341,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27435" toLevel="1" name="Shadow Dualsword Box">
+	<skill id="27435" toLevel="1" name="Shadow Dual Sword Box">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>26446</itemConsumeId>
@@ -377,7 +377,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27439" toLevel="3" name="Vital Stone - Vital Wind">
-		<!-- For 15 sec., increases Vitality consumption by 20% and Acquired XP/ SP by 20%. -->
+		<!-- For $s1, Vitality Consumption +$s2 and Acquired XP/ SP +$s3 when hunting. -->
 		<icon>icon.etc_bm_jewel_vital</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1200000</reuseDelay>
@@ -416,7 +416,7 @@
 		</effects>
 	</skill>
 	<skill id="27440" toLevel="6" name="Cat's Eye">
-		<!-- Damage Reflection Resistance +10%. -->
+		<!-- Damage Reflection Resistance +$s1. -->
 		<icon>BranchIcon.Icon.etc_bm_jewel_catseye_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -443,7 +443,7 @@
 		</effects>
 	</skill>
 	<skill id="27441" toLevel="1" name="Cat's Eye - Invincibility">
-		<!-- Becomes invincible for 10 sec. Does not cancel upon attack. -->
+		<!-- Becomes invincible for $s1 Does not cancel upon attack. Cooldown is $s2. -->
 		<icon>BranchIcon.Icon.etc_bm_jewel_catseye_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -471,7 +471,7 @@
 		</effects>
 	</skill>
 	<skill id="27442" toLevel="6" name="Amethyst">
-		<!-- PvP Damage +3%. -->
+		<!-- PvP Damage +$s1. -->
 		<icon>BranchIcon.Icon.etc_bm_jewel_amethyst_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -514,8 +514,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="27443" toLevel="1" name="Amethyst - Remove Invincibility">
-		<!-- Removes the target's invincibility and debuff invincibility effects. -->
+	<skill id="27443" toLevel="1" name="Amethyst - Remove Invincibility/Immunity">
+		<!-- Removes invincibility or debuff immunity from the target. -->
 		<icon>BranchIcon.Icon.etc_bm_jewel_amethyst_i00</icon>
 		<operateType>A1</operateType>
 		<castRange>900</castRange>
@@ -542,7 +542,7 @@
 		</effects>
 	</skill>
 	<skill id="27444" toLevel="1" name="Summon Scroll: Pomona">
-		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
+		<!-- For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
 		<icon>icon.etc_star_scroll_baekisung</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>

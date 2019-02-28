@@ -6,7 +6,7 @@
 	<skill id="17601" toLevel="1" name="Turtle Appearance Stone: Shield">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17602" toLevel="1" name="Blue Mackerel Appearance Stone: Dualsword">
+	<skill id="17602" toLevel="1" name="Blue Mackerel Appearance Stone: Dual Sword">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17603" toLevel="1" name="Blue Mackerel Appearance Stone: Dual Blunt Weapon">
@@ -18,15 +18,15 @@
 	<skill id="17605" toLevel="1" name="Blue Mackerel Appearance Stone: One-handed Blunt Weapon">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17606" toLevel="1" name="Entrance Pass: Fantasy Fishing Dock (1-hour)">
-		<!-- Use the Fantasy Fishing Dock, and teleport to Fantasy Isle when the buff runs out. Buff lasts 1hr., and remains after death. While the buff is active, you can reenter without using another pass. -->
+	<skill id="17606" toLevel="1" name="Entrance Pass: Fantasy Fishing Dock (1-h.)">
+		<!-- Use the Fantasy Fishing Dock, and teleport to Fantasy Isle when the buff runs out. Buff lasts 1h., and remains after death. While the buff is active, you can reenter without using another pass. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17607" toLevel="1" name="Entrance Pass: Fantasy Fishing Dock (2-hour)">
-		<!-- Use the Fantasy Fishing Dock, and teleport to Fantasy Isle when the buff runs out. Buff lasts 2hr., and remains after death. While the buff is active, you can reenter without using another pass. -->
+	<skill id="17607" toLevel="1" name="Entrance Pass: Fantasy Fishing Dock (2-h.)">
+		<!-- Use the Fantasy Fishing Dock, and teleport to Fantasy Isle when the buff runs out. Buff lasts 2h., and remains after death. While the buff is active, you can reenter without using another pass. -->
 		<icon>icon.fishing_zone_ticket</icon>
 		<operateType>A2</operateType>
 		<castRange>900</castRange>
@@ -763,11 +763,11 @@
 	<skill id="17684" toLevel="1" name="Steel Armor Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17685" toLevel="1" name="Lara's Gift">
+	<skill id="17685" toLevel="1" name="Team Leader Lara's Luxury Gift">
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="17686" toLevel="4" name="Lara's Random Buff">
+	<skill id="17686" toLevel="4" name="Uldie�s Creepy Blessing">
 		<!-- Special buff from Uldie. Acquired XP/ SP +$s1, P. Def. +$s2, and M. Def. +$s3. Receives a special gift box when the buff expires, but not in death. -->
 		<icon>BranchSys.icon.br_sevenlove_girlpresent_i00</icon>
 		<operateType>A2</operateType>
@@ -780,11 +780,11 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17687" toLevel="1" name="Lara's Gift">
+	<skill id="17687" toLevel="1" name="Team Leader Lara's Gift">
 		<operateType>A1</operateType>
 		<effectPoint>1</effectPoint>
 	</skill>
-	<skill id="17688" toLevel="4" name="Lara's Random Buff">
+	<skill id="17688" toLevel="4" name="Team Leader Lara's Energy">
 		<!-- Overflowing energy buff from Team Leader Lara. When hunting monsters, increases Acquired XP/ SP by $s1, P. Def. by $s2, and M. Def. by $s3. Receives a special gift box when the buff expires, but not in death. -->
 		<icon>BranchSys.icon.br_sevenlove_girlpresent_i00</icon>
 		<operateType>A2</operateType>
@@ -797,10 +797,10 @@
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="17689" toLevel="1" name="Lara's Secret Gift">
+	<skill id="17689" toLevel="1" name="Team Leader Lara's Luxury Gift">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17690" toLevel="1" name="Lara's Gift">
+	<skill id="17690" toLevel="1" name="Team Leader Lara's Gift">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17691" toLevel="1" name="Blessed High-grade Lucky Enchant Stone: Weapon (R-grade)">

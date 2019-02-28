@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="9000" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (D-grade)">
+	<skill id="9000" toLevel="1" name="PA - Scroll: Enchant Weapon (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -9,7 +9,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9001" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (C-grade)">
+	<skill id="9001" toLevel="1" name="PA - Scroll: Enchant Weapon (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -18,7 +18,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9002" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (B-grade)">
+	<skill id="9002" toLevel="1" name="PA - Scroll: Enchant Weapon (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -27,7 +27,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9003" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (A-grade)">
+	<skill id="9003" toLevel="1" name="PA - Scroll: Enchant Weapon (A-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -36,7 +36,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9004" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (S-grade)">
+	<skill id="9004" toLevel="1" name="PA - Scroll: Enchant Weapon (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -45,7 +45,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9005" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (D-grade)">
+	<skill id="9005" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (D-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -54,7 +54,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9006" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (C-grade)">
+	<skill id="9006" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (C-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -63,7 +63,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9007" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (B-grade)">
+	<skill id="9007" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (B-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -72,7 +72,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9008" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (A-grade)">
+	<skill id="9008" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (A-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -81,7 +81,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9009" toLevel="1" name="Player Commendation - Blessed Scroll: Enchant Weapon (S-grade)">
+	<skill id="9009" toLevel="1" name="PA - Blessed Scroll: Enchant Weapon (S-grade)">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
@@ -495,7 +495,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9027" toLevel="1" name="Player Commendation Instant Lottery Ticket">
+	<skill id="9027" toLevel="1" name="PA Instant Lottery Ticket">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15358</itemConsumeId> <!-- Player Commendation Instant Lottery Ticket -->
@@ -576,7 +576,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9030" toLevel="1" name="Watermelon Seed">
+	<skill id="9030" toLevel="1" name="Honey Watermelon Seed">
 		<hitTime>1500</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -815,7 +815,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9040" toLevel="1" name="PC Points">
+	<skill id="9040" toLevel="1" name="PA Points">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>15426</itemConsumeId> <!-- Hero's Summon Point -->
@@ -830,7 +830,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9041" toLevel="1" name="6th Anniversary Cake">
-		<!-- 6th Anniversary celebratory cake. Vitality is recovered for 1 hr. when acquiring XP. -->
+		<!-- 6th Anniversary celebratory cake. Vitality is recovered for 1 h. when acquiring XP. -->
 		<icon>icon.event_six_party_cake_i00</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -4322,10 +4322,10 @@
 						<item id="15439" count="1" /> <!-- Scroll: 1,000 SP -->
 					</item>
 					<item chance="15">
-						<item id="14065" count="1" /> <!-- Superior Minion Coupon - 5-hr. -->
+						<item id="14065" count="1" /> <!-- Superior Minion Coupon - 5-hour -->
 					</item>
 					<item chance="15">
-						<item id="13273" count="1" /> <!-- Minion Coupon (5-hr.) -->
+						<item id="13273" count="1" /> <!-- Minion Coupon (5-hour) -->
 					</item>
 					<item chance="15">
 						<item id="13016" count="10" /> <!-- My Teleport Scroll -->
@@ -4477,7 +4477,7 @@
 		</effects>
 	</skill>
 	<skill id="9079" toLevel="1" name="Scroll: Santa's Buff">
-		<!-- For 1 hr., receives help from a great spirit to increase Max MP by 20%, MP Recovery Bonus by 20%, HP Recovery Bonus by 20%, the chance of prominent magic damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
+		<!-- For 1 h., receives help from a great spirit to increase Max MP by 20%, MP Recovery Bonus by 20%, HP Recovery Bonus by 20%, the chance of prominent magic damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption for skill use by 5%. -->
 		<icon>icon.mysterious_wedding_i00</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -5023,7 +5023,7 @@
 						<item id="5560" count="1" /> <!-- Holiday Tree -->
 					</item>
 					<item chance="0.2401959">
-						<item id="5562" count="1" /> <!-- Echo Crystal - 1st Carol -->
+						<item id="5562" count="1" /> <!-- Echo Crystal -1st Carol -->
 					</item>
 					<item chance="0.2401959">
 						<item id="5563" count="1" /> <!-- Echo Crystal - 2nd Carol -->

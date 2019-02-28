@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8200" toLevel="1" name="Draconic Leather Armor Set - PvP">
-		<!-- Increases Max MP/ Atk. Spd./ P. Atk./ weight limit. Decreases damage received during PvP and has a chance to cancel the opponent's target when attacked. DEX+ 1, STR+ 1, CON-2 -->
+		<!-- Increases Max MP/ Atk. Spd./ P. Atk./ weight limit. Decreases damage received during PvP and has a chance to cancel the opponent's target when attacked. DEX+1, STR+1, CON-2 -->
 		<icon>icon.armor_t89_ul_i00</icon>
 		<magicLvl>75</magicLvl>
 		<operateType>P</operateType>
@@ -147,7 +147,7 @@
 		</effects>
 	</skill>
 	<skill id="8203" toLevel="1" name="Dynasty Breastplate - PvP">
-		<!-- Increases Defense/ Max HP/ Magical Effect of HP Recovery Received/ Stun Resistance. Decreases damage received during PvP and slows down all speed ranges of the attacker at a certain probability. -->
+		<!-- Increases Defense/ Maximum HP/ Magical Effect of HP Recovery Received/ Stun Resistance. Decreases damage received during PvP and slows down all speed ranges of the attacker at a certain probability. -->
 		<icon>icon.armor_t91_uk_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -978,7 +978,7 @@
 		</effects>
 	</skill>
 	<skill id="8219" toLevel="1" name="Dynasty Platinum Plate - PvP">
-		<!-- Increases Defense/ Max HP/ Magical Effect of HP Recovery Received/ Stun Resistance. Decreases damage received during PvP and slows down all speed ranges of the attacker at a certain probability. -->
+		<!-- Increases Defense/ Maximum HP/ Magical Effect of HP Recovery Received/ Stun Resistance. Decreases damage received during PvP and slows down all speed ranges of the attacker at a certain probability. -->
 		<icon>icon.armor_t91_uk_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -1860,7 +1860,7 @@
 		</effects>
 	</skill>
 	<skill id="8240" toLevel="3" name="Obliteration Storm">
-		<!-- Delivers a powerful range attack, shocking the target. Consumes all accumulated critical hits. Requires a Stage 3 Critical. -->
+		<!-- Delivers a powerful range attack, shocking the target. Consumes all accumulated critical hits. Requires a Stage 3 critical hit. -->
 		<icon>icon.weapon_long_spear_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -2014,7 +2014,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8245" toLevel="1" name="Release Agathion's Seal - Love">
+	<skill id="8245" toLevel="1" name="Agathion Summon - Love">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2210,7 +2210,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="8254" toLevel="1" name="Release Agathion's Seal - Monkey">
+	<skill id="8254" toLevel="1" name="Agathion Summon - Monkey">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2227,7 +2227,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8255" toLevel="1" name="Release Agathion's Seal - Griffin">
+	<skill id="8255" toLevel="1" name="Summon Agathion - Griffin">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2244,7 +2244,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8256" toLevel="1" name="Release Agathion's Seal - Joy">
+	<skill id="8256" toLevel="1" name="Agathion Summon - Joy">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2261,7 +2261,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8257" toLevel="1" name="Release Agathion's Seal - Angry Devil">
+	<skill id="8257" toLevel="1" name="Agathion Summon - Angry Devil">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2278,7 +2278,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8258" toLevel="1" name="Release Agathion's Seal - Sorrow">
+	<skill id="8258" toLevel="1" name="Agathion Summon - Sorrow">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2295,7 +2295,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8259" toLevel="1" name="Release Agathion's Seal - Teddy Boy">
+	<skill id="8259" toLevel="1" name="Agathion Summon - Teddy Boy">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2312,7 +2312,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="8260" toLevel="1" name="Release Agathion's Seal - Teddy Girl">
+	<skill id="8260" toLevel="1" name="Agathion Summon - Teddy Girl">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2525,7 +2525,7 @@
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
-	<skill id="8275" toLevel="1" name="Release Agathion's Seal - Knight">
+	<skill id="8275" toLevel="1" name="Agathion Summon - Knight">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -2681,7 +2681,7 @@
 		<magicCriticalRate>5</magicCriticalRate>
 	</skill>
 	<skill id="8283" toLevel="1" name="Vesper Heavy Armor Set">
-		<!-- When equipped, increases P. Atk./ P. Def. by 5.57%, Max HP by 531, and Sleep/ Hold Resistance by 70%. STR+ 2, DEX-2 -->
+		<!-- When equipped, increases P. Atk./ P. Def. by 5.57%, Max HP by 531, and Sleep/ Hold Resistance by 70%. STR+2, DEX-2 -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2709,7 +2709,7 @@
 		</effects>
 	</skill>
 	<skill id="8284" toLevel="1" name="Vesper Noble Heavy Armor Set">
-		<!-- When equipped, increases P. Atk./ P. Def. by 5.57%, Max HP by 540, Sleep/ Hold Resistance by 70%, Accuracy by 4, Speed by 5, and Magic Damage Resistance by 1%. Cloak equip possible. STR+ 2, DEX-2 -->
+		<!-- When equipped, increases P. Atk./ P. Def. by 5.57%, Max HP by 540, Sleep/ Hold Resistance by 70%, Accuracy by 4, Speed by 5, and Magic Damage Resistance by 1%. Cloak equip possible. STR+2, DEX-2 -->
 		<icon>icon.armor_t94_u_i01</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2753,7 +2753,7 @@
 		</effects>
 	</skill>
 	<skill id="8285" toLevel="1" name="Vesper Light Armor Set">
-		<!-- When equipped, increases P. Atk. by 5.57%, Atk. Spd./ MP Recovery by 5% and Max MP by 347. STR+ 1, CON-2, DEX+ 1 -->
+		<!-- When equipped, increases P. Atk. by 5.57%, Atk. Spd./ MP Recovery by 5% and Max MP by 347. STR+1, CON-2, DEX+1 -->
 		<icon>icon.armor_t95_u_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2778,7 +2778,7 @@
 		</effects>
 	</skill>
 	<skill id="8286" toLevel="1" name="Vesper Noble Light Armor Set">
-		<!-- When equipped, increases P. Atk. by 5.57%, Atk. Spd./ MP Recovery by 5%, Max MP by 354, Evasion by 3, Critical Damage by 172, and Paralysis Resistance by 50%. Can equip a cloak. STR+ 1, CON-2, DEX+ 1 -->
+		<!-- When equipped, increases P. Atk. by 5.57%, Atk. Spd./ MP Recovery by 5%, Max MP by 354, Evasion by 3, Critical Damage by 172, and Paralysis Resistance by 50%. Can equip a cloak. STR+1, CON-2, DEX+1 -->
 		<icon>icon.armor_t95_u_i01</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2853,7 +2853,7 @@
 		</effects>
 	</skill>
 	<skill id="8288" toLevel="1" name="Vesper Noble Robe Set">
-		<!-- When equipped, increases M. Atk. by 8.47%, Casting Spd. by 15%, MP Recovery by 5%, Stun Resistance by 50%, and Speed by 7. Decreases magic cancel rate by 30 and MP Consumption for magic skills by 3%. Can equip a cloak. INT+ 1, MEN-2, WIT+ 1 -->
+		<!-- When equipped, increases M. Atk. by 8.47%, Casting Spd. by 15%, MP Recovery by 5%, Stun Resistance by 50%, and Speed by 7. Decreases magic cancelling damage by 30 and MP Consumption for magic skills by 3%. Can equip a cloak. INT+1, MEN-2, WIT+1 -->
 		<icon>icon.armor_t96_u_i01</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

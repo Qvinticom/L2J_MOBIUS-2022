@@ -155,13 +155,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20">
-						<item id="20083" count="1" /> <!-- Afro Hair - Vitality (3-hr.) -->
+						<item id="20083" count="1" /> <!-- Afro Hair - Vitality (3-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20086" count="1" /> <!-- Horn-rimmed Glasses - Vitality (3-hr.) -->
+						<item id="20086" count="1" /> <!-- Horn-rimmed Glasses - Vitality (3-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20089" count="1" /> <!-- Assassin's Bamboo Hat - Vitality (3-hr.) -->
+						<item id="20089" count="1" /> <!-- Assassin's Bamboo Hat - Vitality (3-hour) -->
 					</item>
 					<item chance="10">
 						<item id="20084" count="1" /> <!-- Afro Hair - Vitality (3-day) -->
@@ -205,13 +205,13 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20">
-						<item id="20083" count="1" /> <!-- Afro Hair - Vitality (3-hr.) -->
+						<item id="20083" count="1" /> <!-- Afro Hair - Vitality (3-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20086" count="1" /> <!-- Horn-rimmed Glasses - Vitality (3-hr.) -->
+						<item id="20086" count="1" /> <!-- Horn-rimmed Glasses - Vitality (3-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20089" count="1" /> <!-- Assassin's Bamboo Hat - Vitality (3-hr.) -->
+						<item id="20089" count="1" /> <!-- Assassin's Bamboo Hat - Vitality (3-hour) -->
 					</item>
 					<item chance="10">
 						<item id="20084" count="1" /> <!-- Afro Hair - Vitality (3-day) -->
@@ -285,7 +285,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20">
-						<item id="20098" count="1" /> <!-- Formal Wear (Event) - Shadow (1-hr.) -->
+						<item id="20098" count="1" /> <!-- Formal Wear (Event) - Shadow (1-hour) -->
 					</item>
 					<item chance="80">
 						<item id="20099" count="1" /> <!-- Formal Wear (Event) - 7-day -->
@@ -314,10 +314,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="20103" count="1" /> <!-- Holiday Scroll: Heavy Armor Warrior - 8-hr. -->
-						<item id="20104" count="1" /> <!-- Holiday Scroll: Light Armor Warrior - 8-hr. -->
-						<item id="20105" count="1" /> <!-- Holiday Scroll: Healer - 8-hr. -->
-						<item id="20106" count="1" /> <!-- Holiday Scroll: Mage - 8-hr. -->
+						<item id="20103" count="1" /> <!-- Holiday Scroll: Heavy Armor Warrior - 8-hour -->
+						<item id="20104" count="1" /> <!-- Holiday Scroll: Light Armor Warrior - 8-hour -->
+						<item id="20105" count="1" /> <!-- Holiday Scroll: Healer - 8-hour -->
+						<item id="20106" count="1" /> <!-- Holiday Scroll: Mage - 8-hour -->
 					</item>
 				</items>
 			</effect>
@@ -628,10 +628,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="99.99948">
-						<item id="20107" count="1" /> <!-- Santa's Weapon Coupon - 12-hr. -->
+						<item id="20107" count="1" /> <!-- Santa's Weapon Coupon - 12-hour -->
 					</item>
 					<item chance="0.00051">
-						<item id="20108" count="1" /> <!-- Santa's Weapon Coupon - 12-hr. -->
+						<item id="20108" count="1" /> <!-- Santa's Weapon Coupon - 12-hour -->
 					</item>
 				</items>
 			</effect>
@@ -657,7 +657,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="100">
-						<item id="20108" count="1" /> <!-- Santa's Weapon Coupon - 12-hr. -->
+						<item id="20108" count="1" /> <!-- Santa's Weapon Coupon - 12-hour -->
 					</item>
 				</items>
 			</effect>
@@ -906,7 +906,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="0.00661">
-						<item id="6659" count="1" /> <!-- Zaken's Earring -->
+						<item id="6659" count="1" /> <!-- Zaken's Earring - ] -->
 					</item>
 					<item chance="0.1">
 						<item id="6660" count="1" /> <!-- Queen Ant's Ring -->
@@ -1760,7 +1760,7 @@
 		</effects>
 	</skill>
 	<skill id="22056" toLevel="1" name="Wind Walk">
-		<!-- Increases Speed by 33 for 1 hr. -->
+		<!-- Increases Speed by 33 for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1783,7 +1783,7 @@
 		</effects>
 	</skill>
 	<skill id="22057" toLevel="1" name="Haste">
-		<!-- Increases Atk. Spd. by 33% for 1 hr. -->
+		<!-- Increases Atk. Spd. by 33% for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1806,7 +1806,7 @@
 		</effects>
 	</skill>
 	<skill id="22058" toLevel="1" name="Might">
-		<!-- Increases P. Atk. by 15% for 1 hr. -->
+		<!-- Increases P. Atk. by 15% for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1829,7 +1829,7 @@
 		</effects>
 	</skill>
 	<skill id="22059" toLevel="1" name="Shield">
-		<!-- Increases P. Def. by 15% for 1 hr. -->
+		<!-- Increases P. Def. by 15% for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1852,7 +1852,7 @@
 		</effects>
 	</skill>
 	<skill id="22060" toLevel="1" name="Death Whisper">
-		<!-- Increases Critical Damage by 35% for 1 hr. -->
+		<!-- Increases Critical Damage by 35% for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1875,7 +1875,7 @@
 		</effects>
 	</skill>
 	<skill id="22061" toLevel="1" name="Guidance">
-		<!-- Increases Accuracy by 4 for 1 hr. -->
+		<!-- Increases Accuracy by 4 for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1898,7 +1898,7 @@
 		</effects>
 	</skill>
 	<skill id="22062" toLevel="1" name="Empower">
-		<!-- Increases M. Atk. by 75% for 1 hr. -->
+		<!-- Increases M. Atk. by 75% for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1921,7 +1921,7 @@
 		</effects>
 	</skill>
 	<skill id="22063" toLevel="1" name="Greater Acumen">
-		<!-- Increases Casting Spd. by 30% for 1 hr. -->
+		<!-- Increases Casting Spd. by 30% for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1944,7 +1944,7 @@
 		</effects>
 	</skill>
 	<skill id="22064" toLevel="1" name="Vampiric Rage">
-		<!-- For 1 hr., 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
+		<!-- For 1 h., 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1967,7 +1967,7 @@
 		</effects>
 	</skill>
 	<skill id="22065" toLevel="1" name="Blessed Body">
-		<!-- Increases Max HP by 35% for 1 hr. -->
+		<!-- Increases Max HP by 35% for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1990,7 +1990,7 @@
 		</effects>
 	</skill>
 	<skill id="22066" toLevel="1" name="Berserker Spirit">
-		<!-- Decreases party members' P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hr. -->
+		<!-- Decreases party members' P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2041,7 +2041,7 @@
 		</effects>
 	</skill>
 	<skill id="22067" toLevel="1" name="Magic Barrier">
-		<!-- Increases M. Def. by 30% for 1 hr. -->
+		<!-- Increases M. Def. by 30% for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2064,7 +2064,7 @@
 		</effects>
 	</skill>
 	<skill id="22068" toLevel="1" name="Blessed Soul">
-		<!-- Increases Max MP by 35% for 1 hr. -->
+		<!-- Increases Max MP by 35% for 1 h. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2087,7 +2087,7 @@
 		</effects>
 	</skill>
 	<skill id="22069" toLevel="1" name="Clarity">
-		<!-- For 1 hr., decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and song/ dance skill MP Consumption by 20%. -->
+		<!-- For 1 h., decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and song/ dance skill MP Consumption by 20%. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2121,7 +2121,7 @@
 		</effects>
 	</skill>
 	<skill id="22070" toLevel="1" name="Wild Magic">
-		<!-- For 1 hr., increases by 2 the occurrence rate of damage that is caused by magic damage. -->
+		<!-- For 1 h., increases by 2 the occurrence rate of damage that is caused by magic damage. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2340,7 +2340,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22079" toLevel="1" name="Water Resistance">
-		<!-- Increases Water Resistance by 20% for 1 hr. -->
+		<!-- Increases Water Resistance by 20% for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2360,7 +2360,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22080" toLevel="1" name="Wind Resistance">
-		<!-- Increases Wind Resistance by 20% for 1 hr. -->
+		<!-- Increases Wind Resistance by 20% for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2380,7 +2380,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22081" toLevel="1" name="Fire Resistance">
-		<!-- Increases Fire Resistance by 20% for 1 hr. -->
+		<!-- Increases Fire Resistance by 20% for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2400,7 +2400,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22082" toLevel="1" name="Holy Attack Resistance">
-		<!-- Increases Holy Attack Resistance by 23% for 1 hr. -->
+		<!-- Increases Holy Attack Resistance by 23% for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2420,7 +2420,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22083" toLevel="1" name="Dark Attack Resistance">
-		<!-- Increases Dark Attack Resistance by 23% for 1 hr. -->
+		<!-- Increases Dark Attack Resistance by 23% for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2440,7 +2440,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22084" toLevel="1" name="Mental Shield">
-		<!-- Increases Hold/ Sleep/ Mental Attack Resistance by 40 for 1 hr. -->
+		<!-- Increases Hold/ Sleep/ Mental Attack Resistance by 40 for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2467,7 +2467,7 @@
 		</effects>
 	</skill>
 	<skill id="22085" toLevel="1" name="Focus">
-		<!-- Increases Critical Rate by 30 for 1 hr. -->
+		<!-- Increases Critical Rate by 30 for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2493,7 +2493,7 @@
 		</effects>
 	</skill>
 	<skill id="22086" toLevel="1" name="Concentration">
-		<!-- Decreases magic cancel rate by 36 for 1 hr. -->
+		<!-- Decreases magic cancel damage by 36 for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2519,7 +2519,7 @@
 		</effects>
 	</skill>
 	<skill id="22087" toLevel="1" name="Blessed Shield">
-		<!-- Increases Shield Defense Rate by 15 for 1 hr. -->
+		<!-- Increases Shield Defense Rate by 15 for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2545,7 +2545,7 @@
 		</effects>
 	</skill>
 	<skill id="22088" toLevel="1" name="Agility">
-		<!-- Increases Evasion rate by 4 for 1 hr. -->
+		<!-- Increases Evasion rate by 4 for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2571,7 +2571,7 @@
 		</effects>
 	</skill>
 	<skill id="22089" toLevel="1" name="Regeneration">
-		<!-- Increases HP Regeneration by 20% for 1 hr. -->
+		<!-- Increases HP Regeneration by 20% for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2597,7 +2597,7 @@
 		</effects>
 	</skill>
 	<skill id="22090" toLevel="1" name="Advanced Block">
-		<!-- Increases Shield Defense by 40% for 1 hr. -->
+		<!-- Increases Shield Defense by 40% for 1 h. -->
 		<icon>br_cashtex.item.br_cash_scroll_of_wind_walk_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2623,7 +2623,7 @@
 		</effects>
 	</skill>
 	<skill id="22091" toLevel="1" name="Eva's Rune">
-		<!-- Through the power of Eva, increases Max HP by 10% and decreases Skill Cooldown by 20%. Reflects 5% of damage received back onto the enemy. -->
+		<!-- Through the power of Eva, Max HP +10% and Skill Cooldown -20%. Reflects 5% of damage received back onto the enemy. -->
 		<icon>BranchSys.icon.br_rune_of_eva_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2707,7 +2707,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="15">
-						<item id="20554" count="1" /> <!-- SP Rune 30% Pack (5-hr.) -->
+						<item id="20554" count="1" /> <!-- SP Rune 30% Pack (5-hour) -->
 					</item>
 					<item chance="15">
 						<item id="20392" count="1" /> <!-- Vitality Replenishing Potion -->
@@ -2741,10 +2741,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="70">
-						<item id="20581" count="1" /> <!-- XP Rune III (Lv. 1-100+) 30% Pack (3-hr.) (Event) -->
+						<item id="20581" count="1" /> <!-- XP Rune III (Lv. 1-100+) 30% Pack (3-hour) (Event) -->
 					</item>
 					<item chance="30">
-						<item id="20548" count="1" /> <!-- XP Rune III (Lv. 1-100+) 30% Pack (5-hr.) -->
+						<item id="20548" count="1" /> <!-- XP Rune III (Lv. 1-100+) 30% Pack (5-hour) -->
 					</item>
 				</items>
 			</effect>

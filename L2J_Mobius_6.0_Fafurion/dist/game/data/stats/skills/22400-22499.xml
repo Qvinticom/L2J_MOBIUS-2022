@@ -422,7 +422,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="22407" toLevel="1" name="PC Vitality">
+	<skill id="22407" toLevel="1" name="PA Vitality">
 		<!-- For 60 min., Vitality is replenished when XP is acquired through hunting. -->
 		<icon>icon.etc_pccafe_point_i00</icon>
 		<operateType>A2</operateType>
@@ -530,7 +530,7 @@
 		</conditions>
 	</skill>
 	<skill id="22412" toLevel="1" name="Weapon Conversion - One-handed Emerald Weapon">
-		<!-- For 2 hr., a one-handed sword is changed into an Emerald Weapon. -->
+		<!-- For 2 h., a one-handed sword is changed into an Emerald Weapon. -->
 		<icon>BranchSys3.Icon.g_beam_1h_sword</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -549,7 +549,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22413" toLevel="1" name="Weapon Conversion - Dual Emerald Weapons">
-		<!-- For 2 hr., a dual sword is changed into dual Emerald Weapons. -->
+		<!-- For 2 h., a dual sword is changed into dual Emerald Weapons. -->
 		<icon>BranchSys3.Icon.g_beam_1h_sword</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1856,7 +1856,7 @@
 		</effects>
 	</skill>
 	<skill id="22480" toLevel="1" name="Leaf of Appreciation">
-		<!-- For 1 hr., the effects of Leaf of Appreciation increases Max MP by 20%, MP Recovery Bonus by 20%, HP Recovery Bonus by 20%, the chance of prominent magic damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption needed for skill use by 5%. -->
+		<!-- For 1 h., the effects of Leaf of Appreciation increases Max MP by 20%, MP Recovery Bonus by 20%, HP Recovery Bonus by 20%, the chance of prominent magic damage by 2, Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, and Debuff Resistance by 10%. Decreases Speed by 20% and MP consumption needed for skill use by 5%. -->
 		<icon>icon.etc_leaf_green_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>

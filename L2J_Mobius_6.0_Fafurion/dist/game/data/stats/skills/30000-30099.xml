@@ -16,6 +16,7 @@
 		</effects>
 	</skill>
 	<skill id="30001" toLevel="28" name="Hydro Attack">
+		<!-- Attacks target with $s1 Power added to M. Atk. $s2 more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30001</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -213,6 +214,7 @@
 		</effects>
 	</skill>
 	<skill id="30003" toLevel="20" name="Hydro Flare">
+		<!-- Eliminates Storm Sign and attacks target with $s1 Power added to M. Atk. $s2 more damage if target is debuffed. Storm Sign Stage $s3 only. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30003</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -330,6 +332,7 @@
 		</effects>
 	</skill>
 	<skill id="30004" toLevel="25" name="Hydro Strike">
+		<!-- Uses the power of storm to inflict damage with $s1 power added to M. Atk. and generates strong squall to make the target faint for $s2. -->
 		<icon>icon.skill30004</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -495,6 +498,7 @@
 		</effects>
 	</skill>
 	<skill id="30006" toLevel="11" name="Storm Rage">
+		<!-- Attacks target with $s1 Power added to M. Atk. and blows them away. $s2 more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30006</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalType>STUN</abnormalType>
@@ -594,6 +598,7 @@
 		</effects>
 	</skill>
 	<skill id="30007" toLevel="15" name="Hydro Drain">
+		<!-- Eliminates Storm Sign and attacks target with $s1 Power added to M. atk. and recovers $s2 HP and $s3 MP. Over-hit. Storm Sign Stage $s4 only. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30007</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>
@@ -703,7 +708,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="30008" toLevel="5" name="Wind Blend">
-		<!-- Slowly assimilates into the wind for $s1. Becomes one with the wind and disappears later on. Requires a sword or blunt weapon. -->
+		<!-- For $s1, blends into the wind. Becomes one with the wind and disappears later on. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30008</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
@@ -785,6 +790,7 @@
 		</endEffects>
 	</skill>
 	<skill id="30009" toLevel="10" name="Deceptive Blink">
+		<!-- The caster's assimilated into the wind, and teleports to the rear. Assimiliation lasts for $s1, and Speed increases by $s2 while assimilated. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30009</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -856,6 +862,7 @@
 		</effects>
 	</skill>
 	<skill id="30010" toLevel="2" name="Windy Refuge">
+		<!-- Cancels all debuffs and recovers HP/ MP for $s1 inside a refuge of wind. Cannot move. -->
 		<icon>icon.skill30010</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -922,6 +929,7 @@
 		</effects>
 	</skill>
 	<skill id="30011" toLevel="15" name="Threatening Wind">
+		<!-- Sends a slashing wind to brand target with Storm Sign Stage $s1. Requires a sword or blunt Weapon. -->
 		<icon>icon.skill30011</icon>
 		<effectRange>1200</effectRange>
 		<operateType>A1</operateType>
@@ -983,6 +991,7 @@
 		</effects>
 	</skill>
 	<skill id="30012" toLevel="25" name="Air Rush">
+		<!-- Knocks down target and attacks with $s1 Power added to M. Atk. $s2 more damage if target is debuffed. If target has Storm Sign, eliminates it and inflicts additional damage. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30012</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1103,7 +1112,7 @@
 		</effects>
 	</skill>
 	<skill id="30013" toLevel="1" name="Switch Places">
-		<!-- Trades places with target. Requires a sword or blunt weapon. PC targets only. -->
+		<!-- Trades places with target. Requires a sword or blunt weapon. Can only use on other characters. -->
 		<icon>icon.skill30005</icon>
 		<effectRange>1400</effectRange>
 		<effectPoint>-709</effectPoint>
@@ -1130,6 +1139,7 @@
 		</effects>
 	</skill>
 	<skill id="30014" toLevel="15" name="Compelling Wind">
+		<!-- Sends a breeze that pushes target toward you for $s1. Requires a sword/ blunt weapon. -->
 		<icon>icon.skill30014</icon>
 		<operateType>A2</operateType>
 		<abnormalLevel>1</abnormalLevel>
@@ -1217,6 +1227,7 @@
 		</conditions>
 	</skill>
 	<skill id="30016" toLevel="4" name="Eye of the Storm">
+		<!-- For $s1, M. Critical Rate +$s2, P./ M. Def. +$s3. -->
 		<icon>icon.skill30016</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1275,6 +1286,7 @@
 		</effects>
 	</skill>
 	<skill id="30017" toLevel="4" name="Squall">
+		<!-- For $s1, Received P./ M. Critical Damage -$s2. Has a chance of striking target with lightning. -->
 		<icon>icon.skill30017</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>
@@ -1385,6 +1397,7 @@
 		</effects>
 	</skill>
 	<skill id="30019" toLevel="11" name="Sayha's Word">
+		<!-- Attacks target with $s1 Power added to M. Atk., and decreases their Atk./ Casting Spd. by $s3 and Speed by $s4 for $s2. Instantly brands target with Storm Sign Stage $s5. $s6 more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30019</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1498,6 +1511,7 @@
 		</effects>
 	</skill>
 	<skill id="30020" toLevel="1" name="Sayha's Fury">
+		<!-- For $s1, Received P./ M. Critical Damage -$s2, and Speed +$s3. Has a chance of striking an attacker with lightning and branding them with Storm Sign Stage $s4. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30020</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1559,6 +1573,7 @@
 		</effects>
 	</skill>
 	<skill id="30022" toLevel="2" name="Sayha's Blessing">
+		<!-- For $s1, nearby party members' Speed +$s2, and Knock Back/ Knock Down/ Pull/ Danger Zone/ Aerial Yoke/ Aggression Resistance +$s3. Requires a sword or blunt weapon. -->
 		<icon>icon.skill30022</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -1700,6 +1715,7 @@
 		</effects>
 	</skill>
 	<skill id="30029" toLevel="4" name="Divine Storm">
+		<!-- Attacks nearby target with $s1 Power added to M. Atk. and locks them inside a storm for $s2. $s3 more damage if target is debuffed. Requires a sword or blunt weapon. -->
 		<icon>icon.iconskill30007</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -2143,7 +2159,7 @@
 		</effects>
 	</skill>
 	<skill id="30043" toLevel="11" name="Eminent Attribute Resistance">
-		<!-- Atk. Attribute Bonus +$s1, Fire/ Water/ Wind/ Earth/ Holy Resistance +$s2. -->
+		<!-- Attack Attribute Bonus +$s1, Fire/ Water/ Wind/ Earth/ Holy Resistance +$s2. -->
 		<icon>icon.skill11006</icon>
 		<operateType>P</operateType>
 		<magicLvl>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36000" name="Heavenly P. Def. Cookie" type="EtcItem">
-		<!-- Dimensional item. For 1 hr., P. Def. +45%, M. Def. +15%, P./ M. Critical Rate +100%, P. Critical Damage +35%, Shield Defense Rate +30%, Shield P. Def. +50%. Cooldown is 60 min. The buffs persist after death. Cannot be used in Olympiad. -->
+		<!-- Dimensional item. For 1 h., P. Def. +45%, M. Def. +15%, P./ M. Critical Rate +100%, P. Critical Damage +35%, Shield Defense Rate +30%, Shield P. Def. +50%. Cooldown is 60 min. The buffs persist after death. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.etc_bm_defence_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -19,7 +19,7 @@
 		</skills>
 	</item>
 	<item id="36001" name="Heavenly Magic Cookie" type="EtcItem">
-		<!-- Dimensional Item. For 1 hr., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. by 15%, Skill Cooldown -20%, and all Skill MP Consumption -15%. Cooldown 60 min. Buff does not get deleted even after death. Cannot be used in the Olympiad. -->
+		<!-- Dimensional Item. For 1 h., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. by 15%, Skill Cooldown -20%, and all Skill MP Consumption -15%. Cooldown 60 min. Buff does not get deleted even after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_magic_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -37,7 +37,7 @@
 		</skills>
 	</item>
 	<item id="36002" name="Heavenly CP Cookie" type="EtcItem">
-		<!-- For 1 hr., increases maximum CP by 20%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
+		<!-- For 1 hour, increases maximum CP by 20%. Cooldown 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_cp_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -183,7 +183,7 @@
 		</skills>
 	</item>
 	<item id="36010" name="Heavenly P. Atk. Cookie" additionalName="Event" type="EtcItem">
-		<!-- Dimensional item. For 1 hr., increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. Cooldown is 60 min. The buffs persist after death. Cannot be used in Olympiad. -->
+		<!-- Dimensional item. For 1 hour, increases P. Atk. by 22%, P. Critical Rate by 100%, P. Critical Damage by 70%, Atk. Spd. by 10%, and Speed by 10. Cooldown is 60 min. The buffs persist after death. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.etc_bm_attack_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -204,7 +204,7 @@
 		</skills>
 	</item>
 	<item id="36011" name="Heavenly P. Def. Cookie" additionalName="Event" type="EtcItem">
-		<!-- Dimensional item. For 1 hr., increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, Shield P. Def. by 50%. Cooldown is 60 min. The buffs persist after death. Cannot be used in Olympiad. -->
+		<!-- Dimensional item. For 1 hour, increases P. Def. by 45%, M. Def. by 15%, P./ M. Critical Rate by 100%, P. Critical Damage by 35%, Shield Defense Rate by 30%, Shield P. Def. by 50%. Cooldown is 60 min. The buffs persist after death. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.etc_bm_defence_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -225,7 +225,7 @@
 		</skills>
 	</item>
 	<item id="36012" name="Heavenly Magic Cookie" additionalName="Event" type="EtcItem">
-		<!-- Dimensional Item. For 1 hr., M. Atk. +40%, M. Critical Rate +100%, Casting Spd. by 15%, Skill Cooldown -20%, and all Skill MP Consumption -15%. Cooldown 60 min. Buff does not get deleted even after death. Cannot be used in the Olympiad. -->
+		<!-- Dimensional Item. For 1 hour, M. Atk. +40%, M. Critical Rate +100%, Casting Spd. by 15%, Skill Cooldown -20%, and all Skill MP Consumption -15%. Cooldown 60 min. Buff does not get deleted even after death. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_bm_magic_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -246,7 +246,7 @@
 		</skills>
 	</item>
 	<item id="36013" name="Heavenly CP Cookie" additionalName="Event" type="EtcItem">
-		<!-- For 1 hr., increases Max CP by 20%. Cooldown is 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
+		<!-- For 1 h., increases Max CP by 20%. Cooldown is 60 min. Buff does not get deleted even after death. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_cp_cookie" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -421,7 +421,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36022" name="Returning Hero's Health Potion" type="EtcItem">
-		<!-- Upon use, it restores 3000 HP and the remaining power restores CP instantly. Instant effect with no cooldown. Cannot use Olympiad. -->
+		<!-- Upon use, it restores 3000 HP and the remaining power restores CP instantly. Instant effect with no duration. Cannot use Olympiad. -->
 		<set name="icon" val="icon.etc_bm_hero_red_potion" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -468,7 +468,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36024" name="Returning Hero's Wondrous Cubic" type="EtcItem">
-		<!-- Double-click to acquire one of the following: 30-min. Vitality Recovering Potion, 700 PA Points, 2 Heavenly Cocktails, Scroll of Escape Box: Village, and Blessed Scroll of Escape. (Can only be used once a-day) -->
+		<!-- Double-click to acquire one of the following: 30-min. Vitality Recovering Potion, 700 PA coupon points, 2 Heavenly Cocktails, Scroll of Escape Box: Village, and Blessed Scroll of Escape. (Can only be used once a-day) -->
 		<set name="icon" val="Branchsys2.icon.cube_event_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -756,7 +756,7 @@
 		</skills>
 	</item>
 	<item id="36038" name="Mysterious Defense" type="EtcItem">
-		<!-- Item that can be used only in the Ceremony of Chaos Arena. Makes you invincible for 5 seconds. -->
+		<!-- Item that can be used only in the Ceremony of Chaos Arena. Makes you invincible for 5 sec. -->
 		<set name="icon" val="icon.etc_grankain_protect" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1170,7 +1170,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36055" name="Scroll: Stronghold Siege (10-second)" type="EtcItem">
-		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 10 seconds. -->
+		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 10 sec. -->
 		<set name="icon" val="icon.etc_doom_capture" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1189,7 +1189,7 @@
 		</skills>
 	</item>
 	<item id="36056" name="Scroll: Stronghold Siege (20-second)" type="EtcItem">
-		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 20 seconds. -->
+		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 20 sec. -->
 		<set name="icon" val="icon.etc_doom_capture" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1208,7 +1208,7 @@
 		</skills>
 	</item>
 	<item id="36057" name="Scroll: Stronghold Siege (30-second)" type="EtcItem">
-		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 30 seconds. -->
+		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 30 sec. -->
 		<set name="icon" val="icon.etc_doom_capture" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1227,7 +1227,7 @@
 		</skills>
 	</item>
 	<item id="36058" name="Scroll: Stronghold Siege (40-second)" type="EtcItem">
-		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 40 seconds. -->
+		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 40 sec. -->
 		<set name="icon" val="icon.etc_doom_capture" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1246,7 +1246,7 @@
 		</skills>
 	</item>
 	<item id="36059" name="Scroll: Stronghold Siege (50-second)" type="EtcItem">
-		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 50 seconds. -->
+		<!-- Scroll that enables you to occupy Demolished Throne Stronghold, Transportation Stronghold, and Attack Stronghold in 50 sec. -->
 		<set name="icon" val="icon.etc_doom_capture" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1265,7 +1265,7 @@
 		</skills>
 	</item>
 	<item id="36060" name="Penitent's Manacles" type="Armor">
-		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 seconds after you remove the bracelet. -->
+		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 sec. after you remove the bracelet. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1287,7 +1287,7 @@
 		</skills>
 	</item>
 	<item id="36061" name="Penitent's Manacles" type="Armor">
-		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 seconds after you remove the bracelet. -->
+		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 sec. after you remove the bracelet. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1308,7 +1308,7 @@
 		</skills>
 	</item>
 	<item id="36062" name="Penitent's Manacles" type="Armor">
-		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 seconds after you remove the bracelet. -->
+		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 sec. after you remove the bracelet. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1329,7 +1329,7 @@
 		</skills>
 	</item>
 	<item id="36063" name="Penitent's Manacles" type="Armor">
-		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 seconds after you remove the bracelet. -->
+		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 sec. after you remove the bracelet. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1350,7 +1350,7 @@
 		</skills>
 	</item>
 	<item id="36064" name="Penitent's Manacles" type="Armor">
-		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 seconds after you remove the bracelet. -->
+		<!-- Bracelet used to summon Agathion, the Sin Eater. It must be removed to seal Agathion. Hour of Penitence not in effect for 10 sec. after you remove the bracelet. -->
 		<set name="icon" val="icon.etc_leash_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1615,7 +1615,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36079" name="Yum Yum Candy" type="EtcItem">
-		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases Acquired XP/ SP by 25%. Its effect applies together with that of Nom Nom Candy (limited to 1). Temporary event item. -->
+		<!-- Yum Yum Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Acquired XP/ SP +25%. Its effect applies together with that of Nom Nom Candy (limited to 1). Temporary event item. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1632,7 +1632,7 @@
 		</skills>
 	</item>
 	<item id="36080" name="Nom Nom Candy" type="EtcItem">
-		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Increases Acquired XP/ SP by 25%. Its effect applies together with that of Yum Yum Candy (limited to 1). Temporary event item. -->
+		<!-- Nom Nom Candy made of the peanuts grown by Maphr, the goddess of earth, for Valentine's Day. Acquired XP/ SP +25%. Its effect applies together with that of Yum Yum Candy (limited to 1). Temporary event item. -->
 		<set name="icon" val="icon.etc_whiteday_candy_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1684,7 +1684,7 @@
 		</skills>
 	</item>
 	<item id="36083" name="Star Agathion - Innocent Heejin" type="Armor">
-		<!-- Bracelet for summoning Agathion - Innocent Heejin (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
+		<!-- Bracelet for summoning Agathion - Innocent Heejin (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1713,7 +1713,7 @@
 		</skills>
 	</item>
 	<item id="36084" name="Star Agathion - Dandy Hyuk" type="Armor">
-		<!-- Bracelet for summoning Agathion - Dandy Hyuk (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
+		<!-- Bracelet for summoning Agathion - Dandy Hyuk (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1742,7 +1742,7 @@
 		</skills>
 	</item>
 	<item id="36085" name="Star Agathion - Powerful Sooro" type="Armor">
-		<!-- Bracelet for summoning Agathion - Powerful Sooro (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
+		<!-- Bracelet for summoning Agathion - Powerful Sooro (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1771,7 +1771,7 @@
 		</skills>
 	</item>
 	<item id="36086" name="Star Agathion - Chic Jaebum" type="Armor">
-		<!-- Bracelet for summoning Agathion - Chic Jaebum (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
+		<!-- Bracelet for summoning Agathion - Chic Jaebum (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1800,7 +1800,7 @@
 		</skills>
 	</item>
 	<item id="36087" name="Star Agathion - Cute Shinyoung" type="Armor">
-		<!-- Bracelet for summoning Agathion - Cute Shinyoung (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
+		<!-- Bracelet for summoning Agathion - Cute Shinyoung (30-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2015,7 +2015,7 @@
 		</skills>
 	</item>
 	<item id="36097" name="Star Agathion - Innocent Heejin" type="Armor">
-		<!-- Bracelet for summoning Agathion - Innocent Heejin (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
+		<!-- Bracelet for summoning Agathion - Innocent Heejin (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2044,7 +2044,7 @@
 		</skills>
 	</item>
 	<item id="36098" name="Star Agathion - Dandy Hyuk" type="Armor">
-		<!-- Bracelet for summoning Agathion - Dandy Hyuk (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
+		<!-- Bracelet for summoning Agathion - Dandy Hyuk (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -2073,7 +2073,7 @@
 		</skills>
 	</item>
 	<item id="36099" name="Star Agathion - Powerful Sooro" type="Armor">
-		<!-- Bracelet for summoning Agathion - Powerful Sooro (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
+		<!-- Bracelet for summoning Agathion - Powerful Sooro (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />

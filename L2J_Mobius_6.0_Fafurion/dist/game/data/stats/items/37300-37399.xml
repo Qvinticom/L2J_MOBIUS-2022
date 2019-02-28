@@ -390,7 +390,7 @@
 		</stats>
 	</item>
 	<item id="37312" name="Steel Requiem Retributer (30-day)" type="Weapon">
-		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. No Soul Crystal option. -->
+		<!-- <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_grangkaz_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -439,14 +439,14 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36950" min="1" max="1" chance="100" /> <!-- Toma's Living Guide -->
+			<item id="36950" min="1" max="1" chance="100" /> <!-- Welcome Guide -->
 			<item id="36021" min="1" max="1" chance="100" /> <!-- Returning Hero's Potion Pack -->
 			<item id="36023" min="1" max="1" chance="100" /> <!-- Returning Hero's Support Box -->
 			<item id="37314" min="1" max="1" chance="100" /> <!-- Fated Support Box -->
 		</capsuled_items>
 	</item>
 	<item id="37314" name="Fated Support Box" type="EtcItem">
-		<!-- When Double Clicked, an equipment item appropriate for each Grades or job can be obtained. Only available to characters between lv40 and lv85 who have completed their first job advancement. -->
+		<!-- When Double Clicked, an equipment item appropriate for each Grades or job can be obtained. Only available to characters between Lv. 40 and Lv. 85 who have completed their first job advancement. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -2229,7 +2229,7 @@
 		<set name="handler" val="Appearance" />
 	</item>
 	<item id="37379" name="Blessed Scroll: Modify Weapon (R-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of an R-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i06" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2243,7 +2243,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37380" name="Blessed Scroll: Modify Weapon (S-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of an S-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i05" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2257,7 +2257,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37381" name="Blessed Scroll: Modify Weapon (A-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of an A-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i04" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2271,7 +2271,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37382" name="Blessed Scroll: Modify Weapon (B-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a B-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2285,7 +2285,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37383" name="Blessed Scroll: Modify Weapon (C-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a C-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i02" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2299,7 +2299,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37384" name="Blessed Scroll: Modify Weapon (D-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a D-grade weapon to that of a different weapon of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_weapon_change_i01" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2313,7 +2313,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37385" name="Blessed Scroll: Modify Armor (R-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of an R-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i06" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2327,7 +2327,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37386" name="Blessed Scroll: Modify Armor (S-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of an S-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i05" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2341,7 +2341,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37387" name="Blessed Scroll: Modify Armor (A-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of an A-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i04" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2355,7 +2355,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37388" name="Blessed Scroll: Modify Armor (B-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a B-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i03" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2369,7 +2369,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37389" name="Blessed Scroll: Modify Armor (C-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a C-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i02" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -2383,7 +2383,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="37390" name="Blessed Scroll: Modify Armor (D-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double click to use. -->
+		<!-- Changes the appearance of a D-grade armor to that of different armor of the same grade or a lower grade. You need an appearance item, which remains intact after its appearance is extracted. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.pr_armor_change_i01" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />

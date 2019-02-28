@@ -85,6 +85,7 @@
 		</effects>
 	</skill>
 	<skill id="10801" toLevel="8" name="Bullseye">
+		<!-- Decreases target's Bow/ Crossbow Resistance by $s1 and M. Def. by $s2. -->
 		<icon>icon.skill10801</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime> <!-- Confirm duration, GDL = 20 -->
@@ -204,6 +205,7 @@
 		</effects>
 	</skill>
 	<skill id="10802" toLevel="4" name="Mass Bullseye">
+		<!-- Decreases target's and nearby enemies' Bow/ Crossbow Resistance by $s1 and M. Def. by $s2. After a certain time, target explodes, suffering heavy damage. -->
 		<icon>icon.skill10782</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>15</abnormalTime> <!-- Confirm duration, GDL = 20 -->
@@ -315,6 +317,7 @@
 		</effects>
 	</skill>
 	<skill id="10805" toLevel="4" name="Quick Charge">
+		<!-- Teleports $s1 grids forward. -->
 		<icon>icon.skill10805</icon>
 		<operateType>DA1</operateType>
 		<magicLvl>
@@ -364,6 +367,7 @@
 		</conditions>
 	</skill>
 	<skill id="10806" toLevel="4" name="Frost Trap">
+		<!-- Decreases Speed, Atk. Spd. and Casting Spd. -->
 		<icon>icon.skill0516</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-2</effectPoint>
@@ -420,6 +424,7 @@
 		</effects>
 	</skill>
 	<skill id="10807" toLevel="4" name="Gravity Trap">
+		<!-- Inflicted with Hold and unable to move. -->
 		<icon>icon.skill0518</icon>
 		<operateType>A2</operateType>
 		<effectPoint>-2</effectPoint>
@@ -506,6 +511,7 @@
 		</effects>
 	</skill>
 	<skill id="10810" toLevel="4" name="Sniping">
+		<!-- For $s1 when a bow or crossbow is equipped, P. Atk. +$s2, Atk. Spd. +$s3, and P. Def./ M. Def. +$s4. -->
 		<icon>icon.skill11870</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -653,6 +659,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="10856" toLevel="4" name="Rapid Fire Position">
+		<!-- For $s1 when a bow or crossbow is equipped, P. Atk. +$s2, chance of receiving an M. Critical Hit -$s3, and P. Skill Cooldown -$s4. -->
 		<icon>icon.skill11871</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36400" name="XP Buff 50% (1-hour)" type="EtcItem">
-		<!-- Hourglass that increases acquired XP by an additional 50% for 1 hr. Available for all levels. -->
+		<!-- Hourglass that increases acquired XP by additional 50% for 1 h. Available for all levels. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -57,7 +57,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="36404" name="Scroll: Midsummer Passion" additionalName="Event" type="EtcItem">
-		<!-- Increases acquired XP and SP by 30% for 1 hr. -->
+		<!-- Increases acquired XP and SP by 30% for 1 hour. -->
 		<set name="icon" val="icon.etc_aidcharm_cancel_deathfire_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -130,7 +130,7 @@
 		</stats>
 	</item>
 	<item id="36410" name="Blessed Valakas' Necklace (14-day)" additionalName="Event" type="Armor">
-		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Resistance +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflect 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. -->
+		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Resistance +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1269,7 +1269,7 @@
 		</stats>
 	</item>
 	<item id="36462" name="Lindvior Cutter" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_lind_onehand_sword_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -1294,7 +1294,7 @@
 		</stats>
 	</item>
 	<item id="36463" name="Lindvior Shooter" additionalName="Standard" type="Weapon">
-		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, M. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
+		<!-- A weapon imbued with the wisdom of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through Aden's Wizard Jenna. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_lind_crossbow_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />

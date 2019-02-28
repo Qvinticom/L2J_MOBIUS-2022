@@ -167,7 +167,7 @@
 		</effects>
 	</skill>
 	<skill id="21406" toLevel="1" name="Mysterious Dwarf Dye - Endurance">
-		<!-- For 5 sec., reflects 50% of received damage and recovers 460 HP per sec. -->
+		<!-- For 5 sec., reflects 50% of received damage and recovers 460 HP per second. -->
 		<icon>icon.skill1920</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -237,7 +237,7 @@
 		</effects>
 	</skill>
 	<skill id="21410" toLevel="1" name="Cloak of the Chosen: Blessed Escape">
-		<!-- Can use Blessed Escape every hr. -->
+		<!-- Can use Blessed Escape every hour. -->
 		<operateType>A1</operateType>
 		<magicLvl>1</magicLvl>
 		<hitTime>200</hitTime>
@@ -263,7 +263,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="21413" toLevel="1" name="Mysterious Halloween Potion">
-		<!-- Mysterious potion that changes the appearance into that of a Halloween weapon and outfit for 1 hr. -->
+		<!-- Mysterious potion that changes the appearance into that of a Halloween weapon and outfit for 1 h. -->
 		<icon>icon.etc_whiteday_herb</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -311,7 +311,7 @@
 		</effects>
 	</skill>
 	<skill id="21415" toLevel="1" name="Halloween: Weapon">
-		<!-- All Damage +3%, LUC +1, and Atk. Attribute +30. -->
+		<!-- Increases all Damage by 3%, LUC +1, and Attack Attribute +30. -->
 		<icon>icon.ev_wp_halloween</icon>
 		<operateType>P</operateType>
 		<effects>

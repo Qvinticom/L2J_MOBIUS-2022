@@ -611,7 +611,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="21335" toLevel="2" name="Adenia's Damage Reflect">
+	<skill id="21335" toLevel="2" name="Adenia's Damage Reflection">
 		<!-- Passive: Reflects $s1 of received damage back to enemy. -->
 		<icon>icon.skill3080</icon>
 		<operateType>P</operateType>
@@ -623,7 +623,7 @@
 		</magicLvl>
 		<isMagic>1</isMagic>
 	</skill>
-	<skill id="21336" toLevel="2" name="Adenia's Damage Reflect">
+	<skill id="21336" toLevel="2" name="Adenia's Damage Reflection">
 		<!-- Active: For $s1, reflects $s2 of received damage back to enemy. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
@@ -718,7 +718,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21343" toLevel="1" name="Adenia's Barrier">
-		<!-- Active: For some time, P./ M. Def. +10%. -->
+		<!-- Active: For some time, P. Def./ M. Def. +10%. -->
 		<icon>icon.skill3123</icon>
 		<operateType>A2</operateType>
 		<mpConsume>48</mpConsume>
@@ -877,7 +877,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21353" toLevel="1" name="Vitality Recovery">
-		<!-- For 5 min., restores Vitality with XP gain. Cooldown is 1 hr. -->
+		<!-- For 5 min., restores Vitality with XP gain. Cooldown is 1 h. -->
 		<icon>BranchSys.icon.br_black_gem_mask_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -904,7 +904,7 @@
 		</effects>
 	</skill>
 	<skill id="21354" toLevel="1" name="Vitality Recovery">
-		<!-- For 5 min., restores Vitality with XP gain. Cooldown is 1 hr. -->
+		<!-- For 5 min., restores Vitality with XP gain. Cooldown is 1 h. -->
 		<icon>icon.accessory_dwarf_goggle_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>3000</hitTime>
@@ -931,7 +931,7 @@
 		</effects>
 	</skill>
 	<skill id="21355" toLevel="1" name="Erupting Vitality XP Potion">
-		<!-- For 1 hr., Vitality Bonus +100%. Cooldown is 1 hr. -->
+		<!-- For 1 h., Vitality Bonus +100%. Cooldown is 1 h. -->
 		<icon>icon.etc_potion_red_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>23728</itemConsumeId> <!-- Erupting Vitality XP Potion -->
@@ -965,7 +965,7 @@
 		</effects>
 	</skill>
 	<skill id="21356" toLevel="1" name="Erupting Vitality Replenishing Potion">
-		<!-- For 1 hr., Vitality Recovery +100%. Cooldown is 1 hr. -->
+		<!-- For 1 h., Vitality Recovery +100%. Cooldown is 1 h. -->
 		<icon>icon.etc_potion_blue_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>23729</itemConsumeId> <!-- Erupting Vitality Replenishing Potion -->
@@ -999,7 +999,7 @@
 		</effects>
 	</skill>
 	<skill id="21357" toLevel="1" name="Erupting Vitality Conservation Potion">
-		<!-- For 1 hr., Vitality Consumption -50%. Cooldown is 1 hr. -->
+		<!-- For 1 h., Vitality consumption upon XP gain -50%. Cooldown is 1 h. -->
 		<icon>icon.etc_potion_yellow_i00</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>23730</itemConsumeId> <!-- Erupting Vitality Conservation Potion -->
@@ -1156,7 +1156,7 @@
 		</effects>
 	</skill>
 	<skill id="21364" toLevel="12" name="Talisman - Abundance">
-		<!-- Equipping Talisman increases P. Atk. by $s1, M. Atk. by $s2, P./ M. Evasion by $s3 and $s4, respectively, Attribute Resistance by $s5, Debuff Resistance by $s6, and P./ M. Critical Rate by $s7, and decreases Critical Damage inflicted by $s8 and Skill Power inflicted during PvP by $s9. Decreases additional skill damage inflicted during PvP. -->
+		<!-- P. Atk. +$s1, M. Atk. +$s2, P./ M. Evasion +$s3. -->
 		<icon>
 			<value level="1">BranchSys2.icon.g_giant_gem</value>
 			<value level="2">BranchSys2.icon.g_giant_gem</value>
@@ -2764,7 +2764,7 @@
 		</effects>
 	</skill>
 	<skill id="21377" toLevel="3" name="Adenian Tattoo: Protection">
-		<!-- Active Skill: P./ M. Def. +$s1, Max HP/ CP +$s2. Lasts $s3. Cooldown is $s4 hr. Can be used in the Olympiad. -->
+		<!-- Active Skill: P./ M. Def. +$s1, Max HP/ CP +$s2. Lasts $s3. Cooldown is $s4 h. Can be used in the Olympiad. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i01</icon>
 		<operateType>A2</operateType>
 		<hitTime>600</hitTime>
@@ -2856,7 +2856,7 @@
 		</effects>
 	</skill>
 	<skill id="21378" toLevel="3" name="Adenian Tattoo: Valor">
-		<!-- Active Skill: P. Atk. +$s1, M. Atk. +$s2. Lasts $s3. Cooldown is $s4 hr. Can be used in the Olympiad. -->
+		<!-- Active Skill: P. Atk. +$s1, M. Atk. +$s2. Lasts $s3. Cooldown is $s4 h. Can be used in the Olympiad. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i02</icon>
 		<operateType>A2</operateType>
 		<hitTime>600</hitTime>
@@ -2892,7 +2892,7 @@
 		</effects>
 	</skill>
 	<skill id="21379" toLevel="3" name="Adenian Tattoo: Deviance">
-		<!-- Active Skill: P./ M. Def. +$s1, P. Atk. +$s2, M. Atk. +$s3. Lasts $s4. Cooldown is $s5 hr. Can be used in the Olympiad. -->
+		<!-- Active Skill: P./ M. Def. +$s1, P. Atk. +$s2, M. Atk. +$s3. Lasts $s4. Cooldown is $s5 h. Can be used in the Olympiad. -->
 		<icon>BranchSys3.icon1.g_co_tatu_i03</icon>
 		<operateType>A2</operateType>
 		<hitTime>500</hitTime>

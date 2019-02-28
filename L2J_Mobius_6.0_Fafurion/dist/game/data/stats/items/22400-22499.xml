@@ -481,7 +481,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="22425" name="Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant success rate increases by 10%. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. -->
+		<!-- Enchant success rate increases by 10%. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. -->
 		<set name="icon" val="BranchSys.icon.br_scrl_of_ench_wp_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -501,7 +501,7 @@
 		</skills>
 	</item>
 	<item id="22426" name="Ancient Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- Enchant success rate increases by 10%. Failure to enchant does not affect the weapon's enchantment level. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. -->
+		<!-- Enchant success rate increases by 10%. Failure to enchant does not affect the weapon's enchantment level. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. -->
 		<set name="icon" val="BranchSys.icon.br_ancient_cry_of_ench_wp_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -521,7 +521,7 @@
 		</skills>
 	</item>
 	<item id="22427" name="Heavenly Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- 100% enchant success rate. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. Standard weapons can be enchanted to +12 and magic weapons to +7. -->
+		<!-- 100% enchant success rate. When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. Standard weapons can be enchanted to +12 and magic weapons to +7. -->
 		<set name="icon" val="BranchSys.icon.br_holy_cry_of_ench_wp_s_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="ENCHT_ATTR_ANCIENT_CRYSTAL_ENCHANT_WP" />
@@ -881,7 +881,7 @@
 		</skills>
 	</item>
 	<item id="22445" name="Vitality Replenishing Potion 5-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Vitality Replenishing Potions. -->
+		<!-- Wrapped Pack containing 5 Vitality Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -901,7 +901,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22446" name="Vitality Maintaining Potion 5-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Vitality maintaining potions. -->
+		<!-- Wrapped Pack containing 5 Vitality maintaining potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -921,7 +921,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22447" name="Vitality Recovering Potion 5-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Vitality Recovering Potion. -->
+		<!-- Wrapped Pack containing 5 Vitality Recovering Potion. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -941,7 +941,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22448" name="Soulshot Medium Pack (5000 R-grade)" type="EtcItem">
-		<!-- Double-click to obtain 5000 Soulshots (R-grade). -->
+		<!-- Wrapped Pack containing 5000 Soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -961,7 +961,7 @@
 		</skills>
 	</item>
 	<item id="22449" name="Soulshot Large Pack (10000 R-grade)" type="EtcItem">
-		<!-- Double-click to obtain 10000 Soulshots (R-grade). -->
+		<!-- Wrapped Pack containing 10000 Soulshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_soulshot_r_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -981,7 +981,7 @@
 		</skills>
 	</item>
 	<item id="22450" name="Blessed Spiritshot Medium Pack (R-grade) (5000)" type="EtcItem">
-		<!-- Double-click to obtain 5000 Blessed Spiritshots (R-grade). -->
+		<!-- Wrapped Pack containing 5000 Blessed Spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -1001,7 +1001,7 @@
 		</skills>
 	</item>
 	<item id="22451" name="Blessed Spiritshot Large Pack (R-grade) (10000)" type="EtcItem">
-		<!-- Double-click to obtain 10000 Blessed Spiritshots (R-grade). -->
+		<!-- Wrapped Pack containing 10000 Blessed Spiritshots (R-grade). -->
 		<set name="icon" val="icon.br_cash_pack_of_blessed_spiritshot_r_i00" />
 		<set name="weight" val="1000" />
 		<set name="is_clan_depositable" val="false" />
@@ -1021,7 +1021,7 @@
 		</skills>
 	</item>
 	<item id="22452" name="Scroll of Escape 10-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 10 Scrolls of Escape. Also contains 1 bonus Blessed Scroll of Escape. -->
+		<!-- Wrapped Pack containing 10 Scrolls of Escape. Also contains 1 bonus Blessed Scroll of Escape. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1042,7 +1042,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22453" name="Scroll of Escape: Castle 10-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 10 Scrolls of Escape: Castle. Also contains 1 bonus Blessed Scroll of Escape: Castle. -->
+		<!-- Wrapped Pack containing 10 Scrolls of Escape: Castle. Also contains 1 bonus Blessed Scroll of Escape - Castle. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1058,12 +1058,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22436" min="10" max="10" chance="100" /> <!-- Scroll of Escape: Castle -->
-			<item id="22439" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape: Castle -->
+			<item id="22436" min="10" max="10" chance="100" /> <!-- Scroll of Escape - Castle -->
+			<item id="22439" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape - Castle -->
 		</capsuled_items>
 	</item>
 	<item id="22454" name="Scroll of Escape: Clan Hall 10-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 10 Scrolls of Escape: Clan Hall. Also contains 1 bonus Blessed Scroll of Escape: Clan Hall. -->
+		<!-- Wrapped Pack containing 10 Scrolls of Escape: Clan Hall. Also contains 1 bonus Blessed Scroll of Escape - Clan Hall. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1079,12 +1079,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22437" min="10" max="10" chance="100" /> <!-- Scroll of Escape: Clan Hall -->
-			<item id="22440" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape: Clan Hall -->
+			<item id="22437" min="10" max="10" chance="100" /> <!-- Scroll of Escape - Clan Hall -->
+			<item id="22440" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape - Clan Hall -->
 		</capsuled_items>
 	</item>
 	<item id="22455" name="Improved Bronze Bracelet Pack" type="EtcItem">
-		<!-- Double-click to obtain an Improved Bronze Bracelet. -->
+		<!-- Wrapped Pack containing Improved Bronze Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1104,7 +1104,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22456" name="Improved Steel Bracelet Pack" type="EtcItem">
-		<!-- Double-click to obtain an Improved Steel Bracelet. -->
+		<!-- Wrapped Pack containing Improved Steel Bracelet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1124,7 +1124,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22457" name="Blessed Scroll of Resurrection (Pet) Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 Blessed Scrolls of Resurrection: Pet. -->
+		<!-- Wrapped Pack containing 3 Blessed Scrolls of Resurrection: Pet. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1144,7 +1144,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22458" name="Weapon Appearance/Restoration Stone Pack (R-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Weapon Appearance Stone (R-grade) and 1 Weapon Restoration Stone (R-grade). -->
+		<!-- Wrapped Pack containing Weapon Appearance Stone (R-grade) and 1 Weapon Restoration Stone (R-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1165,7 +1165,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22459" name="Weapon Appearance/Restoration Stone Pack (S-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Weapon Appearance Stone (S-grade) and 1 Weapon Restoration Stone (S-grade). -->
+		<!-- Wrapped Pack containing Weapon Appearance Stone (S-grade) and 1 Weapon Restoration Stone (S-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1186,7 +1186,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22460" name="Weapon Appearance/Restoration Stone Pack (A-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Weapon Appearance Stone (A-grade) and 1 Weapon Restoration Stone (A-grade). -->
+		<!-- Wrapped Pack containing Weapon Appearance Stone (A-grade) and 1 Weapon Restoration Stone (A-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1207,7 +1207,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22461" name="Weapon Appearance/Restoration Stone Pack (B-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Weapon Appearance Stone (B-grade) and 1 Weapon Restoration Stone (B-grade). -->
+		<!-- Wrapped Pack containing Weapon Appearance Stone (B-grade) and 1 Weapon Restoration Stone (B-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1228,7 +1228,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22462" name="Weapon Appearance/Restoration Stone Pack (C-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Weapon Appearance Stone (C-grade) and 1 Weapon Restoration Stone (C-grade). -->
+		<!-- Wrapped Pack containing Weapon Appearance Stone (C-grade) and 1 Weapon Restoration Stone (C-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1249,7 +1249,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22463" name="Weapon Appearance/Restoration Stone Pack (D-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Weapon Appearance Stone (D-grade) and 1 Weapon Restoration Stone (D-grade). -->
+		<!-- Wrapped Pack containing Weapon Appearance Stone (D-grade) and 1 Weapon Restoration Stone (D-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1270,7 +1270,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22464" name="Blessed Weapon Appearance/Restoration Stone Pack (R-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Blessed Weapon Appearance Stone (R-grade) and 1 Weapon Restoration Stone (R-grade). -->
+		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (R-grade) and 1 Weapon Restoration Stone (R-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1291,7 +1291,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22465" name="Blessed Weapon Appearance/Restoration Stone Pack (S-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Blessed Weapon Appearance Stone (S-grade) and 1 Weapon Restoration Stone (S-grade). -->
+		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (S-grade) and 1 Weapon Restoration Stone (S-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1312,7 +1312,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22466" name="Blessed Weapon Appearance/Restoration Stone Pack (A-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Blessed Weapon Appearance Stone (A-grade) and 1 Weapon Restoration Stone (A-grade). -->
+		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (A-grade) and 1 Weapon Restoration Stone (A-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1333,7 +1333,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22467" name="Blessed Weapon Appearance/Restoration Stone Pack (B-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Blessed Weapon Appearance Stone (B-grade) and 1 Weapon Restoration Stone (B-grade). -->
+		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (B-grade) and 1 Weapon Restoration Stone (B-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1354,7 +1354,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22468" name="Blessed Weapon Appearance/Restoration Stone Pack (C-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Blessed Weapon Appearance Stone (C-grade) and 1 Weapon Restoration Stone (C-grade). -->
+		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (C-grade) and 1 Weapon Restoration Stone (C-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1375,7 +1375,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22469" name="Blessed Weapon Appearance/Restoration Stone Pack (D-grade)" type="EtcItem">
-		<!-- Double-click to obtain a Blessed Weapon Appearance Stone (D-grade) and 1 Weapon Restoration Stone (D-grade). -->
+		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (D-grade) and 1 Weapon Restoration Stone (D-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1396,7 +1396,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22470" name="Superior Healing Potion 5-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Superior Healing Potions. -->
+		<!-- Wrapped Pack containing 5 Superior Healing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1416,7 +1416,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22471" name="Superior Quick Healing Potion 5-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Superior Quick Healing Potions. -->
+		<!-- Wrapped Pack containing 5 Superior Quick Healing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1436,7 +1436,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22472" name="Adventurer's Song - Energy of Recovery 3-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 Adventurer's Song - Energy of Recovery. -->
+		<!-- Wrapped Pack containing 3 Adventurer's Song - Energy of Recovery. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1473,7 +1473,7 @@
 		</skills>
 	</item>
 	<item id="22474" name="Heavenly Cocktail 3-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 3 heavenly cocktails. -->
+		<!-- Wrapped Pack containing 3 heavenly cocktails. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1843,7 +1843,7 @@
 		</skills>
 	</item>
 	<item id="22493" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" type="EtcItem">
-		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 100% (3-hr.). -->
+		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 100% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1860,11 +1860,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hr.) -->
+			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22494" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 100% (5-hr.). -->
+		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 100% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1881,7 +1881,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34036" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (5-hr.) -->
+			<item id="34036" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22495" name="XP Rune I (Lv. 1-85) 100% Pack (7-day)" type="EtcItem">
@@ -1906,7 +1906,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22496" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" type="EtcItem">
-		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 200% (3-hr.). -->
+		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 200% (3-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1923,11 +1923,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hr.) -->
+			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22497" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" type="EtcItem">
-		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 200% (5-hr.). -->
+		<!-- Double-click on the box to acquire 1 XP Rune I (Lv. 1-85) 200% (5-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />
@@ -1944,7 +1944,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34039" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (5-hr.) -->
+			<item id="34039" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="22498" name="XP Rune I (Lv. 1-85) 200% Pack (7-day)" type="EtcItem">
@@ -1969,7 +1969,7 @@
 		</capsuled_items>
 	</item>
 	<item id="22499" name="My Teleport Book Pack" type="EtcItem">
-		<!-- Double-click to obtain a My Teleport Scroll. -->
+		<!-- Wrapped Pack containing My Teleport Scroll. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
 		<set name="is_clan_depositable" val="false" />

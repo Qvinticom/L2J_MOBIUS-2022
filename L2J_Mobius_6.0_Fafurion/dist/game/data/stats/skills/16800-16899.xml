@@ -14,27 +14,27 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16803" toLevel="1" name="Dark Fire">
-		<!-- Inflicts severe magical damage on a single target and decreases P. Atk. and M. Atk. by 20%. -->
+		<!-- Inflicts severe magical damage on a single target and decreases P. Attack and M. Atk. by 20%. -->
 		<icon>icon.skill11780</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16804" toLevel="1" name="Dark Breaker">
-		<!-- Inflicts severe physical damage on a single target and decreases P. Atk. and M. Atk. by 30%. -->
+		<!-- Inflicts severe physical damage on a single target and decreases P. Attack and M. Atk. by 30%. -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16805" toLevel="1" name="Chaos Breaker">
-		<!-- Inflicts severe physical damage on a single target and decreases P. Atk. and M. Atk. by 30%. -->
+		<!-- Inflicts severe physical damage on a single target and decreases P. Attack and M. Atk. by 30%. -->
 		<icon>icon.skill10262</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16806" toLevel="1" name="Chaos Fire">
-		<!-- Inflicts severe magical damage on a single target and decreases P. Atk. and M. Atk. by 20%. -->
+		<!-- Inflicts severe magical damage on a single target and decreases P. Attack and M. Atk. by 20%. -->
 		<icon>icon.skill11780</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16807" toLevel="1" name="Dark Blade">
-		<!-- Inflicts severe physical damage on a single target and decreases P. Defense and M. Defense by 30%. -->
+		<!-- Inflicts severe physical damage on a single target and decreases P. Defense and M. Def. by 30%. -->
 		<icon>icon.skill11780</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -54,7 +54,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16811" toLevel="1" name="Abyss Fire">
-		<!-- Inflicts magical damage on a single target and decreases M. Defense by 30%. -->
+		<!-- Inflicts magical damage on a single target and decreases M. Def. by 30%. -->
 		<icon>icon.skill11780</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -64,7 +64,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16813" toLevel="1" name="Shining Punishment">
-		<!-- Inflicts severe physical damage on a single target and decreases Speed and Attack Speed by 50%. -->
+		<!-- Inflicts severe physical damage on a single target and decreases Speed and Atk.Spd. by 50%. -->
 		<icon>icon.skill0096</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -74,7 +74,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16815" toLevel="1" name="Abyss Blast">
-		<!-- Inflicts magical damage on a single target and decreases P. Atk. and M. Atk. by 30%. -->
+		<!-- Inflicts magical damage on a single target and decreases P. Attack and M. Atk. by 30%. -->
 		<icon>icon.skill11780</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -142,7 +142,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16829" toLevel="1" name="Will of Survival">
-		<!-- Increases P./ M. defense by 30% and P./ M. Atk. by 20%. -->
+		<!-- Increases P./ M. Def. by 30% and P./ M. Atk. by 20%. -->
 		<icon>icon.kelbim_reflection_armor</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -152,12 +152,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16831" toLevel="1" name="Roar of the Battlefield">
-		<!-- Boosts P. Atk. and M. Atk. by 30% of the allies in the specified range for 30 sec. -->
+		<!-- Boosts P. Attack and M. Atk. by 30% of the allies in the specified range for 30 sec. -->
 		<icon>icon.skill10277</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16832" toLevel="1" name="Giant Barrier">
-		<!-- Cancels all debuffs, becomes invincible against standard attack, skill and debuff near you for 10 sec. and Spd. +30%. -->
+		<!-- Cancels all debuffs, becomes invincible against standard attack, skill and debuff near you for 10 sec. and increases speed by 30%. -->
 		<icon>icon.skill10279</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -167,7 +167,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16834" toLevel="1" name="Winged Spear">
-		<!-- For 60 sec., Attack +30%. Additionally, standard attack range +80 and the Stun state is inflicted at a 10% chance if hit. -->
+		<!-- Increases Attack by 30% for 60 sec. Additionally, the general attack range is extended by 80 and the Stun state is inflicted at a 10% chance if hit. -->
 		<icon>icon.skill10333</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -176,8 +176,8 @@
 		<icon>icon.skill11011</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="16836" toLevel="1" name="Devil??s Highway">
-		<!-- Inflicts damage on the enemies in the specified range and absorbs 25% of the damage as your HP. Additionally, for 20 sec., decreases the target's M. Atk./ M. Defense by 30%, P. Defense/ Casting Spd./ P. Critical Rate/ M. Critical Rate/ Speed by 8% and Accuracy by 12. -->
+	<skill id="16836" toLevel="1" name="Devil's Highway">
+		<!-- Inflicts damage on the enemies in the specified range and absorbs 25% of the damage as your HP. Additionally, for 20 sec., decreases the target's M. Attack/ M. Def. by 30%, P. Defense/ Casting Spd./ P. Critical Rate/ M. Critical Rate/ Speed by 8% and Accuracy by 12. -->
 		<icon>icon.skill11048</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -202,7 +202,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16841" toLevel="1" name="Final Ultimate Defense">
-		<!-- For 30 sec., increases Defense and M. Defense by 4000, respectively, sets the limit of damage received at 300, and reflects 40% of damage received to the attacker. Additionally increases Resistance to buff-canceling attacks by 80%. -->
+		<!-- For 30 sec., increases Defense and M. Def. by 4000, respectively, sets the limit of damage received at 300, and reflects 40% of damage received to the attacker. Additionally increases Resistance to buff-canceling attacks by 80%. -->
 		<icon>icon.skill10017</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -217,7 +217,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16844" toLevel="1" name="Mind of Steel">
-		<!-- Attack +15%, P. Critical Damage +10%, P. Skill Critical Damage +10%, Spd. +50, Knock Back/ Knock Down/ Pull/ Danger Zone/ Aerial Yoke/ Aggression defense success rate +90%. Inflicts additional damage 5 times stronger than the standard attack. HP stays as low as 1 and recovers by 30% when the effect expires. -->
+		<!-- Increases Attack by 15%, P. Critical Damage by 10%, P. Skill Critical Damage by 10%, Speed by 50, Knock Back/ Knock Down/ Pull/ Danger Zone/ Aerial Yoke/ Aggression defense success rate by 90%. Inflicts additional damage 5 times stronger than the general attack. HP does not decrease below 1 and recovers by 30% when the effect expires. -->
 		<icon>icon.skill30520</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -232,7 +232,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16847" toLevel="1" name="Berserker">
-		<!-- Increases Debuff Resistance/ Speed/ Attack/ P. Accuracy/ Defense/ Attack Speed/ Critical Damage. Recovers your HP by 20% if you kill the target. Additionally, increases Attack by 10% and Critical Rate by 100 if HP falls under 60%. Increases Attack by 30% and Critical Rate by 300 more if HP falls under 30%. -->
+		<!-- Increases Debuff Resistance/ Speed/ Attack/ P. Accuracy/ Defense/ Atk.Spd./ Critical Damage. Recovers your HP by 20% if you kill the target. Additionally, increases Attack by 10% and Critical Rate by 100 if HP falls under 60%. Increases Attack by 30% and Critical Rate by 300 more if HP falls under 30%. -->
 		<icon>icon.skill10274</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -247,7 +247,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16850" toLevel="1" name="Hunting Instinct">
-		<!-- Increases your Attack by 10%, P. Skill Power by 15%, P. Skill Critical Rate by 15%, and P. Skill Critical Damage by 15% for 60 sec. -->
+		<!-- Increases your Attack by 10%, Physical Skill Power by 15%, P. Skill Critical Rate by 15%, and P. Skill Critical Damage by 15% for 60 sec. -->
 		<icon>icon.skill10953</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -357,7 +357,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16872" toLevel="15" name="Etina's Benefaction">
-		<!-- You are under Etina's Benefaction and your P. Atk./ M. Atk./ P. Def./ M. Def. increase. -->
+		<!-- You are under Etina's Benefaction and your P. Attack/ M. Atk./ P. Defense/ M. Def. increase. -->
 		<icon>icon.m_class_light</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -440,7 +440,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16888" toLevel="1" name="Might of Wing">
-		<!-- The Power of Camille increases P. Atk./ M. Atk./ Attack Speed/ Casting Spd. by 100%. -->
+		<!-- The Power of Camille increases P. Attack/ M. Atk./ Atk.Spd./ Casting Spd. by 100%. -->
 		<icon>icon.skill16888</icon>
 		<operateType>A1</operateType>
 	</skill>

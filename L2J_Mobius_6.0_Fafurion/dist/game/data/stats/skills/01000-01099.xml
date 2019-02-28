@@ -2543,6 +2543,7 @@
 		</effects>
 	</skill>
 	<skill id="1059" toLevel="3" name="Empower">
+		<!-- Increases M. Atk. by $s2 for $s1. -->
 		<icon>icon.skill1059</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3434,7 +3435,7 @@
 		</effects>
 	</skill>
 	<skill id="1078" toLevel="6" name="Concentration">
-		<!-- Decreases magic cancel rate by $s2 for $s1. -->
+		<!-- Decreases magic cancel damage by $s2 for $s1. -->
 		<icon>icon.skill1078</icon>
 		<abnormalLvl>
 			<value level="1">1</value>

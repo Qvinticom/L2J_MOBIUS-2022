@@ -229,7 +229,7 @@
 		</skills>
 	</item>
 	<item id="10314" name="Beleth's Ring" type="Armor">
-		<!-- A ring made by Tully at the command of Beleth, imbued with Beleth's magic powers. Effects: MP +21, M. Def +12%, Max HP +105, Mental Atk. +10, Mental Attack Resistance +10, MP Recovery +0.23, Dark Attack Def. +30. Only one effect is applied when two identical rings are worn. -->
+		<!-- A ring made by Tully at the command of Beleth, imbued with Beleth's magic powers. Effects: MP +21, M. Def. +12%, Max HP +105, Mental Atk. +10, Mental Attack Resistance +10, MP Recovery +0.23, Dark Attack Def. +30. Effect does not stack with identical ones. -->
 		<set name="icon" val="icon.accessary_dynasty_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />

@@ -28,8 +28,8 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="23490" min="1" max="1" chance="100" /> <!-- PA Vitality (1-hr.) - Event -->
-			<item id="22280" min="1" max="1" chance="100" /> <!-- PA - Blessing (1-hr.) - Event -->
+			<item id="23490" min="1" max="1" chance="100" /> <!-- PA Vitality (1-hour) - Event -->
+			<item id="22280" min="1" max="1" chance="100" /> <!-- PA - Blessing (1-hour) - Event -->
 		</capsuled_items>
 	</item>
 	<item id="23602" name="Hussar's Wing" type="Armor">
@@ -91,7 +91,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23605" name="SP Rune 50% Pack (1-hour)" type="EtcItem">
-		<!-- Double-click to obtain a SP Rune 50% (1-hr.). -->
+		<!-- Wrapped Pack containing SP Rune 50% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -103,7 +103,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hr. -->
+			<item id="22959" min="1" max="1" chance="100" /> <!-- SP Rune 50% - 1-hour -->
 		</capsuled_items>
 	</item>
 	<item id="23606" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" type="EtcItem">
@@ -307,7 +307,7 @@
 		</skills>
 	</item>
 	<item id="23617" name="Vitality Maintaining Potion Pack" additionalName="No Weekly Usage Limit" type="EtcItem">
-		<!-- Double-click to obtain a Vitality Maintaining Potion with no weekly usage limit. -->
+		<!-- Wrapped Pack containing Vitality Maintaining Potion with no weekly usage limit. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -324,7 +324,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23618" name="Black Gem Mask Pack (7-day)" additionalName="Vitality (No Weekly Usage Limit)" type="EtcItem">
-		<!-- Double-click to obtain a Black Gem Mask (7-day). -->
+		<!-- Wrapped Pack containing Black Gem Mask (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -341,7 +341,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23619" name="Artisan's Goggles Pack (7-day)" additionalName="Vitality (No Weekly Usage Limit)" type="EtcItem">
-		<!-- Double-click to obtain an Artisan's Goggles (7-day). -->
+		<!-- Wrapped Pack containing Artisan's Goggles (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -733,7 +733,7 @@
 		</stats>
 	</item>
 	<item id="23639" name="Blessed Valakas' Necklace" additionalName="3-day" type="Armor">
-		<!-- HP +625, MP +79, Sleep Resistance +50%, Sleep Attack Rate +50%, Fire Resistance +30, Dark Resistance +20, STR +3, INT +3, P. Skill Attack +5%, P. Atk. +10%, M. Atk. +20%. Wild Magic Effect, and Damage Reflect effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance +100% momentarily. 3-day. -->
+		<!-- HP +625, MP +79, Sleep Resistance +50%, Sleep Attack Rate +50%, Fire Resistance +30, Dark Resistance +20, STR +3, INT +3, P. Skill Attack +5%, P. Atk. +10%, M. Atk. +20%. Wild Magic Effect, and Damage Reflection effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance +100% momentarily. 3-day. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -758,7 +758,7 @@
 		</stats>
 	</item>
 	<item id="23640" name="Blessed Valakas' Necklace" additionalName="7-day" type="Armor">
-		<!-- HP +625, MP +79, Sleep Resistance +50%, Sleep Attack Rate +50%, Fire Resistance +30, Dark Resistance +20, STR +3, INT +3, P. Skill Attack +5%, P. Atk. +10%, M. Atk. +20%. Wild Magic Effect, and Damage Reflect effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance +100% temporarily. 7-day. -->
+		<!-- HP +625, MP +79, Sleep Resistance +50%, Sleep Attack Rate +50%, Fire Resistance +30, Dark Resistance +20, STR +3, INT +3, P. Skill Attack +5%, P. Atk. +10%, M. Atk. +20%. Wild Magic Effect, and Damage Reflection effect. Decreases P. Skill cooldown and M. Skill cooldown. Can use Cancel Hold skill, and Hold Resistance +100% temporarily. 7-day. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -903,7 +903,7 @@
 		</skills>
 	</item>
 	<item id="23648" name="Knighthood's Fortune Box" type="EtcItem">
-		<!-- Double-click to obtain supplies used by knights, such as various XP Rune Packs, Vitailty Star Candies, firecrackers, etc. -->
+		<!-- Wrapped Pack containing supplies used by knights, such as various XP Rune Packs, Vitailty Star Candies, firecrackers, etc. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_cube_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -919,7 +919,7 @@
 		</skills>
 	</item>
 	<item id="23649" name="Royal Guard's Fortune Box" type="EtcItem">
-		<!-- Double-click to obtain supplies used by royal guards, such as Blessed Scrolls, Unbind Scrolls, Enchant Scrolls, and Enchant Stones of various levels and types. -->
+		<!-- Wrapped Pack containing supplies used by royal guards, such as Blessed Scrolls, Unbind Scrolls, Enchant Scrolls, and Enchant Stones of various levels and types. -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

@@ -357,7 +357,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18443" toLevel="1" name="Release Agathion's Seal - Anakaim Holy Barrier">
+	<skill id="18443" toLevel="1" name="Agathion Summon - Anakim Holy Barrier">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
@@ -656,7 +656,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18448" toLevel="1" name="Summon Piero">
+	<skill id="18448" toLevel="1" name="Scroll: Summon Piero">
 		<!-- Summon Piero. -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>46219</itemConsumeId> <!-- Summon Scroll: Piero -->
@@ -673,7 +673,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18449" toLevel="1" name="Magic Number Cube">
+	<skill id="18449" toLevel="1" name="Elysium Animal Cure">
 		<!-- Apply for the giveaway. -->
 		<operateType>A1</operateType>
 		<castRange>1500</castRange>
@@ -690,7 +690,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="18451" toLevel="2" name="11th Anniversary Buff">
-		<!-- Acquired XP/ SP +$s1. Receive a $s2th Anniversary Coins once the buff ends. Note: Cannot receive item if you're dead or don't have space in your inventory. -->
+		<!-- Acquired XP/ SP +$s1. Receive a $s2th Anniversary Coins once the buff ends. Note: Cannot receive item if you are dead or don't have space in your inventory. -->
 		<icon>icon.ev_buff_11th</icon>
 		<abnormalTime>
 			<value level="1">3600</value>
@@ -761,7 +761,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18458" toLevel="2" name="L2 Market +8 Amaranthine Weapon Pack">
-		<!-- 1st place prize for the L2 Market giveaway. Get a +8 Helios weapon. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get a +8 Amaranthine weapon. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18459" toLevel="3" name="L2 Market Seed Talisman Pack">
@@ -789,7 +789,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18465" toLevel="9" name="L2 Market R99 Weapon Enhancement Stone Pack">
-		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Helios Enhancement Stone. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Amaranthine Enhancement Stone. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18466" toLevel="1" name="Piero's Victory Box">
@@ -813,7 +813,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18471" toLevel="1" name="Dandy's Golden Ball">
-		<!-- For 1 hr., Acquired XP/ SP +100%, and changes the appearance of your armor into that of an NC Dinos uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. -->
+		<!-- For 1 h., Acquired XP/ SP +100%, and changes the appearance of your armor into that of an NC Dinos uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. -->
 		<icon>BranchIcon.icon.g_ev_goldenball</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>15000</reuseDelay>
@@ -823,12 +823,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18473" toLevel="1" name="Venezia Rune">
-		<!-- Keep this in your inventory to gain Acquired XP/ SP +22%. The effect only applies to characters below Lv. 99. -->
+		<!-- Acquired XP/ SP +22%. The effect only applies to characters below Lv. 99. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
 	</skill>
 	<skill id="18474" toLevel="1" name="Blessed Venezia Rune">
-		<!-- Keep this in your inventory to gain Acquired XP/ SP +11%. All levels. -->
+		<!-- Acquired XP/ SP +11%. All levels. -->
 		<icon>icon.skill19226</icon>
 		<operateType>P</operateType>
 	</skill>
@@ -1172,7 +1172,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18498" toLevel="3" name="Holiday Blessing">
-		<!-- For $s1 hr. Acquired XP/ SP + $s2 and Vitality Consumption -$s3. Additionaly, recovers $s4 bar of Vitality and changes the appearance into that of Santa Claus. -->
+		<!-- For $s1 hours Acuired XP/ SP +$s2 and Vitality Consumption -$s3. Additionaly, recovers $s4 bar of Vitality and changes the appearance into that of Santa Claus. -->
 		<icon>
 			<value level="1">BranchSys.icon.br_xmas_miracle_i00</value>
 			<value level="2">icon.etc_scroll_white_i00</value>

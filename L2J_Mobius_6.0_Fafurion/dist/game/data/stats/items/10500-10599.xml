@@ -390,7 +390,7 @@
 		</skills>
 	</item>
 	<item id="10520" name="Echo Crystal - Kuraki Mai" type="EtcItem">
-		<!-- Echo Crystal that plays Kuraki Mai's music. It can be used once every 40 seconds and disappears after being used. -->
+		<!-- Echo Crystal that plays Kuraki Mai's music. It can be used once every 40 sec. and disappears after being used. -->
 		<set name="icon" val="icon.etc_echo_crystal_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -770,7 +770,7 @@
 		</skills>
 	</item>
 	<item id="10535" name="Yellow Talisman - P. Def." type="Armor">
-		<!-- P. Def. Increases when equipped. Effect does not stack with additional Talismans of the same type. Shadow Item. -->
+		<!-- P. Def. increases when equipped. Effect does not stack with additional Talismans of the same type. Shadow Item. -->
 		<set name="icon" val="icon.etc_talisman_i02" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="deco1" />

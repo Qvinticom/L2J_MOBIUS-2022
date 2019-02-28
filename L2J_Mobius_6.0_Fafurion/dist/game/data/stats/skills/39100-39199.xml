@@ -37,13 +37,14 @@
 		<icon>BranchSys.icon.br_firecracker_gold_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="39171" toLevel="1" name="Member of the Balthus Knight">
-		<!-- Grants you a disguise for 1 hr. You'll have a chance to receive special supplies. -->
+	<skill id="39171" toLevel="1" name="Sibi's Disguided Clothing">
+		<!-- Grants you a disguise for 1 h. You'll have a chance to receive special supplies. -->
 		<icon>
 			<value level="1">icon.ev_balthus_token</value>
 			<value level="2">icon.etc_lottery_card_i00</value>
 			<value level="3">icon.etc_lottery_card_i00</value>
 			<value level="4">icon.etc_lottery_card_i00</value>
+			<value level="5">icon.christmas_card_box2</value>
 		</icon>
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>49784</itemConsumeId>
@@ -125,6 +126,9 @@
 			<effect name="Detection" />
 		</effects>
 	</skill>
+	<skill id="39174" toLevel="1" name="Valor Recovery Potion">
+		<operateType>A1</operateType>
+	</skill>
 	<skill id="39175" toLevel="1" name="Scroll: PK">
 		<operateType>A1</operateType>
 		<hitTime>2000</hitTime>
@@ -174,5 +178,107 @@
 				<mode>DIFF</mode>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="39177" toLevel="1" name="Resolute Raid Point Rune">
+		<!-- RP gain +100% if stored in the inventory. -->
+		<icon>icon.etc_i.etc_rp_point_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39178" toLevel="1" name="Resolute Attack Scroll">
+		<!-- For $s1, all clan members' P. Atk./ M. Atk. +$s2, P. Skill Power/ M. Skill Power +$s3, XP and SP gain +$s4. -->
+		<icon>icon.skill19015</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39179" toLevel="1" name="Resolute Defense Scroll">
+		<!-- For $s1, nearby clan members' P./ M. Def. +$s2, debuff resistance +$s3, XP and SP gain +$s4. -->
+		<icon>icon.skill19015</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39180" toLevel="1" name="Resolute Recovery Potion">
+		<!-- Recovers 3000 HP. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39181" toLevel="3" name="Honey Vitality Beer">
+		<!-- For $s1, CON/ MEN/ LUC/ CHA $s2. Using additional Honey Vitality Beer items while the buff is active enables up to Lv. 3 stacked effects. -->
+		<icon>
+			<value level="1">icon.bm_royal_honey_beer_lv1</value>
+			<value level="2">icon.bm_royal_honey_beer_lv2</value>
+			<value level="3">icon.bm_royal_honey_beer_lv3</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39182" toLevel="1" name="Chorong's Summon Friend Scroll">
+		<!-- Summons a selected target. Only available while you're in a party. Cooldown 30 min. -->
+		<icon>icon.etc_summon_aga_agit_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39183" toLevel="1" name="Vitality Beer">
+		<!-- Double-click it to recover a certain amount of Vitality. -->
+		<icon>icon.bm_honey_beer</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39184" toLevel="6" name="Suspicious Safe">
+		<!-- Double-click to obtain an item. -->
+		<icon>
+			<value level="1">icon.bm_strongbox</value>
+			<value level="2">icon.bm_pvp_pve_upgrade_box</value>
+			<value level="3">icon.bm_royal_white_ticket_box</value>
+			<value level="4">icon.bm_royal_purple_ticket_box</value>
+			<value level="5">icon.skill0000</value>
+			<value level="6">icon.bm_strongbox</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39185" toLevel="1" name="Divine Zodiac Agathion Book of Growth">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39186" toLevel="1" name="Zodiac Agathion Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39187" toLevel="21" name="Burnstein's Aufgabe Shield Appearance Stone (30-day)">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39188" toLevel="1" name="Red Libra Kaliel's Energy Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39189" toLevel="2" name="Clan Hall Belt - Stage 1">
+		<!-- When equipped, Max HP/ MP/ CP +$s1, weight +$s2, damage dealt +$s3, Received Damage -$s4, Inventory Slots +$s5. -->
+		<icon>icon.event_energy_belt_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39190" toLevel="1" name="GM Lassana's Present Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39191" toLevel="1" name="Talisman - Wind Pack">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39192" toLevel="1" name="Talisman - Fortress Pack">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39193" toLevel="1" name="Item Seal Scroll">
+		<icon>icon.scrl_item_lock</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39194" toLevel="1" name="Release Seal Scroll">
+		<icon>icon.scrl_item_unlock</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39195" toLevel="1" name="Dark/ Bloody Amaranthine Enhancement Stone Box">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39196" toLevel="1" name="Knights' Basic Supplies">
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39197" toLevel="1" name="+8 Shiny Elemental T-shirt Pack">
+		<!-- Obtains an Elemental Shirt enchanted to +8 on use. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39198" toLevel="1" name="+8 Reflect Attack T-shirt Pack">
+		<!-- Obtains a Reflect Attack T-shirt enchanted to +8 on use. -->
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="39199" toLevel="1" name="+8 Reflect Magic T-shirt Pack">
+		<!-- Obtains a Reflect Magic T-shirt enchanted to +8 on use. -->
+		<operateType>A1</operateType>
 	</skill>
 </list>

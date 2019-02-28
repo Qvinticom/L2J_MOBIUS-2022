@@ -400,34 +400,34 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="15">
-						<item id="36235" count="1" /> <!-- Istina's Necklace - 3-hr. -->
+						<item id="36235" count="1" /> <!-- Istina's Necklace - 3-hour -->
 					</item>
 					<item chance="15">
-						<item id="36236" count="1" /> <!-- Istina's Ring - 3-hr. -->
+						<item id="36236" count="1" /> <!-- Istina's Ring - 3-hour -->
 					</item>
 					<item chance="15">
-						<item id="36237" count="1" /> <!-- Istina's Earring - 3-hr. -->
+						<item id="36237" count="1" /> <!-- Istina's Earring - 3-hour -->
 					</item>
 					<item chance="15">
-						<item id="36238" count="1" /> <!-- Octavis' Ring - 3-hr. -->
+						<item id="36238" count="1" /> <!-- Octavis' Ring - 3-hour -->
 					</item>
 					<item chance="15">
-						<item id="36239" count="1" /> <!-- Octavis' Necklace - 3-hr. -->
+						<item id="36239" count="1" /> <!-- Octavis' Necklace - 3-hour -->
 					</item>
 					<item chance="15">
-						<item id="36240" count="1" /> <!-- Octavis' Earring - 3-hr. -->
+						<item id="36240" count="1" /> <!-- Octavis' Earring - 3-hour -->
 					</item>
 					<item chance="2">
-						<item id="36241" count="1" /> <!-- Blessed Antharas' Earring - 3-hr. -->
+						<item id="36241" count="1" /> <!-- Blessed Antharas' Earring - 3-hour -->
 					</item>
 					<item chance="2">
-						<item id="36242" count="1" /> <!-- Blessed Valakas' Necklace - 3-hr. -->
+						<item id="36242" count="1" /> <!-- Blessed Valakas' Necklace - 3-hour -->
 					</item>
 					<item chance="1">
-						<item id="36243" count="1" /> <!-- Earth Wyrm Heart Ring - 3-hr. -->
+						<item id="36243" count="1" /> <!-- Earth Wyrm Heart Ring - 3-hour -->
 					</item>
 					<item chance="5">
-						<item id="36244" count="1" /> <!-- Tauti's Ring - 3-hr. -->
+						<item id="36244" count="1" /> <!-- Tauti's Ring - 3-hour -->
 					</item>
 				</items>
 			</effect>
@@ -1699,10 +1699,10 @@
 						<item id="19448" count="1" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 					</item>
 					<item chance="0.004">
-						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) - Event -->
 					</item>
 					<item chance="0.036">
-						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) - Event -->
 					</item>
 				</items>
 			</effect>
@@ -1869,7 +1869,7 @@
 		</effects>
 	</skill>
 	<skill id="9757" toLevel="1" name="Horn Melody (Battleground)">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. Effect remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -1911,7 +1911,7 @@
 		</effects>
 	</skill>
 	<skill id="9758" toLevel="1" name="Drum Melody (Battleground)">
-		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. Effect remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2038,7 +2038,7 @@
 		</effects>
 	</skill>
 	<skill id="9760" toLevel="1" name="Pipe Organ Melody (Battleground)">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. Effect remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2080,7 +2080,7 @@
 		</effects>
 	</skill>
 	<skill id="9761" toLevel="1" name="Guitar Melody (Battleground)">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. Effect remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_roll_of_paper_blue_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2201,7 +2201,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9764" toLevel="1" name="Battleground Scroll: Damage Reflect Resistance">
+	<skill id="9764" toLevel="1" name="Battleground Scroll: Damage Reflection Resistance">
 		<!-- Increases Damage Reflection Resistance. -->
 		<icon>icon.etc_roll_of_paper_black_i00</icon>
 		<operateType>A2</operateType>
@@ -2458,22 +2458,22 @@
 						<item id="22204" count="1" /> <!-- Attribute Stone Pack - Event -->
 					</item>
 					<item chance="0.4084">
-						<item id="35735" count="1" /> <!-- Fire Stone (+ 150) - Event -->
+						<item id="35735" count="1" /> <!-- Fire Stone (+150) - Event -->
 					</item>
 					<item chance="0.4084">
-						<item id="35736" count="1" /> <!-- Water Stone (+ 150) - Event -->
+						<item id="35736" count="1" /> <!-- Water Stone (+150) - Event -->
 					</item>
 					<item chance="0.4084">
-						<item id="35737" count="1" /> <!-- Earth Stone (+ 150) - Event -->
+						<item id="35737" count="1" /> <!-- Earth Stone (+150) - Event -->
 					</item>
 					<item chance="0.4084">
-						<item id="35738" count="1" /> <!-- Wind Stone (+ 150) - Event -->
+						<item id="35738" count="1" /> <!-- Wind Stone (+150) - Event -->
 					</item>
 					<item chance="0.4084">
-						<item id="35739" count="1" /> <!-- Dark Stone (+ 150) - Event -->
+						<item id="35739" count="1" /> <!-- Dark Stone (+150) - Event -->
 					</item>
 					<item chance="0.4084">
-						<item id="35740" count="1" /> <!-- Holy Stone (+ 150) - Event -->
+						<item id="35740" count="1" /> <!-- Holy Stone (+150) - Event -->
 					</item>
 					<item chance="0.0034">
 						<item id="35751" count="1" /> <!-- Draco's Shiny Accessory Pack - Event -->
@@ -2569,7 +2569,7 @@
 		</effects>
 	</skill>
 	<skill id="9775" toLevel="1" name="Birthday Vitality Potion">
-		<!-- For 1 hr., Vitality is replenished when XP is gained through hunting. Buff is deleted when subclass is changed. Cooldown is 60 min. Buff remains even after death. -->
+		<!-- For 1 h., Vitality is replenished when XP is gained through hunting. Buff is deleted when subclass is changed. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>icon.etc_potion_blue_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2594,8 +2594,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9776" toLevel="1" name="Freya's Refreshing Breeze (1-hour)">
-		<!-- For 1 hr., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
+	<skill id="9776" toLevel="1" name="Freya's Refreshing Breeze (1-h.)">
+		<!-- For 1 h., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>icon.etc_I.etc_hot_spring_mineral_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2614,8 +2614,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9777" toLevel="1" name="Pa'agrio's Warm Breeze (1-hour)">
-		<!-- For 1 hr., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
+	<skill id="9777" toLevel="1" name="Pa'agrio's Warm Breeze (1-h.)">
+		<!-- For 1 h., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>BranchSys2.Icon.pi_wind_of_paagrio</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2634,8 +2634,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9778" toLevel="1" name="Sweet Chocolate (1-hour)">
-		<!-- For 1 hr., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
+	<skill id="9778" toLevel="1" name="Sweet Chocolate (1-h.)">
+		<!-- For 1 h., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>BranchSys.icon.br_valentine_darkchoco_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2655,7 +2655,7 @@
 		</effects>
 	</skill>
 	<skill id="9779" toLevel="1" name="Returning Hero's Vitality Replenishing Juice">
-		<!-- Vitality Recovery for 1 hr. No effect when Birthday Vitality Buff is applied. Cooldown is 60 min. -->
+		<!-- Vitality Recovery for 1 h. No effect when Birthday Vitality Buff is applied. Cooldown is 60 min. -->
 		<icon>BranchSys2.icon.br_breath_of_hero_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2674,8 +2674,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9780" toLevel="1" name="Pirate Elixir (1-hour)">
-		<!-- For 1 hr., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
+	<skill id="9780" toLevel="1" name="Pirate Elixir (1-h.)">
+		<!-- For 1 h., Vitality is replenished when XP is gained through hunting. Cooldown is 60 min. Buff remains even after death. -->
 		<icon>icon.etc_hot_spring_nectar_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>

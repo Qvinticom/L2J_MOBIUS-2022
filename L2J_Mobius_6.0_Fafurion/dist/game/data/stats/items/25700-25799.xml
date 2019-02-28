@@ -427,7 +427,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="25721" name="Visual Enchant Stone" additionalName="Low-grade / Damage Reflect Resistance" type="EtcItem">
-		<!-- Talk to the Fantasy Isle Paddy to trade Male/ Female Swimsuit, Formal Wear, Santa Outfit, Beach/ Alluring/ Seductive Swimsuit, and Maid Costume into Damage Reflect Resistance 5% Appearance Stone. -->
+		<!-- Talk to the Fantasy Isle Paddy to trade Male/ Female Swimsuit, Formal Wear, Santa Outfit, Beach/ Alluring/ Seductive Swimsuit, and Maid Costume into Damage Reflection Resistance 5% Appearance Stone. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
@@ -547,7 +547,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="25741" name="Visual Enchant Stone" additionalName="Mid-grade / Damage Reflect Resistance" type="EtcItem">
-		<!-- Talk to the Fantasy Isle Paddy to trade Male/ Female Swimsuit, Formal Wear, Santa Outfit, Beach/ Alluring/ Seductive Swimsuit, and Maid Costume into Damage Reflect Resistance 7% Appearance Stone. -->
+		<!-- Talk to the Fantasy Isle Paddy to trade Male/ Female Swimsuit, Formal Wear, Santa Outfit, Beach/ Alluring/ Seductive Swimsuit, and Maid Costume into Damage Reflection Resistance 7% Appearance Stone. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
@@ -667,7 +667,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="25761" name="Visual Enchant Stone" additionalName="Top-grade / Damage Reflect Resistance" type="EtcItem">
-		<!-- Talk to the Fantasy Isle Paddy to trade Male/ Female Swimsuit, Formal Wear, Santa Outfit, Beach/ Alluring/ Seductive Swimsuit, and Maid Costume into Damage Reflect Resistance 15% Appearance Stone. -->
+		<!-- Talk to the Fantasy Isle Paddy to trade Male/ Female Swimsuit, Formal Wear, Santa Outfit, Beach/ Alluring/ Seductive Swimsuit, and Maid Costume into Damage Reflection Resistance 15% Appearance Stone. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
@@ -781,7 +781,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="25780" name="Visual Enchant Stone Pack" additionalName="Low-grade / Random" type="EtcItem">
-		<!-- Double-click to obtain a low-grade Visual Enchant Stone. -->
+		<!-- Wrapped Pack containing a low-grade Visual Enchant Stone. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -789,7 +789,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="25781" name="Visual Enchant Stone Pack" additionalName="Mid-grade / Random" type="EtcItem">
-		<!-- Double-click to obtain a mid-grade Visual Enchant Stone. -->
+		<!-- Wrapped Pack containing a mid-grade Visual Enchant Stone. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -797,7 +797,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="25782" name="Visual Enchant Stone Pack" additionalName="Top-grade / Random" type="EtcItem">
-		<!-- Double-click to obtain a high-grade Visual Enchant Stone. -->
+		<!-- Wrapped Pack containing a high-grade Visual Enchant Stone. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -805,7 +805,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="25783" name="Visual Enchant Stone Pack" additionalName="Basic Mid-grade / Random" type="EtcItem">
-		<!-- Double-click to obtain a mid-grade or low-grade Visual Enchant Stone. -->
+		<!-- Wrapped Pack containing a mid-grade or low-grade Visual Enchant Stone. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -813,7 +813,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="25784" name="Visual Enchant Stone Pack" additionalName="Standard Mid-grade / Random" type="EtcItem">
-		<!-- Double-click to obtain a low-grade, mid-grade, or high-grade Visual Enchant Stone. -->
+		<!-- Wrapped Pack containing a low-grade, mid-grade, or high-grade Visual Enchant Stone. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -821,7 +821,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="25785" name="Visual Enchant Stone Pack" additionalName="Notable Mid-grade / Random" type="EtcItem">
-		<!-- Double-click to obtain a mid-grade or high-grade Visual Enchant Stone. -->
+		<!-- Wrapped Pack containing a mid-grade or high-grade Visual Enchant Stone. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -837,7 +837,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="25787" name="Luck Box 3" type="EtcItem">
-		<!-- Has a chance of obtaining either an XP Rune III (Lv. 1-100+) 100% Pack (30-day), Prestige Rune 100% Pack, Kat the Cat's Box of Roses, Pa'agrio's Warm Breeze, Ghost Potion, Emperor's Growth Scroll, Feather of Blessing Pack, Letter Collector's Gift, Mysterious Healthy Juice (HP/ CP), Gemstone (R-grade), or Heavenly Recovery Potion. -->
+		<!-- Has a chance of obtaining either an XP Rune III (Lv. 1-100+) 100% Pack (30-day), High-grade Maphr's Rune 100% Pack, Kat the Cat's Box of Roses, Pa'agrio's Warm Breeze, Ghost Potion, Emperor's Growth Scroll, Feather of Blessing Pack, Letter Collector's Gift, Mysterious Healthy Juice (HP/ CP), Gemstone (R-grade), or Heavenly Recovery Potion. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -853,7 +853,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="25789" name="Luck Box 3" type="EtcItem">
-		<!-- Has a chance of obtaining either an XP Rune III (Lv. 1-100+) 100% Pack (30-day), Prestige Rune 100% Pack, Kat the Cat's Box of Roses, Pa'agrio's Warm Breeze, Ghost Potion, Emperor's Growth Scroll, Feather of Blessing Pack, Letter Collector's Gift, Mysterious Healthy Juice (HP/ CP), Gemstone (R-grade), or Heavenly Recovery Potion. -->
+		<!-- Has a chance of obtaining either an XP Rune III (Lv. 1-100+) 100% Pack (30-day), High-grade Maphr's Rune 100% Pack, Kat the Cat's Box of Roses, Pa'agrio's Warm Breeze, Ghost Potion, Emperor's Growth Scroll, Feather of Blessing Pack, Letter Collector's Gift, Mysterious Healthy Juice (HP/ CP), Gemstone (R-grade), or Heavenly Recovery Potion. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -861,7 +861,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="25790" name="Ancient Hero's Weapon Pack" type="EtcItem">
-		<!-- Double-click to obtain 14 Ancient Hero weapons (15-day). -->
+		<!-- Wrapped Pack containing 14 Ancient Hero weapons (15-day). -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -909,7 +909,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="25792" name="Scroll: Enchant Elemental Shirt" type="EtcItem">
-		<!-- Enchant Scroll exclusive to Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, Shiny Elemental Shirt, Physical Reflect Shirt, and Magical Reflect Shirt. When enchanted, increases P. Def. and M. Def. by 1. P. Def. +3 starting from +4. Can be safely enchanted to +3 and up to a maximum of +10. From +4, basic stats (CON, MEN, STR, INT, DEX, WIT) are raised in stages. Depending on the shirt type, various additional options can be applied from +4 to +10. -->
+		<!-- Enchant Scroll exclusive to Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, and the Shiny Elemental Shirt. When enchanted, increases P. Def. and M. Def. by 1. P. Def. +3 starting from +4. Can be safely enchanted to +3 and up to a maximum of +10. From +4, basic stats (CON, MEN, STR, INT, DEX, WIT) are raised in stages. Depending on the shirt type, various additional options can be applied from +4 to +10. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
@@ -924,7 +924,7 @@
 		</skills>
 	</item>
 	<item id="25793" name="Blessed Scroll: Enchant Elemental Shirt" type="EtcItem">
-		<!-- Enchant Scroll exclusive to Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, Shiny Elemental Shirt, Physical Reflect Shirt, and Magical Reflect Shirt. When enchanted, P. Def. and M. Def. +1. From +3, resistance to corresponding element +5, and from +4, P. Def. +3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +6, +7, +8, +9, and +10, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
+		<!-- Enchant Scroll exclusive to Pa'agrio's Shirt, Sayha's Shirt, Eva's Shirt, Maphr's Shirt, and the Shiny Elemental Shirt. When enchanted, increases P. Def. and M. Def. by 1. From +3, Elemental defense increases by 5, and from +4, P. Def. increases by 3. Can be safely enchanted up to +3 and can be enchanted up to a max of +10. Basic stats (CON, MEN, STR, INT, DEX, WIT) are gradually increased with each enchant level starting from +4. At +5, +6, +7, +8, +9, and +10, additional bonuses are also applied. If enchanting fails, the enchant value will be reset to 0. -->
 		<set name="icon" val="BranchSys2.icon.etc_scroll_of_enchant_shirt_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="immediate_effect" val="true" />

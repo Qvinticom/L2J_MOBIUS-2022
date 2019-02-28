@@ -15,7 +15,7 @@
 	<skill id="13504" toLevel="1" name="Monster Weapon Appearance Stone: Guillotine's Greatsword">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="13505" toLevel="1" name="Monster Weapon Appearance Stone: Thesakar's Axe">
+	<skill id="13505" toLevel="1" name="Monster Weapon Appearance Stone: Thesakar's Spear">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="13506" toLevel="1" name="Monster Weapon Appearance Stone: Mimilead's Staff">
@@ -42,7 +42,7 @@
 	<skill id="13513" toLevel="1" name="Monster Weapon Appearance Stone: Shield of Corruption">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="13514" toLevel="1" name="Giant's Damage Reflect">
+	<skill id="13514" toLevel="1" name="Giant's Damage Reflection">
 		<!-- Reflects 20% of damage to attacker. -->
 		<icon>icon.skill0086</icon>
 		<operateType>P</operateType>
@@ -73,8 +73,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13516" toLevel="1" name="Giant's Damage Reflect Shield">
-		<!-- Damage Reflect Resistance +50%. -->
+	<skill id="13516" toLevel="1" name="Giant's Damage Reflection Shield">
+		<!-- Damage Reflection Resistance +50%. -->
 		<icon>icon.active_damage_shield1</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -184,7 +184,7 @@
 		</effects>
 	</skill>
 	<skill id="13520" toLevel="1" name="Giant's Silence">
-		<!-- For 5 sec., locks target's P. Skill/ M. Skill. PvP only. -->
+		<!-- For 5 sec., locks target's P. Skill/ M. Skill. PvP Only. -->
 		<icon>icon.skill1064</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -214,7 +214,7 @@
 		</effects>
 	</skill>
 	<skill id="13521" toLevel="1" name="Giant's Sleep">
-		<!-- Sleeps target for 5 sec. PvP only. -->
+		<!-- Sleeps target for 5 sec. PvP Only. -->
 		<icon>icon.skill1069</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -246,7 +246,7 @@
 		</effects>
 	</skill>
 	<skill id="13522" toLevel="1" name="Giant's Winter">
-		<!-- For 10 sec., target's Atk. Spd./ Casting Spd. -50%. -->
+		<!-- For 10 sec., decreases target's Atk. Spd./ Casting Spd. by 50%. -->
 		<icon>icon.skill1454</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -505,7 +505,7 @@
 		</effects>
 	</skill>
 	<skill id="13529" toLevel="1" name="Enhanced Octavis' Necklace (Warrior)">
-		<!-- P. Atk. +3%, P. Skill Cooldown -10%, Damage Reflect +5%. Wearing two of the items will only give the effect of one. -->
+		<!-- P. Atk. +3%, P. Skill Cooldown -10%, Damage Reflection +5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.octavis_necklace_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -576,7 +576,7 @@
 		</effects>
 	</skill>
 	<skill id="13532" toLevel="1" name="Enhanced Istina' Necklace (Warrior)">
-		<!-- P. Atk. +2%, P. Skill Cooldown -5%, Damage Reflect +5%. Wearing two of the items will only give the effect of one. -->
+		<!-- P. Atk. +2%, P. Skill Cooldown -5%, Damage Reflection +5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.istina_necklace_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -647,7 +647,7 @@
 		</effects>
 	</skill>
 	<skill id="13535" toLevel="1" name="Enhanced Octavis' Necklace (Wizard)">
-		<!-- M. Atk. +3%, M. Skill Cooldown -5%, Damage Reflect +5%. Wearing two of the items will only give the effect of one. -->
+		<!-- M. Atk. +3%, M. Skill Cooldown -5%, Damage Reflection +5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.octavis_necklace_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -718,7 +718,7 @@
 		</effects>
 	</skill>
 	<skill id="13538" toLevel="1" name="Enhanced Istina' Necklace (Wizard)">
-		<!-- M. Atk. +5%, M. Skill Cooldown -10%, Damage Reflect +5%. Wearing two of the items will only give the effect of one. -->
+		<!-- M. Atk. +5%, M. Skill Cooldown -10%, Damage Reflection +5%. Wearing two of the items will only give the effect of one. -->
 		<icon>icon.istina_necklace_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -742,7 +742,7 @@
 		</effects>
 	</skill>
 	<skill id="13539" toLevel="1" name="Baium's Soul Ring">
-		<!-- P./ M. Accuracy +4, P./ M. Critical Damage +15%, Atk./ Casting Spd. +5%, Stun/ Hold/ Mental and Defense success rate +25% -->
+		<!-- P./ M. Accuracy +4, P./ M. Critical Damage +15%, Atk. Spd./ Casting Spd. +5%, Stun/ Hold/ Mental and Defense success rate +25% -->
 		<icon>icon.accessory_ring_of_baium_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -782,7 +782,7 @@
 		</effects>
 	</skill>
 	<skill id="13540" toLevel="1" name="Frintezza's Soul Necklace">
-		<!-- Speed +5, Poison/ Bleed/ Stun/ Hold/ Paralyze attack and defense success rate +20%, Skill cooldown -10%, Damage Reflect +5% -->
+		<!-- Speed +5, Poison/ Bleed/ Stun/ Hold/ Paralyze attack and defense success rate +20%, Skill cooldown -10%, Damage Reflection +5% -->
 		<icon>icon.accessory_necklace_of_frintessa_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1375,7 +1375,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13558" toLevel="1" name="Mysterious Dualsword">
+	<skill id="13558" toLevel="1" name="Mysterious Dual Sword">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +612, Atk. Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_r_dualsword</icon>
 		<operateType>P</operateType>
@@ -1831,7 +1831,7 @@
 		</effects>
 	</skill>
 	<skill id="13563" toLevel="5" name="Einhasad's Wrath">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, Atk. Spd. +$s4, Casting Spd. +$s5. P. Def. and M. Def. -$s6. Cooldown is $s7. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, Atk. Spd. +$s4, Casting Spd. +$s5. P. Def. and M. Def. -$s6. Cooldown is $s7 -->
 		<icon>icon.ainhasard_shirt</icon>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -2008,7 +2008,7 @@
 		</effects>
 	</skill>
 	<skill id="13569" toLevel="3" name="Talisman - Lilith">
-		<!-- Increase M. Def. +$s1, MP recovery +$s2, dark resistance +$s3, and damage reflect resistance +$s4. -->
+		<!-- Increase M. Def. +$s1, MP recovery +$s2, dark resistance +$s3, and Damage Reflection resistance +$s4. -->
 		<icon>
 			<value level="1">icon.lilith_talisman_i00</value>
 			<value level="2">icon.anakim_talisman_i00</value>
@@ -2428,7 +2428,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13578" toLevel="1" name="Hero's Weapon: One-handed Magic Sword">
+	<skill id="13578" toLevel="1" name="Hero's Weapon: Magic Sword">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, M. Atk. +598, Casting Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_infinity_sword</icon>
 		<operateType>P</operateType>
@@ -2467,7 +2467,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13579" toLevel="1" name="Hero's Weapon: One-handed Magic Blunt Weapon">
+	<skill id="13579" toLevel="1" name="Hero's Weapon: One-handed Staff">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, M. Atk. +598, Casting Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_the_mace_of_hero</icon>
 		<operateType>P</operateType>
@@ -2506,7 +2506,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13580" toLevel="1" name="Hero's Weapon: Two-handed Magic Blunt Weapon">
+	<skill id="13580" toLevel="1" name="Hero's Weapon: Two-handed Staff">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, M. Atk. +657, Casting Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_the_staff_of_hero</icon>
 		<operateType>P</operateType>
@@ -2545,7 +2545,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13581" toLevel="1" name="Hero's Weapon: Dualsword">
+	<skill id="13581" toLevel="1" name="Hero's Weapon: Dual Sword">
 		<!-- Max HP +25%, Max MP +30%, Max CP +50%, P. Atk. +612, Atk. Spd. +15%, and PvP Damage +15%. -->
 		<icon>icon.bm_r_dualsword</icon>
 		<operateType>P</operateType>

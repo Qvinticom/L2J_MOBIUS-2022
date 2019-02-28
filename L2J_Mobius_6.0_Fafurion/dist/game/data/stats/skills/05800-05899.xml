@@ -1441,7 +1441,7 @@
 		<targetType>ENEMY_ONLY</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5862" toLevel="1" name="Destruction of the Body">
+	<skill id="5862" toLevel="1" name="Doom of Body">
 		<affectLimit>10-10</affectLimit>
 		<effectPoint>-1000</effectPoint>
 		<magicLvl>99</magicLvl>
@@ -1461,7 +1461,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="5863" toLevel="1" name="Destruction of the Soul">
+	<skill id="5863" toLevel="1" name="Doom of Soul">
 		<affectLimit>10-10</affectLimit>
 		<effectPoint>-1000</effectPoint>
 		<magicLvl>99</magicLvl>
@@ -1499,7 +1499,9 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="5865" toLevel="1" name="Wide-bodied Valakas">
+	<skill id="5865" toLevel="1" name="Valakas Berserk">
+		<!-- Valakas is in a berserk state with increased P. Atk. -->
+		<icon>icon.skill1062</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>
 		<abnormalType>BERSERKER</abnormalType>

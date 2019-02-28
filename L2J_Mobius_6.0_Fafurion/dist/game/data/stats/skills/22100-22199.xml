@@ -94,7 +94,7 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="40">
-						<item id="20590" count="1" /> <!-- Summon of Love Bracelet Pack (24-hr.) (Event) -->
+						<item id="20590" count="1" /> <!-- Summon of Love Bracelet Pack (24-hour) (Event) -->
 					</item>
 					<item chance="60">
 						<item id="9207" count="1" /> <!-- Quick Healing Potion (Event) -->
@@ -279,19 +279,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20">
-						<item id="20712" count="1" /> <!-- Reanimated Corpse Mask (Event) - Skooldie's Blessing: Protection of Darkness (2-hr.) -->
+						<item id="20712" count="1" /> <!-- Reanimated Corpse Mask (Event) - Skooldie's Blessing: Protection of Darkness (2-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20713" count="1" /> <!-- Shriek Mask (Event) - Skooldie's Blessing: Protection of Darkness (2-hr.) -->
+						<item id="20713" count="1" /> <!-- Shriek Mask (Event) - Skooldie's Blessing: Protection of Darkness (2-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20714" count="1" /> <!-- Red Devil Mask (Event) - Skooldie's Blessing: Protection of Darkness (2-hr.) -->
+						<item id="20714" count="1" /> <!-- Red Devil Mask (Event) - Skooldie's Blessing: Protection of Darkness (2-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20715" count="1" /> <!-- Mummy Mask (Event) - Skooldie's Blessing: Protection of Darkness (2-hr.) -->
+						<item id="20715" count="1" /> <!-- Mummy Mask (Event) - Skooldie's Blessing: Protection of Darkness (2-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20716" count="1" /> <!-- Alien Mask (Event) - Skooldie's Blessing: Protection of Darkness (2-hr.) -->
+						<item id="20716" count="1" /> <!-- Alien Mask (Event) - Skooldie's Blessing: Protection of Darkness (2-hour) -->
 					</item>
 				</items>
 			</effect>
@@ -318,19 +318,19 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="20">
-						<item id="20718" count="1" /> <!-- Shiny Reanimated Corpse Mask (Event) - Blessing of Halloween (4-hr.) -->
+						<item id="20718" count="1" /> <!-- Shiny Reanimated Corpse Mask (Event) - Blessing of Halloween (4-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20719" count="1" /> <!-- Shiny Shriek Mask (Event) - Blessing of Halloween (4-hr.) -->
+						<item id="20719" count="1" /> <!-- Shiny Shriek Mask (Event) - Blessing of Halloween (4-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20720" count="1" /> <!-- Shiny Red Devil Mask (Event) - Blessing of Halloween (4-hr.) -->
+						<item id="20720" count="1" /> <!-- Shiny Red Devil Mask (Event) - Blessing of Halloween (4-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20721" count="1" /> <!-- Shiny Mummy Mask (Event) - Blessing of Halloween (4-hr.) -->
+						<item id="20721" count="1" /> <!-- Shiny Mummy Mask (Event) - Blessing of Halloween (4-hour) -->
 					</item>
 					<item chance="20">
-						<item id="20722" count="1" /> <!-- Shiny Alien Mask (Event) - Blessing of Halloween (4-hr.) -->
+						<item id="20722" count="1" /> <!-- Shiny Alien Mask (Event) - Blessing of Halloween (4-hour) -->
 					</item>
 				</items>
 			</effect>
@@ -474,10 +474,10 @@
 			<effect name="RestorationRandom">
 				<items>
 					<item chance="99.99949">
-						<item id="20755" count="1" /> <!-- Santa's Weapon Coupon - Regular - 24-hr. -->
+						<item id="20755" count="1" /> <!-- Santa's Weapon Coupon - Regular - 24-hour -->
 					</item>
 					<item chance="0.00051">
-						<item id="20757" count="1" /> <!-- Santa's Weapon Coupon - Jackpot - 24-hr. -->
+						<item id="20757" count="1" /> <!-- Santa's Weapon Coupon - Jackpot - 24-hour -->
 					</item>
 				</items>
 			</effect>
@@ -551,7 +551,7 @@
 		</effects>
 	</skill>
 	<skill id="22119" toLevel="1" name="Love for All Seasons">
-		<!-- For 1 hr., increases M. Atk. by 75% and the occurrence rate of damage that is caused by magic damage by 2. -->
+		<!-- For 1 h., increases M. Atk. by 75% and the occurrence rate of damage that is caused by magic damage by 2. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_a_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -581,7 +581,7 @@
 		</effects>
 	</skill>
 	<skill id="22120" toLevel="1" name="Happy New Year">
-		<!-- For 1 hr., increases Critical Damage by 35%, Critical Rate by 30, and Accuracy by 4. -->
+		<!-- For 1 h., increases Critical Damage by 35%, Critical Rate by 30, and Accuracy by 4. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_b_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -615,7 +615,7 @@
 		</effects>
 	</skill>
 	<skill id="22121" toLevel="1" name="Female Aniruddha">
-		<!-- For 1 hr., increases P. Def. by 15, M. Def. by 30%, and Shield Defense Rate by 15. -->
+		<!-- For 1 h., increases P. Def. by 15, M. Def. by 30%, and Shield Defense Rate by 15. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_c_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -649,7 +649,7 @@
 		</effects>
 	</skill>
 	<skill id="22122" toLevel="1" name="Kung Hei Fat Choy">
-		<!-- Decreases a party member's P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 15%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hr. Recovers 9% of the physical damage inflicted on the enemy as HP with a certain probability. -->
+		<!-- Decreases a party member's P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 15%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 h. Recovers 9% of the physical damage inflicted on the enemy as HP with a certain probability. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_d_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -707,7 +707,7 @@
 		</effects>
 	</skill>
 	<skill id="22123" toLevel="1" name="Chinese Feast">
-		<!-- For 1 hr., decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and song/ dance skill MP Consumption by 20%. Increases Casting Spd. by 30% and Max MP by 35%. -->
+		<!-- For 1 h., decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and song/ dance skill MP Consumption by 20%. Increases Casting Spd. by 30% and Max MP by 35%. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_e_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -752,7 +752,7 @@
 		</effects>
 	</skill>
 	<skill id="22124" toLevel="1" name="Hwa Gei Bu Gwi">
-		<!-- Increases Atk. Spd. by 33% and the weight penalty interval by 9000 for 1 hr. -->
+		<!-- Increases Atk. Spd. by 33% and the weight penalty interval by 9000 for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_f_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -781,7 +781,7 @@
 		</effects>
 	</skill>
 	<skill id="22125" toLevel="1" name="Fire Stamp">
-		<!-- For 1 hr., increases Speed by 33, Evasion rate by 4, and Max HP by 35%. -->
+		<!-- For 1 h., increases Speed by 33, Evasion rate by 4, and Max HP by 35%. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_g_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1177,7 +1177,7 @@
 		</effects>
 	</skill>
 	<skill id="22139" toLevel="1" name="Branding Wind Walk">
-		<!-- Increases Speed by 33 for 1 hr. -->
+		<!-- Increases Speed by 33 for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_g_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1200,7 +1200,7 @@
 		</effects>
 	</skill>
 	<skill id="22140" toLevel="1" name="Hwa Gei Bu Gwi Haste">
-		<!-- Increases Atk. Spd. by 33% for 1 hr. -->
+		<!-- Increases Atk. Spd. by 33% for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_f_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1223,7 +1223,7 @@
 		</effects>
 	</skill>
 	<skill id="22141" toLevel="1" name="Branding Agility">
-		<!-- Increases Evasion rate by 4 for 1 hr. -->
+		<!-- Increases Evasion rate by 4 for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_g_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1246,7 +1246,7 @@
 		</effects>
 	</skill>
 	<skill id="22142" toLevel="1" name="Female Aniruddha's Shield">
-		<!-- Increases P. Def. by 15% for 1 hr. -->
+		<!-- Increases P. Def. by 15% for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_c_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1269,7 +1269,7 @@
 		</effects>
 	</skill>
 	<skill id="22143" toLevel="1" name="Happy New Year Death Whisper">
-		<!-- Increases Critical Damage by 35% for 1 hr. -->
+		<!-- Increases Critical Damage by 35% for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_b_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1292,7 +1292,7 @@
 		</effects>
 	</skill>
 	<skill id="22144" toLevel="1" name="Happy New Year Guidance">
-		<!-- Increases Accuracy by 4 for 1 hr. -->
+		<!-- Increases Accuracy by 4 for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_b_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1315,7 +1315,7 @@
 		</effects>
 	</skill>
 	<skill id="22145" toLevel="1" name="Love for All Seasons Empower">
-		<!-- Increases M. Atk. by 75% for 1 hr. -->
+		<!-- Increases M. Atk. by 75% for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_a_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1338,7 +1338,7 @@
 		</effects>
 	</skill>
 	<skill id="22146" toLevel="1" name="Chinese Feast Greater Acumen">
-		<!-- Increases Casting Spd. by 30% for 1 hr. -->
+		<!-- Increases Casting Spd. by 30% for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_e_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1361,7 +1361,7 @@
 		</effects>
 	</skill>
 	<skill id="22147" toLevel="1" name="Kung Hei Fat Choy Vampiric Rage">
-		<!-- For 1 hr., 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
+		<!-- For 1 h., 9% of the physical damage inflicted on the enemy is recovered as HP with a certain probability. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_d_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1384,7 +1384,7 @@
 		</effects>
 	</skill>
 	<skill id="22148" toLevel="1" name="Branding Blessed Body">
-		<!-- Increases Max HP by 35% for 1 hr. -->
+		<!-- Increases Max HP by 35% for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_g_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1407,7 +1407,7 @@
 		</effects>
 	</skill>
 	<skill id="22149" toLevel="1" name="Kung Hei Fat Choy Berserker Spirit">
-		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 hr. -->
+		<!-- Decreases P. Def. by 8%, M. Def. by 16%, and Evasion by 4, and increases P. Atk. by 8%, M. Atk. by 16%, Atk. Spd. by 8%, Casting Spd. by 8%, and Speed by 8 for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_d_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1454,7 +1454,7 @@
 		</effects>
 	</skill>
 	<skill id="22150" toLevel="1" name="Female Aniruddha's Magic Barrier">
-		<!-- Increases M. Def. by 30% for 1 hr. -->
+		<!-- Increases M. Def. by 30% for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_c_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1477,7 +1477,7 @@
 		</effects>
 	</skill>
 	<skill id="22151" toLevel="1" name="Chinese Feast Blessed Soul">
-		<!-- Increases Max MP by 35% for 1 hr. -->
+		<!-- Increases Max MP by 35% for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_e_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1500,7 +1500,7 @@
 		</effects>
 	</skill>
 	<skill id="22152" toLevel="1" name="Chinese Feast Clarity">
-		<!-- For 1 hr., decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and song/ dance skill MP Consumption by 20%. -->
+		<!-- For 1 h., decreases P. Skill MP Consumption by 20%, M. Skill MP Consumption by 10%, and song/ dance skill MP Consumption by 20%. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_e_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1534,7 +1534,7 @@
 		</effects>
 	</skill>
 	<skill id="22153" toLevel="1" name="Love for All Seasons Wild Magic">
-		<!-- For 1 hr., increases by 2 the occurrence rate of damage that is caused by magic damage. -->
+		<!-- For 1 h., increases by 2 the occurrence rate of damage that is caused by magic damage. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_a_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1557,7 +1557,7 @@
 		</effects>
 	</skill>
 	<skill id="22154" toLevel="1" name="Happy New Year Focus">
-		<!-- Increases Critical Rate by 30% for 1 hr. -->
+		<!-- Increases Critical Rate by 30% for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_b_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1580,7 +1580,7 @@
 		</effects>
 	</skill>
 	<skill id="22155" toLevel="1" name="Female Aniruddha's Blessed Shield">
-		<!-- Increases Shield Defense Rate by 15 for 1 hr. -->
+		<!-- Increases Shield Defense Rate by 15 for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_c_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1603,7 +1603,7 @@
 		</effects>
 	</skill>
 	<skill id="22156" toLevel="1" name="Hwa Gei Bu Gwi Decrease Weight">
-		<!-- Increases the weight penalty interval by 9000 for 1 hr. -->
+		<!-- Increases the weight penalty interval by 9000 for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_f_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -1625,7 +1625,7 @@
 		</effects>
 	</skill>
 	<skill id="22157" toLevel="1" name="Kung Hei Fat Choy Might">
-		<!-- Increases P. Atk. by 15% for 1 hr. -->
+		<!-- Increases P. Atk. by 15% for 1 h. -->
 		<icon>BranchSys.icon.br_taiwan_newyear_food_d_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2165,7 +2165,7 @@
 		<affectScope>RANGE</affectScope>
 		<affectObject>FRIEND</affectObject>
 	</skill>
-	<skill id="22175" toLevel="1" name="Good/Bad of Life">
+	<skill id="22175" toLevel="1" name="Good/ Bad of Life">
 		<!-- Restores 500 HP when HP falls to 30% or below. -->
 		<icon>icon.skill0001</icon>
 		<magicLvl>1</magicLvl>
@@ -2521,7 +2521,7 @@
 		</effects>
 	</skill>
 	<skill id="22182" toLevel="1" name="Birthday Vitality Buff">
-		<!-- Birthday gift received once a year. Increases your Vitality whenever you gain XP. This buff is active for 12 hr. and is not lost upon death. However, it will disappear if you change to a subclass. -->
+		<!-- Birthday gift received once a year. Increases your Vitality whenever you gain XP. This buff is active for 12 h. and is not lost upon death. However, it will disappear if you change to a subclass. -->
 		<icon>icon.etc_potion_blue_i00</icon>
 		<canBeDispelled>false</canBeDispelled>
 		<operateType>A2</operateType> <!-- FIXME: value unconfirmed -->

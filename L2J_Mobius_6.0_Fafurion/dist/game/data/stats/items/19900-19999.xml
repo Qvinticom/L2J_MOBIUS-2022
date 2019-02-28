@@ -36,7 +36,7 @@
 		</stats>
 	</item>
 	<item id="19902" name="Blessed Seraph Tunic" additionalName="Recovery Type / Robe" type="Armor">
-		<!-- When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -136,7 +136,7 @@
 		</stats>
 	</item>
 	<item id="19907" name="Blessed Eternal Breastplate" additionalName="Defense Type / Heavy" type="Armor">
-		<!-- Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -255,7 +255,7 @@
 		</stats>
 	</item>
 	<item id="19913" name="Blessed Eternal Leather Armor" additionalName="Enchant Type / Light" type="Armor">
-		<!-- When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -355,7 +355,7 @@
 		</stats>
 	</item>
 	<item id="19918" name="Blessed Eternal Tunic" additionalName="Recovery Type / Robe" type="Armor">
-		<!-- When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -456,7 +456,7 @@
 		</stats>
 	</item>
 	<item id="19923" name="Blessed Durandia Breastplate" additionalName="Defense Type / Heavy" type="Armor">
-		<!-- Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t97_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -577,7 +577,7 @@
 		</stats>
 	</item>
 	<item id="19929" name="Blessed Durandia Leather Armor" additionalName="Enchant Type / Light" type="Armor">
-		<!-- When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t98_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -680,7 +680,7 @@
 		</stats>
 	</item>
 	<item id="19934" name="Blessed Durandia Tunic" additionalName="Recovery Type / Robe" type="Armor">
-		<!-- When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t99_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1767,7 +1767,7 @@
 		</stats>
 	</item>
 	<item id="19968" name="Requiem Retributer" additionalName="MP Regeneration + Acumen" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Rate and Casting Spd. by 15%. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- <Soul Crystal Enhancement>. Increases MP Recovery Rate and Casting Spd. by 15%. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1802,7 +1802,7 @@
 		</stats>
 	</item>
 	<item id="19969" name="Requiem Retributer" additionalName="Acumen + Empower" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. M. Atk. +296. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- <Soul Crystal Enhancement>. Increases Casting Spd. by 15%. M. Atk. +296. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1837,7 +1837,7 @@
 		</stats>
 	</item>
 	<item id="19970" name="Requiem Retributer" additionalName="Empower + MP Regeneration" type="Weapon">
-		<!-- <Soul Crystal Enhancement>. M. Atk. +296 and MP Recovery Rate. Increases damage inflicted during PvP. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- <Soul Crystal Enhancement>. M. Atk. +296 and MP Recovery Rate. Increases damage inflicted during PvP. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_grangkaz_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />

@@ -804,7 +804,7 @@
 		</skills>
 	</item>
 	<item id="17138" name="Freya's Gift" type="EtcItem">
-		<!-- Double-click to obtain a Freya's heart. -->
+		<!-- Wrapped Pack containing Freya's heart. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
@@ -1223,7 +1223,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="17163" name="Event - Leaf of Appreciation" type="EtcItem">
-		<!-- When used, can feel yourself becoming stronger by the Leaf of Appreciation for 1 hr. -->
+		<!-- When used, can feel yourself becoming stronger by the Leaf of Appreciation for 1 hour. -->
 		<set name="icon" val="icon.etc_leaf_green_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="etcitem_type" val="POTION" />
@@ -1284,7 +1284,7 @@
 		</capsuled_items>
 	</item>
 	<item id="17166" name="Vesper Noble Enhancement Stone 10-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 10 Vesper Noble Enhancement Stones -->
+		<!-- Wrapped Pack containing 10 Vesper Noble Enhancement Stones -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="material" val="FISH" />
@@ -1702,7 +1702,7 @@
 		</skills>
 	</item>
 	<item id="17186" name="Olympic Athlete's Ring" additionalName="3-day" type="Armor">
-		<!-- Olympic Athlete's Ring. 3-day. MP+ 21 -->
+		<!-- Olympic Athlete's Ring. 3-day. MP+21 -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1724,7 +1724,7 @@
 		</stats>
 	</item>
 	<item id="17187" name="Olympic Athlete's Necklace" additionalName="3-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 3-day. MP+ 42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
+		<!-- Olympic Athlete's Necklace. 3-day. MP+42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflection effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1772,7 +1772,7 @@
 		</stats>
 	</item>
 	<item id="17189" name="Olympic Athlete's Ring" additionalName="7-day" type="Armor">
-		<!-- Olympic Athlete's Ring. 7-day. MP+ 21 -->
+		<!-- Olympic Athlete's Ring. 7-day. MP+21 -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1794,7 +1794,7 @@
 		</stats>
 	</item>
 	<item id="17190" name="Olympic Athlete's Necklace" additionalName="7-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 7-day. MP+ 42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
+		<!-- Olympic Athlete's Necklace. 7-day. MP+42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflection effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1842,7 +1842,7 @@
 		</stats>
 	</item>
 	<item id="17192" name="Olympic Athlete's Ring" additionalName="10-day" type="Armor">
-		<!-- Olympic Athlete's Ring. 10-day. MP+ 21 -->
+		<!-- Olympic Athlete's Ring. 10-day. MP+21 -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1864,7 +1864,7 @@
 		</stats>
 	</item>
 	<item id="17193" name="Olympic Athlete's Necklace" additionalName="10-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 10-day. MP+ 42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
+		<!-- Olympic Athlete's Necklace. 10-day. MP+42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflection effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1912,7 +1912,7 @@
 		</stats>
 	</item>
 	<item id="17195" name="Olympic Athlete's Ring" additionalName="30-day" type="Armor">
-		<!-- Olympic Athlete's Ring. 30-day. MP+ 21 -->
+		<!-- Olympic Athlete's Ring. 30-day. MP+21 -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -1934,7 +1934,7 @@
 		</stats>
 	</item>
 	<item id="17196" name="Olympic Athlete's Necklace" additionalName="30-day" type="Armor">
-		<!-- Olympic Athlete's Necklace. 30-day. MP+ 42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
+		<!-- Olympic Athlete's Necklace. 30-day. MP+42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflection effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -1982,7 +1982,7 @@
 		</stats>
 	</item>
 	<item id="17198" name="Olympic Athlete's Ring" type="Armor">
-		<!-- Olympic Athlete's Ring. MP+ 21 -->
+		<!-- Olympic Athlete's Ring. MP+21 -->
 		<set name="icon" val="icon.accessory_ring_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -2003,7 +2003,7 @@
 		</stats>
 	</item>
 	<item id="17199" name="Olympic Athlete's Necklace" type="Armor">
-		<!-- Olympic Athlete's Necklace. MP+ 42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflect effects. -->
+		<!-- Olympic Athlete's Necklace. MP+42, Sleep/ Paralysis/ Stun Resistance increases by 15%. Sleep/ Paralysis/ Stun Atk. Rate increases by 15%. Decreased skill cooldown and Damage Reflection effects. -->
 		<set name="icon" val="icon.accessory_necklace_of_hero_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />

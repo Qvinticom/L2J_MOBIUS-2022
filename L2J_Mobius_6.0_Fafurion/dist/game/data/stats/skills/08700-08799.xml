@@ -1053,7 +1053,7 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8755" toLevel="1" name="Special Ability: Infinity Crusher">
-		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Max HP/ CP, Atk. Spd. and damage during PvP while reflecting debuff inflicted to the enemy. -->
+		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Maximum HP/ CP, attack speed and damage during PvP while reflecting debuff inflicted to the enemy. -->
 		<icon>icon.weapon_the_hammer_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1107,7 +1107,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8759" toLevel="1" name="Special Ability: Infinity Fighter">
-		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Max HP/ MP/ CP, evasion and damage during PvP while reflecting debuff inflicted to the enemy. -->
+		<!-- Inflicts Stun on the enemy for successful critical attack. Increases Maximum HP/ MP/ CP, evasion and damage during PvP while reflecting debuff inflicted to the enemy. -->
 		<icon>icon.weapon_the_fist_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1134,7 +1134,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="8761" toLevel="1" name="Special Ability: Infinity Dagger">
-		<!-- Momentarily the enemy's magic skills during a critical attack. Increases Max MP/ Max CP/ Atk. Spd./ MP Regeneration, Critical Rate when attacking from behind, and damage inflicted during PvP. Restores HP by using some of the damage inflicted upon the enemy with a certain probability. -->
+		<!-- Momentarily the enemy's magic skills during a critical attack. Increases Max MP/ Max CP/ Atk. Spd./ MP Regeneration, Critical Rate when attacking from behind, and damage inflicted during PvP. restores HP by using some of the damage inflicted upon the enemy with a certain probability. -->
 		<icon>icon.weapon_the_dagger_of_hero_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1428,7 +1428,7 @@
 		</effects>
 	</skill>
 	<skill id="8786" toLevel="1" name="Top-grade Royal Guard Earring - Gludio">
-		<!-- Increases Maximum CP by 5%, Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Bleed Resistance by 15%, Stun attack bonus by 15%, and Water Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1456,21 +1456,21 @@
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8790" toLevel="1" name="Top-grade Royal Guard Earring - Aden">
-		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Atk. Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Mental attack bonus by 15%, and Earth Attack Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8791" toLevel="1" name="Top-grade Royal Guard Earring - Innadril">
-		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Sleep attack bonus by 15%, and Water Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Stun Resistance by 15%, Sleep attack bonus by 15%, and Water Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>85</magicLvl>
 	</skill>
 	<skill id="8792" toLevel="1" name="Top-grade Royal Guard Earring - Goddard">
-		<!-- Increases Maximum CP by 5%, Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Resistance by 10. -->
+		<!-- Increases Maximum CP by 5%, Sleep Resistance by 15%, Stun attack bonus by 15%, and Fire Attribute Defense by 10. -->
 		<icon>icon.accessory_earring_of_domi_protection_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

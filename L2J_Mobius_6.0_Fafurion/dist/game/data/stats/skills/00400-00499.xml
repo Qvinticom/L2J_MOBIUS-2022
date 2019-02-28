@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="400" toLevel="10" name="Tribunal">
-		<!-- Inflicts holy damage on the enemy with $s1 Power added to P. Atk. and greatly provokes the enemy. For $s2, decreases Critical Rate by $s3 and Melee Weapon Resistance by $s4. Requires a sword or blunt weapon to be equipped. Over-hit. Critical. -->
+		<!-- Inflicts holy damage on the enemy with $s1 Power added to P. Atk. and greatly provokes the enemy. For $s2, decreases Critical Rate by $s3 and Melee Weapon Resistance by $s4. Requires a sword or blunt weapon to be equipped. Over-hit and Critical are possible. -->
 		<icon>icon.skill0400</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -223,7 +223,7 @@
 		</effects>
 	</skill>
 	<skill id="401" toLevel="10" name="Judgment">
-		<!-- Inflicts dark damage on the enemy with $s1 Power added to P. Atk. and greatly provokes the enemy. For $s2, decreases the enemy's Critical Damage by $s3 and Melee Weapon Resistance by $s4. Requires a sword, blunt weapon, or dual sword. Over-hit. Critical. -->
+		<!-- Inflicts dark damage on the enemy with $s1 Power added to P. Atk. and greatly provokes the enemy. For $s2, decreases the enemy's Critical Damage by $s3 and Melee Weapon Resistance by $s4. Requires a sword, blunt weapon, or dual sword. Over-hit and Critical are possible. -->
 		<icon>icon.skill0401</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -573,6 +573,7 @@
 		</effects>
 	</skill>
 	<skill id="404" toLevel="17" name="Mass Shackling">
+		<!-- Provokes nearby enemies to attack, then immobilizes them for $s1. -->
 		<icon>icon.skill0404</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -862,7 +863,7 @@
 		</effects>
 	</skill>
 	<skill id="407" toLevel="10" name="Psycho Symphony">
-		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and decreases Speed/ Atk. Spd./ Casting Spd. by $s3 for $s2. Over-hit. Critical. -->
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and decreases Speed/ Atk. Spd./ Casting Spd. by $s3 for $s2. Over-hit and Critical are possible. -->
 		<icon>icon.skill0407</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -992,7 +993,7 @@
 		</effects>
 	</skill>
 	<skill id="408" toLevel="10" name="Demonic Blade Dance">
-		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and decreases P. Atk./ M. Atk. by $s3 for $s2. Over-hit. Critical. -->
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and decreases P. Atk./ M. Atk. by $s3 for $s2. Over-hit and Critical are possible. -->
 		<icon>icon.skill0408</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1115,7 +1116,7 @@
 		</effects>
 	</skill>
 	<skill id="409" toLevel="10" name="Critical Blow">
-		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Increases your Vital Spot Attack Rate by $s3 for $s2. Requires a dagger. Over-hit. Half-kill. -->
+		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Increases your Vital Spot Attack Rate by $s3 for $s2. Requires a dagger. Over-hit and Half-kill are possible. -->
 		<icon>icon.skill0409</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1227,6 +1228,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="410" toLevel="8" name="Mortal Strike">
+		<!-- Increases your Vital Spot Attack Rate by $s2 for $s1. Requires a dagger or dual dagger. -->
 		<icon>icon.skill0410</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1329,6 +1331,7 @@
 		</effects>
 	</skill>
 	<skill id="411" toLevel="3" name="Stealth">
+		<!-- Prevents being pre-emptively attacked by monsters for $s1, and decreases Evasion by $s2, P. Def. by $s3, M. Def. by $s4, Accuracy by $s5 and P. Atk. by $s6. -->
 		<icon>icon.skill0411</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2450,7 +2453,7 @@
 		</effects>
 	</skill>
 	<skill id="432" toLevel="1" name="Assassination">
-		<!-- When using a dagger, increases P. Atk. by $s1 and Vital Spot Attack Rate by $s2. -->
+		<!-- When using a dagger, increases P. Atk. by $s1 and Critical Rate by $s2. -->
 		<icon>icon.skill0432</icon>
 		<magicLvl>78</magicLvl>
 		<operateType>P</operateType>
@@ -2576,6 +2579,7 @@
 		</effects>
 	</skill>
 	<skill id="437" toLevel="10" name="Song of Silence">
+		<!-- Sings a Song of Silence. Blocks all the enemies' physical/ magic skills for $s1. -->
 		<icon>icon.skill0437</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2630,6 +2634,7 @@
 		</effects>
 	</skill>
 	<skill id="438" toLevel="4" name="Soul of the Phoenix">
+		<!-- Maintains buffs and debuffs even after death. The Noblesse Blessing and the Amulet of Luck disappear, however. Consumes $s1 Blood of the Phoenix. -->
 		<icon>icon.skill0438</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -4091,7 +4096,7 @@
 		</effects>
 	</skill>
 	<skill id="468" toLevel="9" name="Fallen Attack">
-		<!-- Attacks an enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon or short sword. Over-hit. -->
+		<!-- Attacks an enemy with $s1 Power added to P. Atk. Requires a sword, blunt weapon or short sword. Over-hit is possible. -->
 		<icon>icon.skill0468</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -4667,7 +4672,7 @@
 		</effects>
 	</skill>
 	<skill id="476" toLevel="15" name="Dark Strike">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a sword, blunt weapon, or ancient sword. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a sword, blunt weapon, or ancient sword. Over-hit is possible. -->
 		<icon>icon.skill0476</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -4764,7 +4769,7 @@
 		</effects>
 	</skill>
 	<skill id="477" toLevel="37" name="Dark Smash">
-		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. -->
+		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. -->
 		<icon>icon.skill0477</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -4953,7 +4958,7 @@
 		</effects>
 	</skill>
 	<skill id="478" toLevel="15" name="Double Thrust">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit is possible. -->
 		<icon>icon.skill0478</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -5149,6 +5154,7 @@
 		</effects>
 	</skill>
 	<skill id="483" toLevel="8" name="Sword Shield">
+		<!-- For $s1, increases P. Def. by $s2 and decreases Speed by $s3. -->
 		<icon>icon.skill0483</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -5267,6 +5273,7 @@
 		</conditions>
 	</skill>
 	<skill id="485" toLevel="19" name="Disarm">
+		<!-- Disarms the enemy for $s1. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -5396,7 +5403,7 @@
 		</effects>
 	</skill>
 	<skill id="487" toLevel="15" name="Penetrating Shot">
-		<!-- Fires a powerful bolt to attack the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a crossbow. Over-hit. -->
+		<!-- Fires a powerful bolt to attack the enemy with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a crossbow. Over-hit is possible. -->
 		<icon>icon.skill0487</icon>
 		<castRange>500</castRange>
 		<coolTime>800</coolTime>
@@ -5586,7 +5593,7 @@
 		</conditions>
 	</skill>
 	<skill id="492" toLevel="25" name="Spread Wing">
-		<!-- Spreads wings to attack nearby enemies with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Over-hit. -->
+		<!-- Spreads wings to attack nearby enemies with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Over-hit is possible. -->
 		<icon>icon.skill0492</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -5716,7 +5723,7 @@
 		</effects>
 	</skill>
 	<skill id="493" toLevel="28" name="Storm Assault">
-		<!-- Makes a hurricane-like assault on the target and nearby enemies with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. -->
+		<!-- Makes a hurricane-like assault on the target and nearby enemies with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. -->
 		<icon>icon.skill0493</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -5932,7 +5939,7 @@
 		</effects>
 	</skill>
 	<skill id="494" toLevel="37" name="Shoulder Charge">
-		<!-- Charges forward and hit the enemies hard with your shoulder to inflict Stun for $s1. Soul consumption boosts the power. Up to $s2 souls can be consumed. Requires an ancient sword/ sword/ blunt/ spear/ fist weapon/ dual blunt/ dual sword weapon. Over-hit. -->
+		<!-- Charges forward and hit the enemies hard with your shoulder to inflict Stun for $s1. Soul consumption boosts the power. Up to $s2 souls can be consumed. Requires an ancient sword/ sword/ blunt/ spear/ fist weapon/ dual blunt/ dual sword weapon. Over-hit is possible. -->
 		<icon>icon.skill0494</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -6174,7 +6181,7 @@
 		</effects>
 	</skill>
 	<skill id="495" toLevel="10" name="Blade Rush">
-		<!-- Holds a sword up and rushes forward to inflict bleed on the enemies in the rushing path for $s1. Makes them consume $s2 HP every sec. Increases Power upon the consumption of up to $s3 souls. Requires an ancient sword or sword to be equipped. Over-hit. -->
+		<!-- Holds a sword up and rushes forward to inflict bleed on the enemies in the rushing path for $s1. Makes them consume $s2 HP every second. Increases Power upon the consumption of up to $s3 souls. Requires an ancient sword or sword to be equipped. Over-hit is possible. -->
 		<icon>icon.skill0495</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -6303,7 +6310,7 @@
 		</effects>
 	</skill>
 	<skill id="496" toLevel="31" name="Slashing Blade">
-		<!-- Wields a sword at nearby enemies with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. -->
+		<!-- Wields a sword at nearby enemies with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. -->
 		<icon>icon.skill0496</icon>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -6468,7 +6475,7 @@
 		</effects>
 	</skill>
 	<skill id="497" toLevel="16" name="Crushing Pain">
-		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon,spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. Ignores shield defense. -->
+		<!-- Attack targets with $s1 Power added to P. Atk. Consumes up to $s2 souls to increase power. Requires an ancient sword, dagger, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword to be equipped. Over-hit. Ignores shield defense. -->
 		<icon>icon.skill0497</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -6574,7 +6581,7 @@
 		</effects>
 	</skill>
 	<skill id="498" toLevel="12" name="Contagion">
-		<!-- Attacks the enemy's wound with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires an ancient sword or a sword. Over-hit. Ignores Shield Defense. -->
+		<!-- Attacks the enemy's wound with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires an ancient sword or a sword. Over-hit is possible. Ignores Shield Defense. -->
 		<icon>icon.skill0498</icon>
 		<castRange>40</castRange>
 		<coolTime>700</coolTime>

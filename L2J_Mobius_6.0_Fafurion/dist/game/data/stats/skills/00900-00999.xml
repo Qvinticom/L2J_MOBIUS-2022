@@ -1008,7 +1008,7 @@
 		</effects>
 	</skill>
 	<skill id="917" toLevel="1" name="Final Secret">
-		<!-- For 30 sec., you call upon your hidden reserves to increase your skills power and ordinary attack damage by 30% during PvP. -->
+		<!-- For 30 sec., you call upon your hidden reserves to increase your skills power and standard attack damage by 30% during PvP. -->
 		<icon>icon.skill0917</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1090,7 +1090,7 @@
 		</effects>
 	</skill>
 	<skill id="920" toLevel="37" name="Power Crush">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Over-hit. Critical. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Over-hit and Critical are possible. -->
 		<icon>icon.skill0920</icon>
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
@@ -1273,7 +1273,7 @@
 		</effects>
 	</skill>
 	<skill id="921" toLevel="1" name="Cursed Pierce">
-		<!-- Attacks the enemy with 3849 Power added to P. Atk. Over-hit. Ignores Shield Defense. Critical is possible. -->
+		<!-- Attacks the enemy with 3849 Power added to P. Atk. Over-hit is possible. Ignores Shield Defense. Critical is possible. -->
 		<icon>icon.skill0921</icon>
 		<castRange>80</castRange>
 		<coolTime>720</coolTime>
@@ -1334,7 +1334,7 @@
 		</effects>
 	</skill>
 	<skill id="923" toLevel="1" name="Dual Dagger Mastery">
-		<!-- When using a dual dagger, increases P. Atk. by 87.5 and the Vital Spot Attack Rate by 5%. -->
+		<!-- When using a dual dagger, increases P. Atk. by 87.5 and the rate of deadly attack by 5%. -->
 		<icon>icon.skill0923</icon>
 		<magicLvl>81</magicLvl>
 		<operateType>P</operateType>
@@ -1361,7 +1361,7 @@
 		</effects>
 	</skill>
 	<skill id="924" toLevel="1" name="Seven Arrow">
-		<!-- Shoots 7 arrows to attack the enemy with 11440 Power added to P. Atk. Critical. -->
+		<!-- Shoots 7 arrows to attack the enemy with 11440 Power added to P. Atk. Critical hit is possible. -->
 		<icon>icon.skill0924</icon>
 		<castRange>900</castRange>
 		<effectPoint>-1022</effectPoint>
@@ -1437,7 +1437,7 @@
 		</effects>
 	</skill>
 	<skill id="927" toLevel="14" name="Burning Chop">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk., causes burns for $s2, and makes him consume $s3 HP every sec. Cannot be used when a bow/ crossbow is equipped. Over-hit. Critical. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., causes burns for $s2, and makes him consume $s3 HP every second. Cannot be used when a bow/ crossbow is equipped. Over-hit and Critical are possible. -->
 		<icon>icon.skill0927</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -1564,7 +1564,7 @@
 		</effects>
 	</skill>
 	<skill id="928" toLevel="1" name="Dual Blow">
-		<!-- Attacks the target's vital points with 11234 Power added to P. Atk. Lethal Strike is possible. Half Kill is possible. Critical. Over-hit. Requires a dual dagger to be equipped. -->
+		<!-- Attacks the target's vital points with 11234 Power added to P. Atk. Lethal Strike is possible. Half Kill is possible. Critical hit is possible. Over-hit is possible. Requires a dual dagger to be equipped. -->
 		<icon>icon.skill0928_1</icon>
 		<castRange>40</castRange>
 		<effectPoint>-337</effectPoint>
@@ -2846,7 +2846,7 @@
 		</effects>
 	</skill>
 	<skill id="947" toLevel="1" name="Lucky Strike">
-		<!-- Inflicts an exploding attack on the enemy with 4312 Power added to P. Atk. Causes damage and spoil at the same time on some nearby enemies. Requires a sword or blunt weapon. Over-hit. -->
+		<!-- Inflicts an exploding attack on the enemy with 4312 Power added to P. Atk. Causes damage and spoil at the same time on some nearby enemies. Requires a sword or blunt weapon. Over-hit is possible. -->
 		<icon>icon.skill0947</icon>
 		<affectLimit>3-6</affectLimit>
 		<affectRange>150</affectRange>
@@ -2906,7 +2906,7 @@
 		</effects>
 	</skill>
 	<skill id="949" toLevel="1" name="Onslaught of Pa'agrio">
-		<!-- Attacks near the enemy with 4312 Power added to P. Atk., causes burns for 15 sec., and makes him consume 92 HP every sec. Requires a blunt weapon. Over-hit. -->
+		<!-- Attacks near the enemy with 4312 Power added to P. Atk., causes burns for 15 sec., and makes him consume 92 HP every second. Requires a blunt weapon. Over-hit is possible. -->
 		<icon>icon.skill0949</icon>
 		<abnormalLvl>9</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -3121,7 +3121,7 @@
 		</effects>
 	</skill>
 	<skill id="954" toLevel="1" name="Strider Bite">
-		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 sec., and makes him consume 54 HP every sec. Over-hit. Critical. -->
+		<!-- Commands the mounted strider to bite the enemies in front. Attacks the enemy with 1649 Power added to P. Atk., causes Bleed for 20 sec., and makes him consume 54 HP every second. Over-hit and Critical are possible. -->
 		<icon>icon.skill00954</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -3243,7 +3243,7 @@
 		</effects>
 	</skill>
 	<skill id="957" toLevel="37" name="Guillotine Attack">
-		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit. -->
+		<!-- Attacks the target with $s1 Power added to P. Atk. Requires a sword or blunt weapon to be equipped. Ignores Shield Defense. Over-hit is possible. -->
 		<icon>icon.skill957</icon>
 		<castRange>40</castRange>
 		<coolTime>1080</coolTime>
@@ -3428,7 +3428,7 @@
 		</effects>
 	</skill>
 	<skill id="958" toLevel="37" name="Triple Blade Slash">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dual sword. Over-hit. Ignores Shield Defense. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a dual sword. Over-hit is possible. Ignores Shield Defense. -->
 		<icon>icon.skill958</icon>
 		<castRange>40</castRange>
 		<coolTime>167</coolTime>
@@ -4002,7 +4002,7 @@
 		</effects>
 	</skill>
 	<skill id="974" toLevel="7" name="Stun Shot">
-		<!-- Fires arrows of $s1 power added to P. Atk. Inflicts Stun on the enemy for $s2. Cancels target. -->
+		<!-- Fires arrows of $s1 power added to P. Attack. Inflicts Stun on the enemy for $s2. Cancels target. -->
 		<icon>icon.skill0101</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -4260,7 +4260,7 @@
 		</effects>
 	</skill>
 	<skill id="978" toLevel="7" name="Shoulder Charge">
-		<!-- Charges forward and hit the enemies hard with your shoulder to inflict Stun for $s1. Soul consumption boosts the power. Up to $s2 souls can be consumed. Over-hit. -->
+		<!-- Charges forward and hit the enemies hard with your shoulder to inflict Stun for $s1. Soul consumption boosts the power. Up to $s2 souls can be consumed. Over-hit is possible. -->
 		<icon>icon.skill0494</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -4702,7 +4702,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="986" toLevel="25" name="Deadly Strike">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Cannot be used when a bow/ crossbow/ fist weapon is equipped. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Cannot be used when a bow/ crossbow/ fist weapon is equipped. Over-hit is possible. -->
 		<icon>icon.skill0986</icon>
 		<castRange>40</castRange>
 		<effectPoint>-2320</effectPoint>
@@ -5207,7 +5207,7 @@
 		</conditions>
 	</skill>
 	<skill id="995" toLevel="1" name="Rush Impact">
-		<!-- Charges forward to attack the enemies in front with 4224 power added to P. Atk. and inflicts Stun for 9 sec. Unavailable to use when a bow/ crossbow is equipped. -->
+		<!-- Charges forward to attack the enemies in front with 4224 power added to P. Attack and inflicts Stun for 9 sec. Unavailable to use when a bow/ crossbow is equipped. -->
 		<icon>icon.skill0793</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -5302,7 +5302,7 @@
 		</effects>
 	</skill>
 	<skill id="997" toLevel="25" name="Crushing Strike">
-		<!-- Impacts the enemy with $s1 Power added to P. Atk, decreasing the target's P. Def. and M. Def. by $s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit. -->
+		<!-- Impacts the enemy with $s1 Power added to P. Atk, decreasing the target's P. Def. and M. Def. by $s3 for $s2. Requires a sword or blunt weapon to be equipped. Over-hit is possible. -->
 		<icon>icon.skill0997</icon>
 		<abnormalTime>3</abnormalTime>
 		<activateRate>80</activateRate>

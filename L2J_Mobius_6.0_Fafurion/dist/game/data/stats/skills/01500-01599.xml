@@ -289,7 +289,7 @@
 		</effects>
 	</skill>
 	<skill id="1508" toLevel="1" name="Thorn Root">
-		<!-- Holds nearby enemies for 10 sec. and makes them consume 90 HP and 30 MP every sec. -->
+		<!-- Holds nearby enemies for 10 sec. and makes them consume 90 HP and 30 MP every second. -->
 		<icon>icon.skill1508</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -330,6 +330,7 @@
 		</effects>
 	</skill>
 	<skill id="1509" toLevel="9" name="Seal of Limit">
+		<!-- Reduces Heal received by the target and nearby enemies by $s2 for $s1. For PvPs near the Dominant Flag, limits the maximum HP/ MP/ CP Recovery to $s3. -->
 		<icon>icon.skill1509</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -567,7 +568,7 @@
 		</effects>
 	</skill>
 	<skill id="1512" toLevel="1" name="Soul Vortex">
-		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. for $s2., decreases Speed by $s3, Atk. Spd. by $s4, and Casting Spd. by $s5. Consumes $s6 MP every sec. Over-hit. -->
+		<!-- Stirs up a vortex connecting to the dimension of souls and inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. for $s2., decreases Speed by $s3, Atk. Spd. by $s4, and Casting Spd. by $s5. Consumes $s6 MP every second. Over-hit is possible. -->
 		<icon>icon.skill1512</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -647,6 +648,7 @@
 		</effects>
 	</skill>
 	<skill id="1514" toLevel="7" name="Soul Barrier">
+		<!-- Spreads the soul's defensive barrier to increase your Bow Resistance +$s2, Crossbow Resistance +$s3, and M. Def. +$s4 for $s1. -->
 		<icon>icon.skill1514</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -863,7 +865,7 @@
 		</effects>
 	</skill>
 	<skill id="1519" toLevel="1" name="Chant of Blood Awakening">
-		<!-- Combines party members' standard attack damage absorption and Atk. Spd. increase to have a more advanced blood awakening effect. For 40 min., Atk. Spd. +33% and has a chance of recovering 9% of the damage inflicted on the enemy as HP. -->
+		<!-- Combines party members' standard attack damage absorption and Atk. Spd. increase to have a more advanced blood awakening effect. For 40 min., increases Atk. Spd. by 33% and has a chance of recovering 9% of the damage inflicted on the enemy as HP. -->
 		<icon>icon.skill1519</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2400</abnormalTime>
@@ -1529,7 +1531,7 @@
 		</effects>
 	</skill>
 	<skill id="1525" toLevel="42" name="Divine Curse">
-		<!-- For $s1, casts the wrathful curse of the gods to decrease the effect of recovery magic by $s2. Decreases $s3 HP every sec. -->
+		<!-- For $s1, casts the wrathful curse of the gods to decrease the effect of recovery magic by $s2. Decreases $s3 HP every second. -->
 		<icon>icon.skill1525</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -1814,7 +1816,7 @@
 		</effects>
 	</skill>
 	<skill id="1527" toLevel="3" name="Expert Casting">
-		<!-- Casting Cooldown -$s1, and Casting Spd. +$s2 when equipped with light armor. -->
+		<!-- M. Skill Cooldown -$s2. Additionally, Casting Spd. +$s1 when equipped with light armor. -->
 		<icon>icon.skill1527</icon>
 		<magicLvl>
 			<value level="1">40</value>
@@ -2654,7 +2656,7 @@
 		</effects>
 	</skill>
 	<skill id="1539" toLevel="4" name="Stigma of Shilen">
-		<!-- For $s1, decreases Short-range Weapon Resistance by $s2. -->
+		<!-- For $s1, decreases Melee Weapon Resistance by $s2. -->
 		<icon>icon.skill1539</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -3407,7 +3409,7 @@
 		</effects>
 	</skill>
 	<skill id="1558" toLevel="24" name="Dimension Spiral">
-		<!-- Creates a tear in the dimension to inflict damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<!-- Creates a tear in the dimension to inflict damage on the enemy with $s1 Power added to M. Atk. Over-hit is possible. -->
 		<icon>icon.skill1558</icon>
 		<castRange>900</castRange>
 		<effectPoint>-590</effectPoint>
@@ -3580,7 +3582,7 @@
 		</effects>
 	</skill>
 	<skill id="1560" toLevel="1" name="Lucky Blow">
-		<!-- Attacks the target's vital points with 11234 Power added to P. Atk., causing a Spoiled state. Lethal Strike. Half-kill. Over-hit. Critical. Requires a dual dagger. -->
+		<!-- Attacks the target's vital points with 11234 Power added to P. Atk., causing a Spoiled state. Lethal strike, half Kill, critical hit, and over-hit are possible. Requires a dual dagger. -->
 		<icon>icon.skill1560</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -4155,7 +4157,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1577" toLevel="3" name="Sub - Critical Damage Increase">
+	<skill id="1577" toLevel="3" name="Sub - P./ M. Critical Damage Increase">
 		<!-- Increases P. Critical Damage by $s1, M. Critical Damage by $s2. -->
 		<icon>icon.skill0815</icon>
 		<operateType>P</operateType>
@@ -4714,7 +4716,7 @@
 		</effects>
 	</skill>
 	<skill id="1595" toLevel="1" name="Rhythm of Start Dark">
-		<!-- For 2 min., decreases all party members' M. Critical Rate by 100%, physical/ magic/ song/ dance skills' MP Consumption by 5%, and physical/ magic skills' Cooldown by 20%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- For 2 min., decreases all party members' damage attack magic's Critical Rate by 100%, physical/ magic/ song/ dance skills' MP Consumption by 5%, and physical/ magic skills' Cooldown by 20%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill1586</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4779,7 +4781,7 @@
 		</effects>
 	</skill>
 	<skill id="1596" toLevel="1" name="Rhythm of Start">
-		<!-- For 2 min., decreases all party members' M. Critical Rate by 100%, physical/ magic/ song/ dance skills' MP Consumption by 5%, and physical/ magic skills' Cooldown by 20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- For 2 min., decreases all party members' damage attack magic's Critical Rate by 100%, physical/ magic/ song/ dance skills' MP Consumption by 5%, and physical/ magic skills' Cooldown by 20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill1586</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4848,7 +4850,7 @@
 		</effects>
 	</skill>
 	<skill id="1598" toLevel="1" name="Rhythm of Magician Dark">
-		<!-- For 2 min., decreases all party members' magic cancel rate by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
+		<!-- For 2 min., decreases all party members' magic cancel damage by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. Addtionally increases MP Consumption when the skill is used while song/ dance effect is in place. Requires a dual sword to be equipped. -->
 		<icon>icon.skill11005</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -4901,7 +4903,7 @@
 		</effects>
 	</skill>
 	<skill id="1599" toLevel="1" name="Rhythm of Magician">
-		<!-- For 2 min., decreases all party members' magic cancel rate by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
+		<!-- For 2 min., decreases all party members' magic cancel damage by 40, MP Consumption for magic skills by 10%, and increases Casting Spd. by 30% and MP recovery bonus by 20%. MP Consumption is additionally increased if the skill is used while song/ dance effect is in place. -->
 		<icon>icon.skill11005</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>120</abnormalTime>

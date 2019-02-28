@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="20700" name="Bamboo Panda Hat Pack" type="EtcItem">
-		<!-- Double-click to obtain a Bamboo Panda Hat. -->
+		<!-- Wrapped Pack containing Bamboo Panda Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -23,7 +23,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20701" name="Bamboo Panda Hat Pack (7-day)" additionalName="Great Adventurer's Soul Power" type="EtcItem">
-		<!-- Double-click to obtain a Bamboo Panda Hat (7-day). -->
+		<!-- Wrapped Pack containing Bamboo Panda Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -45,7 +45,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20702" name="Sexy Panda Hat Pack" type="EtcItem">
-		<!-- Double-click to obtain a Sexy Panda Hat. -->
+		<!-- Wrapped Pack containing Sexy Panda Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -67,7 +67,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20703" name="Sexy Panda Hat (7-day)" additionalName="Blessed Resurrection" type="EtcItem">
-		<!-- Double-click to obtain a Sexy Panda Hat (7-day). -->
+		<!-- Wrapped Pack containing Sexy Panda Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -89,7 +89,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20704" name="Gatekeeper Hat Pack" type="EtcItem">
-		<!-- Double-click to obtain a Gatekeeper Hat. -->
+		<!-- Wrapped Pack containing Gatekeeper Hat. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -111,7 +111,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20705" name="Gatekeeper Hat Pack (7-day)" additionalName="Appetite for Destruction" type="EtcItem">
-		<!-- Double-click to obtain a Gatekeeper Hat (7-day). -->
+		<!-- Wrapped Pack containing Gatekeeper Hat (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -237,7 +237,7 @@
 		</skills>
 	</item>
 	<item id="20712" name="Reanimated Corpse Mask (Event)" additionalName="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
-		<!-- For events. Super Strong Giant's Mask. Equip to use card skill needed to play Jack Game. Cooldown is 1 hr. -->
+		<!-- For events. Super Strong Giant's Mask. Equip to use card skill needed to play Jack Game. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -261,7 +261,7 @@
 		</skills>
 	</item>
 	<item id="20713" name="Shriek Mask (Event)" additionalName="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
-		<!-- For events. Shriek Mask. Equip to use card skill needed to play Jack Game. Cooldown is 1 hr. -->
+		<!-- For events. Shriek Mask. Equip to use card skill needed to play Jack Game. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -285,7 +285,7 @@
 		</skills>
 	</item>
 	<item id="20714" name="Red Devil Mask (Event)" additionalName="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
-		<!-- For events. Red Devil Mask. Equip to use card skill needed to play Jack Game. Cooldown is 1 hr. -->
+		<!-- For events. Red Devil Mask. Equip to use card skill needed to play Jack Game. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -309,7 +309,7 @@
 		</skills>
 	</item>
 	<item id="20715" name="Mummy Mask (Event)" additionalName="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
-		<!-- For events. Mummy Mask. Equip to use card skill needed to play Jack Game. Cooldown is 1 hr. -->
+		<!-- For events. Mummy Mask. Equip to use card skill needed to play Jack Game. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -333,7 +333,7 @@
 		</skills>
 	</item>
 	<item id="20716" name="Alien Mask (Event)" additionalName="Skooldie's Blessing: Protection of Darkness (2-hour)" type="Armor">
-		<!-- For events. Alien Mask. Equip to use card skill needed to play Jack Game. Cooldown is 1 hr. -->
+		<!-- For events. Alien Mask. Equip to use card skill needed to play Jack Game. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -377,7 +377,7 @@
 		</skills>
 	</item>
 	<item id="20718" name="Shiny Reanimated Corpse Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
-		<!-- For events. Brightly shining Super Strong Giant's Mask. Equip to use card skill needed to play Jack Game. Cooldown is 2 hr. -->
+		<!-- For events. Brightly shining Super Strong Giant's Mask. Equip to use card skill needed to play Jack Game. Cooldown is 2 hour. -->
 		<set name="icon" val="BranchSys.icon.br_shiny_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -401,7 +401,7 @@
 		</skills>
 	</item>
 	<item id="20719" name="Shiny Shriek Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
-		<!-- For events. Brightly shining Shriek Mask. Equip to use card skill needed to play Jack Game. Cooldown is 2 hr. -->
+		<!-- For events. Brightly shining Shriek Mask. Equip to use card skill needed to play Jack Game. Cooldown is 2 hour. -->
 		<set name="icon" val="BranchSys.icon.br_shiny_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -425,7 +425,7 @@
 		</skills>
 	</item>
 	<item id="20720" name="Shiny Red Devil Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
-		<!-- For events. Brightly shining Red Devil Mask. Equip to use card skill needed to play Jack Game. Cooldown is 2 hr. -->
+		<!-- For events. Brightly shining Red Devil Mask. Equip to use card skill needed to play Jack Game. Cooldown is 2 hour. -->
 		<set name="icon" val="BranchSys.icon.br_shiny_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -449,7 +449,7 @@
 		</skills>
 	</item>
 	<item id="20721" name="Shiny Mummy Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
-		<!-- For events. Brightly shining Mummy Mask. Equip to use card skill needed to play Jack Game. Cooldown is 2 hr. -->
+		<!-- For events. Brightly shining Mummy Mask. Equip to use card skill needed to play Jack Game. Cooldown is 2 hour. -->
 		<set name="icon" val="BranchSys.icon.br_shiny_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -473,7 +473,7 @@
 		</skills>
 	</item>
 	<item id="20722" name="Shiny Alien Mask (Event)" additionalName="Blessing of Halloween (4-hour)" type="Armor">
-		<!-- For events. Shiny Alien Mask. Equip to use card skill needed to play Jack Game. Cooldown is 2 hr. -->
+		<!-- For events. Shiny Alien Mask. Equip to use card skill needed to play Jack Game. Cooldown is 2 hour. -->
 		<set name="icon" val="BranchSys.icon.br_shiny_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -516,7 +516,7 @@
 		<set name="is_oly_restricted" val="true" />
 	</item>
 	<item id="20724" name="Golden Jack O'Lantern Mask" additionalName="Golden Jack O'Lantern's Authority (7-day)" type="Armor">
-		<!-- Jack O'Lantern Mask made with gold. It glows gorgeously. Cooldown is 1 hr. -->
+		<!-- Jack O'Lantern Mask made with gold. It glows gorgeously. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_golden_jack0_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -583,7 +583,7 @@
 		</skills>
 	</item>
 	<item id="20727" name="Agathion - Zombie" additionalName="Soul Stealth (7-day)" type="Armor">
-		<!-- Bracelet that summons an Agathion - Zombie. Cooldown is 12 hr. -->
+		<!-- Bracelet that summons an Agathion - Zombie. Cooldown is 12 hours. -->
 		<set name="icon" val="BranchSys.icon.br_aga_gangsi_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -766,7 +766,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20735" name="Agathion - Zombie Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Zombie. -->
+		<!-- Wrapped Pack containing Agathion - Zombie. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -788,7 +788,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20736" name="Agathion - Zombie Pack (7-day)" additionalName="Soul Stealth" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Zombie (7-day). -->
+		<!-- Wrapped Pack containing Agathion - Zombie (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -810,7 +810,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20737" name="Agathion - Bluebird Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Bluebird. -->
+		<!-- Wrapped Pack containing Agathion - Bluebird. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -832,7 +832,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20738" name="Agathion - Hatbird Pack" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Hatbird. -->
+		<!-- Wrapped Pack containing Agathion - Hatbird. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -936,7 +936,7 @@
 		</skills>
 	</item>
 	<item id="20743" name="Shiny Reanimated Corpse Mask" additionalName="Blessing of Halloween (7-day)" type="Armor">
-		<!-- Reanimated Corpse Mask. Cooldown is 1 hr. -->
+		<!-- Reanimated Corpse Mask. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_shiny_frankenstein_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -959,7 +959,7 @@
 		</skills>
 	</item>
 	<item id="20744" name="Shiny Shriek Mask" additionalName="Blessing of Halloween (7-day)" type="Armor">
-		<!-- Shriek Mask. Cooldown is 1 hr. -->
+		<!-- Shriek Mask. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_shiny_scream_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -982,7 +982,7 @@
 		</skills>
 	</item>
 	<item id="20745" name="Shiny Red Devil Mask" additionalName="Blessing of Halloween (7-day)" type="Armor">
-		<!-- Red Devil Mask. Cooldown is 1 hr. -->
+		<!-- Red Devil Mask. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_shiny_doccabi_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1005,7 +1005,7 @@
 		</skills>
 	</item>
 	<item id="20746" name="Shiny Mummy Mask" additionalName="Blessing of Halloween (7-day)" type="Armor">
-		<!-- Mummy Mask. Cooldown is 1 hr. -->
+		<!-- Mummy Mask. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_shiny_mummy_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1028,7 +1028,7 @@
 		</skills>
 	</item>
 	<item id="20747" name="Shiny Alien Mask" additionalName="Blessing of Halloween (7-day)" type="Armor">
-		<!-- Shiny Alien Mask. Cooldown is 1 hr. -->
+		<!-- Shiny Alien Mask. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_shiny_alien_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1178,7 +1178,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20756" min="1" max="1" chance="100" /> <!-- Santa's Shirt Coupon - 24-hr. -->
+			<item id="20756" min="1" max="1" chance="100" /> <!-- Santa's Shirt Coupon - 24-hour -->
 			<item id="20758" min="1" max="1" chance="100" /> <!-- Santa's Weapon Coupon Box -->
 			<item id="5561" min="1" max="1" chance="100" /> <!-- Special Holiday Tree -->
 		</capsuled_items>
@@ -1201,8 +1201,8 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="20756" min="1" max="1" chance="100" /> <!-- Santa's Shirt Coupon - 24-hr. -->
-			<item id="20757" min="1" max="1" chance="100" /> <!-- Santa's Weapon Coupon - Jackpot - 24-hr. -->
+			<item id="20756" min="1" max="1" chance="100" /> <!-- Santa's Shirt Coupon - 24-hour -->
+			<item id="20757" min="1" max="1" chance="100" /> <!-- Santa's Weapon Coupon - Jackpot - 24-hour -->
 			<item id="5561" min="1" max="1" chance="100" /> <!-- Special Holiday Tree -->
 		</capsuled_items>
 	</item>
@@ -1276,7 +1276,7 @@
 		</skills>
 	</item>
 	<item id="20759" name="Holiday Shirt" additionalName="24-hour" type="Armor">
-		<!-- Shirt filled with Christmas fortune. When enchanted, it gains a powerful function. -->
+		<!-- T-shirt filled with Christmas fortune. When enchanted, it gains a powerful function. -->
 		<set name="icon" val="BranchSys.br_xmas_shirts_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="underwear" />
@@ -1750,7 +1750,7 @@
 		</skills>
 	</item>
 	<item id="20781" name="Agathion - Miss Chipao" additionalName="Decrease Weight (7-day)" type="Armor">
-		<!-- Bracelet that summons Agathion - Miss Chipao. Cooldown is 4 hr. -->
+		<!-- Bracelet that summons Agathion - Miss Chipao. Cooldown is 4 hours. -->
 		<set name="icon" val="BranchSys.icon.br_aga_chinesedress_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1847,7 +1847,7 @@
 		</skills>
 	</item>
 	<item id="20785" name="Agathion - Nepal Snow" additionalName="Snow's Haste (7-day)" type="Armor">
-		<!-- Bracelet that summons an Agathion - Nepal Snow. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons an Agathion - Nepal Snow. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_aga_suno_trumpet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1872,7 +1872,7 @@
 		</skills>
 	</item>
 	<item id="20786" name="Agathion - Round Ball Snow" additionalName="Snow's Acumen (7-day)" type="Armor">
-		<!-- Bracelet that summons an Agathion - Round Ball Snow. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons an Agathion - Round Ball Snow. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_aga_suno_ball_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1897,7 +1897,7 @@
 		</skills>
 	</item>
 	<item id="20787" name="Agathion - Ladder Snow" additionalName="Snow's Wind Walk (7-day)" type="Armor">
-		<!-- Bracelet that summons an Agathion - Ladder Snow. Cooldown is 1 hr. -->
+		<!-- Bracelet that summons an Agathion - Ladder Snow. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_aga_suno_tall_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lbracelet" />
@@ -1969,7 +1969,7 @@
 		</skills>
 	</item>
 	<item id="20790" name="Yellow Paper Hat" additionalName="Blessed Body (7-day)" type="Armor">
-		<!-- Brilliant hat made of yellow paper. Cooldown is 1 hr. -->
+		<!-- Brilliant hat made of yellow paper. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_party_hat_gold_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -1991,7 +1991,7 @@
 		</skills>
 	</item>
 	<item id="20791" name="Pink Paper Mask Set" additionalName="Blessed Soul (7-day)" type="Armor">
-		<!-- Brilliant mask and hat made of pink paper. Cooldown is 1 hr. -->
+		<!-- Brilliant mask and hat made of pink paper. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_party_hat_mask_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2055,7 +2055,7 @@
 		<set name="is_mailable" val="false" />
 	</item>
 	<item id="20794" name="Flavorful Cheese Hat" additionalName="Scent of Flavorful Cheese (7-day)" type="Armor">
-		<!-- Hat made of delicious-looking cheese. If you look carefully, you can find a hidden golden mouse. Cooldown is 1 hr. -->
+		<!-- Hat made of delicious-looking cheese. If you look carefully, you can find a hidden golden mouse. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_bigrat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2077,7 +2077,7 @@
 		</skills>
 	</item>
 	<item id="20795" name="Sweet Cheese Hat" additionalName="Scent of Sweet Cheese (7-day)" type="Armor">
-		<!-- Hat made of delicious-looking cheese. If you look carefully, you can find a hidden pink mouse. Cooldown is 1 hr. -->
+		<!-- Hat made of delicious-looking cheese. If you look carefully, you can find a hidden pink mouse. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_goldrat_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="hairall" />
@@ -2099,7 +2099,7 @@
 		</skills>
 	</item>
 	<item id="20796" name="Agathion - Guangong Pack (7-day)" additionalName="Aura of Fury" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Guangong (7-day). -->
+		<!-- Wrapped Pack containing Agathion - Guangong (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2121,7 +2121,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20797" name="Agathion - Gwanseum Nyang Nyang Pack (7-day)" additionalName="Blessing of Mercy" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Gwanseum Nyang Nyang (7-day). -->
+		<!-- Wrapped Pack containing Agathion - Gwanseum Nyang Nyang (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2143,7 +2143,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20798" name="Agathion - Blue Opera Pack (7-day)" additionalName="Sword of Recovery" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Blue Opera (7 day - Sword of Recovery). -->
+		<!-- Wrapped Pack containing Agathion - Blue Opera (7 day - Sword of Recovery). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2165,7 +2165,7 @@
 		</capsuled_items>
 	</item>
 	<item id="20799" name="Agathion - Blue Opera Pack (7-day)" additionalName="Sword of Lightning" type="EtcItem">
-		<!-- Double-click to obtain an Agathion - Blue Opera (7 day - Sword of Lightning). -->
+		<!-- Wrapped Pack containing Agathion - Blue Opera (7 day - Sword of Lightning). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

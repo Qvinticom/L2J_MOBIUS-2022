@@ -109,7 +109,7 @@
 		</stats>
 	</item>
 	<item id="45606" name="Special Magic Ornament Eternal Belt" additionalName="PVE Attack" type="Armor">
-		<!-- Belt purchased with a Mark of Battle. Weight +12800, Inventory Slots +18, PVE Damage +6%. -->
+		<!-- Belt purchased with a Mark of Battle. Weight +12800, Inventory Slots +18, PvE Damage +6%. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -130,7 +130,7 @@
 		</stats>
 	</item>
 	<item id="45607" name="Special Magic Ornament Eternal Belt" additionalName="PVE Defense" type="Armor">
-		<!-- Belt purchased with a Mark of Battle. Weight +12800, Inventory Slots +18, PVE Damage -7%. -->
+		<!-- Belt purchased with a Mark of Battle. Weight +12800, Inventory Slots +18, PvE Damage -7%. -->
 		<set name="icon" val="icon.r99_magic_pouch_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -245,7 +245,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45614" name="Talisman - Battle: Attack (1-day)" type="Armor">
-		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./ M. Atk./ Skill Critical Rate/ Skill Critical Damage +20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 1-day. -->
+		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./ M. Atk./ Skill Critical Rate/ Skill Critical Damage +20% for 10 sec. Can only be used in the Olympiad and Ceremony of Chaos. 1-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -260,7 +260,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="45615" name="Talisman - Battle: Attack (3-day)" type="Armor">
-		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./ M. Atk./ Skill Critical Rate/ Skill Critical Damage +20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 3-day. -->
+		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./ M. Atk./ Skill Critical Rate/ Skill Critical Damage +20% for 10 sec. Can only be used in the Olympiad and Ceremony of Chaos. 3-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -275,7 +275,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="45616" name="Talisman - Battle: Attack (30-day)" type="Armor">
-		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./ M. Atk./ Skill Critical Rate/ Skill Critical Damage +20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 30-day. -->
+		<!-- Can use the Talisman - Battle: Attack skill when equipped. P. Atk./ M. Atk./ Skill Critical Rate/ Skill Critical Damage +20% for 10 sec. Can only be used in the Olympiad and Ceremony of Chaos. 30-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -290,7 +290,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="45617" name="Talisman - Battle: Speed (1-day)" type="Armor">
-		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./ Casting Spd. +20%, Speed +60, and Cooldown - 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 1-day. -->
+		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./ Casting Spd. +20%, Speed +60, and Cooldown -20% for 10 sec. Can only be used in the Olympiad and Ceremony of Chaos. 1-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -305,7 +305,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="45618" name="Talisman - Battle: Speed (3-day)" type="Armor">
-		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./ Casting Spd. +20%, Speed +60, and Cooldown - 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 3-day. -->
+		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./ Casting Spd. +20%, Speed +60, and Cooldown -20% for 10 sec. Can only be used in the Olympiad and Ceremony of Chaos. 3-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -320,7 +320,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="45619" name="Talisman - Battle: Speed (30-day)" type="Armor">
-		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./ Casting Spd. +20%, Speed +60, and Cooldown - 20% for 10 seconds. Can only be used in the Olympiad and Ceremony of Chaos. 30-day. -->
+		<!-- Can use the Talisman - Battle: Speed skill when equipped. Atk. Spd./ Casting Spd. +20%, Speed +60, and Cooldown -20% for 10 sec. Can only be used in the Olympiad and Ceremony of Chaos. 30-day. -->
 		<set name="icon" val="icon.etc_talisman_i07" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -630,7 +630,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="45641" name="Rodemai's Rune" additionalName="15-day" type="EtcItem">
-		<!-- Keep this in your inventory to gain Acquired XP/ SP +7%. -->
+		<!-- Acquired XP/ SP +7%. -->
 		<set name="icon" val="icon.skill19226" />
 		<set name="weight" val="120" />
 		<set name="is_clan_depositable" val="false" />
@@ -645,7 +645,7 @@
 		<set name="time" val="21600" />
 	</item>
 	<item id="45642" name="Rodemai's Rune Pack (15-day)" type="EtcItem">
-		<!-- Double-click to obtain 1 Rodemai's Rune (15-day). -->
+		<!-- Wrapped Pack containing 1 Rodemai's Rune (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -719,7 +719,7 @@
 		</stats>
 	</item>
 	<item id="45646" name="Mysterious Egg" additionalName="Event" type="EtcItem">
-		<!-- An unidentified mysterious egg. Double-click to find out what it is. Will be deleted once the event ends. -->
+		<!-- An unidentified mysterious egg. Double-click to find out what it is. -->
 		<set name="icon" val="icon.egg_white" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -732,7 +732,7 @@
 		<set name="weight" val="10" />
 	</item>
 	<item id="45647" name="Returning Warrior's Bracelet" additionalName="Event" type="Armor">
-		<!-- MP +187. Activates 5 Talisman slots when equipped. Will be deleted once the event ends. -->
+		<!-- MP +187. Activates 5 Talisman slots when equipped. -->
 		<set name="icon" val="icon.high_agathion_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="commissionItemType" val="BRACELET" />
@@ -754,7 +754,7 @@
 		</stats>
 	</item>
 	<item id="45648" name="Pippi's Talisman" additionalName="Event" type="Armor">
-		<!-- Talisman to summon Pippi. Will be deleted once the event ends. -->
+		<!-- Talisman to summon Pippi. -->
 		<set name="icon" val="icon.accessory_chicken_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -767,7 +767,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="45649" name="Kokko's Talisman" additionalName="Event" type="Armor">
-		<!-- Talisman to summon Kokko. Will be deleted once the event ends. -->
+		<!-- Talisman to summon Kokko. -->
 		<set name="icon" val="icon.accessory_chicken_cap2_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -780,7 +780,7 @@
 		<set name="weight" val="150" />
 	</item>
 	<item id="45650" name="Pippi's Fortune Pocket - Stage 1" additionalName="Event" type="EtcItem">
-		<!-- Use to obtain 400000 XP. Cannot be combined. Under Lv. 85 only. Will be deleted once the event ends. -->
+		<!-- Use to obtain 400000 XP. Cannot be combined. Under Lv. 85 only. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -793,7 +793,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45651" name="Pippi's Fortune Pocket - Stage 2" additionalName="Event" type="EtcItem">
-		<!-- Use to obtain 1600000 XP. Cannot be combined. Under Lv. 85 only. Will be deleted once the event ends. -->
+		<!-- Use to obtain 1600000 XP. Cannot be combined. Under Lv. 85 only. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -806,7 +806,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="45652" name="Pippi's Fortune Pocket - Stage 3" additionalName="Event" type="EtcItem">
-		<!-- Use to obtain 6400000 XP. Cannot be combined. Under Lv. 85 only. Will be deleted once the event ends. -->
+		<!-- Use to obtain 6400000 XP. Cannot be combined. Under Lv. 85 only. -->
 		<set name="icon" val="icon.etc_lucky_pocket_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1217,7 +1217,7 @@
 		</stats>
 	</item>
 	<item id="45677" name="Twilight Attack Type Heavy Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Twilight Attack Type Heavy set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Twilight Attack Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1229,7 +1229,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45678" name="Twilight Defense Type Heavy Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Twilight Defense Type Heavy set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Twilight Defense Type Heavy set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1241,7 +1241,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45679" name="Twilight Assassin Type Light Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Twilight Assassin Type Light set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Twilight Assassin Type Light set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1253,7 +1253,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45680" name="Twilight Enchant Type Light Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Twilight Enchant Type Light set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Twilight Enchant Type Light set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1265,7 +1265,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45681" name="Twilight Magic Type Robe Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Twilight Magic Type Robe set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Twilight Magic Type Robe set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1277,7 +1277,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="45682" name="Twilight Recovery Type Robe Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Get a +6 enchanted 30-day Twilight Recovery Type Robe set. Deleted after event. -->
+		<!-- Get a +6 enchanted 30-day Twilight Recovery Type Robe set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1306,7 +1306,7 @@
 		</stats>
 	</item>
 	<item id="45684" name="Twilight Breastplate" additionalName="Attack Type / Heavy (30-day)" type="Armor">
-		<!-- Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1414,7 +1414,7 @@
 		</stats>
 	</item>
 	<item id="45690" name="Twilight Breastplate" additionalName="Defense Type / Heavy (30-day)" type="Armor">
-		<!-- Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1522,7 +1522,7 @@
 		</stats>
 	</item>
 	<item id="45696" name="Twilight Leather Armor" additionalName="Assassin Type / Light (30-day)" type="Armor">
-		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack when enchanted to +4. -->
+		<!-- Increases Evasion, Speed, and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />

@@ -916,7 +916,7 @@
 		</effects>
 	</skill>
 	<skill id="223" toLevel="49" name="Sting">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk., and inflicts Bleed causing loss of $s3 HP per second for $s2. Requires a sword, dagger, dual sword, or dual-dagger. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk., and inflicts Bleed causing loss of $s3 HP per second for $s2. Requires a sword, dagger, dual sword, or dual-dagger. Over-hit is possible. -->
 		<icon>icon.skill0223</icon>
 		<abnormalLvl>
 			<value level="1">3</value>
@@ -1289,7 +1289,7 @@
 		</effects>
 	</skill>
 	<skill id="226" toLevel="1" name="Relax">
-		<!-- Increases HP Recovery Bonus by 5. While sitting, 1 MP is consumed per sec. -->
+		<!-- Increases HP Recovery Bonus by 5. While sitting, 1 MP is consumed per second. -->
 		<icon>icon.skill0226</icon>
 		<magicLvl>5</magicLvl>
 		<mpConsume>2</mpConsume>
@@ -2432,6 +2432,7 @@
 			<value level="8">icon.skill0243_1</value>
 			<value level="9">icon.skill0243_1</value>
 			<value level="10">icon.skill0243_1</value>
+			<value level="11">icon.skill0243_1</value>
 		</icon>
 		<magicLvl>
 			<value level="1">20</value>
@@ -2486,7 +2487,7 @@
 		</effects>
 	</skill>
 	<skill id="245" toLevel="15" name="Wild Sweep">
-		<!-- Attacks multiple enemies simultaneously with $s1 Power added to P. Atk. Requires a polearm. Over-hit. -->
+		<!-- Attacks multiple enemies simultaneously with $s1 Power added to P. Atk. Requires a polearm. Over-hit is possible. -->
 		<icon>icon.skill0245</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>80</affectRange>
@@ -3410,7 +3411,7 @@
 		</effects>
 	</skill>
 	<skill id="255" toLevel="15" name="Power Smash">
-		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit. -->
+		<!-- Attacks the enemy with $s1 Power added to P. Atk. Requires a sword or blunt weapon. Over-hit is possible. -->
 		<icon>icon.skill0255</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3836,7 +3837,7 @@
 		</effects>
 	</skill>
 	<skill id="260" toLevel="37" name="Hammer Crush">
-		<!-- Attacks the enemy with $s1 power added to P. Atk. and inflicts Stun for $s2. Requires a blunt weapon. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Attacks the enemy with $s1 power added to P. Attack and inflicts Stun for $s2. Requires a blunt weapon. Ignores Shield Defense. Over-hit and Critical Hit are possible. -->
 		<icon>icon.skill0260</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -4030,6 +4031,7 @@
 		</effects>
 	</skill>
 	<skill id="261" toLevel="34" name="Triple Sonic Slash">
+		<!-- Gathers Momentum to attack the target with $s1 power. Damage increases as Momentum is used up. Damage +$s3 when the maximum Momentum $s2 are consumed. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0261</icon>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -4386,7 +4388,7 @@
 		</effects>
 	</skill>
 	<skill id="263" toLevel="37" name="Deadly Blow">
-		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Requires a dagger. Over-hit. Half-kill. -->
+		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Requires a dagger. Over-hit and Half-kill are possible. -->
 		<icon>icon.skill0263</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -4926,7 +4928,7 @@
 		</effects>
 	</skill>
 	<skill id="276" toLevel="1" name="Dance of Concentration">
-		<!-- Decreases all party members' magic cancel rate by $s2 and increases Casting Spd. by $s3 for $s1. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
+		<!-- Decreases all party members' magic cancel damage by $s2 and increases Casting Spd. by $s3 for $s1. Additionally increases MP Consumption when dancing while song/ dance is in effect. Requires a dual sword. -->
 		<icon>icon.skill0276</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>
@@ -5059,6 +5061,7 @@
 		</effects>
 	</skill>
 	<skill id="279" toLevel="17" name="Lightning Strike">
+		<!-- Strikes the enemy with a lightning bolt that inflicts non-attribute damage with $s1 Power. Paralyzes for $s2. -->
 		<icon>icon.skill0279</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -5172,7 +5175,7 @@
 		</effects>
 	</skill>
 	<skill id="280" toLevel="37" name="Burning Fist">
-		<!-- Hurls a Fire type iron-fist to attack the target with $s1 Power added to P. Atk. Requires a fist weapon. Ignores Shield Defense. Over-hit. Critical. -->
+		<!-- Hurls a Fire type iron-fist to attack the target with $s1 Power added to P. Atk. Requires a fist weapon. Ignores Shield Defense. Over-hit and Critical are possible. -->
 		<icon>icon.skill0280</icon>
 		<castRange>40</castRange>
 		<effectPoint>
@@ -5358,7 +5361,7 @@
 		</effects>
 	</skill>
 	<skill id="281" toLevel="37" name="Soul Breaker">
-		<!-- Throws an Iron Fist to attack target with $s1 power added to P. Atk. and inflict Stun for $s2. Requires a fist weapon. Ignores Shield Defense, Overheat, Critical. -->
+		<!-- Throws an Iron Fist to attack target with $s1 power added to P. Attack and inflict Stun for $s2. Requires a fist weapon. Ignores Shield Defense, Overheat, Critical. -->
 		<icon>icon.skill0281</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -5744,7 +5747,7 @@
 		</effects>
 	</skill>
 	<skill id="284" toLevel="40" name="Hurricane Assault">
-		<!-- Attacks the target with rapid consecutive strikes with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consumption of up to $s2 Momentum levels. Over-hit. Critical. Ignores Shield Defense. -->
+		<!-- Attacks the target with rapid consecutive strikes with $s1 Power added to P. Atk. Requires a fist weapon. Increases Power upon consumption of up to $s2 Momentum levels. Over-hit and Critical are possible. Ignores Shield Defense. -->
 		<icon>icon.skill0284</icon>
 		<castRange>40</castRange>
 		<coolTime>440</coolTime>
@@ -6010,6 +6013,7 @@
 		</effects>
 	</skill>
 	<skill id="286" toLevel="13" name="Provoke">
+		<!-- Provokes enemies within a wide range and Spear Resistance -$s2 for $s1. -->
 		<icon>icon.skill0286</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>

@@ -175,7 +175,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18350" toLevel="1" name="Spellbook: Summon Instant Cure Potion">
+	<skill id="18350" toLevel="1" name="Spellbook: Summon Battle Potion">
 		<hitTime>3000</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
@@ -241,7 +241,7 @@
 		</effects>
 	</skill>
 	<skill id="18352" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- Weight +12800, Inventory Slot +18, and Damage +6% during PvE. -->
+		<!-- Weight +12800, Inventory Slots +18, and Damage +6% during PvE. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -266,7 +266,7 @@
 		</effects>
 	</skill>
 	<skill id="18353" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- Weight +12800, Inventory Slot +18, and Damage Received -7% during PvE. -->
+		<!-- Weight +12800, Inventory Slots +18, and Damage Received -7% during PvE. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -291,7 +291,7 @@
 		</effects>
 	</skill>
 	<skill id="18354" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- Weight +12800, Inventory Slot +18, AND Damage +6% during PvP. -->
+		<!-- Weight +12800, Inventory Slots +18, AND Damage +6% during PvP. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -316,7 +316,7 @@
 		</effects>
 	</skill>
 	<skill id="18355" toLevel="1" name="Special Magic Ornament Eternal Belt">
-		<!-- Weight +12800, Inventory Slot +18, and Damage Received -7% during PvP. -->
+		<!-- Weight +12800, Inventory Slots +18, and Damage Received -7% during PvP. -->
 		<icon>icon.skill0332</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -362,14 +362,14 @@
 		<reuseDelay>5000</reuseDelay>
 	</skill>
 	<skill id="18360" toLevel="1" name="Festival Buff - Yum Yum">
-		<!-- You've gotten full from the food at the festival. Atk. Spd. -5%, Casting Spd. -5%, Speed -20, and P. Def. +10%, M. Def. +10%, Max HP +10% for 3 hr. -->
+		<!-- You've gotten full from the food at the festival. Atk. Spd. -5%, Casting Spd. -5%, Speed -20, and P. Def. +10%, M. Def. +10%, Max HP +10% for 3 h. -->
 		<icon>icon.ev_festival_chicken</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18361" toLevel="1" name="Festival Buff - Tipsy Tipsy">
-		<!-- You've drank too much at the festival. Atk. Spd. -5%, Casting Spd. -5%, Speed -20, and P. Atk. +10%, M. Atk. +10%, Skill Power +10%, 10%, Damage Reflect Resistance +10% for 3 hr. -->
+		<!-- You've drank too much at the festival. Atk. Spd. -5%, Casting Spd. -5%, Speed -20, and P. Atk. +10%, M. Atk. +10%, Skill Power +10%, 10%, Damage Reflection Resistance +10% for 3 h. -->
 		<icon>icon.ev_festival_herong</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
@@ -390,7 +390,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="18364" toLevel="1" name="Festival's Effect">
-		<!-- The festival is not over yet. Obtain 300 Festival Coins after 6 hr. Receive the buff once a day. It resets at 6:30 AM every day.<Note:> Cannot receive Festival Coins if you're dead or don't have space in your inventory. -->
+		<!-- The festival is not over yet. Obtain 300 Festival Coins after 6 h. Receive the buff once a day. It resets at 6:30 AM every day.<Note:> Cannot receive Festival Coins if you're dead or don't have space in your inventory. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -404,7 +404,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="18366" toLevel="1" name="Festival's Effect">
-		<!-- The festival is not over yet. Obtain 600 Festival Coins after 6 hr. Receive the buff once a day. It resets at 6:30 AM every day.<Note:> Cannot receive Festival Coins if you're dead or don't have space in your inventory. -->
+		<!-- The festival is not over yet. Obtain 600 Festival Coins after 6 h. Receive the buff once a day. It resets at 6:30 AM every day.<Note:> Cannot receive Festival Coins if you're dead or don't have space in your inventory. -->
 		<icon>icon.skill_sing</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -495,7 +495,7 @@
 		</effects>
 	</skill>
 	<skill id="18376" toLevel="1" name="Pippi's Belt">
-		<!-- Weight +12800 and Inventory Slot +12. -->
+		<!-- Weight +12800 and Inventory Slots +12. -->
 		<icon>icon.belt_i03</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -508,7 +508,7 @@
 		</effects>
 	</skill>
 	<skill id="18377" toLevel="1" name="Kokko's Belt">
-		<!-- Weight +12800 and Inventory Slot +18. -->
+		<!-- Weight +12800 and Inventory Slots +18. -->
 		<icon>icon.belt_i03</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -530,7 +530,7 @@
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="18380" toLevel="1" name="Player Commendation - Talisman - STR">
+	<skill id="18380" toLevel="1" name="PA - Talisman - STR">
 		<!-- STR +5 when equipped. -->
 		<icon>
 			<value level="1">Icon.etc_allstat_talisman_i00</value>
@@ -544,7 +544,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18381" toLevel="1" name="Player Commendation - Talisman - INT">
+	<skill id="18381" toLevel="1" name="PA - Talisman - INT">
 		<!-- INT +5 when equipped. -->
 		<icon>
 			<value level="1">Icon.etc_allstat_talisman_i00</value>
@@ -558,7 +558,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18382" toLevel="1" name="Player Commendation - Talisman - DEX">
+	<skill id="18382" toLevel="1" name="PA - Talisman - DEX">
 		<!-- DEX +5 when equipped. -->
 		<icon>
 			<value level="1">Icon.etc_allstat_talisman_i00</value>
@@ -572,7 +572,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18383" toLevel="1" name="Player Commendation - Talisman - WIT">
+	<skill id="18383" toLevel="1" name="PA - Talisman - WIT">
 		<!-- WIT +5 when equipped. -->
 		<icon>
 			<value level="1">Icon.etc_allstat_talisman_i00</value>
@@ -586,7 +586,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18384" toLevel="1" name="Player Commendation - Talisman - CON">
+	<skill id="18384" toLevel="1" name="PA - Talisman - CON">
 		<!-- CON +5 when equipped. -->
 		<icon>
 			<value level="1">Icon.etc_allstat_talisman_i00</value>
@@ -600,7 +600,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18385" toLevel="1" name="Player Commendation - Talisman - MEN">
+	<skill id="18385" toLevel="1" name="PA - Talisman - MEN">
 		<!-- MEN +5 when equipped. -->
 		<icon>
 			<value level="1">Icon.etc_allstat_talisman_i00</value>
@@ -614,8 +614,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18386" toLevel="1" name="Player Commendation - Talisman - Attack Attribute">
-		<!-- Atk. Attribute +50 when equipped. -->
+	<skill id="18386" toLevel="1" name="PA - Talisman - Attack Attribute">
+		<!-- Attack Attribute +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -624,7 +624,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18387" toLevel="1" name="Player Commendation - Talisman - Fire Resistance">
+	<skill id="18387" toLevel="1" name="PA - Talisman - Fire Resistance">
 		<!-- Fire Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -635,7 +635,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18388" toLevel="1" name="Player Commendation - Talisman - Water Resistance">
+	<skill id="18388" toLevel="1" name="PA - Talisman - Water Resistance">
 		<!-- Water Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -646,7 +646,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18389" toLevel="1" name="Player Commendation - Talisman - Wind Resistance">
+	<skill id="18389" toLevel="1" name="PA - Talisman - Wind Resistance">
 		<!-- Wind Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -657,7 +657,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18390" toLevel="1" name="Player Commendation - Talisman - Earth Resistance">
+	<skill id="18390" toLevel="1" name="PA - Talisman - Earth Resistance">
 		<!-- Earth Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -668,7 +668,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18391" toLevel="1" name="Player Commendation - Talisman - Holy Resistance">
+	<skill id="18391" toLevel="1" name="PA - Talisman - Holy Resistance">
 		<!-- Holy Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -679,7 +679,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="18392" toLevel="1" name="Player Commendation - Talisman - Dark Resistance">
+	<skill id="18392" toLevel="1" name="PA - Talisman - Dark Resistance">
 		<!-- Dark Resistance +50 when equipped. -->
 		<icon>Icon.etc_allstat_talisman_i00</icon>
 		<operateType>P</operateType>
@@ -705,11 +705,11 @@
 		<operateType>A1</operateType>
 		<reuseDelay>2000</reuseDelay>
 	</skill>
-	<skill id="18396" toLevel="1" name="Player Commendation Points">
+	<skill id="18396" toLevel="1" name="PA Points">
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>
-	<skill id="18397" toLevel="1" name="Player Commendation Points">
+	<skill id="18397" toLevel="1" name="PA Points">
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
 	</skill>

@@ -447,7 +447,7 @@
 		</stats>
 	</item>
 	<item id="21820" name="Dynasty Accessory of Fortune Pack (S-grade)" additionalName="90-day" type="EtcItem">
-		<!-- Double-click to obtain S-grade Jewelry Set of Fortune that. 90 days. -->
+		<!-- Wrapped Pack containing S-grade Jewelry Set of Fortune that. 90 days. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1606,7 +1606,7 @@
 		</skills>
 	</item>
 	<item id="21857" name="Hero's Gold Chest" additionalName="90-day" type="EtcItem">
-		<!-- Hero's Gold Chest. Double-click to obtain each of a Hero's Treasure Chest, Dimensional Support Pack, Potion Support Pack, and Supplies Support Pack. -->
+		<!-- Hero's Gold Chest. Wrapped Pack containing each of a Hero's Treasure Chest, Dimensional Support Pack, Potion Support Pack, and Supplies Support Pack. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1629,7 +1629,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21858" name="Dimensional Support Pack" additionalName="90-day" type="EtcItem">
-		<!-- Dimensional support pack. Double-click to obtain 2 Superior Minion coupon, 3 feathers of blessing, 5 Kamaloka (Near Kamaloka, Hall of the Abyss, Labyrinth of the Abyss) entrance passes, and 3 Vitality Replenishing Potions. -->
+		<!-- Dimensional support pack. Wrapped Pack containing 2 Superior Minion coupon, 3 feathers of blessing, 5 Kamaloka (Near Kamaloka, Hall of the Abyss, Labyrinth of the Abyss) entrance passes, and 3 Vitality Replenishing Potions. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1645,7 +1645,7 @@
 		<set name="is_destroyable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="14074" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon (Event) - 5-hr. -->
+			<item id="14074" min="2" max="2" chance="100" /> <!-- Superior Minion Coupon (Event) - 5-hour -->
 			<item id="13300" min="3" max="3" chance="100" /> <!-- Feather of Blessing (Event) -->
 			<item id="13297" min="5" max="5" chance="100" /> <!-- Extra Pass: Kamaloka (Hall of the Abyss) (Event) -->
 			<item id="13298" min="5" max="5" chance="100" /> <!-- Extra Pass: Near Kamaloka (Event) -->
@@ -1654,7 +1654,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21859" name="Potion Support Pack" additionalName="90-day" type="EtcItem">
-		<!-- Potion support pack. Double-click to obtain 20 Superior Quick Healing Potions, 50 Superior Healing Potions, 5 fresh milks, and 5 Leaf of Appreciations. -->
+		<!-- Potion support pack. Wrapped Pack containing 20 Superior Quick Healing Potions, 50 Superior Healing Potions, 5 fresh milks, and 5 Leaf of Appreciations. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1677,7 +1677,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21860" name="Supplies Support Pack" additionalName="90-day" type="EtcItem">
-		<!-- Supplies support pack. Double-click to obtain 200,000 mysterious soulshots and spirits according to grade. -->
+		<!-- Supplies support pack. Wrapped Pack containing 200,000 mysterious soulshots and spirits according to grade. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1693,22 +1693,22 @@
 		<set name="is_destroyable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21845" min="20000" max="20000" chance="100" /> <!-- Mysterious No-grade Soulshot -->
-			<item id="21846" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -->
-			<item id="21847" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (C-grade) -->
-			<item id="21848" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (B-grade) -->
-			<item id="21849" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (A-grade) -->
-			<item id="21850" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (S-grade) -->
-			<item id="21851" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed No-grade Spiritshot -->
-			<item id="21852" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -->
-			<item id="21853" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (C-grade) -->
-			<item id="21854" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (B-grade) -->
-			<item id="21855" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (A-grade) -->
-			<item id="21856" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
+			<item id="21845" min="20000" max="20000" chance="100" /> <!-- Mysterious No-grade Soulshot -  -->
+			<item id="21846" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (D-grade) -  -->
+			<item id="21847" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (C-grade) -  -->
+			<item id="21848" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (B-grade) -  -->
+			<item id="21849" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (A-grade) -  -->
+			<item id="21850" min="20000" max="20000" chance="100" /> <!-- Mysterious Soulshot (S-grade) -  -->
+			<item id="21851" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed No-grade Spiritshot -  -->
+			<item id="21852" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (D-grade) -  -->
+			<item id="21853" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (C-grade) -  -->
+			<item id="21854" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (B-grade) -  -->
+			<item id="21855" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (A-grade) -  -->
+			<item id="21856" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (S-grade) -  -->
 		</capsuled_items>
 	</item>
 	<item id="21861" name="PC Vitality (1-hour)" type="EtcItem">
-		<!-- When used, for 1 hr., energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
+		<!-- When used, for 1 hour, energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1730,7 +1730,7 @@
 		</skills>
 	</item>
 	<item id="21862" name="Player Commendation - Vitality Pack" type="EtcItem">
-		<!-- PA - Vitality Pack. Double-click to obtain 3 PA Vitality. When used, has a chance of receiving a 1h~4h PA Vitality buff. Can only be used at levels 1 - 75. -->
+		<!-- PA - Vitality Pack. Wrapped Pack containing 3 PA Vitality. When used, has a chance of receiving a 1h~4h PA Vitality buff. Can only be used at levels 1 - 75. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1771,7 +1771,7 @@
 		</skills>
 	</item>
 	<item id="21864" name="Player Commendation - Blessing Pack" type="EtcItem">
-		<!-- PA - Blessing pack. Double-click to obtain PA - Blessing. -->
+		<!-- PA - Blessing pack. Wrapped Pack containing PA - Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1791,7 +1791,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21865" name="PC Vitality (2-hour)" type="EtcItem">
-		<!-- When used, for 2 hr., energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
+		<!-- When used, for 2 hours, energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1812,7 +1812,7 @@
 		</skills>
 	</item>
 	<item id="21866" name="PC Vitality (3-hour)" type="EtcItem">
-		<!-- When used, for 3 hr., energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
+		<!-- When used, for 3 hours, energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1833,7 +1833,7 @@
 		</skills>
 	</item>
 	<item id="21867" name="PC Vitality (4-hour)" type="EtcItem">
-		<!-- When used, for 4 hr., energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
+		<!-- When used, for 4 hours, energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -1965,7 +1965,7 @@
 		</skills>
 	</item>
 	<item id="21874" name="Medal of Glory" type="EtcItem">
-		<!-- Item for obtaining Fame. If you bring it to the Olympiad Manager, you can exchange 1 Mark of Battle for 100 Fame points using the ?ark of Battle Exchange' list. -->
+		<!-- Item for obtaining Fame. If you bring it to the Olympiad Manager, you can exchange 1 Mark of Battle for 100 Fame points using the Mark of Battle Exchange' list. -->
 		<set name="icon" val="icon.etc_badge_gold_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -1997,7 +1997,7 @@
 		</skills>
 	</item>
 	<item id="21876" name="Pa'agrio's Christmas Package" type="EtcItem">
-		<!-- Double-click to obtain each of Pa'agrio's Warm Breeze (4-hr.) pack, XP Buff 50% Pack (4-hr.), party cake, and shiny party hat. -->
+		<!-- Wrapped Pack containing each of Pa'agrio's Warm Breeze (4-hour) pack, XP Buff 50% Pack (4-hour), party cake, and shiny party hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2014,14 +2014,14 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21878" min="1" max="1" chance="100" /> <!-- Pa'agrio's Warm Breeze Pack (4-hr.) -->
-			<item id="21879" min="1" max="1" chance="100" /> <!-- XP Buff 50% Pack (4-hr.) -->
+			<item id="21878" min="1" max="1" chance="100" /> <!-- Pa'agrio's Warm Breeze Pack (4-hour) -->
+			<item id="21879" min="1" max="1" chance="100" /> <!-- XP Buff 50% Pack (4-hour) -->
 			<item id="21881" min="1" max="1" chance="100" /> <!-- Party Cake -->
 			<item id="21882" min="1" max="1" chance="100" /> <!-- Shiny Party Hat - Blessed Body (90-day) -->
 		</capsuled_items>
 	</item>
 	<item id="21877" name="Pa'agrio's Christmas Package" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain each of Pa'agrio's Warm Breeze (4-hr.) pack, XP Buff 50% Pack (4-hr.), party cake, and shiny party hat. -->
+		<!-- Wrapped Pack containing each of Pa'agrio's Warm Breeze (4-hour) pack, XP Buff 50% Pack (4-hour), party cake, and shiny party hat. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2038,14 +2038,14 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21878" min="1" max="1" chance="100" /> <!-- Pa'agrio's Warm Breeze Pack (4-hr.) -->
-			<item id="21879" min="1" max="1" chance="100" /> <!-- XP Buff 50% Pack (4-hr.) -->
+			<item id="21878" min="1" max="1" chance="100" /> <!-- Pa'agrio's Warm Breeze Pack (4-hour) -->
+			<item id="21879" min="1" max="1" chance="100" /> <!-- XP Buff 50% Pack (4-hour) -->
 			<item id="21881" min="1" max="1" chance="100" /> <!-- Party Cake -->
 			<item id="21882" min="1" max="1" chance="100" /> <!-- Shiny Party Hat - Blessed Body (90-day) -->
 		</capsuled_items>
 	</item>
 	<item id="21878" name="Pa'agrio's Warm Breeze Pack (4-hour)" type="EtcItem">
-		<!-- Double-click to obtain 15 Pa'agrio's warm breezes. -->
+		<!-- Wrapped Pack containing 15 Pa'agrio's warm breezes. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2062,11 +2062,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="21880" min="15" max="15" chance="100" /> <!-- Pa'agrio's Warm Breeze (4-hr.) -->
+			<item id="21880" min="15" max="15" chance="100" /> <!-- Pa'agrio's Warm Breeze (4-hour) -  -->
 		</capsuled_items>
 	</item>
 	<item id="21879" name="XP Buff 50% Pack (4-hour)" type="EtcItem">
-		<!-- Dimensional pack. Double-click to obtain 15 XP Buff 50%es (4-hr.). -->
+		<!-- Dimensional pack. Wrapped Pack containing 15 XP Buff 50%es (4-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2083,11 +2083,11 @@
 		<set name="is_mailable" val="false" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="17283" min="15" max="15" chance="100" /> <!-- XP Buff 50% (4-hr.) -->
+			<item id="17283" min="15" max="15" chance="100" /> <!-- XP Buff 50% (4-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="21880" name="Pa'agrio's Warm Breeze (4-hour)" type="EtcItem">
-		<!-- Upon use, for 4 hr., you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- Upon use, for 4 hours, you can temporarily feel the Vitality recovery herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.Icon.pi_wind_of_paagrio" />
 		<set name="material" val="LIQUID" />
 		<set name="is_tradable" val="false" />
@@ -2183,7 +2183,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="21885" name="Rose Spirit Coupon Pack" type="EtcItem">
-		<!-- Double-click to obtain 2 Rose Spirit Coupons. -->
+		<!-- Wrapped Pack containing 2 Rose Spirit Coupons. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2199,11 +2199,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="20914" min="2" max="2" chance="100" /> <!-- Enhanced Rose Spirit Coupon (5-hr.) -->
+			<item id="20914" min="2" max="2" chance="100" /> <!-- Enhanced Rose Spirit Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="21886" name="Rose Spirit Set Pack" type="EtcItem">
-		<!-- Double-click to obtain Rose Spirit Coupon Pack and 1 Sweet Chocolate Box. -->
+		<!-- Wrapped Pack containing Rose Spirit Coupon Pack and 1 Sweet Chocolate Box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2224,7 +2224,7 @@
 		</capsuled_items>
 	</item>
 	<item id="21887" name="Rose Spirit Coupon" type="EtcItem">
-		<!-- Coupon that can be exchanged for a necklace (5-hr.) that summons an Improved Rose Spirit. -->
+		<!-- Coupon that can be exchanged for a necklace (5-hour) that summons an Improved Rose Spirit. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="100" />
@@ -2240,7 +2240,7 @@
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="21888" name="Sweet Chocolate Box" type="EtcItem">
-		<!-- Double-click to obtain 3 sweet chocolates and 50 rose essences. -->
+		<!-- Wrapped Pack containing 3 sweet chocolates and 50 rose essences. -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_box_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_dropable" val="false" />
@@ -2255,11 +2255,11 @@
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
 			<item id="20904" min="50" max="50" chance="100" /> <!-- Rose Essence -->
-			<item id="21889" min="3" max="3" chance="100" /> <!-- Sweet Chocolate (4-hr.) -->
+			<item id="21889" min="3" max="3" chance="100" /> <!-- Sweet Chocolate (4-hour) -  -->
 		</capsuled_items>
 	</item>
 	<item id="21889" name="Sweet Chocolate (4-hour)" type="EtcItem">
-		<!-- Upon use, replenishes Vitality while hunting for 4 hr. The effect doesn't apply while "Birthday Vitality Buff" is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
+		<!-- Upon use, replenishes Vitality while hunting for 4 hours. The effect doesn't apply while "Birthday Vitality Buff" is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="material" val="LIQUID" />
 		<set name="weight" val="1" />
@@ -2281,7 +2281,7 @@
 		</skills>
 	</item>
 	<item id="21890" name="Rose Spirit Coupon Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain 2 improved rose spirit coupons. -->
+		<!-- Wrapped Pack containing 2 improved rose spirit coupons. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />
@@ -2297,11 +2297,11 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="20914" min="2" max="2" chance="100" /> <!-- Enhanced Rose Spirit Coupon (5-hr.) -->
+			<item id="20914" min="2" max="2" chance="100" /> <!-- Enhanced Rose Spirit Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="21891" name="Rose Spirit Set Pack" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain Rose Spirit Coupon and 1 Sweet Chocolate Box. -->
+		<!-- Wrapped Pack containing Rose Spirit Coupon and 1 Sweet Chocolate Box. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
 		<set name="is_tradable" val="false" />

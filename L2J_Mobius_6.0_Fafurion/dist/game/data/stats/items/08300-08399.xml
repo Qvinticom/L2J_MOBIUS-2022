@@ -785,7 +785,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="8363" name="Adventurer's Box: Cradle of Creation" type="EtcItem">
-		<!-- Open the box to obtain the Cradle of Creation at a certain rate. -->
+		<!-- Open the box to obtain the Cradle of Creation with a certain probability. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />

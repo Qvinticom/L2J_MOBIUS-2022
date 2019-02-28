@@ -3043,7 +3043,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="12871" toLevel="1" name="Hero's Treasure Chest">
+	<skill id="12871" toLevel="1" name="Destruction Scroll: Enchant Weapon (R-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -3248,7 +3248,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="12882" toLevel="1" name="Talking Island Homemade Cookie">
+	<skill id="12882" toLevel="1" name="Hero's Treasure Chest">
 		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>BranchSys.icon.br_valentine_cookie_i00</icon>
 		<operateType>A2</operateType>
@@ -3309,8 +3309,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="12889" toLevel="1" name="Romantic Chapeau - Critical Rate">
-		<!-- Critical Rate +50. -->
+	<skill id="12889" toLevel="1" name="Romantic Chapeau - P. Critical Rate">
+		<!-- P. Critical Rate +50. -->
 		<icon>icon.accessory_romantic_chaperon_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3337,8 +3337,8 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="12893" toLevel="1" name="Angel Circlet - Evasion">
-		<!-- Evasion +5. -->
+	<skill id="12893" toLevel="1" name="Angel Circlet - P. Evasion">
+		<!-- P. Evasion +5. -->
 		<icon>icon.Accessary_angel_circlet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -3358,15 +3358,15 @@
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="12896" toLevel="1" name="Demon Circlet - Accuracy">
-		<!-- Accuracy +5. -->
+	<skill id="12896" toLevel="1" name="Demon Circlet - P. Accuracy">
+		<!-- P. Accuracy +5. -->
 		<icon>icon.Accessary_demon_circlet_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>1</magicLvl>
 	</skill>
-	<skill id="12897" toLevel="1" name="Player Commendation - Blessing">
-		<!-- For 1 hr., recovers Vitality when XP is acquired through hunting. -->
+	<skill id="12897" toLevel="1" name="PA - Blessing">
+		<!-- For 1 h., recovers Vitality when XP is acquired through hunting. -->
 		<icon>BranchSys.icon.br_flag_of_bookmark_i00</icon>
 		<operateType>A2</operateType>
 		<hitTime>100</hitTime>

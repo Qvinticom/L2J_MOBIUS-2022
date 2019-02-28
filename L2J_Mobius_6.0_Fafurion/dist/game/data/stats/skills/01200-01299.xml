@@ -4290,6 +4290,7 @@
 		</effects>
 	</skill>
 	<skill id="1244" toLevel="13" name="Freezing Flame">
+		<!-- Strikes the target with a magical cold flame. For $s1, causes -$s2 HP per second on the enemy and -$s3 during PvP. -->
 		<icon>icon.skill1244</icon>
 		<abnormalLvl>
 			<value level="1">5</value>
@@ -5622,6 +5623,7 @@
 		</effects>
 	</skill>
 	<skill id="1263" toLevel="24" name="Curse Gloom">
+		<!-- Inflicts damage on the enemy with $s1 Power added to M. Atk. Decreases the enemy's M. Def. -$s3 and $s4 Attribute Resistance -$s5 for $s2. -->
 		<icon>icon.skill1263</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>
@@ -5979,7 +5981,7 @@
 		</effects>
 	</skill>
 	<skill id="1264" toLevel="3" name="Solar Spark">
-		<!-- Inflicts holy damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<!-- Inflicts holy damage on the enemy with $s1 Power added to M. Atk. Over-hit is possible. -->
 		<icon>icon.skill1264</icon>
 		<castRange>750</castRange>
 		<effectPoint>
@@ -6024,7 +6026,7 @@
 		</effects>
 	</skill>
 	<skill id="1265" toLevel="14" name="Solar Flare">
-		<!-- Inflicts holy damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<!-- Inflicts holy damage on the enemy with $s1 Power added to M. Atk. Over-hit is possible. -->
 		<icon>icon.skill1265</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -6124,7 +6126,7 @@
 		</effects>
 	</skill>
 	<skill id="1266" toLevel="3" name="Shadow Spark">
-		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Over-hit is possible. -->
 		<icon>icon.skill1266</icon>
 		<castRange>750</castRange>
 		<effectPoint>
@@ -6169,7 +6171,7 @@
 		</effects>
 	</skill>
 	<skill id="1267" toLevel="14" name="Shadow Flare">
-		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<!-- Inflicts dark damage on the enemy with $s1 Power added to M. Atk. Over-hit is possible. -->
 		<icon>icon.skill1267</icon>
 		<castRange>900</castRange>
 		<effectPoint>
@@ -7674,7 +7676,7 @@
 		</effects>
 	</skill>
 	<skill id="1292" toLevel="1" name="Elemental Assault">
-		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Over-hit is possible. -->
 		<icon>icon.skill1292</icon>
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>
@@ -7697,7 +7699,7 @@
 		</effects>
 	</skill>
 	<skill id="1293" toLevel="1" name="Elemental Symphony">
-		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Over-hit. -->
+		<!-- Inflicts non-attribute damage on the enemy with $s1 Power added to M. Atk. Over-hit is possible. -->
 		<icon>icon.skill1293</icon>
 		<castRange>900</castRange>
 		<effectPoint>-6000</effectPoint>

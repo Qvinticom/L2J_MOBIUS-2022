@@ -846,7 +846,7 @@
 		</effects>
 	</skill>
 	<skill id="23435" toLevel="1" name="Borna Spirit">
-		<!-- Borna's Atk. Spd. +5%, Casting Spd. +5%, and has a chance of applying 9% Vampiric Rage. M. Atk. +10%, M. Critical Rate +10%, and P./ M. Def. +20%. Has a chance of inflicting magic damage when attacked. -->
+		<!-- Borna's Atk. Spd. +5%, Casting Spd. +5%, and has a chance of applying 9% Vampiric Rage. M. Atk. +10%, M. Critical Rate +10%, and P. Def./ M. Def. +20%. Has a chance of inflicting magic damage when attacked. -->
 		<icon>icon.skill11046</icon>
 		<operateType>P</operateType>
 		<hitTime>700</hitTime>
@@ -1889,7 +1889,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23472" toLevel="2" name="(Mass Devil's Curse)">
-		<!-- Inflicts $s1 physical damage to target and nearby enemies, and absorbs $s2 of inflicted damage as HP. Also, for $s3, the target's P./ M. Def./ Casting Spd./ M. Atk./ P. Critical Rate/ M. Critical Rate/ Speed +$s4, and P. Accuracy -$s5. -->
+		<!-- Inflicts $s1 physical damage to target and nearby enemies, and absorbs $s2 of inflicted damage as HP. Also, for $s3, the target's P. Def./ M. Def./ Casting Spd./ M. Atk./ P. Critical Rate/ M. Critical Rate/ Speed +$s4, and P. Accuracy -$s5. -->
 		<icon>icon.skill11048</icon>
 		<operateType>A2</operateType>
 		<mpConsume>211</mpConsume>
@@ -1963,7 +1963,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="23475" toLevel="2" name="(Crippling Attack)">
-		<!-- Inflicts $s1 physical damage. For $s2, target's P./ M. Def. -$s3, and P. Evasion -$s4. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. Over-hit. Critical. -->
+		<!-- Inflicts $s1 physical damage. For $s2, target's P. Def./ M. Def. -$s3, and P. Evasion -$s4. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. Over-hit. Critical. -->
 		<icon>icon.skill11509</icon>
 		<abnormalLvl>5</abnormalLvl>
 		<abnormalTime>10</abnormalTime>

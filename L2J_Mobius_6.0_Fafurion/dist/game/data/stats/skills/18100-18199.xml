@@ -138,12 +138,12 @@
 	<skill id="18114" toLevel="1" name="Disassembly Recipe Pouch: Weapon">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18115" toLevel="1" name="Ertheia's Attribute Stone Pack (+ 60)">
-		<!-- Double-click to obtain a random Attribute Stone (+ 60). -->
+	<skill id="18115" toLevel="1" name="Ertheia's Attribute Stone Pack (+60)">
+		<!-- Double-click to obtain a random Attribute Stone (+60). -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18116" toLevel="1" name="Ertheia's Attribute Stone Pack (+ 150)">
-		<!-- Double-click to obtain a random Attribute Stone (+ 150). -->
+	<skill id="18116" toLevel="1" name="Ertheia's Attribute Stone Pack (+150)">
+		<!-- Double-click to obtain a random Attribute Stone (+150). -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18117" toLevel="1" name="Ertheia's Attribute Crystal Pack - Super">
@@ -196,7 +196,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18126" toLevel="2" name="Freya's Frozen Scroll">
-		<!-- For 10 min., Vitality Consumption +$s1 and Acquired XP/ SP +$s2. Remains after death. Cooldown is 9 min. -->
+		<!-- For 10 min., Vitality Consumption +$s1 and Acquired XP/ SP +$s2 while hunting. Remains after death. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. -->
 		<icon>icon.freya_scroll</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -250,7 +250,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18130" toLevel="1" name="Freya's Frozen Scroll">
-		<!-- For 10 min., Vitality Consumption +100% and Acquired XP/ SP +100%. Remains after death. Cooldown is 9 min. -->
+		<!-- For 10 min., Vitality Consumption +100% and Acquired XP/ SP +100% while hunting. Remains after death. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. -->
 		<icon>icon.freya_scroll</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -387,7 +387,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18143" toLevel="1" name="Freya's Heart">
-		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P./ M. Def. +5%, Atk./ Casting Spd. +5%, Max HP/ MP +5%, and Acquired XP/ SPed through hunt +50%. Cannot be stacked with event buffs. -->
+		<!-- For 60 min., P. Atk. +5%, M. Atk. +20%, P./ M. Def. +5%, Atk./ Casting Spd. +5%, Max HP/ MP +5%, and Aquired XP/ SP +50%. Does not stack with Letter Collector's Gift or Art of Seduction buffs. -->
 		<icon>icon.etc_jewel_gold_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1800000</reuseDelay>
@@ -422,7 +422,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18148" toLevel="1" name="Song of Sayha">
-		<!-- The warmth of Sayha's winds. For 2 hr., Acquired XP/ SP +100%. -->
+		<!-- The warmth of Sayha's winds. For 2 h., Acquired XP/ SP +100%. -->
 		<icon>BranchSys2.icon.the_fall_of_dragon</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
@@ -432,7 +432,7 @@
 		<!-- Changes the appearance of a blunt weapon into that of Turikki's Blunt Weapon. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="18150" toLevel="1" name="Monster Weapon Appearance Stone: Tayga Archer's Bow">
+	<skill id="18150" toLevel="1" name="Monster Weapon Appearance Stone: Tiger Bow">
 		<!-- Changes the appearance of a bow into that of a Tayga Archer's Bow. -->
 		<operateType>A1</operateType>
 	</skill>
@@ -568,7 +568,7 @@
 		<isMagic>4</isMagic>
 	</skill>
 	<skill id="18172" toLevel="1" name="Joon's Magic">
-		<!-- For 30 min., Acquired XP/ SP +10%, Atk. Attribute +100, P. Atk. +20%, M. Atk. +30%, Speed +10, Atk./ Casting Spd. +10%, P./ M. Accuracy +4, Max HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction or Mysterious Wind Scroll. Buff remains after death. -->
+		<!-- For 30 min., Acquired XP/ SP +10%, Attack Attribute +100, P. Atk. +20%, M. Atk. +30%, Speed +10, Atk./ Casting Spd. +10%, P./ M. Accuracy +4, Max HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction or Mysterious Wind Scroll. Buff remains after death. -->
 		<icon>icon.buff_joon_power_skill</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>2</abnormalLvl>
@@ -755,7 +755,7 @@
 		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="18182" toLevel="1" name="Alien Nano Supplement">
+	<skill id="18182" toLevel="1" name="Battle Rations">
 		<!-- Randomly increases one of STR, DEX, CON, INT, WIT, MEN, LUC, or CHA by 6. Cannot be stacked with other Battle Rations or Fish Stew. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A1</operateType>
@@ -763,56 +763,56 @@
 		<effectPoint>100</effectPoint>
 		<reuseDelay>1000</reuseDelay>
 	</skill>
-	<skill id="18183" toLevel="1" name="Alien Nano Supplement: STR">
+	<skill id="18183" toLevel="1" name="Battle Rations: STR">
 		<!-- For 30 min., STR +6. Cannot be stacked with other Battle Rations or Fish Stew. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18184" toLevel="1" name="Alien Nano Supplement: DEX">
+	<skill id="18184" toLevel="1" name="Battle Rations: DEX">
 		<!-- For 30 min., DEX +6. Cannot be stacked with other Battle Rations or Fish Stew. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18185" toLevel="1" name="Alien Nano Supplement: CON">
+	<skill id="18185" toLevel="1" name="Battle Rations: CON">
 		<!-- For 30 min., CON +6. Cannot be stacked with other Battle Rations or Fish Stew. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18186" toLevel="1" name="Alien Nano Supplement: INT">
+	<skill id="18186" toLevel="1" name="Battle Rations: INT">
 		<!-- For 30 min., INT +6. Cannot be stacked with other Battle Rations or Fish Stew. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18187" toLevel="1" name="Alien Nano Supplement: WIT">
+	<skill id="18187" toLevel="1" name="Battle Rations: WIT">
 		<!-- For 30 min., WIT +6. Cannot be stacked with other Battle Rations or Fish Stew. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18188" toLevel="1" name="Alien Nano Supplement: MEN">
+	<skill id="18188" toLevel="1" name="Battle Rations: MEN">
 		<!-- For 30 min., MEN +6. Cannot be stacked with other Battle Rations or Fish Stew. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18189" toLevel="1" name="Alien Nano Supplement: LUC">
+	<skill id="18189" toLevel="1" name="Battle Rations: LUC">
 		<!-- For 30 min., LUC +6. Cannot be stacked with other Battle Rations or Fish Stew. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>1000</reuseDelay>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="18190" toLevel="1" name="Alien Nano Supplement: CHA">
+	<skill id="18190" toLevel="1" name="Battle Rations: CHA">
 		<!-- For 30 min., CHA +6. Cannot be stacked with other Battle Rations or Fish Stew. -->
 		<icon>icon.ev_invasion_buff_box</icon>
 		<operateType>A2</operateType>

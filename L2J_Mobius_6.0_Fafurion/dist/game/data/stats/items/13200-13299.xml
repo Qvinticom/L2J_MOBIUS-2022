@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="13200" name="Player Commendation - Bellion Cestus" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Bellion Cestus with limited ability enhancement. <Special Option>. Atk. Spd. decreases by 9% when HP drops to 60% or below. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Bellion Cestus with limited ability enhancement. <Special Option>. Atk. Spd. decreases by 9% when HP drops to 60% or below. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -38,7 +38,7 @@
 		</stats>
 	</item>
 	<item id="13201" name="Player Commendation - Bow of Peril" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Bow of Peril with limited ability enhancement. <Special Option>. Cooldown decreases by about 13%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Bow of Peril with limited ability enhancement. <Special Option>. Cooldown decreases by about 13%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -110,7 +110,7 @@
 		</stats>
 	</item>
 	<item id="13203" name="Player Commendation - Guardian's Sword" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Guardian's Sword with limited ability enhancement. <Special Option>. Max HP increases by 25%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Guardian's Sword with limited ability enhancement. <Special Option>. Max HP increases by 25%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -146,7 +146,7 @@
 		</stats>
 	</item>
 	<item id="13204" name="Player Commendation - Wizard's Tear" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Wizard's Tear with limited ability enhancement. <Special Option>. Casting Spd. Increases by 15%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Wizard's Tear with limited ability enhancement. <Special Option>. Casting Spd. Increases by 15%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -183,7 +183,7 @@
 		</stats>
 	</item>
 	<item id="13205" name="Player Commendation - Kaim Vanul's Bones" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Kaim Vanul's Bones with limited ability enhancement. <Special Option>. Max MP increases by 30%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Kaim Vanul's Bones with limited ability enhancement. <Special Option>. Max MP increases by 30%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -221,7 +221,7 @@
 		</stats>
 	</item>
 	<item id="13206" name="Player Commendation - Star Buster" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Star Buster with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 6%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Star Buster with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 6%. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -258,7 +258,7 @@
 		</stats>
 	</item>
 	<item id="13207" name="Player Commendation - Colichemarde" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Colichemarde with limited ability enhancement. <Special Option>. Critical +64. When enchanted to 4 or more, chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Colichemarde with limited ability enhancement. <Special Option>. Critical +64. When enchanted to 4 or more, chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -299,7 +299,7 @@
 		</stats>
 	</item>
 	<item id="13208" name="Player Commendation - Dismantler" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Dismantler with limited ability enhancement. <Special Option>. Absorbs 8 HP from the target during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Dismantler with limited ability enhancement. <Special Option>. Absorbs 8 HP from the target during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -339,7 +339,7 @@
 		</stats>
 	</item>
 	<item id="13209" name="Player Commendation - Hell Hound" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Hell Hound with limited ability enhancement. <Special Option>. MP consumption decreases by 12% during skill use. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Hell Hound with limited ability enhancement. <Special Option>. MP consumption decreases by 12% during skill use. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -380,7 +380,7 @@
 		</stats>
 	</item>
 	<item id="13210" name="Player Commendation - Sirra's Blade" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Sirra's Blade with limited ability enhancement. <Special Option>. Max HP increases by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Sirra's Blade with limited ability enhancement. <Special Option>. Max HP increases by 25%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -416,7 +416,7 @@
 		</stats>
 	</item>
 	<item id="13211" name="Player Commendation - Sword of Ipos" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Sword of Ipos with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Sword of Ipos with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -452,7 +452,7 @@
 		</stats>
 	</item>
 	<item id="13212" name="Player Commendation - Barakiel's Axe" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Barakiel's Axe with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Barakiel's Axe with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -489,7 +489,7 @@
 		</stats>
 	</item>
 	<item id="13213" name="Player Commendation - Behemoth' Tuning Fork" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Behemoth' Tuning Fork with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Behemoth' Tuning Fork with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -526,7 +526,7 @@
 		</stats>
 	</item>
 	<item id="13214" name="Player Commendation - Naga Storm" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Naga's Storm with limited ability enhancement. <Special Option>. Critical +67. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Naga's Storm with limited ability enhancement. <Special Option>. Critical +67. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
@@ -563,7 +563,7 @@
 		</stats>
 	</item>
 	<item id="13215" name="Player Commendation - Tiphon's Spear" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Tiphon's Spear with limited ability enhancement. <Special Option>. The angle of attack widens. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Tiphon's Spear with limited ability enhancement. <Special Option>. The angle of attack widens. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
@@ -600,7 +600,7 @@
 		</stats>
 	</item>
 	<item id="13216" name="Player Commendation - Shyeed's Bow" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Shyeed's Bow with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Shyeed's Bow with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
@@ -639,7 +639,7 @@
 		</stats>
 	</item>
 	<item id="13217" name="Player Commendation - Sobekk's Hurricane" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Sobekk's Hurricane with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 6%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Sobekk's Hurricane with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 6%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -676,7 +676,7 @@
 		</stats>
 	</item>
 	<item id="13218" name="Player Commendation - Themis' Tongue" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Themis' Tongue with limited ability enhancement. <Special Option>. Max MP increases by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Themis' Tongue with limited ability enhancement. <Special Option>. Max MP increases by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
@@ -713,7 +713,7 @@
 		</stats>
 	</item>
 	<item id="13219" name="Player Commendation - Cabrio's Hand" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Cabrio's Hand with limited ability enhancement. <Special Option>. Max MP increases by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Cabrio's Hand with limited ability enhancement. <Special Option>. Max MP increases by 30%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -751,7 +751,7 @@
 		</stats>
 	</item>
 	<item id="13220" name="Player Commendation - Daimon Crystal" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Daimon Crystal with limited ability enhancement. <Special Option>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Daimon Crystal with limited ability enhancement. <Special Option>. Casting Spd. Increases by 15%. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BLUNT" />
@@ -825,7 +825,7 @@
 		</stats>
 	</item>
 	<item id="13222" name="Player Commendation - Éclair Bijou" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- ?clair Bijou with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- ?clair Bijou with limited ability enhancement. <Special Option>. Atk. Spd. Increases by about 6%. Increases damage inflicted during PvP. When enchanted to 4 or more, chance of increasing P. Atk., M. Atk., and healing power, and of decreasing MP consumption for skill use for you and your party members during a Critical Attack. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -866,7 +866,7 @@
 		</stats>
 	</item>
 	<item id="13223" name="Player Commendation - Durendal" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Durendal with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Durendal with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="ANCIENTSWORD" />
@@ -906,7 +906,7 @@
 		</stats>
 	</item>
 	<item id="13224" name="Player Commendation - Screaming Vengeance" additionalName="PC-exclusive Weapon" type="Weapon">
-		<!-- Screaming Vengeance with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
+		<!-- Screaming Vengeance with limited ability enhancement. <Special Option>. Critical +61. Increases damage inflicted during PvP. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -947,7 +947,7 @@
 		</stats>
 	</item>
 	<item id="13225" name="Kamaloka (Hall of the Abyss) 15-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 15 Extra Passes: Hall of the Abyss. -->
+		<!-- Wrapped Pack containing 15 Extra Passes: Hall of the Abyss. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -968,7 +968,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13226" name="Near Kamaloka 15-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 15 Extra Passes: Near Kamaloka. -->
+		<!-- Wrapped Pack containing 15 Extra Passes: Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1052,7 +1052,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13230" name="Kamaloka (Labyrinth of the Abyss) 15-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 15 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
+		<!-- Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1073,7 +1073,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13231" name="Kamaloka (Hall of the Abyss) 5-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 15 Sheets of Extra Entrance Passes to Near Kamaloka. -->
+		<!-- Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Near Kamaloka. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1094,7 +1094,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13232" name="Near Kamaloka 5-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 15 Sheets of Extra Entrance Passes to Kamaloka (Labyrinth of the Abyss). -->
+		<!-- Wrapped Pack containing 15 Sheets of Extra Entrance Passes to Kamaloka (Labyrinth of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1115,7 +1115,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13233" name="Kamaloka (Labyrinth of the Abyss) 5-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain 5 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
+		<!-- Wrapped Pack containing 5 Sheets of Extra Entrance Passes to Kamaloka (Hall of the Abyss). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1611,7 +1611,7 @@
 		<set name="time" val="10080" />
 	</item>
 	<item id="13256" name="Gran Kain's Gift Box Pack" type="EtcItem">
-		<!-- Double-click to obtain a Gran Kain's Wrapped Pack (30-day). -->
+		<!-- Wrapped Pack containing Gran Kain's Wrapped Pack (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1632,7 +1632,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13257" name="Gran Kain's Gift Box Pack (Event)" type="EtcItem">
-		<!-- Double-click to obtain a Gran Kain's Wrapped Pack (30-day). -->
+		<!-- Wrapped Pack containing Gran Kain's Wrapped Pack (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1694,7 +1694,7 @@
 		</skills>
 	</item>
 	<item id="13260" name="Gran Kain's Squeaking Shoes" additionalName="10-hour" type="Armor">
-		<!-- Gift from Gran Kain, it emits a unique sound each time a report is called in. May be used for up to 10 hr. -->
+		<!-- Gift from Gran Kain, it emits a unique sound each time a report is called in. May be used for up to 10 hours. -->
 		<set name="icon" val="icon.armor_t02_b_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="feet" />
@@ -1956,7 +1956,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13273" name="Minion Coupon (5-hour)" type="EtcItem">
-		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hr.). -->
+		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1972,7 +1972,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="13274" name="Minion Coupon (7-day)" type="EtcItem">
-		<!-- Wrapped box containing coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hr.). -->
+		<!-- Wrapped box containing coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_ticket_blue_i00" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FISH" />
@@ -1988,7 +1988,7 @@
 		<set name="is_premium" val="true" />
 	</item>
 	<item id="13275" name="Minion Coupon 3-unit Pack" type="EtcItem">
-		<!-- Double-click to obtain a coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hr.). -->
+		<!-- Wrapped Pack containing coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2005,11 +2005,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="13273" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hr.) -->
+			<item id="13273" min="3" max="3" chance="100" /> <!-- Minion Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="13276" name="Minion Coupon Pack" type="EtcItem">
-		<!-- Double-click to obtain a coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hr.). -->
+		<!-- Wrapped Pack containing coupon that can be exchanged for a necklace that allows you to summon a Minion (5-hour). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2026,7 +2026,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hr.) -->
+			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="13277" name="Energy Star Stone" type="EtcItem">
@@ -2056,7 +2056,7 @@
 		</skills>
 	</item>
 	<item id="13279" name="Feather of Blessing Pack" type="EtcItem">
-		<!-- Double-click to obtain a Feather of Blessing. -->
+		<!-- Wrapped Pack containing Feather of Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2098,7 +2098,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13281" name="Pumpkin Transformation Stick Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Pumpkin Transformation Stick (7-day). -->
+		<!-- Wrapped Pack containing Pumpkin Transformation Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2119,7 +2119,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13282" name="Kat the Cat Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Kat the Cat Hat (7-day). -->
+		<!-- Wrapped Pack containing Kat the Cat Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2140,7 +2140,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13283" name="Feline Queen Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Feline Queen Hat (7-day). -->
+		<!-- Wrapped Pack containing Feline Queen Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2161,7 +2161,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13284" name="Monster Eye Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Monster Eye Hat (7-day). -->
+		<!-- Wrapped Pack containing Monster Eye Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2182,7 +2182,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13285" name="Brown Bear Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Brown Bear Hat (7-day). -->
+		<!-- Wrapped Pack containing Brown Bear Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2203,7 +2203,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13286" name="Fungus Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Fungus Hat (7-day). -->
+		<!-- Wrapped Pack containing Fungus Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2224,7 +2224,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13287" name="Skull Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Skull Hat (7-day). -->
+		<!-- Wrapped Pack containing Skull Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2245,7 +2245,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13288" name="Ornithomimus Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Ornithomimus Hat (7-day). -->
+		<!-- Wrapped Pack containing Ornithomimus Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2266,7 +2266,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13289" name="Feline King Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Feline King Hat (7-day). -->
+		<!-- Wrapped Pack containing Feline King Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2287,7 +2287,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13290" name="Kai the Cat Hat Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Kai the Cat Hat (7-day). -->
+		<!-- Wrapped Pack containing Kai the Cat Hat (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2308,7 +2308,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13291" name="OX Stick Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain an OX Stick (7-day). -->
+		<!-- Wrapped Pack containing OX Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -2330,7 +2330,7 @@
 		</capsuled_items>
 	</item>
 	<item id="13292" name="Rock-Paper-Scissors Stick Pack (7-day)" type="EtcItem">
-		<!-- Double-click to obtain a Rock-Paper-Scissors Stick (7-day). -->
+		<!-- Wrapped Pack containing Rock-Paper-Scissors Stick (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i02" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

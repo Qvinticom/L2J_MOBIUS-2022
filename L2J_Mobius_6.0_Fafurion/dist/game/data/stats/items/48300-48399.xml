@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="48300" name="Resolute Recovery Potion" type="EtcItem">
-		<!-- Upon use, it restores 3000 HP and the remaining power restores CP. Instant effect with no cooldown. Cannot be used in the Olympiad. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<!-- Upon use, it restores 3000 HP and the remaining power restores CP. Instant effect with no duration. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_potion_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -10,7 +10,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48301" name="Resolute Attack Scroll" type="EtcItem">
-		<!-- Special attack scroll that can be obtained with Clan Point Tokens. When used, nearby clan members' P./ M. Atk. +3%, P./ M. Skill Power +3%, and Acquired XP/ SPed +5% for 30 min. Cannot be used together with Resolute Defense Scroll. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<!-- Special attack scroll that can be obtained with Clan Point Tokens. When used, nearby clan members' P./ M. Atk. +3%, P./ M. Skill Power +3%, and Acquired XP/ SPed +5% for 30 min. Cannot be used together with Resolute Defense Scroll. Cannot be used in the Olympiad and the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -18,7 +18,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48302" name="Resolute Defense Scroll" type="EtcItem">
-		<!-- Special defense scroll that can be obtained with Clan Point Tokens. When used, nearby clan members' P./ M. Def. +5%, Debuff Resistance +5%, and Acquired XP/ SPed +5% for 30 min. Cannot be used together with Resolute Attack Scroll. Cannot be used in the Olympiad and the Ceremony of Chaos. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<!-- Special defense scroll that can be obtained with Clan Point Tokens. When used, nearby clan members' P./ M. Def. +5%, Debuff Resistance +5%, and Acquired XP/ SPed +5% for 30 min. Cannot be used together with Resolute Attack Scroll. Cannot be used in the Olympiad and the Ceremony of Chaos. -->
 		<set name="icon" val="icon.etc_scroll_of_transformation_traikan_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -26,7 +26,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48303" name="Resolute Raid Point Rune (2-hour) Box" type="EtcItem">
-		<!-- Raid Point Rune box that can be obtained with Clan Point Tokens. Double-click to obtain a Resolute Raid Point Rune (2-hr.) that increases Raid Points gained by 100%. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<!-- Raid Point Rune box that can be obtained with Clan Point Tokens. Double-click to obtain a Resolute Raid Point Rune (2-hour) that increases Raid Points gained by 100%. -->
 		<set name="icon" val="BranchSys.icon.br_fortuna_cube_s_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -36,7 +36,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48304" name="Resolute Raid Point Rune" additionalName="2-hour" type="EtcItem">
-		<!-- Having it in the inventory increases Raid Points gained by 100%. Will be deleted on Wednesday, May 31, 2017, after regular maintenance. -->
+		<!-- Having it in the inventory increases Raid Points gained by 100%. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_rp_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -77,7 +77,7 @@
 		</stats>
 	</item>
 	<item id="48307" name="Blessed Antharas' Earring - Pure" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Cancels Stun and gives Stun Resistance for 5 secsCancels Stun and gives Stun Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Defenses +25 -->
+		<!-- Dimensional Item. MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Cancels Stun and gives Stun Resistance for 5 secsCancels Stun and gives Stun Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Resistances +25 -->
 		<set name="icon" val="icon.bm_earring_of_antaras" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -93,7 +93,7 @@
 		</stats>
 	</item>
 	<item id="48308" name="Blessed Valakas' Necklace - Body" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. <Craft Effect>. Max HP +5% -->
+		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Resistance +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. <Craft Effect>. Max HP +5% -->
 		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -109,7 +109,7 @@
 		</stats>
 	</item>
 	<item id="48309" name="Blessed Valakas' Necklace - Mind" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs Cancels Hold and gives Hold Resistance for 5 secs. <Craft Effect>. Skill Cooldown -3% -->
+		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Resistance +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs Cancels Hold and gives Hold Resistance for 5 secs. <Craft Effect>. Skill Cooldown -3% -->
 		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -125,7 +125,7 @@
 		</stats>
 	</item>
 	<item id="48310" name="Blessed Valakas' Necklace - Barrier" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. <Craft Effect>. Fixed Damage Resistance +5% -->
+		<!-- Dimensional Item. MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Resistance +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Cancels Hold and gives Hold Resistance for 5 secs. <Craft Effect>. Fixed Damage Resistance +5% -->
 		<set name="icon" val="icon.bm_necklace_of_valakas" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -173,7 +173,7 @@
 		</stats>
 	</item>
 	<item id="48313" name="Lindvior's Earring - Pure" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Resistance +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Cancels Knock Back/ Knock Down and gives Knock Back/ Knock Down Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Resistance +25 -->
+		<!-- Dimensional Item. MP +59, P./ M. Critical Damage +10%, Movement Speed +5, DEX/ WIT +3, Wind/ Dark Attribute Resistance +30, Petrification Atk./ Def. Success Rate +50%, Knock Back/ Knock Down/ Pull Atk./ Def. Success Rate +40%, Danger Zone Def. Success Rate +40%, Abnormal Status Reflection +10%, Reflect Damage Magic +10%. Active Skill: Cancels Knock Back/ Knock Down and gives Knock Back/ Knock Down Resistance for 5 secs. Does not stack with identical earrings or earrings with same Craft Effect. <Craft Effect>. 6 Attribute Resistances +25 -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
@@ -189,7 +189,7 @@
 		</stats>
 	</item>
 	<item id="48314" name="Suspicious Safe" type="EtcItem">
-		<!-- Suspicious safes traded tacitly in the Mystic Tavern. Use it to obtain a rare item. Will be deleted on Wednesday, October 25, 2017, after regular maintenance. -->
+		<!-- Suspicious safes traded tacitly in the Mystic Tavern. Use it to obtain a rare item. -->
 		<set name="icon" val="icon.bm_strongbox" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -197,7 +197,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48315" name="Shiny Gold Bar" type="EtcItem">
-		<!-- A highly expensive gold bar secretly traded at Mystic Tavern. Take it to a Dimensional Merchant to exchange it for a useful item. Will be deleted during maintenance on Wednesday, April 25th, 2018. -->
+		<!-- A highly expensive gold bar secretly traded at Mystic Tavern. Take it to a Dimensional Merchant to exchange it for a useful item. -->
 		<set name="icon" val="icon.bm_gold_bar" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
@@ -220,7 +220,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48318" name="Dark Bloody Enhancement Stone Box" type="EtcItem">
-		<!-- Use to obtain a Dark Helios, Bloody Helios, Dark Eternal, or Bloody Eternal Enhancement Stone. -->
+		<!-- Use to obtain a Dark Weapon, Bloody Weapon, Dark Armor, or Bloody Armor Enhancement Stone. -->
 		<set name="icon" val="icon.bm_pvp_pve_upgrade_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -253,7 +253,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48322" name="Dimensional Bracelet Enhancement Stone Pack" type="EtcItem">
-		<!-- Double-click to randomly obtain one of 6 types of Dimensional Bracelet Enhancement Stones. -->
+		<!-- Double-click to randomly obtain one of the 6 types of Dimensional Bracelet Enhancement Stones. -->
 		<set name="icon" val="icon.bm_sayha_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -269,7 +269,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48324" name="Agathion Masters Box" type="EtcItem">
-		<!-- Use to obtain 4 Zodiac Agathion Cubes. There is also a chance to additionally obtain a Divine Book of Growth: Zodiac Agathion. -->
+		<!-- Use to obtain 4 Zodiac Agathion Cubes. There is also a chance to additionally obtain a Divine Zodiac Agathion Book of Growth. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -277,7 +277,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48325" name="Special Agathion Masters Box" type="EtcItem">
-		<!-- Use to obtain 4 Zodiac Agathion Cubes and a Divine Book of Growth: Zodiac Agathion. -->
+		<!-- Use to obtain 4 Zodiac Agathion Cubes and a Divine Zodiac Agathion Book of Growth. -->
 		<set name="icon" val="icon.bm_gold_relic_box" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -916,7 +916,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48384" name="Cannonball of Despair" type="EtcItem">
-		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it stuns Spezion and his clones for 10 seconds, and removes the Invincibility buff for 1 min. -->
+		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it stuns Spezion and his clones for 10 sec., and removes the Invincibility buff for 1 min.. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -936,7 +936,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48386" name="Cannonball of Rage" type="EtcItem">
-		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 min. and inflicts Eroded Rage buff on Spezion's clones and minions for 30 seconds. -->
+		<!-- A cannonball that can be used with a cannon in the Prison of Darkness. When hit, it removes Spezion's Invincibility buff for 1 min. and inflicts Eroded Rage buff on Spezion's clones and minions for 30 sec. -->
 		<set name="icon" val="icon.big_gun_shot_i00" />
 		<set name="material" val="PAPER" />
 		<set name="is_tradable" val="false" />
@@ -946,7 +946,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48387" name="Ancient Zodiac Agathion Book of Growth" additionalName="Event" type="EtcItem">
-		<!-- Zodiac Agathion growth scroll. Increases M. Def. when the Agathion grows, adding a Special Ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the Agathion's Unique Ability gradually from +1. If successful, the Agathion randomly grows to between +1 and +3. Cannot be used past +7. Will be deleted on Wednesday, January 3, 2018, after regular maintenance. -->
+		<!-- Zodiac Agathion growth scroll. Increases M. Def. when the Agathion grows, adding a Special Ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the Agathion's Unique Ability gradually from +1. If successful, the Agathion randomly grows to between +1 and +3. Cannot be used past +7. -->
 		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -966,7 +966,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48389" name="Shiny Agathion Cube Fragment" type="EtcItem">
-		<!-- Can be exchanged for the Book of Growth: Zodiac Agathion through the Warehouse Keeper. -->
+		<!-- Can be exchanged for the Zodiac Agathion Book of Growth through the Warehouse Keeper. -->
 		<set name="icon" val="icon.cube_piece_ag" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
@@ -1027,7 +1027,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="48397" name="Mother Tree Guardians Basic Treasure Chest" additionalName="Shadow of the Mother Tree" type="EtcItem">
-		<!-- A basic supply box received in exchange for helping the Mother Tree Guardians with their mission in Shadow of the Mother Tree. Double click to view the item. -->
+		<!-- A basic supply box received in exchange for helping the Mother Tree Guardians with their mission in Shadow of the Mother Tree. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -1038,7 +1038,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48398" name="Mother Tree Guardians Intermediate Treasure Chest" additionalName="Shadow of the Mother Tree" type="EtcItem">
-		<!-- An intermediate supply box received in exchange for helping the Mother Tree Guardians with their mission in Shadow of the Mother Tree. Double click to view the item. -->
+		<!-- An intermediate supply box received in exchange for helping the Mother Tree Guardians with their mission in Shadow of the Mother Tree. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
@@ -1049,7 +1049,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="48399" name="Mother Tree Guardians Advanced Treasure Chest" additionalName="Shadow of the Mother Tree" type="EtcItem">
-		<!-- An advanced supply box received in exchange for helping the Mother Tree Guardians with their mission in Shadow of the Mother Tree. Double click to view the item. -->
+		<!-- An advanced supply box received in exchange for helping the Mother Tree Guardians with their mission in Shadow of the Mother Tree. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />

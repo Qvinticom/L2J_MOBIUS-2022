@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10244" toLevel="3" name="True Vanguard">
+	<skill id="10244" toLevel="3" name="Two-Hand Stance">
 		<!-- Holds a weapon with both hands. If the weapon is a sword or blunt weapon, this stance increases P. Critical Rate/ P. Critical Damage by $s1 and P. Atk. by $s2 of Shield Def. but disables you to cast shield skills or defend with the shield. Use the stance again to cancel it. Requires a shield to be equipped. -->
 		<icon>icon.skill10244</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -169,7 +169,7 @@
 		</effects>
 	</skill>
 	<skill id="10251" toLevel="10" name="Superior Weapon Mastery">
-		<!-- P. Atk. +$s1, additional P. Atk. +$s2, Atk. Spd +$s2, P. Accuracy +$s4 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. STR +$s5. Depending on your STR, the Cooldown resets or the duration increases by $s6 times. -->
+		<!-- P. Atk. +$s1, additional P. Atk. +$s2, Atk. Spd +$s3, P. Accuracy +$s4 when a sword, blunt, or spear is equipped. Increases the number of possible targets during a spear attack. STR +$s5. Depending on your STR, the Cooldown resets or the duration increases by $s6 times. -->
 		<icon>icon.skill10251</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -444,7 +444,7 @@
 		</effects>
 	</skill>
 	<skill id="10255" toLevel="10" name="Superior Momentum Mastery">
-		<!-- Absorbs Momentum by $s1 during a standard physical attack and $s2 during a critical attack. Can absorb up to $s3 Momentum levels. $s4 chance of triggering Lightning Force during a standard attack. -->
+		<!-- Absorbs Momentum by $s1 during a standard attack and $s2 during a critical attack. Can absorb up to $s3 Momentum levels. $s4 chance of triggering Lightning Force during a standard attack. -->
 		<icon>icon.skill10255</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -605,7 +605,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10257" toLevel="1" name="Self Heal (Warrior)">
+	<skill id="10257" toLevel="1" name="Great Spirit Mastery">
 		<!-- Poison/ Bleed/ Hold/ Sleep/ Mental Resistance +30%. STR +2. -->
 		<icon>icon.skill10257</icon>
 		<operateType>P</operateType>
@@ -626,6 +626,7 @@
 		</effects>
 	</skill>
 	<skill id="10258" toLevel="11" name="Armor Destruction">
+		<!-- Attacks target with $s1 Power added to P. Atk. Weakens P. Def. and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10258</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -736,6 +737,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10260" toLevel="11" name="Mega Strike">
+		<!-- Attacks target with $s1 added to P. Atk. and increases damage as Momentum increases. Increases damage by 30% when Momentum is used up to 3. Requires a sword, blunt, spear, fist, dual blunt, or dual sword Over-hit. Critical. Ignores Shield Defense. -->
 		<icon>icon.skill10260</icon>
 		<castRange>40</castRange>
 		<effectRange>400</effectRange>
@@ -828,6 +830,7 @@
 		</effects>
 	</skill>
 	<skill id="10262" toLevel="9" name="Power Bomber">
+		<!-- Inflicts a powerful strike on target with $s1 Power added to P. Atk., knocking them down for $s2, and increases damage as Momentum increases. Increases damage by $s4 when Momentum is used up to $s3. Requires a sword, blunt, spear, fist, dual blunt, or dual sword. Critical. Ignores Shield Defense. -->
 		<icon>icon.skill10262</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -938,6 +941,7 @@
 		</effects>
 	</skill>
 	<skill id="10263" toLevel="11" name="Hurricane Blaster">
+		<!-- Attacks target with $s1 power, lowers P. Def., and absorbs Momentum. Requires a sword, blunt, spear, fist, dual blunt, or dual sword. -->
 		<icon>icon.skill10263</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1042,6 +1046,7 @@
 		</selfEffects>
 	</skill>
 	<skill id="10265" toLevel="11" name="Eruption">
+		<!-- Attacks nearby enemies with $s1 Power added to P. Atk., stuns them for $s2 and remove their target. Power is decreased by $s3 when equipped with a sword/ blunt/ fist weapon and increased by $s4 when equipped with a spear. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10265</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -1152,6 +1157,7 @@
 		</effects>
 	</skill>
 	<skill id="10266" toLevel="11" name="Giant Punch">
+		<!-- Strikes down at the ground with a fist to Knock Down nearby enemies for $s1. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. -->
 		<icon>icon.skill10266</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1253,6 +1259,7 @@
 		</effects>
 	</skill>
 	<skill id="10267" toLevel="9" name="Hurricane Rush">
+		<!-- Shoulder charge target to Stun it for $s1. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. -->
 		<icon>icon.skill10267</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -1378,6 +1385,7 @@
 		</effects>
 	</skill>
 	<skill id="10269" toLevel="10" name="Jump Attack">
+		<!-- Jumps to attack frontal enemies with $s1 Power added to P. Atk. and decreases their Speed by $s3 for $s2. The more Momentum used the more damage inflicted, up to a maximum of $s4 Momentum levels. Requires a sword, blunt, spear, fist, dual blunt weapon, or dual sword weapon to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10269</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1485,6 +1493,7 @@
 		</effects>
 	</skill>
 	<skill id="10270" toLevel="1" name="Second Wind">
+		<!-- Instantly $s1 HP and $s2 CP. For $s3, Max HP +$s4 and Max CP +$s5. -->
 		<icon>icon.skill10270</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1531,6 +1540,7 @@
 		</effects>
 	</skill>
 	<skill id="10271" toLevel="2" name="Power Provoke">
+		<!-- Provokes nearby enemies. Raises their P. Atk. and Atk. Spd. for $s1 but lower their P. Def. -->
 		<icon>icon.skill10271</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -1579,6 +1589,7 @@
 		</effects>
 	</skill>
 	<skill id="10273" toLevel="4" name="Lightning Disarm">
+		<!-- Disarms nearby enemies for $s1. Lowers P. Atk. and M. Atk. by $s2. -->
 		<icon>icon.skill10273</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
@@ -1646,6 +1657,7 @@
 		</effects>
 	</skill>
 	<skill id="10274" toLevel="4" name="Berserker">
+		<!-- You have reached your physical limit. Increases Debuff Resistance, Speed, P. Atk., Accuracy, P. Def., Atk. Spd., and Critical Damage. When target is killed, recovers HP by $s1. When HP falls below $s2, increases P. Atk. by $s3 and Critical Rate by $s4. When HP falls below $s5, increases P. Atk. by $s6 and Critical Rate by an additional $s7. Can be used when HP is below $s8. -->
 		<icon>icon.skill10274</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1795,6 +1807,7 @@
 		</effects>
 	</skill>
 	<skill id="10275" toLevel="4" name="Infinity Strike">
+		<!-- Adds $s1 to P. Atk., ignoring the target's P. Def. by $s2 and dealing a powerful blow. Can be used when sword/ blunt/ spear/ fist weapon/ dual blunt weapons/ dual swords are equipped. Over-hit. -->
 		<icon>icon.skill10275</icon>
 		<operateType>A1</operateType>
 		<mpConsume>
@@ -1856,6 +1869,7 @@
 		</effects>
 	</skill>
 	<skill id="10276" toLevel="1" name="Force of Nature">
+		<!-- Immediately increases Momentum to its maximum level. -->
 		<icon>icon.skill10276</icon>
 		<operateType>A1</operateType>
 		<magicLvl>85</magicLvl>
@@ -2042,6 +2056,7 @@
 		</effects>
 	</skill>
 	<skill id="10279" toLevel="1" name="Giant Barrier">
+		<!-- Removes all debuffs and for $s1, becomes invincible against standard attacks, skills, and debuffs. Spd. +$s2. Available when HP is $s3 or lower. -->
 		<icon>icon.skill10279</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>
@@ -2126,6 +2141,7 @@
 		</effects>
 	</skill>
 	<skill id="10281" toLevel="5" name="Sonic Star">
+		<!-- Adds $s1 to P. Atk. at the speed of light ignoring the P. Def. of nearby enemies by $s2 and knocking them down. Can be used when sword/ blunt/ spear/ fist weapons/ dual blunt weapons/ dual swords are equipped. Over-hit. -->
 		<icon>icon.skill10281</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
@@ -2430,7 +2446,7 @@
 		</effects>
 	</skill>
 	<skill id="10287" toLevel="6" name="Rolling Thunder">
-		<!-- HP decreases by $s1 per sec. -->
+		<!-- HP decreases by $s1 per second. -->
 		<icon>icon.skill0494</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2486,6 +2502,7 @@
 		</effects>
 	</skill>
 	<skill id="10288" toLevel="11" name="Hurricane Storm">
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. Power -$s2 when using a sword, dual sword, blunt, or fist weapon. Power +$s3 when using a spear. Requires a sword, blunt, spear, fist weapon, dual blunt, or dual sword. Over-hit. Critical. -->
 		<icon>icon.skill10288</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -2570,7 +2587,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10289" toLevel="4" name="Boost">
+	<skill id="10289" toLevel="4" name="Brave Spear">
+		<!-- Increases skills' effect by $s2 for $s1 and normal/ skill attack damage by $s3 during PvP. -->
 		<icon>icon.skill10289</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2684,6 +2702,7 @@
 		</conditions>
 	</skill>
 	<skill id="10291" toLevel="1" name="Feral Bear Cry">
+		<!-- Shouts loudly to invoke the power of the Bear. Increases P. Atk. and Critical Damage by $s2 for $s1. -->
 		<icon>icon.skill10291</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2719,6 +2738,7 @@
 		</effects>
 	</skill>
 	<skill id="10292" toLevel="1" name="Feral Ogre Cry">
+		<!-- Shouts loudly to invoke the power of the Ogre. For $s1, increases your P. Atk., P. Def. and M. Def. by $s2 and P. Critical Damage and Max HP by $s3. -->
 		<icon>icon.skill10292</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2767,6 +2787,7 @@
 		</effects>
 	</skill>
 	<skill id="10293" toLevel="1" name="Feral Puma Cry">
+		<!-- Shouts loudly to invoke the power of the Puma. For $s1, increases your P. Accuracy by $s2 and Atk. Spd. by $s3, and decreases Critical Damage received by $s4. -->
 		<icon>icon.skill10293</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2803,6 +2824,7 @@
 		</effects>
 	</skill>
 	<skill id="10294" toLevel="1" name="Feral Rabbit Cry">
+		<!-- Shouts loudly to invoke the power of the Rabbit. For $s1, increases your Atk. Spd. by $s2, Speed by $s3 and P. Evasion by $s4. -->
 		<icon>icon.skill10294</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2842,6 +2864,7 @@
 		</effects>
 	</skill>
 	<skill id="10295" toLevel="1" name="Hawk Cry">
+		<!-- Shouts loudly to invoke the power of the Hawk. For $s1, increases your P. Accuracy by $s2, Critical Rate by $s3 and Critical Damage by $s4. -->
 		<icon>icon.skill10295</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2881,6 +2904,7 @@
 		</effects>
 	</skill>
 	<skill id="10296" toLevel="1" name="Spirit of the Hunter">
+		<!-- For $s1, increases damage against insects/ plants/ animals +$s2. -->
 		<icon>icon.skill0359</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -2913,6 +2937,7 @@
 		</effects>
 	</skill>
 	<skill id="10297" toLevel="1" name="Spirit of the Slayer">
+		<!-- For 30 min., increases damage against monsters/ magic creatures/ giants/ dragons +10%. -->
 		<icon>icon.skill0360</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -2946,6 +2971,7 @@
 		</effects>
 	</skill>
 	<skill id="10298" toLevel="1" name="Power Revival">
+		<!-- Recover own HP by 100%, and MP/ CP by 50%. -->
 		<icon>icon.skill10298</icon>
 		<effectPoint>707</effectPoint>
 		<operateType>A1</operateType>

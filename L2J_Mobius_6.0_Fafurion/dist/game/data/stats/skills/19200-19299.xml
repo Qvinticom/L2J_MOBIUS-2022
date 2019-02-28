@@ -85,6 +85,7 @@
 		</effects>
 	</skill>
 	<skill id="19203" toLevel="1" name="Ultimate Bullseye">
+		<!-- Decreases target's Bow/ Crossbow Resistance by $s2 for $s1. Does not cancel when striking. Consumes $s3 Soulstone. -->
 		<icon>icon.skill19203</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -121,6 +122,7 @@
 		</effects>
 	</skill>
 	<skill id="19204" toLevel="1" name="Prophecy of Might">
+		<!-- For $s1, the selected party member's P. Critical Rate and Damage, P./ M. Skill Critical Rate and Power +$s2. If cast once, it activates the Glaring effect that increases your P. Atk./ M. Atk. by $s3, and resets the cooldown of Prophecy of Might. If cast twice, it cancels the Glaring effect. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19204</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -169,6 +171,7 @@
 		</effects>
 	</skill>
 	<skill id="19205" toLevel="1" name="Song of Archery">
+		<!-- Increases Bow/ Crossbow Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skillsongofarchery</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -197,6 +200,7 @@
 		</effects>
 	</skill>
 	<skill id="19206" toLevel="1" name="Sage's Dance">
+		<!-- Increases M. Def. of all party members by $s2 for $s1. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skilldanceofwisdom</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -225,6 +229,7 @@
 		</effects>
 	</skill>
 	<skill id="19207" toLevel="1" name="Chant of Bison">
+		<!-- For $s1, all party members' P. Atk./ M. Atk. +$s2 and P. Skill Power/ M. Skill Power +$s3. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19207</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -264,7 +269,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19208" toLevel="1" name="Seal of Restriction">
+	<skill id="19208" toLevel="1" name="Seal of Suspension">
+		<!-- For $s1, Physical and Magic skill cooldown of the target and nearby enemies +$s2. Consumes 5 Spirit Ore. -->
 		<icon>
 			<value level="1">icon.skill11558</value>
 			<value level="2">icon.skill11558</value>
@@ -563,6 +569,7 @@
 		</effects>
 	</skill>
 	<skill id="19209" toLevel="1" name="Divinity of Einhasad">
+		<!-- Decreases Magic Skill MP Consumption by $s2 and has a $s3 to result in a Critical when using 'Radiant Heal', 'Panic Heal', or 'Brilliant Heal' for $s1. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19209</icon>
 		<operateType>A2</operateType>
 		<mpConsume>46</mpConsume>
@@ -592,6 +599,7 @@
 		</effects>
 	</skill>
 	<skill id="19210" toLevel="1" name="Summon Tree of Sephiroth">
+		<!-- Summons an Enchanted Tree of Life that cannot be targeted. The summoned tree heals nearby party members for $s1 and casts a debuff canceling blessing. Consumes $s2 Spirit Ore. -->
 		<icon>icon.skill19210</icon>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
@@ -640,7 +648,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19211" toLevel="1" name="Barrer for Test">
+	<skill id="19211" toLevel="1" name="Barrier for Test">
 		<!-- For 1 min., puts a barrier around a party member. The barrier blocks 50000 damage. Consumes 5 Spirit Ore. -->
 		<icon>icon.skill19211</icon>
 		<operateType>A2</operateType>
@@ -653,6 +661,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="19212" toLevel="1" name="Shillien Protection">
+		<!-- Puts a barrier around a party member for $s1. Recovers $s2 CP/ HP if dealt a death blow. Buff is deleted when the effect is applied. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill19211</icon>
 		<operateType>A2</operateType>
 		<mpConsume>46</mpConsume>
@@ -788,7 +797,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19217" toLevel="1" name="Polishing Arrows: Added Blow">
+	<skill id="19217" toLevel="1" name="Polishing Arrows: Additional Hit">
 		<!-- Creates 250 Enhanced Orichalcum Arrows with Additional Hit. Consumes 1 Crystal (R-grade). -->
 		<icon>icon.skill_polishing_arrows</icon>
 		<operateType>A1</operateType>
@@ -814,7 +823,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19218" toLevel="1" name="Polishing Bolts: Added Blow">
+	<skill id="19218" toLevel="1" name="Polishing Bolts: Additional Hit">
 		<!-- Creates 250 Enhanced Orichalcum Bolts with Additional Hit. Consumes 1 Crystal (R-grade). -->
 		<icon>icon.skill_polishing_bolts</icon>
 		<operateType>A1</operateType>
@@ -1110,7 +1119,7 @@
 		</effects>
 	</skill>
 	<skill id="19226" toLevel="2" name="Favor of the Exalted">
-		<!-- For $s1 hr., increases Acquired XP/ SP by $s2. Consumes $s3 Spirit Ore. -->
+		<!-- For $s1 h., increases Acquired XP/ SP by $s2. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill19226</icon>
 		<operateType>A2</operateType>
 		<excludedFromCheck>true</excludedFromCheck>
@@ -1151,7 +1160,7 @@
 		</effects>
 	</skill>
 	<skill id="19227" toLevel="2" name="Wind Hiding">
-		<!-- Blends into the wind for $s1. Spd. +$s2. Canceled when using standard attacks or attack skills. -->
+		<!-- Blends into the wind for $s1. Increases Speed by $s2. Canceled when using standard attacks or attack skills. -->
 		<icon>icon.skill30008</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -1184,6 +1193,7 @@
 		</effects>
 	</skill>
 	<skill id="19228" toLevel="1" name="Song of Thief">
+		<!-- Increases Dagger/ Dual Dagger Resistance of all party members by $s2 for $s1. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill19228</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>30</abnormalTime>
@@ -1233,6 +1243,7 @@
 		<isMagic>1</isMagic>
 	</skill>
 	<skill id="19231" toLevel="1" name="Song of Assault">
+		<!-- For $s1, all P. Critical Rate and Damage, P./ M. Skill Critical Rate and Critical Damage of all party members +$s2. Consumes $s3 Spirit Ore. -->
 		<icon>icon.skill19231</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1285,6 +1296,7 @@
 		</effects>
 	</skill>
 	<skill id="19232" toLevel="1" name="Crippling Dance">
+		<!-- For $s1, all party members' P. Atk./ M. Atk. +$s2 and P. Skill Power/ M. Skill Power +$s3. Consumes $s4 Spirit Ore. -->
 		<icon>icon.skill19232</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1324,8 +1336,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19233" toLevel="3" name="Guardian's Shield">
-		<!-- Increase Defense by $s1 -->
+	<skill id="19233" toLevel="3" name="Guardian Shield">
+		<!-- Defense +$s1 -->
 		<icon>icon.skill19120</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1339,8 +1351,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19234" toLevel="3" name="Guardian's Magic Barrier">
-		<!-- Increase M. Defense by $s1 -->
+	<skill id="19234" toLevel="3" name="Guardian Magic Barrier">
+		<!-- M. Def. +$s1 -->
 		<icon>icon.skill19121</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1354,8 +1366,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19235" toLevel="3" name="Guardian's Body">
-		<!-- Increase Max HP by $s1 -->
+	<skill id="19235" toLevel="3" name="Guardian Body">
+		<!-- Max HP +$s1 -->
 		<icon>icon.skill1045</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1369,8 +1381,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19236" toLevel="3" name="Guardian's Elemental Cover">
-		<!-- Increase Attribute Resistance by $s1 -->
+	<skill id="19236" toLevel="3" name="Guardian Elemental Cover">
+		<!-- Attribute Resistance +$s1 -->
 		<icon>icon.skill1352</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1424,8 +1436,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19237" toLevel="2" name="Guardian's Armor Defense">
-		<!-- Increases P. Defense and M. Defense by $s1 if heavy armor is equipped. -->
+	<skill id="19237" toLevel="2" name="Guardian Armor Defense">
+		<!-- P./ M. Def. +$s1 if heavy armor is equipped. -->
 		<icon>icon.skill0231</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1451,8 +1463,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19238" toLevel="2" name="Guardian's Leather Defense">
-		<!-- Increases P. Defense and M. Defense by $s1 if light armor is equipped. -->
+	<skill id="19238" toLevel="2" name="Guardian Leather Defense">
+		<!-- P./ M. Def. +$s1 if light armor is equipped. -->
 		<icon>icon.skill0233</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1478,8 +1490,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19239" toLevel="2" name="Guardian's Tunic Defense">
-		<!-- Increases P. Defense and M. defense by $s1 if robe is equipped. -->
+	<skill id="19239" toLevel="2" name="Guardian Tunic Defense">
+		<!-- P./ M. Def. +$s1 if robe is equipped. -->
 		<icon>icon.skill0234</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1505,8 +1517,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19240" toLevel="2" name="Guardian's Resist">
-		<!-- Increase Debuff Resistance by $s1 -->
+	<skill id="19240" toLevel="2" name="Guardian Resist">
+		<!-- Debuff Resistance +$s1 -->
 		<icon>icon.skill1354</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1519,8 +1531,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19241" toLevel="4" name="Guardian's Life">
-		<!-- Increase Max HP by $s1 -->
+	<skill id="19241" toLevel="4" name="Guardian Life">
+		<!-- Max HP +$s1 -->
 		<icon>icon.skill1229</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1535,8 +1547,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19242" toLevel="1" name="Guardian's Block">
-		<!-- Increase Shield Defense by $s1 -->
+	<skill id="19242" toLevel="1" name="Guardian Block">
+		<!-- Shield Defense +$s1 -->
 		<icon>icon.skill1304</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1546,8 +1558,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19243" toLevel="4" name="Guardian's Armor">
-		<!-- Increase Defense by $s1 -->
+	<skill id="19243" toLevel="4" name="Guardian Armor">
+		<!-- Defense +$s1 -->
 		<icon>icon.skill19165</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1562,8 +1574,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19244" toLevel="1" name="Guardian's Guidance">
-		<!-- Increases P. Accuracy, M. Accuracy, and Servitor's P. Accuracy by $s1. Enchants Revelation skill. -->
+	<skill id="19244" toLevel="1" name="Guardian Guidance">
+		<!-- P. Accuracy, M. Accuracy, and Servitor's P. Accuracy +$s1. Enchants Revelation skill. -->
 		<icon>icon.skill19127</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1634,8 +1646,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19245" toLevel="2" name="Guardian's Death Shield">
-		<!-- Received P. Critical Damage -$s1 -->
+	<skill id="19245" toLevel="2" name="Guardian Death Shield">
+		<!-- Received P. Critical Damage -$s1. -->
 		<icon>icon.skill1542</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1648,8 +1660,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19246" toLevel="2" name="Guardian's Focus Shield">
-		<!-- Chance of receiving P. Critical Damage -$s1 -->
+	<skill id="19246" toLevel="2" name="Guardian Focus Shield">
+		<!-- Chance of receiving P. Critical Damage -$s1. -->
 		<icon>icon.skill0986</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1662,8 +1674,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19247" toLevel="2" name="Guardian's Mind Control">
-		<!-- Decreases skill cooldown by $s1. -->
+	<skill id="19247" toLevel="2" name="Guardian Mind Control">
+		<!-- Skill Cooldown -$s1. -->
 		<icon>icon.skill19132</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1677,8 +1689,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19248" toLevel="2" name="Guardian's Blessing">
-		<!-- Increase EXP and SP by $s1 -->
+	<skill id="19248" toLevel="2" name="Guardian Blessing">
+		<!-- Acquired XP/ SP +$s1 -->
 		<icon>icon.skill_exp_sp_up</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1694,8 +1706,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19249" toLevel="2" name="Guardian's Binding Cover">
-		<!-- Decrease damage received by $s1 when immobilized -->
+	<skill id="19249" toLevel="2" name="Guardian Binding Cover">
+		<!-- Received Damage -$s1 when immobilized. -->
 		<icon>icon.skill0335</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
@@ -1716,8 +1728,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19250" toLevel="1" name="Guardian's Spirit">
-		<!-- Increase Attribute Resistance by $s1 -->
+	<skill id="19250" toLevel="1" name="Guardian Spirit">
+		<!-- Attribute Resistance +$s1 -->
 		<icon>icon.skill10044</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1747,8 +1759,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19251" toLevel="1" name="Guardian's Potential">
-		<!-- Increase skill critical rate by $s1. -->
+	<skill id="19251" toLevel="1" name="Guardian Potential">
+		<!-- Skill Critical Rate +$s1. -->
 		<icon>icon.skill1532</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1758,8 +1770,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19252" toLevel="2" name="Guardian's Expert Potion">
-		<!-- Increase Recovery Potion and Miracle Potion by $s1 -->
+	<skill id="19252" toLevel="2" name="Guardian Expert Potion">
+		<!-- Recovery Potion and Miracle Potion +$s1 -->
 		<icon>icon.skill_potion_up</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1772,8 +1784,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19253" toLevel="1" name="Guardian's Defense Master">
-		<!-- Decrease damage received by $s1 -->
+	<skill id="19253" toLevel="1" name="Guardian Defense Master">
+		<!-- Received Damage -$s1 -->
 		<icon>icon.skill0528</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1791,8 +1803,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19254" toLevel="2" name="Berserker's Haste">
-		<!-- Increase Atk. Spd. by $s1 -->
+	<skill id="19254" toLevel="2" name="Berserker Haste">
+		<!-- Atk. Spd. +$s1 -->
 		<icon>icon.skill1086</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1807,8 +1819,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19255" toLevel="4" name="Berserker's Might">
-		<!-- Increase Attack by $s1. -->
+	<skill id="19255" toLevel="4" name="Berserker Might">
+		<!-- P. Atk. +$s1. -->
 		<icon>icon.skill19139</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1824,7 +1836,7 @@
 		</effects>
 	</skill>
 	<skill id="19256" toLevel="4" name="Berserker's Elemental Attack">
-		<!-- Increase Atk. Attribute by $s1 -->
+		<!-- Attack Attribute +$s1 -->
 		<icon>icon.skill19130</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1838,8 +1850,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19257" toLevel="3" name="Berserker's Craft Focus">
-		<!-- Increases P. Skill Critical Rate by $s1. -->
+	<skill id="19257" toLevel="3" name="Berserker Craft Focus">
+		<!-- P. Skill Critical Rate +$s1. -->
 		<icon>icon.skill0193</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1853,8 +1865,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19258" toLevel="2" name="Berserker's Backfire">
-		<!-- Increase Damage From Behind by $s1 -->
+	<skill id="19258" toLevel="2" name="Berserker Backfire">
+		<!-- Damage From Behind +$s1 -->
 		<icon>icon.skill0030</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1868,8 +1880,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19259" toLevel="3" name="Berserker's Focus">
-		<!-- Increase P. Critical Rate by $s1 -->
+	<skill id="19259" toLevel="3" name="Berserker Focus">
+		<!-- P. Critical Rate +$s1 -->
 		<icon>icon.skill1077</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1883,8 +1895,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19260" toLevel="1" name="Berserker's Coast">
-		<!-- Decrease skill consuming MP by $s1. -->
+	<skill id="19260" toLevel="1" name="Berserker Coast">
+		<!-- Skill MP Consumption -$s1. -->
 		<icon>icon.skill19140</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1895,8 +1907,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19261" toLevel="3" name="Berserker's Craft Death">
-		<!-- Increases P. Skill Critical Damage by $s1. -->
+	<skill id="19261" toLevel="3" name="Berserker Craft Death">
+		<!-- P. Skill Critical Damage +$s1. -->
 		<icon>icon.skill10655</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1910,8 +1922,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19262" toLevel="2" name="Berserker's Mortal">
-		<!-- Increase Skill Mastery rate by $s1 -->
+	<skill id="19262" toLevel="2" name="Mortal Berserker">
+		<!-- Skill Master Rate +$s1 -->
 		<icon>icon.skill0330</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1925,7 +1937,7 @@
 		</effects>
 	</skill>
 	<skill id="19263" toLevel="3" name="Berserker's Death Whisper">
-		<!-- Increases P. Critical Damage by $s1. -->
+		<!-- P. Critical Damage +$s1. -->
 		<icon>icon.skill4278</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -1939,8 +1951,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19264" toLevel="1" name="Berserker's Eagle">
-		<!-- Increases P. Accuracy, M. Accuracy, and Servitor's P. Accuracy by $s1. Enchants Revelation skill. -->
+	<skill id="19264" toLevel="1" name="Berserker Eagle">
+		<!-- P. Accuracy, M. Accuracy, and Servitor's P. Accuracy +$s1. Enchants Revelation skill. -->
 		<icon>icon.skill19127</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2011,8 +2023,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19265" toLevel="2" name="Berserker's Battle">
-		<!-- Increase Attack by $s1. -->
+	<skill id="19265" toLevel="2" name="Berserker Battle">
+		<!-- P. Atk. +$s1. -->
 		<icon>icon.skill1388</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2025,8 +2037,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19266" toLevel="2" name="Berserker's Fire">
-		<!-- Increase P. Skill Power by $s1. -->
+	<skill id="19266" toLevel="2" name="Berserker Fire">
+		<!-- P. Skill Power +$s1. -->
 		<icon>icon.skill1356</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2040,7 +2052,7 @@
 		</effects>
 	</skill>
 	<skill id="19267" toLevel="1" name="Berserker's Skill Reduction">
-		<!-- Decreases skill cooldown by $s1. -->
+		<!-- Skill Cooldown -$s1. -->
 		<icon>icon.skill0758</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2052,7 +2064,7 @@
 		</effects>
 	</skill>
 	<skill id="19268" toLevel="2" name="Berserker's Blessing">
-		<!-- Increase EXP and SP by $s1 -->
+		<!-- Acquired XP/ SP +$s1 -->
 		<icon>icon.skill_exp_sp_up</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2069,7 +2081,7 @@
 		</effects>
 	</skill>
 	<skill id="19269" toLevel="2" name="Berserker's Binding Attack">
-		<!-- Increase damage on immobile target by $s1 -->
+		<!-- Damage on immobile target +$s1 -->
 		<icon>icon.skill0983</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
@@ -2091,7 +2103,7 @@
 		</effects>
 	</skill>
 	<skill id="19270" toLevel="2" name="Berserker's Divine Attack">
-		<!-- Increase Atk. Attribute by $s1 -->
+		<!-- Attack Attribute +$s1 -->
 		<icon>icon.skill11011</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2104,7 +2116,7 @@
 		</effects>
 	</skill>
 	<skill id="19271" toLevel="2" name="Berserker's Expert Potion">
-		<!-- Increase Recovery Potion and Miracle Potion by $s1 -->
+		<!-- Recovery Potion and Miracle Potion +$s1 -->
 		<icon>icon.skill_potion_up</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2117,8 +2129,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19272" toLevel="1" name="Berserker's Combat Master">
-		<!-- Increase Damage by $s1 -->
+	<skill id="19272" toLevel="1" name="Berserker Combat Master">
+		<!-- Damage +$s1 -->
 		<icon>icon.skill1499</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2141,7 +2153,7 @@
 		</effects>
 	</skill>
 	<skill id="19273" toLevel="2" name="Wizard's Acumen">
-		<!-- Increase Casting Spd. by $s1 -->
+		<!-- Casting Spd. +$s1 -->
 		<icon>icon.skill1085</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2155,7 +2167,7 @@
 		</effects>
 	</skill>
 	<skill id="19274" toLevel="3" name="Wizard's Empower">
-		<!-- Increase M. Atk. by $s1 -->
+		<!-- M. Atk. +$s1. -->
 		<icon>icon.skill1059</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2170,7 +2182,7 @@
 		</effects>
 	</skill>
 	<skill id="19275" toLevel="3" name="Wizard's Elemental Shot">
-		<!-- Increase Atk. Attribute by $s1 -->
+		<!-- Attack Attribute +$s1 -->
 		<icon>icon.skill19130</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2184,7 +2196,7 @@
 		</effects>
 	</skill>
 	<skill id="19276" toLevel="3" name="Wizard's Wild Magic">
-		<!-- Increase M. Critical Rate by $s1 -->
+		<!-- M. Critical Rate +$s1 -->
 		<icon>icon.skill1303</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2199,7 +2211,7 @@
 		</effects>
 	</skill>
 	<skill id="19277" toLevel="3" name="Wizard's Condition">
-		<!-- Increase Max HP and MP by $s1. -->
+		<!-- Max HP/ MP +$s1. -->
 		<icon>icon.skill1501</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2222,7 +2234,7 @@
 		</effects>
 	</skill>
 	<skill id="19278" toLevel="1" name="Wizard's Eva">
-		<!-- Decrease skill consuming MP by $s1. -->
+		<!-- Skill MP Consumption -$s1. -->
 		<icon>icon.skill0214</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2234,7 +2246,7 @@
 		</effects>
 	</skill>
 	<skill id="19279" toLevel="3" name="Wizard's Mystic">
-		<!-- Increase M. Critical Damage by $s1 -->
+		<!-- M. Critical Damage +$s1 -->
 		<icon>icon.skill19160</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2249,7 +2261,7 @@
 		</effects>
 	</skill>
 	<skill id="19280" toLevel="2" name="Wizard's Prominence">
-		<!-- Increase Skill Mastery rate by $s1 -->
+		<!-- Skill Master Rate +$s1 -->
 		<icon>icon.skill0330</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2263,7 +2275,7 @@
 		</effects>
 	</skill>
 	<skill id="19281" toLevel="1" name="Wizard's Sight">
-		<!-- Increases P. Accuracy, M. Accuracy, and Servitor's P. Accuracy by $s1. Enchants Revelation skill. -->
+		<!-- P. Accuracy, M. Accuracy, and Servitor's P. Accuracy +$s1. Enchants Revelation skill. -->
 		<icon>icon.skill19127</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2335,7 +2347,7 @@
 		</effects>
 	</skill>
 	<skill id="19282" toLevel="2" name="Wizard's Protection">
-		<!-- Increase Mental, Stun, and Aerial Yoke success rate by $s1 -->
+		<!-- Mental, Stun, and Aerial Yoke Atk. Rate +$s1 -->
 		<icon>icon.skill0046</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2356,7 +2368,7 @@
 		</effects>
 	</skill>
 	<skill id="19283" toLevel="2" name="Wizard's Water">
-		<!-- Increase M. Skill Power by $s1. -->
+		<!-- M. Skill Power +$s1. -->
 		<icon>icon.skill1355</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2370,7 +2382,7 @@
 		</effects>
 	</skill>
 	<skill id="19284" toLevel="2" name="Wizard's Magic Reduction">
-		<!-- Decreases skill cooldown by $s1. -->
+		<!-- Skill Cooldown -$s1. -->
 		<icon>icon.skill0945</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2385,7 +2397,7 @@
 		</effects>
 	</skill>
 	<skill id="19285" toLevel="2" name="Wizard's Blessing">
-		<!-- Increase EXP and SP by $s1 -->
+		<!-- Acquired XP/ SP +$s1 -->
 		<icon>icon.skill_exp_sp_up</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2402,7 +2414,7 @@
 		</effects>
 	</skill>
 	<skill id="19286" toLevel="2" name="Wizard's Binding Shot">
-		<!-- Increase damage on immobile target by $s1 -->
+		<!-- Damage on immobile target +$s1 -->
 		<icon>icon.skill0983</icon>
 		<operateType>P</operateType>
 		<passiveConditions>
@@ -2424,7 +2436,7 @@
 		</effects>
 	</skill>
 	<skill id="19287" toLevel="2" name="Wizard's Divine Shot">
-		<!-- Increase Atk. Attribute by $s1 -->
+		<!-- Attack Attribute +$s1 -->
 		<icon>icon.skill11011</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2437,7 +2449,7 @@
 		</effects>
 	</skill>
 	<skill id="19288" toLevel="2" name="Wizard's Expert Potion">
-		<!-- Increase Recovery Potion and Miracle Potion by $s1 -->
+		<!-- Recovery Potion and Miracle Potion +$s1 -->
 		<icon>icon.skill_potion_up</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2451,7 +2463,7 @@
 		</effects>
 	</skill>
 	<skill id="19289" toLevel="1" name="Wizard's Spellmaster">
-		<!-- Increase Damage by $s1 -->
+		<!-- Damage +$s1 -->
 		<icon>icon.skill1500</icon>
 		<operateType>P</operateType>
 		<effects>
@@ -2466,7 +2478,7 @@
 		</effects>
 	</skill>
 	<skill id="19290" toLevel="2" name="Vitality of the Exalted">
-		<!-- Increases Acquired XP/ SP by $s1. -->
+		<!-- Acquired XP/ SP +$s1. -->
 		<icon>icon.s_vitality_of_honors1</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -2488,6 +2500,31 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="19291" toLevel="1" name="Subclass Certification - Attack">
+		<!-- Increases P. Atk. by $s1, M. Atk. by $s2. -->
+		<icon>icon.skill0816</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19292" toLevel="1" name="Subclass Certification - Defense">
+		<!-- Increases P. Def./ M. Def. by $s1. -->
+		<icon>icon.skill0439</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19293" toLevel="1" name="Subclass Certification - Speed">
+		<!-- Increases Atk. Spd./ Casting Spd. by $s1. -->
+		<icon>icon.skill0817</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19294" toLevel="1" name="Subclass Certification - Critical">
+		<!-- Increases P./ M. Critical Rate by $s1. -->
+		<icon>icon.skill0814</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19295" toLevel="1" name="Subclass Certification - Condition">
+		<!-- Increases Max HP/ MP/ CP by $s1. -->
+		<icon>icon.skill1397</icon>
+		<operateType>A1</operateType>
 	</skill>
 	<skill id="19296" toLevel="8" name="Counter Flip">
 		<!-- Knocks down the opponent who attacked you for $s1 and moves you behind opponent's back. Cancels Counter Stance. Requires dagger/ dual dagger. -->
@@ -2680,7 +2717,7 @@
 		</effects>
 	</skill>
 	<skill id="19299" toLevel="7" name="Reverse Mana">
-		<!-- Attempts Deadly Attack with $s1 power added to P. Atk. and recovers your MP by $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
+		<!-- Attempts Deadly Attack with $s1 power added to P. Attack and recovers your MP by $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19299</icon>
 		<operateType>A1</operateType>
 		<targetType>ENEMY</targetType>

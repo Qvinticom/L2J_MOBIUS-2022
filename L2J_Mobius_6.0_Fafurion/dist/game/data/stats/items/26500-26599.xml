@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="26500" name="Cat's Eye" additionalName="Lv. 4" type="Armor">
-		<!-- Resistance to Damage Reflect +40%. Effect does not stack with additional jewels of the same type. -->
+		<!-- Damage Reflection Resistance +40%. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -18,7 +18,7 @@
 		</skills>
 	</item>
 	<item id="26501" name="Cat's Eye" additionalName="Lv. 5" type="Armor">
-		<!-- Resistance to Damage Reflect +50%. Adds 10 second invincibility skill. Effect does not stack with additional jewels of the same type. -->
+		<!-- Damage Reflect Resistance +50%. Can use invincibility. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -146,7 +146,7 @@
 		</capsuled_items>
 	</item>
 	<item id="26509" name="Summon Scroll: Pomona" additionalName="Event" type="EtcItem">
-		<!-- Scroll for summoning Pomona once. For 30 min., obtained XP +10%, Max HP/ MP/ CP +30%, P. Def./ M. Def. +30%, Speed +20, P. Atk. +10%, and M. Atk. +20%. Skill MP Consumption -15%. Cannot use with the Art of Seduction buff. -->
+		<!-- Scroll for summoning Pomona once. You receive a power-up buff -->
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

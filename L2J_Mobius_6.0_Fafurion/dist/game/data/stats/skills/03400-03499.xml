@@ -159,7 +159,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3410" toLevel="1" name="Blue Talisman - Damage Reflect">
+	<skill id="3410" toLevel="1" name="Blue Talisman - Damage Reflection">
 		<!-- Reflects a portion of physical melee damage received back onto the enemy when using a Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -440,7 +440,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="3423" toLevel="1" name="Release Agathion's Seal - Little Angel">
+	<skill id="3423" toLevel="1" name="Agathion Summon - Little Angel">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -457,7 +457,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3424" toLevel="1" name="Release Agathion's Seal - Little Devil">
+	<skill id="3424" toLevel="1" name="Agathion Summon - Little Devil">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -474,7 +474,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="3425" toLevel="1" name="Release Agathion's Seal - Rudolph">
+	<skill id="3425" toLevel="1" name="Agathion Summon - Rudolph">
 		<!-- Summons Agathion. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<hitTime>3000</hitTime>
@@ -1521,7 +1521,7 @@
 		</effects>
 	</skill>
 	<skill id="3487" toLevel="1" name="Blue Talisman - P. Atk.">
-		<!-- Increases P. Atk with the power of Talisman. -->
+		<!-- Increases P. Atk. with the power of Talisman. -->
 		<icon>icon.etc_talisman_i01</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>120</abnormalTime>

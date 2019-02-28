@@ -340,7 +340,7 @@
 		</stats>
 	</item>
 	<item id="18011" name="Blessed Apocalypse Retributer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_herencia_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -487,7 +487,7 @@
 		</stats>
 	</item>
 	<item id="18016" name="Blessed Twilight Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t601_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -607,7 +607,7 @@
 		</stats>
 	</item>
 	<item id="18022" name="Blessed Twilight Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t602_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -711,7 +711,7 @@
 		</stats>
 	</item>
 	<item id="18027" name="Blessed Twilight Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t603_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -1192,7 +1192,7 @@
 		</stats>
 	</item>
 	<item id="18045" name="Blessed Specter Retributer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_rupe_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1339,7 +1339,7 @@
 		</stats>
 	</item>
 	<item id="18050" name="Blessed Seraph Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t401_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -1459,7 +1459,7 @@
 		</stats>
 	</item>
 	<item id="18056" name="Blessed Seraph Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t402_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1563,7 +1563,7 @@
 		</stats>
 	</item>
 	<item id="18061" name="Blessed Seraph Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t403_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />
@@ -2044,7 +2044,7 @@
 		</stats>
 	</item>
 	<item id="18079" name="Blessed Amaranthine Retributer" type="Weapon">
-		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When enchanted to +4, M. Atk., M. Skill Critical Damage, and Casting Spd. increase. -->
+		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. Increases M. Atk., M. Critical Damage, and Casting Spd. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_shaelon_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -2191,7 +2191,7 @@
 		</stats>
 	</item>
 	<item id="18084" name="Blessed Eternal Breastplate" additionalName="Heavy Armor" type="Armor">
-		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases received P. Critical Damage when enchanted to +4. -->
+		<!-- Bestows an attack or defense type set option. Increases P. Def. and decreases P. Critical Damage when enchanted to +4. -->
 		<set name="icon" val="icon.armor_t701_u_i00" />
 		<set name="armor_type" val="HEAVY" />
 		<set name="default_action" val="EQUIP" />
@@ -2311,7 +2311,7 @@
 		</stats>
 	</item>
 	<item id="18090" name="Blessed Eternal Leather Armor" additionalName="Light Armor" type="Armor">
-		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Attack. -->
+		<!-- Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and P. Atk. Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t702_u_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -2415,7 +2415,7 @@
 		</stats>
 	</item>
 	<item id="18095" name="Blessed Eternal Tunic" additionalName="Robe" type="Armor">
-		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Attack. -->
+		<!-- Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mental Attack Resistance, and decreases Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="icon.armor_t703_u_i00" />
 		<set name="armor_type" val="MAGIC" />
 		<set name="default_action" val="EQUIP" />

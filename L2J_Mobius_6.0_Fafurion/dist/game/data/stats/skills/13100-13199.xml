@@ -333,7 +333,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13122" toLevel="1" name="Added Blow Quiver">
+	<skill id="13122" toLevel="1" name="Additional Hit Quiver">
 		<!-- Chance of inflicting damage again upon shooting. -->
 		<icon>icon.skill0256</icon>
 		<operateType>P</operateType>
@@ -355,7 +355,7 @@
 		<magicLvl>99</magicLvl>
 	</skill>
 	<skill id="13125" toLevel="1" name="Special Talisman - P. Atk.">
-		<!-- Increases P. Atk when equipped. -->
+		<!-- Increases P. Atk. when equipped. -->
 		<icon>icon.r85_talisman_pa_up_active</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -418,7 +418,7 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="13134" toLevel="4" name="Set Effect - Twilight Robe 2 Piece (Recovery Type)">
-		<!-- WIT+ $s1. MEN -$s2. Casting Spd. +$s3. -->
+		<!-- WIT+$s1. MEN -$s2. Casting Spd. +$s3. -->
 		<icon>icon.armor_t94_u_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -447,7 +447,7 @@
 		</conditions>
 	</skill>
 	<skill id="13136" toLevel="1" name="Hero's Cloak">
-		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +3, received PvP damage -15%. -->
+		<!-- Increases STR/ DEX/ CON/ INT/ WIT/ MEN +3, and decreases PvP damage by 15%. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -492,7 +492,7 @@
 		</effects>
 	</skill>
 	<skill id="13137" toLevel="1" name="Glorious Cloak">
-		<!-- STR/ DEX/ CON/ INT/ WIT/ MEN +2, received PvP damage -5%. -->
+		<!-- Increases STR/ DEX/ CON/ INT/ WIT/ MEN +2, and decreases PvP damage by 5%. -->
 		<icon>icon.vesper_cloack_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1155,7 +1155,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="13157" toLevel="1" name="Special Ability: Infinity Dualsword">
+	<skill id="13157" toLevel="1" name="Special Ability: Infinity Dual Sword">
 		<!-- PvP Damage +$s1. Max HP/ MP/ CP +$s2, Atk. Spd. +$s3, P. Skill Power +$s4, P. Critical Damage +$s5. -->
 		<icon>icon.weapon_r_dualsword_i01</icon>
 		<operateType>P</operateType>

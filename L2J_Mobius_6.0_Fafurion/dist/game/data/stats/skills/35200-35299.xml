@@ -1,184 +1,319 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="35227" toLevel="1" name="Artifact Set Effect - Level 1">
-		<!-- Damage +$s1, Received Damage -$s2 -->
+	<skill id="35200" toLevel="1" name="Special Ability Legend Infinity Caster">
+		<!-- PvP Damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
+		<icon>icon.weapon_the_mace_of_hero_i01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35201" toLevel="1" name="Special Ability Legend Infinity Retributer">
+		<!-- PvP Damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
+		<icon>icon.weapon_the_staff_of_hero_i01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35202" toLevel="1" name="Special Ability Legend Infinity Dual Sword">
+		<!-- PvP Damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
+		<icon>icon.weapon_r_dualsword_i01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35203" toLevel="1" name="Special Ability Legend Infinity Dual Dagger">
+		<!-- PvP Damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
+		<icon>icon.weapon_r_dualdagger_i01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35204" toLevel="1" name="Special Ability Legend Infinity Dual Blunt Weapon">
+		<!-- PvP Damage +$s1, Max HP/ MP/ CP +$s2, Atk. Spd./ Casting Spd. +$s3, P./ M. Skill Power +$s4, P. Critical Damage and P./ M. Skill Critical Damage +$s5, Skill Cooldown -$s6. -->
+		<icon>icon.weapon_r_dualblunt_i01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35205" toLevel="1" name="Savior's Mask Basic Effect">
+		<!-- Increases M. Def. by $s1. -->
+		<icon>icon.episode_mask_01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35206" toLevel="11" name="Savior's Mask Enchant Effects">
+		<!-- Enchanting a hair accessory increases its Debuff Resistance and an adds extra option depending on the equipped Knight's/ Warrior's/ Wizard's Circlet. -->
+		<icon>icon.episode_scrl_of_ench_hair</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35207" toLevel="4" name="Strength of Savior's Warrior">
+		<!-- Increases P. Atk. by $s1. -->
+		<icon>icon.episode_scrl_of_ench_hair</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35208" toLevel="4" name="Power of Savior's Wizard">
+		<!-- Increases M. Atk. by $s1. -->
+		<icon>icon.episode_scrl_of_ench_hair</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35209" toLevel="4" name="Defense of Savior's Knight">
+		<!-- Increases P./ M. Def. by $s1. -->
+		<icon>icon.episode_scrl_of_ench_hair</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35210" toLevel="1" name="Warrior's Ring">
+		<!-- Increases Max CP by $s1, P. Critical Damage and P./ M. Skill Critical Damage by $s2, Atk./ Casting Spd. by $s3, Stun/ Paralysis/ Knock Back/ Knock Down Attack and Defense Success by $s4. -->
+		<icon>icon.accessory_ring_of_hero_i01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35211" toLevel="11" name="Angel's Necklace">
+		<!-- Angel's necklace. Enchanting the necklace activates special effects. -->
+		<icon>icon.elemental_necklace_wind_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35212" toLevel="1" name="Talisman - Battle: Cancel Hide">
+		<!-- Cancel Hide effect of enemies within range and prevents it from obtaining the same effect for $s1 Cooldown is $s2 Can only be used in the Grand Olympiad. -->
+		<icon>icon.etc_talisman_i07</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35213" toLevel="11" name="Angel's Earring">
+		<!-- Enchanting the earring activates special effects. -->
+		<icon>icon.accessary_angel_of_earing</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35214" toLevel="11" name="Lucien's Bracelet - Attack">
+		<!-- Can equip $s1 talismans. P. Atk. +$s2. -->
+		<icon>icon.accessary_bracelet_lucien_p01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35215" toLevel="11" name="Lucien's Bracelet - Magic">
+		<!-- Can equip $s1 talismans. M. Atk. +$s2. -->
+		<icon>icon.accessary_bracelet_lucien_m01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35216" toLevel="11" name="Lucien's Bracelet - Defense">
+		<!-- Can equip $s1 talismans. P./ M. Def. +$s2. -->
+		<icon>icon.accessary_bracelet_lucien_d01</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35217" toLevel="11" name="Fallen Angel's Ring">
+		<!-- Increases Knock Back/ Knock Down/ Pull/ Faint Resistance by $s1. -->
+		<icon>icon.bm_ring_of_fallen_angel</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35218" toLevel="1" name="Item Skill: Recovery">
+		<!-- Passive: Decreases cooldown of Passive skill by $s1. -->
+		<icon>icon.skill3238</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35219" toLevel="10" name="War">
+		<!-- P. Atk. +$s1. -->
+		<icon>icon.bm_ensoul_stone_shilen</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35220" toLevel="10" name="Revelation">
+		<!-- M. Atk. +$s1. -->
+		<icon>icon.bm_ensoul_stone_shilen</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35221" toLevel="10" name="Greed">
+		<!-- Normal Attack Critical Damage +$s1. -->
+		<icon>icon.bm_ensoul_stone_shilen</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35222" toLevel="10" name="Punishment">
+		<!-- P. Skill Critical Damage +$s1. -->
+		<icon>icon.bm_ensoul_stone_shilen</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35223" toLevel="10" name="Awakened">
+		<!-- M. Skill Critical Damage +$s1. -->
+		<icon>icon.bm_ensoul_stone_shilen</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35224" toLevel="10" name="Disaster">
+		<!-- Skill Cooldown -$s1. -->
+		<icon>icon.bm_ensoul_stone_shilen</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35225" toLevel="10" name="Advent">
+		<!-- Max HP +$s1. -->
+		<icon>icon.bm_ensoul_stone_shilen</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35226" toLevel="10" name="Active Stun">
+		<!-- Momentarily immobile due to the Stun effect. Debuff resistance ignored. -->
+		<icon>icon.bm_ensoul_stone_shilen</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35227" toLevel="1" name="Artifact Set Effect Lv. 1">
+		<!-- Damage +$s1, Received Damage -$s2. -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35228" toLevel="1" name="Artifact Set Effect - Level 2">
-		<!-- Damage +$s1, Received Damage -$s2 -->
+	<skill id="35228" toLevel="1" name="Artifact Set Effect Lv. 2">
+		<!-- Damage +$s1, Received Damage -$s2. -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35229" toLevel="1" name="Artifact Set Effect - Level 3">
-		<!-- Damage +$s1, Received Damage -$s2, All Basic Stats +$s3 -->
+	<skill id="35229" toLevel="1" name="Artifact Set Effect Lv. 3">
+		<!-- Damage +$s1, Received Damage -$s2, all basic stats $s3. -->
 		<icon>icon.artifact_book_00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35230" toLevel="11" name="Artifact P. Atk.">
-		<!-- P. Atk. increased when upgraded -->
+	<skill id="35230" toLevel="11" name="Artifact - P. Atk.">
+		<!-- P. Atk. increased when upgraded. -->
 		<icon>icon.artifact_b_pa</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35231" toLevel="11" name="Artifact M. Atk.">
-		<!-- M. Atk. increased when upgraded -->
+	<skill id="35231" toLevel="11" name="Artifact - M. Atk.">
+		<!-- M. Atk. increased when upgraded. -->
 		<icon>icon.artifact_b_ma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35232" toLevel="11" name="Artifact Atk. Spd.">
-		<!-- Atk. Spd. increased when upgraded -->
+	<skill id="35232" toLevel="11" name="Artifact - Atk. Spd.">
+		<!-- Atk. Spd. increased when upgraded. -->
 		<icon>icon.artifact_b_pa_speed</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35233" toLevel="11" name="Artifact Casting Spd.">
-		<!-- Casting Spd. increased when upgraded -->
+	<skill id="35233" toLevel="11" name="Artifact - Casting Spd.">
+		<!-- Casting Spd. increased when upgraded. -->
 		<icon>icon.artifact_b_ma_speed</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35234" toLevel="11" name="Artifact P. Def.">
-		<!-- P. Def. increased when upgraded -->
+	<skill id="35234" toLevel="11" name="Artifact - P. Def.">
+		<!-- P. Def. increased when upgraded. -->
 		<icon>icon.artifact_c_phy_def</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35235" toLevel="11" name="Artifact M. Def.">
-		<!-- M. Def. increased when upgraded -->
+	<skill id="35235" toLevel="11" name="Artifact - M. Def.">
+		<!-- M. Def. increased when upgraded. -->
 		<icon>icon.artifact_c_mag_def</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35236" toLevel="11" name="Artifact Max HP">
-		<!-- Max HP increased when upgraded -->
+	<skill id="35236" toLevel="11" name="Artifact - Max HP">
+		<!-- Max HP increased when upgraded. -->
 		<icon>icon.artifact_c_hp</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35237" toLevel="11" name="Artifact Max MP">
-		<!-- Max MP increased when upgraded -->
+	<skill id="35237" toLevel="11" name="Artifact - Max MP">
+		<!-- Max MP increased when upgraded. -->
 		<icon>icon.artifact_c_mp</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35238" toLevel="11" name="Artifact  XP Gain">
-		<!-- Acquired XP increased when upgraded -->
+	<skill id="35238" toLevel="11" name="Artifact - XP">
+		<!-- Enchantment increases XP and SP Bonus. -->
 		<icon>icon.artifact_d_exp</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35239" toLevel="11" name="Artifact HP Absorption">
-		<!-- Vampiric Rage increased when upgraded -->
+	<skill id="35239" toLevel="11" name="Artifact - Vampiric Rage">
+		<!-- Vampiric Rage increased when upgraded. -->
 		<icon>icon.artifact_d_vampiric_rage</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35240" toLevel="11" name="Artifact Speed">
-		<!-- Speed increased when upgraded -->
+	<skill id="35240" toLevel="11" name="Artifact - Speed">
+		<!-- Speed increased when upgraded. -->
 		<icon>icon.artifact_d_move_speed</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35241" toLevel="11" name="Artifact Received Heal Amount">
-		<!-- Received Healing increased when upgraded -->
+	<skill id="35241" toLevel="11" name="Artifact - Received Healing">
+		<!-- Received Healing increased when upgraded. -->
 		<icon>icon.artifact_d_heal_effect</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35242" toLevel="11" name="Artifact P. Atk.">
-		<!-- P. Atk. increased when upgraded -->
+	<skill id="35242" toLevel="11" name="Artifact - P. Atk.">
+		<!-- P. Atk. increased when upgraded. -->
 		<icon>icon.artifact_a_pa</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35243" toLevel="11" name="Artifact M. Atk.">
-		<!-- M. Atk. increased when upgraded -->
+	<skill id="35243" toLevel="11" name="Artifact - M. Atk.">
+		<!-- M. Atk. increased when upgraded. -->
 		<icon>icon.artifact_a_ma</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35244" toLevel="11" name="Artifact P. Accuracy">
-		<!-- P. Accuracy increased when upgraded -->
+	<skill id="35244" toLevel="11" name="Artifact - P. Accuracy">
+		<!-- P. Accuracy increased when upgraded. -->
 		<icon>icon.artifact_a_hit</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35245" toLevel="11" name="Artifact M. Accuracy">
-		<!-- M. Accuracy increased when upgraded -->
+	<skill id="35245" toLevel="11" name="Artifact - M. Accuracy">
+		<!-- M. Accuracy increased when upgraded. -->
 		<icon>icon.artifact_a_mhit</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35246" toLevel="11" name="Artifact P. Critical">
-		<!-- P. Critical Rate increased when upgraded -->
+	<skill id="35246" toLevel="11" name="Artifact - Normal Attack Critical Rate">
+		<!-- Enchantment increases Normal Attack Critical Rate. -->
 		<icon>icon.artifact_a_crt_per</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35247" toLevel="11" name="Artifact P. Skill Critical Rate">
-		<!-- P. Skill Critical Rate increased when upgraded -->
+	<skill id="35247" toLevel="11" name="Artifact - P. Skill Critical Rate">
+		<!-- P. Skill Critical Rate increased when upgraded. -->
 		<icon>icon.artifact_a_crt_skill_per</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35248" toLevel="11" name="Artifact M. Skill Critical Rate">
-		<!-- M. Skill Critical Rate increased when upgraded -->
+	<skill id="35248" toLevel="11" name="Artifact - M. Skill Critical Rate">
+		<!-- M. Skill Critical Rate increased when upgraded. -->
 		<icon>icon.artifact_a_crt_mag_per</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35249" toLevel="11" name="Artifact Potion / Elixir Effect Bonus">
-		<!-- Potion / Elixir Effect Bonus increased when upgraded -->
+	<skill id="35249" toLevel="11" name="Artifact - Potion/ Elixir Effect Bonus">
+		<!-- Potion/ Elixir Effect Bonus increased when upgraded. -->
 		<icon>icon.artifact_a_hp_special</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 
-	<skill id="35250" toLevel="11" name="Received Damage When Imobilized">
-		<!-- Received Damage When Immobilized reduced when upgraded -->
+	<skill id="35250" toLevel="11" name="Artifact - Received Damage When Immobilized">
+		<!-- Received Damage when Immobilized reduced when upgraded. -->
 		<icon>icon.artifact_a_block_act_dmg</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
 
-	<skill id="35251" toLevel="11" name="Artifact Fixed Damage Reduction">
-		<!-- Fixed Damage reduced when upgraded -->
+	<skill id="35251" toLevel="11" name="Artifact - Fixed Damage Resistance">
+		<!-- Fixed Damage Resistance increased when upgraded. -->
 		<icon>icon.artifact_a_dmg_by_atk</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<magicLvl>80</magicLvl>
 	</skill>
-	<skill id="35252" toLevel="1" name="Artifact Attack Attribute">
-		<!-- Attack Attribute +$s1 -->
+	<skill id="35252" toLevel="1" name="Artifact - Atk. Attribute">
+		<!-- Atk. Attribute +$s1. -->
 		<icon>icon.artifact_a_attribute_att_up</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -210,8 +345,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35253" toLevel="1" name="Artifact Defense Attribute">
-		<!-- Attribute Resistance +$s1 -->
+	<skill id="35253" toLevel="1" name="Artifact - Attribute Resistance">
+		<!-- Attribute Resistance +$s1. -->
 		<icon>icon.artifact_a_attribute_def_up</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -243,8 +378,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35254" toLevel="1" name="Artifact Received Damage When Imobilized">
-		<!-- Received Damage When Immobilized -$s1 -->
+	<skill id="35254" toLevel="1" name="Artifact - Received Damage When Immobilized">
+		<!-- Received Damage -$s1 when immobilized. -->
 		<icon>icon.artifact_a_block_act_dmg</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -270,8 +405,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35255" toLevel="1" name="Artifact P. Skill Power">
-		<!-- P. Skill Power +$s1 -->
+	<skill id="35255" toLevel="1" name="Artifact - P. Skill Power">
+		<!-- P. Skill Power +$s1. -->
 		<icon>icon.artifact_a_skill_power</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -283,8 +418,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35256" toLevel="1" name="Artifact M. Skill Power">
-		<!-- M. Skill Power +$s1 -->
+	<skill id="35256" toLevel="1" name="Artifact - M. Skill Power">
+		<!-- M. Skill Power +$s1. -->
 		<icon>icon.artifact_a_spell_power</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -295,5 +430,220 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="35257" toLevel="1" name="Red Mask of Victory (2018)">
+		<!-- M. Def. +$s1, Debuff Resistance +$s2 P. Atk./ M. Atk./ P. Def. +$s3. -->
+		<icon>icon.accessory_worldcup_mask_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35258" toLevel="1" name="Paulina's Eternal Necklace - Skill Cooldown">
+		<!-- Skill Cooldown -$s1. -->
+		<icon>icon.skill5239</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35259" toLevel="1" name="Paulina's Eternal Earring - MP Consumption">
+		<!-- Heal Received +$s1, Skill MP Consumption -$s2. -->
+		<icon>icon.skill1397</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35260" toLevel="1" name="Paulina's Eternal Earring - Vampiric Rage">
+		<!-- A chance to apply Vampiric Rage $s1. -->
+		<icon>icon.skill1268</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35261" toLevel="1" name="Paulina's Eternal Ring - Critical Rate">
+		<!-- P./ M. Critical Rate +$s1. -->
+		<icon>icon.skill0137</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35262" toLevel="1" name="Paulina's Eternal Ring - Critical Damage">
+		<!-- Normal/ P. Atk./ M. Atk. Skill Critical Damage +$s1. -->
+		<icon>icon.skill0531</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35263" toLevel="1" name="Set Effect - Paulina's Eternal Heavy Armor, 5-Piece">
+		<!-- STR +$s1, CON +$s2, P. Atk. +$s3, Skill Power +$s4, P. Def. +$s5, M. Def. +$s6. -->
+		<icon>icon.m_class_heavy</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35264" toLevel="1" name="Set Effect - Paulina's Eternal Light Armor, 5-Piece">
+		<!-- STR +$s1, CON +$s2, P. Atk. +$s3, Skill Power +$s4, Attribute Resistance +$s5, Speed +$s6. -->
+		<icon>icon.m_class_light</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35265" toLevel="1" name="Set Effect - Paulina's Eternal Robe Armor, 5-Piece">
+		<!-- INT +$s1, CON +$s2, M. Atk. +$s3, Skill Power +$s4, Max HP/ MP +$s5, Skill MP Consumption -$s6. -->
+		<icon>icon.m_class_robe</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35266" toLevel="1" name="Paulina's Battle Enhancement Blessing">
+		<!-- Max HP +$s1, P. Critical Rate +$s2, P. Critical Damage +$s3, Atk. Spd. +$s4 -->
+		<icon>icon.skill6319</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35267" toLevel="1" name="Paulina's Battle Enhancement Blessing">
+		<!-- Max HP +$s1, P. Critical Rate +$s2, P. Critical Damage +$s3, Atk. Spd. +$s4 -->
+		<icon>icon.skill6319</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35268" toLevel="1" name="Paulina's Magic Enhancement Blessing">
+		<!-- Max HP +$s1, M. Skill Critical Rate +$s2, M. Skill Critical Damage +$s3, Casting Spd. +$s4 -->
+		<icon>icon.skill6319</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35269" toLevel="1" name="Paulina's Magic Enhancement Blessing">
+		<!-- Max HP +$s1, P. Critical Damage +$s2, M. Skill Critical Damage +$s3, Atk. Spd./ Casting Spd. +$s4 -->
+		<icon>icon.skill6319</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35270" toLevel="1" name="Paulina's Eternal Bracelet">
+		<!-- Can equip $s1 talismans. Additionally increases P. Atk./ M. Atk./ P./ M. Def. by $s2. -->
+		<icon>icon.bm_polyne_R99_bracelet</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35271" toLevel="1" name="Fafurion's Breath">
+		<!-- Petrifies nearby enemies for 5 sec and then paralyzes them for 10 sec when fully petrified. Ignores debuff resistance. Consumes 1 Dragon Blood. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
+		<icon>icon.fafurion_breath_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35272" toLevel="1" name="Fafurion Raging Waves">
+		<!-- Completely drains CP of nearby enemies. Consumes 1 Dragon Blood. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
+		<icon>icon.fafurion_raging_waves_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35273" toLevel="1" name="Dandy's Combat Boost Blessing">
+		<!-- Max HP +$s1, P. Critical Rate +$s2, P. Critical Damage +$s3, Atk. Spd. +$s4 -->
+		<icon>icon.karma</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35274" toLevel="1" name="Dandy's Combat Boost Blessing">
+		<!-- Max HP +$s1, P. Critical Rate +$s2, P. Critical Damage +$s3, Atk. Spd. +$s4 -->
+		<icon>icon.karma</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35275" toLevel="1" name="Dandy's Magic Boost Blessing">
+		<!-- Max HP +$s1, M. Skill Critical Rate +$s2, M. Skill Critical Damage +$s3, Casting Spd. +$s4 -->
+		<icon>icon.karma</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35276" toLevel="1" name="Dandy's Magic Boost Blessing">
+		<!-- Max HP +$s1, P. Critical Damage +$s2, M. Skill Critical Damage +$s3, Atk. Spd./ Casting Spd. +$s4 -->
+		<icon>icon.karma</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35277" toLevel="1" name="Krishna Shaper Enchantment Effect">
+		<!-- P. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
+		<icon>icon.weapon_r110_dagger_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35278" toLevel="1" name="Krishna Dicing Death Enchantment Effect">
+		<!-- P. Skill Critical Damage +$s1, P. Def. +$s2. -->
+		<icon>icon.weapon_r110_onehand_sword_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35279" toLevel="1" name="Krishna Slasher Enchantment Effect">
+		<!-- P. Skill Critical Damage +$s1, P. Atk. +$s2. -->
+		<icon>icon.weapon_r110_twohand_sword_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35280" toLevel="1" name="Krishna Avenger Enchantment Effect">
+		<!-- P. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
+		<icon>icon.weapon_r110_onehand_blunt_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35281" toLevel="1" name="Krishna Fighter Enchantment Effect">
+		<!-- Normal Attack Critical Damage +$s1 and additional damage +$s2. -->
+		<icon>icon.weapon_r110_fist_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35282" toLevel="1" name="Krishna Stormer Enchantment Effect">
+		<!-- Increases Normal Attack Critical Damage by $s1 and has a chance to stun enemies near the target for $s2 on a standard attack. -->
+		<icon>icon.weapon_r110_spear_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35283" toLevel="1" name="Krishna Thrower Enchantment Effect">
+		<!-- P. Skill Critical Damage +$s1, Normal Critical Damage +$s2. -->
+		<icon>icon.weapon_r110_bow_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35284" toLevel="1" name="Krishna Shooter Enchantment Effect">
+		<!-- P. Skill Critical Damage +$s1, P. Skill Power +$s2. -->
+		<icon>icon.weapon_r110_crossbow_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35285" toLevel="1" name="Krishna Buster Enchantment Effect">
+		<!-- M. Skill Critical Damage +$s1, P. Def. +$s2. -->
+		<icon>icon.weapon_r110_onehand_magic_sword_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35286" toLevel="1" name="Krishna Caster Enchantment Effect">
+		<!-- M. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
+		<icon>icon.weapon_r110_onehand_magic_blunt_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35287" toLevel="1" name="Krishna Retributer Enchantment Effect">
+		<!-- Normal Attack/ P. Skill/ M. Skill Critical Damage +$s1, Max HP/ MP/ CP +$s2. -->
+		<icon>icon.weapon_r110_twohand_magic_blunt_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35288" toLevel="1" name="Krishna Dual Sword Enchantment Effect">
+		<!-- P. Skill Critical Damage +$s1, P. Skill Power +$s2. -->
+		<icon>icon.weapon_r110_dual_sword_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35289" toLevel="1" name="Krishna Dual Dagger Enchantment Effect">
+		<!-- P. Skill Critical Damage +$s1, Normal Attack Critical Damage +$s2. -->
+		<icon>icon.weapon_r110_dual_dagger_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35290" toLevel="1" name="Krishna Dual Blunt Enchantment Effect">
+		<!-- P. Skill Critical Damage +$s1, Skill Cooldown -$s2. -->
+		<icon>icon.weapon_r110_dual_blunt_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35291" toLevel="4" name="Set Effect - Leviathan Heavy Armor, 2-piece">
+		<!-- STR +$s1, CON +$s2. -->
+		<icon>icon.armor_t901_u_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35292" toLevel="4" name="Set Effect - Leviathan Light Armor, 2-Piece">
+		<!-- STR +$s1, DEX $s2. -->
+		<icon>icon.armor_t902_u_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35293" toLevel="4" name="Set Effect - Leviathan Robe Armor, 2-piece">
+		<!-- INT +$s1, CON +$s2. -->
+		<icon>icon.armor_t903_u_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35294" toLevel="1" name="Leviathan Shield Enchantment Effect">
+		<!-- Atk. Spd. +$s1, P. Skill Power +$s2, M. Skill Power -$s3. -->
+		<icon>icon.weapon_r110_shield</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35295" toLevel="1" name="Leviathan Sigil Enchantment Effect">
+		<!-- Casting Spd. +$s1, M. Skill Power +$s2, P. Skill Power -$s3. -->
+		<icon>icon.weapon_r110_sigil</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35296" toLevel="1" name="Special Ability Krishna Dicing Death">
+		<!-- P. Accuracy +$s1, Normal Attack Critical Rate +$s2. -->
+		<icon>icon.weapon_r110_onehand_sword_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35297" toLevel="1" name="Special Ability Krishna Slasher">
+		<!-- P. Atk. +$s1. -->
+		<icon>icon.weapon_r110_twohand_sword_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35298" toLevel="1" name="Special Ability Krishna Avenger">
+		<!-- P. Accuracy +$s1, P./ M. Skill Power +$s2. -->
+		<icon>icon.weapon_r110_onehand_blunt_i00</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="35299" toLevel="1" name="Special Ability Krishna Shaper">
+		<!-- P. Accuracy +$s1, P. Skill Critical Damage +$s2. -->
+		<icon>icon.weapon_r110_dagger_i00</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

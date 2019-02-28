@@ -208,7 +208,7 @@
 			<condition name="CanUseVitalityConsumeItem" />
 		</conditions>
 	</skill>
-	<skill id="22708" toLevel="1" name="XP Buff 50% (1-hour)">
+	<skill id="22708" toLevel="1" name="XP Buff 50% (1-h.)">
 		<!-- Obtained XP +50%. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -232,7 +232,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="22709" toLevel="1" name="XP Buff 50% (2-hour)">
+	<skill id="22709" toLevel="1" name="XP Buff 50% (2-h.)">
 		<!-- Obtained XP +50%. -->
 		<icon>icon.etc_dragons_blood_i03</icon>
 		<operateType>A2</operateType>
@@ -311,7 +311,7 @@
 		</conditions>
 	</skill>
 	<skill id="22713" toLevel="1" name="Letter Collector's Gift">
-		<!-- For 2 hr., Atk./ Casting Spd. +15%, and Speed +20. -->
+		<!-- For 2 h., Atk./ Casting Spd. +15%, and Speed +20. -->
 		<icon>icon.shield_bread_i01</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>3600000</reuseDelay>
@@ -504,22 +504,22 @@
 						<item id="23346" count="1" /> <!-- Letter Collector's Gift -->
 					</item>
 					<item chance="7.01">
-						<item id="34661" count="1" /> <!-- Fire Stone (+ 60) -->
+						<item id="34661" count="1" /> <!-- Fire Stone (+60) -->
 					</item>
 					<item chance="7.01">
-						<item id="34662" count="1" /> <!-- Water Stone (+ 60) -->
+						<item id="34662" count="1" /> <!-- Water Stone (+60) -->
 					</item>
 					<item chance="7.01">
-						<item id="34663" count="1" /> <!-- Earth Stone (+ 60) -->
+						<item id="34663" count="1" /> <!-- Earth Stone (+60) -->
 					</item>
 					<item chance="7.01">
-						<item id="34664" count="1" /> <!-- Wind Stone (+ 60) -->
+						<item id="34664" count="1" /> <!-- Wind Stone (+60) -->
 					</item>
 					<item chance="7.01">
-						<item id="34665" count="1" /> <!-- Dark Stone (+ 60) -->
+						<item id="34665" count="1" /> <!-- Dark Stone (+60) -->
 					</item>
 					<item chance="7.01">
-						<item id="34666" count="1" /> <!-- Holy Stone (+ 60) -->
+						<item id="34666" count="1" /> <!-- Holy Stone (+60) -->
 					</item>
 				</items>
 			</effect>
@@ -572,7 +572,7 @@
 						<item id="23434" count="1" /> <!-- Agathion - Phoenix Pack (7-day) - Nirvana Rebirth -->
 					</item>
 					<item chance="6">
-						<item id="23435" count="1" /> <!-- Agathion - Blue Opera Pack (7-day) - Sword of Recovery -->
+						<item id="23435" count="1" /> <!-- Agathion - Blue Opera Pack (7-day) - Sword of Recovery ] -->
 					</item>
 					<item chance="8">
 						<item id="23436" count="1" /> <!-- Agathion - Button-eyed Bear Doll Pack (7-day) - Vitality -->
@@ -616,7 +616,7 @@
 						<item id="22626" count="1" /> <!-- Elixir of CP - 1-day -->
 					</item>
 					<item chance="4">
-						<item id="22621" count="1" /> <!-- Vitality Recovery Potion - 1-hr. -->
+						<item id="22621" count="1" /> <!-- Vitality Recovery Potion - 1-hour -->
 					</item>
 					<item chance="0.1">
 						<item id="22628" count="1" /> <!-- Scroll: Enchant Armor (R-grade) -->
@@ -1403,7 +1403,7 @@
 						<item id="23579" count="1" /> <!-- Shining Accessory Pack - Event -->
 					</item>
 					<item chance="0.027">
-						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+						<item id="36163" count="1" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) - Event -->
 					</item>
 					<item chance="0.037">
 						<item id="23596" count="1" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) - Event -->
@@ -1418,7 +1418,7 @@
 						<item id="23534" count="1" /> <!-- Monster Weapon Appearance Stone Pack - Event -->
 					</item>
 					<item chance="0.3">
-						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+						<item id="36164" count="1" /> <!-- Giant's Scroll: Enchant Armor (R-grade) - Event -->
 					</item>
 					<item chance="0.425">
 						<item id="23600" count="1" /> <!-- Lucky Enchant Stone: Armor (R-grade) - Event -->
@@ -1525,7 +1525,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="22745" toLevel="1" name="Fantasy Homemade Cookie">
-		<!-- For 60 min., Max MP +20%, HP Recovery Bonus +20%, M. Critical Rate +20, Standard Attack Critical Damage +20%, P. Atk. +10%, P. Def. +20%, Atk. Spd. +20%, M. Atk. +20%, M. Def. +20%, Casting Spd. +20%, Debuff Resistance +10%, and increases P. Def. when hit by a critical attack. Speed -15%. Additionally increases Standard Attack Critical Damage for party members equipped with equipped with bow, crossbow or melee weapons when they receive more than a certain amount of damage. -->
+		<!-- For 60 min., increases Max MP by 20%, HP Recovery Bonus by 20%, M. Critical Rate by 2, Standard Attack Critical Damage by 20%, P. Atk. by 10%, P. Def. by 20%, Atk. Spd. by 20%, M. Atk. by 20%, M. Def. by 20%, Casting Spd. by 20%, Debuff Resistance by 10%, and increases P. Def. when hit by a critical attack. Decreases Speed by 15%. Additionally increases Standard Attack Critical Damage for party members equipped with bow, crossbow or melee weapons when they receive more than a certain amount of damage. -->
 		<icon>BranchSys3.Icon.ev_halloween_cookie</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -1955,7 +1955,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="22765" toLevel="1" name="PC Vitality">
+	<skill id="22765" toLevel="1" name="PA Vitality">
 		<!-- For 60 min., Vitality is replenished with XP gain through hunting. -->
 		<icon>icon.etc_pccafe_point_i00</icon>
 		<operateType>A2</operateType>

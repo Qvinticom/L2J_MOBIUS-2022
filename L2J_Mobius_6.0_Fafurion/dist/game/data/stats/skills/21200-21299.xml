@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="21200" toLevel="1" name="Age of Three Kingdoms">
-		<!-- For 20 min., increases Speed by 33, Atk. Spd. by 33%, M. Atk. by 65%, Casting Spd. by 30%, P. Atk., and P. Def. by 15%. Cooldown is 2 hr. Consumes 1 Proof of Friendship upon skill use. -->
+		<!-- For 20 min., increases Speed by 33, Atk. Spd. by 33%, M. Atk. by 65%, Casting Spd. by 30%, P. Atk., and P. Def. by 15%. Cooldown is 2 h. Consumes 1 Proof of Friendship upon skill use. -->
 		<icon>BranchSys.Icon.br_spirit_skill_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -25,7 +25,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21201" toLevel="1" name="Haste">
-		<!-- Increases Atk. Spd. by 33% for 20 min. Cooldown is 1 hr. -->
+		<!-- Increases Atk. Spd. by 33% for 20 min. Cooldown is 1 h. -->
 		<icon>BranchSys2.icon.br_dragonboat_cap_i00</icon>
 		<abnormalLvl>26</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -360,7 +360,7 @@
 		</effects>
 	</skill>
 	<skill id="21221" toLevel="1" name="Blessed Resurrection">
-		<!-- Allows the use of Blessed Resurrection. Cooldown is 12 hr. -->
+		<!-- Allows the use of Blessed Resurrection. Cooldown is 12 h. -->
 		<icon>BranchSys2.icon.br_flag_cap_i00</icon>
 		<blockedInOlympiad>true</blockedInOlympiad>
 		<effectPoint>1</effectPoint>
@@ -379,7 +379,7 @@
 		</conditions>
 	</skill>
 	<skill id="21222" toLevel="1" name="Elemental Resistance">
-		<!-- Increases Fire/ Water/ Wind/ Earth Resistance by 20 for 1 hr. Cooldown is 4 hr. -->
+		<!-- Increases Fire/ Water/ Wind/ Earth Resistance by 20 for 1 h. Cooldown is 4 h. -->
 		<icon>BranchSys2.icon.br_polar_bear_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MD_UP_ATTR</abnormalType>
@@ -398,7 +398,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21223" toLevel="1" name="Ultimate Defense">
-		<!-- For 30 sec., increases one's own P. Def. by 3636, M. Def. by 2727, and Buff-canceling Attack Resistance by 80%, and becomes unable to move. Cooldown is 1 hr. -->
+		<!-- For 30 sec., increases one's own P. Def. by 3636, M. Def. by 2727, and Buff-canceling Attack Resistance by 80%, and becomes unable to move. Cooldown is 1 h. -->
 		<icon>BranchSys2.icon.br_polar_bear_wp_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>PD_UP_SPECIAL</abnormalType>
@@ -416,7 +416,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21224" toLevel="1" name="Great Adventurer's Soul Power">
-		<!-- For 5 min., receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Debuff Resistance by 10%. Cooldown is 1 hr. -->
+		<!-- For 5 min., receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases Debuff Resistance by 10%. Cooldown is 1 h. -->
 		<icon>BranchSys2.icon.br_stagbeetle_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -435,7 +435,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21225" toLevel="1" name="Brave Warrior's Soul Power">
-		<!-- For 5 min., receives the soul's help to increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 1 hr. -->
+		<!-- For 5 min., receives the soul's help to increases Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Bestows the ability to recover as HP 5% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 1 h. -->
 		<icon>BranchSys2.icon.br_hornbeetle_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -454,7 +454,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21226" toLevel="1" name="Great Wizard's Soul Power">
-		<!-- For 5 min., receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. Cooldown is 1 hr. -->
+		<!-- For 5 min., receives the soul's help to increase Casting Spd. by 20%, M. Atk. by 20%, and M. Def. by 20%. Decreases MP Consumption for skill use by 5%. Cooldown is 1 h. -->
 		<icon>BranchSys2.icon.br_ladybug_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -473,7 +473,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21227" toLevel="1" name="Great Adventurer's Soul Power">
-		<!-- For 5 min., receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Cooldown is 1 hr. -->
+		<!-- For 5 min., receives the soul's help to increase Max HP by 20%, Max MP by 20%, and Speed by 20%. Increases HP Recovery Bonus by 20% and MP Recovery Bonus by 20%. Cooldown is 1 h. -->
 		<icon>BranchSys2.icon.br_mantis_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -492,7 +492,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21228" toLevel="1" name="Brave Warrior's Soul Power">
-		<!-- For 5 min., receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases P. Critical Damage and P. Critical Rate by 20%. Cooldown is 1 hr. -->
+		<!-- For 5 min., receives the soul's help to increase Atk. Spd. by 20%, P. Atk. by 10%, and P. Def. by 20%. Increases P. Critical Damage and P. Critical Rate by 20%. Cooldown is 1 h. -->
 		<icon>BranchSys2.icon.br_locust_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>MULTI_BUFF</abnormalType>
@@ -511,7 +511,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21229" toLevel="1" name="Blood Awakening">
-		<!-- Combines standard attack damage absorption and Atk. Spd. increase for a more advanced blood awakening effect. For 1 hr., Atk. Spd. +33% and bestows the ability to recover as HP 9% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 4 hr. -->
+		<!-- Combines general attack damage absorption and Atk. Spd. increase for a more advanced blood awakening effect. For 1 h., increases Atk. Spd. by 33% and bestows the ability to recover as HP 9% of the physical damage inflicted on the enemy with a certain probability. Cooldown is 4 h. -->
 		<icon>BranchSys2.icon.br_close_helmet_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>IMPROVE_VAMPIRIC_HASTE</abnormalType>
@@ -530,7 +530,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21230" toLevel="1" name="Improve Magic">
-		<!-- Combines M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 hr., increases M. Atk. by 75% and M. Def. by 30%. Cooldown is 4 hr. -->
+		<!-- Combines M. Atk. increase and M. Def. increase to have more advanced magic ability increase effect. For 1 h., increases M. Atk. by 75% and M. Def. by 30%. Cooldown is 4 h. -->
 		<icon>BranchSys2.icon.br_navy_cap_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>IMPROVE_MA_MD_UP</abnormalType>
@@ -549,7 +549,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="21231" toLevel="1" name="Improve Critical Attack">
-		<!-- Combines Critical Rate Increase and Critical Damage Increase to have more advanced critical increase effect. For 1 hr., increases Critical Rate by 30% and Critical Damage by 35%. Cooldown is 4 hr. -->
+		<!-- Combines Critical Rate Increase and Critical Damage Increase to have more advanced critical increase effect. For 1 h., increases Critical Rate by 30% and Critical Damage by 35%. Cooldown is 4 h. -->
 		<icon>BranchSys2.icon.br_gold_eyeglass_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalType>IMPROVE_CRT_RATE_DMG_UP</abnormalType>
@@ -648,7 +648,7 @@
 		</effects>
 	</skill>
 	<skill id="21236" toLevel="1" name="Power Shirt: Blessed Escape">
-		<!-- Allows the use of Blessed Escape every 20 hr. -->
+		<!-- Allows the use of Blessed Escape every 20 h. -->
 		<icon>Icon.skill1050</icon>
 		<hitTime>200</hitTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
@@ -670,7 +670,7 @@
 		</effects>
 	</skill>
 	<skill id="21237" toLevel="1" name="Power Shirt: Invincibility">
-		<!-- Momentarily becomes invincible for 7 sec. Can be used every 20 hr. -->
+		<!-- Momentarily becomes invincible for 7 sec. Can be used every 20 h. -->
 		<icon>BranchSys2.icon.7anni_shirt_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>7</abnormalTime>
@@ -1082,7 +1082,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21254" toLevel="1" name="Claw of Destruction">
+	<skill id="21254" toLevel="1" name="Tiat's Tiatenon">
 		<!-- During a PvP attack, has a chance of inflicting fear on the target and causing them to flee. -->
 		<icon>BranchSys2.icon.br_wp_tiatenon_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1104,7 +1104,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21255" toLevel="1" name="Blades of Delusion">
+	<skill id="21255" toLevel="1" name="Aenkinel's Astaroth">
 		<!-- Has a chance of decreasing the target's P. Def. when attacking. -->
 		<icon>BranchSys2.icon.br_wp_astarot_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1126,7 +1126,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="21256" toLevel="1" name="Blood Brother">
+	<skill id="21256" toLevel="1" name="Yehan Klanikus' Tirbing">
 		<!-- Decreases a target's defense at a certain probability for successful attack and inflicts Stun. -->
 		<icon>BranchSys2.icon.br_wp_tirbing_i00</icon>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1236,7 +1236,7 @@
 		<magicLvl>1</magicLvl>
 	</skill>
 	<skill id="21262" toLevel="1" name="Bad Bunny's Earring">
-		<!-- Its effects are HP+ 250, Vampiric Rage effect with a certain probability, increased accuracy, decreased Cooldown for magic skills, and decreased MP Consumption for magic skills. When two identical earrings are equipped, only one effect is applied. -->
+		<!-- Its effects are HP+250, Vampiric Rage effect with a certain probability, increased accuracy, decreased Cooldown for magic skills, and decreased MP Consumption for magic skills. When two identical earrings are equipped, only one effect is applied. -->
 		<icon>branchsys2.icon2.g_accessory_event_earring</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -1463,7 +1463,7 @@
 		</effects>
 	</skill>
 	<skill id="21274" toLevel="6" name="Start of Evolution">
-		<!-- Agathion has a chance of evolving to Lv. $s1 at the place to which you were teleported via the Evolution Deliverer. Cooldown is $s2 hr. -->
+		<!-- Agathion has a chance of evolving to Lv. $s1 at the place to which you were teleported via the Evolution Deliverer. Cooldown is $s2 h. -->
 		<icon>BranchSys3.icon.skill22419</icon>
 		<itemConsumeId>22394</itemConsumeId>
 		<itemConsumeCount>1</itemConsumeCount>
@@ -1558,7 +1558,7 @@
 		<isDebuff>false</isDebuff>
 	</skill>
 	<skill id="21277" toLevel="1" name="Miracle of the Tree - Vitality Recovery">
-		<!-- For 60 min., recovers Vitality when acquiring XP. Cooldown is 4 hr. -->
+		<!-- For 60 min., recovers Vitality when acquiring XP. Cooldown is 4 h. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<reuseDelay>14400000</reuseDelay>
@@ -1643,7 +1643,7 @@
 		<magicLvl>95</magicLvl>
 	</skill>
 	<skill id="21284" toLevel="1" name="Ron's Authority">
-		<!-- Has a chance of increasing Magic Damage Resistance when attacking. -->
+		<!-- Has a chance of increasing Magic Resistance when attacking. -->
 		<icon>BranchSys3.Icon.g_urukmash_i00</icon>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>

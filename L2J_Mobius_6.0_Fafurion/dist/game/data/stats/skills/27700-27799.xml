@@ -368,7 +368,7 @@
 		<icon>icon.etc_treasure_box_i02</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27717" toLevel="6" name="Greater Gemstone's Blessing">
+	<skill id="27717" toLevel="6" name="Greater Jewel's Blessing">
 		<!-- You can feel a new energy thanks to your possession of a Greater Jewel. Max CP +5%. -->
 		<icon>icon.etc_bm_brooch_lavianrose_piece</icon>
 		<operateType>A1</operateType>
@@ -681,7 +681,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27750" toLevel="6" name="Einhasad's Necklace">
-		<!-- Damage Reflect Resistance becomes $s1 for 30 sec. -->
+		<!-- Damage Reflection Resistance becomes $s1 for 30 sec. -->
 		<icon>BranchIcon.Icon.necklace_of_einhasad_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -691,7 +691,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27752" toLevel="6" name="Eva's Earring">
-		<!-- P. Def. and M. Def become $s1 for 40 sec. -->
+		<!-- P. Def. and M. Def. become $s1 for 40 sec. -->
 		<icon>BranchIcon.Icon.earring_of_eva_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -772,31 +772,31 @@
 	<skill id="27767" toLevel="1" name="Shiny Elemental Shirt Special Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27768" toLevel="1" name="Reflect Attack T-shirt Special Pack">
+	<skill id="27768" toLevel="1" name="Physical Reflect Shirt Special Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27769" toLevel="1" name="Reflect Magic T-shirt Special Pack">
+	<skill id="27769" toLevel="1" name="Magical Reflect Shirt Special Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27770" toLevel="1" name="Royal White Save Ticket (R)">
+	<skill id="27770" toLevel="1" name="Royal White Save Card (R)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27771" toLevel="1" name="Royal White Save Ticket (R95)">
+	<skill id="27771" toLevel="1" name="Royal White Save Card (R95)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27772" toLevel="1" name="Royal White Save Ticket (R99)">
+	<skill id="27772" toLevel="1" name="Royal White Save Card (R99)">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27773" toLevel="1" name="Royal Purple Save Ticket (R)">
+	<skill id="27773" toLevel="1" name="Royal Purple Save Card (R)">
 		<!-- When using an R-grade Weapon Enchantment Standard Weapon Enchant Scroll, increases the chance by 20%. Can only be used with a 12 or higher Enchantment Item. On success, Enchantment count increases by 1. In case of Enchantment failure, the item is not Crystallized, but the base Enchantment count decreases by 1. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27774" toLevel="1" name="Royal Purple Save Ticket (R95)">
-		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R95-grade Armor. Can only be used on 12+ enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+	<skill id="27774" toLevel="1" name="Royal Purple Save Card (R95)">
+		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R95-grade Armor. Can only be used on 12+enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="27775" toLevel="1" name="Royal Purple Save Ticket (R99)">
-		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R99-grade Armor. Can only be used on 12+ enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
+	<skill id="27775" toLevel="1" name="Royal Purple Save Card (R99)">
+		<!-- A ticket that enhances probability by 20% when using a Normal Weapon Enchant Scroll to enchant R99-grade Armor. Can only be used on 12+enchanted items. When Enchant succeeds, it increases by 1. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27776" toLevel="1" name="Entrance Pass: Embryo Command Post">
@@ -806,7 +806,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27778" toLevel="1" name="Release Agathion's Seal - Babayaga">
-		<!-- The Agathion - Hut on Chicken Legs seal is released. -->
+		<!-- The Agathion - Babayaga seal is released. -->
 		<icon>icon.etc_summon_aga_agit_i00</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -823,12 +823,12 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27782" toLevel="1" name="Agathion's Blessing: Dash">
-		<!-- For 10 sec., a Hut on Chicken Legs's power boosts Speed by 100%. -->
+		<!-- For 10sec., a Babayaga's power boosts Speed by 100%. Cooldown is 10min. -->
 		<icon>icon.skill_transform_buff</icon>
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27783" toLevel="1" name="Agathion's Blessing: Meditation">
-		<!-- For 30 sec., P. Def. -90% and restores MP by 134 per sec. Effect removed when hit. Cooldown is 30 min. -->
+		<!-- For 30sec., P. Def. -90% and restores MP by 134 per second. Effect removed when hit. Cooldown is 30 min. -->
 		<icon>icon.skill1430</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -1215,7 +1215,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="27798" toLevel="1" name="Elk's Blessing">
-		<!-- Maintains Vitality for 1 hr. through the Elk's Blessing. -->
+		<!-- Maintains Vitality for 1 h. through the Elk's Blessing. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>

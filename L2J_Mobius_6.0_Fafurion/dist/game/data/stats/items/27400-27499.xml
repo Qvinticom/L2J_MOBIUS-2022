@@ -977,7 +977,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
 	<item id="27471" name="Vital Stone" additionalName="Lv. 4" type="Armor">
-		<!-- Vitality Bonus +25% and Vitality Consumption -7%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
+		<!-- Vitality Bonus +25% and Vitality Point Consumption Speed -7%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -991,7 +991,7 @@
 		<set name="weight" val="5" />
 	</item>
 	<item id="27472" name="Vital Stone" additionalName="Lv. 5" type="Armor">
-		<!-- Vitality Bonus +50% and Vitality Consumption -15%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
+		<!-- Vitality Bonus +50% and Vitality Point Consumption Speed -15%. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_vital" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1013,7 +1013,7 @@
 		</skills>
 	</item>
 	<item id="27474" name="Tanzanite" additionalName="Lv. 1" type="Armor">
-		<!-- Creates a protection shield that absorbs 5,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protection shield that absorbs 5,000 damage for 5 sec. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1030,7 +1030,7 @@
 		</skills>
 	</item>
 	<item id="27475" name="Tanzanite" additionalName="Lv. 2" type="Armor">
-		<!-- Creates a protection shield that absorbs 10,000 damage for 5 seconds. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protection shield that absorbs 10,000 damage for 5 sec. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1047,7 +1047,7 @@
 		</skills>
 	</item>
 	<item id="27476" name="Tanzanite" additionalName="Lv. 3" type="Armor">
-		<!-- Creates a protection shield that absorbs 15,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protection shield that absorbs 15,000 damage for 10 sec. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1064,7 +1064,7 @@
 		</skills>
 	</item>
 	<item id="27477" name="Tanzanite" additionalName="Lv. 4" type="Armor">
-		<!-- Creates a protection shield that absorbs 30,000 damage for 10 seconds. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protection shield that absorbs 30,000 damage for 10 sec. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1081,7 +1081,7 @@
 		</skills>
 	</item>
 	<item id="27478" name="Tanzanite" additionalName="Lv. 5" type="Armor">
-		<!-- Creates a protection shield that absorbs 50,000 damage for 15 seconds. Effect does not stack with additional jewels of the same type. -->
+		<!-- Creates a protection shield that absorbs 50,000 damage for 15 sec. Effect does not stack with additional jewels of the same type. -->
 		<set name="icon" val="icon.etc_bm_jewel_tanzanite" />
 		<set name="bodypart" val="brooch_jewel" />
 		<set name="default_action" val="EQUIP" />
@@ -1169,7 +1169,7 @@
 		</capsuled_items>
 	</item>
 	<item id="27484" name="Maphr's Wind Scroll" additionalName="Event" type="EtcItem">
-		<!-- Vitality consumption +200% and Acquired XP/ SP +200% while hunting. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
+		<!-- Vitality consumption +200% and Acquired XP/ SP +200%. Remains after death. Duration is 30 sec. Cooldown is 1 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1186,7 +1186,7 @@
 		</skills>
 	</item>
 	<item id="27485" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Solo" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 85 solo dungeon. Deleted after event. -->
+		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 85 solo dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1197,7 +1197,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27486" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Solo" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 90 solo dungeon. Deleted after event. -->
+		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 90 solo dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1208,7 +1208,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27487" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Solo" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 95 solo dungeon. Deleted after event. -->
+		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 95 solo dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1219,7 +1219,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27488" name="Entrance Pass: Kartia's Labyrinth Lv. 85 Party" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 85 party dungeon. Deleted after event. -->
+		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 85 party dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1230,7 +1230,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27489" name="Entrance Pass: Kartia's Labyrinth Lv. 90 Party" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 90 party dungeon. Deleted after event. -->
+		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 90 party dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1241,7 +1241,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="27490" name="Entrance Pass: Kartia's Labyrinth Lv. 95 Party" additionalName="Event" type="EtcItem">
-		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 95 party dungeon. Deleted after event. -->
+		<!-- Kartia's Labyrinth Extra Pass delivered to adventurers from the Kartia Research Center. When used, you can reset your instance timer for the level 95 party dungeon. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

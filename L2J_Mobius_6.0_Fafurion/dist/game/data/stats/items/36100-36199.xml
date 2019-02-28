@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="36100" name="Star Agathion - Chic Jaebum" type="Armor">
-		<!-- Bracelet for summoning Agathion - Chic Jaebum (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
+		<!-- Bracelet for summoning Agathion - Chic Jaebum (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -30,7 +30,7 @@
 		</skills>
 	</item>
 	<item id="36101" name="Star Agathion - Cute Shinyoung" type="Armor">
-		<!-- Bracelet for summoning Agathion - Cute Shinyoung (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hr.) -->
+		<!-- Bracelet for summoning Agathion - Cute Shinyoung (7-day). <Used Skill>. 1. Blessing of Star Agathion. Increases acquired XP and SP by 30% for 60 min. (cooldown 5 min.). 2. Star Agathion Teleport. Lets you teleport to various strongholds. (cooldown 30 min.). 3. Gift of Star Agathion. Can get one of Vitality Replenishing/ Maintaining/ Recovering Items randomly. (cooldown 20 hours) -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -705,7 +705,7 @@
 		</capsuled_items>
 	</item>
 	<item id="36143" name="Double Crystal Enhancement Reward: Amaranthine Box (Physical)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Blessed Helios Shaper, Cutter, Slasher, Avenger, Fighter, Stormer, Thrower, and Shooter. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
+		<!-- Double-click to receive one of the following: Double Crystal Helios Shaper, Cutter, Slasher, Avenger, Fighter, Stormer, Thrower, and Shooter. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -719,7 +719,7 @@
 		</skills>
 	</item>
 	<item id="36144" name="Double Crystal Enhancement Reward: Amaranthine Box (Magical)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Blessed Helios Buster, Caster, and Retributer. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
+		<!-- Double-click to receive one of the following: Double Crystal Helios Buster, Caster, and Retributer. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -733,7 +733,7 @@
 		</skills>
 	</item>
 	<item id="36145" name="Double Crystal Enhancement Reward: Amaranthine Box (Dual Weapons)" type="EtcItem">
-		<!-- Double-click to receive one of the following: Blessed Helios Dual Sword, Dual Dagger, and Dual Blunt. You'll also receive an ingredient that will allow you to bestow a Soul Crystal effect 2 times. -->
+		<!-- Double-click to receive one of the following: Double Crystal Helios Dual Sword, Dual Dagger, and Dual Blunt. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -775,7 +775,7 @@
 		</skills>
 	</item>
 	<item id="36148" name="Kaliel's Scroll of Escape Pack" type="EtcItem">
-		<!-- Double-click to receive a Scroll of Escape: Ruins of Ye Sagira, Isle of Souls Harbor, Guillotine Fortress, Bloody Swampland, Crystal Caverns, and Seal of Shilen. -->
+		<!-- Double-click to receive a Scroll of Escape - Ruins of Ye Sagira, Isle of Souls Harbor, Guillotine Fortress, Bloody Swampland, Crystal Caverns, and Seal of Shilen. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
@@ -785,16 +785,16 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="36170" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Bloody Swampland -->
-			<item id="36171" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Isle of Souls Harbor -->
-			<item id="36172" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Ruins of Ye Sagira -->
-			<item id="36173" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Guillotine Fortress -->
-			<item id="36174" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Parnassus -->
-			<item id="36175" min="1" max="1" chance="100" /> <!-- Scroll of Escape: Seal of Shilen -->
+			<item id="36170" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Bloody Swampland -->
+			<item id="36171" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Isle of Souls Harbor -->
+			<item id="36172" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Ruins of Ye Sagira -->
+			<item id="36173" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Guillotine Fortress -->
+			<item id="36174" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Parnassus -->
+			<item id="36175" min="1" max="1" chance="100" /> <!-- Scroll of Escape - Seal of Shilen -->
 		</capsuled_items>
 	</item>
 	<item id="36149" name="Kaliel's Soul Bottle Box" type="EtcItem">
-		<!-- Double-click to receive an XP Bottle (10-hr.). The obtained XP Bottle cannot be exchanged, dropped or sold in a store. -->
+		<!-- Double-click to receive an XP Bottle (10-hour). The obtained XP Bottle cannot be exchanged, dropped or sold in a store. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -804,11 +804,11 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ExtractableItems" />
 		<capsuled_items>
-			<item id="34743" min="1" max="1" chance="100" /> <!-- Agathion - XP Bottle (10-hr.) -->
+			<item id="34743" min="1" max="1" chance="100" /> <!-- Agathion - XP Bottle (10-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="36150" name="Kaliel's Hourglass" type="EtcItem">
-		<!-- Increases XP obtained through hunting by 50% for 1 hr. -->
+		<!-- Increases XP obtained through hunting by 50% for 1 hour. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="is_oly_restricted" val="true" />
@@ -972,7 +972,7 @@
 		<set name="immediate_effect" val="true" />
 	</item>
 	<item id="36163" name="Giant's Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. Random enchantment from +1 to +3. -->
+		<!-- When enchanted, increases P. Atk. by 6 for R-grade one-handed swords, one-handed blunts, one-handed staffs, daggers, spears, and other weapons. Increases P. Atk. by 7 for two-handed swords, two-handed blunts, two-handed staffs, dual daggers, dual swords, fist weapons, and crossbows. Increases P. Atk. by 12 for bow weapons. Increases M. Atk. by 5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than standard weapons. Random enchantment from +1 to +3. -->
 		<set name="icon" val="icon.giant_scrl_of_ench_wp_r" />
 		<set name="weight" val="100" />
 		<set name="is_sellable" val="false" />
@@ -1070,7 +1070,7 @@
 		</stats>
 	</item>
 	<item id="36169" name="Gustav's Belt" type="Armor">
-		<!-- Belt that contains the power of Gustav of the Devastated Castle. Increases damage by 5% and decreases received damage by 5%. Increases weight by 12800 and the number of inventory slots by 18. -->
+		<!-- Belt that contains the power of Gustav of the Devastated Castle. Additional damage +5%, Weight Limit +12800, Inventory Slots +18. Received Damage -5%. -->
 		<set name="icon" val="icon.event_energy_belt_i00" />
 		<set name="armor_type" val="LIGHT" />
 		<set name="default_action" val="EQUIP" />
@@ -1435,7 +1435,7 @@
 		</stats>
 	</item>
 	<item id="36191" name="Kaliel's Wish" type="EtcItem">
-		<!-- Makes you eligible to receive a Kaliel's Blessing event reward token and 1st-place winner item for 1 hr. Can be used only by characters of Lv. 40 or higher who have done the 2nd class transfer. Buff gets deleted upon Subclass/ Dual Class change. Temporary event item. -->
+		<!-- Makes you eligible to receive a Kaliel's Blessing event reward token and 1st-place winner item for 1 hour. Can be used only by characters of Lv. 40 or higher who have done the 2nd class transfer. Buff gets deleted upon Subclass/ Dual Class change. Temporary event item. -->
 		<set name="icon" val="icon.etc_blessed_kalie_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1475,7 +1475,7 @@
 		</skills>
 	</item>
 	<item id="36193" name="Shaper Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="default_action" val="EQUIP" />
@@ -1509,7 +1509,7 @@
 		</stats>
 	</item>
 	<item id="36194" name="Cutter Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1542,7 +1542,7 @@
 		</stats>
 	</item>
 	<item id="36195" name="Slasher Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="default_action" val="EQUIP" />
@@ -1575,7 +1575,7 @@
 		</stats>
 	</item>
 	<item id="36196" name="Avenger Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
 		<set name="default_action" val="EQUIP" />
@@ -1609,7 +1609,7 @@
 		</stats>
 	</item>
 	<item id="36197" name="Fighter Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="weapon_type" val="DUALFIST" />
 		<set name="default_action" val="EQUIP" />
@@ -1643,7 +1643,7 @@
 		</stats>
 	</item>
 	<item id="36198" name="Stormer Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="weapon_type" val="POLE" />
 		<set name="default_action" val="EQUIP" />
@@ -1677,7 +1677,7 @@
 		</stats>
 	</item>
 	<item id="36199" name="Thrower Sealed with Heroes' Power" type="Weapon">
-		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
+		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="weapon_type" val="BOW" />
 		<set name="default_action" val="EQUIP" />

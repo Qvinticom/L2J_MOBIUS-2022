@@ -222,7 +222,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5417" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard attack and skill, buff/ de-buff. -->
+		<!-- Invincible against general attack and skill, buff/ de-buff. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -239,7 +239,7 @@
 		</effects>
 	</skill>
 	<skill id="5418" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard attack and skill, buff/ de-buff. -->
+		<!-- Invincible against general attack and skill, buff/ de-buff. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -269,7 +269,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="5420" toLevel="1" name="Invincibility">
-		<!-- Invincible against standard attack and skill, buff/ de-buff. -->
+		<!-- Invincible against general attack and skill, buff/ de-buff. -->
 		<magicLvl>85</magicLvl>
 		<operateType>T</operateType>
 		<magicCriticalRate>-5</magicCriticalRate>
@@ -506,7 +506,7 @@
 		</effects>
 	</skill>
 	<skill id="5426" toLevel="1" name="Counter Chance">
-		<!-- Increases Casting Spd. and decreases Skill MP Consumption. -->
+		<!-- Condition causing target to decrease skill Casting Spd. and MP consumption. -->
 		<icon>icon.skill0532</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>60</abnormalTime>

@@ -563,7 +563,7 @@
 		</skills>
 	</item>
 	<item id="19443" name="Orichalcum Bolt" type="EtcItem">
-		<!-- Bolt made of Orichalcum. Used as bolts for R-grade Crossbows. -->
+		<!-- Bolt made of Orichalcum. Used as bolts for R-grade crossbows. -->
 		<set name="icon" val="icon.etc_oricalcum_bolt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="etcitem_type" val="BOLT" />
@@ -607,7 +607,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="19447" name="Blessed Scroll: Enchant Weapon (R-grade)" type="EtcItem">
-		<!-- When enchanted, P. Atk. for R-grade one-handed sword/ blunt, dagger, spear, etc. +6, and two-handed sword/ blunt/ fist, dagger, crossbow +7. P. Atk. for bows +12. P. Atk. +12 for bow weapons. M. Atk. +5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
+		<!-- When enchanted, P. Atk. for R-grade one-handed sword/ blunt, dagger, spear, etc. +6, and two-handed sword/ blunt, dual dagger, dual sword, crossbow +7. P. Atk. +12 for bow weapons. M. Atk. +5 for all weapons. P. Atk./ M. Atk increases greatly starting at +4. For blessed weapons, all stats will increase more than for standard weapons. Failure to enchant does not crystallize the item but resets its enchantment level to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_weapon_i06" />
 		<set name="weight" val="10" />
 		<set name="price" val="150000000" />
@@ -623,7 +623,7 @@
 		</skills>
 	</item>
 	<item id="19448" name="Blessed Scroll: Enchant Armor (R-grade)" type="EtcItem">
-		<!-- When enchanted, P. Def. for armor/ accessories (R-grade) +2. When enchanted to +4 or above, P. Def. Increases greatly. Can be safely enchanted up to +3. HP gradually increases with each enchant value starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
+		<!-- When enchanted, P. Def. for armor/accessories (R-grade) +2. When enchanted to +4 or above, P. Def. Increases greatly. Can be safely enchanted up to +3. HP gradually increases with each enchant level starting from +4. If enchanting fails, the item will not be crystallized but the enchant value will be reset to 0. -->
 		<set name="icon" val="icon.blessed_scroll_of_enchant_armor_i06" />
 		<set name="weight" val="10" />
 		<set name="price" val="18000000" />
@@ -667,7 +667,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="19451" name="Istina's Ring" type="Armor">
-		<!-- MP +37, P. Accuracy +3, P. Critical Rate +54.4, Water Resistance +20. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP +37, P. Accuracy +3, P. Critical Rate +54.4, Water Resistance +20. Only one effect is applied when two of the same rings are equipped. -->
 		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -705,7 +705,7 @@
 		</stats>
 	</item>
 	<item id="19453" name="Istina's Necklace" type="Armor">
-		<!-- MP +74, Holy Resistance +35, skill cooldown decrease, Damage Reflect effect. -->
+		<!-- MP +74, Holy Resistance +35, skill cooldown decrease, Damage Reflection effect. -->
 		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />
@@ -781,7 +781,7 @@
 		</stats>
 	</item>
 	<item id="19457" name="Octavis' Ring" type="Armor">
-		<!-- MP +37, increases P. Critical Damage, Fire Resistance +20. Only one effect is applied when two identical rings are worn. -->
+		<!-- MP +37, increases P. Critical Damage, Fire Resistance +20. Only one effect is applied when two of the same Ring are equipped. -->
 		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rfinger;lfinger" />
@@ -895,7 +895,7 @@
 		</stats>
 	</item>
 	<item id="19463" name="Blessed Antharas' Earring" type="Armor">
-		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Skills Used: Immediately neutralizes Stun effect when used, and gives Stun Resistance for 5 seconds. Effect does not stack with identical ones. Can be crafted. -->
+		<!-- MP +59, P./ M. Def. +15%, CON/ MEN +3, Earth/ Holy Attribute Resistance +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Skills Used: Immediately neutralizes Stun effect when used, and gives Stun Resistance for 5 sec. Effect does not stack with identical ones. Can be crafted. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -916,7 +916,7 @@
 		</stats>
 	</item>
 	<item id="19464" name="Blessed Valakas' Necklace" type="Armor">
-		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Resistance +30, Dark Attribute Resistance +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflect 5%. Skills Used: Immediately disables Hold effect when used, and gives Hold Resistance for 5 seconds. Can be crafted. -->
+		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attack Def. +30, Dark Attack Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Skills Used: Immediately disables Hold effect when used, and gives Hold Resistance for 5 sec. Can be crafted. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="neck" />

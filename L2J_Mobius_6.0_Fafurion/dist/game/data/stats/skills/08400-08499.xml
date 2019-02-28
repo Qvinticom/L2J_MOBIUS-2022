@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="8400" toLevel="1" name="Vorpal Heavy Armor Set">
-		<!-- Increases P. Def. by 8.47%, P. Atk. by 5.57%, Accuracy by 4, Speed by 7, Magic Damage Resistance by 2%, Max HP by 541, Bleed/ Hold/ Sleep Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Can equip a cloak. CON+ 2. STR-2 -->
+		<!-- Increases P. Def. by 8.47%, P. Atk. by 5.57%, Accuracy by 4, Speed by 7, M. Def. by 2%, Max HP by 541, Bleed/ Hold/ Sleep Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Can equip a cloak. CON+2. STR-2 -->
 		<icon>icon.armor_t94_u_i03</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -66,7 +66,7 @@
 		</effects>
 	</skill>
 	<skill id="8401" toLevel="1" name="Vorpal Leather Armor Set">
-		<!-- Increases P. Atk./ P. Def. by 5.57%, Atk. Spd. by 5%, Speed by 3%, Critical Damage by 182, Max MP by 360, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Can equip a cloak. STR+ 1, DEX+ 2, CON-3 -->
+		<!-- Increases P. Atk./ P. Def. by 5.57%, Atk. Spd. by 5%, Speed by 3%, Critical Damage by 182, Max MP by 360, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Can equip a cloak. STR+1, DEX+2, CON-3 -->
 		<icon>icon.armor_t95_u_i03</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -129,7 +129,7 @@
 		</effects>
 	</skill>
 	<skill id="8402" toLevel="1" name="Vorpal Robe Set">
-		<!-- Increases M. Atk. by 8.7%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 92, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Can equip a cloak. WIT+ 2, MEN-1, INT-1 -->
+		<!-- Increases M. Atk. by 8.7%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 92, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Can equip a cloak. WIT+2, MEN-1, INT-1 -->
 		<icon>icon.armor_t96_u_i03</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -187,7 +187,7 @@
 		</effects>
 	</skill>
 	<skill id="8403" toLevel="1" name="Elegia Heavy Armor Set">
-		<!-- STR +3, CON -2. P. Atk. increases by 6.59% when equipped -->
+		<!-- STR+3, CON-2.P. Atk. increases by 6.59% when equipped -->
 		<icon>icon.armor_t97_u_i00</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -246,7 +246,7 @@
 		</effects>
 	</skill>
 	<skill id="8404" toLevel="1" name="Elegia Leather Armor Set">
-		<!-- STR+ 1, DEX+ 2, CON-2. When equipped, increases P. Atk. by 6.59%, Atk. Spd. by 6%, Critical Rate by 171, Paralysis Resistance by 50%, Speed by 3%, and Fire/ Water/ Wind/ Earth Resistance by 5. Can equip a cloak. -->
+		<!-- STR+1, DEX+2, CON-2. When equipped, increases P. Atk. by 6.59%, Atk. Spd. by 6%, Critical Rate by 171, Paralysis Resistance by 50%, Speed by 3%, and Fire/ Water/ Wind/ Earth Resistance by 5. Can equip a cloak. -->
 		<icon>icon.armor_t98_u_i00</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -299,7 +299,7 @@
 		</effects>
 	</skill>
 	<skill id="8405" toLevel="1" name="Elegia Robe Set">
-		<!-- Increases M. Atk. by 10%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 97, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Decreases MP Consumption for magic skills by 3%. Can equip a cloak. WIT+ 2, INT+ 1, MEN-2 -->
+		<!-- Increases M. Atk. by 10%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 97, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Decreases MP Consumption for magic skills by 3%. Can equip a cloak. WIT+2, INT+1, MEN-2 -->
 		<icon>icon.armor_t99_u_i00</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -363,7 +363,7 @@
 		</effects>
 	</skill>
 	<skill id="8406" toLevel="1" name="Moirai Heavy Armor Set - PvP">
-		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Magic Damage Resistance by 2%, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 3. Decreases damage received during PvP, and has a chance to decrease the opponent's Speed. Cloak equip possible. STR +2. CON -2 -->
+		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, M. Def. by 2%, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 3. Decreases damage received during PvP, and has a chance to decrease the opponent's Speed. Cloak equip possible. STR+2. CON-2 -->
 		<icon>icon.armor_t100_u_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -427,7 +427,7 @@
 		</effects>
 	</skill>
 	<skill id="8407" toLevel="1" name="Moirai Light Armor Set - PvP">
-		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Moving Spd. by 3%, Hold Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 3. Decreases damage received during PvP, and has a chance of removing the opponent's target when attacked. Cloak equip possible. DEX+ 2, CON-2 -->
+		<!-- Increases P. Atk. by 4.26%, Atk. Spd. by 4%, Moving Spd. by 3%, Hold Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 3. Decreases damage received during PvP, and has a chance of removing the opponent's target when attacked. Cloak equip possible. DEX+2, CON-2 -->
 		<icon>icon.armor_t101_u_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -501,7 +501,7 @@
 		</effects>
 	</skill>
 	<skill id="8408" toLevel="1" name="Moirai Robe Set - PvP">
-		<!-- Increases M. Atk. by 8.11%, Casting Spd. by 15%, Paralysis Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 5. Decreases damage received during PvP, and has a chance of decreasing Critical Rate/ Damage when attacked. Cloak equip possible. WIT +2, MEN -2. -->
+		<!-- Increases M. Atk. by 8.11%, Casting Spd. by 15%, Paralysis Resistance by 50% and Fire/ Water/ Wind/ Earth Resistance by 5. Decreases damage received during PvP, and has a chance of decreasing Critical Rate/ Damage when attacked. Cloak equip possible. WIT+2, MEN-2 -->
 		<icon>icon.armor_t102_u_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -570,7 +570,7 @@
 		</effects>
 	</skill>
 	<skill id="8409" toLevel="1" name="Vorpal Heavy Armor Set - PvP">
-		<!-- Increases P. Def. by 8.47%, P. Atk. by 5.57%, Accuracy by 4, Speed by 7, Magic Damage Resistance by 2%, Max HP by 541, Bleed/ Hold/ Sleep Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. During PvP, received damage decreases, and all speeds of the attacker decrease at a fixed rate. Can equip a cloak. CON +2. STR -2. -->
+		<!-- Increases P. Def. by 8.47%, P. Atk. by 5.57%, Accuracy by 4, Speed by 7, M. Def. by 2%, Max HP by 541, Bleed/ Hold/ Sleep Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. During PvP, received damage decreases, and all speeds of the attacker decrease at a fixed rate. Can equip a cloak. CON+2. STR-2 -->
 		<icon>icon.armor_t94_u_i03</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -661,7 +661,7 @@
 		</effects>
 	</skill>
 	<skill id="8410" toLevel="1" name="Vorpal Leather Armor Set - PvP">
-		<!-- Increases P. Atk./ P. Def. by 5.57%, Atk. Spd. by 5%, Speed by 3%, Critical Damage by 182, Max MP by 360, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Decreases damage received during PvP and has a chance to cancel the attacker's target when attacked. Can equip a cloak. STR+ 1, DEX+ 2, CON-3 -->
+		<!-- Increases P. Atk./ P. Def. by 5.57%, Atk. Spd. by 5%, Speed by 3%, Critical Damage by 182, Max MP by 360, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Decreases damage received during PvP and has a chance to cancel the attacker's target when attacked. Can equip a cloak. STR+1, DEX+2, CON-3 -->
 		<icon>icon.armor_t95_u_i03</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -750,7 +750,7 @@
 		</effects>
 	</skill>
 	<skill id="8411" toLevel="1" name="Vorpal Robe Set - PvP">
-		<!-- Increases M. Atk. by 8.7%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 92, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. During PvP, received damage decreases and Critical Rate/ damage decrease at a fixed rate when attacked. Can equip a cloak. WIT+ 2, MEN-1, INT-1 -->
+		<!-- Increases M. Atk. by 8.7%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 92, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. During PvP, received damage decreases and Critical Rate/ damage decrease at a fixed rate when attacked. Can equip a cloak. WIT+2, MEN-1, INT-1 -->
 		<icon>icon.armor_t96_u_i03</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -834,7 +834,7 @@
 		</effects>
 	</skill>
 	<skill id="8412" toLevel="1" name="Elegia Heavy Armor Set - PvP">
-		<!-- STR +3, CON -2. P. Atk. increases by 6.59% when equipped -->
+		<!-- STR+3, CON-2. P. Atk. increases by 6.59% when equipped -->
 		<icon>icon.armor_t97_u_i00</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -919,7 +919,7 @@
 		</effects>
 	</skill>
 	<skill id="8413" toLevel="1" name="Elegia Leather Armor Set - PvP">
-		<!-- STR+ 1, DEX+ 2, CON-2. When equipped, increases P. Atk. by 6.59%, Atk. Spd. by 6%, Critical Rate by 171, Paralysis Resistance by 50%, Speed by 3%, and Fire/ Water/ Wind/ Earth Resistance by 5. During PvP, damage incurred upon attack decreases and the opponent's target is cancelled at a fixed rate. Can equip a cloak. -->
+		<!-- STR+1, DEX+2, CON-2. When equipped, increases P. Atk. by 6.59%, Atk. Spd. by 6%, Critical Rate by 171, Paralysis Resistance by 50%, Speed by 3%, and Fire/ Water/ Wind/ Earth Resistance by 5. During PvP, damage incurred upon attack decreases and the opponent's target is cancelled at a fixed rate. Can equip a cloak. -->
 		<icon>icon.armor_t98_u_i00</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -998,7 +998,7 @@
 		</effects>
 	</skill>
 	<skill id="8414" toLevel="1" name="Elegia Robe Set - PvP">
-		<!-- Increases M. Atk. by 10%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 97, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Decreases MP Consumption for magic skills by 3%. During PvP, received damage decreases and Critical Rate/ damage decrease at a fixed rate when attacked. Can equip a cloak. WIT+ 2, INT+ 1, MEN-2 -->
+		<!-- Increases M. Atk. by 10%, Casting Spd. by 15%, MP Recovery Bonus by 5%, Speed by 7, Max MP by 97, Stun Resistance by 50%, and Fire/ Water/ Wind/ Earth Resistance by 5. Decreases MP Consumption for magic skills by 3%. During PvP, received damage decreases and Critical Rate/ damage decrease at a fixed rate when attacked. Can equip a cloak. WIT+2, INT+1, MEN-2 -->
 		<icon>icon.armor_t99_u_i00</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -1132,7 +1132,7 @@
 		</effects>
 	</skill>
 	<skill id="8418" toLevel="1" name="Moirai Helmet">
-		<!-- Increases Attack by 1.25%, Atk. Spd. by 1%, Stun Resistance by 5%, and Fire Resistance by 3. -->
+		<!-- Increases Attack by 1.25%, Atk.Spd. by 1%, Stun Resistance by 5%, and Fire Resistance by 3. -->
 		<icon>icon.armor_helmet_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -1156,7 +1156,7 @@
 		</effects>
 	</skill>
 	<skill id="8419" toLevel="1" name="Moirai Breastplate">
-		<!-- Increases P. Atk. by 4.26%, P. Atk. Spd. by 4%, Stun Resistance by 5% and Fire/ Water/ Wind/ Earth Resistance by 1. -->
+		<!-- Increases P. Attack by 4.26%, P. Atk.Spd. by 4%, Stun Resistance by 5% and Fire/ Water/ Wind/ Earth Resistance by 1. -->
 		<icon>icon.armor_t100_u_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -1192,7 +1192,7 @@
 		</effects>
 	</skill>
 	<skill id="8420" toLevel="1" name="Moirai Gaiters">
-		<!-- Increases Attack by 2.08%, Atk. Spd. by 1.67%, Stun Resistance by 5%, and Water Resistance by 3. -->
+		<!-- Increases Attack by 2.08%, Atk.Spd. by 1.67%, Stun Resistance by 5%, and Water Resistance by 3. -->
 		<icon>icon.armor_t100_l_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -1216,7 +1216,7 @@
 		</effects>
 	</skill>
 	<skill id="8421" toLevel="1" name="Moirai Gauntlets">
-		<!-- Increases Attack by 0.83%, Atk. Spd. by 0.67%, Stun Resistance by 5%, and Wind Resistance by 3. -->
+		<!-- Increases Attack by 0.83%, Atk.Spd. by 0.67%, Stun Resistance by 5%, and Wind Resistance by 3. -->
 		<icon>icon.armor_t100_g_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -1240,7 +1240,7 @@
 		</effects>
 	</skill>
 	<skill id="8422" toLevel="1" name="Moirai Boots">
-		<!-- Increases Attack by 0.83%, Atk. Spd. by 0.67%, Stun Resistance by 5%, and Earth Resistance by 3. -->
+		<!-- Increases Attack by 0.83%, Atk.Spd. by 0.67%, Stun Resistance by 5%, and Earth Resistance by 3. -->
 		<icon>icon.armor_t100_b_i00</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -1264,7 +1264,7 @@
 		</effects>
 	</skill>
 	<skill id="8423" toLevel="1" name="Moirai Shield">
-		<!-- Increases Magic Damage Resistance by 2%. -->
+		<!-- Increases M. Def. by 2%. -->
 		<icon>icon.weapon_tysandy_shield_i01</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -1515,7 +1515,7 @@
 		</effects>
 	</skill>
 	<skill id="8434" toLevel="1" name="Moirai Sigil">
-		<!-- Increases Magic Damage Resistance by 2%. -->
+		<!-- Increases M. Def. by 2%. -->
 		<icon>icon.weapon_tysandy_sigil_i01</icon>
 		<magicLvl>82</magicLvl>
 		<operateType>P</operateType>
@@ -1653,7 +1653,7 @@
 		</effects>
 	</skill>
 	<skill id="8440" toLevel="1" name="Vesper Shield">
-		<!-- Increases Magic Damage Resistance by 2%. -->
+		<!-- Increases M. Def. by 2%. -->
 		<icon>icon.weapon_vesper_verteidiger_i01</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -1915,7 +1915,7 @@
 		</effects>
 	</skill>
 	<skill id="8451" toLevel="1" name="Vesper Sigil">
-		<!-- Increases Magic Damage Resistance by 2%. -->
+		<!-- Increases M. Def. by 2%. -->
 		<icon>icon.verper_sigil_i00</icon>
 		<magicLvl>85</magicLvl>
 		<operateType>P</operateType>
@@ -2015,7 +2015,7 @@
 		</effects>
 	</skill>
 	<skill id="8459" toLevel="1" name="Freya's Necklace">
-		<!-- Increases Max MP by 50, MP Recovery bonus by 0.23, Bleed Resistance by 20%, Paralyze/ Stun/ Sleep Resistance by 15%, Mental Resistance by 10%, and Water Resistance by 10. Decreases magic cooldown by 5% and returns 4% of damage received back to the enemy. -->
+		<!-- Increases Maximum MP by 50, MP Recovery bonus by 0.23, Bleed Resistance by 20%, Paralyze/ Stun/ Sleep Resistance by 15%, Mental Resistance by 10%, and Water Resistance by 10. Decreases magic cooldown by 5% and returns 4% of damage received back to the enemy. -->
 		<icon>icon.accessary_queen_of_ice_necklace_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>
@@ -2052,7 +2052,7 @@
 		</effects>
 	</skill>
 	<skill id="8460" toLevel="1" name="Blessed Freya's Necklace">
-		<!-- Increases Max MP by 50, MP Recovery bonus by 0.46, Bleed Resistance by 25%, Paralyze/ Stun/ Sleep Resistance by 20%, Mental Resistance by 10%, Water Resistance by 15, and the caster's Healing by 15. Decreases magic cooldown by 5% and MP consumption by magic skills by 5%. Returns 4% of damage received back to the enemy. MEN +2, CON +1, STR -1 -->
+		<!-- Increases Maximum MP by 50, MP Recovery bonus by 0.46, Bleed Resistance by 25%, Paralyze/ Stun/ Sleep Resistance by 20%, Mental Resistance by 10%, Water Resistance by 15, and the caster's Healing by 15. Decreases magic cooldown by 5% and MP consumption by magic skills by 5%. Returns 4% of damage received back to the enemy. MEN +2, CON +1, STR -1 -->
 		<icon>icon.accessary_queen_of_ice_necklace_i00</icon>
 		<magicLvl>1</magicLvl>
 		<operateType>P</operateType>

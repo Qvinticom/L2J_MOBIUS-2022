@@ -345,7 +345,7 @@
 		</stats>
 	</item>
 	<item id="46218" name="Magic Number Cube" additionalName="Event" type="EtcItem">
-		<!-- A special injection to re-energize animals in Elysium. Use it to re-energize the Exhausted Elysium Buffalo that appears in Giran Harbor at 14:00 and 23:00. Note that it recovers 1 to 6 power at random due to it being unstable in Aden. Will be deleted after the event. -->
+		<!-- A special injection to re-energize animals in Elysium. Use it to re-energize the Exhausted Elysium Buffalo that appears in Giran Harbor at 14:00 and 23:00. Note that it recovers 1 to 6 power at random due to it being unstable in Aden. -->
 		<set name="icon" val="icon.etc_medicine_of_growth_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -358,7 +358,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
 	<item id="46219" name="Summon Scroll: Piero" additionalName="Event" type="EtcItem">
-		<!-- Scroll that summons Market Five's mascot, Piero. Use it to play the 'Win Against Piero' game. Will be deleted once the event ends. -->
+		<!-- Scroll that summons Market Eleven's mascot, Piero. Use it to play 'Win Against Piero'. -->
 		<set name="icon" val="icon.etc_11th_event_solo" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -371,7 +371,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
 	<item id="46220" name="Membership Card - Market Eleven" additionalName="Event" type="EtcItem">
-		<!-- A membership card for the Market Five that was opened to celebrate the 5th anniversary of Lineage II in Europe. Will be deleted once the event ends. -->
+		<!-- A membership card for the Eleven Market that was opened to celebrate Lineage 2's 11th anniversary. -->
 		<set name="icon" val="icon.ev_buff_11th" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -385,7 +385,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46221" name="L2 Market R99 Armor Enhancement Stone Pack" additionalName="Event" type="EtcItem">
-		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Eternal Enhancement Stones. Will be deleted once the event ends. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Eternal Enhancement Stones. -->
 		<set name="icon" val="icon.etc_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -399,7 +399,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46222" name="L2 Market +8 Amaranthine Weapon Pack" additionalName="Event" type="EtcItem">
-		<!-- Balthus Knight's top-grade supply items. Use it to obtain one +8 Helios weapon. Will be deleted after the event. -->
+		<!-- Balthus Knight's top-grade supply items. Use it to obtain one +8 Helios weapon. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -413,7 +413,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46223" name="L2 Market Seed Talisman Pack" additionalName="Event" type="EtcItem">
-		<!-- 1st place prize for the L2 Market giveaway. Get a Desire, Insanity, or Venir's Talisman. Will be deleted once the event ends. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get a Desire, Insanity, or Venir's Talisman. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -427,7 +427,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46224" name="L2 Market +4 Eternal Armor Pack" additionalName="Event" type="EtcItem">
-		<!-- Balthus Knight's top-grade supply items. Use it to obtain one +4 Eternal armor set. Will be deleted after the event. -->
+		<!-- Balthus Knight's top-grade supply items. Use it to obtain one +4 Eternal armor set. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -441,7 +441,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46225" name="L2 Market Rare Accessory Pack" additionalName="Event" type="EtcItem">
-		<!-- 1st place prize for the L2 Market giveaway. Get a Lindvior's Earring, Antharas' Earring, Valakas' Necklace, or Tauti's Ring. Will be deleted once the event ends. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get a Lindvior's Earring, Antharas' Earring, Valakas' Necklace, or Tauti's Ring. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -455,7 +455,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46226" name="L2 Market Soul Bottle Pack" additionalName="Event" type="EtcItem">
-		<!-- 1st place prize for the L2 Market giveaway. Get a Bottle of Antharas (10), Valakas (10) or Baium's Soul. Will be deleted once the event ends. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get a Bottle of Antharas (10), Valakas (10) or Baium's Soul. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -469,7 +469,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46227" name="L2 Market Belt Pack" additionalName="Event" type="EtcItem">
-		<!-- 1st place prize for the L2 Market giveaway. Get Tiat or Ekimus' Belt. Will be deleted once the event ends. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get Tiat or Ekimus' Belt. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -483,7 +483,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46228" name="L2 Market Talisman - Seven Signs Pack" additionalName="Event" type="EtcItem">
-		<!-- 1st place prize for the L2 Market giveaway. Get an Anakim, Lilith, or Seven Signs Talisman. Will be deleted once the event ends. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get an Anakim, Lilith, or Seven Signs Talisman. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -497,7 +497,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46229" name="L2 Market R99 Weapon Enhancement Stone Pack" additionalName="Event" type="EtcItem">
-		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Helios Enhancement Stone. Will be deleted once the event ends. -->
+		<!-- 1st place prize for the L2 Market giveaway. Get a Bloody or Dark Helios Enhancement Stone. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -682,7 +682,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46244" name="11th Anniversary Coin" additionalName="Event" type="EtcItem">
-		<!-- 5th Anniversary coin. Used to purchase various items at the Market Five in Fantasy Isle. Will be deleted once the event ends. -->
+		<!-- 11th Anniversary coin. Purchase various items at Market Eleven. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="weight" val="1" />
 		<set name="is_clan_depositable" val="false" />
@@ -696,7 +696,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46245" name="Piero's Victory Box" additionalName="Event" type="EtcItem">
-		<!-- Piero's victory box. Will be deleted once the event ends. -->
+		<!-- Piero's victory box. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -709,7 +709,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46246" name="Piero's Jackpot Box" additionalName="Event" type="EtcItem">
-		<!-- Piero's jackpot box. Will be deleted once the event ends. -->
+		<!-- Piero's jackpot box. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -764,7 +764,7 @@
 		</stats>
 	</item>
 	<item id="46250" name="Blessed Venezia Rune" type="EtcItem">
-		<!-- Keep this in your inventory to gain Acquired XP/ SP +11%. All levels. Will be deleted once the event ends. -->
+		<!-- Acquired XP/ SP +11%. All levels. -->
 		<set name="icon" val="icon.skill19226" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -777,7 +777,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 	</item>
 	<item id="46251" name="Blessed Venezia Rune Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain an 11th Anniversary Venezia Runes that can be used at all levels. Will be deleted once the event ends. -->
+		<!-- Wrapped Pack containing an 11th Anniversary Venezia Runes that can be used at all levels. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -792,7 +792,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46252" name="Venezia Rune" type="EtcItem">
-		<!-- Keep this in your inventory to gain Acquired XP/ SP +22%. The effect only applies to characters below Lv. 99. Will be deleted once the event ends. -->
+		<!-- Acquired XP/ SP +22%. The effect only applies to characters below Lv. 99. -->
 		<set name="icon" val="icon.skill19226" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -805,7 +805,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 	</item>
 	<item id="46253" name="Venezia Rune Pack" additionalName="15-day" type="EtcItem">
-		<!-- Double-click to obtain Venezia Runes for characters below Lv. 99. Will be deleted once the event ends. -->
+		<!-- Wrapped Pack containing Venezia Runes for characters below Lv. 99. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -820,7 +820,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46254" name="Dandy's Golden Ball" type="EtcItem">
-		<!-- For 1 hr., Acquired XP/ SP +100%, and changes the appearance of your armor into that of an NC Dinos uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. -->
+		<!-- For 1 h., Acquired XP/ SP +100%, and changes the appearance of your armor into that of an NC Dinos uniform. Cannot be stacked with the Fall of the Dragon or XP Buff 50%. -->
 		<set name="icon" val="BranchIcon.icon.g_ev_goldenball" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -932,7 +932,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46264" name="Freya's Art of Seduction" type="EtcItem">
-		<!-- Dimensional Item. When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P. Def/ M. Def 30% and Movement Speed by 20, and decreases Skill MP Consumption 15% for 30 min. Buff effect persists through death. Cooldown: 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in Olympiad. -->
+		<!-- Dimensional Item. When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P./ M. Def. 30% and Movement Speed by 20, and decreases Skill MP Consumption 15% for 30 min. Effect remains after death. Cooldown: 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.bm_freya_rose_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="immediate_effect" val="true" />
@@ -952,7 +952,7 @@
 		</skills>
 	</item>
 	<item id="46265" name="Freya's Wish-filled Gift" type="EtcItem">
-		<!-- Double-click to obtain 1 random rare item. -->
+		<!-- Wrapped Pack containing 1 random rare item. -->
 		<set name="icon" val="icon.freya_box_i01" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -964,7 +964,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
 	<item id="46266" name="Sirra's Wish-filled Gift" type="EtcItem">
-		<!-- Double-click to obtain 1 random item for enchantment. -->
+		<!-- Wrapped Pack containing 1 random item for enchantment. -->
 		<set name="icon" val="icon.freya_box_i02" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -976,7 +976,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
 	<item id="46267" name="Snowman's Wish-filled Gift" type="EtcItem">
-		<!-- Double-click to obtain 1 random item for skill enchantment. -->
+		<!-- Wrapped Pack containing 1 random item for skill enchantment. -->
 		<set name="icon" val="icon.freya_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1006,7 +1006,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46270" name="Dark Knight Suit Appearance Stone" type="EtcItem">
-		<!-- Modifies the appearance of armor into that of a Dark Knight Suit. Works on one-piece armor. It changes everything, making the appearance of all armor into a Dark Knight Suit. -->
+		<!-- Modifies the appearance of armor into that of a Dark Knight Suit. Works on one-piece armor. It changes everything, making the appearance of all armor into a Dark Knight suit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1035,7 +1035,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46273" name="Freya's Kindness" type="EtcItem">
-		<!-- Double-click to obtain 1 random item out of the following: Dark Assassin Suit, Dark Knight Suit, Ninja Outfit, Metal Suit, or Vampiric Style. -->
+		<!-- Wrapped Pack containing 1 random item out of the following: Dark Assassin Suit, Dark Knight Suit, Ninja Outfit, Metal Suit, or Vampiric Style. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1044,7 +1044,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46274" name="Wind Vitality Tonic" type="EtcItem">
-		<!-- Water of Vitality containing the strength of the wind. Recovers half of a Vitality slot. Cooldown time is 1 min. Cannot be used in the Olympiad. No weekly usage limit. -->
+		<!-- Water of Vitality containing the power of the wind. Recovers half of a Vitality slot. Cannot be used in the Olympiad. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1053,7 +1053,7 @@
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
 	<item id="46275" name="Vampiric Style Appearance Stone Pack" type="EtcItem">
-		<!-- Double-click to obtain a Vampiric Style Appearance Stone and a Vampiric Hair Accessory Appearance Stone. -->
+		<!-- Wrapped Pack containing a Vampiric Style Appearance Stone and a Vampiric Hair Accessory Appearance Stone. -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1061,7 +1061,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46276" name="Ninja Outfit Appearance Stone" type="EtcItem">
-		<!-- Double-click to obtain a Ninja Outfit Appearance Stone and a Ninja Hair Accessory Appearance Stone. -->
+		<!-- Wrapped Pack containing a Ninja Outfit Appearance Stone and a Ninja Hair Accessory Appearance Stone. -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1069,7 +1069,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46277" name="Metal Suit Appearance Stone Pack" type="EtcItem">
-		<!-- Double-click to obtain a Metal Suit Appearance Stone and a Metal Suit Hair Accessory Appearance Stone. -->
+		<!-- Wrapped Pack containing a Metal Suit Appearance Stone and a Metal Suit Hair Accessory Appearance Stone. -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
@@ -1104,7 +1104,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46281" name="Freya Agathion Pack" type="EtcItem">
-		<!-- Double-click to get Agathion - Freya (30-day). Cannot be used in the Olympiad. Will be deleted once the event ends. -->
+		<!-- Double-click to get Agathion - Freya (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.ev_10th_present2" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1143,7 +1143,7 @@
 		<set name="default_action" val="CAPSULE" />
 	</item>
 	<item id="46284" name="Exclusive Christmas Bait" type="EtcItem">
-		<!-- Exclusive Christmas bait. Use it to catch Fish Gift Boxes. Will be deleted after the event. -->
+		<!-- Exclusive Christmas bait. Use it to catch Fish Gift Boxes. -->
 		<set name="icon" val="icon.etc_bait_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1157,7 +1157,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="46285" name="Christmas Bait Box" type="EtcItem">
-		<!-- Box containing Exclusive Christmas Bait. Double-click to get 120 of them. Will be deleted after the event. -->
+		<!-- Box containing Exclusive Christmas Bait. Double-click to get 120 of them. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1170,7 +1170,7 @@
 		<set name="default_action" val="PEEL" />
 	</item>
 	<item id="46286" name="Christmas Fishing Rod" type="Weapon">
-		<!-- Fishing rod purchased from Santa Claus. Changes appearance into that of Santa Claus. Consumes 1 Fishing Shot. Will be deleted after the event. -->
+		<!-- Fishing rod purchased from Santa Claus. Changes appearance to that into that of Santa Claus. Consumes 1 Fishing Shot. -->
 		<set name="icon" val="icon.christmas_fishingrod_i00" />
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="default_action" val="EQUIP" />
@@ -1193,7 +1193,7 @@
 		</stats>
 	</item>
 	<item id="46287" name="Fish Gift Box" type="EtcItem">
-		<!-- A fish that swallowed one of the boxes Santa Claus spread over Aden. Collect these and take them to Santa Claus. Will be deleted after the event. -->
+		<!-- A fish that swallowed one of the boxes Santa Claus spread over Aden. Double-click to obtain a Santa's Small Gift Box. -->
 		<set name="icon" val="icon.fish_swallowing_gift_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
@@ -1203,7 +1203,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46288" name="Holiday Blessing" type="EtcItem">
-		<!-- Double-click to get Acquired XP/ SP +10% and Vitality Consumption -20% for 2 hr. Additionaly, recovers 1 bar of Vitality and changes the appearance into that of Santa Claus. Will be deleted after the event. -->
+		<!-- Double-click to get +10% XP/ SP for 2 hours, Vitality Consumption -20%. Additionaly, recovers 1 bar of Vitality and changes the appearance into that of Santa Claus. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="weight" val="5" />
 		<set name="is_clan_depositable" val="false" />
@@ -1218,7 +1218,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46289" name="Miraculous Christmas Gift Box" type="EtcItem">
-		<!-- Santa's gift for bringing back Santa's Small Gift Boxes. Double-click to get the reward. Will be deleted after the event. -->
+		<!-- Santa's gift for bringing back Santa's Small Gift Boxes. Double-click to get the reward. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
@@ -1226,7 +1226,7 @@
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
 	<item id="46290" name="Santa's Small Gift Box" type="EtcItem">
-		<!-- Santa's gifts spread throughout Aden. Collect these and take them to Santa Claus. Will be deleted after the event. -->
+		<!-- Santa's gifts spread throughout Aden. Collect these and take them to Santa Claus. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1261,7 +1261,7 @@
 		</skills>
 	</item>
 	<item id="46293" name="Christmas Talisman: P. Skill Critical Damage" additionalName="1-hour" type="Armor">
-		<!-- Event item. P. Skill Critical Damage +7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hr. -->
+		<!-- Event item. P. Skill Critical Damage +7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1282,7 +1282,7 @@
 		</skills>
 	</item>
 	<item id="46294" name="Christmas Talisman: M. Skill Critical Damage" additionalName="1-hour" type="Armor">
-		<!-- Event item. M. Skill Critical Damage +7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hr. -->
+		<!-- Event item. M. Skill Critical Damage +7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1303,7 +1303,7 @@
 		</skills>
 	</item>
 	<item id="46295" name="Christmas Talisman: Ultimate Defense" additionalName="1-hour" type="Armor">
-		<!-- Event item. P. Def. +5000 and M. Def. +5000 for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. 1-hr. -->
+		<!-- Event item. P. Atk. +5000 and M. Def. +5000 for 15 sec. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. 1-hour. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1324,7 +1324,7 @@
 		</skills>
 	</item>
 	<item id="46296" name="Christmas Talisman: Debuff Resistance" additionalName="1-hour" type="Armor">
-		<!-- Event Item. Defends against Debuffs 5 times for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. 1-hr. -->
+		<!-- Event Item. Defends against Debuffs 5 times for 15 sec. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. 1-hour. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1345,7 +1345,7 @@
 		</skills>
 	</item>
 	<item id="46297" name="Christmas Talisman: P. Atk." additionalName="1-hour" type="Armor">
-		<!-- Event item. P. Atk. +5% when equipped. Effect does not stack with additional Talismans of the same type. 1-hr. -->
+		<!-- Event item. P. Atk. +5% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1366,7 +1366,7 @@
 		</skills>
 	</item>
 	<item id="46298" name="Christmas Talisman: M. Atk." additionalName="1-hour" type="Armor">
-		<!-- Event item. M. Atk. +5% when equipped. Effect does not stack with additional Talismans of the same type. 1-hr. -->
+		<!-- Event item. M. Atk. +5% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -1387,7 +1387,7 @@
 		</skills>
 	</item>
 	<item id="46299" name="Christmas Talisman: P. Def." additionalName="1-hour" type="Armor">
-		<!-- Event item. P. Def. +7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hr. -->
+		<!-- Event item. P. Def. +7% when equipped. Effect does not stack with additional Talismans of the same type. 1-hour. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />

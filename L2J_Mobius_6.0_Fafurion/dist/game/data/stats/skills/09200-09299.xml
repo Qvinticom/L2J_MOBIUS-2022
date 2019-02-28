@@ -846,8 +846,8 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="9227" toLevel="1" name="Mentor's Horn Melody">
-		<!-- With your Mentor's help, your P. Atk. +$s1, M. Atk. +$s2, P. Def +$s3, and M. Def +$s4. The buff disappears when the Mentee contract ends. -->
+	<skill id="9227" toLevel="1" name="Horn Melody - Mentor">
+		<!-- With your Mentor's help, your P. Atk. +$s1, M. Atk. +$s2, P. Def. +$s3, and M. Def. +$s4. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11517</icon>
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -890,7 +890,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9228" toLevel="1" name="Mentor's Drum Melody">
+	<skill id="9228" toLevel="1" name="Drum Melody - Mentor">
 		<!-- With your mentor's help, increases P. Critical Rate by $s1, P. Critical Damage by $s2, M. Critical Rate by $s3, and decreases Received P. Critical Damage by $s4. Also has a chance to increase Critical Damage when hit. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11522</icon>
 		<abnormalTime>-1</abnormalTime>
@@ -978,7 +978,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9229" toLevel="1" name="Mentor's Lute Melody">
+	<skill id="9229" toLevel="1" name="Lute Melody - Mentor">
 		<!-- With your Mentor's help, your Atk. Spd. +34%, Casting Spd. +31%, and 9% Vampiric Rage effect with a certain rate. Buff is triggered only when your Mentor is active. Buff is maintained for 5 min. when your Mentor goes offline. -->
 		<icon>icon.skill11518</icon>
 		<abnormalTime>-1</abnormalTime>
@@ -1017,7 +1017,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9230" toLevel="1" name="Mentor's Pipe Organ Melody">
+	<skill id="9230" toLevel="1" name="Pipe Organ Melody - Mentor">
 		<!-- With your Mentor's help, your Max HP +$s1, Max MP +$s2 and Max CP +$s3. A chance to add $s4 Vampiric Rage effect. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11519</icon>
 		<abnormalTime>-1</abnormalTime>
@@ -1061,8 +1061,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9231" toLevel="1" name="Mentor's Guitar Melody">
-		<!-- With your Mentor's help, your Atk. Spd. +$s1, Casting Spd. +$s2, P. Movement Speed +$s3, and Skill MP Consumption -$s4. The buff disappears when the Mentee contract ends. -->
+	<skill id="9231" toLevel="1" name="Guitar Melody - Mentor">
+		<!-- With your Mentor's help, your Atk. Spd. +$s1, Casting Spd. +$s2, P. Speed +$s3, and Skill MP Consumption -$s4. The buff disappears when the Mentee contract ends. -->
 		<icon>icon.skill11520</icon>
 		<abnormalTime>-1</abnormalTime>
 		<canBeDispelled>false</canBeDispelled>
@@ -1121,7 +1121,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9232" toLevel="1" name="Mentor's Harp Melody">
+	<skill id="9232" toLevel="1" name="Harp Melody - Mentor">
 		<!-- With your Mentor's help, your P. Accuracy +5, P./ M. Evasion +5, Speed +34, Critical Damage Received -30%. Buff is triggered only when your Mentor is active. Buff is maintained for 5 min. when your Mentor goes offline. -->
 		<icon>icon.skill11521</icon>
 		<abnormalTime>-1</abnormalTime>
@@ -1986,7 +1986,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9273" toLevel="1" name="Player Commendation - Horn Melody">
+	<skill id="9273" toLevel="1" name="PA - Horn Melody">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. PA exclusive. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
@@ -2031,7 +2031,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9274" toLevel="1" name="Player Commendation - Drum Melody">
+	<skill id="9274" toLevel="1" name="PA - Drum Melody">
 		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. PA exclusive. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
@@ -2123,7 +2123,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9275" toLevel="1" name="Player Commendation - Lute Melody">
+	<skill id="9275" toLevel="1" name="PA - Lute Melody">
 		<!-- For 60 min., Atk. Spd. +34%, and Casting Spd. +31%. Has a chance of applying 9% Vampiric Rage. PA only. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -2164,7 +2164,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9276" toLevel="1" name="Player Commendation - Pipe Organ Melody">
+	<skill id="9276" toLevel="1" name="PA - Pipe Organ Melody">
 		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. PA exclusive. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
@@ -2209,7 +2209,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9277" toLevel="1" name="Player Commendation - Guitar Melody">
+	<skill id="9277" toLevel="1" name="PA - Guitar Melody">
 		<!-- For $s1, increases Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. PA exclusive. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
@@ -2270,7 +2270,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9278" toLevel="1" name="Player Commendation - Harp Melody">
+	<skill id="9278" toLevel="1" name="PA - Harp Melody">
 		<!-- For 60 min., P. Accuracy +5, P. Evasion/ M. Evasion +5, and Speed +34. Received Critical Damage -30%. PA only. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
@@ -2319,7 +2319,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9279" toLevel="1" name="PC Progression Support">
+	<skill id="9279" toLevel="1" name="PA Progression Support">
 		<!-- Increases the character's acquired XP and SP by $s1. Does not apply to pets and servitors. PA exclusive. -->
 		<icon>icon.etc_pccafe_exp_i00</icon>
 		<operateType>A2</operateType>
@@ -2338,7 +2338,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="9280" toLevel="2" name="Horn Melody - Heavenly Cocktail">
-		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. Effect remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<operateType>A2</operateType>
 		<effectPoint>1</effectPoint>
@@ -2533,7 +2533,7 @@
 		</effects>
 	</skill>
 	<skill id="9283" toLevel="2" name="Pipe Organ Melody - Heavenly Cocktail">
-		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. Effect remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2586,7 +2586,7 @@
 		</effects>
 	</skill>
 	<skill id="9284" toLevel="2" name="Guitar Melody - Heavenly Cocktail">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. Effect remains even after death and cannot be forcefully deleted. -->
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, and Skill MP Consumption -$s5. Buff remains even after death and cannot be forcefully deleted. -->
 		<icon>icon.etc_fruit_cocktail_i01</icon>
 		<abnormalLvl>6</abnormalLvl>
 		<abnormalTime>3600</abnormalTime>
@@ -2708,7 +2708,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9286" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (D-grade)">
+	<skill id="9286" toLevel="1" name="PA - Scroll: Enchant Weapon (D-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2717,7 +2717,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9287" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (C-grade)">
+	<skill id="9287" toLevel="1" name="PA - Scroll: Enchant Weapon (C-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2726,7 +2726,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9288" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (B-grade)">
+	<skill id="9288" toLevel="1" name="PA - Scroll: Enchant Weapon (B-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2735,7 +2735,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9289" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (A-grade)">
+	<skill id="9289" toLevel="1" name="PA - Scroll: Enchant Weapon (A-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2744,7 +2744,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9290" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (S-grade)">
+	<skill id="9290" toLevel="1" name="PA - Scroll: Enchant Weapon (S-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2753,7 +2753,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9291" toLevel="1" name="Player Commendation - Scroll: Enchant Weapon (R-grade)">
+	<skill id="9291" toLevel="1" name="PA - Scroll: Enchant Weapon (R-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2762,7 +2762,7 @@
 		<targetType>ITEM</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9292" toLevel="1" name="Player Commendation - Quick Healing Potion">
+	<skill id="9292" toLevel="1" name="PA - Quick Healing Potion">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2777,7 +2777,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="9293" toLevel="1" name="Player Commendation - Soulshot (No-grade)">
+	<skill id="9293" toLevel="1" name="PA - Soulshot (No-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2786,7 +2786,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9294" toLevel="1" name="Player Commendation - Soulshot (D-grade)">
+	<skill id="9294" toLevel="1" name="PA - Soulshot (D-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2795,7 +2795,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9295" toLevel="1" name="Player Commendation - Soulshot (C-grade)">
+	<skill id="9295" toLevel="1" name="PA - Soulshot (C-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2804,7 +2804,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9296" toLevel="1" name="Player Commendation - Soulshot (B-grade)">
+	<skill id="9296" toLevel="1" name="PA - Soulshot (B-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2813,7 +2813,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9297" toLevel="1" name="Player Commendation - Soulshot (A-grade)">
+	<skill id="9297" toLevel="1" name="PA - Soulshot (A-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2822,7 +2822,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9298" toLevel="1" name="Player Commendation - Soulshot (S-grade)">
+	<skill id="9298" toLevel="1" name="PA - Soulshot (S-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
@@ -2831,7 +2831,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="9299" toLevel="1" name="Player Commendation - Soulshot (R-grade)">
+	<skill id="9299" toLevel="1" name="PA - Soulshot (R-grade)">
 		<operateType>A1</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>

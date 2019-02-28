@@ -237,7 +237,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46709" name="Pa'agrio's Blessing" type="EtcItem">
-		<!-- Dimensional Item. When used, increases Max HP/ MP/ CP 10%, P. Atk. 20%, M. Atk. 30%, P. Def/ M. Def 10%, Accuracy 4, Magic Accuracy by 4, Movement Speed 10, Attack/ casting Speed 10%, Atk. Attribute 100, and reduces Skill MP Consumption 10% for 30 min. Buff effect persists through death. Cooldown time is 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
+		<!-- Dimensional Item. When used, increases Max HP/ MP/ CP 10%, P. Atk. 20%, M. Atk. 30%, P./ M. Def. 10%, Accuracy 4, Magic Accuracy by 4, Movement Speed 10, Attack/ casting Speed 10%, Attack Attribute 100, and reduces Skill MP Consumption 10% for 30 min. Effect remains after death. Cooldown time is 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.nshop_bless_of_paagrio" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="material" val="PAPER" />
@@ -254,7 +254,7 @@
 		</skills>
 	</item>
 	<item id="46710" name="Lindvior's Earring" additionalName="30-day" type="Armor">
-		<!-- Dimensional Item. MP +59, Petrification Atk./ Resistance +50%, Knock Back/ Knock Down Atk./ Resistance +40%, Pulling Success Rate +40%, Pulling/ Danger Zone Resistance +40%, P. Critical Damage +10%, M. Critical Damage +10%, P./ M. Abnormal Status Reflection +10%. Reflect Damage Magic +10%. Movement Speed +5, DEX +3, and WIT +3. Wind/ Dark Attribute Resistance -30. Active Skill: Enables the skill of canceling Knock Back/ Knock Down and Knock Back/ Knock Down Resistance for 5 seconds. When equipped with two identical earrings, the effect of only one earring will be applied. -->
+		<!-- Dimensional Item. MP +59, Petrification Atk./ Resistance +50%, Knock Back/ Knock Down Atk./ Resistance +40%, Pulling Success Rate +40%, Pulling/ Danger Zone Resistance +40%, P. Critical Damage +10%, M. Critical Damage +10%, P./ M. Abnormal Status Reflection +10%. Reflect Damage Magic +10%. Movement Speed +5, DEX +3, and WIT +3. Wind/ Dark Attribute Resistance decreased by 30. Active Skill: Enables the skill of canceling Knock Back/ Knock Down and Knock Back/ Knock Down Resistance for 5 sec. When equipped with two identical earrings, the effect of only one earring will be applied. -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rear;lear" />
@@ -707,7 +707,7 @@
 		</stats>
 	</item>
 	<item id="46739" name="Reward Fishing Rod Pack" type="EtcItem">
-		<!-- A Reward Box obtained by training in fishing. Double click to obtain the item. -->
+		<!-- A Reward Box obtained by training in fishing. Double-click to obtain the item. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -878,7 +878,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46751" name="Resistance Mark Stage 2" type="EtcItem">
-		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. Marks will be deleted when the event ends. -->
+		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_2_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -887,7 +887,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46752" name="Resistance Mark Stage 3" type="EtcItem">
-		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. Marks will be deleted when the event ends. -->
+		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_3_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -896,7 +896,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46753" name="Resistance Mark Stage 4" type="EtcItem">
-		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. Marks will be deleted when the event ends. -->
+		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_4_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -905,7 +905,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46754" name="Resistance Mark Stage 5" type="EtcItem">
-		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. Marks will be deleted when the event ends. -->
+		<!-- A Mark obtained as a reward for fighting against the Giants in the Giant's Cave alongside with Kamael. With the Giants' activity increasing, it has been agreed that these eye-catching marks will no longer be used, so as to reduce risk. Marks can be exchanged for reward items through Krenaht at Kamael's Foothold. -->
 		<set name="icon" val="icon.etc_barka_friendship_5_i00" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -960,7 +960,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46760" name="Steel Armor Pack" type="EtcItem">
-		<!-- Double click to obtain either Immortal or Twilight Armor. -->
+		<!-- Double-click to obtain either Immortal or Twilight Armor. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="weight" val="10" />
@@ -972,7 +972,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46761" name="Schumadriba's Reward Treasure Chest" type="EtcItem">
-		<!-- A reward box received from Schumadriba for thwarting the evolution of the Giants. You did this by collecting the Shinedust that Giants need to evolve in the upper level of the Giant's Cave. Double click to view the item. -->
+		<!-- A reward box received from Schumadriba for thwarting the evolution of the Giants. You did this by collecting the Shinedust that Giants need to evolve in the upper level of the Giant's Cave. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -983,7 +983,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46762" name="Schumadriba's Advanced Reward Treasure Chest" type="EtcItem">
-		<!-- A reward box received from Schumadriba for defeating the successfully evolved Giants in the lower level of the Giant's Cave. Double click to view the item. -->
+		<!-- A reward box received from Schumadriba for defeating the successfully evolved Giants in the lower level of the Giant's Cave. Double-click to view the item. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1015,98 +1015,98 @@
 		</skills>
 	</item>
 	<item id="46764" name="Shadai's Good Fortune Jewelry Box" type="EtcItem">
-		<!-- Double click to obtain one of the Good Fortune Jewelry Boxes -->
+		<!-- Double-click to obtain one of the Good Fortune Jewelry Boxes -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46765" name="Ruby Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Rubies. -->
+		<!-- Double-click to obtain one of Level 1-5 Rubies. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46766" name="Sapphire Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Sapphires. -->
+		<!-- Double-click to obtain one of Level 1-5 Sapphires. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46767" name="Topaz Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Topazes. -->
+		<!-- Double-click to obtain one of Level 1-5 Topazes. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46768" name="Opal Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Opals. -->
+		<!-- Double-click to obtain one of Level 1-5 Opals. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46769" name="Obsidian Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Obsidians. -->
+		<!-- Double-click to obtain one of Level 1-5 Obsidians. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46770" name="Diamond Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Diamonds. -->
+		<!-- Double-click to obtain one of Level 1-5 Diamonds. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46771" name="Emerald Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Emeralds. -->
+		<!-- Double-click to obtain one of Level 1-5 Emeralds. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46772" name="Aquamarine Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Aquamarines. -->
+		<!-- Double-click to obtain one of Level 1-5 Aquamarines. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46773" name="Pearl Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Pearls. -->
+		<!-- Double-click to obtain one of Level 1-5 Pearls. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46774" name="Vital Stone Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Vital Stones. -->
+		<!-- Double-click to obtain one of Level 1-5 Vital Stones. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46775" name="Garnet Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Garnets. -->
+		<!-- Double-click to obtain one of Level 1-5 Garnets. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46776" name="Tanzanite Treasure Chest of Good Fortune" type="EtcItem">
-		<!-- Double click to obtain one of Level 1-5 Tanzanites. -->
+		<!-- Double-click to obtain one of Level 1-5 Tanzanites. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="46777" name="Vitality Replenishing Potion of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Replenishes vitality by a certain amount when used. Reuse delay 60 min. No weekly usage limit. Will be deleted when the event ends. -->
+		<!-- Replenishes vitality by a certain amount when used. Reuse delay 60 min. No weekly usage limit. -->
 		<set name="icon" val="icon.etc_potion_of_energy_i01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1118,7 +1118,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46778" name="Special Bait Coupon of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Exchange for 1 Heine Special Bait of your choice through a fishing guild member. Will be deleted when the event ends. -->
+		<!-- Exchange for 1 Heine Special Bait of your choice through a fishing guild member. -->
 		<set name="icon" val="icon.etc_bm_lure_ticket" />
 		<set name="is_tradable" val="false" />
 		<set name="is_dropable" val="false" />
@@ -1129,7 +1129,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="46779" name="Equipment Enchantment Chest of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Double click the chest to receive 1 random item relating to equipment enchantment. Will be deleted when the event ends. -->
+		<!-- Double-click the chest to receive 1 random item relating to equipment enchantment. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1140,7 +1140,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46780" name="Skill Enchantment Chest of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Double click the chest to receive 1 random item relating to skill enchantment. Will be deleted when the event ends. -->
+		<!-- Double-click the chest to receive 1 random item relating to skill enchantment. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1151,7 +1151,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46781" name="Good Fortune Chest of Quest Pride" additionalName="Event" type="EtcItem">
-		<!-- Double click the chest to receive 1 random item. Will be deleted when the event ends. -->
+		<!-- Double-click the chest to receive 1 random item. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_tradable" val="false" />
@@ -1173,7 +1173,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46783" name="Blue Dynasty Transformation Potion" type="EtcItem">
-		<!-- Equips the Blue Dynasty for 1 hr. Will be deleted when the event ends. -->
+		<!-- Equips the Blue Dynasty for 1 hour. -->
 		<set name="icon" val="icon.general_stone_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="5" />
@@ -1185,7 +1185,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="46784" name="Red Zubei Transformation Potion" type="EtcItem">
-		<!-- Equips the Red Zubei for 1 hr. Will be deleted when the event ends. -->
+		<!-- Equips the Red Zubei for 1 hour. -->
 		<set name="icon" val="icon.general_stone_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="5" />

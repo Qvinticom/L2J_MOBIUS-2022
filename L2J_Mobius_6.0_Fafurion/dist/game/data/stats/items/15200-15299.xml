@@ -359,7 +359,7 @@
 		<capsuled_items>
 			<item id="15208" min="1" max="1" chance="100" /> <!-- Bracelet of Glory: Friendship - 30-day -->
 			<item id="15221" min="1" max="1" chance="100" /> <!-- Puffy Hat of Friendship -->
-			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hr.) -->
+			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
 		</capsuled_items>
 	</item>
 	<item id="15214" name="Friend Recommend Round 2 Reward Pack Coupon" additionalName="Recommender" type="EtcItem">
@@ -402,7 +402,7 @@
 		<capsuled_items>
 			<item id="15208" min="1" max="1" chance="100" /> <!-- Bracelet of Glory: Friendship - 30-day -->
 			<item id="15220" min="1" max="1" chance="100" /> <!-- Agathion - Oink Oink - 10-day -->
-			<item id="14065" min="1" max="1" chance="100" /> <!-- Superior Minion Coupon - 5-hr. -->
+			<item id="14065" min="1" max="1" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
 			<item id="15279" min="10" max="10" chance="100" /> <!-- Friend Recommendation Proof -->
 		</capsuled_items>
 	</item>
@@ -446,7 +446,7 @@
 		<capsuled_items>
 			<item id="15208" min="1" max="1" chance="100" /> <!-- Bracelet of Glory: Friendship - 30-day -->
 			<item id="15221" min="1" max="1" chance="100" /> <!-- Puffy Hat of Friendship -->
-			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hr.) -->
+			<item id="13273" min="1" max="1" chance="100" /> <!-- Minion Coupon (5-hour) -->
 			<item id="15211" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
 		</capsuled_items>
 	</item>
@@ -490,7 +490,7 @@
 		<capsuled_items>
 			<item id="15208" min="1" max="1" chance="100" /> <!-- Bracelet of Glory: Friendship - 30-day -->
 			<item id="15220" min="1" max="1" chance="100" /> <!-- Agathion - Oink Oink - 10-day -->
-			<item id="14065" min="1" max="1" chance="100" /> <!-- Superior Minion Coupon - 5-hr. -->
+			<item id="14065" min="1" max="1" chance="100" /> <!-- Superior Minion Coupon - 5-hour -->
 			<item id="15211" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (30-day) - 30-day -->
 			<item id="15279" min="10" max="10" chance="100" /> <!-- Friend Recommendation Proof -->
 		</capsuled_items>
@@ -1753,7 +1753,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15274" name="Jewelry Pack (A-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain A-grade Jewelry Set of Fortune. 30-day. -->
+		<!-- Wrapped Pack containing A-grade Jewelry Set of Fortune. 30-day. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1775,7 +1775,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15275" name="Jewelry Pack (B-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain B-grade Jewelry Set of Fortune. 30-day. -->
+		<!-- Wrapped Pack containing B-grade Jewelry Set of Fortune. 30-day. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />
@@ -1797,7 +1797,7 @@
 		</capsuled_items>
 	</item>
 	<item id="15276" name="Jewelry Pack (C-grade)" additionalName="30-day" type="EtcItem">
-		<!-- Double-click to obtain C-grade Jewelry Set of Fortune. 30-day. -->
+		<!-- Wrapped Pack containing C-grade Jewelry Set of Fortune. 30-day. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="default_action" val="PEEL" />
 		<set name="immediate_effect" val="true" />

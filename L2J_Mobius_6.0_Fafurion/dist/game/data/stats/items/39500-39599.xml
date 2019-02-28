@@ -593,7 +593,7 @@
 		<set name="is_questitem" val="true" />
 	</item>
 	<item id="39538" name="Kain's Prophecy Machine Fragment" type="EtcItem">
-		<!-- Part of a machine used by ancient Ertheia to record prophecies, carried by Kain Van Halter. -->
+		<!-- Part of a machine used by ancient Ertheia to record prophecies, carried by Kain van Halter. -->
 		<set name="icon" val="icon.etc_ertheia_prophecy_device_piece" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -890,7 +890,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="39560" name="Low-grade Wind Dye Pack" type="EtcItem">
-		<!-- Double-click to obtain a Lv. 1 - 3 CHA/ LUC Dye. -->
+		<!-- Wrapped Pack containing a Lv. 1 - 3 CHA/ LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -909,7 +909,7 @@
 		</capsuled_items>
 	</item>
 	<item id="39561" name="Mid-grade Wind Dye Pack" type="EtcItem">
-		<!-- Double-click to obtain a Lv. 4 CHA/ LUC Dye. -->
+		<!-- Wrapped Pack containing a Lv. 4 CHA/ LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
@@ -924,7 +924,7 @@
 		</capsuled_items>
 	</item>
 	<item id="39562" name="High-grade Wind Dye Pack" type="EtcItem">
-		<!-- Double-click to obtain a Lv. 5 CHA/ LUC Dye. -->
+		<!-- Wrapped Pack containing a Lv. 5 CHA/ LUC Dye. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -940,7 +940,7 @@
 		</capsuled_items>
 	</item>
 	<item id="39563" name="Talisman - Wind Pack" type="EtcItem">
-		<!-- Double-click to obtain a Talisman - Wind. -->
+		<!-- Wrapped Pack containing a Talisman - Wind. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
@@ -1085,7 +1085,7 @@
 		</skills>
 	</item>
 	<item id="39572" name="Talisman - Insanity" type="Armor">
-		<!-- Max HP/ MP/ CP +800, P./ M. Accuracy +2, P./ M. Evasion +2, Atk. Spd./ Casting Spd +60, P. Critical Rate +30, M. Critical Rate +10, P. Atk. +638, M. Atk. +742, Skill Power +5%, Damage Reflect Resistance +30, P. Def. +563, M. Def. +368, Fixed Damage Resistance +10%, Vampiric Rage +5, STR/ INT/ CON/ MEN/ DEX/ WIT/ CHA/ LUC +2. Skill MP Consumption -3%, Skill Cooldown -3%. -->
+		<!-- Max HP/ MP/ CP +800, P./ M. Accuracy +2, P./ M. Evasion +2, Atk./ Casting Spd. +60, P. Critical Rate +30, M. Critical Rate +10, P. Atk. +638, M. Atk. +742, Skill Power +5%, Damage Reflection Resistance +30, P. Def. +563, M. Def. +368, Fixed Damage Resistance +10%, Vampiric Rage +5, STR/ INT/ CON/ MEN/ DEX/ WIT/ CHA/ LUC +2. Skill MP Consumption -3%, Skill Cooldown -3%. -->
 		<set name="icon" val="icon.accessory_punishment_talisman_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="talisman" />
@@ -1413,7 +1413,7 @@
 		</skills>
 	</item>
 	<item id="39588" name="Yum Yum Candy Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Yum Yum Candy (30-day). Cannot be shared once open. The coupon that came with this gives you the Nom Nom Candy Box. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
+		<!-- Wrapped Pack containing a Yum Yum Candy (30-day). Cannot be shared once open. The coupon that came with this gives you the Nom Nom Candy Box. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />
@@ -1426,7 +1426,7 @@
 		<set name="is_freightable" val="true" />
 	</item>
 	<item id="39589" name="Nom Nom Candy Box" additionalName="Event" type="EtcItem">
-		<!-- Double-click to obtain a Yum Yum Candy (30-day). Cannot be shared once open. The coupon that came with this gives you the Yum Yum Candy Box. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
+		<!-- Wrapped Pack containing a Yum Yum Candy (30-day). Cannot be shared once open. The coupon that came with this gives you the Yum Yum Candy Box. Cannot be used in the Olympiad/ Ceremony of Chaos. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_clan_depositable" val="false" />

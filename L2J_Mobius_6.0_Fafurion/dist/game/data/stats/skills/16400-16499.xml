@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="16400" toLevel="1" name="Ferin's Recharge">
-		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv. Also, for 10 sec., recovers 12 MP per sec. -->
+		<!-- Instantly recovers the target's MP with a maximum of 166 power depending on the target's Lv.. Also, for 10 sec., recovers 12 MP per second. -->
 		<icon>icon.skill11760</icon>
 		<operateType>A2</operateType>
 		<castRange>600</castRange>
@@ -253,7 +253,7 @@
 			</effect>
 	</skill>
 	<skill id="16415" toLevel="4" name="Dimensional Dark Forces">
-		<!-- P. Atk -$s1, M. Atk. -$s2, and P. Critical Rate -$s3, M. Critical Rate -$s4. -->
+		<!-- P. Atk. -$s1, M. Atk. -$s2, and P. Critical Rate -$s3, M. Critical Rate -$s4. -->
 		<icon>icon.skill1298</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -328,7 +328,7 @@
 		<operateType>P</operateType>
 	</skill>
 	<skill id="16419" toLevel="2" name="Stocking Fairy's Blessing">
-		<!-- For $s1 hr., STR +$s2, INT +$s3, Speed +$s4. Can obtain item after $s5 hr. Must be alive with space in the inventory to receive item. -->
+		<!-- For $s1 h., STR +$s2, INT +$s3, Speed +$s4. Can obtain item after $s5 h. Must be alive with space in the inventory to receive item. -->
 		<icon>BranchSys.icon.br_xmas_present_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -358,7 +358,7 @@
 		</effects>
 	</skill>
 	<skill id="16420" toLevel="2" name="Tree Fairy's Blessing">
-		<!-- For $s1 hr., CON +$s2, MEN +$s3, P. Critical Rate +$s4, M. Critical Rate +$s5. Can obtain item after $s6 hr. Must be alive with space in the inventory to receive item. -->
+		<!-- For $s1 h., CON +$s2, MEN +$s3, P. Critical Rate +$s4, M. Critical Rate +$s5. Can obtain item after $s6 h. Must be alive with space in the inventory to receive item. -->
 		<icon>BranchSys.icon.br_xmas_miracle_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -392,7 +392,7 @@
 		</effects>
 	</skill>
 	<skill id="16421" toLevel="2" name="Snowman Fairy's Blessing">
-		<!-- For $s1 hr., DEX +$s2, WIT +$s3, Max HP/ MP +$s4. Can obtain item after $s5 hr. Must be alive with space in the inventory to receive item. -->
+		<!-- For $s1 h., DEX +$s2, WIT +$s3, Max HP/ MP +$s4. Can obtain item after $s5 h. Must be alive with space in the inventory to receive item. -->
 		<icon>BranchSys.icon.br_xmas_present_luck_i00</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -430,7 +430,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16423" toLevel="1" name="Noelle's Gift">
-		<!-- Recover Vitality for 6 hr. if you're in a peace zone. When the buff expires, you also receive a fixed boost regardless of zone. You must be alive to recover Vitality. -->
+		<!-- Recover Vitality for 6 h. if you're in a peace zone. When the buff expires, you also receive a fixed boost regardless of zone. You must be alive to recover Vitality. -->
 		<icon>icon.etc_whiteday_choco</icon>
 		<operateType>A2</operateType>
 		<abnormalLvl>1</abnormalLvl>
@@ -454,7 +454,7 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="16425" toLevel="1" name="Appearance Stone: Santa Suit">
-		<!-- For 1 hr., changes the appearance of your armor into that of a Santa Suit. -->
+		<!-- For 1 h., changes the appearance of your armor into that of a Santa Suit. -->
 		<icon>BranchSys.icon.br_xmas_present_fun_i00</icon>
 		<operateType>A2</operateType>
 		<effectPoint>100</effectPoint>
@@ -700,48 +700,48 @@
 		<coolTime>200</coolTime>
 	</skill>
 	<skill id="16437" toLevel="1" name="Master's Blessing - GM's Cheers">
-		<!-- The GM is always with you. XP and SP increases by 100% for 1 hr. Cannot be stacked with Fall of the Dragon. -->
+		<!-- The GM is always with you. XP and SP increases by 100% for 1 h. Cannot be stacked with Fall of the Dragon. -->
 		<icon>icon.skill0919</icon>
 		<operateType>A2</operateType>
 		<castRange>1200</castRange>
 		<isMagic>4</isMagic>
 	</skill>
-	<skill id="16438" toLevel="1" name="Horn Melody Lv. 2 (Adventurer)">
+	<skill id="16438" toLevel="1" name="Horn Melody Lv. 2 - Adventurer">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
-	<skill id="16439" toLevel="1" name="Drum Melody Lv. 2 (Adventurer)">
+	<skill id="16439" toLevel="1" name="Drum Melody Lv. 2 - Adventurer">
 		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
-	<skill id="16440" toLevel="1" name="Pipe Organ Melody Lv. 2 (Adventurer)">
+	<skill id="16440" toLevel="1" name="Pipe Organ Melody Lv. 2 - Adventurer">
 		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
-	<skill id="16441" toLevel="1" name="Guitar Melody Lv. 2 (Adventurer)">
+	<skill id="16441" toLevel="1" name="Guitar Melody Lv. 2 - Adventurer">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
-	<skill id="16442" toLevel="1" name="Harp Melody Lv. 2 (Adventurer)">
+	<skill id="16442" toLevel="1" name="Harp Melody Lv. 2 - Adventurer">
 		<!-- For 60 min., P. Accuracy +6, P. Evasion/ M. Evasion +6, and Speed +35. Critical Damage Received -30%. -->
 		<icon>icon.skill11521</icon>
 		<operateType>A2</operateType>
 		<effectPoint>687</effectPoint>
 		<castRange>400</castRange>
 	</skill>
-	<skill id="16443" toLevel="1" name="Lute Melody Lv. 2 (Adventurer)">
+	<skill id="16443" toLevel="1" name="Lute Melody Lv. 2 - Adventurer">
 		<!-- For 60 min., party members' Atk Spd. +35%, Casting Spd. +32%, with a chance of 9% Vampiric Rage. -->
 		<icon>icon.skill11518</icon>
 		<operateType>A2</operateType>
@@ -1189,52 +1189,52 @@
 		<effectPoint>-1</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="16490" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16490" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Shilen's blood seeped into a criminal's corpse and came back to life against as one of the Undead. Currently aiming for Giran from another dimension in order to complete the darkness. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16491" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16491" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- The master criminal who resurrected after drinking the blood of Shilen that seeped into the Execution Grounds. It is trapped in the madness of blood, and is aiming for the Giran from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16492" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16492" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- The Guillotine was once an executioner. After drinking the blood of Shilen that permeated the Execution Grounds, it became the "Guillotine of Death" that kills to bring about the resurrection of Shilen, and is aiming for the Giran from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16493" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16493" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Messenger sent by Lindvior to help with Shilen's resurrection. Has the power of wind as strong as Lindvior, and is aiming for Goddard from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16494" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16494" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Messenger sent by Valakas to help with Shilen's resurrection. Has the power of fire as strong as Valakas, and is aiming for Goddard from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16495" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16495" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Messenger sent by Antharas to help with Shilen's resurrection. Has the power of earth as strong as Antharas, and is aiming for Goddard from another dimension. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16496" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16496" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Part of the Spicula was affected by the darkness of Nemis and was reborn as Vengeful Agarez. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16497" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16497" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Part of the Krakia was affected by the darkness of Nemis and was reborn as Vengeful Oretross. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16498" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16498" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Part of the Spicula was affected by the darkness of Nemis and was reborn as Vengeful Eligos. Currently aiming for Gludio from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>
 	</skill>
-	<skill id="16499" toLevel="1" name="99Lv. Raid Boss">
+	<skill id="16499" toLevel="1" name="Raid Boss (Lv. 99)">
 		<!-- Part of the Weiss was affected by the darkness of Nemis and was reborn as Vengeful Lerazia. Currently aiming for Gludin from another dimension in order to carry out Nemis' will. -->
 		<icon>icon.skillraid</icon>
 		<operateType>P</operateType>

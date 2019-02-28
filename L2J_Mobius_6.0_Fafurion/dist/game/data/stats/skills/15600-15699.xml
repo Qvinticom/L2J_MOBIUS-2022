@@ -206,7 +206,7 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="15615" toLevel="7" name="Increase P. Atk.">
-		<!-- P./ M. Atk. +$s1. -->
+		<!-- P. Atk./ M. Atk. +$s1. -->
 		<operateType>A2</operateType>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -416,7 +416,7 @@
 		<operateType>A2</operateType>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15642" toLevel="4" name="Horn Melody (Adventurer)">
+	<skill id="15642" toLevel="4" name="Horn Melody - Adventurer">
 		<!-- For $s1, P. Atk. +$s2, M. Atk. +$s3, P. Def. +$s4, and M. Def. +$s5. -->
 		<icon>icon.skill11517</icon>
 		<abnormalLvl>
@@ -471,7 +471,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15643" toLevel="4" name="Drum Melody (Adventurer)">
+	<skill id="15643" toLevel="4" name="Drum Melody - Adventurer">
 		<!-- For $s1, increases P. Critical Rate by $s2, P. Critical Damage by $s3, M. Critical Rate by $s4, and decreases Received P. Critical Damage by $s5. Also has a chance to increase Critical Damage when hit. -->
 		<icon>icon.skill11522</icon>
 		<abnormalLvl>
@@ -567,7 +567,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15644" toLevel="4" name="Pipe Organ Melody (Adventurer)">
+	<skill id="15644" toLevel="4" name="Pipe Organ Melody - Adventurer">
 		<!-- For $s1, Max HP +$s2, Max MP +$s3, and Max CP +$s4. A chance to apply $s5 Vampiric Rage effect. -->
 		<icon>icon.skill11519</icon>
 		<abnormalLvl>
@@ -627,7 +627,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15645" toLevel="4" name="Guitar Melody (Adventurer)">
+	<skill id="15645" toLevel="4" name="Guitar Melody - Adventurer">
 		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, and Speed +$s4 and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11520</icon>
 		<abnormalLvl>
@@ -693,7 +693,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15646" toLevel="4" name="Harp Melody (Adventurer)">
+	<skill id="15646" toLevel="4" name="Harp Melody - Adventurer">
 		<!-- For $s1, P. Accuracy +$s2, P. Evasion/ M. Evasion +$s3, and Speed +$s4. Also, Critical Damage Received -$s5. -->
 		<icon>icon.skill11521</icon>
 		<abnormalLvl>
@@ -762,7 +762,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15647" toLevel="4" name="Lute Melody (Adventurer)">
+	<skill id="15647" toLevel="4" name="Lute Melody - Adventurer">
 		<!-- For $s1, Atk. Spd. and Casting Spd. +$s2 and $s3, respectively, and applies the Vampiric Rage effect for $s4 at a certain probability. -->
 		<icon>icon.skill11518</icon>
 		<abnormalLvl>
@@ -813,8 +813,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15648" toLevel="1" name="Knight's Harmony (Adventurer)">
-		<!-- For $s1, increases P. Def by $s2, M. Def by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
+	<skill id="15648" toLevel="1" name="Knight's Harmony - Adventurer">
+		<!-- For $s1, increases P. Def. by $s2, M. Def. by $s3, P./ M. Critical Rate by $s4, P. Critical Damage by $s5, Shield Defense Rate by $s6, and Shield Defense by $s7. -->
 		<icon>icon.skill11523</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -861,7 +861,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15649" toLevel="1" name="Warrior's Harmony (Adventurer)">
+	<skill id="15649" toLevel="1" name="Warrior's Harmony - Adventurer">
 		<!-- For $s1, increases P. Atk. by $s2, P. Critical Rate by $s3, P. Critical Damage by $s4, Atk. Spd. by $s5, and Speed by $s6. -->
 		<icon>icon.skill11524</icon>
 		<operateType>A2</operateType>
@@ -913,7 +913,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15650" toLevel="1" name="Wizard's Harmony (Adventurer)">
+	<skill id="15650" toLevel="1" name="Wizard's Harmony - Adventurer">
 		<!-- For $s1, M. Atk. +$s2, M. Critical Rate +$s3, Casting Spd. +$s4, Skill Cooldown -$s5, and Skill MP Consumption -$s6. -->
 		<icon>icon.skill11525</icon>
 		<operateType>A2</operateType>
@@ -994,7 +994,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15651" toLevel="1" name="Prevailing Sonata (Adventurer)">
+	<skill id="15651" toLevel="1" name="Prevailing Sonata - Adventurer">
 		<!-- For $s1, Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to add $s6 Vampiric Rage effect. -->
 		<icon>icon.skill11529</icon>
 		<operateType>A2</operateType>
@@ -1043,8 +1043,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15652" toLevel="1" name="Daring Sonata (Adventurer)">
-		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
+	<skill id="15652" toLevel="1" name="Daring Sonata - Adventurer">
+		<!-- For $s1, Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflectionion +$s5, and Skill Cooldown -$s6. -->
 		<icon>icon.skill11530</icon>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1103,7 +1103,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="15653" toLevel="1" name="Refreshing Sonata (Adventurer)">
+	<skill id="15653" toLevel="1" name="Refreshing Sonata - Adventurer">
 		<!-- For $s1, HP Recovery +$s2, MP Recovery +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill11532</icon>
 		<operateType>A2</operateType>
@@ -1261,7 +1261,7 @@
 		<effectPoint>-692</effectPoint>
 		<isDebuff>true</isDebuff>
 	</skill>
-	<skill id="15665" toLevel="1" name="Presentation - Anakim / Lilith">
+	<skill id="15665" toLevel="1" name="Presentation - Anakim/ Lilith">
 		<operateType>A1</operateType>
 		<castRange>600</castRange>
 	</skill>

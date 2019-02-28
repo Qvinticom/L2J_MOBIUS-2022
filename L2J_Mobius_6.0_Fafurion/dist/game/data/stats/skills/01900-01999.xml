@@ -123,7 +123,7 @@
 		</effects>
 	</skill>
 	<skill id="1907" toLevel="2" name="Prevision">
-		<!-- For $s1., P. Evasion/ M. Evasion +$s2, and Speed +$s3. -->
+		<!-- For $s1, P. Evasion/ M. Evasion +$s2, and Speed +$s3. -->
 		<icon>icon.skill1907</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
@@ -446,7 +446,7 @@
 		</effects>
 	</skill>
 	<skill id="1920" toLevel="2" name="Endurance">
-		<!-- For $s1, reflects $s2 of received damage to attacker and recovers s3 HP every sec. -->
+		<!-- For $s1, reflects $s2 of received damage to attacker and recovers s3 HP every second. -->
 		<icon>icon.skill1920</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -489,7 +489,7 @@
 		</effects>
 	</skill>
 	<skill id="1922" toLevel="2" name="Earth Tremor">
-		<!-- Knocks Down nearby enemies for $s1, and decreases their P./ M. Def. by $s2. -->
+		<!-- Knocks Down nearby enemies for $s1, and decreases their P. Def./ M. Def. by $s2. -->
 		<icon>icon.skill1922</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -1501,7 +1501,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1962" toLevel="4" name="Dual - P. Atk./M. Atk. Increase">
+	<skill id="1962" toLevel="4" name="Dual Certification - Attack">
 		<!-- P. Atk. +$s1, M. Atk. +$s2. -->
 		<icon>icon.skill0816</icon>
 		<operateType>P</operateType>
@@ -1529,8 +1529,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1963" toLevel="4" name="Dual - P. Def./M. Def. Increase">
-		<!-- Increases P./ M. Def. by $s1. -->
+	<skill id="1963" toLevel="4" name="Dual Certification - Defense">
+		<!-- Increases P. Def./ M. Def. by $s1. -->
 		<icon>icon.skill0439</icon>
 		<operateType>P</operateType>
 		<magicLvl>1</magicLvl>
@@ -1557,7 +1557,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1964" toLevel="4" name="Dual - Atk. Spd./Casting Spd. Increase">
+	<skill id="1964" toLevel="4" name="Dual Certification - Speed">
 		<!-- Increases Atk. Spd./ Casting Spd. by $s1. -->
 		<icon>icon.skill0817</icon>
 		<operateType>P</operateType>
@@ -1585,7 +1585,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1965" toLevel="4" name="Dual - Max HP Increase">
+	<skill id="1965" toLevel="4" name="Dual Certification - Condition">
 		<!-- Increases Max HP/ MP/ CP by $s1. -->
 		<icon>icon.skill1501</icon>
 		<operateType>P</operateType>
@@ -1657,7 +1657,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1968" toLevel="1" name="Dual - HP Drain">
+	<skill id="1968" toLevel="1" name="Dual Certification - Vampiric">
 		<!-- Has a chance of absorbing $s1 of damage inflicted upon the enemy as HP during an attack. -->
 		<icon>icon.dual_hpsteal</icon>
 		<operateType>P</operateType>
@@ -1713,8 +1713,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1970" toLevel="1" name="Dual - Specialized for P. Atk.">
-		<!-- Increases P. Atk. by $s1, and decreases P./ M. Def. by $s2. -->
+	<skill id="1970" toLevel="1" name="Dual Certification - Physical">
+		<!-- Increases P. Atk. by $s1, and decreases P. Def./ M. Def. by $s2. -->
 		<icon>icon.dual_atkup</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -1735,8 +1735,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1971" toLevel="1" name="Dual - Specialized for M. Atk.">
-		<!-- Increases M. Atk. by $s1, and decreases P./ M. Def. by $s2. -->
+	<skill id="1971" toLevel="1" name="Dual Certification - Magical">
+		<!-- Increases M. Atk. by $s1, and decreases P. Def./ M. Def. by $s2. -->
 		<icon>icon.dual_defup</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -1813,7 +1813,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1974" toLevel="1" name="Dual - Berserker's Rage">
+	<skill id="1974" toLevel="1" name="Dual Certification - Berserker's Rage">
 		<!-- Has a chance of increasing P. Atk. by $s1 during an attack. -->
 		<icon>icon.dual_t_atkup</icon>
 		<operateType>P</operateType>
@@ -1836,7 +1836,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1975" toLevel="1" name="Dual - Berserker's Rage">
+	<skill id="1975" toLevel="1" name="Dual Certification - Berserker's Rage">
 		<!-- P. Atk. +27% for 15 sec. -->
 		<icon>icon.dual_t_atkup</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1859,7 +1859,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1976" toLevel="1" name="Dual - Master's Rage">
+	<skill id="1976" toLevel="1" name="Dual Certification - Master's Rage">
 		<!-- Has a chance of increasing Skill Power by $s1 during skill use. -->
 		<icon>icon.dual_t_skup</icon>
 		<operateType>P</operateType>
@@ -1877,7 +1877,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1977" toLevel="1" name="Dual - Master's Rage">
+	<skill id="1977" toLevel="1" name="Dual Certification - Master's Rage">
 		<!-- Skill Power +27% for 15 sec. -->
 		<icon>icon.dual_t_skup</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1906,8 +1906,8 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1978" toLevel="1" name="Dual - Light of Protection">
-		<!-- Has a chance of increasing P./ M. Def. by $s1 when attacked. -->
+	<skill id="1978" toLevel="1" name="Dual Certification - Light of Protection">
+		<!-- Has a chance of increasing P. Def./ M. Def. by $s1 when attacked. -->
 		<icon>icon.dual_t_dmgdef</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -1927,7 +1927,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1979" toLevel="1" name="Dual - Light of Protection">
+	<skill id="1979" toLevel="1" name="Dual Certification - Light of Protection">
 		<!-- P. Def./ M. Def. +40% for 15 sec. -->
 		<icon>icon.dual_t_dmgdef</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1956,7 +1956,7 @@
 		</effects>
 	</skill>
 	<skill id="1980" toLevel="1" name="Dual - Light of Blessing">
-		<!-- Has a chance of restoring 10000 HP when attacked. -->
+		<!-- Has a chance of restoring 10 000 HP when attacked. -->
 		<icon>icon.dual_t_dmgheal</icon>
 		<operateType>P</operateType>
 		<magicLvl>99</magicLvl>
@@ -2394,5 +2394,15 @@
 				<mode>PER</mode>
 			</effect>
 		</effects>
+	</skill>
+	<skill id="1998" toLevel="1" name="Dual Certification - Vital">
+		<!-- Increases Acquired XP/ SP in Vitality state by $s1. -->
+		<icon>icon.skill10336</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="1999" toLevel="1" name="Dual Certification - Recovery">
+		<!-- Decreases skill cooldown by $s1. -->
+		<icon>icon.skill11226</icon>
+		<operateType>A1</operateType>
 	</skill>
 </list>

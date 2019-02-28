@@ -193,7 +193,7 @@
 		<affectObject>NOT_FRIEND</affectObject>
 	</skill>
 	<skill id="504" toLevel="37" name="Triple Thrust">
-		<!-- Rapidly jabs the enemy three times with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit. -->
+		<!-- Rapidly jabs the enemy three times with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit is possible. -->
 		<icon>icon.skill0504</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -376,7 +376,7 @@
 		</effects>
 	</skill>
 	<skill id="505" toLevel="28" name="Shining Edge">
-		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit. -->
+		<!-- Attacks the target's vital points with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Over-hit is possible. -->
 		<icon>icon.skill0505</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -524,7 +524,7 @@
 		</effects>
 	</skill>
 	<skill id="506" toLevel="4" name="Checkmate">
-		<!-- Attacks the enemy bearing a Death Mark with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Ignores Shield Defense. Critical. -->
+		<!-- Attacks the enemy bearing a Death Mark with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Requires a short sword to be equipped. Ignores Shield Defense. Critical hit is possible. -->
 		<icon>icon.skill0506</icon>
 		<castRange>40</castRange>
 		<coolTime>300</coolTime>
@@ -583,7 +583,7 @@
 		</effects>
 	</skill>
 	<skill id="507" toLevel="37" name="Twin Shot">
-		<!-- Fires $s1 powerful bolts with $s2 Power added to P. Atk. Increases Power upon the consumption of up to $s3 souls. Requires a crossbow. Over-hit. Critical. -->
+		<!-- Fires $s1 powerful bolts with $s2 Power added to P. Atk. Increases Power upon the consumption of up to $s3 souls. Requires a crossbow. Over-hit and Critical are possible. -->
 		<icon>icon.skill0507</icon>
 		<castRange>900</castRange>
 		<coolTime>1000</coolTime>
@@ -929,7 +929,7 @@
 		</effects>
 	</skill>
 	<skill id="509" toLevel="34" name="Bleeding Shot">
-		<!-- Fires a specially crafted bolt at the enemy with $s1 Power added to P. Atk., causing $s3 HP of bleeding damage per second for up to $s2. Increases Power upon the consumption of up to $s4 souls. Requires a crossbow. Consumes $s5 Special Bolt. Over-hit. -->
+		<!-- Fires a specially crafted bolt at the enemy with $s1 Power added to P. Atk., causing $s3 HP of bleeding damage per second for up to $s2. Increases Power upon the consumption of up to $s4 souls. Requires a crossbow. Consumes $s5 Special Bolt. Over-hit is possible. -->
 		<icon>icon.skill0509</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -1866,7 +1866,7 @@
 		</effects>
 	</skill>
 	<skill id="523" toLevel="7" name="Imbue Dark Seed">
-		<!-- Plants a Seed of Darkness in the enemy's body. For $s1, $s2 HP is consumed per sec. Once fully grown, the seed paralyzes the host body. -->
+		<!-- Plants a Seed of Darkness in the enemy's body. For $s1, $s2 HP is consumed per second. Once fully grown, the seed paralyzes the host body. -->
 		<icon>icon.skill0523</icon>
 		<abnormalLvl>8</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
@@ -2004,7 +2004,7 @@
 		</effects>
 	</skill>
 	<skill id="526" toLevel="1" name="Enuma Elish">
-		<!-- Attacks enemies in front using the Sword of Creation that divides heaven and Earth with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Over-hit. -->
+		<!-- Attacks enemies in front using the Sword of Creation that divides heaven and Earth with $s1 Power added to P. Atk. Increases Power upon the consumption of up to $s2 souls. Over-hit is possible. -->
 		<icon>icon.skill0526</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>400</affectRange>
@@ -2173,6 +2173,7 @@
 		</effects>
 	</skill>
 	<skill id="531" toLevel="8" name="Critical Wound">
+		<!-- Increases a target's P. Critical Damage Received by $s2 for $s1 by giving painful wounds. Requires a dagger/ dual dagger. -->
 		<icon>icon.skill0531</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -2243,7 +2244,7 @@
 		</effects>
 	</skill>
 	<skill id="532" toLevel="1" name="Counter Chance">
-		<!-- When attacked, Casting Spd. +15% and MP Consumption -5% for 1 min. -->
+		<!-- When attacked, Casting Spd. -15% and MP Consumption -5% for 1 min. -->
 		<icon>icon.skill0532</icon>
 		<magicLvl>79</magicLvl>
 		<operateType>P</operateType>
@@ -2263,7 +2264,7 @@
 		</effects>
 	</skill>
 	<skill id="533" toLevel="1" name="Counter Rapid Shot">
-		<!-- When attacked, party members' bow Atk. Spd.+ 15% for 1 min. -->
+		<!-- When attacked, party members' bow Atk. Spd.+15% for 1 min. -->
 		<icon>icon.skill0533</icon>
 		<magicLvl>79</magicLvl>
 		<operateType>P</operateType>
@@ -3128,7 +3129,7 @@
 		</effects>
 	</skill>
 	<skill id="559" toLevel="4" name="Spear">
-		<!-- A strong polearm thrust that has a chance of causing the enemy to bleed. Over-hit. Power $s1. Effect $s2. -->
+		<!-- A strong polearm thrust that has a chance of causing the enemy to bleed. Over-hit is possible. Power $s1. Effect $s2. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -3190,7 +3191,7 @@
 		</effects>
 	</skill>
 	<skill id="560" toLevel="4" name="Power Slash">
-		<!-- A powerful frontal attack that involves swinging a polearm to assault enemies. Over-hit. Power $s1. -->
+		<!-- A powerful frontal attack that involves swinging a polearm to assault enemies. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectRange>200</affectRange>
 		<castRange>40</castRange>
@@ -3315,7 +3316,7 @@
 		</effects>
 	</skill>
 	<skill id="563" toLevel="4" name="Horn of Doom">
-		<!-- Uses a horn to charge the enemy with a powerful ram attack. Over-hit. Power $s1. -->
+		<!-- Uses a horn to charge the enemy with a powerful ram attack. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3416,7 +3417,7 @@
 		</effects>
 	</skill>
 	<skill id="565" toLevel="4" name="Horn Assault">
-		<!-- Releases the energy of a horn to attack a distant enemy. Over-hit. Power $s1. -->
+		<!-- Releases the energy of a horn to attack a distant enemy. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>900</castRange>
 		<coolTime>200</coolTime>
@@ -3599,7 +3600,7 @@
 		</effects>
 	</skill>
 	<skill id="570" toLevel="4" name="Attack Rage">
-		<!-- Gathers force while attacking the enemy. Can be charged up to Level $s1. Critical. Over-hit. -->
+		<!-- Gathers force while attacking the enemy. Can be charged up to Level $s1. Critical hit is possible. Over-hit is possible. -->
 		<icon>icon.skill_transform_etc</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -3700,7 +3701,7 @@
 		</effects>
 	</skill>
 	<skill id="572" toLevel="4" name="Double Slasher">
-		<!-- Attacks a distant enemy by using Momentum. Over-hit. Power $s1. -->
+		<!-- Attacks a distant enemy by using Momentum. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>600</castRange>
 		<effectPoint>
@@ -3742,7 +3743,7 @@
 		</effects>
 	</skill>
 	<skill id="573" toLevel="4" name="Earthquake">
-		<!-- Makes the Earth shake and stuns nearby enemies. Over-hit. Power $s1. -->
+		<!-- Makes the Earth shake and stuns nearby enemies. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>9</abnormalTime>
@@ -3826,7 +3827,7 @@
 		</effects>
 	</skill>
 	<skill id="575" toLevel="4" name="Steel Cutter">
-		<!-- Attacks with a sharp steel blade. Over-hit. Power $s1. -->
+		<!-- Attacks with a sharp steel blade. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3869,7 +3870,7 @@
 		</effects>
 	</skill>
 	<skill id="576" toLevel="4" name="Paw Strike">
-		<!-- Inflict a powerful attack with your forefeet. Over-hit. Power $s1. -->
+		<!-- Inflict a powerful attack with your forefeet. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -3912,7 +3913,7 @@
 		</effects>
 	</skill>
 	<skill id="577" toLevel="4" name="Fire Breath">
-		<!-- Spouts out a Fire attack that strikes enemies in front of you. Over-hit. Power $s1. -->
+		<!-- Spouts out a Fire attack that strikes enemies in front of you. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>250</affectRange>
@@ -3960,7 +3961,7 @@
 		</effects>
 	</skill>
 	<skill id="578" toLevel="4" name="Blaze Quake">
-		<!-- Inflict a burning Fire attack on nearby enemies. Over-hit. Power $s1. Effect $s2. -->
+		<!-- Inflict a burning Fire attack on nearby enemies. Over-hit is possible. Power $s1. Effect $s2. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -4090,7 +4091,7 @@
 		</effects>
 	</skill>
 	<skill id="580" toLevel="4" name="Death Blow">
-		<!-- Inflicts a deadly blow. Lethal Strike is possible. Over-hit. -->
+		<!-- Inflicts a deadly blow. Lethal Strike is possible. Over-hit is possible. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -4183,7 +4184,7 @@
 		</effects>
 	</skill>
 	<skill id="582" toLevel="4" name="Scope Bleed">
-		<!-- Attacks nearby enemies with a lethal blow and causes them to bleed. Over-hit. Power $s1. Effect $s2. -->
+		<!-- Attacks nearby enemies with a lethal blow and causes them to bleed. Over-hit is possible. Power $s1. Effect $s2. -->
 		<icon>icon.skill_transform_debuff</icon>
 		<abnormalLvl>
 			<value level="1">6</value>
@@ -4317,7 +4318,7 @@
 		</effects>
 	</skill>
 	<skill id="584" toLevel="1" name="Power Claw">
-		<!-- Attacks the enemy with powerful claws. Over-hit. Power 1008. -->
+		<!-- Attacks the enemy with powerful claws. Over-hit is possible. Power 1008. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<coolTime>720</coolTime>
@@ -4363,7 +4364,7 @@
 		</effects>
 	</skill>
 	<skill id="586" toLevel="2" name="Rolling Attack">
-		<!-- Quickly swings your polearm around, attacking nearby enemies. Over-hit. Power $s1. -->
+		<!-- Quickly swings your polearm around, attacking nearby enemies. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -4395,7 +4396,7 @@
 		</effects>
 	</skill>
 	<skill id="587" toLevel="2" name="Earth Storm">
-		<!-- Create a vortex of Earth that physically attacks your target. Over-hit. Power $s1. -->
+		<!-- Create a vortex of Earth that physically attacks your target. Over-hit is possible. Power $s1. -->
 		<icon>icon.skill_transform_s_attack</icon>
 		<castRange>40</castRange>
 		<effectPoint>

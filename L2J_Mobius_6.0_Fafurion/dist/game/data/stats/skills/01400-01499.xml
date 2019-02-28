@@ -690,6 +690,7 @@
 		</effects>
 	</skill>
 	<skill id="1416" toLevel="8" name="Pa'agrio's Fist">
+		<!-- For $s1, restores and increases clan members' Max CP +$s2. -->
 		<icon>icon.skill1416</icon>
 		<abnormalLvl>2</abnormalLvl>
 		<abnormalTime>
@@ -1526,7 +1527,7 @@
 		</effects>
 	</skill>
 	<skill id="1435" toLevel="10" name="Death Mark">
-		<!-- Marks the enemy with a Death Mark. For $s1, decreases P. Def. and M. Def. by $s2 and consumes $s3 HP per sec. -->
+		<!-- Marks the enemy with a Death Mark. For $s1, decreases P. Def. and M. Def. by $s2 and consumes $s3 HP per second. -->
 		<icon>icon.skill1435</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2250,7 +2251,7 @@
 		</effects>
 	</skill>
 	<skill id="1442" toLevel="3" name="Darkness Protection">
-		<!-- Increases the target's Dark Attack Resistance by $s2 for $s1. -->
+		<!-- Increases the target's Dark Attack Resistance by $s2 for $s1 -->
 		<icon>icon.skill1442</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
@@ -2301,7 +2302,7 @@
 		</effects>
 	</skill>
 	<skill id="1443" toLevel="1" name="Dark Weapon">
-		<!-- Increases the target's Dark attack level by $s2 for $s1. Can be used on party members. -->
+		<!-- Increases the target's Dark attack level by $s2 for $s1 Can be used on party members. -->
 		<icon>icon.skill1443</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1200</abnormalTime>
@@ -2333,7 +2334,7 @@
 		</effects>
 	</skill>
 	<skill id="1444" toLevel="1" name="Pride of Kamael">
-		<!-- For $s1, increases P. Atk., M. Atk. and Vital Spot Attack Rate by $s2 when using a Kamael-exclusive weapon. -->
+		<!-- For $s1, increases P. Atk., M. Atk. and lethal attack rate by $s2 when using a Kamael-exclusive weapon. -->
 		<icon>icon.skill1444</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>300</abnormalTime>
@@ -2685,7 +2686,7 @@
 		</effects>
 	</skill>
 	<skill id="1448" toLevel="1" name="Blink">
-		<!-- Attacks the enemies near you with $s1 power added to P. Atk. Inflicts Stun for $s2 and teleports to the back. Soul consumption boosts the power. Up to $s3 souls can be consumed. -->
+		<!-- Attacks the enemies near you with $s1 power added to P. Attack. Inflicts Stun for $s2 and teleports to the back. Soul consumption boosts the power. Up to $s3 souls can be consumed. -->
 		<icon>icon.skill1448</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>2</abnormalTime>
@@ -2826,7 +2827,7 @@
 		</effects>
 	</skill>
 	<skill id="1452" toLevel="1" name="Count of Fire">
-		<!-- Uses the power of Fire to burn the enemy for $s1, inflicting damage of $s2 HP per sec. -->
+		<!-- Uses the power of Fire to burn the enemy for $s1, inflicting damage of $s2 HP per second. -->
 		<icon>icon.skill1452</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2929,7 +2930,7 @@
 		</effects>
 	</skill>
 	<skill id="1455" toLevel="1" name="Throne of Ice">
-		<!-- Summons a blast of icy air that freezes the enemy for $s1, causing loss of $s2 HP per sec. -->
+		<!-- Summons a blast of icy air that freezes the enemy for $s1, causing loss of $s2 HP per second. -->
 		<icon>icon.skill1455</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -2995,6 +2996,7 @@
 		</effects>
 	</skill>
 	<skill id="1457" toLevel="2" name="Empowering Echo">
+		<!-- For $s1, increases your magic MP Consumption +$s2 and M. Atk. +$s3. -->
 		<icon>icon.skill1457</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
@@ -3040,7 +3042,7 @@
 		</effects>
 	</skill>
 	<skill id="1458" toLevel="1" name="Throne of Wind">
-		<!-- Uses the power of a storm to weaken the enemy for $s1, causing loss of $s2 HP per sec. -->
+		<!-- Uses the power of a storm to weaken the enemy for $s1, causing loss of $s2 HP per second. -->
 		<icon>icon.skill1458</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3163,6 +3165,7 @@
 		</effects>
 	</skill>
 	<skill id="1462" toLevel="10" name="Seal of Blockade">
+		<!-- During PvP, restrains the standard attacks of the enemy and nearby targets for $s1. -->
 		<icon>icon.skill1462</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
@@ -3538,7 +3541,7 @@
 		</effects>
 	</skill>
 	<skill id="1474" toLevel="1" name="Abyssal Power">
-		<!-- When equipped with light armor, M. Atk. +$s1. -->
+		<!-- When equipped with light armor, increases M. Atk. by $s1. -->
 		<icon>icon.skill1474</icon>
 		<magicLvl>43</magicLvl>
 		<operateType>P</operateType>
