@@ -753,7 +753,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19431" toLevel="9" name="Sforzando Sting">
-		<!-- Rushes at the target to reduce Speed by $s2 for $s1 and gives the Swift Praise effect to allies. Requires a sword, blunt, dual sword or dual blunt to be equipped. -->
 		<icon>icon.skill19431</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -764,7 +763,7 @@
 		<isTriggeredSkill>true</isTriggeredSkill>
 	</skill>
 	<skill id="19433" toLevel="11" name="Alluring Conduct">
-		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P. Def/ M. Def by $s3 for $s2. Increases cooldown of all skills by $s4and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt, dual sword or dual blunt to be equipped. -->
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P. Def/ M. Def by $s3 for $s2. Increases Skill Cooldown by $s4 and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
 		<icon>icon.skill19433</icon>
 		<operateType>A1</operateType>
 	</skill>
@@ -787,7 +786,7 @@
 		<affectRange>1000</affectRange>
 		<effects>
 			<effect name="CallLearnedSkill">
-				<skillId>19444</skillId> <!-- War Drumb -->
+				<skillId>19444</skillId> <!-- War Drum -->
 			</effect>
 			<effect name="CallLearnedSkill">
 				<skillId>19445</skillId> <!-- Marching Drum -->
@@ -798,7 +797,6 @@
 		</effects>
 	</skill>
 	<skill id="19439" toLevel="1" name="Overload's Dignity">
-		<!-- For $s1, increases nearby party members' P. Atk., M. Atk., Atk. Spd. and Casting Spd. $s2 times. This effect cannot be stacked, and a limit applies after its duration is over. -->
 		<icon>icon.skill19439</icon>
 		<abnormalTime>30</abnormalTime>
 		<affectRange>1000</affectRange>
@@ -864,7 +862,6 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="19444" toLevel="1" name="War Drum">
-		<!-- For $s1, party members' Max HP +$s2, P. Atk. +$s3, M. Atk. +$s4, and magic cancel rate -$s5. A chance to apply $s6 Vampiric Rage effect. -->
 		<icon>icon.skill19444</icon>
 		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -910,7 +907,6 @@
 		</effects>
 	</skill>
 	<skill id="19445" toLevel="1" name="Marching Drum">
-		<!-- For $s1, party members' Atk. Spd. +$s2, Casting Spd. +$s3, Speed +$s4, Damage Reflection +$s5, and Skill Cooldown -$s6. -->
 		<icon>icon.skill19445</icon>
 		<abnormalType>ENCHANTER_MOD</abnormalType>
 		<abnormalTime>150</abnormalTime>
@@ -961,7 +957,6 @@
 		</effects>
 	</skill>
 	<skill id="19446" toLevel="1" name="Soothing Drum">
-		<!-- For $s1, party members' HP Recovery Bonus +$s2, MP Recovery Bonus +$s3, and P. Evasion/ M. Evasion +$s4, and Skill MP Consumption -$s5. -->
 		<icon>icon.skill19446</icon>
 		<abnormalType>SYNERGY_IS</abnormalType>
 		<abnormalTime>150</abnormalTime>

@@ -145,7 +145,7 @@
 		</effects>
 	</skill>
 	<skill id="19532" toLevel="3" name="Clan Elemental">
-		<!-- All clan members' defense attributes +$s1. -->
+		<!-- All clan members' Attribute Resistance +$s1. -->
 		<icon>icon.skill19003</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -201,7 +201,7 @@
 		</effects>
 	</skill>
 	<skill id="19533" toLevel="1" name="Clan Rating">
-		<!-- Points gained at the end of the Throne of Heroes Boss Battle +$s1. -->
+		<!-- Points obtained at the end of the Throne of Heroes Boss Battle +$s1. -->
 		<icon>icon.skill19533</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -229,7 +229,7 @@
 		</effects>
 	</skill>
 	<skill id="19535" toLevel="3" name="Clan Resistance">
-		<!-- Clan members' Resistance to Stun/ Paralysis/ MEN/ Aerial Yoke/ Knock Back/ Knock Down +$s1. -->
+		<!-- Clan members' Resistance to Stun/ Paralysis/ Mental/ Aerial Yoke/ Knock Back/ Knock Down +$s1. -->
 		<icon>icon.skill19004</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -281,7 +281,7 @@
 		<effectPoint>100</effectPoint>
 	</skill>
 	<skill id="19537" toLevel="2" name="Clan Iron">
-		<!-- Clan members' PVP Damage Received -$s1. -->
+		<!-- Clan members' PvP Damage Received -$s1. -->
 		<icon>icon.skill0386</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -310,7 +310,7 @@
 		</effects>
 	</skill>
 	<skill id="19538" toLevel="1" name="Clan Vitality">
-		<!-- Clan members' XP and SP gain +$s1. -->
+		<!-- Clan members' XP and SP +$s1. -->
 		<icon>icon.skill19538</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>
@@ -473,7 +473,7 @@
 		</effects>
 	</skill>
 	<skill id="19544" toLevel="6" name="Clan Will">
-		<!-- Clan members' XP and SP gain +$s1. -->
+		<!-- Clan members' XP and SP +$s1. -->
 		<icon>icon.skill19544</icon>
 		<operateType>P</operateType>
 		<targetType>SELF</targetType>

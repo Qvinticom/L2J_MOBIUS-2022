@@ -203,7 +203,7 @@
 		<affectScope>SINGLE</affectScope>
 	</skill>
 	<skill id="16413" toLevel="3" name="Trap Poison">
-		<!-- Poisoned and losing 1,000 HP/second. -->
+		<!-- Poisons the target, causing them to lose $s1 HP every second. -->
 		<icon>icon.skill4035</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>

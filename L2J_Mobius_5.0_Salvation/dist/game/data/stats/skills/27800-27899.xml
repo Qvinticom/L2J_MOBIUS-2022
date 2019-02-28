@@ -386,10 +386,9 @@
 	</skill>
 	<skill id="27872" toLevel="20" name="Elmoreden Cloak Enchant Effect">
 		<!-- PvP Attack Damage $s1. -->
-		<!-- TODO: Inmobilize target from lv18 to lv20 -->
 		<icon>BranchIcon.icon.g_bm_elmoreden_cloak_normal</icon>
 		<operateType>P</operateType>
-		<effects>
+		<effects> <!-- TODO: Inmobilize target from lv18 to lv20 -->
 			<effect name="PvpPhysicalAttackDamageBonus">
 				<amount>
 					<value level="1">1</value>
