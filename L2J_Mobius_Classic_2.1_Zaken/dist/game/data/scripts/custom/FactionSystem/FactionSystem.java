@@ -31,9 +31,7 @@ import ai.AbstractNpcAI;
 public final class FactionSystem extends AbstractNpcAI
 {
 	// NPCs
-	private static final int MANAGER = Config.FACTION_MANAGER_NPCID;
-	private static final int GOOD_GUARD = Config.FACTION_GOOD_GUARD_NPCID;
-	private static final int EVIL_GUARD = Config.FACTION_EVIL_GUARD_NPCID;
+	private static final int MANAGER = 500;
 	// Other
 	private static final String[] TEXTS =
 	{
@@ -48,7 +46,6 @@ public final class FactionSystem extends AbstractNpcAI
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
 		addFirstTalkId(MANAGER);
-		addAggroRangeEnterId(EVIL_GUARD, GOOD_GUARD);
 		
 		if (Config.FACTION_SYSTEM_ENABLED)
 		{
@@ -166,16 +163,6 @@ public final class FactionSystem extends AbstractNpcAI
 				player.sendMessage(message);
 			}
 		}
-	}
-	
-	@Override
-	public String onAggroRangeEnter(L2Npc npc, L2PcInstance player, boolean isSummon)
-	{
-		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((player.isGood() && (npc.getId() == EVIL_GUARD)) || (player.isEvil() && (npc.getId() == GOOD_GUARD))))
-		{
-			addAttackDesire(npc, player);
-		}
-		return super.onAggroRangeEnter(npc, player, isSummon);
 	}
 	
 	public static void main(String[] args)

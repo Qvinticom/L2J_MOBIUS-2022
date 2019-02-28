@@ -225,6 +225,11 @@ public class L2AttackableAI extends L2CharacterAI
 				return false;
 			}
 			
+			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((player.isGood() && ((L2Npc) _actor).getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && ((L2Npc) _actor).getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))))
+			{
+				return true;
+			}
+			
 			if (player.isInParty() && player.getParty().isInDimensionalRift())
 			{
 				final byte riftType = player.getParty().getDimensionalRift().getType();

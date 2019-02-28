@@ -8307,6 +8307,10 @@ public final class L2PcInstance extends L2Playable
 		
 		if (attacker instanceof L2GuardInstance)
 		{
+			if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && ((_isGood && ((L2Npc) attacker).getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (_isEvil && ((L2Npc) attacker).getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME))))
+			{
+				return true;
+			}
 			return (getReputation() < 0); // Guards attack only PK players.
 		}
 		

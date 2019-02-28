@@ -1043,7 +1043,6 @@ public final class Config
 	public static Map<String, Location> COMMUNITY_AVAILABLE_TELEPORTS;
 	public static boolean FACTION_SYSTEM_ENABLED;
 	public static Location FACTION_STARTING_LOCATION;
-	public static int FACTION_MANAGER_NPCID;
 	public static Location FACTION_MANAGER_LOCATION;
 	public static Location FACTION_GOOD_BASE_LOCATION;
 	public static Location FACTION_EVIL_BASE_LOCATION;
@@ -1052,8 +1051,6 @@ public final class Config
 	public static int FACTION_GOOD_NAME_COLOR;
 	public static int FACTION_EVIL_NAME_COLOR;
 	public static boolean FACTION_GUARDS_ENABLED;
-	public static int FACTION_GOOD_GUARD_NPCID;
-	public static int FACTION_EVIL_GUARD_NPCID;
 	public static boolean FACTION_RESPAWN_AT_BASE;
 	public static boolean FACTION_AUTO_NOBLESS;
 	public static boolean FACTION_SPECIFIC_CHAT;
@@ -2379,7 +2376,6 @@ public final class Config
 			FACTION_SYSTEM_ENABLED = Boolean.valueOf(FactionSystem.getBoolean("EnableFactionSystem", false));
 			tempString = FactionSystem.getString("StartingLocation", "85332,16199,-1252").split(",");
 			FACTION_STARTING_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]));
-			FACTION_MANAGER_NPCID = FactionSystem.getInt("FactionManagerNpcId", 500);
 			tempString = FactionSystem.getString("ManagerSpawnLocation", "85712,15974,-1260,26808").split(",");
 			FACTION_MANAGER_LOCATION = new Location(Integer.parseInt(tempString[0]), Integer.parseInt(tempString[1]), Integer.parseInt(tempString[2]), tempString[3] != null ? Integer.parseInt(tempString[3]) : 0);
 			tempString = FactionSystem.getString("GoodBaseLocation", "45306,48878,-3058").split(",");
@@ -2391,8 +2387,6 @@ public final class Config
 			FACTION_GOOD_NAME_COLOR = Integer.decode("0x" + FactionSystem.getString("GoodNameColor", "00FF00"));
 			FACTION_EVIL_NAME_COLOR = Integer.decode("0x" + FactionSystem.getString("EvilNameColor", "0000FF"));
 			FACTION_GUARDS_ENABLED = FactionSystem.getBoolean("EnableFactionGuards", true);
-			FACTION_GOOD_GUARD_NPCID = FactionSystem.getInt("GoodGuardNpcId", 501);
-			FACTION_EVIL_GUARD_NPCID = FactionSystem.getInt("EvilGuardNpcId", 502);
 			FACTION_RESPAWN_AT_BASE = FactionSystem.getBoolean("RespawnAtFactionBase", true);
 			FACTION_AUTO_NOBLESS = FactionSystem.getBoolean("FactionAutoNobless", false);
 			FACTION_SPECIFIC_CHAT = FactionSystem.getBoolean("EnableFactionChat", true);

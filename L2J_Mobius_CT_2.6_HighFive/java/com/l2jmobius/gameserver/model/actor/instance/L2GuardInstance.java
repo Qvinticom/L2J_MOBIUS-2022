@@ -51,6 +51,14 @@ public class L2GuardInstance extends L2Attackable
 		{
 			return true;
 		}
+		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && attacker.isPlayable())
+		{
+			L2PcInstance player = attacker.getActingPlayer();
+			if ((player.isGood() && getTemplate().isClan(Config.FACTION_EVIL_TEAM_NAME)) || (player.isEvil() && getTemplate().isClan(Config.FACTION_GOOD_TEAM_NAME)))
+			{
+				return true;
+			}
+		}
 		return super.isAutoAttackable(attacker);
 	}
 	

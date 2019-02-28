@@ -19,7 +19,6 @@ package custom.FactionSystem;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.ChatType;
 import com.l2jmobius.gameserver.model.L2World;
-import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
@@ -32,9 +31,7 @@ import ai.AbstractNpcAI;
 public final class FactionSystem extends AbstractNpcAI
 {
 	// NPCs
-	private static final int MANAGER = Config.FACTION_MANAGER_NPCID;
-	private static final int GOOD_GUARD = Config.FACTION_GOOD_GUARD_NPCID;
-	private static final int EVIL_GUARD = Config.FACTION_EVIL_GUARD_NPCID;
+	private static final int MANAGER = 500;
 	// Other
 	private static final String[] TEXTS =
 	{
@@ -49,7 +46,6 @@ public final class FactionSystem extends AbstractNpcAI
 		addStartNpc(MANAGER);
 		addTalkId(MANAGER);
 		addFirstTalkId(MANAGER);
-		addSeeCreatureId(EVIL_GUARD, GOOD_GUARD);
 		
 		if (Config.FACTION_SYSTEM_ENABLED)
 		{
@@ -167,16 +163,6 @@ public final class FactionSystem extends AbstractNpcAI
 				player.sendMessage(message);
 			}
 		}
-	}
-	
-	@Override
-	public String onSeeCreature(L2Npc npc, L2Character creature, boolean isSummon)
-	{
-		if (Config.FACTION_SYSTEM_ENABLED && Config.FACTION_GUARDS_ENABLED && creature.isPlayer() && ((creature.getActingPlayer().isGood() && (npc.getId() == EVIL_GUARD)) || (creature.getActingPlayer().isEvil() && (npc.getId() == GOOD_GUARD))))
-		{
-			addAttackDesire(npc, creature);
-		}
-		return super.onSeeCreature(npc, creature, isSummon);
 	}
 	
 	public static void main(String[] args)
