@@ -57,6 +57,12 @@ public class Unstuck implements IUserCommandHandler
 			return false;
 		}
 		
+		if (Config.FACTION_SYSTEM_ENABLED && !activeChar.isGood() && !activeChar.isEvil())
+		{
+			activeChar.sendMessage("You cannot use this function while you are neutral.");
+			return false;
+		}
+		
 		final int unstuckTimer = (activeChar.getAccessLevel().isGm() ? 1000 : Config.UNSTUCK_INTERVAL * 1000);
 		
 		if (activeChar.isInOlympiadMode())
