@@ -3585,7 +3585,7 @@ public final class SystemMessageId
 	@ClientString(id = 1184, message = "This is a period when server statistics are calculated.")
 	public static SystemMessageId THIS_IS_A_PERIOD_WHEN_SERVER_STATISTICS_ARE_CALCULATED;
 	
-	@ClientString(id = 1185, message = " days left until deletion.")
+	@ClientString(id = 1185, message = "days left until deletion.")
 	public static SystemMessageId DAYS_LEFT_UNTIL_DELETION;
 	
 	@ClientString(id = 1186, message = "To create a new account, please visit Lineage II's Support Website (https://support.4game.com).")
@@ -4866,7 +4866,7 @@ public final class SystemMessageId
 	@ClientString(id = 1611, message = "Party Leader: $c1")
 	public static SystemMessageId PARTY_LEADER_C1;
 	
-	@ClientString(id = 1612, message = " =====<Clan War List>=====")
+	@ClientString(id = 1612, message = "=====<Clan War List>=====")
 	public static SystemMessageId CLAN_WAR_LIST;
 	
 	@ClientString(id = 1613, message = "There is no clan listed on your War List.")
@@ -9336,10 +9336,10 @@ public final class SystemMessageId
 	@ClientString(id = 3244, message = "Take that")
 	public static SystemMessageId TAKE_THAT;
 	
-	@ClientString(id = 3245, message = " ")
+	@ClientString(id = 3245, message = "")
 	public static SystemMessageId EMPTY_9;
 	
-	@ClientString(id = 3246, message = " ")
+	@ClientString(id = 3246, message = "")
 	public static SystemMessageId EMPTY_10;
 	
 	@ClientString(id = 3247, message = "Argh... Ha ha ha, pretty impressive, as if you cut from the fabric of the gods.")
@@ -9372,10 +9372,10 @@ public final class SystemMessageId
 	@ClientString(id = 3256, message = "MP has reached 0. The Mana Armor has disappeared.")
 	public static SystemMessageId MP_HAS_REACHED_0_THE_MANA_ARMOR_HAS_DISAPPEARED;
 	
-	@ClientString(id = 3257, message = " ")
+	@ClientString(id = 3257, message = "")
 	public static SystemMessageId EMPTY_11;
 	
-	@ClientString(id = 3258, message = " ")
+	@ClientString(id = 3258, message = "")
 	public static SystemMessageId EMPTY_12;
 	
 	@ClientString(id = 3259, message = "You have acquired $s1 XP (Bonus: $s2) and $s3 SP (Bonus: $s4).")
@@ -10413,7 +10413,7 @@ public final class SystemMessageId
 	@ClientString(id = 3603, message = "We must vanquish this new warden…")
 	public static SystemMessageId WE_MUST_VANQUISH_THIS_NEW_WARDEN;
 	
-	@ClientString(id = 3604, message = " ...f we are to free the Crystal Oracle from Beleth's devious machinations.")
+	@ClientString(id = 3604, message = "...f we are to free the Crystal Oracle from Beleth's devious machinations.")
 	public static SystemMessageId F_WE_ARE_TO_FREE_THE_CRYSTAL_ORACLE_FROM_BELETH_S_DEVIOUS_MACHINATIONS;
 	
 	@ClientString(id = 3605, message = "Your strength is needed now more than ever to defeat Balok.")
@@ -11532,7 +11532,7 @@ public final class SystemMessageId
 	@ClientString(id = 4069, message = "You have downed $s1 with a preemptive attack. You have $s2 preemptive attack chances left.")
 	public static SystemMessageId YOU_HAVE_DOWNED_S1_WITH_A_PREEMPTIVE_ATTACK_YOU_HAVE_S2_PREEMPTIVE_ATTACK_CHANCES_LEFT;
 	
-	@ClientString(id = 4070, message = "You are no longer $s1's mentee, as you have reached Lv. 85 and 3rd Liberation. ")
+	@ClientString(id = 4070, message = "You are no longer $s1's mentee, as you have reached Lv. 85 and 3rd Liberation.")
 	public static SystemMessageId YOU_ARE_NO_LONGER_S1_S_MENTEE_AS_YOU_HAVE_REACHED_LV_85_AND_3RD_LIBERATION;
 	
 	@ClientString(id = 4071, message = "You are no longer $s1's mentor, as they completed the 3rd Liberation. You must wait 1 day before becoming someone else's mentor.")
@@ -11673,7 +11673,7 @@ public final class SystemMessageId
 	@ClientString(id = 4116, message = "The augmentation effects on +$s1 $s2 have been deleted.")
 	public static SystemMessageId THE_AUGMENTATION_EFFECTS_ON_S1_S2_HAVE_BEEN_DELETED;
 	
-	@ClientString(id = 4117, message = " +$s1$s2 has been restored to its previous appearance, as its temporary modification has expired.")
+	@ClientString(id = 4117, message = "+$s1$s2 has been restored to its previous appearance, as its temporary modification has expired.")
 	public static SystemMessageId S1_S2_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED;
 	
 	@ClientString(id = 4118, message = "You cannot teleport as the Dimensional Space is closed.")
@@ -11709,10 +11709,10 @@ public final class SystemMessageId
 	@ClientString(id = 4128, message = "Your wish has been entered successfully into the Wish Tree.")
 	public static SystemMessageId YOUR_WISH_HAS_BEEN_ENTERED_SUCCESSFULLY_INTO_THE_WISH_TREE;
 	
-	@ClientString(id = 4129, message = "Go to the event page to view the wish entered into the Wish Tree? ")
+	@ClientString(id = 4129, message = "Go to the event page to view the wish entered into the Wish Tree?")
 	public static SystemMessageId GO_TO_THE_EVENT_PAGE_TO_VIEW_THE_WISH_ENTERED_INTO_THE_WISH_TREE;
 	
-	@ClientString(id = 4130, message = "Failed to enter wish. Please try again by clicking on the wish link. ")
+	@ClientString(id = 4130, message = "Failed to enter wish. Please try again by clicking on the wish link.")
 	public static SystemMessageId FAILED_TO_ENTER_WISH_PLEASE_TRY_AGAIN_BY_CLICKING_ON_THE_WISH_LINK;
 	
 	@ClientString(id = 4131, message = "Inventory weight/ slot has been filled to 80%% or more. You cannot enter a wish or obtain rewards in this state. Please organize your inventory and try again.")
@@ -11808,7 +11808,7 @@ public final class SystemMessageId
 	@ClientString(id = 4161, message = "Distribution cannot proceed as there is insufficient Adena for distribution.")
 	public static SystemMessageId DISTRIBUTION_CANNOT_PROCEED_AS_THERE_IS_INSUFFICIENT_ADENA_FOR_DISTRIBUTION;
 	
-	@ClientString(id = 4162, message = "My Apostle Lilith! ")
+	@ClientString(id = 4162, message = "My Apostle Lilith!")
 	public static SystemMessageId MY_APOSTLE_LILITH;
 	
 	@ClientString(id = 4163, message = "Drink the blood of darkness, and rise again to complete my sacrifice!")
@@ -11850,19 +11850,19 @@ public final class SystemMessageId
 	@ClientString(id = 4175, message = "You will shortly move to the Olympiad arena.")
 	public static SystemMessageId YOU_WILL_SHORTLY_MOVE_TO_THE_OLYMPIAD_ARENA;
 	
-	@ClientString(id = 4176, message = "It seemed as if everything had returned to normal. ")
+	@ClientString(id = 4176, message = "It seemed as if everything had returned to normal.")
 	public static SystemMessageId IT_SEEMED_AS_IF_EVERYTHING_HAD_RETURNED_TO_NORMAL;
 	
 	@ClientString(id = 4177, message = "But had it?")
 	public static SystemMessageId BUT_HAD_IT;
 	
-	@ClientString(id = 4178, message = "I looked closer, and the darkness was still there. Hiding. ")
+	@ClientString(id = 4178, message = "I looked closer, and the darkness was still there. Hiding.")
 	public static SystemMessageId I_LOOKED_CLOSER_AND_THE_DARKNESS_WAS_STILL_THERE_HIDING;
 	
 	@ClientString(id = 4179, message = "Waiting for a chance to resurface.")
 	public static SystemMessageId WAITING_FOR_A_CHANCE_TO_RESURFACE;
 	
-	@ClientString(id = 4180, message = "The enemy is never far. ")
+	@ClientString(id = 4180, message = "The enemy is never far.")
 	public static SystemMessageId THE_ENEMY_IS_NEVER_FAR;
 	
 	@ClientString(id = 4181, message = "Always remember that, Leona Blackbird.")
@@ -12177,7 +12177,7 @@ public final class SystemMessageId
 	@ClientString(id = 4284, message = "The High Priest has repeatedly attempted to reach Lord Sayha…")
 	public static SystemMessageId THE_HIGH_PRIEST_HAS_REPEATEDLY_ATTEMPTED_TO_REACH_LORD_SAYHA;
 	
-	@ClientString(id = 4285, message = "But there has been only silence. ")
+	@ClientString(id = 4285, message = "But there has been only silence.")
 	public static SystemMessageId BUT_THERE_HAS_BEEN_ONLY_SILENCE;
 	
 	@ClientString(id = 4286, message = "But we still get by.")
@@ -12198,7 +12198,7 @@ public final class SystemMessageId
 	@ClientString(id = 4291, message = "The winds of change are blowing.")
 	public static SystemMessageId THE_WINDS_OF_CHANGE_ARE_BLOWING;
 	
-	@ClientString(id = 4292, message = "The man who covets the power of the gods has opened the dimensional rift. ")
+	@ClientString(id = 4292, message = "The man who covets the power of the gods has opened the dimensional rift.")
 	public static SystemMessageId THE_MAN_WHO_COVETS_THE_POWER_OF_THE_GODS_HAS_OPENED_THE_DIMENSIONAL_RIFT;
 	
 	@ClientString(id = 4293, message = "Now, forgotten creatures will return, and new heroes will arise.")
@@ -12246,13 +12246,13 @@ public final class SystemMessageId
 	@ClientString(id = 4307, message = "Rise above the bounds of mortality and forge your own path.")
 	public static SystemMessageId RISE_ABOVE_THE_BOUNDS_OF_MORTALITY_AND_FORGE_YOUR_OWN_PATH;
 	
-	@ClientString(id = 4308, message = " ")
+	@ClientString(id = 4308, message = "")
 	public static SystemMessageId EMPTY_14;
 	
 	@ClientString(id = 4309, message = "To being ... Exalted!")
 	public static SystemMessageId TO_BEING_EXALTED;
 	
-	@ClientString(id = 4310, message = "The quest you've just completed can be completed $s1 times. Each account can complete this quest $s2 times per week, and it's reset after each maintenance. ")
+	@ClientString(id = 4310, message = "The quest you've just completed can be completed $s1 times. Each account can complete this quest $s2 times per week, and it's reset after each maintenance.")
 	public static SystemMessageId THE_QUEST_YOU_VE_JUST_COMPLETED_CAN_BE_COMPLETED_S1_TIMES_EACH_ACCOUNT_CAN_COMPLETE_THIS_QUEST_S2_TIMES_PER_WEEK_AND_IT_S_RESET_AFTER_EACH_MAINTENANCE;
 	
 	@ClientString(id = 4311, message = "I've been expecting you. Fall victim to my blades.")
@@ -12363,7 +12363,7 @@ public final class SystemMessageId
 	@ClientString(id = 4346, message = "Cannot use skills or items while faking death.")
 	public static SystemMessageId CANNOT_USE_SKILLS_OR_ITEMS_WHILE_FAKING_DEATH;
 	
-	@ClientString(id = 4347, message = "Stage $s2 - $s1 ")
+	@ClientString(id = 4347, message = "Stage $s2 - $s1")
 	public static SystemMessageId STAGE_S2_S1;
 	
 	@ClientString(id = 4348, message = "Soul Crystal effects that have been applied cannot be removed.")
@@ -12783,34 +12783,34 @@ public final class SystemMessageId
 	@ClientString(id = 4486, message = "Lineage 2 will always be by your side.")
 	public static SystemMessageId LINEAGE_2_WILL_ALWAYS_BE_BY_YOUR_SIDE;
 	
-	@ClientString(id = 4487, message = "You cannot exchange items during the number card game. ")
+	@ClientString(id = 4487, message = "You cannot exchange items during the number card game.")
 	public static SystemMessageId YOU_CANNOT_EXCHANGE_ITEMS_DURING_THE_NUMBER_CARD_GAME;
 	
-	@ClientString(id = 4488, message = "You cannot send a request to a character who is playing the number card game. ")
+	@ClientString(id = 4488, message = "You cannot send a request to a character who is playing the number card game.")
 	public static SystemMessageId YOU_CANNOT_SEND_A_REQUEST_TO_A_CHARACTER_WHO_IS_PLAYING_THE_NUMBER_CARD_GAME;
 	
-	@ClientString(id = 4489, message = "You cannot send or receive attached items during the number card game. You can only read or send mail. ")
+	@ClientString(id = 4489, message = "You cannot send or receive attached items during the number card game. You can only read or send mail.")
 	public static SystemMessageId YOU_CANNOT_SEND_OR_RECEIVE_ATTACHED_ITEMS_DURING_THE_NUMBER_CARD_GAME_YOU_CAN_ONLY_READ_OR_SEND_MAIL;
 	
-	@ClientString(id = 4490, message = "The number card game has ended because you are too far from the event NPC. ")
+	@ClientString(id = 4490, message = "The number card game has ended because you are too far from the event NPC.")
 	public static SystemMessageId THE_NUMBER_CARD_GAME_HAS_ENDED_BECAUSE_YOU_ARE_TOO_FAR_FROM_THE_EVENT_NPC;
 	
-	@ClientString(id = 4491, message = "You cannot do Couple Actions during the number card game. ")
+	@ClientString(id = 4491, message = "You cannot do Couple Actions during the number card game.")
 	public static SystemMessageId YOU_CANNOT_DO_COUPLE_ACTIONS_DURING_THE_NUMBER_CARD_GAME;
 	
-	@ClientString(id = 4492, message = "$c1 is playing the number card game. You cannot request Couple Actions. ")
+	@ClientString(id = 4492, message = "$c1 is playing the number card game. You cannot request Couple Actions.")
 	public static SystemMessageId C1_IS_PLAYING_THE_NUMBER_CARD_GAME_YOU_CANNOT_REQUEST_COUPLE_ACTIONS;
 	
-	@ClientString(id = 4493, message = "Guess the number on my card! ")
+	@ClientString(id = 4493, message = "Guess the number on my card!")
 	public static SystemMessageId GUESS_THE_NUMBER_ON_MY_CARD;
 	
-	@ClientString(id = 4494, message = "The number is higher! ")
+	@ClientString(id = 4494, message = "The number is higher!")
 	public static SystemMessageId THE_NUMBER_IS_HIGHER;
 	
-	@ClientString(id = 4495, message = "The number is lower! ")
+	@ClientString(id = 4495, message = "The number is lower!")
 	public static SystemMessageId THE_NUMBER_IS_LOWER;
 	
-	@ClientString(id = 4496, message = "I can't believe it... I lost! ")
+	@ClientString(id = 4496, message = "I can't believe it... I lost!")
 	public static SystemMessageId I_CAN_T_BELIEVE_IT_I_LOST;
 	
 	@ClientString(id = 4497, message = "I won! Haha.")
@@ -12885,40 +12885,40 @@ public final class SystemMessageId
 	@ClientString(id = 4520, message = "You cannot join this clan because $s1 minutes has not passed since you left another clan.")
 	public static SystemMessageId YOU_CANNOT_JOIN_THIS_CLAN_BECAUSE_S1_MINUTES_HAS_NOT_PASSED_SINCE_YOU_LEFT_ANOTHER_CLAN;
 	
-	@ClientString(id = 4521, message = "$s1 was summoned as a Primary Agathion. ")
+	@ClientString(id = 4521, message = "$s1 was summoned as a Primary Agathion.")
 	public static SystemMessageId S1_WAS_SUMMONED_AS_A_PRIMARY_AGATHION;
 	
-	@ClientString(id = 4522, message = "$s1‘s power was unlocked, thereby activating all its abilities. ")
+	@ClientString(id = 4522, message = "$s1‘s power was unlocked, thereby activating all its abilities.")
 	public static SystemMessageId S1_S_POWER_WAS_UNLOCKED_THEREBY_ACTIVATING_ALL_ITS_ABILITIES;
 	
-	@ClientString(id = 4523, message = "$s1 was summoned as a Secondary Agathion. ")
+	@ClientString(id = 4523, message = "$s1 was summoned as a Secondary Agathion.")
 	public static SystemMessageId S1_WAS_SUMMONED_AS_A_SECONDARY_AGATHION;
 	
 	@ClientString(id = 4524, message = "Only $s1‘s Unique Ability becomes active.")
 	public static SystemMessageId ONLY_S1_S_UNIQUE_ABILITY_BECOMES_ACTIVE;
 	
-	@ClientString(id = 4525, message = "$s1‘s power was sealed. ")
+	@ClientString(id = 4525, message = "$s1‘s power was sealed.")
 	public static SystemMessageId S1_S_POWER_WAS_SEALED;
 	
-	@ClientString(id = 4526, message = "Cannot summon any more Agathions. ")
+	@ClientString(id = 4526, message = "Cannot summon any more Agathions.")
 	public static SystemMessageId CANNOT_SUMMON_ANY_MORE_AGATHIONS;
 	
 	@ClientString(id = 4527, message = "You cannot use the Agathion's power because you are not wearing the left bracelet.")
 	public static SystemMessageId YOU_CANNOT_USE_THE_AGATHION_S_POWER_BECAUSE_YOU_ARE_NOT_WEARING_THE_LEFT_BRACELET;
 	
-	@ClientString(id = 4528, message = "+$s1$s2 was summoned as a Primary Agathion. ")
+	@ClientString(id = 4528, message = "+$s1$s2 was summoned as a Primary Agathion.")
 	public static SystemMessageId S1_S2_WAS_SUMMONED_AS_A_PRIMARY_AGATHION;
 	
-	@ClientString(id = 4529, message = "+$s1$s2‘s power was unlocked, thereby activating all its abilities. ")
+	@ClientString(id = 4529, message = "+$s1$s2‘s power was unlocked, thereby activating all its abilities.")
 	public static SystemMessageId S1_S2_S_POWER_WAS_UNLOCKED_THEREBY_ACTIVATING_ALL_ITS_ABILITIES;
 	
-	@ClientString(id = 4530, message = "+$s1$s2 was summoned as a Secondary Agathion. ")
+	@ClientString(id = 4530, message = "+$s1$s2 was summoned as a Secondary Agathion.")
 	public static SystemMessageId S1_S2_WAS_SUMMONED_AS_A_SECONDARY_AGATHION;
 	
 	@ClientString(id = 4531, message = "Only +$s1$s2‘s Unique Ability becomes active.")
 	public static SystemMessageId ONLY_S1_S2_S_UNIQUE_ABILITY_BECOMES_ACTIVE;
 	
-	@ClientString(id = 4532, message = "+$s1$s2‘s power was sealed. ")
+	@ClientString(id = 4532, message = "+$s1$s2‘s power was sealed.")
 	public static SystemMessageId S1_S2_S_POWER_WAS_SEALED;
 	
 	@ClientString(id = 4533, message = "Your status does not allow you to use this function.")
@@ -13083,7 +13083,7 @@ public final class SystemMessageId
 	@ClientString(id = 4586, message = "Use the additional functions set in the Clan Hall")
 	public static SystemMessageId USE_THE_ADDITIONAL_FUNCTIONS_SET_IN_THE_CLAN_HALL;
 	
-	@ClientString(id = 4587, message = "Use the functions related with the Clan Hall bidding and auction ")
+	@ClientString(id = 4587, message = "Use the functions related with the Clan Hall bidding and auction")
 	public static SystemMessageId USE_THE_FUNCTIONS_RELATED_WITH_THE_CLAN_HALL_BIDDING_AND_AUCTION;
 	
 	@ClientString(id = 4588, message = "Expel outsiders from the Clan Hall")
@@ -13113,10 +13113,10 @@ public final class SystemMessageId
 	@ClientString(id = 4596, message = "Hire/position mercenaries")
 	public static SystemMessageId HIRE_POSITION_MERCENARIES;
 	
-	@ClientString(id = 4597, message = "Manor settings and use blacksmith ")
+	@ClientString(id = 4597, message = "Manor settings and use blacksmith")
 	public static SystemMessageId MANOR_SETTINGS_AND_USE_BLACKSMITH;
 	
-	@ClientString(id = 4598, message = "Increase the number of clan members ($s1) ")
+	@ClientString(id = 4598, message = "Increase the number of clan members ($s1)")
 	public static SystemMessageId INCREASE_THE_NUMBER_OF_CLAN_MEMBERS_S1;
 	
 	@ClientString(id = 4599, message = "Increase the number of clan members ($s1) and elite clan members ($s2)")
@@ -13188,7 +13188,7 @@ public final class SystemMessageId
 	@ClientString(id = 4621, message = "- Balanced Critical Damage and Critical Rate<br>- Highest survival rate among similar classes")
 	public static SystemMessageId BALANCED_CRITICAL_DAMAGE_AND_CRITICAL_RATE_BR_HIGHEST_SURVIVAL_RATE_AMONG_SIMILAR_CLASSES;
 	
-	@ClientString(id = 4622, message = "By the will of the Chaos, the power of Ashagen, the greatest assassin of the giants, has been combined with the ancient power of light and wind. This allowed for quicker movement and strengthened the ability to perform extreme maneuvers in an instant. ")
+	@ClientString(id = 4622, message = "By the will of the Chaos, the power of Ashagen, the greatest assassin of the giants, has been combined with the ancient power of light and wind. This allowed for quicker movement and strengthened the ability to perform extreme maneuvers in an instant.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_ASHAGEN_THE_GREATEST_ASSASSIN_OF_THE_GIANTS_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_AND_WIND_THIS_ALLOWED_FOR_QUICKER_MOVEMENT_AND_STRENGTHENED_THE_ABILITY_TO_PERFORM_EXTREME_MANEUVERS_IN_AN_INSTANT;
 	
 	@ClientString(id = 4623, message = "- High Critical Rate<br>- Quick Evasion and Speed")
@@ -13212,7 +13212,7 @@ public final class SystemMessageId
 	@ClientString(id = 4629, message = "- Balanced Critical Damage and Critical Rate<br>- Stable damage-dealing")
 	public static SystemMessageId BALANCED_CRITICAL_DAMAGE_AND_CRITICAL_RATE_BR_STABLE_DAMAGE_DEALING;
 	
-	@ClientString(id = 4630, message = "By the will of the Chaos, the power of Cranigg, the ancient giant hero with the Third Eye, has been combined with the ancient power of light. The Sagittarius can now pierce not only the body, but also the soul of an opponent as a result. ")
+	@ClientString(id = 4630, message = "By the will of the Chaos, the power of Cranigg, the ancient giant hero with the Third Eye, has been combined with the ancient power of light. The Sagittarius can now pierce not only the body, but also the soul of an opponent as a result.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_CRANIGG_THE_ANCIENT_GIANT_HERO_WITH_THE_THIRD_EYE_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_THE_SAGITTARIUS_CAN_NOW_PIERCE_NOT_ONLY_THE_BODY_BUT_ALSO_THE_SOUL_OF_AN_OPPONENT_AS_A_RESULT;
 	
 	@ClientString(id = 4631, message = "- Quick Speed and Atk. Spd.<br>- Advantageous in a small battle")
@@ -13233,10 +13233,10 @@ public final class SystemMessageId
 	@ClientString(id = 4636, message = "By the will of the Chaos, the power of Cranigg, the ancient giant hero with the Third Eye, has been stacked with the ancient power of giants. The great power resulting from this was used to strengthen abilities to protect the self and party members.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_CRANIGG_THE_ANCIENT_GIANT_HERO_WITH_THE_THIRD_EYE_HAS_BEEN_STACKED_WITH_THE_ANCIENT_POWER_OF_GIANTS_THE_GREAT_POWER_RESULTING_FROM_THIS_WAS_USED_TO_STRENGTHEN_ABILITIES_TO_PROTECT_THE_SELF_AND_PARTY_MEMBERS;
 	
-	@ClientString(id = 4637, message = "- Well-rounded balance<br>- Use ranged magic (Vortex) ")
+	@ClientString(id = 4637, message = "- Well-rounded balance<br>- Use ranged magic (Vortex)")
 	public static SystemMessageId WELL_ROUNDED_BALANCE_BR_USE_RANGED_MAGIC_VORTEX;
 	
-	@ClientString(id = 4638, message = "By the will of the Chaos, the power of Soltkreig, one of the 7 Sages of the giants, has been combined with the ancient power of light. Archmages that received this power were able to reach levels of magic that went beyond their present limits. ")
+	@ClientString(id = 4638, message = "By the will of the Chaos, the power of Soltkreig, one of the 7 Sages of the giants, has been combined with the ancient power of light. Archmages that received this power were able to reach levels of magic that went beyond their present limits.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_SOLTKREIG_ONE_OF_THE_7_SAGES_OF_THE_GIANTS_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_ARCHMAGES_THAT_RECEIVED_THIS_POWER_WERE_ABLE_TO_REACH_LEVELS_OF_MAGIC_THAT_WENT_BEYOND_THEIR_PRESENT_LIMITS;
 	
 	@ClientString(id = 4639, message = "- Power M. Atk. paired with debuffs<br>- Advantageous in 1:1 battles")
@@ -13260,7 +13260,7 @@ public final class SystemMessageId
 	@ClientString(id = 4645, message = "- High P. Def. paired with debuffs<br>- Specializes in PvP")
 	public static SystemMessageId HIGH_P_DEF_PAIRED_WITH_DEBUFFS_BR_SPECIALIZES_IN_PVP;
 	
-	@ClientString(id = 4646, message = "By the will of the Chaos, the power of Soltkreig, one of the 7 Sages of the giants, has been stacked with the ancient power of Katenar the giant. This has resulted in powers that rival even those of the giants. ")
+	@ClientString(id = 4646, message = "By the will of the Chaos, the power of Soltkreig, one of the 7 Sages of the giants, has been stacked with the ancient power of Katenar the giant. This has resulted in powers that rival even those of the giants.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_SOLTKREIG_ONE_OF_THE_7_SAGES_OF_THE_GIANTS_HAS_BEEN_STACKED_WITH_THE_ANCIENT_POWER_OF_KATENAR_THE_GIANT_THIS_HAS_RESULTED_IN_POWERS_THAT_RIVAL_EVEN_THOSE_OF_THE_GIANTS;
 	
 	@ClientString(id = 4647, message = "- Party buffer specializing in skills<br>- Shortened skill cooldowns<br>- Use AoE Mutation to aid party")
@@ -13278,13 +13278,13 @@ public final class SystemMessageId
 	@ClientString(id = 4651, message = "- Party buffer based on attack<br>- Use AoE Petrify to aid party")
 	public static SystemMessageId PARTY_BUFFER_BASED_ON_ATTACK_BR_USE_AOE_PETRIFY_TO_AID_PARTY;
 	
-	@ClientString(id = 4652, message = "By the will of the Chaos, the power of Leister, the giant that commanded the war between the giants and the gods, has been combined with the ancient power of light. This power has maximized the strength of not only the Spectral Dancer but the entire party's attack power. ")
+	@ClientString(id = 4652, message = "By the will of the Chaos, the power of Leister, the giant that commanded the war between the giants and the gods, has been combined with the ancient power of light. This power has maximized the strength of not only the Spectral Dancer but the entire party's attack power.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_LEISTER_THE_GIANT_THAT_COMMANDED_THE_WAR_BETWEEN_THE_GIANTS_AND_THE_GODS_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_THIS_POWER_HAS_MAXIMIZED_THE_STRENGTH_OF_NOT_ONLY_THE_SPECTRAL_DANCER_BUT_THE_ENTIRE_PARTY_S_ATTACK_POWER;
 	
 	@ClientString(id = 4653, message = "- Buffer specializing in clan wars and PvP<br>- Restrain standard P. Atk. To aid in clan war<br>- Specializes in clan-level buffs and CP boosts")
 	public static SystemMessageId BUFFER_SPECIALIZING_IN_CLAN_WARS_AND_PVP_BR_RESTRAIN_STANDARD_P_ATK_TO_AID_IN_CLAN_WAR_BR_SPECIALIZES_IN_CLAN_LEVEL_BUFFS_AND_CP_BOOSTS;
 	
-	@ClientString(id = 4654, message = "By the will of the Chaos, the power of Leister, the giant that commanded the war between the giants and the gods, has been combined with the ancient power of light. This power came to protect not only the self but the entire community around the wielder. ")
+	@ClientString(id = 4654, message = "By the will of the Chaos, the power of Leister, the giant that commanded the war between the giants and the gods, has been combined with the ancient power of light. This power came to protect not only the self but the entire community around the wielder.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_LEISTER_THE_GIANT_THAT_COMMANDED_THE_WAR_BETWEEN_THE_GIANTS_AND_THE_GODS_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_THIS_POWER_CAME_TO_PROTECT_NOT_ONLY_THE_SELF_BUT_THE_ENTIRE_COMMUNITY_AROUND_THE_WIELDER;
 	
 	@ClientString(id = 4655, message = "- Party buffer with balanced attack and defense<br>- Decreases enemy HP to aid party")
@@ -13296,7 +13296,7 @@ public final class SystemMessageId
 	@ClientString(id = 4657, message = "- Summoner specializing in Atk. Spd.<br>- Able to use cat-type servitors")
 	public static SystemMessageId SUMMONER_SPECIALIZING_IN_ATK_SPD_BR_ABLE_TO_USE_CAT_TYPE_SERVITORS;
 	
-	@ClientString(id = 4658, message = "By the will of the Chaos, the power of Naviarope, the giant that could open and close the Dimensional Door at will, has been combined with the ancient power of light. This power traversed the dimensions and gave the Arcana Lord true mastery of the art of summoning. ")
+	@ClientString(id = 4658, message = "By the will of the Chaos, the power of Naviarope, the giant that could open and close the Dimensional Door at will, has been combined with the ancient power of light. This power traversed the dimensions and gave the Arcana Lord true mastery of the art of summoning.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_NAVIAROPE_THE_GIANT_THAT_COULD_OPEN_AND_CLOSE_THE_DIMENSIONAL_DOOR_AT_WILL_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_THIS_POWER_TRAVERSED_THE_DIMENSIONS_AND_GAVE_THE_ARCANA_LORD_TRUE_MASTERY_OF_THE_ART_OF_SUMMONING;
 	
 	@ClientString(id = 4659, message = "- Summoner specializing in Critical Damage<br>- Able to use unicorn-type servitors")
@@ -13308,19 +13308,19 @@ public final class SystemMessageId
 	@ClientString(id = 4661, message = "- Summoner specializing in P. Atk.<br>- Able to use phantom-type servitors")
 	public static SystemMessageId SUMMONER_SPECIALIZING_IN_P_ATK_BR_ABLE_TO_USE_PHANTOM_TYPE_SERVITORS;
 	
-	@ClientString(id = 4662, message = "By the will of the Chaos, the power of Naviarope, the giant that could open and close the Dimensional Door at will, has been combined with the ancient power of darkness. This power enabled powerful summoning skills for the Spectral Master. ")
+	@ClientString(id = 4662, message = "By the will of the Chaos, the power of Naviarope, the giant that could open and close the Dimensional Door at will, has been combined with the ancient power of darkness. This power enabled powerful summoning skills for the Spectral Master.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_NAVIAROPE_THE_GIANT_THAT_COULD_OPEN_AND_CLOSE_THE_DIMENSIONAL_DOOR_AT_WILL_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_DARKNESS_THIS_POWER_ENABLED_POWERFUL_SUMMONING_SKILLS_FOR_THE_SPECTRAL_MASTER;
 	
 	@ClientString(id = 4663, message = "- Healer with great restorative powers<br>- Specializes in restoring clan members' HP")
 	public static SystemMessageId HEALER_WITH_GREAT_RESTORATIVE_POWERS_BR_SPECIALIZES_IN_RESTORING_CLAN_MEMBERS_HP;
 	
-	@ClientString(id = 4664, message = "By the will of the Chaos, the power of Lakcis, the forefather of holy magic who took and improved Einhasad's power, has been combined with the ancient power of light. This enabled the Aeore Cardinal to use miraculous magic. ")
+	@ClientString(id = 4664, message = "By the will of the Chaos, the power of Lakcis, the forefather of holy magic who took and improved Einhasad's power, has been combined with the ancient power of light. This enabled the Aeore Cardinal to use miraculous magic.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_LAKCIS_THE_FOREFATHER_OF_HOLY_MAGIC_WHO_TOOK_AND_IMPROVED_EINHASAD_S_POWER_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_THIS_ENABLED_THE_AEORE_CARDINAL_TO_USE_MIRACULOUS_MAGIC;
 	
 	@ClientString(id = 4665, message = "- Healer with fast chain skill usage<br>- Specializes in MP Recovery")
 	public static SystemMessageId HEALER_WITH_FAST_CHAIN_SKILL_USAGE_BR_SPECIALIZES_IN_MP_RECOVERY;
 	
-	@ClientString(id = 4666, message = "By the will of the Chaos, the power of Lakcis, the forefather of holy magic who took and improved Einhasad's power, has been combined with the ancient power of light and water. This power was used not only to protect one's community but to protect the peace of the world. ")
+	@ClientString(id = 4666, message = "By the will of the Chaos, the power of Lakcis, the forefather of holy magic who took and improved Einhasad's power, has been combined with the ancient power of light and water. This power was used not only to protect one's community but to protect the peace of the world.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_LAKCIS_THE_FOREFATHER_OF_HOLY_MAGIC_WHO_TOOK_AND_IMPROVED_EINHASAD_S_POWER_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_AND_WATER_THIS_POWER_WAS_USED_NOT_ONLY_TO_PROTECT_ONE_S_COMMUNITY_BUT_TO_PROTECT_THE_PEACE_OF_THE_WORLD;
 	
 	@ClientString(id = 4667, message = "- Healer with powerful M. Atk.<br>- Specializes in MP Recovery")
@@ -13332,7 +13332,7 @@ public final class SystemMessageId
 	@ClientString(id = 4669, message = "Melee Damage Dealer")
 	public static SystemMessageId MELEE_DAMAGE_DEALER_2;
 	
-	@ClientString(id = 4670, message = " - Specizlizes in Fist Weapons<br> - Attacks from the Side<br> - Fast Atk. Spd.")
+	@ClientString(id = 4670, message = "- Specizlizes in Fist Weapons<br> - Attacks from the Side<br> - Fast Atk. Spd.")
 	public static SystemMessageId SPECIZLIZES_IN_FIST_WEAPONS_BR_ATTACKS_FROM_THE_SIDE_BR_FAST_ATK_SPD;
 	
 	@ClientString(id = 4671, message = "Eviscerators can manipulate gravity to their advantage. Their main strength lies in shifting their own center of gravity to add to their speed and attack speed.")
@@ -13341,7 +13341,7 @@ public final class SystemMessageId
 	@ClientString(id = 4672, message = "Magic Damage Dealer")
 	public static SystemMessageId MAGIC_DAMAGE_DEALER_2;
 	
-	@ClientString(id = 4673, message = " - Specializes in magical two-handed weapons<br> - Close-range Damage Spells<br> - Uses Wind for Defense")
+	@ClientString(id = 4673, message = "- Specializes in magical two-handed weapons<br> - Close-range Damage Spells<br> - Uses Wind for Defense")
 	public static SystemMessageId SPECIALIZES_IN_MAGICAL_TWO_HANDED_WEAPONS_BR_CLOSE_RANGE_DAMAGE_SPELLS_BR_USES_WIND_FOR_DEFENSE;
 	
 	@ClientString(id = 4674, message = "Able to tap into the power of the wind god, Sayha's Seers can diffuse themselves into the wind for transport or defenses. Their talents account for their extraordinary survivability.")
@@ -14514,13 +14514,13 @@ public final class SystemMessageId
 	@ClientString(id = 5180, message = "Ranking information did not load. Please try again later.")
 	public static SystemMessageId RANKING_INFORMATION_DID_NOT_LOAD_PLEASE_TRY_AGAIN_LATER;
 	
-	@ClientString(id = 5181, message = "You have obtained an Attribute. Open your Character Information Screen to check. ")
+	@ClientString(id = 5181, message = "You have obtained an Attribute. Open your Character Information Screen to check.")
 	public static SystemMessageId YOU_HAVE_OBTAINED_AN_ATTRIBUTE_OPEN_YOUR_CHARACTER_INFORMATION_SCREEN_TO_CHECK;
 	
 	@ClientString(id = 5182, message = "Unable to open Olympiad Screen while in participating or watching a match.")
 	public static SystemMessageId UNABLE_TO_OPEN_OLYMPIAD_SCREEN_WHILE_IN_PARTICIPATING_OR_WATCHING_A_MATCH;
 	
-	@ClientString(id = 5183, message = "Olympiad can be watches in Peace Zone only. ")
+	@ClientString(id = 5183, message = "Olympiad can be watches in Peace Zone only.")
 	public static SystemMessageId OLYMPIAD_CAN_BE_WATCHES_IN_PEACE_ZONE_ONLY;
 	
 	@ClientString(id = 5184, message = "ROUND $s1")
@@ -14634,16 +14634,16 @@ public final class SystemMessageId
 	@ClientString(id = 5220, message = "If enchantment fails, the item will be destroyed (crystallized). If enchantment to +6 or higher fails, you can obtain additional Defense enhancement stones.")
 	public static SystemMessageId IF_ENCHANTMENT_FAILS_THE_ITEM_WILL_BE_DESTROYED_CRYSTALLIZED_IF_ENCHANTMENT_TO_6_OR_HIGHER_FAILS_YOU_CAN_OBTAIN_ADDITIONAL_DEFENSE_ENHANCEMENT_STONES;
 	
-	@ClientString(id = 5221, message = "Today you can use $s1 Attack Point(s).\\nYour remaining Life for today is $s2.\\nAn attacker with 1 or higher Life/Attack Point can obtain Bloody Coins by killing a user with 1 or higher Life. These points are rest at 6:30 every day. ")
+	@ClientString(id = 5221, message = "Today you can use $s1 Attack Point(s).\\nYour remaining Life for today is $s2.\\nAn attacker with 1 or higher Life/Attack Point can obtain Bloody Coins by killing a user with 1 or higher Life. These points are rest at 6:30 every day.")
 	public static SystemMessageId TODAY_YOU_CAN_USE_S1_ATTACK_POINT_S_NYOUR_REMAINING_LIFE_FOR_TODAY_IS_S2_NAN_ATTACKER_WITH_1_OR_HIGHER_LIFE_ATTACK_POINT_CAN_OBTAIN_BLOODY_COINS_BY_KILLING_A_USER_WITH_1_OR_HIGHER_LIFE_THESE_POINTS_ARE_REST_AT_6_30_EVERY_DAY;
 	
-	@ClientString(id = 5222, message = "Only Lv. 95 or higher users can use the Bloody Coin System. ")
+	@ClientString(id = 5222, message = "Only Lv. 95 or higher users can use the Bloody Coin System.")
 	public static SystemMessageId ONLY_LV_95_OR_HIGHER_USERS_CAN_USE_THE_BLOODY_COIN_SYSTEM;
 	
-	@ClientString(id = 5223, message = "You beat $c1 and obtained $s2 Bloody Coins. You lost 1 Attack Point. Enter /bloodycoin in the chat window to check your points. ")
+	@ClientString(id = 5223, message = "You beat $c1 and obtained $s2 Bloody Coins. You lost 1 Attack Point. Enter /bloodycoin in the chat window to check your points.")
 	public static SystemMessageId YOU_BEAT_C1_AND_OBTAINED_S2_BLOODY_COINS_YOU_LOST_1_ATTACK_POINT_ENTER_BLOODYCOIN_IN_THE_CHAT_WINDOW_TO_CHECK_YOUR_POINTS;
 	
-	@ClientString(id = 5224, message = "You were killed by $c1 and lost 1 Life. Your Life must be 1 or higher to win a battle and obtain Bloody Coins. Enter /bloodycoin in the chat window to check your points. ")
+	@ClientString(id = 5224, message = "You were killed by $c1 and lost 1 Life. Your Life must be 1 or higher to win a battle and obtain Bloody Coins. Enter /bloodycoin in the chat window to check your points.")
 	public static SystemMessageId YOU_WERE_KILLED_BY_C1_AND_LOST_1_LIFE_YOUR_LIFE_MUST_BE_1_OR_HIGHER_TO_WIN_A_BATTLE_AND_OBTAIN_BLOODY_COINS_ENTER_BLOODYCOIN_IN_THE_CHAT_WINDOW_TO_CHECK_YOUR_POINTS;
 	
 	@ClientString(id = 5225, message = "Current location: $s1/$s2/$s3 (near the outpost)")
@@ -14802,7 +14802,7 @@ public final class SystemMessageId
 	@ClientString(id = 5511, message = "Standing by...")
 	public static SystemMessageId STANDING_BY;
 	
-	@ClientString(id = 5512, message = "$s1 has chosen a class. ")
+	@ClientString(id = 5512, message = "$s1 has chosen a class.")
 	public static SystemMessageId S1_HAS_CHOSEN_A_CLASS;
 	
 	@ClientString(id = 5513, message = "The battle will soon begin.")
@@ -15231,7 +15231,7 @@ public final class SystemMessageId
 	@ClientString(id = 6083, message = "You cannot use this system during trading, private store, and workshop setup.")
 	public static SystemMessageId YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP;
 	
-	@ClientString(id = 6084, message = " Appearance Modification or Restoration in progress. Please try again after completing this task.")
+	@ClientString(id = 6084, message = "Appearance Modification or Restoration in progress. Please try again after completing this task.")
 	public static SystemMessageId APPEARANCE_MODIFICATION_OR_RESTORATION_IN_PROGRESS_PLEASE_TRY_AGAIN_AFTER_COMPLETING_THIS_TASK;
 	
 	@ClientString(id = 6085, message = "$s1 now has $s2's appearance.")
@@ -15363,7 +15363,7 @@ public final class SystemMessageId
 	@ClientString(id = 6127, message = "You have gained $s1 XP and $s2 SP for your contribution in the raid.")
 	public static SystemMessageId YOU_HAVE_GAINED_S1_XP_AND_S2_SP_FOR_YOUR_CONTRIBUTION_IN_THE_RAID;
 	
-	@ClientString(id = 6128, message = "You cannot modify an equipped item into the appearance of an unequippable item. Please check race/gender restrictions. You can modify the appearance if you unequip the item. ")
+	@ClientString(id = 6128, message = "You cannot modify an equipped item into the appearance of an unequippable item. Please check race/gender restrictions. You can modify the appearance if you unequip the item.")
 	public static SystemMessageId YOU_CANNOT_MODIFY_AN_EQUIPPED_ITEM_INTO_THE_APPEARANCE_OF_AN_UNEQUIPPABLE_ITEM_PLEASE_CHECK_RACE_GENDER_RESTRICTIONS_YOU_CAN_MODIFY_THE_APPEARANCE_IF_YOU_UNEQUIP_THE_ITEM;
 	
 	@ClientString(id = 6129, message = "Your level does not allow you to purchase this item.")
@@ -15414,7 +15414,7 @@ public final class SystemMessageId
 	@ClientString(id = 6144, message = "Not enough Hero Coin.")
 	public static SystemMessageId NOT_ENOUGH_HERO_COIN;
 	
-	@ClientString(id = 6145, message = "Training Stage: Lv. $s1 ")
+	@ClientString(id = 6145, message = "Training Stage: Lv. $s1")
 	public static SystemMessageId TRAINING_STAGE_LV_S1;
 	
 	@ClientString(id = 6146, message = "Remaining Training Time: $s1 hr, $s2 min")
@@ -15507,10 +15507,10 @@ public final class SystemMessageId
 	@ClientString(id = 6175, message = "Your Day $s1 Premium Account Attendance Reward is ready. Click on the rewards icon.")
 	public static SystemMessageId YOUR_DAY_S1_PREMIUM_ACCOUNT_ATTENDANCE_REWARD_IS_READY_CLICK_ON_THE_REWARDS_ICON;
 	
-	@ClientString(id = 6176, message = "You've received your Attendance Reward for Day $s1. ")
+	@ClientString(id = 6176, message = "You've received your Attendance Reward for Day $s1.")
 	public static SystemMessageId YOU_VE_RECEIVED_YOUR_ATTENDANCE_REWARD_FOR_DAY_S1;
 	
-	@ClientString(id = 6177, message = "You've received your Premium Account Attendance Reward for Day $s1. ")
+	@ClientString(id = 6177, message = "You've received your Premium Account Attendance Reward for Day $s1.")
 	public static SystemMessageId YOU_VE_RECEIVED_YOUR_PREMIUM_ACCOUNT_ATTENDANCE_REWARD_FOR_DAY_S1;
 	
 	@ClientString(id = 6178, message = "The Attendance Reward cannot be received because the inventory weight/quantity limit has been exceeded.")
@@ -15522,13 +15522,13 @@ public final class SystemMessageId
 	@ClientString(id = 6180, message = "Your Day $s1 VIP Attendance Reward is ready. Click on the rewards icon.")
 	public static SystemMessageId YOUR_DAY_S1_VIP_ATTENDANCE_REWARD_IS_READY_CLICK_ON_THE_REWARDS_ICON;
 	
-	@ClientString(id = 6181, message = "You've received your VIP Attendance Reward for Day $s1. ")
+	@ClientString(id = 6181, message = "You've received your VIP Attendance Reward for Day $s1.")
 	public static SystemMessageId YOU_VE_RECEIVED_YOUR_VIP_ATTENDANCE_REWARD_FOR_DAY_S1;
 	
 	@ClientString(id = 6182, message = "You've already recieved the Attendance Check rewards.")
 	public static SystemMessageId YOU_VE_ALREADY_RECIEVED_THE_ATTENDANCE_CHECK_REWARDS;
 	
-	@ClientString(id = 6183, message = "Your VIP rank is too low to receive the reward. ")
+	@ClientString(id = 6183, message = "Your VIP rank is too low to receive the reward.")
 	public static SystemMessageId YOUR_VIP_RANK_IS_TOO_LOW_TO_RECEIVE_THE_REWARD;
 	
 	@ClientString(id = 6184, message = "Items in the Pet Inventory cannot be used as offerings.")
@@ -15564,7 +15564,7 @@ public final class SystemMessageId
 	@ClientString(id = 6194, message = "Your Day $s1 Attendance Reward is ready. Click on the rewards icon.\\n(You can redeem your reward 30 minutes after logging in.)")
 	public static SystemMessageId YOUR_DAY_S1_ATTENDANCE_REWARD_IS_READY_CLICK_ON_THE_REWARDS_ICON_N_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN_2;
 	
-	@ClientString(id = 6195, message = "You've received your Attendance Reward for Day $s1. ")
+	@ClientString(id = 6195, message = "You've received your Attendance Reward for Day $s1.")
 	public static SystemMessageId YOU_VE_RECEIVED_YOUR_ATTENDANCE_REWARD_FOR_DAY_S1_2;
 	
 	@ClientString(id = 6196, message = "The item cannot be received because the inventory weight/quantity limit has been exceeded.")
@@ -15918,7 +15918,7 @@ public final class SystemMessageId
 	@ClientString(id = 7056, message = "You've aded $c1 to your List of Foes for having killed you.")
 	public static SystemMessageId YOU_VE_ADED_C1_TO_YOUR_LIST_OF_FOES_FOR_HAVING_KILLED_YOU;
 	
-	@ClientString(id = 7057, message = "You've deleted $c1 from your List of Foes. ")
+	@ClientString(id = 7057, message = "You've deleted $c1 from your List of Foes.")
 	public static SystemMessageId YOU_VE_DELETED_C1_FROM_YOUR_LIST_OF_FOES;
 	
 	@ClientString(id = 7058, message = "The Blood Crystal shows you the location of your foe, $c1. Your foe is in $s2.")
@@ -15954,10 +15954,10 @@ public final class SystemMessageId
 	@ClientString(id = 7068, message = "You paused the saving of your SP. To resume, double-click or right-click on the Incomplete Tactics Crystal from your inventory.")
 	public static SystemMessageId YOU_PAUSED_THE_SAVING_OF_YOUR_SP_TO_RESUME_DOUBLE_CLICK_OR_RIGHT_CLICK_ON_THE_INCOMPLETE_TACTICS_CRYSTAL_FROM_YOUR_INVENTORY;
 	
-	@ClientString(id = 7069, message = "You've saved $s1%% XP on the Incomplete Training Crystal. ")
+	@ClientString(id = 7069, message = "You've saved $s1%% XP on the Incomplete Training Crystal.")
 	public static SystemMessageId YOU_VE_SAVED_S1_XP_ON_THE_INCOMPLETE_TRAINING_CRYSTAL;
 	
-	@ClientString(id = 7070, message = "You've saved $s1%% SP on the Incomplete Tactics Crystal. ")
+	@ClientString(id = 7070, message = "You've saved $s1%% SP on the Incomplete Tactics Crystal.")
 	public static SystemMessageId YOU_VE_SAVED_S1_SP_ON_THE_INCOMPLETE_TACTICS_CRYSTAL;
 	
 	@ClientString(id = 7071, message = "You've saved all the XP and created a $s1. Check your inventory.")
@@ -16152,13 +16152,13 @@ public final class SystemMessageId
 	@ClientString(id = 7152, message = "You cannot gift yourself.")
 	public static SystemMessageId YOU_CANNOT_GIFT_YOURSELF;
 	
-	@ClientString(id = 7153, message = "Teleport to $s1? ")
+	@ClientString(id = 7153, message = "Teleport to $s1?")
 	public static SystemMessageId TELEPORT_TO_S1;
 	
 	@ClientString(id = 7154, message = "Not enough Adventure Scrolls. \\nGo to the Premium Shop?")
 	public static SystemMessageId NOT_ENOUGH_ADVENTURE_SCROLLS_NGO_TO_THE_PREMIUM_SHOP;
 	
-	@ClientString(id = 7155, message = "You don't have any more quests to play. ")
+	@ClientString(id = 7155, message = "You don't have any more quests to play.")
 	public static SystemMessageId YOU_DON_T_HAVE_ANY_MORE_QUESTS_TO_PLAY;
 	
 	@ClientString(id = 7156, message = "You must select a quest to teleport instantly.")
@@ -16188,7 +16188,7 @@ public final class SystemMessageId
 	@ClientString(id = 7164, message = "Cannot open the Adventure Guide while in battle. Please finish your battle and try again.")
 	public static SystemMessageId CANNOT_OPEN_THE_ADVENTURE_GUIDE_WHILE_IN_BATTLE_PLEASE_FINISH_YOUR_BATTLE_AND_TRY_AGAIN;
 	
-	@ClientString(id = 7165, message = "Cannot teleport to $s1. ")
+	@ClientString(id = 7165, message = "Cannot teleport to $s1.")
 	public static SystemMessageId CANNOT_TELEPORT_TO_S1;
 	
 	@ClientString(id = 7166, message = "Cannot teleport instantly while in battle. Please finish your battle and try again.")
@@ -16245,7 +16245,7 @@ public final class SystemMessageId
 	@ClientString(id = 7183, message = "Cannot use instant teleport when dead.")
 	public static SystemMessageId CANNOT_USE_INSTANT_TELEPORT_WHEN_DEAD;
 	
-	@ClientString(id = 7184, message = "Cannot teleport instantly when you are unable to move. ")
+	@ClientString(id = 7184, message = "Cannot teleport instantly when you are unable to move.")
 	public static SystemMessageId CANNOT_TELEPORT_INSTANTLY_WHEN_YOU_ARE_UNABLE_TO_MOVE;
 	
 	@ClientString(id = 7185, message = "Probability: $s1")
@@ -16266,7 +16266,7 @@ public final class SystemMessageId
 	@ClientString(id = 7190, message = "Congratulations! Safe Enchant was successful and you got + $s1 , + $s2$s3.")
 	public static SystemMessageId CONGRATULATIONS_SAFE_ENCHANT_WAS_SUCCESSFUL_AND_YOU_GOT_S1_S2_S3;
 	
-	@ClientString(id = 7191, message = "Failed to Safe Enchant. Please try again. ")
+	@ClientString(id = 7191, message = "Failed to Safe Enchant. Please try again.")
 	public static SystemMessageId FAILED_TO_SAFE_ENCHANT_PLEASE_TRY_AGAIN;
 	
 	@ClientString(id = 7192, message = "You can bestow random Set Options to Set Equipment, and you can change Set Options for equipment that already has Set Options.")
@@ -16353,7 +16353,7 @@ public final class SystemMessageId
 	@ClientString(id = 7219, message = "You don't have a Feather of Blessing.\\nFeathers of Blessing can be purchased from the Premium Shop.")
 	public static SystemMessageId YOU_DON_T_HAVE_A_FEATHER_OF_BLESSING_NFEATHERS_OF_BLESSING_CAN_BE_PURCHASED_FROM_THE_PREMIUM_SHOP;
 	
-	@ClientString(id = 7220, message = "You've reached the limit for accounts that can be logged in from your IP address. ")
+	@ClientString(id = 7220, message = "You've reached the limit for accounts that can be logged in from your IP address.")
 	public static SystemMessageId YOU_VE_REACHED_THE_LIMIT_FOR_ACCOUNTS_THAT_CAN_BE_LOGGED_IN_FROM_YOUR_IP_ADDRESS;
 	
 	@ClientString(id = 7221, message = "You've acquired $s1 XP and $s2 additional XP.")
@@ -16482,7 +16482,7 @@ public final class SystemMessageId
 	@ClientString(id = 7262, message = "Now you can receive the XP boost from the Moonlight. During the Moon Festival, you get +100%% XP between 20:00-23:00 every day.")
 	public static SystemMessageId NOW_YOU_CAN_RECEIVE_THE_XP_BOOST_FROM_THE_MOONLIGHT_DURING_THE_MOON_FESTIVAL_YOU_GET_100_XP_BETWEEN_20_00_23_00_EVERY_DAY;
 	
-	@ClientString(id = 7263, message = "The Moonlight XP boost is over for today. ")
+	@ClientString(id = 7263, message = "The Moonlight XP boost is over for today.")
 	public static SystemMessageId THE_MOONLIGHT_XP_BOOST_IS_OVER_FOR_TODAY;
 	
 	@ClientString(id = 7264, message = "The Moonlight XP boost effect is on. During the Moon Festival, you get +100%% XP between 20:00-23:00 every day.")
@@ -16608,7 +16608,7 @@ public final class SystemMessageId
 	@ClientString(id = 7304, message = "$s1 has already applied to join. Please check the list of applications and recommendations.")
 	public static SystemMessageId S1_HAS_ALREADY_APPLIED_TO_JOIN_PLEASE_CHECK_THE_LIST_OF_APPLICATIONS_AND_RECOMMENDATIONS;
 	
-	@ClientString(id = 7305, message = "You've received a recommendation from the $s1 clan. Please check the list of applications and recommendations. ")
+	@ClientString(id = 7305, message = "You've received a recommendation from the $s1 clan. Please check the list of applications and recommendations.")
 	public static SystemMessageId YOU_VE_RECEIVED_A_RECOMMENDATION_FROM_THE_S1_CLAN_PLEASE_CHECK_THE_LIST_OF_APPLICATIONS_AND_RECOMMENDATIONS;
 	
 	@ClientString(id = 7306, message = "The user has deleted the character so the application cannot be accepted.")
@@ -16761,7 +16761,7 @@ public final class SystemMessageId
 	@ClientString(id = 7355, message = "Your student has achieved a goal so you are sending a reward.")
 	public static SystemMessageId YOUR_STUDENT_HAS_ACHIEVED_A_GOAL_SO_YOU_ARE_SENDING_A_REWARD;
 	
-	@ClientString(id = 7356, message = "Student: $s1\\n\\n Goal Achieved: $s2\\n\\n Reward: Proof of Master x$s3 ")
+	@ClientString(id = 7356, message = "Student: $s1\\n\\n Goal Achieved: $s2\\n\\n Reward: Proof of Master x$s3")
 	public static SystemMessageId STUDENT_S1_N_N_GOAL_ACHIEVED_S2_N_N_REWARD_PROOF_OF_MASTER_X_S3;
 	
 	@ClientString(id = 7357, message = "$s1 Level-up Achievement")
@@ -16785,7 +16785,7 @@ public final class SystemMessageId
 	@ClientString(id = 7363, message = "You've requested to be a mercenary for the territory war.")
 	public static SystemMessageId YOU_VE_REQUESTED_TO_BE_A_MERCENARY_FOR_THE_TERRITORY_WAR;
 	
-	@ClientString(id = 7364, message = "This class cannot transform. ")
+	@ClientString(id = 7364, message = "This class cannot transform.")
 	public static SystemMessageId THIS_CLASS_CANNOT_TRANSFORM;
 	
 	@ClientString(id = 7365, message = "Not enough Transformation Points.")
@@ -16797,7 +16797,7 @@ public final class SystemMessageId
 	@ClientString(id = 7367, message = "Reward received.")
 	public static SystemMessageId REWARD_RECEIVED;
 	
-	@ClientString(id = 7368, message = "Only the Clan Leader can create one. ")
+	@ClientString(id = 7368, message = "Only the Clan Leader can create one.")
 	public static SystemMessageId ONLY_THE_CLAN_LEADER_CAN_CREATE_ONE;
 	
 	@ClientString(id = 7369, message = "You cannot end the relationship with another student. Only possible between master and student.")
@@ -16884,13 +16884,13 @@ public final class SystemMessageId
 	@ClientString(id = 7396, message = "Cannot extend the duration of this item.")
 	public static SystemMessageId CANNOT_EXTEND_THE_DURATION_OF_THIS_ITEM;
 	
-	@ClientString(id = 7397, message = "Please unequip the item to extend the duration. ")
+	@ClientString(id = 7397, message = "Please unequip the item to extend the duration.")
 	public static SystemMessageId PLEASE_UNEQUIP_THE_ITEM_TO_EXTEND_THE_DURATION;
 	
 	@ClientString(id = 7398, message = "Cannot extend the duration any more.")
 	public static SystemMessageId CANNOT_EXTEND_THE_DURATION_ANY_MORE;
 	
-	@ClientString(id = 7399, message = "Cannot perform the action while extending the duration. ")
+	@ClientString(id = 7399, message = "Cannot perform the action while extending the duration.")
 	public static SystemMessageId CANNOT_PERFORM_THE_ACTION_WHILE_EXTENDING_THE_DURATION;
 	
 	@ClientString(id = 7400, message = "Your inventory's weight/limit has been exceeded so you can't receive the attendance reward. Please free up some space and try again.")
@@ -16956,7 +16956,7 @@ public final class SystemMessageId
 	@ClientString(id = 7420, message = "Cannot use Shield Capsules.")
 	public static SystemMessageId CANNOT_USE_SHIELD_CAPSULES;
 	
-	@ClientString(id = 7421, message = "The Shield Capsule has been canceled. ")
+	@ClientString(id = 7421, message = "The Shield Capsule has been canceled.")
 	public static SystemMessageId THE_SHIELD_CAPSULE_HAS_BEEN_CANCELED;
 	
 	@ClientString(id = 7422, message = "You've obtained $s1 Dragon Coins as a reward for leveling up.")
@@ -16965,7 +16965,7 @@ public final class SystemMessageId
 	@ClientString(id = 7423, message = "You have too many coins, so you cannot accumulate them any more. Please use the coins from our page.")
 	public static SystemMessageId YOU_HAVE_TOO_MANY_COINS_SO_YOU_CANNOT_ACCUMULATE_THEM_ANY_MORE_PLEASE_USE_THE_COINS_FROM_OUR_PAGE;
 	
-	@ClientString(id = 7424, message = "You've obtained $s1 Dragon Coins from the Dragon Coin Pouch. ")
+	@ClientString(id = 7424, message = "You've obtained $s1 Dragon Coins from the Dragon Coin Pouch.")
 	public static SystemMessageId YOU_VE_OBTAINED_S1_DRAGON_COINS_FROM_THE_DRAGON_COIN_POUCH;
 	
 	@ClientString(id = 7425, message = "Cannot perform the action because another action is in process.")
@@ -16995,7 +16995,7 @@ public final class SystemMessageId
 	@ClientString(id = 7433, message = "Cannot remove the timed Soul Crystal effect from this weapon.")
 	public static SystemMessageId CANNOT_REMOVE_THE_TIMED_SOUL_CRYSTAL_EFFECT_FROM_THIS_WEAPON;
 	
-	@ClientString(id = 7434, message = "The Great Growth event is here. XP from hunting, Adena drop rate, and item drop rate are all doubled between 20:00-22:00 every day. ")
+	@ClientString(id = 7434, message = "The Great Growth event is here. XP from hunting, Adena drop rate, and item drop rate are all doubled between 20:00-22:00 every day.")
 	public static SystemMessageId THE_GREAT_GROWTH_EVENT_IS_HERE_XP_FROM_HUNTING_ADENA_DROP_RATE_AND_ITEM_DROP_RATE_ARE_ALL_DOUBLED_BETWEEN_20_00_22_00_EVERY_DAY;
 	
 	@ClientString(id = 7435, message = "Click on <$s1> to remove the timed Soul Crystal effect.")
@@ -17085,7 +17085,7 @@ public final class SystemMessageId
 	@ClientString(id = 7463, message = "Current Location: Ivory Tower Entrance")
 	public static SystemMessageId CURRENT_LOCATION_IVORY_TOWER_ENTRANCE;
 	
-	@ClientString(id = 7464, message = "The Great Growth event is here. XP from hunting and item drop rate are doubled between 20:00-22:00 every day. ")
+	@ClientString(id = 7464, message = "The Great Growth event is here. XP from hunting and item drop rate are doubled between 20:00-22:00 every day.")
 	public static SystemMessageId THE_GREAT_GROWTH_EVENT_IS_HERE_XP_FROM_HUNTING_AND_ITEM_DROP_RATE_ARE_DOUBLED_BETWEEN_20_00_22_00_EVERY_DAY;
 	
 	@ClientString(id = 7465, message = "Cannot obtain the item from this location.")
@@ -17109,10 +17109,10 @@ public final class SystemMessageId
 	@ClientString(id = 7471, message = "An event item is available. You've received an additional Faint Silver Box.")
 	public static SystemMessageId AN_EVENT_ITEM_IS_AVAILABLE_YOU_VE_RECEIVED_AN_ADDITIONAL_FAINT_SILVER_BOX;
 	
-	@ClientString(id = 7472, message = "An event item is available. You've received an additional Shiny Gold Box. ")
+	@ClientString(id = 7472, message = "An event item is available. You've received an additional Shiny Gold Box.")
 	public static SystemMessageId AN_EVENT_ITEM_IS_AVAILABLE_YOU_VE_RECEIVED_AN_ADDITIONAL_SHINY_GOLD_BOX;
 	
-	@ClientString(id = 7473, message = "If you don't receive the gift, you won't be able to receive any more event items. ")
+	@ClientString(id = 7473, message = "If you don't receive the gift, you won't be able to receive any more event items.")
 	public static SystemMessageId IF_YOU_DON_T_RECEIVE_THE_GIFT_YOU_WON_T_BE_ABLE_TO_RECEIVE_ANY_MORE_EVENT_ITEMS;
 	
 	@ClientString(id = 7474, message = "Chaotic characters cannot teleport instantly through the Adventure Guide.")
@@ -17130,7 +17130,7 @@ public final class SystemMessageId
 	@ClientString(id = 7478, message = "If you use Improved Safe Enchant, you can only enchant an item up to + 9.")
 	public static SystemMessageId IF_YOU_USE_IMPROVED_SAFE_ENCHANT_YOU_CAN_ONLY_ENCHANT_AN_ITEM_UP_TO_9;
 	
-	@ClientString(id = 7479, message = "Cannot acquire items when the inventory's weight/limit is over 80%%. ")
+	@ClientString(id = 7479, message = "Cannot acquire items when the inventory's weight/limit is over 80%%.")
 	public static SystemMessageId CANNOT_ACQUIRE_ITEMS_WHEN_THE_INVENTORY_S_WEIGHT_LIMIT_IS_OVER_80;
 	
 	@ClientString(id = 7480, message = "Cannot acquire a Demonic/Blood Sword while in battle.")
