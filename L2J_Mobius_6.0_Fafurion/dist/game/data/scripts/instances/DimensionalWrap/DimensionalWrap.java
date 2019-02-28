@@ -536,7 +536,7 @@ public class DimensionalWrap extends AbstractInstance
 				}
 				case "NEXT_STAGE":
 				{
-					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.S1_SECONDS_HAVE_BEEN_ADDED_TO_THE_INSTANCE_ZONE_DURATION, ExShowScreenMessage.TOP_CENTER, 5000, true, String.valueOf(180)));
+					world.broadcastPacket(new ExShowScreenMessage(NpcStringId.S1_SECONDS_HAVE_BEEN_ADDED_TO_THE_INSTANCED_ZONE_DURATION, ExShowScreenMessage.TOP_CENTER, 5000, true, String.valueOf(180)));
 					world.setDuration((int) ((world.getRemainingTime() / 60000) + 3));
 					startQuestTimer("START_STAGE", 8000, npc, null);
 					for (L2Npc n : world.getAliveNpcs())
@@ -579,7 +579,7 @@ public class DimensionalWrap extends AbstractInstance
 			}
 			else if (npc.getId() == ABYSSAL_MAKKUM)
 			{
-				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_INSTANCE_ZONE_WILL_CLOSE_SOON, ExShowScreenMessage.TOP_CENTER, 10000, true));
+				world.broadcastPacket(new ExShowScreenMessage(NpcStringId.THE_INSTANCED_ZONE_WILL_CLOSE_SOON, ExShowScreenMessage.TOP_CENTER, 10000, true));
 				world.finishInstance(3);
 				Clean();
 			}

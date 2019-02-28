@@ -270,8 +270,8 @@ public final class SystemMessageId
 	@ClientString(id = 79, message = "This name already exists.")
 	public static SystemMessageId THIS_NAME_ALREADY_EXISTS;
 	
-	@ClientString(id = 80, message = "Your title cannot exceed 16 characters in length.  Please try again.")
-	public static SystemMessageId YOUR_TITLE_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN;
+	@ClientString(id = 80, message = "Your title must be at least 1 character and cannot exceed 16 characters in length. Please try again.")
+	public static SystemMessageId YOUR_TITLE_MUST_BE_AT_LEAST_1_CHARACTER_AND_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN;
 	
 	@ClientString(id = 81, message = "Please select your race.")
 	public static SystemMessageId PLEASE_SELECT_YOUR_RACE;
@@ -3219,8 +3219,8 @@ public final class SystemMessageId
 	@ClientString(id = 1062, message = "Writing something new is possible after level 10.")
 	public static SystemMessageId WRITING_SOMETHING_NEW_IS_POSSIBLE_AFTER_LEVEL_10;
 	
-	@ClientString(id = 1063, message = "The Petition Service is currently unavailable, please send a support ticket on support.4game.com; If you become trapped or unable to move, please use the '/unstuck' command.")
-	public static SystemMessageId THE_PETITION_SERVICE_IS_CURRENTLY_UNAVAILABLE_PLEASE_SEND_A_SUPPORT_TICKET_ON_SUPPORT_4GAME_COM_IF_YOU_BECOME_TRAPPED_OR_UNABLE_TO_MOVE_PLEASE_USE_THE_UNSTUCK_COMMAND;
+	@ClientString(id = 1063, message = "The Petition Service is currently unavailable, please send a support ticket on https://support.4game.com; If you become trapped or unable to move, please use the '/unstuck' command.")
+	public static SystemMessageId THE_PETITION_SERVICE_IS_CURRENTLY_UNAVAILABLE_PLEASE_SEND_A_SUPPORT_TICKET_ON_HTTPS_SUPPORT_4GAME_COM_IF_YOU_BECOME_TRAPPED_OR_UNABLE_TO_MOVE_PLEASE_USE_THE_UNSTUCK_COMMAND;
 	
 	@ClientString(id = 1064, message = "+$s1 $s2 has been unequipped.")
 	public static SystemMessageId S1_S2_HAS_BEEN_UNEQUIPPED;
@@ -3585,7 +3585,7 @@ public final class SystemMessageId
 	@ClientString(id = 1184, message = "This is a period when server statistics are calculated.")
 	public static SystemMessageId THIS_IS_A_PERIOD_WHEN_SERVER_STATISTICS_ARE_CALCULATED;
 	
-	@ClientString(id = 1185, message = "days left until deletion.")
+	@ClientString(id = 1185, message = " days left until deletion.")
 	public static SystemMessageId DAYS_LEFT_UNTIL_DELETION;
 	
 	@ClientString(id = 1186, message = "To create a new account, please visit Lineage II's Support Website (https://support.4game.com).")
@@ -3969,8 +3969,8 @@ public final class SystemMessageId
 	@ClientString(id = 1312, message = "The latest version of Windows Live Messenger may be obtained from the Windows Live web site (http://explore.live.com/messenger).")
 	public static SystemMessageId THE_LATEST_VERSION_OF_WINDOWS_LIVE_MESSENGER_MAY_BE_OBTAINED_FROM_THE_WINDOWS_LIVE_WEB_SITE_HTTP_EXPLORE_LIVE_COM_MESSENGER;
 	
-	@ClientString(id = 1313, message = "To better serve our customers, all chat histories are stored and maintained by NCSOFT. If you do not agree to have your chat records stored, please close the chat window now. For more information regarding this procedure, please visit our home page at https://eu.4game.com/licence/view/serviceId/1006/type/1. Thank you!")
-	public static SystemMessageId TO_BETTER_SERVE_OUR_CUSTOMERS_ALL_CHAT_HISTORIES_ARE_STORED_AND_MAINTAINED_BY_NCSOFT_IF_YOU_DO_NOT_AGREE_TO_HAVE_YOUR_CHAT_RECORDS_STORED_PLEASE_CLOSE_THE_CHAT_WINDOW_NOW_FOR_MORE_INFORMATION_REGARDING_THIS_PROCEDURE_PLEASE_VISIT_OUR_HOME_PAGE_AT_HTTPS_EU_4GAME_COM_LICENCE_VIEW_SERVICEID_1006_TYPE_1_THANK_YOU;
+	@ClientString(id = 1313, message = "To better serve our customers, all chat histories are stored and maintained by NCSOFT. If you do not agree to have your chat records stored, please close the chat window now. For more information regarding this procedure, please visit our home page at https://eu.4game.com/legal/user-agreements/lineage-2-user-agreement.html. Thank you!")
+	public static SystemMessageId TO_BETTER_SERVE_OUR_CUSTOMERS_ALL_CHAT_HISTORIES_ARE_STORED_AND_MAINTAINED_BY_NCSOFT_IF_YOU_DO_NOT_AGREE_TO_HAVE_YOUR_CHAT_RECORDS_STORED_PLEASE_CLOSE_THE_CHAT_WINDOW_NOW_FOR_MORE_INFORMATION_REGARDING_THIS_PROCEDURE_PLEASE_VISIT_OUR_HOME_PAGE_AT_HTTPS_EU_4GAME_COM_LEGAL_USER_AGREEMENTS_LINEAGE_2_USER_AGREEMENT_HTML_THANK_YOU;
 	
 	@ClientString(id = 1314, message = "Please enter the passport ID of the person you wish to add to your contact list.")
 	public static SystemMessageId PLEASE_ENTER_THE_PASSPORT_ID_OF_THE_PERSON_YOU_WISH_TO_ADD_TO_YOUR_CONTACT_LIST;
@@ -4866,7 +4866,7 @@ public final class SystemMessageId
 	@ClientString(id = 1611, message = "Party Leader: $c1")
 	public static SystemMessageId PARTY_LEADER_C1;
 	
-	@ClientString(id = 1612, message = "=====<Clan War List>=====")
+	@ClientString(id = 1612, message = " =====<Clan War List>=====")
 	public static SystemMessageId CLAN_WAR_LIST;
 	
 	@ClientString(id = 1613, message = "There is no clan listed on your War List.")
@@ -6132,11 +6132,11 @@ public final class SystemMessageId
 	@ClientString(id = 2033, message = "A subclass cannot be created or changed because you have exceeded your inventory limit.")
 	public static SystemMessageId A_SUBCLASS_CANNOT_BE_CREATED_OR_CHANGED_BECAUSE_YOU_HAVE_EXCEEDED_YOUR_INVENTORY_LIMIT;
 	
-	@ClientString(id = 2034, message = "There are $s1 hour(s) and $s2 minute(s) remaining until the item can be obtained.")
-	public static SystemMessageId THERE_ARE_S1_HOUR_S_AND_S2_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_OBTAINED;
+	@ClientString(id = 2034, message = "There are $s1 hr. and $s2 min. remaining until the item can be obtained.")
+	public static SystemMessageId THERE_ARE_S1_HR_AND_S2_MIN_REMAINING_UNTIL_THE_ITEM_CAN_BE_OBTAINED;
 	
-	@ClientString(id = 2035, message = "There are $s1 minute(s) remaining until the item can be obtained.")
-	public static SystemMessageId THERE_ARE_S1_MINUTE_S_REMAINING_UNTIL_THE_ITEM_CAN_BE_OBTAINED;
+	@ClientString(id = 2035, message = "There are $s1 min. remaining until the item can be obtained.")
+	public static SystemMessageId THERE_ARE_S1_MIN_REMAINING_UNTIL_THE_ITEM_CAN_BE_OBTAINED;
 	
 	@ClientString(id = 2036, message = "Unable to invite because the party is locked.")
 	public static SystemMessageId UNABLE_TO_INVITE_BECAUSE_THE_PARTY_IS_LOCKED;
@@ -6345,8 +6345,8 @@ public final class SystemMessageId
 	@ClientString(id = 2104, message = "The maximum number of instant zones has been exceeded. You cannot enter.")
 	public static SystemMessageId THE_MAXIMUM_NUMBER_OF_INSTANT_ZONES_HAS_BEEN_EXCEEDED_YOU_CANNOT_ENTER;
 	
-	@ClientString(id = 2105, message = "You have entered another instant zone, therefore you cannot enter corresponding dungeon.")
-	public static SystemMessageId YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON;
+	@ClientString(id = 2105, message = "$c1, you have entered another instant zone, therefore you cannot enter corresponding dungeon.")
+	public static SystemMessageId C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON;
 	
 	@ClientString(id = 2106, message = "This dungeon will expire in $s1 minute(s). You will be forced out of the dungeon when the time expires.")
 	public static SystemMessageId THIS_DUNGEON_WILL_EXPIRE_IN_S1_MINUTE_S_YOU_WILL_BE_FORCED_OUT_OF_THE_DUNGEON_WHEN_THE_TIME_EXPIRES;
@@ -8100,8 +8100,8 @@ public final class SystemMessageId
 	@ClientString(id = 2792, message = "50 Clan Reputation will be awarded. Do you wish to continue?")
 	public static SystemMessageId FIFTY_CLAN_REPUTATION_WILL_BE_AWARDED_DO_YOU_WISH_TO_CONTINUE;
 	
-	@ClientString(id = 2793, message = "You must have a minimum of $s1 people to enter this Instance Zone.")
-	public static SystemMessageId YOU_MUST_HAVE_A_MINIMUM_OF_S1_PEOPLE_TO_ENTER_THIS_INSTANCE_ZONE;
+	@ClientString(id = 2793, message = "You must have a minimum of $s1 people to enter this instanced zone.")
+	public static SystemMessageId YOU_MUST_HAVE_A_MINIMUM_OF_S1_PEOPLE_TO_ENTER_THIS_INSTANCED_ZONE;
 	
 	@ClientString(id = 2794, message = "The territory war channel and functions will now be deactivated.")
 	public static SystemMessageId THE_TERRITORY_WAR_CHANNEL_AND_FUNCTIONS_WILL_NOW_BE_DEACTIVATED;
@@ -8919,8 +8919,8 @@ public final class SystemMessageId
 	@ClientString(id = 3105, message = "Telephone certification is already underway. Please try again later.")
 	public static SystemMessageId TELEPHONE_CERTIFICATION_IS_ALREADY_UNDERWAY_PLEASE_TRY_AGAIN_LATER;
 	
-	@ClientString(id = 3106, message = "Telephone certification is underway.")
-	public static SystemMessageId TELEPHONE_CERTIFICATION_IS_UNDERWAY;
+	@ClientString(id = 3106, message = "For better security service, the Telephone Verification Service will be no longer provided from November 21st, 2018.<br><br>To use our game service safely, please cancel your telephone verification and sign up for the OTP Service.<br>Visit the 4Game website (My Page > Information Protection) to sign up for the OTP Service.")
+	public static SystemMessageId FOR_BETTER_SECURITY_SERVICE_THE_TELEPHONE_VERIFICATION_SERVICE_WILL_BE_NO_LONGER_PROVIDED_FROM_NOVEMBER_21ST_2018_BR_BR_TO_USE_OUR_GAME_SERVICE_SAFELY_PLEASE_CANCEL_YOUR_TELEPHONE_VERIFICATION_AND_SIGN_UP_FOR_THE_OTP_SERVICE_BR_VISIT_THE_4GAME_WEBSITE_MY_PAGE_INFORMATION_PROTECTION_TO_SIGN_UP_FOR_THE_OTP_SERVICE;
 	
 	@ClientString(id = 3107, message = "One moment please.")
 	public static SystemMessageId ONE_MOMENT_PLEASE;
@@ -9225,8 +9225,8 @@ public final class SystemMessageId
 	@ClientString(id = 3207, message = "You obtained $s1 Recommendation(s).")
 	public static SystemMessageId YOU_OBTAINED_S1_RECOMMENDATION_S;
 	
-	@ClientString(id = 3208, message = "You will go to the Lineage II homepage. Do you wish to continue?")
-	public static SystemMessageId YOU_WILL_GO_TO_THE_LINEAGE_II_HOMEPAGE_DO_YOU_WISH_TO_CONTINUE;
+	@ClientString(id = 3208, message = "You will be redirected to the Lineage II website. Do you want to continue?")
+	public static SystemMessageId YOU_WILL_BE_REDIRECTED_TO_THE_LINEAGE_II_WEBSITE_DO_YOU_WANT_TO_CONTINUE;
 	
 	@ClientString(id = 3209, message = "You obtained a Maguen Pet Collar.")
 	public static SystemMessageId YOU_OBTAINED_A_MAGUEN_PET_COLLAR;
@@ -9336,10 +9336,10 @@ public final class SystemMessageId
 	@ClientString(id = 3244, message = "Take that")
 	public static SystemMessageId TAKE_THAT;
 	
-	@ClientString(id = 3245, message = "")
+	@ClientString(id = 3245, message = " ")
 	public static SystemMessageId EMPTY_9;
 	
-	@ClientString(id = 3246, message = "")
+	@ClientString(id = 3246, message = " ")
 	public static SystemMessageId EMPTY_10;
 	
 	@ClientString(id = 3247, message = "Argh... Ha ha ha, pretty impressive, as if you cut from the fabric of the gods.")
@@ -9372,10 +9372,10 @@ public final class SystemMessageId
 	@ClientString(id = 3256, message = "MP has reached 0. The Mana Armor has disappeared.")
 	public static SystemMessageId MP_HAS_REACHED_0_THE_MANA_ARMOR_HAS_DISAPPEARED;
 	
-	@ClientString(id = 3257, message = "")
+	@ClientString(id = 3257, message = " ")
 	public static SystemMessageId EMPTY_11;
 	
-	@ClientString(id = 3258, message = "")
+	@ClientString(id = 3258, message = " ")
 	public static SystemMessageId EMPTY_12;
 	
 	@ClientString(id = 3259, message = "You have acquired $s1 XP (Bonus: $s2) and $s3 SP (Bonus: $s4).")
@@ -10413,7 +10413,7 @@ public final class SystemMessageId
 	@ClientString(id = 3603, message = "We must vanquish this new warden…")
 	public static SystemMessageId WE_MUST_VANQUISH_THIS_NEW_WARDEN;
 	
-	@ClientString(id = 3604, message = "...f we are to free the Crystal Oracle from Beleth's devious machinations.")
+	@ClientString(id = 3604, message = " ...f we are to free the Crystal Oracle from Beleth's devious machinations.")
 	public static SystemMessageId F_WE_ARE_TO_FREE_THE_CRYSTAL_ORACLE_FROM_BELETH_S_DEVIOUS_MACHINATIONS;
 	
 	@ClientString(id = 3605, message = "Your strength is needed now more than ever to defeat Balok.")
@@ -11277,8 +11277,8 @@ public final class SystemMessageId
 	@ClientString(id = 3891, message = "You've obtained individual request points ($s1/100).")
 	public static SystemMessageId YOU_VE_OBTAINED_INDIVIDUAL_REQUEST_POINTS_S1_100;
 	
-	@ClientString(id = 3892, message = "You are not participating in the event. Use Balthus Knight Mark to participate.<br>You can obtain Balthus Knight Mark from Balthus Knight Supply Box or Sibi’s Suspicious Supply Box.")
-	public static SystemMessageId YOU_ARE_NOT_PARTICIPATING_IN_THE_EVENT_USE_BALTHUS_KNIGHT_MARK_TO_PARTICIPATE_BR_YOU_CAN_OBTAIN_BALTHUS_KNIGHT_MARK_FROM_BALTHUS_KNIGHT_SUPPLY_BOX_OR_SIBI_S_SUSPICIOUS_SUPPLY_BOX;
+	@ClientString(id = 3892, message = "You are not participating in the event. You need Balthus Knight Mark to participate.<br>You can obtain Balthus Knight Mark from Balthus Knight Supply Box or Sibi’s Suspicious Supply Box.")
+	public static SystemMessageId YOU_ARE_NOT_PARTICIPATING_IN_THE_EVENT_YOU_NEED_BALTHUS_KNIGHT_MARK_TO_PARTICIPATE_BR_YOU_CAN_OBTAIN_BALTHUS_KNIGHT_MARK_FROM_BALTHUS_KNIGHT_SUPPLY_BOX_OR_SIBI_S_SUSPICIOUS_SUPPLY_BOX;
 	
 	@ClientString(id = 3893, message = "You cannot receive the item $s1 because you've exceeded the limit on the quantity and weight of the inventory.")
 	public static SystemMessageId YOU_CANNOT_RECEIVE_THE_ITEM_S1_BECAUSE_YOU_VE_EXCEEDED_THE_LIMIT_ON_THE_QUANTITY_AND_WEIGHT_OF_THE_INVENTORY;
@@ -11532,7 +11532,7 @@ public final class SystemMessageId
 	@ClientString(id = 4069, message = "You have downed $s1 with a preemptive attack. You have $s2 preemptive attack chances left.")
 	public static SystemMessageId YOU_HAVE_DOWNED_S1_WITH_A_PREEMPTIVE_ATTACK_YOU_HAVE_S2_PREEMPTIVE_ATTACK_CHANCES_LEFT;
 	
-	@ClientString(id = 4070, message = "You are no longer $s1's mentee, as you have reached Lv. 85 and 3rd Liberation.")
+	@ClientString(id = 4070, message = "You are no longer $s1's mentee, as you have reached Lv. 85 and 3rd Liberation. ")
 	public static SystemMessageId YOU_ARE_NO_LONGER_S1_S_MENTEE_AS_YOU_HAVE_REACHED_LV_85_AND_3RD_LIBERATION;
 	
 	@ClientString(id = 4071, message = "You are no longer $s1's mentor, as they completed the 3rd Liberation. You must wait 1 day before becoming someone else's mentor.")
@@ -11673,7 +11673,7 @@ public final class SystemMessageId
 	@ClientString(id = 4116, message = "The augmentation effects on +$s1 $s2 have been deleted.")
 	public static SystemMessageId THE_AUGMENTATION_EFFECTS_ON_S1_S2_HAVE_BEEN_DELETED;
 	
-	@ClientString(id = 4117, message = "+$s1$s2 has been restored to its previous appearance, as its temporary modification has expired.")
+	@ClientString(id = 4117, message = " +$s1$s2 has been restored to its previous appearance, as its temporary modification has expired.")
 	public static SystemMessageId S1_S2_HAS_BEEN_RESTORED_TO_ITS_PREVIOUS_APPEARANCE_AS_ITS_TEMPORARY_MODIFICATION_HAS_EXPIRED;
 	
 	@ClientString(id = 4118, message = "You cannot teleport as the Dimensional Space is closed.")
@@ -11709,10 +11709,10 @@ public final class SystemMessageId
 	@ClientString(id = 4128, message = "Your wish has been entered successfully into the Wish Tree.")
 	public static SystemMessageId YOUR_WISH_HAS_BEEN_ENTERED_SUCCESSFULLY_INTO_THE_WISH_TREE;
 	
-	@ClientString(id = 4129, message = "Go to the event page to view the wish entered into the Wish Tree?")
+	@ClientString(id = 4129, message = "Go to the event page to view the wish entered into the Wish Tree? ")
 	public static SystemMessageId GO_TO_THE_EVENT_PAGE_TO_VIEW_THE_WISH_ENTERED_INTO_THE_WISH_TREE;
 	
-	@ClientString(id = 4130, message = "Failed to enter wish. Please try again by clicking on the wish link.")
+	@ClientString(id = 4130, message = "Failed to enter wish. Please try again by clicking on the wish link. ")
 	public static SystemMessageId FAILED_TO_ENTER_WISH_PLEASE_TRY_AGAIN_BY_CLICKING_ON_THE_WISH_LINK;
 	
 	@ClientString(id = 4131, message = "Inventory weight/ slot has been filled to 80%% or more. You cannot enter a wish or obtain rewards in this state. Please organize your inventory and try again.")
@@ -11808,7 +11808,7 @@ public final class SystemMessageId
 	@ClientString(id = 4161, message = "Distribution cannot proceed as there is insufficient Adena for distribution.")
 	public static SystemMessageId DISTRIBUTION_CANNOT_PROCEED_AS_THERE_IS_INSUFFICIENT_ADENA_FOR_DISTRIBUTION;
 	
-	@ClientString(id = 4162, message = "My Apostle Lilith!")
+	@ClientString(id = 4162, message = "My Apostle Lilith! ")
 	public static SystemMessageId MY_APOSTLE_LILITH;
 	
 	@ClientString(id = 4163, message = "Drink the blood of darkness, and rise again to complete my sacrifice!")
@@ -11832,7 +11832,7 @@ public final class SystemMessageId
 	@ClientString(id = 4169, message = "There is no equipped hair accessory.")
 	public static SystemMessageId THERE_IS_NO_EQUIPPED_HAIR_ACCESSORY;
 	
-	@ClientString(id = 4170, message = "<BROWN01></BROWN01><RED02> Depending on the hair accessory display</RED02><BROWN01>,<br>the hair style may not be displayed. Proceed?</BROWN01>")
+	@ClientString(id = 4170, message = "<BROWN01></BROWN01><RED02>Depending on the hair accessory display</RED02><BROWN01>,<br>the hair style may not be displayed. Proceed?</BROWN01>")
 	public static SystemMessageId BROWN01_BROWN01_RED02_DEPENDING_ON_THE_HAIR_ACCESSORY_DISPLAY_RED02_BROWN01_BR_THE_HAIR_STYLE_MAY_NOT_BE_DISPLAYED_PROCEED_BROWN01;
 	
 	@ClientString(id = 4171, message = "A member has excessive Adena. Distribution has been cancelled.")
@@ -11850,19 +11850,19 @@ public final class SystemMessageId
 	@ClientString(id = 4175, message = "You will shortly move to the Olympiad arena.")
 	public static SystemMessageId YOU_WILL_SHORTLY_MOVE_TO_THE_OLYMPIAD_ARENA;
 	
-	@ClientString(id = 4176, message = "It seemed as if everything had returned to normal.")
+	@ClientString(id = 4176, message = "It seemed as if everything had returned to normal. ")
 	public static SystemMessageId IT_SEEMED_AS_IF_EVERYTHING_HAD_RETURNED_TO_NORMAL;
 	
 	@ClientString(id = 4177, message = "But had it?")
 	public static SystemMessageId BUT_HAD_IT;
 	
-	@ClientString(id = 4178, message = "I looked closer, and the darkness was still there. Hiding.")
+	@ClientString(id = 4178, message = "I looked closer, and the darkness was still there. Hiding. ")
 	public static SystemMessageId I_LOOKED_CLOSER_AND_THE_DARKNESS_WAS_STILL_THERE_HIDING;
 	
 	@ClientString(id = 4179, message = "Waiting for a chance to resurface.")
 	public static SystemMessageId WAITING_FOR_A_CHANCE_TO_RESURFACE;
 	
-	@ClientString(id = 4180, message = "The enemy is never far.")
+	@ClientString(id = 4180, message = "The enemy is never far. ")
 	public static SystemMessageId THE_ENEMY_IS_NEVER_FAR;
 	
 	@ClientString(id = 4181, message = "Always remember that, Leona Blackbird.")
@@ -11988,8 +11988,8 @@ public final class SystemMessageId
 	@ClientString(id = 4221, message = "This is not a valid combination.")
 	public static SystemMessageId THIS_IS_NOT_A_VALID_COMBINATION;
 	
-	@ClientString(id = 4222, message = "This item does not exist.")
-	public static SystemMessageId THIS_ITEM_DOES_NOT_EXIST;
+	@ClientString(id = 4222, message = "You don't have materials.")
+	public static SystemMessageId YOU_DON_T_HAVE_MATERIALS;
 	
 	@ClientString(id = 4223, message = "You cannot do that while trading.")
 	public static SystemMessageId YOU_CANNOT_DO_THAT_WHILE_TRADING;
@@ -12177,7 +12177,7 @@ public final class SystemMessageId
 	@ClientString(id = 4284, message = "The High Priest has repeatedly attempted to reach Lord Sayha…")
 	public static SystemMessageId THE_HIGH_PRIEST_HAS_REPEATEDLY_ATTEMPTED_TO_REACH_LORD_SAYHA;
 	
-	@ClientString(id = 4285, message = "But there has been only silence.")
+	@ClientString(id = 4285, message = "But there has been only silence. ")
 	public static SystemMessageId BUT_THERE_HAS_BEEN_ONLY_SILENCE;
 	
 	@ClientString(id = 4286, message = "But we still get by.")
@@ -12198,7 +12198,7 @@ public final class SystemMessageId
 	@ClientString(id = 4291, message = "The winds of change are blowing.")
 	public static SystemMessageId THE_WINDS_OF_CHANGE_ARE_BLOWING;
 	
-	@ClientString(id = 4292, message = "The man who covets the power of the gods has opened the dimensional rift.")
+	@ClientString(id = 4292, message = "The man who covets the power of the gods has opened the dimensional rift. ")
 	public static SystemMessageId THE_MAN_WHO_COVETS_THE_POWER_OF_THE_GODS_HAS_OPENED_THE_DIMENSIONAL_RIFT;
 	
 	@ClientString(id = 4293, message = "Now, forgotten creatures will return, and new heroes will arise.")
@@ -12246,13 +12246,13 @@ public final class SystemMessageId
 	@ClientString(id = 4307, message = "Rise above the bounds of mortality and forge your own path.")
 	public static SystemMessageId RISE_ABOVE_THE_BOUNDS_OF_MORTALITY_AND_FORGE_YOUR_OWN_PATH;
 	
-	@ClientString(id = 4308, message = "")
+	@ClientString(id = 4308, message = " ")
 	public static SystemMessageId EMPTY_14;
 	
 	@ClientString(id = 4309, message = "To being ... Exalted!")
 	public static SystemMessageId TO_BEING_EXALTED;
 	
-	@ClientString(id = 4310, message = "The quest you've just completed can be completed $s1 times. Each account can complete this quest $s2 times per week, and it's reset after each maintenance.")
+	@ClientString(id = 4310, message = "The quest you've just completed can be completed $s1 times. Each account can complete this quest $s2 times per week, and it's reset after each maintenance. ")
 	public static SystemMessageId THE_QUEST_YOU_VE_JUST_COMPLETED_CAN_BE_COMPLETED_S1_TIMES_EACH_ACCOUNT_CAN_COMPLETE_THIS_QUEST_S2_TIMES_PER_WEEK_AND_IT_S_RESET_AFTER_EACH_MAINTENANCE;
 	
 	@ClientString(id = 4311, message = "I've been expecting you. Fall victim to my blades.")
@@ -12363,7 +12363,7 @@ public final class SystemMessageId
 	@ClientString(id = 4346, message = "Cannot use skills or items while faking death.")
 	public static SystemMessageId CANNOT_USE_SKILLS_OR_ITEMS_WHILE_FAKING_DEATH;
 	
-	@ClientString(id = 4347, message = "Stage $s2 - $s1")
+	@ClientString(id = 4347, message = "Stage $s2 - $s1 ")
 	public static SystemMessageId STAGE_S2_S1;
 	
 	@ClientString(id = 4348, message = "Soul Crystal effects that have been applied cannot be removed.")
@@ -12504,8 +12504,8 @@ public final class SystemMessageId
 	@ClientString(id = 4393, message = "Cannot enter; some users may not yet be seated.")
 	public static SystemMessageId CANNOT_ENTER_SOME_USERS_MAY_NOT_YET_BE_SEATED;
 	
-	@ClientString(id = 4394, message = "Draw $s1, Attempt $s2 in progress.")
-	public static SystemMessageId DRAW_S1_ATTEMPT_S2_IN_PROGRESS;
+	@ClientString(id = 4394, message = "Currently in Stage $s1, Round $s2.")
+	public static SystemMessageId CURRENTLY_IN_STAGE_S1_ROUND_S2;
 	
 	@ClientString(id = 4395, message = "Supply Items are being prepared. The next supply items will be available on the next hour.")
 	public static SystemMessageId SUPPLY_ITEMS_ARE_BEING_PREPARED_THE_NEXT_SUPPLY_ITEMS_WILL_BE_AVAILABLE_ON_THE_NEXT_HOUR;
@@ -12783,34 +12783,34 @@ public final class SystemMessageId
 	@ClientString(id = 4486, message = "Lineage 2 will always be by your side.")
 	public static SystemMessageId LINEAGE_2_WILL_ALWAYS_BE_BY_YOUR_SIDE;
 	
-	@ClientString(id = 4487, message = "You cannot exchange items during the number card game.")
+	@ClientString(id = 4487, message = "You cannot exchange items during the number card game. ")
 	public static SystemMessageId YOU_CANNOT_EXCHANGE_ITEMS_DURING_THE_NUMBER_CARD_GAME;
 	
-	@ClientString(id = 4488, message = "You cannot send a request to a character who is playing the number card game.")
+	@ClientString(id = 4488, message = "You cannot send a request to a character who is playing the number card game. ")
 	public static SystemMessageId YOU_CANNOT_SEND_A_REQUEST_TO_A_CHARACTER_WHO_IS_PLAYING_THE_NUMBER_CARD_GAME;
 	
-	@ClientString(id = 4489, message = "You cannot send or receive attached items during the number card game. You can only read or send mail.")
+	@ClientString(id = 4489, message = "You cannot send or receive attached items during the number card game. You can only read or send mail. ")
 	public static SystemMessageId YOU_CANNOT_SEND_OR_RECEIVE_ATTACHED_ITEMS_DURING_THE_NUMBER_CARD_GAME_YOU_CAN_ONLY_READ_OR_SEND_MAIL;
 	
-	@ClientString(id = 4490, message = "The number card game has ended because you are too far from the event NPC.")
+	@ClientString(id = 4490, message = "The number card game has ended because you are too far from the event NPC. ")
 	public static SystemMessageId THE_NUMBER_CARD_GAME_HAS_ENDED_BECAUSE_YOU_ARE_TOO_FAR_FROM_THE_EVENT_NPC;
 	
-	@ClientString(id = 4491, message = "You cannot do Couple Actions during the number card game.")
+	@ClientString(id = 4491, message = "You cannot do Couple Actions during the number card game. ")
 	public static SystemMessageId YOU_CANNOT_DO_COUPLE_ACTIONS_DURING_THE_NUMBER_CARD_GAME;
 	
-	@ClientString(id = 4492, message = "$c1 is playing the number card game. You cannot request Couple Actions.")
+	@ClientString(id = 4492, message = "$c1 is playing the number card game. You cannot request Couple Actions. ")
 	public static SystemMessageId C1_IS_PLAYING_THE_NUMBER_CARD_GAME_YOU_CANNOT_REQUEST_COUPLE_ACTIONS;
 	
-	@ClientString(id = 4493, message = "Guess the number on my card!")
+	@ClientString(id = 4493, message = "Guess the number on my card! ")
 	public static SystemMessageId GUESS_THE_NUMBER_ON_MY_CARD;
 	
-	@ClientString(id = 4494, message = "The number is higher!")
+	@ClientString(id = 4494, message = "The number is higher! ")
 	public static SystemMessageId THE_NUMBER_IS_HIGHER;
 	
-	@ClientString(id = 4495, message = "The number is lower!")
+	@ClientString(id = 4495, message = "The number is lower! ")
 	public static SystemMessageId THE_NUMBER_IS_LOWER;
 	
-	@ClientString(id = 4496, message = "I can't believe it... I lost!")
+	@ClientString(id = 4496, message = "I can't believe it... I lost! ")
 	public static SystemMessageId I_CAN_T_BELIEVE_IT_I_LOST;
 	
 	@ClientString(id = 4497, message = "I won! Haha.")
@@ -12885,40 +12885,40 @@ public final class SystemMessageId
 	@ClientString(id = 4520, message = "You cannot join this clan because $s1 minutes has not passed since you left another clan.")
 	public static SystemMessageId YOU_CANNOT_JOIN_THIS_CLAN_BECAUSE_S1_MINUTES_HAS_NOT_PASSED_SINCE_YOU_LEFT_ANOTHER_CLAN;
 	
-	@ClientString(id = 4521, message = "$s1 was summoned as a Primary Agathion.")
+	@ClientString(id = 4521, message = "$s1 was summoned as a Primary Agathion. ")
 	public static SystemMessageId S1_WAS_SUMMONED_AS_A_PRIMARY_AGATHION;
 	
-	@ClientString(id = 4522, message = "$s1‘s power was unlocked, thereby activating all its abilities.")
+	@ClientString(id = 4522, message = "$s1‘s power was unlocked, thereby activating all its abilities. ")
 	public static SystemMessageId S1_S_POWER_WAS_UNLOCKED_THEREBY_ACTIVATING_ALL_ITS_ABILITIES;
 	
-	@ClientString(id = 4523, message = "$s1 was summoned as a Secondary Agathion.")
+	@ClientString(id = 4523, message = "$s1 was summoned as a Secondary Agathion. ")
 	public static SystemMessageId S1_WAS_SUMMONED_AS_A_SECONDARY_AGATHION;
 	
 	@ClientString(id = 4524, message = "Only $s1‘s Unique Ability becomes active.")
 	public static SystemMessageId ONLY_S1_S_UNIQUE_ABILITY_BECOMES_ACTIVE;
 	
-	@ClientString(id = 4525, message = "$s1‘s power was sealed.")
+	@ClientString(id = 4525, message = "$s1‘s power was sealed. ")
 	public static SystemMessageId S1_S_POWER_WAS_SEALED;
 	
-	@ClientString(id = 4526, message = "Cannot summon any more Agathions.")
+	@ClientString(id = 4526, message = "Cannot summon any more Agathions. ")
 	public static SystemMessageId CANNOT_SUMMON_ANY_MORE_AGATHIONS;
 	
 	@ClientString(id = 4527, message = "You cannot use the Agathion's power because you are not wearing the left bracelet.")
 	public static SystemMessageId YOU_CANNOT_USE_THE_AGATHION_S_POWER_BECAUSE_YOU_ARE_NOT_WEARING_THE_LEFT_BRACELET;
 	
-	@ClientString(id = 4528, message = "+$s1$s2 was summoned as a Primary Agathion.")
+	@ClientString(id = 4528, message = "+$s1$s2 was summoned as a Primary Agathion. ")
 	public static SystemMessageId S1_S2_WAS_SUMMONED_AS_A_PRIMARY_AGATHION;
 	
-	@ClientString(id = 4529, message = "+$s1$s2‘s power was unlocked, thereby activating all its abilities.")
+	@ClientString(id = 4529, message = "+$s1$s2‘s power was unlocked, thereby activating all its abilities. ")
 	public static SystemMessageId S1_S2_S_POWER_WAS_UNLOCKED_THEREBY_ACTIVATING_ALL_ITS_ABILITIES;
 	
-	@ClientString(id = 4530, message = "+$s1$s2 was summoned as a Secondary Agathion.")
+	@ClientString(id = 4530, message = "+$s1$s2 was summoned as a Secondary Agathion. ")
 	public static SystemMessageId S1_S2_WAS_SUMMONED_AS_A_SECONDARY_AGATHION;
 	
 	@ClientString(id = 4531, message = "Only +$s1$s2‘s Unique Ability becomes active.")
 	public static SystemMessageId ONLY_S1_S2_S_UNIQUE_ABILITY_BECOMES_ACTIVE;
 	
-	@ClientString(id = 4532, message = "+$s1$s2‘s power was sealed.")
+	@ClientString(id = 4532, message = "+$s1$s2‘s power was sealed. ")
 	public static SystemMessageId S1_S2_S_POWER_WAS_SEALED;
 	
 	@ClientString(id = 4533, message = "Your status does not allow you to use this function.")
@@ -13083,7 +13083,7 @@ public final class SystemMessageId
 	@ClientString(id = 4586, message = "Use the additional functions set in the Clan Hall")
 	public static SystemMessageId USE_THE_ADDITIONAL_FUNCTIONS_SET_IN_THE_CLAN_HALL;
 	
-	@ClientString(id = 4587, message = "Use the functions related with the Clan Hall bidding and auction")
+	@ClientString(id = 4587, message = "Use the functions related with the Clan Hall bidding and auction ")
 	public static SystemMessageId USE_THE_FUNCTIONS_RELATED_WITH_THE_CLAN_HALL_BIDDING_AND_AUCTION;
 	
 	@ClientString(id = 4588, message = "Expel outsiders from the Clan Hall")
@@ -13113,10 +13113,10 @@ public final class SystemMessageId
 	@ClientString(id = 4596, message = "Hire/position mercenaries")
 	public static SystemMessageId HIRE_POSITION_MERCENARIES;
 	
-	@ClientString(id = 4597, message = "Manor settings and use blacksmith")
+	@ClientString(id = 4597, message = "Manor settings and use blacksmith ")
 	public static SystemMessageId MANOR_SETTINGS_AND_USE_BLACKSMITH;
 	
-	@ClientString(id = 4598, message = "Increase the number of clan members ($s1)")
+	@ClientString(id = 4598, message = "Increase the number of clan members ($s1) ")
 	public static SystemMessageId INCREASE_THE_NUMBER_OF_CLAN_MEMBERS_S1;
 	
 	@ClientString(id = 4599, message = "Increase the number of clan members ($s1) and elite clan members ($s2)")
@@ -13188,7 +13188,7 @@ public final class SystemMessageId
 	@ClientString(id = 4621, message = "- Balanced Critical Damage and Critical Rate<br>- Highest survival rate among similar classes")
 	public static SystemMessageId BALANCED_CRITICAL_DAMAGE_AND_CRITICAL_RATE_BR_HIGHEST_SURVIVAL_RATE_AMONG_SIMILAR_CLASSES;
 	
-	@ClientString(id = 4622, message = "By the will of the Chaos, the power of Ashagen, the greatest assassin of the giants, has been combined with the ancient power of light and wind. This allowed for quicker movement and strengthened the ability to perform extreme maneuvers in an instant.")
+	@ClientString(id = 4622, message = "By the will of the Chaos, the power of Ashagen, the greatest assassin of the giants, has been combined with the ancient power of light and wind. This allowed for quicker movement and strengthened the ability to perform extreme maneuvers in an instant. ")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_ASHAGEN_THE_GREATEST_ASSASSIN_OF_THE_GIANTS_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_AND_WIND_THIS_ALLOWED_FOR_QUICKER_MOVEMENT_AND_STRENGTHENED_THE_ABILITY_TO_PERFORM_EXTREME_MANEUVERS_IN_AN_INSTANT;
 	
 	@ClientString(id = 4623, message = "- High Critical Rate<br>- Quick Evasion and Speed")
@@ -13212,7 +13212,7 @@ public final class SystemMessageId
 	@ClientString(id = 4629, message = "- Balanced Critical Damage and Critical Rate<br>- Stable damage-dealing")
 	public static SystemMessageId BALANCED_CRITICAL_DAMAGE_AND_CRITICAL_RATE_BR_STABLE_DAMAGE_DEALING;
 	
-	@ClientString(id = 4630, message = "By the will of the Chaos, the power of Cranigg, the ancient giant hero with the Third Eye, has been combined with the ancient power of light. The Sagittarius can now pierce not only the body, but also the soul of an opponent as a result.")
+	@ClientString(id = 4630, message = "By the will of the Chaos, the power of Cranigg, the ancient giant hero with the Third Eye, has been combined with the ancient power of light. The Sagittarius can now pierce not only the body, but also the soul of an opponent as a result. ")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_CRANIGG_THE_ANCIENT_GIANT_HERO_WITH_THE_THIRD_EYE_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_THE_SAGITTARIUS_CAN_NOW_PIERCE_NOT_ONLY_THE_BODY_BUT_ALSO_THE_SOUL_OF_AN_OPPONENT_AS_A_RESULT;
 	
 	@ClientString(id = 4631, message = "- Quick Speed and Atk. Spd.<br>- Advantageous in a small battle")
@@ -13233,10 +13233,10 @@ public final class SystemMessageId
 	@ClientString(id = 4636, message = "By the will of the Chaos, the power of Cranigg, the ancient giant hero with the Third Eye, has been stacked with the ancient power of giants. The great power resulting from this was used to strengthen abilities to protect the self and party members.")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_CRANIGG_THE_ANCIENT_GIANT_HERO_WITH_THE_THIRD_EYE_HAS_BEEN_STACKED_WITH_THE_ANCIENT_POWER_OF_GIANTS_THE_GREAT_POWER_RESULTING_FROM_THIS_WAS_USED_TO_STRENGTHEN_ABILITIES_TO_PROTECT_THE_SELF_AND_PARTY_MEMBERS;
 	
-	@ClientString(id = 4637, message = "- Well-rounded balance<br>- Use ranged magic (Vortex)")
+	@ClientString(id = 4637, message = "- Well-rounded balance<br>- Use ranged magic (Vortex) ")
 	public static SystemMessageId WELL_ROUNDED_BALANCE_BR_USE_RANGED_MAGIC_VORTEX;
 	
-	@ClientString(id = 4638, message = "By the will of the Chaos, the power of Soltkreig, one of the 7 Sages of the giants, has been combined with the ancient power of light. Archmages that received this power were able to reach levels of magic that went beyond their present limits.")
+	@ClientString(id = 4638, message = "By the will of the Chaos, the power of Soltkreig, one of the 7 Sages of the giants, has been combined with the ancient power of light. Archmages that received this power were able to reach levels of magic that went beyond their present limits. ")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_SOLTKREIG_ONE_OF_THE_7_SAGES_OF_THE_GIANTS_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_ARCHMAGES_THAT_RECEIVED_THIS_POWER_WERE_ABLE_TO_REACH_LEVELS_OF_MAGIC_THAT_WENT_BEYOND_THEIR_PRESENT_LIMITS;
 	
 	@ClientString(id = 4639, message = "- Power M. Atk. paired with debuffs<br>- Advantageous in 1:1 battles")
@@ -13260,7 +13260,7 @@ public final class SystemMessageId
 	@ClientString(id = 4645, message = "- High P. Def. paired with debuffs<br>- Specializes in PvP")
 	public static SystemMessageId HIGH_P_DEF_PAIRED_WITH_DEBUFFS_BR_SPECIALIZES_IN_PVP;
 	
-	@ClientString(id = 4646, message = "By the will of the Chaos, the power of Soltkreig, one of the 7 Sages of the giants, has been stacked with the ancient power of Katenar the giant. This has resulted in powers that rival even those of the giants.")
+	@ClientString(id = 4646, message = "By the will of the Chaos, the power of Soltkreig, one of the 7 Sages of the giants, has been stacked with the ancient power of Katenar the giant. This has resulted in powers that rival even those of the giants. ")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_SOLTKREIG_ONE_OF_THE_7_SAGES_OF_THE_GIANTS_HAS_BEEN_STACKED_WITH_THE_ANCIENT_POWER_OF_KATENAR_THE_GIANT_THIS_HAS_RESULTED_IN_POWERS_THAT_RIVAL_EVEN_THOSE_OF_THE_GIANTS;
 	
 	@ClientString(id = 4647, message = "- Party buffer specializing in skills<br>- Shortened skill cooldowns<br>- Use AoE Mutation to aid party")
@@ -13278,13 +13278,13 @@ public final class SystemMessageId
 	@ClientString(id = 4651, message = "- Party buffer based on attack<br>- Use AoE Petrify to aid party")
 	public static SystemMessageId PARTY_BUFFER_BASED_ON_ATTACK_BR_USE_AOE_PETRIFY_TO_AID_PARTY;
 	
-	@ClientString(id = 4652, message = "By the will of the Chaos, the power of Leister, the giant that commanded the war between the giants and the gods, has been combined with the ancient power of light. This power has maximized the strength of not only the Spectral Dancer but the entire party's attack power.")
+	@ClientString(id = 4652, message = "By the will of the Chaos, the power of Leister, the giant that commanded the war between the giants and the gods, has been combined with the ancient power of light. This power has maximized the strength of not only the Spectral Dancer but the entire party's attack power. ")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_LEISTER_THE_GIANT_THAT_COMMANDED_THE_WAR_BETWEEN_THE_GIANTS_AND_THE_GODS_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_THIS_POWER_HAS_MAXIMIZED_THE_STRENGTH_OF_NOT_ONLY_THE_SPECTRAL_DANCER_BUT_THE_ENTIRE_PARTY_S_ATTACK_POWER;
 	
 	@ClientString(id = 4653, message = "- Buffer specializing in clan wars and PvP<br>- Restrain standard P. Atk. To aid in clan war<br>- Specializes in clan-level buffs and CP boosts")
 	public static SystemMessageId BUFFER_SPECIALIZING_IN_CLAN_WARS_AND_PVP_BR_RESTRAIN_STANDARD_P_ATK_TO_AID_IN_CLAN_WAR_BR_SPECIALIZES_IN_CLAN_LEVEL_BUFFS_AND_CP_BOOSTS;
 	
-	@ClientString(id = 4654, message = "By the will of the Chaos, the power of Leister, the giant that commanded the war between the giants and the gods, has been combined with the ancient power of light. This power came to protect not only the self but the entire community around the wielder.")
+	@ClientString(id = 4654, message = "By the will of the Chaos, the power of Leister, the giant that commanded the war between the giants and the gods, has been combined with the ancient power of light. This power came to protect not only the self but the entire community around the wielder. ")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_LEISTER_THE_GIANT_THAT_COMMANDED_THE_WAR_BETWEEN_THE_GIANTS_AND_THE_GODS_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_THIS_POWER_CAME_TO_PROTECT_NOT_ONLY_THE_SELF_BUT_THE_ENTIRE_COMMUNITY_AROUND_THE_WIELDER;
 	
 	@ClientString(id = 4655, message = "- Party buffer with balanced attack and defense<br>- Decreases enemy HP to aid party")
@@ -13296,7 +13296,7 @@ public final class SystemMessageId
 	@ClientString(id = 4657, message = "- Summoner specializing in Atk. Spd.<br>- Able to use cat-type servitors")
 	public static SystemMessageId SUMMONER_SPECIALIZING_IN_ATK_SPD_BR_ABLE_TO_USE_CAT_TYPE_SERVITORS;
 	
-	@ClientString(id = 4658, message = "By the will of the Chaos, the power of Naviarope, the giant that could open and close the Dimensional Door at will, has been combined with the ancient power of light. This power traversed the dimensions and gave the Arcana Lord true mastery of the art of summoning.")
+	@ClientString(id = 4658, message = "By the will of the Chaos, the power of Naviarope, the giant that could open and close the Dimensional Door at will, has been combined with the ancient power of light. This power traversed the dimensions and gave the Arcana Lord true mastery of the art of summoning. ")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_NAVIAROPE_THE_GIANT_THAT_COULD_OPEN_AND_CLOSE_THE_DIMENSIONAL_DOOR_AT_WILL_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_THIS_POWER_TRAVERSED_THE_DIMENSIONS_AND_GAVE_THE_ARCANA_LORD_TRUE_MASTERY_OF_THE_ART_OF_SUMMONING;
 	
 	@ClientString(id = 4659, message = "- Summoner specializing in Critical Damage<br>- Able to use unicorn-type servitors")
@@ -13308,19 +13308,19 @@ public final class SystemMessageId
 	@ClientString(id = 4661, message = "- Summoner specializing in P. Atk.<br>- Able to use phantom-type servitors")
 	public static SystemMessageId SUMMONER_SPECIALIZING_IN_P_ATK_BR_ABLE_TO_USE_PHANTOM_TYPE_SERVITORS;
 	
-	@ClientString(id = 4662, message = "By the will of the Chaos, the power of Naviarope, the giant that could open and close the Dimensional Door at will, has been combined with the ancient power of darkness. This power enabled powerful summoning skills for the Spectral Master.")
+	@ClientString(id = 4662, message = "By the will of the Chaos, the power of Naviarope, the giant that could open and close the Dimensional Door at will, has been combined with the ancient power of darkness. This power enabled powerful summoning skills for the Spectral Master. ")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_NAVIAROPE_THE_GIANT_THAT_COULD_OPEN_AND_CLOSE_THE_DIMENSIONAL_DOOR_AT_WILL_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_DARKNESS_THIS_POWER_ENABLED_POWERFUL_SUMMONING_SKILLS_FOR_THE_SPECTRAL_MASTER;
 	
 	@ClientString(id = 4663, message = "- Healer with great restorative powers<br>- Specializes in restoring clan members' HP")
 	public static SystemMessageId HEALER_WITH_GREAT_RESTORATIVE_POWERS_BR_SPECIALIZES_IN_RESTORING_CLAN_MEMBERS_HP;
 	
-	@ClientString(id = 4664, message = "By the will of the Chaos, the power of Lakcis, the forefather of holy magic who took and improved Einhasad's power, has been combined with the ancient power of light. This enabled the Aeore Cardinal to use miraculous magic.")
+	@ClientString(id = 4664, message = "By the will of the Chaos, the power of Lakcis, the forefather of holy magic who took and improved Einhasad's power, has been combined with the ancient power of light. This enabled the Aeore Cardinal to use miraculous magic. ")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_LAKCIS_THE_FOREFATHER_OF_HOLY_MAGIC_WHO_TOOK_AND_IMPROVED_EINHASAD_S_POWER_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_THIS_ENABLED_THE_AEORE_CARDINAL_TO_USE_MIRACULOUS_MAGIC;
 	
 	@ClientString(id = 4665, message = "- Healer with fast chain skill usage<br>- Specializes in MP Recovery")
 	public static SystemMessageId HEALER_WITH_FAST_CHAIN_SKILL_USAGE_BR_SPECIALIZES_IN_MP_RECOVERY;
 	
-	@ClientString(id = 4666, message = "By the will of the Chaos, the power of Lakcis, the forefather of holy magic who took and improved Einhasad's power, has been combined with the ancient power of light and water. This power was used not only to protect one's community but to protect the peace of the world.")
+	@ClientString(id = 4666, message = "By the will of the Chaos, the power of Lakcis, the forefather of holy magic who took and improved Einhasad's power, has been combined with the ancient power of light and water. This power was used not only to protect one's community but to protect the peace of the world. ")
 	public static SystemMessageId BY_THE_WILL_OF_THE_CHAOS_THE_POWER_OF_LAKCIS_THE_FOREFATHER_OF_HOLY_MAGIC_WHO_TOOK_AND_IMPROVED_EINHASAD_S_POWER_HAS_BEEN_COMBINED_WITH_THE_ANCIENT_POWER_OF_LIGHT_AND_WATER_THIS_POWER_WAS_USED_NOT_ONLY_TO_PROTECT_ONE_S_COMMUNITY_BUT_TO_PROTECT_THE_PEACE_OF_THE_WORLD;
 	
 	@ClientString(id = 4667, message = "- Healer with powerful M. Atk.<br>- Specializes in MP Recovery")
@@ -13332,7 +13332,7 @@ public final class SystemMessageId
 	@ClientString(id = 4669, message = "Melee Damage Dealer")
 	public static SystemMessageId MELEE_DAMAGE_DEALER_2;
 	
-	@ClientString(id = 4670, message = "- Specizlizes in Fist Weapons<br> - Attacks from the Side<br> - Fast Atk. Spd.")
+	@ClientString(id = 4670, message = " - Specizlizes in Fist Weapons<br> - Attacks from the Side<br> - Fast Atk. Spd.")
 	public static SystemMessageId SPECIZLIZES_IN_FIST_WEAPONS_BR_ATTACKS_FROM_THE_SIDE_BR_FAST_ATK_SPD;
 	
 	@ClientString(id = 4671, message = "Eviscerators can manipulate gravity to their advantage. Their main strength lies in shifting their own center of gravity to add to their speed and attack speed.")
@@ -13341,7 +13341,7 @@ public final class SystemMessageId
 	@ClientString(id = 4672, message = "Magic Damage Dealer")
 	public static SystemMessageId MAGIC_DAMAGE_DEALER_2;
 	
-	@ClientString(id = 4673, message = "- Specializes in magical two-handed weapons<br> - Close-range Damage Spells<br> - Uses Wind for Defense")
+	@ClientString(id = 4673, message = " - Specializes in magical two-handed weapons<br> - Close-range Damage Spells<br> - Uses Wind for Defense")
 	public static SystemMessageId SPECIALIZES_IN_MAGICAL_TWO_HANDED_WEAPONS_BR_CLOSE_RANGE_DAMAGE_SPELLS_BR_USES_WIND_FOR_DEFENSE;
 	
 	@ClientString(id = 4674, message = "Able to tap into the power of the wind god, Sayha's Seers can diffuse themselves into the wind for transport or defenses. Their talents account for their extraordinary survivability.")
@@ -13932,8 +13932,8 @@ public final class SystemMessageId
 	@ClientString(id = 4869, message = "View various records within the world.")
 	public static SystemMessageId VIEW_VARIOUS_RECORDS_WITHIN_THE_WORLD;
 	
-	@ClientString(id = 4870, message = "View Instance Zone usage status.")
-	public static SystemMessageId VIEW_INSTANCE_ZONE_USAGE_STATUS;
+	@ClientString(id = 4870, message = "View instanced zone usage status.")
+	public static SystemMessageId VIEW_INSTANCED_ZONE_USAGE_STATUS;
 	
 	@ClientString(id = 4871, message = "You can view clan information and request entry into clan.")
 	public static SystemMessageId YOU_CAN_VIEW_CLAN_INFORMATION_AND_REQUEST_ENTRY_INTO_CLAN;
@@ -14043,56 +14043,62 @@ public final class SystemMessageId
 	@ClientString(id = 4906, message = "Turn on/off to reject friend requests from everyone.")
 	public static SystemMessageId TURN_ON_OFF_TO_REJECT_FRIEND_REQUESTS_FROM_EVERYONE;
 	
-	@ClientString(id = 5000, message = "Your account has been suspended due to account theft. If you registered your e-mail in your personal information, a notification mail will have been sent, so please check. If you have nothing to do with the account theft, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) > Account theft report center</font> and submit your letter of objection. For more information, <font color='FFDF4C'>contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_DUE_TO_ACCOUNT_THEFT_IF_YOU_REGISTERED_YOUR_E_MAIL_IN_YOUR_PERSONAL_INFORMATION_A_NOTIFICATION_MAIL_WILL_HAVE_BEEN_SENT_SO_PLEASE_CHECK_IF_YOU_HAVE_NOTHING_TO_DO_WITH_THE_ACCOUNT_THEFT_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_ACCOUNT_THEFT_REPORT_CENTER_FONT_AND_SUBMIT_YOUR_LETTER_OF_OBJECTION_FOR_MORE_INFORMATION_FONT_COLOR_FFDF4C_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 4907, message = "Shows other PC's equipped items regardless of their transformation status.")
+	public static SystemMessageId SHOWS_OTHER_PC_S_EQUIPPED_ITEMS_REGARDLESS_OF_THEIR_TRANSFORMATION_STATUS;
 	
-	@ClientString(id = 5001, message = "Your account has been suspended as per our management policy because it is confirmed that you submitted a false report. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_BECAUSE_IT_IS_CONFIRMED_THAT_YOU_SUBMITTED_A_FALSE_REPORT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 4908, message = "Shows your equipped items regardless of your transformation status.")
+	public static SystemMessageId SHOWS_YOUR_EQUIPPED_ITEMS_REGARDLESS_OF_YOUR_TRANSFORMATION_STATUS;
 	
-	@ClientString(id = 5002, message = "Your account has been suspended as per our management policy for failing to verify your account during the specified period after submitting the report of account theft. To unblock your account, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) > Report center</font> and go through the user verification process in the account theft report. For more information, go to <font color='FFDF4C'>plaync (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_FAILING_TO_VERIFY_YOUR_ACCOUNT_DURING_THE_SPECIFIED_PERIOD_AFTER_SUBMITTING_THE_REPORT_OF_ACCOUNT_THEFT_TO_UNBLOCK_YOUR_ACCOUNT_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_REPORT_CENTER_FONT_AND_GO_THROUGH_THE_USER_VERIFICATION_PROCESS_IN_THE_ACCOUNT_THEFT_REPORT_FOR_MORE_INFORMATION_GO_TO_FONT_COLOR_FFDF4C_PLAYNC_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5000, message = "Your account has been suspended due to account theft. If you registered your e-mail in your personal information, a notification mail will have been sent, so please check. If you have nothing to do with the account theft, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) > Account theft report center</font> and submit your letter of objection. For more information, <font color='FFDF4C'>contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_DUE_TO_ACCOUNT_THEFT_IF_YOU_REGISTERED_YOUR_E_MAIL_IN_YOUR_PERSONAL_INFORMATION_A_NOTIFICATION_MAIL_WILL_HAVE_BEEN_SENT_SO_PLEASE_CHECK_IF_YOU_HAVE_NOTHING_TO_DO_WITH_THE_ACCOUNT_THEFT_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_ACCOUNT_THEFT_REPORT_CENTER_FONT_AND_SUBMIT_YOUR_LETTER_OF_OBJECTION_FOR_MORE_INFORMATION_FONT_COLOR_FFDF4C_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5003, message = "Your account has been suspended for manipulating the game system to disrupt other users' normal gameplay. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MANIPULATING_THE_GAME_SYSTEM_TO_DISRUPT_OTHER_USERS_NORMAL_GAMEPLAY_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5001, message = "Your account has been suspended as per our management policy because it is confirmed that you submitted a false report. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_BECAUSE_IT_IS_CONFIRMED_THAT_YOU_SUBMITTED_A_FALSE_REPORT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5004, message = "You have traded or attempted to trade an item or character (i.e., account), which holds value in the game system, for cash, cashable goods or item of other games, etc. Pursuant to Article 14 of Chapter 3 of our Terms of Service and management policy, your account has been suspended for 7 days from the date when the act was found. Your account will become unblocked after 7 days of suspension. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center (Lineage II)</font>.")
-	public static SystemMessageId YOU_HAVE_TRADED_OR_ATTEMPTED_TO_TRADE_AN_ITEM_OR_CHARACTER_I_E_ACCOUNT_WHICH_HOLDS_VALUE_IN_THE_GAME_SYSTEM_FOR_CASH_CASHABLE_GOODS_OR_ITEM_OF_OTHER_GAMES_ETC_PURSUANT_TO_ARTICLE_14_OF_CHAPTER_3_OF_OUR_TERMS_OF_SERVICE_AND_MANAGEMENT_POLICY_YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_7_DAYS_FROM_THE_DATE_WHEN_THE_ACT_WAS_FOUND_YOUR_ACCOUNT_WILL_BECOME_UNBLOCKED_AFTER_7_DAYS_OF_SUSPENSION_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_LINEAGE_II_FONT;
+	@ClientString(id = 5002, message = "Your account has been suspended as per our management policy for failing to verify your account during the specified period after submitting the report of account theft. To unblock your account, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) > Report center</font> and go through the user verification process in the account theft report. For more information, go to <font color='FFDF4C'>plaync (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_FAILING_TO_VERIFY_YOUR_ACCOUNT_DURING_THE_SPECIFIED_PERIOD_AFTER_SUBMITTING_THE_REPORT_OF_ACCOUNT_THEFT_TO_UNBLOCK_YOUR_ACCOUNT_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_REPORT_CENTER_FONT_AND_GO_THROUGH_THE_USER_VERIFICATION_PROCESS_IN_THE_ACCOUNT_THEFT_REPORT_FOR_MORE_INFORMATION_GO_TO_FONT_COLOR_FFDF4C_PLAYNC_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5005, message = "You have traded or attempted to trade an item or character (i.e., account), which holds value in the game system, for cash, cashable goods or item of other games, etc. Pursuant to Article 14 of Chapter 3 of our Terms of Service and management policy, your account has been suspended. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center (Lineage II)</font>.")
-	public static SystemMessageId YOU_HAVE_TRADED_OR_ATTEMPTED_TO_TRADE_AN_ITEM_OR_CHARACTER_I_E_ACCOUNT_WHICH_HOLDS_VALUE_IN_THE_GAME_SYSTEM_FOR_CASH_CASHABLE_GOODS_OR_ITEM_OF_OTHER_GAMES_ETC_PURSUANT_TO_ARTICLE_14_OF_CHAPTER_3_OF_OUR_TERMS_OF_SERVICE_AND_MANAGEMENT_POLICY_YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_LINEAGE_II_FONT;
+	@ClientString(id = 5003, message = "Your account has been suspended for manipulating the game system to disrupt other users' normal gameplay. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MANIPULATING_THE_GAME_SYSTEM_TO_DISRUPT_OTHER_USERS_NORMAL_GAMEPLAY_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5006, message = "Your account has been suspended as per our management policy for disrupting public well-being, order, public morals, etc. or committing a fraudulent act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_DISRUPTING_PUBLIC_WELL_BEING_ORDER_PUBLIC_MORALS_ETC_OR_COMMITTING_A_FRAUDULENT_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5004, message = "You have traded or attempted to trade an item or character (i.e., account), which holds value in the game system, for cash, cashable goods or item of other games, etc. Pursuant to Article 14 of Chapter 3 of our Terms of Service and management policy, your account has been suspended for 7 days from the date when the act was found. Your account will become unblocked after 7 days of suspension. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center (Lineage II)</font>.")
+	public static SystemMessageId YOU_HAVE_TRADED_OR_ATTEMPTED_TO_TRADE_AN_ITEM_OR_CHARACTER_I_E_ACCOUNT_WHICH_HOLDS_VALUE_IN_THE_GAME_SYSTEM_FOR_CASH_CASHABLE_GOODS_OR_ITEM_OF_OTHER_GAMES_ETC_PURSUANT_TO_ARTICLE_14_OF_CHAPTER_3_OF_OUR_TERMS_OF_SERVICE_AND_MANAGEMENT_POLICY_YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_7_DAYS_FROM_THE_DATE_WHEN_THE_ACT_WAS_FOUND_YOUR_ACCOUNT_WILL_BECOME_UNBLOCKED_AFTER_7_DAYS_OF_SUSPENSION_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_LINEAGE_II_FONT;
 	
-	@ClientString(id = 5007, message = "Your account has been suspended for disrupting public well-being, order, public morals, etc. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_DISRUPTING_PUBLIC_WELL_BEING_ORDER_PUBLIC_MORALS_ETC_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5005, message = "You have traded or attempted to trade an item or character (i.e., account), which holds value in the game system, for cash, cashable goods or item of other games, etc. Pursuant to Article 14 of Chapter 3 of our Terms of Service and management policy, your account has been suspended. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center (Lineage II)</font>.")
+	public static SystemMessageId YOU_HAVE_TRADED_OR_ATTEMPTED_TO_TRADE_AN_ITEM_OR_CHARACTER_I_E_ACCOUNT_WHICH_HOLDS_VALUE_IN_THE_GAME_SYSTEM_FOR_CASH_CASHABLE_GOODS_OR_ITEM_OF_OTHER_GAMES_ETC_PURSUANT_TO_ARTICLE_14_OF_CHAPTER_3_OF_OUR_TERMS_OF_SERVICE_AND_MANAGEMENT_POLICY_YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_LINEAGE_II_FONT;
 	
-	@ClientString(id = 5008, message = "Your account has been suspended for manipulating the vulnerability of the in-game system, system bug, etc. and/or associating with any of these. Manipulating the bug may result in serious failure in the service or collapse of game balance. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MANIPULATING_THE_VULNERABILITY_OF_THE_IN_GAME_SYSTEM_SYSTEM_BUG_ETC_AND_OR_ASSOCIATING_WITH_ANY_OF_THESE_MANIPULATING_THE_BUG_MAY_RESULT_IN_SERIOUS_FAILURE_IN_THE_SERVICE_OR_COLLAPSE_OF_GAME_BALANCE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5006, message = "Your account has been suspended as per our management policy for disrupting public well-being, order, public morals, etc. or committing a fraudulent act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_DISRUPTING_PUBLIC_WELL_BEING_ORDER_PUBLIC_MORALS_ETC_OR_COMMITTING_A_FRAUDULENT_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5009, message = "Your account has been suspended for using an illegal program. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_USING_AN_ILLEGAL_PROGRAM_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5007, message = "Your account has been suspended for disrupting public well-being, order, public morals, etc. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_DISRUPTING_PUBLIC_WELL_BEING_ORDER_PUBLIC_MORALS_ETC_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5010, message = "Your account has been suspended as per our management policy for manipulating the in-game system for abnormal gameplay. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_MANIPULATING_THE_IN_GAME_SYSTEM_FOR_ABNORMAL_GAMEPLAY_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5008, message = "Your account has been suspended for manipulating the vulnerability of the in-game system, system bug, etc. and/or associating with any of these. Manipulating the bug may result in serious failure in the service or collapse of game balance. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MANIPULATING_THE_VULNERABILITY_OF_THE_IN_GAME_SYSTEM_SYSTEM_BUG_ETC_AND_OR_ASSOCIATING_WITH_ANY_OF_THESE_MANIPULATING_THE_BUG_MAY_RESULT_IN_SERIOUS_FAILURE_IN_THE_SERVICE_OR_COLLAPSE_OF_GAME_BALANCE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5011, message = "Your account has been suspended as per our Terms of Service and management policy upon your request. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_AND_MANAGEMENT_POLICY_UPON_YOUR_REQUEST_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
+	@ClientString(id = 5009, message = "Your account has been suspended for using an illegal program. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_USING_AN_ILLEGAL_PROGRAM_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5012, message = "Your account has been suspended as per our management policy for disrupting public well-being, order, public morals, etc. or attempting a fraudulent act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_DISRUPTING_PUBLIC_WELL_BEING_ORDER_PUBLIC_MORALS_ETC_OR_ATTEMPTING_A_FRAUDULENT_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5010, message = "Your account has been suspended as per our management policy for manipulating the in-game system for abnormal gameplay. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_MANIPULATING_THE_IN_GAME_SYSTEM_FOR_ABNORMAL_GAMEPLAY_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5013, message = "Your account has been suspended as per our Terms of Service for your unauthorized use of other's identification. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_FOR_YOUR_UNAUTHORIZED_USE_OF_OTHER_S_IDENTIFICATION_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
+	@ClientString(id = 5011, message = "Your account has been suspended as per our Terms of Service and management policy upon your request. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_AND_MANAGEMENT_POLICY_UPON_YOUR_REQUEST_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
 	
-	@ClientString(id = 5014, message = "Your account has been suspended as per our Terms of Service for your unauthorized use of other's payment method. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_FOR_YOUR_UNAUTHORIZED_USE_OF_OTHER_S_PAYMENT_METHOD_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
+	@ClientString(id = 5012, message = "Your account has been suspended as per our management policy for disrupting public well-being, order, public morals, etc. or attempting a fraudulent act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_DISRUPTING_PUBLIC_WELL_BEING_ORDER_PUBLIC_MORALS_ETC_OR_ATTEMPTING_A_FRAUDULENT_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5015, message = "Your account has been suspended as per our management policy for engaging in an in-game gambling act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_ENGAGING_IN_AN_IN_GAME_GAMBLING_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5013, message = "Your account has been suspended as per our Terms of Service for your unauthorized use of other's identification. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_FOR_YOUR_UNAUTHORIZED_USE_OF_OTHER_S_IDENTIFICATION_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
 	
-	@ClientString(id = 5016, message = "For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
-	public static SystemMessageId FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
+	@ClientString(id = 5014, message = "Your account has been suspended as per our Terms of Service for your unauthorized use of other's payment method. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_FOR_YOUR_UNAUTHORIZED_USE_OF_OTHER_S_PAYMENT_METHOD_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
+	
+	@ClientString(id = 5015, message = "Your account has been suspended as per our management policy for engaging in an in-game gambling act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_ENGAGING_IN_AN_IN_GAME_GAMBLING_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	
+	@ClientString(id = 5016, message = "For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
+	public static SystemMessageId FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
 	
 	@ClientString(id = 5017, message = "Please inquire through the <font color='FFDF4C'>Lineage II Customer Service Center</font> or the <font color='FFDF4C'>1:1 support</font> in the official website.")
 	public static SystemMessageId PLEASE_INQUIRE_THROUGH_THE_FONT_COLOR_FFDF4C_LINEAGE_II_CUSTOMER_SERVICE_CENTER_FONT_OR_THE_FONT_COLOR_FFDF4C_1_1_SUPPORT_FONT_IN_THE_OFFICIAL_WEBSITE;
@@ -14100,38 +14106,38 @@ public final class SystemMessageId
 	@ClientString(id = 5018, message = "In order to play Lineage II, you must be <font color='FFDF4C'>Ages 15 or above</font>. You must be <font color='FFDF4C'>18 or above</font> in order to use the PvP servers.")
 	public static SystemMessageId IN_ORDER_TO_PLAY_LINEAGE_II_YOU_MUST_BE_FONT_COLOR_FFDF4C_AGES_15_OR_ABOVE_FONT_YOU_MUST_BE_FONT_COLOR_FFDF4C_18_OR_ABOVE_FONT_IN_ORDER_TO_USE_THE_PVP_SERVERS;
 	
-	@ClientString(id = 5019, message = "Go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>)</font>, join our web membership and create a new account.")
-	public static SystemMessageId GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_JOIN_OUR_WEB_MEMBERSHIP_AND_CREATE_A_NEW_ACCOUNT;
+	@ClientString(id = 5019, message = "Go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>)</font>, join our web membership and create a new account.")
+	public static SystemMessageId GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_JOIN_OUR_WEB_MEMBERSHIP_AND_CREATE_A_NEW_ACCOUNT;
 	
-	@ClientString(id = 5020, message = "If you have lost your account information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
-	public static SystemMessageId IF_YOU_HAVE_LOST_YOUR_ACCOUNT_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
+	@ClientString(id = 5020, message = "If you have lost your account information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
+	public static SystemMessageId IF_YOU_HAVE_LOST_YOUR_ACCOUNT_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
 	
 	@ClientString(id = 5021, message = "Users who did not complete the <font color='FFDF4C'>Age 18 Verification</font> may not login between <font color='FFDF4C'>10PM</font> and <font color='FFDF4C'>6AM</font> the next day.")
 	public static SystemMessageId USERS_WHO_DID_NOT_COMPLETE_THE_FONT_COLOR_FFDF4C_AGE_18_VERIFICATION_FONT_MAY_NOT_LOGIN_BETWEEN_FONT_COLOR_FFDF4C_10PM_FONT_AND_FONT_COLOR_FFDF4C_6AM_FONT_THE_NEXT_DAY;
 	
-	@ClientString(id = 5022, message = "Please complete the user verification process for your identification. For user verification process, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>)</font>. For more information, <font color='FFDF4C'>contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId PLEASE_COMPLETE_THE_USER_VERIFICATION_PROCESS_FOR_YOUR_IDENTIFICATION_FOR_USER_VERIFICATION_PROCESS_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_FOR_MORE_INFORMATION_FONT_COLOR_FFDF4C_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5022, message = "Please complete the user verification process for your identification. For user verification process, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>)</font>. For more information, <font color='FFDF4C'>contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId PLEASE_COMPLETE_THE_USER_VERIFICATION_PROCESS_FOR_YOUR_IDENTIFICATION_FOR_USER_VERIFICATION_PROCESS_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_FOR_MORE_INFORMATION_FONT_COLOR_FFDF4C_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5023, message = "Your account has been suspended for attempting to trade for cash, server, or other games. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_ATTEMPTING_TO_TRADE_FOR_CASH_SERVER_OR_OTHER_GAMES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5023, message = "Your account has been suspended for attempting to trade for cash, server, or other games. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_ATTEMPTING_TO_TRADE_FOR_CASH_SERVER_OR_OTHER_GAMES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5024, message = "Your account has been suspended as requested by the investigation (judicial) authority. Note that any request officially issued by the corresponding authorities has legal force. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_REQUESTED_BY_THE_INVESTIGATION_JUDICIAL_AUTHORITY_NOTE_THAT_ANY_REQUEST_OFFICIALLY_ISSUED_BY_THE_CORRESPONDING_AUTHORITIES_HAS_LEGAL_FORCE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
+	@ClientString(id = 5024, message = "Your account has been suspended as requested by the investigation (judicial) authority. Note that any request officially issued by the corresponding authorities has legal force. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_REQUESTED_BY_THE_INVESTIGATION_JUDICIAL_AUTHORITY_NOTE_THAT_ANY_REQUEST_OFFICIALLY_ISSUED_BY_THE_CORRESPONDING_AUTHORITIES_HAS_LEGAL_FORCE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
 	
-	@ClientString(id = 5025, message = "Your account has been suspended for picking up an item from an account reported for theft. Proceed to your user verification process from our Homepage to retrieve your account. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_PICKING_UP_AN_ITEM_FROM_AN_ACCOUNT_REPORTED_FOR_THEFT_PROCEED_TO_YOUR_USER_VERIFICATION_PROCESS_FROM_OUR_HOMEPAGE_TO_RETRIEVE_YOUR_ACCOUNT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5025, message = "Your account has been suspended for picking up an item from an account reported for theft. Proceed to your user verification process from our Homepage to retrieve your account. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_PICKING_UP_AN_ITEM_FROM_AN_ACCOUNT_REPORTED_FOR_THEFT_PROCEED_TO_YOUR_USER_VERIFICATION_PROCESS_FROM_OUR_HOMEPAGE_TO_RETRIEVE_YOUR_ACCOUNT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5026, message = "Your account has been suspended for trading cash, server or other games. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_TRADING_CASH_SERVER_OR_OTHER_GAMES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5026, message = "Your account has been suspended for trading cash, server or other games. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_TRADING_CASH_SERVER_OR_OTHER_GAMES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5027, message = "Your account has been suspended for trading cash, or account. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_TRADING_CASH_OR_ACCOUNT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5027, message = "Your account has been suspended for trading cash, or account. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_TRADING_CASH_OR_ACCOUNT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5028, message = "You haven't completed the user verification process and are not allowed to our game service. Go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>)</font> and complete the verification process to use our service. If you have any questions in regard to the user verification process, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOU_HAVEN_T_COMPLETED_THE_USER_VERIFICATION_PROCESS_AND_ARE_NOT_ALLOWED_TO_OUR_GAME_SERVICE_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_AND_COMPLETE_THE_VERIFICATION_PROCESS_TO_USE_OUR_SERVICE_IF_YOU_HAVE_ANY_QUESTIONS_IN_REGARD_TO_THE_USER_VERIFICATION_PROCESS_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5028, message = "You haven't completed the user verification process and are not allowed to our game service. Go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>)</font> and complete the verification process to use our service. If you have any questions in regard to the user verification process, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOU_HAVEN_T_COMPLETED_THE_USER_VERIFICATION_PROCESS_AND_ARE_NOT_ALLOWED_TO_OUR_GAME_SERVICE_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_AND_COMPLETE_THE_VERIFICATION_PROCESS_TO_USE_OUR_SERVICE_IF_YOU_HAVE_ANY_QUESTIONS_IN_REGARD_TO_THE_USER_VERIFICATION_PROCESS_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5029, message = "You have an inactive account. Your account becomes inactive after a certain period of inactivity. To reactivate an inactive account, visit the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>)</font>.")
-	public static SystemMessageId YOU_HAVE_AN_INACTIVE_ACCOUNT_YOUR_ACCOUNT_BECOMES_INACTIVE_AFTER_A_CERTAIN_PERIOD_OF_INACTIVITY_TO_REACTIVATE_AN_INACTIVE_ACCOUNT_VISIT_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_FONT;
+	@ClientString(id = 5029, message = "You have an inactive account. Your account becomes inactive after a certain period of inactivity. To reactivate an inactive account, visit the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>)</font>.")
+	public static SystemMessageId YOU_HAVE_AN_INACTIVE_ACCOUNT_YOUR_ACCOUNT_BECOMES_INACTIVE_AFTER_A_CERTAIN_PERIOD_OF_INACTIVITY_TO_REACTIVATE_AN_INACTIVE_ACCOUNT_VISIT_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_FONT;
 	
 	@ClientString(id = 5030, message = "<font color='FFDF4C'>Logging in.</font>Please wait.")
 	public static SystemMessageId FONT_COLOR_FFDF4C_LOGGING_IN_FONT_PLEASE_WAIT;
@@ -14139,8 +14145,8 @@ public final class SystemMessageId
 	@ClientString(id = 5031, message = "The account has been temporarily restricted due to an incomplete cell phone (ARS) transaction. For more information, please visit https://eu.4game.com/.")
 	public static SystemMessageId THE_ACCOUNT_HAS_BEEN_TEMPORARILY_RESTRICTED_DUE_TO_AN_INCOMPLETE_CELL_PHONE_ARS_TRANSACTION_FOR_MORE_INFORMATION_PLEASE_VISIT_HTTPS_EU_4GAME_COM;
 	
-	@ClientString(id = 5032, message = "Your account needs verification.<br>Visit the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>)</font>, verify your account and try again.")
-	public static SystemMessageId YOUR_ACCOUNT_NEEDS_VERIFICATION_BR_VISIT_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_VERIFY_YOUR_ACCOUNT_AND_TRY_AGAIN;
+	@ClientString(id = 5032, message = "Your account needs verification.<br>Visit the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>)</font>, verify your account and try again.")
+	public static SystemMessageId YOUR_ACCOUNT_NEEDS_VERIFICATION_BR_VISIT_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_VERIFY_YOUR_ACCOUNT_AND_TRY_AGAIN;
 	
 	@ClientString(id = 5033, message = "Your account has been restricted for violating the EULA, RoC and/or the User Agreement. When a user violates the terms of the User Agreement, the company can impose a restriction on their account. For more information, please visit the Support Center on the official website (https://support.4game.com).")
 	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_FOR_VIOLATING_THE_EULA_ROC_AND_OR_THE_USER_AGREEMENT_WHEN_A_USER_VIOLATES_THE_TERMS_OF_THE_USER_AGREEMENT_THE_COMPANY_CAN_IMPOSE_A_RESTRICTION_ON_THEIR_ACCOUNT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_OFFICIAL_WEBSITE_HTTPS_SUPPORT_4GAME_COM_51;
@@ -14151,17 +14157,17 @@ public final class SystemMessageId
 	@ClientString(id = 5035, message = "Your account has been restricted for violating the EULA, RoC and/or the User Agreement. When a user violates the terms of the User Agreement, the company can impose a restriction on their account. For more information, please visit the Support Center on the official website (https://support.4game.com).")
 	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_FOR_VIOLATING_THE_EULA_ROC_AND_OR_THE_USER_AGREEMENT_WHEN_A_USER_VIOLATES_THE_TERMS_OF_THE_USER_AGREEMENT_THE_COMPANY_CAN_IMPOSE_A_RESTRICTION_ON_THEIR_ACCOUNT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_OFFICIAL_WEBSITE_HTTPS_SUPPORT_4GAME_COM_52;
 	
-	@ClientString(id = 5036, message = "Your account has been suspended.<br>For more information, visit <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_BR_FOR_MORE_INFORMATION_VISIT_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5036, message = "Your account has been suspended.<br>For more information, visit <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_BR_FOR_MORE_INFORMATION_VISIT_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
 	@ClientString(id = 5037, message = "Your account has been restricted for violating the EULA, RoC and/or the User Agreement. When a user violates the terms of the User Agreement, the company can impose a restriction on their account. For more information, please visit the Support Center on the official website (https://support.4game.com).")
 	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_FOR_VIOLATING_THE_EULA_ROC_AND_OR_THE_USER_AGREEMENT_WHEN_A_USER_VIOLATES_THE_TERMS_OF_THE_USER_AGREEMENT_THE_COMPANY_CAN_IMPOSE_A_RESTRICTION_ON_THEIR_ACCOUNT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_OFFICIAL_WEBSITE_HTTPS_SUPPORT_4GAME_COM_53;
 	
-	@ClientString(id = 5038, message = "You may access your account after updating your password and password quiz.<br>Go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>)</font> and <font color='FFDF4C'>update your password and password quiz</font> to retrieve your account.")
-	public static SystemMessageId YOU_MAY_ACCESS_YOUR_ACCOUNT_AFTER_UPDATING_YOUR_PASSWORD_AND_PASSWORD_QUIZ_BR_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_AND_FONT_COLOR_FFDF4C_UPDATE_YOUR_PASSWORD_AND_PASSWORD_QUIZ_FONT_TO_RETRIEVE_YOUR_ACCOUNT;
+	@ClientString(id = 5038, message = "You may access your account after updating your password and password quiz.<br>Go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>)</font> and <font color='FFDF4C'>update your password and password quiz</font> to retrieve your account.")
+	public static SystemMessageId YOU_MAY_ACCESS_YOUR_ACCOUNT_AFTER_UPDATING_YOUR_PASSWORD_AND_PASSWORD_QUIZ_BR_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_AND_FONT_COLOR_FFDF4C_UPDATE_YOUR_PASSWORD_AND_PASSWORD_QUIZ_FONT_TO_RETRIEVE_YOUR_ACCOUNT;
 	
-	@ClientString(id = 5039, message = "Your account has been suspended for using illegal programs. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_USING_ILLEGAL_PROGRAMS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5039, message = "Your account has been suspended for using illegal programs. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_USING_ILLEGAL_PROGRAMS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
 	@ClientString(id = 5040, message = "Your account has been restricted for violating the EULA, RoC and/or the User Agreement. When a user violates the terms of the User Agreement, the company can impose a restriction on their account. For more information, please visit the Support Center on the official website (https://support.4game.com).")
 	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_FOR_VIOLATING_THE_EULA_ROC_AND_OR_THE_USER_AGREEMENT_WHEN_A_USER_VIOLATES_THE_TERMS_OF_THE_USER_AGREEMENT_THE_COMPANY_CAN_IMPOSE_A_RESTRICTION_ON_THEIR_ACCOUNT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_OFFICIAL_WEBSITE_HTTPS_SUPPORT_4GAME_COM_54;
@@ -14169,35 +14175,35 @@ public final class SystemMessageId
 	@ClientString(id = 5041, message = "Your account has been restricted for violating the EULA, RoC and/or the User Agreement. When a user violates the terms of the User Agreement, the company can impose a restriction on their account. For more information, please visit the Support Center on the official website (https://support.4game.com).")
 	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_FOR_VIOLATING_THE_EULA_ROC_AND_OR_THE_USER_AGREEMENT_WHEN_A_USER_VIOLATES_THE_TERMS_OF_THE_USER_AGREEMENT_THE_COMPANY_CAN_IMPOSE_A_RESTRICTION_ON_THEIR_ACCOUNT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_OFFICIAL_WEBSITE_HTTPS_SUPPORT_4GAME_COM_55;
 	
-	@ClientString(id = 5042, message = "Your account has been suspended due to fraudulent information. If you are not involved with this fraud, please verify your account information. For more information, visit the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_DUE_TO_FRAUDULENT_INFORMATION_IF_YOU_ARE_NOT_INVOLVED_WITH_THIS_FRAUD_PLEASE_VERIFY_YOUR_ACCOUNT_INFORMATION_FOR_MORE_INFORMATION_VISIT_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5042, message = "Your account has been suspended due to fraudulent information. If you are not involved with this fraud, please verify your account information. For more information, visit the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_DUE_TO_FRAUDULENT_INFORMATION_IF_YOU_ARE_NOT_INVOLVED_WITH_THIS_FRAUD_PLEASE_VERIFY_YOUR_ACCOUNT_INFORMATION_FOR_MORE_INFORMATION_VISIT_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5043, message = "Your account has been completely blocked for making a fraudulent payment. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_MAKING_A_FRAUDULENT_PAYMENT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5043, message = "Your account has been completely blocked for making a fraudulent payment. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_MAKING_A_FRAUDULENT_PAYMENT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5044, message = "Your account has been completely blocked for trading accounts.<br>For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_TRADING_ACCOUNTS_BR_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5044, message = "Your account has been completely blocked for trading accounts.<br>For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_TRADING_ACCOUNTS_BR_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5045, message = "Your account has been completely blocked for 10 days for using illegal programs. Note that your account will be permanently blocked if it happens again. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_10_DAYS_FOR_USING_ILLEGAL_PROGRAMS_NOTE_THAT_YOUR_ACCOUNT_WILL_BE_PERMANENTLY_BLOCKED_IF_IT_HAPPENS_AGAIN_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5045, message = "Your account has been completely blocked for 10 days for using illegal programs. Note that your account will be permanently blocked if it happens again. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_10_DAYS_FOR_USING_ILLEGAL_PROGRAMS_NOTE_THAT_YOUR_ACCOUNT_WILL_BE_PERMANENTLY_BLOCKED_IF_IT_HAPPENS_AGAIN_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5046, message = "Your account has been completely blocked for using illegal programs. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_USING_ILLEGAL_PROGRAMS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5046, message = "Your account has been completely blocked for using illegal programs. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_USING_ILLEGAL_PROGRAMS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5047, message = "Your account has been completely blocked for using illegal programs. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_USING_ILLEGAL_PROGRAMS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5047, message = "Your account has been completely blocked for using illegal programs. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_USING_ILLEGAL_PROGRAMS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT_2;
 	
 	@ClientString(id = 5048, message = "Your account has been restricted for violating the EULA, RoC and/or the User Agreement. When a user violates the terms of the User Agreement, the company can impose a restriction on their account. For more information, please visit the Support Center on the official website (https://support.4game.com).")
 	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_RESTRICTED_FOR_VIOLATING_THE_EULA_ROC_AND_OR_THE_USER_AGREEMENT_WHEN_A_USER_VIOLATES_THE_TERMS_OF_THE_USER_AGREEMENT_THE_COMPANY_CAN_IMPOSE_A_RESTRICTION_ON_THEIR_ACCOUNT_FOR_MORE_INFORMATION_PLEASE_VISIT_THE_SUPPORT_CENTER_ON_THE_OFFICIAL_WEBSITE_HTTPS_SUPPORT_4GAME_COM_56;
 	
-	@ClientString(id = 5049, message = "Your account has been suspended for repeated uploading abusive posts. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_REPEATED_UPLOADING_ABUSIVE_POSTS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5049, message = "Your account has been suspended for repeated uploading abusive posts. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_REPEATED_UPLOADING_ABUSIVE_POSTS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5050, message = "Your account has been suspended for uploading a post in violation of the current law. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_UPLOADING_A_POST_IN_VIOLATION_OF_THE_CURRENT_LAW_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5050, message = "Your account has been suspended for uploading a post in violation of the current law. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_UPLOADING_A_POST_IN_VIOLATION_OF_THE_CURRENT_LAW_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5051, message = "Your account has been completely blocked for using our game service for commercial purposes. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_USING_OUR_GAME_SERVICE_FOR_COMMERCIAL_PURPOSES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5051, message = "Your account has been completely blocked for using our game service for commercial purposes. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_USING_OUR_GAME_SERVICE_FOR_COMMERCIAL_PURPOSES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
 	@ClientString(id = 5052, message = "You have entered the <font color='FFDF4C'>Live Server</font>.")
 	public static SystemMessageId YOU_HAVE_ENTERED_THE_FONT_COLOR_FFDF4C_LIVE_SERVER_FONT;
@@ -14211,14 +14217,14 @@ public final class SystemMessageId
 	@ClientString(id = 5055, message = "You cannot do that because of <font color='FFDF4C'>Fatigue</font>.")
 	public static SystemMessageId YOU_CANNOT_DO_THAT_BECAUSE_OF_FONT_COLOR_FFDF4C_FATIGUE_FONT;
 	
-	@ClientString(id = 5056, message = "Your account is now in user verification standby mode as there is a suspected case of identity theft. If you have nothing to do with this, click the ‘Unblock' button found on the login page of our Homepage, verify your account and retrieve it for normal game service. For more information, go to the <font color='FFDF4C'>official homepage(</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_IS_NOW_IN_USER_VERIFICATION_STANDBY_MODE_AS_THERE_IS_A_SUSPECTED_CASE_OF_IDENTITY_THEFT_IF_YOU_HAVE_NOTHING_TO_DO_WITH_THIS_CLICK_THE_UNBLOCK_BUTTON_FOUND_ON_THE_LOGIN_PAGE_OF_OUR_HOMEPAGE_VERIFY_YOUR_ACCOUNT_AND_RETRIEVE_IT_FOR_NORMAL_GAME_SERVICE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5056, message = "Your account is now in user verification standby mode as there is a suspected case of identity theft. If you have nothing to do with this, click the ‘Unblock' button found on the login page of our Homepage, verify your account and retrieve it for normal game service. For more information, go to the <font color='FFDF4C'>official homepage(</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_IS_NOW_IN_USER_VERIFICATION_STANDBY_MODE_AS_THERE_IS_A_SUSPECTED_CASE_OF_IDENTITY_THEFT_IF_YOU_HAVE_NOTHING_TO_DO_WITH_THIS_CLICK_THE_UNBLOCK_BUTTON_FOUND_ON_THE_LOGIN_PAGE_OF_OUR_HOMEPAGE_VERIFY_YOUR_ACCOUNT_AND_RETRIEVE_IT_FOR_NORMAL_GAME_SERVICE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5057, message = "Your account has been completely blocked for creating an account under another person's name. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_CREATING_AN_ACCOUNT_UNDER_ANOTHER_PERSON_S_NAME_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5057, message = "Your account has been completely blocked for creating an account under another person's name. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_CREATING_AN_ACCOUNT_UNDER_ANOTHER_PERSON_S_NAME_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5058, message = "Your account has been suspended due to suspected abusive gameplay. If this is not the case, verify your account on our website. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_DUE_TO_SUSPECTED_ABUSIVE_GAMEPLAY_IF_THIS_IS_NOT_THE_CASE_VERIFY_YOUR_ACCOUNT_ON_OUR_WEBSITE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5058, message = "Your account has been suspended due to suspected abusive gameplay. If this is not the case, verify your account on our website. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_DUE_TO_SUSPECTED_ABUSIVE_GAMEPLAY_IF_THIS_IS_NOT_THE_CASE_VERIFY_YOUR_ACCOUNT_ON_OUR_WEBSITE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
 	@ClientString(id = 5059, message = "Please enter more than <font color='FFDF4C'>1 letter</font> and less than <font color='FFDF4C'>16 letters</font>.")
 	public static SystemMessageId PLEASE_ENTER_MORE_THAN_FONT_COLOR_FFDF4C_1_LETTER_FONT_AND_LESS_THAN_FONT_COLOR_FFDF4C_16_LETTERS_FONT;
@@ -14238,11 +14244,11 @@ public final class SystemMessageId
 	@ClientString(id = 5064, message = "Authentication has failed as you have entered an incorrect authentication number or did not enter the authentication number. If you fail authentication <font color='FFDF4C'>3 times</font> in a row, game access will be restricted for <font color='FFDF4C'>30 minutes</font>.")
 	public static SystemMessageId AUTHENTICATION_HAS_FAILED_AS_YOU_HAVE_ENTERED_AN_INCORRECT_AUTHENTICATION_NUMBER_OR_DID_NOT_ENTER_THE_AUTHENTICATION_NUMBER_IF_YOU_FAIL_AUTHENTICATION_FONT_COLOR_FFDF4C_3_TIMES_FONT_IN_A_ROW_GAME_ACCESS_WILL_BE_RESTRICTED_FOR_FONT_COLOR_FFDF4C_30_MINUTES_FONT;
 	
-	@ClientString(id = 5065, message = "An unexpected error has occured. Please contact our Customer Support Team at https://support.4game.com\r\n")
-	public static SystemMessageId AN_UNEXPECTED_ERROR_HAS_OCCURED_PLEASE_CONTACT_OUR_CUSTOMER_SUPPORT_TEAM_AT_HTTPS_SUPPORT_4GAME_COM_R_N_3;
+	@ClientString(id = 5065, message = "An unexpected error has occured. Please contact our Customer Support Team at https://support.4game.com")
+	public static SystemMessageId AN_UNEXPECTED_ERROR_HAS_OCCURED_PLEASE_CONTACT_OUR_CUSTOMER_SUPPORT_TEAM_AT_HTTPS_SUPPORT_4GAME_COM;
 	
-	@ClientString(id = 5066, message = "An unexpected error has occured. Please contact our Customer Support Team at https://support.4game.com\r\n")
-	public static SystemMessageId AN_UNEXPECTED_ERROR_HAS_OCCURED_PLEASE_CONTACT_OUR_CUSTOMER_SUPPORT_TEAM_AT_HTTPS_SUPPORT_4GAME_COM_R_N_4;
+	@ClientString(id = 5066, message = "An unexpected error has occured. Please contact our Customer Support Team at https://support.4game.com")
+	public static SystemMessageId AN_UNEXPECTED_ERROR_HAS_OCCURED_PLEASE_CONTACT_OUR_CUSTOMER_SUPPORT_TEAM_AT_HTTPS_SUPPORT_4GAME_COM_2;
 	
 	@ClientString(id = 5067, message = "If you fail authentication <font color='FFDF4C'>3 times</font> in a row, game access will be restricted for <font color='FFDF4C'>30 minutes</font>. Please try again later.")
 	public static SystemMessageId IF_YOU_FAIL_AUTHENTICATION_FONT_COLOR_FFDF4C_3_TIMES_FONT_IN_A_ROW_GAME_ACCESS_WILL_BE_RESTRICTED_FOR_FONT_COLOR_FFDF4C_30_MINUTES_FONT_PLEASE_TRY_AGAIN_LATER;
@@ -14253,14 +14259,17 @@ public final class SystemMessageId
 	@ClientString(id = 5069, message = "Please enter card number <font color='FFDF4C'>$s1</font>.")
 	public static SystemMessageId PLEASE_ENTER_CARD_NUMBER_FONT_COLOR_FFDF4C_S1_FONT;
 	
-	@ClientString(id = 5070, message = "<font size='15' color='#FFDF5F'>As of April 22nd 2015, Lineage II launched the updated Classic Server.</font><br><font size='13' color='#ABABAB'>Giran, Elf, Dark Elf</font> → Giran (NEW)")
-	public static SystemMessageId FONT_SIZE_15_COLOR_FFDF5F_AS_OF_APRIL_22ND_2015_LINEAGE_II_LAUNCHED_THE_UPDATED_CLASSIC_SERVER_FONT_BR_FONT_SIZE_13_COLOR_ABABAB_GIRAN_ELF_DARK_ELF_FONT_GIRAN_NEW;
+	@ClientString(id = 5070, message = "<font size='15' color='#FFDF5F'>As of July 30th, 2018, Lineage II launched the Specialized Server.</font><br>Bloody (NEW)")
+	public static SystemMessageId FONT_SIZE_15_COLOR_FFDF5F_AS_OF_JULY_30TH_2018_LINEAGE_II_LAUNCHED_THE_SPECIALIZED_SERVER_FONT_BR_BLOODY_NEW;
 	
 	@ClientString(id = 5071, message = "<font color='#FFDF4C'>Generous benefits await the returning heroes!</font>")
 	public static SystemMessageId FONT_COLOR_FFDF4C_GENEROUS_BENEFITS_AWAIT_THE_RETURNING_HEROES_FONT;
 	
 	@ClientString(id = 5072, message = "To get the dormant user benefits, go to <font color='#FFDF4C'>Lineage II Homepage > Dormant user coupon page</font>(<font color='#6699FF'><a href='asfunction:homePage'>lineage2.plaync.com/service/freecoupon/dormancy</a></font>).<br>Get the dormant user benefits and access our game!")
 	public static SystemMessageId TO_GET_THE_DORMANT_USER_BENEFITS_GO_TO_FONT_COLOR_FFDF4C_LINEAGE_II_HOMEPAGE_DORMANT_USER_COUPON_PAGE_FONT_FONT_COLOR_6699FF_A_HREF_ASFUNCTION_HOMEPAGE_LINEAGE2_PLAYNC_COM_SERVICE_FREECOUPON_DORMANCY_A_FONT_BR_GET_THE_DORMANT_USER_BENEFITS_AND_ACCESS_OUR_GAME;
+	
+	@ClientString(id = 5073, message = "To access the server, you must sign up for the OTP Service.</br></br>Do you want to go to the <font color='FFDF4C'>Guide Page</font> for OTP Service sign-up?")
+	public static SystemMessageId TO_ACCESS_THE_SERVER_YOU_MUST_SIGN_UP_FOR_THE_OTP_SERVICE_BR_BR_DO_YOU_WANT_TO_GO_TO_THE_FONT_COLOR_FFDF4C_GUIDE_PAGE_FONT_FOR_OTP_SERVICE_SIGN_UP;
 	
 	@ClientString(id = 5100, message = "Available only for members authorized to activate items")
 	public static SystemMessageId AVAILABLE_ONLY_FOR_MEMBERS_AUTHORIZED_TO_ACTIVATE_ITEMS;
@@ -14505,13 +14514,13 @@ public final class SystemMessageId
 	@ClientString(id = 5180, message = "Ranking information did not load. Please try again later.")
 	public static SystemMessageId RANKING_INFORMATION_DID_NOT_LOAD_PLEASE_TRY_AGAIN_LATER;
 	
-	@ClientString(id = 5181, message = "You have obtained an Attribute. Open your Character Information Screen to check.")
+	@ClientString(id = 5181, message = "You have obtained an Attribute. Open your Character Information Screen to check. ")
 	public static SystemMessageId YOU_HAVE_OBTAINED_AN_ATTRIBUTE_OPEN_YOUR_CHARACTER_INFORMATION_SCREEN_TO_CHECK;
 	
 	@ClientString(id = 5182, message = "Unable to open Olympiad Screen while in participating or watching a match.")
 	public static SystemMessageId UNABLE_TO_OPEN_OLYMPIAD_SCREEN_WHILE_IN_PARTICIPATING_OR_WATCHING_A_MATCH;
 	
-	@ClientString(id = 5183, message = "Olympiad can be watches in Peace Zone only.")
+	@ClientString(id = 5183, message = "Olympiad can be watches in Peace Zone only. ")
 	public static SystemMessageId OLYMPIAD_CAN_BE_WATCHES_IN_PEACE_ZONE_ONLY;
 	
 	@ClientString(id = 5184, message = "ROUND $s1")
@@ -14577,6 +14586,9 @@ public final class SystemMessageId
 	@ClientString(id = 5204, message = "Time Left: $s1min")
 	public static SystemMessageId TIME_LEFT_S1MIN;
 	
+	@ClientString(id = 5205, message = "No zone to display.")
+	public static SystemMessageId NO_ZONE_TO_DISPLAY;
+	
 	@ClientString(id = 5206, message = "Not enough space in the Artifact inventory. Please make more room and try again.")
 	public static SystemMessageId NOT_ENOUGH_SPACE_IN_THE_ARTIFACT_INVENTORY_PLEASE_MAKE_MORE_ROOM_AND_TRY_AGAIN;
 	
@@ -14616,110 +14628,146 @@ public final class SystemMessageId
 	@ClientString(id = 5218, message = "No Artifact has been selected.")
 	public static SystemMessageId NO_ARTIFACT_HAS_BEEN_SELECTED;
 	
-	@ClientString(id = 5300, message = "Your account has been suspended due to account theft. If you registered your e-mail in your personal information, a notification mail will have been sent, so please check. If you have nothing to do with the account theft, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) > Account theft report center</font> and submit your letter of objection. For more information, <font color='FFDF4C'>contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_DUE_TO_ACCOUNT_THEFT_IF_YOU_REGISTERED_YOUR_E_MAIL_IN_YOUR_PERSONAL_INFORMATION_A_NOTIFICATION_MAIL_WILL_HAVE_BEEN_SENT_SO_PLEASE_CHECK_IF_YOU_HAVE_NOTHING_TO_DO_WITH_THE_ACCOUNT_THEFT_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_ACCOUNT_THEFT_REPORT_CENTER_FONT_AND_SUBMIT_YOUR_LETTER_OF_OBJECTION_FOR_MORE_INFORMATION_FONT_COLOR_FFDF4C_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5219, message = "If enchantment fails, the item will be destroyed (crystallized). If enchantment to +8 or higher fails, you can obtain additional weapon enhancement stones.")
+	public static SystemMessageId IF_ENCHANTMENT_FAILS_THE_ITEM_WILL_BE_DESTROYED_CRYSTALLIZED_IF_ENCHANTMENT_TO_8_OR_HIGHER_FAILS_YOU_CAN_OBTAIN_ADDITIONAL_WEAPON_ENHANCEMENT_STONES;
 	
-	@ClientString(id = 5301, message = "Your account has been suspended as per our management policy for manipulating our GM service or customer support service to disrupt other users' normal gameplay or the company's game operation. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_MANIPULATING_OUR_GM_SERVICE_OR_CUSTOMER_SUPPORT_SERVICE_TO_DISRUPT_OTHER_USERS_NORMAL_GAMEPLAY_OR_THE_COMPANY_S_GAME_OPERATION_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5220, message = "If enchantment fails, the item will be destroyed (crystallized). If enchantment to +6 or higher fails, you can obtain additional Defense enhancement stones.")
+	public static SystemMessageId IF_ENCHANTMENT_FAILS_THE_ITEM_WILL_BE_DESTROYED_CRYSTALLIZED_IF_ENCHANTMENT_TO_6_OR_HIGHER_FAILS_YOU_CAN_OBTAIN_ADDITIONAL_DEFENSE_ENHANCEMENT_STONES;
 	
-	@ClientString(id = 5302, message = "Your account has been suspended as per our management policy for failing to verify your account during the specified period after submitting the report of account theft. To unblock your account, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) > Report center</font> and go through the user verification process in the account theft report. For more information, go to <font color='FFDF4C'>plaync (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_FAILING_TO_VERIFY_YOUR_ACCOUNT_DURING_THE_SPECIFIED_PERIOD_AFTER_SUBMITTING_THE_REPORT_OF_ACCOUNT_THEFT_TO_UNBLOCK_YOUR_ACCOUNT_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_REPORT_CENTER_FONT_AND_GO_THROUGH_THE_USER_VERIFICATION_PROCESS_IN_THE_ACCOUNT_THEFT_REPORT_FOR_MORE_INFORMATION_GO_TO_FONT_COLOR_FFDF4C_PLAYNC_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5221, message = "Today you can use $s1 Attack Point(s).\\nYour remaining Life for today is $s2.\\nAn attacker with 1 or higher Life/Attack Point can obtain Bloody Coins by killing a user with 1 or higher Life. These points are rest at 6:30 every day. ")
+	public static SystemMessageId TODAY_YOU_CAN_USE_S1_ATTACK_POINT_S_NYOUR_REMAINING_LIFE_FOR_TODAY_IS_S2_NAN_ATTACKER_WITH_1_OR_HIGHER_LIFE_ATTACK_POINT_CAN_OBTAIN_BLOODY_COINS_BY_KILLING_A_USER_WITH_1_OR_HIGHER_LIFE_THESE_POINTS_ARE_REST_AT_6_30_EVERY_DAY;
 	
-	@ClientString(id = 5303, message = "Your account has been suspended for manipulating the game system to disrupt other users' normal gameplay. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MANIPULATING_THE_GAME_SYSTEM_TO_DISRUPT_OTHER_USERS_NORMAL_GAMEPLAY_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5222, message = "Only Lv. 95 or higher users can use the Bloody Coin System. ")
+	public static SystemMessageId ONLY_LV_95_OR_HIGHER_USERS_CAN_USE_THE_BLOODY_COIN_SYSTEM;
 	
-	@ClientString(id = 5304, message = "Your account has been suspended for attempting promotional activities for commercial purpose or to trade for cash or other games. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_ATTEMPTING_PROMOTIONAL_ACTIVITIES_FOR_COMMERCIAL_PURPOSE_OR_TO_TRADE_FOR_CASH_OR_OTHER_GAMES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5223, message = "You beat $c1 and obtained $s2 Bloody Coins. You lost 1 Attack Point. Enter /bloodycoin in the chat window to check your points. ")
+	public static SystemMessageId YOU_BEAT_C1_AND_OBTAINED_S2_BLOODY_COINS_YOU_LOST_1_ATTACK_POINT_ENTER_BLOODYCOIN_IN_THE_CHAT_WINDOW_TO_CHECK_YOUR_POINTS;
 	
-	@ClientString(id = 5305, message = "Your account has been suspended for trading cash, or account. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_TRADING_CASH_OR_ACCOUNT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5224, message = "You were killed by $c1 and lost 1 Life. Your Life must be 1 or higher to win a battle and obtain Bloody Coins. Enter /bloodycoin in the chat window to check your points. ")
+	public static SystemMessageId YOU_WERE_KILLED_BY_C1_AND_LOST_1_LIFE_YOUR_LIFE_MUST_BE_1_OR_HIGHER_TO_WIN_A_BATTLE_AND_OBTAIN_BLOODY_COINS_ENTER_BLOODYCOIN_IN_THE_CHAT_WINDOW_TO_CHECK_YOUR_POINTS;
 	
-	@ClientString(id = 5306, message = "Your account has been suspended as per our management policy for disrupting public well-being, order, public morals, etc. or committing a fraudulent act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_DISRUPTING_PUBLIC_WELL_BEING_ORDER_PUBLIC_MORALS_ETC_OR_COMMITTING_A_FRAUDULENT_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5225, message = "Current location: $s1/$s2/$s3 (near the outpost)")
+	public static SystemMessageId CURRENT_LOCATION_S1_S2_S3_NEAR_THE_OUTPOST;
 	
-	@ClientString(id = 5307, message = "Your account has been suspended for using vulgar language during gameplay. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_USING_VULGAR_LANGUAGE_DURING_GAMEPLAY_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5226, message = "$c1 has obtained $s4 +$s2$s3 through item upgrade.")
+	public static SystemMessageId C1_HAS_OBTAINED_S4_S2_S3_THROUGH_ITEM_UPGRADE;
 	
-	@ClientString(id = 5308, message = "Your account has been suspended for manipulating the vulnerability of the in-game system, system bug, etc. and/or associating with any of these actions. Manipulating the bug may result in serious failure in the service or collapse of game balance. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MANIPULATING_THE_VULNERABILITY_OF_THE_IN_GAME_SYSTEM_SYSTEM_BUG_ETC_AND_OR_ASSOCIATING_WITH_ANY_OF_THESE_ACTIONS_MANIPULATING_THE_BUG_MAY_RESULT_IN_SERIOUS_FAILURE_IN_THE_SERVICE_OR_COLLAPSE_OF_GAME_BALANCE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5227, message = "Items with Rune or Augment effects cannot be upgraded. Remove the effects and try again.")
+	public static SystemMessageId ITEMS_WITH_RUNE_OR_AUGMENT_EFFECTS_CANNOT_BE_UPGRADED_REMOVE_THE_EFFECTS_AND_TRY_AGAIN;
 	
-	@ClientString(id = 5309, message = "Your account has been suspended as per our management policy for manufacturing/distributing illegal programs, modifying or altering the client or server program. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_MANUFACTURING_DISTRIBUTING_ILLEGAL_PROGRAMS_MODIFYING_OR_ALTERING_THE_CLIENT_OR_SERVER_PROGRAM_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5228, message = "======<Bloody Coin Information>======")
+	public static SystemMessageId BLOODY_COIN_INFORMATION;
 	
-	@ClientString(id = 5310, message = "Your account has been suspended as per our management policy for manipulating the in-game system for abnormal gameplay. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_MANIPULATING_THE_IN_GAME_SYSTEM_FOR_ABNORMAL_GAMEPLAY_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5229, message = "Attack Points: $s1")
+	public static SystemMessageId ATTACK_POINTS_S1;
 	
-	@ClientString(id = 5311, message = "Your account has been suspended as per our Terms of Service and management policy upon your request. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_AND_MANAGEMENT_POLICY_UPON_YOUR_REQUEST_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT_2;
+	@ClientString(id = 5230, message = "Life: $s1")
+	public static SystemMessageId LIFE_S1;
 	
-	@ClientString(id = 5312, message = "Your account has been suspended as per our management policy for disrupting public well-being, order, public morals, etc. or attempting a fraudulent act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_DISRUPTING_PUBLIC_WELL_BEING_ORDER_PUBLIC_MORALS_ETC_OR_ATTEMPTING_A_FRAUDULENT_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5300, message = "Your account has been suspended due to account theft. If you registered your e-mail in your personal information, a notification mail will have been sent, so please check. If you have nothing to do with the account theft, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) > Account theft report center</font> and submit your letter of objection. For more information, <font color='FFDF4C'>contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_DUE_TO_ACCOUNT_THEFT_IF_YOU_REGISTERED_YOUR_E_MAIL_IN_YOUR_PERSONAL_INFORMATION_A_NOTIFICATION_MAIL_WILL_HAVE_BEEN_SENT_SO_PLEASE_CHECK_IF_YOU_HAVE_NOTHING_TO_DO_WITH_THE_ACCOUNT_THEFT_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_ACCOUNT_THEFT_REPORT_CENTER_FONT_AND_SUBMIT_YOUR_LETTER_OF_OBJECTION_FOR_MORE_INFORMATION_FONT_COLOR_FFDF4C_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
 	
-	@ClientString(id = 5313, message = "Your account has been suspended as per our Terms of Service for your unauthorized use of another person's identification. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or, <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_FOR_YOUR_UNAUTHORIZED_USE_OF_ANOTHER_PERSON_S_IDENTIFICATION_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
+	@ClientString(id = 5301, message = "Your account has been suspended as it was confirmed to have misled other users and disrupted our game operation by impersonating our staff, spreading false information, or employing unlawful means. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_IT_WAS_CONFIRMED_TO_HAVE_MISLED_OTHER_USERS_AND_DISRUPTED_OUR_GAME_OPERATION_BY_IMPERSONATING_OUR_STAFF_SPREADING_FALSE_INFORMATION_OR_EMPLOYING_UNLAWFUL_MEANS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5314, message = "Your account has been suspended as per our Terms of Service for your unauthorized use of other's payment method. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_FOR_YOUR_UNAUTHORIZED_USE_OF_OTHER_S_PAYMENT_METHOD_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT_2;
+	@ClientString(id = 5302, message = "Your account has been suspended as per our management policy for failing to verify your account during the specified period after submitting the report of account theft. To unblock your account, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) > Report center</font> and go through the user verification process in the account theft report. For more information, go to <font color='FFDF4C'>plaync (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_FAILING_TO_VERIFY_YOUR_ACCOUNT_DURING_THE_SPECIFIED_PERIOD_AFTER_SUBMITTING_THE_REPORT_OF_ACCOUNT_THEFT_TO_UNBLOCK_YOUR_ACCOUNT_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_REPORT_CENTER_FONT_AND_GO_THROUGH_THE_USER_VERIFICATION_PROCESS_IN_THE_ACCOUNT_THEFT_REPORT_FOR_MORE_INFORMATION_GO_TO_FONT_COLOR_FFDF4C_PLAYNC_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
 	
-	@ClientString(id = 5315, message = "Your account has been suspended as per our management policy for engaging in an in-game gambling act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_ENGAGING_IN_AN_IN_GAME_GAMBLING_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5303, message = "Your account has been suspended for manipulating the game system to disrupt other users' normal gameplay. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MANIPULATING_THE_GAME_SYSTEM_TO_DISRUPT_OTHER_USERS_NORMAL_GAMEPLAY_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
 	
-	@ClientString(id = 5316, message = "Your account has been suspended for using an illegal program. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_USING_AN_ILLEGAL_PROGRAM_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5304, message = "Your account has been suspended for attempting promotional activities for commercial purpose or to trade for cash or other games. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_ATTEMPTING_PROMOTIONAL_ACTIVITIES_FOR_COMMERCIAL_PURPOSE_OR_TO_TRADE_FOR_CASH_OR_OTHER_GAMES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5317, message = "Your account has been suspended temporarily for an objection raised to your real name verification process. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_TEMPORARILY_FOR_AN_OBJECTION_RAISED_TO_YOUR_REAL_NAME_VERIFICATION_PROCESS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5305, message = "Your account has been suspended for trading cash, or account. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_TRADING_CASH_OR_ACCOUNT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
 	
-	@ClientString(id = 5318, message = "Please complete user verification process for your identification. For user verification process, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>)</font>. For more information, <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId PLEASE_COMPLETE_USER_VERIFICATION_PROCESS_FOR_YOUR_IDENTIFICATION_FOR_USER_VERIFICATION_PROCESS_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_FOR_MORE_INFORMATION_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5306, message = "Your account has been suspended as per our management policy for disrupting public well-being, order, public morals, etc. or committing a fraudulent act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and submit an objection to the Report Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_DISRUPTING_PUBLIC_WELL_BEING_ORDER_PUBLIC_MORALS_ETC_OR_COMMITTING_A_FRAUDULENT_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_SUBMIT_AN_OBJECTION_TO_THE_REPORT_CENTER_FONT;
 	
-	@ClientString(id = 5319, message = "Your account has been suspended as requested by the investigation (judicial) authority. Note that any request officially issued by the corresponding authorities has legal force. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_REQUESTED_BY_THE_INVESTIGATION_JUDICIAL_AUTHORITY_NOTE_THAT_ANY_REQUEST_OFFICIALLY_ISSUED_BY_THE_CORRESPONDING_AUTHORITIES_HAS_LEGAL_FORCE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT_2;
+	@ClientString(id = 5307, message = "Your account has been suspended for using vulgar language during gameplay. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_USING_VULGAR_LANGUAGE_DURING_GAMEPLAY_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5320, message = "Your account has been suspended for picking up an item from an account reported for theft. Proceed to your user verification process from our Homepage to retrieve your account. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_PICKING_UP_AN_ITEM_FROM_AN_ACCOUNT_REPORTED_FOR_THEFT_PROCEED_TO_YOUR_USER_VERIFICATION_PROCESS_FROM_OUR_HOMEPAGE_TO_RETRIEVE_YOUR_ACCOUNT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5308, message = "Your account has been suspended for manipulating the vulnerability of the in-game system, system bug, etc. and/or associating with any of these actions. Manipulating the bug may result in serious failure in the service or collapse of game balance. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MANIPULATING_THE_VULNERABILITY_OF_THE_IN_GAME_SYSTEM_SYSTEM_BUG_ETC_AND_OR_ASSOCIATING_WITH_ANY_OF_THESE_ACTIONS_MANIPULATING_THE_BUG_MAY_RESULT_IN_SERIOUS_FAILURE_IN_THE_SERVICE_OR_COLLAPSE_OF_GAME_BALANCE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5321, message = "Your account has been suspended for trading cash or other games. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_TRADING_CASH_OR_OTHER_GAMES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5309, message = "Your account has been suspended as per our management policy for manufacturing/distributing illegal programs, modifying or altering the client or server program. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_MANUFACTURING_DISTRIBUTING_ILLEGAL_PROGRAMS_MODIFYING_OR_ALTERING_THE_CLIENT_OR_SERVER_PROGRAM_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5322, message = "You haven't completed the user verification process and are not allowed to our game service. Go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>)</font> and complete the verification process to use our service. If you have any questions in regard to the user verification process, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOU_HAVEN_T_COMPLETED_THE_USER_VERIFICATION_PROCESS_AND_ARE_NOT_ALLOWED_TO_OUR_GAME_SERVICE_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_AND_COMPLETE_THE_VERIFICATION_PROCESS_TO_USE_OUR_SERVICE_IF_YOU_HAVE_ANY_QUESTIONS_IN_REGARD_TO_THE_USER_VERIFICATION_PROCESS_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5310, message = "Your account has been suspended as per our management policy for manipulating the in-game system for abnormal gameplay. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_MANIPULATING_THE_IN_GAME_SYSTEM_FOR_ABNORMAL_GAMEPLAY_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
 	
-	@ClientString(id = 5323, message = "Your account has been suspended for using an illegal program. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_USING_AN_ILLEGAL_PROGRAM_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5311, message = "Your account has been suspended as per our Terms of Service and management policy upon your request. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_AND_MANAGEMENT_POLICY_UPON_YOUR_REQUEST_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT_2;
 	
-	@ClientString(id = 5324, message = "Your account has been suspended for failing to comply with the previous agreement over item distribution for party/group play to unjustly gain items. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_FAILING_TO_COMPLY_WITH_THE_PREVIOUS_AGREEMENT_OVER_ITEM_DISTRIBUTION_FOR_PARTY_GROUP_PLAY_TO_UNJUSTLY_GAIN_ITEMS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5312, message = "Your account has been suspended as per our management policy for disrupting public well-being, order, public morals, etc. or attempting a fraudulent act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_DISRUPTING_PUBLIC_WELL_BEING_ORDER_PUBLIC_MORALS_ETC_OR_ATTEMPTING_A_FRAUDULENT_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
 	
-	@ClientString(id = 5325, message = "Your account has been completely blocked for using our game service for commercial purposes. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_USING_OUR_GAME_SERVICE_FOR_COMMERCIAL_PURPOSES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5313, message = "Your account has been suspended as per our Terms of Service for your unauthorized use of another person's identification. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or, <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_FOR_YOUR_UNAUTHORIZED_USE_OF_ANOTHER_PERSON_S_IDENTIFICATION_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT;
+	
+	@ClientString(id = 5314, message = "Your account has been suspended as per our Terms of Service for your unauthorized use of other's payment method. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea)</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_TERMS_OF_SERVICE_FOR_YOUR_UNAUTHORIZED_USE_OF_OTHER_S_PAYMENT_METHOD_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT_2;
+	
+	@ClientString(id = 5315, message = "Your account has been suspended as per our management policy for engaging in an in-game gambling act. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_ENGAGING_IN_AN_IN_GAME_GAMBLING_ACT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	
+	@ClientString(id = 5316, message = "Your account has been suspended for using an illegal program. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_USING_AN_ILLEGAL_PROGRAM_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	
+	@ClientString(id = 5317, message = "Your account has been suspended temporarily for an objection raised to your real name verification process. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_TEMPORARILY_FOR_AN_OBJECTION_RAISED_TO_YOUR_REAL_NAME_VERIFICATION_PROCESS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	
+	@ClientString(id = 5318, message = "Please complete user verification process for your identification. For user verification process, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>)</font>. For more information, <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId PLEASE_COMPLETE_USER_VERIFICATION_PROCESS_FOR_YOUR_IDENTIFICATION_FOR_USER_VERIFICATION_PROCESS_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_FOR_MORE_INFORMATION_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	
+	@ClientString(id = 5319, message = "Your account has been suspended as requested by the investigation (judicial) authority. Note that any request officially issued by the corresponding authorities has legal force. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>, or <font color='FFDF4C'>call our hotline (1600-0020 for users in Korea</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_REQUESTED_BY_THE_INVESTIGATION_JUDICIAL_AUTHORITY_NOTE_THAT_ANY_REQUEST_OFFICIALLY_ISSUED_BY_THE_CORRESPONDING_AUTHORITIES_HAS_LEGAL_FORCE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_OR_FONT_COLOR_FFDF4C_CALL_OUR_HOTLINE_1600_0020_FOR_USERS_IN_KOREA_FONT_2;
+	
+	@ClientString(id = 5320, message = "Your account has been suspended for picking up an item from an account reported for theft. Proceed to your user verification process from our Homepage to retrieve your account. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_PICKING_UP_AN_ITEM_FROM_AN_ACCOUNT_REPORTED_FOR_THEFT_PROCEED_TO_YOUR_USER_VERIFICATION_PROCESS_FROM_OUR_HOMEPAGE_TO_RETRIEVE_YOUR_ACCOUNT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	
+	@ClientString(id = 5321, message = "Your account has been suspended for trading cash or other games. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_TRADING_CASH_OR_OTHER_GAMES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	
+	@ClientString(id = 5322, message = "You haven't completed the user verification process and are not allowed to our game service. Go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>)</font> and complete the verification process to use our service. If you have any questions in regard to the user verification process, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOU_HAVEN_T_COMPLETED_THE_USER_VERIFICATION_PROCESS_AND_ARE_NOT_ALLOWED_TO_OUR_GAME_SERVICE_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_FONT_AND_COMPLETE_THE_VERIFICATION_PROCESS_TO_USE_OUR_SERVICE_IF_YOU_HAVE_ANY_QUESTIONS_IN_REGARD_TO_THE_USER_VERIFICATION_PROCESS_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	
+	@ClientString(id = 5323, message = "Your account has been suspended for using an illegal program. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_USING_AN_ILLEGAL_PROGRAM_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	
+	@ClientString(id = 5324, message = "Your account has been suspended for failing to comply with the previous agreement over item distribution for party/group play to unjustly gain items. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_FAILING_TO_COMPLY_WITH_THE_PREVIOUS_AGREEMENT_OVER_ITEM_DISTRIBUTION_FOR_PARTY_GROUP_PLAY_TO_UNJUSTLY_GAIN_ITEMS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	
+	@ClientString(id = 5325, message = "Your account has been completely blocked for using our game service for commercial purposes. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_FOR_USING_OUR_GAME_SERVICE_FOR_COMMERCIAL_PURPOSES_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT_2;
 	
 	@ClientString(id = 5326, message = "The account has been temporarily restricted due to an incomplete cell phone (ARS) transaction. For more information, please visit https://eu.4game.com/.")
 	public static SystemMessageId THE_ACCOUNT_HAS_BEEN_TEMPORARILY_RESTRICTED_DUE_TO_AN_INCOMPLETE_CELL_PHONE_ARS_TRANSACTION_FOR_MORE_INFORMATION_PLEASE_VISIT_HTTPS_EU_4GAME_COM_2;
 	
-	@ClientString(id = 5327, message = "Your account has been suspended for engaging in the promotional activities for commercial purpose. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_ENGAGING_IN_THE_PROMOTIONAL_ACTIVITIES_FOR_COMMERCIAL_PURPOSE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5327, message = "Your account has been suspended for engaging in the promotional activities for commercial purpose. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_ENGAGING_IN_THE_PROMOTIONAL_ACTIVITIES_FOR_COMMERCIAL_PURPOSE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5328, message = "Your account is now in user verification standby mode as there is a suspected case of identity theft. If you have nothing to do with this, click the ‘Unblock' button found on the login page of our Homepage, verify your account and retrieve it for normal game service. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_IS_NOW_IN_USER_VERIFICATION_STANDBY_MODE_AS_THERE_IS_A_SUSPECTED_CASE_OF_IDENTITY_THEFT_IF_YOU_HAVE_NOTHING_TO_DO_WITH_THIS_CLICK_THE_UNBLOCK_BUTTON_FOUND_ON_THE_LOGIN_PAGE_OF_OUR_HOMEPAGE_VERIFY_YOUR_ACCOUNT_AND_RETRIEVE_IT_FOR_NORMAL_GAME_SERVICE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5328, message = "Your account is now in user verification standby mode as there is a suspected case of identity theft. If you have nothing to do with this, click the ‘Unblock' button found on the login page of our Homepage, verify your account and retrieve it for normal game service. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_IS_NOW_IN_USER_VERIFICATION_STANDBY_MODE_AS_THERE_IS_A_SUSPECTED_CASE_OF_IDENTITY_THEFT_IF_YOU_HAVE_NOTHING_TO_DO_WITH_THIS_CLICK_THE_UNBLOCK_BUTTON_FOUND_ON_THE_LOGIN_PAGE_OF_OUR_HOMEPAGE_VERIFY_YOUR_ACCOUNT_AND_RETRIEVE_IT_FOR_NORMAL_GAME_SERVICE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
 	
-	@ClientString(id = 5329, message = "Your account has been suspended temporarily for your gameplay resorting to abnormal methods. If this is not the case, verify your account on our Homepage for normal game service. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_TEMPORARILY_FOR_YOUR_GAMEPLAY_RESORTING_TO_ABNORMAL_METHODS_IF_THIS_IS_NOT_THE_CASE_VERIFY_YOUR_ACCOUNT_ON_OUR_HOMEPAGE_FOR_NORMAL_GAME_SERVICE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5329, message = "Your account has been suspended temporarily for your gameplay resorting to abnormal methods. If this is not the case, verify your account on our Homepage for normal game service. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_TEMPORARILY_FOR_YOUR_GAMEPLAY_RESORTING_TO_ABNORMAL_METHODS_IF_THIS_IS_NOT_THE_CASE_VERIFY_YOUR_ACCOUNT_ON_OUR_HOMEPAGE_FOR_NORMAL_GAME_SERVICE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5330, message = "Your account has been suspended for manipulating the vulnerability of the in-game system, system bug, etc. and/or associating with any of these actions. Manipulating the bug may result in serious failure in the service or collapse of game balance. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MANIPULATING_THE_VULNERABILITY_OF_THE_IN_GAME_SYSTEM_SYSTEM_BUG_ETC_AND_OR_ASSOCIATING_WITH_ANY_OF_THESE_ACTIONS_MANIPULATING_THE_BUG_MAY_RESULT_IN_SERIOUS_FAILURE_IN_THE_SERVICE_OR_COLLAPSE_OF_GAME_BALANCE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5330, message = "Your account has been suspended for manipulating the vulnerability of the in-game system, system bug, etc. and/or associating with any of these actions. Manipulating the bug may result in serious failure in the service or collapse of game balance. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_FOR_MANIPULATING_THE_VULNERABILITY_OF_THE_IN_GAME_SYSTEM_SYSTEM_BUG_ETC_AND_OR_ASSOCIATING_WITH_ANY_OF_THESE_ACTIONS_MANIPULATING_THE_BUG_MAY_RESULT_IN_SERIOUS_FAILURE_IN_THE_SERVICE_OR_COLLAPSE_OF_GAME_BALANCE_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
 	
-	@ClientString(id = 5331, message = "Your account has been suspended temporarily for an objection raised to your real name verification process. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_TEMPORARILY_FOR_AN_OBJECTION_RAISED_TO_YOUR_REAL_NAME_VERIFICATION_PROCESS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
+	@ClientString(id = 5331, message = "Your account has been suspended temporarily for an objection raised to your real name verification process. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via 1-to-1 inquiry through the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_TEMPORARILY_FOR_AN_OBJECTION_RAISED_TO_YOUR_REAL_NAME_VERIFICATION_PROCESS_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_1_TO_1_INQUIRY_THROUGH_THE_SUPPORT_CENTER_FONT_2;
 	
 	@ClientString(id = 5332, message = "Your account has been idle for a long time. If you do not play the game for a certain period, your account will become idle. You can reactivate your account at the <font color='FFDF4C'>plaync webpage (</font><font color='6699FF'><a action='url https://id.plaync.com/account/dormant/index'>id.plaync.com/account/dormant/index</a></font><font color='FFDF4C'>)</font>.")
 	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_IDLE_FOR_A_LONG_TIME_IF_YOU_DO_NOT_PLAY_THE_GAME_FOR_A_CERTAIN_PERIOD_YOUR_ACCOUNT_WILL_BECOME_IDLE_YOU_CAN_REACTIVATE_YOUR_ACCOUNT_AT_THE_FONT_COLOR_FFDF4C_PLAYNC_WEBPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_ID_PLAYNC_COM_ACCOUNT_DORMANT_INDEX_ID_PLAYNC_COM_ACCOUNT_DORMANT_INDEX_A_FONT_FONT_COLOR_FFDF4C_FONT;
 	
-	@ClientString(id = 5333, message = "Your account has been completely blocked due to account theft. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url https://eu.4game.com'>eu.4game.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_DUE_TO_ACCOUNT_THEFT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
+	@ClientString(id = 5333, message = "Your account has been completely blocked due to account theft. For more information, go to the <font color='FFDF4C'>official homepage (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and contact us via the Support Center</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_COMPLETELY_BLOCKED_DUE_TO_ACCOUNT_THEFT_FOR_MORE_INFORMATION_GO_TO_THE_FONT_COLOR_FFDF4C_OFFICIAL_HOMEPAGE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_CONTACT_US_VIA_THE_SUPPORT_CENTER_FONT;
 	
-	@ClientString(id = 5334, message = "Your account is temporarily banned because a suspicious attempt to sign into your account was detected. You can regain access by completing the identity verification process in our website. For more information, visit the <font color='FFDF4C'>4Game website (</font><font color='6699FF'><a action='url https://eu.4game.com'>https://eu.4game.com</a></font><font color='FFDF4C'>) and send a query to Customer Service 1:1 Petition</font>.")
-	public static SystemMessageId YOUR_ACCOUNT_IS_TEMPORARILY_BANNED_BECAUSE_A_SUSPICIOUS_ATTEMPT_TO_SIGN_INTO_YOUR_ACCOUNT_WAS_DETECTED_YOU_CAN_REGAIN_ACCESS_BY_COMPLETING_THE_IDENTITY_VERIFICATION_PROCESS_IN_OUR_WEBSITE_FOR_MORE_INFORMATION_VISIT_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTPS_EU_4GAME_COM_HTTPS_EU_4GAME_COM_A_FONT_FONT_COLOR_FFDF4C_AND_SEND_A_QUERY_TO_CUSTOMER_SERVICE_1_1_PETITION_FONT;
+	@ClientString(id = 5334, message = "Your account is temporarily banned because a suspicious attempt to sign into your account was detected. You can regain access by completing the identity verification process in our website. For more information, visit the <font color='FFDF4C'>4Game website (</font><font color='6699FF'><a action='url http://www.plaync.com'>www.plaync.com</a></font><font color='FFDF4C'>) and send a query to Customer Service 1:1 Petition</font>.")
+	public static SystemMessageId YOUR_ACCOUNT_IS_TEMPORARILY_BANNED_BECAUSE_A_SUSPICIOUS_ATTEMPT_TO_SIGN_INTO_YOUR_ACCOUNT_WAS_DETECTED_YOU_CAN_REGAIN_ACCESS_BY_COMPLETING_THE_IDENTITY_VERIFICATION_PROCESS_IN_OUR_WEBSITE_FOR_MORE_INFORMATION_VISIT_THE_FONT_COLOR_FFDF4C_4GAME_WEBSITE_FONT_FONT_COLOR_6699FF_A_ACTION_URL_HTTP_WWW_PLAYNC_COM_WWW_PLAYNC_COM_A_FONT_FONT_COLOR_FFDF4C_AND_SEND_A_QUERY_TO_CUSTOMER_SERVICE_1_1_PETITION_FONT;
 	
 	@ClientString(id = 5501, message = "$s1 has been killed by $s2.")
 	public static SystemMessageId S1_HAS_BEEN_KILLED_BY_S2;
@@ -14754,7 +14802,7 @@ public final class SystemMessageId
 	@ClientString(id = 5511, message = "Standing by...")
 	public static SystemMessageId STANDING_BY;
 	
-	@ClientString(id = 5512, message = "$s1 has chosen a class.")
+	@ClientString(id = 5512, message = "$s1 has chosen a class. ")
 	public static SystemMessageId S1_HAS_CHOSEN_A_CLASS;
 	
 	@ClientString(id = 5513, message = "The battle will soon begin.")
@@ -15132,8 +15180,8 @@ public final class SystemMessageId
 	@ClientString(id = 6066, message = "If you cancel sending, the gift item cannot be sent again, and it will be returned to your character.")
 	public static SystemMessageId IF_YOU_CANCEL_SENDING_THE_GIFT_ITEM_CANNOT_BE_SENT_AGAIN_AND_IT_WILL_BE_RETURNED_TO_YOUR_CHARACTER;
 	
-	@ClientString(id = 6067, message = "Vitality is applied, and you receive $s1 bonus XP. A maximum of $s2 Vitality potion(s) can be used per week, including replenishing/maintaining/recovering.")
-	public static SystemMessageId VITALITY_IS_APPLIED_AND_YOU_RECEIVE_S1_BONUS_XP_A_MAXIMUM_OF_S2_VITALITY_POTION_S_CAN_BE_USED_PER_WEEK_INCLUDING_REPLENISHING_MAINTAINING_RECOVERING;
+	@ClientString(id = 6067, message = "Vitality is applied, and you receive $s1 bonus XP/SP. A maximum of $s2 Vitality potion(s) can be used per week, including replenishing/maintaining/recovering.")
+	public static SystemMessageId VITALITY_IS_APPLIED_AND_YOU_RECEIVE_S1_BONUS_XP_SP_A_MAXIMUM_OF_S2_VITALITY_POTION_S_CAN_BE_USED_PER_WEEK_INCLUDING_REPLENISHING_MAINTAINING_RECOVERING;
 	
 	@ClientString(id = 6068, message = "Vitality is not yet applied. Vitality is replenished every Wednesday at 6:30 a.m. A maximum of $s1 Vitality potion(s) can be used per week, including replenishing/maintaining/recovering.")
 	public static SystemMessageId VITALITY_IS_NOT_YET_APPLIED_VITALITY_IS_REPLENISHED_EVERY_WEDNESDAY_AT_6_30_A_M_A_MAXIMUM_OF_S1_VITALITY_POTION_S_CAN_BE_USED_PER_WEEK_INCLUDING_REPLENISHING_MAINTAINING_RECOVERING;
@@ -15183,7 +15231,7 @@ public final class SystemMessageId
 	@ClientString(id = 6083, message = "You cannot use this system during trading, private store, and workshop setup.")
 	public static SystemMessageId YOU_CANNOT_USE_THIS_SYSTEM_DURING_TRADING_PRIVATE_STORE_AND_WORKSHOP_SETUP;
 	
-	@ClientString(id = 6084, message = "Appearance Modification or Restoration in progress. Please try again after completing this task.")
+	@ClientString(id = 6084, message = " Appearance Modification or Restoration in progress. Please try again after completing this task.")
 	public static SystemMessageId APPEARANCE_MODIFICATION_OR_RESTORATION_IN_PROGRESS_PLEASE_TRY_AGAIN_AFTER_COMPLETING_THIS_TASK;
 	
 	@ClientString(id = 6085, message = "$s1 now has $s2's appearance.")
@@ -15315,7 +15363,7 @@ public final class SystemMessageId
 	@ClientString(id = 6127, message = "You have gained $s1 XP and $s2 SP for your contribution in the raid.")
 	public static SystemMessageId YOU_HAVE_GAINED_S1_XP_AND_S2_SP_FOR_YOUR_CONTRIBUTION_IN_THE_RAID;
 	
-	@ClientString(id = 6128, message = "You cannot modify an equipped item into the appearance of an unequippable item. Please check race/gender restrictions. You can modify the appearance if you unequip the item.")
+	@ClientString(id = 6128, message = "You cannot modify an equipped item into the appearance of an unequippable item. Please check race/gender restrictions. You can modify the appearance if you unequip the item. ")
 	public static SystemMessageId YOU_CANNOT_MODIFY_AN_EQUIPPED_ITEM_INTO_THE_APPEARANCE_OF_AN_UNEQUIPPABLE_ITEM_PLEASE_CHECK_RACE_GENDER_RESTRICTIONS_YOU_CAN_MODIFY_THE_APPEARANCE_IF_YOU_UNEQUIP_THE_ITEM;
 	
 	@ClientString(id = 6129, message = "Your level does not allow you to purchase this item.")
@@ -15366,7 +15414,7 @@ public final class SystemMessageId
 	@ClientString(id = 6144, message = "Not enough Hero Coin.")
 	public static SystemMessageId NOT_ENOUGH_HERO_COIN;
 	
-	@ClientString(id = 6145, message = "Training Stage: Lv. $s1")
+	@ClientString(id = 6145, message = "Training Stage: Lv. $s1 ")
 	public static SystemMessageId TRAINING_STAGE_LV_S1;
 	
 	@ClientString(id = 6146, message = "Remaining Training Time: $s1 hr, $s2 min")
@@ -15408,8 +15456,8 @@ public final class SystemMessageId
 	@ClientString(id = 6158, message = "Round $s1 of Fortune Reading complete.")
 	public static SystemMessageId ROUND_S1_OF_FORTUNE_READING_COMPLETE;
 	
-	@ClientString(id = 6159, message = "Round $s1 of Lucky Game complete.")
-	public static SystemMessageId ROUND_S1_OF_LUCKY_GAME_COMPLETE;
+	@ClientString(id = 6159, message = "The Lucky Game is in Round $s1.")
+	public static SystemMessageId THE_LUCKY_GAME_IS_IN_ROUND_S1;
 	
 	@ClientString(id = 6160, message = "Congratulations! You won $s2 of $s1.")
 	public static SystemMessageId CONGRATULATIONS_YOU_WON_S2_OF_S1;
@@ -15447,22 +15495,22 @@ public final class SystemMessageId
 	@ClientString(id = 6171, message = "Lv. $s1 or below")
 	public static SystemMessageId LV_S1_OR_BELOW;
 	
-	@ClientString(id = 6172, message = "Redirecting to the Lineage II website. Proceed?")
-	public static SystemMessageId REDIRECTING_TO_THE_LINEAGE_II_WEBSITE_PROCEED;
+	@ClientString(id = 6172, message = "You will be redirected to the Lineage II website. Do you want to continue?")
+	public static SystemMessageId YOU_WILL_BE_REDIRECTED_TO_THE_LINEAGE_II_WEBSITE_DO_YOU_WANT_TO_CONTINUE_2;
 	
 	@ClientString(id = 6173, message = "The lower your Reputation, the higher your chances of dropping items when you die with a PK count of $s1 or above.")
 	public static SystemMessageId THE_LOWER_YOUR_REPUTATION_THE_HIGHER_YOUR_CHANCES_OF_DROPPING_ITEMS_WHEN_YOU_DIE_WITH_A_PK_COUNT_OF_S1_OR_ABOVE;
 	
-	@ClientString(id = 6174, message = "Your Day $s1 Attendance Reward is ready. Click on the rewards icon. (You can redeem your reward 30 minutes after logging in.)")
-	public static SystemMessageId YOUR_DAY_S1_ATTENDANCE_REWARD_IS_READY_CLICK_ON_THE_REWARDS_ICON_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN;
+	@ClientString(id = 6174, message = "Your Day $s1 Attendance Reward is ready. Click on the rewards icon.\\n(You can redeem your reward 30 minutes after logging in.)")
+	public static SystemMessageId YOUR_DAY_S1_ATTENDANCE_REWARD_IS_READY_CLICK_ON_THE_REWARDS_ICON_N_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN;
 	
 	@ClientString(id = 6175, message = "Your Day $s1 Premium Account Attendance Reward is ready. Click on the rewards icon.")
 	public static SystemMessageId YOUR_DAY_S1_PREMIUM_ACCOUNT_ATTENDANCE_REWARD_IS_READY_CLICK_ON_THE_REWARDS_ICON;
 	
-	@ClientString(id = 6176, message = "You've received your Attendance Reward for Day $s1.")
+	@ClientString(id = 6176, message = "You've received your Attendance Reward for Day $s1. ")
 	public static SystemMessageId YOU_VE_RECEIVED_YOUR_ATTENDANCE_REWARD_FOR_DAY_S1;
 	
-	@ClientString(id = 6177, message = "You've received your Premium Account Attendance Reward for Day $s1.")
+	@ClientString(id = 6177, message = "You've received your Premium Account Attendance Reward for Day $s1. ")
 	public static SystemMessageId YOU_VE_RECEIVED_YOUR_PREMIUM_ACCOUNT_ATTENDANCE_REWARD_FOR_DAY_S1;
 	
 	@ClientString(id = 6178, message = "The Attendance Reward cannot be received because the inventory weight/quantity limit has been exceeded.")
@@ -15474,13 +15522,13 @@ public final class SystemMessageId
 	@ClientString(id = 6180, message = "Your Day $s1 VIP Attendance Reward is ready. Click on the rewards icon.")
 	public static SystemMessageId YOUR_DAY_S1_VIP_ATTENDANCE_REWARD_IS_READY_CLICK_ON_THE_REWARDS_ICON;
 	
-	@ClientString(id = 6181, message = "You've received your VIP Attendance Reward for Day $s1.")
+	@ClientString(id = 6181, message = "You've received your VIP Attendance Reward for Day $s1. ")
 	public static SystemMessageId YOU_VE_RECEIVED_YOUR_VIP_ATTENDANCE_REWARD_FOR_DAY_S1;
 	
 	@ClientString(id = 6182, message = "You've already recieved the Attendance Check rewards.")
 	public static SystemMessageId YOU_VE_ALREADY_RECIEVED_THE_ATTENDANCE_CHECK_REWARDS;
 	
-	@ClientString(id = 6183, message = "Your VIP rank is too low to receive the reward.")
+	@ClientString(id = 6183, message = "Your VIP rank is too low to receive the reward. ")
 	public static SystemMessageId YOUR_VIP_RANK_IS_TOO_LOW_TO_RECEIVE_THE_REWARD;
 	
 	@ClientString(id = 6184, message = "Items in the Pet Inventory cannot be used as offerings.")
@@ -15498,8 +15546,8 @@ public final class SystemMessageId
 	@ClientString(id = 6188, message = "You do not meet the level requirements to receive the Attendance Reward. Please check the required level. (You can redeem your reward 30 minutes after logging in.)")
 	public static SystemMessageId YOU_DO_NOT_MEET_THE_LEVEL_REQUIREMENTS_TO_RECEIVE_THE_ATTENDANCE_REWARD_PLEASE_CHECK_THE_REQUIRED_LEVEL_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN;
 	
-	@ClientString(id = 6189, message = "You must receive the attendance reward in a given day to receive the next day's reward.\\\\nRewards received once cannot be reverted back.")
-	public static SystemMessageId YOU_MUST_RECEIVE_THE_ATTENDANCE_REWARD_IN_A_GIVEN_DAY_TO_RECEIVE_THE_NEXT_DAY_S_REWARD_NREWARDS_RECEIVED_ONCE_CANNOT_BE_REVERTED_BACK;
+	@ClientString(id = 6189, message = "- You must receive the reward in a given day to receive the next day's reward.\\n- Rewards received once cannot be reverted back.")
+	public static SystemMessageId YOU_MUST_RECEIVE_THE_REWARD_IN_A_GIVEN_DAY_TO_RECEIVE_THE_NEXT_DAY_S_REWARD_N_REWARDS_RECEIVED_ONCE_CANNOT_BE_REVERTED_BACK;
 	
 	@ClientString(id = 6190, message = "This item cannot be used as an offering.")
 	public static SystemMessageId THIS_ITEM_CANNOT_BE_USED_AS_AN_OFFERING;
@@ -15514,9 +15562,9 @@ public final class SystemMessageId
 	public static SystemMessageId HOW_MANY_S1_WOULD_YOU_LIKE_TO_REMOVE_FROM_THE_OFFERINGS;
 	
 	@ClientString(id = 6194, message = "Your Day $s1 Attendance Reward is ready. Click on the rewards icon.\\n(You can redeem your reward 30 minutes after logging in.)")
-	public static SystemMessageId YOUR_DAY_S1_ATTENDANCE_REWARD_IS_READY_CLICK_ON_THE_REWARDS_ICON_N_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN;
+	public static SystemMessageId YOUR_DAY_S1_ATTENDANCE_REWARD_IS_READY_CLICK_ON_THE_REWARDS_ICON_N_YOU_CAN_REDEEM_YOUR_REWARD_30_MINUTES_AFTER_LOGGING_IN_2;
 	
-	@ClientString(id = 6195, message = "You've received your Attendance Reward for Day $s1.")
+	@ClientString(id = 6195, message = "You've received your Attendance Reward for Day $s1. ")
 	public static SystemMessageId YOU_VE_RECEIVED_YOUR_ATTENDANCE_REWARD_FOR_DAY_S1_2;
 	
 	@ClientString(id = 6196, message = "The item cannot be received because the inventory weight/quantity limit has been exceeded.")
@@ -15551,6 +15599,12 @@ public final class SystemMessageId
 	
 	@ClientString(id = 6206, message = "Your current success rate is $s1%%. Adding offerings can increase the success rate to 100%% for certain recipes. Continue?")
 	public static SystemMessageId YOUR_CURRENT_SUCCESS_RATE_IS_S1_ADDING_OFFERINGS_CAN_INCREASE_THE_SUCCESS_RATE_TO_100_FOR_CERTAIN_RECIPES_CONTINUE;
+	
+	@ClientString(id = 6207, message = "The Festival is not available right now.")
+	public static SystemMessageId THE_FESTIVAL_IS_NOT_AVAILABLE_RIGHT_NOW;
+	
+	@ClientString(id = 6208, message = "The Festival has ended. Please participate in the next round.")
+	public static SystemMessageId THE_FESTIVAL_HAS_ENDED_PLEASE_PARTICIPATE_IN_THE_NEXT_ROUND;
 	
 	@ClientString(id = 6501, message = "You cannot bookmark this location because you do not have a My Teleport Flag.")
 	public static SystemMessageId YOU_CANNOT_BOOKMARK_THIS_LOCATION_BECAUSE_YOU_DO_NOT_HAVE_A_MY_TELEPORT_FLAG;
@@ -15663,8 +15717,8 @@ public final class SystemMessageId
 	@ClientString(id = 6829, message = "You don't have any Beast Soulshots/Spiritshots. Please buy them at the shop.")
 	public static SystemMessageId YOU_DON_T_HAVE_ANY_BEAST_SOULSHOTS_SPIRITSHOTS_PLEASE_BUY_THEM_AT_THE_SHOP;
 	
-	@ClientString(id = 6830, message = "There are $s1 players in the qeue. Click on cancel to end the server connection.")
-	public static SystemMessageId THERE_ARE_S1_PLAYERS_IN_THE_QEUE_CLICK_ON_CANCEL_TO_END_THE_SERVER_CONNECTION;
+	@ClientString(id = 6830, message = "There are $s1 players in the queue. Click 'Cancel' to end the server connection. Avoid wait times with the new Gludio server.")
+	public static SystemMessageId THERE_ARE_S1_PLAYERS_IN_THE_QUEUE_CLICK_CANCEL_TO_END_THE_SERVER_CONNECTION_AVOID_WAIT_TIMES_WITH_THE_NEW_GLUDIO_SERVER;
 	
 	@ClientString(id = 6831, message = "Cannot request duels when participating in the Olympiad/Ceremony of Chaos.")
 	public static SystemMessageId CANNOT_REQUEST_DUELS_WHEN_PARTICIPATING_IN_THE_OLYMPIAD_CEREMONY_OF_CHAOS;
@@ -15678,8 +15732,8 @@ public final class SystemMessageId
 	@ClientString(id = 6834, message = "Your character has been restricted. <br>Please check the icon below for details.")
 	public static SystemMessageId YOUR_CHARACTER_HAS_BEEN_RESTRICTED_BR_PLEASE_CHECK_THE_ICON_BELOW_FOR_DETAILS;
 	
-	@ClientString(id = 6835, message = "Your account has been suspended as per our management policy for disrupting other users' normal gameplay or the company's game operation. For more information, contact us through the Support Center.")
-	public static SystemMessageId YOUR_ACCOUNT_HAS_BEEN_SUSPENDED_AS_PER_OUR_MANAGEMENT_POLICY_FOR_DISRUPTING_OTHER_USERS_NORMAL_GAMEPLAY_OR_THE_COMPANY_S_GAME_OPERATION_FOR_MORE_INFORMATION_CONTACT_US_THROUGH_THE_SUPPORT_CENTER;
+	@ClientString(id = 6835, message = "The character was blocked due to the User Agreement Violation. Please contact Support for the detailed information: https://eu.4gamesupport.com/")
+	public static SystemMessageId THE_CHARACTER_WAS_BLOCKED_DUE_TO_THE_USER_AGREEMENT_VIOLATION_PLEASE_CONTACT_SUPPORT_FOR_THE_DETAILED_INFORMATION_HTTPS_EU_4GAMESUPPORT_COM;
 	
 	@ClientString(id = 6836, message = "The security card service has ended so you will be able to connect to the game after cancelling the security card. In order to protect your account, please cancel the security card and request Google OTP.")
 	public static SystemMessageId THE_SECURITY_CARD_SERVICE_HAS_ENDED_SO_YOU_WILL_BE_ABLE_TO_CONNECT_TO_THE_GAME_AFTER_CANCELLING_THE_SECURITY_CARD_IN_ORDER_TO_PROTECT_YOUR_ACCOUNT_PLEASE_CANCEL_THE_SECURITY_CARD_AND_REQUEST_GOOGLE_OTP;
@@ -15689,6 +15743,12 @@ public final class SystemMessageId
 	
 	@ClientString(id = 6838, message = "The Secret Supplies of Balthus Knights arrived! Someone received $s1.")
 	public static SystemMessageId THE_SECRET_SUPPLIES_OF_BALTHUS_KNIGHTS_ARRIVED_SOMEONE_RECEIVED_S1;
+	
+	@ClientString(id = 6839, message = "The current local time is $s1:$s2.")
+	public static SystemMessageId THE_CURRENT_LOCAL_TIME_IS_S1_S2;
+	
+	@ClientString(id = 6840, message = "With a premium account, you can create a Balthus Knights character starting from Level 85.")
+	public static SystemMessageId WITH_A_PREMIUM_ACCOUNT_YOU_CAN_CREATE_A_BALTHUS_KNIGHTS_CHARACTER_STARTING_FROM_LEVEL_85;
 	
 	@ClientString(id = 7001, message = "Cannot proceed until the current dice roll is over.")
 	public static SystemMessageId CANNOT_PROCEED_UNTIL_THE_CURRENT_DICE_ROLL_IS_OVER;
@@ -15765,11 +15825,11 @@ public final class SystemMessageId
 	@ClientString(id = 7025, message = "$c1 rolled the highest with $s2 points and acquired + $s3$s4.")
 	public static SystemMessageId C1_ROLLED_THE_HIGHEST_WITH_S2_POINTS_AND_ACQUIRED_S3_S4;
 	
-	@ClientString(id = 7026, message = "$s1 players")
-	public static SystemMessageId S1_PLAYERS;
+	@ClientString(id = 7026, message = "$s1-member party")
+	public static SystemMessageId S1_MEMBER_PARTY;
 	
-	@ClientString(id = 7027, message = "$s1~$s2 players")
-	public static SystemMessageId S1_S2_PLAYERS;
+	@ClientString(id = 7027, message = "$s1~$s2-member party")
+	public static SystemMessageId S1_S2_MEMBER_PARTY;
 	
 	@ClientString(id = 7028, message = "Above Lv. $s1")
 	public static SystemMessageId ABOVE_LV_S1;
@@ -15858,7 +15918,7 @@ public final class SystemMessageId
 	@ClientString(id = 7056, message = "You've aded $c1 to your List of Foes for having killed you.")
 	public static SystemMessageId YOU_VE_ADED_C1_TO_YOUR_LIST_OF_FOES_FOR_HAVING_KILLED_YOU;
 	
-	@ClientString(id = 7057, message = "You've deleted $c1 from your List of Foes.")
+	@ClientString(id = 7057, message = "You've deleted $c1 from your List of Foes. ")
 	public static SystemMessageId YOU_VE_DELETED_C1_FROM_YOUR_LIST_OF_FOES;
 	
 	@ClientString(id = 7058, message = "The Blood Crystal shows you the location of your foe, $c1. Your foe is in $s2.")
@@ -15894,10 +15954,10 @@ public final class SystemMessageId
 	@ClientString(id = 7068, message = "You paused the saving of your SP. To resume, double-click or right-click on the Incomplete Tactics Crystal from your inventory.")
 	public static SystemMessageId YOU_PAUSED_THE_SAVING_OF_YOUR_SP_TO_RESUME_DOUBLE_CLICK_OR_RIGHT_CLICK_ON_THE_INCOMPLETE_TACTICS_CRYSTAL_FROM_YOUR_INVENTORY;
 	
-	@ClientString(id = 7069, message = "You've saved $s1%% XP on the Incomplete Training Crystal.")
+	@ClientString(id = 7069, message = "You've saved $s1%% XP on the Incomplete Training Crystal. ")
 	public static SystemMessageId YOU_VE_SAVED_S1_XP_ON_THE_INCOMPLETE_TRAINING_CRYSTAL;
 	
-	@ClientString(id = 7070, message = "You've saved $s1%% SP on the Incomplete Tactics Crystal.")
+	@ClientString(id = 7070, message = "You've saved $s1%% SP on the Incomplete Tactics Crystal. ")
 	public static SystemMessageId YOU_VE_SAVED_S1_SP_ON_THE_INCOMPLETE_TACTICS_CRYSTAL;
 	
 	@ClientString(id = 7071, message = "You've saved all the XP and created a $s1. Check your inventory.")
@@ -16092,13 +16152,13 @@ public final class SystemMessageId
 	@ClientString(id = 7152, message = "You cannot gift yourself.")
 	public static SystemMessageId YOU_CANNOT_GIFT_YOURSELF;
 	
-	@ClientString(id = 7153, message = "Teleport to $s1?")
+	@ClientString(id = 7153, message = "Teleport to $s1? ")
 	public static SystemMessageId TELEPORT_TO_S1;
 	
 	@ClientString(id = 7154, message = "Not enough Adventure Scrolls. \\nGo to the Premium Shop?")
 	public static SystemMessageId NOT_ENOUGH_ADVENTURE_SCROLLS_NGO_TO_THE_PREMIUM_SHOP;
 	
-	@ClientString(id = 7155, message = "You don't have any more quests to play.")
+	@ClientString(id = 7155, message = "You don't have any more quests to play. ")
 	public static SystemMessageId YOU_DON_T_HAVE_ANY_MORE_QUESTS_TO_PLAY;
 	
 	@ClientString(id = 7156, message = "You must select a quest to teleport instantly.")
@@ -16128,7 +16188,7 @@ public final class SystemMessageId
 	@ClientString(id = 7164, message = "Cannot open the Adventure Guide while in battle. Please finish your battle and try again.")
 	public static SystemMessageId CANNOT_OPEN_THE_ADVENTURE_GUIDE_WHILE_IN_BATTLE_PLEASE_FINISH_YOUR_BATTLE_AND_TRY_AGAIN;
 	
-	@ClientString(id = 7165, message = "Cannot teleport to $s1.")
+	@ClientString(id = 7165, message = "Cannot teleport to $s1. ")
 	public static SystemMessageId CANNOT_TELEPORT_TO_S1;
 	
 	@ClientString(id = 7166, message = "Cannot teleport instantly while in battle. Please finish your battle and try again.")
@@ -16185,7 +16245,7 @@ public final class SystemMessageId
 	@ClientString(id = 7183, message = "Cannot use instant teleport when dead.")
 	public static SystemMessageId CANNOT_USE_INSTANT_TELEPORT_WHEN_DEAD;
 	
-	@ClientString(id = 7184, message = "Cannot teleport instantly when you are unable to move.")
+	@ClientString(id = 7184, message = "Cannot teleport instantly when you are unable to move. ")
 	public static SystemMessageId CANNOT_TELEPORT_INSTANTLY_WHEN_YOU_ARE_UNABLE_TO_MOVE;
 	
 	@ClientString(id = 7185, message = "Probability: $s1")
@@ -16206,7 +16266,7 @@ public final class SystemMessageId
 	@ClientString(id = 7190, message = "Congratulations! Safe Enchant was successful and you got + $s1 , + $s2$s3.")
 	public static SystemMessageId CONGRATULATIONS_SAFE_ENCHANT_WAS_SUCCESSFUL_AND_YOU_GOT_S1_S2_S3;
 	
-	@ClientString(id = 7191, message = "Failed to Safe Enchant. Please try again.")
+	@ClientString(id = 7191, message = "Failed to Safe Enchant. Please try again. ")
 	public static SystemMessageId FAILED_TO_SAFE_ENCHANT_PLEASE_TRY_AGAIN;
 	
 	@ClientString(id = 7192, message = "You can bestow random Set Options to Set Equipment, and you can change Set Options for equipment that already has Set Options.")
@@ -16293,7 +16353,7 @@ public final class SystemMessageId
 	@ClientString(id = 7219, message = "You don't have a Feather of Blessing.\\nFeathers of Blessing can be purchased from the Premium Shop.")
 	public static SystemMessageId YOU_DON_T_HAVE_A_FEATHER_OF_BLESSING_NFEATHERS_OF_BLESSING_CAN_BE_PURCHASED_FROM_THE_PREMIUM_SHOP;
 	
-	@ClientString(id = 7220, message = "You've reached the limit for accounts that can be logged in from your IP address.")
+	@ClientString(id = 7220, message = "You've reached the limit for accounts that can be logged in from your IP address. ")
 	public static SystemMessageId YOU_VE_REACHED_THE_LIMIT_FOR_ACCOUNTS_THAT_CAN_BE_LOGGED_IN_FROM_YOUR_IP_ADDRESS;
 	
 	@ClientString(id = 7221, message = "You've acquired $s1 XP and $s2 additional XP.")
@@ -16422,7 +16482,7 @@ public final class SystemMessageId
 	@ClientString(id = 7262, message = "Now you can receive the XP boost from the Moonlight. During the Moon Festival, you get +100%% XP between 20:00-23:00 every day.")
 	public static SystemMessageId NOW_YOU_CAN_RECEIVE_THE_XP_BOOST_FROM_THE_MOONLIGHT_DURING_THE_MOON_FESTIVAL_YOU_GET_100_XP_BETWEEN_20_00_23_00_EVERY_DAY;
 	
-	@ClientString(id = 7263, message = "The Moonlight XP boost is over for today.")
+	@ClientString(id = 7263, message = "The Moonlight XP boost is over for today. ")
 	public static SystemMessageId THE_MOONLIGHT_XP_BOOST_IS_OVER_FOR_TODAY;
 	
 	@ClientString(id = 7264, message = "The Moonlight XP boost effect is on. During the Moon Festival, you get +100%% XP between 20:00-23:00 every day.")
@@ -16548,7 +16608,7 @@ public final class SystemMessageId
 	@ClientString(id = 7304, message = "$s1 has already applied to join. Please check the list of applications and recommendations.")
 	public static SystemMessageId S1_HAS_ALREADY_APPLIED_TO_JOIN_PLEASE_CHECK_THE_LIST_OF_APPLICATIONS_AND_RECOMMENDATIONS;
 	
-	@ClientString(id = 7305, message = "You've received a recommendation from the $s1 clan. Please check the list of applications and recommendations.")
+	@ClientString(id = 7305, message = "You've received a recommendation from the $s1 clan. Please check the list of applications and recommendations. ")
 	public static SystemMessageId YOU_VE_RECEIVED_A_RECOMMENDATION_FROM_THE_S1_CLAN_PLEASE_CHECK_THE_LIST_OF_APPLICATIONS_AND_RECOMMENDATIONS;
 	
 	@ClientString(id = 7306, message = "The user has deleted the character so the application cannot be accepted.")
@@ -16701,7 +16761,7 @@ public final class SystemMessageId
 	@ClientString(id = 7355, message = "Your student has achieved a goal so you are sending a reward.")
 	public static SystemMessageId YOUR_STUDENT_HAS_ACHIEVED_A_GOAL_SO_YOU_ARE_SENDING_A_REWARD;
 	
-	@ClientString(id = 7356, message = "Student: $s1\\n\\n Goal Achieved: $s2\\n\\n Reward: Proof of Master x$s3")
+	@ClientString(id = 7356, message = "Student: $s1\\n\\n Goal Achieved: $s2\\n\\n Reward: Proof of Master x$s3 ")
 	public static SystemMessageId STUDENT_S1_N_N_GOAL_ACHIEVED_S2_N_N_REWARD_PROOF_OF_MASTER_X_S3;
 	
 	@ClientString(id = 7357, message = "$s1 Level-up Achievement")
@@ -16725,7 +16785,7 @@ public final class SystemMessageId
 	@ClientString(id = 7363, message = "You've requested to be a mercenary for the territory war.")
 	public static SystemMessageId YOU_VE_REQUESTED_TO_BE_A_MERCENARY_FOR_THE_TERRITORY_WAR;
 	
-	@ClientString(id = 7364, message = "This class cannot transform.")
+	@ClientString(id = 7364, message = "This class cannot transform. ")
 	public static SystemMessageId THIS_CLASS_CANNOT_TRANSFORM;
 	
 	@ClientString(id = 7365, message = "Not enough Transformation Points.")
@@ -16737,7 +16797,7 @@ public final class SystemMessageId
 	@ClientString(id = 7367, message = "Reward received.")
 	public static SystemMessageId REWARD_RECEIVED;
 	
-	@ClientString(id = 7368, message = "Only the Clan Leader can create one.")
+	@ClientString(id = 7368, message = "Only the Clan Leader can create one. ")
 	public static SystemMessageId ONLY_THE_CLAN_LEADER_CAN_CREATE_ONE;
 	
 	@ClientString(id = 7369, message = "You cannot end the relationship with another student. Only possible between master and student.")
@@ -16824,13 +16884,13 @@ public final class SystemMessageId
 	@ClientString(id = 7396, message = "Cannot extend the duration of this item.")
 	public static SystemMessageId CANNOT_EXTEND_THE_DURATION_OF_THIS_ITEM;
 	
-	@ClientString(id = 7397, message = "Please unequip the item to extend the duration.")
+	@ClientString(id = 7397, message = "Please unequip the item to extend the duration. ")
 	public static SystemMessageId PLEASE_UNEQUIP_THE_ITEM_TO_EXTEND_THE_DURATION;
 	
 	@ClientString(id = 7398, message = "Cannot extend the duration any more.")
 	public static SystemMessageId CANNOT_EXTEND_THE_DURATION_ANY_MORE;
 	
-	@ClientString(id = 7399, message = "Cannot perform the action while extending the duration.")
+	@ClientString(id = 7399, message = "Cannot perform the action while extending the duration. ")
 	public static SystemMessageId CANNOT_PERFORM_THE_ACTION_WHILE_EXTENDING_THE_DURATION;
 	
 	@ClientString(id = 7400, message = "Your inventory's weight/limit has been exceeded so you can't receive the attendance reward. Please free up some space and try again.")
@@ -16896,7 +16956,7 @@ public final class SystemMessageId
 	@ClientString(id = 7420, message = "Cannot use Shield Capsules.")
 	public static SystemMessageId CANNOT_USE_SHIELD_CAPSULES;
 	
-	@ClientString(id = 7421, message = "The Shield Capsule has been canceled.")
+	@ClientString(id = 7421, message = "The Shield Capsule has been canceled. ")
 	public static SystemMessageId THE_SHIELD_CAPSULE_HAS_BEEN_CANCELED;
 	
 	@ClientString(id = 7422, message = "You've obtained $s1 Dragon Coins as a reward for leveling up.")
@@ -16905,7 +16965,7 @@ public final class SystemMessageId
 	@ClientString(id = 7423, message = "You have too many coins, so you cannot accumulate them any more. Please use the coins from our page.")
 	public static SystemMessageId YOU_HAVE_TOO_MANY_COINS_SO_YOU_CANNOT_ACCUMULATE_THEM_ANY_MORE_PLEASE_USE_THE_COINS_FROM_OUR_PAGE;
 	
-	@ClientString(id = 7424, message = "You've obtained $s1 Dragon Coins from the Dragon Coin Pouch.")
+	@ClientString(id = 7424, message = "You've obtained $s1 Dragon Coins from the Dragon Coin Pouch. ")
 	public static SystemMessageId YOU_VE_OBTAINED_S1_DRAGON_COINS_FROM_THE_DRAGON_COIN_POUCH;
 	
 	@ClientString(id = 7425, message = "Cannot perform the action because another action is in process.")
@@ -16935,7 +16995,7 @@ public final class SystemMessageId
 	@ClientString(id = 7433, message = "Cannot remove the timed Soul Crystal effect from this weapon.")
 	public static SystemMessageId CANNOT_REMOVE_THE_TIMED_SOUL_CRYSTAL_EFFECT_FROM_THIS_WEAPON;
 	
-	@ClientString(id = 7434, message = "The Great Growth event is here. XP from hunting, Adena drop rate, and item drop rate are all doubled between 20:00-22:00 every day.")
+	@ClientString(id = 7434, message = "The Great Growth event is here. XP from hunting, Adena drop rate, and item drop rate are all doubled between 20:00-22:00 every day. ")
 	public static SystemMessageId THE_GREAT_GROWTH_EVENT_IS_HERE_XP_FROM_HUNTING_ADENA_DROP_RATE_AND_ITEM_DROP_RATE_ARE_ALL_DOUBLED_BETWEEN_20_00_22_00_EVERY_DAY;
 	
 	@ClientString(id = 7435, message = "Click on <$s1> to remove the timed Soul Crystal effect.")
@@ -17025,7 +17085,7 @@ public final class SystemMessageId
 	@ClientString(id = 7463, message = "Current Location: Ivory Tower Entrance")
 	public static SystemMessageId CURRENT_LOCATION_IVORY_TOWER_ENTRANCE;
 	
-	@ClientString(id = 7464, message = "The Great Growth event is here. XP from hunting and item drop rate are doubled between 20:00-22:00 every day.")
+	@ClientString(id = 7464, message = "The Great Growth event is here. XP from hunting and item drop rate are doubled between 20:00-22:00 every day. ")
 	public static SystemMessageId THE_GREAT_GROWTH_EVENT_IS_HERE_XP_FROM_HUNTING_AND_ITEM_DROP_RATE_ARE_DOUBLED_BETWEEN_20_00_22_00_EVERY_DAY;
 	
 	@ClientString(id = 7465, message = "Cannot obtain the item from this location.")
@@ -17049,10 +17109,10 @@ public final class SystemMessageId
 	@ClientString(id = 7471, message = "An event item is available. You've received an additional Faint Silver Box.")
 	public static SystemMessageId AN_EVENT_ITEM_IS_AVAILABLE_YOU_VE_RECEIVED_AN_ADDITIONAL_FAINT_SILVER_BOX;
 	
-	@ClientString(id = 7472, message = "An event item is available. You've received an additional Shiny Gold Box.")
+	@ClientString(id = 7472, message = "An event item is available. You've received an additional Shiny Gold Box. ")
 	public static SystemMessageId AN_EVENT_ITEM_IS_AVAILABLE_YOU_VE_RECEIVED_AN_ADDITIONAL_SHINY_GOLD_BOX;
 	
-	@ClientString(id = 7473, message = "If you don't receive the gift, you won't be able to receive any more event items.")
+	@ClientString(id = 7473, message = "If you don't receive the gift, you won't be able to receive any more event items. ")
 	public static SystemMessageId IF_YOU_DON_T_RECEIVE_THE_GIFT_YOU_WON_T_BE_ABLE_TO_RECEIVE_ANY_MORE_EVENT_ITEMS;
 	
 	@ClientString(id = 7474, message = "Chaotic characters cannot teleport instantly through the Adventure Guide.")
@@ -17070,7 +17130,7 @@ public final class SystemMessageId
 	@ClientString(id = 7478, message = "If you use Improved Safe Enchant, you can only enchant an item up to + 9.")
 	public static SystemMessageId IF_YOU_USE_IMPROVED_SAFE_ENCHANT_YOU_CAN_ONLY_ENCHANT_AN_ITEM_UP_TO_9;
 	
-	@ClientString(id = 7479, message = "Cannot acquire items when the inventory's weight/limit is over 80%%.")
+	@ClientString(id = 7479, message = "Cannot acquire items when the inventory's weight/limit is over 80%%. ")
 	public static SystemMessageId CANNOT_ACQUIRE_ITEMS_WHEN_THE_INVENTORY_S_WEIGHT_LIMIT_IS_OVER_80;
 	
 	@ClientString(id = 7480, message = "Cannot acquire a Demonic/Blood Sword while in battle.")

@@ -523,7 +523,7 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		}
 		if (leaderName.length() > 16)
 		{
-			player.sendPacket(SystemMessageId.YOUR_TITLE_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN);
+			player.sendPacket(SystemMessageId.YOUR_TITLE_MUST_BE_AT_LEAST_1_CHARACTER_AND_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN);
 			return;
 		}
 		if (player.getName().equals(leaderName))

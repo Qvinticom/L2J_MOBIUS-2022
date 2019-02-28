@@ -518,7 +518,7 @@ public final class Kamaloka extends AbstractInstance
 			// but not in kamaloka
 			if ((player.getInstanceId() == 0) || (world.getTemplateId() != templateId))
 			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addString(player.getName()));
 				return;
 			}
 			// check for level difference again on reenter

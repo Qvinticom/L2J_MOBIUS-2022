@@ -112,7 +112,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 		{
 			if (instance.getTemplateId() != templateId)
 			{
-				player.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON);
+				player.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addString(player.getName()));
 				return;
 			}
 			onEnter(player, instance, false);
@@ -155,7 +155,7 @@ public abstract class AbstractInstance extends AbstractNpcAI
 			{
 				if (getPlayerInstance(member) != null)
 				{
-					enterGroup.forEach(p -> p.sendPacket(SystemMessageId.YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON));
+					enterGroup.forEach(p -> p.sendPacket(SystemMessage.getSystemMessage(SystemMessageId.C1_YOU_HAVE_ENTERED_ANOTHER_INSTANT_ZONE_THEREFORE_YOU_CANNOT_ENTER_CORRESPONDING_DUNGEON).addString(p.getName())));
 					return;
 				}
 				
