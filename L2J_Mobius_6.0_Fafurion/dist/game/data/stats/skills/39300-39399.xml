@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="39393" toLevel="1" name="Artifact Book - Level 1">
+		<!-- Activates Artifact slot level 1. -->
+		<icon>icon.artifact_book_00</icon>
+		<operateType>P</operateType>
+		<effects>
+			<effect name="ArtifactSlot">
+				<amount>1</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39394" toLevel="1" name="Artifact Book - Level 2">
+		<!-- Activates Artifact slot level 2. -->
+		<icon>icon.artifact_book_00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="ArtifactSlot">
+				<amount>2</amount>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="39395" toLevel="1" name="Artifact Book - Level 3">
+		<!-- Activates Artifact slot level 3. -->
+		<icon>icon.artifact_book_00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>100</magicLvl>
+		<effects>
+			<effect name="ArtifactSlot">
+				<amount>3</amount>
+			</effect>
+		</effects>
+	</skill>
+</list>

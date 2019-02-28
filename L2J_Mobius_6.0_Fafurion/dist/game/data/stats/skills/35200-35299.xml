@@ -1,0 +1,299 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="35227" toLevel="1" name="Artifact Set Effect - Level 1">
+		<!-- Damage +$s1, Received Damage -$s2 -->
+		<icon>icon.artifact_book_00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35228" toLevel="1" name="Artifact Set Effect - Level 2">
+		<!-- Damage +$s1, Received Damage -$s2 -->
+		<icon>icon.artifact_book_00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35229" toLevel="1" name="Artifact Set Effect - Level 3">
+		<!-- Damage +$s1, Received Damage -$s2, All Basic Stats +$s3 -->
+		<icon>icon.artifact_book_00</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35230" toLevel="11" name="Artifact P. Atk.">
+		<!-- P. Atk. increased when upgraded -->
+		<icon>icon.artifact_b_pa</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35231" toLevel="11" name="Artifact M. Atk.">
+		<!-- M. Atk. increased when upgraded -->
+		<icon>icon.artifact_b_ma</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35232" toLevel="11" name="Artifact Atk. Spd.">
+		<!-- Atk. Spd. increased when upgraded -->
+		<icon>icon.artifact_b_pa_speed</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35233" toLevel="11" name="Artifact Casting Spd.">
+		<!-- Casting Spd. increased when upgraded -->
+		<icon>icon.artifact_b_ma_speed</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35234" toLevel="11" name="Artifact P. Def.">
+		<!-- P. Def. increased when upgraded -->
+		<icon>icon.artifact_c_phy_def</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35235" toLevel="11" name="Artifact M. Def.">
+		<!-- M. Def. increased when upgraded -->
+		<icon>icon.artifact_c_mag_def</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35236" toLevel="11" name="Artifact Max HP">
+		<!-- Max HP increased when upgraded -->
+		<icon>icon.artifact_c_hp</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35237" toLevel="11" name="Artifact Max MP">
+		<!-- Max MP increased when upgraded -->
+		<icon>icon.artifact_c_mp</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35238" toLevel="11" name="Artifact  XP Gain">
+		<!-- Acquired XP increased when upgraded -->
+		<icon>icon.artifact_d_exp</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35239" toLevel="11" name="Artifact HP Absorption">
+		<!-- Vampiric Rage increased when upgraded -->
+		<icon>icon.artifact_d_vampiric_rage</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35240" toLevel="11" name="Artifact Speed">
+		<!-- Speed increased when upgraded -->
+		<icon>icon.artifact_d_move_speed</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35241" toLevel="11" name="Artifact Received Heal Amount">
+		<!-- Received Healing increased when upgraded -->
+		<icon>icon.artifact_d_heal_effect</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35242" toLevel="11" name="Artifact P. Atk.">
+		<!-- P. Atk. increased when upgraded -->
+		<icon>icon.artifact_a_pa</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35243" toLevel="11" name="Artifact M. Atk.">
+		<!-- M. Atk. increased when upgraded -->
+		<icon>icon.artifact_a_ma</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35244" toLevel="11" name="Artifact P. Accuracy">
+		<!-- P. Accuracy increased when upgraded -->
+		<icon>icon.artifact_a_hit</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35245" toLevel="11" name="Artifact M. Accuracy">
+		<!-- M. Accuracy increased when upgraded -->
+		<icon>icon.artifact_a_mhit</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35246" toLevel="11" name="Artifact P. Critical">
+		<!-- P. Critical Rate increased when upgraded -->
+		<icon>icon.artifact_a_crt_per</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35247" toLevel="11" name="Artifact P. Skill Critical Rate">
+		<!-- P. Skill Critical Rate increased when upgraded -->
+		<icon>icon.artifact_a_crt_skill_per</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35248" toLevel="11" name="Artifact M. Skill Critical Rate">
+		<!-- M. Skill Critical Rate increased when upgraded -->
+		<icon>icon.artifact_a_crt_mag_per</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35249" toLevel="11" name="Artifact Potion / Elixir Effect Bonus">
+		<!-- Potion / Elixir Effect Bonus increased when upgraded -->
+		<icon>icon.artifact_a_hp_special</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+
+	<skill id="35250" toLevel="11" name="Received Damage When Imobilized">
+		<!-- Received Damage When Immobilized reduced when upgraded -->
+		<icon>icon.artifact_a_block_act_dmg</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+
+	<skill id="35251" toLevel="11" name="Artifact Fixed Damage Reduction">
+		<!-- Fixed Damage reduced when upgraded -->
+		<icon>icon.artifact_a_dmg_by_atk</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+	</skill>
+	<skill id="35252" toLevel="1" name="Artifact Attack Attribute">
+		<!-- Attack Attribute +$s1 -->
+		<icon>icon.artifact_a_attribute_att_up</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35253" toLevel="1" name="Artifact Defense Attribute">
+		<!-- Attribute Resistance +$s1 -->
+		<icon>icon.artifact_a_attribute_def_up</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>DARK</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>30</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35254" toLevel="1" name="Artifact Received Damage When Imobilized">
+		<!-- Received Damage When Immobilized -$s1 -->
+		<icon>icon.artifact_a_block_act_dmg</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+		<passiveConditions>
+			<condition name="OpCheckAbnormal">
+				<type>STUN</type>
+				<level>1</level>
+				<hasAbnormal>true</hasAbnormal>
+				<L2Character>caster</L2Character>
+			</condition>
+		</passiveConditions>
+		<effects>
+			<effect name="DamageByAttack">
+				<amount>-11</amount>
+				<type>PK</type>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DamageByAttack">
+				<amount>-11</amount>
+				<type>ENEMY_ALL</type>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35255" toLevel="1" name="Artifact P. Skill Power">
+		<!-- P. Skill Power +$s1 -->
+		<icon>icon.artifact_a_skill_power</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="PhysicalSkillPower">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="35256" toLevel="1" name="Artifact M. Skill Power">
+		<!-- M. Skill Power +$s1 -->
+		<icon>icon.artifact_a_spell_power</icon>
+		<operateType>P</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>80</magicLvl>
+		<effects>
+			<effect name="MagicalSkillPower">
+				<amount>11</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+</list>

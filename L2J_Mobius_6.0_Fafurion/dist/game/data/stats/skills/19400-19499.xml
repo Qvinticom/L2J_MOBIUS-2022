@@ -1,0 +1,1028 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
+	<skill id="19400" toLevel="3" name="Elemental Spike - Decrease Dark Resistance">
+		<!-- Decreases Dark Attribute Resistance by $s2 for $s1. -->
+		<icon>icon.skill11011</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>
+			<value level="1">7</value>
+			<value level="2">7</value>
+			<value level="3">15</value>
+		</abnormalTime>
+		<abnormalType>MULTI_DEBUFF_UNHOLY</abnormalType>
+		<activateRate>100</activateRate>
+		<basicProperty>NONE</basicProperty>
+		<attributeType>DARK</attributeType>
+		<attributeValue>20</attributeValue>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>4</isMagic>
+		<isDebuff>true</isDebuff>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<effects>
+			<effect name="DispelBySlot">
+				<dispel>MULTI_DEBUFF_FIRE,9;MULTI_DEBUFF_HOLY,9;MULTI_DEBUFF_WATER,9;MULTI_DEBUFF_WIND,9;MULTI_DEBUFF_EARTH,9</dispel>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>
+					<value level="1">-20</value>
+					<value level="2">-50</value>
+					<value level="3">-100</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19403" toLevel="3" name="Elemental Harmony">
+		<!-- For $s1, harmony of attributes increases all Atk. Attributes by $s2. -->
+		<icon>icon.skill10044</icon>
+		<abnormalTime>
+			<value level="1">5</value>
+			<value level="2">5</value>
+			<value level="3">10</value>
+		</abnormalTime>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>4</isMagic>
+		<mpConsume>70</mpConsume>
+		<effectPoint>696</effectPoint>
+		<effects>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">100</value>
+				</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">100</value>
+				</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">100</value>
+				</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">100</value>
+				</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">100</value>
+				</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="AttackAttribute">
+				<amount>
+					<value level="1">50</value>
+					<value level="2">70</value>
+					<value level="3">100</value>
+				</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19404" toLevel="6" name="Fire Attribute">
+		<!-- Property Toggle Skill (Presentation) -->
+		<icon>icon.skill11046</icon>
+		<operateType>A1</operateType>
+		<isMagic>4</isMagic>
+		<mpConsume>70</mpConsume>
+		<effectPoint>696</effectPoint>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CallSkill">
+				<skillId>19403</skillId> <!-- Elemental Harmony -->
+				<skillLevel>1</skillLevel>
+				<skillLevelScaleTo>3</skillLevelScaleTo>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19405" toLevel="4" name="Discarded Wizard's Soul">
+		<!-- Summons Discarded Wizard's Soul. -->
+		<icon>icon.skill19405</icon>
+		<magicLvl>
+			<value level="1">99</value>
+			<value level="2">101</value>
+			<value level="3">103</value>
+			<value level="4">105</value>
+		</magicLvl>
+		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>1</isMagic>
+		<hitTime>3500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<mpConsume>
+			<value level="1">483</value>
+			<value level="2">495</value>
+			<value level="3">507</value>
+			<value level="4">519</value>
+		</mpConsume>
+		<conditions>
+			<condition name="CanSummon" />
+		</conditions>
+		<effects>
+			<effect name="Summon">
+				<npcId>
+					<value level="1">15207</value>
+					<value level="2">15208</value>
+					<value level="3">15209</value>
+					<value level="4">15210</value>
+				</npcId>
+				<lifeTime>3600</lifeTime>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19406" toLevel="4" name="Curse from Deadland">
+		<!-- Inflicts dark magic attack on the enemies near you with $s1 power while decreasing speed by $s3 for $s2 and HP Regeneration received by $s4. -->
+		<icon>icon.action225</icon>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+			<value level="3">3</value>
+			<value level="4">4</value>
+		</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>SPEED_DOWN</abnormalType>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
+		<magicLvl>
+			<value level="1">99</value>
+			<value level="2">101</value>
+			<value level="3">103</value>
+			<value level="4">105</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>150</affectRange>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<reuseDelay>5000</reuseDelay>
+		<mpConsume>72</mpConsume>
+		<effectPoint>-100</effectPoint>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>620</power>
+			</effect>
+			<effect name="Speed">
+				<amount>-120</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="HealEffect">
+				<amount>-20</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19407" toLevel="3" name="Essence of Mana">
+		<!-- M. Atk. +$s1, P. Def. +$s2 and M. Critical Rate +$s3. -->
+		<icon>icon.skill11034</icon>
+		<operateType>T</operateType>
+		<mpConsume>36</mpConsume>
+		<effects>
+			<effect name="MAtk">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>
+					<value level="1">30</value>
+					<value level="2">40</value>
+					<value level="3">50</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19408" toLevel="2" name="Embody Mana Armor">
+		<!-- Embodies a Mana Armor that reflects $s1 of the damage received, reduces damage received by $s2, and blocks the rest by consuming MP. MP is consumed by $s3 every second and this skill effect is removed if MP reaches $s4. -->
+		<icon>icon.skill11065</icon>
+		<abnormalVisualEffect>MP_SHIELD</abnormalVisualEffect>
+		<operateType>T</operateType>
+		<reuseDelay>5000</reuseDelay>
+		<mpConsume>36</mpConsume>
+		<effects>
+			<effect name="DamageShield">
+				<amount>10</amount>
+			</effect>
+			<effect name="MpShield">
+				<amount>
+					<value level="1">90</value>
+					<value level="2">95</value>
+				</amount>
+			</effect>
+			<effect name="MpConsumePerLevel">
+				<power>50</power>
+				<ticks>1</ticks>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19409" toLevel="1" name="Curse Gloom">
+		<!-- M. Defense and Attribute Resistance -$s2 and -$s3, respectively, for $s1. -->
+		<icon>icon.skill1263</icon>
+		<abnormalLvl>2</abnormalLvl>
+		<abnormalType>MD_DOWN_AWAKEN</abnormalType>
+		<abnormalTime>10</abnormalTime>
+		<activateRate>100</activateRate>
+		<basicProperty>MAGIC</basicProperty>
+		<operateType>A2</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="MagicalDefence">
+				<amount>-50</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>FIRE</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>WATER</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>WIND</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>EARTH</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>HOLY</attribute>
+			</effect>
+			<effect name="DefenceAttribute">
+				<amount>-50</amount>
+				<attribute>DARK</attribute>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19410" toLevel="1" name="Elemental Crash (Wind)">
+		<!-- Elemental Buster inflicts Knock Back. -->
+		<icon>icon.skill11018</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<activateRate>90</activateRate> <!-- Guessed -->
+		<trait>KNOCKDOWN</trait> <!-- Guessed -->
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<isMagic>1</isMagic>
+		<isDebuff>2</isDebuff>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>100</distance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19411" toLevel="1" name="Elemental Crash (Earth)">
+		<!-- Elemental Crash inflicts Hold for $s1. -->
+		<icon>icon.skill11018</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<trait>HOLD</trait> <!-- Guessed -->
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<isMagic>1</isMagic>
+		<isDebuff>2</isDebuff>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockMove" />
+		</effects>
+	</skill>
+	<skill id="19412" toLevel="1" name="Elemental Crash (Holy)">
+		<!-- Elemental Crash inflicts Stun for $s1. -->
+		<icon>icon.skill11018</icon>
+		<abnormalLvl>5</abnormalLvl>
+		<abnormalTime>2</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>90</activateRate> <!-- Guessed -->
+		<trait>SHOCK</trait> <!-- Guessed -->
+		<basicProperty>NONE</basicProperty>
+		<operateType>A2</operateType>
+		<isMagic>1</isMagic>
+		<isDebuff>2</isDebuff>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<magicLvl>85</magicLvl>
+		<reuseDelay>10000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="19413" toLevel="7" name="Elemental Burst: Water">
+		<!-- Elemental Burst inflicts Frozen for $s1. -->
+		<icon>icon.skill11865</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalType>FREEZE</abnormalType>
+		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="19414" toLevel="7" name="Elemental Burst: Wind">
+		<!-- Elemental Burst inflicts Knock Back. -->
+		<icon>icon.skill11865</icon>
+		<abnormalTime>1</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
+		<activateRate>90</activateRate> <!-- Guessed -->
+		<trait>KNOCKBACK</trait> <!-- Guessed -->
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="KnockBack">
+				<speed>600</speed>
+				<distance>100</distance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19415" toLevel="7" name="Elemental Burst: Earth">
+		<!-- Elemental Burst inflicts Hold for $s1. -->
+		<icon>icon.skill11865</icon>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>ROOT_MAGICALLY</abnormalType>
+		<abnormalVisualEffect>ROOT</abnormalVisualEffect>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<trait>HOLD</trait> <!-- Guessed -->
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="BlockMove" />
+		</effects>
+	</skill>
+	<skill id="19416" toLevel="7" name="Elemental Burst: Holy">
+		<!-- Elemental Burst inflicts Stun for $s1. -->
+		<icon>icon.skill11865</icon>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<trait>SHOCK</trait> <!-- Guessed -->
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="19417" toLevel="7" name="Elemental Burst: Water">
+		<!-- Elemental Burst inflicts Frozen for $s1. -->
+		<icon>icon.skill11865</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>7</abnormalTime>
+		<abnormalType>FREEZE</abnormalType>
+		<abnormalVisualEffect>FROZEN_PILLAR</abnormalVisualEffect>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<targetType>ENEMY_ONLY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<affectLimit>5-12</affectLimit>
+		<affectRange>200</affectRange>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="BlockActions" />
+		</effects>
+	</skill>
+	<skill id="19418" toLevel="7" name="Elemental Burst: Wind">
+		<!-- Elemental Burst cancel target and inflicts Faint for $s1. -->
+		<icon>icon.skill11865</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>3</abnormalTime>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<activateRate>80</activateRate> <!-- Guessed -->
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="BlockActions" />
+			<effect name="TargetCancel">
+				<chance>100</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19419" toLevel="7" name="Elemental Burst: Earth">
+		<!-- Elemental Burst inflicts Knock Down for $s1. -->
+		<icon>icon.skill11865</icon>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<abnormalType>KNOCKDOWN</abnormalType>
+		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
+		<activateRate>90</activateRate> <!-- Guessed -->
+		<trait>KNOCKDOWN</trait> <!-- Guessed -->
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+		</magicLvl>
+		<operateType>A2</operateType>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="KnockBack">
+				<distance>100</distance>
+				<speed>600</speed>
+				<knockDown>true</knockDown>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19420" toLevel="4" name="Quadruple Elemental Blast">
+		<!-- Receives damage over time for $s1 by a powerful magic with $s2 Power added to M. Atk. and becomes Knocked Down. -->
+		<icon>icon.skill11067</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>5</abnormalTime>
+		<isMagic>1</isMagic>
+		<isDebuff>true</isDebuff>
+		<targetType>ENEMY</targetType>
+		<affectScope>RANGE</affectScope>
+		<affectObject>NOT_FRIEND</affectObject>
+		<effects>
+			<effect name="BlockControl" />
+			<effect name="DamOverTime">
+				<power>160</power>
+				<ticks>1</ticks>
+			</effect>
+			<effect name="KnockBack">
+				<distance>100</distance>
+				<speed>600</speed>
+				<knockDown>true</knockDown>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19421" toLevel="1" name="Ensemble Melody">
+		<!-- Casts owned Horn, Drum, Organ, and Guitar Melodies, all at once. -->
+		<icon>icon.skill19421</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
+		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
+		<effects>
+			<effect name="CallLearnedSkill">
+				<skillId>11517</skillId> <!-- Horn Melody -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11518</skillId> <!-- Drum Melody -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11519</skillId> <!-- Pipe Organ Melody -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11520</skillId> <!-- Guitar Melody -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19422" toLevel="1" name="Trio Sonata">
+		<!-- Casts owned Combat, Marching, and Refreshing Sonatas, all at once. -->
+		<icon>icon.skill19422</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
+		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
+		<effects>
+			<effect name="CallLearnedSkill">
+				<skillId>11529</skillId> <!-- Prevailing Sonata -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11530</skillId> <!-- Daring Sonata -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11532</skillId> <!-- Refreshing Sonata -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19423" toLevel="1" name="Spirit's Chorus">
+		<!-- Casts owned Prevailing Song, Marching Song, and Relax Song, all at once. -->
+		<icon>icon.skill19423</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
+		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
+		<effects>
+			<effect name="CallLearnedSkill">
+				<skillId>11607</skillId> <!-- Prevailing Song -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11608</skillId> <!-- Daring Song -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11609</skillId> <!-- Refreshing Song -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19424" toLevel="1" name="Dance of Triumph">
+		<!-- Casts owned Prevailing Dance, Marching Dance, and Relax Dance, all at once. -->
+		<icon>icon.skill19424</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
+		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
+		<effects>
+			<effect name="CallLearnedSkill">
+				<skillId>11610</skillId> <!-- Prevailing Dance -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11611</skillId> <!-- Daring Dance -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11612</skillId> <!-- Refreshing Dance -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19425" toLevel="1" name="Immune Derangement">
+		<!-- Casts owned Elemental Resistance, Debuff Resistance, and Mental Attack Resistance, all at once. -->
+		<icon>icon.skill19425</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
+		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>TARGET</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="CallLearnedSkill">
+				<skillId>11565</skillId> <!-- Elemental Resistance -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11566</skillId> <!-- Resistance Debuff -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>11567</skillId> <!-- Mental Attack Resistance -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19430" toLevel="11" name="Resonant Halo">
+		<!-- Increases P. Atk. by $s1 and Atk. Spd. by $s2 and allows casting Radiant Crash/ Resolving Bash over an area, which increases MP Consumption by $s3. Using the skill again cancels the effect. -->
+		<icon>icon.skill19430</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19431" toLevel="9" name="Sforzando Sting">
+		<icon>icon.skill19431</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19432" toLevel="1" name="Swift Praise">
+		<!-- Increases all party members' P. Atk./ M. Atk./ Atk. Spd./ Casting Spd. $s2 times for $s1. Cooldown $s3. -->
+		<icon>icon.skill19432</icon>
+		<operateType>A1</operateType>
+		<isTriggeredSkill>true</isTriggeredSkill>
+	</skill>
+	<skill id="19433" toLevel="11" name="Alluring Conduct">
+		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. and decreases Atk. Spd./ Casting Spd./ P. Def/ M. Def by $s3 for $s2. Increases Skill Cooldown by $s4 and applies the Swift Praise effect to the caster. Can be used in the Triad state. Requires a sword, blunt weapon, dual sword or dual blunt weapon to be equipped. -->
+		<icon>icon.skill19433</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19438" toLevel="1" name="Triple Stroke">
+		<!-- Casts owned War Drum, Marching Drum and Relax Drum all at once. -->
+		<icon>icon.skill19438</icon>
+		<operateType>A1</operateType>
+		<castRange>1000</castRange>
+		<effectPoint>696</effectPoint>
+		<mpConsume>140</mpConsume>
+		<effectRange>1500</effectRange>
+		<hitTime>4000</hitTime>
+		<coolTime>300</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<magicLvl>97</magicLvl>
+		<isMagic>1</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<affectRange>1000</affectRange>
+		<effects>
+			<effect name="CallLearnedSkill">
+				<skillId>19444</skillId> <!-- War Drum -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>19445</skillId> <!-- Marching Drum -->
+			</effect>
+			<effect name="CallLearnedSkill">
+				<skillId>19446</skillId> <!-- Soothing Drum -->
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19439" toLevel="1" name="Overload's Dignity">
+		<icon>icon.skill19439</icon>
+		<abnormalTime>30</abnormalTime>
+		<affectRange>1000</affectRange>
+		<operateType>A2</operateType>
+		<mpConsume>916</mpConsume>
+		<hitTime>3000</hitTime>
+		<coolTime>500</coolTime>
+		<effectPoint>687</effectPoint>
+		<abnormalType>RHAPSODY</abnormalType>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<magicLvl>89</magicLvl>
+		<abnormalLvl>5</abnormalLvl>
+		<reuseDelay>600000</reuseDelay>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<effects>
+			<effect name="PAtk">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence" fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="1001" toSubLevel="1020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+				</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence" fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">
+				<amount>
+					<value fromLevel="1" toLevel="1" fromSubLevel="3001" toSubLevel="3020">{2 * subIndex}</value>
+				</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="TrackLimitedSkill" />
+		</effects>
+	</skill>
+	<skill id="19442" toLevel="3" name="Single Note">
+		<!-- For $s1, P. Atk. and Atk. Spd. +$s2. -->
+		<icon>
+			<value level="1">icon.skill19442</value>
+			<value level="2">icon.skill19442</value>
+			<value level="3">icon.skill19442_3</value>
+		</icon>
+		<operateType>A1</operateType>
+	</skill>
+	<skill id="19444" toLevel="1" name="War Drum">
+		<icon>icon.skill19444</icon>
+		<abnormalType>BUFF_SPECIAL_AURA</abnormalType>
+		<abnormalTime>150</abnormalTime>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<mpConsume>140</mpConsume>
+		<hitTime>700</hitTime>
+		<coolTime>150</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<effectPoint>687</effectPoint>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</slot>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>33</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="ReduceCancel">
+				<amount>-40</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="VampiricAttack">
+				<!-- Custom chance -->
+				<amount>8</amount>
+				<chance>30</chance>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19445" toLevel="1" name="Marching Drum">
+		<icon>icon.skill19445</icon>
+		<abnormalType>ENCHANTER_MOD</abnormalType>
+		<abnormalTime>150</abnormalTime>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<mpConsume>140</mpConsume>
+		<hitTime>700</hitTime>
+		<coolTime>150</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<effectPoint>687</effectPoint>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</slot>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalAttackSpeed">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>20</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="DamageShield">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+			<effect name="Reuse">
+				<amount>-10</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19446" toLevel="1" name="Soothing Drum">
+		<icon>icon.skill19446</icon>
+		<abnormalType>SYNERGY_IS</abnormalType>
+		<abnormalTime>150</abnormalTime>
+		<operateType>A2</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+		<mpConsume>140</mpConsume>
+		<hitTime>700</hitTime>
+		<coolTime>150</coolTime>
+		<reuseDelay>2000</reuseDelay>
+		<magicLvl>85</magicLvl>
+		<effectPoint>687</effectPoint>
+		<effects>
+			<effect name="DispelBySlotProbability">
+				<dispel>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</dispel>
+				<rate>100</rate>
+			</effect>
+			<effect name="BlockAbnormalSlot">
+				<slot>DANCE_OF_BLADESTORM;SONG_OF_CHAMPION;SONG_OF_EARTH;SONG_OF_HUNTER;SONG_OF_LIFE;SONG_OF_MEDITATION;SONG_OF_RENEWAL;SONG_OF_VENGEANCE;SONG_OF_VITALITY;SONG_OF_WARDING;SONG_OF_WATER;SONG_OF_WIND;DANCE_OF_BERSERKER;DANCE_OF_CONCENTRATION;DANCE_OF_FIRE;DANCE_OF_FURY;DANCE_OF_INSPIRATION;DANCE_OF_MYSTIC;DANCE_OF_SIREN;DANCE_OF_VAMPIRE;DANCE_OF_WARRIOR;SONG_OF_PURIFICATION;WISPERING_OF_BATTLE;SONG_OF_WINDSTORM;MOTION_OF_DEFENCE;BUFF_UNICORN_SERAPHIM;BUFF_QUEEN_OF_CAT;KNIGHT_AURA;DMG_SHIELD</slot>
+			</effect>
+			<effect name="HpRegen">
+				<amount>75</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MpRegen">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicalEvasion">
+				<amount>5</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-22</amount>
+				<mode>PER</mode>
+				<magicType>1</magicType>
+			</effect>
+			<effect name="MagicMpCost">
+				<amount>-22</amount>
+				<mode>PER</mode>
+				<magicType>0</magicType>
+			</effect>
+		</effects>
+	</skill>
+	<skill id="19447" toLevel="2" name="Glaring">
+		<!-- For $s1, P. Atk. and M. Atk. +$s2. Canceled if Prophecy of Might is cast. -->
+		<icon>icon.skill11866</icon>
+		<operateType>A2</operateType>
+		<abnormalLvl>
+			<value level="1">1</value>
+			<value level="2">2</value>
+		</abnormalLvl>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<effectPoint>709</effectPoint>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<specialLevel>-1</specialLevel>
+		<isTriggeredSkill>true</isTriggeredSkill>
+		<affectRange>2000</affectRange>
+		<isMagic>2</isMagic>
+		<targetType>SELF</targetType>
+		<affectScope>PARTY</affectScope>
+		<affectObject>FRIEND</affectObject>
+	</skill>
+</list>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
+	<item id="80000" name="Artifact Fragment" type="EtcItem">
+		<!-- Material to craft Artifacts. Can craft Artifact - Received Damage Reduction When Immobilized, Artifact - P. Skill Power, Artifact - M. Skill Power through Alexandria in Giran Town Luxury Shop. -->
+		<set name="icon" val="icon.bm_artifact_peice" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="GOLD" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+	</item>
+</list>
