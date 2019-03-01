@@ -41,10 +41,6 @@ public final class Q00386_StolenDignity extends Quest
 	// Monsters
 	private static final int CRIMSON_DRAKE = 20670;
 	private static final int KADIOS = 20671;
-	private static final int PAST_CREATURE = 20967;
-	private static final int GIANT_SHADOW = 20969;
-	private static final int ANCIENTS_SOLDIER = 20970;
-	private static final int ANCIENTS_WARRIOR = 20971;
 	private static final int SPITEFUL_SOUL_LEADER = 20974;
 	private static final int SPITEFUL_SOUL_WIZARD = 20975;
 	private static final int ARCHER_OF_DESTRUCTIONS = 21001;
@@ -96,7 +92,7 @@ public final class Q00386_StolenDignity extends Quest
 		super(386);
 		addStartNpc(WAREHOUSE_KEEPER_ROMP);
 		addTalkId(WAREHOUSE_KEEPER_ROMP);
-		addKillId(CRIMSON_DRAKE, KADIOS, PAST_CREATURE, GIANT_SHADOW, ANCIENTS_SOLDIER, ANCIENTS_WARRIOR, SPITEFUL_SOUL_LEADER, SPITEFUL_SOUL_WIZARD, ARCHER_OF_DESTRUCTIONS, GRAVEYARD_LICH, GRAVEYARD_PREDATOR, FALLEN_ORC_SHAMAN, SHARP_TALON_TIGER, HAMES_ORC_SNIPER, HAMES_ORC_PREFECT);
+		addKillId(CRIMSON_DRAKE, KADIOS, SPITEFUL_SOUL_LEADER, SPITEFUL_SOUL_WIZARD, ARCHER_OF_DESTRUCTIONS, GRAVEYARD_LICH, GRAVEYARD_PREDATOR, FALLEN_ORC_SHAMAN, SHARP_TALON_TIGER, HAMES_ORC_SNIPER, HAMES_ORC_PREFECT);
 	}
 	
 	@Override
@@ -676,38 +672,6 @@ public final class Q00386_StolenDignity extends Quest
 				case KADIOS:
 				{
 					if (getRandom(1000) < 211)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case PAST_CREATURE:
-				{
-					if (getRandom(1000) < 257)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case GIANT_SHADOW:
-				{
-					if (getRandom(1000) < 205)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case ANCIENTS_SOLDIER:
-				{
-					if (getRandom(1000) < 208)
-					{
-						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
-					}
-					break;
-				}
-				case ANCIENTS_WARRIOR:
-				{
-					if (getRandom(1000) < 299)
 					{
 						giveItemRandomly(qs.getPlayer(), npc, Q_STOLEN_INF_ORE, 1, 0, 1, true);
 					}

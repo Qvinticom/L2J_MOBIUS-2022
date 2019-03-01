@@ -934,64 +934,6 @@
 			<height normal="16.5" />
 		</collision>
 	</npc>
-	<npc id="20325" level="5" type="L2Monster" name="Goblin Raider">
-		<!-- Confirmed CT2.5 -->
-		<parameters>
-			<param name="MoveAroundSocial" value="42" />
-			<param name="MoveAroundSocial1" value="42" />
-			<param name="MoveAroundSocial2" value="42" />
-		</parameters>
-		<race>HUMANOID</race>
-		<sex>MALE</sex>
-		<equipment rhand="4" /> <!-- Club -->
-		<acquire exp="267" sp="5" />
-		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="80" hpRegen="2" mp="69" mpRegen="0.9" />
-			<attack physical="12.34006" magical="8.42666" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="51.60553" magical="37.76269" />
-			<speed>
-				<walk ground="40" />
-				<run ground="110" />
-			</speed>
-			<hitTime>320</hitTime>
-			<abnormalResist physical="10" magical="10" />
-		</stats>
-		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
-		<exCrtEffect>false</exCrtEffect>
-		<ai clanHelpRange="300" aggroRange="450">
-			<clanList>
-				<clan>GOBLIN</clan>
-			</clanList>
-		</ai>
-		<dropLists>
-			<drop>
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
-		<collision>
-			<radius normal="10" />
-			<height normal="16.5" />
-		</collision>
-	</npc>
 	<npc id="20327" level="5" type="L2Monster" name="Goblin Snooper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>

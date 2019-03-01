@@ -89,8 +89,6 @@ public final class Q00420_LittleWing extends Quest
 		23572, // Nymph Cosmos
 		23573, // Nymph Cosmos
 		23578, // Nymph Guardian
-		23579, // Buoyant Seed
-		23580, // Fluttering Seed
 		23581, // Apherus
 		23582, // Nymph Rose
 	};

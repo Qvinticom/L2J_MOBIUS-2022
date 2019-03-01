@@ -142,28 +142,6 @@
 		</parameters>
 		</npc>
 	</spawn>
-	<spawn name="schuttgart11_mb2313_01m1" ai="DEFAULT_USE_DB_MAKER">
-		<territories>
-			<territory name="schuttgart11_mb2313_01" minZ="-1716" maxZ="-1016">
-				<node x="122566" y="-141209" />
-				<node x="123042" y="-141155" />
-				<node x="122943" y="-140863" />
-				<node x="122534" y="-140863" />
-			</territory>
-		</territories>
-		<npc id="25504" dbSave="true" dbName="spirits_of_nellis" respawnTime="24hour" respawnRandom="12hour" /> <!-- Nellis' Vengeful Spirit -->
-	</spawn>
-	<spawn name="schuttgart11_mb2313_02m1" ai="DEFAULT_USE_DB_MAKER">
-		<territories>
-			<territory name="schuttgart11_mb2313_02" minZ="-1280" maxZ="-1080">
-				<node x="127724" y="-160762" />
-				<node x="127987" y="-160746" />
-				<node x="127956" y="-160524" />
-				<node x="127756" y="-160524" />
-			</territory>
-		</territories>
-		<npc id="25506" dbSave="true" dbName="rayito_the_looter" respawnTime="24hour" respawnRandom="12hour" /> <!-- Rayito the Looter -->
-	</spawn>
 	<spawn name="schuttgart17_akata_m1" ai="DEFAULT_USE_DB_MAKER">
 		<territories>
 			<territory name="schuttgart17_mb2114_01" minZ="-1647" maxZ="-1247">
@@ -518,19 +496,6 @@
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="gludio04_mb1823_01" minZ="-3788" maxZ="-3088">
-				<node x="-55023" y="172477" />
-				<node x="-54417" y="171840" />
-				<node x="-53308" y="172132" />
-				<node x="-53269" y="172696" />
-				<node x="-53577" y="173504" />
-				<node x="-54440" y="173010" />
-			</territory>
-		</territories>
-		<npc id="25169" x="-54127" y="172510" z="-3632" dbSave="true" dbName="ragraman" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ragraman -->
-	</spawn>
-	<spawn>
-		<territories>
 			<territory name="gludio16_mb1823_02" minZ="-3456" maxZ="-2856">
 				<node x="-56468" y="186276" />
 				<node x="-55296" y="186236" />
@@ -642,89 +607,6 @@
 			</territory>
 		</territories>
 		<npc id="25166" x="-29797" y="132470" z="-3664" dbSave="true" dbName="ikuntai" respawnTime="24hour" respawnRandom="12hour" /> <!-- Ikuntai -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="gludio04_mb1923_01" minZ="-3305" maxZ="-2805">
-				<node x="-17304" y="174316" />
-				<node x="-16671" y="174203" />
-				<node x="-16329" y="174872" />
-				<node x="-16557" y="175322" />
-				<node x="-17215" y="175234" />
-			</territory>
-		</territories>
-		<npc id="25352" dbSave="true" dbName="giant_wasteland_basil" respawnTime="24hour" respawnRandom="12hour" /> <!-- Giant Wasteland Basilisk -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="gludio04_mb1923_02" minZ="-3961" maxZ="-3361">
-				<node x="-16700" y="183404" />
-				<node x="-16055" y="183047" />
-				<node x="-15421" y="183852" />
-				<node x="-15753" y="184318" />
-				<node x="-16423" y="184242" />
-			</territory>
-		</territories>
-		<npc id="25354" x="-15909" y="183768" z="-3872" dbSave="true" dbName="gargoyle_lord_sirocco" respawnTime="24hour" respawnRandom="12hour" /> <!-- Gargoyle Lord Sirocco -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="gludio04_mb1923_03" minZ="-4244" maxZ="-3144">
-				<node x="-29855" y="168161" />
-				<node x="-27970" y="168206" />
-				<node x="-27851" y="168964" />
-				<node x="-29350" y="169822" />
-				<node x="-30468" y="169071" />
-			</territory>
-		</territories>
-		<npc id="25870" x="-29304" y="168824" z="-3864" heading="31412" dbSave="true" dbName="airis" respawnTime="24hour" respawnRandom="12hour" /> <!-- Rose -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="gludio04_mb1923_04" minZ="-3765" maxZ="-3065">
-				<node x="-26961" y="181475" />
-				<node x="-25967" y="181911" />
-				<node x="-26310" y="183210" />
-				<node x="-28110" y="183327" />
-				<node x="-27972" y="182155" />
-			</territory>
-		</territories>
-		<npc id="25871" x="-27095" y="182500" z="-3640" heading="11808" dbSave="true" dbName="goya" respawnTime="24hour" respawnRandom="12hour" /> <!-- Thorn -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="oren14_mb2118_01" minZ="-3660" maxZ="-3060">
-				<node x="63916" y="15568" />
-				<node x="64500" y="15720" />
-				<node x="64600" y="16308" />
-				<node x="64336" y="16756" />
-				<node x="63244" y="16104" />
-			</territory>
-		</territories>
-		<npc id="25099" dbSave="true" dbName="repiro_rot_tree" respawnTime="24hour" respawnRandom="12hour" /> <!-- Rotting Tree Repiro -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="oren14_mb2118_02" minZ="-3584" maxZ="-2984">
-				<node x="62504" y="7440" />
-				<node x="63176" y="7684" />
-				<node x="62992" y="8824" />
-				<node x="62172" y="8884" />
-				<node x="61560" y="7992" />
-			</territory>
-		</territories>
-		<npc id="25418" dbSave="true" dbName="dread_avenger_kraven" respawnTime="24hour" respawnRandom="12hour" /> <!-- Dread Avenger Kraven -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="oren14_mb2118_03" minZ="-5008" maxZ="-4408">
-				<node x="41120" y="24152" />
-				<node x="42192" y="22716" />
-				<node x="43380" y="24572" />
-				<node x="41300" y="25032" />
-			</territory>
-		</territories>
-		<npc id="25420" dbSave="true" dbName="handmaiden_of_orfen" respawnTime="24hour" respawnRandom="12hour" /> <!-- Orfen's Handmaiden -->
 	</spawn>
 	<spawn>
 		<territories>
@@ -1473,28 +1355,6 @@
 	</spawn>
 	<spawn>
 		<territories>
-			<territory name="aden23_mb2519_05" minZ="-5968" maxZ="-5318">
-				<node x="188809" y="47780" />
-				<node x="189021" y="48385" />
-				<node x="188818" y="48683" />
-				<node x="188329" y="48292" />
-			</territory>
-		</territories>
-		<npc id="25245" dbSave="true" dbName="last_lesser_glaki" respawnTime="24hour" respawnRandom="12hour" /> <!-- Last Lesser Giant Glaki -->
-	</spawn>
-	<spawn>
-		<territories>
-			<territory name="aden23_mb2519_06" minZ="-5992" maxZ="-5392">
-				<node x="171880" y="54868" />
-				<node x="172232" y="55372" />
-				<node x="171800" y="55960" />
-				<node x="171352" y="55452" />
-			</territory>
-		</territories>
-		<npc id="25244" dbSave="true" dbName="last_lesser_olkuth" respawnTime="24hour" respawnRandom="12hour" /> <!-- Last Lesser Giant Olkuth -->
-	</spawn>
-	<spawn>
-		<territories>
 			<territory name="aden22_mb2519_04" minZ="-4912" maxZ="-4312">
 				<node x="169848" y="42484" />
 				<node x="170128" y="42248" />
@@ -1908,9 +1768,6 @@
 	</spawn>
 	<spawn>
 		<npc id="25698" x="-213006" y="175614" z="-11953" heading="16141" dbSave="true" dbName="Dopagen" respawnTime="24hour" respawnRandom="12hour" /> <!-- Dopagen -->
-	</spawn>
-	<spawn>
-		<npc id="25927" x="-18328" y="-114704" z="-4088" heading="8331" dbSave="true" dbName="Krogel" respawnTime="24hour" respawnRandom="12hour" /> <!-- Krogel -->
 	</spawn>
 	<spawn>
 		<npc id="25928" x="16278" y="-119509" z="-880" heading="25269" dbSave="true" dbName="Tebot" respawnTime="24hour" respawnRandom="12hour" /> <!-- Tebot -->

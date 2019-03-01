@@ -57,10 +57,6 @@ public final class Q00662_AGameOfCards extends Quest
 		MONSTERS.put(20959, 455); // Dark Guard
 		MONSTERS.put(20961, 365); // Bloody Knight
 		MONSTERS.put(20962, 348); // Bloody Priest
-		MONSTERS.put(20965, 457); // Chimera Piece
-		MONSTERS.put(20968, 418); // Forgotten Face
-		MONSTERS.put(20972, 350); // Shaman of Ancient Times
-		MONSTERS.put(20973, 453); // Forgotten Ancient People
 		MONSTERS.put(21002, 315); // Doom Scout
 		MONSTERS.put(21004, 320); // Dismal Pole
 		MONSTERS.put(21006, 335); // Doom Servant

@@ -178,47 +178,6 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="27507" level="99" type="L2Monster" name="One-armed Zombie" title="Quest Monster">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>UNDEAD</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="128" />
-			</speed>
-			<attack physical="17349.336782171" magical="5807.1057427324" critical="4" attackSpeed="253" range="40" />
-			<defence physical="936.17021276596" magical="621.44512323573" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="4416" level="1" /> <!-- Undead -->
-		</skillList>
-		<collision>
-			<radius normal="20" />
-			<height normal="34" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
-				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
-				<item id="35569" min="1" max="1" chance="0.0009" /> <!-- Bloody Eternal Enhancement Stone -->
-				<item id="36879" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Fiber - Upgrade -->
-			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="14.75" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky>
-		</dropLists>
-	</npc>
 	<npc id="27508" level="65" type="L2Monster" name="Swamp of Screams Scout" title="Embryo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
