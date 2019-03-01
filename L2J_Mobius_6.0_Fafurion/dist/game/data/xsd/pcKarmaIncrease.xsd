@@ -3,13 +3,13 @@
 	<xs:element name="pcKarmaIncrease">
 		<xs:complexType>
 			<xs:sequence minOccurs="1" maxOccurs="1">
-				<xs:element name="increase" minOccurs="111" maxOccurs="111">
+				<xs:element name="increase" minOccurs="121" maxOccurs="121">
 					<xs:complexType>
 						<xs:attribute name="lvl" use="required">
 							<xs:simpleType>
 								<xs:restriction base="xs:nonNegativeInteger">
 									<xs:minInclusive value="1" />
-									<xs:maxInclusive value="111" />
+									<xs:maxInclusive value="121" />
 								</xs:restriction>
 							</xs:simpleType>
 						</xs:attribute>
