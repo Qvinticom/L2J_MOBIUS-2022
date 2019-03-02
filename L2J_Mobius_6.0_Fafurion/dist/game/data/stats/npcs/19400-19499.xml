@@ -2416,6 +2416,25 @@
 			<height normal="43" />
 		</collision>
 	</npc>
+	<npc id="19490" displayId="20449" level="90" type="L2Monster" usingServerSideName="true" name="Seal Remnant">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="5022741" hpRegen="9.5" mp="22800" mpRegen="3.3" />
+			<speed>
+				<walk ground="25" />
+				<run ground="1" />
+			</speed>
+			<attack physical="1423.7734551975" magical="972.31382893321" critical="4" attackSpeed="253" range="40" />
+			<defence physical="380.4469273743" magical="278.40772904106" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="13" />
+			<height normal="22" />
+		</collision>
+	</npc>
 	<npc id="19491" level="99" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
