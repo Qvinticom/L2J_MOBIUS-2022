@@ -42,7 +42,7 @@ public class ExChooseInventoryAttributeItem implements IClientOutgoingPacket
 		_itemId = stone.getDisplayId();
 		_count = stone.getCount();
 		_atribute = AttributeType.findByClientId(Elementals.getItemElement(_itemId));
-		if ((_atribute == AttributeType.NONE) || (_atribute == AttributeType.NONE_ARMOR))
+		if (_atribute == AttributeType.NONE)
 		{
 			throw new IllegalArgumentException("Undefined Atribute item: " + stone);
 		}

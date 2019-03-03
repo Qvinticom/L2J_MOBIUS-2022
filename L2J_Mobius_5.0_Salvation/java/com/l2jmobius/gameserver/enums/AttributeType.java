@@ -22,8 +22,7 @@ package com.l2jmobius.gameserver.enums;
  */
 public enum AttributeType
 {
-	NONE_ARMOR(-2),
-	NONE(-1),
+	NONE(-2),
 	FIRE(0),
 	WATER(1),
 	WIND(2),
