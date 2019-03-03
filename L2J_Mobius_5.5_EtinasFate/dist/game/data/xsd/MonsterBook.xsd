@@ -18,7 +18,7 @@
 								</xs:complexType>
 							</xs:element>
 						</xs:sequence>
-						<xs:attribute type="xs:byte" name="id"/>
+						<xs:attribute type="xs:int" name="id"/>
 						<xs:attribute type="xs:short" name="monster"/>
 						<xs:attribute type="xs:string" name="faction"/>
 					</xs:complexType>
