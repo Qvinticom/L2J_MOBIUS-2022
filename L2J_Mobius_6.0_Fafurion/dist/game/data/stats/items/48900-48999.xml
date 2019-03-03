@@ -459,6 +459,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39390" level="1" />
+		</skills>
 	</item>
 	<item id="48942" name="+8 Angel's Earring Box" type="EtcItem">
 		<!-- Use it to obtain 1 +8 Fallen Angel's Earring. -->
@@ -468,6 +472,10 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="39391" level="1" />
+		</skills>
 	</item>
 	<item id="48943" name="Red Libra Request - Sea of Spores" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Sea of Spores. Characters level 106 or higher can receive the request by double-clicking the item. Can be played once a day. -->

@@ -256,10 +256,58 @@
 	<skill id="39390" toLevel="1" name="+8 Angel's Necklace Box">
 		<!-- Use it to obtain 1 +8 enchanted Angel's Necklace. -->
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>48941</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<mpConsume>398</mpConsume>
+		<reuseDelay>600000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration" >
+				<items>
+					<itemId>48669</itemId>
+					<itemCount>1</itemCount>
+					<itemEnchantmentLevel>8</itemEnchantmentLevel>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39391" toLevel="1" name="+8 Angel's Earring Box">
 		<!-- Use it to obtain 1 +8 enchanted Angel's Earring. -->
 		<operateType>A1</operateType>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>48942</itemConsumeId>
+		<magicLvl>1</magicLvl>
+		<mpConsume>398</mpConsume>
+		<reuseDelay>600000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="Restoration" >
+				<items>
+					<itemId>48841</itemId>
+					<itemCount>1</itemCount>
+					<itemEnchantmentLevel>8</itemEnchantmentLevel>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39392" toLevel="1" name="Stage 5 Soul Crystal Box">
 		<operateType>A1</operateType>
