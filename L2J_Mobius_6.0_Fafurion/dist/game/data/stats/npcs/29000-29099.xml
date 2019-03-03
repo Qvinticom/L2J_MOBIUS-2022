@@ -1134,8 +1134,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="29028" level="104" type="L2GrandBoss" name="Valakas" title="Fire Dragon">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29028" level="118" type="L2GrandBoss" name="Valakas" title="Fire Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<acquire exp="155833466880" sp="249333547" raidPoints="1000" />
@@ -3368,8 +3367,7 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29068" level="104" type="L2GrandBoss" name="Antharas" title="Land Dragon">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29068" level="118" type="L2GrandBoss" name="Antharas" title="Land Dragon">
 		<parameters>
 			<param name="ultra_respawn_time" value="3" />
 		</parameters>
@@ -3532,8 +3530,7 @@
 			<height normal="300" />
 		</collision>
 	</npc>
-	<npc id="29069" level="99" type="L2Monster" name="Behemoth Dragon">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29069" level="118" type="L2Monster" name="Behemoth Dragon">
 		<parameters>
 			<param name="RootingManage" value="0" />
 			<skill name="PhysicalSpecial" id="5095" level="1" />
@@ -3587,8 +3584,7 @@
 			<height normal="54" />
 		</collision>
 	</npc>
-	<npc id="29070" level="99" type="L2Monster" name="Dragon Bomber">
-		<!-- Confirmed CT2.5 -->
+	<npc id="29070" level="118" type="L2Monster" name="Dragon Bomber">
 		<parameters>
 			<skill name="SelfRangeDDMagic" id="5094" level="1" />
 		</parameters>
