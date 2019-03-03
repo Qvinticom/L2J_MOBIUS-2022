@@ -17,6 +17,8 @@
 package com.l2jmobius.gameserver.data.xml.impl;
 
 import java.io.File;
+import java.util.Collection;
+import java.util.Collections;
 import java.util.EnumMap;
 import java.util.HashMap;
 import java.util.Map;
@@ -122,6 +124,11 @@ public class EnsoulData implements IGameXmlReader
 					parseReFee(feeNode, fee, 2);
 					break;
 				}
+				case "remove":
+				{
+					parseRemove(feeNode, fee);
+					break;
+				}
 			}
 		});
 	}
@@ -141,6 +148,14 @@ public class EnsoulData implements IGameXmlReader
 		final int id = parseInteger(attrs, "itemId");
 		final int count = parseInteger(attrs, "count");
 		fee.setResoul(index, new ItemHolder(id, count));
+	}
+	
+	private void parseRemove(Node ensoulNode, EnsoulFee fee)
+	{
+		final NamedNodeMap attrs = ensoulNode.getAttributes();
+		final int id = parseInteger(attrs, "itemId");
+		final int count = parseInteger(attrs, "count");
+		fee.addRemovalFee(new ItemHolder(id, count));
 	}
 	
 	private void parseOptions(Node ensoulNode)
@@ -177,6 +192,12 @@ public class EnsoulData implements IGameXmlReader
 		return fee != null ? fee.getResoul(index) : null;
 	}
 	
+	public Collection<ItemHolder> getRemovalFee(CrystalType type)
+	{
+		final EnsoulFee fee = _ensoulFees.get(type);
+		return fee != null ? fee.getRemovalFee() : Collections.emptyList();
+	}
+	
 	public EnsoulOption getOption(int id)
 	{
 		return _ensoulOptions.get(id);
@@ -185,6 +206,24 @@ public class EnsoulData implements IGameXmlReader
 	public EnsoulStone getStone(int id)
 	{
 		return _ensoulStones.get(id);
+	}
+	
+	public int getStone(int type, int optionId)
+	{
+		for (EnsoulStone stone : _ensoulStones.values())
+		{
+			if (stone.getSlotType() == type)
+			{
+				for (int id : stone.getOptions())
+				{
+					if (id == optionId)
+					{
+						return stone.getId();
+					}
+				}
+			}
+		}
+		return 0;
 	}
 	
 	/**

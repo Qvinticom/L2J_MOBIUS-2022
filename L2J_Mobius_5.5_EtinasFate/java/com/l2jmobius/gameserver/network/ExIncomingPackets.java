@@ -68,6 +68,7 @@ import com.l2jmobius.gameserver.network.clientpackets.compound.RequestNewEnchant
 import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeEstimate;
 import com.l2jmobius.gameserver.network.clientpackets.crystalization.RequestCrystallizeItemCancel;
 import com.l2jmobius.gameserver.network.clientpackets.ensoul.RequestItemEnsoul;
+import com.l2jmobius.gameserver.network.clientpackets.ensoul.RequestTryEnSoulExtraction;
 import com.l2jmobius.gameserver.network.clientpackets.faction.RequestUserFactionInfo;
 import com.l2jmobius.gameserver.network.clientpackets.friend.RequestFriendDetailInfo;
 import com.l2jmobius.gameserver.network.clientpackets.luckygame.RequestLuckyGamePlay;
@@ -396,7 +397,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	REQUEST_SSO_AUTHN_TOKEN(0x125, null, ConnectionState.IN_GAME),
 	REQUEST_QUEUE_TICKET_LOGIN(0x126, null, ConnectionState.IN_GAME),
 	REQUEST_BLOCK_MEMO_INFO(0x127, null, ConnectionState.IN_GAME),
-	REQUEST_TRY_EN_SOUL_EXTRACTION(0x128, null, ConnectionState.IN_GAME),
+	REQUEST_TRY_EN_SOUL_EXTRACTION(0x128, RequestTryEnSoulExtraction::new, ConnectionState.IN_GAME),
 	REQUEST_RAIDBOSS_SPAWN_INFO(0x129, RequestRaidBossSpawnInfo::new, ConnectionState.IN_GAME),
 	REQUEST_RAID_SERVER_INFO(0x12A, RequestRaidServerInfo::new, ConnectionState.IN_GAME),
 	REQUEST_SHOW_AGIT_SIEGE_INFO(0x12B, null, ConnectionState.IN_GAME),

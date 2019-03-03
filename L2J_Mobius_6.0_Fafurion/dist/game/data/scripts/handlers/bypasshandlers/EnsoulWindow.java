@@ -19,6 +19,7 @@ package handlers.bypasshandlers;
 import com.l2jmobius.gameserver.handler.IBypassHandler;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.network.serverpackets.ensoul.ExShowEnsoulExtractionWindow;
 import com.l2jmobius.gameserver.network.serverpackets.ensoul.ExShowEnsoulWindow;
 
 /**
@@ -29,6 +30,7 @@ public class EnsoulWindow implements IBypassHandler
 	private static final String[] COMMANDS =
 	{
 		"show_ensoul_window",
+		"show_extract_ensoul_window"
 	};
 	
 	@Override
@@ -39,8 +41,17 @@ public class EnsoulWindow implements IBypassHandler
 			return false;
 		}
 		
-		activeChar.sendPacket(ExShowEnsoulWindow.STATIC_PACKET);
-		return true;
+		if (command.toLowerCase().startsWith(COMMANDS[0])) // show_ensoul_window
+		{
+			activeChar.sendPacket(ExShowEnsoulWindow.STATIC_PACKET);
+			return true;
+		}
+		else if (command.toLowerCase().startsWith(COMMANDS[1])) // show_extract_ensoul_window
+		{
+			activeChar.sendPacket(ExShowEnsoulExtractionWindow.STATIC_PACKET);
+			return true;
+		}
+		return false;
 	}
 	
 	@Override

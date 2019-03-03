@@ -2175,6 +2175,28 @@ public final class L2ItemInstance extends L2Object
 		}
 	}
 	
+	public void removeSpecialAbility(int position, int type)
+	{
+		if (type == 1)
+		{
+			final EnsoulOption option = _ensoulOptions.get(position);
+			if (option != null)
+			{
+				removeSpecialAbility(option);
+				_ensoulOptions.remove(position);
+			}
+		}
+		else if (type == 2)
+		{
+			final EnsoulOption option = _ensoulSpecialOptions.get(position);
+			if (option != null)
+			{
+				removeSpecialAbility(option);
+				_ensoulSpecialOptions.remove(position);
+			}
+		}
+	}
+	
 	public void clearSpecialAbilities()
 	{
 		_ensoulOptions.values().forEach(this::clearSpecialAbility);
