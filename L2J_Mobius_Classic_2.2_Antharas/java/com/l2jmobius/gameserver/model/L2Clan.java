@@ -2977,7 +2977,7 @@ public class L2Clan implements IIdentifiable, INamable
 	public synchronized void addHuntingPoints(L2PcInstance activeChar, L2Npc target, double value)
 	{
 		// TODO: Figure out the retail formula
-		final int points = (int) value / 29600;
+		final int points = (int) value / 2960; // Reduced / 10 for Classic.
 		if (points > 0)
 		{
 			getVariables().set("HUNTING_POINTS", getHuntingPoints() + points);
