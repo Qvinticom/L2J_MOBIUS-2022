@@ -1,0 +1,1301 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
+	<npc id="26301" level="105" type="L2RaidBoss" name="Evil Spirit Knight Tretan" title="Raid Boss">
+		<race>UNDEAD</race>
+		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="40927390" hpRegen="1842.10526315789" mp="156035" mpRegen="1944.44444444444" />
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3888.88888888889" magical="2258.06451612903" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="30.6" />
+			<height normal="60.75" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17432" min="1" max="1" chance="1.462" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17431" min="1" max="1" chance="1.431" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="25.75" /> <!-- Top-grade Spirit Stone -->
+				<item id="17705" min="2" max="3" chance="17.4" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17707" min="2" max="3" chance="16.98" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17706" min="2" max="3" chance="16.9" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17708" min="2" max="3" chance="16.85" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17704" min="2" max="3" chance="16.4" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17703" min="2" max="3" chance="16.27" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="46476" min="1" max="1" chance="1.12" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="1.071" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="1.055" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26302" level="105" type="L2RaidBoss" name="Evil Spirit Knight Boros" title="Raid Boss">
+		<race>UNDEAD</race>
+		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="34788281" hpRegen="1842.10526315789" mp="156035" mpRegen="1944.44444444444" />
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3888.88888888889" magical="2258.06451612903" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="30.6" />
+			<height normal="61.6" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17437" min="1" max="1" chance="1.534" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17438" min="1" max="1" chance="1.534" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="24.22" /> <!-- Top-grade Spirit Stone -->
+				<item id="17708" min="2" max="3" chance="17.3" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17704" min="2" max="3" chance="17.12" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17707" min="2" max="3" chance="17.11" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17703" min="2" max="3" chance="17.03" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17705" min="2" max="3" chance="16.31" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17706" min="2" max="3" chance="16.04" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="46491" min="1" max="1" chance="1.132" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46476" min="1" max="1" chance="1.11" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="1.108" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26303" level="105" type="L2RaidBoss" name="Evil Spirit Alusion" title="Raid Boss">
+		<race>UNDEAD</race>
+		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="34788281" hpRegen="1842.10526315789" mp="156035" mpRegen="1944.44444444444" />
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3888.88888888889" magical="2258.06451612903" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="34" />
+			<height normal="92.2" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17443" min="1" max="1" chance="1.518" /> <!-- Eternal Stockings - Robe -->
+				<item id="17442" min="1" max="1" chance="1.489" /> <!-- Eternal Tunic - Robe -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="23.96" /> <!-- Top-grade Spirit Stone -->
+				<item id="17707" min="2" max="3" chance="17.3" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17704" min="2" max="3" chance="16.8" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17703" min="2" max="3" chance="16.79" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17706" min="2" max="3" chance="16.67" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17708" min="2" max="3" chance="16.55" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17705" min="2" max="3" chance="16.1" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="46506" min="1" max="1" chance="1.123" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="1.114" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46476" min="1" max="1" chance="1.102" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26304" level="105" type="L2RaidBoss" name="Evil Spirit's Puppet Graff" title="Raid Boss">
+		<race>UNDEAD</race>
+		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="34788281" hpRegen="1842.10526315789" mp="156035" mpRegen="1944.44444444444" />
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3888.88888888889" magical="2258.06451612903" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="34" />
+			<height normal="85.4" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17431" min="1" max="1" chance="0.75" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17432" min="1" max="1" chance="0.75" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17437" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17438" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17442" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings - Robe -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="25.55" /> <!-- Top-grade Spirit Stone -->
+				<item id="17703" min="2" max="3" chance="17.41" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17704" min="2" max="3" chance="17.17" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17708" min="2" max="3" chance="17.02" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17705" min="2" max="3" chance="16.85" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17707" min="2" max="3" chance="16.38" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17706" min="2" max="3" chance="15.98" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="46476" min="1" max="1" chance="1.123" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="1.111" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="0.997" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26317" level="94" type="L2RaidBoss" name="Spezion">
+		<race>HUMANOID</race>
+		<acquire exp="1011156496" sp="242677" raidPoints="7" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="2055765" hpRegen="1649.12280701754" mp="46102" mpRegen="1740.74074074074" />
+			<speed>
+				<walk ground="40" />
+				<run ground="200" />
+			</speed>
+			<attack physical="44761.9047619048" magical="7899.15966386555" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3481.48148148148" magical="2021.50537634409" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14721" level="1" /> <!-- Raid Boss (Lv. 94) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
+			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Resist Hold -->
+			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
+		</skillList>
+		<collision>
+			<radius normal="40" />
+			<height normal="81" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="36574" min="1" max="1" chance="50.13" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="36586" min="1" max="1" chance="49.4" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="30.88" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="38006" min="1" max="1" chance="1.234" /> <!-- Twilight Gloves Crafting Pack - Robe -->
+				<item id="37996" min="1" max="1" chance="1.228" /> <!-- Twilight Boots Crafting Pack - Heavy Armor -->
+				<item id="38003" min="1" max="1" chance="1.223" /> <!-- Twilight Circlet Crafting Pack - Robe -->
+				<item id="38007" min="1" max="1" chance="1.216" /> <!-- Twilight Shoes Crafting Pack - Robe -->
+				<item id="38001" min="1" max="1" chance="1.21" /> <!-- Twilight Leather Gloves Crafting Pack - Light Armor -->
+				<item id="37993" min="1" max="1" chance="1.206" /> <!-- Twilight Breastplate Crafting Pack - Heavy Armor -->
+				<item id="37997" min="1" max="1" chance="1.194" /> <!-- Twilight Shield Crafting Box - Heavy Armor -->
+				<item id="38004" min="1" max="1" chance="1.192" /> <!-- Twilight Tunic Crafting Pack - Robe -->
+				<item id="37995" min="1" max="1" chance="1.185" /> <!-- Twilight Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="37994" min="1" max="1" chance="1.179" /> <!-- Twilight Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38002" min="1" max="1" chance="1.177" /> <!-- Twilight Leather Boots Crafting Pack - Light Armor -->
+				<item id="37992" min="1" max="1" chance="1.177" /> <!-- Twilight Helmet Crafting Pack - Heavy Armor -->
+				<item id="38000" min="1" max="1" chance="1.176" /> <!-- Twilight Leather Leggings Crafting Pack - Light Armor -->
+				<item id="37998" min="1" max="1" chance="1.173" /> <!-- Twilight Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38005" min="1" max="1" chance="1.169" /> <!-- Twilight Stockings Crafting Pack - Robe -->
+				<item id="38008" min="1" max="1" chance="1.124" /> <!-- Twilight Sigil Crafting Pack - Robe -->
+				<item id="37999" min="1" max="1" chance="1.119" /> <!-- Twilight Leather Armor Crafting Pack - Light Armor -->
+				<item id="17747" min="1" max="1" chance="0.75" /> <!-- Trace of Decaying Darkness -->
+				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46474" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46475" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46477" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46461" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="37987" min="1" max="1" chance="0.075" /> <!-- Apocalypse Thrower Crafting Pack -->
+				<item id="37984" min="1" max="1" chance="0.075" /> <!-- Apocalypse Avenger Crafting Pack -->
+				<item id="37985" min="1" max="1" chance="0.075" /> <!-- Apocalypse Fighter Crafting Pack -->
+				<item id="37986" min="1" max="1" chance="0.075" /> <!-- Apocalypse Stormer Crafting Pack -->
+				<item id="37981" min="1" max="1" chance="0.075" /> <!-- Apocalypse Shaper Crafting Pack -->
+				<item id="37988" min="1" max="1" chance="0.075" /> <!-- Apocalypse Shooter Crafting Pack -->
+				<item id="37989" min="1" max="1" chance="0.075" /> <!-- Apocalypse Buster Crafting Pack -->
+				<item id="37990" min="1" max="1" chance="0.075" /> <!-- Apocalypse Caster Crafting Pack -->
+				<item id="37991" min="1" max="1" chance="0.075" /> <!-- Apocalypse Retributer Crafting Pack -->
+				<item id="37983" min="1" max="1" chance="0.075" /> <!-- Apocalypse Slasher Crafting Pack -->
+				<item id="46446" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="37982" min="1" max="1" chance="0.075" /> <!-- Apocalypse Cutter Crafting Pack -->
+				<item id="46447" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46462" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26349" level="105" type="L2RaidBoss" name="Summoned Moricks">
+		<race>UNDEAD</race>
+		<acquire exp="26109438075" sp="23498574" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="105783966" hpRegen="1842.10526315789" mp="104530" mpRegen="1944.44444444444" />
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50000" magical="8823.52941176471" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3888.88888888889" magical="2258.06451612903" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="27" />
+			<height normal="54" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="36549" min="1" max="1" chance="51.12" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="50.12" /> <!-- Armor Fragment (High-grade) -->
+				<item id="17527" min="1" max="1" chance="7.005" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="3.062" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26352" level="85" type="L2RaidBoss" name="Scarlet van Halisha">
+		<race>HUMANOID</race>
+		<acquire exp="51569936" sp="12376" raidPoints="0" />
+		<equipment rhand="8222" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6338224" hpRegen="1491.22807017544" mp="373427" mpRegen="1574.07407407407" />
+			<speed>
+				<walk ground="250" />
+				<run ground="155" />
+			</speed>
+			<attack physical="40476.1904761905" magical="7142.85714285714" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3148.14814814815" magical="1827.95698924731" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="6644" level="1" /> <!-- Ice Queen Freya -->
+		</skillList>
+		<collision>
+			<radius normal="92" />
+			<height normal="112.8" />
+		</collision>
+	</npc>
+	<npc id="26359" level="85" type="L2RaidBoss" name="Freya" title="Ice Queen">
+		<race>HUMANOID</race>
+		<acquire exp="51569936" sp="12376" raidPoints="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="6338224" hpRegen="1491.22807017544" mp="373427" mpRegen="1574.07407407407" />
+			<speed>
+				<walk ground="54" />
+				<run ground="180" />
+			</speed>
+			<attack physical="40476.1904761905" magical="7142.85714285714" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3148.14814814815" magical="1827.95698924731" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="6644" level="1" /> <!-- Ice Queen Freya -->
+		</skillList>
+		<collision>
+			<radius normal="22" />
+			<height normal="55" />
+		</collision>
+	</npc>
+	<npc id="26372" level="107" type="L2RaidBoss" name="Corrupted Atrofa" title="Raid Boss">
+		<race>BEAST</race>
+		<acquire exp="265142238950" sp="238620058" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="43246510" hpRegen="1877.19298245614" mp="172027" mpRegen="1981.48148148148" />
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50952.3809523809" magical="8991.59663865546" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3962.96296296296" magical="2301.0752688172" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="130" />
+			<height normal="69.8" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17431" min="1" max="1" chance="1.556" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17432" min="1" max="1" chance="1.435" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="24.55" /> <!-- Top-grade Spirit Stone -->
+				<item id="17708" min="3" max="3" chance="17.5" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17706" min="3" max="3" chance="16.31" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17705" min="3" max="3" chance="16.27" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17703" min="3" max="3" chance="16.25" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17707" min="3" max="3" chance="16.07" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17704" min="3" max="3" chance="15.85" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="46476" min="1" max="1" chance="1.055" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="1.039" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="1.03" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26373" level="107" type="L2RaidBoss" name="Corrupted Arbor" title="Raid Boss">
+		<race>BEAST</race>
+		<acquire exp="265142238950" sp="238620058" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="43246510" hpRegen="1877.19298245614" mp="172027" mpRegen="1981.48148148148" />
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50952.3809523809" magical="8991.59663865546" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3962.96296296296" magical="2301.0752688172" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="82.5" />
+			<height normal="94.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17437" min="1" max="1" chance="1.49" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17438" min="1" max="1" chance="1.44" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="26.21" /> <!-- Top-grade Spirit Stone -->
+				<item id="17708" min="3" max="3" chance="17.31" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17707" min="3" max="3" chance="16.93" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17704" min="3" max="3" chance="16.37" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17705" min="3" max="3" chance="16.14" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17706" min="3" max="3" chance="15.93" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17703" min="3" max="3" chance="15.87" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="46491" min="1" max="1" chance="1.079" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="1.027" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46476" min="1" max="1" chance="1.001" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26374" level="107" type="L2RaidBoss" name="Corrupted Falena" title="Raid Boss">
+		<race>BEAST</race>
+		<acquire exp="265142238950" sp="238620058" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="43246510" hpRegen="1877.19298245614" mp="172027" mpRegen="1981.48148148148" />
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50952.3809523809" magical="8991.59663865546" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3962.96296296296" magical="2301.0752688172" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="90" />
+			<height normal="73" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17443" min="1" max="1" chance="1.529" /> <!-- Eternal Stockings - Robe -->
+				<item id="17442" min="1" max="1" chance="1.509" /> <!-- Eternal Tunic - Robe -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="25.7" /> <!-- Top-grade Spirit Stone -->
+				<item id="17704" min="3" max="3" chance="17.47" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17708" min="3" max="3" chance="17.22" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17705" min="3" max="3" chance="17.2" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17703" min="3" max="3" chance="16.63" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17707" min="3" max="3" chance="16.29" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17706" min="3" max="3" chance="15.93" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="46491" min="1" max="1" chance="1.094" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="1.066" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46476" min="1" max="1" chance="1.049" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26375" level="107" type="L2RaidBoss" name="Corrupted Arimus" title="Raid Boss">
+		<race>BUG</race>
+		<acquire exp="265142238950" sp="238620058" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="43246510" hpRegen="1877.19298245614" mp="172027" mpRegen="1981.48148148148" />
+			<speed>
+				<walk ground="90" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50952.3809523809" magical="8991.59663865546" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3962.96296296296" magical="2301.0752688172" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="101" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17431" min="1" max="1" chance="0.75" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17432" min="1" max="1" chance="0.75" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17437" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17438" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17442" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings - Robe -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="24.53" /> <!-- Top-grade Spirit Stone -->
+				<item id="17707" min="3" max="3" chance="17.18" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17703" min="3" max="3" chance="16.82" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17705" min="3" max="3" chance="16.43" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17708" min="3" max="3" chance="16.26" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17706" min="3" max="3" chance="16.16" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17704" min="3" max="3" chance="16.14" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="46476" min="1" max="1" chance="1.079" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="1.078" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="1.023" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26380" level="107" type="L2RaidBoss" name="Spirit of Time Arachine" title="Raid Boss">
+		<race>BUG</race>
+		<acquire exp="265142238950" sp="238620058" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="43246510" hpRegen="1877.19298245614" mp="172027" mpRegen="1981.48148148148" />
+			<speed>
+				<walk ground="140" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50952.3809523809" magical="8991.59663865546" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3962.96296296296" magical="2301.0752688172" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="78" />
+			<height normal="52.9" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17431" min="1" max="1" chance="1.562" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17432" min="1" max="1" chance="1.5" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="23.88" /> <!-- Top-grade Spirit Stone -->
+				<item id="17703" min="3" max="3" chance="17.48" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17704" min="3" max="3" chance="17.4" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17705" min="3" max="3" chance="16.85" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17708" min="3" max="3" chance="16.77" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17707" min="3" max="3" chance="16.53" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17706" min="3" max="3" chance="16.47" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="46506" min="1" max="1" chance="1.084" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46476" min="1" max="1" chance="1.066" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="1.043" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26381" level="107" type="L2RaidBoss" name="Spirit of Time Tisraki" title="Raid Boss">
+		<race>PLANT</race>
+		<acquire exp="265142238950" sp="238620058" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="43246510" hpRegen="1877.19298245614" mp="172027" mpRegen="1981.48148148148" />
+			<speed>
+				<walk ground="36" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50952.3809523809" magical="8991.59663865546" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3962.96296296296" magical="2301.0752688172" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="66" />
+			<height normal="54" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17438" min="1" max="1" chance="1.528" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17437" min="1" max="1" chance="1.471" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="24.24" /> <!-- Top-grade Spirit Stone -->
+				<item id="17707" min="3" max="3" chance="17.48" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17705" min="3" max="3" chance="17.05" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17706" min="3" max="3" chance="16.79" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17703" min="3" max="3" chance="16.48" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17708" min="3" max="3" chance="15.99" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17704" min="3" max="3" chance="15.97" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="46491" min="1" max="1" chance="1.126" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="1.089" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46476" min="1" max="1" chance="1.054" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26382" level="107" type="L2RaidBoss" name="Spirit of Time Nympia" title="Raid Boss">
+		<race>PLANT</race>
+		<acquire exp="265142238950" sp="238620058" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="43246510" hpRegen="1877.19298245614" mp="172027" mpRegen="1981.48148148148" />
+			<speed>
+				<walk ground="60" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50952.3809523809" magical="8991.59663865546" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3962.96296296296" magical="2301.0752688172" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="40" />
+			<height normal="91" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17443" min="1" max="1" chance="1.493" /> <!-- Eternal Stockings - Robe -->
+				<item id="17442" min="1" max="1" chance="1.487" /> <!-- Eternal Tunic - Robe -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="25.61" /> <!-- Top-grade Spirit Stone -->
+				<item id="17704" min="3" max="3" chance="17.3" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17708" min="3" max="3" chance="17.24" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17707" min="3" max="3" chance="17.04" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17705" min="3" max="3" chance="16.39" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17706" min="3" max="3" chance="16.15" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17703" min="3" max="3" chance="15.9" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="46476" min="1" max="1" chance="1.116" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="1.081" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="1.017" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+	<npc id="26383" level="107" type="L2RaidBoss" name="Spirit of Time Lafros" title="Raid Boss">
+		<race>PLANT</race>
+		<acquire exp="265142238950" sp="238620058" raidPoints="100" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="43246510" hpRegen="1877.19298245614" mp="172027" mpRegen="1981.48148148148" />
+			<speed>
+				<walk ground="40" />
+				<run ground="300" />
+			</speed>
+			<attack physical="50952.3809523809" magical="8991.59663865546" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3962.96296296296" magical="2301.0752688172" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="45" />
+			<height normal="115.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17431" min="1" max="1" chance="0.75" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17432" min="1" max="1" chance="0.75" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17437" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17438" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17442" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings - Robe -->
+				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="45932" min="1" max="1" chance="24.47" /> <!-- Top-grade Spirit Stone -->
+				<item id="17707" min="3" max="3" chance="17.49" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17703" min="3" max="3" chance="17.06" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17708" min="3" max="3" chance="16.94" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17704" min="3" max="3" chance="16.83" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17705" min="3" max="3" chance="16.78" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17706" min="3" max="3" chance="16.51" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="46491" min="1" max="1" chance="1.121" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46476" min="1" max="1" chance="1.026" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46506" min="1" max="1" chance="1.002" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46462" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38046" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="46494" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46509" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="46449" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46465" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
+	</npc>
+</list>

@@ -683,4 +683,231 @@
 			</lucky>
 		</dropLists>
 	</npc>
+	<npc id="24146" level="104" type="L2Monster" name="Death Shooter">
+		<race>DEMONIC</race>
+		<acquire exp="190890718" sp="171758" />
+		<equipment rhand="48232" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="383894" hpRegen="11.5" mp="36613" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="268725.8" magical="32951.7" critical="4" attackSpeed="253" range="40" />
+			<defence physical="115168.2" magical="18306.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="57" min="5951" max="13886" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
+				<item id="35455" min="1" max="1" chance="0.003" /> <!-- Recipe: Helios Fighter (60%) -->
+			</drop>
+			<spoil>
+				<item id="36539" min="1" max="1" chance="1.406" /> <!-- Quality Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24148" level="105" type="L2Monster" name="Death Pondus" title="Atelia Lookout">
+		<race>DEMONIC</race>
+		<acquire exp="466987689" sp="420273" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="415755" hpRegen="11.5" mp="39551" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="291028.5" magical="35595.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="124726.5" magical="19775.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="32" />
+			<height normal="51" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17439" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Gloves - Light Armor -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="57" min="7598" max="17714" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
+			</drop>
+			<spoil>
+				<item id="36539" min="1" max="1" chance="1.795" /> <!-- Quality Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24152" level="105" type="L2Monster" name="Devil Sinist">
+		<race>DEMONIC</race>
+		<acquire exp="77829003" sp="70008" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="277170" hpRegen="11.5" mp="39551" mpRegen="3.9" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="194019" magical="35595.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="83151" magical="19775.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="21" />
+			<height normal="52.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4862" max="11337" chance="70" /> <!-- Adena -->
+				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="35337" min="1" max="1" chance="0.075" /> <!-- Helios Retributer Fragment -->
+				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
+			</drop>
+			<spoil>
+				<item id="36544" min="1" max="1" chance="0.75" /> <!-- Orichalcum Wire -->
+				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24153" level="105" type="L2Monster" name="Devil Varos" title="Atelia Lookout">
+		<race>DEMONIC</race>
+		<acquire exp="466987689" sp="420273" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="277170" hpRegen="11.5" mp="39551" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="194019" magical="35595.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="83151" magical="19775.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="32" />
+			<height normal="51" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="57" min="7598" max="17714" chance="70" /> <!-- Adena -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="35345" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
+			</drop>
+			<spoil>
+				<item id="36544" min="1" max="1" chance="1.235" /> <!-- Orichalcum Wire -->
+				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24156" level="105" type="L2Monster" name="Demonic Archer">
+		<race>DEMONIC</race>
+		<acquire exp="93386601" sp="84010" />
+		<equipment rhand="47898" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="277170" hpRegen="11.5" mp="36613" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="194019" magical="32951.7" critical="4" attackSpeed="253" range="40" />
+			<defence physical="83151" magical="18306.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="26" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4255" max="9920" chance="70" /> <!-- Adena -->
+				<item id="35329" min="1" max="1" chance="0.3" /> <!-- Helios Slasher Fragment -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="36525" min="1" max="1" chance="0.03" /> <!-- Durandil -->
+				<item id="35470" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="1.287" /> <!-- Durable Braid -->
+				<item id="36535" min="1" max="1" chance="0.075" /> <!-- Quality Braid -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="24158" level="105" type="L2Monster" name="Demonic Weiss" title="Atelia Lookout">
+		<race>DEMONIC</race>
+		<acquire exp="466987689" sp="420273" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="277170" hpRegen="11.5" mp="39551" mpRegen="3.9" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="194019" magical="35595.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="83151" magical="19775.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+		</skillList>
+		<collision>
+			<radius normal="21" />
+			<height normal="52.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
+				<item id="57" min="7598" max="17714" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="36525" min="1" max="1" chance="0.03" /> <!-- Durandil -->
+				<item id="36549" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="2.452" /> <!-- Durable Braid -->
+				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
+			</spoil>
+		</dropLists>
+	</npc>
 </list>

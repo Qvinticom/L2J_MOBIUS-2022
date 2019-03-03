@@ -643,4 +643,44 @@
 			<height normal="316.5" />
 		</collision>
 	</npc>
+	<npc id="29319" level="109" type="L2RaidBoss" name="Etis van Etina" title="Overlord">
+		<race>HUMANOID</race>
+		<acquire exp="0" sp="0" raidPoints="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="707640714" hpRegen="1912.28070175439" mp="110728" mpRegen="2018.51851851852" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="51904.7619047619" magical="9159.66386554622" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4037.03703703704" magical="2344.08602150538" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="42" />
+			<height normal="136.2" />
+		</collision>
+	</npc>
+	<npc id="29320" level="109" type="L2RaidBoss" name="Kain van Halter" title="Disciple of Void">
+		<race>ETC</race>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="10713486" hpRegen="1789.47368421053" mp="96766" mpRegen="1888.88888888889" />
+			<speed>
+				<walk ground="60" /> <!-- Need retail value -->
+				<run ground="120" /> <!-- Need retail value -->
+			</speed>
+			<attack physical="48571.4285714286" magical="8571.42857142857" critical="4" attackSpeed="253" range="40" />
+			<defence physical="3777.77777777778" magical="2193.54838709677" />
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="16" /> <!-- Need retail value -->
+			<height normal="13.25" /> <!-- Need retail value -->
+		</collision>
+	</npc>
 </list>

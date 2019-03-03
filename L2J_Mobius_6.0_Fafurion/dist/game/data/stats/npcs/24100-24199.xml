@@ -7,8 +7,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="11929754" hpRegen="11.5" mp="26228" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="45" />
+				<run ground="180" />
 			</speed>
 			<attack physical="8350827.8" magical="23605.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3578926.2" magical="13114" />
@@ -22,8 +22,8 @@
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="45" />
+			<height normal="65.25" />
 		</collision>
 	</npc>
 	<npc id="24116" level="105" type="L2Monster" name="Lithra Needle">
@@ -33,8 +33,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="11225834" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 			<attack physical="7858083.8" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3367750.2" magical="12924" />
@@ -48,8 +48,8 @@
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="24" />
+			<height normal="66" />
 		</collision>
 	</npc>
 	<npc id="24117" level="104" type="L2Monster" name="Crystal Reep">
@@ -59,8 +59,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1151724" hpRegen="11.5" mp="25460" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 			<attack physical="806206.8" magical="22914" critical="4" attackSpeed="253" range="40" />
 			<defence physical="345517.2" magical="12730" />
@@ -72,11 +72,11 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="16" />
+			<height normal="57" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -90,7 +90,7 @@
 				<item id="36564" min="1" max="1" chance="1.041" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -101,8 +101,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1151724" hpRegen="11.5" mp="25460" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 			<attack physical="806206.8" magical="22914" critical="4" attackSpeed="253" range="40" />
 			<defence physical="345517.2" magical="12730" />
@@ -114,11 +114,11 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="16" />
+			<height normal="57" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -132,7 +132,7 @@
 				<item id="36564" min="1" max="1" chance="1.041" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -143,8 +143,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1151724" hpRegen="11.5" mp="25460" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 			<attack physical="806206.8" magical="22914" critical="4" attackSpeed="253" range="40" />
 			<defence physical="345517.2" magical="12730" />
@@ -156,11 +156,11 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="16" />
+			<height normal="43" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -174,7 +174,7 @@
 				<item id="36564" min="1" max="1" chance="1.059" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -185,8 +185,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1151724" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="23" />
+				<run ground="180" />
 			</speed>
 			<attack physical="806206.8" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="345517.2" magical="12924" />
@@ -198,11 +198,11 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="68.9" />
+			<height normal="60.05" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -216,7 +216,7 @@
 				<item id="36564" min="1" max="1" chance="1.069" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -227,8 +227,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1151724" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="23" />
+				<run ground="180" />
 			</speed>
 			<attack physical="806206.8" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="345517.2" magical="12924" />
@@ -240,11 +240,11 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="68.9" />
+			<height normal="60.05" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -258,7 +258,7 @@
 				<item id="36564" min="1" max="1" chance="1.069" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -269,8 +269,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="36" />
+				<run ground="180" />
 			</speed>
 			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="374194.8" magical="12924" />
@@ -282,11 +282,11 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="66" />
+			<height normal="54" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -300,7 +300,7 @@
 				<item id="36564" min="1" max="1" chance="0.989" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -311,8 +311,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="36" />
+				<run ground="180" />
 			</speed>
 			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="374194.8" magical="12924" />
@@ -324,11 +324,11 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="66" />
+			<height normal="54" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -342,7 +342,7 @@
 				<item id="36564" min="1" max="1" chance="0.989" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -353,8 +353,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="57" />
+				<run ground="180" />
 			</speed>
 			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="374194.8" magical="12924" />
@@ -366,11 +366,11 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="45.5" />
+			<height normal="61.35" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -384,7 +384,7 @@
 				<item id="36564" min="1" max="1" chance="1.008" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -395,8 +395,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="50" />
+				<run ground="180" />
 			</speed>
 			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="374194.8" magical="12924" />
@@ -408,11 +408,11 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="45.5" />
+			<height normal="61.35" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -426,7 +426,7 @@
 				<item id="36564" min="1" max="1" chance="1.008" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -437,8 +437,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="374194.8" magical="12924" />
@@ -450,25 +450,25 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="39" />
+			<height normal="99.7" />
 		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="36427" max="84934" chance="70" /> <!-- Adena -->
 				<item id="36539" min="1" max="1" chance="2.228" /> <!-- Quality Leather Braid -->
 				<item id="35453" min="1" max="1" chance="0.03" /> <!-- Recipe: Helios Slasher (60%) -->
-				<item id="37801" min="1" max="1" chance="0.03" /> <!-- Bloody Eternal Enhancement Stone Fragment -->
+				<item id="37801" min="1" max="1" chance="0.03" /> <!-- Bloody Armor Enhancement Stone Fragment -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="1.297" /> <!-- Greater Synthetic Cokes -->
 				<item id="19440" min="1" max="1" chance="0.3" /> <!-- Gemstone (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -479,8 +479,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="1247316" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="40" />
+				<run ground="180" />
 			</speed>
 			<attack physical="873121.2" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="374194.8" magical="12924" />
@@ -492,25 +492,25 @@
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
-			<skill id="28149" level="7" /> <!--  -->
+			<skill id="28149" level="7" /> <!-- Faint Attack Resistance --> <!--  -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="39" />
+			<height normal="99.7" />
 		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="36427" max="84934" chance="70" /> <!-- Adena -->
 				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
 				<item id="35453" min="1" max="1" chance="0.03" /> <!-- Recipe: Helios Slasher (60%) -->
-				<item id="37801" min="1" max="1" chance="0.03" /> <!-- Bloody Eternal Enhancement Stone Fragment -->
+				<item id="37801" min="1" max="1" chance="0.03" /> <!-- Bloody Armor Enhancement Stone Fragment -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="1.28" /> <!-- Greater Synthetic Cokes -->
 				<item id="19440" min="1" max="1" chance="0.3" /> <!-- Gemstone (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -521,8 +521,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="207303" hpRegen="11.5" mp="25460" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 			<attack physical="145112.1" magical="22914" critical="4" attackSpeed="253" range="40" />
 			<defence physical="62190.9" magical="12730" />
@@ -535,8 +535,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="12" />
+			<height normal="42" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -552,7 +552,7 @@
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -563,8 +563,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="207303" hpRegen="11.5" mp="25460" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="39" />
+				<run ground="180" />
 			</speed>
 			<attack physical="145112.1" magical="22914" critical="4" attackSpeed="253" range="40" />
 			<defence physical="62190.9" magical="12730" />
@@ -577,8 +577,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="16" />
+			<height normal="43" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -594,7 +594,7 @@
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -605,8 +605,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="224508" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="23" />
+				<run ground="180" />
 			</speed>
 			<attack physical="157155.6" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="67352.4" magical="12924" />
@@ -619,8 +619,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="35" />
+			<height normal="35" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -637,7 +637,7 @@
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -648,8 +648,8 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="224508" hpRegen="11.5" mp="25848" mpRegen="3.9" />
 			<speed>
-				<walk ground="60" /> <!-- Need retail value -->
-				<run ground="120" /> <!-- Need retail value -->
+				<walk ground="36" />
+				<run ground="180" />
 			</speed>
 			<attack physical="157155.6" magical="23263.2" critical="4" attackSpeed="253" range="40" />
 			<defence physical="67352.4" magical="12924" />
@@ -662,8 +662,8 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<collision>
-			<radius normal="16" /> <!-- Need retail value -->
-			<height normal="13.25" /> <!-- Need retail value -->
+			<radius normal="44" />
+			<height normal="35" />
 		</collision>
 		<dropLists>
 			<drop>
@@ -679,7 +679,294 @@
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="24146" level="104" type="L2Monster" name="Death Shooter">
+		<race>DEMONIC</race>
+		<acquire exp="190890718" sp="171758" />
+		<equipment rhand="48232" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="383894" hpRegen="11.5" mp="36613" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="268725.8" magical="32951.7" critical="4" attackSpeed="253" range="40" />
+			<defence physical="115168.2" magical="18306.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+		</skillList>
+		<collision>
+			<radius normal="17" />
+			<height normal="44" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17437" min="1" max="1" chance="0.003" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="57" min="5951" max="13886" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
+				<item id="35455" min="1" max="1" chance="0.003" /> <!-- Recipe: Helios Fighter (60%) -->
+			</drop>
+			<spoil>
+				<item id="36539" min="1" max="1" chance="1.406" /> <!-- Quality Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.09" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="24148" level="105" type="L2Monster" name="Death Pondus" title="Atelia Lookout">
+		<race>DEMONIC</race>
+		<acquire exp="466987689" sp="420273" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="415755" hpRegen="11.5" mp="39551" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="291028.5" magical="35595.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="124726.5" magical="19775.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="32" />
+			<height normal="51" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17439" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Gloves - Light Armor -->
+				<item id="17420" min="1" max="1" chance="0.0009" /> <!-- Helios Fighter -->
+				<item id="57" min="7598" max="17714" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
+			</drop>
+			<spoil>
+				<item id="36539" min="1" max="1" chance="1.795" /> <!-- Quality Leather Braid -->
+				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="44.04" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="24152" level="105" type="L2Monster" name="Devil Sinist">
+		<race>DEMONIC</race>
+		<acquire exp="77829003" sp="70008" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="277170" hpRegen="11.5" mp="39551" mpRegen="3.9" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="194019" magical="35595.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="83151" magical="19775.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="21" />
+			<height normal="52.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4862" max="11337" chance="70" /> <!-- Adena -->
+				<item id="35347" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="35337" min="1" max="1" chance="0.075" /> <!-- Helios Retributer Fragment -->
+				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
+			</drop>
+			<spoil>
+				<item id="36544" min="1" max="1" chance="0.75" /> <!-- Orichalcum Wire -->
+				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="45.97" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="24153" level="105" type="L2Monster" name="Devil Varos" title="Atelia Lookout">
+		<race>DEMONIC</race>
+		<acquire exp="466987689" sp="420273" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="277170" hpRegen="11.5" mp="39551" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="194019" magical="35595.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="83151" magical="19775.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="32" />
+			<height normal="51" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17426" min="1" max="1" chance="0.0009" /> <!-- Helios Retributer -->
+				<item id="57" min="7598" max="17714" chance="70" /> <!-- Adena -->
+				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
+				<item id="35345" min="1" max="1" chance="0.075" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
+			</drop>
+			<spoil>
+				<item id="36544" min="1" max="1" chance="1.235" /> <!-- Orichalcum Wire -->
+				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="44.18" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="24156" level="105" type="L2Monster" name="Demonic Archer">
+		<race>DEMONIC</race>
+		<acquire exp="93386601" sp="84010" />
+		<equipment rhand="47898" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="277170" hpRegen="11.5" mp="36613" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="200" />
+			</speed>
+			<attack physical="194019" magical="32951.7" critical="4" attackSpeed="253" range="40" />
+			<defence physical="83151" magical="18306.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+		</skillList>
+		<collision>
+			<radius normal="12" />
+			<height normal="26" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="4255" max="9920" chance="70" /> <!-- Adena -->
+				<item id="35329" min="1" max="1" chance="0.3" /> <!-- Helios Slasher Fragment -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="36525" min="1" max="1" chance="0.03" /> <!-- Durandil -->
+				<item id="35470" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="1.287" /> <!-- Durable Braid -->
+				<item id="36535" min="1" max="1" chance="0.075" /> <!-- Quality Braid -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="44.63" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="24158" level="105" type="L2Monster" name="Demonic Weiss" title="Atelia Lookout">
+		<race>DEMONIC</race>
+		<acquire exp="466987689" sp="420273" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="277170" hpRegen="11.5" mp="39551" mpRegen="3.9" />
+			<speed>
+				<walk ground="50" />
+				<run ground="180" />
+			</speed>
+			<attack physical="194019" magical="35595.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="83151" magical="19775.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+		</skillList>
+		<collision>
+			<radius normal="21" />
+			<height normal="52.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
+				<item id="57" min="7598" max="17714" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.3" /> <!-- Orichalcum -->
+				<item id="36525" min="1" max="1" chance="0.03" /> <!-- Durandil -->
+				<item id="36549" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="35469" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="2.452" /> <!-- Durable Braid -->
+				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="44.79" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="24159" level="104" type="L2Monster" name="Atelia Yuyurina">
+		<race>UNDEAD</race>
+		<acquire exp="190890718" sp="171758" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="383894" hpRegen="11.5" mp="39551" mpRegen="3.9" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+			<attack physical="268725.8" magical="35595.9" critical="4" attackSpeed="253" range="40" />
+			<defence physical="115168.2" magical="19775.5" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="26.5" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5951" max="13886" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.75" /> <!-- Orichalcum -->
+				<item id="36539" min="1" max="1" chance="0.3" /> <!-- Quality Leather Braid -->
+				<item id="35329" min="1" max="1" chance="0.075" /> <!-- Helios Slasher Fragment -->
+				<item id="35331" min="1" max="1" chance="0.075" /> <!-- Helios Fighter Fragment -->
+				<item id="35337" min="1" max="1" chance="0.075" /> <!-- Helios Retributer Fragment -->
+			</drop>
+			<spoil>
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="44.5" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
