@@ -54,7 +54,7 @@ public final class AdventurersGuide extends AbstractNpcAI
 		new SkillHolder(15653, 1), // Refreshing Sonata (Adventurer)
 	};
 	// Misc
-	private static int MAX_LEVEL_BUFFS = 94;
+	private static int MAX_LEVEL_BUFFS = 99;
 	private static int MIN_LEVEL_PROTECTION = 40;
 	
 	private AdventurersGuide()
