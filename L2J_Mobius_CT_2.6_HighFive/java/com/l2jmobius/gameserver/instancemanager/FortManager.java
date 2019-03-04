@@ -34,7 +34,7 @@ public final class FortManager implements InstanceListManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
 	
-	private final List<Fort> _forts = new ArrayList<>();
+	private static final List<Fort> _forts = new ArrayList<>();
 	
 	public final int findNearestFortIndex(L2Object obj)
 	{

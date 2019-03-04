@@ -35,7 +35,7 @@ public final class FortManager implements InstanceListManager
 {
 	private static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
 	
-	private final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
+	private static final Map<Integer, Fort> _forts = new ConcurrentSkipListMap<>();
 	
 	public final Fort findNearestFort(L2Object obj)
 	{

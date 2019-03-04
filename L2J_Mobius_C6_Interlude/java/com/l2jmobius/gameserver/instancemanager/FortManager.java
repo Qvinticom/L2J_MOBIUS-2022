@@ -31,17 +31,11 @@ import com.l2jmobius.gameserver.model.entity.siege.Fort;
 /**
  * @author programmos, scoria dev
  */
-
 public class FortManager
 {
 	protected static final Logger LOGGER = Logger.getLogger(FortManager.class.getName());
 	
-	public static final FortManager getInstance()
-	{
-		return SingletonHolder._instance;
-	}
-	
-	private final List<Fort> _forts = new ArrayList<>();
+	private static final List<Fort> _forts = new ArrayList<>();
 	
 	public FortManager()
 	{
@@ -192,6 +186,11 @@ public class FortManager
 	public final List<Fort> getForts()
 	{
 		return _forts;
+	}
+	
+	public static final FortManager getInstance()
+	{
+		return SingletonHolder._instance;
 	}
 	
 	private static class SingletonHolder
