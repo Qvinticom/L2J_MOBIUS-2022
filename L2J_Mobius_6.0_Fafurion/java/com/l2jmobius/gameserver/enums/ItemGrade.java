@@ -64,6 +64,7 @@ public enum ItemGrade
 			case R:
 			case R95:
 			case R99:
+			case R110:
 			{
 				return R;
 			}

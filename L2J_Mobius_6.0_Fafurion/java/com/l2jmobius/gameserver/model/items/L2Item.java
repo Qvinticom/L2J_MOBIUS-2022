@@ -381,6 +381,7 @@ public abstract class L2Item extends ListenersContainer implements IIdentifiable
 			}
 			case R95:
 			case R99:
+			case R110:
 			{
 				return CrystalType.R;
 			}

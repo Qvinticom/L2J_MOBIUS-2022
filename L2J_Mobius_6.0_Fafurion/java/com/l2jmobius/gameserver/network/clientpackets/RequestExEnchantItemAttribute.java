@@ -311,6 +311,7 @@ public class RequestExEnchantItemAttribute implements IClientIncomingPacket
 			}
 			case R95:
 			case R99:
+			case R110:
 			{
 				success = true;
 				break;

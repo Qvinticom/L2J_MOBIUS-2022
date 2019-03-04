@@ -33,7 +33,8 @@ public enum CrystalType
 	R(8, 17371, 30, 500),
 	R95(9, 17371, 30, 500),
 	R99(10, 17371, 30, 500),
-	EVENT(11, 0, 0, 0);
+	R110(11, 17371, 30, 500),
+	EVENT(12, 0, 0, 0);
 	
 	private final int _level;
 	private final int _crystalId;
@@ -90,9 +91,9 @@ public enum CrystalType
 	{
 		level += _level;
 		
-		if (level >= CrystalType.R99.getLevel())
+		if (level >= CrystalType.R110.getLevel())
 		{
-			return CrystalType.R99;
+			return CrystalType.R110;
 		}
 		
 		if (level <= CrystalType.NONE.getLevel())

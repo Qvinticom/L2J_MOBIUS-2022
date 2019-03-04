@@ -2419,7 +2419,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="239" toLevel="10" name="Expertise">
+	<skill id="239" toLevel="11" name="Expertise">
 		<!-- Increases expertise in using $s1 grade or lower equipment. -->
 		<icon>
 			<value level="1">icon.skill0239</value>
@@ -2445,6 +2445,7 @@
 			<value level="8">90</value>
 			<value level="9">95</value>
 			<value level="10">99</value>
+			<value level="11">110</value>
 		</magicLvl>
 		<operateType>P</operateType>
 		<magicCriticalRate>5</magicCriticalRate>
@@ -2461,6 +2462,7 @@
 					<value level="8">R</value>
 					<value level="9">R95</value>
 					<value level="10">R99</value>
+					<value level="11">R110</value>
 				</grade>
 			</effect>
 		</effects>

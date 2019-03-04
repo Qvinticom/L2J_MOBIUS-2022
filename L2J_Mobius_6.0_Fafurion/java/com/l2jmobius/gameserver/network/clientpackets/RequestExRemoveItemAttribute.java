@@ -202,6 +202,18 @@ public class RequestExRemoveItemAttribute implements IClientIncomingPacket
 				}
 				break;
 			}
+			case R110:
+			{
+				if (item.getItem() instanceof L2Weapon)
+				{
+					_price = 6400000;
+				}
+				else
+				{
+					_price = 5120000;
+				}
+				break;
+			}
 		}
 		
 		return _price;

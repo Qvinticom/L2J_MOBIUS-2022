@@ -155,6 +155,11 @@ public class RequestCommissionList implements IClientIncomingPacket
 				filter = filter.and(i -> i.getCrystalType() == CrystalType.R99);
 				break;
 			}
+			case 10:
+			{
+				filter = filter.and(i -> i.getCrystalType() == CrystalType.R110);
+				break;
+			}
 		}
 		
 		filter = filter.and(i -> _query.isEmpty() || i.getName().toLowerCase().contains(_query.toLowerCase()));
