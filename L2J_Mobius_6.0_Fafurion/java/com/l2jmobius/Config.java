@@ -889,13 +889,11 @@ public final class Config
 	public static int ANAKIM_MIN_PLAYERS;
 	public static int ANAKIM_MAX_PLAYERS;
 	public static int ANAKIM_MIN_PLAYER_LVL;
-	public static int ANAKIM_MAX_PLAYER_LVL;
 	
 	// Lilith
 	public static int LILITH_MIN_PLAYERS;
 	public static int LILITH_MAX_PLAYERS;
 	public static int LILITH_MIN_PLAYER_LVL;
-	public static int LILITH_MAX_PLAYER_LVL;
 	
 	// Helios
 	public static int HELIOS_WAIT_TIME;
@@ -2230,13 +2228,11 @@ public final class Config
 			
 			ANAKIM_MIN_PLAYERS = GrandBossSettings.getInt("AnakimMinPlayers", 98);
 			ANAKIM_MAX_PLAYERS = GrandBossSettings.getInt("AnakimMaxPlayers", 120);
-			ANAKIM_MIN_PLAYER_LVL = GrandBossSettings.getInt("AnakimMinPlayerLvl", 90);
-			ANAKIM_MAX_PLAYER_LVL = GrandBossSettings.getInt("AnakimMaxPlayerLvl", 94);
+			ANAKIM_MIN_PLAYER_LVL = GrandBossSettings.getInt("AnakimMinPlayerLvl", 105);
 			
 			LILITH_MIN_PLAYERS = GrandBossSettings.getInt("LilithMinPlayers", 98);
 			LILITH_MAX_PLAYERS = GrandBossSettings.getInt("LilithMaxPlayers", 120);
-			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("LilithMinPlayerLvl", 85);
-			LILITH_MAX_PLAYER_LVL = GrandBossSettings.getInt("LilithMaxPlayerLvl", 89);
+			LILITH_MIN_PLAYER_LVL = GrandBossSettings.getInt("LilithMinPlayerLvl", 105);
 			
 			TRASKEN_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfTraskenSpawn", 264);
 			TRASKEN_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfTraskenSpawn", 72);

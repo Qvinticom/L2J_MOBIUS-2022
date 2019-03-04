@@ -513,12 +513,11 @@ public class Lilith extends AbstractNpcAI
 			
 			for (L2PcInstance member : members)
 			{
-				if ((member.getLevel() < Config.LILITH_MIN_PLAYER_LVL) || (member.getLevel() > Config.LILITH_MAX_PLAYER_LVL))
+				if (member.getLevel() < Config.LILITH_MIN_PLAYER_LVL)
 				{
 					final NpcHtmlMessage packet = new NpcHtmlMessage(npc.getObjectId());
 					packet.setHtml(getHtm(player, "31118-04.html"));
 					packet.replace("%minlvl%", Integer.toString(Config.LILITH_MIN_PLAYER_LVL));
-					packet.replace("%maxlvl%", Integer.toString(Config.LILITH_MAX_PLAYER_LVL));
 					player.sendPacket(packet);
 					return null;
 				}
