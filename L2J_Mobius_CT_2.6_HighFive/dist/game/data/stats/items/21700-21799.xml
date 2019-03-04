@@ -834,13 +834,7 @@
 	<item id="21751" type="EtcItem" name="Rune Jewelry Box - Crystal">
 		<!-- Jewelry box containing the precious treasure of Rune. When used, you can obtain 15 Crystals of Life with a certain rate of chance. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
-		<set name="material" val="CRYSTAL" />
-		<set name="is_stackable" val="true" />
-	</item>
-	<item id="21752" type="EtcItem" name="Rune Jewelry Box - Talisman">
-		<!-- Jewelry box containing the precious treasure of Rune. When used, you can obtain a Talisman with a certain rate of chance. -->
-		<set name="icon" val="icon.etc_treasure_box_i06" />
-		<set name="material" val="CRYSTAL" />
+		<set name="material" val="COTTON" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_tradable" val="false" />
@@ -850,6 +844,20 @@
 		<set name="is_freightable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<set name="item_skill" val="22275-1" /> 
+	</item>
+	<item id="21752" type="EtcItem" name="Rune Jewelry Box - Talisman">
+		<!-- Jewelry box containing the precious treasure of Rune. When used, you can obtain a Talisman with a certain rate of chance. -->
+		<set name="icon" val="icon.etc_treasure_box_i06" />
+		<set name="material" val="COTTON" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_tradable" val="false" />
+		<set name="is_dropable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="22276-1" /> 
 	</item>
 	<item id="21753" type="EtcItem" name="Pablo's Box">
 		<!-- Box containing the precious treasure of Elmore's renowned scholar Pablo. When used, you can obtain a hat with a certain rate of chance. -->

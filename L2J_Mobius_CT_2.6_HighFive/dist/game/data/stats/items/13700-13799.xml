@@ -1501,11 +1501,11 @@
 	<item id="13799" type="EtcItem" name="Treasure Sack of the Ancient Giants">
 		<!-- Contains the treasure of the ancient Giants. Double-click to open it. -->
 		<set name="icon" val="BranchSys2.icon.etc_ancient_treasure_sack_i00" />
-		<set name="default_action" val="PEEL" />
+		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
-		<set name="handler" val="ExtractableItems" />
-		<set name="capsuled_items" val="9628,1,2,60;9629,1,2,30;9630,1,2,35" />
+		<set name="handler" val="ItemSkills" />
+		<set name="item_skill" val="2838-1" />
 	</item>
 </list>
