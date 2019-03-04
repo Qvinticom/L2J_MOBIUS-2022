@@ -33,6 +33,7 @@ import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jmobius.gameserver.data.xml.impl.ClanHallData;
+import com.l2jmobius.gameserver.enums.ClanWarState;
 import com.l2jmobius.gameserver.enums.UserInfoType;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
 import com.l2jmobius.gameserver.instancemanager.ClanEntryManager;
@@ -41,7 +42,6 @@ import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.ClanWar;
-import com.l2jmobius.gameserver.model.ClanWar.ClanWarState;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -470,6 +470,10 @@ public class ClanTable
 		for (L2Clan clan : _clans.values())
 		{
 			clan.updateInDB();
+			for (ClanWar war : clan.getWarList().values())
+			{
+				storeClanWars(war);
+			}
 		}
 	}
 	

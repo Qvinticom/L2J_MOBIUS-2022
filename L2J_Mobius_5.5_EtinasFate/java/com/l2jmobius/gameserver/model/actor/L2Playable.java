@@ -17,10 +17,10 @@
 package com.l2jmobius.gameserver.model.actor;
 
 import com.l2jmobius.gameserver.ai.CtrlEvent;
+import com.l2jmobius.gameserver.enums.ClanWarState;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.ClanWar;
-import com.l2jmobius.gameserver.model.ClanWar.ClanWarState;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2Object;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;

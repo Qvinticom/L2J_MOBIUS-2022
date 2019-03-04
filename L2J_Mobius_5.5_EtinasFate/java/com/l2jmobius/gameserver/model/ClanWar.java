@@ -23,6 +23,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
+import com.l2jmobius.gameserver.enums.ClanWarState;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.clan.OnClanWarStart;
@@ -316,15 +317,5 @@ public final class ClanWar
 	public L2Clan getOpposingClan(L2Clan clan)
 	{
 		return _attackerClanId == clan.getId() ? ClanTable.getInstance().getClan(_attackedClanId) : ClanTable.getInstance().getClan(_attackerClanId);
-	}
-	
-	public enum ClanWarState
-	{
-		DECLARATION,
-		BLOOD_DECLARATION,
-		MUTUAL,
-		WIN,
-		LOSS,
-		TIE
 	}
 }
