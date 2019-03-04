@@ -99,6 +99,7 @@ import quests.Q00472_ChallengeSteamCorridor.Q00472_ChallengeSteamCorridor;
 import quests.Q00473_InTheCoralGarden.Q00473_InTheCoralGarden;
 import quests.Q00474_WaitingForTheSummer.Q00474_WaitingForTheSummer;
 import quests.Q00476_PlainMission.Q00476_PlainMission;
+import quests.Q00482_RecertificationOfValue.Q00482_RecertificationOfValue;
 import quests.Q00483_IntendedTactic.Q00483_IntendedTactic;
 import quests.Q00485_HotSpringWater.Q00485_HotSpringWater;
 import quests.Q00492_TombRaiders.Q00492_TombRaiders;
@@ -482,6 +483,7 @@ public class QuestMasterHandler
 		Q00474_WaitingForTheSummer.class,
 		Q00476_PlainMission.class,
 		Q00483_IntendedTactic.class,
+		Q00482_RecertificationOfValue.class,
 		Q00485_HotSpringWater.class,
 		Q00492_TombRaiders.class,
 		Q00493_KickingOutUnwelcomeGuests.class,
