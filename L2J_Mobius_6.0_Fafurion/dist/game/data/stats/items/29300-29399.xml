@@ -1311,6 +1311,7 @@
 		<!-- Special hair accessory for heroes who just started their adventures in the world of Aden. -->
 		<set name="icon" val="icon.s_newbie_user_display" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />

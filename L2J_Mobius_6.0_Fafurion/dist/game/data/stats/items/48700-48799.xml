@@ -606,6 +606,7 @@
 		<!-- A shining magic T-shirt imbued with Einhasad's Energy. <Item Skill>. Increases M. Def. by 14. Increases Speed by 7. Increases Max HP by 531. Increases Max MP by 531. Decreases Skill MP Consumption by 3%. Increases Damage Reflection Resistance by 5. Increases Water/ Fire/ Wind/ Earth/ Holy/ Dark Attack Resistance by 18. Increases STR by 3, DEX by 3, CON by 2, INT by 3, WIT by 3, MEN by 2. <Active Skill>. Einhasad's Wrath -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CRYSTAL" />
 		<set name="weight" val="130" />

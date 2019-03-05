@@ -5,9 +5,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">179</stat>
 		</stats>
@@ -17,10 +19,13 @@
 		<set name="icon" val="icon.armor_t903_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">64</stat>
 			<stat type="pDef">262</stat>
@@ -31,10 +36,13 @@
 		<set name="icon" val="icon.armor_t903_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">43</stat>
 			<stat type="pDef">164</stat>
@@ -44,10 +52,13 @@
 	<item id="80203" name="Enchanted Leviathan Gloves" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t903_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -55,10 +66,13 @@
 	<item id="80204" name="Enchanted Leviathan Shoes" additionalName="Robe" type="Armor">
 		<set name="icon" val="icon.armor_t903_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -69,9 +83,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">186</stat>
 		</stats>
@@ -81,10 +97,13 @@
 		<set name="icon" val="icon.armor_t901_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">498</stat>
 		</stats>
@@ -94,10 +113,13 @@
 		<set name="icon" val="icon.armor_t901_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">311</stat>
 		</stats>
@@ -106,10 +128,13 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t901_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -118,10 +143,13 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t901_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -132,9 +160,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">186</stat>
 		</stats>
@@ -144,10 +174,13 @@
 		<set name="icon" val="icon.armor_t902_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">398</stat>
 			<stat type="rEvas">5</stat>
@@ -158,10 +191,13 @@
 		<set name="icon" val="icon.armor_t902_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">248</stat>
 			<stat type="rEvas">3</stat>
@@ -171,10 +207,13 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t902_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -183,10 +222,13 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t902_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -197,9 +239,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">186</stat>
 		</stats>
@@ -209,10 +253,13 @@
 		<set name="icon" val="icon.armor_t903_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">68</stat>
 			<stat type="pDef">273</stat>
@@ -224,10 +271,13 @@
 		<set name="icon" val="icon.armor_t903_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">45</stat>
 			<stat type="pDef">171</stat>
@@ -238,10 +288,13 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t903_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -250,10 +303,13 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t903_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -264,9 +320,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">186</stat>
 		</stats>
@@ -276,10 +334,13 @@
 		<set name="icon" val="icon.armor_t901_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">498</stat>
 		</stats>
@@ -289,10 +350,13 @@
 		<set name="icon" val="icon.armor_t901_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">311</stat>
 		</stats>
@@ -301,10 +365,13 @@
 		<!-- PvP Enchant Type Item. Decreases damage from a PC by 2%. -->
 		<set name="icon" val="icon.armor_t901_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -313,10 +380,13 @@
 		<!-- PvP Enchant Type Item. Decreases damage from a PC by 2%. -->
 		<set name="icon" val="icon.armor_t901_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -327,9 +397,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">186</stat>
 		</stats>
@@ -339,10 +411,13 @@
 		<set name="icon" val="icon.armor_t902_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">398</stat>
 			<stat type="rEvas">5</stat>
@@ -353,10 +428,13 @@
 		<set name="icon" val="icon.armor_t902_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">248</stat>
 			<stat type="rEvas">3</stat>
@@ -366,10 +444,13 @@
 		<!-- PvP Enchant Type Item. Decreases damage from a PC by 2%. -->
 		<set name="icon" val="icon.armor_t902_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -378,10 +459,13 @@
 		<!-- PvP Enchant Type Item. Decreases damage from a PC by 2%. -->
 		<set name="icon" val="icon.armor_t902_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -392,9 +476,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">186</stat>
 		</stats>
@@ -404,10 +490,13 @@
 		<set name="icon" val="icon.armor_t903_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">68</stat>
 			<stat type="pDef">273</stat>
@@ -419,10 +508,13 @@
 		<set name="icon" val="icon.armor_t903_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">45</stat>
 			<stat type="pDef">171</stat>
@@ -433,10 +525,13 @@
 		<!-- PvP Enchant Type Item. Decreases damage from a PC by 2%. -->
 		<set name="icon" val="icon.armor_t903_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -445,10 +540,13 @@
 		<!-- PvP Enchant Type Item. Decreases damage from a PC by 2%. -->
 		<set name="icon" val="icon.armor_t903_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">124</stat>
 		</stats>
@@ -459,9 +557,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">198</stat>
 		</stats>
@@ -471,10 +571,13 @@
 		<set name="icon" val="icon.armor_t111_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">528</stat>
 		</stats>
@@ -484,10 +587,13 @@
 		<set name="icon" val="icon.armor_t111_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">330</stat>
 		</stats>
@@ -496,10 +602,13 @@
 		<!-- PvP/ PvE enchant type item. All Damage Received -2%, P. Atk. +2%, and M. Atk. +4%. -->
 		<set name="icon" val="icon.armor_t111_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">132</stat>
 		</stats>
@@ -508,10 +617,13 @@
 		<!-- PvP/ PvE enchant type item. All Damage Received -2%, P. Atk. +2%, and M. Atk. +4%. -->
 		<set name="icon" val="icon.armor_t111_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">132</stat>
 		</stats>
@@ -522,9 +634,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">198</stat>
 		</stats>
@@ -534,10 +648,13 @@
 		<set name="icon" val="icon.armor_t112_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">422</stat>
 			<stat type="rEvas">5</stat>
@@ -548,10 +665,13 @@
 		<set name="icon" val="icon.armor_t112_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">264</stat>
 			<stat type="rEvas">3</stat>
@@ -561,10 +681,13 @@
 		<!-- PvP/ PvE enchant type item. All Damage Received -2%, P. Atk. +2%, and M. Atk. +4%. -->
 		<set name="icon" val="icon.armor_t112_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">132</stat>
 		</stats>
@@ -573,10 +696,13 @@
 		<!-- PvP/ PvE enchant type item. All Damage Received -2%, P. Atk. +2%, and M. Atk. +4%. -->
 		<set name="icon" val="icon.armor_t112_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">132</stat>
 		</stats>
@@ -587,9 +713,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">198</stat>
 		</stats>
@@ -599,10 +727,13 @@
 		<set name="icon" val="icon.armor_t113_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">73</stat>
 			<stat type="pDef">290</stat>
@@ -614,10 +745,13 @@
 		<set name="icon" val="icon.armor_t113_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">49</stat>
 			<stat type="pDef">181</stat>
@@ -628,10 +762,13 @@
 		<!-- PvP/ PvE enchant type item. All Damage Received -2%, P. Atk. +2%, and M. Atk. +4%. -->
 		<set name="icon" val="icon.armor_t113_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">132</stat>
 		</stats>
@@ -640,10 +777,13 @@
 		<!-- PvP/ PvE enchant type item. All Damage Received -2%, P. Atk. +2%, and M. Atk. +4%. -->
 		<set name="icon" val="icon.armor_t113_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">132</stat>
 		</stats>

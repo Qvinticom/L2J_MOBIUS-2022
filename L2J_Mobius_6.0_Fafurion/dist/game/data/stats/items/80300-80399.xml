@@ -233,12 +233,16 @@
 		<set name="icon" val="icon.weapon_r110_sigil" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="920" />
 		<set name="price" val="88681000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">59</stat>
+			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
@@ -260,6 +264,7 @@
 		<!-- A limited-edition cloak that a Dwarf Artisan has stitched with great care to celebrate the opening of the Bloody Server. Can be used only in the Bloody Server. <Additional option>. All stats +1, all Attribute Resistance +5 -->
 		<set name="icon" val="BranchSys2.Icon.7anni_cloack_i01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="back" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="CLOTH" />
 		<set name="weight" val="220" />
@@ -794,6 +799,7 @@
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -810,6 +816,7 @@
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -825,6 +832,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -840,6 +848,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -872,6 +881,7 @@
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -889,6 +899,7 @@
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -905,6 +916,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -920,6 +932,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -952,6 +965,7 @@
 		<set name="icon" val="icon.armor_t803_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -970,6 +984,7 @@
 		<set name="icon" val="icon.armor_t803_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -987,6 +1002,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t803_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -1002,6 +1018,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t803_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -1034,6 +1051,7 @@
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -1050,6 +1068,7 @@
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1065,6 +1084,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -1080,6 +1100,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -1112,6 +1133,7 @@
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -1129,6 +1151,7 @@
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1145,6 +1168,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -1160,6 +1184,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -1192,6 +1217,7 @@
 		<set name="icon" val="icon.armor_t803_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -1210,6 +1236,7 @@
 		<set name="icon" val="icon.armor_t803_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1227,6 +1254,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t803_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -1242,6 +1270,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t803_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -1447,6 +1476,7 @@
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -1463,6 +1493,7 @@
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -1478,6 +1509,7 @@
 		<!-- PvE enchant type item. Decreases damage from an NPC by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />

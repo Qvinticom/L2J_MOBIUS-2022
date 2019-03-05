@@ -95,9 +95,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="316718000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
@@ -107,10 +109,13 @@
 		<set name="icon" val="icon.armor_t901_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="844584000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">469</stat>
 		</stats>
@@ -120,10 +125,13 @@
 		<set name="icon" val="icon.armor_t901_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="527866000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">293</stat>
 		</stats>
@@ -132,10 +140,13 @@
 		<!-- Bestows a heavy armor enchantment option. -->
 		<set name="icon" val="icon.armor_t901_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="211146000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -144,10 +155,13 @@
 		<!-- Bestows a heavy armor enchantment option. -->
 		<set name="icon" val="icon.armor_t901_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="211146000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -174,9 +188,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="316718000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
@@ -186,10 +202,13 @@
 		<set name="icon" val="icon.armor_t902_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="844584000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">375</stat>
 			<stat type="rEvas">5</stat>
@@ -200,10 +219,13 @@
 		<set name="icon" val="icon.armor_t902_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="527866000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">234</stat>
 			<stat type="rEvas">3</stat>
@@ -213,10 +235,13 @@
 		<!-- Bestows a light armor enchantment option. -->
 		<set name="icon" val="icon.armor_t902_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="211146000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -225,10 +250,13 @@
 		<!-- Bestows a light armor enchantment option. -->
 		<set name="icon" val="icon.armor_t902_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="211146000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -239,9 +267,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="316718000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">175</stat>
 		</stats>
@@ -251,10 +281,13 @@
 		<set name="icon" val="icon.armor_t903_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="1750" />
 		<set name="price" val="844584000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">63</stat>
 			<stat type="pDef">257</stat>
@@ -266,10 +299,13 @@
 		<set name="icon" val="icon.armor_t903_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="850" />
 		<set name="price" val="527866000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="mDef">42</stat>
 			<stat type="pDef">161</stat>
@@ -280,10 +316,13 @@
 		<!-- Bestows a robe enchantment option. -->
 		<set name="icon" val="icon.armor_t903_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="211146000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -292,10 +331,13 @@
 		<!-- Bestows a robe enchantment option. -->
 		<set name="icon" val="icon.armor_t903_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="211146000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">117</stat>
 		</stats>
@@ -305,12 +347,16 @@
 		<set name="icon" val="icon.weapon_r110_sigil" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="920" />
 		<set name="price" val="211146000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">58</stat>
+			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
@@ -1713,9 +1759,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">179</stat>
 		</stats>
@@ -1725,10 +1773,13 @@
 		<set name="icon" val="icon.armor_t901_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="7520" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">478</stat>
 		</stats>
@@ -1737,10 +1788,13 @@
 		<set name="icon" val="icon.armor_t901_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="3170" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">299</stat>
 		</stats>
@@ -1748,10 +1802,13 @@
 	<item id="80192" name="Enchanted Leviathan Gauntlets" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t901_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -1759,10 +1816,13 @@
 	<item id="80193" name="Enchanted Leviathan Boots" additionalName="Heavy Armor" type="Armor">
 		<set name="icon" val="icon.armor_t901_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -1788,9 +1848,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="head" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BONE" />
 		<set name="weight" val="530" />
 		<set name="price" val="395897500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">179</stat>
 		</stats>
@@ -1800,10 +1862,13 @@
 		<set name="icon" val="icon.armor_t902_u_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="4140" />
 		<set name="price" val="1055730000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">382</stat>
 			<stat type="rEvas">5</stat>
@@ -1813,10 +1878,13 @@
 		<set name="icon" val="icon.armor_t902_l_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="SCALE_OF_DRAGON" />
 		<set name="weight" val="1320" />
 		<set name="price" val="659832500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">239</stat>
 			<stat type="rEvas">3</stat>
@@ -1825,10 +1893,13 @@
 	<item id="80198" name="Enchanted Leviathan Leather Gloves" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t902_g_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="510" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>
@@ -1836,10 +1907,13 @@
 	<item id="80199" name="Enchanted Leviathan Leather Boots" additionalName="Light Armor" type="Armor">
 		<set name="icon" val="icon.armor_t902_b_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="LEATHER" />
 		<set name="weight" val="1070" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pDef">119</stat>
 		</stats>

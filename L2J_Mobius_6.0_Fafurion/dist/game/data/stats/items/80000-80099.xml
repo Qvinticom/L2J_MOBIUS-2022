@@ -169,6 +169,7 @@
 		<!-- An event hair accessory. Grants you all the Might, Foresight, and Grace Circlet set effects of +7 Savior's Mask. Occupies 1 accessory slot. No Enchantment or Augment allowed. M. Def. +6%, Debuff Resistance +7%, P. Atk./ M. Atk./ P. Def. +1%. -->
 		<set name="icon" val="icon.accessory_worldcup_mask_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -581,6 +582,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_upbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -598,6 +600,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_downbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -614,6 +617,7 @@
 		<!-- Dimensional item. Eternal Gauntlets whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_gloves" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -630,6 +634,7 @@
 		<!-- Dimensional item. Eternal Boots whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_heavy_shoes" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -682,6 +687,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_1_light_upbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -700,6 +706,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_1_light_downbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="LIGHT" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -717,6 +724,7 @@
 		<!-- Dimensional item. Eternal Leather Gloves whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_light_gloves" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -733,6 +741,7 @@
 		<!-- Dimensional item. Eternal Leather Boots whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_light_shoes" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -767,6 +776,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_upbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="chest" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="BRONZE" />
@@ -786,6 +796,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_downbody" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="MAGIC" />
+		<set name="bodypart" val="legs" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="SCALE_OF_DRAGON" />
@@ -804,6 +815,7 @@
 		<!-- Dimensional item. Eternal Gloves whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_gloves" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="gloves" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -820,6 +832,7 @@
 		<!-- Dimensional item. Eternal Shoes whose grade penalty condition has been eased by Paulina's Blessing. No grade penalty from Lv. 85. No Enchantment, Crystallization, or Attribute Assignment allowed. -->
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_shoes" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="feet" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="LEATHER" />
@@ -837,6 +850,7 @@
 		<set name="icon" val="icon.bm_polyne_R99_1_robe_sigil" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="SIGIL" />
+		<set name="bodypart" val="lhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R" />
 		<set name="material" val="STEEL" />
@@ -847,6 +861,7 @@
 		<set name="is_sellable" val="false" />
 		<stats>
 			<stat type="pDef">51</stat>
+			<stat type="pAtkRange">40</stat>
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>

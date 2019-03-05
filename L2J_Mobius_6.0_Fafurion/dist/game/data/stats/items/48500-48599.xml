@@ -1055,6 +1055,7 @@
 		<!-- A mask granted only to those credited for saving Aden by helping the Blackbird Clan defeat Etis van Etina at the Savior's Path - Fall of Etina.. When equipped, increases M. Def. by 5%. -->
 		<set name="icon" val="icon.episode_mask_01" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="hair" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
