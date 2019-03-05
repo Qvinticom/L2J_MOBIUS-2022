@@ -7,11 +7,13 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="1616590000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">788</stat>
 			<stat type="mAtk">517</stat>
@@ -29,11 +31,13 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="1616590000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">984</stat>
 			<stat type="mAtk">352</stat>
@@ -49,9 +53,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="1616590000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">809</stat>
 			<stat type="mAtk">352</stat>
@@ -68,9 +74,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="1616590000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">984</stat>
 			<stat type="mAtk">352</stat>
@@ -149,9 +157,11 @@
 		<set name="icon" val="icon.weapon_r110_shield" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<set name="price" val="211146000" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
@@ -428,11 +438,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">729</stat>
 			<stat type="mAtk">363</stat>
@@ -449,11 +461,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">833</stat>
 			<stat type="mAtk">363</stat>
@@ -470,11 +484,13 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1014</stat>
 			<stat type="mAtk">363</stat>
@@ -490,11 +506,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -514,11 +532,13 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1014</stat>
 			<stat type="mAtk">363</stat>
@@ -536,11 +556,13 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">833</stat>
 			<stat type="mAtk">363</stat>
@@ -558,11 +580,13 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1641</stat>
 			<stat type="mAtk">363</stat>
@@ -579,9 +603,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1477</stat>
 			<stat type="mAtk">363</stat>
@@ -598,11 +624,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">666</stat>
 			<stat type="mAtk">484</stat>
@@ -617,11 +645,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">666</stat>
 			<stat type="mAtk">484</stat>
@@ -639,11 +669,13 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">811</stat>
 			<stat type="mAtk">532</stat>
@@ -661,11 +693,13 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1014</stat>
 			<stat type="mAtk">363</stat>
@@ -681,9 +715,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">833</stat>
 			<stat type="mAtk">363</stat>
@@ -700,9 +736,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1014</stat>
 			<stat type="mAtk">363</stat>
@@ -719,11 +757,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">773</stat>
 			<stat type="mAtk">385</stat>
@@ -740,11 +780,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">884</stat>
 			<stat type="mAtk">385</stat>
@@ -761,11 +803,13 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1076</stat>
 			<stat type="mAtk">385</stat>
@@ -781,11 +825,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -805,11 +851,13 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1076</stat>
 			<stat type="mAtk">385</stat>
@@ -827,11 +875,13 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">884</stat>
 			<stat type="mAtk">385</stat>
@@ -849,11 +899,13 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1741</stat>
 			<stat type="mAtk">385</stat>
@@ -870,9 +922,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1567</stat>
 			<stat type="mAtk">385</stat>
@@ -889,11 +943,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">707</stat>
 			<stat type="mAtk">513</stat>
@@ -908,11 +964,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">707</stat>
 			<stat type="mAtk">513</stat>
@@ -930,11 +988,13 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">861</stat>
 			<stat type="mAtk">565</stat>
@@ -952,11 +1012,13 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1076</stat>
 			<stat type="mAtk">385</stat>
@@ -972,9 +1034,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">884</stat>
 			<stat type="mAtk">385</stat>
@@ -991,9 +1055,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1076</stat>
 			<stat type="mAtk">385</stat>
@@ -1010,11 +1076,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">773</stat>
 			<stat type="mAtk">385</stat>
@@ -1031,11 +1099,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">884</stat>
 			<stat type="mAtk">385</stat>
@@ -1052,11 +1122,13 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1076</stat>
 			<stat type="mAtk">385</stat>
@@ -1072,11 +1144,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1096,11 +1170,13 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1076</stat>
 			<stat type="mAtk">385</stat>
@@ -1118,11 +1194,13 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">884</stat>
 			<stat type="mAtk">385</stat>
@@ -1140,11 +1218,13 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1741</stat>
 			<stat type="mAtk">385</stat>
@@ -1161,9 +1241,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1567</stat>
 			<stat type="mAtk">385</stat>
@@ -1180,11 +1262,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">707</stat>
 			<stat type="mAtk">513</stat>
@@ -1199,11 +1283,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">707</stat>
 			<stat type="mAtk">513</stat>
@@ -1221,11 +1307,13 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">861</stat>
 			<stat type="mAtk">565</stat>
@@ -1243,11 +1331,13 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1076</stat>
 			<stat type="mAtk">385</stat>
@@ -1263,9 +1353,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">884</stat>
 			<stat type="mAtk">385</stat>
@@ -1282,9 +1374,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1076</stat>
 			<stat type="mAtk">385</stat>
@@ -1301,11 +1395,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">845</stat>
 			<stat type="mAtk">421</stat>
@@ -1322,11 +1418,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="SWORD" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">966</stat>
 			<stat type="mAtk">421</stat>
@@ -1343,11 +1441,13 @@
 		<set name="weapon_type" val="BLUNT" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1175</stat>
 			<stat type="mAtk">421</stat>
@@ -1363,11 +1463,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 		</skills>
@@ -1387,11 +1489,13 @@
 		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1175</stat>
 			<stat type="mAtk">421</stat>
@@ -1409,11 +1513,13 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">966</stat>
 			<stat type="mAtk">421</stat>
@@ -1431,11 +1537,13 @@
 		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1902</stat>
 			<stat type="mAtk">421</stat>
@@ -1452,9 +1560,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1713</stat>
 			<stat type="mAtk">421</stat>
@@ -1471,11 +1581,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="DAGGER" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">773</stat>
 			<stat type="mAtk">561</stat>
@@ -1490,11 +1602,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="BOW" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">773</stat>
 			<stat type="mAtk">561</stat>
@@ -1512,11 +1626,13 @@
 		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">941</stat>
 			<stat type="mAtk">617</stat>
@@ -1534,11 +1650,13 @@
 		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1175</stat>
 			<stat type="mAtk">421</stat>
@@ -1554,9 +1672,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">966</stat>
 			<stat type="mAtk">421</stat>
@@ -1573,9 +1693,11 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="pAtk">1175</stat>
 			<stat type="mAtk">421</stat>
@@ -1650,9 +1772,11 @@
 		<set name="icon" val="icon.weapon_r110_shield" />
 		<set name="default_action" val="EQUIP" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_type" val="R110" />
 		<set name="material" val="DAMASCUS" />
 		<set name="weight" val="1130" />
 		<set name="price" val="263932500" />
+		<set name="enchant_enabled" val="1" />
 		<stats>
 			<stat type="rEvas">-8</stat>
 			<stat type="rShld">20</stat>
