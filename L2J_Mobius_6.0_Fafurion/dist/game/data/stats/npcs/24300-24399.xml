@@ -317,6 +317,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="MAGE" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>FOW</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="55" />
 			<height normal="80.5" />
@@ -729,7 +734,12 @@
 			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" canMove="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="30" />
 			<height normal="59" />
@@ -750,6 +760,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="30" />
 			<height normal="59" />
@@ -791,6 +806,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="23.8" />
 			<height normal="61.175" />
@@ -835,6 +855,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="ARCHER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="23.8" />
 			<height normal="61.6" />
@@ -878,6 +903,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="17.5" />
 			<height normal="42.5" />
@@ -919,6 +949,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="17.5" />
 			<height normal="42.5" />
@@ -960,6 +995,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="17.5" />
 			<height normal="42.5" />
@@ -1001,6 +1041,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="17.5" />
 			<height normal="42.5" />
@@ -1043,6 +1088,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="MAGE" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14.45" />
 			<height normal="36.95" />
@@ -1085,6 +1135,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="MAGE" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14.45" />
 			<height normal="36.95" />
@@ -1127,6 +1182,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="HEALER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14.45" />
 			<height normal="36.95" />
@@ -1169,6 +1229,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="HEALER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="14.45" />
 			<height normal="36.95" />
@@ -1211,6 +1276,11 @@
 			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
+		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
+			<clanList>
+				<clan>TOF</clan>
+			</clanList>
+		</ai>
 		<collision>
 			<radius normal="17" />
 			<height normal="25" />
