@@ -2015,7 +2015,7 @@
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
 			<speed>
-				<walk ground="50" />
+				<walk ground="64" />
 				<run ground="50" />
 			</speed>
 			<attack physical="1188.87259499001" magical="811.84586495282" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="5" accuracy="5" />
@@ -2032,7 +2032,7 @@
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<collision>
-			<radius normal="20" />
+			<radius normal="9.5" />
 			<height normal="22.4" />
 		</collision>
 	</npc>

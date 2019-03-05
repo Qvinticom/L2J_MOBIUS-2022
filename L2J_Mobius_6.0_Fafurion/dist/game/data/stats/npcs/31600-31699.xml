@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="31600" level="70" type="L2Npc" name="Pamela Aprodia">
 		<!-- Confirmed CT2.5 -->
@@ -1628,7 +1628,7 @@
 			<height normal="23.5" />
 		</collision>
 	</npc>
-	<npc id="31639" level="70" type="L2Npc" name="Kain Van Halter">
+	<npc id="31639" level="70" type="L2Npc" name="Kain van Halter">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -3883,7 +3883,7 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<equipment lhand="5802" /> <!-- For NPC (Dawn) -->
+		<equipment rhand="5802" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
@@ -3969,7 +3969,7 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<equipment lhand="5802" /> <!-- For NPC (Dawn) -->
+		<equipment rhand="5802" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />

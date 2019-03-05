@@ -317,8 +317,8 @@
 		</stats>
 		<status attackable="false" />
 		<collision>
-			<radius normal="20" />
-			<height normal="36" />
+			<radius normal="24" />
+			<height normal="35.4" />
 		</collision>
 	</npc>
 	<npc id="34216" level="85" type="L2Npc" name="">
@@ -1034,7 +1034,7 @@
 		<status attackable="false" />
 		<collision>
 			<radius normal="8" />
-			<height normal="22.5" />
+			<height normal="21.1" />
 		</collision>
 	</npc>
 	<npc id="34256" level="85" type="L2Npc" name="Citizen" title="Freed">
@@ -1053,7 +1053,7 @@
 		<status attackable="false" />
 		<collision>
 			<radius normal="8" />
-			<height normal="22.5" />
+			<height normal="21.1" />
 		</collision>
 	</npc>
 	<npc id="34257" level="85" type="L2Npc" name="Masa">
@@ -1149,7 +1149,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="34262" level="85" type="L2Merchant" name="Sibis" title="Balthus Knights' Supply Officer">
+	<npc id="34262" level="85" type="L2Merchant" name="Sibi" title="Balthus Knight">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -1574,6 +1574,7 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="5802" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="1507" mpRegen="3.6" />
 			<speed>

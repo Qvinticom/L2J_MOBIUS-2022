@@ -85,8 +85,6 @@ Grand Crusade:
 -Live world map information
 
 Salvation:
--TODO: Skills
--TODO: Skill trees
 -New Agathion item support
 
 Etina's Fate:
@@ -94,7 +92,8 @@ Etina's Fate:
 -Artifact item support
 
 Fafurion:
--Parsed new items from client
+-Support for R110 items
+-Spawned new areas
 
 Events:
 -Birth of Draco

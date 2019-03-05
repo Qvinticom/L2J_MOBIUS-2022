@@ -96,7 +96,7 @@
 			<height normal="3.75" />
 		</collision>
 	</npc>
-	<npc id="1533" level="55" type="L2Npc" name="Wutangka Agathion">
+	<npc id="1533" level="55" type="L2Npc" name="Uthanka Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -160,7 +160,7 @@
 			<height normal="3.75" />
 		</collision>
 	</npc>
-	<npc id="1540" level="55" type="L2Npc" name="Lana Agathion">
+	<npc id="1540" level="55" type="L2Npc" name="Lanya Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -224,7 +224,7 @@
 			<height normal="3.75" />
 		</collision>
 	</npc>
-	<npc id="1542" level="55" type="L2Npc" name="Orodriel Agathion">
+	<npc id="1542" level="55" type="L2Npc" name="Cheerleader Orodriel Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -544,7 +544,7 @@
 			<height normal="3.75" />
 		</collision>
 	</npc>
-	<npc id="1552" level="55" type="L2Npc" name="Gwanseum Nyang Nyang Agathion">
+	<npc id="1552" level="55" type="L2Npc" name="Gwanseum Nyang Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -640,7 +640,7 @@
 			<height normal="3.75" />
 		</collision>
 	</npc>
-	<npc id="1556" level="55" type="L2Npc" name="Mandarin Dress Agathion">
+	<npc id="1556" level="55" type="L2Npc" name="Miss Chipao Agathion">
 		<!-- Confirmed CT2.5 -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
@@ -768,7 +768,7 @@
 			<height normal="3.75" />
 		</collision>
 	</npc>
-	<npc id="1594" level="80" type="L2Npc" name="Singer &amp; Dancer Agathion" title="Singer &amp; Dancer Agathion">
+	<npc id="1594" level="80" type="L2Npc" name="Singer and Dancer Agathion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<sex>MALE</sex>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="20">
@@ -783,6 +783,25 @@
 		<collision>
 			<radius normal="5" />
 			<height normal="3.75" />
+		</collision>
+	</npc>
+	<npc id="1595" level="85" type="L2Npc" name="Zaken's Spirit Swords Agathion">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
 		</collision>
 	</npc>
 </list>

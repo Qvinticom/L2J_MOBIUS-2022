@@ -1718,7 +1718,7 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="30146" level="70" type="L2Teleporter" name="Teleport Device">
+	<npc id="30146" level="70" type="L2Teleporter" name="Mintia" title="Gatekeeper">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1735,7 +1735,7 @@
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 			<speed>
-				<walk ground="1" />
+				<walk ground="50" />
 				<run ground="120" />
 			</speed>
 			<abnormalResist physical="10" magical="10" />
@@ -1757,8 +1757,8 @@
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
-			<radius normal="28" />
-			<height normal="40" />
+			<radius normal="8.5" />
+			<height normal="23.5" />
 		</collision>
 	</npc>
 	<npc id="30147" level="70" type="L2Merchant" name="Unoren" title="Weapon Merchant">

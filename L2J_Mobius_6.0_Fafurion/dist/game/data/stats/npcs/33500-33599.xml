@@ -385,7 +385,7 @@
 		</parameters>
 		<race>HUMAN</race>
 		<sex>MALE</sex>
-		<equipment lhand="5802" /> <!-- For NPC (Dawn) -->
+		<equipment rhand="5802" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
@@ -1867,7 +1867,7 @@
 		<ai clanHelpRange="300" />
 		<collision>
 			<radius normal="8" />
-			<height normal="23" />
+			<height normal="22.5" />
 		</collision>
 	</npc>
 	<npc id="33555" level="1" type="L2Npc" name="">
@@ -2553,7 +2553,7 @@
 		</skillList>
 		<collision>
 			<radius normal="8" />
-			<height normal="25.3" />
+			<height normal="22.1" />
 		</collision>
 	</npc>
 	<npc id="33577" level="85" type="L2Npc" name="Mephisto">

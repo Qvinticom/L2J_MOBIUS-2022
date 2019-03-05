@@ -311,11 +311,43 @@
 	<skill id="32469" toLevel="1" name="Tabeth Strike">
 		<!-- Melee Warrior-type Monsters' Powerful Single Target Physical Attack Skill -->
 		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>WIND</attributeType>
+		<attributeValue>150</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>8000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>18000</power> <!-- Guessing -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32470" toLevel="1" name="Tabeth Spike">
 		<!-- Ranged Wizard-type Monsters' Powerful Single Target Magic Attack Skill (Non-Attribute) -->
 		<icon>icon.skill16206</icon>
 		<operateType>A1</operateType>
+		<castRange>600</castRange>
+		<effectPoint>-100</effectPoint>
+		<effectRange>1100</effectRange>
+		<attributeType>DARK</attributeType>
+		<attributeValue>150</attributeValue>
+		<hitTime>4000</hitTime>
+		<isMagic>1</isMagic> <!-- Magic Skill -->
+		<reuseDelay>8000</reuseDelay>
+		<magicCriticalRate>-5</magicCriticalRate>
+		<targetType>ENEMY</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="MagicalAttack">
+				<power>18000</power> <!-- Guessing -->
+			</effect>
+		</effects>
 	</skill>
 	<skill id="32471" toLevel="2" name="Tabeth Slasher">
 		<!-- Melee Warrior-type Monsters' Physical AoE Skill (point_blank) -->

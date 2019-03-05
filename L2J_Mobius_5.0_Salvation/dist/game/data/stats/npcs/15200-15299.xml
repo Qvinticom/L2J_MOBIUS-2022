@@ -200,7 +200,7 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="15207" level="99" type="L2Pet" name="Discarded Wizard's Soul" title="">
+	<npc id="15207" level="99" type="L2Pet" name="Discarded Wizard's Soul">
 		<!-- Updated to GRAND CRUSADE -->
 		<parameters>
 			<skill name="Skill01_ID" id="19406" level="1" /> <!-- Curse from Deadland -->
@@ -234,7 +234,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15208" level="101" type="L2Pet" name="Discarded Wizard's Soul" title="">
+	<npc id="15208" level="101" type="L2Pet" name="Discarded Wizard's Soul">
 		<!-- Updated to GRAND CRUSADE -->
 		<parameters>
 			<skill name="Skill01_ID" id="19406" level="2" /> <!-- Curse from Deadland -->
@@ -268,7 +268,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15209" level="103" type="L2Pet" name="Discarded Wizard's Soul" title="">
+	<npc id="15209" level="103" type="L2Pet" name="Discarded Wizard's Soul">
 		<!-- Updated to GRAND CRUSADE -->
 		<parameters>
 			<skill name="Skill01_ID" id="19406" level="3" /> <!-- Curse from Deadland -->
@@ -302,7 +302,7 @@
 			<height normal="30.6" />
 		</collision>
 	</npc>
-	<npc id="15210" level="105" type="L2Pet" name="Discarded Wizard's Soul" title="">
+	<npc id="15210" level="105" type="L2Pet" name="Discarded Wizard's Soul">
 		<!-- Updated to GRAND CRUSADE -->
 		<parameters>
 			<skill name="Skill01_ID" id="19406" level="4" /> <!-- Curse from Deadland -->
@@ -334,6 +334,25 @@
 		<collision>
 			<radius normal="22.4" />
 			<height normal="30.6" />
+		</collision>
+	</npc>
+	<npc id="15211" level="85" type="L2Npc" name="Dominant Flag">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="60" />
+				<run ground="120" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="5" />
+			<height normal="12" />
 		</collision>
 	</npc>
 </list>

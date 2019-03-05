@@ -86,8 +86,6 @@ Grand Crusade:
 
 Salvation:
 -Parsed new items from client
--TODO: Skills
--TODO: Skill trees
 -New Agathion item support
 
 Events:

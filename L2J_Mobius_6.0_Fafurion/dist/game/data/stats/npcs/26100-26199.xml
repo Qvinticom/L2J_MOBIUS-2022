@@ -4373,7 +4373,7 @@
 			<height normal="37" />
 		</collision>
 	</npc>
-	<npc id="26175" level="101" type="L2Npc" name="Slave Foreman Archer" title="Raid Minion">		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26175" level="101" type="L2Npc" name="Slave Foreman Archer" title="Raid Minion">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15302" />
@@ -5516,8 +5516,8 @@
 				<attack type="DARK" value="430" />
 			</attribute>
 			<speed>
-				<walk ground="60.0" />
-				<run ground="210.0" />
+				<walk ground="60" />
+				<run ground="240" />
 			</speed>
 		</stats>
 		<status attackable="false" />

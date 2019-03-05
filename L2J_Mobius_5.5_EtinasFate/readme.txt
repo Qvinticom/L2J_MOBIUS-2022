@@ -85,12 +85,10 @@ Grand Crusade:
 -Live world map information
 
 Salvation:
--TODO: Skills
--TODO: Skill trees
 -New Agathion item support
 
 Etina's Fate:
--TODO: Parse new items from client
+-Parsed new items from client
 -Artifact item support
 
 Events:
