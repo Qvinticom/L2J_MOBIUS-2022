@@ -35,7 +35,8 @@ public class Fafurion extends AbstractNpcAI
 {
 	// NPCs
 	private static final int HEART_OF_TSUNAMI = 34488;
-	private static final int FAFURION = 29364;
+	private static final int FAFURION_GRANDBOSS_ID = 19740;
+	private static final int FAFURION_FINAL_FORM = 29364;
 	// Item
 	private static final int FONDUS_STONE = 80322;
 	// Locations
@@ -55,10 +56,10 @@ public class Fafurion extends AbstractNpcAI
 		addStartNpc(HEART_OF_TSUNAMI);
 		addTalkId(HEART_OF_TSUNAMI);
 		addFirstTalkId(HEART_OF_TSUNAMI);
-		addKillId(FAFURION);
+		addKillId(FAFURION_FINAL_FORM);
 		// Unlock
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(FAFURION);
-		final int status = GrandBossManager.getInstance().getBossStatus(FAFURION);
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(FAFURION_GRANDBOSS_ID);
+		final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
 		if (status == DEAD)
 		{
 			final long time = info.getLong("respawn_time") - System.currentTimeMillis();
@@ -68,12 +69,12 @@ public class Fafurion extends AbstractNpcAI
 			}
 			else
 			{
-				GrandBossManager.getInstance().setBossStatus(FAFURION, ALIVE);
+				GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 			}
 		}
 		else if (status != ALIVE)
 		{
-			GrandBossManager.getInstance().setBossStatus(FAFURION, ALIVE);
+			GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 		}
 	}
 	
@@ -85,32 +86,32 @@ public class Fafurion extends AbstractNpcAI
 		{
 			case "unlock_fafurion":
 			{
-				GrandBossManager.getInstance().setBossStatus(FAFURION, ALIVE);
+				GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 				break;
 			}
 			case "beginning":
 			{
-				if (GrandBossManager.getInstance().getBossStatus(FAFURION) == WAITING)
+				if (GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID) == WAITING)
 				{
-					GrandBossManager.getInstance().setBossStatus(FAFURION, FIGHTING);
-					bossInstance = addSpawn(FAFURION, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
+					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, FIGHTING);
+					bossInstance = addSpawn(FAFURION_FINAL_FORM, FAFURION_SPAWN_LOC.getX(), FAFURION_SPAWN_LOC.getY(), FAFURION_SPAWN_LOC.getZ(), FAFURION_SPAWN_LOC.getHeading(), false, 0, false);
 					startQuestTimer("resetRaid", RAID_DURATION * 60 * 60 * 1000, bossInstance, null);
 				}
 				break;
 			}
 			case "resetRaid":
 			{
-				final int status = GrandBossManager.getInstance().getBossStatus(FAFURION);
+				final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
 				if ((status > ALIVE) && (status < DEAD))
 				{
-					GrandBossManager.getInstance().setBossStatus(FAFURION, ALIVE);
+					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, ALIVE);
 					npc.deleteMe();
 				}
 				break;
 			}
 			case "enter_area":
 			{
-				final int status = GrandBossManager.getInstance().getBossStatus(FAFURION);
+				final int status = GrandBossManager.getInstance().getBossStatus(FAFURION_GRANDBOSS_ID);
 				if (player.isGM())
 				{
 					player.teleToLocation(RAID_ENTER_LOC, true);
@@ -161,7 +162,7 @@ public class Fafurion extends AbstractNpcAI
 				}
 				if (status == ALIVE)
 				{
-					GrandBossManager.getInstance().setBossStatus(FAFURION, WAITING);
+					GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, WAITING);
 					startQuestTimer("beginning", Config.FAFURION_WAIT_TIME * 60000, null, null);
 				}
 				break;
@@ -178,11 +179,11 @@ public class Fafurion extends AbstractNpcAI
 		// {
 		// case FAFURION:
 		// {
-		GrandBossManager.getInstance().setBossStatus(FAFURION, DEAD);
+		GrandBossManager.getInstance().setBossStatus(FAFURION_GRANDBOSS_ID, DEAD);
 		final long respawnTime = (Config.FAFURION_SPAWN_INTERVAL + getRandom(-Config.FAFURION_SPAWN_RANDOM, Config.FAFURION_SPAWN_RANDOM)) * 3600000;
-		final StatsSet info = GrandBossManager.getInstance().getStatsSet(FAFURION);
+		final StatsSet info = GrandBossManager.getInstance().getStatsSet(FAFURION_GRANDBOSS_ID);
 		info.set("respawn_time", System.currentTimeMillis() + respawnTime);
-		GrandBossManager.getInstance().setStatsSet(FAFURION, info);
+		GrandBossManager.getInstance().setStatsSet(FAFURION_GRANDBOSS_ID, info);
 		startQuestTimer("unlock_fafurion", respawnTime, null, null);
 		// break;
 		// }
