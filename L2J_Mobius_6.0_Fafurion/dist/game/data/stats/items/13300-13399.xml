@@ -148,7 +148,7 @@
 		</skills>
 	</item>
 	<item id="13307" name="Color Title (Event)" type="EtcItem">
-		<!-- Item that allows you to change a character's title color. You can change back to the original title color by using the "/ resetname" command after changing the title color. If there is no original title, the title will disappear.  -->
+		<!-- Item that allows you to change a character's title color. You can change back to the original title color by using the "/ resetname" command after changing the title color. If there is no original title, the title will disappear. -->
 		<set name="icon" val="icon.color_name_i00" />
 		<set name="default_action" val="NICK_COLOR" />
 		<set name="immediate_effect" val="true" />
@@ -1323,7 +1323,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="13307" min="3" max="3" chance="100" /> <!-- Color Title (Event) -  -->
+			<item id="13307" min="3" max="3" chance="100" /> <!-- Color Title (Event) -->
 		</capsuled_items>
 	</item>
 	<item id="13360" name="Color Title Pack (Event)" type="EtcItem">
@@ -1344,7 +1344,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<capsuled_items>
-			<item id="13307" min="1" max="1" chance="100" /> <!-- Color Title (Event) -  -->
+			<item id="13307" min="1" max="1" chance="100" /> <!-- Color Title (Event) -->
 		</capsuled_items>
 	</item>
 	<item id="13361" name="My Teleport Scroll 10-unit Pack (Event)" type="EtcItem">

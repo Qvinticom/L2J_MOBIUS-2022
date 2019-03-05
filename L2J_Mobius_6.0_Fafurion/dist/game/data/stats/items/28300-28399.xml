@@ -711,7 +711,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="27440" level="6"/>
+			<skill id="27440" level="6"/> <!-- Cat's Eye -->
 		</skills>
 	</item>
 	<item id="28377" name="Greater Amethyst" type="Armor">
@@ -723,7 +723,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="27442" level="6"/>
+			<skill id="27442" level="6"/> <!-- Amethyst -->
 		</skills>
 	</item>
 	<item id="28378" name="Greater Vital Stone" type="Armor">
@@ -735,7 +735,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18568" level="6"/>
+			<skill id="18568" level="6"/> <!-- Vital Stone -->
 		</skills>
 	</item>
 	<item id="28379" name="Greater Garnet" type="Armor">
@@ -747,8 +747,8 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18566" level="6" />
-			<skill id="18567" level="2" />
+			<skill id="18566" level="6" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
 	<item id="28380" name="Greater Tanzanite" type="Armor">
@@ -760,7 +760,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="27549" level="6" />
+			<skill id="27549" level="6" /> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
 	<item id="28381" name="Abundance Box" additionalName="Infinite" type="EtcItem">
@@ -788,8 +788,8 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 		<skills>
-			<skill id="18566" level="6" />
-			<skill id="18567" level="2" />
+			<skill id="18566" level="6" /> <!-- Garnet -->
+			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
 	<item id="28384" name="Chef Monkey's Belt" type="Armor">
