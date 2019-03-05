@@ -2811,7 +2811,64 @@
 			<height normal="48" grown="57.6" />
 		</collision>
 	</npc>
-	<npc id="29361" level="118" type="L2RaidBoss" name="Fafurion" title="Wrathful Water Dragon">
+	<npc id="29361" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="200" />
+			<height normal="320" />
+		</collision>
+	</npc>
+	<npc id="29362" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="200" />
+			<height normal="320" />
+		</collision>
+	</npc>
+	<npc id="29363" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
+		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+		<race>ETC</race>
+		<sex>FEMALE</sex>
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<speed>
+				<walk ground="45" />
+				<run ground="270" />
+			</speed>
+			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
+			<defence physical="405.85106382979" magical="297.0297029703" />
+		</stats>
+		<status attackable="false" />
+		<collision>
+			<radius normal="200" />
+			<height normal="320" />
+		</collision>
+	</npc>
+	<npc id="29364" level="118" type="L2GrandBoss" name="Fafurion" title="Wrathful Water Dragon">
 		<race>DRAGON</race>
 		<acquire exp="108452897573760" sp="97607602024" raidPoints="1000" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
@@ -2922,63 +2979,6 @@
 				<item id="46466" min="1" max="1" chance="5.134" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
 			</drop>
 		</dropLists>
-	</npc>
-	<npc id="29362" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="270" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="200" />
-			<height normal="320" />
-		</collision>
-	</npc>
-	<npc id="29363" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="270" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="200" />
-			<height normal="320" />
-		</collision>
-	</npc>
-	<npc id="29364" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="270" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="200" />
-			<height normal="320" />
-		</collision>
 	</npc>
 	<npc id="29365" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

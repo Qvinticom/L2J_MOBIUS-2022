@@ -902,6 +902,14 @@ public final class Config
 	public static int HELIOS_MIN_PLAYER;
 	public static int HELIOS_MIN_PLAYER_LVL;
 	
+	// Fafurion
+	public static int FAFURION_WAIT_TIME;
+	public static int FAFURION_SPAWN_INTERVAL;
+	public static int FAFURION_SPAWN_RANDOM;
+	public static int FAFURION_MIN_PLAYERS;
+	public static int FAFURION_MAX_PLAYERS;
+	public static int FAFURION_MIN_PLAYER_LVL;
+	
 	// Gracia Seeds Settings
 	public static int SOD_TIAT_KILL_COUNT;
 	public static long SOD_STAGE_2_LENGTH;
@@ -2251,6 +2259,13 @@ public final class Config
 			HELIOS_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfHeliosSpawn", 72);
 			HELIOS_MIN_PLAYER = GrandBossSettings.getInt("HeliosMinPlayers", 70);
 			HELIOS_MIN_PLAYER_LVL = GrandBossSettings.getInt("HeliosMinPlayerLvl", 102);
+			
+			FAFURION_WAIT_TIME = GrandBossSettings.getInt("FafurionWaitTime", 10);
+			FAFURION_SPAWN_INTERVAL = GrandBossSettings.getInt("IntervalOfFafurionSpawn", 264);
+			FAFURION_SPAWN_RANDOM = GrandBossSettings.getInt("RandomOfFafurionSpawn", 72);
+			FAFURION_MIN_PLAYERS = GrandBossSettings.getInt("FafurionMinPlayers", 49);
+			FAFURION_MAX_PLAYERS = GrandBossSettings.getInt("FafurionMaxPlayers", 200);
+			FAFURION_MIN_PLAYER_LVL = GrandBossSettings.getInt("FafurionMinPlayerLvl", 105);
 			
 			// Gracia Seeds
 			final PropertiesParser GraciaSeedsSettings = new PropertiesParser(GRACIASEEDS_CONFIG_FILE);
