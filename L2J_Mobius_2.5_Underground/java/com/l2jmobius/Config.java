@@ -1087,6 +1087,7 @@ public final class Config
 	public static boolean COMMUNITYBOARD_ENABLE_BUFFS;
 	public static boolean COMMUNITYBOARD_ENABLE_HEAL;
 	public static boolean COMMUNITYBOARD_ENABLE_DELEVEL;
+	public static boolean COMMUNITYBOARD_DELEVEL_REMOVE_ABILITIES;
 	public static int COMMUNITYBOARD_TELEPORT_PRICE;
 	public static int COMMUNITYBOARD_BUFF_PRICE;
 	public static int COMMUNITYBOARD_HEAL_PRICE;
@@ -2422,6 +2423,7 @@ public final class Config
 			COMMUNITYBOARD_ENABLE_BUFFS = CommunityBoard.getBoolean("CommunityEnableBuffs", true);
 			COMMUNITYBOARD_ENABLE_HEAL = CommunityBoard.getBoolean("CommunityEnableHeal", true);
 			COMMUNITYBOARD_ENABLE_DELEVEL = CommunityBoard.getBoolean("CommunityEnableDelevel", false);
+			COMMUNITYBOARD_DELEVEL_REMOVE_ABILITIES = CommunityBoard.getBoolean("DelevelRemoveAbilities", false);
 			COMMUNITYBOARD_TELEPORT_PRICE = CommunityBoard.getInt("CommunityTeleportPrice", 0);
 			COMMUNITYBOARD_BUFF_PRICE = CommunityBoard.getInt("CommunityBuffPrice", 0);
 			COMMUNITYBOARD_HEAL_PRICE = CommunityBoard.getInt("CommunityHealPrice", 0);

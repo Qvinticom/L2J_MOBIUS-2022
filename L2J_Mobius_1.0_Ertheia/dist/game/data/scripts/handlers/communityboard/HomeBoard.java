@@ -37,9 +37,11 @@ import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
+import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
 import com.l2jmobius.gameserver.handler.IParseBoardHandler;
 import com.l2jmobius.gameserver.instancemanager.PremiumManager;
+import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.actor.L2Summon;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
@@ -50,6 +52,7 @@ import com.l2jmobius.gameserver.network.serverpackets.BuyList;
 import com.l2jmobius.gameserver.network.serverpackets.ExBuySellList;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.ShowBoard;
+import com.l2jmobius.gameserver.network.serverpackets.ability.ExAcquireAPSkillList;
 
 /**
  * Home board.
@@ -283,9 +286,23 @@ public final class HomeBoard implements IParseBoardHandler
 				activeChar.getStat().setLevel((byte) newLevel);
 				activeChar.setCurrentHpMp(activeChar.getMaxHp(), activeChar.getMaxMp());
 				activeChar.setCurrentCp(activeChar.getMaxCp());
+				if (Config.COMMUNITYBOARD_DELEVEL_REMOVE_ABILITIES)
+				{
+					for (L2SkillLearn sk : SkillTreesData.getInstance().getAbilitySkillTree().values())
+					{
+						final Skill skill = activeChar.getKnownSkill(sk.getSkillId());
+						if (skill != null)
+						{
+							activeChar.removeSkill(skill);
+						}
+					}
+					activeChar.setAbilityPointsUsed(0);
+					activeChar.sendPacket(new ExAcquireAPSkillList(activeChar));
+				}
 				activeChar.broadcastUserInfo();
 				activeChar.checkPlayerSkills(); // Adjust skills according to new level.
 				returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/delevel/complete.html");
+				activeChar.sendMessage("Your level is set to " + newLevel + "!");
 			}
 		}
 		else if (command.startsWith("_bbspremium"))
