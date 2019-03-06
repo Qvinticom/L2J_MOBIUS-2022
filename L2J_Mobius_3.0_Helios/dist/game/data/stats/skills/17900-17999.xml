@@ -660,18 +660,100 @@
 	</skill>
 	<skill id="17944" toLevel="1" name="Scroll of Escape: Talking Island Village">
 		<!-- Teleports you to Talking Island Village. -->
+		<itemConsumeId>39553</itemConsumeId> <!-- Minstrel's Scroll of Escape: Talking Island -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-113978</x>
+				<y>255847</y>
+				<z>-1504</z>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17945" toLevel="1" name="Scroll of Escape: Arms of Timiniel">
+	<skill id="17945" toLevel="2" name="Escape - Hunter's Village Teleport">
 		<!-- Teleports to the Hunter's Village. -->
+		<itemConsumeId>
+			<value level="1">39554</value> <!-- Bard's Scroll of Escape - Hunter's Village -->
+			<value level="2">47054</value> <!-- Scroll of Escape: Arms of Timiniel -->
+		</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport" level="1">
+				<x>116396</x>
+				<y>76876</y>
+				<z>-2728</z>
+			</effect>
+			<effect name="Teleport" level="2">
+				<x>214496</x>
+				<y>79703</y>
+				<z>824</z>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17946" toLevel="1" name="Scroll of Escape: Arms of Timiniel">
+	<skill id="17946" toLevel="2" name="Scroll of Escape: Magmeld">
 		<!-- Teleports you to Magmeld. -->
+		<itemConsumeId>
+			<value level="1">39555</value> <!-- Minstrel's Scroll of Escape: Magmeld -->
+			<value level="2">47055</value> <!-- Scroll of Escape: Arms of Timiniel -->
+		</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport" level="1">
+				<x>207249</x>
+				<y>87023</y>
+				<z>-1024</z>
+			</effect>
+			<effect name="Teleport" level="2">
+				<x>215628</x>
+				<y>79977</y>
+				<z>824</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17947" toLevel="1" name="Scroll of Escape: Town of Rune">
 		<!-- Teleports you to the Town of Rune. -->

@@ -1,10 +1,29 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
 	<skill id="18000" toLevel="1" name="Scroll of Escape: Cemetery">
+		<itemConsumeId>47062</itemConsumeId> <!-- Scroll of Escape: Cemetery -->
+		<itemConsumeCount>1</itemConsumeCount>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>186256</x>
+				<y>20288</y>
+				<z>-3376</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18001" toLevel="1" name="Scroll of Escape: Guillotine Fortress">
 		<operateType>A1</operateType>

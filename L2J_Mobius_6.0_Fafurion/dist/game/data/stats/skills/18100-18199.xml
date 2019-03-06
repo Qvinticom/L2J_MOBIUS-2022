@@ -187,8 +187,29 @@
 		<hitTime>1000</hitTime>
 	</skill>
 	<skill id="18124" toLevel="1" name="Scroll of Escape: Pagan Temple">
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47061</itemConsumeId> <!-- Scroll of Escape: Pagan Temple -->
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>40420</x>
+				<y>-48390</y>
+				<z>-768</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18125" toLevel="1" name="Freya's Frozen Lamp">
 		<!-- Double-click to obtain a Freya's Wind Scroll and a Freya's Recovery Scroll. You also have a random chance to obtain either Freya's Wish Box, Sirra's Wish Box, or Snowman's Wish Box. -->

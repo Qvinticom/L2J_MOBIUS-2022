@@ -165,8 +165,30 @@
 		<isDebuff>true</isDebuff>
 	</skill>
 	<skill id="18220" toLevel="1" name="Blazing Swamp Teleport">
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>47063</itemConsumeId> <!-- Scroll of Escape: Blazing Swamp -->
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1000</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>152713</x>
+				<y>-15085</y>
+				<z>-4384</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18221" toLevel="1" name="Invincibility">
 		<!-- Invincible state. -->

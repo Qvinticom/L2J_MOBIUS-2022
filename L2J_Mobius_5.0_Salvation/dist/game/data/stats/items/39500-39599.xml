@@ -827,6 +827,11 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17944" level="1" /> <!-- Scroll of Escape: Talking Island Village -->
+		</skills>
 	</item>
 	<item id="39554" name="Bard's Scroll of Escape - Hunter's Village" type="EtcItem">
 		<!-- A scroll of escape received from Miso the Minstrel. Use to teleport to the Hunter's Village, where Magmeld Delegation Leader Lada is. -->
@@ -840,6 +845,11 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17945" level="1" /> <!-- Escape - Hunter's Village Teleport -->
+		</skills>
 	</item>
 	<item id="39555" name="Minstrel's Scroll of Escape: Magmeld" type="EtcItem">
 		<!-- A scroll given as a gift. Takes you to Magmeld. -->
@@ -853,6 +863,11 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17946" level="1" /> <!-- Scroll of Escape: Magmeld -->
+		</skills>
 	</item>
 	<item id="39556" name="Minstrel's Scroll of Escape: Town of Rune" type="EtcItem">
 		<!-- A scroll given as a gift. Takes you to Town of Rune. -->
@@ -866,6 +881,11 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 		<set name="weight" val="30" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17947" level="1" /> <!-- Scroll of Escape: Town of Rune -->
+		</skills>
 	</item>
 	<item id="39557" name="Minstrel's Scroll of Escape: Town of Aden" type="EtcItem">
 		<!-- A scroll given as a gift. Takes you to Town of Aden. -->
@@ -878,6 +898,11 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17948" level="1" /> <!-- Scroll of Escape: Town of Aden -->
+		</skills>
 	</item>
 	<item id="39558" name="Low-grade Talisman Ingredient Box" type="EtcItem">
 		<!-- Not in Use -->

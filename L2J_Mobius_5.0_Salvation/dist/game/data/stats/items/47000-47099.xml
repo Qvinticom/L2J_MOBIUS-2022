@@ -1123,6 +1123,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17945" level="2" /> <!-- Scroll of Escape: Arms of Timiniel -->
+		</skills>
 	</item>
 	<item id="47055" name="Scroll of Escape: Arms of Timiniel" type="EtcItem">
 		<!-- Teleports to Nerupa in the Arms of Timiniel. -->
@@ -1134,6 +1138,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17946" level="2" /> <!-- Scroll of Escape: Arms of Timiniel -->
+		</skills>
 	</item>
 	<item id="47056" name="Scroll of Escape: Harnak Underground Ruins" type="EtcItem">
 		<!-- Teleports to Hadel, who can send you to the Harnak Underground Ruins. -->
@@ -1145,6 +1153,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17991" level="1" /> <!-- Scroll of Escape: Harnak Underground Ruins -->
+		</skills>
 	</item>
 	<item id="47057" name="Scroll of Escape: Bloody Swampland" type="EtcItem">
 		<!-- Teleports to Vollodos, between the Bloody Swampland and the Altar of Evil. -->
@@ -1156,6 +1168,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17989" level="1" /> <!-- Scroll of Escape: Bloody Swampland -->
+		</skills>
 	</item>
 	<item id="47058" name="Scroll of Escape: Kartia's Labyrinth" type="EtcItem">
 		<!-- Teleports to the Kartia Researcher, who can send you to Kartia's Labyrinth. -->
@@ -1167,6 +1183,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17992" level="1" /> <!-- Scroll of Escape: Kartia's Labyrinth -->
+		</skills>
 	</item>
 	<item id="47059" name="Scroll of Escape: Isle of Souls" type="EtcItem">
 		<!-- Teleports to Hesed in the Isle of Souls. -->
@@ -1178,6 +1198,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17997" level="1" /> <!-- Scroll of Escape: Isle of Souls -->
+		</skills>
 	</item>
 	<item id="47060" name="Scroll of Escape: Seal of Shilen" type="EtcItem">
 		<!-- Teleports to the Seal of Shilen. -->
@@ -1189,6 +1213,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17999" level="1" /> <!-- Scroll of Escape: Seal of Shilen -->
+		</skills>
 	</item>
 	<item id="47061" name="Scroll of Escape: Pagan Temple" type="EtcItem">
 		<!-- Teleports to Knight Captain Kargos, who has something to do with entering the Pagan Temple. -->
@@ -1200,6 +1228,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18124" level="1" /> <!-- Scroll of Escape: Pagan Temple -->
+		</skills>
 	</item>
 	<item id="47062" name="Scroll of Escape: Cemetery" type="EtcItem">
 		<!-- Teleports to the Cemetery. -->
@@ -1211,6 +1243,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18000" level="1" /> <!-- Scroll of Escape: Cemetery -->
+		</skills>
 	</item>
 	<item id="47063" name="Scroll of Escape: Blazing Swamp" type="EtcItem">
 		<!-- Teleports to the Blazing Swamp. -->
@@ -1222,6 +1258,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="18220" level="1" /> <!-- Scroll of Escape: Blazing Swamp -->
+		</skills>
 	</item>
 	<item id="47064" name="Blessed Paulina's Seraph Heavy Armor Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Seraph Heavy Armor Set which can be equipped from Lv. 85 upwards. -->
@@ -1235,6 +1275,15 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46864" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Helmet -->
+			<item id="46865" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Breastplate -->
+			<item id="46866" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Gaiters -->
+			<item id="46867" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Gauntlets -->
+			<item id="46868" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Boots -->
+			<item id="46869" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Shield -->
+		</capsuled_items>
 	</item>
 	<item id="47065" name="Blessed Paulina's Seraph Light Armor Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Seraph Light Armor Set which can be equipped from Lv. 85 upwards. -->
@@ -1248,6 +1297,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46870" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Helmet -->
+			<item id="46871" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Armor -->
+			<item id="46872" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Leggings -->
+			<item id="46873" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Gloves -->
+			<item id="46874" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Leather Boots -->
+		</capsuled_items>
 	</item>
 	<item id="47066" name="Blessed Paulina's Seraph Robe Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Seraph Robe Set which can be equipped from Lv. 85 upwards. -->
@@ -1261,6 +1318,15 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46875" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Circle -->
+			<item id="46876" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Tunic -->
+			<item id="46877" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Stockings -->
+			<item id="46878" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Gloves -->
+			<item id="46879" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Shoes -->
+			<item id="46880" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Sigil -->
+		</capsuled_items>
 	</item>
 	<item id="47067" name="Blessed Paulina's Seraph Accessory Pack" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Seraph Accessory Set which can be equipped from Lv. 85 upwards. -->
@@ -1274,6 +1340,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46881" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Necklace -->
+			<item id="46882" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Earring -->
+			<item id="46883" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Earring -->
+			<item id="46884" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Ring -->
+			<item id="46885" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Ring -->
+		</capsuled_items>
 	</item>
 	<item id="47068" name="PC Cafe - Paulina's Seraph Heavy Armor Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Heavy Armor Set which can be equipped from Lv. 85 upwards. -->
@@ -1286,6 +1360,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46898" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Breastplate -->
+			<item id="46899" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Gaiters -->
+			<item id="46897" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Helmet -->
+			<item id="46900" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Gauntlets -->
+			<item id="46901" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Boots -->
+		</capsuled_items>
 	</item>
 	<item id="47069" name="PC Cafe - Paulina's Seraph Light Armor Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Light Armor Set which can be equipped from Lv. 85 upwards. -->
@@ -1298,6 +1380,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46904" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Leather Armor -->
+			<item id="46905" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Leather Leggings -->
+			<item id="46903" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Leather Helmet -->
+			<item id="46906" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Leather Gloves -->
+			<item id="46907" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Leather Boots -->
+		</capsuled_items>
 	</item>
 	<item id="47070" name="PC Cafe - Paulina's Seraph Robe Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Robe Set which can be equipped from Lv. 85 upwards. -->
@@ -1310,6 +1400,15 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46909" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Tunic -->
+			<item id="46910" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Stockings -->
+			<item id="46908" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Circlet -->
+			<item id="46911" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Gloves -->
+			<item id="46912" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Shoes -->
+			<item id="46913" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Sigil -->
+		</capsuled_items>
 	</item>
 	<item id="47071" name="PC Cafe - Paulina's Seraph Accessory Pack" additionalName="4-hour" type="EtcItem">
 		<!-- Double click to obtain a 4-hour Seraph Accessory Set which can be equipped from Lv. 85 upwards. -->
@@ -1322,6 +1421,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
+		<set name="handler" val="ExtractableItems" />
+		<capsuled_items>
+			<item id="46914" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Necklace -->
+			<item id="46915" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Earring -->
+			<item id="46916" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Earring -->
+			<item id="46917" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Ring -->
+			<item id="46918" min="1" max="1" chance="100" /> <!-- PC Cafe - Paulina's Seraph Ring -->
+		</capsuled_items>
 	</item>
 	<item id="47072" name="Blessed Paulina's Specter Dualsword Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double click to obtain a 30-day Specter dual sword which can be equipped from Lv. 85 upwards. -->
