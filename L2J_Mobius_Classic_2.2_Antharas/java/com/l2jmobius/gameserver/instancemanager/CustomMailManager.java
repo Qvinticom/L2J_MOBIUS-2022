@@ -68,10 +68,10 @@ public class CustomMailManager
 						final List<ItemHolder> itemHolders = new ArrayList<>();
 						for (String str : items.split(";"))
 						{
-							if (str.toLowerCase().contains(" "))
+							if (str.contains(" "))
 							{
-								final String itemId = str.toLowerCase().split(" ")[0];
-								final String itemCount = str.toLowerCase().split(" ")[1];
+								final String itemId = str.split(" ")[0];
+								final String itemCount = str.split(" ")[1];
 								if (Util.isDigit(itemId) && Util.isDigit(itemCount))
 								{
 									itemHolders.add(new ItemHolder(Integer.parseInt(itemId), Long.parseLong(itemCount)));
