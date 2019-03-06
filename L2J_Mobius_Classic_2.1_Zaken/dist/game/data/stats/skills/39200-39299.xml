@@ -12,7 +12,34 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="39203" toLevel="1" name="Life Stone Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90035</itemConsumeId>
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>20</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="70">
+						<item id="90012" count="1" /> <!-- common -->
+					</item>
+					<item chance="20">
+						<item id="90013" count="1" /> <!-- mid -->
+					</item>
+					<item chance="10">
+						<item id="90014" count="1" /> <!-- high -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39204" toLevel="1" name="Dimensional Blessing">
 		<!-- Gives 3,700,000 XP / 1,110,000 SP. -->
