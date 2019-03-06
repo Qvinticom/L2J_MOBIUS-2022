@@ -92,8 +92,7 @@ public class CustomMailManager
 						}
 						
 						// Delete entry from database.
-						try (Connection con2 = DatabaseFactory.getConnection();
-							PreparedStatement stmt = con2.prepareStatement(DELETE_SQL))
+						try (PreparedStatement stmt = con.prepareStatement(DELETE_SQL))
 						{
 							stmt.setString(1, rs.getString("date"));
 							stmt.setInt(2, playerId);
@@ -101,18 +100,18 @@ public class CustomMailManager
 						}
 						catch (SQLException e)
 						{
-							LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error deleting entry from database:", e);
+							LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error deleting entry from database: ", e);
 						}
 						
 						// Send message.
 						MailManager.getInstance().sendMessage(msg);
-						LOGGER.info(getClass().getSimpleName() + ": Sent message at " + player.getName() + ".");
+						LOGGER.info(getClass().getSimpleName() + ": Message sent to " + player.getName() + ".");
 					}
 				}
 			}
 			catch (SQLException e)
 			{
-				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error loading from database:", e);
+				LOGGER.log(Level.WARNING, getClass().getSimpleName() + ": Error reading from database: ", e);
 			}
 		}, Config.CUSTOM_MAIL_MANAGER_DELAY, Config.CUSTOM_MAIL_MANAGER_DELAY);
 		
