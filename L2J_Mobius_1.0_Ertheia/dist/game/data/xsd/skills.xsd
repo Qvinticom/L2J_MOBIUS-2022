@@ -1236,6 +1236,8 @@
 																						<xs:complexType>
 																							<xs:attribute name="id" type="xs:unsignedShort" use="required" />
 																							<xs:attribute name="count" type="xs:unsignedInt" use="required" />
+																							<xs:attribute name="minEnchant" type="xs:unsignedInt" />
+																							<xs:attribute name="maxEnchant" type="xs:unsignedInt" />
 																						</xs:complexType>
 																					</xs:element>
 																				</xs:sequence>

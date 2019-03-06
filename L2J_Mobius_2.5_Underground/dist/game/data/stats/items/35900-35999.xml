@@ -1728,6 +1728,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player instanceId="224,225,226,227" />
+		</cond>
 		<skills>
 			<skill id="9546" level="1" /> <!-- Ceremony of Chaos - Drum Melody -->
 			<skill id="9547" level="1" /> <!-- Ceremony of Chaos - Pipe Organ Melody -->
@@ -1757,6 +1760,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player instanceId="224,225,226,227" />
+		</cond>
 		<skills>
 			<skill id="9546" level="1" /> <!-- Ceremony of Chaos - Drum Melody -->
 			<skill id="9547" level="1" /> <!-- Ceremony of Chaos - Pipe Organ Melody -->
@@ -1786,6 +1792,9 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player instanceId="224,225,226,227" />
+		</cond>
 		<skills>
 			<skill id="9546" level="1" /> <!-- Ceremony of Chaos - Drum Melody -->
 			<skill id="9547" level="1" /> <!-- Ceremony of Chaos - Pipe Organ Melody -->

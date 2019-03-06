@@ -378,142 +378,245 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="39343" name="Designer Amaranthine Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one of the following: Amaranthine Weapon Pack, Amaranthine Weapon Crafting Pack, or Amaranthine Weapon Pack with an item enchanted to 4, 5, 6, 7, or 8. -->
+	<item id="39343" name="Designer Helios Weapon Pack" type="EtcItem">
+		<!-- Double-click to acquire one of the following: Helios Weapon Pack, Helios Weapon Crafting Pack, or Helios Weapon Pack with an item enchanted to 4, 5, 6, 7, or 8. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17872" level="1" /> <!-- Helios Pack -->
+		</skills>
 	</item>
-	<item id="39344" name="Amaranthine Weapon Crafting Pack" type="EtcItem">
-		<!-- Double-click to acquire a pack for crafting one Amaranthine weapon. -->
+	<item id="39344" name="Helios Weapon Crafting Pack" type="EtcItem">
+		<!-- Double-click to acquire a pack for crafting one Helios weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
-	</item>
-	<item id="39345" name="Amaranthine Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Amaranthine weapon. -->
-		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
 		<set name="immediate_effect" val="true" />
-		<set name="material" val="PAPER" />
-		<set name="is_tradable" val="false" />
-		<set name="is_dropable" val="false" />
-		<set name="is_depositable" val="false" />
-		<set name="is_sellable" val="false" />
-		<set name="is_stackable" val="true" />
-		<set name="is_private_storeable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="17872" level="1" /> <!-- Amaranthine Weapon -->
+			<skill id="17873" level="1" /> <!-- Helios Crafting Pack -->
 		</skills>
 	</item>
-	<item id="39346" name="+4 Amaranthine Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Amaranthine weapon that has been enchanted to + 4. -->
-		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+	<item id="39345" name="Helios Weapon Pack" type="EtcItem">
+		<!-- Double-click to acquire one Helios weapon. -->
+		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17874" level="1" /> <!-- Helios Completion Pack -->
+		</skills>
 	</item>
-	<item id="39347" name="+5 Amaranthine Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Amaranthine weapon that has been enchanted to + 5. -->
+	<item id="39346" name="+4 Helios Weapon Pack" type="EtcItem">
+		<!-- Double-click to acquire one Helios weapon that has been enchanted to +4. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17875" level="1" /> <!-- + 4 Helios Pack -->
+		</skills>
 	</item>
-	<item id="39348" name="+6 Amaranthine Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Amaranthine weapon that has been enchanted to + 6. -->
+	<item id="39347" name="+5 Helios Weapon Pack" type="EtcItem">
+		<!-- Double-click to acquire one Helios weapon that has been enchanted to +5. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17876" level="1" /> <!-- + 5 Helios Pack -->
+		</skills>
 	</item>
-	<item id="39349" name="+7 Amaranthine Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Amaranthine weapon that has been enchanted to + 7. -->
+	<item id="39348" name="+6 Helios Weapon Pack" type="EtcItem">
+		<!-- Double-click to acquire one Helios weapon that has been enchanted to +6. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17877" level="1" /> <!-- + 6 Helios Pack -->
+		</skills>
 	</item>
-	<item id="39350" name="+8 Amaranthine Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Amaranthine weapon that has been enchanted to + 8. -->
+	<item id="39349" name="+7 Helios Weapon Pack" type="EtcItem">
+		<!-- Double-click to acquire one Helios weapon that has been enchanted to +7. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17878" level="1" /> <!-- + 7 Helios Pack -->
+		</skills>
+	</item>
+	<item id="39350" name="+8 Helios Weapon Pack" type="EtcItem">
+		<!-- Double-click to acquire one Helios weapon that has been enchanted to +8. -->
+		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
+		<set name="is_clan_depositable" val="false" />
+		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
+		<set name="is_sellable" val="false" />
+		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17879" level="1" /> <!-- + 8 Helios Pack -->
+		</skills>
 	</item>
 	<item id="39351" name="Designer Specter Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one of the following: Specter Weapon Pack, Specter Weapon Crafting Pack, or Specter Weapon Pack with an item enchanted to 4, 5, 6, 7, or 8. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17864" level="1" /> <!-- Specter Pack -->
+		</skills>
 	</item>
 	<item id="39352" name="Specter Weapon Crafting Pack" type="EtcItem">
 		<!-- Double-click to acquire a pack for crafting one Specter weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17865" level="1" /> <!-- Specter Crafting Pack -->
+		</skills>
 	</item>
 	<item id="39353" name="Specter Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Specter weapon. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17866" level="1" /> <!-- Specter Completion Pack -->
+		</skills>
 	</item>
 	<item id="39354" name="+4 Specter Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Specter weapon that has been enchanted to + 4. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17867" level="1" /> <!-- + 4 Specter Pack -->
+		</skills>
 	</item>
 	<item id="39355" name="+5 Specter Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Specter weapon that has been enchanted to + 5. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17868" level="1" /> <!-- + 5 Specter Pack -->
+		</skills>
 	</item>
 	<item id="39356" name="+6 Specter Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Specter weapon that has been enchanted to + 6. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17869" level="1" /> <!-- + 6 Specter Pack -->
+		</skills>
 	</item>
 	<item id="39357" name="+7 Specter Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Specter weapon that has been enchanted to + 7. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17870" level="1" /> <!-- + 7 Specter Pack -->
+		</skills>
 	</item>
 	<item id="39358" name="+8 Specter Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Specter weapon that has been enchanted to + 8. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="17871" level="1" /> <!-- + 8 Specter Pack -->
+		</skills>
 	</item>
 	<item id="39359" name="Designer Apocalypse Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one of the following: Apocalypse Weapon Pack, Apocalypse Weapon Crafting Pack, or Apocalypse Weapon Pack with an item enchanted to 4, 5, 6, 7, or 8. -->

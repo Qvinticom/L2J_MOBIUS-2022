@@ -653,7 +653,86 @@
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="18618" toLevel="10" name="Scroll of Escape: Blackbird Campsite">
+		<itemConsumeId>
+			<value level="1">47234</value> <!-- Scroll of Escape: Blackbird Campsite -->
+			<value level="2">47235</value> <!-- Scroll of Escape: Enchanted Valley -->
+			<value level="3">47236</value> <!-- Scroll of Escape: Giant's Cave -->
+			<value level="4">47237</value> <!-- Scroll of Escape: Hellbound -->
+			<value level="5">47238</value> <!-- Scroll of Escape: Blazing Swamp -->
+			<value level="6">47239</value> <!-- Scroll of Escape: Raider's Crossroads -->
+			<value level="7">47240</value> <!-- Scroll of Escape: Land of Chaos -->
+			<value level="8">47241</value> <!-- Scroll of Escape: Gainak -->
+			<value level="9">47242</value> <!-- Scroll of Escape: The Cemetery -->
+			<value level="10">47243</value> <!-- Scroll of Escape: Pagan Temple -->
+		</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport" level="1">
+				<x>-48223</x>
+				<y>69566</y>
+				<z>-3080</z>
+			</effect>
+			<effect name="Teleport" level="2">
+				<x>181737</x>
+				<y>46469</y>
+				<z>-4276</z>
+			</effect>
+			<effect name="Teleport" level="3">
+				<x>181737</x>
+				<y>46469</y>
+				<z>-4276</z>
+			</effect>
+			<effect name="Teleport" level="4">
+				<x>-11802</x>
+				<y>236360</y>
+				<z>-3271</z>
+			</effect>
+			<effect name="Teleport" level="5">
+				<x>155310</x>
+				<y>-16339</y>
+				<z>-3320</z>
+			</effect>
+			<effect name="Teleport" level="6">
+				<x>-14916</x>
+				<y>-135329</y>
+				<z>-1216</z>
+			</effect>
+			<effect name="Teleport" level="7">
+				<x>-2568</x>
+				<y>-105972</y>
+				<z>-2632</z>
+			</effect>
+			<effect name="Teleport" level="8">
+				<x>15659</x>
+				<y>-114414</y>
+				<z>-240</z>
+			</effect>
+			<effect name="Teleport" level="9">
+				<x>167047</x>
+				<y>20304</y>
+				<z>-3328</z>
+			</effect>
+			<effect name="Teleport" level="10">
+				<x>36603</x>
+				<y>-51202</y>
+				<z>712</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="18619" toLevel="3" name="Basic Supply Box">
 		<itemConsumeCount>1</itemConsumeCount>

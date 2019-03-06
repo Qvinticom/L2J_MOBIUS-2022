@@ -912,13 +912,13 @@
 	<skill id="17841" toLevel="1" name="Eternal Completion Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17842" toLevel="1" name="+ 5 Eternal Pack">
+	<skill id="17842" toLevel="1" name="+5 Eternal Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17843" toLevel="1" name="+ 6 Eternal Pack">
+	<skill id="17843" toLevel="1" name="+6 Eternal Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17844" toLevel="1" name="+ 8 Eternal Pack">
+	<skill id="17844" toLevel="1" name="+8 Eternal Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17845" toLevel="1" name="Seraph Crafting Pack">
@@ -927,13 +927,13 @@
 	<skill id="17846" toLevel="1" name="Seraph Completion Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17847" toLevel="1" name="+ 5 Seraph Pack">
+	<skill id="17847" toLevel="1" name="+5 Seraph Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17848" toLevel="1" name="+ 6 Seraph Pack">
+	<skill id="17848" toLevel="1" name="+6 Seraph Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17849" toLevel="1" name="+ 8 Seraph Pack">
+	<skill id="17849" toLevel="1" name="+8 Seraph Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17850" toLevel="1" name="Twilight Crafting Pack">
@@ -942,13 +942,13 @@
 	<skill id="17851" toLevel="1" name="Twilight Completion Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17852" toLevel="1" name="+ 5 Twilight Pack">
+	<skill id="17852" toLevel="1" name="+5 Twilight Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17853" toLevel="1" name="+ 6 Twilight Pack">
+	<skill id="17853" toLevel="1" name="+6 Twilight Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17854" toLevel="1" name="+ 8 Twilight Pack">
+	<skill id="17854" toLevel="1" name="+8 Twilight Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17855" toLevel="1" name="Vesper Pack">
@@ -963,46 +963,442 @@
 	<skill id="17858" toLevel="1" name="Apocalypse Completion Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17859" toLevel="1" name="+ 4 Apocalypse Pack">
+	<skill id="17859" toLevel="1" name="+4 Apocalypse Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17860" toLevel="1" name="+ 5 Apocalypse Pack">
+	<skill id="17860" toLevel="1" name="+5 Apocalypse Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17861" toLevel="1" name="+ 6 Apocalypse Pack">
+	<skill id="17861" toLevel="1" name="+6 Apocalypse Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17862" toLevel="1" name="+ 7 Apocalypse Pack">
+	<skill id="17862" toLevel="1" name="+7 Apocalypse Pack">
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="17863" toLevel="1" name="+ 8 Apocalypse Pack">
+	<skill id="17863" toLevel="1" name="+8 Apocalypse Pack">
 		<operateType>A1</operateType>
 	</skill>
 	<skill id="17864" toLevel="1" name="Specter Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="14.3">
+						<item id="39352" count="1" /> <!-- Specter Weapon Crafting Pack -->
+					</item>
+					<item chance="14.3">
+						<item id="39353" count="1" /> <!-- Specter Weapon Pack -->
+					</item>
+					<item chance="14.2">
+						<item id="39354" count="1" /> <!-- +4 Specter Weapon Pack -->
+					</item>
+					<item chance="14.3">
+						<item id="39355" count="1" /> <!-- +5 Specter Weapon Pack -->
+					</item>
+					<item chance="14.3">
+						<item id="39356" count="1" /> <!-- +6 Specter Weapon Pack -->
+					</item>
+					<item chance="14.3">
+						<item id="39357" count="1" /> <!-- +7 Specter Weapon Pack -->
+					</item>
+					<item chance="14.3">
+						<item id="39358" count="1" /> <!-- +8 Specter Weapon Pack -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17865" toLevel="1" name="Specter Crafting Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="38012" count="1" /> <!-- Specter Shaper Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38013" count="1" /> <!-- Specter Cutter Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38014" count="1" /> <!-- Specter Slasher Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38015" count="1" /> <!-- Specter Avenger Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38016" count="1" /> <!-- Specter Fighter Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38017" count="1" /> <!-- Specter Stormer Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38018" count="1" /> <!-- Specter Thrower Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38019" count="1" /> <!-- Specter Shooter Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38020" count="1" /> <!-- Specter Buster Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38021" count="1" /> <!-- Specter Caster Crafting Pack -->
+					</item>
+					<item chance="9.0">
+						<item id="38022" count="1" /> <!-- Specter Retributer Crafting Pack -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17866" toLevel="1" name="Specter Completion Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17382" count="1" /> <!-- Specter Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17383" count="1" /> <!-- Specter Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17384" count="1" /> <!-- Specter Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17385" count="1" /> <!-- Specter Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17386" count="1" /> <!-- Specter Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17387" count="1" /> <!-- Specter Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17388" count="1" /> <!-- Specter Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17389" count="1" /> <!-- Specter Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17390" count="1" /> <!-- Specter Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17391" count="1" /> <!-- Specter Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17392" count="1" /> <!-- Specter Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17867" toLevel="1" name="+ 4 Specter Pack">
+	<skill id="17867" toLevel="1" name="+4 Specter Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17382" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17383" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17384" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17385" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17386" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17387" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17388" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17389" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17390" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17391" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17392" count="1" minEnchant="4" maxEnchant="4" /> <!--  Specter Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17868" toLevel="1" name="+ 5 Specter Pack">
+	<skill id="17868" toLevel="1" name="+5 Specter Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17382" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17383" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17384" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17385" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17386" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17387" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17388" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17389" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17390" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17391" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17392" count="1" minEnchant="5" maxEnchant="5" /> <!--  Specter Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17869" toLevel="1" name="+ 6 Specter Pack">
+	<skill id="17869" toLevel="1" name="+6 Specter Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17382" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17383" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17384" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17385" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17386" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17387" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17388" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17389" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17390" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17391" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17392" count="1" minEnchant="6" maxEnchant="6" /> <!--  Specter Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17870" toLevel="1" name="+ 7 Specter Pack">
+	<skill id="17870" toLevel="1" name="+7 Specter Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17382" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17383" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17384" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17385" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17386" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17387" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17388" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17389" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17390" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17391" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17392" count="1" minEnchant="7" maxEnchant="7" /> <!--  Specter Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17871" toLevel="1" name="+ 8 Specter Pack">
+	<skill id="17871" toLevel="1" name="+8 Specter Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17382" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17383" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17384" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17385" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17386" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17387" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17388" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17389" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17390" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17391" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17392" count="1" minEnchant="8" maxEnchant="8" /> <!--  Specter Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17872" toLevel="1" name="Amaranthine Pack">
+	<skill id="17872" toLevel="1" name="Helios Pack">
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>39345</itemConsumeId>
@@ -1014,79 +1410,415 @@
 		<affectScope>SINGLE</affectScope>
 		<conditions>
 			<condition name="OpEncumbered">
-				<weightPercent>20</weightPercent>
+				<weightPercent>10</weightPercent>
 				<slotsPercent>10</slotsPercent>
 			</condition>
 		</conditions>
 		<effects>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="6.66">
-						<item id="35193" count="1" /> <!-- Bloody Helios Shaper -->
+					<item chance="14.3">
+						<item id="39344" count="1" /> <!-- Helios Weapon Crafting Pack -->
 					</item>
-					<item chance="6.66">
-						<item id="35194" count="1" /> <!-- Bloody Helios Cutter -->
+					<item chance="14.3">
+						<item id="39345" count="1" /> <!-- Helios Weapon Pack -->
 					</item>
-					<item chance="6.66">
-						<item id="35195" count="1" /> <!-- Bloody Helios Slasher -->
+					<item chance="14.2">
+						<item id="39346" count="1" /> <!-- +4 Helios Weapon Pack -->
 					</item>
-					<item chance="6.66">
-						<item id="35196" count="1" /> <!-- Bloody Helios Avenger -->
+					<item chance="14.3">
+						<item id="39347" count="1" /> <!-- +5 Helios Weapon Pack -->
 					</item>
-					<item chance="6.66">
-						<item id="35197" count="1" /> <!-- Bloody Helios Fighter -->
+					<item chance="14.3">
+						<item id="39348" count="1" /> <!-- +6 Helios Weapon Pack -->
 					</item>
-					<item chance="6.66">
-						<item id="35198" count="1" /> <!-- Bloody Helios Stormer -->
+					<item chance="14.3">
+						<item id="39349" count="1" /> <!-- +7 Helios Weapon Pack -->
 					</item>
-					<item chance="6.66">
-						<item id="35199" count="1" /> <!-- Bloody Helios Thrower -->
-					</item>
-					<item chance="6.66">
-						<item id="35200" count="1" /> <!-- Bloody Helios Shooter -->
-					</item>
-					<item chance="6.66">
-						<item id="35201" count="1" /> <!-- Bloody Helios Buster -->
-					</item>
-					<item chance="6.66">
-						<item id="35202" count="1" /> <!-- Bloody Helios Caster -->
-					</item>
-					<item chance="6.66">
-						<item id="35203" count="1" /> <!-- Bloody Helios Retributer -->
-					</item>
-					<item chance="6.66">
-						<item id="35204" count="1" /> <!-- Bloody Helios Dual Sword -->
-					</item>
-					<item chance="6.66">
-						<item id="35205" count="2" /> <!-- Bloody Helios Dual Dagger -->
-					</item>
-					<item chance="6.66">
-						<item id="35206" count="1" /> <!-- Bloody Helios Dual Blunt Weapon -->
+					<item chance="14.3">
+						<item id="39350" count="1" /> <!-- +8 Helios Weapon Pack -->
 					</item>
 				</items>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="17873" toLevel="1" name="Amaranthine Crafting Pack">
+	<skill id="17873" toLevel="1" name="Helios Crafting Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="38043" count="1" /> <!-- Helios Shaper Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38044" count="1" /> <!-- Helios Cutter Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38045" count="1" /> <!-- Helios Slasher Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38046" count="1" /> <!-- Helios Avenger Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38047" count="1" /> <!-- Helios Fighter Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38048" count="1" /> <!-- Helios Stormer Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38049" count="1" /> <!-- Helios Thrower Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38050" count="1" /> <!-- Helios Shooter Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38051" count="1" /> <!-- Helios Buster Crafting Pack -->
+					</item>
+					<item chance="9.1">
+						<item id="38052" count="1" /> <!-- Helios Caster Crafting Pack -->
+					</item>
+					<item chance="9.0">
+						<item id="38053" count="1" /> <!-- Helios Retributer Crafting Pack -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17874" toLevel="1" name="Amaranthine Completion Pack">
+	<skill id="17874" toLevel="1" name="Helios Completion Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17416" count="1" /> <!-- Helios Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17417" count="1" /> <!-- Helios Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17418" count="1" /> <!-- Helios Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17419" count="1" /> <!-- Helios Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17420" count="1" /> <!-- Helios Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17421" count="1" /> <!-- Helios Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17422" count="1" /> <!-- Helios Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17423" count="1" /> <!-- Helios Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17424" count="1" /> <!-- Helios Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17425" count="1" /> <!-- Helios Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17426" count="1" /> <!-- Helios Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17875" toLevel="1" name="+ 4 Amaranthine Pack">
+	<skill id="17875" toLevel="1" name="+4 Helios Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17416" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17417" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17418" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17419" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17420" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17421" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17422" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17423" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17424" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17425" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17426" count="1" minEnchant="4" maxEnchant="4" /> <!--  Helios Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17876" toLevel="1" name="+ 5 Amaranthine Pack">
+	<skill id="17876" toLevel="1" name="+5 Helios Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17416" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17417" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17418" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17419" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17420" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17421" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17422" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17423" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17424" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17425" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17426" count="1" minEnchant="5" maxEnchant="5" /> <!--  Helios Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17877" toLevel="1" name="+ 6 Amaranthine Pack">
+	<skill id="17877" toLevel="1" name="+6 Helios Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17416" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17417" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17418" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17419" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17420" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17421" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17422" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17423" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17424" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17425" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17426" count="1" minEnchant="6" maxEnchant="6" /> <!--  Helios Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17878" toLevel="1" name="+ 7 Amaranthine Pack">
+	<skill id="17878" toLevel="1" name="+7 Helios Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17416" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17417" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17418" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17419" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17420" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17421" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17422" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17423" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17424" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17425" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17426" count="1" minEnchant="7" maxEnchant="7" /> <!--  Helios Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
-	<skill id="17879" toLevel="1" name="+ 8 Amaranthine Pack">
+	<skill id="17879" toLevel="1" name="+8 Helios Pack">
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
 		<operateType>A1</operateType>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="9.1">
+						<item id="17416" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Shaper -->
+					</item>
+					<item chance="9.1">
+						<item id="17417" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Cutter -->
+					</item>
+					<item chance="9.1">
+						<item id="17418" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Slasher -->
+					</item>
+					<item chance="9.1">
+						<item id="17419" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Avenger -->
+					</item>
+					<item chance="9.1">
+						<item id="17420" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Fighter -->
+					</item>
+					<item chance="9.1">
+						<item id="17421" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Stormer -->
+					</item>
+					<item chance="9.1">
+						<item id="17422" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Thrower -->
+					</item>
+					<item chance="9.1">
+						<item id="17423" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Shooter -->
+					</item>
+					<item chance="9.1">
+						<item id="17424" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Buster -->
+					</item>
+					<item chance="9.1">
+						<item id="17425" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Caster -->
+					</item>
+					<item chance="9.0">
+						<item id="17426" count="1" minEnchant="8" maxEnchant="8" /> <!--  Helios Retributer -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17880" toLevel="1" name="Scroll: 1,000,000 SP">
 		<operateType>A1</operateType>

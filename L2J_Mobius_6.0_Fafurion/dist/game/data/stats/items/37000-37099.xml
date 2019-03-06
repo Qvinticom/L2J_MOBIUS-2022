@@ -267,8 +267,12 @@
 	<item id="37017" name="Scroll of Escape: Raider's Crossroads" type="EtcItem">
 		<!-- Scroll for teleporting to Raider's Crossroads. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17050" level="1" /> <!-- Scroll of Escape: Raider's Crossroads -->
@@ -277,8 +281,12 @@
 	<item id="37018" name="Scroll of Escape: Land of Chaos" type="EtcItem">
 		<!-- Scroll for teleporting to the Land of Chaos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17051" level="1" /> <!-- Scroll of Escape: Land of Chaos -->
@@ -287,8 +295,12 @@
 	<item id="37019" name="Scroll of Escape: Gainak" type="EtcItem">
 		<!-- Scroll for teleporting to Gainak. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
+		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="30" />
+		<set name="is_sellable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17049" level="1" /> <!-- Scroll of Escape: Gainak -->

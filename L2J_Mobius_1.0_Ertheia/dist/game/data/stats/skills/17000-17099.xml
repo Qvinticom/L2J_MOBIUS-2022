@@ -172,10 +172,30 @@
 	</skill>
 	<skill id="17049" toLevel="1" name="Scroll of Escape: Gainak">
 		<!-- Return to Gainak. -->
-		<itemConsumeId>37019</itemConsumeId>
+		<itemConsumeId>37019</itemConsumeId> <!-- Scroll of Escape: Gainak -->
 		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>16319</x>
+				<y>-114101</y>
+				<z>-224</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17050" toLevel="1" name="Scroll of Escape: Raider's Crossroads">
 		<!-- Return to Raider's Crossroads -->
@@ -206,10 +226,30 @@
 	</skill>
 	<skill id="17051" toLevel="1" name="Scroll of Escape: Land of Chaos">
 		<!-- Return to Land of Chaos -->
-		<itemConsumeId>37018</itemConsumeId>
+		<itemConsumeId>37018</itemConsumeId> <!-- Scroll of Escape: Land of Chaos -->
 		<itemConsumeCount>1</itemConsumeCount>
+		<icon>icon.skill0000</icon>
 		<operateType>A1</operateType>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
 		<hitTime>1500</hitTime>
+		<isMagic>2</isMagic>
+		<magicLvl>1</magicLvl>
+		<magicCriticalRate>5</magicCriticalRate>
+		<conditions>
+			<condition name="OpAlignment">
+				<affectType>CASTER</affectType>
+				<alignment>LAWFUL</alignment>
+			</condition>
+			<condition name="OpCanEscape" />
+		</conditions>
+		<effects>
+			<effect name="Teleport">
+				<x>-17980</x>
+				<y>-111991</y>
+				<z>-3800</z>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17052" toLevel="1" name="Elmore's Support Box">
 		<!-- Double-click to obtain either: 1 of the 4 Giant's Codices (Oblivion, Discipline, Mastery, Standard), or an Enchant Scroll (R-grade) for a weapon or armor. -->
