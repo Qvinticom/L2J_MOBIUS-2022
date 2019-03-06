@@ -1030,9 +1030,11 @@ public final class Config
 	public static boolean COMMUNITYBOARD_ENABLE_TELEPORTS;
 	public static boolean COMMUNITYBOARD_ENABLE_BUFFS;
 	public static boolean COMMUNITYBOARD_ENABLE_HEAL;
+	public static boolean COMMUNITYBOARD_ENABLE_DELEVEL;
 	public static int COMMUNITYBOARD_TELEPORT_PRICE;
 	public static int COMMUNITYBOARD_BUFF_PRICE;
 	public static int COMMUNITYBOARD_HEAL_PRICE;
+	public static int COMMUNITYBOARD_DELEVEL_PRICE;
 	public static boolean COMMUNITYBOARD_COMBAT_DISABLED;
 	public static boolean COMMUNITYBOARD_KARMA_DISABLED;
 	public static boolean COMMUNITYBOARD_CAST_ANIMATIONS;
@@ -2312,9 +2314,11 @@ public final class Config
 			COMMUNITYBOARD_ENABLE_TELEPORTS = CommunityBoard.getBoolean("CommunityEnableTeleports", true);
 			COMMUNITYBOARD_ENABLE_BUFFS = CommunityBoard.getBoolean("CommunityEnableBuffs", true);
 			COMMUNITYBOARD_ENABLE_HEAL = CommunityBoard.getBoolean("CommunityEnableHeal", true);
+			COMMUNITYBOARD_ENABLE_DELEVEL = CommunityBoard.getBoolean("CommunityEnableDelevel", false);
 			COMMUNITYBOARD_TELEPORT_PRICE = CommunityBoard.getInt("CommunityTeleportPrice", 0);
 			COMMUNITYBOARD_BUFF_PRICE = CommunityBoard.getInt("CommunityBuffPrice", 0);
 			COMMUNITYBOARD_HEAL_PRICE = CommunityBoard.getInt("CommunityHealPrice", 0);
+			COMMUNITYBOARD_DELEVEL_PRICE = CommunityBoard.getInt("CommunityDelevelPrice", 0);
 			COMMUNITYBOARD_KARMA_DISABLED = CommunityBoard.getBoolean("CommunityKarmaDisabled", true);
 			COMMUNITYBOARD_CAST_ANIMATIONS = CommunityBoard.getBoolean("CommunityCastAnimations", false);
 			COMMUNITY_PREMIUM_SYSTEM_ENABLED = CommunityBoard.getBoolean("CommunityPremiumSystem", false);

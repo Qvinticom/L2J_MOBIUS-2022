@@ -34,6 +34,7 @@ import com.l2jmobius.commons.database.DatabaseFactory;
 import com.l2jmobius.gameserver.cache.HtmCache;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.BuyListData;
+import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.MultisellData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.handler.CommunityBoardHandler;
@@ -73,7 +74,8 @@ public final class HomeBoard implements IParseBoardHandler
 		Config.COMMUNITYBOARD_ENABLE_MULTISELLS ? "_bbssell" : null,
 		Config.COMMUNITYBOARD_ENABLE_TELEPORTS ? "_bbsteleport" : null,
 		Config.COMMUNITYBOARD_ENABLE_BUFFS ? "_bbsbuff" : null,
-		Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null
+		Config.COMMUNITYBOARD_ENABLE_HEAL ? "_bbsheal" : null,
+		Config.COMMUNITYBOARD_ENABLE_DELEVEL ? "_bbsdelevel" : null
 	};
 	
 	public static final BiPredicate<String, L2PcInstance> COMBAT_CHECK = (command, activeChar) ->
@@ -254,6 +256,29 @@ public final class HomeBoard implements IParseBoardHandler
 			}
 			
 			returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/" + page + ".html");
+		}
+		else if (command.equals("_bbsdelevel"))
+		{
+			if (activeChar.getInventory().getInventoryItemCount(Config.COMMUNITYBOARD_CURRENCY, -1) < Config.COMMUNITYBOARD_DELEVEL_PRICE)
+			{
+				activeChar.sendMessage("Not enough currency!");
+			}
+			else if (activeChar.getLevel() == 1)
+			{
+				activeChar.sendMessage("You are at minimum level!");
+			}
+			else
+			{
+				activeChar.destroyItemByItemId("CB_Delevel", Config.COMMUNITYBOARD_CURRENCY, Config.COMMUNITYBOARD_DELEVEL_PRICE, activeChar, true);
+				final int newLevel = activeChar.getLevel() - 1;
+				activeChar.setExp(ExperienceData.getInstance().getExpForLevel(newLevel));
+				activeChar.getStat().setLevel((byte) newLevel);
+				activeChar.setCurrentHpMp(activeChar.getMaxHp(), activeChar.getMaxMp());
+				activeChar.setCurrentCp(activeChar.getMaxCp());
+				activeChar.broadcastUserInfo();
+				activeChar.checkPlayerSkills(); // Adjust skills according to new level.
+				returnHtml = HtmCache.getInstance().getHtm(activeChar, "data/html/CommunityBoard/Custom/delevel/complete.html");
+			}
 		}
 		else if (command.startsWith("_bbspremium"))
 		{
