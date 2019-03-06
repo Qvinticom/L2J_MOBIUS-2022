@@ -100,6 +100,7 @@ import com.l2jmobius.gameserver.instancemanager.ClanHallAuctionManager;
 import com.l2jmobius.gameserver.instancemanager.ClanHallManager;
 import com.l2jmobius.gameserver.instancemanager.CoupleManager;
 import com.l2jmobius.gameserver.instancemanager.CursedWeaponsManager;
+import com.l2jmobius.gameserver.instancemanager.CustomMailManager;
 import com.l2jmobius.gameserver.instancemanager.DayNightSpawnManager;
 import com.l2jmobius.gameserver.instancemanager.DimensionalRiftManager;
 import com.l2jmobius.gameserver.instancemanager.FactionManager;
@@ -409,6 +410,10 @@ public class GameServer
 		if (Config.ALLOW_MAIL)
 		{
 			MailManager.getInstance();
+		}
+		if (Config.CUSTOM_MAIL_MANAGER_ENABLED)
+		{
+			CustomMailManager.getInstance();
 		}
 		
 		PunishmentManager.getInstance();
