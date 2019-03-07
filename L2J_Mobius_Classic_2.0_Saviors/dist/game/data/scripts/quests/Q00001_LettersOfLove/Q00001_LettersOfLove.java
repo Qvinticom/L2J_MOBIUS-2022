@@ -40,6 +40,7 @@ public class Q00001_LettersOfLove extends Quest
 	private static final int NECKLACE_OF_KNOWLEDGE = 49039;
 	// Misc
 	private static final int MIN_LEVEL = 2;
+	private static final int MAX_LEVEL = 5;
 	
 	public Q00001_LettersOfLove()
 	{
@@ -47,6 +48,7 @@ public class Q00001_LettersOfLove extends Quest
 		addStartNpc(DARIN);
 		addTalkId(DARIN, ROXXY, BAULRO);
 		registerQuestItems(DARINS_LETTER, ROXXYS_KERCHIEF, DARINS_RECEIPT, BAULROS_POTION);
+		addCondMaxLevel(MAX_LEVEL, "30048-01.html");
 	}
 	
 	@Override
