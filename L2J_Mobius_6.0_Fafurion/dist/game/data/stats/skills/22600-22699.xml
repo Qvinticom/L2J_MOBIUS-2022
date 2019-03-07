@@ -71,9 +71,18 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpSkill">
+			<condition fromLevel="1" toLevel="1" name="OpSkill">
 				<skillId>1372</skillId> <!-- Expand Inventory -->
 				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>true</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1372</skillId> <!-- Expand Inventory -->
 				<skillLevel>2</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
@@ -97,9 +106,18 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<conditions>
-			<condition name="OpSkill">
+			<condition fromLevel="1" toLevel="1" name="OpSkill">
 				<skillId>1371</skillId> <!-- Expand Warehouse -->
 				<skillLevel>1</skillLevel>
+				<hasLearned>false</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Warehouse -->
+				<skillLevel>1</skillLevel>
+				<hasLearned>true</hasLearned>
+			</condition>
+			<condition fromLevel="2" toLevel="2" name="OpSkill">
+				<skillId>1371</skillId> <!-- Expand Warehouse -->
 				<skillLevel>2</skillLevel>
 				<hasLearned>false</hasLearned>
 			</condition>
