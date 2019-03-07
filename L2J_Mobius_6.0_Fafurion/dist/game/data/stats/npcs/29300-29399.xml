@@ -3151,24 +3151,32 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="29374" level="85" type="L2Npc" name="Cyrax" title="Fafurion's High Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="29374" level="116" type="L2Raidboss" name="Cyrax" title="Fafurion's High Priest">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="54052965.5" mp="106532.8" mpRegen="2148.1481481481" hpRegen="105454.54545455" />
+			<attack physical="55238.095238095" magical="9747.8991596639" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4296.2962962963" magical="2494.623655914" />
 			<speed>
 				<walk ground="65" />
 				<run ground="270" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
+			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="30" />
-			<height normal="72" />
+			<radius normal="30.0" />
+			<height normal="72.0" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="32747" level="1" /> <!-- Cyrax -->
+		</skillList>
 	</npc>
 	<npc id="29375" level="85" type="L2Npc" name="Temple Elite Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
