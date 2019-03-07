@@ -1320,7 +1320,7 @@
 		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1328,6 +1328,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13976" level="1" /> <!-- La Vie En Rose's Glorious Brooch -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
 		</stats>
@@ -1336,7 +1339,7 @@
 		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. CHA +1. Can be augmented. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i05" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1344,6 +1347,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13976" level="2" /> <!-- La Vie En Rose's Glorious Brooch -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
 		</stats>
@@ -1391,7 +1397,7 @@
 		<!-- When equipped, activates six Jewel Slots. Inventory Slots +12. All stats +1. Can be augmented. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="brooch" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="5" />
@@ -1399,6 +1405,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<skills>
+			<skill id="13976" level="3" /> <!-- La Vie En Rose's Glorious Brooch -->
+		</skills>
 		<stats>
 			<stat type="mDef">114</stat>
 		</stats>

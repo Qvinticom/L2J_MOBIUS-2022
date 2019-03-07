@@ -452,7 +452,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18380" level="1" /> <!-- Player Commendation - Talisman - STR -->
+		</skills>
 	</item>
 	<item id="46040" name="Player Commendation Talisman - INT" additionalName="PC-exclusive" type="Armor">
 		<!-- INT + 5 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -465,7 +472,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18381" level="1" /> <!-- Player Commendation - Talisman - INT -->
+		</skills>
 	</item>
 	<item id="46041" name="Player Commendation Talisman - DEX" additionalName="PC-exclusive" type="Armor">
 		<!-- DEX + 5 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -478,7 +492,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18382" level="1" /> <!-- Player Commendation - Talisman - DEX -->
+		</skills>
 	</item>
 	<item id="46042" name="Player Commendation Talisman - WIT" additionalName="PC-exclusive" type="Armor">
 		<!-- WIT + 5 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -491,7 +512,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18383" level="1" /> <!-- Player Commendation - Talisman - WIT -->
+		</skills>
 	</item>
 	<item id="46043" name="Player Commendation Talisman - CON" additionalName="PC-exclusive" type="Armor">
 		<!-- CON + 5 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -504,7 +532,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18384" level="1" /> <!-- Player Commendation - Talisman - CON -->
+		</skills>
 	</item>
 	<item id="46044" name="Player Commendation Talisman - MEN" additionalName="PC-exclusive" type="Armor">
 		<!-- MEN + 5 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -517,7 +552,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18385" level="1" /> <!-- Player Commendation - Talisman - MEN -->
+		</skills>
 	</item>
 	<item id="46045" name="Player Commendation Talisman - Atk. Attribute Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Atk. Attribute + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -530,7 +572,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18386" level="1" /> <!-- Player Commendation - Talisman - Attack Attribute -->
+		</skills>
 	</item>
 	<item id="46046" name="Player Commendation Talisman - Fire Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Fire Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -543,7 +592,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18387" level="1" /> <!-- Player Commendation - Talisman - Fire Resistance -->
+		</skills>
 	</item>
 	<item id="46047" name="Player Commendation Talisman - Water Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Water Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -556,7 +612,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18388" level="1" /> <!-- Player Commendation - Talisman - Water Resistance -->
+		</skills>
 	</item>
 	<item id="46048" name="Player Commendation Talisman - Wind Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Wind Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -569,7 +632,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18389" level="1" /> <!-- Player Commendation - Talisman - Wind Resistance -->
+		</skills>
 	</item>
 	<item id="46049" name="Player Commendation Talisman - Earth Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Earth Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -582,7 +652,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18390" level="1" /> <!-- Player Commendation - Talisman - Earth Resistance -->
+		</skills>
 	</item>
 	<item id="46050" name="Player Commendation Talisman - Holy Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Holy Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -595,7 +672,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18391" level="1" /> <!-- Player Commendation - Talisman - Holy Resistance -->
+		</skills>
 	</item>
 	<item id="46051" name="Player Commendation Talisman - Dark Resistance Boost" additionalName="PC-exclusive" type="Armor">
 		<!-- Dark Resistance + 50 when equipped. Only one effect is applied even when wearing two talismans with the same effect. -->
@@ -608,7 +692,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="bodypart" val="deco1" />
+		<set name="useSkillDisTime" val="6" />
+		<set name="equip_reuse_delay" val="30" />
+		<set name="immediate_effect" val="true" />
 		<set name="weight" val="150" />
+		<skills>
+			<skill id="18392" level="1" /> <!-- Player Commendation - Talisman - Dark Resistance -->
+		</skills>
 	</item>
 	<item id="46052" name="Veridan's Soul Stone" type="EtcItem">
 		<!-- Soul Stone obtained from defeating Armed Veridan. When combined with Kechi's Soul Stone and Michaela's Soul Stone, it will be turned into a Dark Soul Stone. Take it to Head Priest of the Earth Daichir to be recognized for defeating Earth Wyrm Trasken. -->

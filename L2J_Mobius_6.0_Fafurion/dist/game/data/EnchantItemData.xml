@@ -1,9 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/EnchantItemData.xsd">
 	<!-- Scrolls: Enchant Hair's -->
-	<enchant id="33818" />
-	<enchant id="34940" />
-	<enchant id="36978" />
+	<enchant id="33818" maxEnchant="10" />
+	<enchant id="34940" maxEnchant="10" />
+	<enchant id="36978" maxEnchant="10" />
+	<!-- Heavenly Enchant Scroll: Weapon -->
+	<enchant id="22427" targetGrade="R" maxEnchant="12" bonusRate="100" />
+	<!-- Heavenly Enchant Scroll: Armor -->
+	<enchant id="22430" targetGrade="R" maxEnchant="12" bonusRate="100" />
 
 	<!-- Scroll: Enchant Shadow Weapon -->
 	<enchant id="46337" targetGrade="R" maxEnchant="10">
@@ -211,6 +215,7 @@
 		<item id="34624" /> <!-- Sayha's Shirt -->
 		<item id="34625" /> <!-- Eva's Shirt -->
 		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
 	</enchant>
 
 	<!-- Blessed Scroll: Enchant Elemental Shirt" type="EtcItem -->
@@ -222,6 +227,13 @@
 		<item id="34624" /> <!-- Sayha's Shirt -->
 		<item id="34625" /> <!-- Eva's Shirt -->
 		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
+	</enchant>
+
+	<!-- Blessed Olf's T-shirt Enchant Scroll - Event -->
+	<enchant id="21707" maxEnchant="10">
+		<item id="21580" /> <!-- Olf's T-shirt -->
+		<item id="21706" /> <!-- Olf's T-shirt (Event) -->
 	</enchant>
 
 	<!-- Event - Herdsman's Love Scroll Event -->
@@ -489,6 +501,7 @@
 		<item id="34624" /> <!-- Sayha's Shirt -->
 		<item id="34625" /> <!-- Eva's Shirt -->
 		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
 		<item id="34732" /> <!-- Exchanged Power Shirt -->
 		<item id="34770" /> <!-- Pa'agrio's Shirt -->
 		<item id="34771" /> <!-- Sayha's Shirt -->
@@ -514,6 +527,7 @@
 		<item id="34624" /> <!-- Sayha's Shirt -->
 		<item id="34625" /> <!-- Eva's Shirt -->
 		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
 		<item id="34732" /> <!-- Exchanged Power Shirt -->
 		<item id="34770" /> <!-- Pa'agrio's Shirt -->
 		<item id="34771" /> <!-- Sayha's Shirt -->
@@ -539,6 +553,7 @@
 		<item id="34624" /> <!-- Sayha's Shirt -->
 		<item id="34625" /> <!-- Eva's Shirt -->
 		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
 		<item id="34732" /> <!-- Exchanged Power Shirt -->
 		<item id="34770" /> <!-- Pa'agrio's Shirt -->
 		<item id="34771" /> <!-- Sayha's Shirt -->
@@ -564,6 +579,7 @@
 		<item id="34624" /> <!-- Sayha's Shirt -->
 		<item id="34625" /> <!-- Eva's Shirt -->
 		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
 		<item id="34732" /> <!-- Exchanged Power Shirt -->
 		<item id="34770" /> <!-- Pa'agrio's Shirt -->
 		<item id="34771" /> <!-- Sayha's Shirt -->
@@ -589,6 +605,7 @@
 		<item id="34624" /> <!-- Sayha's Shirt -->
 		<item id="34625" /> <!-- Eva's Shirt -->
 		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
 		<item id="34732" /> <!-- Exchanged Power Shirt -->
 		<item id="34770" /> <!-- Pa'agrio's Shirt -->
 		<item id="34771" /> <!-- Sayha's Shirt -->
@@ -614,6 +631,7 @@
 		<item id="34624" /> <!-- Sayha's Shirt -->
 		<item id="34625" /> <!-- Eva's Shirt -->
 		<item id="34626" /> <!-- Maphr's Shirt -->
+		<item id="23307" /> <!-- Maphr's Shirt -->
 		<item id="34732" /> <!-- Exchanged Power Shirt -->
 		<item id="34770" /> <!-- Pa'agrio's Shirt -->
 		<item id="34771" /> <!-- Sayha's Shirt -->
