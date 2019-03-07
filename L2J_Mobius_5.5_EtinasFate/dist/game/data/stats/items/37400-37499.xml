@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="37400" name="Emerald Weapon Appearance Stone: Sword" additionalName="15-day" type="EtcItem">
+	<item id="37400" name="Emerald Weapon Appearance Stone: One-handed Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed staff to that of Emerald One-handed Sword. Limited time item (15-day). -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
@@ -119,7 +119,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37407" name="Emerald Weapon Appearance Stone: One-handed Blunt Weapon" additionalName="15-day" type="EtcItem">
+	<item id="37407" name="Emerald Weapon Appearance Stone: One-handed Blunt" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt to that of an Emerald one-handed blunt. 15-day. -->
 		<set name="icon" val="icon.shape_shifting_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -136,7 +136,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37408" name="Emerald Weapon Appearance Stone: Two-handed Blunt Weapon" additionalName="15-day" type="EtcItem">
+	<item id="37408" name="Emerald Weapon Appearance Stone: Two-handed Blunt" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt to that of an Emerald two-handed blunt. 15-day. -->
 		<set name="icon" val="Icon.shape_shifting_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -153,7 +153,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37409" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon" additionalName="15-day" type="EtcItem">
+	<item id="37409" name="Emerald Weapon Appearance Stone: One-handed Staff" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed staff to that of Emerald One-handed Staff. Limited time item (15-day). -->
 		<set name="icon" val="Icon.shape_shifting_magic_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -170,7 +170,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37410" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="15-day" type="EtcItem">
+	<item id="37410" name="Emerald Weapon Appearance Stone: Two-handed Staff" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed staff to that of Emerald Two-handed Staff. Limited time item (15-day). -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -187,7 +187,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37411" name="Emerald Weapon Appearance Stone: Dualsword" additionalName="15-day" type="EtcItem">
+	<item id="37411" name="Emerald Weapon Appearance Stone: Dual Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of Emerald Dual Sword. Limited time item (15-day). -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
@@ -221,7 +221,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37413" name="Emerald Weapon Appearance Stone: Dual Blunt Weapon" additionalName="15-day" type="EtcItem">
+	<item id="37413" name="Emerald Weapon Appearance Stone: Dual Blunt" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of an Emerald dual blunt. 15-day. -->
 		<set name="icon" val="icon.shape_shifting_dualblunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -272,7 +272,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37416" name="Emerald Weapon Appearance Stone: Sword" type="EtcItem">
+	<item id="37416" name="Emerald Weapon Appearance Stone: One-handed Sword" type="EtcItem">
 		<!-- Changes the appearance of a one-handed staff to that of Emerald One-handed Sword. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />
@@ -342,7 +342,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37423" name="Emerald Weapon Appearance Stone: One-handed Blunt Weapon" type="EtcItem">
+	<item id="37423" name="Emerald Weapon Appearance Stone: One-handed Blunt" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt weapon to that of Emerald One-handed Blunt Weapon. -->
 		<set name="icon" val="icon.shape_shifting_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -352,7 +352,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37424" name="Emerald Weapon Appearance Stone: Two-handed Blunt Weapon" type="EtcItem">
+	<item id="37424" name="Emerald Weapon Appearance Stone: Two-handed Blunt" type="EtcItem">
 		<!-- Changes the appearance of a two-handed blunt weapon to that of Emerald Two-handed Blunt. -->
 		<set name="icon" val="Icon.shape_shifting_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -362,7 +362,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37425" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon" type="EtcItem">
+	<item id="37425" name="Emerald Weapon Appearance Stone: One-handed Staff" type="EtcItem">
 		<!-- Changes the appearance of a one-handed staff to that of Emerald One-handed Staff. -->
 		<set name="icon" val="Icon.shape_shifting_magic_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -372,7 +372,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37426" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon" type="EtcItem">
+	<item id="37426" name="Emerald Weapon Appearance Stone: Two-handed Staff" type="EtcItem">
 		<!-- Changes the appearance of a two-handed staff to that of Emerald Two-handed Staff. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -382,7 +382,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37427" name="Emerald Weapon Appearance Stone: Dualsword" type="EtcItem">
+	<item id="37427" name="Emerald Weapon Appearance Stone: Dual Sword" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of Emerald Dual Sword. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
@@ -402,7 +402,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37429" name="Emerald Weapon Appearance Stone: Dual Blunt Weapon" type="EtcItem">
+	<item id="37429" name="Emerald Weapon Appearance Stone: Dual Blunt" type="EtcItem">
 		<!-- Changes the appearance of a dual blunt to that of an Emerald dual blunt. -->
 		<set name="icon" val="icon.shape_shifting_dualblunt_i00" />
 		<set name="is_stackable" val="true" />

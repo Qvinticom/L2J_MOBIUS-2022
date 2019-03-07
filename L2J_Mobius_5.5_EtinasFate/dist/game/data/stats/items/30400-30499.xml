@@ -105,7 +105,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30403" name="Infinity Dualsword" type="Weapon">
+	<item id="30403" name="Infinity Dual Sword" type="Weapon">
 		<!-- Olympiad Hero's Weapon. When equipped, increases PC Damage by 30%. Additionally gives Max HP/ MP/ CP +30%, P. Skill Power +10%, Atk. Spd. +15%, P. Critical Damage +7%. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -255,7 +255,7 @@
 			<item id="9557" min="100" max="100" chance="100" /> <!-- Holy Crystal -->
 		</capsuled_items>
 	</item>
-	<item id="30408" name="Dual Weapon Crafting Stamp (R-grade)" type="EtcItem">
+	<item id="30408" name="Dual Sword Crafting Stamp - R-grade" type="EtcItem">
 		<!-- Used to make an R-grade dual sword. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="weight" val="20" />
@@ -263,7 +263,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="30409" name="Dual Weapon Crafting Stamp (R95-grade)" type="EtcItem">
+	<item id="30409" name="Dual Sword Crafting Stamp (R95-grade)" type="EtcItem">
 		<!-- Used to make an R95-grade dual sword. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="weight" val="20" />
@@ -271,7 +271,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="30410" name="Dual Weapon Crafting Stamp (R99-grade)" type="EtcItem">
+	<item id="30410" name="Dual Sword Crafting Stamp (R99-grade)" type="EtcItem">
 		<!-- Used to make an R99-grade dual sword. -->
 		<set name="icon" val="icon.etc_letter_blue_i00" />
 		<set name="weight" val="20" />

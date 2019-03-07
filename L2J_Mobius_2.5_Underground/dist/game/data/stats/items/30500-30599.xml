@@ -101,7 +101,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30503" name="Bound Bow of Peril" additionalName="Guidance" type="Weapon">
+	<item id="30503" name="Bound Bow of Peril - Guidance" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Accuracy by 3. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -137,7 +137,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30504" name="Bound Bow of Peril" additionalName="Quick Recovery" type="Weapon">
+	<item id="30504" name="Bound Bow of Peril - Quick Recovery" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases cooldown by about 13%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -170,7 +170,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30505" name="Bound Bow of Peril" additionalName="Cheap Shot" type="Weapon">
+	<item id="30505" name="Bound Bow of Peril - Cheap Shot" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 42% chance of decreasing MP consumption to 1 during a standard attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -496,7 +496,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30516" name="Bound Fisted Blade" additionalName="Rsk. Evasion" type="Weapon">
+	<item id="30516" name="Bound Fisted Blade - Rsk. Evasion" type="Weapon">
 		<!-- <Special Option>. Increases Evasion by 6 when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_fist_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -531,7 +531,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30517" name="Bound Fisted Blade" additionalName="Rsk. Haste" type="Weapon">
+	<item id="30517" name="Bound Fisted Blade - Rsk. Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by 12% when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_fist_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -566,7 +566,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30518" name="Bound Fisted Blade" additionalName="Haste" type="Weapon">
+	<item id="30518" name="Bound Fisted Blade - Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by about 7%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_fist_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -634,7 +634,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="30520" name="Bound Peacemaker" additionalName="Evasion" type="Weapon">
+	<item id="30520" name="Bound Peacemaker - Evasion" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow Conversion. <Special Option>. Increases Evasion by 2. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -670,7 +670,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="30521" name="Bound Peacemaker" additionalName="Critical Bleed" type="Weapon">
+	<item id="30521" name="Bound Peacemaker - Critical Bleed" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow conversion. Has a 41% chance of casting Bleed on the target during a standard Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -706,7 +706,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="30522" name="Bound Peacemaker" additionalName="Miser" type="Weapon">
+	<item id="30522" name="Bound Peacemaker - Miser" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Dark Elven Longbow conversion. <Special Option>>. Has a 19% chance of reducing the number of Soulshots consumed to 1 during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_peace_maker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1251,7 +1251,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30543" name="Bound Flamberge" additionalName="Critical Damage" type="Weapon">
+	<item id="30543" name="Bound Flamberge - Critical Damage" type="Weapon">
 		<!-- <Special Option>. P. Atk. + 174 during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_flamberge_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1285,7 +1285,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30544" name="Bound Flamberge" additionalName="Focus" type="Weapon">
+	<item id="30544" name="Bound Flamberge - Focus" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 86. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_flamberge_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1319,7 +1319,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30545" name="Bound Flamberge" additionalName="Light Armor" type="Weapon">
+	<item id="30545" name="Bound Flamberge - Light Armor" type="Weapon">
 		<!-- <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_flamberge_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1839,7 +1839,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30567" name="Bound Poleaxe" additionalName="Critical Stun" type="Weapon">
+	<item id="30567" name="Bound Poleaxe - Critical Stun" type="Weapon">
 		<!-- <Special Option>. Has about a 25% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1875,7 +1875,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30568" name="Bound Poleaxe" additionalName="Long Blow" type="Weapon">
+	<item id="30568" name="Bound Poleaxe - Long Blow" type="Weapon">
 		<!-- <Special Option>. Increases the attack range. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1910,7 +1910,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30569" name="Bound Poleaxe" additionalName="Wide Blow" type="Weapon">
+	<item id="30569" name="Bound Poleaxe - Wide Blow" type="Weapon">
 		<!-- <Special Option>. Broadens the angle of attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_poleaxe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1977,7 +1977,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30571" name="Bound Forgotten Blade" additionalName="Haste" type="Weapon">
+	<item id="30571" name="Bound Forgotten Blade - Haste" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Atk. Spd. by 7%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2012,7 +2012,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30572" name="Bound Forgotten Blade" additionalName="Health" type="Weapon">
+	<item id="30572" name="Bound Forgotten Blade - Health" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2047,7 +2047,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30573" name="Bound Forgotten Blade" additionalName="Focus" type="Weapon">
+	<item id="30573" name="Bound Forgotten Blade - Focus" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Critical by 84. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2114,7 +2114,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30575" name="Bound Divine Pain" additionalName="Haste" type="Weapon">
+	<item id="30575" name="Bound Divine Pain - Haste" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master conversion. <Special Option>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2149,7 +2149,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30576" name="Bound Divine Pain" additionalName="Critical Damage" type="Weapon">
+	<item id="30576" name="Bound Divine Pain - Critical Damage" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master Conversion. <Special Option>. P. Atk. + 297 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2184,7 +2184,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30577" name="Bound Divine Pain" additionalName="Focus" type="Weapon">
+	<item id="30577" name="Bound Divine Pain - Focus" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Infernal Master conversion. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_pain_of_godness_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2252,7 +2252,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30579" name="Bound Paradia Staff" additionalName="Magic Regeneration" type="Weapon">
+	<item id="30579" name="Bound Paradia Staff - Magic Regeneration" type="Weapon">
 		<!-- <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2287,7 +2287,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30580" name="Bound Paradia Staff" additionalName="Magic Mental Shield" type="Weapon">
+	<item id="30580" name="Bound Paradia Staff - Magic Mental Shield" type="Weapon">
 		<!-- <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2322,7 +2322,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30581" name="Bound Paradia Staff" additionalName="Magic Hold" type="Weapon">
+	<item id="30581" name="Bound Paradia Staff - Magic Hold" type="Weapon">
 		<!-- <Special Option>. Has a 6% chance of casting Dryad Root on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_paradia_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2426,7 +2426,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30584" name="Bound Pa'agrio Hammer" additionalName="Rsk. Evasion" type="Weapon">
+	<item id="30584" name="Bound Pa'agrio Hammer - Rsk. Evasion" type="Weapon">
 		<!-- <Special Option>. Increases Evasion by 6 when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2461,7 +2461,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30585" name="Bound Pa'agrio Hammer" additionalName="Magic Poison" type="Weapon">
+	<item id="30585" name="Bound Pa'agrio Hammer - Magic Poison" type="Weapon">
 		<!-- <Special Option>. Has a 7% chance of casting Curse Poison on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2496,7 +2496,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30586" name="Bound Pa'agrio Hammer" additionalName="Magic Weakness" type="Weapon">
+	<item id="30586" name="Bound Pa'agrio Hammer - Magic Weakness" type="Weapon">
 		<!-- <Special Option>. Has a 7% chance of casting Curse Weakness on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_paagrio_hammer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2564,7 +2564,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30588" name="Bound Pa'agrio Axe" additionalName="Mana Up" type="Weapon">
+	<item id="30588" name="Bound Pa'agrio Axe - Mana Up" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 30%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2599,7 +2599,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30589" name="Bound Pa'agrio Axe" additionalName="Magic Weakness" type="Weapon">
+	<item id="30589" name="Bound Pa'agrio Axe - Magic Weakness" type="Weapon">
 		<!-- <Special Option>. Has a 7% chance of casting Curse Weakness on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2634,7 +2634,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30590" name="Bound Pa'agrio Axe" additionalName="Magic Chaos" type="Weapon">
+	<item id="30590" name="Bound Pa'agrio Axe - Magic Chaos" type="Weapon">
 		<!-- <Special Option>. Has a 7% chance of casting Curse Chaos on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_paagrio_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2734,7 +2734,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30593" name="Bound Destroyer Hammer" additionalName="Health" type="Weapon">
+	<item id="30593" name="Bound Destroyer Hammer - Health" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2769,7 +2769,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30594" name="Bound Destroyer Hammer" additionalName="Haste" type="Weapon">
+	<item id="30594" name="Bound Destroyer Hammer - Haste" type="Weapon">
 		<!-- Bound Item. Cannot be exchanged or dropped. <Special Option>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2804,7 +2804,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30595" name="Bound Destroyer Hammer" additionalName="Critical Drain" type="Weapon">
+	<item id="30595" name="Bound Destroyer Hammer - Critical Drain" type="Weapon">
 		<!-- Bound Item. <Special Option>. Absorbs 18 HP from the target during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hammer_of_destroyer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2871,7 +2871,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30597" name="Bound Wizard's Tear" additionalName="Acumen" type="Weapon">
+	<item id="30597" name="Bound Wizard's Tear - Acumen" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Casting Spd. by 15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2905,7 +2905,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30598" name="Bound Wizard's Tear" additionalName="M. Atk." type="Weapon">
+	<item id="30598" name="Bound Wizard's Tear - M. Atk." type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases MP consumption by 15% and M. Atk. by 139 during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2939,7 +2939,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30599" name="Bound Wizard's Tear" additionalName="Conversion" type="Weapon">
+	<item id="30599" name="Bound Wizard's Tear - Conversion" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tears_of_wizard_i00" />
 		<set name="default_action" val="EQUIP" />

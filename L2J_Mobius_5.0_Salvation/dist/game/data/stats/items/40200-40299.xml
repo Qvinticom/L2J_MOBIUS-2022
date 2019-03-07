@@ -81,7 +81,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
-	<item id="40207" name="Amaranthine Fragment" type="EtcItem">
+	<item id="40207" name="Helios Fragment" type="EtcItem">
 		<!-- Main ingredient for crafting a random R99-grade item. -->
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
 		<set name="weight" val="60" />
@@ -201,7 +201,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="40218" name="Blessed Zaken's Earring" additionalName="7-day" type="EtcItem">
+	<item id="40218" name="Blessed Zaken's Earring Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Zaken's Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="is_stackable" val="true" />
@@ -247,14 +247,14 @@
 			<skill id="18119" level="1" /> <!-- Cat Fighter Appearance Stone - Ertheia Only -->
 		</skills>
 	</item>
-	<item id="40221" name="Ertheia's Attribute Stone Pack (+ 60)" type="EtcItem">
+	<item id="40221" name="Ertheia's Attribute Stone Pack (+60)" type="EtcItem">
 		<!-- Double-click to obtain an Attribute Stone (+60). -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_sellable" val="false" />
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40222" name="Ertheia's Attribute Stone Pack (+ 150)" type="EtcItem">
+	<item id="40222" name="Ertheia's Attribute Stone Pack (+150)" type="EtcItem">
 		<!-- Double-click to obtain an Attribute Stone (+150). -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="is_sellable" val="false" />

@@ -802,7 +802,7 @@
 			<skill id="21376" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Outlaw -->
 		</skills>
 	</item>
-	<item id="24355" name="Premium Account: Art of Seduction" type="EtcItem">
+	<item id="24355" name="PA - Art of Seduction" type="EtcItem">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P./ M. Def. +30%, P. Atk. +10%, M. Atk. +20%. Effect disappears if active while receiving Art of Seduction. Cannot be exchanged, dropped, or used in the Olympiad. Can be used in the Ceremony of Chaos. Can be stored in the private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -868,7 +868,7 @@
 			<skill id="9525" level="1" /> <!-- Draco's Warrior Hat - Blessed Resurrection -->
 		</skills>
 	</item>
-	<item id="24358" name="Premium Account: Quick Healing Potion" type="EtcItem">
+	<item id="24358" name="PA - Quick Healing Potion" type="EtcItem">
 		<!-- Rerstores 1250 HP, and remaining power restores CP. No cooldown. Cannot be exchanged, dropped, sold, used in the Olympiad, or used in the Ceremony of Chaos. Can be stored in the private warehouse. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="20" />
@@ -1006,14 +1006,14 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="24366" name="Luck Box 1" additionalName="Gemini" type="EtcItem">
+	<item id="24366" name="Wondrous Casket" additionalName="Gemini" type="EtcItem">
 		<!-- Has a chance of obtaining either a Sealed Talisman - Longing, Immortal Scroll, Talisman - Abundance, Elycum, Energy of Destruction 20-unit Pack, Giant's Energy, Top-grade augmentation Pack (R95-grade), Top-grade augmentation Pack (R99-grade), or Agathion - Gemini. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="24367" name="Luck Box 2" additionalName="Cancer" type="EtcItem">
+	<item id="24367" name="Wondrous Casket" additionalName="Cancer" type="EtcItem">
 		<!-- Has a chance of obtaining either a Sealed Talisman - Longing, Immortal Scroll, Talisman - Abundance, Elycum, Energy of Destruction 20-unit Pack, Giant's Energy, Top-grade augmentation Pack (R95-grade), Top-grade augmentation Pack (R99-grade), or Agathion - Cancer. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />

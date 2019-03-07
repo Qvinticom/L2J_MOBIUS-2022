@@ -398,7 +398,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47832" name="Santiago' Certificate" type="EtcItem">
+	<item id="47832" name="Santiago? Certificate" type="EtcItem">
 		<!-- The certificate received for completing Fishing Guild Leader Santiago's mission. Take this to Lionel Hunter in Heine with other certificates and get a new Exalted Power. -->
 		<set name="icon" val="icon.etc_roll_of_paper_white_i00" />
 		<set name="material" val="PAPER" />
@@ -673,7 +673,7 @@
 			<skill id="18345" level="5" /> <!-- Dignity of the Exalted Lv. 5 -->
 		</skills>
 	</item>
-	<item id="47854" name="Spellbook: Vitality of the Exalted" additionalName="Lv1" type="EtcItem">
+	<item id="47854" name="Spellbook: Vitality of the Exalted" additionalName="Lv. 1" type="EtcItem">
 		<!-- Exalted Inherent Skill Vitality of the Exalted Lv1 can be learned from this Book. Can only be learned by Main Class Lv. 99 and above. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
@@ -693,7 +693,7 @@
 			<skill id="18793" level="1" />	<!-- Spellbook: Vitality of the Exalted Lv. 1 -->
 		</skills>
 	</item>
-	<item id="47855" name="Spellbook: Vitality of the Exalted" additionalName="Lv2" type="EtcItem">
+	<item id="47855" name="Spellbook: Vitality of the Exalted" additionalName="Lv. 2" type="EtcItem">
 		<!-- Exalted Inherent Skill Vitality of the Exalted Lv2 can be learned from this Book. Can only be learned by Main Class Lv. 99 and above. -->
 		<set name="icon" val="icon.giant_book_i02" />
 		<set name="is_depositable" val="false" />
@@ -1211,7 +1211,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47890" name="Research Shadow Weapon." type="Weapon">
+	<item id="47890" name="Research Shadow Weapon" type="Weapon">
 		<!-- An Ashen Shadow Revolutionaries Weapon being researched by the Blacksmith of Mammon. As a research weapon, you cannot use Scroll: Enchant Shadow Weapon Enhance, and may only use Weapon Enchant Scrolls appropriate to its grade. Enhance it to +7 and bring it to the Blacksmith of Mammon. -->
 		<set name="icon" val="icon.weapon_shadow_dagger" />
 		<set name="default_action" val="EQUIP" />

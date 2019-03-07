@@ -559,7 +559,7 @@
 			<skill id="26030" level="1" /> <!-- Mana Potion -->
 		</skills>
 	</item>
-	<item id="729" name="Scroll: Enchant Weapon (A-Grade)" type="EtcItem">
+	<item id="729" name="Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- When enchanted, P. Atk. + 4 for A-grade one-handed swords, one-handed blunts, daggers, spears, and other weapons. P. Atk. + 5 for two-handed swords, two-handed blunts, dualswords, and two-handed fist weapons. P. Atk. + 8 for bows. M. Atk. + 3 for all weapons. Starting at + 4, P. Atk. / M. Atk. bonus double. Enchanting is safe up to + 3. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -576,7 +576,7 @@
 			<skill id="2006" level="1" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 		</skills>
 	</item>
-	<item id="730" name="Scroll: Enchant Armor (A-Grade)" type="EtcItem">
+	<item id="730" name="Scroll: Enchant Armor (A-grade)" type="EtcItem">
 		<!-- P. Def. + 1 for A-grade armor and accessories. Starting from + 4, P. Def. + 3. Can be safely enchanted up to + 3. For one-piece armor, it can safely be enchanted up to + 4. HP gradually increases with each enchant level starting from + 4. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i04" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -593,7 +593,7 @@
 			<skill id="2007" level="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="731" name="Crystal Scroll: Enchant Weapon (A-Grade)" type="EtcItem">
+	<item id="731" name="Crystal Scroll: Enchant Weapon (A-grade)" type="EtcItem">
 		<!-- Scroll of enchantment that empowers an A-grade weapon. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_weapon_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -605,7 +605,7 @@
 		<set name="commissionItemType" val="SCROLL_ENCHANT_WEAPON" />
 		<set name="handler" val="EnchantScrolls" />
 	</item>
-	<item id="732" name="Crystal Scroll: Enchant Armor (A-Grade)" type="EtcItem">
+	<item id="732" name="Crystal Scroll: Enchant Armor (A-grade)" type="EtcItem">
 		<!-- Scroll of enchantment that empowers an A-grade armor. -->
 		<set name="icon" val="icon.etc_scroll_of_enchant_armor_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />

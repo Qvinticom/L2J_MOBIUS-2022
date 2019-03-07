@@ -289,7 +289,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23825" name="Mysterious Human Dye" additionalName="Aim, Mental, Unbind, 7-day" type="EtcItem">
+	<item id="23825" name="Wondrous Human Dye" additionalName="Unbind, 7-day" type="EtcItem">
 		<!-- Wondrous dye containing Human power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Human race. (Fire/ Water/ Wind/ Earth Resistance +10, Debuff Resistance +1%/ Active Skill: Unbind). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_human" />
 		<set name="is_stackable" val="true" />
@@ -302,7 +302,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
-	<item id="23826" name="Mysterious Elf Dye" additionalName="Blessing of Water, Delicacy, Prevision, 7-day" type="EtcItem">
+	<item id="23826" name="Wondrous Elf Dye" additionalName="Prevision, 7-day" type="EtcItem">
 		<!-- Wondrous dye containing Elven power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Elf race. (Water Resistance +20, P. Critical Rate +10, M. Critical Rate +10/ Active Skill: Prevision). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_elf" />
 		<set name="is_stackable" val="true" />
@@ -315,7 +315,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
-	<item id="23827" name="Mysterious Dark Elf Dye" additionalName="Sharpness, Blessing of Wind, Disparition, 7-day" type="EtcItem">
+	<item id="23827" name="Wondrous Dark Elf Dye" additionalName="Disparition, 7-day" type="EtcItem">
 		<!-- Wondrous dye containing Dark Elven power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Dark Elf race. (Wind Resistance +20, P. Critical Damage and M. Critical Damage +1%/ Active Skill: Disparition). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_darkelf" />
 		<set name="is_stackable" val="true" />
@@ -328,7 +328,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
-	<item id="23828" name="Mysterious Orc Dye" additionalName="Blessing of Fire, Energetic, Savage, 7-day" type="EtcItem">
+	<item id="23828" name="Wondrous Orc Dye" additionalName="Savage, 7-day" type="EtcItem">
 		<!-- Wondrous dye containing Orc power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Orc race. (Fire Resistance +20, HP/ MP/ CP +1%/ Active Skill: Savage). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_orc" />
 		<set name="is_stackable" val="true" />
@@ -341,7 +341,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
-	<item id="23829" name="Mysterious Dwarf Dye" additionalName="Dexterity, Blessing of Earth, Endurance, 7-day" type="EtcItem">
+	<item id="23829" name="Wondrous Dwarf Dye" additionalName="Endurance, 7-day" type="EtcItem">
 		<!-- Wondrous dye containing Dwarven power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Dwarf race. (Earth Resistance +20, Skill Cooldown - 1%/ Active Skill: Endurance). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_dwarf" />
 		<set name="is_stackable" val="true" />
@@ -354,7 +354,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
-	<item id="23830" name="Mysterious Kamael Dye" additionalName="Battle Instinct, Dark Silence, Soul Protection, 7-day" type="EtcItem">
+	<item id="23830" name="Wondrous Kamael Dye" additionalName="Soul Protection, 7-day" type="EtcItem">
 		<!-- Wondrous dye containing Kamael power. Bring this to the village symbol maker to imprint a 7-day magic symbol that contains the abilities of the Kamael race. (Dark Resistance +20, PvP Damage +1%/ Active Skill: Soul Protection). All classes. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_race_kamael" />
 		<set name="is_stackable" val="true" />
@@ -367,7 +367,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
-	<item id="23831" name="XP Rune I (Lv. 1-85) 100% Pack (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="23831" name="XP Rune I (Lv. 1-85) 100% Pack (1-hr.)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain an XP Rune I (Lv. 1-85) 100% Pack (1-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -378,7 +378,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="23832" name="Pa'agrio's Warm Breeze Pack (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="23832" name="Pa'agrio's Warm Breeze Pack (1-hr.)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Pa'agrio's Warm Breeze (1-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -635,7 +635,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="DYE" />
 	</item>
-	<item id="23847" name="Luxury Fortune Reading Coupon" type="EtcItem">
+	<item id="23847" name="Tarot Card Coupon" type="EtcItem">
 		<!-- Coupon you can trade in for a Tarot Card through Eve's Card Shop. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -644,7 +644,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="23848" name="Luxury Fortune Reading Coupon" type="EtcItem">
+	<item id="23848" name="Tarot Card Coupon" type="EtcItem">
 		<!-- Coupon you can trade in for a Tarot Card through Eve's Card Shop. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -657,7 +657,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="23849" name="Luxury Fortune Reading Coupon" additionalName="Event" type="EtcItem">
+	<item id="23849" name="Tarot Card Coupon" additionalName="Event" type="EtcItem">
 		<!-- Coupon you can trade in for a Tarot Card through Eve's Card Shop. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -666,7 +666,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="23850" name="Luxury Fortune Reading Coupon" additionalName="Event" type="EtcItem">
+	<item id="23850" name="Tarot Card Coupon" additionalName="Event" type="EtcItem">
 		<!-- Coupon you can trade in for a Tarot Card through Eve's Card Shop. -->
 		<set name="icon" val="BranchSys3.icon1.g_luckygame_card_trade_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -692,7 +692,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="23852" name="Transparent Armor" type="Armor">
+	<item id="23852" name="Transparent Armor" additionalName="Test" type="Armor">
 		<!-- Transparent armor that shows your underwear. Your cloak also becomes invisible. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="armor_type" val="HEAVY" />
@@ -703,7 +703,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="1000" />
 	</item>
-	<item id="23853" name="Transparent Armor Appearance Stone" type="EtcItem">
+	<item id="23853" name="Transparent Armor Appearance Stone" additionalName="Test" type="EtcItem">
 		<!-- Transparent armor appearance stone. Makes armor invisible so that Adenian Underwear and Tattoos are visible. Your cloak also becomes invisible. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
@@ -715,7 +715,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="Appearance" />
 	</item>
-	<item id="23854" name="XP Rune II (Lv. 1-95) 100% Pack (3-hour)" type="EtcItem">
+	<item id="23854" name="XP Rune II (Lv. 1-95) 100% Pack (3-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune II (Lv. 1-95) 100% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -992,7 +992,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="23871" name="Prestige Rune 100%" additionalName="1-hour" type="EtcItem">
+	<item id="23871" name="Prestige Rune 100%" additionalName="1-hr." type="EtcItem">
 		<!-- When possessed in the inventory Drop and Spoil rate +100%, amount of dropped Adena +100% while hunting. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1005,7 +1005,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="60" />
 	</item>
-	<item id="23872" name="Prestige Rune 100%" additionalName="5-hour" type="EtcItem">
+	<item id="23872" name="Prestige Rune 100%" additionalName="5-hr." type="EtcItem">
 		<!-- When possessed in the inventory Drop and Spoil rate +100%, amount of dropped Adena +100% while hunting. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1031,7 +1031,7 @@
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="23874" name="Prestige Rune 100% Pack" additionalName="1-hour" type="EtcItem">
+	<item id="23874" name="Prestige Rune 100% Pack" additionalName="1-hr." type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 100% (1-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1043,7 +1043,7 @@
 		<set name="time" val="60" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="23875" name="Prestige Rune 100% Pack" additionalName="5-hour" type="EtcItem">
+	<item id="23875" name="Prestige Rune 100% Pack" additionalName="5-hr." type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 100% (5-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />

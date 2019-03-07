@@ -361,7 +361,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48127" name="PA - Agathion Charm" additionalName="PA exclusive" type="Armor">
+	<item id="48127" name="PA - Cobra Agathion Charm" additionalName="PA exclusive" type="Armor">
 		<!-- Charm that summons a Cobra Agathion. Can use a skill that teleports party members back to town after summoning the Agathion. Used for 30 days. -->
 		<set name="icon" val="icon.agathion_base" />
 		<set name="default_action" val="EQUIP" />
@@ -856,7 +856,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48165" name="Proof of Freedom" type="EtcItem">
+	<item id="48165" name="Clues of Liberty" type="EtcItem">
 		<!-- Proof obtained after defeating a giant who, under the orders of Mimir, came to find the Giant Trackers who planned to betray the giants. -->
 		<set name="icon" val="icon.etc_heart_gragon" />
 		<set name="material" val="PAPER" />
@@ -867,7 +867,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48166" name="Hunter's Stone Piece" type="EtcItem">
+	<item id="48166" name="Hunter's Stone Fragment" type="EtcItem">
 		<!-- One of the pieces used to craft the Hunter's Stone. After gathering 3 Hunter's Stone Fragments, talk to Histie to swap them for a Hunter's Stone. -->
 		<set name="icon" val="icon.etc_chaser_stone_piece" />
 		<set name="material" val="PAPER" />

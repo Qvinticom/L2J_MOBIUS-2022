@@ -110,7 +110,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45804" name="Dynasty Dualsword of Fortune" additionalName="30-day" type="Weapon">
+	<item id="45804" name="Dynasty Dual Sword of Fortune" additionalName="30-day" type="Weapon">
 		<!-- Critical +109, Max HP +10%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
@@ -358,7 +358,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="45818" name="Player Commendation Points Coupon (360 Points)" type="EtcItem">
+	<item id="45818" name="PA Points Coupon (360 Points)" type="EtcItem">
 		<!-- When double-clicked, 360 PA Points can be acquired. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="weight" val="100" />
@@ -371,7 +371,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="45819" name="Player Commendation Points Coupon (720 Points)" type="EtcItem">
+	<item id="45819" name="PA Points Coupon (720 Points)" type="EtcItem">
 		<!-- When double-clicked, 720 PA Points can be acquired. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="weight" val="100" />
@@ -741,7 +741,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45834" name="Apocalypse Dualsword - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45834" name="Apocalypse Dual Sword - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Atk. +332. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
@@ -1338,7 +1338,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45862" name="Specter Dualsword - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45862" name="Specter Dual Sword - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Atk. +377. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
@@ -1602,7 +1602,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="45879" name="Amaranthine Shaper - Focus" additionalName="30-day" type="Weapon">
+	<item id="45879" name="Helios Shaper - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +81.9. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="weapon_type" val="DAGGER" />
@@ -1630,7 +1630,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45880" name="Amaranthine Cutter - Focus" additionalName="30-day" type="Weapon">
+	<item id="45880" name="Helios Cutter - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +78.7. Increases damage inflicted during PvP. Increases Accuracy and P. Critical Rate when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="weapon_type" val="SWORD" />
@@ -1657,7 +1657,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45881" name="Amaranthine Slasher - Focus" additionalName="30-day" type="Weapon">
+	<item id="45881" name="Helios Slasher - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +78.7. Increases damage inflicted during PvP. Increases P. Atk. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="weapon_type" val="SWORD" />
@@ -1684,7 +1684,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45882" name="Amaranthine Avenger - Focus" additionalName="30-day" type="Weapon">
+	<item id="45882" name="Helios Avenger - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +78.7. Increases damage inflicted during PvP. Increases P. Critical Damage when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1712,7 +1712,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45883" name="Amaranthine Fighter - Focus" additionalName="30-day" type="Weapon">
+	<item id="45883" name="Helios Fighter - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +75.5. Increases damage inflicted during PvP. Increases Atk. Spd. And P. Atk. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -1740,7 +1740,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45884" name="Amaranthine Stormer - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45884" name="Helios Stormer - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Atk. +415. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="weapon_type" val="POLE" />
@@ -1772,7 +1772,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="45885" name="Amaranthine Thrower - Focus" additionalName="30-day" type="Weapon">
+	<item id="45885" name="Helios Thrower - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +78.7. Increases damage inflicted during PvP. Increases effect of P. Skills when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="weapon_type" val="BOW" />
@@ -1801,7 +1801,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="45886" name="Amaranthine Shooter - Focus" additionalName="30-day" type="Weapon">
+	<item id="45886" name="Helios Shooter - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +78.7. Increases damage inflicted during PvP. Increases Atk. Spd. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -1828,7 +1828,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="45887" name="Amaranthine Buster - Acumen" additionalName="30-day" type="Weapon">
+	<item id="45887" name="Helios Buster - Acumen" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weaon_serapear_i01" />
 		<set name="weapon_type" val="SWORD" />
@@ -1856,7 +1856,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45888" name="Amaranthine Caster - Acumen" additionalName="30-day" type="Weapon">
+	<item id="45888" name="Helios Caster - Acumen" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_pilia_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1885,7 +1885,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45889" name="Amaranthine Retributer - Acumen" additionalName="30-day" type="Weapon">
+	<item id="45889" name="Helios Retributer - Acumen" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Casting Spd. +15%. Increases damage inflicted during PvP. Increases M. Accuracy and M. Critical Rate when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shaelon_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1915,7 +1915,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45890" name="Amaranthine Dualsword - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45890" name="Helios Dual Sword - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Atk. +415. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="weapon_type" val="DUAL" />
@@ -1942,7 +1942,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45891" name="Amaranthine Dual Dagger - Focus" additionalName="30-day" type="Weapon">
+	<item id="45891" name="Helios Dual Dagger - Focus" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. Critical +78.7. Increases damage inflicted during PvP. Increases P. Critical Damage and P. Atk. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -1970,7 +1970,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="45892" name="Amaranthine Dual Blunet Weapon - Damage Up" additionalName="30-day" type="Weapon">
+	<item id="45892" name="Helios Dual Blunet Weapon - Damage Up" additionalName="30-day" type="Weapon">
 		<!-- <Special Option>. P. Atk. +415. Increases damage inflicted during PvP. Increases effect of P. Skills and P. Atk. when enchanted to +4. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="weapon_type" val="DUALBLUNT" />

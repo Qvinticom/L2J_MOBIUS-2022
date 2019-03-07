@@ -454,7 +454,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="22718" name="Japanese Blunt Weapon" type="Weapon">
+	<item id="22718" name="Japanese One-handed Blunt Weapon" type="Weapon">
 		<!-- Japanese weapon. One-handed blunt weapon type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -516,7 +516,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22720" name="Japanese Magic Blunt Weapon" type="Weapon">
+	<item id="22720" name="Japanese One-handed Staff" type="Weapon">
 		<!-- Japanese weapon. One-handed staff type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_magic_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -547,7 +547,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22721" name="Japanese Giant Magic Blunt Weapon" type="Weapon">
+	<item id="22721" name="Japanese Giant Two-handed Staff" type="Weapon">
 		<!-- Japanese weapon. Two-handed staff type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -578,7 +578,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22722" name="Japanese Dualsword" type="Weapon">
+	<item id="22722" name="Japanese Dual Sword" type="Weapon">
 		<!-- Japanese weapon. Dual Sword type. Base appearance of Japanese Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_japan_dual" />
 		<set name="default_action" val="EQUIP" />
@@ -866,7 +866,7 @@
 			<skill id="22573" level="1" /> <!-- Japanese Crossbow Appearance Stone -->
 		</skills>
 	</item>
-	<item id="22734" name="Japanese Blunt Appearance Stone" type="EtcItem">
+	<item id="22734" name="Japanese One-handed Blunt Weapon Appearance Stone" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a one-handed blunt weapon to that of a Japanese Blunt Weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -908,7 +908,7 @@
 			<skill id="22575" level="1" /> <!-- Japanese Giant Blunt Appearance Stone -->
 		</skills>
 	</item>
-	<item id="22736" name="Japanese Magic Blunt Appearance Stone" type="EtcItem">
+	<item id="22736" name="Japanese One-handed Staff Appearance Stone" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a one-handed staff to that of a Japanese One-handed Staff. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -929,7 +929,7 @@
 			<skill id="22576" level="1" /> <!-- Japanese Magic Blunt Appearance Stone -->
 		</skills>
 	</item>
-	<item id="22737" name="Japanese Giant Magic Blunt Appearance Stone" type="EtcItem">
+	<item id="22737" name="Japanese Giant Two-handed Staff Appearance Stone" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a two-handed blunt weapon to that of a Japanese Giant Two-handed Staff. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -950,7 +950,7 @@
 			<skill id="22577" level="1" /> <!-- Japanese Giant Magic Blunt Appearance Stone -->
 		</skills>
 	</item>
-	<item id="22738" name="Japanese Dualsword Appearance Stone" type="EtcItem">
+	<item id="22738" name="Japanese Dual Sword Appearance Stone" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a dual sword to that of a Japanese Dual Sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
@@ -1221,7 +1221,7 @@
 			<item id="22749" min="1" max="1" chance="100" /> <!-- Scroll: Increase Vitality (Top-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22751" name="Drop Rate Rune 30% (3-hour)" type="EtcItem">
+	<item id="22751" name="Drop Rate Rune 30% (3-hr.)" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through hunting +30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1238,7 +1238,7 @@
 			<skill id="22587" level="1" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="22752" name="Drop Rate Rune 30% (5-hour)" type="EtcItem">
+	<item id="22752" name="Drop Rate Rune 30% (5-hr.)" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through hunting +30%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1272,7 +1272,7 @@
 			<skill id="22587" level="1" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="22754" name="Drop Rate Rune 50% (3-hour)" type="EtcItem">
+	<item id="22754" name="Drop Rate Rune 50% (3-hr.)" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through hunting +50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1289,7 +1289,7 @@
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="22755" name="Drop Rate Rune 50% (5-hour)" type="EtcItem">
+	<item id="22755" name="Drop Rate Rune 50% (5-hr.)" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through hunting +50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1323,7 +1323,7 @@
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="22757" name="Drop Rate Rune 100% (3-hour)" type="EtcItem">
+	<item id="22757" name="Drop Rate Rune 100% (3-hr.)" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through hunting +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1340,7 +1340,7 @@
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="22758" name="Drop Rate Rune 100% (5-hour)" type="EtcItem">
+	<item id="22758" name="Drop Rate Rune 100% (5-hr.)" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through hunting +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1374,7 +1374,7 @@
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="22760" name="Drop Rate Rune 200% (3-hour)" type="EtcItem">
+	<item id="22760" name="Drop Rate Rune 200% (3-hr.)" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through hunting +200%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1391,7 +1391,7 @@
 			<skill id="22587" level="4" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="22761" name="Drop Rate Rune 200% (5-hour)" type="EtcItem">
+	<item id="22761" name="Drop Rate Rune 200% (5-hr.)" type="EtcItem">
 		<!-- When stored in the inventory, item acquisition through hunting +200%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1425,7 +1425,7 @@
 			<skill id="22587" level="4" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="22763" name="Drop Rate Rune 30% Pack (3-hour)" type="EtcItem">
+	<item id="22763" name="Drop Rate Rune 30% Pack (3-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a Drop Rate Rune 30% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1446,7 +1446,7 @@
 			<item id="22751" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (3-hr.) -->
 		</capsuled_items>
 	</item>
-	<item id="22764" name="Drop Rate Rune 30% Pack (5-hour)" type="EtcItem">
+	<item id="22764" name="Drop Rate Rune 30% Pack (5-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a Drop Rate Rune 30% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1488,7 +1488,7 @@
 			<item id="22753" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 30% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="22766" name="Drop Rate Rune 50% Pack (3-hour)" type="EtcItem">
+	<item id="22766" name="Drop Rate Rune 50% Pack (3-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a Drop Rate Rune 50% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1509,7 +1509,7 @@
 			<item id="22754" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (3-hr.) -->
 		</capsuled_items>
 	</item>
-	<item id="22767" name="Drop Rate Rune 50% Pack (5-hour)" type="EtcItem">
+	<item id="22767" name="Drop Rate Rune 50% Pack (5-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a Drop Rate Rune 50% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1551,7 +1551,7 @@
 			<item id="22756" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 50% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="22769" name="Drop Rate Rune 100% Pack (3-hour)" type="EtcItem">
+	<item id="22769" name="Drop Rate Rune 100% Pack (3-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a Drop Rate Rune 100% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1572,7 +1572,7 @@
 			<item id="22757" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (3-hr.) -->
 		</capsuled_items>
 	</item>
-	<item id="22770" name="Drop Rate Rune 100% Pack (5-hour)" type="EtcItem">
+	<item id="22770" name="Drop Rate Rune 100% Pack (5-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a Drop Rate Rune 100% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1614,7 +1614,7 @@
 			<item id="22759" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 100% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="22772" name="Drop Rate Rune 200% Pack (3-hour)" type="EtcItem">
+	<item id="22772" name="Drop Rate Rune 200% Pack (3-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a Drop Rate Rune 200% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1635,7 +1635,7 @@
 			<item id="22760" min="1" max="1" chance="100" /> <!-- Drop Rate Rune 200% (3-hr.) -->
 		</capsuled_items>
 	</item>
-	<item id="22773" name="Drop Rate Rune 200% Pack (5-hour)" type="EtcItem">
+	<item id="22773" name="Drop Rate Rune 200% Pack (5-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a Drop Rate Rune 200% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />

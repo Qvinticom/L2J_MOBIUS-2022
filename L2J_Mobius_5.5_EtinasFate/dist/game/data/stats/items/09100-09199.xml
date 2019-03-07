@@ -587,7 +587,7 @@
 			<stat type="pDef">36</stat>
 		</stats>
 	</item>
-	<item id="9129" name="Shadow Item: Shield of Nightmare" type="Armor">
+	<item id="9129" name="Shadow Item: Shield of Nightmares" type="Armor">
 		<!-- This Shadow Item contains the mirrored power of a Shield of Nightmares. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -710,7 +710,7 @@
 			<skill id="2308" level="35" /> <!-- Event Item -->
 		</skills>
 	</item>
-	<item id="9135" name="Item Set Pack (A/S-grade) (Wizard)" type="EtcItem">
+	<item id="9135" name="Item Set Pack (A/ S-grade) (Wizard)" type="EtcItem">
 		<!-- One can receive A- and S-grade Supplies for wizards by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />

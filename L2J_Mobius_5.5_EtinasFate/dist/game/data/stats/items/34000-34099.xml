@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="34000" name="Lv. 5 Legendary MEN Dye" additionalName="MEN + 5 / INT + 1 / Holy Resistance + 25 (Event)" type="EtcItem">
+	<item id="34000" name="Lv. 5 Legendary MEN Dye" additionalName="MEN +5/ INT +1/ Holy Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Legendary MEN Dye (Men +5 Int +1 Holy Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_3_dye_men" />
 		<set name="weight" val="150" />
@@ -584,7 +584,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="34035" name="XP Rune I (Lv. 1-85) 100% (3-hour)" type="EtcItem">
+	<item id="34035" name="XP Rune I (Lv. 1-85) 100% (3-hr.)" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 100%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -602,7 +602,7 @@
 			<skill id="9240" level="1" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="34036" name="XP Rune I (Lv. 1-85) 100% (5-hour)" type="EtcItem">
+	<item id="34036" name="XP Rune I (Lv. 1-85) 100% (5-hr.)" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 100%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -638,7 +638,7 @@
 			<skill id="9240" level="1" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="34038" name="XP Rune I (Lv. 1-85) 200% (3-hour)" type="EtcItem">
+	<item id="34038" name="XP Rune I (Lv. 1-85) 200% (3-hr.)" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 200%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -656,7 +656,7 @@
 			<skill id="9240" level="2" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="34039" name="XP Rune I (Lv. 1-85) 200% (5-hour)" type="EtcItem">
+	<item id="34039" name="XP Rune I (Lv. 1-85) 200% (5-hr.)" type="EtcItem">
 		<!-- Ancient characters which bestow a mysterious ability if stored in the inventory. Increases acquired XP and SP by 200%. The effect only applies to characters below level 86. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -692,7 +692,7 @@
 			<skill id="9240" level="2" /> <!-- XP Rune I (Lv. 1-85) -->
 		</skills>
 	</item>
-	<item id="34041" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" type="EtcItem">
+	<item id="34041" name="XP Rune I (Lv. 1-85) 100% Pack (3-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -710,7 +710,7 @@
 			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hr.) -->
 		</capsuled_items>
 	</item>
-	<item id="34042" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" type="EtcItem">
+	<item id="34042" name="XP Rune I (Lv. 1-85) 100% Pack (5-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -746,7 +746,7 @@
 			<item id="34037" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="34044" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" type="EtcItem">
+	<item id="34044" name="XP Rune I (Lv. 1-85) 200% Pack (3-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -764,7 +764,7 @@
 			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hr.) -->
 		</capsuled_items>
 	</item>
-	<item id="34045" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" type="EtcItem">
+	<item id="34045" name="XP Rune I (Lv. 1-85) 200% Pack (5-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -800,7 +800,7 @@
 			<item id="34040" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="34047" name="XP Rune I (Lv. 1-85) 100% Pack (3-hour)" additionalName="Event" type="EtcItem">
+	<item id="34047" name="XP Rune I (Lv. 1-85) 100% Pack (3-hr.)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -821,7 +821,7 @@
 			<item id="34035" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (3-hr.) -->
 		</capsuled_items>
 	</item>
-	<item id="34048" name="XP Rune I (Lv. 1-85) 100% Pack (5-hour)" additionalName="Event" type="EtcItem">
+	<item id="34048" name="XP Rune I (Lv. 1-85) 100% Pack (5-hr.)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 100% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -863,7 +863,7 @@
 			<item id="34037" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 100% (7-day) -->
 		</capsuled_items>
 	</item>
-	<item id="34050" name="XP Rune I (Lv. 1-85) 200% Pack (3-hour)" additionalName="Event" type="EtcItem">
+	<item id="34050" name="XP Rune I (Lv. 1-85) 200% Pack (3-hr.)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -884,7 +884,7 @@
 			<item id="34038" min="1" max="1" chance="100" /> <!-- XP Rune I (Lv. 1-85) 200% (3-hr.) -->
 		</capsuled_items>
 	</item>
-	<item id="34051" name="XP Rune I (Lv. 1-85) 200% Pack (5-hour)" additionalName="Event" type="EtcItem">
+	<item id="34051" name="XP Rune I (Lv. 1-85) 200% Pack (5-hr.)" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune I (Lv. 1-85) 200% (5-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="weight" val="100" />
@@ -1513,8 +1513,8 @@
 			<skill id="9280" level="2" /> <!-- Horn Melody - Heavenly Cocktail -->
 		</skills>
 	</item>
-	<item id="34083" name="Player Commendation - Grand Épée (Earth)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand ?p?e (Earth) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+	<item id="34083" name="PA - Grand Épée (Earth)" additionalName="PA exclusive" type="Weapon">
+		<!-- Grand Épée (Earth) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1550,8 +1550,8 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34084" name="Player Commendation - Grand Épée (Water)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand ?p?e (Water) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+	<item id="34084" name="PA - Grand Épée (Water)" additionalName="PA exclusive" type="Weapon">
+		<!-- Grand Épée (Water) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1587,8 +1587,8 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34085" name="Player Commendation - Grand Épée (Wind)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand ?p?e (Wind) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+	<item id="34085" name="PA - Grand Épée (Wind)" additionalName="PA exclusive" type="Weapon">
+		<!-- Grand Épée (Wind) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1624,8 +1624,8 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34086" name="Player Commendation - Grand Épée (Fire)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand ?p?e (Fire) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+	<item id="34086" name="PA - Grand Épée (Fire)" additionalName="PA exclusive" type="Weapon">
+		<!-- Grand Épée (Fire) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1661,8 +1661,8 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34087" name="Player Commendation - Grand Épée (Holy)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand ?p?e (Holy) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+	<item id="34087" name="PA - Grand Épée (Holy)" additionalName="PA exclusive" type="Weapon">
+		<!-- Grand Épée (Holy) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1698,8 +1698,8 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34088" name="Player Commendation - Grand Épée (Dark)" additionalName="PC-exclusive" type="Weapon">
-		<!-- Grand ?p?e (Dark) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
+	<item id="34088" name="PA - Grand Épée (Dark)" additionalName="PA exclusive" type="Weapon">
+		<!-- Grand Épée (Dark) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. When enchanted to 4 or more, it has a chance of increasing P. Atk., M. Atk., and received healing amount, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -1735,7 +1735,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34089" name="Player Commendation - Glaive (Earth)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34089" name="PA - Glaive (Earth)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Earth) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1772,7 +1772,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34090" name="Player Commendation - Glaive (Water)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34090" name="PA - Glaive (Water)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Water) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1809,7 +1809,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34091" name="Player Commendation - Glaive (Wind)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34091" name="PA - Glaive (Wind)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Wind) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1846,7 +1846,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34092" name="Player Commendation - Glaive (Fire)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34092" name="PA - Glaive (Fire)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Fire) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1883,7 +1883,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34093" name="Player Commendation - Glaive (Holy)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34093" name="PA - Glaive (Holy)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Holy) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1920,7 +1920,7 @@
 			<stat type="holyPower">150</stat>
 		</stats>
 	</item>
-	<item id="34094" name="Player Commendation - Glaive (Dark)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34094" name="PA - Glaive (Dark)" additionalName="PA exclusive" type="Weapon">
 		<!-- Glaive (Dark) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1957,7 +1957,7 @@
 			<stat type="darkPower">150</stat>
 		</stats>
 	</item>
-	<item id="34095" name="Player Commendation - Mithril Dagger (Earth)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34095" name="PA - Mithril Dagger (Earth)" additionalName="PA exclusive" type="Weapon">
 		<!-- Mithril Dagger (Earth) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1991,7 +1991,7 @@
 			<stat type="earthPower">150</stat>
 		</stats>
 	</item>
-	<item id="34096" name="Player Commendation - Mithril Dagger (Water)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34096" name="PA - Mithril Dagger (Water)" additionalName="PA exclusive" type="Weapon">
 		<!-- Mithril Dagger (Water) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2025,7 +2025,7 @@
 			<stat type="waterPower">150</stat>
 		</stats>
 	</item>
-	<item id="34097" name="Player Commendation - Mithril Dagger (Wind)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34097" name="PA - Mithril Dagger (Wind)" additionalName="PA exclusive" type="Weapon">
 		<!-- Mithril Dagger (Wind) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2059,7 +2059,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="34098" name="Player Commendation - Mithril Dagger (Fire)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34098" name="PA - Mithril Dagger (Fire)" additionalName="PA exclusive" type="Weapon">
 		<!-- Mithril Dagger (Fire) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2093,7 +2093,7 @@
 			<stat type="firePower">150</stat>
 		</stats>
 	</item>
-	<item id="34099" name="Player Commendation - Mithril Dagger (Holy)" additionalName="PC-exclusive" type="Weapon">
+	<item id="34099" name="PA - Mithril Dagger (Holy)" additionalName="PA exclusive" type="Weapon">
 		<!-- Mithril Dagger (Holy) with limited ability enhancement. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with PA Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_mithril_dagger_i00" />
 		<set name="default_action" val="EQUIP" />

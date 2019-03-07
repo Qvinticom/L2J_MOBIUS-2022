@@ -213,7 +213,7 @@
 			<stat type="maxMp">31</stat>
 		</stats>
 	</item>
-	<item id="21209" name="MP Recovery Potion Pack" type="EtcItem">
+	<item id="21209" name="MP Recovery Bonus Potion Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 3 MP Recovery Bonus (+50%) potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="material" val="STEEL" />
@@ -233,7 +233,7 @@
 			<item id="21210" min="3" max="3" chance="100" /> <!-- MP Recovery Bonus Potion -->
 		</capsuled_items>
 	</item>
-	<item id="21210" name="MP Recovery Potion" type="EtcItem">
+	<item id="21210" name="MP Recovery Bonus Potion" type="EtcItem">
 		<!-- Instantly restores MP by 50%. Cooldown is 5 min. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="36200" name="Shooter Sealed with Heroes' Power" type="Weapon">
+	<item id="36200" name="Shooter Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -35,7 +35,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="36201" name="Buster Sealed with Heroes' Power" type="Weapon">
+	<item id="36201" name="Buster Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i01" />
 		<set name="weapon_type" val="SWORD" />
@@ -68,7 +68,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36202" name="Caster Sealed with Heroes' Power" type="Weapon">
+	<item id="36202" name="Caster Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -102,7 +102,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36203" name="Retributer Sealed with Heroes' Power" type="Weapon">
+	<item id="36203" name="Retributer Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -137,7 +137,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36204" name="Dualsword Sealed with Heroes' Power" type="Weapon">
+	<item id="36204" name="Dual Sword Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="weapon_type" val="DUAL" />
@@ -170,7 +170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36205" name="Dual Dagger Sealed with Heroes' Power" type="Weapon">
+	<item id="36205" name="Dual Dagger Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -204,7 +204,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36206" name="Dual Blunt Sealed with Heroes' Power" type="Weapon">
+	<item id="36206" name="Dual Blunt Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. Will be deleted after the event. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -238,7 +238,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36207" name="Shaper Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36207" name="Shaper Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_the_dagger_of_hero_i01" />
 		<set name="weapon_type" val="DAGGER" />
@@ -271,7 +271,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36208" name="Cutter Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36208" name="Cutter Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_the_sword_of_hero_i01" />
 		<set name="weapon_type" val="SWORD" />
@@ -303,7 +303,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36209" name="Slasher Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36209" name="Slasher Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_the_two_handed_sword_of_hero_i01" />
 		<set name="weapon_type" val="SWORD" />
@@ -335,7 +335,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36210" name="Avenger Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36210" name="Avenger Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_the_axe_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -368,7 +368,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36211" name="Fighter Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36211" name="Fighter Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_the_fist_of_hero_i01" />
 		<set name="weapon_type" val="DUALFIST" />
@@ -401,7 +401,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36212" name="Stormer Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36212" name="Stormer Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_the_pole_of_hero_i01" />
 		<set name="weapon_type" val="POLE" />
@@ -434,7 +434,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="36213" name="Thrower Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36213" name="Thrower Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_the_bow_of_hero_i01" />
 		<set name="weapon_type" val="BOW" />
@@ -468,7 +468,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="36214" name="Shooter Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36214" name="Shooter Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -502,7 +502,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="36215" name="Buster Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36215" name="Buster Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i01" />
 		<set name="weapon_type" val="SWORD" />
@@ -534,7 +534,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36216" name="Caster Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36216" name="Caster Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -567,7 +567,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36217" name="Retributer Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36217" name="Retributer Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -601,7 +601,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36218" name="Dualsword Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36218" name="Dual Sword Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="weapon_type" val="DUAL" />
@@ -633,7 +633,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36219" name="Dual Dagger Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36219" name="Dual Dagger Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -666,7 +666,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36220" name="Dual Blunt Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36220" name="Dual Blunt Imbued with Heroes' Power" additionalName="2-hr." type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hr. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -901,7 +901,7 @@
 			<skill id="9721" level="1" /> <!-- Boss Accessory Pack -->
 		</skills>
 	</item>
-	<item id="36235" name="Istina's Necklace" additionalName="3-hour" type="Armor">
+	<item id="36235" name="Istina's Necklace" additionalName="3-hr." type="Armor">
 		<!-- Istina's Necklace. 3-hr. MP +74 and Holy Resistance +35. Decreases Skill Cooldown and creates a Damage Reflect effect. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.istina_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -924,7 +924,7 @@
 			<stat type="mDef">205</stat>
 		</stats>
 	</item>
-	<item id="36236" name="Istina's Ring" additionalName="3-hour" type="Armor">
+	<item id="36236" name="Istina's Ring" additionalName="3-hr." type="Armor">
 		<!-- Istina's Ring. 3-hr. MP +37, Accuracy +3, Critical +54.4, and Water Resistance +20. Only one effect is applied when two identical rings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.istina_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -947,7 +947,7 @@
 			<stat type="mDef">103</stat>
 		</stats>
 	</item>
-	<item id="36237" name="Istina's Earring" additionalName="3-hour" type="Armor">
+	<item id="36237" name="Istina's Earring" additionalName="3-hr." type="Armor">
 		<!-- Istina's Earring. 3-hr. MP +56, Stun Resistance +30%, and Stun attack +30%. Creates Vampiric Rage and Wind Resistance. Wearing two of these earrings will give you the effect of wearing one. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.istina_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -970,7 +970,7 @@
 			<stat type="mDef">154</stat>
 		</stats>
 	</item>
-	<item id="36238" name="Octavis' Ring" additionalName="3-hour" type="Armor">
+	<item id="36238" name="Octavis' Ring" additionalName="3-hr." type="Armor">
 		<!-- Octavis' Ring. 3-hr. Increases MP by 37, Critical Damage, and Fire Resistance by 20. Only one effect is applied when two identical rings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.octavis_ring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -993,7 +993,7 @@
 			<stat type="mDef">103</stat>
 		</stats>
 	</item>
-	<item id="36239" name="Octavis' Necklace" additionalName="3-hour" type="Armor">
+	<item id="36239" name="Octavis' Necklace" additionalName="3-hr." type="Armor">
 		<!-- Octavis' Necklace. 3-hr. Increases MP by 74, Dark Resistance by 35, and P. Skill Power. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.octavis_necklace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1016,7 +1016,7 @@
 			<stat type="mDef">205</stat>
 		</stats>
 	</item>
-	<item id="36240" name="Octavis' Earring" additionalName="3-hour" type="Armor">
+	<item id="36240" name="Octavis' Earring" additionalName="3-hr." type="Armor">
 		<!-- Octavis' Earring. 3-hr. Increases MP by 56, Hold/ Sleep Resistance by 40%, Hold/ Sleep attack by 40%, and Earth Resistance by 30. Wearing two of these earrings will give you the effect of wearing one. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.octavis_earring_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1039,7 +1039,7 @@
 			<stat type="mDef">154</stat>
 		</stats>
 	</item>
-	<item id="36241" name="Blessed Antharas' Earring" additionalName="3-hour" type="Armor">
+	<item id="36241" name="Blessed Antharas' Earring" additionalName="3-hr." type="Armor">
 		<!-- Blessed Antharas' Earring. 3-hr. Increases MP by 59, Bleed Resistance by 50% Bleed rate by 50% Heal Amount, Vampiric Rage Effect, Stun/ Mental Attack Resistance by 40%, Stun/ Mental attack rate by 40%, Earth Resistance, Holy Resistance, M. Def. and P. Def., CON by 3, and MEN by 3. Decreases P. Skill and M. Skill's MP consumption. Can use Stun Cancellation and momentarily makes Stun Resistance 100%. Wearing two of these earrings will give you the effect of wearing one. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1064,7 +1064,7 @@
 			<stat type="mDef">170</stat>
 		</stats>
 	</item>
-	<item id="36242" name="Blessed Valakas' Necklace" additionalName="3-hour" type="Armor">
+	<item id="36242" name="Blessed Valakas' Necklace" additionalName="3-hr." type="Armor">
 		<!-- Blessed Valakas' Necklace. 3-hr. HP +625, MP +79, Sleep Resistance +50%, Sleep Attack Rate +50%, Fire Resistance +30, Dark Resistance +20, STR +3, INT +3, P. Skill Power + 5%, P. Atk. +10%, and M. Atk. +20%. Decreases M. Skill and P. Skill cooldown, and creates a Wild Magic Effect and Damage Reflect effect. Can use Cancel Hold and momentarily makes Hold Resistance 100%. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1089,7 +1089,7 @@
 			<stat type="mDef">226</stat>
 		</stats>
 	</item>
-	<item id="36243" name="Earth Wyrm Heart Ring" additionalName="3-hour" type="Armor">
+	<item id="36243" name="Earth Wyrm Heart Ring" additionalName="3-hr." type="Armor">
 		<!-- Earth Wyrm's Heart Ring. 3-hr. MP +38, P./ M. Debuff Resistance +15, MP Regeneration +3, P. Critical Damage +20%, and P. Accuracy +5. Poison Resistance +50%, Poison Atk. Rate +50%, Knock Back, Knock Down, Pulling, Danger Zone Resistance +20%, Atk. Spd. and Casting Spd. +6%, and Wind/ Water Resistance +30. Can use skills that affect party members' Atk. Spd., Casting Spd., and Vampiric Rage. Can use Poison removal. Only one effect is applied when two identical rings are worn. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.ring_earthworm_heart" />
 		<set name="default_action" val="EQUIP" />
@@ -1115,7 +1115,7 @@
 			<stat type="mDef">108</stat>
 		</stats>
 	</item>
-	<item id="36244" name="Tauti's Ring" additionalName="3-hour" type="Armor">
+	<item id="36244" name="Tauti's Ring" additionalName="3-hr." type="Armor">
 		<!-- Tauti's Ring. 3-hr. Tauti's Ring. Fire/ Dark Resistance +25, MP +38, Critical Damage +15%, Skill Power +5%, PvP damage +5%, Paralysis/ Binding/ Banishment Resistance +10, Damage Reflect Resistance +5, Absorption Resistance +5, received PvP damage -5%, and critical +54 when a blunt is equipped. Even if you wear two identical rings, only the effects of one apply (excluding attributes/ M. Def.). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.accessary_tauti_ring" />
 		<set name="default_action" val="EQUIP" />

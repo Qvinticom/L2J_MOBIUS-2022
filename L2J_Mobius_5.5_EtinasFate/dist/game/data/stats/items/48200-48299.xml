@@ -53,7 +53,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="48202" name="Circlet of Authority" type="Armor">
+	<item id="48202" name="Warrior's Circlet" type="Armor">
 		<!-- Warrior's Circlet. <Upgrade Requirement>. Enchant to +5 to upgrade to a Noble Warrior's Circlet. -->
 		<set name="icon" val="icon.bm_pattack_circlet_01" />
 		<set name="default_action" val="EQUIP" />
@@ -67,7 +67,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="48203" name="Noble Circlet of Authority" type="Armor">
+	<item id="48203" name="Noble Warrior's Circlet" type="Armor">
 		<!-- Noble Warrior's Circlet. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Warrior's Circlet. Can be augmented. -->
 		<set name="icon" val="icon.bm_pattack_circlet_02" />
 		<set name="default_action" val="EQUIP" />
@@ -77,7 +77,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48204" name="Radiant Circlet of Authority" type="Armor">
+	<item id="48204" name="Radiant Warrior's Circlet" type="Armor">
 		<!-- Radiant Warrior's Circlet. Can be augmented. -->
 		<set name="icon" val="icon.bm_pattack_circlet_03" />
 		<set name="default_action" val="EQUIP" />
@@ -87,7 +87,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48205" name="Circlet of Foresight" type="Armor">
+	<item id="48205" name="Wizard's Circlet" type="Armor">
 		<!-- Wizard's Circlet. <Upgrade Requirement>. Enchant to +5 to upgrade to a Noble Wizard's Circlet. -->
 		<set name="icon" val="icon.bm_mattack_circlet_01" />
 		<set name="default_action" val="EQUIP" />
@@ -101,7 +101,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="48206" name="Noble Circlet of Foresight" type="Armor">
+	<item id="48206" name="Noble Wizard's Circlet" type="Armor">
 		<!-- Noble Wizard's Circlet. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Wizard's Circlet. Can be augmented. -->
 		<set name="icon" val="icon.bm_mattack_circlet_02" />
 		<set name="default_action" val="EQUIP" />
@@ -111,7 +111,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48207" name="Radiant Circlet of Foresight" type="Armor">
+	<item id="48207" name="Radiant Wizard's Circlet" type="Armor">
 		<!-- Radiant Wizard's Circlet. Can be augmented. -->
 		<set name="icon" val="icon.bm_mattack_circlet_03" />
 		<set name="default_action" val="EQUIP" />
@@ -121,7 +121,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48208" name="Circlet of Grace" type="Armor">
+	<item id="48208" name="Knight's Circlet" type="Armor">
 		<!-- Knight's Circlet. <Upgrade Requirement>. Enchant to +5 to upgrade to a Noble Knight's Circlet. -->
 		<set name="icon" val="icon.bm_defense_circlet_01" />
 		<set name="default_action" val="EQUIP" />
@@ -135,7 +135,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="48209" name="Noble Circlet of Grace" type="Armor">
+	<item id="48209" name="Noble Knight's Circlet" type="Armor">
 		<!-- Noble Knight's Circlet. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Knight's Circlet. Can be augmented. -->
 		<set name="icon" val="icon.bm_defense_circlet_02" />
 		<set name="default_action" val="EQUIP" />
@@ -145,7 +145,7 @@
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48210" name="Radiant Circlet of Grace" type="Armor">
+	<item id="48210" name="Radiant Knight's Circlet" type="Armor">
 		<!-- Radiant Knight's Circlet. Can be augmented. -->
 		<set name="icon" val="icon.bm_defense_circlet_03" />
 		<set name="default_action" val="EQUIP" />
@@ -164,14 +164,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48212" name="Noble Upgrade Stone" type="EtcItem">
+	<item id="48212" name="Noble Circlet Upgrade Stone" type="EtcItem">
 		<!-- Ingredient needed to upgrade Warrior's/ Wizard's/ Knight's Circlets into Noble Circlets. Talk to Head Blacksmith Ferris of Aden to upgrade +5 Circlets into Noble Circlets. -->
 		<set name="icon" val="icon.bm_hair_acc_upgrade_1" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48213" name="Radiant Upgrade Stone" type="EtcItem">
+	<item id="48213" name="Radiant Circlet Upgrade Stone" type="EtcItem">
 		<!-- Ingredient needed to upgrade Noble Warrior's/ Wizard's/ Knight's Circlets into Radiant Circlets. Talk to Head Blacksmith Ferris of Aden to upgrade +5 Noble Circlets into Radiant Circlets. -->
 		<set name="icon" val="icon.bm_hair_acc_upgrade_2" />
 		<set name="material" val="PAPER" />
@@ -202,7 +202,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48217" name="High-grade Balthus Knight Mark" type="EtcItem">
+	<item id="48217" name="Balthus Knights' Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -214,7 +214,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="48218" name="Veteran Duo Bracelet Pack" additionalName="Event" type="EtcItem">
+	<item id="48218" name="Balthus Knights' Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="PEEL" />
@@ -227,7 +227,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="48219" name="Returned Duo Bracelet Pack" additionalName="Event" type="EtcItem">
+	<item id="48219" name="Balthus Knights' Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="PEEL" />
@@ -240,7 +240,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="48220" name="NoItemName" type="EtcItem">
+	<item id="48220" name="Balthus Knights' Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="material" val="PAPER" />
@@ -411,7 +411,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="48233" name="Clan Cloak - War Specialty" additionalName="Stage 1" type="Armor">
+	<item id="48233" name="Clan Cloak- War Specialty" additionalName="Stage 1" type="Armor">
 		<!-- Can be worn when your level is at least 85 and your clan is at least level 8. <Upgrade Condition>. Can be upgraded to level 2 cloak when enchanted to +5. -->
 		<set name="icon" val="icon.alliance_cloak_pvp01" />
 		<set name="default_action" val="EQUIP" />
@@ -428,7 +428,7 @@
 			<stat type="pDef">50</stat>
 		</stats>
 	</item>
-	<item id="48234" name="Clan Cloak - War Specialty" additionalName="Stage 2" type="Armor">
+	<item id="48234" name="Clan Cloak- War Specialty" additionalName="Stage 2" type="Armor">
 		<!-- Can be worn when your level is at least 99 and your clan is at least level 10. <Upgrade Condition>. Can be upgraded to level 3 cloak when enchanted to +5. -->
 		<set name="icon" val="icon.alliance_cloak_pvp02" />
 		<set name="default_action" val="EQUIP" />
@@ -445,7 +445,7 @@
 			<stat type="pDef">60</stat>
 		</stats>
 	</item>
-	<item id="48235" name="Clan Cloak - War Specialty" additionalName="Stage 3" type="Armor">
+	<item id="48235" name="Clan Cloak- War Specialty" additionalName="Stage 3" type="Armor">
 		<!-- Can be worn when your level is at least 105 and your clan is at least level 12. <Upgrade Condition>. Can be upgraded to level 4 cloak when enchanted to +5. -->
 		<set name="icon" val="icon.alliance_cloak_pvp03" />
 		<set name="default_action" val="EQUIP" />
@@ -462,7 +462,7 @@
 			<stat type="pDef">70</stat>
 		</stats>
 	</item>
-	<item id="48236" name="Clan Cloak - War Specialty" additionalName="Stage 4" type="Armor">
+	<item id="48236" name="Clan Cloak- War Specialty" additionalName="Stage 4" type="Armor">
 		<!-- Can be worn when your level is at least 110 and your clan is at least level 13. -->
 		<set name="icon" val="icon.alliance_cloak_pvp04" />
 		<set name="default_action" val="EQUIP" />
@@ -794,7 +794,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48261" name="Clan Cloak - Combat Specialty Upgrade Stone" additionalName="Stage 1" type="EtcItem">
+	<item id="48261" name="Clan Cloak- Combat Specialty Upgrade Stone" additionalName="Stage 1" type="EtcItem">
 		<!-- Material needed to upgrade Clan Cloak - Combat Specialty from level 1 to level 2. The cloak can be upgraded through Head Blacksmith Ferris in the Town of Aden. -->
 		<set name="icon" val="icon.r_soul_stone_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -806,7 +806,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48262" name="Clan Cloak - Combat Specialty Upgrade Stone" additionalName="Stage 2" type="EtcItem">
+	<item id="48262" name="Clan Cloak- Combat Specialty Upgrade Stone" additionalName="Stage 2" type="EtcItem">
 		<!-- Material needed to upgrade Clan Cloak - Combat Specialty from level 2 to level 3. The cloak can be upgraded through Head Blacksmith Ferris in the Town of Aden. -->
 		<set name="icon" val="icon.r95_soul_stone_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -818,7 +818,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48263" name="Clan Cloak - Combat Specialty Upgrade Stone" additionalName="Stage 3" type="EtcItem">
+	<item id="48263" name="Clan Cloak- Combat Specialty Upgrade Stone" additionalName="Stage 3" type="EtcItem">
 		<!-- Material needed to upgrade Clan Cloak - Combat Specialty from level 3 to level 4. The cloak can be upgraded through Head Blacksmith Ferris in the Town of Aden. -->
 		<set name="icon" val="icon.r99_soul_stone_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1102,7 +1102,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48285" name="Scroll PK" type="EtcItem">
+	<item id="48285" name="Scroll: PK" type="EtcItem">
 		<!-- Double-click to lower PK value by 1. Your PK value has to be at least 1. Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah is in possession. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />
@@ -1143,7 +1143,7 @@
 			<skill id="22754" level="1" /> <!-- Scroll: Reputation -->
 		</skills>
 	</item>
-	<item id="48287" name="Snow Kung Transformation Stick" additionalName="15-day" type="Weapon">
+	<item id="48287" name="Snow Man Transformation Stick" additionalName="15-day" type="Weapon">
 		<!-- Stick that turns you into a Snowman. -->
 		<set name="icon" val="icon.weapon_snowman_stick_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1328,7 +1328,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48294" name="+10 Eternal Armor set Pack" type="EtcItem">
+	<item id="48294" name="+10 Eternal Armor Set Pack" type="EtcItem">
 		<!-- Test server support item. Use to obtain +10 Bloody Eternal light armor, heavy armor, and robe sets. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />

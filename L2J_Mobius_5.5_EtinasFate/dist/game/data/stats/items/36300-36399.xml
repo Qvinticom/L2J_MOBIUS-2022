@@ -272,7 +272,7 @@
 			<skill id="9772" level="1" /> <!-- Draco's Shiny Gift (Event) -->
 		</skills>
 	</item>
-	<item id="36327" name="Birthday Vitality Potion" additionalName="1-hour" type="EtcItem">
+	<item id="36327" name="Birthday Vitality Potion" additionalName="1-hr." type="EtcItem">
 		<!-- Upon use, for 1 hr., Vitality is recovered when XP is acquired through hunting. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_potion_blue_i00" />
 		<set name="weight" val="80" />
@@ -291,7 +291,7 @@
 			<skill id="9775" level="1" /> <!-- Birthday Vitality Potion -->
 		</skills>
 	</item>
-	<item id="36328" name="Freya's Refreshing Breeze" additionalName="1-hour" type="EtcItem">
+	<item id="36328" name="Freya's Refreshing Breeze" additionalName="1-hr." type="EtcItem">
 		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_mineral_i00" />
 		<set name="weight" val="1" />
@@ -312,7 +312,7 @@
 			<skill id="9776" level="1" /> <!-- Freya's Refreshing Breeze (1-hour) -->
 		</skills>
 	</item>
-	<item id="36329" name="Pa'agrio's Warm Breeze (1-hour)" type="EtcItem">
+	<item id="36329" name="Pa'agrio's Warm Breeze (1-hr.)" type="EtcItem">
 		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="BranchSys2.Icon.pi_wind_of_paagrio" />
 		<set name="is_clan_depositable" val="false" />
@@ -331,7 +331,7 @@
 			<skill id="9777" level="1" /> <!-- Pa'agrio's Warm Breeze (1-hour) -->
 		</skills>
 	</item>
-	<item id="36330" name="Sweet Chocolate (1-hour)" type="EtcItem">
+	<item id="36330" name="Sweet Chocolate (1-hr.)" type="EtcItem">
 		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing herb's effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="BranchSys.icon.br_valentine_darkchoco_i00" />
 		<set name="weight" val="1" />
@@ -351,7 +351,7 @@
 			<skill id="9778" level="1" /> <!-- Sweet Chocolate (1-hour) -->
 		</skills>
 	</item>
-	<item id="36331" name="Returning Hero's Vitality Replenishing Juice" additionalName="1-hour" type="EtcItem">
+	<item id="36331" name="Returning Hero's Vitality Replenishing Juice" additionalName="1-hr." type="EtcItem">
 		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality recovery effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="BranchSys2.icon.br_breath_of_hero_i00" />
 		<set name="weight" val="120" />
@@ -371,7 +371,7 @@
 			<skill id="9779" level="1" /> <!-- Returning Hero's Vitality Replenishing Juice -->
 		</skills>
 	</item>
-	<item id="36332" name="Pirate Elixir (1-hour)" type="EtcItem">
+	<item id="36332" name="Pirate Elixir (1-hr.)" type="EtcItem">
 		<!-- Upon use, for 1 hr., you can temporarily feel the Vitality-replenishing effect. No effect applies when used while the "Birthday Joy" buff is in effect. Cooldown is 60 min. Vitality item with limited usage. Not deleted upon death. -->
 		<set name="icon" val="icon.etc_hot_spring_nectar_i00" />
 		<set name="weight" val="1" />
@@ -458,7 +458,7 @@
 			<skill id="9789" level="1" /> <!-- DHA Energy Drink -->
 		</skills>
 	</item>
-	<item id="36338" name="Omega3 Energy Drink" additionalName="Event" type="EtcItem">
+	<item id="36338" name="Omega 3 Energy Drink" additionalName="Event" type="EtcItem">
 		<!-- Energy drink that stimulates the nerves, activating the neurons in the brain. WIT +10. Formulated for special events, this energy drink is said to help with Mental activity. Cannot be used in Olympiad. The body does not remember the drink's potent effect after 30 min. -->
 		<set name="icon" val="icon.etc_oblivion_white_i00" />
 		<set name="is_stackable" val="true" />

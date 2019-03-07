@@ -1114,7 +1114,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29078" name="Greater Vital Stone" type="Armor">
+	<item id="29078" name="Greater Vital Stone" additionalName="30-day" type="Armor">
 		<!-- Vitality Bonus +30% and Vitality Consumption -15%. Acquired XP/ SP +10% as well. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1150,7 +1150,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29081" name="Dimensional Talisman - Attack Attribute" additionalName="30-day" type="Armor">
+	<item id="29081" name="Dimensional Talisman - Atk. Attribute" additionalName="30-day" type="Armor">
 		<!-- When equipped, Atk. Attribute increases by 50. The effect does not stack when two or more identical Talismans are equipped. -->
 		<set name="icon" val="icon.npoint_talisman_stat" />
 		<set name="default_action" val="EQUIP" />
@@ -1165,7 +1165,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="29082" name="Dimensional Talisman - Attack Attribute Pack (30-day)" type="EtcItem">
+	<item id="29082" name="Dimensional Talisman - Atk. Attribute Pack (30-day)" type="EtcItem">
 		<!-- Double-click to obtain a Dimensional Talisman - Atk. Attribute (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />

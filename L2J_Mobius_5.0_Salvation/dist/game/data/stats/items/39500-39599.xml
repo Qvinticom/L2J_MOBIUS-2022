@@ -70,7 +70,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="39505" name="Scroll of Escape: The Cemetary" type="EtcItem">
+	<item id="39505" name="Scroll of Escape: The Cemetery" type="EtcItem">
 		<!-- Teleports you to The Cemetery. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -981,7 +981,7 @@
 			<item id="39567" min="1" max="1" chance="25" /> <!-- Talisman- Wind Pack - Debuff Defense -->
 		</capsuled_items>
 	</item>
-	<item id="39564" name="Talisman - Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
+	<item id="39564" name="Talisman- Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman- Wind: P. Skill Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
@@ -995,7 +995,7 @@
 			<item id="39568" min="1" max="1" chance="100" /> <!-- Talisman - Wind: P. Critical Damage - Passive -->
 		</capsuled_items>
 	</item>
-	<item id="39565" name="Talisman - Wind Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
+	<item id="39565" name="Talisman- Wind Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman- Wind: M. Skill Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
@@ -1009,7 +1009,7 @@
 			<item id="39569" min="1" max="1" chance="100" /> <!-- Talisman - Wind: M. Critical Damage - Passive -->
 		</capsuled_items>
 	</item>
-	<item id="39566" name="Talisman - Wind Pack" type="EtcItem">
+	<item id="39566" name="Talisman- Wind Pack" additionalName="Defense" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman- Wind: Defense. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
@@ -1023,7 +1023,7 @@
 			<item id="39570" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Defense - Active -->
 		</capsuled_items>
 	</item>
-	<item id="39567" name="Talisman - Wind Pack" type="EtcItem">
+	<item id="39567" name="Talisman- Wind Pack" additionalName="Debuff Defense" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman- Wind: Debuff Resistance. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_stackable" val="true" />
@@ -1073,7 +1073,7 @@
 			<skill id="17974" level="1" /> <!-- Talisman - Wind: M. Critical Damage -->
 		</skills>
 	</item>
-	<item id="39570" name="Talisman - Wind: Defense" type="Armor">
+	<item id="39570" name="Talisman - Wind: Defense" additionalName="Active" type="Armor">
 		<!-- For 15 sec., P./ M. Def. are maximized. Cooldown is 20 min. -->
 		<set name="icon" val="icon.r85_talisman_pd_up_active" />
 		<set name="default_action" val="EQUIP" />
@@ -1091,7 +1091,7 @@
 			<skill id="17975" level="1" /> <!-- Talisman - Wind: Defense -->
 		</skills>
 	</item>
-	<item id="39571" name="Talisman - Wind: Debuff Resistance" type="Armor">
+	<item id="39571" name="Talisman - Wind: Debuff Resistance" additionalName="Active" type="Armor">
 		<!-- For 15 sec., Debuff Resistance is increased. Cooldown is 20 min. -->
 		<set name="icon" val="icon.r85_talisman_md_up_active" />
 		<set name="default_action" val="EQUIP" />

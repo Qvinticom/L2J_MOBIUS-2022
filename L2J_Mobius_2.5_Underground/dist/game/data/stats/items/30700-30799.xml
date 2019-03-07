@@ -127,7 +127,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30705" name="Bound Carnage Bow" additionalName="Light Armor" type="Weapon">
+	<item id="30705" name="Bound Carnage Bow - Light Armor" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Weight Gauge by 20%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -164,7 +164,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30706" name="Bound Carnage Bow" additionalName="Critical Bleed" type="Weapon">
+	<item id="30706" name="Bound Carnage Bow - Critical Bleed" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 35% chance of casting Bleed on the target during a standard Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -201,7 +201,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="30707" name="Bound Carnage Bow" additionalName="Mana Up" type="Weapon">
+	<item id="30707" name="Bound Carnage Bow - Mana Up" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_carnium_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -269,7 +269,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30709" name="Bound Tsurugi" additionalName="Focus" type="Weapon">
+	<item id="30709" name="Bound Tsurugi - Focus" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 77. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tsurugi_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -303,7 +303,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30710" name="Bound Tsurugi" additionalName="Critical Damage" type="Weapon">
+	<item id="30710" name="Bound Tsurugi - Critical Damage" type="Weapon">
 		<!-- <Special Option>. P. Atk. + 213 during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tsurugi_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -337,7 +337,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30711" name="Bound Tsurugi" additionalName="Haste" type="Weapon">
+	<item id="30711" name="Bound Tsurugi - Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by about 7%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tsurugi_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -592,7 +592,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30721" name="Bound Chakram" additionalName="Critical Drain" type="Weapon">
+	<item id="30721" name="Bound Chakram - Critical Drain" type="Weapon">
 		<!-- <Special Option>. Absorbs 6 HP from the target during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_chakram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -627,7 +627,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30722" name="Bound Chakram" additionalName="Critical Poison" type="Weapon">
+	<item id="30722" name="Bound Chakram - Critical Poison" type="Weapon">
 		<!-- <Special Option>. Has a 17% chance of casting Poison on the target during a standard Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_chakram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -662,7 +662,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30723" name="Bound Chakram" additionalName="Rsk. Haste" type="Weapon">
+	<item id="30723" name="Bound Chakram - Rsk. Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by 13% when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_chakram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -978,7 +978,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30735" name="Bound Ghost Staff" additionalName="Magic Regeneration" type="Weapon">
+	<item id="30735" name="Bound Ghost Staff - Magic Regeneration" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 30% chance of casting Regeneration on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1013,7 +1013,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30736" name="Bound Ghost Staff" additionalName="Magic Mental Shield" type="Weapon">
+	<item id="30736" name="Bound Ghost Staff - Magic Mental Shield" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1048,7 +1048,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30737" name="Bound Ghost Staff" additionalName="Magic Hold" type="Weapon">
+	<item id="30737" name="Bound Ghost Staff - Magic Hold" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 10% chance of casting Dryad Root on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1152,7 +1152,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30740" name="Bound Cursed Dagger" additionalName="Critical Bleed" type="Weapon">
+	<item id="30740" name="Bound Cursed Dagger - Critical Bleed" type="Weapon">
 		<!-- <Special Option>. Has a 17% chance of casting Bleed on the target during a standard Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_cursed_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1187,7 +1187,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30741" name="Bound Cursed Dagger" additionalName="Critical Poison" type="Weapon">
+	<item id="30741" name="Bound Cursed Dagger - Critical Poison" type="Weapon">
 		<!-- <Special Option>. Has a 9% chance of casting Poison on the target during a standard Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_cursed_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1222,7 +1222,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30742" name="Bound Cursed Dagger" additionalName="Rsk. Haste" type="Weapon">
+	<item id="30742" name="Bound Cursed Dagger - Rsk. Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by 13% when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_cursed_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1338,7 +1338,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30746" name="Bound Cursed Staff" additionalName="Magic Hold" type="Weapon">
+	<item id="30746" name="Bound Cursed Staff - Magic Hold" type="Weapon">
 		<!-- <Special Option>. Has a 6% chance of casting Dryad Root on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_cursed_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1373,7 +1373,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30747" name="Bound Cursed Staff" additionalName="Magic Poison" type="Weapon">
+	<item id="30747" name="Bound Cursed Staff - Magic Poison" type="Weapon">
 		<!-- <Special Option>. Has an 8% chance of casting Curse Poison on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_cursed_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1408,7 +1408,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30748" name="Bound Cursed Staff" additionalName="Magic Weakness" type="Weapon">
+	<item id="30748" name="Bound Cursed Staff - Magic Weakness" type="Weapon">
 		<!-- <Special Option>. Has an 8% chance of casting Curse Weakness on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_cursed_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1867,7 +1867,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30764" name="Bound Imperial Staff" additionalName="Empower" type="Weapon">
+	<item id="30764" name="Bound Imperial Staff - Empower" type="Weapon">
 		<!-- Bound Item. <Special Option>. M. Atk. + 60. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1903,7 +1903,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30765" name="Bound Imperial Staff" additionalName="MP Regeneration" type="Weapon">
+	<item id="30765" name="Bound Imperial Staff - MP Regeneration" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases MP Recovery Rate. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1939,7 +1939,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30766" name="Bound Imperial Staff" additionalName="Magic Hold" type="Weapon">
+	<item id="30766" name="Bound Imperial Staff - Magic Hold" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 20% chance of casting Dryad Root on the target during magic use. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2009,7 +2009,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30768" name="Bound Inferno Staff" additionalName="Acumen" type="Weapon">
+	<item id="30768" name="Bound Inferno Staff - Acumen" type="Weapon">
 		<!-- <Special Option>. Increases Casting Spd. by 15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2044,7 +2044,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30769" name="Bound Inferno Staff" additionalName="Magic Silence" type="Weapon">
+	<item id="30769" name="Bound Inferno Staff - Magic Silence" type="Weapon">
 		<!-- <Special Option>. Has a 10% chance of casting Silence on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2079,7 +2079,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30770" name="Bound Inferno Staff" additionalName="Magic Paralyze" type="Weapon">
+	<item id="30770" name="Bound Inferno Staff - Magic Paralyze" type="Weapon">
 		<!-- <Special Option>. Has a 5% chance of casting Paralysis on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2145,7 +2145,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30772" name="Bound Infernal Master" additionalName="Haste" type="Weapon">
+	<item id="30772" name="Bound Infernal Master - Haste" type="Weapon">
 		<!-- Bound Item. Cannot be exchanged or dropped. <Special Option>. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2179,7 +2179,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30773" name="Bound Infernal Master" additionalName="Critical Damage" type="Weapon">
+	<item id="30773" name="Bound Infernal Master - Critical Damage" type="Weapon">
 		<!-- Bound Item. <Special Option>. P. Atk. + 297 during a Critical Attack. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2213,7 +2213,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30774" name="Bound Infernal Master" additionalName="Focus" type="Weapon">
+	<item id="30774" name="Bound Infernal Master - Focus" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_inferno_master_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2322,7 +2322,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30778" name="Bound Immortal Edge" additionalName="Focus" type="Weapon">
+	<item id="30778" name="Bound Immortal Edge - Focus" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. <Special Option>. Increases Critical by 77. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2357,7 +2357,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30779" name="Bound Immortal Edge" additionalName="Health" type="Weapon">
+	<item id="30779" name="Bound Immortal Edge - Health" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2392,7 +2392,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30780" name="Bound Immortal Edge" additionalName="Critical Drain" type="Weapon">
+	<item id="30780" name="Bound Immortal Edge - Critical Drain" type="Weapon">
 		<!-- Kamael-exclusive Weapon: Pa'agrian Sword. <Special Option>. Absorbs 9 HP from the target during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2460,7 +2460,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30782" name="Bound Ecliptic Axe" additionalName="Conversion" type="Weapon">
+	<item id="30782" name="Bound Ecliptic Axe - Conversion" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2495,7 +2495,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30783" name="Bound Ecliptic Axe" additionalName="M. Atk." type="Weapon">
+	<item id="30783" name="Bound Ecliptic Axe - M. Atk." type="Weapon">
 		<!-- <Special Option>. Increases MP consumption by 15% and M. Atk. by 112 during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2530,7 +2530,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30784" name="Bound Ecliptic Axe" additionalName="Magic Hold" type="Weapon">
+	<item id="30784" name="Bound Ecliptic Axe - Magic Hold" type="Weapon">
 		<!-- <Special Option>. Has a 6% chance of casting Dryad Root on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2742,7 +2742,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30790" name="Bound Widow Maker" additionalName="Critical Stun" type="Weapon">
+	<item id="30790" name="Bound Widow Maker - Critical Stun" type="Weapon">
 		<!-- <Special Option>. Has about a 31% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_widow_maker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2778,7 +2778,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30791" name="Bound Widow Maker" additionalName="Long Blow" type="Weapon">
+	<item id="30791" name="Bound Widow Maker - Long Blow" type="Weapon">
 		<!-- <Special Option>. Increases the attack range. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_widow_maker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2813,7 +2813,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="30792" name="Bound Widow Maker" additionalName="Wide Blow" type="Weapon">
+	<item id="30792" name="Bound Widow Maker - Wide Blow" type="Weapon">
 		<!-- <Special Option>. Broadens the angle of attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_widow_maker_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2881,7 +2881,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30794" name="Bound Silver Axe" additionalName="Anger" type="Weapon">
+	<item id="30794" name="Bound Silver Axe - Anger" type="Weapon">
 		<!-- <Special Option>. P. Atk. + 20 and decreases Max HP by 15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_war_pick_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2916,7 +2916,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30795" name="Bound Silver Axe" additionalName="Rsk. Focus" type="Weapon">
+	<item id="30795" name="Bound Silver Axe - Rsk. Focus" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 138 when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_war_pick_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2951,7 +2951,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30796" name="Bound Silver Axe" additionalName="Haste" type="Weapon">
+	<item id="30796" name="Bound Silver Axe - Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by about 8%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_war_pick_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3019,7 +3019,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30798" name="Bound War Axe" additionalName="Anger" type="Weapon">
+	<item id="30798" name="Bound War Axe - Anger" type="Weapon">
 		<!-- <Special Option>. P. Atk. + 24 and decreases Max HP by 15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_war_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -3054,7 +3054,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="30799" name="Bound War Axe" additionalName="Health" type="Weapon">
+	<item id="30799" name="Bound War Axe - Health" type="Weapon">
 		<!-- <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_war_axe_i01" />
 		<set name="default_action" val="EQUIP" />

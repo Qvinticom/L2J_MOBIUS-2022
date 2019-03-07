@@ -27,7 +27,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="45373" name="Agathion - Blessed Pisces Pack" type="EtcItem">
+	<item id="45373" name="Blessed Pisces Agathion Bracelet Pack" type="EtcItem">
 		<!-- Double-click to obtain a Super Advanced Seed Bracelet (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="150" />
@@ -69,7 +69,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="45375" name="Alien Nano Supplement" additionalName="Event" type="EtcItem">
+	<item id="45375" name="Battle Rations" additionalName="Event" type="EtcItem">
 		<!-- Random basic stat +6 for 30 min. Cannot be stacked with Fish Stew or other Alien Nano Supplements. -->
 		<set name="icon" val="icon.ev_invasion_buff_box" />
 		<set name="is_stackable" val="true" />
@@ -107,7 +107,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="45380" name="Depleted Plasma Gun" additionalName="1-hour" type="Weapon">
+	<item id="45380" name="Depleted Plasma Gun" additionalName="1-hr." type="Weapon">
 		<!-- Looks like the energy pack is nearly drained, but it can use a Knock Back skill! 1-hr. -->
 		<set name="icon" val="icon.invasion_gun" />
 		<set name="weapon_type" val="CROSSBOW" />
@@ -130,7 +130,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="45381" name="Charged Plasma Gun" additionalName="1-hour" type="Weapon">
+	<item id="45381" name="Charged Plasma Gun" additionalName="1-hr." type="Weapon">
 		<!-- Be careful, this one is set to the highest power! Use this and you can also use the Spirit Hit skill. 1-hr. -->
 		<set name="icon" val="icon.invasion_gun" />
 		<set name="weapon_type" val="CROSSBOW" />

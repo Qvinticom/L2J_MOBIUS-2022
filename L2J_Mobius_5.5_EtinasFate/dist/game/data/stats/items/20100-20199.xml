@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="20100" name="Rock-Paper-Scissors Santa Hat" additionalName="24-hour" type="Armor">
+	<item id="20100" name="Rock-Paper-Scissors Santa Hat" additionalName="24-hr." type="Armor">
 		<!-- This festive holiday hat allows you to participate in a "Rock-Paper-Scissors" contest with Thomas D. Turkey. Requires 2 hair accessory slots. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_gawibawibo_cap_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -54,7 +54,7 @@
 			<item id="20078" min="1" max="1" chance="100" /> <!-- Santa's Gift - Luck - 4-hr. -->
 		</capsuled_items>
 	</item>
-	<item id="20103" name="Holiday Scroll: Heavy Armor Warrior" additionalName="8-hour" type="EtcItem">
+	<item id="20103" name="Holiday Scroll: Heavy Armor Warrior" additionalName="8-hr." type="EtcItem">
 		<!-- This magical scroll contains buffs for Fighters wearing heavy armor. It can be used once every hour. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -77,7 +77,7 @@
 			<skill id="22013" level="1" /> <!-- Winter Holiday Festival -->
 		</skills>
 	</item>
-	<item id="20104" name="Holiday Scroll: Light Armor Warrior" additionalName="8-hour" type="EtcItem">
+	<item id="20104" name="Holiday Scroll: Light Armor Warrior" additionalName="8-hr." type="EtcItem">
 		<!-- This magical scroll contains buffs for Fighters wearing light armor. It can be used once every hour. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -100,7 +100,7 @@
 			<skill id="22014" level="1" /> <!-- Winter Holiday Festival -->
 		</skills>
 	</item>
-	<item id="20105" name="Holiday Scroll: Healer" additionalName="8-hour" type="EtcItem">
+	<item id="20105" name="Holiday Scroll: Healer" additionalName="8-hr." type="EtcItem">
 		<!-- This mysterious scroll contains magic useful to Healer classes. It can be used once every hour. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -123,7 +123,7 @@
 			<skill id="22015" level="1" /> <!-- Winter Holiday Festival -->
 		</skills>
 	</item>
-	<item id="20106" name="Holiday Scroll: Mage" additionalName="8-hour" type="EtcItem">
+	<item id="20106" name="Holiday Scroll: Mage" additionalName="8-hr." type="EtcItem">
 		<!-- This magical scroll contains buffs for Mages. It can be used once every hour. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_scroll_i00" />
 		<set name="default_action" val="CALL_SKILL" />
@@ -146,7 +146,7 @@
 			<skill id="22016" level="1" /> <!-- Winter Holiday Festival -->
 		</skills>
 	</item>
-	<item id="20107" name="Santa's Weapon Coupon" additionalName="12-hour" type="EtcItem">
+	<item id="20107" name="Santa's Weapon Coupon" additionalName="12-hr." type="EtcItem">
 		<!-- Allows you to potentially receive a powerful item from one of Santa's Helpers in the village. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
@@ -162,7 +162,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="720" />
 	</item>
-	<item id="20108" name="Santa's Weapon Coupon" additionalName="12-hour" type="EtcItem">
+	<item id="20108" name="Santa's Weapon Coupon" additionalName="12-hr." type="EtcItem">
 		<!-- Allows you to potentially receive a powerful item from one of Santa's Helpers in the village. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="immediate_effect" val="true" />
@@ -178,7 +178,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="time" val="720" />
 	</item>
-	<item id="20109" name="Sword of Revolution (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20109" name="Sword of Revolution (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Sword of Revolution for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_revolution_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -214,7 +214,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20110" name="Lesser Giant's Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20110" name="Lesser Giant's Sword (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Lesser Giant's Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_giants_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -249,7 +249,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20111" name="Maingauche (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20111" name="Maingauche (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Maingauche for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_maingauche_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -285,7 +285,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20112" name="Tarbar (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20112" name="Tarbar (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Tarbar for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tarbar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -321,7 +321,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20113" name="Lesser Giant's Hammer (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20113" name="Lesser Giant's Hammer (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Lesser Giant's Hammer for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_giants_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -357,7 +357,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20114" name="Priest Mace (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20114" name="Priest Mace (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Priest Mace for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_mace_of_priest_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -393,7 +393,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20115" name="Goat Head Staff (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20115" name="Goat Head Staff (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Goat Head Staff for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_goathead_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -429,7 +429,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20116" name="Bich'Hwa (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20116" name="Bich'Hwa (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Bich'Hwa for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_bichhwa_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -465,7 +465,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20117" name="Reinforced Longbow (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20117" name="Reinforced Longbow (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Reinforced Longbow for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_strengthening_long_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -503,7 +503,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="20118" name="Winged Spear (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20118" name="Winged Spear (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Winged Spear for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_winged_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -540,7 +540,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="20119" name="Artisan's Sword*Artisan's Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20119" name="Artisan's Sword*Artisan's Sword (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Artisan's Sword*Artisan's Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -575,8 +575,8 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20120" name="Épée (Event)" additionalName="4-hour" type="Weapon">
-		<!-- ?p?e for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
+	<item id="20120" name="Épée (Event)" additionalName="4-hr." type="Weapon">
+		<!-- Épée for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />
@@ -615,7 +615,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20121" name="Katzbalger (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20121" name="Katzbalger (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Katzbalger for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tulwar_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -654,7 +654,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20122" name="Arm Breaker (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20122" name="Arm Breaker (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Arm Breaker for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_hunting_gun_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -694,7 +694,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="20123" name="Samurai Long Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20123" name="Samurai Long Sword (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Samurai Long Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_samurai_longsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -729,7 +729,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20124" name="Berserker Blade (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20124" name="Berserker Blade (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Berserker Blade for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -764,7 +764,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20125" name="Crystal Dagger (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20125" name="Crystal Dagger (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Crystal Dagger for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_crystal_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -800,7 +800,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20126" name="Yaksa Mace (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20126" name="Yaksa Mace (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Yaksa Mace for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_yaksa_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -836,7 +836,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20127" name="Dwarven Hammer (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20127" name="Dwarven Hammer (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Dwarven Hammer for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dwarven_hammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -872,7 +872,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20128" name="Ecliptic Axe (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20128" name="Ecliptic Axe (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Ecliptic Axe for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_eclipse_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -908,7 +908,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20129" name="Demon's Staff (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20129" name="Demon's Staff (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Demon's Staff for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_demons_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -944,7 +944,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20130" name="Great Pata (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20130" name="Great Pata (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Great Pata for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_great_pata_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -980,7 +980,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20131" name="Eminence Bow (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20131" name="Eminence Bow (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Eminence Bow for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_eminence_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1018,7 +1018,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="20132" name="Orcish Poleaxe (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20132" name="Orcish Poleaxe (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Orcish Poleaxe for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_orcish_poleaxe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1055,7 +1055,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="20133" name="Katana*Katana (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20133" name="Katana*Katana (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Katana*Katana for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1091,7 +1091,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20134" name="Admiral's Estoc (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20134" name="Admiral's Estoc (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Admiral's Estoc for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_blink_slasher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1131,7 +1131,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20135" name="Saber Tooth (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20135" name="Saber Tooth (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Saber Tooth for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_invincible_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1170,7 +1170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20136" name="Sharpshooter (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20136" name="Sharpshooter (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Sharpshooter for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_taslam_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1210,7 +1210,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="20137" name="Damascus Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20137" name="Damascus Sword (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Damascus Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sword_of_damascus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1245,7 +1245,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20138" name="Guardian's Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20138" name="Guardian's Sword (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Guardian's Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1280,7 +1280,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20139" name="Demon's Dagger (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20139" name="Demon's Dagger (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Demon's Dagger for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_demons_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1316,7 +1316,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20140" name="Art of Battle Axe (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20140" name="Art of Battle Axe (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Art of Battle Axe for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_art_of_battle_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1352,7 +1352,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20141" name="Star Buster (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20141" name="Star Buster (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Star Buster for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_star_buster_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1388,7 +1388,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20142" name="Kaim Vanul's Bones (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20142" name="Kaim Vanul's Bones (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Kaim Vanul's Bones for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_bone_of_kaim_vanul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1424,7 +1424,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20143" name="Staff of Evil Spirits (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20143" name="Staff of Evil Spirits (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Staff of Evil Spirits for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_staff_of_evil_sprit_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1460,7 +1460,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20144" name="Bellion Cestus (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20144" name="Bellion Cestus (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Bellion Cestus for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_bellion_cestus_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1496,7 +1496,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20145" name="Bow of Peril (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20145" name="Bow of Peril (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Bow of Peril for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_hazard_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1534,7 +1534,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="20146" name="Lance (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20146" name="Lance (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Lance for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_lancia_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1571,7 +1571,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="20147" name="Samurai Long Sword*Samurai Long Sword (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20147" name="Samurai Long Sword*Samurai Long Sword (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Samurai Long Sword*Samurai Long Sword for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1607,7 +1607,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20148" name="Colichemarde (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20148" name="Colichemarde (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Colichemarde for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_colichemarde_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1647,7 +1647,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20149" name="Dismantler (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20149" name="Dismantler (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Dismantler for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dismantler_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1686,7 +1686,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20150" name="Hell Hound (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20150" name="Hell Hound (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Hell Hound for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_hell_hound_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1726,7 +1726,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="20151" name="Dark Legion's Edge (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20151" name="Dark Legion's Edge (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Dark Legion's Edge for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dark_legions_edge_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1762,7 +1762,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20152" name="Dragon Slayer (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20152" name="Dragon Slayer (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Dragon Slayer for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1798,7 +1798,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20153" name="Soul Separator (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20153" name="Soul Separator (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Soul Separator for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_soul_separator_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1835,7 +1835,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20154" name="Elysian (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20154" name="Elysian (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Elysian for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_elysian_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1872,7 +1872,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20155" name="Doom Crusher (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20155" name="Doom Crusher (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Doom Crusher for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_doom_crusher_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1909,7 +1909,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20156" name="Flaming Dragon Skull (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20156" name="Flaming Dragon Skull (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Flaming Dragon Skull for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_flame_head_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1946,7 +1946,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20157" name="Branch of the Mother Tree (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20157" name="Branch of the Mother Tree (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Branch of the Mother Tree for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_worldtrees_branch_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1983,7 +1983,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20158" name="Dragon Grinder (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20158" name="Dragon Grinder (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Dragon Grinder for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_grinder_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2020,7 +2020,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20159" name="Soul Bow (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20159" name="Soul Bow (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Soul Bow for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_soul_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2059,7 +2059,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="20160" name="Tallum Glaive (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20160" name="Tallum Glaive (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Tallum Glaive for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_tallum_glaive_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2097,7 +2097,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="20161" name="Damascus*Damascus (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20161" name="Damascus*Damascus (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Damascus*Damascus for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2134,7 +2134,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20162" name="Lacerator (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20162" name="Lacerator (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Lacerator for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2175,7 +2175,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20163" name="Undertaker (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20163" name="Undertaker (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Undertaker for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_death_bringer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2215,7 +2215,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20164" name="Reaper (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20164" name="Reaper (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Reaper for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2256,7 +2256,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="20165" name="Forgotten Blade (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20165" name="Forgotten Blade (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Forgotten Blade for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_forgotten_blade_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2292,7 +2292,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20166" name="Heaven's Divider (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20166" name="Heaven's Divider (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Heaven's Divider for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_heavens_divider_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2328,7 +2328,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20167" name="Angel Slayer (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20167" name="Angel Slayer (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Angel Slayer for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_angel_slayer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2365,7 +2365,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20168" name="Basalt Battlehammer (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20168" name="Basalt Battlehammer (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Basalt Battlehammer for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_basalt_battlehammer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2402,7 +2402,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20169" name="Dragon Hunter Axe (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20169" name="Dragon Hunter Axe (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Dragon Hunter Axe for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dragon_hunter_axe_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2439,7 +2439,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20170" name="Arcana Mace (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20170" name="Arcana Mace (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Arcana Mace for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_arcana_mace_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2476,7 +2476,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20171" name="Imperial Staff (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20171" name="Imperial Staff (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Imperial Staff for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2513,7 +2513,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20172" name="Demon Splinter (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20172" name="Demon Splinter (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Demon Splinter for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2550,7 +2550,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20173" name="Draconic Bow (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20173" name="Draconic Bow (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Draconic Bow for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_draconic_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2589,7 +2589,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="20174" name="Saint Spear (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20174" name="Saint Spear (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Saint Spear for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_saint_spear_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2627,7 +2627,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="20175" name="Tallum Blade*Dark Legion's Edge (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20175" name="Tallum Blade*Dark Legion's Edge (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Tallum Blade*Dark Legion's Edge for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2664,7 +2664,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20176" name="Laevateinn (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20176" name="Laevateinn (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Laevateinn for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_leavatein_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2705,7 +2705,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20177" name="Gram (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20177" name="Gram (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Gram for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_gram_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2745,7 +2745,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20178" name="Sarunga (Event)" additionalName="4-hour" type="Weapon">
+	<item id="20178" name="Sarunga (Event)" additionalName="4-hr." type="Weapon">
 		<!-- Sarunga for events. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_sarnga_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -81,7 +81,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 	</item>
-	<item id="40207" name="Amaranthine Fragment" type="EtcItem">
+	<item id="40207" name="Helios Fragment" type="EtcItem">
 		<!-- Main ingredient for crafting a random R99-grade item. -->
 		<set name="icon" val="icon.etc_vesper_cutter_piece_i00" />
 		<set name="weight" val="60" />
@@ -201,7 +201,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="40218" name="Blessed Zaken's Earring" additionalName="7-day" type="EtcItem">
+	<item id="40218" name="Blessed Zaken's Earring Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Zaken's Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="is_stackable" val="true" />
@@ -854,7 +854,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40260" name="Potion of Protection: Knock Back / Knock Down" type="EtcItem">
+	<item id="40260" name="Potion of Protection: Knock Back/ Knock Down" type="EtcItem">
 		<!-- When used, increases Resistance to Knock Back/ Knock Down Attacks by 5% and reduces PVP damage taken by 3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
 		<set name="icon" val="icon.etc_fruit_juice_glass_bottle_i10" />
 		<set name="weight" val="10" />

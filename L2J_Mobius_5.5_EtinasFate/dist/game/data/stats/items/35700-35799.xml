@@ -882,7 +882,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="35746" name="Draco's Hat: Warrior (7-day)" additionalName="Event" type="Armor">
+	<item id="35746" name="Draco's Hat:Warrior (7-day)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. 7-day. STR +2, DEX +2, CON +2. Can use the blessed resurrection skill (1 hr. cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -902,7 +902,7 @@
 			<skill id="9515" level="1" /> <!-- Draco's Warrior Hat -->
 		</skills>
 	</item>
-	<item id="35747" name="Draco's Hat: Wizard (7-day)" additionalName="Event" type="Armor">
+	<item id="35747" name="Draco's Hat:Wizard (7-day)" additionalName="Event" type="Armor">
 		<!-- A cute Draco's Hat. 7-day. INT +2, WIT +2, MEN +2. Can use the blessed resurrection skill (1 hr. cooldown). Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -945,7 +945,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="35750" name="Draco's Blessing (30-minute)" additionalName="Event" type="EtcItem">
+	<item id="35750" name="Draco's Blessing (30-min.)" additionalName="Event" type="EtcItem">
 		<!-- For 30 min., increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />
@@ -1062,7 +1062,7 @@
 			<skill id="9511" level="1" /> <!-- Scroll: Reputation (Top-grade) -->
 		</skills>
 	</item>
-	<item id="35758" name="Draco's Blessing (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="35758" name="Draco's Blessing (1-hr.)" additionalName="Event" type="EtcItem">
 		<!-- For 1 hr., increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />
@@ -1076,7 +1076,7 @@
 			<skill id="9519" level="1" /> <!-- Draco's Blessing (1-hour) -->
 		</skills>
 	</item>
-	<item id="35759" name="Draco's Blessing (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="35759" name="Draco's Blessing (1-hr.)" additionalName="Event" type="EtcItem">
 		<!-- For 1 hr., increases XP and SP acquired in hunt by 100% when used by characters level 1 - 95. Temporary event item. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_stackable" val="true" />
@@ -1090,7 +1090,7 @@
 			<skill id="9520" level="1" /> <!-- Draco's Blessing (1-hour) -->
 		</skills>
 	</item>
-	<item id="35760" name="Draco's Blessing (3-hour)" additionalName="Event" type="EtcItem">
+	<item id="35760" name="Draco's Blessing (3-hr.)" additionalName="Event" type="EtcItem">
 		<!-- For 3 hr., increases XP and SP acquired in hunt by 200% when used by characters level 85 - 90. -->
 		<set name="icon" val="icon.etc_ev_draco_exp_up" />
 		<set name="is_sellable" val="false" />

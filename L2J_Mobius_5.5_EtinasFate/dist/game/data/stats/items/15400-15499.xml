@@ -58,7 +58,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="15403" name="Player Commendation - Berserker Blade" additionalName="PC-exclusive Weapon" type="Weapon">
+	<item id="15403" name="PA - Berserker Blade" additionalName="PA exclusive Weapon" type="Weapon">
 		<!-- Berserker Blade with limited ability enhancement. <Special Option>. Critical +73. Expiratory. Cannot be crystallized or granted functions besides enchantment. This item cannot be enhanced except with Destiny Enchant Scrolls. -->
 		<set name="icon" val="icon.weapon_berserker_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -805,7 +805,7 @@
 			<skill id="9066" level="1" /> <!-- Transformation Scroll Pack -->
 		</skills>
 	</item>
-	<item id="15438" name="Vitality Maintaining Potion (10-minute)" type="EtcItem">
+	<item id="15438" name="Vitality Maintaining Potion (10-min.)" type="EtcItem">
 		<!-- Vitality is maintained for 10 min. Cooldown is 30 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -840,7 +840,7 @@
 			<skill id="9069" level="1" /> <!-- Scroll: 1,000 SP -->
 		</skills>
 	</item>
-	<item id="15440" name="Vitality Maintaining Potion (30-minute)" type="EtcItem">
+	<item id="15440" name="Vitality Maintaining Potion (30-min.)" type="EtcItem">
 		<!-- Vitality is maintained for 30 min. Cooldown is 60 min. Vitality item with limited usage. Effect remains even after death. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

@@ -124,7 +124,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_questitem" val="true" />
 	</item>
-	<item id="20606" name="High-class Certificate (Event)" additionalName="8-hour" type="EtcItem">
+	<item id="20606" name="High-class Certificate (Event)" additionalName="8-hr." type="EtcItem">
 		<!-- A Certificate that shows you received the Event Chest of Experience. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="immediate_effect" val="true" />
@@ -411,7 +411,7 @@
 			<skill id="21094" level="1" /> <!-- Theme - Theme Park -->
 		</skills>
 	</item>
-	<item id="20619" name="Agathion - Weaver Pack (24-hour)" additionalName="Flute Sound" type="EtcItem">
+	<item id="20619" name="Agathion - Weaver Pack (24-hr.)" additionalName="Flute Sound" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Weaver (24-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -449,7 +449,7 @@
 			<item id="20622" min="1" max="1" chance="100" /> <!-- Agathion - Weaver - Flute Sound (3-day) -->
 		</capsuled_items>
 	</item>
-	<item id="20621" name="Agathion - Weaver" additionalName="Flute Sound (24-hour)" type="Armor">
+	<item id="20621" name="Agathion - Weaver" additionalName="Flute Sound (24-hr.)" type="Armor">
 		<!-- Bracelet that summons an Agathion - Weaver. -->
 		<set name="icon" val="BranchSys.icon.br_aga_womanweaver_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -883,7 +883,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20640" name="Common Item - Light Crossbow" type="Weapon">
+	<item id="20640" name="Common Item - Light Bow" type="Weapon">
 		<!-- Light Bow with limited power enhancement. Cannot be enchanted, augmented, or enhanced with a soul crystal. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />

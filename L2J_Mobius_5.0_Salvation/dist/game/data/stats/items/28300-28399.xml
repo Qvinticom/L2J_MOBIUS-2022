@@ -546,7 +546,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="28357" name="Special Treasure Chest" type="EtcItem">
+	<item id="28357" name="Exclusive Treasure Chest" type="EtcItem">
 		<!-- Exclusive treasure chest. Double-click to receive a random item. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -570,7 +570,7 @@
 			<stat type="mDef">101</stat>
 		</stats>
 	</item>
-	<item id="28359" name="La Vie En Rose's Gemstone Powder" type="EtcItem">
+	<item id="28359" name="La Vie En Rose's Jewel Powder" type="EtcItem">
 		<!-- La Vie En Rose's refined jewel powder. Go find Shadai to use it when exchanging for various jewels. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_powder_jewel" />
 		<set name="is_sellable" val="false" />
@@ -903,7 +903,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="28392" name="Heine Exclusive Bait (99-)" type="EtcItem">
+	<item id="28392" name="Heine Exclusive Bait (99+)" type="EtcItem">
 		<!-- Bait is used to obtain Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 99 or above. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -961,7 +961,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="28398" name="Today''s To-do Soulshot Box" type="EtcItem">
+	<item id="28398" name="Daily Mission Soulshot Box" type="EtcItem">
 		<!-- Double-click to obtain 10,000 Grade C-R Soulshots. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="PEEL" />
@@ -980,7 +980,7 @@
 			<item id="33780" min="10000" max="10000" chance="100" /> <!-- Soulshot (R-grade) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="28399" name="Today's To-do Blessed Spiritshot Box" type="EtcItem">
+	<item id="28399" name="Daily Mission Blessed Spiritshot Box" type="EtcItem">
 		<!-- Double-click to obtain 10,000 Grade C-R Blessed Spiritshots. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="PEEL" />

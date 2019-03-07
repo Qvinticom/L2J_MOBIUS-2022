@@ -106,7 +106,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36409" name="Blessed Antharas' Earring (14-day)" additionalName="Event" type="Armor">
+	<item id="36409" name="Blessed Antharas' Earring" additionalName="14-day" type="Armor">
 		<!-- MP +59, P./ M. Def. +15%, CON/ MEN+3, Earth/ Holy Attribute Def. +30, Bleed Atk./ Def. Success Rate +50%, Stun/ Mental Atk./ Def. Success Rate +40%, Heal Received +10%, Skill MP Consumption -5%, Vampiric Rage +4%. Active Skill: Can use Stun Cancellation. Momentarily increases Stun Resistance +100%. Does not stack with identical earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_antaras_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -129,7 +129,7 @@
 			<stat type="mDef">170</stat>
 		</stats>
 	</item>
-	<item id="36410" name="Blessed Valakas' Necklace (14-day)" additionalName="Event" type="Armor">
+	<item id="36410" name="Blessed Valakas' Necklace" additionalName="14-day" type="Armor">
 		<!-- MP +79, HP +625, P. Atk. +10%, M. Atk. +20%, M. Critical Rate +20, STR/ INT+3, Fire Attribute Def. +30, Dark Attribute Def. +20, Sleep Atk./ Def. Success Rate +50%, P. Skill Power +5%, Skill Cooldown -10%, Damage Reflection 5%. Active Skill: Can use Hold Cancellation. Momentarily increases Hold Resistance +100%. -->
 		<set name="icon" val="icon.accessory_necklace_of_valakas_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -418,7 +418,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36426" name="Antharas Dualsword" additionalName="Fragment" type="Weapon">
+	<item id="36426" name="Antharas Dual Sword" additionalName="Fragment" type="Weapon">
 		<!-- Antharas' dual sword Fragment. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />
@@ -952,7 +952,7 @@
 			<stat type="earthPower">500</stat>
 		</stats>
 	</item>
-	<item id="36450" name="Antharas Dualsword" additionalName="Standard" type="Weapon">
+	<item id="36450" name="Antharas Dual Sword" additionalName="Standard" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1590,7 +1590,7 @@
 			<stat type="earthPower">999</stat>
 		</stats>
 	</item>
-	<item id="36474" name="Antharas Dualsword" additionalName="High-grade" type="Weapon">
+	<item id="36474" name="Antharas Dual Sword" additionalName="High-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, damage on dragons +100%. Use Active Skills Dignity and Antharas' Lash. Can be upgraded to a higher grade through the Watcher of Antharas Theodric. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2262,7 +2262,7 @@
 			<stat type="earthPower">999</stat>
 		</stats>
 	</item>
-	<item id="36498" name="Antharas Dualsword" additionalName="Top-grade" type="Weapon">
+	<item id="36498" name="Antharas Dual Sword" additionalName="Top-grade" type="Weapon">
 		<!-- A weapon imbued with the power of the dragons. PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, damage on dragons +300%. Use Active Skills Dignity, Antharas' Lash and Antharas' Breath. Its appearance cannot be changed. Cannot be crystallized, enchanted, augmented, or assigned an attribute. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />

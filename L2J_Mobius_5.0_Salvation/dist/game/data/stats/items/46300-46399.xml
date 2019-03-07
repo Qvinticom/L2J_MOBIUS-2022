@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46300" name="Christmas Talisman: M. Def." additionalName="1-hour" type="Armor">
+	<item id="46300" name="Christmas Talisman - M. Def." additionalName="1-hour" type="Armor">
 		<!-- Event item. M. Def. +7% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -21,7 +21,7 @@
 			<skill id="13835" level="1" /> <!-- Christmas Talisman - M. Def -->
 		</skills>
 	</item>
-	<item id="46301" name="Christmas Talisman: Attribute Defense" additionalName="1-hour" type="Armor">
+	<item id="46301" name="Christmas Talisman - Attribute Resistance" additionalName="1-hour" type="Armor">
 		<!-- Event item. All Attributes Resistance +30 when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -454,7 +454,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46326" name="Shadow Dualsword" type="Weapon">
+	<item id="46326" name="Shadow Dual Sword" type="Weapon">
 		<!-- Weapon of the Ashen Shadow Revolutionaries. Can only be enchanted up to +10 with a Scroll: Enchant Shadow Weapon. Soul Crystal enhancement, augmentation, crystallization, modification is impossible. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
 		<set name="weapon_type" val="DUAL" />
@@ -714,7 +714,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46336" name="Shadow Dualsword" type="Weapon">
+	<item id="46336" name="Shadow Dual Sword" type="Weapon">
 		<!-- Ashen Shadow Revolutionaries Weapon. When equipped, increases PvE Damage 10%, Max HP/ MP 15%, P. Atk. 7%, P. Critical Rate 100, Atk. Spd. 15%. Enchantment, Augment, Crystallization, Appearance Modification cannot be used. special Soul Crystal 1 can be used. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
 		<set name="weapon_type" val="DUAL" />
@@ -1181,7 +1181,7 @@
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
-	<item id="46357" name="Agathion - Blessed Virgo Pack" additionalName="30-day" type="EtcItem">
+	<item id="46357" name="Blessed Virgo Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Virgo. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1196,7 +1196,7 @@
 			<item id="46346" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Virgo - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46358" name="Agathion - Blessed Capricorn Pack" additionalName="30-day" type="EtcItem">
+	<item id="46358" name="Blessed Capricorn Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Capricorn. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1211,7 +1211,7 @@
 			<item id="46347" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Capricorn - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46359" name="Agathion - Blessed Libra Pack" additionalName="30-day" type="EtcItem">
+	<item id="46359" name="Blessed Libra Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Libra. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1226,7 +1226,7 @@
 			<item id="46348" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Libra - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46360" name="Agathion - Blessed Aries Pack" additionalName="30-day" type="EtcItem">
+	<item id="46360" name="Blessed Aries Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Aries. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1241,7 +1241,7 @@
 			<item id="46349" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aries - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46361" name="Agathion - Blessed Taurus Pack" additionalName="30-day" type="EtcItem">
+	<item id="46361" name="Blessed Taurus Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Taurus. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1256,7 +1256,7 @@
 			<item id="46350" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Taurus - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46362" name="Agathion - Blessed Leo Pack" additionalName="30-day" type="EtcItem">
+	<item id="46362" name="Blessed Leo Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Leo. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1271,7 +1271,7 @@
 			<item id="46351" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Leo - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46363" name="Agathion - Blessed Gemini Pack" additionalName="30-day" type="EtcItem">
+	<item id="46363" name="Blessed Gemini Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Gemini. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1286,7 +1286,7 @@
 			<item id="46352" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Gemini - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46364" name="Agathion - Blessed Scorpio Pack" additionalName="30-day" type="EtcItem">
+	<item id="46364" name="Blessed Scorpio Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Scorpio. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1301,7 +1301,7 @@
 			<item id="46353" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Scorpio - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46365" name="Agathion - Blessed Aquarius Pack" additionalName="30-day" type="EtcItem">
+	<item id="46365" name="Blessed Aquarius Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Aquarius. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1316,7 +1316,7 @@
 			<item id="46354" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Aquarius - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46366" name="Agathion - Blessed Pisces Pack" additionalName="30-day" type="EtcItem">
+	<item id="46366" name="Blessed Pisces Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Pisces. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1331,7 +1331,7 @@
 			<item id="45372" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Pisces - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46367" name="Agathion - Blessed Sagittarius Pack" additionalName="30-day" type="EtcItem">
+	<item id="46367" name="Blessed Sagittarius Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Sagittarius. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1346,7 +1346,7 @@
 			<item id="46355" min="1" max="1" chance="100" /> <!-- Agathion - Blessed Sagittarius - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="46368" name="Agathion - Blessed Cancer Pack" additionalName="30-day" type="EtcItem">
+	<item id="46368" name="Blessed Cancer Agathion Pack" additionalName="30-day" type="EtcItem">
 		<!-- Wrapped Pack containing Agathion - Blessed Cancer. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="weight" val="10" />
@@ -1791,7 +1791,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46388" name="Frozen Dualsword" type="Weapon">
+	<item id="46388" name="Frozen Dual Sword" type="Weapon">
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dual_i00" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />

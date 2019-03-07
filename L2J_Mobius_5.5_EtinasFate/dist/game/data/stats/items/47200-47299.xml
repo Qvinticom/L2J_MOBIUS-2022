@@ -517,7 +517,7 @@
 			<skill id="18618" level="10" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47244" name="Ramona's Fancy Earrings" type="Armor">
+	<item id="47244" name="Ramona's Fancy Earring" type="Armor">
 		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 64, additional damage to Giants by 5%, and Vampiric Rage by 5%. When two identical earrings are equipped, only one effect is applied. Cannot be enchanted, augmented or crystallized. -->
 		<set name="icon" val="icon.glossy_earing_of_ramona" />
 		<set name="default_action" val="EQUIP" />
@@ -536,7 +536,7 @@
 			<stat type="maxMp">64</stat>
 		</stats>
 	</item>
-	<item id="47245" name="Helios' Majestic Earrings" type="Armor">
+	<item id="47245" name="Helios' Majestic Earring" type="Armor">
 		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 64, additional damage to Giants by 5%, and Vampiric Rage by 5%. When two identical earrings are equipped, only one effect is applied. Cannot be enchanted, augmented or crystallized. -->
 		<set name="icon" val="icon.grand_earing_of_helios" />
 		<set name="default_action" val="EQUIP" />
@@ -555,7 +555,7 @@
 			<stat type="maxMp">64</stat>
 		</stats>
 	</item>
-	<item id="47246" name="Harnak's Deformed Necklace" type="Armor">
+	<item id="47246" name="Harnak's Transformed Necklace" type="Armor">
 		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 79, additional damage to Giants by 5%, and decreases Skill Cooldown by 10%. Cannot be enchanted, augmented or crystallized. -->
 		<set name="icon" val="icon.transform_necklace_of_harnak" />
 		<set name="default_action" val="EQUIP" />
@@ -619,7 +619,7 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47250" name="Giant Crystal" type="EtcItem">
+	<item id="47250" name="Giant Power Crystal" type="EtcItem">
 		<!-- A crystal with the power of the Giants. Use to neutralize the effects of the Superion Barrier and the Helios Barrier. -->
 		<set name="icon" val="icon.etc_freezing_core_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

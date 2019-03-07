@@ -880,7 +880,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37641" name="Mysterious Dualsword" additionalName="7-day" type="Weapon">
+	<item id="37641" name="Mysterious Dual Sword" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
@@ -1339,7 +1339,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37655" name="Mysterious Dualsword" additionalName="30-day" type="Weapon">
+	<item id="37655" name="Mysterious Dual Sword" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
@@ -1572,7 +1572,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="37666" name="Rare Accessory Pack" additionalName="30-day" type="EtcItem">
+	<item id="37666" name="Rare Accessory Pack" type="EtcItem">
 		<!-- Double click to acquire 30-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_clan_depositable" val="false" />
@@ -2207,7 +2207,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37699" name="Valentine Dualsword" type="Weapon">
+	<item id="37699" name="Valentine Dual Sword" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DUAL" />

@@ -202,7 +202,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48217" name="High-grade Balthus Knight Mark" type="EtcItem">
+	<item id="48217" name="Balthus Knights' Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -214,7 +214,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="48218" name="Veteran Duo Bracelet Pack" additionalName="Event" type="EtcItem">
+	<item id="48218" name="Balthus Knights' Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="PEEL" />
@@ -227,7 +227,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="48219" name="Returned Duo Bracelet Pack" additionalName="Event" type="EtcItem">
+	<item id="48219" name="Balthus Knights' Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="default_action" val="PEEL" />
@@ -240,7 +240,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="48220" name="NoItemName" type="EtcItem">
+	<item id="48220" name="Balthus Knights' Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights' supplies. Double-click to obtain items. -->
 		<set name="icon" val="icon.etc_balthus_box" />
 		<set name="material" val="PAPER" />
@@ -1102,7 +1102,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48285" name="Scroll PK" type="EtcItem">
+	<item id="48285" name="Scroll: PK" type="EtcItem">
 		<!-- Double-click to lower PK value by 1. Your PK value has to be at least 1. Cannot be used when the Demonic Sword Zariche or the Blood Sword Akamanah is in possession. -->
 		<set name="icon" val="icon.etc_ev_draco_pk_count_down" />
 		<set name="weight" val="10" />

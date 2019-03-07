@@ -172,7 +172,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="38706" name="Steel StormBringer*Ultimate Sword" type="Weapon">
+	<item id="38706" name="Steel Stormbringer*Ultimate Sword" type="Weapon">
 		<!-- Cannot augment. As with two-handed swords/ blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. When enchanted to +4 or above, P. Atk. +166 in a Critical Attack. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1177,7 +1177,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="38741" name="Steel Dynasty Dualsword" type="Weapon">
+	<item id="38741" name="Steel Dynasty Dual Sword" type="Weapon">
 		<!-- Cannot augment. As with two-handed swords/ blunts and fist weapons, dual swords have a greater increase in P. Atk. when enchanted than one-handed swords. When enchanted to +4 or above, Critical +109, Max HP +10%. Additional damage during PvP. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1439,7 +1439,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="38750" name="Lara's Card Key" type="EtcItem">
+	<item id="38750" name="Uldie's Portrait With No Make-up" type="EtcItem">
 		<!-- Portrait of Uldie with no make-up on her. Always keep it in your inventory to receive Uldie? special buff. Temporary event item. -->
 		<set name="icon" val="icon.cardkey_raracat" />
 		<set name="is_clan_depositable" val="false" />
@@ -1453,7 +1453,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38751" name="Lara's Business Card" type="EtcItem">
+	<item id="38751" name="Uldie's Certificate of Secret Pinky Promise of Top Secrecy" type="EtcItem">
 		<!-- Uldie can exchange these Certificates for Halloween items in her store. Temporary event item. -->
 		<set name="icon" val="icon.namecard_raracat" />
 		<set name="is_clan_depositable" val="false" />
@@ -1474,14 +1474,14 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38753" name="Lara's Secret Gift" type="EtcItem">
+	<item id="38753" name="Secret Gift From Uldie" type="EtcItem">
 		<!-- A box with Ultimate Secret Gift from Uldie. Nobody in the world can ever tell what you will find in this Secret Box. Temporary event item. -->
 		<set name="icon" val="BranchSys.icon.br_ghost_magicalbox_i00" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38754" name="Shiny Elemental Shirt + 8 Coupon" type="EtcItem">
+	<item id="38754" name="Shiny Elemental Shirt +8 Coupon" type="EtcItem">
 		<!-- Talk to a GM to receive a Shiny Elemental Shirt +8. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="is_sellable" val="false" />
@@ -1489,7 +1489,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="38755" name="Shiny Elemental Shirt + 7 Coupon" type="EtcItem">
+	<item id="38755" name="Shiny Elemental Shirt +7 Coupon" type="EtcItem">
 		<!-- Talk to a GM to receive a Shiny Elemental Shirt +7. -->
 		<set name="icon" val="icon.etc_lottery_card_i00" />
 		<set name="is_sellable" val="false" />
@@ -1698,7 +1698,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="38770" name="Test: Jewel Lv.2" additionalName="1" type="Armor">
+	<item id="38770" name="Test: Jewel Lv. 2" additionalName="1" type="Armor">
 		<!-- Test Jewel -->
 		<set name="icon" val="icon.etc_bm_jewel_moonstone_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1714,7 +1714,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="38772" name="Test: Jewel Lv.2" additionalName="2" type="Armor">
+	<item id="38772" name="Test: Jewel Lv. 2" additionalName="2" type="Armor">
 		<!-- Test Jewel -->
 		<set name="icon" val="icon.etc_bm_jewel_onyx_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1730,7 +1730,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 	</item>
-	<item id="38774" name="Test: Jewel Lv.2" additionalName="3" type="Armor">
+	<item id="38774" name="Test: Jewel Lv. 2" additionalName="3" type="Armor">
 		<!-- Test Jewel -->
 		<set name="icon" val="icon.etc_bm_jewel_Tourmaline_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1997,7 +1997,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="38784" name="Sealed Antharas Dualsword Borrowed by Dandy" type="Weapon">
+	<item id="38784" name="Sealed Antharas Dual Sword Borrowed by Dandy" type="Weapon">
 		<!-- Dragon weapon that Antharas lent to Dandy. Use the Dandy's Breath skill while possessing Dandy's Scroll: Release Seal to acquire Dandy's borrowed dragon weapon. Bring Dandy the Dragon Scroll: Boost Weapon to exchange it for a Genuine dragon weapon. No-grade Soulshot, Spiritshot, and Blessed Spiritshot must be used. <Passive: Dandy's Strength>. PvP damage +5%, Max HP +15%, Atk. Spd. +15%. Cannot be used in the Olympiad or Ceremony of of Chaos. Cannot enchant, crystallize, modify, or assign an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />

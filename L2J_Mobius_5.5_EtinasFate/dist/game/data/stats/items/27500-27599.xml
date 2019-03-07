@@ -481,7 +481,7 @@
 		<set name="is_private_storeable" val="false" />
 	</item>
 	<item id="27534" name="Diana's Recommendation" additionalName="Event" type="EtcItem">
-		<!-- With this you can participate in the Mr. & Ms. Lineage 2 contest. Save it until the very end of the contest. -->
+		<!-- With this you can participate in the Mr. and Ms. Lineage 2 contest. Save it until the very end of the contest. -->
 		<set name="icon" val="icon.etc_letter_envelope_i00" />
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
@@ -492,7 +492,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="27535" name="+ 8 Shiny Elemental Shirt Pack" type="EtcItem">
+	<item id="27535" name="+ 8 Shiny Elemental Shirt Chest" type="EtcItem">
 		<!-- Double-click to get a +8 Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
@@ -504,7 +504,7 @@
 			<item id="37718" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Shiny Elemental Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="27536" name="+ 8 Reflect Attack T-shirt Pack" type="EtcItem">
+	<item id="27536" name="+ 8 Reflect Attack Shirt Chest" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Reflect Attack Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
@@ -516,7 +516,7 @@
 			<item id="46193" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Physical Reflect Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="27537" name="+ 8 Reflect Magic T-shirt Pack" type="EtcItem">
+	<item id="27537" name="+ 8 Reflect Magic Shirt Chest" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Reflect Magic Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
@@ -528,7 +528,7 @@
 			<item id="46194" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Magical Reflect Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="27538" name="+ 7 Bloody Amaranthine Pack" type="EtcItem">
+	<item id="27538" name="+ 7 Bloody Helios Chest" type="EtcItem">
 		<!-- Double-click to get a +7 enchanted Bloody Helios weapon. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
@@ -663,7 +663,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="27551" name="Rare Accessory Pack" additionalName="30-day" type="EtcItem">
+	<item id="27551" name="Rare Accessory Pack" type="EtcItem">
 		<!-- Double-click to get Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Ruler's Authority, and Lindvior's Earring for 30 days. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="is_sellable" val="false" />
@@ -1124,7 +1124,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27578" name="XP Rune III (Lv. 1-100+) 100% Pack (1-hour)" type="EtcItem">
+	<item id="27578" name="XP Rune III (Lv. 1-100+) 100% Pack (1-hr.)" type="EtcItem">
 		<!-- Premium User Only. Double-click to obtain a XP Rune III (Lv. 1-100+) 100% (1-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
@@ -1145,7 +1145,7 @@
 			<item id="27581" min="1" max="1" chance="100" /> <!-- XP Rune III (Lv. 1-100+) 100% Pack (30-day) - 1-hr. -->
 		</capsuled_items>
 	</item>
-	<item id="27579" name="SP Rune 100% Pack (1-hour)" type="EtcItem">
+	<item id="27579" name="SP Rune 100% Pack (1-hr.)" type="EtcItem">
 		<!-- Premium User Only. Double-click to obtain a SP Rune 100% (1-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
@@ -1187,7 +1187,7 @@
 			<item id="27583" min="1" max="1" chance="100" /> <!-- Prestige Rune 100% - 1-hr. -->
 		</capsuled_items>
 	</item>
-	<item id="27581" name="XP Rune III (Lv. 1-100+) 100% Pack (30-day)" additionalName="1-hour" type="EtcItem">
+	<item id="27581" name="XP Rune III (Lv. 1-100+) 100% Pack (30-day)" additionalName="1-hr." type="EtcItem">
 		<!-- Premium User Only. Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired XP by 100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1204,7 +1204,7 @@
 			<skill id="26046" level="6" /> <!-- XP Rune III (Lv. 1-100+) 100% -->
 		</skills>
 	</item>
-	<item id="27582" name="SP Rune 100%" additionalName="1-hour" type="EtcItem">
+	<item id="27582" name="SP Rune 100%" additionalName="1-hr." type="EtcItem">
 		<!-- Premium User Only. Ancient charm endowed with mysterious symbols. When stored in the inventory, increases acquired SP by 100%. The remaining time decreases even when not playing. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_sp_i00" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
@@ -1221,7 +1221,7 @@
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
 	</item>
-	<item id="27583" name="Prestige Rune 100%" additionalName="1-hour" type="EtcItem">
+	<item id="27583" name="Prestige Rune 100%" additionalName="1-hr." type="EtcItem">
 		<!-- Premium User Only. When carried during a hunt, Adena/ item drop rate/ item acquisition through Spoil +30%.100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />

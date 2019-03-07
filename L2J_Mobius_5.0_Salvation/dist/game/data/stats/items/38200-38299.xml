@@ -91,7 +91,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="38210" name="Blue Mackerel Appearance Stone: Dualsword" type="EtcItem">
+	<item id="38210" name="Blue Mackerel Appearance Stone: Dual Sword" type="EtcItem">
 		<!-- Turns the appearance of a dual sword into that of a Blue Mackerel. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
@@ -356,7 +356,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="38221" name="Blue Mackerel: Dualsword" type="Weapon">
+	<item id="38221" name="Blue Mackerel: Dual Sword" type="Weapon">
 		<!-- Blue Mackerel-shaped weapon. dual sword. -->
 		<set name="icon" val="icon.wp_fishing11" />
 		<set name="default_action" val="EQUIP" />

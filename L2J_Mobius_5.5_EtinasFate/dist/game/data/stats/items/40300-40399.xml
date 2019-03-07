@@ -57,7 +57,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40305" name="Dual Expertise Rune (R99-grade)" additionalName="30-day" type="EtcItem">
+	<item id="40305" name="Expertise Rune (R99-grade)" additionalName="30-day" type="EtcItem">
 		<!-- While possessed, allows you to equip R99-grade items without penalties. 30-day. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -73,7 +73,7 @@
 			<skill id="17577" level="1" /> <!-- Expertise Rune (R99-grade) -->
 		</skills>
 	</item>
-	<item id="40306" name="Dual Expertise Rune Pack" additionalName="R99-grade" type="EtcItem">
+	<item id="40306" name="Expertise Rune Pack" additionalName="R99-grade" type="EtcItem">
 		<!-- Double-click to obtain a Expertise Rune Box (R99-grade) (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="weight" val="10" />
@@ -964,7 +964,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="40362" name="Agathion - Joon Pack (30-day)" type="Armor">
+	<item id="40362" name="Agathion - Joon (30-day)" type="Armor">
 		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Active Skill>. 1. Joon's Magic: For 30 min., Acquired XP/ SP +10%, Atk. Attribute +100, P. Atk. +20%, M. Atk. +30%, Atk. Spd./ Casting Spd +10%, P./ M. Accuracy +4, Speed +10, Max. HP/ MP/ CP +10%, P./ M. Def. +10%, and Skill MP Consumption -10%. Cannot be stacked with Art of Seduction or Mysterious Wind Scroll. Buff remains after death. <Active Skill>. 2. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />

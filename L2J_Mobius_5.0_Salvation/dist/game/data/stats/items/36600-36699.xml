@@ -800,7 +800,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36643" name="Emerald Weapon: Dualsword" type="Weapon">
+	<item id="36643" name="Emerald Weapon: Dual Sword" type="Weapon">
 		<!-- Emerald Weapon. dual sword style. Initial Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_dual" />
 		<set name="default_action" val="EQUIP" />
@@ -1118,7 +1118,7 @@
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="36659" name="Emerald Weapon Appearance Stone: Dualsword" additionalName="7-day" type="EtcItem">
+	<item id="36659" name="Emerald Weapon Appearance Stone: Dual Sword" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of an Emerald dual sword. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />

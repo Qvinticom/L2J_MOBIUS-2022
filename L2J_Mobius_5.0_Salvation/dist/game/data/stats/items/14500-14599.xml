@@ -1744,7 +1744,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14559" name="PC Cafe Points" type="EtcItem">
+	<item id="14559" name="PA Points" type="EtcItem">
 		<!-- When double-clicked, 700 PA Points can be acquired. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2098,7 +2098,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14570" name="Dualsword of Hunter Family" type="Weapon">
+	<item id="14570" name="Dual Sword of Hunter Family" type="Weapon">
 		<!-- Soul Crystal Enhancement and augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />

@@ -489,7 +489,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37843" name="Valentine Appearance Stone: Dualsword" additionalName="15-day" type="EtcItem">
+	<item id="37843" name="Valentine Appearance Stone: Dual Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of a Valentine's Day weapon.15-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
@@ -665,7 +665,7 @@
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37859" name="Valentine Appearance Stone: Dualsword" additionalName="30-day" type="EtcItem">
+	<item id="37859" name="Valentine Appearance Stone: Dual Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of a Valentine's Day weapon. 30-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
@@ -1125,7 +1125,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37879" name="Hero's Weapon: Dualsword" additionalName="15-day" type="Weapon">
+	<item id="37879" name="Hero's Weapon: Dual Sword" additionalName="15-day" type="Weapon">
 		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
@@ -1353,7 +1353,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37894" name="Improved Warrior's Recovery Potion" type="EtcItem">
+	<item id="37894" name="Healing Potion Improved Warrior? Recovery Potion" type="EtcItem">
 		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no cooldown. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="14900" name="Rune Supply Box - Magic Ornament" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14900" name="Rune Supply Box - Magic Ornament" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Rune. High grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -20,7 +20,7 @@
 			<skill id="2991" level="1" /> <!-- Rune supply box - magic ornament -->
 		</skills>
 	</item>
-	<item id="14901" name="Schuttgart Supply Box - Magic Ornament" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14901" name="Schuttgart Supply Box - Magic Ornament" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Schuttgart. High grade magic pouch that's attached to the belt can be acquired at a certain rate. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1526,7 +1526,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="14987" name="Avadon Shield of Fortune" additionalName="30-day" type="Armor">
+	<item id="14987" name="Abaddon Shield of Fortune" additionalName="30-day" type="Armor">
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lhand" />

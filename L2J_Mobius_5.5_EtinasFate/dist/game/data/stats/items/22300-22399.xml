@@ -741,7 +741,7 @@
 			<item id="16853" min="1" max="1" chance="100" /> <!-- Equipment Set Pack (90-day) - 90-day -->
 		</capsuled_items>
 	</item>
-	<item id="22334" name="XP Rune III (Lv. 1-100+) 50%" additionalName="1-hour" type="EtcItem">
+	<item id="22334" name="XP Rune III (Lv. 1-100+) 50%" additionalName="1-hr." type="EtcItem">
 		<!-- Ancient characters that bestow a mysterious ability when possessed in the inventory. Increases acquired XP by 50%. The remaining period decreases even while logged off. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_exp_i00" />
 		<set name="material" val="PAPER" />
@@ -1207,7 +1207,7 @@
 			<skill id="22412" level="1" /> <!-- Weapon Conversion - One-handed Emerald Weapon -->
 		</skills>
 	</item>
-	<item id="22360" name="Weapon Conversion Scroll: Emerald Dualsword" type="EtcItem">
+	<item id="22360" name="Weapon Conversion Scroll: Emerald Dual Sword" type="EtcItem">
 		<!-- When used, the equipped weapon changes into an Emerald Dual Sword for 2 hr. Cooldown is 60 min. Only applies when a dual sword is equipped. -->
 		<set name="icon" val="BranchSys3.Icon.g_scroll_beam_1h_sword" />
 		<set name="weight" val="5" />
@@ -1251,7 +1251,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22362" name="Emerald Dualsword" type="Weapon">
+	<item id="22362" name="Emerald Dual Sword" type="Weapon">
 		<!-- Emerald Dual Sword. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />

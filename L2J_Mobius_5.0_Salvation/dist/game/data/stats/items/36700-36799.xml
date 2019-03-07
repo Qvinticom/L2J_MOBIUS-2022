@@ -285,7 +285,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36720" name="Practice StormBringer" type="Weapon">
+	<item id="36720" name="Soul Crystal Practice Stormbringer" type="Weapon">
 		<!-- Temporary practice weapon for learning about soul crystal enhancement. Very inefficient as a weapon. -->
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -312,7 +312,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36721" name="Practice Green Soul Crystal - Stage 5" type="EtcItem">
+	<item id="36721" name="Practice Green Soul Crystal- Stage 5" type="EtcItem">
 		<!-- Green crystal for practice containing the light of absorbed souls. Stage 5. Once saturated, it bestows special abilities on a weapon. -->
 		<set name="icon" val="icon.ensoul_big_p" />
 		<set name="is_clan_depositable" val="false" />
@@ -327,7 +327,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="weight" val="20" />
 	</item>
-	<item id="36722" name="Enhancement Practice Gemstone (C-grade)" type="EtcItem">
+	<item id="36722" name="Soul Crystal Practice Gemstone" type="EtcItem">
 		<!-- Temporary practice gemstone for learning about soul crystal enhancement. -->
 		<set name="icon" val="icon.etc_bead_gold_i00" />
 		<set name="weight" val="2" />
@@ -343,7 +343,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="36723" name="Practice StormBringer" additionalName="Focus" type="Weapon">
+	<item id="36723" name="Soul Crystal Option Stormbringer" additionalName="Focus" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases Critical by 86. -->
 		<set name="icon" val="icon.weapon_stormbringer_i01" />
 		<set name="default_action" val="EQUIP" />

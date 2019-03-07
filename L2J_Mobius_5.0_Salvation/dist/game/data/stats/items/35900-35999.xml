@@ -342,7 +342,7 @@
 			<skill id="9522" level="1" /> <!-- Summon Clan Member -->
 		</skills>
 	</item>
-	<item id="35930" name="Chaos's Recovery Potion" type="EtcItem">
+	<item id="35930" name="Chaos Recovery Potion" type="EtcItem">
 		<!-- Recovery Potion purchased using Mark of Battle. Upon use, it restores 2500 HP and the remaining power restores CP. Instant effect with no cooldown. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="10" />
@@ -846,7 +846,7 @@
 			<item id="34937" min="1" max="1" chance="100" /> <!-- Star Agathion - Sooro Kim - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35949" name="Agathion - Jaebum Park Pack (7-day)" type="EtcItem">
+	<item id="35949" name="Agathion - Jaebum Pack (7-day)" type="EtcItem">
 		<!-- Box containing Agathion - Jaebum Park (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -951,7 +951,7 @@
 			<item id="35938" min="1" max="1" chance="100" /> <!-- Star Agathion - Sooro Kim - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35954" name="Agathion - Jaebum Park Pack (15-day)" type="EtcItem">
+	<item id="35954" name="Agathion - Jaebum Pack (15-day)" type="EtcItem">
 		<!-- Box containing Agathion - Jaebum Park (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1056,7 +1056,7 @@
 			<item id="35943" min="1" max="1" chance="100" /> <!-- Star Agathion - Sooro Kim - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35959" name="Agathion - Jaebum Park Pack (30-day)" type="EtcItem">
+	<item id="35959" name="Agathion - Jaebum Pack (30-day)" type="EtcItem">
 		<!-- Box containing Agathion - Jaebum Park (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1161,7 +1161,7 @@
 			<item id="34937" min="1" max="1" chance="100" /> <!-- Star Agathion - Sooro Kim - 7-day -->
 		</capsuled_items>
 	</item>
-	<item id="35964" name="Agathion - Jaebum Park Pack (7-day)" additionalName="Event" type="EtcItem">
+	<item id="35964" name="Agathion - Jaebum Pack (7-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Jaebum Park (7-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1266,7 +1266,7 @@
 			<item id="35938" min="1" max="1" chance="100" /> <!-- Star Agathion - Sooro Kim - 15-day -->
 		</capsuled_items>
 	</item>
-	<item id="35969" name="Agathion - Jaebum Park Pack (15-day)" additionalName="Event" type="EtcItem">
+	<item id="35969" name="Agathion - Jaebum Pack (15-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Jaebum Park (15-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1371,7 +1371,7 @@
 			<item id="35943" min="1" max="1" chance="100" /> <!-- Star Agathion - Sooro Kim - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="35974" name="Agathion - Jaebum Park Pack (30-day)" additionalName="Event" type="EtcItem">
+	<item id="35974" name="Agathion - Jaebum Pack (30-day)" additionalName="Event" type="EtcItem">
 		<!-- Box containing Agathion - Jaebum Park (30-day). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="weight" val="100" />
@@ -1569,7 +1569,7 @@
 			<item id="19469" min="1" max="1" chance="0.13" /> <!-- Purple Soul Crystal Fragment (R99-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="35983" name="HP Recovery Herb" type="EtcItem">
+	<item id="35983" name="HP Recovery Bonus Herb" type="EtcItem">
 		<set name="is_depositable" val="false" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

@@ -688,7 +688,7 @@
 		<set name="weight" val="150" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="46150" name="Superior Giant's Codex Chapter 1" type="EtcItem">
+	<item id="46150" name="Superior Giant's Codex - Chapter 1" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +11~+20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
@@ -723,7 +723,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46154" name="Superior Giant's Codex Chapter 2" type="EtcItem">
+	<item id="46154" name="Superior Giant's Codex - Chapter 2" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +21~+30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
@@ -1276,7 +1276,7 @@
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Elemental Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="46196" name="Reflect Attack T-shirt Bag" type="EtcItem">
+	<item id="46196" name="Reflect Attack Shirt Bag" type="EtcItem">
 		<!-- Double-click to get 1 Physical Reflect Shirt and 10 Elemental Shirt Enchant Scrolls. -->
 		<set name="icon" val="icon.reflect_attack_bac" />
 		<set name="is_sellable" val="false" />
@@ -1288,7 +1288,7 @@
 			<item id="25792" min="10" max="10" chance="100" /> <!-- Scroll: Enchant Elemental Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="46197" name="Reflect Magic T-shirt Bag" type="EtcItem">
+	<item id="46197" name="Reflect Magic Shirt Bag" type="EtcItem">
 		<!-- Double-click to get 1 Magical Reflect Shirt and 10 Elemental Shirt Enchant Scrolls. -->
 		<set name="icon" val="icon.reflect_magic_bac" />
 		<set name="is_sellable" val="false" />

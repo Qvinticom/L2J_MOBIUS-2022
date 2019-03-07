@@ -125,7 +125,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26312" name="Offering Test Ingredient 2" type="Weapon">
+	<item id="26312" name="Offering Test Ingredient  2" type="Weapon">
 		<!-- Weapon worth 1000 Adena. Shadow item. -->
 		<set name="icon" val="icon.weapon_two_handed_sword_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -151,7 +151,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="26313" name="Offering Test Ingredient 3" type="EtcItem">
+	<item id="26313" name="Offering Test Ingredient  3" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Timed item. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -163,20 +163,20 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="price" val="1000" />
 	</item>
-	<item id="26314" name="Offering Test Ingredient 4" type="EtcItem">
+	<item id="26314" name="Offering Test Ingredient  4" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Premium item. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26315" name="Offering Test Ingredient 5" type="EtcItem">
+	<item id="26315" name="Offering Test Ingredient  5" type="EtcItem">
 		<!-- Price is 0, but can be sold in the shop. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26316" name="Offering Test Ingredient 6" type="EtcItem">
+	<item id="26316" name="Offering Test Ingredient  6" type="EtcItem">
 		<!-- Stackable item worth 1000 Adena. Cannot be sold in the shop. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
@@ -184,7 +184,7 @@
 		<set name="etcitem_type" val="MATERIAL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26317" name="Offering Test Ingredient 7" type="EtcItem">
+	<item id="26317" name="Offering Test Ingredient  7" type="EtcItem">
 		<!-- Stackable item worth 1000. Must be used as an offering. -->
 		<set name="icon" val="icon.etc_crystal_ball_silver_i00" />
 		<set name="price" val="1000" />
@@ -247,7 +247,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="26325" name="Santa Cloak" type="Armor">
+	<item id="26325" name="Santa's Cloak" type="Armor">
 		<!-- Santa's warm cloak. -->
 		<set name="icon" val="BranchSys3.icon.g_christmas_cloak" />
 		<set name="default_action" val="EQUIP" />

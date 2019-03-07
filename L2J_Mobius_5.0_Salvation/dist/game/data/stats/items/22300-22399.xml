@@ -1207,7 +1207,7 @@
 			<skill id="22412" level="1" /> <!-- Weapon Conversion - One-handed Emerald Weapon -->
 		</skills>
 	</item>
-	<item id="22360" name="Weapon Conversion Scroll: Emerald Dualsword" type="EtcItem">
+	<item id="22360" name="Weapon Conversion Scroll: Emerald Dual Sword" type="EtcItem">
 		<!-- When used, the equipped weapon changes into an emerald dual sword for 2 hours. Cooldown is 60 min. Only applies when a dual sword is equipped. -->
 		<set name="icon" val="BranchSys3.Icon.g_scroll_beam_1h_sword" />
 		<set name="weight" val="5" />
@@ -1251,7 +1251,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22362" name="Emerald Dualsword" type="Weapon">
+	<item id="22362" name="Emerald Dual Sword" type="Weapon">
 		<!-- Emerald dual sword. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="weapon_type" val="DUAL" />

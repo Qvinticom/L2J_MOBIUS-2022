@@ -279,7 +279,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46215" name="Halloween Dualsword" type="Weapon">
+	<item id="46215" name="Halloween Dual Sword" type="Weapon">
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -370,7 +370,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 	</item>
-	<item id="46220" name="Membership Card - Market Eleven" additionalName="Event" type="EtcItem">
+	<item id="46220" name="Membership Card - Market Five" additionalName="Event" type="EtcItem">
 		<!-- A membership card for the Market Five that was opened to celebrate the 5th anniversary of Lineage II in Europe. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.ev_buff_11th" />
 		<set name="weight" val="1" />
@@ -398,7 +398,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 	</item>
-	<item id="46222" name="L2 Market +8 Amaranthine Weapon Pack" additionalName="Event" type="EtcItem">
+	<item id="46222" name="L2 Market +8 Helios Weapon Pack" additionalName="Event" type="EtcItem">
 		<!-- Get a +8 Helios weapon. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -510,7 +510,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 	</item>
-	<item id="46230" name="+8 Amaranthine Shaper Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46230" name="+8  Helios Shaper Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Shaper. -->
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -522,7 +522,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46231" name="+8 Amaranthine Cutter Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46231" name="+8  Helios Cutter Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Cutter. -->
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -534,7 +534,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46232" name="+8 Amaranthine Slasher Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46232" name="+8  Helios Slasher Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Slasher. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -546,7 +546,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46233" name="+8 Amaranthine Avenger Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46233" name="+8  Helios Avenger Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios dual sword. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="is_clan_depositable" val="false" />
@@ -558,7 +558,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46234" name="+8 Amaranthine Fighter Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46234" name="+8  Helios Fighter Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Dual Dagger. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="is_clan_depositable" val="false" />
@@ -570,7 +570,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46235" name="+8 Amaranthine Stormer Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46235" name="+8  Helios Stormer Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Dual Blunt Weapon. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="is_clan_depositable" val="false" />
@@ -582,7 +582,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46236" name="+8 Amaranthine Thrower Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46236" name="+8  Helios Thrower Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Avenger. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -594,7 +594,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46237" name="+8 Amaranthine Shooter Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46237" name="+8  Helios Shooter Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Fighter. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -606,7 +606,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46238" name="+8 Amaranthine Buster Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46238" name="+8  Helios Buster Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Stormer. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -618,7 +618,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46239" name="+8 Amaranthine Caster Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46239" name="+8  Helios Caster Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Thrower. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -630,7 +630,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46240" name="+8 Amaranthine Retributer Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46240" name="+8  Helios Retributer Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Shooter. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -681,7 +681,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="CAPSULE" />
 	</item>
-	<item id="46244" name="11th Anniversary Coin" additionalName="Event" type="EtcItem">
+	<item id="46244" name="5th Anniversary Coin" additionalName="Event" type="EtcItem">
 		<!-- 5th Anniversary coin. Used to purchase various items at the Market Five in Fantasy Isle. Will be deleted once the event ends. -->
 		<set name="icon" val="icon.etc_11th_token" />
 		<set name="weight" val="1" />
@@ -1260,7 +1260,7 @@
 			<skill id="13827" level="1" /> <!-- Christmas Talisman - ALL STAT (High) -->
 		</skills>
 	</item>
-	<item id="46293" name="Christmas Talisman: P. Skill Critical Damage" additionalName="1-hour" type="Armor">
+	<item id="46293" name="Christmas Talisman - P. Skill Critical Damage" additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Skill Critical Damage +7% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1281,7 +1281,7 @@
 			<skill id="13828" level="1" /> <!-- Christmas Talisman - P. Skill Critical Damage -->
 		</skills>
 	</item>
-	<item id="46294" name="Christmas Talisman: M. Skill Critical Damage" additionalName="1-hour" type="Armor">
+	<item id="46294" name="Christmas Talisman - M. Skill Critical Damage" additionalName="1-hour" type="Armor">
 		<!-- Event item. M. Skill Critical Damage +7% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1302,7 +1302,7 @@
 			<skill id="13829" level="1" /> <!-- Christmas Talisman - M. Skill Critical Damage -->
 		</skills>
 	</item>
-	<item id="46295" name="Christmas Talisman: Ultimate Defense" additionalName="1-hour" type="Armor">
+	<item id="46295" name="Christmas Talisman - Ultimate Defense" additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Def. +5000 and M. Def. +5000 for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1323,7 +1323,7 @@
 			<skill id="13830" level="1" /> <!-- Christmas Talisman - Ultimate Defense -->
 		</skills>
 	</item>
-	<item id="46296" name="Christmas Talisman: Debuff Resistance" additionalName="1-hour" type="Armor">
+	<item id="46296" name="Christmas Talisman - Debuff Resistance" additionalName="1-hour" type="Armor">
 		<!-- Event Item. Defends against Debuffs 5 times for 15 seconds. Cooldown is 10 min. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1344,7 +1344,7 @@
 			<skill id="13831" level="1" /> <!-- Christmas Talisman - Debuff Resistance -->
 		</skills>
 	</item>
-	<item id="46297" name="Christmas Talisman: P. Atk." additionalName="1-hour" type="Armor">
+	<item id="46297" name="Christmas Talisman - P. Atk." additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Atk. +5% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1365,7 +1365,7 @@
 			<skill id="13832" level="1" /> <!-- Christmas Talisman - P. Atk -->
 		</skills>
 	</item>
-	<item id="46298" name="Christmas Talisman: M. Atk." additionalName="1-hour" type="Armor">
+	<item id="46298" name="Christmas Talisman - M. Atk." additionalName="1-hour" type="Armor">
 		<!-- Event item. M. Atk. +5% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1386,7 +1386,7 @@
 			<skill id="13833" level="1" /> <!-- Christmas Talisman - M. Atk -->
 		</skills>
 	</item>
-	<item id="46299" name="Christmas Talisman: P. Def." additionalName="1-hour" type="Armor">
+	<item id="46299" name="Christmas Talisman - P. Def." additionalName="1-hour" type="Armor">
 		<!-- Event item. P. Def. +7% when equipped. Effect does not stack with additional Talismans of the same type. -->
 		<set name="icon" val="icon.etc_xmas_talisman_i00" />
 		<set name="default_action" val="EQUIP" />

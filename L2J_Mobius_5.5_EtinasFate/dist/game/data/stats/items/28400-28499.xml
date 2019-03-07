@@ -195,7 +195,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28489" name="Brilliant Brooch Jewel" type="EtcItem">
+	<item id="28489" name="La Vie En Rose's Magnificent Brooch Jewel" type="EtcItem">
 		<!-- A shining jewel needed to create a La Vie En Rose's Magnificent Brooch. Bring this to Shadai in Heine to upgrade an Enhanced Magnificent Brooch to a Rare one. Additional fee is required. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
 		<set name="material" val="PAPER" />
@@ -293,7 +293,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="28413" name="+10 Reflect Attack T-shirt Pack" type="EtcItem">
+	<item id="28413" name="+10 Physical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +10 Physical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -306,7 +306,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="28414" name="+10 Reflect Magic T-shirt Pack" type="EtcItem">
+	<item id="28414" name="+10 Magical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +10 Magical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="icon.event_july_seven_park_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -379,7 +379,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28420" name="Reflect Attack T-shirt Pack" type="EtcItem">
+	<item id="28420" name="Physical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a Physical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="icon.npoint_valakas_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -387,7 +387,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28421" name="Reflect Magic T-shirt Pack" type="EtcItem">
+	<item id="28421" name="Magical Reflect Shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a Magical Reflect Shirt. The shirt acquired after opening the box cannot be dropped or exchanged. -->
 		<set name="icon" val="icon.npoint_earring_of_lind_30day_box" />
 		<set name="default_action" val="PEEL" />
@@ -402,51 +402,51 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28423" name="Reflect Attack T-shirt Special Pack" type="EtcItem">
+	<item id="28423" name="Physical Reflect Shirt Special Pack" type="EtcItem">
 		<!-- Double-click to get 1 of the following: Scroll: Enchant Elemental Shirt x10, Blessed Scroll: Enchant Elemental Shirt x5, Destruction Scroll: Enchant Elemental Shirt x1, Physical Reflect Shirt Pack x1. -->
 		<set name="icon" val="icon.reflect_attack_bac" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28424" name="Reflect Magic T-shirt Special Pack" type="EtcItem">
+	<item id="28424" name="Magical Reflect Shirt Special Pack" type="EtcItem">
 		<!-- Double-click to get 1 of the following: Scroll: Enchant Elemental Shirt x10, Blessed Scroll: Enchant Elemental Shirt x5, Destruction Scroll: Enchant Elemental Shirt x1, Magical Reflect Shirt Pack x1. -->
 		<set name="icon" val="icon.reflect_magic_bac" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28425" name="Royal White Save Ticket (R)" type="EtcItem">
+	<item id="28425" name="Royal White Save Card (R-grade)" type="EtcItem">
 		<!-- Enchant success rate +30% for armor (R-grade) with a normal enchant scroll. Only for items enchanted between +3 and +9. When enchant succeeds, it increases randomly by 1-3. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28426" name="Royal White Save Ticket (R95)" type="EtcItem">
+	<item id="28426" name="Royal White Save Card (R95-grade)" type="EtcItem">
 		<!-- Enchant success rate +30% for armor (R95-grade) with a normal enchant scroll. Only for items enchanted between +3 and +9. When enchant succeeds, it increases randomly by 1-3. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28427" name="Royal White Save Ticket (R99)" type="EtcItem">
+	<item id="28427" name="Royal White Save Card (R99-grade)" type="EtcItem">
 		<!-- Enchant success rate +30% for armor (R99-grade) with a normal enchant scroll. Only for items enchanted between +3 and +9. When enchant succeeds, it increases randomly by 1-3. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28428" name="Royal Purple Save Ticket (R)" type="EtcItem">
+	<item id="28428" name="Royal Purple Save Card (R-grade)" type="EtcItem">
 		<!-- Enchant success rate +20% for weapons (R-grade) with a normal enchant scroll. Can only be used on 12+ enchanted items. When enchant succeeds, it increases by 1. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.royal_purple_save" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28429" name="Royal Purple Save Ticket (R95)" type="EtcItem">
+	<item id="28429" name="Royal Purple Save Card (R95-grade)" type="EtcItem">
 		<!-- Enchant success rate +20% for weapons (R95-grade) with a normal enchant scroll. Can only be used on 12+ enchanted items. When enchant succeeds, it increases by 1. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.royal_purple_save" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28430" name="Royal Purple Save Ticket (R99)" type="EtcItem">
+	<item id="28430" name="Royal Purple Save Card (R99-grade)" type="EtcItem">
 		<!-- Enchant success rate +20% for weapons (R99-grade) with a normal enchant scroll. Can only be used on 12+ enchanted items. When enchant succeeds, it increases by 1. When enchant fails, the item does not crystallize, but the existing enchant value decreases by 1. -->
 		<set name="icon" val="icon.royal_purple_save" />
 		<set name="is_sellable" val="false" />
@@ -467,7 +467,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28433" name="Agathion - Babayaga" additionalName="Premium" type="Armor">
+	<item id="28433" name="Agathion - Hut on Chicken Legs" additionalName="Premium" type="Armor">
 		<!-- Can summon Hut on Chicken Legs when equipped. -->
 		<set name="icon" val="BranchSys2.icon.br_aga_threehead_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -481,7 +481,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="28434" name="Mount - Elk" type="Armor">
+	<item id="28434" name="Mount - Fire Elk" type="Armor">
 		<!-- Can mount a Fire Elk when equipped. -->
 		<set name="icon" val="BranchIcon.icon.tf_elk_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -770,7 +770,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28455" name="Dimensional Bracelet Stage 6 Pack" type="EtcItem">
+	<item id="28455" name="Dimensional Bracelet Stage 6 Pack" additionalName="CHA+5" type="EtcItem">
 		<!-- Double-click to obtain a Dimensional Bracelet Stage 6 (CHA +5). -->
 		<set name="icon" val="icon.freya_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -902,7 +902,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28468" name="Topaz (7-day)" additionalName="Lv5" type="Armor">
+	<item id="28468" name="Topaz Lv. 5" additionalName="7-day" type="Armor">
 		<!-- A 7-day item. Disrupts the target from casting skills. Using it on a PC additionally ignores the target's CP and inflicts 13275 power at a fixed rate. When equipped with another jewel of the same type, only the effects of the jewel with the higher level is applied. -->
 		<set name="icon" val="icon.etc_bm_jewel_topaz_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1073,7 +1073,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28486" name="La Vie En Rose's Radiant Brooch" type="Armor">
+	<item id="28486" name="La Vie En Rose's Magnificent Brooch" type="Armor">
 		<!-- Activates 6 jewel slots when equipped. Inventory Slot +12. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i04" />
 		<set name="default_action" val="EQUIP" />
@@ -1089,7 +1089,7 @@
 			<stat type="mDef">114</stat>
 		</stats>
 	</item>
-	<item id="28487" name="La Vie En Rose's Radiant Brooch" additionalName="Enchant Type" type="Armor">
+	<item id="28487" name="La Vie En Rose's Magnificent Brooch" additionalName="Enhanced" type="Armor">
 		<!-- Activates 6 jewel slots when equipped. Inventory Slot +12. Additionally, CHA +1. Can be augmented. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i05" />
 		<set name="default_action" val="EQUIP" />
@@ -1105,7 +1105,7 @@
 			<stat type="mDef">114</stat>
 		</stats>
 	</item>
-	<item id="28488" name="La Vie En Rose's Radiant Brooch" additionalName="Rare-Type" type="Armor">
+	<item id="28488" name="La Vie En Rose's Magnificent Brooch" additionalName="Rare" type="Armor">
 		<!-- Activates 6 jewel slots when equipped. Inventory Slot +12. Additionally, all basic stats +2. Max CP +12%. Can be augmented. -->
 		<set name="icon" val="icon.etc_bm_brooch_lavianrose_i06" />
 		<set name="default_action" val="EQUIP" />

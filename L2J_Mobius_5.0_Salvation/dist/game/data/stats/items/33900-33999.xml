@@ -1401,7 +1401,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33942" name="Requiem Dualsword" additionalName="Haste (Event)" type="Weapon">
+	<item id="33942" name="Requiem Dual Sword" additionalName="Haste (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases Atk. Spd. by about 15%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1436,7 +1436,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33943" name="Requiem Dualsword" additionalName="Damage Up (Event)" type="Weapon">
+	<item id="33943" name="Requiem Dual Sword" additionalName="Damage Up (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. P. Atk. +288. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1471,7 +1471,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="33944" name="Requiem Dualsword" additionalName="Health (Event)" type="Weapon">
+	<item id="33944" name="Requiem Dual Sword" additionalName="Health (Event)" type="Weapon">
 		<!-- <Soul Crystal Enhancement>. Increases Max HP by 25%. Increases damage inflicted during PvP. Increases P. Critical Rate and P. Atk. when enchanted to +4. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="default_action" val="EQUIP" />
@@ -1833,7 +1833,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33956" name="Immortal Shield" additionalName="Attack Type / Heavy (Event)" type="Armor">
+	<item id="33956" name="Immortal Shield" additionalName="Attack Type/Heavy (Event)" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2200,7 +2200,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33972" name="Immortal Shield" additionalName="Defense Type / Heavy (Event)" type="Armor">
+	<item id="33972" name="Immortal Shield" additionalName="Defense Type/Heavy (Event)" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_sacon_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2456,7 +2456,7 @@
 			<stat type="pDef">76</stat>
 		</stats>
 	</item>
-	<item id="33983" name="Lv. 5 Giant STR Dye" additionalName="STR + 5 / DEX + 1 (Event)" type="EtcItem">
+	<item id="33983" name="Lv. 5 Giant STR Dye" additionalName="STR +5 / DEX +1 (Event)" type="EtcItem">
 		<!-- Lv. 5 Giant STR Dye (Str +5 Dex -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_1_dye_str" />
 		<set name="weight" val="150" />
@@ -2470,7 +2470,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33984" name="Lv. 5 Giant DEX Dye" additionalName="DEX + 5 / CON -1 (Event)" type="EtcItem">
+	<item id="33984" name="Lv. 5 Giant DEX Dye" additionalName="DEX +5 / CON -1 (Event)" type="EtcItem">
 		<!-- Lv. 5 Giant DEX Dye (Dex +5 Con -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_1_dye_dex" />
 		<set name="weight" val="150" />
@@ -2484,7 +2484,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33985" name="Lv. 5 Giant CON Dye" additionalName="CON + 5 / STR -1 (Event)" type="EtcItem">
+	<item id="33985" name="Lv. 5 Giant CON Dye" additionalName="CON +5 / STR -1 (Event)" type="EtcItem">
 		<!-- Lv. 5 Giant CON Dye (Con +5 Str -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_1_dye_con" />
 		<set name="weight" val="150" />
@@ -2498,7 +2498,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33986" name="Lv. 5 Giant INT Dye" additionalName="INT + 5 / WIT + 1 (Event)" type="EtcItem">
+	<item id="33986" name="Lv. 5 Giant INT Dye" additionalName="INT +5 / WIT +1 (Event)" type="EtcItem">
 		<!-- Lv. 5 Giant INT Dye (Int +5 Wit -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_1_dye_int" />
 		<set name="weight" val="150" />
@@ -2512,7 +2512,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33987" name="Lv. 5 Giant WIT Dye" additionalName="Wit + 5 Men -1 (Event)" type="EtcItem">
+	<item id="33987" name="Lv. 5 Giant WIT Dye" additionalName="Wit +5 Men -1 (Event)" type="EtcItem">
 		<!-- Lv. 5 Giant WIT Dye (Wit +5 Men -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_1_dye_wit" />
 		<set name="weight" val="150" />
@@ -2526,7 +2526,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33988" name="Lv. 5 Giant MEN Dye" additionalName="MEN + 5 / INT + 1 (Event)" type="EtcItem">
+	<item id="33988" name="Lv. 5 Giant MEN Dye" additionalName="MEN +5 / INT +1 (Event)" type="EtcItem">
 		<!-- Lv. 5 Giant MEN Dye (Men +5 Int -1). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_1_dye_men" />
 		<set name="weight" val="150" />
@@ -2540,7 +2540,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33989" name="Lv. 5 Ancient STR Dye" additionalName="STR + 5 / DEX - 1 / Fire Resistance + 25 (Event)" type="EtcItem">
+	<item id="33989" name="Lv. 5 Ancient STR Dye" additionalName="STR +5 / DEX -1 / Fire Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Ancient STR Dye (Str +5 Dex -1 Fire Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_2_dye_str" />
 		<set name="weight" val="150" />
@@ -2554,7 +2554,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33990" name="Lv. 5 Ancient DEX Dye" additionalName="DEX + 5 / CON - 1 / Earth Resistance + 25 (Event)" type="EtcItem">
+	<item id="33990" name="Lv. 5 Ancient DEX Dye" additionalName="DEX +5 / CON -1 / Earth Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Ancient DEX Dye (Dex +5 Con -1 Earth Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_2_dye_dex" />
 		<set name="weight" val="150" />
@@ -2568,7 +2568,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33991" name="Lv. 5 Ancient CON Dye" additionalName="CON + 5 / STR - 1 / Dark Resistance + 25 (Event)" type="EtcItem">
+	<item id="33991" name="Lv. 5 Ancient CON Dye" additionalName="CON +5 / STR -1 / Dark Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Ancient CON Dye (Con +5 Str -1 Dark Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_2_dye_con" />
 		<set name="weight" val="150" />
@@ -2582,7 +2582,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33992" name="Lv. 5 Ancient INT Dye" additionalName="INT + 5 / WIT - 1 / Water Resistance + 25 (Event)" type="EtcItem">
+	<item id="33992" name="Lv. 5 Ancient INT Dye" additionalName="INT +5 / WIT -1 / Water Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Ancient INT Dye (Int +5 Wit -1 Water Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_2_dye_int" />
 		<set name="weight" val="150" />
@@ -2596,7 +2596,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33993" name="Lv. 5 Ancient WIT Dye" additionalName="WIT + 5 / MEN - 1 / Wind Resistance + 25 (Event)" type="EtcItem">
+	<item id="33993" name="Lv. 5 Ancient WIT Dye" additionalName="WIT +5 / MEN -1 / Wind Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Ancient WIT Dye (Wit +5 Men -1 Wind Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_2_dye_wit" />
 		<set name="weight" val="150" />
@@ -2610,7 +2610,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33994" name="Lv. 5 Ancient MEN Dye" additionalName="MEN + 5 / INT - 1 / Holy Resistance + 25 (Event)" type="EtcItem">
+	<item id="33994" name="Lv. 5 Ancient MEN Dye" additionalName="MEN +5 / INT -1 / Holy Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Ancient MEN Dye (Men +5 Int -1 Holy Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_2_dye_men" />
 		<set name="weight" val="150" />
@@ -2624,7 +2624,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33995" name="Lv. 5 Legendary STR Dye" additionalName="STR + 5 / DEX + 1 / Fire Resistance + 25 (Event)" type="EtcItem">
+	<item id="33995" name="Lv. 5 Legendary STR Dye" additionalName="STR +5 / DEX +1 / Fire Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Legendary STR Dye (Str +5 Dex +1 Fire Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_3_dye_str" />
 		<set name="weight" val="150" />
@@ -2638,7 +2638,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33996" name="Lv. 5 Legendary DEX Dye" additionalName="DEX + 5 / CON + 1 / Earth Resistance + 25 (Event)" type="EtcItem">
+	<item id="33996" name="Lv. 5 Legendary DEX Dye" additionalName="DEX +5 / CON +1 / Earth Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Legendary DEX Dye (Dex +5 Con +1 Earth Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_3_dye_dex" />
 		<set name="weight" val="150" />
@@ -2652,7 +2652,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33997" name="Lv. 5 Legendary CON Dye" additionalName="CON + 5 / STR + 1 / Dark Resistance + 25 (Event)" type="EtcItem">
+	<item id="33997" name="Lv. 5 Legendary CON Dye" additionalName="CON +5 / STR +1 / Dark Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Legendary CON Dye (Con +5 Str +1 Dark Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_3_dye_con" />
 		<set name="weight" val="150" />
@@ -2666,7 +2666,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33998" name="Lv. 5 Legendary INT Dye" additionalName="INT + 5 / WIT + 1 / Water Resistance + 25 (Event)" type="EtcItem">
+	<item id="33998" name="Lv. 5 Legendary INT Dye" additionalName="INT +5 / WIT +1 / Water Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Legendary INT Dye (Int +5 Wit +1 Water Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_3_dye_int" />
 		<set name="weight" val="150" />
@@ -2680,7 +2680,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="33999" name="Lv. 5 Legendary WIT Dye" additionalName="WIT + 5 / MEN + 1 / Wind Resistance + 25 (Event)" type="EtcItem">
+	<item id="33999" name="Lv. 5 Legendary WIT Dye" additionalName="WIT +5 / MEN +1 / Wind Resistance +25 (Event)" type="EtcItem">
 		<!-- Lv. 5 Legendary WIT Dye (Wit +5 Men +1 Wind Resistance +25). If you go to the village Symbol Maker, you can imprint on your body the symbol of magic that can change abilities. In order to imprint the symbol, 10 dyes are required. Can be used by all classes after completion of the fourth class transfer. -->
 		<set name="icon" val="icon.lv5_3_dye_wit" />
 		<set name="weight" val="150" />

@@ -1165,7 +1165,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="21840" name="Dynasty Dualsword of Fortune" additionalName="90-day" type="Weapon">
+	<item id="21840" name="Dynasty Dual Sword of Fortune" additionalName="90-day" type="Weapon">
 		<!-- Increases P. Critical Rate by 109, Maximum HP by 10%. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1707,7 +1707,7 @@
 			<item id="21856" min="20000" max="20000" chance="100" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="21861" name="PC Vitality (1-hour)" type="EtcItem">
+	<item id="21861" name="PA Vitality (1-hour)" type="EtcItem">
 		<!-- When used, for 1 hour, energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />
@@ -1729,7 +1729,7 @@
 			<skill id="22284" level="1" /> <!-- PC Vitality -->
 		</skills>
 	</item>
-	<item id="21862" name="Player Commendation - Vitality Pack" type="EtcItem">
+	<item id="21862" name="PA - Vitality Pack" type="EtcItem">
 		<!-- PA - Vitality Pack. Wrapped Pack containing 3 PA Vitality. When used, has a chance of receiving a 1h~4h PA Vitality buff. Can only be used at levels 1 - 75. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -1749,7 +1749,7 @@
 			<skill id="22288" level="1" /> <!-- Player Commendation - Vitality Pack -->
 		</skills>
 	</item>
-	<item id="21863" name="Player Commendation - Blessing" type="EtcItem">
+	<item id="21863" name="PA - Blessing" type="EtcItem">
 		<!-- When used, replenishes Vitality while hunting for all party members during 20 min. Cooldown is 60 min. -->
 		<set name="icon" val="BranchSys.icon.br_flag_of_bookmark_i00" />
 		<set name="material" val="STEEL" />
@@ -1770,7 +1770,7 @@
 			<skill id="22283" level="1" /> <!-- Player Commendation - Blessing -->
 		</skills>
 	</item>
-	<item id="21864" name="Player Commendation - Blessing Pack" type="EtcItem">
+	<item id="21864" name="PA - Blessing Pack" type="EtcItem">
 		<!-- PA - Blessing pack. Wrapped Pack containing PA - Blessing. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="STEEL" />
@@ -1790,7 +1790,7 @@
 			<item id="21863" min="1" max="1" chance="100" /> <!-- PA - Blessing -->
 		</capsuled_items>
 	</item>
-	<item id="21865" name="PC Vitality (2-hour)" type="EtcItem">
+	<item id="21865" name="PA Vitality (2-hour)" type="EtcItem">
 		<!-- When used, for 2 hours, energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />
@@ -1811,7 +1811,7 @@
 			<skill id="22285" level="1" /> <!-- PC Vitality -->
 		</skills>
 	</item>
-	<item id="21866" name="PC Vitality (3-hour)" type="EtcItem">
+	<item id="21866" name="PA Vitality (3-hour)" type="EtcItem">
 		<!-- When used, for 3 hours, energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />
@@ -1832,7 +1832,7 @@
 			<skill id="22286" level="1" /> <!-- PC Vitality -->
 		</skills>
 	</item>
-	<item id="21867" name="PC Vitality (4-hour)" type="EtcItem">
+	<item id="21867" name="PA Vitality (4-hour)" type="EtcItem">
 		<!-- When used, for 4 hours, energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Can only be used at levels 1 - 75. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />

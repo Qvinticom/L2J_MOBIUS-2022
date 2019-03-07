@@ -514,7 +514,7 @@
 			<skill id="22700" level="1" /> <!-- Dr. Destroy's Sealed Rune of Wisdom -->
 		</skills>
 	</item>
-	<item id="23331" name="Vitality Maintaining Potion (30-minute)" type="EtcItem">
+	<item id="23331" name="Vitality Maintaining Potion (30-min.)" type="EtcItem">
 		<!-- Maintains Vitality for 30 min. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_lesser_potion_scarlet_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -530,7 +530,7 @@
 			<skill id="22707" level="2" /> <!-- Vitality Maintaining Potion -->
 		</skills>
 	</item>
-	<item id="23332" name="XP Buff 50% (1-hour)" type="EtcItem">
+	<item id="23332" name="XP Buff 50% (1-hr.)" type="EtcItem">
 		<!-- Increases acquired XP by 50% for a certain amount of time. All levels. Effect remains after death. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="is_clan_depositable" val="false" />
@@ -547,7 +547,7 @@
 			<skill id="22708" level="1" /> <!-- XP Buff 50% (1-hour) -->
 		</skills>
 	</item>
-	<item id="23333" name="XP Buff 50% (2-hour)" type="EtcItem">
+	<item id="23333" name="XP Buff 50% (2-hr.)" type="EtcItem">
 		<!-- Increases acquired XP by 50% for a certain amount of time. All levels. Effect remains after death. -->
 		<set name="icon" val="icon.etc_dragons_blood_i03" />
 		<set name="is_clan_depositable" val="false" />
@@ -1200,7 +1200,7 @@
 			<skill id="22624" level="1" /> <!-- Hair Accessory Restoration Stone -->
 		</skills>
 	</item>
-	<item id="23372" name="Weapon Appearance/Restoration Stone Pack (R-grade)" type="EtcItem">
+	<item id="23372" name="Weapon Appearance/ Restoration Stone Pack (R-grade)" type="EtcItem">
 		<!-- Double-click to obtain a Weapon Appearance Stone (R-grade) and a Weapon Restoration Stone (R-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1217,7 +1217,7 @@
 			<item id="22414" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (R-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="23373" name="Weapon Appearance/Restoration Stone Pack (S-grade)" type="EtcItem">
+	<item id="23373" name="Weapon Appearance/ Restoration Stone Pack (S-grade)" type="EtcItem">
 		<!-- Double-click to obtain a Weapon Appearance Stone (S-grade) and a Weapon Restoration Stone (S-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1234,7 +1234,7 @@
 			<item id="22415" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (S-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="23374" name="Armor Appearance/Restoration Stone Pack (R-grade)" type="EtcItem">
+	<item id="23374" name="Armor Appearance/ Restoration Stone Pack (R-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Armor Appearance Stone (R-grade) and an Armor Restoration Stone (R-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1251,7 +1251,7 @@
 			<item id="22694" min="1" max="1" chance="100" /> <!-- Armor Restoration Stone (R-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="23375" name="Armor Appearance/Restoration Stone Pack (S-grade)" type="EtcItem">
+	<item id="23375" name="Armor Appearance/ Restoration Stone Pack (S-grade)" type="EtcItem">
 		<!-- Double-click to obtain an Armor Appearance Stone (S-grade) and an Armor Restoration Stone (S-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1268,7 +1268,7 @@
 			<item id="22695" min="1" max="1" chance="100" /> <!-- Armor Restoration Stone (S-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="23376" name="Hair Accessory Appearance/Restoration Stone Pack" type="EtcItem">
+	<item id="23376" name="Hair Accessory Appearance/ Restoration Stone Pack" type="EtcItem">
 		<!-- Double-click to obtain a Hair Accessory Appearance Stone and a Hair Accessory Restoration Stone. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1552,7 +1552,7 @@
 			<skill id="22719" level="1" /> <!-- Transformation Scroll Pack -->
 		</skills>
 	</item>
-	<item id="23389" name="XP Rune II (Lv. 1-95) 100% Pack (1-hour)" type="EtcItem">
+	<item id="23389" name="XP Rune II (Lv. 1-95) 100% Pack (1-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune II (Lv. 1-95) 100% (1-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
@@ -1572,7 +1572,7 @@
 			<item id="23391" min="1" max="1" chance="100" /> <!-- XP Rune II (Lv. 1-95) 100% - 1-hr. -->
 		</capsuled_items>
 	</item>
-	<item id="23390" name="XP Rune II (Lv. 1-95) 100% Pack (3-hour)" type="EtcItem">
+	<item id="23390" name="XP Rune II (Lv. 1-95) 100% Pack (3-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a XP Rune II (Lv. 1-95) 100% (3-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
@@ -1592,7 +1592,7 @@
 			<item id="23392" min="1" max="1" chance="100" /> <!-- XP Rune II (Lv. 1-95) 100% - 3-hr. -->
 		</capsuled_items>
 	</item>
-	<item id="23391" name="XP Rune II (Lv. 1-95) 100%" additionalName="1-hour" type="EtcItem">
+	<item id="23391" name="XP Rune II (Lv. 1-95) 100%" additionalName="1-hr." type="EtcItem">
 		<!-- If stored in the inventory, Acquired XP/ SP +100%. Lv. 95 or below. 1-hr. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1609,7 +1609,7 @@
 			<skill id="9529" level="1" /> <!-- XP Rune II (Lv. 1-95) 100% -->
 		</skills>
 	</item>
-	<item id="23392" name="XP Rune II (Lv. 1-95) 100%" additionalName="3-hour" type="EtcItem">
+	<item id="23392" name="XP Rune II (Lv. 1-95) 100%" additionalName="3-hr." type="EtcItem">
 		<!-- If stored in the inventory, Acquired XP/ SP +100%. Lv. 95 or below. 3-hr. -->
 		<set name="icon" val="br_cashtex.item.br_cash_rune_of_feather_i00" />
 		<set name="is_clan_depositable" val="false" />

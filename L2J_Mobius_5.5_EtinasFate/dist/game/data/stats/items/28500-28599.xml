@@ -155,7 +155,7 @@
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="28513" name="Advanced RedandBlue Cat's Eye Treasure Chest" additionalName="30-day" type="EtcItem">
+	<item id="28513" name="Advanced Red and Blue Cat's Eye Treasure Chest" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Vital Stone (30-day fixed term) and a Blue Cat's Eye (30-day fixed term). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -313,7 +313,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="28525" name="Mysterious Dualsword 7-day Pack" additionalName="Event" type="EtcItem">
+	<item id="28525" name="Mysterious Dual Sword 7-day Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Mysterious Dual Sword (7-day). -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -377,7 +377,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28531" name="Top-grade Returning Hero's Support Box" type="EtcItem">
+	<item id="28531" name="Top-grade Hero's Support Box" type="EtcItem">
 		<!-- Double-click to obtain La Vie En Rose's Noble Brooch, Lv. 3 Ruby/ Sapphire/ Emerald/ Vital Stone (30-day), +6 Helios Weapon Capsule Coupon (30-day), +6 Eternal Armor Set Coupon (30-day), Tauti's Ring (14-day), Earth Wyrm Heart Ring (14-day), Warrior's Recovery Potion x100, Returning Hero's Vitality Replenishing Juice x10, Hero's Support Cube. For characters Lv. 99 or above. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -482,14 +482,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28539" name="Brooch Spirit Stone" type="EtcItem">
+	<item id="28539" name="Magnificent Brooch Spirit Stone" type="EtcItem">
 		<!-- Spirit Stone needed for augmenting an Enhanced Magnificent Brooch. Can be also used for upgrading an Elegant Brooch. Bring this stone to Shadai in Heine to upgrade an Elegant Brooch to an Enhanced Magnificent Brooch. Additional fee is required. -->
 		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
 		<set name="material" val="LEATHER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28540" name="Brooch Spirit Stone" additionalName="Rare-Type" type="EtcItem">
+	<item id="28540" name="Magnificent Brooch Spirit Stone" additionalName="Rare" type="EtcItem">
 		<!-- Spirit Stone needed for augmenting a Rare Magnificent Brooch. -->
 		<set name="icon" val="Icon.bm_lavianrose_mineral_brooch" />
 		<set name="material" val="LEATHER" />
@@ -642,7 +642,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28558" name="Bloody Amaranthine Ingredient Set" type="EtcItem">
+	<item id="28558" name="Bloody Helios Ingredient Set" type="EtcItem">
 		<!-- Double-click to obtain the ingredients for crafting Bloody Helios. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -660,7 +660,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28560" name="Dark Amaranthine Ingredient Set" type="EtcItem">
+	<item id="28560" name="Dark Helios Ingredient Set" type="EtcItem">
 		<!-- Double-click to obtain the ingredients for crafting Dark Helios. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="PEEL" />
@@ -703,7 +703,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28565" name="Vital Stone Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="28565" name="Vital Stone Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Vital Stones. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -711,7 +711,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28566" name="Tanzanite Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="28566" name="Tanzanite Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Tanzanites. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -719,7 +719,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28567" name="Amethyst Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="28567" name="Amethyst Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Amethysts. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewelbox_amethyst_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -727,7 +727,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28568" name="Garnet Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="28568" name="Garnet Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Garnets. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />

@@ -1104,7 +1104,7 @@
 			<skill id="2046" level="1" /> <!-- Summon Pet -->
 		</skills>
 	</item>
-	<item id="14065" name="Superior Minion Coupon" additionalName="5-hour" type="EtcItem">
+	<item id="14065" name="Superior Minion Coupon" additionalName="5-hr." type="EtcItem">
 		<!-- Coupon that can be exchanged for a necklace (5-hr.) that summons a Superior Minion. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />
@@ -1330,7 +1330,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14074" name="Superior Minion Coupon (Event)" additionalName="5-hour" type="EtcItem">
+	<item id="14074" name="Superior Minion Coupon (Event)" additionalName="5-hr." type="EtcItem">
 		<!-- A coupon that can be exchanged for a necklace that allows you to summon a Superior Minion (5-hr.). -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="immediate_effect" val="true" />

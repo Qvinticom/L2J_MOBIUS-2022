@@ -122,7 +122,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="47914" name="Advanced RedandBlue Cat's Eye Treasure Chest" additionalName="30-day" type="EtcItem">
+	<item id="47914" name="Advanced Red and Blue Cat's Eye Treasure Chest" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Vital Stone (30-day fixed term) and a Blue Cat's Eye (30-day fixed term). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -476,7 +476,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47944" name="13th Anniversary Item" type="EtcItem">
+	<item id="47944" name="6th Anniversary Item" type="EtcItem">
 		<!-- An event item for the 6th anniversary of Lineage 2. Village event NPC Bliss needs it for the event. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_L2_soul_ore" />
 		<set name="material" val="LEATHER" />
@@ -518,7 +518,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47947" name="Request - Instanced Zone Dungeon" type="EtcItem">
+	<item id="47947" name="Request - Instance Zone Dungeon" type="EtcItem">
 		<!-- Double-click to receive an Instance Zone dungeon request. You can complete the mission if you carry out 1 type of daily quest in an Instance Zone dungeon of at least level 85. Will be deleted when the event has concluded. Can be carried out once a day. -->
 		<set name="icon" val="icon.ev_13th_paper_inzone" />
 		<set name="default_action" val="START_QUEST" />
@@ -542,7 +542,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="47949" name="Request - Instanced Zone Dungeon" type="EtcItem">
+	<item id="47949" name="Request - Instance Zone Dungeon" type="EtcItem">
 		<!-- You can complete the mission if you carry out 1 type of daily quest in an Instance Zone dungeon of at least level 85. Will be deleted when the event has concluded. -->
 		<set name="icon" val="icon.ev_13th_paper_inzone" />
 		<set name="material" val="LEATHER" />

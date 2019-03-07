@@ -13,7 +13,7 @@
 			<skill id="9208" level="1" /> <!-- Lucky Clover (R-grade) -->
 		</skills>
 	</item>
-	<item id="23601" name="Player Commendation - Gift Box" additionalName="Event" type="EtcItem">
+	<item id="23601" name="PA - Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Gift given after accumulating 1-hr worth of PA Points. Double-click to use. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
@@ -90,7 +90,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23605" name="SP Rune 50% Pack (1-hour)" type="EtcItem">
+	<item id="23605" name="SP Rune 50% Pack (1-hr.)" type="EtcItem">
 		<!-- Double-click to obtain a SP Rune 50% (1-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -243,7 +243,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="23614" name="Vitality Maintaining Potion (10-minute)" additionalName="No Weekly Usage Limit" type="EtcItem">
+	<item id="23614" name="Vitality Maintaining Potion (10-min.)" additionalName="No Weekly Usage Limit" type="EtcItem">
 		<!-- Maintains Vitality for 10 min. Cooldown is 30 min. No weekly usage limit. -->
 		<set name="icon" val="BranchSys.icon.br_vitality_potion_i00" />
 		<set name="weight" val="10" />
@@ -379,7 +379,7 @@
 			<skill id="22849" level="1" /> <!-- Dragon Vitality Replenishing Potion -->
 		</skills>
 	</item>
-	<item id="23621" name="Vitality Suspending Potion (30-minute)" additionalName="No Weekly Usage Limit" type="EtcItem">
+	<item id="23621" name="Vitality Suspending Potion (30-min.)" additionalName="No Weekly Usage Limit" type="EtcItem">
 		<!-- Stops Vitality consumption and bonuses for 30 min. Cooldown is 60 min. No weekly usage limit. -->
 		<set name="icon" val="BranchSys3.lcon.g_vitality_potion_stop" />
 		<set name="weight" val="36" />
@@ -516,7 +516,7 @@
 			<skill id="22852" level="1" /> <!-- Piroscki - Replenish Vitality -->
 		</skills>
 	</item>
-	<item id="23629" name="Torun Gingerbread" additionalName="1-hour" type="EtcItem">
+	<item id="23629" name="Torun Gingerbread" additionalName="1-hr." type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -533,7 +533,7 @@
 			<skill id="22853" level="1" /> <!-- Torun Gingerbread (1-hour) -->
 		</skills>
 	</item>
-	<item id="23630" name="Torun Gingerbread" additionalName="1.5-hour" type="EtcItem">
+	<item id="23630" name="Torun Gingerbread" additionalName="1.5-hr." type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -554,7 +554,7 @@
 			<skill id="22854" level="1" /> <!-- Torun Gingerbread (1.5-hour) -->
 		</skills>
 	</item>
-	<item id="23631" name="Torun Gingerbread" additionalName="2-hour" type="EtcItem">
+	<item id="23631" name="Torun Gingerbread" additionalName="2-hr." type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -571,7 +571,7 @@
 			<skill id="22855" level="1" /> <!-- Torun Gingerbread (2-hour) -->
 		</skills>
 	</item>
-	<item id="23632" name="Torun Gingerbread" additionalName="2.5-hour" type="EtcItem">
+	<item id="23632" name="Torun Gingerbread" additionalName="2.5-hr." type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -592,7 +592,7 @@
 			<skill id="22856" level="1" /> <!-- Torun Gingerbread (2.5-hour) -->
 		</skills>
 	</item>
-	<item id="23633" name="Torun Gingerbread" additionalName="3-hour" type="EtcItem">
+	<item id="23633" name="Torun Gingerbread" additionalName="3-hr." type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -613,7 +613,7 @@
 			<skill id="22857" level="1" /> <!-- Torun Gingerbread (3-hour) -->
 		</skills>
 	</item>
-	<item id="23634" name="Torun Gingerbread" additionalName="4-hour" type="EtcItem">
+	<item id="23634" name="Torun Gingerbread" additionalName="4-hr." type="EtcItem">
 		<!-- Polish bread. Increases acquired XP by 50% for a certain amount of time. All levels. -->
 		<set name="icon" val="BranchSys3.icon1.g_torun_gingerbread_pl" />
 		<set name="is_stackable" val="true" />
@@ -634,7 +634,7 @@
 			<skill id="22858" level="1" /> <!-- Torun Gingerbread (4-hour) -->
 		</skills>
 	</item>
-	<item id="23635" name="Flint" type="EtcItem">
+	<item id="23635" name="flint" type="EtcItem">
 		<!-- Creates a campfire that lasts for 30 min. The warmth of the bonfire reduces the amount of MP consumption during skill use, and increases HP/ MP/ CP Recovery Rate. The closer you sit to the fire, the better the effect. All members. -->
 		<set name="icon" val="BranchSys2.icon.g_campfire_flint" />
 		<set name="is_clan_depositable" val="false" />
@@ -651,7 +651,7 @@
 			<skill id="22860" level="1" /> <!-- Summon Roaring Campfire -->
 		</skills>
 	</item>
-	<item id="23636" name="Cloak (Poland)" type="Armor">
+	<item id="23636" name="Polish Cloak" type="Armor">
 		<!-- Cloak for Poland only. Elaborately embroidered. -->
 		<set name="icon" val="BranchSys3.icon1.g_pl_cape" />
 		<set name="default_action" val="EQUIP" />

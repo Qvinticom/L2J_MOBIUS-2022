@@ -16,7 +16,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48002" name="Fish Cream Stew - MEN" additionalName="Event" type="EtcItem">
+	<item id="48002" name="Fish Cream Stew - STR" additionalName="Event" type="EtcItem">
 		<!-- When used, STR +3 and CHA +1 for 30 min. The effects do not stack when several different types of fish stew are used. Cooldown of 5 min. Will be deleted on Wednesday, December 7, 2016, after regular maintenance. -->
 		<set name="icon" val="icon.fish_stew_residence_cha" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -126,7 +126,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48014" name="Freya's Dark Rune (2-hour) Box" type="EtcItem">
+	<item id="48014" name="Freya's Dark Rune (2-hr.) Box" type="EtcItem">
 		<!-- Double-click to obtain Freya's Dark Rune (2-hr.). Freya's Dark Rune effects do not apply in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_dark_rune_box" />
 		<set name="default_action" val="PEEL" />
@@ -136,7 +136,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48015" name="Freya's Dark Rune" additionalName="2-hour" type="EtcItem">
+	<item id="48015" name="Freya's Dark Rune" additionalName="2-hr." type="EtcItem">
 		<!-- When stored in the inventory, PvP Damage +15%. The remaining time decreases even when not playing. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_freya_dark_rune" />
 		<set name="material" val="PAPER" />
@@ -157,7 +157,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="48017" name="Healer Costume" type="Armor">
+	<item id="48017" name="Heal Costume" type="Armor">
 		<set name="icon" val="icon.healer_chest_change" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="gloves" />
@@ -169,7 +169,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="48018" name="Chevalier Outfit" type="Armor">
+	<item id="48018" name="Chevalier Costume" type="Armor">
 		<set name="icon" val="icon.chevalier_chest_change" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -205,7 +205,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="48021" name="Valkyrie Outfit" type="Armor">
+	<item id="48021" name="Valkyrie Costume" type="Armor">
 		<set name="icon" val="icon.valkyrie_chest_change_0" />
 		<set name="default_action" val="EQUIP" />
 		<set name="armor_type" val="HEAVY" />
@@ -245,7 +245,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48025" name="Chevalier Outfit Appearance Stone" type="EtcItem">
+	<item id="48025" name="Chevalier Costume Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of upper or full-body armor to that of a Chevalier costume. Makes entire armor look like the Chevalier costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -272,7 +272,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48028" name="Valkyrie Outfit Appearance Stone" type="EtcItem">
+	<item id="48028" name="Valkyrie Costume Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of upper or full-body armor to that of a Valkyrie costume. Makes entire armor look like the Valkyrie costume. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -416,7 +416,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48046" name="Zodiac Agathion Book of Growth" type="EtcItem">
+	<item id="48046" name="Book of Growth: Zodiac Agathion" type="EtcItem">
 		<!-- Zodiac Agathion growth scroll. Increases M. Def. when the Agathion grows, adding a special ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the Agathion's unique ability gradually from +1. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -424,7 +424,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48047" name="Ancient Zodiac Agathion Book of Growth" type="EtcItem">
+	<item id="48047" name="Ancient Book of Growth: Zodiac Agathion" type="EtcItem">
 		<!-- Zodiac Agathion growth scroll. Increases M. Def. when the Agathion grows, adding a Special Ability from +4. Ensures safe enchantment up to +3 and enables the Agathion to be enchanted up to +10. Increases the agathion's Unique Ability gradually from +1. If successful, the Agathion randomly grows to between +1 and +3. Cannot be used past +7. -->
 		<set name="icon" val="icon.star_giantscrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -592,7 +592,7 @@
 		<set name="weight" val="5" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48064" name="Super Advanced Seed Bracelet" type="Armor">
+	<item id="48064" name="Super Advanced Seed Bracelet" additionalName="Stage 1" type="Armor">
 		<!-- When equipped, it activates one main Agathion slot and one auxiliary slot. Can be enchanted through Fishing Guild Leader Santiago. <Active Skill>. 1. Agathion Teleport: Provides a teleport skill to teleport to Town of Aden/ Town of Rune/ Town of Giran/ Heine (Cooldown: 30 min). <Item Skill>. 1. Increases STR/ INT/ CON/ DEX/ WIT/ MEN/ CHA/ LUC by 1. 2. Increases Fire/ Water/ Earth/ Wind/ Dark/ Holy attacks by 50 and defenses by 30. 3. Increases XP gain in Vitality state by 5%. -->
 		<set name="icon" val="icon.lbracelet_agathion_charm" />
 		<set name="default_action" val="EQUIP" />
@@ -659,7 +659,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48071" name="Super Advanced Seed Bracelet Treasure Chest" type="EtcItem">
+	<item id="48071" name="Super Advanced Seed Bracelet Box" type="EtcItem">
 		<!-- Open to obtain a Super Advanced Seed Bracelet. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -783,7 +783,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="48081" name="Super Advanced Seed Bracelet Treasure Chest" additionalName="30-day" type="EtcItem">
+	<item id="48081" name="Super Advanced Seed Bracelet Box" additionalName="30-day" type="EtcItem">
 		<!-- Use to obtain a Super Advanced Seed Bracelet (30-day). -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="PEEL" />

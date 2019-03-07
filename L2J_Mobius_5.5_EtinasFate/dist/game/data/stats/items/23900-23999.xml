@@ -413,7 +413,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="23922" name="Tears One-handed Magic Blunt Weapon" type="Weapon">
+	<item id="23922" name="Tears One-handed Staff" type="Weapon">
 		<!-- Russia's weapon crafting contest finalist. One-handed staff type. Base appearance of Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -439,7 +439,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="23923" name="Tears Two-handed Magic Blunt Weapon" type="Weapon">
+	<item id="23923" name="Tears Two-handed Staff" type="Weapon">
 		<!-- Russia's weapon crafting contest finalist. Two-handed staff type. Base appearance of Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_magic_twohand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -465,7 +465,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="23924" name="Tears Dualsword" type="Weapon">
+	<item id="23924" name="Tears Dual Sword" type="Weapon">
 		<!-- Russia's weapon crafting contest finalist. Dual Sword type. Base appearance of Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dual_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -747,7 +747,7 @@
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="23938" name="Tears One-handed Magic Blunt Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="23938" name="Tears One-handed Staff Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a one-handed blunt weapon to that of a Tears One-handed Staff. Limited time item (7-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
@@ -765,7 +765,7 @@
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="23939" name="Tears Two-handed Magic Blunt Weapon Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="23939" name="Tears Two-handed Staff Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a two-handed blunt weapon to that of a Tears Two-handed Staff. Limited time item (7-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
@@ -783,7 +783,7 @@
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="23940" name="Tears Dualsword Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="23940" name="Tears Dual Sword Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a dual sword to that of a Tears Dual Sword. Limited time item (7-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
@@ -873,7 +873,7 @@
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="23945" name="Prestige Rune 100% Pack" additionalName="3-hour" type="EtcItem">
+	<item id="23945" name="Prestige Rune 100% Pack" additionalName="3-hr." type="EtcItem">
 		<!-- Double-click to obtain a Prestige Rune 100% (3-hr.). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -883,7 +883,7 @@
 		<set name="time" val="180" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="23946" name="XP Rune II (Lv. 1-95) 100% Pack (1-hour)" type="EtcItem">
+	<item id="23946" name="XP Rune II (Lv. 1-95) 100% Pack (1-hr.)" type="EtcItem">
 		<!-- Pack containing XP Rune II (Lv. 1-95) 100% (1-hr.). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_clan_depositable" val="false" />
@@ -955,7 +955,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="23952" name="Extra Pass: Infernal/Lunatic Kamaloka" type="EtcItem">
+	<item id="23952" name="Extra Pass: Infernal/ Lunatic Kamaloka" type="EtcItem">
 		<!-- Entry Pass to Infernal and Lunatic Kamaloka. Use to reset cooldown and enter the dungeon up to 5 times within the cooldown. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_mailable" val="false" />
@@ -1346,7 +1346,7 @@
 			<skill id="26086" level="1" /> <!-- Vampiric Style Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23984" name="Traces of Ancient Kartia's Labyrinth" type="EtcItem">
+	<item id="23984" name="Traces of Ancient Kartia's Labyrinth" additionalName="PA Event Item" type="EtcItem">
 		<!-- Maybe the Kartia Researcher can tell you more about it. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. Deleted after event. -->
 		<set name="icon" val="BranchSys3.Icon.g_ev_magic_powder" />
 		<set name="weight" val="10" />
@@ -1359,7 +1359,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23985" name="Extra Pass: Ancient Kartia's Labyrinth" type="EtcItem">
+	<item id="23985" name="Extra Pass: Ancient Kartia's Labyrinth" additionalName="PA Event Item" type="EtcItem">
 		<!-- Resets the cooldown to Ancient Kartia's Labyrinth. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. Deleted after event. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="28300" name="Transcendent Eternal Tunic" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
+	<item id="28300" name="Transcendent Eternal Tunic" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
 		<!-- Enhanced Eternal armor. Decreases Damage Received by 8%. Increases P. Atk. by 1.5% and M. Atk. by 3%. When enchanted to +4, increases M. Evasion and M. Debuff Resistance, decreases received P. Critical Damage and the chance of receiving P. Critical Attack. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -27,7 +27,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="28301" name="Transcendent Eternal Stockings" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
+	<item id="28301" name="Transcendent Eternal Stockings" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
 		<!-- Enhanced Eternal armor. Decreases Damage Received by 5%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -50,7 +50,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="28302" name="Transcendent Eternal Gloves" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
+	<item id="28302" name="Transcendent Eternal Gloves" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
 		<!-- Enhanced Eternal armor. Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -70,7 +70,7 @@
 			<stat type="pDef">125</stat>
 		</stats>
 	</item>
-	<item id="28303" name="Transcendent Eternal Shoes" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
+	<item id="28303" name="Transcendent Eternal Shoes" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
 		<!-- Enhanced Eternal armor. Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. Aeore Healers only. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -546,7 +546,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="28357" name="Special Treasure Chest" type="EtcItem">
+	<item id="28357" name="Exclusive Treasure Chest" type="EtcItem">
 		<!-- Exclusive treasure chest. Double-click to receive a random item. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -570,7 +570,7 @@
 			<stat type="mDef">101</stat>
 		</stats>
 	</item>
-	<item id="28359" name="La Vie En Rose's Gemstone Powder" type="EtcItem">
+	<item id="28359" name="La Vie En Rose's Jewel Powder" type="EtcItem">
 		<!-- La Vie En Rose's refined jewel powder. Go find Shadai to use it when exchanging for various jewels. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_powder_jewel" />
 		<set name="is_sellable" val="false" />
@@ -903,7 +903,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="28392" name="Heine Exclusive Bait (99-)" type="EtcItem">
+	<item id="28392" name="Heine Exclusive Bait (99+)" type="EtcItem">
 		<!-- Bait is used to obtain a Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 95 or above. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />

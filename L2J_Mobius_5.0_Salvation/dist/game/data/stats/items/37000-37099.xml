@@ -100,7 +100,7 @@
 			<item id="3887" min="1" max="1" chance="20" /> <!-- Letter - T - Event -->
 		</capsuled_items>
 	</item>
-	<item id="37006" name="Letter Collector's Pouch: RIIS" type="EtcItem">
+	<item id="37006" name="Letter Collector's Pouch: HIIS" type="EtcItem">
 		<!-- Magic pouch that contains the letters of RIIS. Double-click to get one of the following letters: H, II and S. -->
 		<set name="icon" val="icon.etc_crystal_spice_s_i00" />
 		<set name="weight" val="10" />
@@ -823,7 +823,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37050" name="Tegaffe's Dualsword" type="Weapon">
+	<item id="37050" name="Tegaffe's Dual Sword" type="Weapon">
 		<!-- Monster Weapon. dual sword style. Initial Monster Weapon Appearance Stone. -->
 		<set name="icon" val="icon.Summon_orc_dual_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1305,7 +1305,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37070" name="Monster Weapon Appearance Stone: Tegaffe's Dualsword" type="EtcItem">
+	<item id="37070" name="Monster Weapon Appearance Stone: Tegaffe's Dual Sword" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of Tegaffe's dual sword. An appearance-modified item has no change in abilities. Double click to use. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />

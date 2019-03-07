@@ -145,7 +145,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="40214" name="Blessed Antharas' Earring Pack" additionalName="7-day" type="EtcItem">
+	<item id="40214" name="Blessed Antharas' Earring  Pack" additionalName="7-day" type="EtcItem">
 		<!-- Double-click to obtain a Blessed Antharas Earring (7-day). -->
 		<set name="icon" val="icon.etc_box_of_adventure_5_i00" />
 		<set name="is_stackable" val="true" />
@@ -1240,7 +1240,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="40291" name="Steel Demon's Staff" additionalName="Magic Chaos" type="Weapon">
+	<item id="40291" name="Steel Demon's Staff - Magic Chaos" type="Weapon">
 		<!-- <Special Option>. Has a 7% chance of inflicting Curse Chaos on target when using a magical skill on them. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_demons_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1266,7 +1266,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40292" name="Steel Spirit's Staff" additionalName="Magic Mental Shield" type="Weapon">
+	<item id="40292" name="Steel Spirit's Staff - Magic Mental Shield" type="Weapon">
 		<!-- <Special Option>. Has a 50% chance of inflicting Mental Shield on target when using a magical skill on them. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sprites_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1292,7 +1292,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40293" name="Steel Dasparion's Staff" additionalName="Acumen" type="Weapon">
+	<item id="40293" name="Steel Dasparion's Staff - Acumen" type="Weapon">
 		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dasparions_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1318,7 +1318,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40294" name="Steel Imperial Staff" additionalName="Empower" type="Weapon">
+	<item id="40294" name="Steel Imperial Staff - Empower" type="Weapon">
 		<!-- <Special Option>. M. Atk. + 60. PvP damage increased. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_imperial_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1344,7 +1344,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="40295" name="Steel Dynasty Staff" additionalName="Acumen" type="Weapon">
+	<item id="40295" name="Steel Dynasty Staff - Acumen" type="Weapon">
 		<!-- <Special Option>. Casting Spd. + 15%. PvP damage increased. Cannot augment or bestow a Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_dynasty_twohand_staff_i01" />
 		<set name="default_action" val="EQUIP" />

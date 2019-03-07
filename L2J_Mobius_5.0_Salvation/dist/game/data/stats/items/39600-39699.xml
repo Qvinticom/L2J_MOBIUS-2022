@@ -317,7 +317,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="39611" name="Dimensional Antharas Dualsword" type="Weapon">
+	<item id="39611" name="Dimensional Antharas Dual Sword" type="Weapon">
 		<!-- Top-grade Dragon Weapon. <Passive Skill>. PvP Damage +30%, HP/ MP +100%, CP +200%, Atk. Spd. +1500, P. Critical Rate +500, Damage against dragons +300%. <Active Skill>. 1. Protection: For 2 min., Speed +100, invincible to debuffs. Consumes 1 unit of Dragon Blood. Cooldown is 10 min. 2. Antharas' Breath: Decreases nearby enemies' Atk./ Casting Spd. and Speed by 90% and slowly paralyzes them for 10 sec. Consumes 1 unit of Dragon Blood. Cooldown is 5 min. 3. Antharas' Tail Blow: Destroys nearby enemies' CP. Cooldown is 5 min. Cannot be used in the Olympiad or Ceremony of Chaos. Cannot be modified, crystallized, enchanted, or assigned an attribute. -->
 		<set name="icon" val="icon.weapon_antaras_dual_sword_i01" />
 		<set name="weapon_type" val="DUAL" />
@@ -1240,13 +1240,13 @@
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="39670" name="Devil Circlet" additionalName="LUC" type="Armor">
+	<item id="39670" name="Demon Circlet" additionalName="LUC" type="Armor">
 		<!-- LUC +3 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="39671" name="Devil Circlet" additionalName="CHA" type="Armor">
+	<item id="39671" name="Demon Circlet" additionalName="CHA" type="Armor">
 		<!-- CHA +3 when equipped. -->
 		<set name="icon" val="icon.Accessary_demon_circlet_i00" />
 		<set name="default_action" val="EQUIP" />

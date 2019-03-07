@@ -517,7 +517,7 @@
 			<skill id="18618" level="10" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47244" name="Ramona's Fancy Earrings" type="Armor">
+	<item id="47244" name="Ramona's Fancy Earring" type="Armor">
 		<!-- Take it to Rafforty to exchange for the Source of the Emperor. MP +64, Additional Damage to the Giants +5%, Vampiric Rage +5%. Effect does not stack with identical ones. Enchantment, Augment, Crystallization not possible -->
 		<set name="icon" val="icon.glossy_earing_of_ramona" />
 		<set name="default_action" val="EQUIP" />
@@ -536,7 +536,7 @@
 			<stat type="maxMp">64</stat>
 		</stats>
 	</item>
-	<item id="47245" name="Helios' Majestic Earrings" type="Armor">
+	<item id="47245" name="Helios' Majestic Earring" type="Armor">
 		<!-- Take it to Rafforty to exchange for the Source of the Emperor. MP +64, Additional Damage to the Giants +5%, Vampiric Rage +5%. Effect does not stack with identical ones. Enchantment, Augment, Crystallization not possible -->
 		<set name="icon" val="icon.grand_earing_of_helios" />
 		<set name="default_action" val="EQUIP" />
@@ -619,7 +619,7 @@
 		<set name="weight" val="30" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47250" name="Giant Crystal" type="EtcItem">
+	<item id="47250" name="Giant Power Crystal" type="EtcItem">
 		<!-- A crystal with the power of the Giants. Use to neutralize the effects of the Superion Barrier and the Helios Barrier. -->
 		<set name="icon" val="icon.etc_freezing_core_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

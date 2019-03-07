@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="34600" name="Player Commendation - Transformation Scroll: Rose (F)" additionalName="PC-exclusive" type="EtcItem">
+	<item id="34600" name="PA - Transformation Scroll: Rose (F)" additionalName="PA exclusive" type="EtcItem">
 		<!-- Inflicts magic-type attack. Transforms into a Rose (F) for 10 min. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="is_clan_depositable" val="false" />
@@ -18,7 +18,7 @@
 			<skill id="9324" level="1" /> <!-- Player Commendation - Transform Rose (Female) -->
 		</skills>
 	</item>
-	<item id="34601" name="Player Commendation - Transformation Scroll: Rose (M)" additionalName="PC-exclusive" type="EtcItem">
+	<item id="34601" name="PA - Transformation Scroll: Rose (M)" additionalName="PA exclusive" type="EtcItem">
 		<!-- Inflicts warrior-type attack. Transforms into a Rose (M) for 10 min. -->
 		<set name="icon" val="icon.etc_trans_4f_s_b_01" />
 		<set name="is_clan_depositable" val="false" />
@@ -36,7 +36,7 @@
 			<skill id="9323" level="1" /> <!-- Player Commendation - Transform Rose (Male) -->
 		</skills>
 	</item>
-	<item id="34602" name="Player Commendation - Quick Healing Potion" additionalName="PC-exclusive" type="EtcItem">
+	<item id="34602" name="PA - Quick Healing Potion" additionalName="PA exclusive" type="EtcItem">
 		<!-- Magic potion that instantly restores HP. Cannot be used when HP is full. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />
@@ -258,7 +258,7 @@
 			<skill id="9306" level="1" /> <!-- Player Commendation - Blessed Spiritshot (R-grade) -->
 		</skills>
 	</item>
-	<item id="34617" name="Player Commendation - Agathion's Gift" additionalName="PC-exclusive" type="EtcItem">
+	<item id="34617" name="PA - Agathion's Gift" additionalName="PA exclusive" type="EtcItem">
 		<!-- When used, you can receive an Agathion's gift. -->
 		<set name="icon" val="icon.present_of_destination_event" />
 		<set name="weight" val="20" />
@@ -276,7 +276,7 @@
 			<skill id="9318" level="1" /> <!-- Open PC Points Coupon -->
 		</skills>
 	</item>
-	<item id="34618" name="Player Commendation - Enhanced Cocktail" additionalName="PC-exclusive" type="EtcItem">
+	<item id="34618" name="PA - Enhanced Cocktail" additionalName="PA exclusive" type="EtcItem">
 		<!-- Cocktail that contains the flavors of many rare fruits. When consumed, you will feel the effects of Horn Melody, Pipe Organ Melody, Guitar Melody, and Drum Melody. -->
 		<set name="icon" val="icon.etc_fruit_cocktail_i02" />
 		<set name="weight" val="2" />
@@ -302,7 +302,7 @@
 			<skill id="9331" level="1" /> <!-- Horn Melody - Enhanced Cocktail -->
 		</skills>
 	</item>
-	<item id="34619" name="Player Commendation Points Coupon" additionalName="PC-exclusive" type="EtcItem">
+	<item id="34619" name="PA Points Coupon" additionalName="PA exclusive" type="EtcItem">
 		<!-- Click on the item to acquire PA Points. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="weight" val="120" />
@@ -348,7 +348,7 @@
 			<skill id="9280" level="1" /> <!-- Horn Melody - Heavenly Cocktail -->
 		</skills>
 	</item>
-	<item id="34621" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance (Passive)" type="Armor">
+	<item id="34621" name="Talisman (R-grade) - Half-kill/ Lethal Strike Resistance (Passive)" type="Armor">
 		<!-- Increases resistance to half-kill and lethal strike when equipped. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -368,7 +368,7 @@
 			<skill id="13368" level="1" /> <!-- Talisman (R-grade) - Half-kill/Lethal Strike Resistance -->
 		</skills>
 	</item>
-	<item id="34622" name="Talisman (R-grade) - Half-kill/Lethal Strike Resistance (Active)" type="Armor">
+	<item id="34622" name="Talisman (R-grade) - Half-kill/ Lethal Strike Resistance (Active)" type="Armor">
 		<!-- Increases resistance to half-kill and lethal strike when used. Shadow weapon. -->
 		<set name="icon" val="icon.r85_talisman_md_up_passive" />
 		<set name="default_action" val="EQUIP" />

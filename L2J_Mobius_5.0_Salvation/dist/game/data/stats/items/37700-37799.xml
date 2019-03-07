@@ -431,7 +431,7 @@
 			<item id="37710" min="1" max="1" chance="5" /> <!-- Coco's Transformation Cookie -->
 		</capsuled_items>
 	</item>
-	<item id="37723" name="Shiny Elemental Shirt Exchange Stone" type="EtcItem">
+	<item id="37723" name="Shirt Exchange Stone" type="EtcItem">
 		<!-- Bring this to the Fantasy Isle Paddy to exchange your +8 shirt for the same shirt but enchanted to +10. Note: the shirt cannot be traded after exchange. -->
 		<set name="icon" val="icon.shirt_stone" />
 		<set name="is_dropable" val="false" />
@@ -457,7 +457,7 @@
 		<set name="icon" val="icon.accessory_mining_cap_i00" />
 		<set name="default_action" val="EQUIP" />
 	</item>
-	<item id="37727" name="Dandy's Gift Box" type="EtcItem">
+	<item id="37727" name="Toy Knight's Gift Box" type="EtcItem">
 		<!-- Double click to acquire a 7-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Blessed Zaken's Earring, and Ruler's Authority Belt. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -867,7 +867,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
 	</item>
-	<item id="37757" name="Certificate: 50 Olympiad Matches" type="EtcItem">
+	<item id="37757" name="Olympiad Match 50 Participation Certificate" type="EtcItem">
 		<!-- Document that proves participation in the Olympiad Match 50. Take this document to the Olympiad Manager to receive a whole reward. -->
 		<set name="icon" val="icon.mercenary_certification_i02" />
 		<set name="is_clan_depositable" val="false" />

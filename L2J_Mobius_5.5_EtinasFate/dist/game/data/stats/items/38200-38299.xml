@@ -36,7 +36,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="38204" name="Sea Horse Appearance Stone: Two-handed Magic Blunt Weapon" type="EtcItem">
+	<item id="38204" name="Sea Horse Appearance Stone: Two-handed Staff" type="EtcItem">
 		<!-- Changes the appearance of a two-handed staff to that of a Sea Horse. -->
 		<set name="icon" val="icon.shape_shifting_magic_twohand_blunt_i00" />
 		<set name="is_stackable" val="true" />
@@ -91,7 +91,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="38210" name="Blue Mackerel Appearance Stone: Dualsword" type="EtcItem">
+	<item id="38210" name="Blue Mackerel Appearance Stone: Dual Sword" type="EtcItem">
 		<!-- Turns the appearance of a dual sword into that of a Blue Mackerel. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
@@ -210,7 +210,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="38215" name="Sea Horse: Two-handed Magic Blunt Weapon" type="Weapon">
+	<item id="38215" name="Sea Horse: Two-handed Staff" type="Weapon">
 		<!-- Sea Horse-shaped weapon. Two-handed staff type. Base appearance of Sea Horse Weapon Appearance Stone. -->
 		<set name="icon" val="icon.wp_fishing5" />
 		<set name="default_action" val="EQUIP" />
@@ -356,7 +356,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="38221" name="Blue Mackerel: Dualsword" type="Weapon">
+	<item id="38221" name="Blue Mackerel: Dual Sword" type="Weapon">
 		<!-- Blue Mackerel-shaped weapon. Dual Sword. -->
 		<set name="icon" val="icon.wp_fishing11" />
 		<set name="default_action" val="EQUIP" />
@@ -382,7 +382,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="38222" name="Fish Stew" additionalName="WIT" type="EtcItem">
+	<item id="38222" name="Rotten Fish Stew" type="EtcItem">
 		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. Will be deleted after the event. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -398,7 +398,7 @@
 			<skill id="17387" level="1" /> <!-- Fish Stew: WIT -->
 		</skills>
 	</item>
-	<item id="38223" name="Fish Stew" additionalName="INT" type="EtcItem">
+	<item id="38223" name="Rotten Fish Stew" type="EtcItem">
 		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. Will be deleted after the event. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -414,7 +414,7 @@
 			<skill id="17388" level="1" /> <!-- Fish Stew: INT -->
 		</skills>
 	</item>
-	<item id="38224" name="Fish Stew" additionalName="MEN" type="EtcItem">
+	<item id="38224" name="Rotten Fish Stew" type="EtcItem">
 		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. Will be deleted after the event. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -430,7 +430,7 @@
 			<skill id="17389" level="1" /> <!-- Fish Stew: MEN -->
 		</skills>
 	</item>
-	<item id="38225" name="Fish Stew" additionalName="DEX" type="EtcItem">
+	<item id="38225" name="Rotten Fish Stew" type="EtcItem">
 		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. Will be deleted after the event. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -446,7 +446,7 @@
 			<skill id="17390" level="1" /> <!-- Fish Stew: DEX -->
 		</skills>
 	</item>
-	<item id="38226" name="Fish Stew" additionalName="STR" type="EtcItem">
+	<item id="38226" name="Rotten Fish Stew" type="EtcItem">
 		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. Will be deleted after the event. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -462,7 +462,7 @@
 			<skill id="17391" level="1" /> <!-- Fish Stew: STR -->
 		</skills>
 	</item>
-	<item id="38227" name="Fish Stew" additionalName="CON" type="EtcItem">
+	<item id="38227" name="Rotten Fish Stew" type="EtcItem">
 		<!-- Rotten Fish Stew. It no longer grants any effects. Take it to a Fishing Guild Member in each town to exchange it for fish. Will be deleted after the event. -->
 		<set name="icon" val="icon.fish_stew_buff" />
 		<set name="default_action" val="SKILL_REDUCE" />

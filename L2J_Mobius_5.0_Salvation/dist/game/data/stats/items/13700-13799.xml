@@ -458,7 +458,7 @@
 		<set name="handler" val="Recipes" />
 		<set name="recipe_id" val="924" /> <!-- mk_star_stone_high_hp_potion -->
 	</item>
-	<item id="13723" name="Design: High-quality MP Recovery Stone" type="EtcItem">
+	<item id="13723" name="Design: High-quality MP Recovery Bonus Stone" type="EtcItem">
 		<set name="icon" val="icon.scroll_of_verification_i01" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -471,7 +471,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="13724" name="Design: High-quality HP MP Recovery Stone" type="EtcItem">
+	<item id="13724" name="Design: High-quality HP MP Recovery Bonus Stone" type="EtcItem">
 		<set name="icon" val="icon.scroll_of_verification_i02" />
 		<set name="default_action" val="RECIPE" />
 		<set name="etcitem_type" val="RECIPE" />
@@ -972,7 +972,7 @@
 			<skill id="2592" level="1" /> <!-- Quick Healing Potion -->
 		</skills>
 	</item>
-	<item id="13751" name="Warrior's T-shirt" type="Armor">
+	<item id="13751" name="Warrior's Shirt" type="Armor">
 		<!-- Olympiad Warrior's Shirt. Bestows an option that increases Max CP by 672 when enchanted by 4 or more. -->
 		<set name="icon" val="icon.etc_shirts_a_i04" />
 		<set name="default_action" val="EQUIP" />

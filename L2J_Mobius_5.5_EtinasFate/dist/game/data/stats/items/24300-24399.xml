@@ -718,7 +718,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="24351" name="Talisman - Hunter" additionalName="Abundance / 3-day" type="Armor">
+	<item id="24351" name="Talisman - Hunter" additionalName="Abundance/ 3-day" type="Armor">
 		<!-- P. Atk. +231, M. Atk. +271, P./ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +13%, P./ M. Critical Rate +13%. Received Critical Damage -15%, Received Skill Damage during PVP -15%. Extra defense against skill damage in PvP. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -739,7 +739,7 @@
 			<skill id="21373" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Hunter -->
 		</skills>
 	</item>
-	<item id="24352" name="Talisman - Slaughterer" additionalName="Abundance / 3-day" type="Armor">
+	<item id="24352" name="Talisman - Slaughterer" additionalName="Abundance/ 3-day" type="Armor">
 		<!-- P. Atk. +231, M. Atk. +271, P./ M. Evasion +7, Attribute Resistance +15, Debuff Resistance +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Bonus +7. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -760,7 +760,7 @@
 			<skill id="21374" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Slaughterer -->
 		</skills>
 	</item>
-	<item id="24353" name="Talisman - Conquerer" additionalName="Abundance / 3-day" type="Armor">
+	<item id="24353" name="Talisman - Conquerer" additionalName="Abundance/ 3-day" type="Armor">
 		<!-- P. Atk. +231, M. Atk. +271, P./ M. Evasion +7, P./ M. Critical Rate +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Bonus +7. Received Critical Damage -15%, Received Skill Damage during PVP -15%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -781,7 +781,7 @@
 			<skill id="21375" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Conquerer -->
 		</skills>
 	</item>
-	<item id="24354" name="Talisman - Outlaw" additionalName="Abundance / 3-day" type="Armor">
+	<item id="24354" name="Talisman - Outlaw" additionalName="Abundance/ 3-day" type="Armor">
 		<!-- Attribute Resistance +15, Debuff Resistance +13%, P./ M. Critical Rate +13%, Max HP/ MP/ CP +490, HP/ MP/ CP Recovery Bonus +7. Received Critical Damage -15%, Received Skill Damage during PVP -15%. Note: Effect for the Talisman of Abundance does not stack even when 2 or more are equipped. -->
 		<set name="icon" val="BranchSys2.icon.g_twilight_gem" />
 		<set name="default_action" val="EQUIP" />
@@ -802,7 +802,7 @@
 			<skill id="21376" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Outlaw -->
 		</skills>
 	</item>
-	<item id="24355" name="Premium Account: Art of Seduction" type="EtcItem">
+	<item id="24355" name="PA - Art of Seduction" type="EtcItem">
 		<!-- For 30 min., Max HP/ MP/ CP +30%, P./ M. Def. +30%, P. Atk. +10%, M. Atk. +20%. Effect disappears if active while receiving Art of Seduction. Cannot be exchanged, dropped, or used in the Olympiad. Can be used in the Ceremony of Chaos. Can be stored in the private warehouse. -->
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -824,7 +824,7 @@
 			<skill id="17290" level="1" /> <!-- Art of Seduction -->
 		</skills>
 	</item>
-	<item id="24356" name="Draco's Hat: Wizard" additionalName="7-day" type="Armor">
+	<item id="24356" name="Draco's Hat: Warrior" additionalName="7-day" type="Armor">
 		<!-- Cute Draco Hat. 7-day. STR/ DEX/ CON +2. Can use Blessed Resurrection. Cooldown is 1 hr. Cannot be used in the Olympiad. Can be destroyed and sold in a private warehouse. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -846,7 +846,7 @@
 			<skill id="9526" level="1" /> <!-- Draco's Wizard Hat - Blessed Resurrection -->
 		</skills>
 	</item>
-	<item id="24357" name="Draco's Hat: Warrior" additionalName="7-day" type="Armor">
+	<item id="24357" name="Draco's Hat: Wizard" additionalName="7-day" type="Armor">
 		<!-- Cute Draco Hat. 7-day. INT/ WIT/ MEN +2. Can use Blessed Resurrection. Cooldown is 1 hr. Cannot be used in the Olympiad. Can be destroyed and sold in a private warehouse. -->
 		<set name="icon" val="icon.etc_ev_draco_hair_acc" />
 		<set name="default_action" val="EQUIP" />
@@ -868,7 +868,7 @@
 			<skill id="9525" level="1" /> <!-- Draco's Warrior Hat - Blessed Resurrection -->
 		</skills>
 	</item>
-	<item id="24358" name="Premium Account: Quick Healing Potion" type="EtcItem">
+	<item id="24358" name="PA - Quick Healing Potion" type="EtcItem">
 		<!-- Rerstores 1250 HP, and remaining power restores CP. No cooldown. Cannot be exchanged, dropped, sold, used in the Olympiad, or used in the Ceremony of Chaos. Can be stored in the private warehouse. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="20" />
@@ -1006,14 +1006,14 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="24366" name="Luck Box 1" additionalName="Gemini" type="EtcItem">
+	<item id="24366" name="Wondrous Casket" additionalName="Gemini" type="EtcItem">
 		<!-- Has a chance of obtaining either a Sealed Talisman - Longing, Immortal Scroll, Talisman - Abundance, Elycum, Energy of Destruction 20-unit Pack, Giant's Energy, Top-grade Augmentation Pack (R95-grade), Top-grade Augmentation Pack (R99-grade), or Agathion - Gemini. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="24367" name="Luck Box 2" additionalName="Cancer" type="EtcItem">
+	<item id="24367" name="Vintage Casket" additionalName="Cancer" type="EtcItem">
 		<!-- Has a chance of obtaining either a Sealed Talisman - Longing, Immortal Scroll, Talisman - Abundance, Elycum, Energy of Destruction 20-unit Pack, Giant's Energy, Top-grade Augmentation Pack (R95-grade), Top-grade Augmentation Pack (R99-grade), or Agathion - Cancer. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />

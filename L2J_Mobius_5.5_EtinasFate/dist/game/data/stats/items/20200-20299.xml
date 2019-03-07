@@ -1340,7 +1340,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="20257" name="Baguette Dualsword" additionalName="7-day" type="Weapon">
+	<item id="20257" name="Baguette Great Two-handed Sword" additionalName="7-day" type="Weapon">
 		<!-- A two-handed sword made of bread. Contains the passion of Baguette. -->
 		<set name="icon" val="BranchSys.icon.br_2h_sword_bread_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1799,7 +1799,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="20270" name="Baguette's Dualsword" additionalName="7-day" type="Weapon">
+	<item id="20270" name="Baguette Dual Sword" additionalName="7-day" type="Weapon">
 		<!-- A dual sword that contains the great power of Baguette. -->
 		<set name="icon" val="BranchSys.icon.br_dual_bread_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -2125,7 +2125,7 @@
 			<item id="20301" min="1" max="1" chance="100" /> <!-- Agathion - Great Sumo Match -->
 		</capsuled_items>
 	</item>
-	<item id="20285" name="Agathion - Great Sumo Match Pack (7-day)" additionalName="Big Head / Firework" type="EtcItem">
+	<item id="20285" name="Agathion - Great Sumo Match Pack (7-day)" additionalName="Big Head/ Firework" type="EtcItem">
 		<!-- Double-click to obtain an Agathion - Great Sumo Match (7-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />

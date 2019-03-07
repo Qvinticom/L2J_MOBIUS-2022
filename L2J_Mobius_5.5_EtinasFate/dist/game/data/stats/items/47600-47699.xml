@@ -243,7 +243,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47625" name="Eli T-shirt" type="Armor">
+	<item id="47625" name="Eli Shirt" type="Armor">
 		<!-- Red Libra-only Item. A shirt widely used in Elysium. However, cannot increase power in Aden. <Item Skill>. Magic Defense Increased by 18. Movement Speed increased by 7. Max HP increased by 552. Max MP increased by 552. Skill MP Consumption reduced by 3%. Damage Reflect Resistance increased by 5. Vampiric Rage increased by 5%. Skill Cooldown reduced by 3%. Damage Received reduced by 3%. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance increased by 36. STR+4, DEX+4, CON+4, INT+4, WIT+4, MEN+4. <Active Skill>. Einhasad's Wrath/ Einhasad's Protection/ Einhasad's Silence/ Einhasad's Salvation/ Einhasad's Blessing. To be deleted on March 9th, 2016 (Wed) after regular maintenance. -->
 		<set name="icon" val="icon.ainhasard_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -514,7 +514,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47656" name="Protector's Guardian Earrings" additionalName="30-day" type="Armor">
+	<item id="47656" name="Warrior's Earring" additionalName="30-day" type="Armor">
 		<!-- Earring bought using Mark of Battle. Max MP +49, Max CP +10%, P./ M. Def. +3%, Stun/ Mental Resistance and Stun/ Mental Success Rate +30%, Vampiric Rage +4%. These effects do not stack with identical earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -688,7 +688,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47671" name="PC Points Coupon (180)" type="EtcItem">
+	<item id="47671" name="PA Points Coupon (180)" type="EtcItem">
 		<!-- When double clicked, 180 PA Points can be acquired. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

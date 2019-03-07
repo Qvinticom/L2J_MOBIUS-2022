@@ -809,7 +809,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47172" name="Basic Supply Box" additionalName="Blackbird Clan" type="EtcItem">
+	<item id="47172" name="Blackbird Clan Basic Supply Box" additionalName="Hellbound" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Blackbird Clan with their mission in the Beleth's Magic Circle area. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -825,7 +825,7 @@
 			<skill id="18599" level="1" /> <!-- Basic Supply Box -->
 		</skills>
 	</item>
-	<item id="47173" name="Intermediate Supply Box" additionalName="Blackbird Clan" type="EtcItem">
+	<item id="47173" name="Blackbird Clan Intermediate Supply Box" additionalName="Hellbound" type="EtcItem">
 		<!-- An intermediate supply box received in exchange for helping the Blackbird Clan with their mission in the Beleth's Magic Circle area. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -841,7 +841,7 @@
 			<skill id="18599" level="2" /> <!-- Intermediate Supply Box -->
 		</skills>
 	</item>
-	<item id="47174" name="Advanced Supply Box" additionalName="Blackbird Clan" type="EtcItem">
+	<item id="47174" name="Blackbird Clan Advanced Supply Box" additionalName="Hellbound" type="EtcItem">
 		<!-- An advanced supply box received in exchange for helping the Blackbird Clan with their mission in the Beleth's Magic Circle area. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -857,7 +857,7 @@
 			<skill id="18599" level="3" /> <!-- Advanced Supply Box -->
 		</skills>
 	</item>
-	<item id="47175" name="Basic Supply Box" additionalName="Kingdom's Royal Guard" type="EtcItem">
+	<item id="47175" name="Kingdom's Royal Guard Basic Supply Box" additionalName="Atelia Fortress" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Kingdom's Royal Guard with their mission at Atelia Fortress. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -873,7 +873,7 @@
 			<skill id="18600" level="1" /> <!-- Basic Supply Box -->
 		</skills>
 	</item>
-	<item id="47176" name="Intermediate Supply Box" additionalName="Kingdom's Royal Guard" type="EtcItem">
+	<item id="47176" name="Kingdom's Royal Guard Intermediate Supply Box" additionalName="Atelia Fortress" type="EtcItem">
 		<!-- An intermediate supply box received in exchange for helping the Kingdom's Royal Guard with their mission at Atelia Fortress. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -889,7 +889,7 @@
 			<skill id="18600" level="2" /> <!-- Intermediate Supply Box -->
 		</skills>
 	</item>
-	<item id="47177" name="Advanced Supply Box" additionalName="Kingdom's Royal Guard" type="EtcItem">
+	<item id="47177" name="Kingdom's Royal Guard Advanced Supply Box" additionalName="Atelia Fortress" type="EtcItem">
 		<!-- An advanced supply box received in exchange for helping the Kingdom's Royal Guard with their mission at Atelia Fortress. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -905,7 +905,7 @@
 			<skill id="18600" level="3" /> <!-- Advanced Supply Box -->
 		</skills>
 	</item>
-	<item id="47178" name="Basic Supply Box" additionalName="Mother Tree Guardians" type="EtcItem">
+	<item id="47178" name="Mother Tree Guardians Basic Treasure Chest" additionalName="Enchanted Valley" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Mother Tree Guardians with their mission at Enchanted Valley. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -921,7 +921,7 @@
 			<skill id="18601" level="1" /> <!-- Basic Supply Box -->
 		</skills>
 	</item>
-	<item id="47179" name="Intermediate Supply Box" additionalName="Mother Tree Guardians" type="EtcItem">
+	<item id="47179" name="Mother Tree Guardians Intermediate Treasure Chest" additionalName="Enchanted Valley" type="EtcItem">
 		<!-- An intermediate supply box received in exchange for helping the Mother Tree Guardians with their mission at Enchanted Valley. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -937,7 +937,7 @@
 			<skill id="18601" level="2" /> <!-- Intermediate Supply Box -->
 		</skills>
 	</item>
-	<item id="47180" name="Advanced Supply Box" additionalName="Mother Tree Guardians" type="EtcItem">
+	<item id="47180" name="Mother Tree Guardians Advanced Treasure Chest" additionalName="Enchanted Valley" type="EtcItem">
 		<!-- An advanced supply box received in exchange for helping the Mother Tree Guardians with their mission at Enchanted Valley. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -953,7 +953,7 @@
 			<skill id="18601" level="3" /> <!-- Advanced Supply Box -->
 		</skills>
 	</item>
-	<item id="47181" name="Basic Supply Box" additionalName="Unworldly Visitors" type="EtcItem">
+	<item id="47181" name="Unworldly Visitors Basic Supply Box" additionalName="Garden of Spirits" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Unworldly Visitors with their mission at Garden of Spirits. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -969,7 +969,7 @@
 			<skill id="18602" level="1" /> <!-- Basic Supply Box -->
 		</skills>
 	</item>
-	<item id="47182" name="Intermediate Supply Box" additionalName="Unworldly Visitors" type="EtcItem">
+	<item id="47182" name="Unworldly Visitors Intermediate Supply Box" additionalName="Garden of Spirits" type="EtcItem">
 		<!-- An intermediate supply box received in exchange for helping the Unworldly Visitors with their mission at Garden of Spirits. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -985,7 +985,7 @@
 			<skill id="18602" level="2" /> <!-- Intermediate Supply Box -->
 		</skills>
 	</item>
-	<item id="47183" name="Advanced Supply Box" additionalName="Unworldly Visitors" type="EtcItem">
+	<item id="47183" name="Unworldly Visitors Advanced Supply Box" additionalName="Garden of Spirits" type="EtcItem">
 		<!-- An advanced supply box received in exchange for helping the Unworldly Visitors with their mission at Garden of Spirits. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1001,7 +1001,7 @@
 			<skill id="18602" level="3" /> <!-- Advanced Supply Box -->
 		</skills>
 	</item>
-	<item id="47184" name="Basic Supply Box" additionalName="Giant Trackers" type="EtcItem">
+	<item id="47184" name="Giant Trackers Basic Treasure Chest" additionalName="Giant's Cave" type="EtcItem">
 		<!-- A basic supply box received in exchange for helping the Giant Trackers with their mission at the upper level of the Giant's Cave. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_bronze" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1017,7 +1017,7 @@
 			<skill id="18603" level="1" /> <!-- Basic Supply Box (lower level) -->
 		</skills>
 	</item>
-	<item id="47185" name="Intermediate Supply Box" additionalName="Giant Trackers" type="EtcItem">
+	<item id="47185" name="Giant Trackers Intermediate Treasure Chest" additionalName="Giant's Cave" type="EtcItem">
 		<!-- An intermediate supply box received in exchange for helping the Giant Trackers with their mission in the upper level of the Giant's Cave. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_silver" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1033,7 +1033,7 @@
 			<skill id="18603" level="2" /> <!-- Intermediate Supply Box (lower level) -->
 		</skills>
 	</item>
-	<item id="47186" name="Advanced Supply Box" additionalName="Giant Trackers" type="EtcItem">
+	<item id="47186" name="Giant Trackers Advanced Treasure Chest" additionalName="Giant's Cave" type="EtcItem">
 		<!-- An advanced supply box received in exchange for helping the Giant Trackers with their mission in the upper level of the Giant's Cave. Double click to view the item. -->
 		<set name="icon" val="icon.etc_readybox_gold" />
 		<set name="default_action" val="SKILL_REDUCE" />

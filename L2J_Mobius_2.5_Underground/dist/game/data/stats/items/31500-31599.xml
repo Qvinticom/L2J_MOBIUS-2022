@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="31500" name="Bound Nirvana Axe" additionalName="Magic Poison" type="Weapon">
+	<item id="31500" name="Bound Nirvana Axe - Magic Poison" type="Weapon">
 		<!-- <Special Option>. Has a 7% chance of casting Curse Poison on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -35,7 +35,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31501" name="Bound Nirvana Axe" additionalName="Magic Weakness" type="Weapon">
+	<item id="31501" name="Bound Nirvana Axe - Magic Weakness" type="Weapon">
 		<!-- <Special Option>. Has a 7% chance of casting Curse Weakness on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_nirvana_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -473,7 +473,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31515" name="Bound Ultimate Sword" additionalName="Guidance" type="Weapon">
+	<item id="31515" name="Bound Ultimate Sword - Guidance" type="Weapon">
 		<!-- <Special Option>. Increases Accuracy by 5. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -507,7 +507,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31516" name="Bound Ultimate Sword" additionalName="Critical Drain" type="Weapon">
+	<item id="31516" name="Bound Ultimate Sword - Critical Drain" type="Weapon">
 		<!-- <Special Option>. Absorbs 9 HP from the target during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -541,7 +541,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31517" name="Bound Ultimate Sword" additionalName="Health" type="Weapon">
+	<item id="31517" name="Bound Ultimate Sword - Health" type="Weapon">
 		<!-- <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_limit_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -610,7 +610,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31519" name="Bound Lacerator" additionalName="Critical Damage" type="Weapon">
+	<item id="31519" name="Bound Lacerator - Critical Damage" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Dark Legion Conversion. <Special Option>. P. Atk. by 326 during a Critical Attack. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -646,7 +646,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31520" name="Bound Lacerator" additionalName="Health" type="Weapon">
+	<item id="31520" name="Bound Lacerator - Health" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Dark Legion Conversion. <Special Option>. Increases Max HP by about 25%. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -682,7 +682,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31521" name="Bound Lacerator" additionalName="Rsk. Focus" type="Weapon">
+	<item id="31521" name="Bound Lacerator - Rsk. Focus" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Dark Legion Conversion. <Special Option>. Increases Critical by 130 when HP drops to 60% or below. Increases damage inflicted during PvP. When enchanted to 4 or more, it Has a chance of increasing P. Atk., M. Atk., and healing power, and decreasing MP consumption for skill use for you and your party members during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -751,7 +751,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31523" name="Bound Great Pata" additionalName="Critical Drain" type="Weapon">
+	<item id="31523" name="Bound Great Pata - Critical Drain" type="Weapon">
 		<!-- <Special Option>. Absorbs 10 HP from the target during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -786,7 +786,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31524" name="Bound Great Pata" additionalName="Critical Poison" type="Weapon">
+	<item id="31524" name="Bound Great Pata - Critical Poison" type="Weapon">
 		<!-- <Special Option>. Has a 14% chance of casting Poison on the target during a standard Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -821,7 +821,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31525" name="Bound Great Pata" additionalName="Rsk. Haste" type="Weapon">
+	<item id="31525" name="Bound Great Pata - Rsk. Haste" type="Weapon">
 		<!-- <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_pata_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -913,7 +913,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31528" name="Bound Great Axe" additionalName="Anger" type="Weapon">
+	<item id="31528" name="Bound Great Axe - Anger" type="Weapon">
 		<!-- Bound Item. <Special Option>. P. Atk. + 28 and decreases Max HP by 15%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -948,7 +948,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31529" name="Bound Great Axe" additionalName="Critical Stun" type="Weapon">
+	<item id="31529" name="Bound Great Axe - Critical Stun" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 27% chance of casting Stun on the target during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -984,7 +984,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="31530" name="Bound Great Axe" additionalName="Light Armor" type="Weapon">
+	<item id="31530" name="Bound Great Axe - Light Armor" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Weight Gauge by 20%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1051,7 +1051,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31532" name="Bound Great Sword" additionalName="Health" type="Weapon">
+	<item id="31532" name="Bound Great Sword - Health" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1085,7 +1085,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31533" name="Bound Great Sword" additionalName="Critical Damage" type="Weapon">
+	<item id="31533" name="Bound Great Sword - Critical Damage" type="Weapon">
 		<!-- Bound Item. <Special Option>. P. Atk. + 247 during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1119,7 +1119,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31534" name="Bound Great Sword" additionalName="Focus" type="Weapon">
+	<item id="31534" name="Bound Great Sword - Focus" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Critical by 68. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_great_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1186,7 +1186,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31536" name="Bound Grace Dagger" additionalName="Evasion" type="Weapon">
+	<item id="31536" name="Bound Grace Dagger - Evasion" type="Weapon">
 		<!-- <Special Option>. Increases Evasion by 2. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_grace_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1221,7 +1221,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31537" name="Bound Grace Dagger" additionalName="Focus" type="Weapon">
+	<item id="31537" name="Bound Grace Dagger - Focus" type="Weapon">
 		<!-- <Special Option>. Increases Critical by 81. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_grace_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1256,7 +1256,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31538" name="Bound Grace Dagger" additionalName="Back Blow" type="Weapon">
+	<item id="31538" name="Bound Grace Dagger - Back Blow" type="Weapon">
 		<!-- <Special Option>. Increases P. Critical Rate by 45% when attacking the target from behind. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_grace_dagger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1360,7 +1360,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31541" name="Bound Gram" additionalName="Haste" type="Weapon">
+	<item id="31541" name="Bound Gram - Haste" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Heaven's Divider Conversion. <Special Option>. Increases Atk. Spd. by 7%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1396,7 +1396,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31542" name="Bound Gram" additionalName="Health" type="Weapon">
+	<item id="31542" name="Bound Gram - Health" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Heaven's Divider Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1432,7 +1432,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31543" name="Bound Gram" additionalName="Focus" type="Weapon">
+	<item id="31543" name="Bound Gram - Focus" type="Weapon">
 		<!-- Bound Item. Kamael-exclusive Weapon: Heaven's Divider Conversion. <Special Option>. Increases Critical by 84. Increases damage inflicted during PvP. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1501,7 +1501,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31545" name="Bound Stick of Eternity" additionalName="Empower" type="Weapon">
+	<item id="31545" name="Bound Stick of Eternity - Empower" type="Weapon">
 		<!-- <Special Option>. M. Atk. + 24. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1536,7 +1536,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31546" name="Bound Stick of Eternity" additionalName="Rsk. Evasion" type="Weapon">
+	<item id="31546" name="Bound Stick of Eternity - Rsk. Evasion" type="Weapon">
 		<!-- <Special Option>. Increases Evasion by 7 when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1571,7 +1571,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31547" name="Bound Stick of Eternity" additionalName="Blessed Body" type="Weapon">
+	<item id="31547" name="Bound Stick of Eternity - Blessed Body" type="Weapon">
 		<!-- <Special Option>. Has a 20% chance of casting Blessed Body on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_stick_of_eternity_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1639,7 +1639,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31549" name="Bound Ghoul's Staff" additionalName="Rsk. Evasion" type="Weapon">
+	<item id="31549" name="Bound Ghoul's Staff - Rsk. Evasion" type="Weapon">
 		<!-- <Special Option>. Increases Evasion by 6 when HP drops to 60% or below. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1674,7 +1674,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31550" name="Bound Ghoul's Staff" additionalName="Mana Up" type="Weapon">
+	<item id="31550" name="Bound Ghoul's Staff - Mana Up" type="Weapon">
 		<!-- <Special Option>. Increases Max MP by 30%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1709,7 +1709,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31551" name="Bound Ghoul's Staff" additionalName="Blessed Body" type="Weapon">
+	<item id="31551" name="Bound Ghoul's Staff - Blessed Body" type="Weapon">
 		<!-- <Special Option>. Has a 20% chance of casting Blessed Body on the target during magic use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_ghouls_staff_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1778,7 +1778,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="31553" name="Bound Noble Elven Bow" additionalName="Evasion" type="Weapon">
+	<item id="31553" name="Bound Noble Elven Bow - Evasion" type="Weapon">
 		<!-- <Special Option>. Increases Evasion by 2. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_noble_elven_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1814,7 +1814,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="31554" name="Bound Noble Elven Bow" additionalName="Miser" type="Weapon">
+	<item id="31554" name="Bound Noble Elven Bow - Miser" type="Weapon">
 		<!-- <Special Option>. Has a 59% chance of reducing the number of soulshots consumed to 7. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_noble_elven_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1848,7 +1848,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="31555" name="Bound Noble Elven Bow" additionalName="Cheap Shot" type="Weapon">
+	<item id="31555" name="Bound Noble Elven Bow - Cheap Shot" type="Weapon">
 		<!-- <Special Option>. Has a 47% chance of decreasing MP consumption to 1 during a standard attack. -->
 		<set name="icon" val="icon.weapon_noble_elven_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2397,7 +2397,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31576" name="Bound Guardian's Sword" additionalName="Critical Drain" type="Weapon">
+	<item id="31576" name="Bound Guardian's Sword - Critical Drain" type="Weapon">
 		<!-- Bound Item. <Special Option>. Absorbs 8 HP from the target during a Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2431,7 +2431,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31577" name="Bound Guardian's Sword" additionalName="Health" type="Weapon">
+	<item id="31577" name="Bound Guardian's Sword - Health" type="Weapon">
 		<!-- Bound Item. <Special Option>. Increases Max HP by 25%. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2465,7 +2465,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="31578" name="Bound Guardian's Sword" additionalName="Critical Bleed" type="Weapon">
+	<item id="31578" name="Bound Guardian's Sword - Critical Bleed" type="Weapon">
 		<!-- Bound Item. <Special Option>. Has a 24% chance of casting Bleed on the target during a standard Critical Attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_guardians_sword_i01" />
 		<set name="default_action" val="EQUIP" />

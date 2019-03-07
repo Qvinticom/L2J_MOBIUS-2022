@@ -55,7 +55,7 @@
 		<set name="commissionItemType" val="MAJOR_CRAFTING_INGREDIENTS" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="6705" name="Sealed Imperial Crusader Shield Part" type="EtcItem">
+	<item id="6705" name="Sealed Imperial Crusader Shield Fragment" type="EtcItem">
 		<!-- Key material for Dwarves to make a Sealed Imperial Crusader Shield. Can be sold in any shop. -->
 		<set name="icon" val="icon.etc_plate_silver_i00" />
 		<set name="etcitem_type" val="MATERIAL" />
@@ -1222,7 +1222,7 @@
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
 	</item>
-	<item id="6779" name="Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
+	<item id="6779" name="Mercenary Posting Ticket (Sword/ Stationary)" type="EtcItem">
 		<!-- Goddard/ Sword/ Stationary -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1233,7 +1233,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6780" name="Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
+	<item id="6780" name="Mercenary Posting Ticket (Spear/ Stationary)" type="EtcItem">
 		<!-- Goddard/ Spear/ Stationary -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1244,7 +1244,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6781" name="Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
+	<item id="6781" name="Mercenary Posting Ticket (Bow/ Stationary)" type="EtcItem">
 		<!-- Goddard/ Bow/ Stationary -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1255,7 +1255,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6782" name="Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
+	<item id="6782" name="Mercenary Posting Ticket (Cleric/ Stationary)" type="EtcItem">
 		<!-- Goddard/ Cleric/ Stationary -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1266,7 +1266,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6783" name="Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
+	<item id="6783" name="Mercenary Posting Ticket (Wizard/ Stationary)" type="EtcItem">
 		<!-- Goddard/ Wizard/ Stationary -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1277,7 +1277,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6784" name="Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
+	<item id="6784" name="Mercenary Posting Ticket (Sword/ Mobile)" type="EtcItem">
 		<!-- Goddard/ Sword/ Mobile -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1288,7 +1288,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6785" name="Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
+	<item id="6785" name="Mercenary Posting Ticket (Spear/ Mobile)" type="EtcItem">
 		<!-- Goddard/ Spear/ Mobile -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1299,7 +1299,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6786" name="Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
+	<item id="6786" name="Mercenary Posting Ticket (Bow/ Mobile)" type="EtcItem">
 		<!-- Goddard/ Bow/ Mobile -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1310,7 +1310,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6787" name="Mercenary Posting Ticket (Cleric/Mobile)" type="EtcItem">
+	<item id="6787" name="Mercenary Posting Ticket (Cleric/ Mobile)" type="EtcItem">
 		<!-- Goddard/ Cleric/ Mobile -->
 		<set name="icon" val="icon.mticket_cleric_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1321,7 +1321,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6788" name="Mercenary Posting Ticket (Wizard/Mobile)" type="EtcItem">
+	<item id="6788" name="Mercenary Posting Ticket (Wizard/ Mobile)" type="EtcItem">
 		<!-- Goddard/ Wizard/ Mobile -->
 		<set name="icon" val="icon.mticket_wizard_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1365,7 +1365,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6792" name="Greater Mercenary Posting Ticket (Sword/Stationary)" type="EtcItem">
+	<item id="6792" name="Greater Mercenary Posting Ticket (Sword/ Stationary)" type="EtcItem">
 		<!-- Goddard/ Sword/ Stationary. -->
 		<set name="icon" val="icon.mticket_sword_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1376,7 +1376,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6793" name="Greater Mercenary Posting Ticket (Spear/Stationary)" type="EtcItem">
+	<item id="6793" name="Greater Mercenary Posting Ticket (Spear/ Stationary)" type="EtcItem">
 		<!-- Goddard/ Spear/ Stationary. -->
 		<set name="icon" val="icon.mticket_pole_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1387,7 +1387,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6794" name="Greater Mercenary Posting Ticket (Bow/Stationary)" type="EtcItem">
+	<item id="6794" name="Greater Mercenary Posting Ticket (Bow/ Stationary)" type="EtcItem">
 		<!-- Goddard/ Bow/ Stationary. -->
 		<set name="icon" val="icon.mticket_bow_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1398,7 +1398,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6795" name="Greater Mercenary Posting Ticket (Cleric/Stationary)" type="EtcItem">
+	<item id="6795" name="Greater Mercenary Posting Ticket (Cleric/ Stationary)" type="EtcItem">
 		<!-- Goddard/ Cleric/ Stationary. -->
 		<set name="icon" val="icon.mticket_cleric_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1409,7 +1409,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6796" name="Greater Mercenary Posting Ticket (Wizard/Stationary)" type="EtcItem">
+	<item id="6796" name="Greater Mercenary Posting Ticket (Wizard/ Stationary)" type="EtcItem">
 		<!-- Goddard/ Wizard/ Stationary. -->
 		<set name="icon" val="icon.mticket_wizard_fix_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1420,7 +1420,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6797" name="Greater Mercenary Posting Ticket (Sword/Mobile)" type="EtcItem">
+	<item id="6797" name="Greater Mercenary Posting Ticket (Sword/ Mobile)" type="EtcItem">
 		<!-- Goddard/ Sword/ Mobile. -->
 		<set name="icon" val="icon.mticket_sword_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1431,7 +1431,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6798" name="Greater Mercenary Posting Ticket (Spear/Mobile)" type="EtcItem">
+	<item id="6798" name="Greater Mercenary Posting Ticket (Spear/ Mobile)" type="EtcItem">
 		<!-- Goddard/ Spear/ Mobile. -->
 		<set name="icon" val="icon.mticket_pole_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />
@@ -1442,7 +1442,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="handler" val="MercTicket" />
 	</item>
-	<item id="6799" name="Greater Mercenary Posting Ticket (Bow/Mobile)" type="EtcItem">
+	<item id="6799" name="Greater Mercenary Posting Ticket (Bow/ Mobile)" type="EtcItem">
 		<!-- Goddard/ Bow/ Mobile. -->
 		<set name="icon" val="icon.mticket_bow_move_i00" />
 		<set name="etcitem_type" val="CASTLE_GUARD" />

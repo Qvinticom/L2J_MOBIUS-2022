@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="18400" name="Special Talisman (R95-grade) - MP Recovery (Passive)" type="Armor">
+	<item id="18400" name="Special Talisman (R95-grade) - MP Recovery Bonus (Passive)" type="Armor">
 		<!-- MP Recovery Bonus amount +0.70 when equipped. -->
 		<set name="icon" val="icon.r85_sp_talisman_mp_rg_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -20,7 +20,7 @@
 			<skill id="8739" level="1" /> <!-- Special Talisman (R95-grade) - MP Recovery -->
 		</skills>
 	</item>
-	<item id="18401" name="Special Talisman (R99-grade) - MP Recovery (Passive)" type="Armor">
+	<item id="18401" name="Special Talisman (R99-grade) - MP Recovery Bonus (Passive)" type="Armor">
 		<!-- MP Recovery Bonus amount +0.72 when equipped. -->
 		<set name="icon" val="icon.r85_sp_talisman_mp_rg_passive" />
 		<set name="default_action" val="EQUIP" />

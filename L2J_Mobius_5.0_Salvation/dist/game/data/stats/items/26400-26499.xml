@@ -28,7 +28,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26404" name="Sealed Shadow Dualsword" type="EtcItem">
+	<item id="26404" name="Sealed Shadow Dual Sword" type="EtcItem">
 		<!-- Double-click to get a Shadow dual sword. Cannot be exchanged or dropped once open. -->
 		<set name="icon" val="icon.weapon_shadow_dual_sword" />
 		<set name="is_sellable" val="false" />
@@ -241,21 +241,21 @@
 		<set name="recipe_id" val="5007" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="26422" name="Luck Box 1" additionalName="Journey's Prelude" type="EtcItem">
+	<item id="26422" name="Wondrous Casket" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Get 1 of the following: Recipe: Talisman - Abundance Lv. 1-4 (High-grade), Hunter/ Slaughterer/ Conqueror/ Outlaw Talisman, Valakas' Necklace, Istina's Necklace, Octavis' Necklace, Antharas' Earring, Istina's Earring, Octavis' Earring, Baium's Ring, Queen Ant's Ring, Istina's Ring, Octavis' Ring, Lilith/ Anakim Talisman, Orfen's Earring, Elcyum Crystal x5, Elcyum x2, Giant's Energy x10, Tempest Stone, Lv. 5 Legendary Dye Pack, Fortune Pocket - Stage 5, Gemstone (R-grade) x30. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26423" name="Luck Box 2" additionalName="Journey's Prelude" type="EtcItem">
+	<item id="26423" name="Vintage Casket" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Get 1 of the following: Seven Signs' Energy, Freya's Lucky Enchant Stone: Armor/ Weapon (R-grade), Windy Lucky Enchant Stone: Armor/ Weapon (R-grade), Blessed Giant's Lucky Enchant Stone: Armor/ Weapon Pack (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Blessed Lucky Enchant Stone: Armor/ Weapon Pack (R-grade), Blessed High-grade Lucky Enchant Stone: Armor/ Weapon (R-grade), Lesser Giant's Lucky Enchant Stone: Armor/ Weapon Pack (R-grade), Bottle of Antharas/ Valakas/ Queen Ant/ Orfen/ Baium's Soul, Blessed Scroll: Enchant Armor/ Weapon (R-grade), High-grade Lucky Enchant Stone: Weapon/ Armor (R-grade), Giant's Scroll: Enchant Armor (R-grade), Scroll: Enchant Weapon Pack (R-grade), Scroll: Enchant Armor (R-grade) x3, Wondrous Casket (Journey's Prelude). -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="26424" name="Luck Box 3" additionalName="Journey's Prelude" type="EtcItem">
+	<item id="26424" name="Shabby Casket" additionalName="Journey's Prelude" type="EtcItem">
 		<!-- Get 1 of the following: Talisman - Annihilation Crafting Pack, Hellfire/ Desire/ Longing/ Insanity Talisman Upgrade Pack, XP Rune III 100% Pack (30-day), Prestige Rune 100% Pack (30-day), Pa'agrio's Warm Breeze (1-hour) Pack, Ghost Potion, Emperor's Growth Scroll x2, Feather of Blessing Pack x3, Letter Collector's Gift x2, Gemstone (R-grade) x10, Heavenly Recovery Potion x30, Life Stone Instilled with Giants' Power, Immortal Scroll, Immortal Scroll - Chapter 1, Elcyum Powder, Wondrous Casket (Journey's Prelude), Vintage Casket (Journey's Prelude). -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
@@ -557,7 +557,7 @@
 			<skill id="27434" level="1" /> <!-- Shadow Retributer +1 ~+9 -->
 		</skills>
 	</item>
-	<item id="26446" name="Shadow Dualsword Box" type="EtcItem">
+	<item id="26446" name="Shadow Dual Sword Box" type="EtcItem">
 		<!-- Double-click to get a +1 ~ +9 Shadow dual sword. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="default_action" val="CAPSULE" />
@@ -1233,7 +1233,7 @@
 			<skill id="18565" level="5"/> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="26491" name="La Vie En Rose's Vital Stone Chest" type="EtcItem">
+	<item id="26491" name="La Vie En Rose's Vital Stone Box" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Vital Stone. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="PEEL" />
@@ -1250,7 +1250,7 @@
 			<item id="26476" min="1" max="1" chance="100" /> <!-- Vital Stone - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="26492" name="La Vie En Rose's Garnet Chest" type="EtcItem">
+	<item id="26492" name="La Vie En Rose's Garnet Box" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Garnet. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="PEEL" />
@@ -1267,7 +1267,7 @@
 			<item id="26481" min="1" max="1" chance="100" /> <!-- Garnet - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="26493" name="La Vie En Rose's Tanzanite Chest" type="EtcItem">
+	<item id="26493" name="La Vie En Rose's Tanzanite Box" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Tanzanite. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="PEEL" />
@@ -1284,7 +1284,7 @@
 			<item id="26486" min="1" max="1" chance="100" /> <!-- Tanzanite - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="26494" name="La Vie En Rose's Radiant Brooch Chest" type="EtcItem">
+	<item id="26494" name="La Vie En Rose's Radiant Brooch Box" type="EtcItem">
 		<!-- Double-click to acquire a La Vie En Rose's Radiant Brooch. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="default_action" val="PEEL" />

@@ -1337,7 +1337,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22661" name="Emerald Weapon: Dualsword" type="Weapon">
+	<item id="22661" name="Emerald Weapon: Dual Sword" type="Weapon">
 		<!-- Emerald Weapon. dual sword form. Basic Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_dual" />
 		<set name="default_action" val="EQUIP" />
@@ -1709,7 +1709,7 @@
 			<skill id="22532" level="1" /> <!-- Emerald Weapon Appearance Stone: Two-handed Magic Blunt -->
 		</skills>
 	</item>
-	<item id="22677" name="Emerald Weapon Appearance Stone: Dualsword" type="EtcItem">
+	<item id="22677" name="Emerald Weapon Appearance Stone: Dual Sword" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />

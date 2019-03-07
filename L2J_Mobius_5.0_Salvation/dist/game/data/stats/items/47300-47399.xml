@@ -300,7 +300,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47318" name="Blessed Eternal Shield" additionalName="Attack Type / Heavy Armor" type="Armor">
+	<item id="47318" name="Blessed Eternal Shield" additionalName="Attack Type/Heavy" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -560,7 +560,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47334" name="Blessed Eternal Shield" additionalName="Defense Type / Heavy Armor" type="Armor">
+	<item id="47334" name="Blessed Eternal Shield" additionalName="Defense Type/Heavy" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1056,14 +1056,14 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47367" name="Royal Save Ticket Box" type="EtcItem">
+	<item id="47367" name="Royal Save Card Box" type="EtcItem">
 		<!-- Double click to obtain an R~R99 Red or Blue Royal Save Card. -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47368" name="Agathion Box" type="EtcItem">
+	<item id="47368" name="Agathion Pack" type="EtcItem">
 		<!-- Double click to obtain one of the following: Zodiac Agathion Pack (15-day), Radiant Zodiac Agathion Pack (30-day), Twinkling Zodiac Agathion Pack (30-day), Agathion - Anakim Holy Barrier Pack. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1204,7 +1204,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47382" name="Freya's Wind Scroll (High-grade)" additionalName="Temporary Name" type="EtcItem">
+	<item id="47382" name="Freya's Wind Scroll" additionalName="Event" type="EtcItem">
 		<!-- Vitality consumption +150%, XP/ SP acquisition +150% while hunting. Remains after death. Duration is 10 min. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="is_clan_depositable" val="false" />
@@ -1253,7 +1253,7 @@
 			<skill id="18628" level="1" /> <!-- Express Bus Pass Card -->
 		</skills>
 	</item>
-	<item id="47385" name="Balthus Knight Mark" type="EtcItem">
+	<item id="47385" name="Balthus Knights' Mark" type="EtcItem">
 		<!-- Makes you eligible to receive a Member of the Balthus Knight disguise for 1 hour. Can be used only by characters of Level 85 or higher. Buff gets deleted upon Subclass/ Dual Class change. Will be deleted after the event. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1265,7 +1265,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47386" name="Sibis' Letter" additionalName="Event" type="EtcItem">
+	<item id="47386" name="Sibi's Letter" additionalName="Event" type="EtcItem">
 		<!-- Letter from the Vice-Chief of the Balthus Knights. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -1277,7 +1277,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47387" name="Balthus Knights Supply Items" type="EtcItem">
+	<item id="47387" name="Balthus Knights' Supply Box" type="EtcItem">
 		<!-- Double-click to receive 3 Balthus Knight Marks. (Can be used only once a day). Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1317,7 +1317,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47390" name="Forever/Longing Talisman/Energy of Longing Supply Items" type="EtcItem">
+	<item id="47390" name="Insanity Talisman/Longing Talisman/Energy of Longing Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights' Supply Box. When used, an Insanity Talisman/ Longing Talisman/ Energy of Longing can be obtained. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1335,7 +1335,7 @@
 			<item id="47420" min="1" max="1" chance="25" /> <!-- Energy of Longing -->
 		</capsuled_items>
 	</item>
-	<item id="47391" name="Venir Stage 11/12/13 Talisman Supply Items" type="EtcItem">
+	<item id="47391" name="Venir Stage 11/12/13 Talisman Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knight Supply Box. When used, a Venir Talisman Stage 11/ 12/ 13 can be obtained. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1354,14 +1354,14 @@
 			<item id="39646" min="1" max="1" chance="25" /> <!-- Venir's Talisman - Stage 13 -->
 		</capsuled_items>
 	</item>
-	<item id="47392" name="Shining Scroll: Enchant Elemental Shirt" type="EtcItem">
+	<item id="47392" name="Destruction Scroll: Enchant Elemental Shirt" type="EtcItem">
 		<!-- Shirt Enchantment-only Scroll. If enchanting fails the existing enchant value is maintained. Cannot be used on Shirts of +9 or higher. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47393" name="Dark Assassin/White Assassin Suit Supply Items" type="EtcItem">
+	<item id="47393" name="Dark/White Assassin Suit Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights' Supply Box. When used, a Dark/White Assassin Suit Appearance Stone can be obtained. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
@@ -1390,7 +1390,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47395" name="Bottle of Antharas/Valakas/Baium's Soul Supply Item" type="EtcItem">
+	<item id="47395" name="Bottle of Antharas/Valakas/Baium's Soul Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights' Supply Box. When used, an Antharas/ Valakas/ Baium Soul Bottle can be obtained. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="immediate_effect" val="true" />
@@ -1420,7 +1420,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47397" name="Seven Signs/Anakim/Lilith Talisman Supply Item" type="EtcItem">
+	<item id="47397" name="Seven Signs/Anakim/Lilith Talisman Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights' Supply Box. When used, a Seven Signs/ Anakim/ Lilith's Talisman can be obtained. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="immediate_effect" val="true" />
@@ -1439,7 +1439,7 @@
 			<item id="37715" min="1" max="1" chance="25" /> <!-- Talisman - Anakim -->
 		</capsuled_items>
 	</item>
-	<item id="47398" name="Bloody Eternal Enhancement Stone - x2" type="EtcItem">
+	<item id="47398" name="Bloody Eternal Enhancement Stones Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights' Supply Box. When used, 2 Bloody Eternal Enhancement Stones can be obtained. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
@@ -1454,7 +1454,7 @@
 			<item id="35569" min="2" max="2" chance="75" /> <!-- Bloody Eternal Enhancement Stone -->
 		</capsuled_items>
 	</item>
-	<item id="47399" name="Sibis Coin Box" type="EtcItem">
+	<item id="47399" name="Sibi's Coins Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights' Supply Items. When used, 1500 Sibi's Coins can be obtained. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />

@@ -123,7 +123,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46704" name="Emperor Shunaiman's Dualsword" additionalName="30-day" type="Weapon">
+	<item id="46704" name="Emperor Shunaiman's Dual Sword" additionalName="30-day" type="Weapon">
 		<!-- Dimensional Item. Emperor Shunaiman's Weapon. Can be used at all levels. Must use Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. -->
 		<set name="icon" val="icon.npoint_weapon_dual_sword" />
 		<set name="default_action" val="EQUIP" />
@@ -1021,63 +1021,63 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46765" name="Ruby Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46765" name="Ruby Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Rubies. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_ruby_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46766" name="Sapphire Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46766" name="Sapphire Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Sapphires. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_sapphire_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46767" name="Topaz Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46767" name="Topaz Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Topazes. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_topaz_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46768" name="Opal Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46768" name="Opal Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Opals. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_opal_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46769" name="Obsidian Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46769" name="Obsidian Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Obsidians. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_obsidian_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46770" name="Diamond Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46770" name="Diamond Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Diamonds. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_diamond_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46771" name="Emerald Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46771" name="Emerald Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Emeralds. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_emerald_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46772" name="Aquamarine Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46772" name="Aquamarine Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Aquamarines. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_aquamarine_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46773" name="Pearl Treasure Chest of Good Fortune" type="EtcItem">
+	<item id="46773" name="Pearl Fortune Box" type="EtcItem">
 		<!-- Double click to obtain one of Level 1-5 Pearls. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_pearl_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1375,7 +1375,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="46795" name="Paulina's Light Crossbow" type="Weapon">
+	<item id="46795" name="Paulina's Light Bow" type="Weapon">
 		<!-- A Light Bow imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
 		<set name="icon" val="icon.weapon_cyclone_bow_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1495,7 +1495,7 @@
 		</stats>
 	</item>
 	<item id="46799" name="Paulina's Grand Épée" type="Weapon">
-		<!-- A Grand ?p?e imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
+		<!-- A Grand Épée imbued with the energy of Paulina. Enchantment, Soul Crystal, Augment, and Attribute Assignment not possible. <Special Option>. Atk. Spd. +5%, P. Critical Rate +30. -->
 		<set name="icon" val="icon.weapon_rapier_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weapon_type" val="RAPIER" />

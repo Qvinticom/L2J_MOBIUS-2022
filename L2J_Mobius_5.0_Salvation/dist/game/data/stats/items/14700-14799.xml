@@ -1239,7 +1239,7 @@
 			<player sex="1" />
 		</cond>
 	</item>
-	<item id="14773" name="Formal Wear (14-day)" additionalName="14-day" type="Armor">
+	<item id="14773" name="Formal Wear" additionalName="14-day" type="Armor">
 		<!-- Tuxedo for men, and a wedding dress for women. Equipping this disables armor. Hair accessories, weapons, and magic armor remain equipped. 14-day. Cannot be restored once deleted. -->
 		<set name="icon" val="icon.armor_t2000_ul_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1311,7 +1311,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="14776" name="Agathion - Juju (14-day)" additionalName="14-day" type="Armor">
+	<item id="14776" name="Agathion - Juju" additionalName="14-day" type="Armor">
 		<!-- Can summon an Agathion - Juju when equipped. 14-day. Cannot be restored once deleted. -->
 		<set name="icon" val="icon.high_agathion_bracelet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1734,7 +1734,7 @@
 			<stat type="pAtkRange">14</stat>
 		</stats>
 	</item>
-	<item id="14795" name="Baguette's Dualsword" type="Weapon">
+	<item id="14795" name="Baguette's Dual Sword" type="Weapon">
 		<!-- Two-handed sword made of bread. Two-handed sword containing Baguett's great power. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />

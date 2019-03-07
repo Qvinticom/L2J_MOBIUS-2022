@@ -407,7 +407,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37129" name="Bloody Amaranthine Pack" additionalName="Event" type="EtcItem">
+	<item id="37129" name="Bloody Helios Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive 1 of each Bloody Helios Weapon with Double Crystal Enhancement. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -472,7 +472,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37134" name="Lv. 5 Legendary Dye Pack" additionalName="Event" type="EtcItem">
+	<item id="37134" name="Lv. 5 Legendary Dye Pack" type="EtcItem">
 		<!-- Double-click to receive 3 of each Lv. 5 Legendary Dye Pack. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -912,7 +912,7 @@
 			<stat type="pDef">41</stat>
 		</stats>
 	</item>
-	<item id="37157" name="Steel Avadon Shield (60-day)" type="Armor">
+	<item id="37157" name="Steel Abaddon Shield (60-day)" type="Armor">
 		<!-- Abaddon Shield with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_avadon_shield_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1067,7 +1067,7 @@
 			<stat type="pDef">49</stat>
 		</stats>
 	</item>
-	<item id="37165" name="Steel Shield of Nightmare (60-day)" type="Armor">
+	<item id="37165" name="Steel Shield of Nightmares (60-day)" type="Armor">
 		<!-- Shield of Nightmares with limited ability enhancement (enchantment, soul crystal enhancement and augmenting). 60-day. -->
 		<set name="icon" val="icon.shield_shield_of_nightmare_i00" />
 		<set name="default_action" val="EQUIP" />

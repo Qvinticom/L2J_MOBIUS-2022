@@ -981,7 +981,7 @@
 			<item id="39567" min="1" max="1" chance="25" /> <!-- Talisman - Wind Pack -->
 		</capsuled_items>
 	</item>
-	<item id="39564" name="Talisman - Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
+	<item id="39564" name="Talisman - Wind Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind: P. Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
@@ -995,7 +995,7 @@
 			<item id="39568" min="1" max="1" chance="100" /> <!-- Talisman - Wind: P. Critical Damage -->
 		</capsuled_items>
 	</item>
-	<item id="39565" name="Talisman - Wind Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
+	<item id="39565" name="Talisman - Wind Pack" type="EtcItem">
 		<!-- Wrapped Pack containing a Talisman - Wind: M. Critical Damage. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_stackable" val="true" />
@@ -1037,7 +1037,7 @@
 			<item id="39571" min="1" max="1" chance="100" /> <!-- Talisman - Wind: Debuff Resistance -->
 		</capsuled_items>
 	</item>
-	<item id="39568" name="Talisman - Wind: P. Critical Damage" additionalName="Passive" type="Armor">
+	<item id="39568" name="Talisman - Wind: P. Critical Damage" type="Armor">
 		<!-- P. Skill Critical Damage + 10%. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -1055,7 +1055,7 @@
 			<skill id="17973" level="1" /> <!-- Talisman - Wind: P. Critical Damage -->
 		</skills>
 	</item>
-	<item id="39569" name="Talisman - Wind: M. Critical Damage" additionalName="Passive" type="Armor">
+	<item id="39569" name="Talisman - Wind: M. Critical Damage" type="Armor">
 		<!-- M. Skill Critical Damage + 10%. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />

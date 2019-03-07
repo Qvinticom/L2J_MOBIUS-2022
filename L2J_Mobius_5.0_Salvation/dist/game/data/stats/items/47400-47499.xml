@@ -126,7 +126,7 @@
 			<skill id="9570" level="1" /> <!-- Heavenly P. Def. Cookie -->
 		</skills>
 	</item>
-	<item id="47405" name="Scroll of Experience - Lv1 (Main Class)" type="EtcItem">
+	<item id="47405" name="Scroll of Experience- Lv1 (Main Class)" type="EtcItem">
 		<!-- Use to gain 31 billion EXP and 40 million SP. Can be used by main class of Lv. 85 or above. -->
 		<set name="icon" val="icon.etc_codex_of_giant_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -137,7 +137,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47406" name="Scroll of Experience - Lv2 (Main Class)" type="EtcItem">
+	<item id="47406" name="Scroll of Experience- Lv2 (Main Class)" type="EtcItem">
 		<!-- Use to gain 230 billion EXP and 550 million SP. Can be used by main class of Lv. 85 or above. -->
 		<set name="icon" val="icon.etc_codex_of_giant_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -159,7 +159,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47408" name="+6 Amaranthine Weapon Capsule Coupon" additionalName="30-day" type="EtcItem">
+	<item id="47408" name="+6 Helios Weapon Capsule Coupon" additionalName="30-day" type="EtcItem">
 		<!-- Amazing Duo Event. Can be exchanged with a Helios Weapon (30-day) through the Fantasy Isle Keeper NPC. Will be deleted when the event ends. -->
 		<set name="icon" val="icon.etc_level_bustup_ticket_i02" />
 		<set name="is_tradable" val="false" />
@@ -209,7 +209,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47413" name="PC Cafe Points Coupon (200 points)" type="EtcItem">
+	<item id="47413" name="PA Points Coupon (200 points)" type="EtcItem">
 		<!-- Double click to obtain 200 PA Points. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -253,7 +253,7 @@
 			<skill id="18634" level="1" /> <!-- Duo - Freya's Wind -->
 		</skills>
 	</item>
-	<item id="47416" name="Sibis' Suspicious Supply Items" type="EtcItem">
+	<item id="47416" name="Sibi's Suspicious Supply Box" type="EtcItem">
 		<!-- Supply Box prepared by Balthus Knights' Supply Officer Sibi. When used, a random item can be obtained. Will be deleted after the event. -->
 		<set name="icon" val="icon.etc_treasure_box_i11" />
 		<set name="immediate_effect" val="true" />
@@ -429,7 +429,7 @@
 			<skill id="18126" level="2" /> <!-- Freya's Scroll of Storm -->
 		</skills>
 	</item>
-	<item id="47429" name="Freya's Bloody Rune (2 hours) Box" type="EtcItem">
+	<item id="47429" name="Freya's Bloody Rune (2-hour) Box" type="EtcItem">
 		<!-- Double click to obtain Freya's Bloody Rune (2-hour). -->
 		<set name="icon" val="BranchSys3.icon.g_cash_fortuna_box_r" />
 		<set name="default_action" val="PEEL" />
@@ -692,14 +692,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47451" name="+8 T-shirt Box (Shiny/Attack/Magic)" type="EtcItem">
+	<item id="47451" name="+8 Shirt Box (Shiny/Attack/Magic)" type="EtcItem">
 		<!-- Double click to obtain one of the following +8 enchanted items: Shiny Elemental/ Melee Reflect/ Magical Reflect Shirt. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47452" name="+9 T-shirt Box (Shiny/Attack/Magic)" type="EtcItem">
+	<item id="47452" name="+9 Shirt Box (Shiny/Attack/Magic)" type="EtcItem">
 		<!-- Double click to obtain one of the following +9 enchanted items: Shiny Elemental/ Melee Reflect/ Magical Reflect Shirt. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -792,7 +792,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47464" name="White Assassin Suit Appearance Stone" type="EtcItem">
+	<item id="47464" name="Appearance Stone: White Assassin Suit" type="EtcItem">
 		<!-- Use to change the appearance of your upper or full-body armor into a White Assassin Suit. The stone modifies the appearance of all armor, and all armor appears as a White Assassin Outfit. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="immediate_effect" val="true" />

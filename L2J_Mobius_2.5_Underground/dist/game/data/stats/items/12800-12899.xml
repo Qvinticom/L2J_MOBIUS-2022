@@ -1042,7 +1042,7 @@
 			<player level="80" />
 		</cond>
 	</item>
-	<item id="12852" name="Naga Storm - Molar {PvP}" additionalName="Focus" type="Weapon">
+	<item id="12852" name="Naga Storm - Molar {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that activates the Poison effect occasionally during an attack. <Special Option>. Increases Critical by 67. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1082,7 +1082,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12853" name="Naga Storm - Molar {PvP}" additionalName="Critical Damage" type="Weapon">
+	<item id="12853" name="Naga Storm - Molar {PvP} - Critical Damage" type="Weapon">
 		<!-- Masterwork Item that activates the Poison effect occasionally during an attack. <Special Option>. P. Atk. + 200 during a Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1122,7 +1122,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12854" name="Naga Storm - Molar {PvP}" additionalName="Back Blow" type="Weapon">
+	<item id="12854" name="Naga Storm - Molar {PvP} - Back Blow" type="Weapon">
 		<!-- Masterwork Item that activates the Poison effect occasionally during an attack. <Special Option>. P. Critical Rate increases by 37 during an attack from behind the target. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_naga_storm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1162,7 +1162,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12855" name="Daimon Crystal - Wisdom {PvP}" additionalName="Mana Up" type="Weapon">
+	<item id="12855" name="Daimon Crystal - Wisdom {PvP} - Mana Up" type="Weapon">
 		<!-- Masterwork Item that decreases MP consumption when using the skill. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1202,7 +1202,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12856" name="Daimon Crystal - Wisdom {PvP}" additionalName="Acumen" type="Weapon">
+	<item id="12856" name="Daimon Crystal - Wisdom {PvP} - Acumen" type="Weapon">
 		<!-- Masterwork Item that decreases MP consumption when using the skill. <Special Option>. Increases Casting Spd. by 15%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1242,7 +1242,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12857" name="Daimon Crystal - Wisdom {PvP}" additionalName="Magic Mental Shield" type="Weapon">
+	<item id="12857" name="Daimon Crystal - Wisdom {PvP} - Magic Mental Shield" type="Weapon">
 		<!-- Masterwork Item that decreases MP consumption upon skill use. <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_crystal_of_deamon_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1282,7 +1282,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12858" name="Barakiel's Axe - Mild {PvP}" additionalName="Health" type="Weapon">
+	<item id="12858" name="Barakiel's Axe - Mild {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases HP Recovery Rate. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1321,7 +1321,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12859" name="Barakiel's Axe - Mild {PvP}" additionalName="Haste" type="Weapon">
+	<item id="12859" name="Barakiel's Axe - Mild {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases HP Recovery Rate. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1360,7 +1360,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12860" name="Barakiel's Axe - Mild {PvP}" additionalName="Focus" type="Weapon">
+	<item id="12860" name="Barakiel's Axe - Mild {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases HP Recovery Rate. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_barakiel_axe_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1399,7 +1399,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12861" name="Screaming Vengeance - Concentration {PvP}" additionalName="Cheap Shot" type="Weapon">
+	<item id="12861" name="Screaming Vengeance - Concentration {PvP} - Cheap Shot" type="Weapon">
 		<!-- Masterwork Item that decreases MP consumption and increases Accuracy when using a bow. Kamael-exclusive Weapon: Shyeed's Bow Conversion. <Special Option>when using the P. Skills, MP consumption decreases by 12%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of Bows/Crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1442,7 +1442,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12862" name="Screaming Vengeance - Concentration {PvP}" additionalName="Focus" type="Weapon">
+	<item id="12862" name="Screaming Vengeance - Concentration {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that decreases MP consumption and increases Accuracy when using a bow. Kamael-exclusive Weapon: Shyeed's Bow Conversion. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1485,7 +1485,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12863" name="Screaming Vengeance - Concentration {PvP}" additionalName="Quick Recovery" type="Weapon">
+	<item id="12863" name="Screaming Vengeance - Concentration {PvP} - Quick Recovery" type="Weapon">
 		<!-- Masterwork Item that decreases MP consumption and increases Accuracy when using a bow. Kamael-exclusive Weapon: Shyeed's Bow conversion. <Special Option>. Decreases cooldown by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_soul_shooter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1527,7 +1527,7 @@
 			<stat type="pAtkRange">400</stat>
 		</stats>
 	</item>
-	<item id="12864" name="Behemoth' Tuning Fork - Destruction {PvP}" additionalName="Focus" type="Weapon">
+	<item id="12864" name="Behemoth' Tuning Fork - Destruction {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases P. Atk. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1566,7 +1566,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12865" name="Behemoth' Tuning Fork - Destruction {PvP}" additionalName="Health" type="Weapon">
+	<item id="12865" name="Behemoth' Tuning Fork - Destruction {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases P. Atk. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1605,7 +1605,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12866" name="Behemoth' Tuning Fork - Destruction {PvP}" additionalName="Anger" type="Weapon">
+	<item id="12866" name="Behemoth' Tuning Fork - Destruction {PvP} - Anger" type="Weapon">
 		<!-- Masterwork Item that increases P. Atk. <Special Option>. Decreases Max HP by 15% and P. Atk. + 32. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tuning_fork_of_behemoth_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1644,7 +1644,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12867" name="Durendal - Earth {PvP}" additionalName="Focus" type="Weapon">
+	<item id="12867" name="Durendal - Earth {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. Kamael-exclusive Weapon: Sword of Ipos Conversion. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1686,7 +1686,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12868" name="Durendal - Earth {PvP}" additionalName="Haste" type="Weapon">
+	<item id="12868" name="Durendal - Earth {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. Kamael-exclusive Weapon: Sword of Ipos Conversion. The. Atk. Spd. of. <Special Option> increases by 6%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1728,7 +1728,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12869" name="Durendal - Earth {PvP}" additionalName="Health" type="Weapon">
+	<item id="12869" name="Durendal - Earth {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. Kamael-exclusive Weapon: Sword of Ipos Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_death_bringer_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1770,7 +1770,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12870" name="Shyeed's Bow - Concentration {PvP}" additionalName="Cheap Shot" type="Weapon">
+	<item id="12870" name="Shyeed's Bow - Concentration {PvP} - Cheap Shot" type="Weapon">
 		<!-- Masterwork Item that decreases MP consumption when using a bow. <Special Option>. Has a 30% chance of decreasing MP consumption to 1 during a standard attack. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1811,7 +1811,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12871" name="Shyeed's Bow - Concentration {PvP}" additionalName="Focus" type="Weapon">
+	<item id="12871" name="Shyeed's Bow - Concentration {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that decreases MP consumption when using a bow. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1852,7 +1852,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12872" name="Shyeed's Bow - Concentration {PvP}" additionalName="Quick Recovery" type="Weapon">
+	<item id="12872" name="Shyeed's Bow - Concentration {PvP} - Quick Recovery" type="Weapon">
 		<!-- Masterwork Item that decreases MP consumption when using a bow. <Special Option>. Cooldown decreases by about 17%. Increases damage inflicted during PvP. Has a chance of increasing Atk. Spd. of bows/crossbows during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_shyid_bow_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1892,7 +1892,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="12873" name="Sword of Ipos - Earth {PvP}" additionalName="Focus" type="Weapon">
+	<item id="12873" name="Sword of Ipos - Earth {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Increases Critical by 61. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1930,7 +1930,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12874" name="Sword of Ipos - Earth {PvP}" additionalName="Haste" type="Weapon">
+	<item id="12874" name="Sword of Ipos - Earth {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1968,7 +1968,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12875" name="Sword of Ipos - Earth {PvP}" additionalName="Health" type="Weapon">
+	<item id="12875" name="Sword of Ipos - Earth {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases Max HP. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sword_of_ipos_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2006,7 +2006,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12876" name="Sobekk's Hurricane - Landslide {PvP}" additionalName="Rsk. Haste" type="Weapon">
+	<item id="12876" name="Sobekk's Hurricane - Landslide {PvP} - Rsk. Haste" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. <Special Option>. Increases Atk. Spd. by 11% when HP drops to 60% or below. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2046,7 +2046,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12877" name="Sobekk's Hurricane - Landslide {PvP}" additionalName="Haste" type="Weapon">
+	<item id="12877" name="Sobekk's Hurricane - Landslide {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that has the Stun effect occasionally when hitting. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2086,7 +2086,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12878" name="Sobekk's Hurricane - Landslide {PvP}" additionalName="Critical Drain" type="Weapon">
+	<item id="12878" name="Sobekk's Hurricane - Landslide {PvP} - Critical Drain" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. <Special Option>. Absorbs HP 14 of the target during a Critical Attack. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sobekk_hurricane_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2126,7 +2126,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12879" name="Sirra's Blade - Landslide {PvP}" additionalName="Haste" type="Weapon">
+	<item id="12879" name="Sirra's Blade - Landslide {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that has the Stun effect occasionally when hitting. Increases Atk. Spd. by about 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2164,7 +2164,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12880" name="Sirra's Blade - Landslide {PvP}" additionalName="Health" type="Weapon">
+	<item id="12880" name="Sirra's Blade - Landslide {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2202,7 +2202,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12881" name="Sirra's Blade - Landslide {PvP}" additionalName="Critical Poison" type="Weapon">
+	<item id="12881" name="Sirra's Blade - Landslide {PvP} - Critical Poison" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. <Special Option>. Poisons the target at the chance of 15% during the standard attack Critical. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_sirr_blade_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2240,7 +2240,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12882" name="Éclair Bijou - Landslide {PvP}" additionalName="Haste" type="Weapon">
+	<item id="12882" name="Éclair Bijou - Landslide {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. Kamael-exclusive Weapon: Sirra's Blade Conversion The. Atk. Spd. of. <Special Option> increases by 6%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2283,7 +2283,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12883" name="Éclair Bijou - Landslide {PvP}" additionalName="Health" type="Weapon">
+	<item id="12883" name="Éclair Bijou - Landslide {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. Kamael-exclusive Weapon: Sirra's Blade Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2326,7 +2326,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12884" name="Éclair Bijou - Landslide {PvP}" additionalName="Critical Poison" type="Weapon">
+	<item id="12884" name="Éclair Bijou - Landslide {PvP} - Critical Poison" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. Kamael-exclusive Weapon: Sirra's Blade Conversion. <Special Option>. Has a 15% chance of casting Poison on the target during a standard Critical Attack. Increases damage inflicted during PvP. Has a chance of recovering CP during an attack. When enchanted to 4 or more, there is a chance that party members including yourself will get increased P. Atk., M. Atk., and the amount of received heal, and decreased MP consumption during skill use. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_greed_stinger_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2369,7 +2369,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12885" name="Tiphon's Spear - Landslide {PvP}" additionalName="Critical Stun" type="Weapon">
+	<item id="12885" name="Tiphon's Spear - Landslide {PvP} - Critical Stun" type="Weapon">
 		<!-- Masterwork Item that activates the Stun effect occasionally during an attack. <Special Option>. Has about a 25% chance of casting Stun during a Critical Attack. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2408,7 +2408,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="12886" name="Tiphon's Spear - Landslide {PvP}" additionalName="Long Blow" type="Weapon">
+	<item id="12886" name="Tiphon's Spear - Landslide {PvP} - Long Blow" type="Weapon">
 		<!-- Masterwork Item that has the Stun effect occasionally when hitting. <Special Option>. The range increases. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2447,7 +2447,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="12887" name="Tiphon's Spear - Landslide {PvP}" additionalName="Wild Blow" type="Weapon">
+	<item id="12887" name="Tiphon's Spear - Landslide {PvP} - Wild Blow" type="Weapon">
 		<!-- Masterwork Item that has the Stun effect occasionally when hitting. <Special Option>. The angle of attack widens. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tiphon_spear_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2523,7 +2523,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12889" name="Themis' Tongue - Cleverness {PvP}" additionalName="Mana Up" type="Weapon">
+	<item id="12889" name="Themis' Tongue - Cleverness {PvP} - Mana Up" type="Weapon">
 		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2562,7 +2562,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12890" name="Themis' Tongue - Cleverness {PvP}" additionalName="Magic Mental Shield" type="Weapon">
+	<item id="12890" name="Themis' Tongue - Cleverness {PvP} - Magic Mental Shield" type="Weapon">
 		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Has a 50% chance of casting Mental Shield on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2601,7 +2601,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12891" name="Themis' Tongue - Cleverness {PvP}" additionalName="Magic Focus" type="Weapon">
+	<item id="12891" name="Themis' Tongue - Cleverness {PvP} - Magic Focus" type="Weapon">
 		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Has a 20% chance of casting Focus on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_tongue_of_themis_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2640,7 +2640,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12892" name="Cabrio's Hand - Cleverness {PvP}" additionalName="Conversion" type="Weapon">
+	<item id="12892" name="Cabrio's Hand - Cleverness {PvP} - Conversion" type="Weapon">
 		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Increases Max MP by 60% and decreases Max HP by 40%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2680,7 +2680,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12893" name="Cabrio's Hand - Cleverness {PvP}" additionalName="Mana Up" type="Weapon">
+	<item id="12893" name="Cabrio's Hand - Cleverness {PvP} - Mana Up" type="Weapon">
 		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Increases Max MP by 30%. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2720,7 +2720,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12894" name="Cabrio's Hand - Cleverness {PvP}" additionalName="Magic Silence" type="Weapon">
+	<item id="12894" name="Cabrio's Hand - Cleverness {PvP} - Magic Silence" type="Weapon">
 		<!-- Masterwork Item that increases MP Recovery Rate. <Special Option>. Has a 10% chance of casting Silence on the target during magic use. Increases damage inflicted during PvP. Has a chance of increasing Casting Spd. when attacked. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_hand_of_cabrio_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2760,7 +2760,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12895" name="Gram - Thunder {PvP}" additionalName="Haste" type="Weapon">
+	<item id="12895" name="Gram - Thunder {PvP} - Haste" type="Weapon">
 		<!-- Masterwork Item that increases the Critical impact. Kamael-exclusive Weapon: Heaven's Divider Conversion. <Special Option>. Increases Atk. Spd. by about 7%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2802,7 +2802,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12896" name="Gram - Thunder {PvP}" additionalName="Health" type="Weapon">
+	<item id="12896" name="Gram - Thunder {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases the Critical impact. Kamael-exclusive Weapon: Heaven's Divider Conversion. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2844,7 +2844,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12897" name="Gram - Thunder {PvP}" additionalName="Focus" type="Weapon">
+	<item id="12897" name="Gram - Thunder {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases the Critical impact. Kamael-exclusive Weapon: Heaven's Divider Conversion. <Special Option>. Increases Critical by 84. Increases damage inflicted during PvP. Has a chance of inflicting additional damage during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_gram_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2886,7 +2886,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12898" name="Demon Splinter - Thunder {PvP}" additionalName="Focus" type="Weapon">
+	<item id="12898" name="Demon Splinter - Thunder {PvP} - Focus" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Damage. <Special Option>. Increases Critical by 80. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -2926,7 +2926,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="12899" name="Demon Splinter - Thunder {PvP}" additionalName="Health" type="Weapon">
+	<item id="12899" name="Demon Splinter - Thunder {PvP} - Health" type="Weapon">
 		<!-- Masterwork Item that increases P. Critical Damage. <Special Option>. Increases Max HP by 25%. Increases damage inflicted during PvP. Has a chance of canceling 1 or more of the target's enhanced status, or of decreasing the target's Shield Defense during an attack. No Soul Crystal option. -->
 		<set name="icon" val="icon.weapon_demon_splinter_i01" />
 		<set name="default_action" val="EQUIP" />

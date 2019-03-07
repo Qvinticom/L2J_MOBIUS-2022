@@ -465,7 +465,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="23924" name="Tears Dualsword" type="Weapon">
+	<item id="23924" name="Tears Dual Sword" type="Weapon">
 		<!-- Russia's weapon crafting contest finalist. dual sword type. Weapon Appearance Basic. -->
 		<set name="icon" val="BranchSys3.iconWeapon.g_tears_dual_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -783,7 +783,7 @@
 		<set name="time" val="10080" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="23940" name="Tears Dualsword Appearance Stone" additionalName="7-day" type="EtcItem">
+	<item id="23940" name="Tears Dual Sword Appearance Stone" additionalName="7-day" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of a Tears dual sword. 7-day. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
@@ -1346,7 +1346,7 @@
 			<skill id="26086" level="1" /> <!-- Vampiric Style Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23984" name="Traces of Ancient Kartia's Labyrinth" type="EtcItem">
+	<item id="23984" name="Traces of Ancient Kartia's Labyrinth" additionalName="PA Event Item" type="EtcItem">
 		<!-- Maybe the Kartia Researcher can tell you more about it. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. Deleted after event. -->
 		<set name="icon" val="BranchSys3.Icon.g_ev_magic_powder" />
 		<set name="weight" val="10" />
@@ -1359,7 +1359,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="23985" name="Extra Pass: Ancient Kartia's Labyrinth" type="EtcItem">
+	<item id="23985" name="Extra Pass: Ancient Kartia's Labyrinth" additionalName="PA Event Item" type="EtcItem">
 		<!-- Resets the cooldown to Ancient Kartia's Labyrinth. Cannot be exchanged, dropped, or sold. Can be stored in the private warehouse. Deleted after event. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="is_clan_depositable" val="false" />

@@ -686,7 +686,7 @@
 			<skill id="2007" level="1" /> <!-- Scroll: Enchant Armor (A-grade) -->
 		</skills>
 	</item>
-	<item id="22240" name="Enhanced Rose Spirit Coupon (5-hour)" additionalName="Event" type="EtcItem">
+	<item id="22240" name="Enhanced Rose Spirit Coupon (5-hr.)" additionalName="Event" type="EtcItem">
 		<!-- Coupon that can be exchanged for a necklace (5-hr.) that summons an improved rose spirit. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="material" val="STEEL" />
@@ -1333,7 +1333,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="22274" name="Player Commendation - Transformation Scroll Pack" additionalName="Event" type="EtcItem">
+	<item id="22274" name="PA - Transformation Scroll Pack" additionalName="Event" type="EtcItem">
 		<!-- Gift that can be received after accumulating two hr. worth of PA Points. The box contains 1 random Transformation Scroll. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
@@ -1351,7 +1351,7 @@
 			<skill id="22386" level="1" /> <!-- Player Commendation - Transformation Scroll Pack -->
 		</skills>
 	</item>
-	<item id="22275" name="Player Commendation - Gift Box" additionalName="Event" type="EtcItem">
+	<item id="22275" name="PA - Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Gift that can be received after accumulating 1 hr. worth of PA Points. Double-click to receive a special gift. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
@@ -1370,7 +1370,7 @@
 			<item id="22280" min="1" max="1" chance="100" /> <!-- PA - Blessing (1-hr.) - Event -->
 		</capsuled_items>
 	</item>
-	<item id="22276" name="Player Commendation - Transformation Stick Pack" additionalName="Event" type="EtcItem">
+	<item id="22276" name="PA - Transformation Stick Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive a transformation stick. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
@@ -1388,7 +1388,7 @@
 			<skill id="22388" level="1" /> <!-- Player Commendation - Transformation Stick Pack -->
 		</skills>
 	</item>
-	<item id="22277" name="Player Commendation - Hair Accessory Pack" additionalName="Event" type="EtcItem">
+	<item id="22277" name="PA - Hair Accessory Pack" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive a hair accessory. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
@@ -1406,7 +1406,7 @@
 			<skill id="22389" level="1" /> <!-- Player Commendation - Hair Accessory Pack -->
 		</skills>
 	</item>
-	<item id="22278" name="Player Commendation - Luxury Gift Box" additionalName="Event" type="EtcItem">
+	<item id="22278" name="PA - Luxury Gift Box" additionalName="Event" type="EtcItem">
 		<!-- Double-click to receive a special gift. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="material" val="COTTON" />
@@ -1424,7 +1424,7 @@
 			<skill id="22390" level="1" /> <!-- Player Commendation - Luxury Gift Box -->
 		</skills>
 	</item>
-	<item id="22279" name="PC Vitality (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="22279" name="PA Vitality (1-hr.)" additionalName="Event" type="EtcItem">
 		<!-- Upon use, for 1 hr., energy is replenished when XP is acquired through hunting. Cooldown is 60 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="material" val="STEEL" />
@@ -1446,7 +1446,7 @@
 			<skill id="22407" level="1" /> <!-- PC Vitality -->
 		</skills>
 	</item>
-	<item id="22280" name="Player Commendation - Blessing (1-hour)" additionalName="Event" type="EtcItem">
+	<item id="22280" name="PA - Blessing (1-hr.)" additionalName="Event" type="EtcItem">
 		<!-- When used, HP Recovery Bonus, Max MP, and Critical Rate +20%, and you can feel the effects of Prophecy of Water, Might, Haste, Empower, Acumen, Wind Walk, Vampiric Rage, Berserker Spirit, Shield, Focus, Death Whisper, Guidance, Clarity, Wild Magic, and Concentration for 1 hr. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_miracle_i00" />
 		<set name="material" val="LIQUID" />
