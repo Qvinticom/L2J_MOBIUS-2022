@@ -709,7 +709,7 @@
 			<skill id="22466" level="1" /> <!-- Scroll of Escape -->
 		</skills>
 	</item>
-	<item id="22436" name="Scroll of Escape: Castle" type="EtcItem">
+	<item id="22436" name="Scroll of Escape - Castle" type="EtcItem">
 		<!-- Magic scroll that moves you to your castle. If you do not have a castle, it moves you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -728,7 +728,7 @@
 			<skill id="22467" level="1" /> <!-- Scroll of Escape: Castle -->
 		</skills>
 	</item>
-	<item id="22437" name="Scroll of Escape: Clan Hall" type="EtcItem">
+	<item id="22437" name="Scroll of Escape - Clan Hall" type="EtcItem">
 		<!-- Magic scroll that teleports you to your clan hall. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -766,7 +766,7 @@
 			<skill id="22469" level="1" /> <!-- Blessed Scroll of Escape -->
 		</skills>
 	</item>
-	<item id="22439" name="Blessed Scroll of Escape: Castle" type="EtcItem">
+	<item id="22439" name="Blessed Scroll of Escape - Castle" type="EtcItem">
 		<!-- Magic scroll that teleports you to your castle. If you do not have a castle, it teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -785,7 +785,7 @@
 			<skill id="22470" level="1" /> <!-- Blessed Scroll of Escape: Castle -->
 		</skills>
 	</item>
-	<item id="22440" name="Blessed Scroll of Escape: Clan Hall" type="EtcItem">
+	<item id="22440" name="Blessed Scroll of Escape - Clan Hall" type="EtcItem">
 		<!-- Magic scroll that teleports you to your clan hall. If you do not have a clan hall, it teleports you to the nearest village. Weight is 0. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -1041,7 +1041,7 @@
 			<item id="22438" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape -->
 		</capsuled_items>
 	</item>
-	<item id="22453" name="Scroll of Escape: Castle 10-unit Pack" type="EtcItem">
+	<item id="22453" name="Scroll of Escape - Castle 10-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 Scrolls of Escape: Castle. Also contains 1 bonus Blessed Scroll of Escape - Castle. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1062,7 +1062,7 @@
 			<item id="22439" min="1" max="1" chance="100" /> <!-- Blessed Scroll of Escape - Castle -->
 		</capsuled_items>
 	</item>
-	<item id="22454" name="Scroll of Escape: Clan Hall 10-unit Pack" type="EtcItem">
+	<item id="22454" name="Scroll of Escape - Clan Hall 10-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 10 Scrolls of Escape: Clan Hall. Also contains 1 bonus Blessed Scroll of Escape - Clan Hall. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1143,7 +1143,7 @@
 			<item id="22441" min="3" max="3" chance="100" /> <!-- Blessed Scroll of Resurrection (Pet) -->
 		</capsuled_items>
 	</item>
-	<item id="22458" name="Weapon Appearance/Restoration Stone Pack (R-grade)" type="EtcItem">
+	<item id="22458" name="Weapon Appearance/ Restoration Stone Pack (R-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Weapon Appearance Stone (R-grade) and 1 Weapon Restoration Stone (R-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1164,7 +1164,7 @@
 			<item id="22414" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (R-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22459" name="Weapon Appearance/Restoration Stone Pack (S-grade)" type="EtcItem">
+	<item id="22459" name="Weapon Appearance/ Restoration Stone Pack (S-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Weapon Appearance Stone (S-grade) and 1 Weapon Restoration Stone (S-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1185,7 +1185,7 @@
 			<item id="22415" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (S-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22460" name="Weapon Appearance/Restoration Stone Pack (A-grade)" type="EtcItem">
+	<item id="22460" name="Weapon Appearance/ Restoration Stone Pack (A-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Weapon Appearance Stone (A-grade) and 1 Weapon Restoration Stone (A-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1206,7 +1206,7 @@
 			<item id="22416" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (A-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22461" name="Weapon Appearance/Restoration Stone Pack (B-grade)" type="EtcItem">
+	<item id="22461" name="Weapon Appearance/ Restoration Stone Pack (B-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Weapon Appearance Stone (B-grade) and 1 Weapon Restoration Stone (B-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1227,7 +1227,7 @@
 			<item id="22417" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (B-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22462" name="Weapon Appearance/Restoration Stone Pack (C-grade)" type="EtcItem">
+	<item id="22462" name="Weapon Appearance/ Restoration Stone Pack (C-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Weapon Appearance Stone (C-grade) and 1 Weapon Restoration Stone (C-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1248,7 +1248,7 @@
 			<item id="22418" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (C-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22463" name="Weapon Appearance/Restoration Stone Pack (D-grade)" type="EtcItem">
+	<item id="22463" name="Weapon Appearance/ Restoration Stone Pack (D-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Weapon Appearance Stone (D-grade) and 1 Weapon Restoration Stone (D-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1269,7 +1269,7 @@
 			<item id="22419" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (D-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22464" name="Blessed Weapon Appearance/Restoration Stone Pack (R-grade)" type="EtcItem">
+	<item id="22464" name="Blessed Weapon Appearance/ Restoration Stone Pack (R-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (R-grade) and 1 Weapon Restoration Stone (R-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1290,7 +1290,7 @@
 			<item id="22414" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (R-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22465" name="Blessed Weapon Appearance/Restoration Stone Pack (S-grade)" type="EtcItem">
+	<item id="22465" name="Blessed Weapon Appearance/ Restoration Stone Pack (S-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (S-grade) and 1 Weapon Restoration Stone (S-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1311,7 +1311,7 @@
 			<item id="22415" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (S-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22466" name="Blessed Weapon Appearance/Restoration Stone Pack (A-grade)" type="EtcItem">
+	<item id="22466" name="Blessed Weapon Appearance/ Restoration Stone Pack (A-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (A-grade) and 1 Weapon Restoration Stone (A-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1332,7 +1332,7 @@
 			<item id="22416" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (A-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22467" name="Blessed Weapon Appearance/Restoration Stone Pack (B-grade)" type="EtcItem">
+	<item id="22467" name="Blessed Weapon Appearance/ Restoration Stone Pack (B-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (B-grade) and 1 Weapon Restoration Stone (B-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1353,7 +1353,7 @@
 			<item id="22417" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (B-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22468" name="Blessed Weapon Appearance/Restoration Stone Pack (C-grade)" type="EtcItem">
+	<item id="22468" name="Blessed Weapon Appearance/ Restoration Stone Pack (C-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (C-grade) and 1 Weapon Restoration Stone (C-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1374,7 +1374,7 @@
 			<item id="22418" min="1" max="1" chance="100" /> <!-- Weapon Restoration Stone (C-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22469" name="Blessed Weapon Appearance/Restoration Stone Pack (D-grade)" type="EtcItem">
+	<item id="22469" name="Blessed Weapon Appearance/ Restoration Stone Pack (D-grade)" type="EtcItem">
 		<!-- Wrapped Pack containing Blessed Weapon Appearance Stone (D-grade) and 1 Weapon Restoration Stone (D-grade). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />

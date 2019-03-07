@@ -270,7 +270,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="46624" name="Entrance Pass: Embryo Command Post" additionalName="1-day" type="EtcItem">
+	<item id="46624" name="Entrance Pass: Embryo Command Post" type="EtcItem">
 		<!-- Dimensional item. Extra pass to a daily instanced zone. Double-click to unbind the Embryo Command Post. Cannot be used if the instanced zone is not bound. Can be used only once a day outside of the instanced zone. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="is_clan_depositable" val="false" />
@@ -330,7 +330,7 @@
 			<skill id="18049" level="1" /> <!-- Hair Accessory (CHA) -->
 		</skills>
 	</item>
-	<item id="46629" name="Practice StormBringer" type="Weapon">
+	<item id="46629" name="Practice Stormbringer" type="Weapon">
 		<!-- Temporary practice weapon for learning about the Soul Crystal system. Very inefficient as a weapon. -->
 		<set name="icon" val="icon.weapon_stormbringer_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -568,7 +568,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46643" name="Rudi" additionalName="Event" type="EtcItem">
+	<item id="46643" name="Rudy" additionalName="Event" type="EtcItem">
 		<!-- Red Libra item. Oil made by Grocer Pink. Collect 1320 of these and take them to Grocer Pink to receive 10 Lv.5 Giant Dyes. -->
 		<set name="icon" val="icon.five_vairy_potion" />
 		<set name="is_dropable" val="false" />
@@ -921,7 +921,7 @@
 			<stat type="rCrit">6.0</stat>
 		</stats>
 	</item>
-	<item id="46664" name="Elysium Dualsword" additionalName="Event" type="Weapon">
+	<item id="46664" name="Elysium Dual Sword" additionalName="Event" type="Weapon">
 		<!-- Red Libra-exclusive item. A weapon widely used in Elysium. However, it cannot be enchanted in Aden. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1253,7 +1253,7 @@
 			<skill id="18565" level="5"/> <!-- Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="46685" name="La Vie En Rose's Vital Stone Chest" type="EtcItem">
+	<item id="46685" name="La Vie En Rose's Vital Stone Box" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Vital Stone. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="PEEL" />
@@ -1270,7 +1270,7 @@
 			<item id="26476" min="1" max="1" chance="100" /> <!-- Vital Stone - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="46686" name="La Vie En Rose's Garnet Chest" type="EtcItem">
+	<item id="46686" name="La Vie En Rose's Garnet Box" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Garnet. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_garnet" />
 		<set name="default_action" val="PEEL" />
@@ -1287,7 +1287,7 @@
 			<item id="26481" min="1" max="1" chance="100" /> <!-- Garnet - Lv. 1 -->
 		</capsuled_items>
 	</item>
-	<item id="46687" name="La Vie En Rose's Tanzanite Chest" type="EtcItem">
+	<item id="46687" name="La Vie En Rose's Tanzanite Box" type="EtcItem">
 		<!-- Double-click to acquire a Lv. 1 Tanzanite. -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="PEEL" />

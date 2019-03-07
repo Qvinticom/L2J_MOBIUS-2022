@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="46100" name="Treasure Map - High Priest Raymond" type="EtcItem">
+	<item id="46100" name="Treasure Map - High Priest Raymond" additionalName="Not in Use" type="EtcItem">
 		<!-- A map showing the location of some treasure. It says "For the High Priest", so it's probably a gift for the temple. -->
 		<set name="icon" val="icon.etc_map_yellow_i04" />
 		<set name="is_depositable" val="false" />
@@ -13,7 +13,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46101" name="Treasure Map - Turek Orc's Legacy" type="EtcItem">
+	<item id="46101" name="Treasure Map - Turek Orc's Legacy" additionalName="Not in Use" type="EtcItem">
 		<!-- A map showing the location of some treasure. It says, "Glory to the Turek Orcs". It looks like it is related to the Turek Orcs. -->
 		<set name="icon" val="icon.etc_map_yellow_i05" />
 		<set name="is_depositable" val="false" />
@@ -688,7 +688,7 @@
 		<set name="weight" val="150" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="46150" name="Superior Giant's Codex Chapter 1" type="EtcItem">
+	<item id="46150" name="Superior Giant's Codex - Chapter 1" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +11~+20 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
@@ -723,7 +723,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46154" name="Superior Giant's Codex Chapter 2" type="EtcItem">
+	<item id="46154" name="Superior Giant's Codex - Chapter 2" type="EtcItem">
 		<!-- Superior Giant's Codex. Rare item needed for enchanting skills between +21~+30 after Awakening. -->
 		<set name="icon" val="icon.codex_of_incuse" />
 		<set name="weight" val="10" />
@@ -758,7 +758,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46158" name="Scroll of Escape: Blackbird Campsite" type="EtcItem">
+	<item id="46158" name="Scroll of Escape - Blackbird Campsite" type="EtcItem">
 		<!-- Scroll for teleporting to Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -941,7 +941,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46172" name="Drew Protection Box" additionalName="Event" type="EtcItem">
+	<item id="46172" name="Grand Fortune Pouch" additionalName="Event" type="EtcItem">
 		<!-- Double-click to obtain a Scroll: Enchant Weapon (R-grade), Scroll: Enchant Armor (R-grade), Scroll: Enchant Weapon (S-grade), Scroll: Enchant Armor (S-grade), Blessed Scroll of Escape, Blessed Scroll of Resurrection, or Elixir Pack (R-grade). -->
 		<set name="icon" val="BranchSys.icon.br_lucky_bag_i00" />
 		<set name="is_clan_depositable" val="false" />

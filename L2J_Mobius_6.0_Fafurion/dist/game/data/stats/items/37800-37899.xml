@@ -8,12 +8,12 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37801" name="Bloody Eternal Enhancement Stone Fragment" type="EtcItem">
+	<item id="37801" name="Bloody Armor Enhancement Stone Fragment" type="EtcItem">
 		<!-- Bring 10 fragments to the Blacksmith of Mammon to obtain a Bloody Armor Enhancement Stone. -->
 		<set name="icon" val="icon.energy_condenser_fragment_pvp" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37802" name="Dark Eternal Enhancement Stone Fragment" type="EtcItem">
+	<item id="37802" name="Dark Armor Enhancement Stone Fragment" type="EtcItem">
 		<!-- Bring 10 fragments to the Blacksmith of Mammon to obtain a Dark Armor Enhancement Stone. -->
 		<set name="icon" val="icon.energy_condenser_fragment_pve" />
 		<set name="is_stackable" val="true" />
@@ -262,7 +262,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37822" name="Scroll of Escape: Hellbound" type="EtcItem">
+	<item id="37822" name="Scroll of Escape - Hellbound" type="EtcItem">
 		<!-- Scroll that teleports you to Hellbound. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="weight" val="30" />
@@ -456,7 +456,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37840" name="Valentine Appearance Stone: One-handed Magic Sword" additionalName="15-day" type="EtcItem">
+	<item id="37840" name="Valentine Appearance Stone: Magic Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
@@ -467,7 +467,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37841" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" additionalName="15-day" type="EtcItem">
+	<item id="37841" name="Valentine Appearance Stone: One-handed Staff" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed staff to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
@@ -478,7 +478,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37842" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="15-day" type="EtcItem">
+	<item id="37842" name="Valentine Appearance Stone: Two-handed Staff" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed staff to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
@@ -489,7 +489,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37843" name="Valentine Appearance Stone: Dualsword" additionalName="15-day" type="EtcItem">
+	<item id="37843" name="Valentine Appearance Stone: Dual Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of a Valentine weapon. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
@@ -632,7 +632,7 @@
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37856" name="Valentine Appearance Stone: One-handed Magic Sword" additionalName="30-day" type="EtcItem">
+	<item id="37856" name="Valentine Appearance Stone: Magic Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of a Valentine weapon. Limited time item (30-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
@@ -643,7 +643,7 @@
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37857" name="Valentine Appearance Stone: One-handed Magic Blunt Weapon" additionalName="30-day" type="EtcItem">
+	<item id="37857" name="Valentine Appearance Stone: One-handed Staff" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a one-handed staff to that of a Valentine weapon. Limited time item (30-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="is_stackable" val="true" />
@@ -654,7 +654,7 @@
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37858" name="Valentine Appearance Stone: Two-handed Magic Blunt Weapon" additionalName="30-day" type="EtcItem">
+	<item id="37858" name="Valentine Appearance Stone: Two-handed Staff" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a two-handed staff to that of a Valentine weapon. Limited time item (30-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="is_stackable" val="true" />
@@ -665,7 +665,7 @@
 		<set name="time" val="43200" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37859" name="Valentine Appearance Stone: Dualsword" additionalName="30-day" type="EtcItem">
+	<item id="37859" name="Valentine Appearance Stone: Dual Sword" additionalName="30-day" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of a Valentine weapon. Limited time item (30-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
@@ -1027,7 +1027,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="37876" name="Hero's Weapon: One-handed Magic Sword" additionalName="15-day" type="Weapon">
+	<item id="37876" name="Hero's Weapon: Magic Sword" additionalName="15-day" type="Weapon">
 		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_infinity_sword" />
 		<set name="weapon_type" val="SWORD" />
@@ -1059,7 +1059,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37877" name="Hero's Weapon: One-handed Magic Blunt Weapon" additionalName="15-day" type="Weapon">
+	<item id="37877" name="Hero's Weapon: One-handed Staff" additionalName="15-day" type="Weapon">
 		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1092,7 +1092,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37878" name="Hero's Weapon: Two-handed Magic Blunt Weapon" additionalName="15-day" type="Weapon">
+	<item id="37878" name="Hero's Weapon: Two-handed Staff" additionalName="15-day" type="Weapon">
 		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero" />
 		<set name="weapon_type" val="BLUNT" />
@@ -1125,7 +1125,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37879" name="Hero's Weapon: Dualsword" additionalName="15-day" type="Weapon">
+	<item id="37879" name="Hero's Weapon: Dual Sword" additionalName="15-day" type="Weapon">
 		<!-- Weapon infused with heroes' power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. All levels. 15-day. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
@@ -1353,7 +1353,7 @@
 		<set name="is_questitem" val="true" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37894" name="Improved Warrior's Recovery Potion" type="EtcItem">
+	<item id="37894" name="Healing Potion Improved Warrior's Recovery Potion" type="EtcItem">
 		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />

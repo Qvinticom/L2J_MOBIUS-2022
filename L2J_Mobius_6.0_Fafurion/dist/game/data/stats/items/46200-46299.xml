@@ -279,7 +279,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46215" name="Halloween Dualsword" type="Weapon">
+	<item id="46215" name="Halloween Dual Sword" type="Weapon">
 		<set name="icon" val="icon.ev_wp_halloween" />
 		<set name="weapon_type" val="DUAL" />
 		<set name="default_action" val="EQUIP" />
@@ -344,7 +344,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="46218" name="Magic Number Cube" additionalName="Event" type="EtcItem">
+	<item id="46218" name="Elysium Animal Cure" additionalName="Event" type="EtcItem">
 		<!-- A special injection to re-energize animals in Elysium. Use it to re-energize the Exhausted Elysium Buffalo that appears in Giran Harbor at 14:00 and 23:00. Note that it recovers 1 to 6 power at random due to it being unstable in Aden. -->
 		<set name="icon" val="icon.etc_medicine_of_growth_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -398,7 +398,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 	</item>
-	<item id="46222" name="L2 Market +8 Amaranthine Weapon Pack" additionalName="Event" type="EtcItem">
+	<item id="46222" name="L2 Market +8 Helios Weapon Pack" type="EtcItem">
 		<!-- Balthus Knight's top-grade supply items. Use it to obtain one +8 Helios weapon. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -426,7 +426,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 	</item>
-	<item id="46224" name="L2 Market +4 Eternal Armor Pack" additionalName="Event" type="EtcItem">
+	<item id="46224" name="+4 Eternal Armor Pack" type="EtcItem">
 		<!-- Balthus Knight's top-grade supply items. Use it to obtain one +4 Eternal armor set. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="is_clan_depositable" val="false" />
@@ -510,7 +510,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 	</item>
-	<item id="46230" name="+8 Amaranthine Shaper Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46230" name="+8 Helios Shaper Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Shaper. -->
 		<set name="icon" val="icon.weapon_stanpid_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -522,7 +522,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46231" name="+8 Amaranthine Cutter Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46231" name="+8 Helios Cutter Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Cutter. -->
 		<set name="icon" val="icon.weapon_plenitas_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -534,7 +534,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46232" name="+8 Amaranthine Slasher Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46232" name="+8 Helios Slasher Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Slasher. -->
 		<set name="icon" val="icon.weapon_bauen_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -546,7 +546,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46233" name="+8 Amaranthine Avenger Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46233" name="+8 Helios Avenger Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Dual Sword. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i21" />
 		<set name="is_clan_depositable" val="false" />
@@ -558,7 +558,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46234" name="+8 Amaranthine Fighter Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46234" name="+8 Helios Fighter Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Dual Dagger. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i21" />
 		<set name="is_clan_depositable" val="false" />
@@ -570,7 +570,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46235" name="+8 Amaranthine Stormer Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46235" name="+8 Helios Stormer Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Dual Blunt Weapon. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i21" />
 		<set name="is_clan_depositable" val="false" />
@@ -582,7 +582,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46236" name="+8 Amaranthine Thrower Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46236" name="+8 Helios Thrower Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Avenger. -->
 		<set name="icon" val="icon.weapon_qutram_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -594,7 +594,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46237" name="+8 Amaranthine Shooter Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46237" name="+8 Helios Shooter Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Fighter. -->
 		<set name="icon" val="icon.weapon_durga_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -606,7 +606,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46238" name="+8 Amaranthine Buster Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46238" name="+8 Helios Buster Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Stormer. -->
 		<set name="icon" val="icon.weapon_crabel_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -618,7 +618,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46239" name="+8 Amaranthine Caster Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46239" name="+8 Helios Caster Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Thrower. -->
 		<set name="icon" val="icon.weapon_castron_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -630,7 +630,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="46240" name="+8 Amaranthine Retributer Capsule" additionalName="Not in Use" type="EtcItem">
+	<item id="46240" name="+8 Helios Retributer Capsule" additionalName="Not in Use" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Helios Shooter. -->
 		<set name="icon" val="icon.weapon_stilla_i01" />
 		<set name="is_clan_depositable" val="false" />
@@ -848,7 +848,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="46257" name="Scroll of Escape: Enchanted Valley" type="EtcItem">
+	<item id="46257" name="Scroll of Escape - Enchanted Valley" type="EtcItem">
 		<!-- Teleports you to the Enchanted Valley. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />

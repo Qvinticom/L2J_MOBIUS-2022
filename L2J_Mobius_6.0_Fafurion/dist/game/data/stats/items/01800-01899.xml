@@ -372,7 +372,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="1829" name="Scroll of Escape: Clan Hall" type="EtcItem">
+	<item id="1829" name="Scroll of Escape - Clan Hall" type="EtcItem">
 		<!-- Scroll that relocates you to your clan hall. If you don't have a clan hall, it will relocate you to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -391,7 +391,7 @@
 			<skill id="2040" level="1" /> <!-- Scroll of Escape: Clan Hall -->
 		</skills>
 	</item>
-	<item id="1830" name="Scroll of Escape: Castle" type="EtcItem">
+	<item id="1830" name="Scroll of Escape - Castle" type="EtcItem">
 		<!-- Scroll that relocates you to your castle. If you don't have a castle, it will relocate you to the nearest village. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="36200" name="Shooter Sealed with Heroes' Power" type="Weapon">
+	<item id="36200" name="Shooter Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_infinity_shooter_i01" />
 		<set name="weapon_type" val="TWOHANDCROSSBOW" />
@@ -35,7 +35,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="36201" name="Buster Sealed with Heroes' Power" type="Weapon">
+	<item id="36201" name="Buster Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_infinity_sword_i01" />
 		<set name="weapon_type" val="SWORD" />
@@ -68,7 +68,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36202" name="Caster Sealed with Heroes' Power" type="Weapon">
+	<item id="36202" name="Caster Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_the_mace_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -102,7 +102,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36203" name="Retributer Sealed with Heroes' Power" type="Weapon">
+	<item id="36203" name="Retributer Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_the_staff_of_hero_i01" />
 		<set name="weapon_type" val="BLUNT" />
@@ -137,7 +137,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36204" name="Dualsword Sealed with Heroes' Power" type="Weapon">
+	<item id="36204" name="Dual Sword Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="weapon_type" val="DUAL" />
@@ -170,7 +170,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36205" name="Dual Dagger Sealed with Heroes' Power" type="Weapon">
+	<item id="36205" name="Dual Dagger Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_r_dualdagger_i01" />
 		<set name="weapon_type" val="DUALDAGGER" />
@@ -204,7 +204,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36206" name="Dual Blunt Sealed with Heroes' Power" type="Weapon">
+	<item id="36206" name="Dual Blunt Sealed with Heroes' Power" additionalName="1-day" type="Weapon">
 		<!-- A weapon with the power of heroes sealed within. You can acquire a Weapon Imbued with Heroes' Power if you have a Scroll Imbued with Heroes' Power. Can be used by all levels. Must use a Soulshot (No-grade)/ Spiritshot/ Blessed Spiritshot. 1-day item. -->
 		<set name="icon" val="icon.weapon_r_dualblunt_i01" />
 		<set name="weapon_type" val="DUALBLUNT" />
@@ -601,7 +601,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="36218" name="Dualsword Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
+	<item id="36218" name="Dual Sword Imbued with Heroes' Power" additionalName="2-hour" type="Weapon">
 		<!-- A weapon imbued with the power of heroes. Can be used by all levels. Must use No-grade Soulshots/ Spiritshots/ Blessed Spiritshots. Cannot be used in the Olympiad. 2-hour. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i01" />
 		<set name="weapon_type" val="DUAL" />

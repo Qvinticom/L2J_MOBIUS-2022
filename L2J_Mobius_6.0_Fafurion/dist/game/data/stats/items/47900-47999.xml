@@ -76,7 +76,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47909" name="Angel's Gift Package" additionalName="Lv1" type="EtcItem">
+	<item id="47909" name="Angel's Gift Package" additionalName="Lv. 1" type="EtcItem">
 		<!-- Double-click to acquire one Stage 5 (30-day fixed period) fishing pole box and one Scroll: Enchant Faint Elemental Shirt. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -85,7 +85,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47910" name="Angel's Gift Package" additionalName="Lv2" type="EtcItem">
+	<item id="47910" name="Angel's Gift Package" additionalName="Lv. 2" type="EtcItem">
 		<!-- Double-click to acquire one Stage 5 (30-day fixed period) fishing pole box and one Scroll: Enchant Faint Elemental Shirt, and one Greater Vital Stone (30-day fixed period). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -94,7 +94,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47911" name="Angel's Gift Package" additionalName="Lv3" type="EtcItem">
+	<item id="47911" name="Angel's Gift Package" additionalName="Lv. 3" type="EtcItem">
 		<!-- Double-click to acquire one Stage 5 (30-day fixed period) fishing pole box and two Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), and one Advanced Red&Blue Cat's Eye (30-day fixed period). -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -103,7 +103,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47912" name="Angel's Gift Package" additionalName="Lv4" type="EtcItem">
+	<item id="47912" name="Angel's Gift Package" additionalName="Lv. 4" type="EtcItem">
 		<!-- Double-click to acquire one Stage 5 (30-day fixed period) fishing pole box and three Scrolls: Enchant Faint Elemental Shirt, one Greater Vital Stone (30-day fixed period), one Advanced Red&Blue Cat's Eye (30-day fixed period), one Greater Tanzanite (30-day fixed period) box, and one Nevit's Cloak of Light (30-day fixed period) box. -->
 		<set name="icon" val="icon.bm_nebit_present" />
 		<set name="default_action" val="PEEL" />
@@ -112,7 +112,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47913" name="Greater Transport Box" additionalName="30-day" type="EtcItem">
+	<item id="47913" name="Greater Vital Stone Lv. 1 Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Vital Stone Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_vital" />
 		<set name="default_action" val="PEEL" />
@@ -122,7 +122,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="47914" name="Advanced RedandBlue Cat's Eye Treasure Chest" additionalName="30-day" type="EtcItem">
+	<item id="47914" name="Greater Red and Blue Cat's Eye Lv. 1 Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Red Cat's Eye Lv. 1 (30-day) and a Blue Cat's Eye Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_shhadai" />
 		<set name="default_action" val="PEEL" />
@@ -132,7 +132,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="47915" name="Greater Tanzanite Box" additionalName="30-day" type="EtcItem">
+	<item id="47915" name="Greater Tanzanite Lv. 1 Box" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a Greater Tanzanite Lv. 1 (30-day). -->
 		<set name="icon" val="icon.etc_bm_jewelbox_tanzanite" />
 		<set name="default_action" val="PEEL" />
@@ -199,7 +199,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47920" name="Greater Vital Stone" additionalName="30-day" type="Armor">
+	<item id="47920" name="Greater Vital Stone Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Increases bonus EXP by 30% and decreases Vitality consumption by 15% when worn using Vitality. Additionally, acquired XP is increased by 10%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -214,7 +214,7 @@
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47921" name="Greater Red Cat's Eye" additionalName="30-day" type="Armor">
+	<item id="47921" name="Greater Red Cat's Eye Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Increases P. Critical Damage by 12%, P. Skill Critical Damage by 12%, and P. Skill Power by 5%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -229,7 +229,7 @@
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47922" name="Greater Blue Cat's Eye" additionalName="30-day" type="Armor">
+	<item id="47922" name="Greater Blue Cat's Eye Lv. 1" additionalName="30-day" type="Armor">
 		<!-- Increases Magic Critical Damage by 12%, M. Skill Power by 5%. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
 		<set name="icon" val="icon.bm_jewel_blue_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -244,7 +244,7 @@
 		<set name="time" val="43200" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47923" name="Greater Tanzanite" additionalName="30-day" type="Armor">
+	<item id="47923" name="Greater Tanzanite Lv. 1" additionalName="30-day" type="Armor">
 		<!-- When used, it creates a shield that absorbs 50,000 damage for 15 sec. and recovers 15% of maximum HP immediately after use. When you wear the same type of gemstone, only the effect of the highest level gem is applied. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -476,7 +476,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47944" name="13th Anniversary Item" type="EtcItem">
+	<item id="47944" name="Magic Fire Event Item" type="EtcItem">
 		<!-- Take it to Bliss to receive a Magic Woodpile. Will be deleted after the event is over, September 26, 2018. -->
 		<set name="icon" val="icon.ev_L2_soul_ore" />
 		<set name="material" val="LEATHER" />
@@ -510,7 +510,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47946" name="Magic Flame" type="EtcItem">
+	<item id="47946" name="Magic Fire" type="EtcItem">
 		<!-- Double-click to send the Magic Fire towards heaven and receive a reward. Many people send their hopes and wishes towards heaven with this fire for luck. It is said that the wishes will come true if the fire reaches the sky without extinguishing. Maybe you will receive a reward if you send it up with a wish. Will be deleted after the event is over, September 26, 2018. -->
 		<set name="icon" val="icon.ev_firewood_box" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -574,7 +574,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47953" name="Shaper of Challenger" type="Weapon">
+	<item id="47953" name="Challenger's Shaper" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -598,7 +598,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="47954" name="Dicing Death of Challenger" type="Weapon">
+	<item id="47954" name="Challenger's Dicing Death" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -622,7 +622,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47955" name="Slasher of Challenger" type="Weapon">
+	<item id="47955" name="Challenger's Slasher" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -647,7 +647,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47956" name="Avenger of Challenger" type="Weapon">
+	<item id="47956" name="Challenger's Avenger" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -672,7 +672,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47957" name="Fighter of Challenger" type="Weapon">
+	<item id="47957" name="Challenger's Fighter" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -698,7 +698,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47958" name="Stormer of Challenger" type="Weapon">
+	<item id="47958" name="Challenger's Stormer" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -727,7 +727,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="47959" name="Thrower of Challenger" type="Weapon">
+	<item id="47959" name="Challenger's Thrower" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -753,7 +753,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="47960" name="Shooter of Challenger" type="Weapon">
+	<item id="47960" name="Challenger's Shooter" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -779,7 +779,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="47961" name="Buster of Challenger" type="Weapon">
+	<item id="47961" name="Challenger's Buster" type="Weapon">
 		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_magic_sword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -803,7 +803,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47962" name="Caster of Challenger" type="Weapon">
+	<item id="47962" name="Challenger's Caster" type="Weapon">
 		<!-- <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -828,7 +828,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47963" name="Retributer of Challenger" type="Weapon">
+	<item id="47963" name="Challenger's Retributer" type="Weapon">
 		<!-- <Special Options>. Atk. Spd./ Casting Spd. +15%. P. Critical Damage +10%, M. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -854,7 +854,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47964" name="Dual Sword of Challenger" type="Weapon">
+	<item id="47964" name="Challenger's Dual Sword" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualsword_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -879,7 +879,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47965" name="Dual Dagger of Challenger" type="Weapon">
+	<item id="47965" name="Challenger's Dual Dagger" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -905,7 +905,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47966" name="Dual Blunt of Challenger" type="Weapon">
+	<item id="47966" name="Challenger's Dual Blunt" type="Weapon">
 		<!-- <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%.. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -931,7 +931,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47967" name="Enhance Shaper of Challenger" type="Weapon">
+	<item id="47967" name="Challenger's Enhanced Shaper" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dagger_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -955,7 +955,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="47968" name="Enhance Dicing Death of Challenger" type="Weapon">
+	<item id="47968" name="Challenger's Enhanced Dicing Death" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_sword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -979,7 +979,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47969" name="Enhanced Slasher of Challenger" type="Weapon">
+	<item id="47969" name="Challenger's Enhanced Slasher" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_two_handed_sword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1004,7 +1004,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47970" name="Enhanced Avenger of Challenger" type="Weapon">
+	<item id="47970" name="Challenger's Enhanced Avenger" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_axe_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1029,7 +1029,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47971" name="Enhanced Fighter of Challenger" type="Weapon">
+	<item id="47971" name="Challenger's Enhanced Fighter" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_fist_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1055,7 +1055,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47972" name="Enhanced Stormer of Challenger" type="Weapon">
+	<item id="47972" name="Challenger's Enhanced Stormer" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_pole_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1084,7 +1084,7 @@
 			<stat type="pAtkRange">80</stat>
 		</stats>
 	</item>
-	<item id="47973" name="Enhanced Thrower of Challenger" type="Weapon">
+	<item id="47973" name="Challenger's Enhanced Thrower" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_bow_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1110,7 +1110,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="47974" name="Enhanced Shooter of Challenger" type="Weapon">
+	<item id="47974" name="Challenger's Enhanced Shooter" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_shooter_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1136,7 +1136,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="47975" name="Enhanced Buster of Challenger" type="Weapon">
+	<item id="47975" name="Challenger's Enhanced Buster" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_magic_sword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1160,7 +1160,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47976" name="Enhanced Caster of Challenger" type="Weapon">
+	<item id="47976" name="Challenger's Enhanced Caster" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Casting Spd. +15%. M. Critical Rate +50, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_mace_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1185,7 +1185,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47977" name="Enhanced Retributer of Challenger" type="Weapon">
+	<item id="47977" name="Challenger's Enhanced Retributer" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd./ Casting Spd. +15%. P. Critical Damage +10%, M. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_staff_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1211,7 +1211,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47978" name="Enhanced Dual Sword of Challenger" type="Weapon">
+	<item id="47978" name="Challenger's Enhanced Dual Sword" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualsword_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1236,7 +1236,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47979" name="Enhanced Dual Dagger of Challenger" type="Weapon">
+	<item id="47979" name="Challenger's Enhanced Dual Dagger" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +50, P. Critical Damage +10%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualdagger_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />
@@ -1262,7 +1262,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="47980" name="Enhanced Dual Blunt of Challenger" type="Weapon">
+	<item id="47980" name="Challenger's Enhanced Dual Blunt" type="Weapon">
 		<!-- When equipped, PvE Damage +10%. <Special Options>. Atk. Spd. +15%. P. Critical Rate +100, P. Critical Damage +5%. Max HP +15%. Cannot be enchanted, crystallized, appearance modified, soul crystal enhanced, augmented, or assigned with attributes. -->
 		<set name="icon" val="icon.bm_the_dualblunt_of_hero_i02" />
 		<set name="default_action" val="EQUIP" />

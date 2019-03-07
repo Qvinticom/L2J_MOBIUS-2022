@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
-	<item id="28300" name="Transcendent Eternal Tunic" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
+	<item id="28300" name="Transcendent Eternal Tunic" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
 		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1.5% and M. Atk. by 3%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_u_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -27,7 +27,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="28301" name="Transcendent Eternal Stockings" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
+	<item id="28301" name="Transcendent Eternal Stockings" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
 		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1.5% and M. Atk. by 3%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_l_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -50,7 +50,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="28302" name="Transcendent Eternal Gloves" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
+	<item id="28302" name="Transcendent Eternal Gloves" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_g_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -70,7 +70,7 @@
 			<stat type="pDef">125</stat>
 		</stats>
 	</item>
-	<item id="28303" name="Transcendent Eternal Shoes" additionalName="Recovery Type / Robe / Lv. 6" type="Armor">
+	<item id="28303" name="Transcendent Eternal Shoes" additionalName="Recovery Type/ Robe/ Lv. 6" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1.5% and M. Atk. by 3%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t803_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -546,7 +546,7 @@
 		<set name="is_mailable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="28357" name="Special Treasure Chest" type="EtcItem">
+	<item id="28357" name="Exclusive Treasure Chest" type="EtcItem">
 		<!-- Exclusive treasure chest. Double-click to receive a random item. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -702,7 +702,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28376" name="Greater Cat's Eye" type="Armor">
+	<item id="28376" name="Greater Cat's Eye" additionalName="Lv. 1" type="Armor">
 		<!-- Damage Reflection Resistance +50 and there's a 10% chance of reflecting debuffs to the enemy. Can use the invincibility skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_catseye_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -714,7 +714,7 @@
 			<skill id="27440" level="6"/> <!-- Cat's Eye -->
 		</skills>
 	</item>
-	<item id="28377" name="Greater Amethyst" type="Armor">
+	<item id="28377" name="Greater Amethyst" additionalName="Lv. 1" type="Armor">
 		<!-- PvP Damage +15%, chance of receiving a critical attack -25%. Can remove invincibility and debuff invincibility. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="BranchIcon.Icon.etc_bm_jewel_amethyst_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -726,7 +726,7 @@
 			<skill id="27442" level="6"/> <!-- Amethyst -->
 		</skills>
 	</item>
-	<item id="28378" name="Greater Vital Stone" type="Armor">
+	<item id="28378" name="Greater Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- Vitality Bonus +50% and Vitality Point Consumption Speed -15%. Acquired XP/ SP +10%. Can use Vital Wind skill. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -738,7 +738,7 @@
 			<skill id="18568" level="6"/> <!-- Vital Stone -->
 		</skills>
 	</item>
-	<item id="28379" name="Greater Garnet" type="Armor">
+	<item id="28379" name="Greater Garnet" additionalName="Lv. 1" type="Armor">
 		<!-- Debuff Resistance +30%, and when receiving damage to a PC, Stun/ Silence are canceled. Cancels debuff and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -751,7 +751,7 @@
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="28380" name="Greater Tanzanite" type="Armor">
+	<item id="28380" name="Greater Tanzanite" additionalName="Lv. 1" type="Armor">
 		<!-- Creates a protection shield that absorbs 50,000 damage for 15 sec. Recover 15% of Max HP instantly. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -779,7 +779,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="28383" name="Greater Garnet" type="Armor">
+	<item id="28383" name="Greater Garnet" additionalName="Lv. 1" type="Armor">
 		<!-- Increases Resistance to all Debuffs by 30%, and when receiving damage to a PC, Stun/ Silence are canceled. When used, all debuffs are canceled and you become immune to debuffs for 7 sec. Effect does not stack with additional Gems of the same type. Equipping various Greater Gems will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -903,7 +903,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="28392" name="Heine Exclusive Bait (99-)" type="EtcItem">
+	<item id="28392" name="Heine Exclusive Bait (99+)" type="EtcItem">
 		<!-- Bait is used to obtain a Heine Exclusive Reward Chest with a certain chance. Can be used by characters Lv. 99 or above. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />

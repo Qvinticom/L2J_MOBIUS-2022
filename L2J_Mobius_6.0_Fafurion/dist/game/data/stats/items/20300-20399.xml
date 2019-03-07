@@ -49,7 +49,7 @@
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
-	<item id="20302" name="Agathion - Great Sumo Match" additionalName="Big Head / Firework (7-day)" type="Armor">
+	<item id="20302" name="Agathion - Great Sumo Match" additionalName="Big Head/ Firework (7-day)" type="Armor">
 		<!-- Bracelet that summons Agathion - Great Sumo Match. Cooldown is 1 hour. -->
 		<set name="icon" val="BranchSys.icon.br_aga_sumo_match_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1654,7 +1654,7 @@
 			<skill id="22052" level="1" /> <!-- Transformation Scroll: Dragon Bomber -->
 		</skills>
 	</item>
-	<item id="20372" name="Scroll of Escape: Talking Island Village" type="EtcItem">
+	<item id="20372" name="Scroll of Escape - Talking Island Village" type="EtcItem">
 		<!-- Magic scroll that moves you to Talking Island Village. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1679,7 +1679,7 @@
 			<skill id="22053" level="1" /> <!-- Scroll of Escape: Talking Island Village -->
 		</skills>
 	</item>
-	<item id="20373" name="Scroll of Escape: Elven Village" type="EtcItem">
+	<item id="20373" name="Scroll of Escape - Elven Village" type="EtcItem">
 		<!-- Magic scroll that moves you to Elven Village. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1704,7 +1704,7 @@
 			<skill id="22053" level="2" /> <!-- Scroll of Escape: Elven Village -->
 		</skills>
 	</item>
-	<item id="20374" name="Scroll of Escape: Dark Elf Village" type="EtcItem">
+	<item id="20374" name="Scroll of Escape - Dark Elf Village" type="EtcItem">
 		<!-- Magic scroll that moves you to Dark Elf Village. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1729,7 +1729,7 @@
 			<skill id="22053" level="3" /> <!-- Scroll of Escape: Dark Elf Village -->
 		</skills>
 	</item>
-	<item id="20375" name="Scroll of Escape: Orc Village" type="EtcItem">
+	<item id="20375" name="Scroll of Escape - Orc Village" type="EtcItem">
 		<!-- Magic scroll that moves you to Orc Village. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1754,7 +1754,7 @@
 			<skill id="22053" level="4" /> <!-- Scroll of Escape: Orc Village -->
 		</skills>
 	</item>
-	<item id="20376" name="Scroll of Escape: Dwarven Village" type="EtcItem">
+	<item id="20376" name="Scroll of Escape - Dwarven Village" type="EtcItem">
 		<!-- Magic scroll that moves you to Dwarven Village. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1779,7 +1779,7 @@
 			<skill id="22053" level="5" /> <!-- Scroll of Escape: Dwarven Village -->
 		</skills>
 	</item>
-	<item id="20377" name="Scroll of Escape: Gludin Village" type="EtcItem">
+	<item id="20377" name="Scroll of Escape - Gludin Village" type="EtcItem">
 		<!-- Magic scroll that moves you to Gludin Village. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1804,7 +1804,7 @@
 			<skill id="22053" level="6" /> <!-- Scroll of Escape: Gludin Village -->
 		</skills>
 	</item>
-	<item id="20378" name="Scroll of Escape: Town of Gludio" type="EtcItem">
+	<item id="20378" name="Scroll of Escape - Town of Gludio" type="EtcItem">
 		<!-- Magic scroll that teleports you to the Town of Gludio. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1829,7 +1829,7 @@
 			<skill id="22053" level="7" /> <!-- Scroll of Escape: Town of Gludio -->
 		</skills>
 	</item>
-	<item id="20379" name="Scroll of Escape: Town of Dion" type="EtcItem">
+	<item id="20379" name="Scroll of Escape - Town of Dion" type="EtcItem">
 		<!-- Magic scroll that moves you to Town of Dion. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1854,7 +1854,7 @@
 			<skill id="22053" level="8" /> <!-- Scroll of Escape: Town of Dion -->
 		</skills>
 	</item>
-	<item id="20380" name="Scroll of Escape: Floran Village" type="EtcItem">
+	<item id="20380" name="Scroll of Escape - Floran Village" type="EtcItem">
 		<!-- Magic scroll that moves you to Floran Village. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1879,7 +1879,7 @@
 			<skill id="22053" level="9" /> <!-- Scroll of Escape: Floran Village -->
 		</skills>
 	</item>
-	<item id="20381" name="Scroll of Escape: Town of Giran" type="EtcItem">
+	<item id="20381" name="Scroll of Escape - Town of Giran" type="EtcItem">
 		<!-- Magic scroll that teleports you to the Town of Giran. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1904,7 +1904,7 @@
 			<skill id="22053" level="10" /> <!-- Scroll of Escape: Town of Giran -->
 		</skills>
 	</item>
-	<item id="20382" name="Scroll of Escape: Hardin's Academy" type="EtcItem">
+	<item id="20382" name="Scroll of Escape - Hardin's Academy" type="EtcItem">
 		<!-- Magic scroll that moves you to Hardin's Academy. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1929,7 +1929,7 @@
 			<skill id="22053" level="11" /> <!-- Scroll of Escape: Hardin's Academy -->
 		</skills>
 	</item>
-	<item id="20383" name="Scroll of Escape: Heine" type="EtcItem">
+	<item id="20383" name="Scroll of Escape - Heine" type="EtcItem">
 		<!-- Magic scroll that moves you to Heine. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1954,7 +1954,7 @@
 			<skill id="22053" level="12" /> <!-- Scroll of Escape: Heine -->
 		</skills>
 	</item>
-	<item id="20384" name="Scroll of Escape: Town of Oren" type="EtcItem">
+	<item id="20384" name="Scroll of Escape - Town of Oren" type="EtcItem">
 		<!-- Magic scroll that moves you to Town of Oren. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1979,7 +1979,7 @@
 			<skill id="22053" level="13" /> <!-- Scroll of Escape: Town of Oren -->
 		</skills>
 	</item>
-	<item id="20385" name="Scroll of Escape: Ivory Tower" type="EtcItem">
+	<item id="20385" name="Scroll of Escape - Ivory Tower" type="EtcItem">
 		<!-- Magic scroll that moves you to Ivory Tower. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2004,7 +2004,7 @@
 			<skill id="22053" level="14" /> <!-- Scroll of Escape: Ivory Tower -->
 		</skills>
 	</item>
-	<item id="20386" name="Scroll of Escape: Hunter's Village" type="EtcItem">
+	<item id="20386" name="Scroll of Escape - Hunter's Village" type="EtcItem">
 		<!-- Magic scroll that moves you to Hunter's Village. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2029,7 +2029,7 @@
 			<skill id="22053" level="15" /> <!-- Scroll of Escape: Hunter's Village -->
 		</skills>
 	</item>
-	<item id="20387" name="Scroll of Escape: Town of Aden" type="EtcItem">
+	<item id="20387" name="Scroll of Escape - Town of Aden" type="EtcItem">
 		<!-- Magic scroll that teleports you to the Town of Aden. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2054,7 +2054,7 @@
 			<skill id="22053" level="16" /> <!-- Scroll of Escape: Town of Aden -->
 		</skills>
 	</item>
-	<item id="20388" name="Scroll of Escape: Town of Goddard" type="EtcItem">
+	<item id="20388" name="Scroll of Escape - Town of Goddard" type="EtcItem">
 		<!-- Magic scroll that moves you to Town of Goddard. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2079,7 +2079,7 @@
 			<skill id="22053" level="17" /> <!-- Scroll of Escape: Town of Goddard -->
 		</skills>
 	</item>
-	<item id="20389" name="Scroll of Escape: Town of Rune" type="EtcItem">
+	<item id="20389" name="Scroll of Escape - Town of Rune" type="EtcItem">
 		<!-- Magic scroll that moves you to the Town of Rune. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2104,7 +2104,7 @@
 			<skill id="22053" level="18" /> <!-- Scroll of Escape: Town of Rune -->
 		</skills>
 	</item>
-	<item id="20390" name="Scroll of Escape: Town of Schuttgart" type="EtcItem">
+	<item id="20390" name="Scroll of Escape - Town of Schuttgart" type="EtcItem">
 		<!-- Magic scroll that moves you to Town of Schuttgart. -->
 		<set name="icon" val="BranchSys.icon.br_escape_scroll_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

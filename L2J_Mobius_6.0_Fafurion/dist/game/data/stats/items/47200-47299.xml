@@ -387,7 +387,7 @@
 			<stat type="pDef">400</stat>
 		</stats>
 	</item>
-	<item id="47234" name="Scroll of Escape: Blackbird Campsite" type="EtcItem">
+	<item id="47234" name="Scroll of Escape - Blackbird Campsite" type="EtcItem">
 		<!-- Teleports to the Blackbird Campsite. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -400,7 +400,7 @@
 			<skill id="18618" level="1" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47235" name="Scroll of Escape: Enchanted Valley" type="EtcItem">
+	<item id="47235" name="Scroll of Escape - Enchanted Valley" type="EtcItem">
 		<!-- Teleports to the Enchanted Valley. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -413,7 +413,7 @@
 			<skill id="18618" level="2" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47236" name="Scroll of Escape: Giant's Cave" type="EtcItem">
+	<item id="47236" name="Scroll of Escape - Giant's Cave" type="EtcItem">
 		<!-- Teleports to Kekropus in the Giant's Cave. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -426,7 +426,7 @@
 			<skill id="18618" level="3" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47237" name="Scroll of Escape: Hellbound" type="EtcItem">
+	<item id="47237" name="Scroll of Escape - Hellbound" type="EtcItem">
 		<!-- Teleports to the Hellbound. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -439,7 +439,7 @@
 			<skill id="18618" level="4" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47238" name="Scroll of Escape: Blazing Swamp" type="EtcItem">
+	<item id="47238" name="Scroll of Escape - Blazing Swamp" type="EtcItem">
 		<!-- Teleports to the Blazing Swamp. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -452,7 +452,7 @@
 			<skill id="18618" level="5" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47239" name="Scroll of Escape: Raider's Crossroads" type="EtcItem">
+	<item id="47239" name="Scroll of Escape - Raider's Crossroads" type="EtcItem">
 		<!-- Teleports to the Raider's Crossroads. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -465,7 +465,7 @@
 			<skill id="18618" level="6" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47240" name="Scroll of Escape: Land of Chaos" type="EtcItem">
+	<item id="47240" name="Scroll of Escape - Land of Chaos" type="EtcItem">
 		<!-- Teleports to the Land of Chaos. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -478,7 +478,7 @@
 			<skill id="18618" level="7" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47241" name="Scroll of Escape: Gainak" type="EtcItem">
+	<item id="47241" name="Scroll of Escape - Gainak" type="EtcItem">
 		<!-- Teleports to the Gainak. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -491,7 +491,7 @@
 			<skill id="18618" level="8" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47242" name="Scroll of Escape: The Cemetery" type="EtcItem">
+	<item id="47242" name="Scroll of Escape - The Cemetery" type="EtcItem">
 		<!-- Teleports to the Cemetery. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -504,7 +504,7 @@
 			<skill id="18618" level="9" /> <!-- Scroll of Escape: Blackbird Campsite -->
 		</skills>
 	</item>
-	<item id="47243" name="Scroll of Escape: Pagan Temple" type="EtcItem">
+	<item id="47243" name="Scroll of Escape - Pagan Temple" type="EtcItem">
 		<!-- Teleport to Knight Captain Kargos, who has something to do with entering the Pagan Temple. -->
 		<set name="icon" val="icon.etc_scroll_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -555,7 +555,7 @@
 			<stat type="maxMp">64</stat>
 		</stats>
 	</item>
-	<item id="47246" name="Harnak's Deformed Necklace" type="Armor">
+	<item id="47246" name="Harnak's Transformed Necklace" type="Armor">
 		<!-- Can be exchanged for the Source of the Emperor through Denign. Increases MP by 79, additional damage to Giants by 5%, and decreases Skill Cooldown by 10%. Cannot be enchanted, augmented or crystallized. -->
 		<set name="icon" val="icon.transform_necklace_of_harnak" />
 		<set name="default_action" val="EQUIP" />
@@ -716,7 +716,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47260" name="Giant Crystal" type="EtcItem">
+	<item id="47260" name="Giant's Crystal" type="EtcItem">
 		<!-- An item required for the production and enhancement of the Giant Trackers Talisman. -->
 		<set name="icon" val="icon.general_energy_condense_i05" />
 		<set name="is_tradable" val="false" />

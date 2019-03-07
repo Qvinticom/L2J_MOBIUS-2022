@@ -100,7 +100,7 @@
 			<item id="3887" min="1" max="1" chance="20" /> <!-- Letter - T - Event -->
 		</capsuled_items>
 	</item>
-	<item id="37006" name="Letter Collector's Pouch: RIIS" type="EtcItem">
+	<item id="37006" name="Letter Collector's Pouch: HIIS" type="EtcItem">
 		<!-- Magic pouch that contains the letters of RIIS. Double-click to get one of the following letters: H, II and S. -->
 		<set name="icon" val="icon.etc_crystal_spice_s_i00" />
 		<set name="weight" val="10" />
@@ -264,7 +264,7 @@
 			<stat type="pAtkRange">500</stat>
 		</stats>
 	</item>
-	<item id="37017" name="Scroll of Escape: Raider's Crossroads" type="EtcItem">
+	<item id="37017" name="Scroll of Escape - Raider's Crossroads" type="EtcItem">
 		<!-- Scroll for teleporting to Raider's Crossroads. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -278,7 +278,7 @@
 			<skill id="17050" level="1" /> <!-- Scroll of Escape: Raider's Crossroads -->
 		</skills>
 	</item>
-	<item id="37018" name="Scroll of Escape: Land of Chaos" type="EtcItem">
+	<item id="37018" name="Scroll of Escape - Land of Chaos" type="EtcItem">
 		<!-- Scroll for teleporting to the Land of Chaos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -292,7 +292,7 @@
 			<skill id="17051" level="1" /> <!-- Scroll of Escape: Land of Chaos -->
 		</skills>
 	</item>
-	<item id="37019" name="Scroll of Escape: Gainak" type="EtcItem">
+	<item id="37019" name="Scroll of Escape - Gainak" type="EtcItem">
 		<!-- Scroll for teleporting to Gainak. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -381,7 +381,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
 	</item>
-	<item id="37025" name="Scroll of Escape: Alligator Island" type="EtcItem">
+	<item id="37025" name="Scroll of Escape - Alligator Island" type="EtcItem">
 		<!-- Teleports you to Alligator Island. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -398,7 +398,7 @@
 			<skill id="9967" level="1" /> <!-- Scroll of Escape: Alligator Island -->
 		</skills>
 	</item>
-	<item id="37026" name="Scroll of Escape: Outlaw Forest" type="EtcItem">
+	<item id="37026" name="Scroll of Escape - Outlaw Forest" type="EtcItem">
 		<!-- Teleports you to Outlaw Forest. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -415,7 +415,7 @@
 			<skill id="9968" level="1" /> <!-- Scroll of Escape: Outlaw Forest -->
 		</skills>
 	</item>
-	<item id="37027" name="Scroll of Escape: Sea of Spores" type="EtcItem">
+	<item id="37027" name="Scroll of Escape - Sea of Spores" type="EtcItem">
 		<!-- Teleports you to the Sea of Spores. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -432,7 +432,7 @@
 			<skill id="9969" level="1" /> <!-- Scroll of Escape: Sea of Spores -->
 		</skills>
 	</item>
-	<item id="37028" name="Scroll of Escape: Forsaken Plains" type="EtcItem">
+	<item id="37028" name="Scroll of Escape - Forsaken Plains" type="EtcItem">
 		<!-- Teleports you to Forsaken Plains. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -449,7 +449,7 @@
 			<skill id="9970" level="1" /> <!-- Scroll of Escape: Forsaken Plains -->
 		</skills>
 	</item>
-	<item id="37029" name="Scroll of Escape: Fields of Massacre" type="EtcItem">
+	<item id="37029" name="Scroll of Escape - Fields of Massacre" type="EtcItem">
 		<!-- Teleports you to the Fields of Massacre. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -470,7 +470,7 @@
 			<skill id="9971" level="1" /> <!-- Scroll of Escape: Fields of Massacre -->
 		</skills>
 	</item>
-	<item id="37030" name="Scroll of Escape: Swamp of Screams" type="EtcItem">
+	<item id="37030" name="Scroll of Escape - Swamp of Screams" type="EtcItem">
 		<!-- Teleports you to the Swamp of Screams. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -491,7 +491,7 @@
 			<skill id="9972" level="1" /> <!-- Scroll of Escape: Swamp of Screams -->
 		</skills>
 	</item>
-	<item id="37031" name="Scroll of Escape: Forest of the Dead" type="EtcItem">
+	<item id="37031" name="Scroll of Escape - Forest of the Dead" type="EtcItem">
 		<!-- Teleports you to the Forest of the Dead. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -512,7 +512,7 @@
 			<skill id="9973" level="1" /> <!-- Scroll of Escape: Forest of the Dead -->
 		</skills>
 	</item>
-	<item id="37032" name="Scroll of Escape: Wall of Argos" type="EtcItem">
+	<item id="37032" name="Scroll of Escape - Wall of Argos" type="EtcItem">
 		<!-- Teleports you to the Wall of Argos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -533,7 +533,7 @@
 			<skill id="9974" level="1" /> <!-- Scroll of Escape: Wall of Argos -->
 		</skills>
 	</item>
-	<item id="37033" name="Scroll of Escape: Wall of Argos" type="EtcItem">
+	<item id="37033" name="Scroll of Escape - Wall of Argos" type="EtcItem">
 		<!-- Teleports you to the Wall of Argos. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -549,7 +549,7 @@
 			<skill id="9983" level="1" /> <!-- Scroll of Escape: Wall of Argos -->
 		</skills>
 	</item>
-	<item id="37034" name="Scroll of Escape: Varka Silenos Barracks" type="EtcItem">
+	<item id="37034" name="Scroll of Escape - Varka Silenos Barracks" type="EtcItem">
 		<!-- Teleports you to Varka Silenos Barracks. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="material" val="PAPER" />
@@ -567,7 +567,7 @@
 			<skill id="9975" level="1" /> <!-- Scroll of Escape: Varka Silenos Barracks -->
 		</skills>
 	</item>
-	<item id="37035" name="Scroll of Escape: Ketra Orc Outpost" type="EtcItem">
+	<item id="37035" name="Scroll of Escape - Ketra Orc Outpost" type="EtcItem">
 		<!-- Teleports you to Ketra Orc Outpost. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -583,7 +583,7 @@
 			<skill id="9976" level="1" /> <!-- Scroll of Escape: Ketra Orc Outpost -->
 		</skills>
 	</item>
-	<item id="37036" name="Scroll of Escape: Den of Evil" type="EtcItem">
+	<item id="37036" name="Scroll of Escape - Den of Evil" type="EtcItem">
 		<!-- Teleports you to the Den of Evil. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -599,7 +599,7 @@
 			<skill id="9977" level="1" /> <!-- Scroll of Escape: Den of Evil -->
 		</skills>
 	</item>
-	<item id="37037" name="Scroll of Escape: Sel Mahum Training Grounds" type="EtcItem">
+	<item id="37037" name="Scroll of Escape - Sel Mahum Training Grounds" type="EtcItem">
 		<!-- Teleports you to Sel Mahum Training Grounds. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -615,7 +615,7 @@
 			<skill id="9978" level="1" /> <!-- Scroll of Escape: Sel Mahum Training Grounds -->
 		</skills>
 	</item>
-	<item id="37038" name="Scroll of Escape: Plains of the Lizardmen" type="EtcItem">
+	<item id="37038" name="Scroll of Escape - Plains of the Lizardmen" type="EtcItem">
 		<!-- Teleports you to the Plains of the Lizardmen. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -631,7 +631,7 @@
 			<skill id="9979" level="1" /> <!-- Scroll of Escape: Plains of the Lizardmen -->
 		</skills>
 	</item>
-	<item id="37039" name="Scroll of Escape: Field of Silence" type="EtcItem">
+	<item id="37039" name="Scroll of Escape - Field of Silence" type="EtcItem">
 		<!-- Teleports you to the Field of Silence. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -647,7 +647,7 @@
 			<skill id="9980" level="1" /> <!-- Scroll of Escape: Field of Silence -->
 		</skills>
 	</item>
-	<item id="37040" name="Scroll of Escape: Field of Whispers" type="EtcItem">
+	<item id="37040" name="Scroll of Escape - Field of Whispers" type="EtcItem">
 		<!-- Teleports you to the Field of Whispers. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="weight" val="30" />
@@ -823,7 +823,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37050" name="Tegaffe's Dualsword" type="Weapon">
+	<item id="37050" name="Tegaffe's Dual Sword" type="Weapon">
 		<!-- Monster weapon. Dual Sword type. Base appearance of Monster Weapon Appearance Stone. -->
 		<set name="icon" val="icon.Summon_orc_dual_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -850,7 +850,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="37051" name="Seknus' One-handed Magic Sword" type="Weapon">
+	<item id="37051" name="Seknus' Magic Sword" type="Weapon">
 		<!-- Monster weapon. Magic sword type. Base appearance of Monster Weapon Appearance Stone. -->
 		<set name="icon" val="icon.seknus_1hs_wp_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1305,7 +1305,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37070" name="Monster Weapon Appearance Stone: Tegaffe's Dualsword" type="EtcItem">
+	<item id="37070" name="Monster Weapon Appearance Stone: Tegaffe's Dual Sword" type="EtcItem">
 		<!-- Changes the appearance of a dual sword to that of Tegaffe's Dual Sword. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.shape_shifting_dual_i00" />
 		<set name="is_stackable" val="true" />
@@ -1316,7 +1316,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37071" name="Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword" type="EtcItem">
+	<item id="37071" name="Monster Weapon Appearance Stone: Seknus' Magic Sword" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of Seknus' Sword. An appearance-modified item has no change in abilities. Double-click to use. -->
 		<set name="icon" val="icon.shape_shifting_sword_i00" />
 		<set name="is_stackable" val="true" />

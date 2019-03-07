@@ -1003,7 +1003,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14527" name="Icarus Dual Daggers - Confusion" type="Weapon">
+	<item id="14527" name="Icarus Dual Dagger - Chaos" type="Weapon">
 		<!-- Masterwork item that increases Evasion. A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. Can be equipped by Dagger Masters level 81 and higher. Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1089,7 +1089,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14529" name="Icarus Dual Daggers - Confusion {PvP}" type="Weapon">
+	<item id="14529" name="Icarus Dual Dagger - Chaos {PvP}" type="Weapon">
 		<!-- Masterwork item that increases Evasion. A dual dagger that has greater P. Atk. than a regular one-handed sword when enchanted. When enchanted to 4 or higher, increases Critical by 109. Inflicts more damage during PvP and has a chance to remove 1 or more of the target's enhanced status or decrease its Shield Defense during an attack. Can be equipped by Dagger Masters level 81 and higher. No Soul Crystal option. -->
 		<set name="icon" val="icon.dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1159,7 +1159,7 @@
 			<item id="13316" min="1" max="1" chance="100" /> <!-- Ornithomimus Hat (Event) - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="14531" name="Gludio Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14531" name="Gludio Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Gludio. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1179,7 +1179,7 @@
 			<skill id="2948" level="1" /> <!-- Gludio Supply Box - magic pin -->
 		</skills>
 	</item>
-	<item id="14532" name="Dion Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14532" name="Dion Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Dion. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1199,7 +1199,7 @@
 			<skill id="2949" level="1" /> <!-- Dion supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14533" name="Giran Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14533" name="Giran Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Giran. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1219,7 +1219,7 @@
 			<skill id="2950" level="1" /> <!-- Giran supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14534" name="Oren Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14534" name="Oren Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Oren. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1239,7 +1239,7 @@
 			<skill id="2951" level="1" /> <!-- Oren supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14535" name="Aden Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14535" name="Aden Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Aden. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1259,7 +1259,7 @@
 			<skill id="2952" level="1" /> <!-- Aden supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14536" name="Innadril Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14536" name="Innadril Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Innadril. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1279,7 +1279,7 @@
 			<skill id="2953" level="1" /> <!-- Innadril supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14537" name="Goddard Supply Box: Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14537" name="Goddard Supply Box: Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Goddard. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1299,7 +1299,7 @@
 			<skill id="2954" level="1" /> <!-- Goddard Supply Box: magic pin -->
 		</skills>
 	</item>
-	<item id="14538" name="Rune Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14538" name="Rune Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Rune. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1319,7 +1319,7 @@
 			<skill id="2955" level="1" /> <!-- Rune supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14539" name="Schuttgart Supply Box - Magic Pin" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14539" name="Schuttgart Supply Box - Magic Pin" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Schuttgart. Has a chance of containing high grade magic pin that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1339,7 +1339,7 @@
 			<skill id="2956" level="1" /> <!-- Schuttgart supply box - magic pin -->
 		</skills>
 	</item>
-	<item id="14540" name="Gludio Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14540" name="Gludio Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Gludio. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1359,7 +1359,7 @@
 			<skill id="2957" level="1" /> <!-- Gludio supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14541" name="Dion Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14541" name="Dion Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Dion. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1379,7 +1379,7 @@
 			<skill id="2958" level="1" /> <!-- Dion supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14542" name="Giran Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14542" name="Giran Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Giran. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1399,7 +1399,7 @@
 			<skill id="2959" level="1" /> <!-- Giran supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14543" name="Oren Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14543" name="Oren Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Oren. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1419,7 +1419,7 @@
 			<skill id="2960" level="1" /> <!-- Oren supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14544" name="Aden Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14544" name="Aden Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Aden. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1439,7 +1439,7 @@
 			<skill id="2961" level="1" /> <!-- Aden supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14545" name="Innadril Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14545" name="Innadril Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Innadril. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1459,7 +1459,7 @@
 			<skill id="2962" level="1" /> <!-- Innadril supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14546" name="Goddard Supply Box: Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14546" name="Goddard Supply Box: Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Goddard. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1479,7 +1479,7 @@
 			<skill id="2963" level="1" /> <!-- Goddard Supply Box: magic pouch -->
 		</skills>
 	</item>
-	<item id="14547" name="Rune Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14547" name="Rune Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Rune. Has a chance of containing high grade magic pouch that can be attached to a belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1499,7 +1499,7 @@
 			<skill id="2964" level="1" /> <!-- Rune supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14548" name="Schuttgart Supply Box - Magic Pouch" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14548" name="Schuttgart Supply Box - Magic Pouch" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Schuttgart. High grade magic pouch that can be attached to the belt is packaged. -->
 		<set name="icon" val="icon.etc_box_of_adventure_2_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1519,7 +1519,7 @@
 			<skill id="2965" level="1" /> <!-- Schuttgart supply box - magic pouch -->
 		</skills>
 	</item>
-	<item id="14549" name="Gludio Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14549" name="Gludio Supply Box - Belt" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Gludio. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1539,7 +1539,7 @@
 			<skill id="2966" level="1" /> <!-- Gludio supply box - belt -->
 		</skills>
 	</item>
-	<item id="14550" name="Dion Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14550" name="Dion Supply Box - Belt" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Dion. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1559,7 +1559,7 @@
 			<skill id="2967" level="1" /> <!-- Dion supply box - belt -->
 		</skills>
 	</item>
-	<item id="14551" name="Giran Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14551" name="Giran Supply Box - Belt" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Giran. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1579,7 +1579,7 @@
 			<skill id="2968" level="1" /> <!-- Giran supply box - belt -->
 		</skills>
 	</item>
-	<item id="14552" name="Oren Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14552" name="Oren Supply Box - Belt" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Oren. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1599,7 +1599,7 @@
 			<skill id="2969" level="1" /> <!-- Oren supply box - belt -->
 		</skills>
 	</item>
-	<item id="14553" name="Aden Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14553" name="Aden Supply Box - Belt" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Aden. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1619,7 +1619,7 @@
 			<skill id="2970" level="1" /> <!-- Aden supply box - belt -->
 		</skills>
 	</item>
-	<item id="14554" name="Innadril Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14554" name="Innadril Supply Box - Belt" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Innadril. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1639,7 +1639,7 @@
 			<skill id="2971" level="1" /> <!-- Innadril supply box - belt -->
 		</skills>
 	</item>
-	<item id="14555" name="Goddard Supply Box: Belt" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14555" name="Goddard Supply Box: Belt" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Goddard. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1659,7 +1659,7 @@
 			<skill id="2972" level="1" /> <!-- Goddard Supply Box: belt -->
 		</skills>
 	</item>
-	<item id="14556" name="Rune Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14556" name="Rune Supply Box - Belt" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Rune. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1679,7 +1679,7 @@
 			<skill id="2973" level="1" /> <!-- Rune supply box - belt -->
 		</skills>
 	</item>
-	<item id="14557" name="Schuttgart Supply Box - Belt" additionalName="S-/A-grade" type="EtcItem">
+	<item id="14557" name="Schuttgart Supply Box - Belt" additionalName="S-/ A-grade" type="EtcItem">
 		<!-- Box that has the symbol of Schuttgart. Has a chance of containing high grade belt. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1744,7 +1744,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14559" name="PC Cafe Points" type="EtcItem">
+	<item id="14559" name="PA Points" type="EtcItem">
 		<!-- When double-clicked, 700 PA Points can be acquired. -->
 		<set name="icon" val="icon.etc_pccafe_point_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -2098,7 +2098,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="14570" name="Dualsword of Hunter Family" type="Weapon">
+	<item id="14570" name="Dual Sword of Hunter Family" type="Weapon">
 		<!-- Soul Crystal Enhancement and Augmentation not allowed. -->
 		<set name="icon" val="icon.weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />

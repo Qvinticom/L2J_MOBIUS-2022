@@ -240,7 +240,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="7618" name="Scroll of Escape: Ketra Orc Village" type="EtcItem">
+	<item id="7618" name="Scroll of Escape - Ketra Orc Village" type="EtcItem">
 		<!-- Magical scroll that relocates you to Ketra Orc Village. Cannot be sold in shops. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -258,7 +258,7 @@
 			<skill id="2213" level="20" /> <!-- Scroll of Escape: Ketra Orc Village -->
 		</skills>
 	</item>
-	<item id="7619" name="Scroll of Escape: Varka Silenos Village" type="EtcItem">
+	<item id="7619" name="Scroll of Escape - Varka Silenos Village" type="EtcItem">
 		<!-- Magical scroll that relocates you to Varka Silenos Village. Cannot be sold in shops. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

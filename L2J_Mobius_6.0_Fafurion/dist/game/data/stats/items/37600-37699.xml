@@ -880,7 +880,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37641" name="Mysterious Dualsword" additionalName="7-day" type="Weapon">
+	<item id="37641" name="Mysterious Dual Sword" additionalName="7-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
@@ -1339,7 +1339,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37655" name="Mysterious Dualsword" additionalName="30-day" type="Weapon">
+	<item id="37655" name="Mysterious Dual Sword" additionalName="30-day" type="Weapon">
 		<!-- Weapon infused with mysterious power. Must use No-grade Soulshot/ Spiritshot/ Blessed Spiritshot. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.bm_r_dualsword" />
 		<set name="weapon_type" val="DUAL" />
@@ -1437,7 +1437,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37658" name="Mysterious Healthy Juice Pack (HP/CP)" type="EtcItem">
+	<item id="37658" name="Mysterious Healthy Juice Pack (HP/ CP)" type="EtcItem">
 		<!-- Double-click to acquire 3 Mysterious Healthy Juices (HP/ CP). -->
 		<set name="icon" val="icon.etc_pi_gift_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1451,7 +1451,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="default_action" val="PEEL" />
 	</item>
-	<item id="37659" name="Mysterious Healthy Juice (HP/CP)" type="EtcItem">
+	<item id="37659" name="Mysterious Healthy Juice (HP/ CP)" type="EtcItem">
 		<!-- Mysterious juice that momentarily replenishes 30,000 HP and CP. Cannot be used in the Olympiad or Ceremony of Chaos. -->
 		<set name="icon" val="icon.bm_health_juice_violet" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1572,7 +1572,7 @@
 		<set name="is_freightable" val="true" />
 		<set name="weight" val="10" />
 	</item>
-	<item id="37666" name="Rare Accessory Pack" additionalName="30-day" type="EtcItem">
+	<item id="37666" name="Rare Accessory Pack" type="EtcItem">
 		<!-- Double-click to acquire 30-day Blessed Antharas's Earring, Blessed Valakas's Necklace, Tauti's Ring, and Earth Wyrm Heart Ring. -->
 		<set name="icon" val="icon.etc_pi_box_love_pack" />
 		<set name="is_clan_depositable" val="false" />
@@ -2130,7 +2130,7 @@
 			<stat type="randomDamage">5</stat>
 		</stats>
 	</item>
-	<item id="37696" name="Valentine One-handed Magic Sword" type="Weapon">
+	<item id="37696" name="Valentine Magic Sword" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine magic sword type. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -2155,7 +2155,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37697" name="Valentine One-handed Magic Blunt Weapon" type="Weapon">
+	<item id="37697" name="Valentine One-handed Staff" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine one-handed staff type. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2181,7 +2181,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37698" name="Valentine Two-handed Magic Blunt Weapon" type="Weapon">
+	<item id="37698" name="Valentine Two-handed Staff" type="Weapon">
 		<!-- Modifies the appearance of a weapon. Valentine two-handed staff type. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="BLUNT" />
@@ -2207,7 +2207,7 @@
 			<stat type="randomDamage">20</stat>
 		</stats>
 	</item>
-	<item id="37699" name="Valentine Dualsword" type="Weapon">
+	<item id="37699" name="Valentine Dual Sword" type="Weapon">
 		<!-- Modifies the appearance of a weapon. -->
 		<set name="icon" val="icon.ev_hallowinday_candy_i00" />
 		<set name="weapon_type" val="DUAL" />

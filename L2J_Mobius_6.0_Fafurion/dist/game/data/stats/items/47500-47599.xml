@@ -561,7 +561,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47547" name="Bait" type="EtcItem">
+	<item id="47547" name="Corroded Bait" type="EtcItem">
 		<!-- This Normal Bait cannot be used any more. You can sell it to NPC Shop. -->
 		<set name="icon" val="icon.etc_normal_lure" />
 		<set name="default_action" val="EQUIP" />
@@ -583,7 +583,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_oly_restricted" val="true" />
 	</item>
-	<item id="47549" name="PC Cafe Bait" type="EtcItem">
+	<item id="47549" name="PA Bait" type="EtcItem">
 		<!-- Fishing time: 105 sec. Standby time: 15 sec. Special Fishing Bait. Fish using this bait to catch a Purplish Box with low probability. Can be used outside PAs. -->
 		<set name="icon" val="icon.etc_bait_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -790,7 +790,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47563" name="Zodiac Agathion Box" type="EtcItem">
+	<item id="47563" name="Zodiac Agathion Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the twelve Agathions Stage 1. -->
 		<set name="icon" val="icon.etc_exchange_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -934,7 +934,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47574" name="PC Cafe Treasure Chest" type="EtcItem">
+	<item id="47574" name="PA Treasure Chest" type="EtcItem">
 		<!-- Double-click to obtain the item. -->
 		<set name="icon" val="icon.new_user_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -946,19 +946,19 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47575" name="Royal White Save Ticket (R)" type="EtcItem">
+	<item id="47575" name="Royal White Save Ticket (R-grade)" type="EtcItem">
 		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R-grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47576" name="Royal White Save Ticket (R95)" type="EtcItem">
+	<item id="47576" name="Royal White Save Ticket (R95-grade)" type="EtcItem">
 		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R95 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47577" name="Royal White Save Ticket (R99)" type="EtcItem">
+	<item id="47577" name="Royal White Save Ticket (R99-grade)" type="EtcItem">
 		<!-- A ticket that enhances probability by 15% when using a Normal Armor Enchant Scroll to enchant R99 grade Armor. Can only be used on 3-9 enchanted items. When Enchant fails, the item does not crystallize, but the existing enchant level decreases by 1. -->
 		<set name="icon" val="icon.bm_royal_white_save_ticket" />
 		<set name="is_sellable" val="false" />

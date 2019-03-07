@@ -386,7 +386,7 @@
 			<stat type="mDef">158</stat>
 		</stats>
 	</item>
-	<item id="37523" name="Summon Scroll: Pomona" type="EtcItem">
+	<item id="37523" name="Summon Scroll: Bae Kisung" type="EtcItem">
 		<!-- A scroll that can summon Bae Kisung once. If Bae Kisung is summoned, you can receive Kisung's Power Up buff for 30 min and also obtain Kisung's Gift Box containing special gifts. Cooldown is 15 sec. Cannot be used in Olympiad. -->
 		<set name="icon" val="icon.etc_star_scroll_baekisung" />
 		<set name="is_clan_depositable" val="false" />
@@ -407,7 +407,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="37525" name="Agathion - Pomona" additionalName="90-day" type="Armor">
+	<item id="37525" name="Agathion - Bae Kisung" additionalName="90-day" type="Armor">
 		<!-- A bracelet that can summon Bae Kisung Agathion. 90-day item. Cannot be used in Olympiad. <Active Skill>. 1. Bae Kisung Agathion Teleport: Assigns a skill to teleport to Town of Aden/ Town of Rune/ Talking Island Village. (Cooldown: 30 min). <Item Skill>. 1. Kisung's Mysterious Power: Kisung's mysterious power decreases Physical and Magic Skill MP Consumption by 3%. 2. Kisung's Great Power: Kisung's great power increases Atk. Spd. and Casting Spd. by 50. 3. Kisung's Balanced Power: Kisung's Balanced Power increases STR/ INT/ CON/ DEX/ WIT/ MEN by 1. -->
 		<set name="icon" val="icon.bracelet_agathion_bm_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -537,7 +537,7 @@
 			<skill id="17103" level="1" /> <!-- Santa's Blessing -->
 		</skills>
 	</item>
-	<item id="37537" name="Pomona's Gift Box" type="EtcItem">
+	<item id="37537" name="Bae Kisung's Gift Box" type="EtcItem">
 		<!-- Double-click to receive 10 Rose Essences as well as a Passion Treasure Chest at a low probability. -->
 		<set name="icon" val="icon.event_oriental_park_i00" />
 		<set name="weight" val="10" />
@@ -548,7 +548,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="37538" name="Pomona Agathion Pack" type="EtcItem">
+	<item id="37538" name="Bae Kisung Agathion Box" type="EtcItem">
 		<!-- Double-click to receive a Bae Kisung Agathion (90-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_pi_box_wish_pack" />
 		<set name="weight" val="10" />
@@ -642,18 +642,18 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37551" name="Winter Holiday Gift" type="EtcItem">
+	<item id="37551" name="2012 Holiday Gift" type="EtcItem">
 		<!-- Double-click to acquire one of the following: Bottle of Orfen's Soul, Bottle of Frintezza's Soul, Bottle of Queen Ant's Soul, or Bottle of Baium's Soul. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i04" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37552" name="Wintermelon Seed" type="EtcItem">
+	<item id="37552" name="Snowy Squash Seed" type="EtcItem">
 		<!-- Double-click to have a Young Snowy Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="37553" name="Large Wintermelon Seed" type="EtcItem">
+	<item id="37553" name="Large Snowy Squash Seed" type="EtcItem">
 		<!-- Double-click to have a Young Large Snowy Squash appear. -->
 		<set name="icon" val="icon.etc_gourd_i11" />
 		<set name="is_stackable" val="true" />

@@ -645,7 +645,7 @@
 		<set name="isAppearanceable" val="true" />
 		<set name="commissionItemType" val="HAIR_ACCESSORY" />
 	</item>
-	<item id="8937" name="Shadow Item: StormBringer*StormBringer" type="Weapon">
+	<item id="8937" name="Shadow Item: Stormbringer*Stormbringer" type="Weapon">
 		<!-- This Shadow Item contains the mirrored power of a Stormbringer. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.time_weapon_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1228,7 +1228,7 @@
 			<skill id="2308" level="29" /> <!-- Event Item -->
 		</skills>
 	</item>
-	<item id="8971" name="Item Set Pack (A/S-grade) (Warrior)" type="EtcItem">
+	<item id="8971" name="Item Set Pack (A/ S-grade) (Warrior)" type="EtcItem">
 		<!-- One can receive A- and S-grade Supplies for Warriors by Double-clicking. (Can be used when the Weight Gauge is below 80% and there are 10 or more empty inventory slots.) -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1553,7 +1553,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8982" name="Shadow Item: Two-handed Sword" type="Weapon">
+	<item id="8982" name="Shadow Item - Two-handed Sword" type="Weapon">
 		<!-- This Shadow Item contains the mirrored power of a Two-handed Sword. It cannot be crystallized or granted functions besides enchantment. -->
 		<set name="icon" val="icon.weapon_two_handed_sword_i00" />
 		<set name="default_action" val="EQUIP" />

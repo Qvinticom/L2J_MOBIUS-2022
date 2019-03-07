@@ -351,7 +351,7 @@
 			<skill id="22658" level="1" /> <!-- Darion's Hellblade Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23218" name="Doll Blader's Butcher Blades Appearance Stone" type="EtcItem">
+	<item id="23218" name="Doll's Butcher Blades Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a dual dagger into that of a Doll Blader's Butcher Blade. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="immediate_effect" val="true" />
@@ -372,7 +372,7 @@
 			<skill id="22659" level="1" /> <!-- Doll Blader's Butcher Blades Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23219" name="Tiat's Claw of Destruction Appearance Stone" type="EtcItem">
+	<item id="23219" name="Tiat's Tiatenon Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a one-handed blunt into that of Tiat's Tiat's Tiatenon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -393,7 +393,7 @@
 			<skill id="22660" level="1" /> <!-- Tiat's Claw of Destruction Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23220" name="Aenkinel's Blades of Delusion Appearance Stone" type="EtcItem">
+	<item id="23220" name="Aenkinel's Astaroth Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a dual sword into that of Aenkinel's Aenkinel's Astaroth. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
@@ -414,7 +414,7 @@
 			<skill id="22661" level="1" /> <!-- Aenkinel's Blades of Delusion Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23221" name="Yehan Klanikus' Blood Brother Appearance Stone" type="EtcItem">
+	<item id="23221" name="Yehan Klanikus' Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a two-handed sword to that of the Yehan Klanikus' Tirbing. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="immediate_effect" val="true" />
@@ -435,7 +435,7 @@
 			<skill id="22662" level="1" /> <!-- Yehan Klanikus' Blood Brother Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23222" name="Mardil's Fan Appearance Stone" type="EtcItem">
+	<item id="23222" name="Mardil's Wind Appearance Stone" type="EtcItem">
 		<!-- Changes the appearance of a one-handed sword to that of Mardil's Wind. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="immediate_effect" val="true" />
@@ -691,7 +691,7 @@
 			<skill id="22672" level="1" /> <!-- Seductive Swimsuit Appearance Stone -->
 		</skills>
 	</item>
-	<item id="23236" name="Scroll of Escape: Uthanka's Tomb" type="EtcItem">
+	<item id="23236" name="Scroll of Escape - Uthanka's Tomb" type="EtcItem">
 		<!-- Scroll of Escape dropped by Pirate Captain Uthanka's spirit. Use it to return to his tomb. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i00" />
 		<set name="is_sellable" val="false" />
@@ -1313,7 +1313,7 @@
 			<skill id="22091" level="1" /> <!-- Eva's Rune -->
 		</skills>
 	</item>
-	<item id="23270" name="Drop Rate Rune 50%" additionalName="1-hour" type="EtcItem">
+	<item id="23270" name="Maphr's Rune 50%" additionalName="1-hour" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1330,7 +1330,7 @@
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23271" name="Drop Rate Rune 100%" additionalName="1-hour" type="EtcItem">
+	<item id="23271" name="Maphr's Rune 100%" additionalName="1-hour" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1347,7 +1347,7 @@
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23272" name="Drop Rate Rune 200%" additionalName="1-hour" type="EtcItem">
+	<item id="23272" name="Maphr's Rune 200%" additionalName="1-hour" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 200%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1364,7 +1364,7 @@
 			<skill id="22587" level="4" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23273" name="Drop Rate Rune 50%" additionalName="30-day" type="EtcItem">
+	<item id="23273" name="Maphr's Rune 50%" additionalName="30-day" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 50%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1381,7 +1381,7 @@
 			<skill id="22587" level="2" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23274" name="Drop Rate Rune 100%" additionalName="30-day" type="EtcItem">
+	<item id="23274" name="Maphr's Rune 100%" additionalName="30-day" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1398,7 +1398,7 @@
 			<skill id="22587" level="3" /> <!-- Drop Rate Rune -->
 		</skills>
 	</item>
-	<item id="23275" name="Drop Rate Rune 200%" additionalName="30-day" type="EtcItem">
+	<item id="23275" name="Maphr's Rune 200%" additionalName="30-day" type="EtcItem">
 		<!-- When possessed in the inventory, increases the rate of item acquisition through hunting by 200%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="is_clan_depositable" val="false" />
@@ -1738,7 +1738,7 @@
 			<item id="23269" min="1" max="1" chance="100" /> <!-- Eva's Rune - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23293" name="Drop Rate Rune 50% Pack (1-hour)" type="EtcItem">
+	<item id="23293" name="Maphr's Rune 50% Pack (1-hour)" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Rune 50% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1757,7 +1757,7 @@
 			<item id="23270" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23294" name="Drop Rate Rune 100% Pack (1-hour)" type="EtcItem">
+	<item id="23294" name="Maphr's Rune 100% Pack (1-hour)" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1776,7 +1776,7 @@
 			<item id="23271" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23295" name="Drop Rate Rune 200% Pack (1-hour)" type="EtcItem">
+	<item id="23295" name="Maphr's Rune 200% Pack (1-hour)" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Rune 200% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1795,7 +1795,7 @@
 			<item id="23272" min="1" max="1" chance="100" /> <!-- Maphr's Rune 200% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="23296" name="Drop Rate Rune 50% Pack (30-day)" type="EtcItem">
+	<item id="23296" name="Maphr's Rune 50% Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Rune 50% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1814,7 +1814,7 @@
 			<item id="23273" min="1" max="1" chance="100" /> <!-- Maphr's Rune 50% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23297" name="Drop Rate Rune 100% Pack (30-day)" type="EtcItem">
+	<item id="23297" name="Maphr's Rune 100% Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Rune 100% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />
@@ -1833,7 +1833,7 @@
 			<item id="23274" min="1" max="1" chance="100" /> <!-- Maphr's Rune 100% - 30-day -->
 		</capsuled_items>
 	</item>
-	<item id="23298" name="Drop Rate Rune 200% Pack (30-day)" type="EtcItem">
+	<item id="23298" name="Maphr's Rune 200% Pack (30-day)" type="EtcItem">
 		<!-- Wrapped Pack containing Maphr's Rune 200% (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="is_clan_depositable" val="false" />

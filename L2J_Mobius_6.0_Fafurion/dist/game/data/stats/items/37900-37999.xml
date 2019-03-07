@@ -128,7 +128,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37912" name="Chrono Maracas Appearance Stone: Dualsword" type="EtcItem">
+	<item id="37912" name="Chrono Maracas Appearance Stone: Dual Sword" type="EtcItem">
 		<!-- Changes the appearance of a dual sword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
@@ -158,7 +158,7 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37915" name="Scarecrow Sword Appearance Stone: One-handed Magic Sword" type="EtcItem">
+	<item id="37915" name="Scarecrow Magic Sword Appearance Stone: Magic Sword" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of a Scarecrow Magic Sword. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
@@ -202,7 +202,7 @@
 			<stat type="randomDamage">10</stat>
 		</stats>
 	</item>
-	<item id="37918" name="Scarecrow Sword" type="Weapon">
+	<item id="37918" name="Scarecrow Magic Sword" type="Weapon">
 		<!-- Cute, scarecrow-shaped magic sword. -->
 		<set name="icon" val="icon.weapon_scarescow_stick_i00" />
 		<set name="weapon_type" val="SWORD" />
@@ -272,7 +272,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37924" name="Chrono Maracas Appearance Stone: Dualsword" additionalName="15-day" type="EtcItem">
+	<item id="37924" name="Chrono Maracas Appearance Stone: Dual Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a dual sword into that of a Chrono Maracas. It has been retouched by Celdion, the master of the Black Anvil Guild. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="is_stackable" val="true" />
@@ -305,7 +305,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37927" name="Scarecrow Sword Appearance Stone: One-handed Magic Sword" additionalName="15-day" type="EtcItem">
+	<item id="37927" name="Scarecrow Sword Appearance Stone: Magic Sword" additionalName="15-day" type="EtcItem">
 		<!-- Changes the appearance of a magic sword to that of a Scarecrow Sword. Limited time item (15-day). -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_sword" />
 		<set name="is_stackable" val="true" />
@@ -316,7 +316,7 @@
 		<set name="time" val="21600" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="37928" name="Player Commendation - Art of Seduction" type="EtcItem">
+	<item id="37928" name="PA - Art of Seduction" type="EtcItem">
 		<!-- When used, increases Max HP/ MP/ CP 30%, P. Atk. 10%, M. Atk. 20%, P./ M. Def. 30% for 30 min. Cooldown time is 5 min. Cannot be stacked with 'Art of Seduction'. Cannot be used in the Olympiad. -->
 		<set name="icon" val="BranchSys2.icon.br_rosalia_rose_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1112,7 +1112,7 @@
 			<item id="36553" min="1" max="1" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="37966" name="Immortal Shield Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37966" name="Immortal Shield Crafting Box" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Box containing all ingredients needed for crafting Immortal Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />
@@ -1685,7 +1685,7 @@
 			<item id="36553" min="3" max="3" chance="100" /> <!-- Armor Fragment (Mid-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="37997" name="Twilight Shield Crafting Pack" additionalName="Heavy Armor" type="EtcItem">
+	<item id="37997" name="Twilight Shield Crafting Box" additionalName="Heavy Armor" type="EtcItem">
 		<!-- Wrapped Box containing all ingredients needed for crafting Twilight Shield. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_stackable" val="true" />

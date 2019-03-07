@@ -1371,7 +1371,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="8682" name="Naga Storm" type="Weapon">
+	<item id="8682" name="Naga's Storm" type="Weapon">
 		<!-- Can bestow 1 regular Soul Crystal and 1 special Soul Crystal. -->
 		<set name="icon" val="icon.weapon_naga_storm_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1719,7 +1719,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8698" name="Recipe: Naga Storm (60%)" type="EtcItem">
+	<item id="8698" name="Recipe: Naga's Storm (60%)" type="EtcItem">
 		<!-- For Dwarves only. Recipe for making Naga's Storm. Requires Create Item - Skill Lv. 8. 60% success rate. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />
@@ -1733,7 +1733,7 @@
 		<set name="commissionItemType" val="RECIPE" />
 		<set name="handler" val="Recipes" />
 	</item>
-	<item id="8699" name="Recipe: Naga Storm" type="EtcItem">
+	<item id="8699" name="Recipe: Naga's Storm" type="EtcItem">
 		<!-- For Dwarves only. Recipe for making Naga's Storm. Requires Create Item - Skill Lv. 8. 100% success rate. -->
 		<set name="icon" val="icon.etc_recipe_violet_i00" />
 		<set name="default_action" val="RECIPE" />

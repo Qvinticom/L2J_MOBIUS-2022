@@ -831,7 +831,7 @@
 			<skill id="22174" level="1" /> <!-- Evain's Recovery Scroll -->
 		</skills>
 	</item>
-	<item id="21035" name="Good/Bad of Life" type="EtcItem">
+	<item id="21035" name="Good/ Bad of Life" type="EtcItem">
 		<!-- Good luck charm containing the power of life. When held in the inventory, it automatically restores 500 HP when HP falls below 30%. -->
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />
 		<set name="immediate_effect" val="true" />
@@ -2043,7 +2043,7 @@
 			<item id="21086" min="1" max="1" chance="100" /> <!-- SP Rune 30% -->
 		</capsuled_items>
 	</item>
-	<item id="21088" name="Mount - Jet Bike" type="Armor">
+	<item id="21088" name="Mount - Jet Bike'" type="Armor">
 		<!-- Sweet mount made by Dwarven science and engineering. This item enables you to drive a Jet Bike. -->
 		<set name="icon" val="BranchSys2.icon.br_z_bike_i00" />
 		<set name="default_action" val="EQUIP" />

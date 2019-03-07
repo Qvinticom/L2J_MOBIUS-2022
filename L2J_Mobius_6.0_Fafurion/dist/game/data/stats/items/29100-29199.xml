@@ -397,7 +397,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29138" name="Match Girls' Gift" type="EtcItem">
+	<item id="29138" name="Match Sisters' Gift" type="EtcItem">
 		<!-- A gift with various items from the match sisters who are thankful for your help. -->
 		<set name="icon" val="icon.etc_pouch_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -405,7 +405,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29139" name="Match Girls' Gratitude" type="EtcItem">
+	<item id="29139" name="Match Sisters' Gratitude" type="EtcItem">
 		<!-- For 30 min., Acquired XP/ SP +30%, Vitality Bonus +30%, P./ M. Atk. And P./ M. Def. +15%. -->
 		<set name="icon" val="icon.etc_candle_white_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -451,7 +451,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29144" name="Freya's Thrilling Shopping Bag" type="EtcItem">
+	<item id="29144" name="Freya's Heart-pounding Shopping Bag" type="EtcItem">
 		<!-- Double-click Freya's Heart-pounding Shopping Bag to obtain 1 Freya's Art of Seduction and 2 Freya's Recovery Potion. There is also a chance to additionally obtain one a Freya, Sirra, or Snowman Winter Card or Freya's Ice Crystal. -->
 		<set name="icon" val="icon.bm_freya_bag_01" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -531,7 +531,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29153" name="Prestige Rune 30%" additionalName="30-day" type="EtcItem">
+	<item id="29153" name="High-grade Maphr's Rune" additionalName="30-day" type="EtcItem">
 		<!-- While carried in inventory, Adena drop amount +300%, item drop rate and spoil acquisition rate +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="material" val="PAPER" />
@@ -617,7 +617,7 @@
 		<set name="weight" val="1480" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="29161" name="Prestige Rune 300% Pack" additionalName="30-day" type="EtcItem">
+	<item id="29161" name="High-grade Maphr's Rune Pack" additionalName="30-day" type="EtcItem">
 		<!-- Double-click to obtain a High-grade Maphr's Rune (30-day). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -630,7 +630,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="29162" name="Falling Stars Chest" type="EtcItem">
+	<item id="29162" name="Light Imbued Treasure Chest" type="EtcItem">
 		<!-- A chest containing a starlight. Double-click to obtain one of the following items: Lindvior's Earring, Blessed Antharas' Earring, Seven Signs' Energy, Ring of Creation, Dark Helios/ Eternal Enhancement Stone, Mystic Soul Crystal, Mystic Soul Crystal Fragment, Bottle of Baium's Soul, Dragon Claw, Destruction Scroll: Enchant Elemental Shirt, Freya's Lucky Enchant Stone: Weapon/ Armor (R-grade), Blessed Scroll: Enchant Weapon (R-grade), Giant's Scroll: Enchant Weapon (R-grade), Source of the Emperor, Frenzied Tauti's Small Fragment, Insane Kelbim's Small Fragment, Life Stone Instilled with Giants' Power, Ancient Zodiac Agathion Charm Book of Growth, Low-grade/ Mid-grade/ High-grade Zodiac Agathion Pack, Red Starlight Jar, Agathion Evolution Stone, Starlight Jar, Superior Giant's Codex - Mastery/ Mastery Chapter 1, Superior Giant's Codex - Chapter 1, Ancient Book: Divine Inspiration (Beginner/ Intermediate), Freya's Bloody/ Dark Rune (2-hour) Box, Eva's Rune (3-day) Pack, Elcyum, Giant's Energy 100-unit Pack, Bottle Fragment of Baium's/ Antharas'/ Valakas' Soul x5, Giant's Energy x2, Gemstone (R-grade) x10. -->
 		<set name="icon" val="BranchIcon.icon.etc_g_bm_godspirit_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -710,7 +710,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29173" name="Prestige Rune 300% Pack" additionalName="7-day" type="EtcItem">
+	<item id="29173" name="High-grade Maphr's Rune 300% Pack" additionalName="7-day" type="EtcItem">
 		<!-- Dimensional item. Double-click the item to obtain 1 High-grade Maphr's Rune 300% - 7-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -723,7 +723,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="29174" name="Prestige Rune 300%" additionalName="7-day" type="EtcItem">
+	<item id="29174" name="High-grade Maphr's Rune 300%" additionalName="7-day" type="EtcItem">
 		<!-- Dimensional item. If stored in inventory, increases Adena gain by 300%, item drop rate and item gain through spoils by 100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="material" val="PAPER" />
@@ -733,7 +733,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="10080" />
 	</item>
-	<item id="29175" name="Prestige Rune 300% Pack" additionalName="1-day" type="EtcItem">
+	<item id="29175" name="High-grade Maphr's Rune 300% Pack" additionalName="1-day" type="EtcItem">
 		<!-- Dimensional item. Double-click the item to obtain 1 High-grade Maphr's Rune 300% - 1-day. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -746,7 +746,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="1440" />
 	</item>
-	<item id="29176" name="Prestige Rune 300%" additionalName="1-day" type="EtcItem">
+	<item id="29176" name="High-grade Maphr's Rune 300%" additionalName="1-day" type="EtcItem">
 		<!-- Dimensional item. If stored in inventory, increases Adena gain by 300%, item drop rate and item gain through spoils by 100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="material" val="PAPER" />
@@ -828,7 +828,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29183" name="Mermaid Agathion Enchant Scroll" type="EtcItem">
+	<item id="29183" name="Scroll: Enchant Mermaid Agathion" type="EtcItem">
 		<!-- Enchant Scroll exclusively for Mermaid Agathion. The scroll increases M. Def. and adds a Special Ability from +4. It can enhance Agathion safely to +3 and enhance up to +10. Unique Abilities level up gradually from +1. -->
 		<set name="icon" val="icon.star_scrl_of_ench_ag" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -844,7 +844,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29185" name="Master's Fishing Potion" additionalName="1-hr" type="EtcItem">
+	<item id="29185" name="Master's Fishing Potion" additionalName="1-hour" type="EtcItem">
 		<!-- When used, increases Successful Fishing Acquired XP/ SP by 50% for 1 h. Applied to all bait. Can be stacked with Angler's Blessing. -->
 		<set name="icon" val="BranchIcon.etc_sign_agathion_feed_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -862,7 +862,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29187" name="Fishing XP Box" additionalName="Lv. 85-94" type="EtcItem">
+	<item id="29187" name="Fishing XP Box" additionalName="Lv. 85 - 94" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 85 to 94). There's a chance to obtain a Shining Fishing Box. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -874,7 +874,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29188" name="Fishing XP Box" additionalName="Lv .95-98" type="EtcItem">
+	<item id="29188" name="Fishing XP Box" additionalName="Lv. 95 - 98" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 95 to 98). There's a chance to obtain a Shining Fishing Box. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -886,7 +886,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29189" name="Fishing XP Box" additionalName="Lv. 99-101" type="EtcItem">
+	<item id="29189" name="Fishing XP Box" additionalName="Lv. 99 - 101" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 99 to 101). There's a chance to obtain a Shining Fishing Box. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -898,7 +898,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29190" name="Fishing XP Box" additionalName="Lv. 102-104" type="EtcItem">
+	<item id="29190" name="Fishing XP Box" additionalName="Lv. 102 - 104" type="EtcItem">
 		<!-- Box that contains Fishing Scroll: XP (Lv. 102 to 104). There's a chance to obtain a Shining Fishing Box. -->
 		<set name="icon" val="icon.bm_special_pendant_abradant_box" />
 		<set name="default_action" val="PEEL" />
@@ -930,7 +930,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29193" name="Fishing XP Scroll" additionalName="Lv. 85-94" type="EtcItem">
+	<item id="29193" name="Fishing Scroll: XP" additionalName="Lv. 85 - 94" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters between Lv. 85 to 94 can use this. Cannot be used by Chaotic Characters. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -942,7 +942,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29194" name="Fishing XP Scroll" additionalName="Lv .95-98" type="EtcItem">
+	<item id="29194" name="Fishing Scroll: XP" additionalName="Lv. 95 - 98" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters between Lv. 95 to 98 can use this. Cannot be used by Chaotic Characters. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -954,7 +954,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29195" name="Fishing XP Scroll" additionalName="Lv. 99-101" type="EtcItem">
+	<item id="29195" name="Fishing Scroll: XP" additionalName="Lv. 99 - 101" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters between Lv. 99 to 101 can use this. Cannot be used by Chaotic Characters. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -966,7 +966,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29196" name="Fishing XP Scroll" additionalName="Lv. 102-104" type="EtcItem">
+	<item id="29196" name="Fishing Scroll: XP" additionalName="Lv. 102 - 104" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters between Lv. 102 to 104 can use this. Cannot be used by Chaotic Characters. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -978,7 +978,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29197" name="Fishing XP Scroll" additionalName="Lv. 105" type="EtcItem">
+	<item id="29197" name="Fishing Scroll: XP" additionalName="Lv. 105" type="EtcItem">
 		<!-- Fishing Scroll: XP rewarded for fishing. Characters Lv. 105 or higher can use this. Cannot be used by Chaotic Characters. -->
 		<set name="icon" val="icon.exp_bottle_scroll" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -998,7 +998,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="29199" name="New User's Leaf" additionalName="14-day" type="Armor">
+	<item id="29199" name="New User Sprout" additionalName="14-day" type="Armor">
 		<!-- Special hair accessory for heroes who just started their adventures in the world of Aden. -->
 		<set name="icon" val="icon.s_newbie_user_display" />
 		<set name="default_action" val="EQUIP" />

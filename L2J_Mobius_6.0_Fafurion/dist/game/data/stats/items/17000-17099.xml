@@ -510,7 +510,7 @@
 			<item id="15440" min="5" max="5" chance="100" /> <!-- Vitality Maintaining Potion (30-min.) -->
 		</capsuled_items>
 	</item>
-	<item id="17025" name="PC Point Pack (700) (Event)" type="EtcItem">
+	<item id="17025" name="PA Point Pack (700) (Event)" type="EtcItem">
 		<!-- Wrapped Pack containing 700 PA Points. Cannot be exchanged, dropped, destroyed or sold in private store. -->
 		<set name="icon" val="icon.etc_pi_gift_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1789,7 +1789,7 @@
 			<skill id="2097" level="3" /> <!-- Sowing -->
 		</skills>
 	</item>
-	<item id="17093" name="Vitality Maintaining Potion (10-minute) (Event)" type="EtcItem">
+	<item id="17093" name="Vitality Maintaining Potion (10-min.) (Event)" type="EtcItem">
 		<!-- Vitality is maintained for 10 min. Cooldown is 30 min. Vitality item with limited usage. -->
 		<set name="icon" val="icon.etc_lesser_potion_blue_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />

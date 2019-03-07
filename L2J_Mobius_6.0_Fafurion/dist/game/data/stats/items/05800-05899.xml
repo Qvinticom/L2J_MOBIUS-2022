@@ -696,7 +696,7 @@
 		<set name="commissionItemType" val="OTHER_ITEM" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="5858" name="Blessed Scroll of Escape: Clan Hall" type="EtcItem">
+	<item id="5858" name="Blessed Scroll of Escape - Clan Hall" type="EtcItem">
 		<!-- Magical scroll that transports you to your clan hall. If you don't belong to a clan that possesses a clan hall, this scroll will have no effect. -->
 		<set name="icon" val="icon.etc_scroll_of_return_agit_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -715,7 +715,7 @@
 			<skill id="2177" level="1" /> <!-- Blessed Scroll of Escape: Clan Hall -->
 		</skills>
 	</item>
-	<item id="5859" name="Blessed Scroll of Escape: Castle" type="EtcItem">
+	<item id="5859" name="Blessed Scroll of Escape - Castle" type="EtcItem">
 		<!-- Magical scroll that transports you to your castle. If you don't belong to a clan that controls a castle, this scroll will have no effect. -->
 		<set name="icon" val="icon.etc_scroll_of_return_castle_i01" />
 		<set name="default_action" val="SKILL_REDUCE" />

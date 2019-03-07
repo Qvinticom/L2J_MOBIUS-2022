@@ -222,21 +222,21 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47622" name="Royal Purple Save Ticket (R)" type="EtcItem">
+	<item id="47622" name="Royal Purple Save Ticket (R-grade)" type="EtcItem">
 		<!-- When using an R-grade Weapon Enchantment Standard Weapon Enchant Scroll, increases the chance by 10%. Can only be used with a 12 or higher Enchantment Item. On success, Enchantment count increases by 1. In case of Enchantment failure, the item is not Crystallized, but the base Enchantment count decreases by 1. -->
 		<set name="icon" val="icon.royal_purple_save" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47623" name="Royal Purple Save Ticket (R95)" type="EtcItem">
+	<item id="47623" name="Royal Purple Save Ticket (R95-grade)" type="EtcItem">
 		<!-- When using an R95-grade Weapon Enchantment Standard Weapon Enchant Scroll, increases the chance by 10%. Can only be used with a 12 or higher Enchantment Item. On success, Enchantment count increases by 1. In case of Enchantment failure, the item is not Crystallized, but the base Enchantment count decreases by 1. -->
 		<set name="icon" val="icon.royal_purple_save" />
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47624" name="Royal Purple Save Ticket (R99)" type="EtcItem">
+	<item id="47624" name="Royal Purple Save Ticket (R99-grade)" type="EtcItem">
 		<!-- When using an R99-grade Weapon Enchantment Standard Weapon Enchant Scroll, increases the chance by 10%. Can only be used with a 12 or higher Enchantment Item. On success, Enchantment count increases by 1. In case of Enchantment failure, the item is not Crystallized, but the base Enchantment count decreases by 1. -->
 		<set name="icon" val="icon.royal_purple_save" />
 		<set name="material" val="PAPER" />
@@ -514,7 +514,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47656" name="Protector's Guardian Earrings" additionalName="30-day" type="Armor">
+	<item id="47656" name="Warrior's Earring" additionalName="30-day" type="Armor">
 		<!-- Earrings bought using the Mark of Battle. Earring bought using Mark of Battle. Max MP +49, Max CP +10%, P./ M. Def. +3%, Stun/ Mental Resistance and Stun/ Mental Success Rate +30%, Vampiric Rage +4%. These effects do not stack with identical earrings. -->
 		<set name="icon" val="icon.accessory_earring_of_hero_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -688,7 +688,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47671" name="PC Points Coupon (180)" type="EtcItem">
+	<item id="47671" name="PA Points Coupon (180)" type="EtcItem">
 		<!-- When double clicked, 180 PA Points can be acquired. -->
 		<set name="icon" val="icon.etc_ticket_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -960,7 +960,7 @@
 			<skill id="18714" level="5" /> <!-- Blue Cat's Eye -->
 		</skills>
 	</item>
-	<item id="47687" name="Greater Topaz" type="Armor">
+	<item id="47687" name="Greater Topaz" additionalName="Lv. 1" type="Armor">
 		<!-- Disrupts the target's skill casting when used. When used on a PC, inflicts damage with 13275 power, ignoring the target's CP. Low chance of killing the enemy instantly. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_absdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -972,7 +972,7 @@
 			<skill id="17701" level="6" /> <!-- Topaz - Spiritshot -->
 		</skills>
 	</item>
-	<item id="47688" name="Greater Ruby" type="Armor">
+	<item id="47688" name="Greater Ruby" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, increases Soulshot and Beast Soulshot damage by 20% and P. Atk. By 9%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_ssdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -986,7 +986,7 @@
 			<skill id="18717" level="6" /> <!-- Ruby -->
 		</skills>
 	</item>
-	<item id="47689" name="Greater Sapphire" type="Armor">
+	<item id="47689" name="Greater Sapphire" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, increases Spiritshot and Blessed Spiritshot damage by 20% and M. Atk. By 13%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_spsdmg_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1000,7 +1000,7 @@
 			<skill id="18719" level="6" /> <!-- Sapphire -->
 		</skills>
 	</item>
-	<item id="47690" name="Greater Obsidian" type="Armor">
+	<item id="47690" name="Greater Obsidian" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, received PvP damage -15% and cancels the attacker's target. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_pvpdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1012,7 +1012,7 @@
 			<skill id="17704" level="6" /> <!-- Obsidian -->
 		</skills>
 	</item>
-	<item id="47691" name="Greater Opal" type="Armor">
+	<item id="47691" name="Greater Opal" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, increases Attack Attribute by 120 and all Attribute Resistance by 70. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_atkeleup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1024,7 +1024,7 @@
 			<skill id="17705" level="6" /> <!-- Opal -->
 		</skills>
 	</item>
-	<item id="47692" name="Greater Emerald" type="Armor">
+	<item id="47692" name="Greater Emerald" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, all basic stats +3 and Skill Mastery rate +30%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_allstat_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1036,7 +1036,7 @@
 			<skill id="17825" level="6" /> <!-- Emerald -->
 		</skills>
 	</item>
-	<item id="47693" name="Greater Aquamarine" type="Armor">
+	<item id="47693" name="Greater Aquamarine" additionalName="Lv. 1" type="Armor">
 		<!-- When using a skill after equipping, there is a 15% chance of recovering 136 MP, and skill cooldown is reduced by 5%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_castmpup_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1048,7 +1048,7 @@
 			<skill id="17823" level="6" /> <!-- Aquamarine -->
 		</skills>
 	</item>
-	<item id="47694" name="Greater Diamond" type="Armor">
+	<item id="47694" name="Greater Diamond" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, P. Def. increases by 1986 and incoming P. Critical Damage decreases by 5%. P. Def. increases by 10% as well. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_phydef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1060,7 +1060,7 @@
 			<skill id="17708" level="6" /> <!-- Diamond -->
 		</skills>
 	</item>
-	<item id="47695" name="Greater Pearl" type="Armor">
+	<item id="47695" name="Greater Pearl" additionalName="Lv. 1" type="Armor">
 		<!-- When equipped, M. Def. Increases by 1150 and incoming M. Critical Damage decreases by 5%. M. Def. increases by 10% as well. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_magdef_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1072,7 +1072,7 @@
 			<skill id="17709" level="6" /> <!-- Pearl -->
 		</skills>
 	</item>
-	<item id="47696" name="Greater Vital Stone" type="Armor">
+	<item id="47696" name="Greater Vital Stone" additionalName="Lv. 1" type="Armor">
 		<!-- Vitality Bonus +30% and Vitality Point Consumption Speed -15%. Acquired XP/ SP +10% as well. Can use Vital Wind skill. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_vital_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1084,7 +1084,7 @@
 			<skill id="18568" level="6" /> <!-- Vital Stone -->
 		</skills>
 	</item>
-	<item id="47697" name="Greater Garnet" type="Armor">
+	<item id="47697" name="Greater Garnet" additionalName="Lv. 1" type="Armor">
 		<!-- Increases success rate of Debuff Resistance by 30%, and when receiving damage to a PC, Stun/ Silence are canceled. When used, all debuffs are canceled. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_garnet_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1097,7 +1097,7 @@
 			<skill id="18567" level="2" /> <!-- Garnet - Purge -->
 		</skills>
 	</item>
-	<item id="47698" name="Greater Tanzanite" type="Armor">
+	<item id="47698" name="Greater Tanzanite" additionalName="Lv. 1" type="Armor">
 		<!-- Creates a protection shield that absorbs 50,000 damage for 15 sec., and recovers 15% of Max HP immediately. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_tanzanite_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />
@@ -1109,7 +1109,7 @@
 			<skill id="18565" level="6" /> <!-- Greater Tanzanite - Barrier -->
 		</skills>
 	</item>
-	<item id="47699" name="Greater Red Cat's Eye" type="Armor">
+	<item id="47699" name="Greater Red Cat's Eye" additionalName="Lv. 1" type="Armor">
 		<!-- When using a physical skill after equipping, P. Critical Damage +12%, P. Skill Critical Damage +12% and P. Skill Power +5%. Effect does not stack with additional jewels of the same type. Equipping various Greater Jewels will grant additional effects. -->
 		<set name="icon" val="icon.bm_jewel_red_catseye_high_lv1_lavianrose" />
 		<set name="default_action" val="EQUIP" />

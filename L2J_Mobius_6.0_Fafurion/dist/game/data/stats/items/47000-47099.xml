@@ -447,7 +447,7 @@
 			<stat type="windPower">150</stat>
 		</stats>
 	</item>
-	<item id="47018" name="Paulina's Apocalypse Dualsword" type="Weapon">
+	<item id="47018" name="Paulina's Apocalypse Dual Sword" type="Weapon">
 		<!-- An Apocalypse Dual Sword imbued with the energy of Paulina. <Special Option>. Atk. Spd. +5%, P. Critical Rate +82. Enchantment, Augment, Soul Crystal, Crystallization, Appearance Modification, Attribute Assignment not possible. -->
 		<set name="icon" val="icon.weapon_r_dualsword_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -1113,7 +1113,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47054" name="Scroll of Escape: Arms of Timiniel" type="EtcItem">
+	<item id="47054" name="Scroll of Escape - Arms of Timiniel" type="EtcItem">
 		<!-- Teleports to the Fairy Citizen in the Arms of Timiniel. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1128,7 +1128,7 @@
 			<skill id="17945" level="2" /> <!-- Scroll of Escape: Arms of Timiniel -->
 		</skills>
 	</item>
-	<item id="47055" name="Scroll of Escape: Arms of Timiniel" type="EtcItem">
+	<item id="47055" name="Scroll of Escape - Arms of Timiniel" type="EtcItem">
 		<!-- Teleports to Nerupa in the Arms of Timiniel. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1143,7 +1143,7 @@
 			<skill id="17946" level="2" /> <!-- Scroll of Escape: Arms of Timiniel -->
 		</skills>
 	</item>
-	<item id="47056" name="Scroll of Escape: Harnak Underground Ruins" type="EtcItem">
+	<item id="47056" name="Scroll of Escape - Harnak Underground Ruins" type="EtcItem">
 		<!-- Teleports to Hadel, who can send you to the Harnak Underground Ruins. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1158,7 +1158,7 @@
 			<skill id="17991" level="1" /> <!-- Scroll of Escape: Harnak Underground Ruins -->
 		</skills>
 	</item>
-	<item id="47057" name="Scroll of Escape: Bloody Swampland" type="EtcItem">
+	<item id="47057" name="Scroll of Escape - Bloody Swampland" type="EtcItem">
 		<!-- Teleports to Vollodos, between the Bloody Swampland and the Altar of Evil. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1173,7 +1173,7 @@
 			<skill id="17989" level="1" /> <!-- Scroll of Escape: Bloody Swampland -->
 		</skills>
 	</item>
-	<item id="47058" name="Scroll of Escape: Kartia's Labyrinth" type="EtcItem">
+	<item id="47058" name="Scroll of Escape - Kartia's Labyrinth" type="EtcItem">
 		<!-- Teleports to the Kartia Researcher, who can send you to Kartia's Labyrinth. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1188,7 +1188,7 @@
 			<skill id="17992" level="1" /> <!-- Scroll of Escape: Kartia's Labyrinth -->
 		</skills>
 	</item>
-	<item id="47059" name="Scroll of Escape: Isle of Souls" type="EtcItem">
+	<item id="47059" name="Scroll of Escape - Isle of Souls" type="EtcItem">
 		<!-- Teleports to Hesed in the Isle of Souls. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1203,7 +1203,7 @@
 			<skill id="17997" level="1" /> <!-- Scroll of Escape: Isle of Souls -->
 		</skills>
 	</item>
-	<item id="47060" name="Scroll of Escape: Seal of Shilen" type="EtcItem">
+	<item id="47060" name="Scroll of Escape - Seal of Shilen" type="EtcItem">
 		<!-- Teleports to the Seal of Shilen. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1218,7 +1218,7 @@
 			<skill id="17999" level="1" /> <!-- Scroll of Escape: Seal of Shilen -->
 		</skills>
 	</item>
-	<item id="47061" name="Scroll of Escape: Pagan Temple" type="EtcItem">
+	<item id="47061" name="Scroll of Escape - Pagan Temple" type="EtcItem">
 		<!-- Teleports to Knight Captain Kargos, who has something to do with entering the Pagan Temple. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1233,7 +1233,7 @@
 			<skill id="18124" level="1" /> <!-- Scroll of Escape: Pagan Temple -->
 		</skills>
 	</item>
-	<item id="47062" name="Scroll of Escape: Cemetery" type="EtcItem">
+	<item id="47062" name="Scroll of Escape - Cemetery" type="EtcItem">
 		<!-- Teleports to the Cemetery. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1248,7 +1248,7 @@
 			<skill id="18000" level="1" /> <!-- Scroll of Escape: Cemetery -->
 		</skills>
 	</item>
-	<item id="47063" name="Scroll of Escape: Blazing Swamp" type="EtcItem">
+	<item id="47063" name="Scroll of Escape - Blazing Swamp" type="EtcItem">
 		<!-- Teleports to the Blazing Swamp. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i05" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1349,7 +1349,7 @@
 			<item id="46885" min="1" max="1" chance="100" /> <!-- Blessed Paulina's Seraph Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="47068" name="PC Cafe - Paulina's Seraph Heavy Armor Box" additionalName="4-hour" type="EtcItem">
+	<item id="47068" name="PA - Paulina's Seraph Heavy Armor Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double-click to obtain a 4-hour Seraph Heavy Armor Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1369,7 +1369,7 @@
 			<item id="46901" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Boots - Heavy Armor -->
 		</capsuled_items>
 	</item>
-	<item id="47069" name="PC Cafe - Paulina's Seraph Light Armor Box" additionalName="4-hour" type="EtcItem">
+	<item id="47069" name="PA - Paulina's Seraph Light Armor Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double-click to obtain a 4-hour Seraph Light Armor Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1389,7 +1389,7 @@
 			<item id="46907" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Leather Boots - Light Armor -->
 		</capsuled_items>
 	</item>
-	<item id="47070" name="PC Cafe - Paulina's Seraph Robe Box" additionalName="4-hour" type="EtcItem">
+	<item id="47070" name="PA - Paulina's Seraph Robe Box" additionalName="4-hour" type="EtcItem">
 		<!-- Double-click to obtain a 4-hour Seraph Robe Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1410,7 +1410,7 @@
 			<item id="46913" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Sigil - Robe -->
 		</capsuled_items>
 	</item>
-	<item id="47071" name="PC Cafe - Paulina's Seraph Accessory Pack" additionalName="4-hour" type="EtcItem">
+	<item id="47071" name="PA - Paulina's Seraph Accessory Pack" additionalName="4-hour" type="EtcItem">
 		<!-- Double-click to obtain a 4-hour Seraph Accessory Set which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="default_action" val="PEEL" />
@@ -1430,7 +1430,7 @@
 			<item id="46918" min="1" max="1" chance="100" /> <!-- PA - Paulina's Seraph Ring - Critical Rate -->
 		</capsuled_items>
 	</item>
-	<item id="47072" name="Blessed Paulina's Specter Dualsword Box" additionalName="30-day" type="EtcItem">
+	<item id="47072" name="Blessed Paulina's Specter Dual Sword Box" additionalName="30-day" type="EtcItem">
 		<!-- Dimensional Item. Double-click to obtain a 30-day Specter Dual Sword which can be equipped from Lv. 85 upwards. -->
 		<set name="icon" val="br_cashtex.item.br_cash_lucky_box_i00" />
 		<set name="default_action" val="PEEL" />

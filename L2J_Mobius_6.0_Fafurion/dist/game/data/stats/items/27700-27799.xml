@@ -780,21 +780,21 @@
 		<set name="handler" val="Recipes" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="27753" name="Luck Box 1" additionalName="Underground" type="EtcItem">
+	<item id="27753" name="Wondrous Casket" additionalName="Dungeon" type="EtcItem">
 		<!-- Get 1 of the following: Anakim Talisman, Talisman - Lilith, Antharas' Earring, Valakas' Necklace, +7 Shiny Elemental Shirt Pack, Physical Reflect Shirt Pack/ Magical Reflect Shirt Pack, Baium's Ring, Talisman - Abundance (High-grade), Queen Ant's Ring, Superior Giant's Codex - Mastery Chapter 1, Soul Crystal Stage 4/ 5, Hunter/ Slaughterer/ Conquerer/ Outlaw Talisman, Superior Giant's Codex Chapter 1, Elcyum, Lv. 5 Dye Pack, Elcyum Crystal, Giant's Energy, Fortune Pocket - Stage 5, Gemstone (R-grade), Apocalypse/ Specter/ Helios Weapon Packs. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="27754" name="Luck Box 2" additionalName="Underground" type="EtcItem">
+	<item id="27754" name="Vintage Casket" additionalName="Dungeon" type="EtcItem">
 		<!-- Get 1 of the following: Seven Signs' Energy, bottle of Orfen's Soul, Queen Ant's Soul, Baium's Soul, Antharas' Soul, or Valakas' Soul, R-grade enchant stone or enchant scroll, Lucky Box 1, Destruction Weapon/ Armor Scroll. -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="27755" name="Luck Box 3" additionalName="Underground" type="EtcItem">
+	<item id="27755" name="Shabby Casket" additionalName="Dungeon" type="EtcItem">
 		<!-- Get 1 of the following: Life Stone Instilled with Giants' Power, one of four Enchant Elemental Shirts (+7), Seed Talisman Upgrade Pack, , Immortal Scroll/ Chapter 1, XP Rune III, High-grade Maphr's Rune 100%, Talisman - Annihilation Crafting Pack, Pa'agrio's Warm Breeze, Lucky Box 1/ 2, Ghost Potion, Queen Ant/ Antharas/ Valakas/ Frintezza's Soul Fragment, Feather of Blessing Pack, Emperor's Growth Scroll, Elcyum Powder, Gemstone (R-grade). -->
 		<set name="icon" val="icon.event_big_july_seven_park_i00" />
 		<set name="weight" val="10" />
@@ -857,7 +857,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="27764" name="Ultimate Eternal Helmet" additionalName="Heavy Armor / Lv1" type="Armor">
+	<item id="27764" name="Ultimate Eternal Helmet" additionalName="Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows an attack or defense type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -876,7 +876,7 @@
 			<stat type="pDef">169</stat>
 		</stats>
 	</item>
-	<item id="27765" name="Ultimate Eternal Breatplate" additionalName="Heavy Armor / Lv1" type="Armor">
+	<item id="27765" name="Ultimate Eternal Breastplate" additionalName="Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows an attack or defense type set option. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -901,7 +901,7 @@
 			<stat type="pDef">451</stat>
 		</stats>
 	</item>
-	<item id="27766" name="Ultimate Eternal Gaiters" additionalName="Heavy Armor / Lv1" type="Armor">
+	<item id="27766" name="Ultimate Eternal Gaiters" additionalName="Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows an attack or defense type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -922,7 +922,7 @@
 			<stat type="pDef">282</stat>
 		</stats>
 	</item>
-	<item id="27767" name="Ultimate Eternal Gauntlets" additionalName="Heavy Armor / Lv1" type="Armor">
+	<item id="27767" name="Ultimate Eternal Gauntlets" additionalName="Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows an attack or defense type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -942,7 +942,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27768" name="Ultimate Eternal Boots" additionalName="Heavy Armor / Lv1" type="Armor">
+	<item id="27768" name="Ultimate Eternal Boots" additionalName="Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows an attack or defense type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -962,7 +962,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27769" name="Ultimate Eternal Leather Helmet" additionalName="Light Armor / Lv1" type="Armor">
+	<item id="27769" name="Ultimate Eternal Leather Helmet" additionalName="Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -981,7 +981,7 @@
 			<stat type="pDef">169</stat>
 		</stats>
 	</item>
-	<item id="27770" name="Ultimate Eternal Leather Armor" additionalName="Light Armor / Lv1" type="Armor">
+	<item id="27770" name="Ultimate Eternal Leather Armor" additionalName="Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows an assassin or enchant type set option. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1007,7 +1007,7 @@
 			<stat type="rEvas">5</stat>
 		</stats>
 	</item>
-	<item id="27771" name="Ultimate Eternal Leather Leggings" additionalName="Light Armor / Lv1" type="Armor">
+	<item id="27771" name="Ultimate Eternal Leather Leggings" additionalName="Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1029,7 +1029,7 @@
 			<stat type="rEvas">3</stat>
 		</stats>
 	</item>
-	<item id="27772" name="Ultimate Eternal Leather Gloves" additionalName="Light Armor / Lv1" type="Armor">
+	<item id="27772" name="Ultimate Eternal Leather Gloves" additionalName="Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1049,7 +1049,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27773" name="Ultimate Eternal Leather Boots" additionalName="Light Armor / Lv1" type="Armor">
+	<item id="27773" name="Ultimate Eternal Leather Boots" additionalName="Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows an assassin or enchant type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1069,7 +1069,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27774" name="Ultimate Eternal Circlet" additionalName="Robe / Lv1" type="Armor">
+	<item id="27774" name="Ultimate Eternal Circlet" additionalName="Robe/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows a magic or recovery type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1088,7 +1088,7 @@
 			<stat type="pDef">169</stat>
 		</stats>
 	</item>
-	<item id="27775" name="Ultimate Eternal Tunic" additionalName="Robe / Lv1" type="Armor">
+	<item id="27775" name="Ultimate Eternal Tunic" additionalName="Robe/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows a magic or recovery type set option. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1115,7 +1115,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="27776" name="Ultimate Eternal Stockings" additionalName="Robe / Lv1" type="Armor">
+	<item id="27776" name="Ultimate Eternal Stockings" additionalName="Robe/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows a magic or recovery type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1138,7 +1138,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="27777" name="Ultimate Eternal Gloves" additionalName="Robe / Lv1" type="Armor">
+	<item id="27777" name="Ultimate Eternal Gloves" additionalName="Robe/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows a magic or recovery type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1158,7 +1158,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27778" name="Ultimate Eternal Shoes" additionalName="Robe / Lv1" type="Armor">
+	<item id="27778" name="Ultimate Eternal Shoes" additionalName="Robe/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. Bestows a magic or recovery type set option. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1178,7 +1178,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27779" name="Ultimate Eternal Helmet" additionalName="Attack Type / Heavy Armor / Lv1" type="Armor">
+	<item id="27779" name="Ultimate Eternal Helmet" additionalName="Attack Type/ Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1197,7 +1197,7 @@
 			<stat type="pDef">169</stat>
 		</stats>
 	</item>
-	<item id="27780" name="Ultimate Eternal Breatplate" additionalName="Attack Type / Heavy Armor / Lv1" type="Armor">
+	<item id="27780" name="Ultimate Eternal Breastplate" additionalName="Attack Type/ Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1222,7 +1222,7 @@
 			<stat type="pDef">451</stat>
 		</stats>
 	</item>
-	<item id="27781" name="Ultimate Eternal Gaiters" additionalName="Attack Type / Heavy Armor / Lv1" type="Armor">
+	<item id="27781" name="Ultimate Eternal Gaiters" additionalName="Attack Type/ Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1243,7 +1243,7 @@
 			<stat type="pDef">282</stat>
 		</stats>
 	</item>
-	<item id="27782" name="Ultimate Eternal Gauntlets" additionalName="Attack Type / Heavy Armor / Lv1" type="Armor">
+	<item id="27782" name="Ultimate Eternal Gauntlets" additionalName="Attack Type/ Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1263,7 +1263,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27783" name="Ultimate Eternal Boots" additionalName="Attack Type / Heavy Armor / Lv1" type="Armor">
+	<item id="27783" name="Ultimate Eternal Boots" additionalName="Attack Type/ Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1283,7 +1283,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27784" name="Ultimate Eternal Leather Helmet" additionalName="Assassin Type / Light Armor / Lv1" type="Armor">
+	<item id="27784" name="Ultimate Eternal Leather Helmet" additionalName="Assassin Type/ Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1302,7 +1302,7 @@
 			<stat type="pDef">169</stat>
 		</stats>
 	</item>
-	<item id="27785" name="Ultimate Eternal Leather Armor" additionalName="Assassin Type / Light Armor / Lv1" type="Armor">
+	<item id="27785" name="Ultimate Eternal Leather Armor" additionalName="Assassin Type/ Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. When enchanted to +4, increases Evasion, Speed and Physical Attack Resistance, and decreases the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_u_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1328,7 +1328,7 @@
 			<stat type="rEvas">5</stat>
 		</stats>
 	</item>
-	<item id="27786" name="Ultimate Eternal Leather Leggings" additionalName="Assassin Type / Light Armor / Lv1" type="Armor">
+	<item id="27786" name="Ultimate Eternal Leather Leggings" additionalName="Assassin Type/ Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_l_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1350,7 +1350,7 @@
 			<stat type="rEvas">3</stat>
 		</stats>
 	</item>
-	<item id="27787" name="Ultimate Eternal Leather Gloves" additionalName="Assassin Type / Light Armor / Lv1" type="Armor">
+	<item id="27787" name="Ultimate Eternal Leather Gloves" additionalName="Assassin Type/ Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_g_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1370,7 +1370,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27788" name="Ultimate Eternal Leather Boots" additionalName="Assassin Type / Light Armor / Lv1" type="Armor">
+	<item id="27788" name="Ultimate Eternal Leather Boots" additionalName="Assassin Type/ Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t812_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1390,7 +1390,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27789" name="Ultimate Eternal Circlet" additionalName="Magic Type / Robe / Lv1" type="Armor">
+	<item id="27789" name="Ultimate Eternal Circlet" additionalName="Magic Type/ Robe/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_circlet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1409,7 +1409,7 @@
 			<stat type="pDef">169</stat>
 		</stats>
 	</item>
-	<item id="27790" name="Ultimate Eternal Tunic" additionalName="Magic Type / Robe / Lv1" type="Armor">
+	<item id="27790" name="Ultimate Eternal Tunic" additionalName="Magic Type/ Robe/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. When enchanted to +4, increases M. Evasion and Mentall Attack Resistance, and decreases P. Critical Damage and the chance of receiving P. Critical Hit. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_u_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1436,7 +1436,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="27791" name="Ultimate Eternal Stockings" additionalName="Magic Type / Robe / Lv1" type="Armor">
+	<item id="27791" name="Ultimate Eternal Stockings" additionalName="Magic Type/ Robe/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_l_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1459,7 +1459,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="27792" name="Ultimate Eternal Gloves" additionalName="Magic Type / Robe / Lv1" type="Armor">
+	<item id="27792" name="Ultimate Eternal Gloves" additionalName="Magic Type/ Robe/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_g_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1479,7 +1479,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27793" name="Ultimate Eternal Shoes" additionalName="Magic Type / Robe / Lv1" type="Armor">
+	<item id="27793" name="Ultimate Eternal Shoes" additionalName="Magic Type/ Robe/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t813_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1499,7 +1499,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27794" name="Ultimate Eternal Helmet" additionalName="Defense Type / Heavy Armor / Lv1" type="Armor">
+	<item id="27794" name="Ultimate Eternal Helmet" additionalName="Defense Type/ Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_helmet_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1518,7 +1518,7 @@
 			<stat type="pDef">169</stat>
 		</stats>
 	</item>
-	<item id="27795" name="Ultimate Eternal Breatplate" additionalName="Defense Type / Heavy Armor / Lv1" type="Armor">
+	<item id="27795" name="Ultimate Eternal Breastplate" additionalName="Defense Type/ Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 8%. Increases P. Atk. by 1% and M. Atk. by 2%. When enchanted to +4, decreases P. Critical Damage and additionally increases P. Def. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_u_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1543,7 +1543,7 @@
 			<stat type="pDef">451</stat>
 		</stats>
 	</item>
-	<item id="27796" name="Ultimate Eternal Gaiters" additionalName="Defense Type / Heavy Armor / Lv1" type="Armor">
+	<item id="27796" name="Ultimate Eternal Gaiters" additionalName="Defense Type/ Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 5%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_l_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1564,7 +1564,7 @@
 			<stat type="pDef">282</stat>
 		</stats>
 	</item>
-	<item id="27797" name="Ultimate Eternal Gauntlets" additionalName="Defense Type / Heavy Armor / Lv1" type="Armor">
+	<item id="27797" name="Ultimate Eternal Gauntlets" additionalName="Defense Type/ Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_g_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1584,7 +1584,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27798" name="Ultimate Eternal Boots" additionalName="Defense Type / Heavy Armor / Lv1" type="Armor">
+	<item id="27798" name="Ultimate Eternal Boots" additionalName="Defense Type/ Heavy Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 2%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_t811_b_i01" />
 		<set name="default_action" val="EQUIP" />
@@ -1604,7 +1604,7 @@
 			<stat type="pDef">113</stat>
 		</stats>
 	</item>
-	<item id="27799" name="Ultimate Eternal Leather Helmet" additionalName="Enchant Type / Light Armor / Lv1" type="Armor">
+	<item id="27799" name="Ultimate Eternal Leather Helmet" additionalName="Enchant Type/ Light Armor/ Lv. 1" type="Armor">
 		<!-- Decreases Damage Received by 3%. Increases P. Atk. by 1% and M. Atk. by 2%. -->
 		<set name="icon" val="BranchIcon.icon.armor_leather_helmet_i01" />
 		<set name="default_action" val="EQUIP" />

@@ -256,7 +256,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 		<skills>
-			<skill id="27587" level="1" /> <!-- Experienced Adventurer's Circlet � Critical Rate -->
+			<skill id="27587" level="1" /> <!-- Experienced Adventurer's Circlet ' Critical Rate -->
 		</skills>
 	</item>
 	<item id="27517" name="Experienced Adventurer's Bracelet" type="Armor">
@@ -492,7 +492,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="27535" name="+ 8 Shiny Elemental Shirt Pack" type="EtcItem">
+	<item id="27535" name="+8 Shiny Elemental Shirt Chest" type="EtcItem">
 		<!-- Double-click to get a +8 Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
@@ -504,7 +504,7 @@
 			<item id="37718" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Shiny Elemental Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="27536" name="+ 8 Reflect Attack T-shirt Pack" type="EtcItem">
+	<item id="27536" name="+8 Reflect Attack T-shirt Chest" type="EtcItem">
 		<!-- Double-click to get a +8 Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
@@ -516,7 +516,7 @@
 			<item id="46193" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Physical Reflect Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="27537" name="+ 8 Reflect Magic T-shirt Pack" type="EtcItem">
+	<item id="27537" name="+8 Reflect Magic T-shirt Chest" type="EtcItem">
 		<!-- Double-click to get a +8 enchanted Reflect Magic T-shirt. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
@@ -528,7 +528,7 @@
 			<item id="46194" min="1" max="1" chance="100" minEnchant="8" maxEnchant="8" /> <!-- Magical Reflect Shirt -->
 		</capsuled_items>
 	</item>
-	<item id="27538" name="+ 7 Bloody Amaranthine Pack" type="EtcItem">
+	<item id="27538" name="+7 Bloody Helios Chest" type="EtcItem">
 		<!-- Double-click to get a +7 enchanted Bloody Helios weapon. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
@@ -663,7 +663,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="27551" name="Rare Accessory Pack" additionalName="30-day" type="EtcItem">
+	<item id="27551" name="Rare Accessory Pack" type="EtcItem">
 		<!-- Double-click to get Blessed Antharas' Earring, Blessed Valakas' Necklace, Tauti's Ring, Earth Wyrm Heart Ring, Ruler's Authority, and Lindvior's Earring for 30 days. -->
 		<set name="icon" val="icon.etc_pi_box_belief_pack" />
 		<set name="is_sellable" val="false" />
@@ -1166,7 +1166,7 @@
 			<item id="27582" min="1" max="1" chance="100" /> <!-- SP Rune 100% - 1-hour -->
 		</capsuled_items>
 	</item>
-	<item id="27580" name="Prestige Rune 100% Pack" type="EtcItem">
+	<item id="27580" name="High-grade Maphr's Rune 100% Pack" type="EtcItem">
 		<!-- Premium User Only. Wrapped Pack containing High-grade Maphr's Rune 100% (1-hour). -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="10" />
@@ -1221,7 +1221,7 @@
 			<skill id="26047" level="6" /> <!-- SP Rune 100% -->
 		</skills>
 	</item>
-	<item id="27583" name="Prestige Rune 100%" additionalName="1-hour" type="EtcItem">
+	<item id="27583" name="High-grade Maphr's Rune 100%" additionalName="1-hour" type="EtcItem">
 		<!-- Premium User Only. When carried during a hunt, Adena/ item drop rate/ item acquisition through Spoil +100%. -->
 		<set name="icon" val="BranchSys3.lcon.g_rune_itemdrop_up" />
 		<set name="etcitem_type" val="ENCHT_ATTR_RUNE" />

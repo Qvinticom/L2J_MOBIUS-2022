@@ -380,7 +380,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48934" name="Entrance Pass - Lurin’s Fortress" type="EtcItem">
+	<item id="48934" name="Entrance Pass - Lurin's Fortress" type="EtcItem">
 		<!-- Extra pass to a daily Instanced Zone Dungeon. Double-click to unbind Lurin s Fortress. Cannot be used if the Instanced Zone is not bound. Can be used only once a day outside of the instanced zone. -->
 		<set name="icon" val="icon.etc_ticket_red_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -407,7 +407,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48937" name="Mentee’s Vitality Potion of Gratitude" type="EtcItem">
+	<item id="48937" name="Mentee's Vitality Potion of Gratitude" type="EtcItem">
 		<!-- A token of gratitude from a mentee who has grown thanks to his mentor s aid. Recharges a certain amount of Vitality. Can be used only 5 times per week. -->
 		<set name="icon" val="icon.bm_freya_potion" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -418,7 +418,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48938" name="Lurin’s Fortress Relic Box" type="EtcItem">
+	<item id="48938" name="Lurin's Fortress Relic Box" type="EtcItem">
 		<!-- Use it to obtain Mysterious Soulshot, Mysterious Blessed Spiritshot, Zodiac Cube Fragment, Rune Stone, Seed Bracelet, or other items. -->
 		<set name="icon" val="icon.etc_marguene_collection_box_i00" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -492,7 +492,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48944" name="Red Libra Request - Krofin’s Nest" type="EtcItem">
+	<item id="48944" name="Red Libra Request - Krofin's Nest" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Krofin s Nest. Characters of level 107 or higher can receive the request by double-clicking the item. Can be played twice a day. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="default_action" val="START_QUEST" />
@@ -514,7 +514,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48946" name="Red Libra Request - Krofin’s Nest" type="EtcItem">
+	<item id="48946" name="Red Libra Request - Krofin's Nest" type="EtcItem">
 		<!-- A request issued by the Red Libra Merchants to eliminate monsters in Krofin s Nest. -->
 		<set name="icon" val="icon.red_comminssion_paper" />
 		<set name="material" val="PAPER" />
@@ -524,7 +524,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48947" name="Red Libra Entrance Pass - Krofin’s Nest" type="EtcItem">
+	<item id="48947" name="Red Libra Entrance Pass - Krofin's Nest" type="EtcItem">
 		<!-- Extra pass to a daily Instanced Zone Dungeon prepared by the Red Libra Merchants. Double-click to unbind the Krofin s Nest. Cannot be used if the Instanced Zone Dungeon is not bound. Can be used only once a day outside of the instanced zone. -->
 		<set name="icon" val="icon.ev_libra_reset_ticket" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -534,7 +534,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48948" name="Entrance Pass: Krofin’s Nest" type="EtcItem">
+	<item id="48948" name="Entrance Pass: Krofin's Nest" type="EtcItem">
 		<!-- Dimensional item. Extra pass to a daily Instanced Zone Dungeon. Double-click to unbind the Krofin s Nest. Cannot be used if the Instanced Zone is not bound. Can be used only once a day outside of the instanced zone. -->
 		<set name="icon" val="icon.etc_bm_kalie_instantzone_re" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -579,7 +579,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48954" name="Artifact Book - Level 1" type="Armor">
+	<item id="48954" name="Artifact Book - Lv. 1" type="Armor">
 		<!-- Activates 1 Artifact - Attack slot, 1 Artifact - Protection slot, 1 Artifact - Support slot, 4 Artifact - Balance slots when equipped. When artifacts are equipped to all slots Damage +1%, Received Damage -5%. Can be equipped by characters level 100 and higher. -->
 		<set name="icon" val="icon.artifact_book_00" />
 		<set name="default_action" val="EQUIP" />
@@ -594,7 +594,7 @@
 			<skill id="39393" level="1" /> <!-- Artifact Book (Open 1 Slot) -->
 		</skills>
 	</item>
-	<item id="48955" name="Artifact Book - Level 2" type="Armor">
+	<item id="48955" name="Artifact Book - Lv. 2" type="Armor">
 		<!-- Activates 2 Artifact - Attack slots, 2 Artifact - Protection slots, 2 Artifact - Support slots, 8 Artifact - Balance slots when equipped. When artifacts are equipped to all slots Damage +5%, Received Damage -6%. Can be equipped by characters level 105 and higher. -->
 		<set name="icon" val="icon.artifact_book_00" />
 		<set name="default_action" val="EQUIP" />
@@ -609,7 +609,7 @@
 			<skill id="39394" level="1" /> <!-- Artifact Book (Open 2 Slot) -->
 		</skills>
 	</item>
-	<item id="48956" name="Artifact Book - Level 3" type="Armor">
+	<item id="48956" name="Artifact Book - Lv. 3" type="Armor">
 		<!-- Activates 3 Artifact - Attack slots, 3 Artifact - Protection slots, 3 Artifact - Support slots, 12 Artifact - Balance slots when equipped. When artifacts are equipped to all slots Damage +6%, Received Damage -7%, all basic stats +1. Can be equipped by characters level 110 and higher. -->
 		<set name="icon" val="icon.artifact_book_00" />
 		<set name="default_action" val="EQUIP" />
@@ -624,7 +624,7 @@
 			<skill id="39395" level="1" /> <!-- Artifact Book (Open 3 Slot) -->
 		</skills>
 	</item>
-	<item id="48957" name="Artifact - P. Atk. Fighting Spirit" type="Armor">
+	<item id="48957" name="Artifact - P. Atk." additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases P. Atk. Can be equipped in an artifact balance slot. Enchantment increases P. Atk. Enchantment uses a Attack Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_b_pa" />
 		<set name="default_action" val="EQUIP" />
@@ -632,7 +632,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48958" name="Artifact - M. Atk. Fighting Spirit" type="Armor">
+	<item id="48958" name="Artifact - M. Atk." additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases M. Atk. Can be equipped in an artifact fight slot. Enchantment increases M. Atk. Enchantment uses a Attack Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_b_ma" />
 		<set name="default_action" val="EQUIP" />
@@ -640,7 +640,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48959" name="Artifact - Atk. Spd. Fighting Spirit" type="Armor">
+	<item id="48959" name="Artifact - Atk. Spd." additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases Atk. Spd. Can be equipped in an artifact fight slot. Enchantment increases Atk. Spd. Enchantment uses a Attack Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_b_pa_speed" />
 		<set name="default_action" val="EQUIP" />
@@ -648,7 +648,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48960" name="Artifact - Casting Spd. Fighting Spirit" type="Armor">
+	<item id="48960" name="Artifact - Casting Spd." additionalName="Fighting Spirit" type="Armor">
 		<!-- An artifact that increases Casting Spd. Can be equipped in an artifact fight slot. Enchantment increases Casting Spd. Enchantment uses a Attack Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_b_ma_speed" />
 		<set name="default_action" val="EQUIP" />
@@ -656,7 +656,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48961" name="Artifact - P. Def. Protection" type="Armor">
+	<item id="48961" name="Artifact - P. Def." additionalName="Protection" type="Armor">
 		<!-- An artifact that increases P. Def. Can be equipped in an artifact protection slot. Enchantment increases P. Def. Enchantment uses a Protection Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_c_phy_def" />
 		<set name="default_action" val="EQUIP" />
@@ -664,7 +664,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48962" name="Artifact - M. Def. Protection" type="Armor">
+	<item id="48962" name="Artifact - M. Def." additionalName="Protection" type="Armor">
 		<!-- An artifact that increases M. Def. Can be equipped in an artifact protection slot. Enchantment increases M. Def. Enchantment uses a Protection Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_c_mag_def" />
 		<set name="default_action" val="EQUIP" />
@@ -672,7 +672,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48963" name="Artifact - Max HP Protection" type="Armor">
+	<item id="48963" name="Artifact - Max HP" additionalName="Protection" type="Armor">
 		<!-- An artifact that increases Max HP. Can be equipped in an artifact protection slot. Enchantment increases Max HP. Enchantment uses a Protection Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_c_hp" />
 		<set name="default_action" val="EQUIP" />
@@ -680,7 +680,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48964" name="Artifact - Max MP Protection" type="Armor">
+	<item id="48964" name="Artifact - Max MP" additionalName="Protection" type="Armor">
 		<!-- An artifact that increases Max MP. Can be equipped in an artifact protection slot. Enchantment increases Max MP. Enchantment uses a Protection Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_c_mp" />
 		<set name="default_action" val="EQUIP" />
@@ -688,7 +688,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48965" name="Artifact - XP Gain Support" type="Armor">
+	<item id="48965" name="Artifact - XP" additionalName="Support" type="Armor">
 		<!-- An artifact that increases XP and SP. Can be equipped in an artifact support slot. Enchantment increases XP and SP gains. Enchantment uses a Support Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_d_exp" />
 		<set name="default_action" val="EQUIP" />
@@ -696,7 +696,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48966" name="Artifact - HP Absorption Support" type="Armor">
+	<item id="48966" name="Artifact Vampiric Rage" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Vampiric Rage. Can be equipped in an artifact support slot. Enchantment increases Vampiric Rage. Enchantment uses a Support Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_d_vampiric_rage" />
 		<set name="default_action" val="EQUIP" />
@@ -704,7 +704,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48967" name="Artifact - Speed Support" type="Armor">
+	<item id="48967" name="Artifact - Speed" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Movement Speed. Can be equipped in an artifact support slot. Enchantment increases Movement Speed. Enchantment uses a Support Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_d_move_speed" />
 		<set name="default_action" val="EQUIP" />
@@ -712,7 +712,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48968" name="Artifact - Received Heal Amount Support" type="Armor">
+	<item id="48968" name="Artifact - Received Healing" additionalName="Support" type="Armor">
 		<!-- An artifact that increases Received Healing. Can be equipped in an artifact support slot. Enchantment increases Received Healing. Enchantment uses a Support Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_d_heal_effect" />
 		<set name="default_action" val="EQUIP" />
@@ -720,7 +720,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48969" name="Artifact - P. Atk. Balance" type="Armor">
+	<item id="48969" name="Artifact - P. Atk." additionalName="Balance" type="Armor">
 		<!-- An artifact that increases P. Atk. Can be equipped in an artifact balance slot. Enchantment increases P. Atk. Enchantment uses a Balance Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_a_pa" />
 		<set name="default_action" val="EQUIP" />
@@ -728,7 +728,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48970" name="Artifact - M. Atk. Balance" type="Armor">
+	<item id="48970" name="Artifact - M. Atk." additionalName="Balance" type="Armor">
 		<!-- An artifact that increases M. Atk. Can be equipped in an artifact balance slot. Enchantment increases M. Atk. Enchantment uses a Balance Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_a_ma" />
 		<set name="default_action" val="EQUIP" />
@@ -736,7 +736,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48971" name="Artifact - P. Accuracy Balance" type="Armor">
+	<item id="48971" name="Artifact - P. Accuracy" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases P. Accuracy. Can be equipped in an artifact balance slot. Enchantment increases P. Accuracy. Enchantment uses a Balance Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_a_hit" />
 		<set name="default_action" val="EQUIP" />
@@ -744,7 +744,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48972" name="Artifact - M. Accuracy Balance" type="Armor">
+	<item id="48972" name="Artifact - M. Accuracy" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases M. Accuracy. Can be equipped in an artifact balance slot. Enchantment increases M. Accuracy. Enchantment uses a Balance Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_a_mhit" />
 		<set name="default_action" val="EQUIP" />
@@ -752,7 +752,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48973" name="Artifact - P. Critical Rate Balance" type="Armor">
+	<item id="48973" name="Artifact Normal Attack Critical Rate" additionalName="Balance" type="Armor">
 		<!-- An artifact that can increase Normal Attack Critical Rate. Can be equipped in an artifact balance slot. Enchantment increases Normal Attack Critical Rate. Enchantment uses a Balance Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_a_crt_per" />
 		<set name="default_action" val="EQUIP" />
@@ -760,7 +760,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48974" name="Artifact - P. Skill Critical Rate Balance" type="Armor">
+	<item id="48974" name="Artifact - P. Skill Critical Rate" additionalName="Balance" type="Armor">
 		<!-- An artifact that can increase P. Skill Critical Rate. Can be equipped in an artifact balance slot. Enchantment increases P. Skill Critical Rate. Enchantment uses a Balance Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_a_crt_skill_per" />
 		<set name="default_action" val="EQUIP" />
@@ -768,7 +768,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48975" name="Artifact - M. Skill Critical Rate Balance" type="Armor">
+	<item id="48975" name="Artifact - M. Skill Critical Rate" additionalName="Balance" type="Armor">
 		<!-- An artifact that can increase M. Skill Critical Rate. Can be equipped in an artifact balance slot. Enchantment increases M. Skill Critical Rate. Enchantment uses a Balance Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_a_crt_mag_per" />
 		<set name="default_action" val="EQUIP" />
@@ -776,7 +776,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48976" name="Artifact - Potion / Elixir Effect Bonus Balance" type="Armor">
+	<item id="48976" name="Artifact - Potion/ Elixir Effect Bonus" additionalName="Balance" type="Armor">
 		<!-- An artifact that boosts the effects of Recovery Potion/ Elixirs. Can be equipped in an artifact balance slot. Enchantment increases the active effects of Recovery Potion/ Elixirs. Enchantment uses a Balance Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_a_hp_special" />
 		<set name="default_action" val="EQUIP" />
@@ -784,7 +784,7 @@
 		<set name="is_sellable" val="false" />
 		<!-- Skill add in option stat when enchant/upgrade -->
 	</item>
-	<item id="48977" name="Artifact - Received Damage Reduction When Imobilized Balance" type="Armor">
+	<item id="48977" name="Artifact - Received Damage When Immobilized" additionalName="Balance" type="Armor">
 		<!-- An artifact that reduces the damage received while action-prohibited. Can be equipped in an artifact balance slot. Enchantment reduces the damage received while action-prohibited. Enchantment uses a Balance Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_a_block_act_dmg" />
 		<set name="default_action" val="EQUIP" />
@@ -807,7 +807,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48980" name="Artifact - Attack Attribute Balance" type="Armor">
+	<item id="48980" name="Artifact - Atk. Attribute" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Atk. Attribute. Can be applied to Artifact - Balance slots. Atk. Attribute +30 when equipped. Can be purchased at Giran Town Luxury Shop. Cannot be upgraded. -->
 		<set name="icon" val="icon.artifact_a_attribute_att_up" />
 		<set name="default_action" val="EQUIP" />
@@ -817,7 +817,7 @@
 			<skill id="35252" level="1" /> <!-- Artifact - Attack Attribute -->
 		</skills>
 	</item>
-	<item id="48981" name="Artifact - Defense Attribute Balance" type="Armor">
+	<item id="48981" name="Artifact - Attribute Resistance" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases Attribute Resistance. Can be applied to Artifact - Balance slots. Attribute Resistance +30 when equipped. Can be purchased at Giran Town Luxury Shop. Cannot be upgraded. -->
 		<set name="icon" val="icon.artifact_a_attribute_def_up" />
 		<set name="default_action" val="EQUIP" />
@@ -827,7 +827,7 @@
 			<skill id="35253" level="1" /> <!-- Artifact - Defense Attribute -->
 		</skills>
 	</item>
-	<item id="48982" name="Artifact - Received Damage Reduction When Imobilized Balance" type="Armor">
+	<item id="48982" name="Artifact - Received Damage When Immobilized" additionalName="Balance" type="Armor">
 		<!-- An artifact that reduces Received Damage when Immobilized. Can be applied to Artifact - Balance slots. Received Damage Reduction when Immobilized -11%. Cannot be upgraded. -->
 		<set name="icon" val="icon.artifact_a_block_act_dmg" />
 		<set name="default_action" val="EQUIP" />
@@ -837,7 +837,7 @@
 			<skill id="35254" level="1" /> <!-- Artifact - Received Damage When Imobilized -->
 		</skills>
 	</item>
-	<item id="48983" name="Artifact - P. Skill Power Balance" type="Armor">
+	<item id="48983" name="Artifact - P. Skill Power" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases P. Skill Power. Can be applied to Artifact - Balance slots. P. Skill Power +11% when equipped. Cannot be upgraded. -->
 		<set name="icon" val="icon.artifact_a_skill_power" />
 		<set name="default_action" val="EQUIP" />
@@ -847,7 +847,7 @@
 			<skill id="35255" level="1" /> <!-- Artifact - P. Skill Power -->
 		</skills>
 	</item>
-	<item id="48984" name="Artifact - M. Skill Power Balance" type="Armor">
+	<item id="48984" name="Artifact - M. Skill Power" additionalName="Balance" type="Armor">
 		<!-- An artifact that increases M. Skill Power. Can be applied to Artifact - Balance slots. M. Skill Power +11% when equipped. Cannot be upgraded. -->
 		<set name="icon" val="icon.artifact_a_spell_power" />
 		<set name="default_action" val="EQUIP" />
@@ -857,7 +857,7 @@
 			<skill id="35256" level="1" /> <!-- Artifact - M. Skill Power -->
 		</skills>
 	</item>
-	<item id="48985" name="Artifact - Fixed Damage Reduction Balance" type="Armor">
+	<item id="48985" name="Artifact - Fixed Damage Resistance" additionalName="Balance" type="Armor">
 		<!-- An artifact that decreases the fixed damage. Can be equipped in an artifact balance slot. Enchantment decreases the fixed damage received. Enchantment uses a Balance Artifact of the same type as a material. -->
 		<set name="icon" val="icon.artifact_a_dmg_by_atk" />
 		<set name="default_action" val="EQUIP" />

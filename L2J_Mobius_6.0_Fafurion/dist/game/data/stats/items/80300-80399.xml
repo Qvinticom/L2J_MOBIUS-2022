@@ -286,7 +286,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="80323" name="Minion’s Symbol" type="EtcItem">
+	<item id="80323" name="Minion's Symbol" type="EtcItem">
 		<!-- A mark that only a few of Fafurion s best minions can receive. It also indicates that they are still under Fafurion s influence. Gather the marks and take them to Lupicia at the entrance of Fafurion Temple. -->
 		<set name="icon" val="icon.etc_symbol_subordinate_01" />
 		<set name="material" val="PAPER" />
@@ -1381,7 +1381,7 @@
 		<set name="weight" val="120" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80388" name="Mammon’s Adena Box" type="EtcItem">
+	<item id="80388" name="Mammon's Adena Box" type="EtcItem">
 		<!-- Use it to obtain a random amount of Adena. -->
 		<set name="icon" val="icon.bm_dragon_shinning_present" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1417,7 +1417,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="80392" name="Mammon’s Key" type="EtcItem">
+	<item id="80392" name="Mammon's Key" type="EtcItem">
 		<!-- Special coins that contain Mammon's power. Can be used through a Dimensional Merchant. -->
 		<set name="icon" val="icon.bm_dragon_key" />
 		<set name="material" val="PAPER" />

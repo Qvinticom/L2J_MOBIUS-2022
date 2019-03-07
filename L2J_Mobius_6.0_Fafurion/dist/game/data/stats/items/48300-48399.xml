@@ -369,7 +369,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="48332" name="Rael Wrist Shield" type="Weapon">
+	<item id="48332" name="Rael Tribe Wrist Shield" type="Weapon">
 		<!-- Material item for crafting Rael Tribe Wrist Shield appearance. -->
 		<set name="icon" val="icon.shapeshift_npc_shield7" />
 		<set name="default_action" val="EQUIP" />
@@ -453,7 +453,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="48338" name="Poln Angel Shulter" type="Weapon">
+	<item id="48338" name="Fallen Angel Shulter" type="Weapon">
 		<!-- Material item for crafting Fallen Angel Shulter appearance. -->
 		<set name="icon" val="icon.shapeshift_npc_shield13" />
 		<set name="default_action" val="EQUIP" />
@@ -509,7 +509,7 @@
 			<stat type="pDef">25</stat>
 		</stats>
 	</item>
-	<item id="48342" name="Angelos Shield" type="Weapon">
+	<item id="48342" name="Angelus Shield" type="Weapon">
 		<!-- Material item for crafting Angelus Shield appearance. -->
 		<set name="icon" val="icon.shapeshift_npc_shield17" />
 		<set name="default_action" val="EQUIP" />
@@ -563,7 +563,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="48348" name="Tanta Skull Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="48348" name="Tanta Tribe Skull Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Tanta Tribe Skull Shield appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -571,7 +571,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="48349" name="Rael Wrist Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="48349" name="Rael Tribe Wrist Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Rael Tribe Wrist Shield appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -619,7 +619,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="48355" name="Poln Angel Shulter Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="48355" name="Fallen Angel Shulter Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Fallen Angel Shulter appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -651,7 +651,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="48359" name="Angelos Shield Appearance Stone" additionalName="30-day" type="EtcItem">
+	<item id="48359" name="Angelus Shield Appearance Stone" additionalName="30-day" type="EtcItem">
 		<!-- Appearance Stone that gives a shield Angelus Shield appearance for 30 days. -->
 		<set name="icon" val="icon.shape_shifting_shield_i00" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -849,7 +849,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48378" name="Beast Shard" type="EtcItem">
+	<item id="48378" name="Monster Fragment" type="EtcItem">
 		<!-- Items that Black Wizard Lapathia asked you to obtain from monsters in the Altar of Evil for a memorial ritual for her perished kin. -->
 		<set name="icon" val="icon.etc_bodypart_liver_i00" />
 		<set name="material" val="PAPER" />
@@ -971,7 +971,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48390" name="Shiny Shirt Cube Fragment" type="EtcItem">
+	<item id="48390" name="Shiny T-shirt Cube Fragment" type="EtcItem">
 		<!-- Can be exchanged for the Faint Scroll: Enchant Elemental Shirt through the Warehouse Keeper. -->
 		<set name="icon" val="icon.cube_piece_tshirt" />
 		<set name="material" val="PAPER" />
@@ -989,7 +989,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48393" name="Adventure Guild Cube Treasure Chest" type="EtcItem">
+	<item id="48393" name="Adventure Guild Cube Box" type="EtcItem">
 		<!-- A cube box received from Herphah for completing the Adventure Guild missions. Double-click to obtain useful items periodically. -->
 		<set name="icon" val="icon.cube_piece_bless" />
 		<set name="immediate_effect" val="true" />

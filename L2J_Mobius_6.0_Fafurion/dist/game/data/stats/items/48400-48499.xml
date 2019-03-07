@@ -10,7 +10,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48401" name="Item Unseal Scroll" additionalName="15-minute" type="EtcItem">
+	<item id="48401" name="Release Seal Scroll" additionalName="15-min." type="EtcItem">
 		<!-- Use to unseal a sealed item. -->
 		<set name="icon" val="icon.scrl_item_unlock" />
 		<set name="material" val="PAPER" />
@@ -115,7 +115,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="48411" name="Item Unseal Scroll (15-min) Box" additionalName="15-minute" type="EtcItem">
+	<item id="48411" name="Release Seal Scroll (15-min) Box" additionalName="15-min." type="EtcItem">
 		<!-- Double-click to obtain 10 Release Seal Scrolls (15-min). -->
 		<set name="icon" val="BranchSys3.g_ev_invite_fantasy_box" />
 		<set name="default_action" val="PEEL" />
@@ -127,7 +127,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48412" name="Scroll of Escape: Town of Aden" type="EtcItem">
+	<item id="48412" name="Scroll of Escape - Town of Aden" type="EtcItem">
 		<!-- Use to move to the Town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -137,7 +137,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 	</item>
-	<item id="48413" name="Scroll of Escape: Town of Aden" type="EtcItem">
+	<item id="48413" name="Scroll of Escape - Town of Aden" type="EtcItem">
 		<!-- Use to move to the Town of Aden. -->
 		<set name="icon" val="icon.etc_scroll_of_return_i03" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -218,14 +218,14 @@
 		<set name="price" val="10000000" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48422" name="Talisman - Wind Pack" type="EtcItem">
+	<item id="48422" name="Talisman - Wind Box" type="EtcItem">
 		<!-- Double-click to obtain a box containing a Talisman - Wind (30-day). -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48423" name="Talisman - Wind Pack" additionalName="P. Skill Critical Damage" type="EtcItem">
+	<item id="48423" name="Talisman - Wind Box" additionalName="P. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain a Talisman - Wind: P. Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -233,7 +233,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48424" name="Talisman - Wind Pack" additionalName="M. Skill Critical Damage" type="EtcItem">
+	<item id="48424" name="Talisman - Wind Box" additionalName="M. Skill Critical Damage" type="EtcItem">
 		<!-- Double-click to obtain a Talisman- Wind: M. Critical Damage (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i03" />
 		<set name="default_action" val="PEEL" />
@@ -241,7 +241,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48425" name="Talisman - Wind Pack" additionalName="Defense" type="EtcItem">
+	<item id="48425" name="Talisman - Wind Box" additionalName="Defense" type="EtcItem">
 		<!-- Double-click to obtain a Talisman - Wind: Defense (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -249,7 +249,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48426" name="Talisman - Wind Pack" additionalName="Debuff Defense" type="EtcItem">
+	<item id="48426" name="Talisman - Wind Box" additionalName="Debuff Defense" type="EtcItem">
 		<!-- Double-click to obtain a Talisman - Wind: Debuff Resistance (30-day). Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -270,7 +270,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="48428" name="Talisman - Wind: M. Critical Damage" additionalName="30-day" type="Armor">
+	<item id="48428" name="Talisman- Wind: M. Critical Damage" additionalName="30-day" type="Armor">
 		<!-- When equipped, M. Skill Critical Damage +10%. -->
 		<set name="icon" val="icon.r_talisman_mc_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -312,7 +312,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 	</item>
-	<item id="48431" name="PA Talisman - STR" additionalName="2-hour" type="Armor">
+	<item id="48431" name="PA Talisman- STR" additionalName="2-hour" type="Armor">
 		<!-- When equipped, STR +5. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -403,7 +403,7 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 	</item>
-	<item id="48438" name="PA Talisman - Attribute Defense Boost" additionalName="2-hour" type="Armor">
+	<item id="48438" name="PA Talisman - Attribute Resistance Boost" additionalName="2-hour" type="Armor">
 		<!-- When equipped, P. Def. +50. The effect does not stack when two or more identical Talismans or a Mysterious Talisman with the same effect is equipped. -->
 		<set name="icon" val="Icon.etc_allstat_talisman_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -612,7 +612,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="21600" />
 	</item>
-	<item id="48453" name="Fortress Talisman - Speed" additionalName="15-day" type="Armor">
+	<item id="48453" name="Fortress Talisman - Movement Speed" additionalName="15-day" type="Armor">
 		<!-- When equipped, Movement Speed +15. -->
 		<set name="icon" val="icon.r85_talisman_ca_up_passive" />
 		<set name="default_action" val="EQUIP" />
@@ -633,7 +633,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48455" name="Fortress Talisman - Vitality Box" type="EtcItem">
+	<item id="48455" name="Fortress Talisman- Vitality Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - Vitality (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
@@ -745,7 +745,7 @@
 		<set name="material" val="PAPER" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48469" name="Fortress Talisman - Speed Box" type="EtcItem">
+	<item id="48469" name="Fortress Talisman - Movement Speed Box" type="EtcItem">
 		<!-- Double-click to obtain a Fortress Talisman - Movement Speed (15-day). -->
 		<set name="icon" val="icon.ev_charge_box" />
 		<set name="default_action" val="PEEL" />
@@ -818,7 +818,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48476" name="Dark/ Bloody Helios Enhancement Stone Treasure Chest" type="EtcItem">
+	<item id="48476" name="Dark/ Bloody Weapon Enhancement Stone Treasure Chest" type="EtcItem">
 		<!-- Use it to obtain a Dark Weapon Enhancement Stone or Bloody Weapon Enhancement Stone. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -850,7 +850,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48479" name="Knights' Enchant Scroll Supplies" additionalName="Event" type="EtcItem">
+	<item id="48479" name="Knights' Enchant Scroll Supply Items" additionalName="Event" type="EtcItem">
 		<!-- Use to obtain 1 Scroll: Enchant Weapon (R-grade) and 1 Scroll: Enchant Armor (R-grade). -->
 		<set name="icon" val="icon.bm_ensoulbox_soul_of_undead" />
 		<set name="default_action" val="PEEL" />
@@ -862,7 +862,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48480" name="+8 Shiny Elemental Shirt Pack" type="EtcItem">
+	<item id="48480" name="+8 Shiny Elemental T-shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +8 Shiny Elemental Shirt. -->
 		<set name="icon" val="icon.ainhasard_shirt_box_1" />
 		<set name="default_action" val="CAPSULE" />
@@ -871,7 +871,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48481" name="+8 Reflect Attack Shirt Pack" type="EtcItem">
+	<item id="48481" name="+8 Reflect Attack T-shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +8 Reflect Attack T-shirt. -->
 		<set name="icon" val="icon.reflect_attack_shirt_box_2" />
 		<set name="default_action" val="CAPSULE" />
@@ -880,7 +880,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48482" name="+8 Reflect Magical Shirt Pack" type="EtcItem">
+	<item id="48482" name="+8 Reflect Magic T-shirt Pack" type="EtcItem">
 		<!-- Double-click to obtain a +8 Reflect Magic T-shirt. -->
 		<set name="icon" val="icon.reflect_magic_shirt_box_3" />
 		<set name="default_action" val="CAPSULE" />
@@ -905,7 +905,7 @@
 			<stat type="pDef">28</stat>
 		</stats>
 	</item>
-	<item id="48484" name="+7 Reflect Attack Shirt" additionalName="1-day" type="Armor">
+	<item id="48484" name="+7 Reflect Attack T-shirt" additionalName="1-day" type="Armor">
 		<!-- A magical t-shirt specialized for physical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. P. Def. +8%, Received P. Critical Damage -12%, 7% chance to reflect physical skill debuffs.. Cannot be enchanted. -->
 		<set name="icon" val="icon.reflect_attack_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -921,7 +921,7 @@
 			<stat type="pDef">28</stat>
 		</stats>
 	</item>
-	<item id="48485" name="+7 Reflect Magical Shirt" additionalName="1-day" type="Armor">
+	<item id="48485" name="+7 Reflect Magic T-shirt" additionalName="1-day" type="Armor">
 		<!-- A magical t-shirt specialized for magical defense. <Item Skill>. M. Def. +15. Movement Speed +7. Max HP +536. Max MP +536. Water, Fire, Wind, Earth, Holy, Dark Attack Resistance +24. STR +3, DEX +3, CON +3, INT +3, WIT +3, MEN +3. M. Def. +8%, Received M. Critical Damage -12%, 7% chance to reflect magical skill debuffs.. Cannot be enchanted. -->
 		<set name="icon" val="icon.reflect_magic_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -996,7 +996,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48491" name="Dragon shirt" type="Armor">
+	<item id="48491" name="Dragon Skin Shirt" type="Armor">
 		<!-- A Dragon Skin Shirt. <Upgrade Condition>. Can be upgraded to a Dragon Leather Shirt when enchanted to +5. For characters Lv. 85 or above. -->
 		<set name="icon" val="icon.bm_dragon_shirt" />
 		<set name="default_action" val="EQUIP" />
@@ -1088,7 +1088,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="48498" name="Blessed Dragon Shirt Enchant Scroll" type="EtcItem">
+	<item id="48498" name="Blessed Scroll: Enchant Dragon Shirt" type="EtcItem">
 		<!-- Enchant Scroll that is exclusively for Dragon Shirts. The scroll can enchant up to +5. Failure to enchant resets the enchantment level of the Dragon Shirt. -->
 		<set name="icon" val="icon.bm_blessed_scrl_of_ench_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />

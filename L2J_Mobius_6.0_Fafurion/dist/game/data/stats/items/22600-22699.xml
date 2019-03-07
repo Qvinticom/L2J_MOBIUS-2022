@@ -152,7 +152,7 @@
 			<item id="21856" min="5000" max="5000" chance="100" /> <!-- Mysterious Blessed Spiritshot (S-grade) -->
 		</capsuled_items>
 	</item>
-	<item id="22608" name="Vitality Maintaining Potion (30-minute) 2-unit Pack" type="EtcItem">
+	<item id="22608" name="Vitality Maintaining Potion (30-min.) 2-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 2 Vitality Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -172,7 +172,7 @@
 			<item id="21251" min="2" max="2" chance="100" /> <!-- Vitality Maintaining Potion (30-min.) -->
 		</capsuled_items>
 	</item>
-	<item id="22609" name="Vitality Maintaining Potion (30-minute) 4-unit Pack" type="EtcItem">
+	<item id="22609" name="Vitality Maintaining Potion (30-min.) 4-unit Pack" type="EtcItem">
 		<!-- Wrapped Pack containing 4 Vitality Replenishing Potions. -->
 		<set name="icon" val="BranchSys.icon.br_four_leaf_clover_box_i00" />
 		<set name="weight" val="100" />
@@ -1275,7 +1275,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22659" name="Emerald Weapon: One-handed Magic Blunt Weapon" type="Weapon">
+	<item id="22659" name="Emerald Weapon: One-handed Staff" type="Weapon">
 		<!-- Emerald weapon. One-handed staff type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -1306,7 +1306,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22660" name="Emerald Weapon: Two-handed Magic Blunt Weapon" type="Weapon">
+	<item id="22660" name="Emerald Weapon: Two-handed Staff" type="Weapon">
 		<!-- Emerald weapon. Two-handed staff type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_magic_twohand_blunt" />
 		<set name="default_action" val="EQUIP" />
@@ -1337,7 +1337,7 @@
 			<stat type="pAtkRange">40</stat>
 		</stats>
 	</item>
-	<item id="22661" name="Emerald Weapon: Dualsword" type="Weapon">
+	<item id="22661" name="Emerald Weapon: Dual Sword" type="Weapon">
 		<!-- Emerald weapon. Dual Sword type. Base appearance of Emerald Weapon Appearance Stone. -->
 		<set name="icon" val="BranchSys3.Icon.g_beam_dual" />
 		<set name="default_action" val="EQUIP" />
@@ -1520,7 +1520,7 @@
 			<skill id="22523" level="1" /> <!-- Emerald Weapon Appearance Stone: Dagger -->
 		</skills>
 	</item>
-	<item id="22668" name="Emerald Weapon Appearance Stone: Two-handed Sword" type="EtcItem">
+	<item id="22668" name="Emerald Two-handed Sword Appearance Stone" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a two-handed sword to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_twohand_sword" />
 		<set name="immediate_effect" val="true" />
@@ -1667,7 +1667,7 @@
 			<skill id="22530" level="1" /> <!-- Emerald Weapon Appearance Stone: Two-handed Blunt -->
 		</skills>
 	</item>
-	<item id="22675" name="Emerald Weapon Appearance Stone: One-handed Magic Blunt Weapon" type="EtcItem">
+	<item id="22675" name="Emerald One-handed Staff Appearance Stone" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a one-handed staff to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -1688,7 +1688,7 @@
 			<skill id="22531" level="1" /> <!-- Emerald Weapon Appearance Stone: One-handed Magic Blunt -->
 		</skills>
 	</item>
-	<item id="22676" name="Emerald Weapon Appearance Stone: Two-handed Magic Blunt Weapon" type="EtcItem">
+	<item id="22676" name="Emerald Two-handed Staff Appearance Stone" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a two-handed staff to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_magic_twohand_blunt" />
 		<set name="immediate_effect" val="true" />
@@ -1709,7 +1709,7 @@
 			<skill id="22532" level="1" /> <!-- Emerald Weapon Appearance Stone: Two-handed Magic Blunt -->
 		</skills>
 	</item>
-	<item id="22677" name="Emerald Weapon Appearance Stone: Dualsword" type="EtcItem">
+	<item id="22677" name="Emerald Dual Sword Appearance Stone" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a dual sword to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dual" />
 		<set name="immediate_effect" val="true" />
@@ -1730,7 +1730,7 @@
 			<skill id="22533" level="1" /> <!-- Emerald Weapon Appearance Stone: Dualsword -->
 		</skills>
 	</item>
-	<item id="22678" name="Emerald Weapon Appearance Stone: Dual Dagger" type="EtcItem">
+	<item id="22678" name="Emerald Dual Dagger Appearance Stone" type="EtcItem">
 		<!-- Dimensional item. Changes the appearance of a dual dagger to that of an Emerald weapon. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_dualdagger" />
 		<set name="immediate_effect" val="true" />

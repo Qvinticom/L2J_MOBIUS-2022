@@ -216,14 +216,14 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47312" name="Spicy Seasoning" type="EtcItem">
+	<item id="47312" name="Universal Seasoning" type="EtcItem">
 		<!-- A seasoning available for purchase from a chef at each residence. Take Ugly Fish, Nimble Fish, and Universal Seasoning to the chef to make Royal Fish Soup. -->
 		<set name="icon" val="icon.etc_life_dust_i03" />
 		<set name="price" val="150000" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47313" name="Bloody Eternal Helmet" additionalName="Attack Type / Heavy Armor" type="Armor">
+	<item id="47313" name="Bloody Eternal Helmet" additionalName="Attack Type/ Heavy Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -3%, P. Atk. +1%, M. Atk. +2%. Tyrr, Sigel and Iss classes only. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -238,7 +238,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="47314" name="Bloody Eternal Breastplate" additionalName="Attack Type / Heavy Armor" type="Armor">
+	<item id="47314" name="Bloody Eternal Breastplate" additionalName="Attack Type/ Heavy Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, P. Critical Damage decreased and P. Def. increased additionally. Tyrr, Sigel and Iss classes only. -->
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -254,7 +254,7 @@
 			<stat type="pDef">433</stat>
 		</stats>
 	</item>
-	<item id="47315" name="Bloody Eternal Gaiters" additionalName="Attack Type / Heavy Armor" type="Armor">
+	<item id="47315" name="Bloody Eternal Gaiters" additionalName="Attack Type/ Heavy Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -5%, P. Atk. +1%, M. Atk. +2%. Tyrr, Sigel and Iss classes only. -->
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -270,7 +270,7 @@
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="47316" name="Bloody Eternal Gauntlets" additionalName="Attack Type / Heavy Armor" type="Armor">
+	<item id="47316" name="Bloody Eternal Gauntlets" additionalName="Attack Type/ Heavy Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Tyrr, Sigel and Iss classes only. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -285,7 +285,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47317" name="Bloody Eternal Boots" additionalName="Attack Type / Heavy Armor" type="Armor">
+	<item id="47317" name="Bloody Eternal Boots" additionalName="Attack Type/ Heavy Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Tyrr, Sigel and Iss classes only. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -300,7 +300,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47318" name="Blessed Eternal Shield" additionalName="Attack Type / Heavy Armor" type="Armor">
+	<item id="47318" name="Blessed Eternal Shield" additionalName="Attack Type/ Heavy" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -317,7 +317,7 @@
 			<stat type="sDef">557</stat>
 		</stats>
 	</item>
-	<item id="47319" name="Bloody Eternal Leather Helmet" additionalName="Assassin Type / Light Armor" type="Armor">
+	<item id="47319" name="Bloody Eternal Leather Helmet" additionalName="Assassin Type/ Light Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -3%, P. Atk. +1%, M. Atk. +2%. Othell and Yul classes only. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -332,7 +332,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="47320" name="Bloody Eternal Leather Armor" additionalName="Assassin Type / Light Armor" type="Armor">
+	<item id="47320" name="Bloody Eternal Leather Armor" additionalName="Assassin Type/ Light Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, Evasion and Movement Speed increased, P. Critical Rate Received decreased, and Physical Attack Resistance increased. Othell and Yul classes only. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -349,7 +349,7 @@
 			<stat type="rEvas">5</stat>
 		</stats>
 	</item>
-	<item id="47321" name="Bloody Eternal Leather Leggings" additionalName="Assassin Type / Light Armor" type="Armor">
+	<item id="47321" name="Bloody Eternal Leather Leggings" additionalName="Assassin Type/ Light Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -5%, P. Atk. +1%, M. Atk. +2%. Othell and Yul classes only. -->
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -366,7 +366,7 @@
 			<stat type="rEvas">3</stat>
 		</stats>
 	</item>
-	<item id="47322" name="Bloody Eternal Leather Gloves" additionalName="Assassin Type / Light Armor" type="Armor">
+	<item id="47322" name="Bloody Eternal Leather Gloves" additionalName="Assassin Type/ Light Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Othell and Yul classes only. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -381,7 +381,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47323" name="Bloody Eternal Leather Boots" additionalName="Assassin Type / Light Armor" type="Armor">
+	<item id="47323" name="Bloody Eternal Leather Boots" additionalName="Assassin Type/ Light Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Othell and Yul classes only. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -396,7 +396,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47324" name="Bloody Eternal Circlet" additionalName="Magic Type / Robe" type="Armor">
+	<item id="47324" name="Bloody Eternal Circlet" additionalName="Magic Type/ Robe" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -3%, P. Atk. +1%, M. Atk. +2%. Aeore, Feoh, Wynn, Iss classes and Sayha's Seer only. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -411,7 +411,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="47325" name="Bloody Eternal Tunic" additionalName="Magic Type / Robe" type="Armor">
+	<item id="47325" name="Bloody Eternal Tunic" additionalName="Magic Type/ Robe" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, M. Evasion and Mental Attack Resistance increased, P. Critical Rate/ Damage Received decreased. Aeore, Feoh, Wynn, Iss classes and Sayha's Seer only. -->
 		<set name="icon" val="icon.armor_t803_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -435,7 +435,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="47326" name="Bloody Eternal Stockings" additionalName="Magic Type / Robe" type="Armor">
+	<item id="47326" name="Bloody Eternal Stockings" additionalName="Magic Type/ Robe" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -5%, P. Atk. +1%, M. Atk. +2%. Aeore, Feoh, Wynn, Iss classes and Sayha's Seer only. -->
 		<set name="icon" val="icon.armor_t803_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -453,7 +453,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="47327" name="Bloody Eternal Gloves" additionalName="Magic Type / Robe" type="Armor">
+	<item id="47327" name="Bloody Eternal Gloves" additionalName="Magic Type/ Robe" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Aeore, Feoh, Wynn, Iss classes and Sayha's Seer only. -->
 		<set name="icon" val="icon.armor_t803_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -468,7 +468,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47328" name="Bloody Eternal Shoes" additionalName="Magic Type / Robe" type="Armor">
+	<item id="47328" name="Bloody Eternal Shoes" additionalName="Magic Type/ Robe" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Aeore, Feoh, Wynn, Iss classes and Sayha's Seer only. -->
 		<set name="icon" val="icon.armor_t803_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -483,7 +483,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47329" name="Bloody Eternal Helmet" additionalName="Defense Type / Heavy Armor" type="Armor">
+	<item id="47329" name="Bloody Eternal Helmet" additionalName="Defense Type/ Heavy Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -3%, P. Atk. +1%, M. Atk. +2%. Sigel classes only. -->
 		<set name="icon" val="icon.armor_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -498,7 +498,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="47330" name="Bloody Eternal Breastplate" additionalName="Defense Type / Heavy Armor" type="Armor">
+	<item id="47330" name="Bloody Eternal Breastplate" additionalName="Defense Type/ Heavy Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, P. Critical Damage decreased and P. Def. increased additionally. Sigel classes only. -->
 		<set name="icon" val="icon.armor_t801_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -514,7 +514,7 @@
 			<stat type="pDef">433</stat>
 		</stats>
 	</item>
-	<item id="47331" name="Bloody Eternal Gaiters" additionalName="Defense Type / Heavy Armor" type="Armor">
+	<item id="47331" name="Bloody Eternal Gaiters" additionalName="Defense Type/ Heavy Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -5%, P. Atk. +1%, M. Atk. +2%. Sigel classes only. -->
 		<set name="icon" val="icon.armor_t801_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -530,7 +530,7 @@
 			<stat type="pDef">270</stat>
 		</stats>
 	</item>
-	<item id="47332" name="Bloody Eternal Gauntlets" additionalName="Defense Type / Heavy Armor" type="Armor">
+	<item id="47332" name="Bloody Eternal Gauntlets" additionalName="Defense Type/ Heavy Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Sigel classes only. -->
 		<set name="icon" val="icon.armor_t801_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -545,7 +545,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47333" name="Bloody Eternal Boots" additionalName="Defense Type / Heavy Armor" type="Armor">
+	<item id="47333" name="Bloody Eternal Boots" additionalName="Defense Type/ Heavy Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Sigel classes only. -->
 		<set name="icon" val="icon.armor_t801_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -560,7 +560,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47334" name="Blessed Eternal Shield" additionalName="Defense Type / Heavy Armor" type="Armor">
+	<item id="47334" name="Blessed Eternal Shield" additionalName="Defense Type/ Heavy" type="Armor">
 		<!-- Additionally increases Shield Defense. -->
 		<set name="icon" val="icon.weapon_akra_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -577,7 +577,7 @@
 			<stat type="sDef">557</stat>
 		</stats>
 	</item>
-	<item id="47335" name="Bloody Eternal Leather Helmet" additionalName="Enchant Type / Light Armor" type="Armor">
+	<item id="47335" name="Bloody Eternal Leather Helmet" additionalName="Enchant Type/ Light Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -3%, P. Atk. +1%, M. Atk. +2%. Othell, Yul, Iss, Aeore, Wynn, Tyrr classes and Eviscerator only. -->
 		<set name="icon" val="icon.armor_leather_helmet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -592,7 +592,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="47336" name="Bloody Eternal Leather Armor" additionalName="Enchant Type / Light Armor" type="Armor">
+	<item id="47336" name="Bloody Eternal Leather Armor" additionalName="Enchant Type/ Light Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, Evasion and Movement Speed increased, P. Critical Rate Received decreased, and Physical Attack Resistance increased. Othell, Yul, Iss, Aeore, Wynn, Tyrr classes and Eviscerator only. -->
 		<set name="icon" val="icon.armor_t802_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -609,7 +609,7 @@
 			<stat type="rEvas">5</stat>
 		</stats>
 	</item>
-	<item id="47337" name="Bloody Eternal Leather Leggings" additionalName="Enchant Type / Light Armor" type="Armor">
+	<item id="47337" name="Bloody Eternal Leather Leggings" additionalName="Enchant Type/ Light Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -5%, P. Atk. +1%, M. Atk. +2%. Othell, Yul, Iss, Aeore, Wynn, Tyrr classes and Eviscerator only. -->
 		<set name="icon" val="icon.armor_t802_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -626,7 +626,7 @@
 			<stat type="rEvas">3</stat>
 		</stats>
 	</item>
-	<item id="47338" name="Bloody Eternal Leather Gloves" additionalName="Enchant Type / Light Armor" type="Armor">
+	<item id="47338" name="Bloody Eternal Leather Gloves" additionalName="Enchant Type/ Light Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Othell, Yul, Iss, Aeore, Wynn, Tyrr classes and Eviscerator only. -->
 		<set name="icon" val="icon.armor_t802_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -641,7 +641,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47339" name="Bloody Eternal Leather Boots" additionalName="Enchant Type / Light Armor" type="Armor">
+	<item id="47339" name="Bloody Eternal Leather Boots" additionalName="Enchant Type/ Light Armor" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Othell, Yul, Iss, Aeore, Wynn, Tyrr classes and Eviscerator only. -->
 		<set name="icon" val="icon.armor_t802_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -656,7 +656,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47340" name="Bloody Eternal Circlet" additionalName="Recovery Type / Robe" type="Armor">
+	<item id="47340" name="Bloody Eternal Circlet" additionalName="Recovery Type/ Robe" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -3%, P. Atk. +1%, M. Atk. +2%. Aeore classes only. -->
 		<set name="icon" val="icon.armor_circlet_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -671,7 +671,7 @@
 			<stat type="pDef">162</stat>
 		</stats>
 	</item>
-	<item id="47341" name="Bloody Eternal Tunic" additionalName="Recovery Type / Robe" type="Armor">
+	<item id="47341" name="Bloody Eternal Tunic" additionalName="Recovery Type/ Robe" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -8%, P. Atk. +1%, M. Atk. +2%. When enchanted to +4, M. Evasion and Mental Attack Resistance increased, P. Critical Rate/ Damage Received decreased. Aeore classes only. -->
 		<set name="icon" val="icon.armor_t803_u_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -695,7 +695,7 @@
 			<stat type="maxMp">649</stat>
 		</stats>
 	</item>
-	<item id="47342" name="Bloody Eternal Stockings" additionalName="Recovery Type / Robe" type="Armor">
+	<item id="47342" name="Bloody Eternal Stockings" additionalName="Recovery Type/ Robe" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -5%, P. Atk. +1%, M. Atk. +2%. Aeore classes only. -->
 		<set name="icon" val="icon.armor_t803_l_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -713,7 +713,7 @@
 			<stat type="maxMp">427</stat>
 		</stats>
 	</item>
-	<item id="47343" name="Bloody Eternal Gloves" additionalName="Recovery Type / Robe" type="Armor">
+	<item id="47343" name="Bloody Eternal Gloves" additionalName="Recovery Type/ Robe" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Aeore classes only. -->
 		<set name="icon" val="icon.armor_t803_g_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -728,7 +728,7 @@
 			<stat type="pDef">108</stat>
 		</stats>
 	</item>
-	<item id="47344" name="Bloody Eternal Shoes" additionalName="Recovery Type / Robe" type="Armor">
+	<item id="47344" name="Bloody Eternal Shoes" additionalName="Recovery Type/ Robe" type="Armor">
 		<!-- PvE enchant type item. Damage received from an NPC -2%, P. Atk. +1%, M. Atk. +2%. Aeore classes only. -->
 		<set name="icon" val="icon.armor_t803_b_i00" />
 		<set name="default_action" val="EQUIP" />
@@ -760,7 +760,7 @@
 			<stat type="rEvas">-8</stat>
 		</stats>
 	</item>
-	<item id="47346" name="+8 Bloody Eternal Set Pack" additionalName="Attack Type / Heavy Armor" type="EtcItem">
+	<item id="47346" name="+8 Bloody Eternal Set Pack" additionalName="Attack Type/ Heavy Armor" type="EtcItem">
 		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Attack Type Heavy Armor Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -772,7 +772,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47347" name="+8 Bloody Eternal Set Pack" additionalName="Assassin Type / Light Armor" type="EtcItem">
+	<item id="47347" name="+8 Bloody Eternal Set Pack" additionalName="Assassin Type/ Light Armor" type="EtcItem">
 		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Assassin Type Light Armor Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -784,7 +784,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47348" name="+8 Bloody Eternal Set Pack" additionalName="Magic Type / Robe" type="EtcItem">
+	<item id="47348" name="+8 Bloody Eternal Set Pack" additionalName="Magic Type/ Robe" type="EtcItem">
 		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Magic Type Robe Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -796,7 +796,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47349" name="+8 Bloody Eternal Set Pack" additionalName="Defense Type / Heavy Armor" type="EtcItem">
+	<item id="47349" name="+8 Bloody Eternal Set Pack" additionalName="Defense Type/ Heavy Armor" type="EtcItem">
 		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Defense Type Heavy Armor Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -808,7 +808,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47350" name="+8 Bloody Eternal Set Pack" additionalName="Enchant Type / Light Armor" type="EtcItem">
+	<item id="47350" name="+8 Bloody Eternal Set Pack" additionalName="Enchant Type/ Light Armor" type="EtcItem">
 		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Enchant Type Light Armor Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -820,7 +820,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47351" name="+8 Bloody Eternal Set Pack" additionalName="Recovery Type / Robe" type="EtcItem">
+	<item id="47351" name="+8 Bloody Eternal Set Pack" additionalName="Recovery Type/ Robe" type="EtcItem">
 		<!-- Double-click to obtain a +8 enchanted Bloody Eternal Recovery Type Robe Set. -->
 		<set name="icon" val="icon.etc_equip_item_box_i00" />
 		<set name="default_action" val="CAPSULE" />
@@ -1056,14 +1056,14 @@
 		<set name="handler" val="Appearance" />
 		<set name="default_action" val="SKILL_REDUCE" />
 	</item>
-	<item id="47367" name="Royal Save Ticket Box" type="EtcItem">
+	<item id="47367" name="Royal Save Card Box" type="EtcItem">
 		<!-- Double-click to obtain an R~R99 Red or Blue Royal Save Card. -->
 		<set name="icon" val="icon.bm_pendant_pve_box" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47368" name="Agathion Box" type="EtcItem">
+	<item id="47368" name="Agathion Pack" type="EtcItem">
 		<!-- Double-click to obtain one of the following: Zodiac Agathion Pack (15-day), Radiant Zodiac Agathion Pack (30-day), Twinkling Zodiac Agathion Pack (30-day), Agathion- Anakim Holy Barrier Pack. -->
 		<set name="icon" val="icon.etc_pi_box_joy_pack" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1091,7 +1091,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47372" name="Mammon's Talisman" additionalName="Skill Power" type="Armor">
+	<item id="47372" name="Mammon's Talisman (30-day)" additionalName="Skill Power" type="Armor">
 		<!-- When equipped, Skill Power +4%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1110,7 +1110,7 @@
 			<skill id="13959" level="1" /> <!-- Mammon's Talisman - Skill Power -->
 		</skills>
 	</item>
-	<item id="47373" name="Mammon's Talisman" additionalName="Attack Attribute" type="Armor">
+	<item id="47373" name="Mammon's Talisman (30-day)" additionalName="Attack Attribute" type="Armor">
 		<!-- When equipped, Attack Attribute Bonus +40. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1129,7 +1129,7 @@
 			<skill id="13960" level="1" /> <!-- Mammon's Talisman - Attack Attribute -->
 		</skills>
 	</item>
-	<item id="47374" name="Mammon's Talisman" additionalName="Skill Cooldown" type="Armor">
+	<item id="47374" name="Mammon's Talisman (30-day)" additionalName="Skill Cooldown" type="Armor">
 		<!-- When equipped, Skill Cooldown -4%. -->
 		<set name="icon" val="icon.bm_magic_square_talisman" />
 		<set name="default_action" val="EQUIP" />
@@ -1181,7 +1181,7 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47379" name="Red Dark/Bloody Coupon" additionalName="Event" type="EtcItem">
+	<item id="47379" name="Red Dark/ Bloody Coupon" additionalName="Event" type="EtcItem">
 		<!-- Red Libra-only Item. Craftsman Black exchanges this for Helios Weapons. It will be deleted when the Red Libra merchants leave. -->
 		<set name="icon" val="icon.event_mahum_memo" />
 		<set name="is_dropable" val="false" />
@@ -1204,7 +1204,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47382" name="Freya's Wind Scroll (High-grade)" additionalName="Temporary Name" type="EtcItem">
+	<item id="47382" name="Freya's Frozen Scroll" additionalName="Event" type="EtcItem">
 		<!-- Vitality consumption +100%, Acquired XP/ SP +100%. Remains after death. Duration is 10 min. Cooldown is 9 min. Only usable when 1 or more Vitality slot is full. Cannot be used in the Olympiad. -->
 		<set name="icon" val="icon.freya_scroll" />
 		<set name="is_clan_depositable" val="false" />
@@ -1253,7 +1253,7 @@
 			<skill id="18628" level="1" /> <!-- Express Bus Pass Card -->
 		</skills>
 	</item>
-	<item id="47385" name="Balthus Knight Mark" type="EtcItem">
+	<item id="47385" name="Sibi's Disguised Clothing" type="EtcItem">
 		<!-- Makes you eligible to receive a Member of the Balthus Knight disguise for 1 hour. Can be used only by characters of Level 85 or higher. Buff gets deleted upon Subclass/ Dual Class change. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.ev_balthus_token" />
 		<set name="default_action" val="SKILL_REDUCE" />
@@ -1265,7 +1265,7 @@
 		<set name="is_private_storeable" val="false" />
 		<set name="is_freightable" val="true" />
 	</item>
-	<item id="47386" name="Sibis' Letter" additionalName="Event" type="EtcItem">
+	<item id="47386" name="Sibi's Letter" additionalName="Event" type="EtcItem">
 		<!-- Letter from the Vice-Chief of the Balthus Knights. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_royal_membership_i00" />
 		<set name="default_action" val="SHOW_HTML" />
@@ -1277,7 +1277,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47387" name="Balthus Knights Supply Items" type="EtcItem">
+	<item id="47387" name="Balthus Knights Supply Box" type="EtcItem">
 		<!-- Double-click to receive 3 Balthus Knight Marks. Can be used only once a day. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="default_action" val="PEEL" />
@@ -1317,7 +1317,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47390" name="Forever/Longing Talisman/Energy of Longing Supply Items" type="EtcItem">
+	<item id="47390" name="Insanity Talisman/ Longing Talisman/ Energy of Longing Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Box. When used, an Insanity Talisman/ Longing Talisman/ Energy of Longing can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i01" />
 		<set name="default_action" val="PEEL" />
@@ -1335,7 +1335,7 @@
 			<item id="47420" min="1" max="1" chance="25" /> <!-- Energy of Longing -->
 		</capsuled_items>
 	</item>
-	<item id="47391" name="Venir Stage 11/12/13 Talisman Supply Items" type="EtcItem">
+	<item id="47391" name="Venir Stage 11/ 12/ 13 Talisman Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knight Supply Box. When used, a Venir Talisman Stage 11/ 12/ 13 can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i02" />
 		<set name="immediate_effect" val="true" />
@@ -1354,14 +1354,14 @@
 			<item id="39646" min="1" max="1" chance="25" /> <!-- Venir's Talisman - Stage 13 -->
 		</capsuled_items>
 	</item>
-	<item id="47392" name="Shining Scroll: Enchant Elemental Shirt" type="EtcItem">
+	<item id="47392" name="Destruction Scroll: Enchant Elemental Shirt" type="EtcItem">
 		<!-- Shirt Enchantment-only Scroll. If enchanting fails the existing enchant value is maintained. Cannot be used on Shirts of +9 or higher. -->
 		<set name="icon" val="icon.g_scrl_of_ench_wolf_shirt" />
 		<set name="default_action" val="SKILL_REDUCE" />
 		<set name="weight" val="10" />
 		<set name="is_stackable" val="true" />
 	</item>
-	<item id="47393" name="Dark Assassin/White Assassin Suit Supply Items" type="EtcItem">
+	<item id="47393" name="Dark/ White Assassin Suit Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Box. When used, a Dark/ White Assassin Suit Appearance Stone can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
@@ -1379,7 +1379,7 @@
 			<item id="40270" min="1" max="1" chance="34" /> <!-- Appearance Stone: Dark Assassin Suit -->
 		</capsuled_items>
 	</item>
-	<item id="47394" name="Scroll of Blessing R99/R95/R(2) Supply Item" type="EtcItem">
+	<item id="47394" name="Scroll of Blessing R99/ R95/ R(2) Box" type="EtcItem">
 		<!-- Top-grade Balthus Knight Supply Item. Use to obtain an R99/ R95/ R(2) Grade Scroll of Blessing. -->
 		<set name="icon" val="icon.etc_treasure_box_i05" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1390,7 +1390,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47395" name="Bottle of Antharas/Valakas/Baium's Soul Supply Item" type="EtcItem">
+	<item id="47395" name="Bottle of Antharas/ Valakas/ Baium's Soul Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Box. When used, an Antharas/ Valakas/ Baium Soul Bottle can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i06" />
 		<set name="immediate_effect" val="true" />
@@ -1409,7 +1409,7 @@
 			<item id="37520" min="1" max="1" chance="25" /> <!-- Bottle of Baium's Soul -->
 		</capsuled_items>
 	</item>
-	<item id="47396" name="Nurka/Rydel/Gustav's Belt Supply Item" type="EtcItem">
+	<item id="47396" name="Nurka/ Lidia/ Gustav's Belt Box" type="EtcItem">
 		<!-- Top-grade Sibi's Lucky Draw Supply Items. When used, a Nurka/ Lydia/ Gustav's Belt can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i07" />
 		<set name="default_action" val="SKILL_REDUCE_ON_SKILL_SUCCESS" />
@@ -1420,7 +1420,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_private_storeable" val="false" />
 	</item>
-	<item id="47397" name="Seven Signs/Anakim/Lilith Talisman Supply Item" type="EtcItem">
+	<item id="47397" name="Seven Signs/ Anakim/ Lilith Talisman Supply Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Box. When used, a Seven Signs/ Anakim/ Lilith's Talisman can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i08" />
 		<set name="immediate_effect" val="true" />
@@ -1439,7 +1439,7 @@
 			<item id="37715" min="1" max="1" chance="25" /> <!-- Talisman - Anakim -->
 		</capsuled_items>
 	</item>
-	<item id="47398" name="Bloody Eternal Enhancement Stone - x2" type="EtcItem">
+	<item id="47398" name="2 Bloody Eternal Enhancement Stones Box" type="EtcItem">
 		<!-- Top-grade Sibi's Lucky Draw Supply Items. When used, 2 Bloody Eternal Enhancement Stones can be obtained. -->
 		<set name="icon" val="icon.etc_treasure_box_i04" />
 		<set name="immediate_effect" val="true" />
@@ -1454,7 +1454,7 @@
 			<item id="35569" min="2" max="2" chance="75" /> <!-- Bloody Armor Enhancement Stone -->
 		</capsuled_items>
 	</item>
-	<item id="47399" name="Sibis Coin Box" type="EtcItem">
+	<item id="47399" name="Sibi's Coins Box" type="EtcItem">
 		<!-- Top-grade Balthus Knights Supply Items. When used, 1500 Sibi's Coins can be obtained. This item will be deleted after the event is over. -->
 		<set name="icon" val="icon.etc_treasure_box_i10" />
 		<set name="default_action" val="PEEL" />
