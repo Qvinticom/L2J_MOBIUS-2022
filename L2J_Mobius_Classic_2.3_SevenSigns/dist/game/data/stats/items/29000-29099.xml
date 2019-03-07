@@ -211,7 +211,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="55003" level="1" />
+			<skill id="55003" level="1" /> <!-- 1st Class Buff Scroll -->
 		</skills>
 	</item>
 	<item id="29012" name="2nd Class Buff Scroll" type="EtcItem">
@@ -229,7 +229,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="55004" level="2" />
+			<skill id="55004" level="2" /> <!-- 2nd Class Buff Scroll -->
 		</skills>
 	</item>
 	<item id="29013" name="Scroll: Hunter's Song" type="EtcItem">
@@ -435,7 +435,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55015" level="1" />
+			<skill id="55015" level="1" /> <!-- Quick Healing Potion -->
 		</skills>
 	</item>
 	<item id="29032" name="Major Quick Healing Potion" type="EtcItem">
@@ -453,7 +453,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55016" level="1" />
+			<skill id="55016" level="1" /> <!-- Major Quick Healing Potion -->
 		</skills>
 	</item>
 	<item id="29033" name="Adventurer Hat - Event" type="Armor">

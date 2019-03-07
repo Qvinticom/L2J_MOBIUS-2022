@@ -811,7 +811,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="55035" level="1" />
+			<skill id="55035" level="1" /> <!-- 1st Class Buff Scroll -->
 		</skills>
 	</item>
 	<item id="29553" name="2nd Class Buff Scroll" type="EtcItem">
@@ -829,7 +829,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="55036" level="2" />
+			<skill id="55036" level="2" /> <!-- 2nd Class Buff Scroll -->
 		</skills>
 	</item>
 	<item id="29554" name="Quick Healing Potion" type="EtcItem">
@@ -846,7 +846,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55037" level="1" />
+			<skill id="55037" level="1" /> <!-- Quick Healing Potion -->
 		</skills>
 	</item>
 	<item id="29555" name="Major Quick Healing Potion" type="EtcItem">
@@ -863,7 +863,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55038" level="1" />
+			<skill id="55038" level="1" /> <!-- Major Quick Healing Potion -->
 		</skills>
 	</item>
 	<item id="29556" name="Chronicle Chest" type="EtcItem">
@@ -989,7 +989,7 @@
 		<set name="is_oly_restricted" val="true" />
 		<set name="time" val="10080" />
 		<skills>
-			<skill id="55042" level="1" />
+			<skill id="55042" level="1" /> <!-- Attendance XP Rune -->
 		</skills>
 	</item>
 	<item id="29567" name="6-Day Reward" additionalName="Attendance Reward" type="EtcItem">
@@ -1204,7 +1204,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55044" level="1"/>
+			<skill id="55044" level="1"/> <!-- Lineage II Chest -->
 		</skills>
 	</item>
 	<item id="29582" name="Chronicle Chest" type="EtcItem">
@@ -1216,7 +1216,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55045" level="1"/>
+			<skill id="55045" level="1"/> <!-- Chronicle Chest -->
 		</skills>
 	</item>
 	<item id="29583" name="Memories Chest" type="EtcItem">
@@ -1228,7 +1228,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55046" level="1"/>
+			<skill id="55046" level="1"/> <!-- Memories Chest -->
 		</skills>
 	</item>
 	<item id="29584" name="Angel Cat's Blessing Chest" type="EtcItem">

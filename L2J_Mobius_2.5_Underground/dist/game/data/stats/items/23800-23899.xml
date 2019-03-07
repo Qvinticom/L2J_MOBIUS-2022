@@ -217,7 +217,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23817" name="Uthanka's Ring" type="Armor">
-		<!-- Can transform into Pirate Captain Uthanka.  -->
+		<!-- Can transform into Pirate Captain Uthanka. -->
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -225,7 +225,7 @@
 		<set name="commissionItemType" val="RING" />
 	</item>
 	<item id="23818" name="Uthanka's Ring" additionalName="7-day" type="Armor">
-		<!-- Can transform into Pirate Captain Uthanka (7-day).  -->
+		<!-- Can transform into Pirate Captain Uthanka (7-day). -->
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -399,7 +399,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="1" />
+			<skill id="21364" level="1" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23834" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
@@ -412,7 +412,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="2" />
+			<skill id="21364" level="2" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23835" name="Talisman - Abundance" additionalName="Morale" type="Armor">
@@ -425,7 +425,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="3" />
+			<skill id="21364" level="3" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23836" name="Talisman - Abundance" additionalName="Physique" type="Armor">
@@ -438,7 +438,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="4" />
+			<skill id="21364" level="4" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23837" name="Talisman - Hunter" additionalName="Abundance" type="Armor">
@@ -451,8 +451,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21373" level="1" />
-			<skill id="21364" level="5" />
+			<skill id="21373" level="1" /> <!-- Unequip Talisman - Hunter -->
+			<skill id="21364" level="5" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23838" name="Talisman - Slaughterer" additionalName="Abundance" type="Armor">
@@ -465,8 +465,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21374" level="1" />
-			<skill id="21364" level="6" />
+			<skill id="21374" level="1" /> <!-- Unequip Talisman - Slaughterer -->
+			<skill id="21364" level="6" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23839" name="Talisman - Conquerer" additionalName="Abundance" type="Armor">
@@ -479,8 +479,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21375" level="1" />
-			<skill id="21364" level="7" />
+			<skill id="21375" level="1" /> <!-- Unequip Talisman - Conquerer -->
+			<skill id="21364" level="7" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23840" name="Talisman - Outlaw" additionalName="Abundance" type="Armor">
@@ -493,8 +493,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21376" level="1" />
-			<skill id="21364" level="8" />
+			<skill id="21376" level="1" /> <!-- Unequip Talisman - Outlaw -->
+			<skill id="21364" level="8" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23841" name="Abundance Gift Box" additionalName="War" type="EtcItem">

@@ -111,7 +111,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="32012" level="1"/>
+			<skill id="32012" level="1"/> <!-- High-Quality Dye Chest -->
 		</skills>
 	</item>
 	<item id="49111" name="Dye Chest" type="EtcItem">
@@ -123,7 +123,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="32013" level="1"/>
+			<skill id="32013" level="1"/> <!-- Wind Dye Pack -->
 		</skills>
 	</item>
 	<item id="49112" name="Staff Chest" additionalName="Grade C" type="EtcItem">

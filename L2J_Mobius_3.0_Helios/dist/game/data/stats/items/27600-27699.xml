@@ -48,7 +48,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="27618" level="1" />
+			<skill id="27618" level="1" /> <!-- Daily Mission Reward Chest -->
 		</skills>
 	</item>
 	<item id="27604" name="Amaranthine Double Crystal Enhancement Box" type="EtcItem">
@@ -687,8 +687,8 @@
 		<set name="immediate_effect" val="true" />
 		<set name="commissionItemType" val="NECKLACE" />
 		<skills>
-			<skill id="46729" level="1" type="ON_EQUIP" />
-			<skill id="46730" level="1" type="ON_UNEQUIP" />
+			<skill id="46729" level="1" type="ON_EQUIP" /> <!-- Equip Grankain's Necklace - Stage 3 Necklace -->
+			<skill id="46730" level="1" type="ON_UNEQUIP" /> <!-- Unequip Grankain's Necklace - Stage 3 Necklace -->
 			<skill id="27636" level="1" /> <!-- Gran Kain's Necklace -->
 		</skills>
 		<stats>

@@ -296,7 +296,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
-			<skill id="13569" level="1" />
+			<skill id="13569" level="1" /> <!-- Talisman - Lilith -->
 		</skills>
 	</item>
 	<item id="37715" name="Talisman - Anakim" type="Armor">
@@ -312,7 +312,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
-			<skill id="13569" level="2" />
+			<skill id="13569" level="2" /> <!-- Talisman - Lilith -->
 		</skills>
 	</item>
 	<item id="37716" name="Seven Signs' Energy" type="EtcItem">
@@ -333,7 +333,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="weight" val="150" />
 		<skills>
-			<skill id="13569" level="3" />
+			<skill id="13569" level="3" /> <!-- Talisman - Lilith -->
 		</skills>
 	</item>
 	<item id="37718" name="Shiny Elemental Shirt" type="Armor">
@@ -351,21 +351,21 @@
 		<set name="enchant_enabled" val="8" />
 		<set name="weight" val="130" />
 		<skills>
-			<skill id="13563" level="1" type="ON_ENCHANT" type_value="6" />
-			<skill id="13563" level="2" type="ON_ENCHANT" type_value="7" />
-			<skill id="13563" level="3" type="ON_ENCHANT" type_value="8" />
-			<skill id="13563" level="4" type="ON_ENCHANT" type_value="9" />
-			<skill id="13563" level="5" type="ON_ENCHANT" type_value="10" />
-			<skill id="13564" level="1" type="ON_ENCHANT" type_value="7" />
-			<skill id="13564" level="2" type="ON_ENCHANT" type_value="8" />
-			<skill id="13564" level="3" type="ON_ENCHANT" type_value="9" />
-			<skill id="13564" level="4" type="ON_ENCHANT" type_value="10" />
-			<skill id="13565" level="1" type="ON_ENCHANT" type_value="8" />
-			<skill id="13565" level="2" type="ON_ENCHANT" type_value="9" />
-			<skill id="13565" level="3" type="ON_ENCHANT" type_value="10" />
-			<skill id="13566" level="1" type="ON_ENCHANT" type_value="9" />
-			<skill id="13566" level="2" type="ON_ENCHANT" type_value="10" />
-			<skill id="13567" level="1" type="ON_ENCHANT" type_value="10" />
+			<skill id="13563" level="1" type="ON_ENCHANT" type_value="6" /> <!-- Einhasad's Wrath -->
+			<skill id="13563" level="2" type="ON_ENCHANT" type_value="7" /> <!-- Einhasad's Wrath -->
+			<skill id="13563" level="3" type="ON_ENCHANT" type_value="8" /> <!-- Einhasad's Wrath -->
+			<skill id="13563" level="4" type="ON_ENCHANT" type_value="9" /> <!-- Einhasad's Wrath -->
+			<skill id="13563" level="5" type="ON_ENCHANT" type_value="10" /> <!-- Einhasad's Wrath -->
+			<skill id="13564" level="1" type="ON_ENCHANT" type_value="7" /> <!-- Einhasad's Protection -->
+			<skill id="13564" level="2" type="ON_ENCHANT" type_value="8" /> <!-- Einhasad's Protection -->
+			<skill id="13564" level="3" type="ON_ENCHANT" type_value="9" /> <!-- Einhasad's Protection -->
+			<skill id="13564" level="4" type="ON_ENCHANT" type_value="10" /> <!-- Einhasad's Protection -->
+			<skill id="13565" level="1" type="ON_ENCHANT" type_value="8" /> <!-- Einhasad's Silence -->
+			<skill id="13565" level="2" type="ON_ENCHANT" type_value="9" /> <!-- Einhasad's Silence -->
+			<skill id="13565" level="3" type="ON_ENCHANT" type_value="10" /> <!-- Einhasad's Silence -->
+			<skill id="13566" level="1" type="ON_ENCHANT" type_value="9" /> <!-- Einhasad's Salvation -->
+			<skill id="13566" level="2" type="ON_ENCHANT" type_value="10" /> <!-- Einhasad's Salvation -->
+			<skill id="13567" level="1" type="ON_ENCHANT" type_value="10" /> <!-- Einhasad's Blessing -->
 		</skills>
 		<stats>
 			<stat type="pDef">28</stat>
@@ -962,7 +962,7 @@
 			<player level="80" />
 		</cond>
 		<skills>
-			<skill id="13771" level="1" />
+			<skill id="13771" level="1" /> <!-- Exalted Cloak -->
 		</skills>
 		<stats>
 			<stat type="pDef">50</stat>

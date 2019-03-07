@@ -101,7 +101,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="49.17" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="49.17" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -476,7 +476,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="90.64" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="90.64" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -533,7 +533,7 @@
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -587,7 +587,7 @@
 				<item id="36881" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -670,7 +670,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="78.84" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="78.84" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -763,7 +763,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="78.43" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="78.43" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -927,7 +927,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="88.33" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="88.33" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1011,7 +1011,7 @@
 				<item id="6575" min="1" max="1" chance="0.20028440385347" /> <!-- Blessed Scroll: Enchant Weapon (D-grade) -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="41.29" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="41.29" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1315,7 +1315,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1821,7 +1821,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="90.41" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="90.41" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -1952,7 +1952,7 @@
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="89.91" /> <!-- Fortune Bag - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="89.91" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
 		<collision>
@@ -3220,7 +3220,7 @@
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<dropLists>
 			<drop>
-				<item id="36311" min="7" max="14" chance="100" /> <!-- Battleground Scroll: Damage Reflect Resistance -->
+				<item id="36311" min="7" max="14" chance="100" /> <!-- Battleground Scroll: Damage Reflection Resistance -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -4614,7 +4614,7 @@
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
 		<dropLists>
 			<drop>
-				<item id="36311" min="7" max="14" chance="100" /> <!-- Battleground Scroll: Damage Reflect Resistance -->
+				<item id="36311" min="7" max="14" chance="100" /> <!-- Battleground Scroll: Damage Reflection Resistance -->
 				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->

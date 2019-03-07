@@ -2759,10 +2759,10 @@
 		<skillList>
 			<skill id="50028" level="1" /> <!-- 62 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5464" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="14765" level="4" />
-			<skill id="4045" level="1" />
+			<skill id="5464" level="1" /> <!-- Wind Attribute -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -2796,11 +2796,11 @@
 		<skillList>
 			<skill id="50028" level="2" /> <!-- 64 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5464" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="14765" level="4" />
-			<skill id="4045" level="1" />
-			<skill id="4416" level="3" />
+			<skill id="5464" level="1" /> <!-- Wind Attribute -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="3" /> <!-- Undead -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -2834,17 +2834,17 @@
 		<skillList>
 			<skill id="50028" level="3" /> <!-- 66 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4437" level="3" />
-			<skill id="4441" level="3" />
-			<skill id="4435" level="3" />
-			<skill id="4436" level="3" />
-			<skill id="4440" level="3" />
-			<skill id="4439" level="3" />
-			<skill id="4438" level="3" />
-			<skill id="5463" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="4494" level="1" />
-			<skill id="14765" level="4" />
+			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
+			<skill id="4441" level="3" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
+			<skill id="4440" level="3" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
+			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
+			<skill id="5463" level="1" /> <!-- Water Attribute -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -2878,16 +2878,16 @@
 		<skillList>
 			<skill id="50028" level="4" /> <!-- 68 Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4441" level="5" />
-			<skill id="4435" level="5" />
-			<skill id="4440" level="5" />
-			<skill id="4439" level="5" />
-			<skill id="4438" level="5" />
-			<skill id="5462" level="1" />
-			<skill id="4415" level="19" />
-			<skill id="4494" level="1" />
-			<skill id="14765" level="4" />
-			<skill id="4414" level="1" />
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="5462" level="1" /> <!-- Fire Attribute -->
+			<skill id="4415" level="19" /> <!-- Bare Hands -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -2921,12 +2921,12 @@
 		<skillList>
 			<skill id="50028" level="5" /> <!-- 70 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5462" level="1" />
-			<skill id="4415" level="7" />
-			<skill id="4414" level="3" />
-			<skill id="14765" level="4" />
-			<skill id="4045" level="1" />
-			<skill id="4084" level="1" />
+			<skill id="5462" level="1" /> <!-- Fire Attribute -->
+			<skill id="4415" level="7" /> <!-- Bare Hands -->
+			<skill id="4414" level="3" /> <!-- Heavy Armor Type -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4084" level="1" /> <!-- Physical Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -2960,15 +2960,15 @@
 		<skillList>
 			<skill id="50028" level="6" /> <!-- 72 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4441" level="5" />
-			<skill id="4435" level="5" />
-			<skill id="4440" level="5" />
-			<skill id="4439" level="5" />
-			<skill id="4438" level="5" />
-			<skill id="5238" level="1" />
-			<skill id="5467" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="4494" level="1" />
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="5238" level="1" /> <!-- Freezing -->
+			<skill id="5467" level="1" /> <!-- Darkness Protection -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>

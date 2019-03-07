@@ -970,7 +970,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40362" name="Agathion - Joon Pack (30-day)" type="Armor">
-		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. . <Passive Skill>. 1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death. . <Active Skill>. 1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
+		<!-- Can summon Joon when equipped. 30-day. Cannot be used in the Olympiad. <Passive Skill>. 1. Joon's Magic: For 30 min., acquired XP/SP + 10%, Atk. Attribute + 100, P. Atk. + 20%, M. Atk. + 30%, Atk./Casting Spd. + 10%, P./M. Accuracy + 4, Speed + 10, Max. HP/MP/CP + 10%, P./M. Def. + 10%, and MP Consumption - 10%. Cannot be stacked with Art of Seduction. Buff remains after death. <Active Skill>. 1. Joon's Resurrection: can use Blessed Resurrection. Cooldown is 3 hr. -->
 		<set name="icon" val="icon.pi_high_agathion_bracelet_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -1127,7 +1127,7 @@
 		<set name="time" val="43200" />
 	</item>
 	<item id="40372" name="Agathion - Three-headed Dragon" additionalName="30-day" type="Armor">
-		<!-- Can summon Pisces when equipped. . <Active Skill>. 1. Agathion Teleport: teleports you to Heine, or town of Aden/Rune/Giran. (Cooldown is 30 min.). . <Passive Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN + 1. 2. Attribute Enchant: Attribute Attck/Resistance + 30. -->
+		<!-- Can summon Pisces when equipped. <Active Skill>. 1. Agathion Teleport: teleports you to Heine, or town of Aden/Rune/Giran. (Cooldown is 30 min.). <Passive Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN + 1. 2. Attribute Enchant: Attribute Attck/Resistance + 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />

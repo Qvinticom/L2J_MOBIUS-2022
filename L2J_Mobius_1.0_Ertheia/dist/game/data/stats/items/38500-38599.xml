@@ -1,7 +1,7 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/items.xsd">
 	<item id="38500" name="Agathion - Twinkling Cancer" type="Armor">
-		<!-- Summons Cancer. . <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). . <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
+		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Atk.: Fire/ Water/ Earth/ Wind/ Dark/ Holy Atk. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -23,12 +23,12 @@
 			<skill id="17551" level="1" /> <!-- Balanced Power -->
 			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
 			<skill id="17567" level="1" /> <!-- Zodiac Agathion Attribute Enchant -->
-			<skill id="9606" level="1" />
+			<skill id="9606" level="1" /> <!-- Sealing Agathion -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
 	<item id="38501" name="Agathion - Radiant Cancer" type="Armor">
-		<!-- Summons Cancer. . <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). . <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
+		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine.(Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. 2. Attribute Resistance: Fire/ Water/ Earth/ Wind/ Dark/ Holy Def. each increases by 30. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -50,12 +50,12 @@
 			<skill id="17551" level="1" /> <!-- Balanced Power -->
 			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
 			<skill id="17568" level="1" /> <!-- Zodiac Agathion Attribute Enchant -->
-			<skill id="9606" level="1" />
+			<skill id="9606" level="1" /> <!-- Sealing Agathion -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
 	<item id="38502" name="Agathion - Cancer" type="Armor">
-		<!-- Summons Cancer. . <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). . <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
+		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.). <Item Skill>. 1. Balanced Power: STR/INT/CON/DEX/WIT/MEN increases by 1. -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -76,12 +76,12 @@
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
 			<skill id="17551" level="1" /> <!-- Balanced Power -->
 			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
-			<skill id="9606" level="1" />
+			<skill id="9606" level="1" /> <!-- Sealing Agathion -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>
 	<item id="38503" name="Agathion - Faint Cancer" type="Armor">
-		<!-- Summons Cancer. . <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
+		<!-- Summons Cancer. <Active Skill>. 1. Agathion Teleport: Town of Aden/Town of Rune/Town of Giran/Heine. (Cooldown is 30min.) -->
 		<set name="icon" val="icon.agathion_magmeld_teleport" />
 		<set name="default_action" val="EQUIP" />
 		<set name="is_clan_depositable" val="false" />
@@ -101,7 +101,7 @@
 			<skill id="17549" level="1" /> <!-- Agathion Teleport: Town of Giran -->
 			<skill id="17550" level="1" /> <!-- Agathion Teleport: Town of Heine -->
 			<skill id="17622" level="1" /> <!-- Agathion Cute Trick -->
-			<skill id="9606" level="1" />
+			<skill id="9606" level="1" /> <!-- Sealing Agathion -->
 			<skill id="9606" level="1" type="ON_UNEQUIP" /> <!-- Sealing Agathion -->
 		</skills>
 	</item>

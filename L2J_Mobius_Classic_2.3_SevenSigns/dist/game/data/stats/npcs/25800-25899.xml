@@ -26,16 +26,16 @@
 		<skillList>
 			<skill id="50028" level="7" /> <!-- 74 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4441" level="5" />
-			<skill id="4435" level="5" />
-			<skill id="4440" level="5" />
-			<skill id="4439" level="5" />
-			<skill id="4438" level="5" />
-			<skill id="5238" level="1" />
-			<skill id="5467" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="4494" level="1" />
-			<skill id="14765" level="4" />
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="5238" level="1" /> <!-- Freezing -->
+			<skill id="5467" level="1" /> <!-- Darkness Protection -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -69,14 +69,14 @@
 		<skillList>
 			<skill id="50028" level="8" /> <!-- 76 Lv. Raid Boss -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="6268" level="1" />
-			<skill id="4441" level="5" />
-			<skill id="4440" level="5" />
-			<skill id="4438" level="5" />
-			<skill id="5465" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="14765" level="2" />
-			<skill id="4045" level="1" />
+			<skill id="6268" level="1" /> <!-- Jump Attack -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -110,10 +110,10 @@
 		<skillList>
 			<skill id="50028" level="9" /> <!-- 78 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4415" level="12" />
-			<skill id="5463" level="1" />
-			<skill id="14765" level="4" />
-			<skill id="4045" level="1" />
+			<skill id="4415" level="12" /> <!-- Bare Hands -->
+			<skill id="5463" level="1" /> <!-- Water Attribute -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -147,10 +147,10 @@
 		<skillList>
 			<skill id="50028" level="10" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5464" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="14765" level="2" />
-			<skill id="4045" level="1" />
+			<skill id="5464" level="1" /> <!-- Wind Attribute -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -188,10 +188,10 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk.: -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def.: -->
-			<skill id="5464" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="14765" level="2" />
-			<skill id="4045" level="1" />
+			<skill id="5464" level="1" /> <!-- Wind Attribute -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -229,10 +229,10 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk.: -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def.: -->
-			<skill id="5464" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="14765" level="2" />
-			<skill id="4045" level="1" />
+			<skill id="5464" level="1" /> <!-- Wind Attribute -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -269,10 +269,10 @@
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk.: -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def.: -->
-			<skill id="5464" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="14765" level="2" />
-			<skill id="4045" level="1" />
+			<skill id="5464" level="1" /> <!-- Wind Attribute -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -311,10 +311,10 @@
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk.: -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def.: -->
-			<skill id="5464" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="14765" level="2" />
-			<skill id="4045" level="1" />
+			<skill id="5464" level="1" /> <!-- Wind Attribute -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -353,10 +353,10 @@
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk.: -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def.: -->
-			<skill id="5464" level="1" />
-			<skill id="4415" level="3" />
-			<skill id="14765" level="2" />
-			<skill id="4045" level="1" />
+			<skill id="5464" level="1" /> <!-- Wind Attribute -->
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -394,9 +394,9 @@
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk.: -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
-			<skill id="4415" level="3" />
-			<skill id="14765" level="4" />
-			<skill id="4045" level="1" />
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -435,8 +435,8 @@
 			<skill id="4411" level="14" /> <!-- Strong M. Atk.: -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
-			<skill id="4415" level="3" />
-			<skill id="4045" level="1" />
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -475,9 +475,9 @@
 			<skill id="4411" level="14" /> <!-- Strong M. Atk.: -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
-			<skill id="4415" level="3" />
-			<skill id="14765" level="4" />
-			<skill id="4045" level="1" />
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -516,8 +516,8 @@
 			<skill id="4411" level="14" /> <!-- Strong M. Atk.: -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
-			<skill id="4415" level="3" />
-			<skill id="4045" level="1" />
+			<skill id="4415" level="3" /> <!-- Bare Hands -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -555,10 +555,10 @@
 			<skill id="4411" level="15" /> <!-- Strong M. Atk.: -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
-			<skill id="4415" level="11" />
-			<skill id="4414" level="3" />
-			<skill id="14765" level="4" />
-			<skill id="4045" level="1" />
+			<skill id="4415" level="11" /> <!-- Bare Hands -->
+			<skill id="4414" level="3" /> <!-- Heavy Armor Type -->
+			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>

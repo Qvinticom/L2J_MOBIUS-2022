@@ -398,7 +398,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="1" />
+			<skill id="21364" level="1" /> <!-- Talisman - Hunter -->
 		</skills>
 	</item>
 	<item id="23834" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
@@ -410,7 +410,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="2" />
+			<skill id="21364" level="2" /> <!-- Talisman - Hunter -->
 		</skills>
 	</item>
 	<item id="23835" name="Talisman - Abundance" additionalName="Morale" type="Armor">
@@ -422,7 +422,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="3" />
+			<skill id="21364" level="3" /> <!-- Talisman - Hunter -->
 		</skills>
 	</item>
 	<item id="23836" name="Talisman - Abundance" additionalName="Physique" type="Armor">
@@ -434,7 +434,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="4" />
+			<skill id="21364" level="4" /> <!-- Talisman - Hunter -->
 		</skills>
 	</item>
 	<item id="23837" name="Talisman - Hunter" additionalName="Abundance" type="Armor">
@@ -446,9 +446,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="5" />
-			<skill id="21365" level="1" type="ON_EQUIP" />
-			<skill id="21373" level="1" type="ON_UNEQUIP" />
+			<skill id="21364" level="5" /> <!-- Talisman - Hunter -->
+			<skill id="21365" level="1" type="ON_EQUIP" /> <!-- Talisman - Hunter -->
+			<skill id="21373" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Hunter -->
 		</skills>
 	</item>
 	<item id="23838" name="Talisman - Slaughterer" additionalName="Abundance" type="Armor">
@@ -460,9 +460,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="6" />
-			<skill id="21370" level="1" type="ON_EQUIP" />
-			<skill id="21374" level="1" type="ON_UNEQUIP" />
+			<skill id="21364" level="6" /> <!-- Talisman - Hunter -->
+			<skill id="21370" level="1" type="ON_EQUIP" /> <!-- Talisman - Slaughterer -->
+			<skill id="21374" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Slaughterer -->
 		</skills>
 	</item>
 	<item id="23839" name="Talisman - Conquerer" additionalName="Abundance" type="Armor">
@@ -474,9 +474,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="7" />
-			<skill id="21371" level="1" type="ON_EQUIP" />
-			<skill id="21375" level="1" type="ON_UNEQUIP" />
+			<skill id="21364" level="7" /> <!-- Talisman - Hunter -->
+			<skill id="21371" level="1" type="ON_EQUIP" /> <!-- Talisman - Conquerer -->
+			<skill id="21375" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Conquerer -->
 		</skills>
 	</item>
 	<item id="23840" name="Talisman - Outlaw" additionalName="Abundance" type="Armor">
@@ -488,9 +488,9 @@
 		<set name="is_commissionable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="8" />
-			<skill id="21372" level="1" type="ON_EQUIP" />
-			<skill id="21376" level="1" type="ON_UNEQUIP" />
+			<skill id="21364" level="8" /> <!-- Talisman - Hunter -->
+			<skill id="21372" level="1" type="ON_EQUIP" /> <!-- Talisman - Outlaw -->
+			<skill id="21376" level="1" type="ON_UNEQUIP" /> <!-- Unequip Talisman - Outlaw -->
 		</skills>
 	</item>
 	<item id="23841" name="Abundance Gift Box" additionalName="War" type="EtcItem">

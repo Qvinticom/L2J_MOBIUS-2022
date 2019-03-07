@@ -532,7 +532,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="37536" name="Santa's Blessing" type="EtcItem">
-		<!-- Double-click to change your appearance to that of a Santa for 3 hours. STR/INT/CON/DEX/WIT/MEN + 1. Buff remains even after death. . Note: If you use an item that changes your appearance, such as Letter Collector's Gift, the Santa appearance might disappear. -->
+		<!-- Double-click to change your appearance to that of a Santa for 3 hours. STR/INT/CON/DEX/WIT/MEN + 1. Buff remains even after death. Note: If you use an item that changes your appearance, such as Letter Collector's Gift, the Santa appearance might disappear. -->
 		<set name="icon" val="BranchSys.icon.br_xmas_present_fun_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />

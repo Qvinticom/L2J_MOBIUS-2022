@@ -142,7 +142,7 @@
 		</stats>
 	</item>
 	<item id="23104" name="Vesper Pincer of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. . Critical + 131. Has a chance of increasing all party members' P. Atk., M. Atk., and Heal Amount, and decreasing MP consumption during skill use during a Critical Attack. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon. Critical + 131. Has a chance of increasing all party members' P. Atk., M. Atk., and Heal Amount, and decreasing MP consumption during skill use during a Critical Attack. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_pincer_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="rhand" />
@@ -178,7 +178,7 @@
 		</stats>
 	</item>
 	<item id="23105" name="Vesper Shooter of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. . Critical + 133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon. Critical + 133. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_schutze_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -214,7 +214,7 @@
 		</stats>
 	</item>
 	<item id="23106" name="Vesper Nagan of Fortune" additionalName="90-day" type="Weapon">
-		<!-- Kamael-only weapon. . Critical + 131. Increases damage inflicted during PvP. Can be assigned an attribute. -->
+		<!-- Kamael-only weapon. Critical + 131. Increases damage inflicted during PvP. Can be assigned an attribute. -->
 		<set name="icon" val="icon.weapon_vesper_nagen_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
@@ -1921,7 +1921,7 @@
 		</skills>
 	</item>
 	<item id="23193" name="Ninja Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots. . Warning: The appearance resets if you bestow a pendant on the appearance-modified hair accessory. -->
+		<!-- Changes the appearance of a hair accessory to that of a Ninja outfit. Can only be used on hair accessories that use 2 slots. Warning: The appearance resets if you bestow a pendant on the appearance-modified hair accessory. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />

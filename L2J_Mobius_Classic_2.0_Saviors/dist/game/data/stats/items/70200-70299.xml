@@ -240,7 +240,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55317" level="1"/>
+			<skill id="55317" level="1"/> <!-- Chronicle Chest -->
 		</skills>
 	</item>
 	<item id="70219" name="Refined Rare Accessory Pack" additionalName="7-day" type="EtcItem">
@@ -447,7 +447,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
-			<skill id="55329" level="1" />
+			<skill id="55329" level="1" /> <!-- Strawberry Juice -->
 		</skills>
 	</item>
 	<item id="70234" name="Mango Juice" type="EtcItem">
@@ -464,7 +464,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
-			<skill id="55330" level="1" />
+			<skill id="55330" level="1" /> <!-- Mango Juice -->
 		</skills>
 	</item>
 	<item id="70235" name="Cherry Juice" type="EtcItem">
@@ -481,7 +481,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
-			<skill id="55331" level="1" />
+			<skill id="55331" level="1" /> <!-- Cherry Juice -->
 		</skills>
 	</item>
 	<item id="70236" name="Scroll: 50 SP" additionalName="Event" type="EtcItem">

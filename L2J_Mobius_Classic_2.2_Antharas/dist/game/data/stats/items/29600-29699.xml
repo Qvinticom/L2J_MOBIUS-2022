@@ -16,7 +16,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="55057" level="1" />
+			<skill id="55057" level="1" /> <!-- Wind Walk -->
 		</skills>
 	</item>
 	<item id="29601" name="Newbie Kit - Lvl 1" type="EtcItem">
@@ -1219,7 +1219,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="55055" level="1" />
+			<skill id="55055" level="1" /> <!-- 1st Class Buff Scroll -->
 		</skills>
 	</item>
 	<item id="29655" name="2nd Class Buff Scroll" type="EtcItem">
@@ -1240,7 +1240,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="is_stackable" val="true" />
 		<skills>
-			<skill id="55056" level="2" />
+			<skill id="55056" level="2" /> <!-- 2nd Class Buff Scroll -->
 		</skills>
 	</item>
 	<item id="29656" name="Traveler's Package - Lvl 1" type="EtcItem">
@@ -1500,8 +1500,8 @@
 		<set name="time" val="43200" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55059" level="1"/>
-			<skill id="55060" level="1"/>
+			<skill id="55059" level="1"/> <!-- Summon Agathion - Griffin -->
+			<skill id="55060" level="1"/> <!-- Griffin s Benediction -->
 			<skill id="3267" level="1" type="ON_UNEQUIP" /> <!-- Seal Agathion -->
 		</skills>
 	</item>
@@ -1555,7 +1555,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55063" level="1" />
+			<skill id="55063" level="1" /> <!-- Quick Castle Healing Potion -->
 		</skills>
 	</item>
 	<item id="29672" name="Major Quick Castle Healing Potion" type="EtcItem">
@@ -1573,7 +1573,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55064" level="1" />
+			<skill id="55064" level="1" /> <!-- Major Quick Castle Healing Potion -->
 		</skills>
 	</item>
 	<item id="29673" name="Scroll: Castle Berserker Spirit" type="EtcItem">
@@ -1589,7 +1589,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55065" level="1" />
+			<skill id="55065" level="1" /> <!-- Scroll: Castle Berserker Spirit -->
 		</skills>
 	</item>
 	<item id="29674" name="Scroll: Castle Death Whisper" type="EtcItem">
@@ -1605,7 +1605,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55066" level="1" />
+			<skill id="55066" level="1" /> <!-- Scroll: Castle Death Whisper -->
 		</skills>
 	</item>
 	<item id="29675" name="Blessed Castle Scroll of Escape" type="EtcItem">
@@ -1623,7 +1623,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55067" level="1" />
+			<skill id="55067" level="1" /> <!-- Blessed Castle Scroll of Escape -->
 		</skills>
 	</item>
 	<item id="29676" name="Scroll: Castle Blessing" type="EtcItem">
@@ -1639,7 +1639,7 @@
 		<set name="commissionItemType" val="SCROLL_OTHER" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55068" level="1" />
+			<skill id="55068" level="1" /> <!-- Scroll: Castle Blessing -->
 		</skills>
 	</item>
 	<item id="29677" name="Castle Ring (10-day)" type="Armor">
@@ -1657,7 +1657,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55069" level="1" />
+			<skill id="55069" level="1" /> <!-- Castle Ring -->
 		</skills>
 		<stats>
 			<stat type="mDef">32</stat>
@@ -1674,7 +1674,7 @@
 		<set name="commissionItemType" val="RING" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55069" level="1" />
+			<skill id="55069" level="1" /> <!-- Castle Ring -->
 		</skills>
 		<stats>
 			<stat type="mDef">32</stat>
@@ -1695,7 +1695,7 @@
 		<set name="commissionItemType" val="EARRING" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55070" level="1" />
+			<skill id="55070" level="1" /> <!-- Castle Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
@@ -1713,7 +1713,7 @@
 		<set name="commissionItemType" val="EARRING" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55070" level="1" />
+			<skill id="55070" level="1" /> <!-- Castle Earring -->
 		</skills>
 		<stats>
 			<stat type="mDef">48</stat>
@@ -1735,7 +1735,7 @@
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55071" level="1" />
+			<skill id="55071" level="1" /> <!-- Castle Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">64</stat>
@@ -1753,7 +1753,7 @@
 		<set name="commissionItemType" val="NECKLACE" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55071" level="1" />
+			<skill id="55071" level="1" /> <!-- Castle Necklace -->
 		</skills>
 		<stats>
 			<stat type="mDef">64</stat>
@@ -1789,7 +1789,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39015" level="1" />
+			<skill id="39015" level="1" /> <!-- Scroll: Shield -->
 		</skills>
 	</item>
 	<item id="29685" name="Scroll: Might" type="EtcItem">
@@ -1804,7 +1804,7 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="39014" level="1" />
+			<skill id="39014" level="1" /> <!-- Scroll: Might -->
 		</skills>
 	</item>
 	<item id="29686" name="Scroll: Concentration" type="EtcItem">
@@ -1877,7 +1877,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55072" level="1"/>
+			<skill id="55072" level="1"/> <!-- Lineage II Chest -->
 		</skills>
 	</item>
 	<item id="29693" name="Chronicle Chest" type="EtcItem">
@@ -1889,7 +1889,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55073" level="1"/>
+			<skill id="55073" level="1"/> <!-- Chronicle Chest -->
 		</skills>
 	</item>
 	<item id="29694" name="Memories Chest" type="EtcItem">
@@ -1901,7 +1901,7 @@
 		<set name="is_stackable" val="true" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55074" level="1"/>
+			<skill id="55074" level="1"/> <!-- Memories Chest -->
 		</skills>
 	</item>
 	<item id="29695" name="Quick Healing Potion" additionalName="Event" type="EtcItem">
@@ -1915,7 +1915,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55083" level="1" />
+			<skill id="55083" level="1" /> <!-- Quick Healing Potion -->
 		</skills>
 	</item>
 	<item id="29696" name="Major Quick Healing Potion" additionalName="Event" type="EtcItem">
@@ -1929,7 +1929,7 @@
 		<set name="etcitem_type" val="POTION" />
 		<set name="handler" val="ItemSkills" />
 		<skills>
-			<skill id="55084" level="1" />
+			<skill id="55084" level="1" /> <!-- Major Quick Healing Potion -->
 		</skills>
 	</item>
 	<item id="29697" name="1st Class Buff Scroll" additionalName="Event" type="EtcItem">
@@ -1946,7 +1946,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="55085" level="1" />
+			<skill id="55085" level="1" /> <!-- 1st Class Buff Scroll -->
 		</skills>
 	</item>
 	<item id="29698" name="2nd Class Buff Scroll" additionalName="Event" type="EtcItem">
@@ -1963,7 +1963,7 @@
 		<set name="handler" val="ItemSkills" />
 		<set name="immediate_effect" val="true" />
 		<skills>
-			<skill id="55086" level="2" />
+			<skill id="55086" level="2" /> <!-- 2nd Class Buff Scroll -->
 		</skills>
 	</item>
 	<item id="29699" name="Minor Blessed Scroll of Escape" additionalName="Event" type="EtcItem">

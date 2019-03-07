@@ -217,7 +217,7 @@
 		<set name="is_stackable" val="true" />
 	</item>
 	<item id="23817" name="Uthanka's Ring" type="Armor">
-		<!-- Can transform into Pirate Captain Uthanka.  -->
+		<!-- Can transform into Pirate Captain Uthanka. -->
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -225,7 +225,7 @@
 		<set name="commissionItemType" val="RING" />
 	</item>
 	<item id="23818" name="Uthanka's Ring" additionalName="7-day" type="Armor">
-		<!-- Can transform into Pirate Captain Uthanka (7-day).  -->
+		<!-- Can transform into Pirate Captain Uthanka (7-day). -->
 		<set name="icon" val="BranchSys3.lcon.g_ring_of_uthanka" />
 		<set name="default_action" val="EQUIP" />
 		<set name="weight" val="150" />
@@ -399,7 +399,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="1" />
+			<skill id="21364" level="1" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23834" name="Talisman - Abundance" additionalName="Tactics" type="Armor">
@@ -412,7 +412,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="2" />
+			<skill id="21364" level="2" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23835" name="Talisman - Abundance" additionalName="Morale" type="Armor">
@@ -425,7 +425,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="3" />
+			<skill id="21364" level="3" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23836" name="Talisman - Abundance" additionalName="Physique" type="Armor">
@@ -438,7 +438,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21364" level="4" />
+			<skill id="21364" level="4" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23837" name="Talisman - Hunter" additionalName="Abundance" type="Armor">
@@ -451,8 +451,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21373" level="1" />
-			<skill id="21364" level="5" />
+			<skill id="21373" level="1" /> <!-- Unequip Talisman - Hunter -->
+			<skill id="21364" level="5" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23838" name="Talisman - Slaughterer" additionalName="Abundance" type="Armor">
@@ -465,8 +465,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21374" level="1" />
-			<skill id="21364" level="6" />
+			<skill id="21374" level="1" /> <!-- Unequip Talisman - Slaughterer -->
+			<skill id="21364" level="6" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23839" name="Talisman - Conquerer" additionalName="Abundance" type="Armor">
@@ -479,8 +479,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21375" level="1" />
-			<skill id="21364" level="7" />
+			<skill id="21375" level="1" /> <!-- Unequip Talisman - Conquerer -->
+			<skill id="21364" level="7" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23840" name="Talisman - Outlaw" additionalName="Abundance" type="Armor">
@@ -493,8 +493,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_freightable" val="true" />
 		<skills>
-			<skill id="21376" level="1" />
-			<skill id="21364" level="8" />
+			<skill id="21376" level="1" /> <!-- Unequip Talisman - Outlaw -->
+			<skill id="21364" level="8" /> <!-- Talisman - Abundance -->
 		</skills>
 	</item>
 	<item id="23841" name="Abundance Gift Box" additionalName="War" type="EtcItem">
@@ -626,7 +626,7 @@
 		</capsuled_items>
 	</item>
 	<item id="23845" name="Mysterious Hunt Dye" additionalName="P. Def., Speed, 1-day" type="EtcItem">
-		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (when HP is 90% or above, P. Def. + 20%, Speed + 33). All classes. Awakened only. . Note: Tattoo is only effective in the Olympiad and Ceremony of Chaos. -->
+		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (when HP is 90% or above, P. Def. + 20%, Speed + 33). All classes. Awakened only. Note: Tattoo is only effective in the Olympiad and Ceremony of Chaos. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_defence" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -639,7 +639,7 @@
 		<set name="etcitem_type" val="DYE" />
 	</item>
 	<item id="23846" name="Mysterious Slaughter Dye" additionalName="Damage Reflect Resistance, Received Damage Decrease, 1-day" type="EtcItem">
-		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (Received Damage from PCs - 2%, Damage Reflect Resistance + 2, effect increased for PC kills, up to Lv. 5) All classes. Awakened only. . Note: Tattoo is only effective in a castle siege, dimensional castle siege, fortress siege, and a clan hall war. -->
+		<!-- Take it to the town's Symbol Maker for a 1-day tattoo that increases your power (Received Damage from PCs - 2%, Damage Reflect Resistance + 2, effect increased for PC kills, up to Lv. 5) All classes. Awakened only. Note: Tattoo is only effective in a castle siege, dimensional castle siege, fortress siege, and a clan hall war. -->
 		<set name="icon" val="BranchSys3.icon1.g_premium_dye_etc_slaughter" />
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
@@ -1100,7 +1100,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23878" name="Samurai Hair Accessory Appearance Stone" type="EtcItem">
-		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit. Only for 2-slot hair accessories. . Note: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
+		<!-- Modifies the appearance of a hair accessory into that of a Samurai Outfit. Only for 2-slot hair accessories. Note: Bestowing a pendant on a modified hair accessory wil reset the appearance. -->
 		<set name="icon" val="BranchSys3.Icon.g_shape_shifting_hair2" />
 		<set name="immediate_effect" val="true" />
 		<set name="handler" val="Appearance" />
@@ -1129,7 +1129,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23880" name="Samurai Outfit Appearance Stone" type="EtcItem">
-		<!-- Modifies the appearance of armor into that of a Samurai. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. . Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
+		<!-- Modifies the appearance of armor into that of a Samurai. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />
@@ -1158,7 +1158,7 @@
 		<set name="default_action" val="EQUIP" />
 	</item>
 	<item id="23882" name="Anakim Outfit Appearance Stone" type="EtcItem">
-		<!-- Modifies the appearance of armor into that of Anakim. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. . Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
+		<!-- Modifies the appearance of armor into that of Anakim. Works on one-piece armor. Changes the entire armor set's appearance. Can be undone with a Restoration Stone. Note: Upgrading or bestowing options on modified armor will reset the appearance. -->
 		<set name="icon" val="BranchSys3.icon1.g_scrl_change_chest" />
 		<set name="is_stackable" val="true" />
 		<set name="is_freightable" val="true" />

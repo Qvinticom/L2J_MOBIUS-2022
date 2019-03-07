@@ -612,7 +612,7 @@
 		<set name="time" val="10080" />
 		<set name="bodypart" val="talisman" />
 		<skills>
-			<skill id="35036" level="1" />
+			<skill id="35036" level="1" /> <!-- Warrior s Talisman - Attack -->
 		</skills>
 	</item>
 	<item id="90158" name="Fire Dragon Pendant +6" additionalName="30-day" type="Armor">
@@ -628,7 +628,7 @@
 		<set name="is_sellable" val="false" />
 		<set name="time" val="43200" />
 		<skills>
-			<skill id="35007" level="6" />
+			<skill id="35007" level="6" /> <!-- Fire Dragon Pendant Enchant Effect -->
 		</skills>
 		<stats>
 			<stat type="pDef">40</stat>
@@ -669,7 +669,7 @@
 		<set name="time" val="10080" />
 		<set name="bodypart" val="talisman" />
 		<skills>
-			<skill id="35037" level="1" />
+			<skill id="35037" level="1" /> <!-- Warrior s Talisman - Defense -->
 		</skills>
 	</item>
 	<item id="90161" name="Chest of Glory" additionalName="7-day" type="EtcItem">
@@ -781,7 +781,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
-			<skill id="39224" level="1" />
+			<skill id="39224" level="1" /> <!-- Strawberry Banana Cocktail -->
 		</skills>
 	</item>
 	<item id="90169" name="Mango Banana Cocktail" type="EtcItem">
@@ -798,7 +798,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
-			<skill id="39225" level="1" />
+			<skill id="39225" level="1" /> <!-- Mango Banana Cocktail -->
 		</skills>
 	</item>
 	<item id="90170" name="Cherry Banana Cocktail" type="EtcItem">
@@ -815,7 +815,7 @@
 		<set name="is_commissionable" val="false" />
 		<set name="for_npc" val="true" />
 		<skills>
-			<skill id="39226" level="1" />
+			<skill id="39226" level="1" /> <!-- Cherry Banana Cocktail -->
 		</skills>
 	</item>
 	<item id="90171" name="Monkey Bait" type="EtcItem">

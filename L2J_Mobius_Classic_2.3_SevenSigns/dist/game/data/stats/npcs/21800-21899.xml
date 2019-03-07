@@ -88,7 +88,7 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="10" />
+			<skill id="4408" level="10" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="14" /> <!-- Average P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Average M. Atk. -->
@@ -249,7 +249,7 @@
 			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4276" level="2" />
+			<skill id="4276" level="2" /> <!-- Bow / Crossbow Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -326,7 +326,7 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4067" level="1" /> <!-- Blow -->
-			<skill id="4276" level="2" />
+			<skill id="4276" level="2" /> <!-- Bow / Crossbow Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -483,7 +483,7 @@
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4276" level="2" />
+			<skill id="4276" level="2" /> <!-- Bow / Crossbow Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -563,7 +563,7 @@
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4073" level="1" /> <!-- Stun -->
-			<skill id="4276" level="2" />
+			<skill id="4276" level="2" /> <!-- Bow / Crossbow Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -640,7 +640,7 @@
 			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4276" level="2" />
+			<skill id="4276" level="2" /> <!-- Bow / Crossbow Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -791,10 +791,10 @@
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
 			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4073" level="1" /> <!-- Stun -->
-			<skill id="4416" level="4" />
-			<skill id="4408" level="10" />
-			<skill id="4410" level="13" />
-			<skill id="4411" level="13" />
+			<skill id="4416" level="4" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Extremely Weak M. Atk. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -872,13 +872,13 @@
 			<skill id="4415" level="4" /> <!-- One-handed Sword -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
 			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4416" level="4" />
-			<skill id="4408" level="10" />
-			<skill id="4410" level="13" />
-			<skill id="4411" level="14" />
-			<skill id="4412" level="12" />
-			<skill id="4413" level="7" />
-			<skill id="4276" level="2" />
+			<skill id="4416" level="4" /> <!-- Undead -->
+			<skill id="4408" level="10" /> <!-- HP Increase (1x) -->
+			<skill id="4410" level="13" /> <!-- Extremely Weak P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Extremely Weak M. Atk. -->
+			<skill id="4412" level="12" /> <!-- Extremely Weak P. Def. -->
+			<skill id="4413" level="7" /> <!-- Extremely Weak M. Def. -->
+			<skill id="4276" level="2" /> <!-- Bow / Crossbow Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -951,7 +951,7 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4232" level="7" /> <!-- NPC AE Strike -->
-			<skill id="4408" level="10" />
+			<skill id="4408" level="10" /> <!-- HP Increase (1x) -->
 			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Slightly Strong M. Atk. -->
@@ -962,7 +962,7 @@
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4789" level="2" /> <!-- NPC High Level -->
 			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4276" level="2" />
+			<skill id="4276" level="2" /> <!-- Bow / Crossbow Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
