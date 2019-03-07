@@ -45,6 +45,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 	private static final int SUCCUBUS_BLOOD = 1083;
 	// Misc
 	private static final int MIN_LEVEL = 16;
+	private static final int MAX_LEVEL = 26;
 	
 	public Q00003_WillTheSealBeBroken()
 	{
@@ -53,6 +54,7 @@ public class Q00003_WillTheSealBeBroken extends Quest
 		addTalkId(TALLOTH);
 		addKillId(OMEN_BEAST, TAINTED_ZOMBIE, STINK_ZOMBIE, LESSER_SUCCUBUS, LESSER_SUCCUBUS_TILFO, LESSER_SUCCUBUS_TUREN);
 		registerQuestItems(OMEN_BEAST_EYE, TAINT_STONE, SUCCUBUS_BLOOD);
+		addCondMaxLevel(MAX_LEVEL, "30141-01.html");
 	}
 	
 	@Override

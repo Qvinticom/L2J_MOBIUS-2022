@@ -46,6 +46,7 @@ public class Q00005_MinersFavor extends Quest
 	private static final int NECKLACE = 49039; // Necklace (Novice)
 	// Misc
 	private static final int MIN_LEVEL = 2;
+	private static final int MAX_LEVEL = 5;
 	
 	public Q00005_MinersFavor()
 	{
@@ -53,6 +54,7 @@ public class Q00005_MinersFavor extends Quest
 		addStartNpc(BOLTER);
 		addTalkId(BOLTER, SHARI, GARITA, REED, BRUNON);
 		registerQuestItems(BOLTERS_LIST, MINING_BOOTS, MINERS_PICK, BOOMBOOM_POWDER, REDSTONE_BEER, BOLTERS_SMELLY_SOCKS);
+		addCondMaxLevel(MAX_LEVEL, "30554-01.html");
 	}
 	
 	@Override

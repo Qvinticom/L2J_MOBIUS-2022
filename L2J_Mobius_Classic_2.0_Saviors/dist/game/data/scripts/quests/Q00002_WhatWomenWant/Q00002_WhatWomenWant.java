@@ -44,6 +44,7 @@ public class Q00002_WhatWomenWant extends Quest
 	private static final int EARRING = 49040;
 	// Misc
 	private static final int MIN_LEVEL = 2;
+	private static final int MAX_LEVEL = 5;
 	
 	public Q00002_WhatWomenWant()
 	{
@@ -51,6 +52,7 @@ public class Q00002_WhatWomenWant extends Quest
 		addStartNpc(ARUJIEN);
 		addTalkId(ARUJIEN, MIRABEL, HERBIEL, GREENIS);
 		registerQuestItems(ARUJIENS_LETTER1, ARUJIENS_LETTER2, ARUJIENS_LETTER3, POETRY_BOOK, GREENIS_LETTER);
+		addCondMaxLevel(MAX_LEVEL, "30223-01.html");
 	}
 	
 	@Override

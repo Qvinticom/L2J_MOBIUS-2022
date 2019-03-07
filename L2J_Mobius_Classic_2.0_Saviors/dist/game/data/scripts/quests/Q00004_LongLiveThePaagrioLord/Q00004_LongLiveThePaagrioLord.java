@@ -50,6 +50,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 	private static final int CLUB = 49051; // Club (Novice)
 	// Misc
 	private static final int MIN_LEVEL = 2;
+	private static final int MAX_LEVEL = 5;
 	
 	public Q00004_LongLiveThePaagrioLord()
 	{
@@ -57,6 +58,7 @@ public class Q00004_LongLiveThePaagrioLord extends Quest
 		addStartNpc(NAKUSIN);
 		addTalkId(NAKUSIN, VARKEES, URUTU, HESTUI, KUNAI, USKA, GROOKIN);
 		registerQuestItems(HONEY_KHANDAR, BEAR_FUR_CLOAK, BLOODY_AXE, ANCESTOR_SKULL, SPIDER_DUST, DEEP_SEA_ORB);
+		addCondMaxLevel(MAX_LEVEL, "30578-01.htm");
 	}
 	
 	@Override
