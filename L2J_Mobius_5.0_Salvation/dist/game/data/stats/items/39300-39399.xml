@@ -623,81 +623,131 @@
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17856" level="1" /> <!-- Apocalypse Pack -->
+		</skills>
 	</item>
 	<item id="39360" name="Apocalypse Weapon Crafting Pack" type="EtcItem">
 		<!-- Double-click to acquire a pack for crafting one Apocalypse weapon. -->
 		<set name="icon" val="icon.event_hero_treasure_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17857" level="1" /> <!-- Apocalypse Crafting Pack -->
+		</skills>
 	</item>
 	<item id="39361" name="Apocalypse Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Apocalypse weapon. -->
 		<set name="icon" val="icon.etc_box_of_adventure_3_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17858" level="1" /> <!-- Apocalypse Completion Pack -->
+		</skills>
 	</item>
 	<item id="39362" name="+4 Apocalypse Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Apocalypse weapon that has been enchanted to +4. -->
+		<!-- Double-click to acquire one Apocalypse weapon that has been enchanted to + 4. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17859" level="1" /> <!-- + 4 Apocalypse Pack -->
+		</skills>
 	</item>
 	<item id="39363" name="+5 Apocalypse Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Apocalypse weapon that has been enchanted to +5. -->
+		<!-- Double-click to acquire one Apocalypse weapon that has been enchanted to + 5. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17860" level="1" /> <!-- + 5 Apocalypse Pack -->
+		</skills>
 	</item>
 	<item id="39364" name="+6 Apocalypse Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Apocalypse weapon that has been enchanted to +6. -->
+		<!-- Double-click to acquire one Apocalypse weapon that has been enchanted to + 6. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17861" level="1" /> <!-- + 6 Apocalypse Pack -->
+		</skills>
 	</item>
 	<item id="39365" name="+7 Apocalypse Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Apocalypse weapon that has been enchanted to +7. -->
+		<!-- Double-click to acquire one Apocalypse weapon that has been enchanted to + 7. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17862" level="1" /> <!-- + 7 Apocalypse Pack -->
+		</skills>
 	</item>
 	<item id="39366" name="+8 Apocalypse Weapon Pack" type="EtcItem">
-		<!-- Double-click to acquire one Apocalypse weapon that has been enchanted to +8. -->
+		<!-- Double-click to acquire one Apocalypse weapon that has been enchanted to + 8. -->
 		<set name="icon" val="icon.etc_ev_kalie_treasure_box" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17863" level="1" /> <!-- + 8 Apocalypse Pack -->
+		</skills>
 	</item>
 	<item id="39367" name="Orc Supply Box" type="EtcItem">
 		<!-- Box containing items that were collected over a long period of time by the Aspiring Orc Ruler of Aden. -->
 		<set name="icon" val="icon.etc_box_of_adventure_1_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_commissionable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17883" level="1" /> <!-- Daily Attendance Reward -->
+		</skills>
 	</item>
 	<item id="39368" name="1st Week Gift Box" type="EtcItem">
 		<!-- 1st Week Gift Box prepared for those who truly love Lineage II. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17884" level="1" /> <!-- Reward: Week 1 -->
+		</skills>
 	</item>
 	<item id="39369" name="2nd Week Gift Box" type="EtcItem">
 		<!-- 2nd Week Gift Box prepared for those who truly love Lineage II. -->
@@ -705,8 +755,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17885" level="1" /> <!-- Reward: Week 2 -->
+		</skills>
 	</item>
 	<item id="39370" name="3rd Week Gift Box" type="EtcItem">
 		<!-- 3rd Week Gift Box prepared for those who truly love Lineage II. -->
@@ -714,24 +769,39 @@
 		<set name="is_stackable" val="true" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="commissionItemType" val="OTHER_ITEM" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17886" level="1" /> <!-- Reward: Week 3 -->
+		</skills>
 	</item>
 	<item id="39371" name="4th Week Gift Box" type="EtcItem">
 		<!-- 4th Week Gift Box prepared for those who truly love Lineage II. -->
 		<set name="icon" val="icon.event_six_party_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17887" level="1" /> <!-- Reward: Week 4 -->
+		</skills>
 	</item>
 	<item id="39372" name="Vesper Weapon Pack" type="EtcItem">
 		<!-- Double-click to acquire one Vesper weapon. -->
 		<set name="icon" val="icon.etc_jewel_box_i00" />
 		<set name="is_clan_depositable" val="false" />
 		<set name="is_mailable" val="false" />
+		<set name="is_freightable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="default_action" val="CAPSULE" />
+		<skills>
+			<skill id="17855" level="1" /> <!-- Vesper Pack -->
+		</skills>
 	</item>
 	<item id="39373" name="Scroll: 1,000,000 SP" type="EtcItem">
 		<!-- Scroll that replenishes 1,000,000 SP. -->

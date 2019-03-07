@@ -4,16 +4,22 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, M. Atk. 3% and M. Skill Critical Damage +2%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="13794" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="1616590000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
+		<skills>
+			<skill id="13304" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">788</stat>
 			<stat type="mAtk">517</stat>
@@ -28,16 +34,21 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +2% and P. Skill Power +2%. -->
 		<set name="icon" val="icon.weapon_r110_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
-		<set name="immediate_effect" val="true" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="16553" />
+		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="price" val="1616590000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">984</stat>
 			<stat type="mAtk">352</stat>
@@ -52,12 +63,18 @@
 		<set name="icon" val="icon.weapon_r110_dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="16553" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="1616590000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="damage_range" val="0;0;44;120" />
+		<skills>
+			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">809</stat>
 			<stat type="mAtk">352</stat>
@@ -73,12 +90,18 @@
 		<set name="icon" val="icon.weapon_r110_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_count" val="16553" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="1616590000" />
 		<set name="enchant_enabled" val="1" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">984</stat>
 			<stat type="mAtk">352</stat>
@@ -482,7 +505,11 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Accuracy +4 and P. Skill Critical Damage +2%. Enchantment effects: P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DUAL" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="DAGGER" />
+		<set name="crystal_count" val="17243" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
@@ -491,6 +518,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13282" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">729</stat>
 			<stat type="mAtk">363</stat>
@@ -505,7 +535,11 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Accuracy +4 and Normal Attack Critical Rate +30. Enchantment effects: P. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="rhand" />
 		<set name="weapon_type" val="SWORD" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="blessed" val="true" />
+		<set name="crystal_count" val="17243" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
@@ -514,6 +548,9 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<skills>
+			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">833</stat>
 			<stat type="mAtk">363</stat>
@@ -527,7 +564,7 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +5%. Enchantment effects: P. Skill Critical Damage +3%, P. Atk.+3%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BLUNT" />
+		<set name="weapon_type" val="SWORD" />
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
@@ -537,6 +574,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13261" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1014</stat>
 			<stat type="mAtk">363</stat>
@@ -550,7 +592,9 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Accuracy +4 and P./ M. Skill Power +2%. Enchantment effects: P. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
+		<set name="crystal_count" val="17243" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
@@ -559,8 +603,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="13256" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
 		</skills>
 		<stats>
 			<stat type="pAtk">833</stat>
@@ -579,12 +626,18 @@
 		<set name="bodypart" val="lrhand" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="17243" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;32;120" />
+		<skills>
+			<skill id="13267" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1014</stat>
 			<stat type="mAtk">363</stat>
@@ -599,8 +652,9 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, increases P. Atk. by 2% and enables the character to attack multiple enemies. Enchantment effects: Normal Attack Critical Damage +3%, a chance to stun enemies near the target for 3 sec on a standard attack. -->
 		<set name="icon" val="icon.weapon_r110_spear_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
+		<set name="crystal_count" val="17243" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="BRONZE" />
@@ -609,6 +663,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;66;120" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">833</stat>
 			<stat type="mAtk">363</stat>
@@ -623,8 +683,9 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +2% and Atk. Spd. +2%. Enchantment effects: P. Skill Critical Damage +3%, Normal Attack Critical Damage +3%. -->
 		<set name="icon" val="icon.weapon_r110_bow_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="RAPIER" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BOW" />
+		<set name="crystal_count" val="17243" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
@@ -633,6 +694,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;10;0" />
+		<skills>
+			<skill id="13292" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1641</stat>
 			<stat type="mAtk">363</stat>
@@ -648,12 +714,19 @@
 		<set name="icon" val="icon.weapon_r110_crossbow_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="TWOHANDCROSSBOW" />
+		<set name="crystal_count" val="17243" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1580" />
 		<set name="price" val="2020737500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1477</stat>
 			<stat type="mAtk">363</stat>
@@ -668,7 +741,9 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, M. Accuracy +4 and M. Skill Power +2%. Enchantment effects: M. Skill Critical Damage +3%, P. Def. +5%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="DAGGER" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="SWORD" />
+		<set name="crystal_count" val="17243" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
@@ -677,6 +752,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
+		<skills>
+			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">666</stat>
 			<stat type="mAtk">484</stat>
@@ -689,15 +770,23 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, M. Accuracy +4 and Casting Spd. +2%. Enchantment effects: M. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_onehand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="BOW" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
+		<set name="crystal_count" val="17243" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="price" val="2020737500" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
+		<skills>
+			<skill id="13299" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">666</stat>
 			<stat type="mAtk">484</stat>
@@ -712,8 +801,8 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, M. Atk. 3% and M. Skill Critical Damage +2%. Enchantment effects: Normal Attack/ P. Skill/ M. Skill Critical Damage +3%, Max HP/ MP/ CP +7%. -->
 		<set name="icon" val="icon.weapon_r110_twohand_magic_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="WOOD" />
@@ -722,6 +811,12 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<set name="is_magic_weapon" val="true" />
+		<skills>
+			<skill id="13304" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">811</stat>
 			<stat type="mAtk">532</stat>
@@ -736,9 +831,10 @@
 		<!-- Can bestow 2 regular Soul Crystals and 1 special Soul Crystal. When +4 enchanted, P. Atk. +2% and P. Skill Power +2%. Enchantment effects: P. Skill Critical Damage +3%, Skill Power +3%. -->
 		<set name="icon" val="icon.weapon_r110_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
+		<set name="crystal_count" val="20692" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -746,6 +842,11 @@
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13277" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1014</stat>
 			<stat type="mAtk">363</stat>
@@ -760,12 +861,19 @@
 		<set name="icon" val="icon.weapon_r110_dual_dagger_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALDAGGER" />
+		<set name="crystal_count" val="20692" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="2050" />
 		<set name="price" val="2020737500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;44;120" />
+		<skills>
+			<skill id="13287" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">833</stat>
 			<stat type="mAtk">363</stat>
@@ -781,12 +889,19 @@
 		<set name="icon" val="icon.weapon_r110_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
+		<set name="crystal_count" val="20692" />
 		<set name="immediate_effect" val="true" />
 		<set name="crystal_type" val="R110" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="price" val="2020737500" />
 		<set name="enchant_enabled" val="1" />
+		<set name="blessed" val="true" />
+		<set name="damage_range" val="0;0;40;120" />
+		<skills>
+			<skill id="13272" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1014</stat>
 			<stat type="mAtk">363</stat>
