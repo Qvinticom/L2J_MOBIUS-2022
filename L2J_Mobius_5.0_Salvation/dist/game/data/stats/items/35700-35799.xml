@@ -815,6 +815,9 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="60025, 60026, 60027" />
+		</cond>
 		<skills>
 			<skill id="9504" level="1" /> <!-- Scroll: PK (Low-grade) -->
 		</skills>
@@ -983,6 +986,9 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="60025, 60026, 60027" />
+		</cond>
 		<skills>
 			<skill id="9505" level="1" /> <!-- Scroll: PK (Mid-grade) -->
 		</skills>
@@ -1013,6 +1019,9 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="commissionItemType" val="SCROLL_OTHER" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="60025, 60026, 60027" />
+		</cond>
 		<skills>
 			<skill id="9507" level="1" /> <!-- Scroll: PK (Top-grade) -->
 		</skills>

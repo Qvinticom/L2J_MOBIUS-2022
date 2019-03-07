@@ -1348,6 +1348,9 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="60025, 60026, 60027" />
+		</cond>
 		<skills>
 			<skill id="22748" level="1" /> <!-- Scroll: PK (Low-grade) -->
 		</skills>
@@ -1368,6 +1371,9 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="60025, 60026, 60027" />
+		</cond>
 		<skills>
 			<skill id="22749" level="1" /> <!-- Scroll: PK (Mid-grade) -->
 		</skills>
@@ -1388,6 +1394,9 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="60025, 60026, 60027" />
+		</cond>
 		<skills>
 			<skill id="22750" level="1" /> <!-- Scroll: PK (High-grade) -->
 		</skills>
@@ -1408,6 +1417,9 @@
 		<set name="etcitem_type" val="SCROLL" />
 		<set name="handler" val="ItemSkills" />
 		<set name="is_stackable" val="true" />
+		<cond addName="1" msgId="113">
+			<player insideZoneId="60025, 60026, 60027" />
+		</cond>
 		<skills>
 			<skill id="22751" level="1" /> <!-- Scroll: PK (Top-grade) -->
 		</skills>
