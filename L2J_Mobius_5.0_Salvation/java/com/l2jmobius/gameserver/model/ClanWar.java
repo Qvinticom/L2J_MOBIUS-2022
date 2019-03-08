@@ -101,7 +101,10 @@ public final class ClanWar
 			
 			if (endTimePeriod > System.currentTimeMillis())
 			{
-				ClanTable.getInstance().deleteClanWars(_attackerClanId, _attackedClanId);
+				ThreadPool.schedule(() ->
+				{
+					ClanTable.getInstance().deleteClanWars(_attackerClanId, _attackedClanId);
+				}, 10000);
 			}
 			else
 			{
