@@ -789,11 +789,11 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2377901025504" sp="2140110720" />
+		<acquire exp="2377901025504" sp="2140110720" raidPoints="300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="34079799" hpRegen="441.65" mp="36939" mpRegen="20" />
-			<attack physical="722.31" magical="1398.68" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1602" magical="293" evasion="-18" />
+			<vitals hp="103787467.02735" hpRegen="470.5528213" mp="88540.925" mpRegen="3.3" />
+			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="36935.17502" magical="18028.22092" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -802,6 +802,10 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status undying="false" noSleepMode="true" />
+		<collision>
+			<radius normal="75" />
+			<height normal="147" />
+		</collision>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4062" level="1" /> <!-- Orfen -->
@@ -893,10 +897,6 @@
 				<item id="38048" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Crafting Pack -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="75" />
-			<height normal="147" />
-		</collision>
 	</npc>
 	<npc id="29326" level="108" type="L2Monster" name="Arima" title="Orfen's Handmaiden">
 		<parameters>
@@ -1139,11 +1139,11 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="55516197856" sp="13323887" raidPoints="300" />
+		<acquire exp="5789917167100" sp="5210925500" raidPoints="300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="204125156" hpRegen="211.789458580091" mp="39760" mpRegen="3" />
-			<attack physical="72659" magical="64745" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3864" magical="3774" evasion="-18" />
+			<vitals hp="147435690.38708" hpRegen="488.1839242" mp="91059.891" mpRegen="3.6" />
+			<attack physical="330509.599" magical="237025.0379" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="38319.09589" magical="18703.71877" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
@@ -1152,6 +1152,10 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status undying="false" />
+		<collision>
+			<radius normal="42.5" />
+			<height normal="55" />
+		</collision>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4197" level="9" /> <!-- Hold -->
@@ -1258,10 +1262,6 @@
 				<item id="37772" min="1" max="1" chance="1.187" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="42.5" />
-			<height normal="55" />
-		</collision>
 	</npc>
 	<npc id="29337" level="110" type="L2Monster" name="Lilith Elite Fighter">
 		<parameters>
@@ -1982,9 +1982,9 @@
 		<sex>FEMALE</sex>
 		<acquire exp="5789917167100" sp="5210925500" raidPoints="300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="233660596" hpRegen="211.789458580091" mp="43380" mpRegen="3" />
-			<attack physical="228568" magical="129156" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6100" magical="6909" evasion="-18" />
+			<vitals hp="147435690.38708" hpRegen="488.1839242" mp="91059.891" mpRegen="3.6" />
+			<attack physical="330509.599" magical="237025.0379" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="38319.09589" magical="18703.71877" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
@@ -1993,6 +1993,10 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status undying="false" />
+		<collision>
+			<radius normal="27.9" />
+			<height normal="54.6" />
+		</collision>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4314" level="9" /> <!-- BOSS Holy Light Burst -->
@@ -2100,10 +2104,6 @@
 				<item id="37772" min="1" max="1" chance="1.186" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="27.9" />
-			<height normal="54.6" />
-		</collision>
 	</npc>
 	<npc id="29349" level="110" type="L2Monster" name="Anakim Elite Captain">
 		<parameters>
@@ -3151,24 +3151,23 @@
 			<height normal="44" />
 		</collision>
 	</npc>
-	<npc id="29374" level="116" type="L2Raidboss" name="Cyrax" title="Fafurion's High Priest">
+	<npc id="29374" level="116" type="L2RaidBoss" name="Cyrax" title="Fafurion's High Priest">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="0" sp="0" />
+		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="54052965.5" mp="106532.8" mpRegen="2148.1481481481" hpRegen="105454.54545455" />
-			<attack physical="55238.095238095" magical="9747.8991596639" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="4296.2962962963" magical="2494.623655914" />
+			<vitals hp="136411306.91373" hpRegen="543.0227337" mp="98179.66" mpRegen="3.6" />
+			<attack physical="367636.4933" magical="263650.599" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="42623.567" magical="20804.75" />
 			<speed>
 				<walk ground="65" />
 				<run ground="270" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
 		<status attackable="true" canMove="true" />
 		<collision>
-			<radius normal="30.0" />
-			<height normal="72.0" />
+			<radius normal="30" />
+			<height normal="72" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->

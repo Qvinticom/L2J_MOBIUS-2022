@@ -3914,20 +3914,24 @@
 		<acquire exp="159805184" sp="38353" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1277698" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="1919368.982085" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="22357.8239450089" magical="4004.46625608211" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2959.60951220743" magical="1625.94816873311" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="22357.8239450089" magical="4004.46625608211" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2959.60951220743" magical="1625.94816873311" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
 				<attack type="DARK" value="280" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="24" />
+			<height normal="80" />
+		</collision>
 		<skillList>
 			<skill id="14720" level="1" /> <!-- Raid Boss (Lv. 88) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -3941,21 +3945,21 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="17318" min="1" max="1" chance="4.284" /> <!-- Immortal Gloves - Robe -->
-				<item id="17308" min="1" max="1" chance="4.27" /> <!-- Immortal Boots - Heavy Armor -->
-				<item id="17304" min="1" max="1" chance="2.865" /> <!-- Immortal Helmet - Heavy Armor -->
-				<item id="17310" min="1" max="1" chance="2.854" /> <!-- Immortal Leather Helmet - Light Armor -->
-				<item id="17313" min="1" max="1" chance="2.088" /> <!-- Immortal Leather Gloves - Light Armor -->
-				<item id="17319" min="1" max="1" chance="1.357" /> <!-- Immortal Shoes - Robe -->
+				<item id="17308" min="1" max="1" chance="4.273" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17318" min="1" max="1" chance="4.227" /> <!-- Immortal Gloves - Robe -->
+				<item id="17310" min="1" max="1" chance="2.848" /> <!-- Immortal Leather Helmet - Light Armor -->
+				<item id="17304" min="1" max="1" chance="2.78" /> <!-- Immortal Helmet - Heavy Armor -->
+				<item id="17313" min="1" max="1" chance="2.15" /> <!-- Immortal Leather Gloves - Light Armor -->
+				<item id="17319" min="1" max="1" chance="1.366" /> <!-- Immortal Shoes - Robe -->
 				<item id="17300" min="1" max="1" chance="0.3" /> <!-- Requiem Retributer -->
 				<item id="17296" min="1" max="1" chance="0.3" /> <!-- Requiem Thrower -->
 				<item id="17291" min="1" max="1" chance="0.3" /> <!-- Requiem Cutter -->
 				<item id="17290" min="1" max="1" chance="0.3" /> <!-- Requiem Shaper -->
-				<item id="17527" min="1" max="1" chance="28.17" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="2.314" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46474" min="1" max="1" chance="1.173" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46489" min="1" max="1" chance="1.077" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="1.065" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="17527" min="1" max="1" chance="30.33" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="2.327" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46504" min="1" max="1" chance="1.171" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46474" min="1" max="1" chance="1.17" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="1.043" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="46490" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
@@ -3973,25 +3977,8 @@
 				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
 				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
 				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="24" />
-			<height normal="80" />
-		</collision>
 	</npc>
 	<npc id="25876" level="104" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -5102,30 +5089,33 @@
 		</dropLists>
 	</npc>
 	<npc id="25886" level="97" type="L2RaidBoss" name="Houpon the Warden Overseer" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<equipment rhand="15302" /> <!-- npc_invisi_bow -->
 		<acquire exp="458933384" sp="110144" raidPoints="30" />
-		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1484202" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="2229581.054775" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="81115" magical="11368.0387932822" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="2107" magical="1210" />
 			<speed>
 				<walk ground="55" />
 				<run ground="150" />
 			</speed>
-			<attack physical="81115" magical="11368.0387932822" critical="4" attackSpeed="253" range="1100" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2107" magical="1210" />
 			<attribute>
 				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
 				<attack type="DARK" value="430" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="52" />
+		</collision>
 		<skillList>
 			<skill id="15217" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -5147,44 +5137,44 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="35326" min="1" max="1" chance="9.443" /> <!-- Seraph Ring Gem -->
-				<item id="35318" min="1" max="1" chance="8.183" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35307" min="1" max="1" chance="8.177" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35313" min="1" max="1" chance="8.168" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35325" min="1" max="1" chance="6.37" /> <!-- Seraph Earring Gem -->
-				<item id="35310" min="1" max="3" chance="6.136" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35304" min="1" max="1" chance="5.068" /> <!-- Specter Buster Fragment -->
-				<item id="35298" min="1" max="1" chance="5.06" /> <!-- Specter Slasher Fragment -->
-				<item id="35305" min="1" max="1" chance="5.039" /> <!-- Specter Caster Fragment -->
-				<item id="35296" min="1" max="1" chance="5.036" /> <!-- Specter Shaper Fragment -->
-				<item id="35306" min="1" max="1" chance="5.033" /> <!-- Specter Retributer Fragment -->
-				<item id="35297" min="1" max="1" chance="5.015" /> <!-- Specter Cutter Fragment -->
-				<item id="35300" min="1" max="1" chance="5.01" /> <!-- Specter Fighter Fragment -->
-				<item id="35299" min="1" max="1" chance="5.009" /> <!-- Specter Avenger Fragment -->
-				<item id="17527" min="1" max="1" chance="5.002" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="35302" min="1" max="1" chance="4.988" /> <!-- Specter Thrower Fragment -->
-				<item id="35309" min="1" max="1" chance="4.965" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35301" min="1" max="1" chance="4.973" /> <!-- Specter Stormer Fragment -->
-				<item id="35315" min="1" max="1" chance="4.961" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35303" min="1" max="1" chance="4.96" /> <!-- Specter Shooter Fragment -->
-				<item id="35320" min="1" max="1" chance="4.922" /> <!-- Seraph Stocking Ingredient -->
-				<item id="35324" min="1" max="1" chance="4.741" /> <!-- Seraph Necklace Gem -->
-				<item id="35311" min="1" max="3" chance="4.12" /> <!-- Seraph Boot Ingredient -->
-				<item id="35308" min="1" max="1" chance="3.142" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="3.112" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35314" min="1" max="1" chance="3.046" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35312" min="2" max="6" chance="3.029" /> <!-- Seraph Shield Ingredient -->
-				<item id="35316" min="2" max="6" chance="2.479" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35317" min="3" max="9" chance="2.119" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35321" min="3" max="9" chance="1.749" /> <!-- Seraph Glove Ingredient -->
-				<item id="35322" min="4" max="12" chance="1.534" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35323" min="4" max="12" chance="1.374" /> <!-- Seraph Sigil Ingredient -->
-				<item id="46489" min="1" max="1" chance="1.316" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="1.314" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="1.288" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46505" min="1" max="1" chance="1.103" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46475" min="1" max="1" chance="1.075" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46490" min="1" max="1" chance="1.049" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="35326" min="1" max="1" chance="9.423" /> <!-- Seraph Ring Gem -->
+				<item id="35318" min="1" max="1" chance="8.241" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35307" min="1" max="1" chance="8.221" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35313" min="1" max="1" chance="8.175" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35325" min="1" max="1" chance="6.274" /> <!-- Seraph Earring Gem -->
+				<item id="35310" min="1" max="3" chance="6.141" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35298" min="1" max="1" chance="5.073" /> <!-- Specter Slasher Fragment -->
+				<item id="35297" min="1" max="1" chance="5.065" /> <!-- Specter Cutter Fragment -->
+				<item id="35305" min="1" max="1" chance="5.064" /> <!-- Specter Caster Fragment -->
+				<item id="35300" min="1" max="1" chance="5.061" /> <!-- Specter Fighter Fragment -->
+				<item id="35301" min="1" max="1" chance="5.05" /> <!-- Specter Stormer Fragment -->
+				<item id="35304" min="1" max="1" chance="5.024" /> <!-- Specter Buster Fragment -->
+				<item id="17527" min="1" max="1" chance="5.01" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35296" min="1" max="1" chance="5.008" /> <!-- Specter Shaper Fragment -->
+				<item id="35303" min="1" max="1" chance="5.002" /> <!-- Specter Shooter Fragment -->
+				<item id="35306" min="1" max="1" chance="4.985" /> <!-- Specter Retributer Fragment -->
+				<item id="35299" min="1" max="1" chance="4.967" /> <!-- Specter Avenger Fragment -->
+				<item id="35302" min="1" max="1" chance="4.963" /> <!-- Specter Thrower Fragment -->
+				<item id="35320" min="1" max="1" chance="4.924" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35315" min="1" max="1" chance="4.906" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35309" min="1" max="1" chance="4.88" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35324" min="1" max="1" chance="4.716" /> <!-- Seraph Necklace Gem -->
+				<item id="35311" min="1" max="3" chance="4.092" /> <!-- Seraph Boot Ingredient -->
+				<item id="35308" min="1" max="1" chance="3.136" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35314" min="1" max="1" chance="3.129" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35312" min="2" max="6" chance="3.087" /> <!-- Seraph Shield Ingredient -->
+				<item id="35319" min="1" max="1" chance="3.024" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35316" min="2" max="6" chance="2.513" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35317" min="3" max="9" chance="2.015" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35321" min="3" max="9" chance="1.722" /> <!-- Seraph Glove Ingredient -->
+				<item id="35322" min="4" max="12" chance="1.48" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35323" min="4" max="12" chance="1.381" /> <!-- Seraph Sigil Ingredient -->
+				<item id="46474" min="1" max="1" chance="1.316" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="1.262" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="1.227" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="1.062" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="1.05" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="1.021" /> <!-- Leona's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
@@ -5236,28 +5226,10 @@
 				<item id="35420" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shaper (60%) -->
 				<item id="35438" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Armor (60%) -->
 				<item id="35433" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="52" />
-		</collision>
 	</npc>
 	<npc id="25887" level="97" type="L2RaidBoss" name="Crook the Mad" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -5266,20 +5238,24 @@
 		<acquire exp="458933384" sp="110144" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1484202" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="2229581.054775" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="81115" magical="11368.0387932822" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2107" magical="1210" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="81115" magical="11368.0387932822" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2107" magical="1210" />
 			<attribute>
 				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
 				<attack type="DARK" value="430" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="24.0" />
+			<height normal="45.0" />
+		</collision>
 		<skillList>
 			<skill id="15216" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -5301,44 +5277,44 @@
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
 			<drop>
-				<item id="35326" min="1" max="1" chance="9.437" /> <!-- Seraph Ring Gem -->
-				<item id="35318" min="1" max="1" chance="8.254" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35313" min="1" max="1" chance="8.249" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35307" min="1" max="1" chance="8.217" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35325" min="1" max="1" chance="6.306" /> <!-- Seraph Earring Gem -->
-				<item id="35310" min="1" max="3" chance="6.106" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35306" min="1" max="1" chance="5.078" /> <!-- Specter Retributer Fragment -->
-				<item id="35303" min="1" max="1" chance="5.078" /> <!-- Specter Shooter Fragment -->
-				<item id="35301" min="1" max="1" chance="5.071" /> <!-- Specter Stormer Fragment -->
-				<item id="35296" min="1" max="1" chance="5.048" /> <!-- Specter Shaper Fragment -->
-				<item id="35300" min="1" max="1" chance="5.046" /> <!-- Specter Fighter Fragment -->
-				<item id="35299" min="1" max="1" chance="5.031" /> <!-- Specter Avenger Fragment -->
-				<item id="35304" min="1" max="1" chance="5.012" /> <!-- Specter Buster Fragment -->
-				<item id="35309" min="1" max="1" chance="4.991" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35315" min="1" max="1" chance="4.985" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35302" min="1" max="1" chance="4.969" /> <!-- Specter Thrower Fragment -->
-				<item id="35297" min="1" max="1" chance="4.968" /> <!-- Specter Cutter Fragment -->
-				<item id="35305" min="1" max="1" chance="4.956" /> <!-- Specter Caster Fragment -->
-				<item id="35298" min="1" max="1" chance="4.949" /> <!-- Specter Slasher Fragment -->
-				<item id="17527" min="1" max="1" chance="4.92" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="35320" min="1" max="1" chance="4.871" /> <!-- Seraph Stocking Ingredient -->
-				<item id="35324" min="1" max="1" chance="4.762" /> <!-- Seraph Necklace Gem -->
-				<item id="35311" min="1" max="3" chance="4.073" /> <!-- Seraph Boot Ingredient -->
-				<item id="35314" min="1" max="1" chance="3.047" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35319" min="1" max="1" chance="3.031" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35312" min="2" max="6" chance="3.025" /> <!-- Seraph Shield Ingredient -->
-				<item id="35308" min="1" max="1" chance="3.023" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35316" min="2" max="6" chance="2.52" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35317" min="3" max="9" chance="2.046" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35321" min="3" max="9" chance="1.819" /> <!-- Seraph Glove Ingredient -->
-				<item id="35322" min="4" max="12" chance="1.488" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35323" min="4" max="12" chance="1.38" /> <!-- Seraph Sigil Ingredient -->
-				<item id="46504" min="1" max="1" chance="1.233" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="1.229" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46489" min="1" max="1" chance="1.223" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46505" min="1" max="1" chance="1.119" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46490" min="1" max="1" chance="1.113" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46475" min="1" max="1" chance="1.082" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="35326" min="1" max="1" chance="9.479" /> <!-- Seraph Ring Gem -->
+				<item id="35318" min="1" max="1" chance="8.206" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35313" min="1" max="1" chance="8.182" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35307" min="1" max="1" chance="8.174" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35325" min="1" max="1" chance="6.322" /> <!-- Seraph Earring Gem -->
+				<item id="35310" min="1" max="3" chance="6.159" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35304" min="1" max="1" chance="5.079" /> <!-- Specter Buster Fragment -->
+				<item id="35301" min="1" max="1" chance="5.074" /> <!-- Specter Stormer Fragment -->
+				<item id="35305" min="1" max="1" chance="5.066" /> <!-- Specter Caster Fragment -->
+				<item id="35296" min="1" max="1" chance="5.056" /> <!-- Specter Shaper Fragment -->
+				<item id="35303" min="1" max="1" chance="5.05" /> <!-- Specter Shooter Fragment -->
+				<item id="17527" min="1" max="1" chance="5.04" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="35300" min="1" max="1" chance="5.039" /> <!-- Specter Fighter Fragment -->
+				<item id="35299" min="1" max="1" chance="5.03" /> <!-- Specter Avenger Fragment -->
+				<item id="35297" min="1" max="1" chance="5.02" /> <!-- Specter Cutter Fragment -->
+				<item id="35302" min="1" max="1" chance="5.001" /> <!-- Specter Thrower Fragment -->
+				<item id="35306" min="1" max="1" chance="4.982" /> <!-- Specter Retributer Fragment -->
+				<item id="35315" min="1" max="1" chance="4.963" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35298" min="1" max="1" chance="4.956" /> <!-- Specter Slasher Fragment -->
+				<item id="35320" min="1" max="1" chance="4.888" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35309" min="1" max="1" chance="4.854" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35324" min="1" max="1" chance="4.772" /> <!-- Seraph Necklace Gem -->
+				<item id="35311" min="1" max="3" chance="4.109" /> <!-- Seraph Boot Ingredient -->
+				<item id="35314" min="1" max="1" chance="3.073" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35308" min="1" max="1" chance="3.058" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35319" min="1" max="1" chance="3.047" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35312" min="2" max="6" chance="3.036" /> <!-- Seraph Shield Ingredient -->
+				<item id="35316" min="2" max="6" chance="2.433" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35317" min="3" max="9" chance="2.1" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35321" min="3" max="9" chance="1.724" /> <!-- Seraph Glove Ingredient -->
+				<item id="35322" min="4" max="12" chance="1.571" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35323" min="4" max="12" chance="1.356" /> <!-- Seraph Sigil Ingredient -->
+				<item id="46504" min="1" max="1" chance="1.283" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="1.266" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46474" min="1" max="1" chance="1.192" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="1.092" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="1.083" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="1.045" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
 				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
@@ -5390,50 +5366,36 @@
 				<item id="35420" min="1" max="1" chance="0.075" /> <!-- Recipe: Specter Shaper (60%) -->
 				<item id="35438" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Leather Armor (60%) -->
 				<item id="35433" min="1" max="1" chance="0.075" /> <!-- Recipe: Seraph Gaiters (60%) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="24" />
-			<height normal="45" />
-		</collision>
 	</npc>
 	<npc id="25888" level="97" type="L2RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<equipment rhand="96" /> <!-- Scythe -->
-		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
+		<equipment rhand="96" /> <!-- scythe -->
+		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="209097" hpRegen="45" mp="22428" mpRegen="30" />
+			<vitals hp="314107.3419" hpRegen="45" mp="22428" mpRegen="30" />
+			<attack physical="40918.7454632461" magical="7231.0886261522" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="10" width="0" />
+			<defence physical="3393.34457" magical="1948.7171" />
 			<speed>
 				<walk ground="50" />
 				<run ground="155" />
 			</speed>
-			<attack physical="40918.7454632461" magical="7231.0886261522" critical="8" attackSpeed="253" range="40" type="SWORD" distance="10" width="0" random="10" accuracy="5" />
-			<defence physical="3393.34457" magical="1948.7171" />
 			<attribute>
 				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
 				<attack type="DARK" value="430" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="58" />
+		</collision>
 		<skillList>
 			<skill id="15215" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
@@ -5453,10 +5415,6 @@
 			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="20" />
-			<height normal="58" />
-		</collision>
 	</npc>
 	<npc id="25889" level="97" type="L2Monster" name="Revenant of Sir Calibus" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

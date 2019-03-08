@@ -1651,9 +1651,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="13945521" hpRegen="1824.56140350877" mp="50920" mpRegen="1925.92592592593" />
-			<attack physical="49523.8095238095" magical="8739.49579831933" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3851.85185185185" magical="2236.55913978495" />
+			<vitals hp="20949082.10169" hpRegen="436.263366" mp="83501.371" mpRegen="3.3" />
+			<attack physical="295358.4152" magical="211816.358" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="34243.68753" magical="16714.49407" />
 			<attribute>
 				<defence fire="300" water="300" wind="300" earth="300" holy="250" dark="370"/>
 			</attribute>
@@ -1662,6 +1662,11 @@
 				<run ground="270" />
 			</speed>
 		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="30" />
+			<height normal="54" />
+		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -1779,10 +1784,6 @@
 				<item id="40198" min="1" max="1" chance="0.03" /> <!-- Disassembly Recipe Pouch: Armor -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="30" />
-			<height normal="54" />
-		</collision>
 	</npc>
 	<npc id="26125" level="104" type="L2Monster" name="Giant Atelia">
 		<race>CONSTRUCT</race>
@@ -1918,7 +1919,6 @@
 		</collision>
 	</npc>
 	<npc id="26131" level="101" type="L2RaidBoss" name="Isabella" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="26132" count="2" respawnTime="360" weightPoint="1" />
@@ -1927,20 +1927,25 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="54225186393" sp="130140121" raidPoints="30" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8161846" hpRegen="1771.9298245614" mp="48616" mpRegen="1870.37037037037" />
+		<acquire exp="57494325657" sp="137986036" raidPoints="30" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="27519758.98749" hpRegen="436.263366" mp="83501.371" mpRegen="3.3" />
+			<attack physical="295358.4152" magical="211816.358" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="34243.68753" magical="16714.49407" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="48095.2380952381" magical="8487.39495798319" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3740.74074074074" magical="2172.04301075269" />
 			<attribute>
 				<defence fire="350" water="300" wind="350" earth="350" holy="350" dark="350" />
 				<attack type="WIND" value="430" />
 			</attribute>
 		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="24" />
+			<height normal="67.5" />
+		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
@@ -2028,10 +2033,6 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="24" />
-			<height normal="67.5" />
-		</collision>
 	</npc>
 	<npc id="26132" level="100" type="L2Monster" name="Croa" title="Raid Minion">
 		<!-- Source: www.l2wiki.com -->
@@ -2259,7 +2260,6 @@
 		</collision>
 	</npc>
 	<npc id="26137" level="102" type="L2RaidBoss" name="Mimir" title="Great Sage">
-		<!-- Source: www.l2wiki.com -->
 		<parameters>
 			<skill name="Skill01_ID" id="16590" level="1" />
 			<skill name="Skill02_ID" id="16591" level="1" />
@@ -2276,16 +2276,22 @@
 			</minions>
 		</parameters>
 		<race>GIANT</race>
+		<sex>MALE</sex>
 		<acquire exp="38714665651" sp="77429377" raidPoints="30" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14238366" hpRegen="1789.47368421053" mp="49380" mpRegen="1888.88888888889" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="21388995.787335" hpRegen="419.6050136" mp="80975.917" mpRegen="3.3" />
+			<attack physical="284080.4007" magical="203728.3272" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32936.12091" magical="16076.26507" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<attack physical="48571.4285714286" magical="8571.42857142857" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3777.77777777778" magical="2193.54838709677" />
 		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="32" />
+			<height normal="50.5" />
+		</collision>
 		<skillList>
 			<skill id="16590" level="1" /> <!-- Ancient Power Thunder -->
 			<skill id="16591" level="1" /> <!-- Ancient Plasma Wave -->
@@ -2382,10 +2388,6 @@
 				<clan>MIMIR</clan>
 			</clanList>
 		</ai>
-		<collision>
-			<radius normal="32" />
-			<height normal="50.5" />
-		</collision>
 	</npc>
 	<npc id="26138" level="101" type="L2Monster" name="Mimillion Bathus">
 		<race>HUMAN</race>
@@ -3533,19 +3535,23 @@
 		</collision>
 	</npc>
 	<npc id="26163" level="101" type="L2RaidBoss" name="Demon Worshipper Zarka" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="22782822" hpRegen="1771.9298245614" mp="72788" mpRegen="1870.37037037037" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
+			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32291.88188" magical="15761.80918" />
 			<speed>
 				<walk ground="40" />
 				<run ground="300" />
 			</speed>
-			<attack physical="48095.2380952381" magical="8487.39495798319" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3740.74074074074" magical="2172.04301075269" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="40" />
+			<height normal="83.5" />
+		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
@@ -3634,10 +3640,6 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="40" />
-			<height normal="83.5" />
-		</collision>
 	</npc>
 	<npc id="26164" level="101" type="L2RaidBoss" name="Demon Worshipper Kultaan" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->
@@ -3747,19 +3749,23 @@
 		</collision>
 	</npc>
 	<npc id="26165" level="101" type="L2RaidBoss" name="Demon Worshipper Nortan" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="22782822" hpRegen="1771.9298245614" mp="72788" mpRegen="1870.37037037037" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
+			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32291.88188" magical="15761.80918" />
 			<speed>
 				<walk ground="75" />
 				<run ground="300" />
 			</speed>
-			<attack physical="48095.2380952381" magical="8487.39495798319" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3740.74074074074" magical="2172.04301075269" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="58" />
+			<height normal="91" />
+		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
@@ -3848,10 +3854,6 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="58" />
-			<height normal="91" />
-		</collision>
 	</npc>
 	<npc id="26166" level="101" type="L2Npc" name="Banished Lizardman Warrior" title="Raid Minion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3926,19 +3928,23 @@
 		</collision>
 	</npc>
 	<npc id="26170" level="101" type="L2RaidBoss" name="Valac" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="26803320" hpRegen="1771.9298245614" mp="72788" mpRegen="1870.37037037037" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="40264178.265075" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
+			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32291.88188" magical="15761.80918" />
 			<speed>
 				<walk ground="34" />
 				<run ground="300" />
 			</speed>
-			<attack physical="48095.2380952381" magical="8487.39495798319" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3740.74074074074" magical="2172.04301075269" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="54" />
+			<height normal="77.5" />
+		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -4027,25 +4033,25 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="54" />
-			<height normal="77.5" />
-		</collision>
 	</npc>
 	<npc id="26171" level="101" type="L2RaidBoss" name="Kurion" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="22782822" hpRegen="1771.9298245614" mp="72788" mpRegen="1870.37037037037" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
+			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32291.88188" magical="15761.80918" />
 			<speed>
 				<walk ground="37" />
 				<run ground="300" />
 			</speed>
-			<attack physical="48095.2380952381" magical="8487.39495798319" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3740.74074074074" magical="2172.04301075269" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="25" />
+			<height normal="90" />
+		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -4134,25 +4140,25 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="25.0" grown="30" />
-			<height normal="90.0" grown="109" />
-		</collision>
 	</npc>
 	<npc id="26172" level="101" type="L2RaidBoss" name="Atluum" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
+		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="22782822" hpRegen="1771.9298245614" mp="72788" mpRegen="1870.37037037037" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
+			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32291.88188" magical="15761.80918" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="48095.2380952381" magical="8487.39495798319" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3740.74074074074" magical="2172.04301075269" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="40" />
+			<height normal="83" />
+		</collision>
 		<skillList>
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
@@ -4241,10 +4247,6 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="40" />
-			<height normal="83" />
-		</collision>
 	</npc>
 	<npc id="26173" level="101" type="L2RaidBoss" name="Lebruum" title="Raid Boss">
 		<!-- Source: www.l2wiki.com -->

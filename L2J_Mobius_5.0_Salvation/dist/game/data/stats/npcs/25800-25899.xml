@@ -4044,20 +4044,24 @@
 		<acquire exp="159805184" sp="38353" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1277698" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="1919368.982085" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="22357.8239450089" magical="4004.46625608211" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2959.60951220743" magical="1625.94816873311" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="22357.8239450089" magical="4004.46625608211" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2959.60951220743" magical="1625.94816873311" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
 				<attack type="DARK" value="280" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="24" />
+			<height normal="80" />
+		</collision>
 		<skillList>
 			<skill id="14720" level="1" /> <!-- Raid Boss (Lv. 88) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -4118,10 +4122,6 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="24" />
-			<height normal="80" />
-		</collision>
 	</npc>
 	<npc id="25876" level="104" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -5232,30 +5232,33 @@
 		</dropLists>
 	</npc>
 	<npc id="25886" level="97" type="L2RaidBoss" name="Houpon the Warden Overseer" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
+		<equipment rhand="15302" /> <!-- npc_invisi_bow -->
 		<acquire exp="458933384" sp="110144" raidPoints="30" />
-		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1484202" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="2229581.054775" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="81115" magical="11368.0387932822" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
+			<defence physical="2107" magical="1210" />
 			<speed>
 				<walk ground="55" />
 				<run ground="150" />
 			</speed>
-			<attack physical="81115" magical="11368.0387932822" critical="4" attackSpeed="253" range="1100" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2107" magical="1210" />
 			<attribute>
 				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
 				<attack type="DARK" value="430" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="52" />
+		</collision>
 		<skillList>
 			<skill id="15217" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
@@ -5381,13 +5384,8 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="52" />
-		</collision>
 	</npc>
 	<npc id="25887" level="97" type="L2RaidBoss" name="Crook the Mad" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -5396,20 +5394,24 @@
 		<acquire exp="458933384" sp="110144" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1484202" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="2229581.054775" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<attack physical="81115" magical="11368.0387932822" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="2107" magical="1210" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
 			</speed>
-			<attack physical="81115" magical="11368.0387932822" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2107" magical="1210" />
 			<attribute>
 				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
 				<attack type="DARK" value="430" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="24.0" />
+			<height normal="45.0" />
+		</collision>
 		<skillList>
 			<skill id="15216" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
@@ -5535,13 +5537,8 @@
 				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="24" />
-			<height normal="45" />
-		</collision>
 	</npc>
 	<npc id="25888" level="97" type="L2RaidBoss" name="Execution Grounds Watchman Guillotine" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Attack_BoostValue" value="148" />
 		</parameters>
@@ -5550,20 +5547,24 @@
 		<equipment rhand="96" /> <!-- Scythe -->
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="209097" hpRegen="45" mp="22428" mpRegen="30" />
+			<vitals hp="314107.3419" hpRegen="45" mp="22428" mpRegen="30" />
+			<attack physical="40918.7454632461" magical="7231.0886261522" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="10" width="0" />
+			<defence physical="3393.34457" magical="1948.7171" />
 			<speed>
 				<walk ground="50" />
 				<run ground="155" />
 			</speed>
-			<attack physical="40918.7454632461" magical="7231.0886261522" critical="8" attackSpeed="253" range="40" type="SWORD" distance="10" width="0" random="10" accuracy="5" />
-			<defence physical="3393.34457" magical="1948.7171" />
 			<attribute>
 				<defence fire="350" water="350" wind="350" earth="350" holy="300" dark="350" />
 				<attack type="DARK" value="430" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="58" />
+		</collision>
 		<skillList>
 			<skill id="15215" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
@@ -5583,10 +5584,6 @@
 			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<collision>
-			<radius normal="20" />
-			<height normal="58" />
-		</collision>
 	</npc>
 	<npc id="25889" level="97" type="L2Monster" name="Revenant of Sir Calibus" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

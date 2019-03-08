@@ -789,11 +789,11 @@
 		</parameters>
 		<race>FAIRY</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2377901025504" sp="2140110720" />
+		<acquire exp="2377901025504" sp="2140110720" raidPoints="300" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="34079799" hpRegen="441.65" mp="36939" mpRegen="20" />
-			<attack physical="722.31" magical="1398.68" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="1602" magical="293" evasion="-18" />
+			<vitals hp="103787467.02735" hpRegen="470.5528213" mp="88540.925" mpRegen="3.3" />
+			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="36935.17502" magical="18028.22092" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -802,6 +802,10 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status undying="false" noSleepMode="true" />
+		<collision>
+			<radius normal="75" />
+			<height normal="147" />
+		</collision>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4062" level="1" /> <!-- Orfen -->
@@ -892,10 +896,6 @@
 				<item id="38048" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Crafting Pack -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="75" />
-			<height normal="147" />
-		</collision>
 	</npc>
 	<npc id="29327" level="85" type="L2Npc" name="Arimus" title="Orfen's Handmaiden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

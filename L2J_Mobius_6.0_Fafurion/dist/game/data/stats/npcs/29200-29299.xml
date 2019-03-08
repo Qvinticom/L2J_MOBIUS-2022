@@ -2163,21 +2163,25 @@
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="15301" /> <!-- Transparent Pole (NPC) -->
-		<acquire exp="202583506944" sp="293716117" raidPoints="1000" />
+		<acquire exp="202583506944" sp="324133611" raidPoints="1000" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="209461939" hpRegen="10.5" mp="47100" mpRegen="3.6" />
+			<vitals hp="314655529.43246" hpRegen="436.263366" mp="77237.207" mpRegen="3.3" />
+			<attack physical="295358.4152" magical="211816.358" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="34243.68753" magical="16714.49407" />
 			<speed>
 				<walk ground="100" />
 				<run ground="270" />
 			</speed>
-			<attack physical="63862.33880135" magical="11469.742130133" critical="4" attackSpeed="253" range="40" />
-			<defence physical="7772.0207253886" magical="3235.1068620499" />
 			<attribute>
 				<defence fire="300" water="300" wind="370" earth="250" holy="300" dark="300" />
 				<attack type="WIND" value="370" />
 			</attribute>
 		</stats>
 		<status attackable="false" />
+		<collision>
+			<radius normal="350" />
+			<height normal="210" />
+		</collision>
 		<skillList>
 			<skill id="4415" level="1"/> <!-- Bare Hands -->
 			<skill id="4416" level="10"/> <!-- Dragons -->
@@ -2196,117 +2200,99 @@
 		<ai aggroRange="2000" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="17439" min="1" max="3" chance="20.86" /> <!-- Eternal Leather Gloves - Light Armor -->
-				<item id="17440" min="1" max="3" chance="20.6" /> <!-- Eternal Leather Boots - Light Armor -->
-				<item id="17438" min="1" max="3" chance="20.52" /> <!-- Eternal Leather Leggings - Light Armor -->
-				<item id="36946" min="1" max="1" chance="19.79" /> <!-- Lindvior's Earring -->
-				<item id="17437" min="1" max="3" chance="19.37" /> <!-- Eternal Leather Armor - Light Armor -->
-				<item id="17436" min="1" max="3" chance="19.23" /> <!-- Eternal Leather Helmet - Light Armor -->
-				<item id="17434" min="1" max="3" chance="17.38" /> <!-- Eternal Boots - Heavy Armor -->
-				<item id="17431" min="1" max="3" chance="17.37" /> <!-- Eternal Breastplate - Heavy Armor -->
-				<item id="17430" min="1" max="3" chance="17.34" /> <!-- Eternal Helmet - Heavy Armor -->
-				<item id="17435" min="1" max="3" chance="16.93" /> <!-- Eternal Shield - Heavy Armor -->
-				<item id="17433" min="1" max="3" chance="16.93" /> <!-- Eternal Gauntlets - Heavy Armor -->
-				<item id="17441" min="1" max="3" chance="16.85" /> <!-- Eternal Circlet - Robe -->
-				<item id="17442" min="1" max="3" chance="16.84" /> <!-- Eternal Tunic - Robe -->
-				<item id="17432" min="1" max="3" chance="16.71" /> <!-- Eternal Gaiters - Heavy Armor -->
-				<item id="17443" min="1" max="3" chance="16.35" /> <!-- Eternal Stockings - Robe -->
-				<item id="17444" min="1" max="3" chance="16.25" /> <!-- Eternal Gloves - Robe -->
-				<item id="17445" min="1" max="3" chance="16.16" /> <!-- Eternal Shoes - Robe -->
-				<item id="17446" min="1" max="3" chance="15.875" /> <!-- Eternal Sigil - Robe -->
-				<item id="17418" min="1" max="3" chance="9.156" /> <!-- Helios Slasher -->
-				<item id="17422" min="1" max="3" chance="9.12" /> <!-- Helios Thrower -->
-				<item id="17420" min="1" max="3" chance="9.108" /> <!-- Helios Fighter -->
-				<item id="17419" min="1" max="3" chance="9.105" /> <!-- Helios Avenger -->
-				<item id="17424" min="1" max="3" chance="9.097" /> <!-- Helios Buster -->
-				<item id="17417" min="1" max="3" chance="9.087" /> <!-- Helios Cutter -->
-				<item id="17425" min="1" max="3" chance="9.086" /> <!-- Helios Caster -->
-				<item id="17423" min="1" max="3" chance="9.074" /> <!-- Helios Shooter -->
-				<item id="17421" min="1" max="3" chance="9.066" /> <!-- Helios Stormer -->
-				<item id="17426" min="1" max="3" chance="9.033" /> <!-- Helios Retributer -->
-				<item id="17416" min="1" max="3" chance="9.03" /> <!-- Helios Shaper -->
-				<item id="36435" min="1" max="1" chance="0.075" /> <!-- Lindvior Thrower - Fragment -->
-				<item id="36436" min="1" max="1" chance="0.075" /> <!-- Lindvior Slasher - Fragment -->
+				<item id="17438" min="1" max="3" chance="20.83" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17439" min="1" max="3" chance="20.82" /> <!-- Eternal Leather Gloves - Light Armor -->
+				<item id="17437" min="1" max="3" chance="20.28" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="36946" min="1" max="1" chance="19.69" /> <!-- Lindvior's Earring -->
+				<item id="17436" min="1" max="3" chance="19.45" /> <!-- Eternal Leather Helmet - Light Armor -->
+				<item id="17440" min="1" max="3" chance="19.42" /> <!-- Eternal Leather Boots - Light Armor -->
+				<item id="17431" min="1" max="3" chance="17.34" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17441" min="1" max="3" chance="17.23" /> <!-- Eternal Circlet - Robe -->
+				<item id="17430" min="1" max="3" chance="17.18" /> <!-- Eternal Helmet - Heavy Armor -->
+				<item id="17444" min="1" max="3" chance="16.98" /> <!-- Eternal Gloves - Robe -->
+				<item id="17434" min="1" max="3" chance="16.88" /> <!-- Eternal Boots - Heavy Armor -->
+				<item id="17443" min="1" max="3" chance="16.86" /> <!-- Eternal Stockings - Robe -->
+				<item id="17433" min="1" max="3" chance="16.8" /> <!-- Eternal Gauntlets - Heavy Armor -->
+				<item id="17446" min="1" max="3" chance="16.285" /> <!-- Eternal Sigil - Robe -->
+				<item id="17435" min="1" max="3" chance="16.235" /> <!-- Eternal Shield - Heavy Armor -->
+				<item id="17432" min="1" max="3" chance="16.22" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17442" min="1" max="3" chance="16.18" /> <!-- Eternal Tunic - Robe -->
+				<item id="17445" min="1" max="3" chance="15.92" /> <!-- Eternal Shoes - Robe -->
+				<item id="17418" min="1" max="3" chance="9.154" /> <!-- Helios Slasher -->
+				<item id="17423" min="1" max="3" chance="9.147" /> <!-- Helios Shooter -->
+				<item id="17417" min="1" max="3" chance="9.121" /> <!-- Helios Cutter -->
+				<item id="17421" min="1" max="3" chance="9.116" /> <!-- Helios Stormer -->
+				<item id="17420" min="1" max="3" chance="9.107" /> <!-- Helios Fighter -->
+				<item id="17426" min="1" max="3" chance="9.076" /> <!-- Helios Retributer -->
+				<item id="17425" min="1" max="3" chance="9.063" /> <!-- Helios Caster -->
+				<item id="17422" min="1" max="3" chance="9.062" /> <!-- Helios Thrower -->
+				<item id="17419" min="1" max="3" chance="9.042" /> <!-- Helios Avenger -->
+				<item id="17424" min="1" max="3" chance="9.025" /> <!-- Helios Buster -->
+				<item id="17416" min="1" max="3" chance="9.024" /> <!-- Helios Shaper -->
 				<item id="36434" min="1" max="1" chance="0.075" /> <!-- Lindvior Shaper - Fragment -->
+				<item id="36436" min="1" max="1" chance="0.075" /> <!-- Lindvior Slasher - Fragment -->
+				<item id="36437" min="1" max="1" chance="0.075" /> <!-- Lindvior Caster - Fragment -->
 				<item id="36438" min="1" max="1" chance="0.075" /> <!-- Lindvior Cutter - Fragment -->
 				<item id="36439" min="1" max="1" chance="0.075" /> <!-- Lindvior Shooter - Fragment -->
 				<item id="36440" min="1" max="1" chance="0.075" /> <!-- Lindvior Dual Dagger - Fragment -->
-				<item id="36437" min="1" max="1" chance="0.075" /> <!-- Lindvior Caster - Fragment -->
+				<item id="36435" min="1" max="1" chance="0.075" /> <!-- Lindvior Thrower - Fragment -->
 				<item id="36414" min="1" max="1" chance="100" /> <!-- Dragon Claw -->
-				<item id="37781" min="1" max="1" chance="49.98" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
-				<item id="37772" min="1" max="1" chance="49.78" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
-				<item id="35568" min="1" max="1" chance="49.25" /> <!-- Bloody Weapon Enhancement Stone -->
-				<item id="19448" min="10" max="10" chance="29.06" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="36389" min="10" max="10" chance="28.76" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
-				<item id="46493" min="1" max="1" chance="23.61" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
-				<item id="46508" min="1" max="1" chance="23.58" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<item id="46477" min="1" max="2" chance="23.16" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46492" min="1" max="2" chance="22.39" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46478" min="1" max="1" chance="21.93" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="46507" min="1" max="2" chance="21.9" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="19447" min="10" max="10" chance="20.88" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="36386" min="10" max="10" chance="20.69" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
-				<item id="36162" min="1" max="1" chance="20.69" /> <!-- Scroll of Blessing: (R99-grade) -->
-				<item id="46509" min="1" max="1" chance="19.78" /> <!-- Lionel's Soul Crystal - Stage 6 -->
-				<item id="46479" min="1" max="1" chance="19.49" /> <!-- Leona's Soul Crystal - Stage 6 -->
-				<item id="46494" min="1" max="1" chance="19.49" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
-				<item id="17707" min="1" max="1" chance="17.36" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
-				<item id="17708" min="1" max="1" chance="17.32" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
-				<item id="17702" min="1" max="1" chance="17.28" /> <!-- Lv. 5 Giant MEN Dye - Men +5 -->
-				<item id="17697" min="1" max="1" chance="17.08" /> <!-- Lv. 5 Giant STR Dye - STR +5 -->
-				<item id="17699" min="1" max="1" chance="16.98" /> <!-- Lv. 5 Giant CON Dye - CON +5 -->
-				<item id="17706" min="1" max="1" chance="16.85" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
-				<item id="39483" min="1" max="1" chance="16.69" /> <!-- Alchemic Tome: Enchant Scroll -->
-				<item id="39484" min="1" max="1" chance="16.65" /> <!-- Alchemic Tome: Life Stone -->
-				<item id="39485" min="1" max="1" chance="16.64" /> <!-- Alchemic Tome: Dye -->
-				<item id="17700" min="1" max="1" chance="16.61" /> <!-- Lv. 5 Giant INT Dye - INT +5 -->
-				<item id="17711" min="1" max="1" chance="16.51" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
-				<item id="17698" min="1" max="1" chance="16.51" /> <!-- Lv. 5 Giant DEX Dye - DEX +5 -->
-				<item id="17701" min="1" max="1" chance="16.38" /> <!-- Lv. 5 Giant WIT Dye - Wit +5 -->
-				<item id="17705" min="1" max="1" chance="16.32" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
-				<item id="17713" min="1" max="1" chance="16.3" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
-				<item id="17709" min="1" max="1" chance="16.24" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
-				<item id="17710" min="1" max="1" chance="16.06" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
-				<item id="46463" min="1" max="1" chance="15.93" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
-				<item id="17704" min="1" max="1" chance="15.97" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
-				<item id="17703" min="1" max="1" chance="15.9" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
-				<item id="17712" min="1" max="1" chance="15.88" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
-				<item id="17714" min="1" max="1" chance="15.87" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
-				<item id="46448" min="1" max="1" chance="15.4" /> <!-- Kain's Soul Crystal - Stage 5 -->
-				<item id="46447" min="1" max="2" chance="14.89" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46462" min="1" max="2" chance="14.83" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46449" min="1" max="1" chance="12.94" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<item id="46464" min="1" max="1" chance="12.51" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
-				<item id="46480" min="1" max="1" chance="11.28" /> <!-- Leona's Soul Crystal - Stage 7 -->
-				<item id="46495" min="1" max="1" chance="11.2" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
-				<item id="46510" min="1" max="1" chance="11.17" /> <!-- Lionel's Soul Crystal - Stage 7 -->
-				<item id="46450" min="1" max="1" chance="7.763" /> <!-- Kain's Soul Crystal - Stage 7 -->
-				<item id="46496" min="1" max="1" chance="7.722" /> <!-- Pantheon's Soul Crystal - Stage 8 -->
-				<item id="46465" min="1" max="1" chance="7.704" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
-				<item id="46511" min="1" max="1" chance="7.682" /> <!-- Lionel's Soul Crystal - Stage 8 -->
-				<item id="46481" min="1" max="1" chance="7.628" /> <!-- Leona's Soul Crystal - Stage 8 -->
-				<item id="46466" min="1" max="1" chance="5.222" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
-				<item id="46451" min="1" max="1" chance="5.16" /> <!-- Kain's Soul Crystal - Stage 8 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="37781" min="1" max="1" chance="50.08" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
+				<item id="35568" min="1" max="1" chance="49.87" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="37772" min="1" max="1" chance="49.45" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
+				<item id="36389" min="10" max="10" chance="30.8" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="19448" min="10" max="10" chance="29.98" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="46477" min="1" max="2" chance="24.1" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="2" chance="23.41" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="23.03" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46508" min="1" max="1" chance="22.83" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46492" min="1" max="2" chance="22.79" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="22.59" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="19447" min="10" max="10" chance="20.4" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="46509" min="1" max="1" chance="19.55" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="36386" min="10" max="10" chance="19.47" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+				<item id="36162" min="1" max="1" chance="19.43" /> <!-- Scroll of Blessing: (R99-grade) -->
+				<item id="46494" min="1" max="1" chance="19.24" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="18.59" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="17713" min="1" max="1" chance="17.4" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
+				<item id="39483" min="1" max="1" chance="17.3" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="17705" min="1" max="1" chance="17.29" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17709" min="1" max="1" chance="17.29" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
+				<item id="17712" min="1" max="1" chance="17.05" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
+				<item id="17702" min="1" max="1" chance="17.05" /> <!-- Lv. 5 Giant MEN Dye - Men +5 -->
+				<item id="17704" min="1" max="1" chance="16.99" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17698" min="1" max="1" chance="16.91" /> <!-- Lv. 5 Giant DEX Dye - DEX +5 -->
+				<item id="17710" min="1" max="1" chance="16.9" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+				<item id="17701" min="1" max="1" chance="16.89" /> <!-- Lv. 5 Giant WIT Dye - Wit +5 -->
+				<item id="39485" min="1" max="1" chance="16.75" /> <!-- Alchemic Tome: Dye -->
+				<item id="39484" min="1" max="1" chance="16.7" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="17697" min="1" max="1" chance="16.62" /> <!-- Lv. 5 Giant STR Dye - STR +5 -->
+				<item id="17714" min="1" max="1" chance="16.53" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
+				<item id="17699" min="1" max="1" chance="16.48" /> <!-- Lv. 5 Giant CON Dye - CON +5 -->
+				<item id="17707" min="1" max="1" chance="16.4" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="17706" min="1" max="1" chance="16.33" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17703" min="1" max="1" chance="16.3" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17700" min="1" max="1" chance="16.23" /> <!-- Lv. 5 Giant INT Dye - INT +5 -->
+				<item id="17711" min="1" max="1" chance="16.09" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
+				<item id="17708" min="1" max="1" chance="16.04" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="46463" min="1" max="1" chance="15.66" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="2" chance="15.65" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46462" min="1" max="2" chance="15.06" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46448" min="1" max="1" chance="14.97" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46449" min="1" max="1" chance="12.43" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46464" min="1" max="1" chance="12.32" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="11.64" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46480" min="1" max="1" chance="11.5" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46510" min="1" max="1" chance="11.33" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="7.762" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46511" min="1" max="1" chance="7.732" /> <!-- Lionel's Soul Crystal - Stage 8 -->
+				<item id="46465" min="1" max="1" chance="7.725" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46496" min="1" max="1" chance="7.698" /> <!-- Pantheon's Soul Crystal - Stage 8 -->
+				<item id="46481" min="1" max="1" chance="7.598" /> <!-- Leona's Soul Crystal - Stage 8 -->
+				<item id="46451" min="1" max="1" chance="5.221" /> <!-- Kain's Soul Crystal - Stage 8 -->
+				<item id="46466" min="1" max="1" chance="5.203" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
 			</drop>
-			<lucky>
-				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-				<item id="40199" min="1" max="1" chance="4.952" /> <!-- Disassembly Recipe Pouch: Weapon -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="350" />
-			<height normal="210" />
-		</collision>
 	</npc>
 	<npc id="29241" level="104" type="L2Monster" name="Lyn Draco">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

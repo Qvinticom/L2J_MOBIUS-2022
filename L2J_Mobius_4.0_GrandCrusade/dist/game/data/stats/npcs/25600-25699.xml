@@ -5248,7 +5248,6 @@
 		</collision>
 	</npc>
 	<npc id="25696" level="89" type="L2RaidBoss" name="Taklacan" title="Bistakon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="Skill01_ID" id="6379" level="1" />
 			<skill name="Skill02_ID" id="6378" level="1" />
@@ -5262,8 +5261,8 @@
 		<sex>MALE</sex>
 		<acquire exp="386354696" sp="92725" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="763865" hpRegen="9.5" mp="18468" mpRegen="3.3" />
-			<attack physical="11355.958626" magical="1212.53790962933" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<vitals hp="1147484.858145" hpRegen="242.622420161294" mp="18468" mpRegen="3.3" />
+			<attack physical="22711.917252" magical="1746.05458986623" random="10" critical="4" accuracy="-11" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="17479.902520542" magical="8527.328348" evasion="-18" />
 			<attribute>
 				<attack type="EARTH" value="280" />
@@ -5275,7 +5274,11 @@
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="40.0" />
+			<height normal="57.0" />
+		</collision>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -5347,13 +5350,8 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="40" />
-			<height normal="57" />
-		</collision>
 	</npc>
 	<npc id="25697" level="89" type="L2RaidBoss" name="Torumba" title="Reptilikon">
-		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<skill name="SpecialSkill01_ID" id="6403" level="1" />
 			<skill name="SpecialSkill02_ID" id="6404" level="1" />
@@ -5365,8 +5363,8 @@
 		<sex>MALE</sex>
 		<acquire exp="386354696" sp="92725" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="6312935" hpRegen="9.5" mp="18468" mpRegen="3.3" />
-			<attack physical="3038.11848539117" magical="1212.53790962933" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<vitals hp="9483345.19467" hpRegen="242.622420161294" mp="18468" mpRegen="3.3" />
+			<attack physical="6076.23697078235" magical="1746.05458986623" random="10" critical="4" accuracy="-11" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1085.36442" magical="529.48" evasion="-18" />
 			<attribute>
 				<attack type="EARTH" value="280" />
@@ -5378,6 +5376,11 @@
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="40" />
+			<height normal="64" />
+		</collision>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -5446,10 +5449,6 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="40" />
-			<height normal="64" />
-		</collision>
 	</npc>
 	<npc id="25698" level="89" type="L2RaidBoss" name="Dopagen" title="Kokracon">
 		<!-- Confirmed CT2.5 -->
@@ -5465,9 +5464,9 @@
 		<sex>MALE</sex>
 		<acquire exp="386354696" sp="92725" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="631293" hpRegen="9.5" mp="18468" mpRegen="3.3" />
-			<attack physical="11355.958626" magical="1212.53790962933" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="17479.902520542" magical="8527.328348" evasion="-18" />
+			<vitals hp="948334.014735" hpRegen="242.622420161294" mp="18468" mpRegen="3.3" />
+			<attack physical="22711.917252" magical="1746.05458986623" random="10" critical="4" accuracy="-11" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="17479.902520542" magical="8527.328348" />
 			<attribute>
 				<attack type="EARTH" value="280" />
 				<defence fire="200" water="200" wind="150" earth="200" holy="200" dark="200" default="250" />
@@ -5478,7 +5477,11 @@
 			</speed>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status undying="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="45" />
+			<height normal="75" />
+		</collision>
 		<skillList>
 			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
@@ -5550,10 +5553,6 @@
 				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="45" />
-			<height normal="75" />
-		</collision>
 	</npc>
 	<npc id="25699" level="85" type="L2RaidBoss" name="Glakias" title="Ice Knight Captain">
 		<!-- Confirmed CT2.5 -->

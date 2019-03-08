@@ -3228,7 +3228,6 @@
 		</collision>
 	</npc>
 	<npc id="3473" level="96" type="L2RaidBoss" name="Omega Golem" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="3474" count="2" respawnTime="360" weightPoint="1" />
@@ -3247,20 +3246,24 @@
 		<acquire exp="207470592" sp="49792" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="23604934" hpRegen="23103.5" mp="44856" mpRegen="30" />
-			<speed>
-				<walk ground="70" />
-				<run ground="140" />
-			</speed>
-			<attack physical="128810.835640155" magical="7231" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
+			<vitals hp="35459535.30342" hpRegen="23103.5" mp="44856" mpRegen="30" />
+			<attack physical="128810.835640155" magical="7231" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="3468" magical="1981" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="30.0" />
+			<height normal="27.5" />
+		</collision>
 		<skillList>
 			<skill id="15413" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
@@ -3276,15 +3279,11 @@
 				<clan>OMEGA_GOLEM</clan>
 			</clanList>
 		</ai>
-		<collision>
-			<radius normal="50" />
-			<height normal="68" />
-		</collision>
 		<dropLists>
 			<drop>
-				<item id="17398" min="1" max="1" chance="1.048" /> <!-- Seraph Gaiters - Heavy Armor -->
-				<item id="17404" min="1" max="1" chance="1.027" /> <!-- Seraph Leather Leggings - Light Armor -->
-				<item id="17409" min="1" max="1" chance="0.977" /> <!-- Seraph Stockings - Robe -->
+				<item id="17409" min="1" max="1" chance="1.07" /> <!-- Seraph Stockings - Robe -->
+				<item id="17404" min="1" max="1" chance="1.009" /> <!-- Seraph Leather Leggings - Light Armor -->
+				<item id="17398" min="1" max="1" chance="0.966" /> <!-- Seraph Gaiters - Heavy Armor -->
 				<item id="17408" min="1" max="1" chance="0.75" /> <!-- Seraph Tunic - Robe -->
 				<item id="17403" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Armor - Light Armor -->
 				<item id="17397" min="1" max="1" chance="0.75" /> <!-- Seraph Breastplate - Heavy Armor -->
@@ -3299,7 +3298,7 @@
 				<item id="17384" min="1" max="1" chance="0.3" /> <!-- Specter Slasher -->
 				<item id="17383" min="1" max="1" chance="0.3" /> <!-- Specter Cutter -->
 				<item id="17382" min="1" max="1" chance="0.3" /> <!-- Specter Shaper -->
-				<item id="17526" min="1" max="1" chance="1.539" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="1.554" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="35434" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gauntlets (60%) -->
 				<item id="35435" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Boots (60%) -->
 				<item id="35436" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Shield (60%) -->
@@ -3331,16 +3330,6 @@
 				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
 				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
 				<item id="35430" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Retributer (60%) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3470,7 +3459,6 @@
 		</collision>
 	</npc>
 	<npc id="3477" level="88" type="L2RaidBoss" name="Reinforced Super Kat the Cat" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Party_Type" value="2" />
 			<minions name="Privates">
@@ -3488,23 +3476,28 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<equipment rhand="47164" /> <!--  -->
 		<acquire exp="159805184" sp="38353" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="12808340" hpRegen="9827.1" mp="39048" mpRegen="30" />
+			<vitals hp="19240798.98207" hpRegen="9827.1" mp="39048" mpRegen="30" />
+			<attack physical="55253.562042107" magical="5006" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="2960" magical="1626" />
 			<speed>
 				<walk ground="70" />
 				<run ground="140" />
 			</speed>
-			<attack physical="55253.562042107" magical="5006" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="2960" magical="1626" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
 				<attack type="EARTH" value="280" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="22.5" />
+			<height normal="37.5" />
+		</collision>
 		<skillList>
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -3518,34 +3511,20 @@
 				<clan>SUPER_CAT_BOSS</clan>
 			</clanList>
 		</ai>
-		<collision>
-			<radius normal="22.5" />
-			<height normal="37.5" />
-		</collision>
 		<dropLists>
 			<drop>
-				<item id="17318" min="1" max="1" chance="25.09" /> <!-- Immortal Gloves - Robe -->
-				<item id="17308" min="1" max="1" chance="22.95" /> <!-- Immortal Boots - Heavy Armor -->
-				<item id="17304" min="1" max="1" chance="15.91" /> <!-- Immortal Helmet - Heavy Armor -->
-				<item id="17310" min="1" max="1" chance="15.89" /> <!-- Immortal Leather Helmet - Light Armor -->
-				<item id="17313" min="1" max="3" chance="12.3" /> <!-- Immortal Leather Gloves - Light Armor -->
-				<item id="17319" min="2" max="4" chance="7.937" /> <!-- Immortal Shoes - Robe -->
-				<item id="17291" min="1" max="1" chance="1.494" /> <!-- Requiem Cutter -->
-				<item id="17296" min="1" max="1" chance="1.49" /> <!-- Requiem Thrower -->
-				<item id="17290" min="1" max="1" chance="1.468" /> <!-- Requiem Shaper -->
-				<item id="17300" min="1" max="1" chance="1.466" /> <!-- Requiem Retributer -->
-				<item id="17527" min="1" max="1" chance="47.48" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="3.648" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="17318" min="1" max="1" chance="24.43" /> <!-- Immortal Gloves - Robe -->
+				<item id="17308" min="1" max="1" chance="23" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17304" min="1" max="1" chance="15.48" /> <!-- Immortal Helmet - Heavy Armor -->
+				<item id="17310" min="1" max="1" chance="15.41" /> <!-- Immortal Leather Helmet - Light Armor -->
+				<item id="17313" min="1" max="3" chance="11.41" /> <!-- Immortal Leather Gloves - Light Armor -->
+				<item id="17319" min="2" max="4" chance="7.964" /> <!-- Immortal Shoes - Robe -->
+				<item id="17296" min="1" max="1" chance="1.591" /> <!-- Requiem Thrower -->
+				<item id="17300" min="1" max="1" chance="1.582" /> <!-- Requiem Retributer -->
+				<item id="17290" min="1" max="1" chance="1.569" /> <!-- Requiem Shaper -->
+				<item id="17291" min="1" max="1" chance="1.518" /> <!-- Requiem Cutter -->
+				<item id="17527" min="1" max="1" chance="46.3" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="3.569" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3592,7 +3571,6 @@
 		</collision>
 	</npc>
 	<npc id="3479" level="92" type="L2RaidBoss" name="Darkened Super Feline Queen" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Skill01_Probablity" value="400" />
 			<param name="Skill02_Probablity" value="300" />
@@ -3605,25 +3583,25 @@
 			<skill name="Skill02_ID" id="23550" level="1" />
 			<param name="Attack_BoostValue" value="6950" />
 		</parameters>
-		<race>ELEMENTAL</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="183127104" sp="43950" raidPoints="30" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="14217624" hpRegen="10667.3" mp="41920" mpRegen="30" />
+			<vitals hp="21357837.419145" hpRegen="10667.3" mp="41920" mpRegen="30" />
+			<attack physical="66344.3340380442" magical="6016" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3204" magical="1795" />
 			<speed>
 				<walk ground="70" />
 				<run ground="140" />
 			</speed>
-			<attack physical="66344.3340380442" magical="6016" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3204" magical="1795" />
 			<attribute>
 				<defence fire="200" water="200" wind="200" earth="200" holy="150" dark="200" />
 				<attack type="EARTH" value="280" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -3643,23 +3621,13 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17343" min="1" max="1" chance="66.58" /> <!-- Twilight Shield - Heavy Armor -->
-				<item id="17339" min="1" max="1" chance="17.41" /> <!-- Twilight Breastplate - Heavy Armor -->
-				<item id="17350" min="1" max="1" chance="16.78" /> <!-- Twilight Tunic - Robe -->
+				<item id="17343" min="1" max="1" chance="65.27" /> <!-- Twilight Shield - Heavy Armor -->
+				<item id="17350" min="1" max="1" chance="16.98" /> <!-- Twilight Tunic - Robe -->
+				<item id="17339" min="1" max="1" chance="16.9" /> <!-- Twilight Breastplate - Heavy Armor -->
 				<item id="17325" min="1" max="1" chance="0.75" /> <!-- Apocalypse Cutter -->
 				<item id="17330" min="1" max="1" chance="0.75" /> <!-- Apocalypse Thrower -->
-				<item id="17527" min="1" max="1" chance="46.47" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="3.622" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="17527" min="1" max="1" chance="47.23" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="3.654" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3706,7 +3674,6 @@
 		</collision>
 	</npc>
 	<npc id="3481" level="94" type="L2RaidBoss" name="Control-crazed Mew the Cat" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="Skill01_Probablity" value="300" />
 			<param name="Skill02_Probablity" value="300" />
@@ -3719,25 +3686,25 @@
 			<skill name="Skill02_ID" id="23556" level="1" />
 			<param name="Attack_BoostValue" value="7100" />
 		</parameters>
-		<race>ANIMAL</race>
+		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="198916032" sp="47739" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="164" int="188" dex="55" wit="78" con="82" men="149">
-			<vitals hp="14425282" hpRegen="10704.9" mp="43380" mpRegen="30" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="15744949.44027" hpRegen="10704.9" mp="43380" mpRegen="30" />
+			<attack physical="77439.5246547926" magical="6591" random="10" critical="4" accuracy="0" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
+			<defence physical="3333" magical="1886" />
 			<speed>
 				<walk ground="70" />
 				<run ground="140" />
 			</speed>
-			<attack physical="77439.5246547926" magical="6591" critical="4" attackSpeed="253" range="40" type="FIST" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="3333" magical="1886" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="EARTH" value="330" />
 			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
-		<status attackable="false" undying="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
@@ -3757,21 +3724,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17352" min="1" max="1" chance="91.475" /> <!-- Twilight Gloves - Robe -->
-				<item id="17347" min="1" max="1" chance="20.07" /> <!-- Twilight Leather Gloves - Light Armor -->
-				<item id="17330" min="1" max="1" chance="7.548" /> <!-- Apocalypse Thrower -->
-				<item id="17334" min="1" max="1" chance="1.532" /> <!-- Apocalypse Retributer -->
-				<item id="17526" min="1" max="1" chance="37" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="17352" min="1" max="1" chance="91.51" /> <!-- Twilight Gloves - Robe -->
+				<item id="17347" min="1" max="1" chance="18.29" /> <!-- Twilight Leather Gloves - Light Armor -->
+				<item id="17330" min="1" max="1" chance="7.518" /> <!-- Apocalypse Thrower -->
+				<item id="17334" min="1" max="1" chance="1.515" /> <!-- Apocalypse Retributer -->
+				<item id="17526" min="1" max="1" chance="37.98" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</drop>
 		</dropLists>
 	</npc>

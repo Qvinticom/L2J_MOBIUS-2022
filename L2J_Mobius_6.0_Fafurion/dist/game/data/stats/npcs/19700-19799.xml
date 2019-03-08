@@ -760,23 +760,31 @@
 			<height normal="230" />
 		</collision>
 	</npc>
-	<npc id="19740" level="85" type="L2Npc" name="Fafurion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="19740" level="118" type="L2GrandBoss" name="Fafurion">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="108452897573760" sp="97607602024" raidPoints="1000" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="260487323.99993" hpRegen="561.9508371" mp="100626.447" mpRegen="3.6" />
+			<attack physical="380451.1715" magical="272840.6485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44109.29354" magical="21529.93964" />
 			<speed>
-				<walk ground="1" />
-				<run ground="210" />
+				<walk ground="45" />
+				<run ground="270" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
-			<radius normal="0.001" />
-			<height normal="0.001" />
+			<radius normal="200.0" />
+			<height normal="320.0" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32726" level="1" /> <!-- Fafurion -->
+			<skill id="32727" level="3" /> <!-- Fafurion's Arrogance - Stage 3 -->
+		</skillList>
 	</npc>
 </list>
