@@ -399,30 +399,28 @@
 		</dropLists>
 	</npc>
 	<npc id="23314" level="98" type="L2Monster" name="Nerva Orc Raider">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<equipment rhand="17325" /> 
 		<acquire exp="171766099" sp="171815" />
-		<equipment rhand="17325" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="380400.735525" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6326.484931" magical="1133.341541" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="515.3924972" magical="297.3358744" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4920.2127659574" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="38" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="57" min="25865" max="60385" chance="70" /> <!-- Adena -->
@@ -433,41 +431,32 @@
 				<item id="36560" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Top-grade) -->
 				<item id="36885" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="14" />
-			<height normal="38" />
-		</collision>
 	</npc>
 	<npc id="23315" level="98" type="L2Monster" name="Nerva Orc Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<equipment rhand="15304" /> 
 		<acquire exp="185462171" sp="185549" />
-		<equipment rhand="15304" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="418441.124535" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6326.484931" magical="1133.341541" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="515.3924972" magical="297.3358744" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1048846.269104" magical="175972.90129492" critical="8" attackSpeed="398" range="900" />
-			<defence physical="4787.2340425532" magical="3054.5607752265" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="34" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="57" min="26899" max="62800" chance="70" /> <!-- Adena -->
@@ -478,43 +467,32 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="14" />
-			<height normal="34" />
-		</collision>
 	</npc>
 	<npc id="23316" level="99" type="L2Monster" name="Nerva Orc Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<equipment rhand="17332" lhand="15588" /> 
 		<acquire exp="227222267" sp="227285" />
-		<equipment rhand="17332" lhand="15588" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="691638.04509" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="906897.14997713" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4840.4255319149" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="10" />
+			<height normal="32" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Helios Retributer -->
@@ -526,41 +504,31 @@
 				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="10" />
-			<height normal="32" />
-		</collision>
 	</npc>
 	<npc id="23317" level="98" type="L2Monster" name="Nerva Orc Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<equipment rhand="8688" /> 
 		<acquire exp="200289115" sp="200339" />
-		<equipment rhand="8688" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="459938.927745" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6326.484931" magical="1133.341541" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="515.3924972" magical="297.3358744" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="875352.90128227" magical="87986.450647461" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3124.7805631627" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="36" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
-			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="57" min="27975" max="65312" chance="70" /> <!-- Adena -->
@@ -571,40 +539,31 @@
 				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36885" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="14" />
-			<height normal="36" />
-		</collision>
 	</npc>
 	<npc id="23318" level="99" type="L2Monster" name="Nerva Orc Assassin">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<equipment rhand="15559" /> 
 		<acquire exp="190805181" sp="190825" />
-		<equipment rhand="15559" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="556768.60737" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="946327.4608457" magical="87986.450647461" critical="8" attackSpeed="698" range="40" />
-			<defence physical="5319.1489361702" magical="3510.989396812" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="32" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
@@ -616,42 +575,32 @@
 				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="13" />
-			<height normal="32" />
-		</collision>
 	</npc>
 	<npc id="23319" level="99" type="L2Monster" name="Nerva Orc Ambusher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<equipment rhand="15559" /> 
 		<acquire exp="162338275" sp="162402" />
-		<equipment rhand="15559" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="946327.4608457" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3124.7805631627" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="34" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="23568" level="1" /> <!-- Monster Dueling -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
@@ -663,39 +612,30 @@
 				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="14" />
-			<height normal="34" />
-		</collision>
 	</npc>
 	<npc id="23320" level="99" type="L2Monster" name="Nerva Orc Merchant">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<acquire exp="220810845" sp="220816" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1514686.85187" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3124.7805631627" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="17422" min="1" max="1" chance="0.003" /> <!-- Helios Thrower -->
@@ -707,39 +647,30 @@
 				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36885" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="42" />
-		</collision>
 	</npc>
 	<npc id="23321" level="99" type="L2Monster" name="Nerva Orc Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<acquire exp="394048714" sp="394098" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1037456.43672" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="5319.1489361702" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="42" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="17420" min="1" max="1" chance="0.003" /> <!-- Helios Fighter -->
@@ -751,40 +682,30 @@
 				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="42" />
-		</collision>
 	</npc>
 	<npc id="23322" level="99" type="L2Monster" name="Nerva Orc Prefect">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<acquire exp="497145041" sp="497204" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="1383275.459265" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="985757.77171427" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="5319.1489361702" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="18" />
+			<height normal="38" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
-			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="17419" min="1" max="1" chance="0.0075" /> <!-- Helios Avenger -->
@@ -796,320 +717,256 @@
 				<item id="36535" min="1" max="1" chance="0.3" /> <!-- Quality Braid -->
 				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="18" />
-			<height normal="38" />
-		</collision>
 	</npc>
 	<npc id="23323" level="99" type="L2Monster" name="Nerva Orc Elite">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<acquire exp="175289414" sp="175339" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="380400.735525" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="906897.14997713" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="2808.7915174496" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
-		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
-		<dropLists>
-			<drop>
-				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Helios Avenger -->
-				<item id="57" min="26383" max="61577" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="3.713" /> <!-- Quality Leather -->
-				<item id="36937" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem (Top-grade) - Upgrade -->
-			</drop>
-			<spoil>
-				<item id="36519" min="1" max="1" chance="15.15" /> <!-- Quality Leather -->
-				<item id="36885" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="32" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17419" min="1" max="1" chance="0.003" /> <!-- Helios Avenger -->
+				<item id="57" min="26383" max="61577" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="3.79" /> <!-- Quality Leather -->
+				<item id="36937" min="1" max="1" chance="0.0009" /> <!-- Recipe: Accessory Gem (Top-grade) - Upgrade -->
+			</drop>
+			<spoil>
+				<item id="36519" min="1" max="1" chance="15.26" /> <!-- Quality Leather -->
+				<item id="36885" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="23324" level="83" type="L2Monster" name="Captain" title="Nerva Bloodlust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>DRAGON</race>
-		<sex>FEMALE</sex>
-		<acquire exp="440867" sp="105" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+	<npc id="23324" level="99" type="L2Monster" name="Captain (Raiders Crossroads)">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="312430691" sp="312455" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="691638.04509" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
-		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
-		<dropLists>
-			<drop>
-				<item id="57" min="39" max="91" chance="70" /> <!-- Adena -->
-				<item id="9549" min="1" max="1" chance="0.0075" /> <!-- Wind Stone -->
-				<item id="45929" min="1" max="3" chance="0.0075" /> <!-- Spirit Stone -->
-				<item id="959" min="1" max="1" chance="0.0009" /> <!-- Scroll: Enchant Weapon (S-grade) -->
-				<item id="17248" min="1" max="1" chance="0.0009" /> <!-- Large Dragon Bone -->
-			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="1.615" /> <!-- Thin Braid -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="42" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
+				<item id="57" min="33741" max="78752" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="1.869" /> <!-- Orichalcum -->
+				<item id="36945" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Synthetic Cokes - Upgrade -->
+			</drop>
+			<spoil>
+				<item id="36524" min="1" max="1" chance="7.176" /> <!-- Orichalcum -->
+				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
-	<npc id="23325" level="99" type="L2Monster" name="Archer" title="Nerva Bloodlust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="30863520" sp="49381" />
-		<equipment rhand="15304" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+	<npc id="23325" level="99" type="L2Monster" name="Archer (Raiders Crossroads)">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="15304" /> 
+		<acquire exp="56356730" sp="56453" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="828036.52823999" magical="175972.90129492" critical="8" attackSpeed="398" range="900" />
-			<defence physical="4787.2340425532" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="34" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="57" min="18354" max="42755" chance="70" /> <!-- Adena -->
 				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
-				<item id="36529" min="1" max="1" chance="4.86100000000001" /> <!-- Quality Fiber -->
-				<item id="36520" min="1" max="1" chance="0.299999999999997" /> <!-- Exquisite Leather -->
+				<item id="57" min="25321" max="59098" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="3.934" /> <!-- Quality Fiber -->
+				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
 			</drop>
 			<spoil>
 				<item id="36520" min="1" max="1" chance="0.75" /> <!-- Exquisite Leather -->
 				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="14" />
-			<height normal="34" />
-		</collision>
 	</npc>
-	<npc id="23326" level="99" type="L2Monster" name="Wizard" title="Nerva Bloodlust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="30863520" sp="49381" />
-		<equipment rhand="8688" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+	<npc id="23326" level="99" type="L2Monster" name="Wizard (Raiders Crossroads)">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="8688" /> 
+		<acquire exp="56356730" sp="56453" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="14" />
+			<height normal="36" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
-			<skill id="15629" level="1" /> <!-- Nerva's Mental Blow -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="57" min="18354" max="42755" chance="70" /> <!-- Adena -->
-				<item id="36539" min="1" max="1" chance="5.60800000000003" /> <!-- Quality Leather Braid -->
+				<item id="57" min="25321" max="59098" chance="70" /> <!-- Adena -->
+				<item id="36539" min="1" max="1" chance="4.512" /> <!-- Quality Leather Braid -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 			</drop>
 			<spoil>
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 				<item id="36885" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="14" />
-			<height normal="36" />
-		</collision>
 	</npc>
-	<npc id="23327" level="99" type="L2Monster" name="Soldier" title="Nerva Bloodlust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="30863520" sp="49381" />
-		<equipment rhand="17325" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+	<npc id="23327" level="99" type="L2Monster" name="Soldier (Raiders Crossroads)">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="17325" /> 
+		<acquire exp="56356730" sp="56453" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
-			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
-		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
-		<dropLists>
-			<drop>
-				<item id="57" min="18354" max="42755" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="4.00900000000002" /> <!-- Orichalcum Wire -->
-				<item id="36530" min="1" max="1" chance="1.37999999999998" /> <!-- Exquisite Fiber -->
-			</drop>
-			<spoil>
-				<item id="36544" min="1" max="1" chance="3.099" /> <!-- Orichalcum Wire -->
-				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="38" />
 		</collision>
-	</npc>
-	<npc id="23328" level="99" type="L2Monster" name="Assassin" title="Nerva Bloodlust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ORC</race>
-		<sex>FEMALE</sex>
-		<acquire exp="30863520" sp="49381" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
-			<speed>
-				<walk ground="60" />
-				<run ground="180" />
-			</speed>
-			<attack physical="788606.21737142" magical="175972.90129492" critical="8" attackSpeed="698" range="40" />
-			<defence physical="4787.2340425532" magical="3159.8904571308" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
-		</stats>
-		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
-			<skill id="4416" level="17" /> <!-- Humanoids -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
-				<item id="57" min="18354" max="42755" chance="70" /> <!-- Adena -->
-				<item id="36549" min="1" max="1" chance="1.07799999999999" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="36540" min="1" max="1" chance="0.300000000000005" /> <!-- Exquisite Leather Braid -->
+				<item id="57" min="25321" max="59098" chance="70" /> <!-- Adena -->
+				<item id="36544" min="1" max="1" chance="3.198" /> <!-- Orichalcum Wire -->
+				<item id="36530" min="1" max="1" chance="1.094" /> <!-- Exquisite Fiber -->
+			</drop>
+			<spoil>
+				<item id="36544" min="1" max="1" chance="2.554" /> <!-- Orichalcum Wire -->
+				<item id="36886" min="1" max="1" chance="0.03" /> <!-- Recipe: Durable Braid - Upgrade -->
+			</spoil>
+		</dropLists>
+	</npc>
+	<npc id="23328" level="99" type="L2Monster" name="Assassin (Raiders Crossroads)">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="56356730" sp="56453" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
+			<speed>
+				<walk ground="60" />
+				<run ground="180" />
+			</speed>
+		</stats>
+		<status attackable="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="32" />
+		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
+			<skill id="4411" level="8" /> <!-- Weak M. Atk. -->
+			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
+			<skill id="4413" level="7" /> <!-- Weak M. Def. -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="25321" max="59098" chance="70" /> <!-- Adena -->
+				<item id="36549" min="1" max="1" chance="0.75" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
 			</drop>
 			<spoil>
 				<item id="36540" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather Braid -->
 				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="13" />
-			<height normal="32" />
-		</collision>
 	</npc>
 	<npc id="23329" level="99" type="L2Monster" name="Nerva Kaiser">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>CONSTRUCT</race>
-		<sex>FEMALE</sex>
+		<race>ETC</race>
+		<sex>MALE</sex>
 		<acquire exp="1752885033" sp="1752908" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
+			<attack physical="6745.743697" magical="1186.412163" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="525.7003472" magical="304.7692712" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="788606.21737142" magical="175972.90129492" critical="4" attackSpeed="698" range="40" />
-			<defence physical="21276.595744681" magical="12288.462888842" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="300" holy="150" dark="150" />
-				<attack type="EARTH" value="370" />
-			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="20" />
+			<height normal="36.5" />
+		</collision>
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
-		<ai aggroRange="600" isAggressive="true" />
 		<dropLists>
 			<drop>
 				<item id="57" min="25368" max="59208" chance="70" /> <!-- Adena -->
@@ -1120,14 +977,7 @@
 				<item id="36554" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (High-grade) -->
 				<item id="36887" min="1" max="1" chance="0.003" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="36.5" />
-		</collision>
 	</npc>
 	<npc id="23330" level="99" type="L2Monster" name="Rubble">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
