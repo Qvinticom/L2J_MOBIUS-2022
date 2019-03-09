@@ -627,6 +627,8 @@
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
 		<set name="default_action" val="CAPSULE" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
 		<skills>
 			<skill id="17856" level="1" /> <!-- Apocalypse Pack -->
 		</skills>
