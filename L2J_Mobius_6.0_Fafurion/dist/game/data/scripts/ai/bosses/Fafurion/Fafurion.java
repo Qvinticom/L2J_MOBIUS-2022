@@ -36,7 +36,7 @@ public class Fafurion extends AbstractNpcAI
 	// NPCs
 	private static final int HEART_OF_TSUNAMI = 34488;
 	private static final int FAFURION_GRANDBOSS_ID = 19740;
-	private static final int FAFURION_FINAL_FORM = 29364;
+	private static final int FAFURION_FINAL_FORM = 29367;
 	// Item
 	private static final int FONDUS_STONE = 80322;
 	// Locations

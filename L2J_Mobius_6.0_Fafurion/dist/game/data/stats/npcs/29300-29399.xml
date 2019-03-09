@@ -2811,67 +2811,9 @@
 			<height normal="48" grown="57.6" />
 		</collision>
 	</npc>
-	<npc id="29361" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="270" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="200" />
-			<height normal="320" />
-		</collision>
-	</npc>
-	<npc id="29362" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="270" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="200" />
-			<height normal="320" />
-		</collision>
-	</npc>
-	<npc id="29363" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="270" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="200" />
-			<height normal="320" />
-		</collision>
-	</npc>
-	<npc id="29364" level="118" type="L2GrandBoss" name="Fafurion" title="Wrathful Water Dragon">
+	<npc id="29361" level="85" type="L2Monster" name="Fafurion" title="Wrathful Water Dragon">
 		<race>DRAGON</race>
-		<acquire exp="108452897573760" sp="97607602024" raidPoints="1000" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="412872295" hpRegen="2070.17543859649" mp="124077" mpRegen="2185.18518518519" />
 			<speed>
 				<walk ground="45" />
@@ -2889,29 +2831,157 @@
 			<skill id="32726" level="1" /> <!-- Fafurion -->
 			<skill id="32727" level="3" /> <!-- Fafurion's Arrogance - Stage 1 -->
 		</skillList>
+	</npc>
+	<npc id="29362" level="85" type="L2Monster" name="Fafurion" title="Wrathful Water Dragon">
+		<race>DRAGON</race>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="412872295" hpRegen="2070.17543859649" mp="124077" mpRegen="2185.18518518519" />
+			<speed>
+				<walk ground="45" />
+				<run ground="270" />
+			</speed>
+			<attack physical="56190.4761904762" magical="9915.96638655462" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4370.37037037037" magical="2537.63440860215" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="32726" level="1" /> <!-- Fafurion -->
+			<skill id="32727" level="3" /> <!-- Fafurion's Arrogance - Stage 1 -->
+		</skillList>
+	</npc>
+	<npc id="29363" level="85" type="L2Monster" name="Fafurion" title="Wrathful Water Dragon">
+		<race>DRAGON</race>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="412872295" hpRegen="2070.17543859649" mp="124077" mpRegen="2185.18518518519" />
+			<speed>
+				<walk ground="45" />
+				<run ground="270" />
+			</speed>
+			<attack physical="56190.4761904762" magical="9915.96638655462" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4370.37037037037" magical="2537.63440860215" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="32726" level="1" /> <!-- Fafurion -->
+			<skill id="32727" level="3" /> <!-- Fafurion's Arrogance - Stage 1 -->
+		</skillList>
+	</npc>
+	<npc id="29364" level="118" type="L2Monster" name="Fafurion" title="Wrathful Water Dragon">
+		<race>DRAGON</race>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="412872295" hpRegen="2070.17543859649" mp="124077" mpRegen="2185.18518518519" />
+			<speed>
+				<walk ground="45" />
+				<run ground="270" />
+			</speed>
+			<attack physical="56190.4761904762" magical="9915.96638655462" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4370.37037037037" magical="2537.63440860215" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="32726" level="1" /> <!-- Fafurion -->
+			<skill id="32727" level="3" /> <!-- Fafurion's Arrogance - Stage 1 -->
+		</skillList>
+	</npc>
+	<npc id="29365" level="85" type="L2Monster" name="Fafurion" title="Wrathful Water Dragon">
+		<race>DRAGON</race>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="412872295" hpRegen="2070.17543859649" mp="124077" mpRegen="2185.18518518519" />
+			<speed>
+				<walk ground="45" />
+				<run ground="270" />
+			</speed>
+			<attack physical="56190.4761904762" magical="9915.96638655462" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4370.37037037037" magical="2537.63440860215" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="32726" level="1" /> <!-- Fafurion -->
+			<skill id="32727" level="3" /> <!-- Fafurion's Arrogance - Stage 1 -->
+		</skillList>
+	</npc>
+	<npc id="29366" level="85" type="L2Monster" name="Fafurion" title="Wrathful Water Dragon">
+		<race>DRAGON</race>
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="412872295" hpRegen="2070.17543859649" mp="124077" mpRegen="2185.18518518519" />
+			<speed>
+				<walk ground="45" />
+				<run ground="270" />
+			</speed>
+			<attack physical="56190.4761904762" magical="9915.96638655462" critical="4" attackSpeed="253" range="40" />
+			<defence physical="4370.37037037037" magical="2537.63440860215" />
+		</stats>
+		<status attackable="true" />
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="32726" level="1" /> <!-- Fafurion -->
+			<skill id="32727" level="3" /> <!-- Fafurion's Arrogance - Stage 1 -->
+		</skillList>
+	</npc>
+	<npc id="29367" level="85" type="L2RaidBoss" name="Fafurion" title="Wrathful Water Dragon">
+		<race>DRAGON</race>
+		<sex>MALE</sex>
+		<acquire exp="108452897573760" sp="97607602024" raidPoints="1000" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="260487323.99993" hpRegen="561.9508371" mp="100626.447" mpRegen="3.6" />
+			<attack physical="380451.1715" magical="272840.6485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="44109.29354" magical="21529.93964" />
+			<speed>
+				<walk ground="45" />
+				<run ground="270" />
+			</speed>
+		</stats>
+		<status attackable="true" />
 		<collision>
-			<radius normal="200" />
-			<height normal="320" />
+			<radius normal="200.0" />
+			<height normal="320.0" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+			<skill id="32726" level="1" /> <!-- Fafurion -->
+			<skill id="32727" level="3" /> <!-- Fafurion's Arrogance - Stage 3 -->
+		</skillList>
 		<dropLists>
 			<drop>
-				<item id="80113" min="1" max="2" chance="20.59" /> <!-- Leviathan Leather Gloves - Light Armor -->
-				<item id="80110" min="1" max="2" chance="20.49" /> <!-- Leviathan Leather Helmet - Light Armor -->
-				<item id="80111" min="1" max="2" chance="19.88" /> <!-- Leviathan Leather Armor - Light Armor -->
-				<item id="80114" min="1" max="2" chance="19.63" /> <!-- Leviathan Leather Boots - Light Armor -->
-				<item id="80112" min="1" max="2" chance="19.41" /> <!-- Leviathan Leather Leggings - Light Armor -->
-				<item id="80107" min="1" max="2" chance="17.34" /> <!-- Leviathan Gauntlets - Heavy Armor -->
-				<item id="80104" min="1" max="2" chance="17.33" /> <!-- Leviathan Helmet - Heavy Armor -->
-				<item id="80118" min="1" max="2" chance="16.73" /> <!-- Leviathan Gloves - Robe -->
-				<item id="80105" min="1" max="2" chance="16.67" /> <!-- Leviathan Breastplate - Heavy Armor -->
-				<item id="80115" min="1" max="2" chance="16.62" /> <!-- Leviathan's Circlet - Robe -->
-				<item id="80120" min="1" max="2" chance="16.535" /> <!-- Leviathan Sigil - Robe -->
-				<item id="80117" min="1" max="2" chance="16.4" /> <!-- Leviathan Stockings - Robe -->
-				<item id="80109" min="1" max="2" chance="16.34" /> <!-- Leviathan Shield - Heavy Armor -->
-				<item id="80116" min="1" max="2" chance="16.3" /> <!-- Leviathan Tunic - Robe -->
-				<item id="80106" min="1" max="2" chance="15.92" /> <!-- Leviathan Gaiters - Heavy Armor -->
-				<item id="80119" min="1" max="2" chance="15.91" /> <!-- Leviathan Shoes - Robe -->
-				<item id="80108" min="1" max="2" chance="15.87" /> <!-- Leviathan Boots - Heavy Armor -->
+				<item id="80113" min="1" max="2" chance="20.59" /> <!-- Leviathan Leather Gloves (page does not exist) -->
+				<item id="80110" min="1" max="2" chance="20.49" /> <!-- Leviathan Leather Helmet -->
+				<item id="80111" min="1" max="2" chance="19.88" /> <!-- Leviathan Leather Armor (page does not exist) -->
+				<item id="80114" min="1" max="2" chance="19.63" /> <!-- Leviathan Leather Boots (page does not exist) -->
+				<item id="80112" min="1" max="2" chance="19.41" /> <!-- Leviathan Leather Leggings (page does not exist) -->
+				<item id="80107" min="1" max="2" chance="17.34" /> <!-- Leviathan Gauntlets (page does not exist) -->
+				<item id="80104" min="1" max="2" chance="17.33" /> <!-- Leviathan Helmet -->
+				<item id="80118" min="1" max="2" chance="16.73" /> <!-- Leviathan Gloves (page does not exist) -->
+				<item id="80105" min="1" max="2" chance="16.67" /> <!-- Leviathan Breastplate (page does not exist) -->
+				<item id="80115" min="1" max="2" chance="16.62" /> <!-- Leviathan's Circlet -->
+				<item id="80120" min="1" max="2" chance="16.535" /> <!-- Leviathan Sigil (page does not exist) -->
+				<item id="80117" min="1" max="2" chance="16.4" /> <!-- Leviathan Stockings (page does not exist) -->
+				<item id="80109" min="1" max="2" chance="16.34" /> <!-- Leviathan Shield -->
+				<item id="80116" min="1" max="2" chance="16.3" /> <!-- Leviathan Tunic (page does not exist) -->
+				<item id="80106" min="1" max="2" chance="15.92" /> <!-- Leviathan Gaiters (page does not exist) -->
+				<item id="80119" min="1" max="2" chance="15.91" /> <!-- Leviathan Shoes (page does not exist) -->
+				<item id="80108" min="1" max="2" chance="15.87" /> <!-- Leviathan Boots (page does not exist) -->
 				<item id="80099" min="1" max="2" chance="9.153" /> <!-- Krishna Caster -->
 				<item id="80090" min="1" max="2" chance="9.141" /> <!-- Krishna Shaper -->
 				<item id="80091" min="1" max="2" chance="9.124" /> <!-- Krishna Cutter -->
@@ -2922,7 +2992,7 @@
 				<item id="80094" min="1" max="2" chance="9.066" /> <!-- Krishna Fighter -->
 				<item id="80097" min="1" max="2" chance="9.058" /> <!-- Krishna Shooter -->
 				<item id="80096" min="1" max="2" chance="9.044" /> <!-- Krishna Thrower -->
-				<item id="80092" min="1" max="2" chance="9.038" /> <!-- Krishna Slasher -->
+				<item id="80092" min="1" max="2" chance="9.038" /> <!-- Krishna Slasher (page does not exist) -->
 				<item id="19448" min="3" max="4" chance="30.6" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="36389" min="3" max="4" chance="30" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
 				<item id="37781" min="1" max="1" chance="25.68" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
@@ -2954,88 +3024,31 @@
 				<item id="46450" min="1" max="1" chance="7.684" /> <!-- Kain's Soul Crystal - Stage 7 -->
 				<item id="46481" min="1" max="1" chance="7.675" /> <!-- Leona's Soul Crystal - Stage 8 -->
 				<item id="46496" min="1" max="1" chance="7.673" /> <!-- Pantheon's Soul Crystal - Stage 8 -->
-				<item id="17702" min="1" max="1" chance="6.738" /> <!-- Lv. 5 Giant MEN Dye - Men +5 -->
-				<item id="17708" min="1" max="1" chance="6.727" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
-				<item id="17711" min="1" max="1" chance="6.722" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
-				<item id="17699" min="1" max="1" chance="6.709" /> <!-- Lv. 5 Giant CON Dye - CON +5 -->
-				<item id="17712" min="1" max="1" chance="6.702" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
-				<item id="17714" min="1" max="1" chance="6.691" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
-				<item id="17701" min="1" max="1" chance="6.689" /> <!-- Lv. 5 Giant WIT Dye - Wit +5 -->
+				<item id="17702" min="1" max="1" chance="6.738" /> <!-- Lv. 5 Giant MEN Dye -->
+				<item id="17708" min="1" max="1" chance="6.727" /> <!-- Lv. 5 Ancient MEN Dye -->
+				<item id="17711" min="1" max="1" chance="6.722" /> <!-- Lv. 5 Legendary CON Dye -->
+				<item id="17699" min="1" max="1" chance="6.709" /> <!-- Lv. 5 Giant CON Dye -->
+				<item id="17712" min="1" max="1" chance="6.702" /> <!-- Lv. 5 Legendary INT Dye -->
+				<item id="17714" min="1" max="1" chance="6.691" /> <!-- Lv. 5 Legendary MEN Dye -->
+				<item id="17701" min="1" max="1" chance="6.689" /> <!-- Lv. 5 Giant WIT Dye -->
 				<item id="39485" min="1" max="1" chance="6.685" /> <!-- Alchemic Tome: Dye -->
-				<item id="17703" min="1" max="1" chance="6.662" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
-				<item id="17706" min="1" max="1" chance="6.658" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
-				<item id="17705" min="1" max="1" chance="6.655" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
-				<item id="17709" min="1" max="1" chance="6.634" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
-				<item id="17700" min="1" max="1" chance="6.63" /> <!-- Lv. 5 Giant INT Dye - INT +5 -->
-				<item id="17713" min="1" max="1" chance="6.62" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
-				<item id="17710" min="1" max="1" chance="6.618" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+				<item id="17703" min="1" max="1" chance="6.662" /> <!-- Lv. 5 Ancient STR Dye -->
+				<item id="17706" min="1" max="1" chance="6.658" /> <!-- Lv. 5 Ancient INT Dye -->
+				<item id="17705" min="1" max="1" chance="6.655" /> <!-- Lv. 5 Ancient CON Dye -->
+				<item id="17709" min="1" max="1" chance="6.634" /> <!-- Lv. 5 Legendary STR Dye -->
+				<item id="17700" min="1" max="1" chance="6.63" /> <!-- Lv. 5 Giant INT Dye -->
+				<item id="17713" min="1" max="1" chance="6.62" /> <!-- Lv. 5 Legendary WIT Dye -->
+				<item id="17710" min="1" max="1" chance="6.618" /> <!-- Lv. 5 Legendary DEX Dye -->
 				<item id="39484" min="1" max="1" chance="6.615" /> <!-- Alchemic Tome: Life Stone -->
-				<item id="17697" min="1" max="1" chance="6.614" /> <!-- Lv. 5 Giant STR Dye - STR +5 -->
+				<item id="17697" min="1" max="1" chance="6.614" /> <!-- Lv. 5 Giant STR Dye -->
 				<item id="39483" min="1" max="1" chance="6.609" /> <!-- Alchemic Tome: Enchant Scroll -->
-				<item id="17707" min="1" max="1" chance="6.607" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
-				<item id="17704" min="1" max="1" chance="6.601" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
-				<item id="17698" min="1" max="1" chance="6.594" /> <!-- Lv. 5 Giant DEX Dye - DEX +5 -->
+				<item id="17707" min="1" max="1" chance="6.607" /> <!-- Lv. 5 Ancient WIT Dye -->
+				<item id="17704" min="1" max="1" chance="6.601" /> <!-- Lv. 5 Ancient DEX Dye -->
+				<item id="17698" min="1" max="1" chance="6.594" /> <!-- Lv. 5 Giant DEX Dye -->
 				<item id="46451" min="1" max="1" chance="5.2" /> <!-- Kain's Soul Crystal - Stage 8 -->
 				<item id="46466" min="1" max="1" chance="5.134" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
 			</drop>
 		</dropLists>
-	</npc>
-	<npc id="29365" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="270" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="200" />
-			<height normal="320" />
-		</collision>
-	</npc>
-	<npc id="29366" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="270" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="200" />
-			<height normal="320" />
-		</collision>
-	</npc>
-	<npc id="29367" level="85" type="L2Npc" name="Fafurion" title="Wrathful Water Dragon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
-			<speed>
-				<walk ground="45" />
-				<run ground="270" />
-			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
-		</stats>
-		<status attackable="false" />
-		<collision>
-			<radius normal="200" />
-			<height normal="320" />
-		</collision>
 	</npc>
 	<npc id="29368" level="85" type="L2Npc" name="Emerald Dragon" title="Servant">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
