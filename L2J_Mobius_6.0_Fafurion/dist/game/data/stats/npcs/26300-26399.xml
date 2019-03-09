@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="26300" level="85" type="L2Npc" name="Vampire Witch" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1807,14 +1807,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="60" />
-				<run ground="300" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="130" />
-			<height normal="69.8" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -1901,14 +1901,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="60" />
-				<run ground="300" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="82.5" />
-			<height normal="94.5" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -1995,14 +1995,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="60" />
-				<run ground="300" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="90" />
-			<height normal="73" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -2089,14 +2089,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="90" />
-				<run ground="300" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="30" />
-			<height normal="101" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->

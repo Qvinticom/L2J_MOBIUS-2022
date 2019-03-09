@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="24200" level="85" type="L2Npc" name="Silence Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -505,24 +505,23 @@
 		<sex>MALE</sex>
 		<acquire exp="330532630" sp="286225" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="83150.75" mp="34804.88" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="11701.62848" magical="10845.75" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="24945.225" magical="41575.375" />
+			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
-				<walk ground="140" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>SOS</clan>
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="30" />
-			<height normal="18.5" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
@@ -544,7 +543,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="45.93" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -553,16 +552,15 @@
 		<sex>MALE</sex>
 		<acquire exp="1338151420" sp="1202252" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="571685.75" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="80095.96284" magical="74567.706521739" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="171505.725" magical="285842.875" />
+			<vitals hp="1442740.459845" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>SOS</clan>
@@ -577,7 +575,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -592,7 +590,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="45.4" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -601,16 +599,15 @@
 		<sex>MALE</sex>
 		<acquire exp="1338151420" sp="1202252" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="571685.75" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="80095.96284" magical="74567.706521739" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="171505.725" magical="285842.875" />
+			<vitals hp="1442740.459845" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>SOS</clan>
@@ -641,7 +638,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="45.68" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -650,16 +647,15 @@
 		<sex>MALE</sex>
 		<acquire exp="1541367421" sp="1385329" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="623657.25" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="87372.53848" magical="81346.597826087" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="187097.175" magical="311828.625" />
+			<vitals hp="1573898.855535" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>SOS</clan>
@@ -674,7 +670,7 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -689,7 +685,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.79" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -701,16 +697,15 @@
 		</parameters>
 		<acquire exp="1541367421" sp="1385329" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="623657.25" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="87372.53848" magical="81346.597826087" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="187097.175" magical="311828.625" />
+			<vitals hp="1573898.855535" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="MAGE" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>SOS</clan>
@@ -742,7 +737,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.36" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -754,16 +749,15 @@
 		</parameters>
 		<acquire exp="1541367421" sp="1385329" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="623657.25" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="87372.53848" magical="81346.597826087" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="187097.175" magical="311828.625" />
+			<vitals hp="1573898.855535" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="MAGE" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>SOS</clan>
@@ -793,7 +787,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.18" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -802,29 +796,28 @@
 		<sex>MALE</sex>
 		<acquire exp="5254515360" sp="4723920" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2702515.25" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="378413.22412" magical="352501.98913043" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="810754.575" magical="1351257.625" />
+			<vitals hp="6820229.635815" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
-				<walk ground="90" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>SOS</clan>
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="30" />
-			<height normal="101" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
@@ -840,7 +833,7 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.91" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -849,24 +842,23 @@
 		<sex>MALE</sex>
 		<acquire exp="3236872729" sp="2908046" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2883964" mp="26228" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="174684.55348" magical="162693.19565217" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="374194.35" magical="623657.25" />
+			<vitals hp="3147797.71107" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
-				<walk ground="140" />
-				<run ground="180" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>SOS</clan>
 			</clanList>
 		</ai>
 		<collision>
-			<radius normal="60" />
-			<height normal="40" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
@@ -890,7 +882,7 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.42" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -899,16 +891,15 @@
 		<sex>MALE</sex>
 		<acquire exp="191304136" sp="168540" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="76221.75" mp="34804.88" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="10731.00284" magical="9941.9673913043" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="22866.525" magical="38110.875" />
+			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="32" />
@@ -932,7 +923,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="45.14" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -941,16 +932,15 @@
 		<sex>MALE</sex>
 		<acquire exp="220358903" sp="194633" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="83150.75" mp="34804.88" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="11701.62848" magical="10845.75" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="24945.225" magical="41575.375" />
+			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="35.2" />
 			<height normal="49" />
@@ -974,7 +964,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.44" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -983,16 +973,15 @@
 		<sex>MALE</sex>
 		<acquire exp="191304136" sp="168540" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="76221.75" mp="34804.88" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="10731.00284" magical="9941.9673913043" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="22866.525" magical="38110.875" />
+			<vitals hp="192357.781605" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="35" />
@@ -1016,7 +1005,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.56" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1025,16 +1014,15 @@
 		<sex>MALE</sex>
 		<acquire exp="220358903" sp="194633" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="83150.75" mp="34804.88" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="11701.62848" magical="10845.75" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="24945.225" magical="41575.375" />
+			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18" />
 			<height normal="35" />
@@ -1058,7 +1046,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.04" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1067,16 +1055,15 @@
 		<sex>MALE</sex>
 		<acquire exp="220358903" sp="194633" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="83150.75" mp="34804.88" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="11701.62848" magical="10845.75" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="24945.225" magical="41575.375" />
+			<vitals hp="209844.221745" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="50" />
 			<height normal="25" />
@@ -1100,7 +1087,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.16" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1109,16 +1096,15 @@
 		<sex>MALE</sex>
 		<acquire exp="525848112" sp="466560" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="180160.5" mp="34804.88" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="25283.55912" magical="23499.195652174" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="54048.15" magical="90080.25" />
+			<vitals hp="454663.84743" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="90" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="101" />
@@ -1126,7 +1112,7 @@
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 		<dropLists>
@@ -1144,7 +1130,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="1" chance="0" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.77" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
