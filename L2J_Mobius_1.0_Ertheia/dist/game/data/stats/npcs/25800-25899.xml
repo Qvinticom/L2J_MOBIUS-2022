@@ -9,7 +9,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2541011" sp="95136" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="8172432" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<attack physical="45027.4086463771" magical="7933.39078546243" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
 			<defence physical="3607.74748074426" magical="2081.35112045963" />
@@ -403,7 +403,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="433094" sp="103" />
-		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="204238" hpRegen="140.389595300422" mp="1007" mpRegen="2.4" />
 			<speed>
 				<walk ground="46" />
@@ -481,7 +481,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<acquire exp="433606" sp="104" />
-		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="226581" hpRegen="148.411184814856" mp="1097" mpRegen="2.7" />
 			<speed>
 				<walk ground="46" />
@@ -560,7 +560,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<acquire exp="470081" sp="112" />
-		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="252431" hpRegen="157.068083969282" mp="1219" mpRegen="2.7" />
 			<speed>
 				<walk ground="60" />
@@ -640,7 +640,7 @@
 		<sex>MALE</sex>
 		<acquire exp="502954" sp="120" />
 		<equipment rhand="147" /> <!-- Tear of Darkness -->
-		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="274258" hpRegen="163.901363297288" mp="1345" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
@@ -687,7 +687,7 @@
 		<sex>MALE</sex>
 		<acquire exp="518128" sp="124" />
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
-		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="284017" hpRegen="166.91181661428" mp="1410" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
@@ -766,7 +766,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<acquire exp="540997" sp="129" />
-		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="297703" hpRegen="171.270903950157" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
@@ -846,7 +846,7 @@
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
 		<acquire exp="540997" sp="129" />
-		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="297703" hpRegen="171.270903950157" mp="1507" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
@@ -2249,7 +2249,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="530201" hpRegen="8.5" mp="2242" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
@@ -2303,7 +2303,7 @@
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="2081767" hpRegen="8.5" mp="33087" mpRegen="30" />
 			<speed>
 				<walk ground="30" />
@@ -3515,7 +3515,7 @@
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
-		<stats str="164" int="188" dex="48" wit="71" con="111" men="149">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="1277698" hpRegen="8.5" mp="22800" mpRegen="30" />
 			<speed>
 				<walk ground="60" />

@@ -3,7 +3,7 @@
 	<npc id="29300" level="97" type="L2RaidBoss" name="Varkaron" title="Dimensional Invader">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="231808530" hpRegen="7.5" mp="47100" mpRegen="2.7" />
 			<attack physical="47220.231122922" magical="8304.9036091231" critical="4" attackSpeed="253" range="40" />
 			<defence physical="4347.718797982" magical="2100.4713645644" />
@@ -665,7 +665,7 @@
 	<npc id="29319" level="109" type="L2RaidBoss" name="Etis van Etina" title="Overlord">
 		<race>HUMANOID</race>
 		<acquire exp="0" sp="0" raidPoints="0" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="707640714" hpRegen="1912.28070175439" mp="110728" mpRegen="2018.51851851852" />
 			<speed>
 				<walk ground="60" />
@@ -687,7 +687,7 @@
 	</npc>
 	<npc id="29320" level="109" type="L2RaidBoss" name="Kain Van Halter" title="Disciple of Void">
 		<race>ETC</race>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="10713486" hpRegen="1789.47368421053" mp="96766" mpRegen="1888.88888888889" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
