@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
+﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="24300" level="85" type="L2Npc" name="Lurin">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -330,16 +330,15 @@
 		<sex>MALE</sex>
 		<acquire exp="222117927" sp="199899" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="124726" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="17522.16348" magical="16268.608695652" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="37417.8" magical="62363" />
+			<vitals hp="314766.01716" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>FOS</clan>
@@ -350,7 +349,7 @@
 			<height normal="43.8" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
@@ -366,7 +365,7 @@
 				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="45.37" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -375,16 +374,15 @@
 		<sex>MALE</sex>
 		<acquire exp="222117927" sp="199899" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="124726" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="17522.16348" magical="16268.608695652" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="37417.8" magical="62363" />
+			<vitals hp="314766.01716" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>FOS</clan>
@@ -395,7 +393,7 @@
 			<height normal="41.4" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
@@ -412,7 +410,7 @@
 				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="45.49" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -421,16 +419,15 @@
 		<sex>MALE</sex>
 		<acquire exp="192829535" sp="173483" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="114332.25" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="16066.47284" magical="14912.902173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="34299.675" magical="57166.125" />
+			<vitals hp="288535.726035" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>FOS</clan>
@@ -441,7 +438,7 @@
 			<height normal="20" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
@@ -458,7 +455,7 @@
 				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.59" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -467,16 +464,15 @@
 		<sex>MALE</sex>
 		<acquire exp="192829535" sp="173483" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="114332.25" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="16066.47284" magical="14912.902173913" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="34299.675" magical="57166.125" />
+			<vitals hp="288535.726035" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>FOS</clan>
@@ -487,7 +483,7 @@
 			<height normal="20" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
@@ -504,7 +500,7 @@
 				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.66" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -513,16 +509,15 @@
 		<sex>MALE</sex>
 		<acquire exp="283699270" sp="255322" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="145513.75" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="20433.57976" magical="18980.054347826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="43654.125" magical="72756.875" />
+			<vitals hp="367227.230325" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>FOS</clan>
@@ -533,7 +528,7 @@
 			<height normal="43.8" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
@@ -549,7 +544,7 @@
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="45.9" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -558,16 +553,15 @@
 		<sex>MALE</sex>
 		<acquire exp="283699270" sp="255322" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="145513.75" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="20433.57976" magical="18980.054347826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="43654.125" magical="72756.875" />
+			<vitals hp="367227.230325" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>FOS</clan>
@@ -578,7 +572,7 @@
 			<height normal="41.4" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
@@ -595,7 +589,7 @@
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.79" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -604,16 +598,15 @@
 		<sex>MALE</sex>
 		<acquire exp="252403361" sp="227098" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="135120.25" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="18977.92412" magical="17624.380434783" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="40536.075" magical="67560.125" />
+			<vitals hp="340997.570115" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>FOS</clan>
@@ -624,7 +617,7 @@
 			<height normal="20" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
@@ -641,7 +634,7 @@
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="45.66" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -650,16 +643,15 @@
 		<sex>MALE</sex>
 		<acquire exp="252403361" sp="227098" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="135120.25" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="18977.92412" magical="17624.380434783" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="40536.075" magical="67560.125" />
+			<vitals hp="340997.570115" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
+		<status attackable="true" />
 		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
 			<clanList>
 				<clan>FOS</clan>
@@ -670,7 +662,7 @@
 			<height normal="20" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<dropLists>
@@ -687,7 +679,7 @@
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.95" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
