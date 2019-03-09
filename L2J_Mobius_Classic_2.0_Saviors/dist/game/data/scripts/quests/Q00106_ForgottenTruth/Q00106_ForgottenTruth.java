@@ -48,6 +48,7 @@ public final class Q00106_ForgottenTruth extends Quest
 	private static final int REWARDS = 49049; // Eldritch Dagger (Novice)
 	// Misc
 	private static final int MIN_LVL = 10;
+	private static final int MAX_LEVEL = 15;
 	
 	public Q00106_ForgottenTruth()
 	{
@@ -56,6 +57,7 @@ public final class Q00106_ForgottenTruth extends Quest
 		addTalkId(THIFIELL, KARTA);
 		addKillId(TUMRAN_ORC_BRIGAND);
 		registerQuestItems(KARTAS_TRANSLATION, ONYX_TALISMAN1, ONYX_TALISMAN2, ANCIENT_SCROLL, ANCIENT_CLAY_TABLET);
+		addCondMaxLevel(MAX_LEVEL, "30358-02.htm");
 	}
 	
 	@Override

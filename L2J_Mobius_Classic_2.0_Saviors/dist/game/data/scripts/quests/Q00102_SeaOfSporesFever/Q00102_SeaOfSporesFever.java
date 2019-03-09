@@ -58,6 +58,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 	
 	// Misc
 	private static final int MIN_LVL = 12;
+	private static final int MAX_LEVEL = 18;
 	private static final Map<Integer, Integer> SENTINELS = new HashMap<>();
 	static
 	{
@@ -75,6 +76,7 @@ public class Q00102_SeaOfSporesFever extends Quest
 		addTalkId(ALBERIUS, COBENDELL, GARTRANDELL, BERROS, VELTRESS, RAYEN);
 		addKillId(DRYAD, DRYAD_ELDER);
 		registerQuestItems(ALBERIUS_LIST, ALBERIUS_LETTER, EVERGREEN_AMULET, DRYADS_TEAR, COBENDELLS_MEDICINE1, COBENDELLS_MEDICINE2, COBENDELLS_MEDICINE3, COBENDELLS_MEDICINE4, COBENDELLS_MEDICINE5);
+		addCondMaxLevel(MAX_LEVEL, "30284-08.htm");
 	}
 	
 	@Override

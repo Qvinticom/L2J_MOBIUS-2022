@@ -76,6 +76,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 	private static final int STAFF_OF_SUNSET = 49045;
 	// Misc
 	private static final int MIN_LVL = 10;
+	private static final int MAX_LEVEL = 15;
 	
 	public Q00105_SkirmishWithOrcs()
 	{
@@ -84,6 +85,7 @@ public final class Q00105_SkirmishWithOrcs extends Quest
 		addTalkId(KENDNELL);
 		addKillId(MONSTER_DROP.keySet());
 		registerQuestItems(KENDNELLS_ORDERS);
+		addCondMaxLevel(MAX_LEVEL, "30218-02.htm");
 	}
 	
 	@Override

@@ -56,6 +56,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 	private static final int REWARDS = 49044; // Wand of Adept
 	// Misc
 	private static final int MIN_LVL = 10;
+	private static final int MAX_LEVEL = 15;
 	
 	public Q00104_SpiritOfMirrors()
 	{
@@ -64,6 +65,7 @@ public final class Q00104_SpiritOfMirrors extends Quest
 		addTalkId(ARNOLD, GALLINT, JOHNSTONE, KENYOS);
 		addKillId(MONSTERS.keySet());
 		registerQuestItems(GALLINTS_OAK_WAND, SPIRITBOUND_WAND1, SPIRITBOUND_WAND2, SPIRITBOUND_WAND3);
+		addCondMaxLevel(MAX_LEVEL, "30017-02.htm");
 	}
 	
 	@Override

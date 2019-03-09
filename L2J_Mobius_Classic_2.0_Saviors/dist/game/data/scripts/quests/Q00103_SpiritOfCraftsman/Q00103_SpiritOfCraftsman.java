@@ -53,6 +53,7 @@ public final class Q00103_SpiritOfCraftsman extends Quest
 	private static final int REWARDS = 49050; // Blood Saber
 	// Misc
 	private static final int MIN_LVL = 10;
+	private static final int MAX_LEVEL = 16;
 	
 	public Q00103_SpiritOfCraftsman()
 	{
@@ -61,6 +62,7 @@ public final class Q00103_SpiritOfCraftsman extends Quest
 		addTalkId(BLACKSMITH_KAROYD, CECON, HARNE);
 		addKillId(MARSH_ZOMBIE, DOOM_SOLDIER, SKELETON_HUNTER, SKELETON_HUNTER_ARCHER);
 		registerQuestItems(KAROYDS_LETTER, CECKTINONS_VOUCHER1, CECKTINONS_VOUCHER2, SOUL_CATCHER, PRESERVE_OIL, ZOMBIE_HEAD, STEELBENDERS_HEAD, BONE_FRAGMENT);
+		addCondMaxLevel(MAX_LEVEL, "30307-02.htm");
 	}
 	
 	@Override
