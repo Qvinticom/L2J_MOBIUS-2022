@@ -1466,81 +1466,84 @@
 		</dropLists>
 	</npc>
 	<npc id="25932" level="86" type="L2RaidBoss" name="Transformed: Dartanion" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<acquire exp="3394764000" sp="814743" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="17318591" hpRegen="9.5" mp="37636" mpRegen="3.3" />
+			<vitals hp="26016136.491975" hpRegen="319.2293199" mp="61717.911" mpRegen="3" />
+			<attack physical="8378.426681" magical="2640.22553" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3669.642906" magical="1790.222112" />
 			<speed>
 				<walk ground="20" />
 				<run ground="180" />
 			</speed>
-			<attack physical="25419.415424346" magical="4570.4880793208" critical="4" attackSpeed="253" range="40" />
-			<defence physical="813.14285714286" magical="442.41472812901" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="60" />
+			<height normal="65" />
+		</collision>
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="15626" level="1" /> <!-- Raid Boss (Lv. 86) -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="15626" level="1" /> <!-- Raid Boss (Lv. 86) -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17313" min="1" max="1" chance="18.02" /> <!-- Immortal Leather Gloves - Light Armor -->
-				<item id="17312" min="1" max="1" chance="17.95" /> <!-- Immortal Leather Leggings - Light Armor -->
-				<item id="17311" min="1" max="1" chance="17.9" /> <!-- Immortal Leather Armor - Light Armor -->
-				<item id="17310" min="1" max="1" chance="17.56" /> <!-- Immortal Leather Helmet - Light Armor -->
-				<item id="17314" min="1" max="1" chance="17.12" /> <!-- Immortal Leather Boots - Light Armor -->
-				<item id="17316" min="1" max="1" chance="15.73" /> <!-- Immortal Tunic - Robe -->
-				<item id="17306" min="1" max="1" chance="15.67" /> <!-- Immortal Gaiters - Heavy Armor -->
-				<item id="17309" min="1" max="1" chance="15.64" /> <!-- Immortal Shield - Heavy Armor -->
-				<item id="17305" min="1" max="1" chance="15.43" /> <!-- Immortal Breastplate - Heavy Armor -->
-				<item id="17304" min="1" max="1" chance="15.29" /> <!-- Immortal Helmet - Heavy Armor -->
-				<item id="17319" min="1" max="1" chance="15.03" /> <!-- Immortal Shoes - Robe -->
-				<item id="17318" min="1" max="1" chance="14.97" /> <!-- Immortal Gloves - Robe -->
-				<item id="17317" min="1" max="1" chance="14.93" /> <!-- Immortal Stockings - Robe -->
-				<item id="17307" min="1" max="1" chance="14.91" /> <!-- Immortal Gauntlets - Heavy Armor -->
-				<item id="17308" min="1" max="1" chance="14.84" /> <!-- Immortal Boots - Heavy Armor -->
-				<item id="17320" min="1" max="1" chance="14.83" /> <!-- Immortal Sigil - Robe -->
-				<item id="17315" min="1" max="1" chance="14.37" /> <!-- Immortal Circlet - Robe -->
-				<item id="17292" min="1" max="1" chance="4.607" /> <!-- Requiem Slasher -->
-				<item id="17297" min="1" max="1" chance="4.5675" /> <!-- Requiem Shooter -->
-				<item id="17296" min="1" max="1" chance="4.556" /> <!-- Requiem Thrower -->
-				<item id="17294" min="1" max="1" chance="4.546" /> <!-- Requiem Fighter -->
-				<item id="17299" min="1" max="1" chance="4.543" /> <!-- Requiem Caster -->
-				<item id="17291" min="1" max="1" chance="4.5415" /> <!-- Requiem Cutter -->
-				<item id="17295" min="1" max="1" chance="4.5355" /> <!-- Requiem Stormer -->
-				<item id="17290" min="1" max="1" chance="4.53" /> <!-- Requiem Shaper -->
-				<item id="17293" min="1" max="1" chance="4.521" /> <!-- Requiem Avenger -->
-				<item id="17300" min="1" max="1" chance="4.498" /> <!-- Requiem Retributer -->
-				<item id="17298" min="1" max="1" chance="4.49" /> <!-- Requiem Buster -->
-				<item id="19448" min="1" max="1" chance="80.23" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="45937" min="1" max="1" chance="34.37" /> <!-- Hair Accessory Spirit Stone -->
-				<item id="37779" min="1" max="1" chance="34.12" /> <!-- Scroll of Blessing: Armor (R-grade) -->
-				<item id="19447" min="1" max="1" chance="19.21" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="17698" min="1" max="1" chance="17.24" /> <!-- Lv. 5 Giant DEX Dye - DEX +5 -->
-				<item id="17702" min="1" max="1" chance="16.84" /> <!-- Lv. 5 Giant MEN Dye - Men +5 -->
-				<item id="17699" min="1" max="1" chance="16.81" /> <!-- Lv. 5 Giant CON Dye - CON +5 -->
-				<item id="17697" min="1" max="1" chance="16.31" /> <!-- Lv. 5 Giant STR Dye - STR +5 -->
-				<item id="17701" min="1" max="1" chance="16.24" /> <!-- Lv. 5 Giant WIT Dye - Wit +5 -->
-				<item id="17700" min="1" max="1" chance="15.85" /> <!-- Lv. 5 Giant INT Dye - INT +5 -->
-				<item id="36978" min="1" max="1" chance="15.12" /> <!-- Scroll: Enchant Hair Accessory -->
-				<item id="37770" min="1" max="1" chance="14.91" /> <!-- Scroll of Blessing: Weapon (R-grade) -->
-				<item id="46489" min="1" max="1" chance="1.128" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="1.071" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="1.045" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="17314" min="1" max="1" chance="18.06" /> <!-- Immortal Leather Boots - Light Armor -->
+				<item id="17310" min="1" max="1" chance="17.99" /> <!-- Immortal Leather Helmet - Light Armor -->
+				<item id="17312" min="1" max="1" chance="17.96" /> <!-- Immortal Leather Leggings - Light Armor -->
+				<item id="17311" min="1" max="1" chance="17.27" /> <!-- Immortal Leather Armor - Light Armor -->
+				<item id="17313" min="1" max="1" chance="17.19" /> <!-- Immortal Leather Gloves - Light Armor -->
+				<item id="17304" min="1" max="1" chance="15.41" /> <!-- Immortal Helmet - Heavy Armor -->
+				<item id="17319" min="1" max="1" chance="15.39" /> <!-- Immortal Shoes - Robe -->
+				<item id="17307" min="1" max="1" chance="15.34" /> <!-- Immortal Gauntlets - Heavy Armor -->
+				<item id="17308" min="1" max="1" chance="15.34" /> <!-- Immortal Boots - Heavy Armor -->
+				<item id="17309" min="1" max="1" chance="15.27" /> <!-- Immortal Shield - Heavy Armor -->
+				<item id="17316" min="1" max="1" chance="15.2" /> <!-- Immortal Tunic - Robe -->
+				<item id="17317" min="1" max="1" chance="15.14" /> <!-- Immortal Stockings - Robe -->
+				<item id="17305" min="1" max="1" chance="15.1" /> <!-- Immortal Breastplate - Heavy Armor -->
+				<item id="17306" min="1" max="1" chance="15.08" /> <!-- Immortal Gaiters - Heavy Armor -->
+				<item id="17318" min="1" max="1" chance="15.03" /> <!-- Immortal Gloves - Robe -->
+				<item id="17315" min="1" max="1" chance="14.96" /> <!-- Immortal Circlet - Robe -->
+				<item id="17320" min="1" max="1" chance="14.49" /> <!-- Immortal Sigil - Robe -->
+				<item id="17295" min="1" max="1" chance="4.61" /> <!-- Requiem Stormer -->
+				<item id="17296" min="1" max="1" chance="4.601" /> <!-- Requiem Thrower -->
+				<item id="17298" min="1" max="1" chance="4.5995" /> <!-- Requiem Buster -->
+				<item id="17293" min="1" max="1" chance="4.587" /> <!-- Requiem Avenger -->
+				<item id="17294" min="1" max="1" chance="4.579" /> <!-- Requiem Fighter -->
+				<item id="17292" min="1" max="1" chance="4.563" /> <!-- Requiem Slasher -->
+				<item id="17299" min="1" max="1" chance="4.545" /> <!-- Requiem Caster -->
+				<item id="17300" min="1" max="1" chance="4.538" /> <!-- Requiem Retributer -->
+				<item id="17297" min="1" max="1" chance="4.53" /> <!-- Requiem Shooter -->
+				<item id="17290" min="1" max="1" chance="4.5255" /> <!-- Requiem Shaper -->
+				<item id="17291" min="1" max="1" chance="4.489" /> <!-- Requiem Cutter -->
+				<item id="19448" min="1" max="1" chance="80.85" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="45937" min="1" max="1" chance="35.6" /> <!-- Hair Accessory Spirit Stone -->
+				<item id="37779" min="1" max="1" chance="34.28" /> <!-- Scroll of Blessing: Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="19.61" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="17697" min="1" max="1" chance="17.02" /> <!-- Lv. 5 Giant STR Dye - STR +5 -->
+				<item id="17701" min="1" max="1" chance="17.01" /> <!-- Lv. 5 Giant WIT Dye - Wit +5 -->
+				<item id="17702" min="1" max="1" chance="16.92" /> <!-- Lv. 5 Giant MEN Dye - Men +5 -->
+				<item id="17700" min="1" max="1" chance="16.75" /> <!-- Lv. 5 Giant INT Dye - INT +5 -->
+				<item id="17698" min="1" max="1" chance="16.74" /> <!-- Lv. 5 Giant DEX Dye - DEX +5 -->
+				<item id="17699" min="1" max="1" chance="16.48" /> <!-- Lv. 5 Giant CON Dye - CON +5 -->
+				<item id="37770" min="1" max="1" chance="15.35" /> <!-- Scroll of Blessing: Weapon (R-grade) -->
+				<item id="36978" min="1" max="1" chance="14.35" /> <!-- Scroll: Enchant Hair Accessory -->
+				<item id="46474" min="1" max="1" chance="1.152" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="1.082" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="1.065" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46490" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="46475" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
@@ -1552,25 +1555,8 @@
 				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
 				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
 				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="60" />
-			<height normal="65" />
-		</collision>
 	</npc>
 	<npc id="25933" level="93" type="L2RaidBoss" name="Garden Patrol Captain" title="Raid Boss">
 		<parameters>
@@ -4169,7 +4155,6 @@
 		</dropLists>
 	</npc>
 	<npc id="25969" level="97" type="L2RaidBoss" name="Stelos" title="Raid Boss">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<minions name="Privates">
 				<npc id="25973" count="1" respawnTime="360" weightPoint="1" />
@@ -4179,30 +4164,34 @@
 			</minions>
 		</parameters>
 		<race>GIANT</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="18588531" hpRegen="10.5" mp="68400" mpRegen="3.6" />
+			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />
+			<attack physical="42936.94521" magical="7578.692529" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4671.572037" magical="2279.00964" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />
 			</speed>
-			<attack physical="42936.977054453" magical="7578.7033585297" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4244.623655914" magical="2030.7649339907" />
 			<attribute>
 				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
 				<attack type="EARTH" value="430" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
+		<collision>
+			<radius normal="45" />
+			<height normal="83" />
+		</collision>
 		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="16288" level="1" /> <!-- 97Lv. Raid Boss -->
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="16288" level="1" /> <!-- Raid Boss (Lv. 97) -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -4214,40 +4203,40 @@
 				<item id="17526" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="17527" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="47714" min="1" max="1" chance="100" /> <!-- Rare Accessory Spirit Stone -->
-				<item id="17690" min="3" max="3" chance="17.51" /> <!-- Lv. 4 Ancient MEN Dye - MEN +5/ INT -2/ Holy Resistance +20 -->
-				<item id="17686" min="3" max="3" chance="17.14" /> <!-- Lv. 4 Ancient DEX Dye - DEX +5/ CON -2/ Earth Resistance +20 -->
-				<item id="17689" min="3" max="3" chance="17.06" /> <!-- Lv. 4 Ancient WIT Dye - WIT +5/ MEN -2/ Wind Resistance +20 -->
-				<item id="17688" min="3" max="3" chance="16.72" /> <!-- Lv. 4 Ancient INT Dye - INT +5/ WIT -2/ Water Resistance +20 -->
-				<item id="17687" min="3" max="3" chance="16.66" /> <!-- Lv. 4 Ancient CON Dye - CON +5/ STR -2/ Dark Resistance +20 -->
-				<item id="17685" min="3" max="3" chance="16.5" /> <!-- Lv. 4 Ancient STR Dye - STR +5/ DEX -2/ Fire Resistance +20 -->
-				<item id="38574" min="1" max="1" chance="2.338" /> <!-- Apparition Stone (Lv. 98) -->
-				<item id="46489" min="1" max="1" chance="1.303" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="1.282" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="1.254" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46490" min="1" max="1" chance="1.114" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46475" min="1" max="1" chance="1.046" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46505" min="1" max="1" chance="1.013" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="17687" min="3" max="3" chance="17.28" /> <!-- Lv. 4 Ancient CON Dye - CON +5/ STR -2/ Dark Resistance +20 -->
+				<item id="17686" min="3" max="3" chance="17.22" /> <!-- Lv. 4 Ancient DEX Dye - DEX +5/ CON -2/ Earth Resistance +20 -->
+				<item id="17690" min="3" max="3" chance="16.77" /> <!-- Lv. 4 Ancient MEN Dye - MEN +5/ INT -2/ Holy Resistance +20 -->
+				<item id="17689" min="3" max="3" chance="16.76" /> <!-- Lv. 4 Ancient WIT Dye - WIT +5/ MEN -2/ Wind Resistance +20 -->
+				<item id="17688" min="3" max="3" chance="16.15" /> <!-- Lv. 4 Ancient INT Dye - INT +5/ WIT -2/ Water Resistance +20 -->
+				<item id="17685" min="3" max="3" chance="16.02" /> <!-- Lv. 4 Ancient STR Dye - STR +5/ DEX -2/ Fire Resistance +20 -->
+				<item id="38574" min="1" max="1" chance="2.35" /> <!-- Apparition Stone (Lv. 98) -->
+				<item id="46504" min="1" max="1" chance="1.324" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46474" min="1" max="1" chance="1.323" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="1.201" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="1.108" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="1.1" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46490" min="1" max="1" chance="1" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
 				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
 				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
 				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
-				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
-				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
 				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46463" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="38016" min="1" max="1" chance="0.3" /> <!-- Specter Fighter Crafting Pack -->
+				<item id="38015" min="1" max="1" chance="0.3" /> <!-- Specter Avenger Crafting Pack -->
 				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
 				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
 				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
 				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="38012" min="1" max="1" chance="0.3" /> <!-- Specter Shaper Crafting Pack -->
+				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="46493" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
 				<item id="38035" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Crafting Pack - Robe -->
-				<item id="38013" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Crafting Pack -->
 				<item id="38014" min="1" max="1" chance="0.3" /> <!-- Specter Slasher Crafting Pack -->
 				<item id="46478" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 5 -->
 				<item id="46448" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 5 -->
@@ -4274,25 +4263,8 @@
 				<item id="38033" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
 				<item id="38032" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
 				<item id="38019" min="1" max="1" chance="0.3" /> <!-- Specter Shooter Crafting Pack -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="45" />
-			<height normal="83" />
-		</collision>
 	</npc>
 	<npc id="25970" level="97" type="L2RaidBoss" name="Ravolas" title="Raid Boss">
 		<parameters>
@@ -4304,7 +4276,7 @@
 			</minions>
 		</parameters>
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<acquire exp="9058597718" sp="2174063" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27923851.21218" hpRegen="379.3777269" mp="112166.166" mpRegen="3" />

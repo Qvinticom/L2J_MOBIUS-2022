@@ -2264,14 +2264,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="140" />
-				<run ground="300" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="78" />
-			<height normal="52.9" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
@@ -2358,14 +2358,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="36" />
-				<run ground="300" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="66" />
-			<height normal="54" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
@@ -2452,14 +2452,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="60" />
-				<run ground="300" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="40" />
-			<height normal="91" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
@@ -2546,14 +2546,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="40" />
-				<run ground="300" />
+				<walk ground="50" />
+				<run ground="120" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="45" />
-			<height normal="115.5" />
+			<radius normal="8" />
+			<height normal="22.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->

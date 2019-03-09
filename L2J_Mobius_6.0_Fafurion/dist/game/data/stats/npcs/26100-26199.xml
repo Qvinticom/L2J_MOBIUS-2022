@@ -1905,7 +1905,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="26131" level="101" type="L2RaidBoss" name="Isabella" title="Raid Boss">
+	<npc id="26131" level="104" type="L2RaidBoss" name="Isabella" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="26132" count="2" respawnTime="360" weightPoint="1" />
@@ -3384,43 +3384,47 @@
 		</collision>
 	</npc>
 	<npc id="26162" level="101" type="L2RaidBoss" name="Demon Worshipper Dorgon" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="26803320" hpRegen="1771.9298245614" mp="72788" mpRegen="1870.37037037037" />
+			<vitals hp="40264178.265075" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
+			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32291.88188" magical="15761.80918" />
 			<speed>
 				<walk ground="58" />
 				<run ground="300" />
 			</speed>
-			<attack physical="278523.7147" magical="199743.3485" critical="4" attackSpeed="253" range="40" />
-			<defence physical="32291.88188" magical="15761.80918" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="56" />
+			<height normal="78" />
+		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16788" level="1" /> <!-- Raid Boss (Lv. 101) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17443" min="1" max="1" chance="1.519" /> <!-- Eternal Stockings - Robe -->
-				<item id="17442" min="1" max="1" chance="1.47" /> <!-- Eternal Tunic - Robe -->
+				<item id="17431" min="1" max="1" chance="1.543" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17432" min="1" max="1" chance="1.514" /> <!-- Eternal Gaiters - Heavy Armor -->
 				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="45932" min="1" max="1" chance="25.63" /> <!-- Top-grade Spirit Stone -->
-				<item id="17708" min="2" max="2" chance="17.44" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
-				<item id="17707" min="2" max="2" chance="17.25" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
-				<item id="17706" min="2" max="2" chance="17.06" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
-				<item id="17705" min="2" max="2" chance="16.98" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
-				<item id="17703" min="2" max="2" chance="16.93" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
-				<item id="17704" min="2" max="2" chance="16.8" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
-				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
-				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
-				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="45932" min="1" max="1" chance="25.73" /> <!-- Top-grade Spirit Stone -->
+				<item id="17703" min="2" max="2" chance="17.34" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17704" min="2" max="2" chance="17.26" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17708" min="2" max="2" chance="17.25" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17705" min="2" max="2" chance="17.22" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17706" min="2" max="2" chance="16.53" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17707" min="2" max="2" chance="15.9" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
 				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
 				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
 				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
 				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
@@ -3470,25 +3474,8 @@
 				<item id="46509" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 				<item id="46464" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46449" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="56" />
-			<height normal="78" />
-		</collision>
 	</npc>
 	<npc id="26163" level="101" type="L2RaidBoss" name="Demon Worshipper Zarka" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -3585,43 +3572,47 @@
 		</dropLists>
 	</npc>
 	<npc id="26164" level="101" type="L2RaidBoss" name="Demon Worshipper Kultaan" title="Raid Boss">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
+		<sex>MALE</sex>
 		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="22782822" hpRegen="1771.9298245614" mp="72788" mpRegen="1870.37037037037" />
+			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
+			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32291.88188" magical="15761.80918" />
 			<speed>
 				<walk ground="75" />
 				<run ground="300" />
 			</speed>
-			<attack physical="278523.7147" magical="199743.3485" critical="4" attackSpeed="253" range="40" />
-			<defence physical="32291.88188" magical="15761.80918" />
 		</stats>
 		<status attackable="true" />
+		<collision>
+			<radius normal="58" />
+			<height normal="91" />
+		</collision>
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="16788" level="3" /> <!-- Raid Boss (Lv. 101) -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17431" min="1" max="1" chance="1.541" /> <!-- Eternal Breastplate - Heavy Armor -->
-				<item id="17432" min="1" max="1" chance="1.513" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17443" min="1" max="1" chance="1.537" /> <!-- Eternal Stockings - Robe -->
+				<item id="17442" min="1" max="1" chance="1.434" /> <!-- Eternal Tunic - Robe -->
 				<item id="17526" min="2" max="2" chance="100" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="17527" min="3" max="3" chance="100" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="45932" min="1" max="1" chance="25.33" /> <!-- Top-grade Spirit Stone -->
-				<item id="17708" min="2" max="2" chance="17.37" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
-				<item id="17707" min="2" max="2" chance="17.16" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
-				<item id="17706" min="2" max="2" chance="16.72" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
-				<item id="17703" min="2" max="2" chance="16.03" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
-				<item id="17704" min="2" max="2" chance="15.92" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
-				<item id="17705" min="2" max="2" chance="15.91" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
-				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
-				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
-				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="45932" min="1" max="1" chance="23.93" /> <!-- Top-grade Spirit Stone -->
+				<item id="17705" min="2" max="2" chance="17.47" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17703" min="2" max="2" chance="16.97" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17706" min="2" max="2" chance="16.91" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17704" min="2" max="2" chance="16.38" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17708" min="2" max="2" chance="16.1" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17707" min="2" max="2" chance="15.98" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
 				<item id="38053" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.75" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.75" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Crafting Pack -->
 				<item id="38049" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Crafting Pack -->
 				<item id="38048" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Crafting Pack -->
 				<item id="38047" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Crafting Pack -->
@@ -3671,25 +3662,8 @@
 				<item id="46509" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 6 -->
 				<item id="46464" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
 				<item id="46449" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="58" />
-			<height normal="91" />
-		</collision>
 	</npc>
 	<npc id="26165" level="101" type="L2RaidBoss" name="Demon Worshipper Nortan" title="Raid Boss">
 		<race>HUMANOID</race>
