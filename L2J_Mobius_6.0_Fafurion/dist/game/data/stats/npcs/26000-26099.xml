@@ -3342,8 +3342,8 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<equipment rhand="38427" /> 
 		<acquire exp="11022625707" sp="2645430" raidPoints="100" />
-		<equipment rhand="38427" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="27284871.85665" hpRegen="461.8588637" mp="139513.897" mpRegen="3.3" />
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3352,10 +3352,6 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attribute>
-				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
-				<attack type="EARTH" value="430" />
-			</attribute>
 		</stats>
 		<status attackable="true" />
 		<collision>
@@ -3573,10 +3569,6 @@
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attribute>
-				<defence fire="350" water="350" wind="300" earth="350" holy="350" dark="350" />
-				<attack type="EARTH" value="430" />
-			</attribute>
 		</stats>
 		<status attackable="true" />
 		<collision>

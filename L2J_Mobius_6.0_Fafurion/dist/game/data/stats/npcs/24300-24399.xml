@@ -81,37 +81,31 @@
 		<sex>MALE</sex>
 		<acquire exp="2941100928" sp="2636064" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2837640.75" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="397330.79412" magical="370127.05434783" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="851292.225" magical="1418820.375" />
+			<vitals hp="7161240.455145" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
-			<clanList>
-				<clan>FOW</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="51" />
 			<height normal="36.1" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4116" level="10" /> <!-- Resist M. Atk. -->
+			<skill id="4116" level="10" /> <!-- Magic Attack Resistance -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
 			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4276" level="3" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
 			<skill id="32677" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<dropLists>
@@ -128,7 +122,7 @@
 				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="45.67" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -137,37 +131,31 @@
 		<sex>MALE</sex>
 		<acquire exp="3307195160" sp="2970250" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3055920.5" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="427890.52476" magical="398598.32608696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="916776.15" magical="1527960.25" />
+			<vitals hp="7712104.32903" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
-			<clanList>
-				<clan>FOW</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="51" />
 			<height normal="36.1" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4116" level="10" /> <!-- Resist M. Atk. -->
+			<skill id="4116" level="10" /> <!-- Magic Attack Resistance -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
 			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4276" level="3" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
 			<skill id="32677" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<dropLists>
@@ -184,7 +172,7 @@
 				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="45.66" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -193,37 +181,31 @@
 		<sex>MALE</sex>
 		<acquire exp="3307195160" sp="2970250" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3055920.5" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="427890.52476" magical="398598.32608696" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="916776.15" magical="1527960.25" />
+			<vitals hp="7712104.32903" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6625" magical="3848" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
-			<clanList>
-				<clan>FOW</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="54" />
 			<height normal="84.75" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4116" level="10" /> <!-- Resist M. Atk. -->
+			<skill id="4116" level="10" /> <!-- Magic Attack Resistance -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
 			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4276" level="3" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
 			<skill id="32677" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<dropLists>
@@ -240,7 +222,7 @@
 				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.97" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -249,37 +231,31 @@
 		<sex>MALE</sex>
 		<acquire exp="3680457000" sp="3303300" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3274201" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="458450.3604" magical="427069.69565217" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="982260.3" magical="1637100.5" />
+			<vitals hp="8262970.09566" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
-		<ai type="FIGHTER" clanHelpRange="450" aggroRange="450" isAggressive="true" >
-			<clanList>
-				<clan>FOW</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="87" />
 			<height normal="80.25" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="3" /> <!-- Beasts -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4116" level="10" /> <!-- Resist M. Atk. -->
+			<skill id="4116" level="10" /> <!-- Magic Attack Resistance -->
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
 			<skill id="16177" level="8" /> <!-- Knock Down Resistance -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4276" level="3" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
 			<skill id="32677" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<dropLists>
@@ -298,7 +274,7 @@
 				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="44.09" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -307,21 +283,15 @@
 		<sex>MALE</sex>
 		<acquire exp="3680457000" sp="3303300" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3274201" mp="35317.04" mpRegen="3.5" hpRegen="3.5" />
-			<attack physical="458450.3604" magical="427069.69565217" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="982260.3" magical="1637100.5" />
+			<vitals hp="8262970.09566" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
+			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6981" magical="4055" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<abnormalResist physical="100" magical="100" />
 		</stats>
-		<status attackable="true" canMove="true" />
-		<ai type="MAGE" clanHelpRange="450" aggroRange="450" isAggressive="true" >
-			<clanList>
-				<clan>FOW</clan>
-			</clanList>
-		</ai>
+		<status attackable="true" />
 		<collision>
 			<radius normal="55" />
 			<height normal="80.5" />
@@ -330,9 +300,9 @@
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="32675" level="1" /> <!-- Status Effect Resistance -->
-			<skill id="4116" level="10" /> <!-- Resist M. Atk. -->
-			<skill id="5620" level="9" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4276" level="3" /> <!-- Bow/Crossbow Vulnerability -->
+			<skill id="4116" level="10" /> <!-- Magic Attack Resistance -->
+			<skill id="5620" level="9" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4276" level="3" /> <!-- Bow/ Crossbow Vulnerability -->
 			<skill id="32677" level="1" /> <!-- Servitor Attack Weakness -->
 		</skillList>
 		<dropLists>
@@ -351,7 +321,7 @@
 				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3 " chance="43.93" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
