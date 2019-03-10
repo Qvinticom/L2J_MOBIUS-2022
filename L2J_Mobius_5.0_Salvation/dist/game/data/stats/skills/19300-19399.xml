@@ -465,7 +465,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19309" toLevel="7" name="Reverse Plunder">
+	<skill id="19309" toLevel="9" name="Reverse Plunder">
 		<!-- Attempts Deadly Attack with $s1 power added to P. Atk. and steals an item. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19309</icon>
 		<operateType>A1</operateType>
@@ -474,13 +474,26 @@
 		<castRange>40</castRange>
 		<mpConsume>
 			<value level="1">90</value>
-            <value level="2">98</value>
-            <value level="3">106</value>
-            <value level="4">112</value>
-            <value level="5">118</value>
-            <value level="6">124</value>
-            <value level="7">130</value>
+			<value level="2">98</value>
+			<value level="3">106</value>
+			<value level="4">112</value>
+			<value level="5">118</value>
+			<value level="6">124</value>
+			<value level="7">130</value>
+			<value level="8">136</value>
+			<value level="9">142</value>
 		</mpConsume>
+		<magicLvl>
+			<value level="1">85</value>
+			<value level="2">90</value>
+			<value level="3">95</value>
+			<value level="4">99</value>
+			<value level="5">101</value>
+			<value level="6">103</value>
+			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
+		</magicLvl>
 		<hitTime>2030</hitTime>
 		<coolTime>500</coolTime>
 		<reuseDelay>7000</reuseDelay>
@@ -504,6 +517,8 @@
 					<value level="5">58100</value>
 					<value level="6">60700</value>
 					<value level="7">63290</value>
+					<value level="8">66540</value>
+					<value level="9">69790</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<chanceBoost>300</chanceBoost>

@@ -23,7 +23,7 @@
 													<xs:simpleType>
 														<xs:restriction base="xs:positiveInteger">
 															<xs:minInclusive value="1" />
-															<xs:maxInclusive value="105" />
+															<xs:maxInclusive value="110" />
 														</xs:restriction>
 													</xs:simpleType>
 												</xs:attribute>
@@ -93,7 +93,7 @@
 										<xs:simpleType>
 											<xs:restriction base="xs:positiveInteger">
 												<xs:minInclusive value="1" />
-												<xs:maxInclusive value="105" />
+												<xs:maxInclusive value="110" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>
@@ -101,7 +101,7 @@
 										<xs:simpleType>
 											<xs:restriction base="xs:positiveInteger">
 												<xs:minInclusive value="1" />
-												<xs:maxInclusive value="105" />
+												<xs:maxInclusive value="110" />
 											</xs:restriction>
 										</xs:simpleType>
 									</xs:attribute>

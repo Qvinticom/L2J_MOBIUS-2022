@@ -1,10 +1,10 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="10700" toLevel="7" name="Wild Plunder">
+	<skill id="10700" toLevel="9" name="Wild Plunder">
 		<!-- Inflicts damage on the enemies in the front with $s1 power added to P. Attack and attempts to loot an item. Requires dagger/dual dagger. -->
 		<icon>icon.skill10700</icon>
 		<affectLimit>9-10</affectLimit>
-		<affectRange>250</affectRange>
+		<affectRange>320</affectRange>
 		<operateType>A1</operateType>
 		<targetType>SELF</targetType>
 		<affectScope>POINT_BLANK</affectScope>
@@ -17,6 +17,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">18</value>
@@ -26,10 +28,12 @@
 			<value level="5">30</value>
 			<value level="6">33</value>
 			<value level="7">36</value>
+			<value level="8">39</value>
+			<value level="9">42</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
-		<effectRange>400</effectRange>
+		<effectRange>320</effectRange>
 		<hitTime>1030</hitTime>
 		<coolTime>500</coolTime>
 		<effectPoint>-709</effectPoint>
@@ -52,11 +56,12 @@
 					<value level="5">21855</value>
 					<value level="6">22921</value>
 					<value level="7">23987</value>
-					<value fromLevel="7" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="8">25319</value>
+					<value level="9">26651</value>
 				</power>
 				<pDefMod>
-					<value fromLevel="1" toLevel="7">1</value>
-					<value fromLevel="3" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="9">1</value>
+					<value fromLevel="3" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 			<effect name="Plunder" />
