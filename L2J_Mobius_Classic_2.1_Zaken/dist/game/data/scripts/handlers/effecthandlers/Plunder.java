@@ -18,6 +18,8 @@ package handlers.effecthandlers;
 
 import java.util.Collection;
 
+import com.l2jmobius.Config;
+import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.ai.CtrlEvent;
 import com.l2jmobius.gameserver.model.L2Party;
 import com.l2jmobius.gameserver.model.StatsSet;
@@ -28,7 +30,6 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
-import com.l2jmobius.gameserver.model.stats.Formulas;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 
 /**
@@ -43,7 +44,22 @@ public final class Plunder extends AbstractEffect
 	@Override
 	public boolean calcSuccess(L2Character effector, L2Character effected, Skill skill)
 	{
-		return Formulas.calcMagicSuccess(effector, effected, skill);
+		final int lvlDifference = (effected.getLevel() - (skill.getMagicLevel() > 0 ? skill.getMagicLevel() : effector.getLevel()));
+		final double lvlModifier = Math.pow(1.3, lvlDifference);
+		float targetModifier = 1;
+		if (effected.isAttackable() && !effected.isRaid() && !effected.isRaidMinion() && (effected.getLevel() >= Config.MIN_NPC_LVL_MAGIC_PENALTY) && (effector.getActingPlayer() != null) && ((effected.getLevel() - effector.getActingPlayer().getLevel()) >= 3))
+		{
+			final int lvlDiff = effected.getLevel() - effector.getActingPlayer().getLevel() - 2;
+			if (lvlDiff >= Config.NPC_SKILL_CHANCE_PENALTY.size())
+			{
+				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(Config.NPC_SKILL_CHANCE_PENALTY.size() - 1);
+			}
+			else
+			{
+				targetModifier = Config.NPC_SKILL_CHANCE_PENALTY.get(lvlDiff);
+			}
+		}
+		return Rnd.get(100) < (100 - Math.round((float) (lvlModifier * targetModifier)));
 	}
 	
 	@Override
@@ -74,7 +90,13 @@ public final class Plunder extends AbstractEffect
 			return;
 		}
 		
+		if (!player.getInventory().checkInventorySlotsAndWeight(monster.getSpoilLootItems(), false, false))
+		{
+			return;
+		}
+		
 		monster.setSpoilerObjectId(effector.getObjectId());
+		
 		if (monster.isSweepActive())
 		{
 			final Collection<ItemHolder> items = monster.takeSweep();
@@ -89,7 +111,7 @@ public final class Plunder extends AbstractEffect
 					}
 					else
 					{
-						player.addItem("Sweeper", sweepedItem, effected, true);
+						player.addItem("Plunder", sweepedItem, effected, true);
 					}
 				}
 			}
