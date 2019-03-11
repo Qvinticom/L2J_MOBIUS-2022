@@ -991,20 +991,20 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 	</npc>
-	<npc id="26219" level="104" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26219" level="102" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<acquire exp="15588090" sp="15588090" raidPoints="7" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="6546867" hpRegen="10.5" mp="49380" mpRegen="3.6" />
+			<vitals hp="9834759.80235" hpRegen="419.6050136" mp="12641940.99" mpRegen="3.3" />
+			<attack physical="284080.4007" magical="203728.3272" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32936.12091" magical="16076.26507" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="60" />
@@ -1012,131 +1012,36 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16893" level="21" /> <!-- Messiah Outer Castle Elite Monster -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17527" min="1" max="1" chance="59.55" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36574" min="1" max="1" chance="49.14" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="36586" min="1" max="1" chance="48.95" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="40.44" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35352" min="1" max="1" chance="1.952" /> <!-- Eternal Glove Ingredient -->
-				<item id="35342" min="1" max="1" chance="1.949" /> <!-- Eternal Boot Ingredient -->
-				<item id="35354" min="1" max="1" chance="1.945" /> <!-- Eternal Sigil Ingredient -->
-				<item id="35340" min="1" max="1" chance="1.943" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35338" min="1" max="1" chance="1.925" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35350" min="1" max="1" chance="1.897" /> <!-- Eternal Tunic Ingredient -->
-				<item id="35343" min="1" max="1" chance="1.896" /> <!-- Eternal Shield Ingredient -->
-				<item id="35347" min="1" max="1" chance="1.888" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35345" min="1" max="1" chance="1.888" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="35349" min="1" max="1" chance="1.887" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35353" min="1" max="1" chance="1.883" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35351" min="1" max="1" chance="1.865" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35341" min="1" max="1" chance="1.861" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="35348" min="1" max="1" chance="1.852" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="35346" min="1" max="1" chance="1.844" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="35339" min="1" max="1" chance="1.84" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35344" min="1" max="1" chance="1.84" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="35335" min="1" max="1" chance="0.75" /> <!-- Helios Buster Fragment -->
-				<item id="35327" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Fragment -->
-				<item id="35328" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Fragment -->
-				<item id="35329" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Fragment -->
-				<item id="35337" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Fragment -->
-				<item id="35331" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Fragment -->
-				<item id="35336" min="1" max="1" chance="0.75" /> <!-- Helios Caster Fragment -->
-				<item id="35332" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Fragment -->
-				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Fragment -->
-				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Fragment -->
-				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
-				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
-				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
-				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
-				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
-				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
-				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
-				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
-				<item id="46493" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
-				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<item id="46478" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="46477" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46446" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46447" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46462" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46461" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46448" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 5 -->
-				<item id="46495" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
-				<item id="46494" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
-				<item id="46509" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 6 -->
-				<item id="46510" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 7 -->
-				<item id="46480" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 7 -->
-				<item id="46479" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 6 -->
-				<item id="46463" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
-				<item id="46464" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
-				<item id="46449" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<item id="46465" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
-				<item id="46450" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 7 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="17436" min="1" max="1" chance="100" /> <!-- Eternal Leather Helmet - Light Armor -->
+				<item id="17437" min="1" max="1" chance="100" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17438" min="1" max="1" chance="100" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17439" min="1" max="1" chance="100" /> <!-- Eternal Leather Gloves - Light Armor -->
+				<item id="17440" min="1" max="1" chance="100" /> <!-- Eternal Leather Boots - Light Armor -->
+				<item id="19448" min="1" max="1" chance="3.006" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="2.066" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
-			<lucky>
-				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="26220" level="104" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="26220" level="102" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<acquire exp="18338931" sp="18338931" raidPoints="7" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="7702197" hpRegen="10.5" mp="49380" mpRegen="3.6" />
+			<vitals hp="11570306.651865" hpRegen="419.6050136" mp="14872873.041" mpRegen="3.3" />
+			<attack physical="284080.4007" magical="203728.3272" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32936.12091" magical="16076.26507" />
 			<speed>
 				<walk ground="30" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="60" />
@@ -1144,115 +1049,45 @@
 		<skillList>
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16893" level="22" /> <!-- Messiah Outer Castle Elite Monster -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17527" min="1" max="1" chance="61.17" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36574" min="1" max="1" chance="50.91" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="36586" min="1" max="1" chance="48.8" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="39.83" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35352" min="1" max="1" chance="1.945" /> <!-- Eternal Glove Ingredient -->
-				<item id="35346" min="1" max="1" chance="1.944" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="35344" min="1" max="1" chance="1.921" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="35342" min="1" max="1" chance="1.92" /> <!-- Eternal Boot Ingredient -->
-				<item id="35345" min="1" max="1" chance="1.906" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="35348" min="1" max="1" chance="1.901" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="35339" min="1" max="1" chance="1.896" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35351" min="1" max="1" chance="1.895" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35338" min="1" max="1" chance="1.894" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35343" min="1" max="1" chance="1.889" /> <!-- Eternal Shield Ingredient -->
-				<item id="35353" min="1" max="1" chance="1.884" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35349" min="1" max="1" chance="1.875" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35340" min="1" max="1" chance="1.867" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35347" min="1" max="1" chance="1.864" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35350" min="1" max="1" chance="1.858" /> <!-- Eternal Tunic Ingredient -->
-				<item id="35354" min="1" max="1" chance="1.854" /> <!-- Eternal Sigil Ingredient -->
-				<item id="35341" min="1" max="1" chance="1.825" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="35328" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Fragment -->
-				<item id="35329" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Fragment -->
-				<item id="35327" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Fragment -->
-				<item id="35331" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Fragment -->
-				<item id="35337" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Fragment -->
-				<item id="35332" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Fragment -->
-				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Fragment -->
-				<item id="35335" min="1" max="1" chance="0.75" /> <!-- Helios Buster Fragment -->
-				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
-				<item id="35336" min="1" max="1" chance="0.75" /> <!-- Helios Caster Fragment -->
-				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Fragment -->
-				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
-				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
+				<item id="17527" min="1" max="1" chance="59.36" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="41.71" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="19448" min="1" max="1" chance="2.978" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="1.958" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="35470" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35469" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35468" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35467" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35466" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35471" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35472" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35473" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35474" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35475" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35476" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35477" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35465" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35464" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35463" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35478" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="35462" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
 				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
+				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
+				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
 				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
 				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
 				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
 				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
 				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
 				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
-				<item id="46493" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
-				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<item id="46478" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="46477" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46446" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46447" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46462" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46461" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46448" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 5 -->
-				<item id="46495" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
-				<item id="46494" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
-				<item id="46509" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 6 -->
-				<item id="46510" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 7 -->
-				<item id="46480" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 7 -->
-				<item id="46479" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 6 -->
-				<item id="46463" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
-				<item id="46464" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
-				<item id="46449" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<item id="46465" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
-				<item id="46450" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 7 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
 			</drop>
-			<lucky>
-				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Bag - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="26221" level="102" type="L2RaidBoss" name="Whitra" title="Guardian">
@@ -1920,7 +1755,6 @@
 		</collision>
 	</npc>
 	<npc id="26236" level="104" type="L2RaidBoss" name="Camille" title="Final Disciple">
-		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<acquire exp="304278653952" sp="608557372" raidPoints="21" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
@@ -3783,6 +3617,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="32259" level="1" /> <!-- Raid Boss (Lv. 105) -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
@@ -3876,6 +3711,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="32259" level="2" /> <!-- Raid Boss (Lv. 105) -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
@@ -3969,6 +3805,7 @@
 			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="32259" level="3" /> <!-- Raid Boss (Lv. 105) -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
@@ -4062,6 +3899,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="32259" level="4" /> <!-- Raid Boss (Lv. 105) -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<dropLists>
