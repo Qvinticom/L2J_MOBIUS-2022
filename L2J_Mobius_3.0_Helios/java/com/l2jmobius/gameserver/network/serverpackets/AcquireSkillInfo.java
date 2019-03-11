@@ -36,7 +36,7 @@ public class AcquireSkillInfo implements IClientOutgoingPacket
 	private final AcquireSkillType _type;
 	private final int _id;
 	private final int _level;
-	private final int _spCost;
+	private final long _spCost;
 	private final List<Req> _reqs;
 	
 	/**

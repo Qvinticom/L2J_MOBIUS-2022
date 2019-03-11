@@ -190,7 +190,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				}
 				
 				final L2Clan clan = activeChar.getClan();
-				final int repCost = s.getLevelUpSp();
+				final int repCost = (int) s.getLevelUpSp(); // Hopefully not greater that max int.
 				if (clan.getReputationScore() >= repCost)
 				{
 					if (Config.LIFE_CRYSTAL_NEEDED)
@@ -254,7 +254,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 					return;
 				}
 				
-				final int repCost = s.getLevelUpSp();
+				final int repCost = (int) s.getLevelUpSp(); // Hopefully not greater that max int.
 				if (clan.getReputationScore() < repCost)
 				{
 					activeChar.sendPacket(SystemMessageId.THE_ATTEMPT_TO_ACQUIRE_THE_SKILL_HAS_FAILED_BECAUSE_OF_AN_INSUFFICIENT_CLAN_REPUTATION);
@@ -590,7 +590,7 @@ public final class RequestAcquireSkill implements IClientIncomingPacket
 				}
 				
 				// First it checks that the skill require SP and the player has enough SP to learn it.
-				final int levelUpSp = skillLearn.getLevelUpSp();
+				final long levelUpSp = skillLearn.getLevelUpSp();
 				if ((levelUpSp > 0) && (levelUpSp > player.getSp()))
 				{
 					player.sendPacket(SystemMessageId.YOU_DO_NOT_HAVE_ENOUGH_SP_TO_LEARN_THIS_SKILL);
