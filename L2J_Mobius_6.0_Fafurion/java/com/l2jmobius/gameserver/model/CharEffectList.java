@@ -1125,6 +1125,18 @@ public final class CharEffectList
 				}
 			}
 		}
+		// Add passive effect flags.
+		for (BuffInfo info : _passives)
+		{
+			if (info != null)
+			{
+				// Add the EffectType flag.
+				for (AbstractEffect e : info.getEffects())
+				{
+					flags |= e.getEffectFlags();
+				}
+			}
+		}
 		
 		// Replace the old flags with the new flags.
 		_effectFlags = flags;
