@@ -536,10 +536,10 @@
 	</npc>
 	<npc id="26312" level="106" type="L2RaidBoss" name="Lithra" title="Raid Boss">
 		<race>FAIRY</race>
-		<sex>MALE</sex>
-		<acquire exp="148628010240" sp="133764580" raidPoints="30" />
+		<sex>FEMALE</sex>
+		<acquire exp="18820610" sp="18820610" raidPoints="30" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="11874205.15815" hpRegen="453.2459686" mp="86021.959" mpRegen="3.3" />
+			<vitals hp="11874205.15815" hpRegen="453.2459686" mp="15263514.71" mpRegen="3.3" />
 			<attack physical="306855.9531" magical="220061.8201" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="35576.70557" magical="17365.14602" />
 			<speed>
@@ -621,62 +621,80 @@
 			<height normal="123" />
 		</collision>
 	</npc>
-	<npc id="26314" level="85" type="L2Npc" name="Lithra Aprias" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26314" level="106" type="L2Monster" name="Lithra Aprias" title="Raid Fighter">
+		<race>PLANT</race>
+		<sex>MALE</sex>
+		<acquire exp="6627640" sp="6627640" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="4181477.4906" hpRegen="9.5" mp="5375016.04" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="40" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="45" />
 			<height normal="115.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="26315" level="85" type="L2Npc" name="Lithra Butterfly" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26315" level="106" type="L2Monster" name="Lithra Butterfly" title="Raid Fighter">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="13255281" sp="13255281" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="8362955.612115" hpRegen="9.5" mp="10750032.891" mpRegen="3.3" />
+			<attack physical="59141" magical="49591" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5557" magical="3227" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="45" />
 			<height normal="65.25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="26316" level="85" type="L2Npc" name="Lithra Needle" title="Raid Fighter">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26316" level="105" type="L2Monster" name="Lithra Needle" title="Raid Fighter">
+		<race>BUG</race>
+		<sex>MALE</sex>
+		<acquire exp="12473148" sp="12473148" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="7869496.17042" hpRegen="9.5" mp="10115723.028" mpRegen="3.3" />
+			<attack physical="55784" magical="45986" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5201" magical="3020" />
 			<speed>
 				<walk ground="39" />
 				<run ground="230" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="66" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="26317" level="94" type="L2RaidBoss" name="Spezion" title="Raid Boss">
 		<race>HUMANOID</race>
@@ -1807,14 +1825,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="300" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="130" />
+			<height normal="69.8" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -1901,14 +1919,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="300" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="82.5" />
+			<height normal="94.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -1995,14 +2013,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="300" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="90" />
+			<height normal="73" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -2089,14 +2107,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="90" />
+				<run ground="300" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="30" />
+			<height normal="101" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
@@ -2264,14 +2282,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="140" />
+				<run ground="300" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="78" />
+			<height normal="52.9" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="12" /> <!-- Bugs -->
@@ -2358,14 +2376,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="36" />
+				<run ground="300" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="66" />
+			<height normal="54" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
@@ -2452,14 +2470,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="60" />
+				<run ground="300" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="40" />
+			<height normal="91" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
@@ -2546,14 +2564,14 @@
 			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
-				<walk ground="50" />
-				<run ground="120" />
+				<walk ground="40" />
+				<run ground="300" />
 			</speed>
 		</stats>
 		<status attackable="true" />
 		<collision>
-			<radius normal="8" />
-			<height normal="22.5" />
+			<radius normal="45" />
+			<height normal="115.5" />
 		</collision>
 		<skillList>
 			<skill id="4416" level="5" /> <!-- Plants -->
