@@ -47,6 +47,6 @@ public class CriticalRatePositionBonus extends AbstractEffect
 	@Override
 	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
-		effected.getStat().mergePositionTypeValue(Stats.CRITICAL_RATE, _position, (-_amount / 100) - 1, MathUtil::div);
+		effected.getStat().mergePositionTypeValue(Stats.CRITICAL_RATE, _position, (_amount / 100) + 1, MathUtil::div);
 	}
 }
