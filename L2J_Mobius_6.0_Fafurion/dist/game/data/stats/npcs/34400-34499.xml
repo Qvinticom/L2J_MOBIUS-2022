@@ -307,10 +307,9 @@
 			<height normal="22" />
 		</collision>
 	</npc>
-	<npc id="34416" level="85" type="L2Npc" name="Rain" title="Grocer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="34416" level="85" type="L2Merchant" name="Rain" title="Grocer">
+		<race>ELF</race>
+		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
 			<speed>
@@ -326,9 +325,8 @@
 			<height normal="24.5" />
 		</collision>
 	</npc>
-	<npc id="34417" level="85" type="L2Npc" name="Saypia" title="Warehouse Keeper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="34417" level="85" type="L2Warehouse" name="Saypia" title="Warehouse Keeper">
+		<race>ELF</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
