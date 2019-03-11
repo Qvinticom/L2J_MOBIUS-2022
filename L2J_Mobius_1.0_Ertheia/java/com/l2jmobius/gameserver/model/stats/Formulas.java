@@ -1059,11 +1059,10 @@ public final class Formulas
 				final int cancelMagicLvl = skill.getMagicLevel();
 				
 				// Prevent initialization.
-				final List<BuffInfo> buffs = target.getEffectList().getBuffs();
-				
-				for (int i = buffs.size() - 1; i >= 0; i--) // reverse order
+				final List<BuffInfo> dances = target.getEffectList().getDances();
+				for (int i = dances.size() - 1; i >= 0; i--) // reverse order
 				{
-					final BuffInfo info = buffs.get(i);
+					final BuffInfo info = dances.get(i);
 					if (!info.getSkill().canBeStolen() || ((rate < 100) && !calcCancelSuccess(info, cancelMagicLvl, rate, skill, target)))
 					{
 						continue;
@@ -1072,6 +1071,25 @@ public final class Formulas
 					if (canceled.size() >= max)
 					{
 						break;
+					}
+				}
+				
+				if (canceled.size() < max)
+				{
+					// Prevent initialization.
+					final List<BuffInfo> buffs = target.getEffectList().getBuffs();
+					for (int i = buffs.size() - 1; i >= 0; i--) // reverse order
+					{
+						final BuffInfo info = buffs.get(i);
+						if (!info.getSkill().canBeStolen() || ((rate < 100) && !calcCancelSuccess(info, cancelMagicLvl, rate, skill, target)))
+						{
+							continue;
+						}
+						canceled.add(info);
+						if (canceled.size() >= max)
+						{
+							break;
+						}
 					}
 				}
 				break;

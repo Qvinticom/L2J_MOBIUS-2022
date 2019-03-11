@@ -141,6 +141,15 @@ public final class CharEffectList
 	}
 	
 	/**
+	 * Gets all the active positive effects on this effect list.
+	 * @return all the dances songs on this effect list
+	 */
+	public List<BuffInfo> getDances()
+	{
+		return _actives.stream().filter(b -> b.getSkill().getBuffType().isDance()).collect(Collectors.toList());
+	}
+	
+	/**
 	 * Gets all the active negative effects on this effect list.
 	 * @return all the debuffs on this effect list
 	 */
