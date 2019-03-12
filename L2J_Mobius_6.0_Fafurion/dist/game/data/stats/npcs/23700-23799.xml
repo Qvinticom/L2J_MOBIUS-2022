@@ -1,64 +1,73 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="23700" level="100" type="L2Npc" name="Altar Guardian">
+	<npc id="23700" level="100" type="L2Monster" name="Altar Guardian">
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="119177.31984" hpRegen="9.5" mp="153194.656" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="240" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="23701" level="100" type="L2Npc" name="Knight Guard" title="Dragonclaw Clan">
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="23701" level="100" type="L2Monster" name="Knight Guard" title="Dragonclaw Clan">
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="58690.23696" hpRegen="9.5" mp="75442.464" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23702" level="101" type="L2Npc" name="Duran" title="Dragonclaw Royal Guard">
+	<npc id="23702" level="101" type="L2Npc" name="L2Monster" title="Dragonclaw Royal Guard">
 		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="946520799" sp="1893101" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="1906838.37927" hpRegen="9.5" mp="2451116.118" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="23" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="2" max="3" chance="80.93" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="30297" min="1" max="2" chance="85.05" /> <!-- Superior Giant's Codex -->
+				<item id="17526" min="1" max="2" chance="19.85" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46150" min="1" max="1" chance="9.997" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="46151" min="1" max="1" chance="2.51" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+				<item id="30298" min="1" max="1" chance="2.475" /> <!-- Superior Giant's Codex - Mastery -->
+				<item id="39738" min="1" max="1" chance="2.475" /> <!-- Rune Stone -->
+				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23703" level="101" type="L2Npc" name="Ice Knight" title="Winter Omen">
 		<race>HUMANOID</race>
@@ -157,61 +166,58 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23706" level="100" type="L2Npc" name="Kelbim's Follower">
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="23706" level="100" type="L2Monster" name="Kelbim's Follower">
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="17290.225575" hpRegen="9.5" mp="22225.455" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23707" level="100" type="L2Npc" name="Kelbim's Follower">
-		<race>HUMAN</race>
+	<npc id="23707" level="100" type="L2Monster" name="Kelbim's Follower">
+		<race>ORC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
+			<vitals hp="17290.225575" hpRegen="9.5" mp="22225.455" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23708" level="100" type="L2Npc" name="Kelbim's Follower">
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="23708" level="100" type="L2Monster" name="Kelbim's Follower">
+		<race>DWARF</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="9" />
 			<height normal="18" />
@@ -241,82 +247,78 @@
 			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="23710" level="100" type="L2Npc" name="Knight Guardian">
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="23710" level="100" type="L2Monster" name="Knight Guardian">
+		<race>DARK_ELF</race>
+		<sex>MALE</sex>
+		<acquire exp="463935300" sp="927900" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23711" level="100" type="L2Npc" name="Altar Guardian Soldier">
-		<race>HUMAN</race>
+	<npc id="23711" level="100" type="L2Monster" name="Altar Guardian Soldier">
+		<race>ORC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="7" />
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="23712" level="100" type="L2Npc" name="Altar Guardian Archer">
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="15302" />
+	<npc id="23712" level="100" type="L2Monster" name="Altar Guardian Archer">
+		<race>ELF</race>
+		<sex>MALE</sex>
+		<equipment rhand="15302" /> 
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="58690.23696" hpRegen="9.5" mp="75442.464" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="7.5" />
 			<height normal="24" />
 		</collision>
 	</npc>
-	<npc id="23713" level="100" type="L2Npc" name="Altar Guardian Wizard">
+	<npc id="23713" level="100" type="L2Monster" name="Altar Guardian Wizard">
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="119177.31984" hpRegen="9.5" mp="153194.656" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="6.5" />
 			<height normal="22.5" />
@@ -356,41 +358,39 @@
 			<height normal="25" />
 		</collision>
 	</npc>
-	<npc id="23716" level="100" type="L2Npc" name="Wild Hog Cannon">
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="23716" level="100" type="L2Monster" name="Wild Hog Cannon">
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="10" />
 				<run ground="200" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="46.5" />
 			<height normal="43.5" />
 		</collision>
 	</npc>
-	<npc id="23717" level="100" type="L2Npc" name="Siege Golem">
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="23717" level="100" type="L2Monster" name="Siege Golem">
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
+		<status attackable="true" />
 		<collision>
 			<radius normal="50" />
 			<height normal="68" />
