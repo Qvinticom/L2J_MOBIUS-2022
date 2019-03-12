@@ -1357,10 +1357,18 @@
 		<!-- When used, recovers 5000 HP and the remaining power is recovered as CP. But, there is no duration. -->
 		<set name="icon" val="icon.etc_potion_gold_i00" />
 		<set name="weight" val="180" />
-		<set name="is_stackable" val="true" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="immediate_effect" val="true" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<set name="is_freightable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="commissionItemType" val="POTION" />
-		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="is_stackable" val="true" />
+		<skills>
+			<skill id="17913" level="1" /> <!-- Supreme Windy Quick Healing Potion -->
+		</skills>
 	</item>
 	<item id="37895" name="SP Rune (Low-grade)" additionalName="7-day" type="EtcItem">
 		<!-- When held in the inventory, it increases SP acquired through hunting by 10%. 7-day. -->
