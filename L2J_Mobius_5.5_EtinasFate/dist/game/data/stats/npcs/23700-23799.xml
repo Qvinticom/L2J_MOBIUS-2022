@@ -62,18 +62,19 @@
 	</npc>
 	<npc id="23703" level="101" type="L2Npc" name="Ice Knight" title="Winter Omen">
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="6235973" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="403282" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1056419.848875" hpRegen="9.5" mp="1357958.675" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
+			<attribute>
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+			</attribute>
 			<speed>
 				<walk ground="20" />
 				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
 		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
@@ -372,18 +373,19 @@
 		</collision>
 	</npc>
 	<npc id="23718" level="100" type="L2Monster" name="Glacier Golem">
-		<!-- Source: www.l2wiki.com -->
 		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
 		<acquire exp="191032200" sp="382100" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="268854" hpRegen="10.5" mp="23928" mpRegen="3.6" />
+			<vitals hp="2347596.229185" hpRegen="9.5" mp="3017681.529" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="47619.04761904762" magical="8403.361344537815" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3703.703703703704" magical="2150.537634408602" />
 		</stats>
+		<status attackable="true" />
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
@@ -396,19 +398,17 @@
 	<npc id="23719" level="100" type="L2Monster" name="Frozen Knight">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53771.1" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="6839.95121517957" magical="3066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
+			<vitals hp="58690.23696" hpRegen="9.5" mp="75442.464" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<ai clanHelpRange="1000" aggroRange="600">
 			<clanList>
 				<clan>FROST_GOLEM</clan>
@@ -424,7 +424,6 @@
 		</collision>
 	</npc>
 	<npc id="23720" level="100" type="L2Monster" name="Panthera">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -437,16 +436,17 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.04046242775" hpRegen="7.5" mp="2355.0" mpRegen="2.7" />
-			<attack physical="5731.52506" magical="1499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="4305.35947" magical="1203.311781207645" />
+		<acquire exp="0" sp="0" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="17290.225575" hpRegen="9.5" mp="22225.455" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<ai clanHelpRange="400" aggroRange="100">
 			<clanList>
 				<clan>FROST_ANIMAL</clan>
@@ -462,7 +462,6 @@
 		</collision>
 	</npc>
 	<npc id="23721" level="100" type="L2Npc" name="Maze Buffalo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -474,20 +473,21 @@
 			<param name="LongRangeGuardRate" value="5" />
 		</parameters>
 		<race>BEAST</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.7282909073" hpRegen="7.5" mp="2355.0" mpRegen="2.7" />
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<vitals hp="17290.225575" hpRegen="9.5" mp="22225.455" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 			<speed>
 				<walk ground="20" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -498,7 +498,6 @@
 		</collision>
 	</npc>
 	<npc id="23722" level="100" type="L2Monster" name="Frost Buffalo">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -510,17 +509,18 @@
 			<param name="LongRangeGuardRate" value="5" />
 		</parameters>
 		<race>BEAST</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.7282909073" hpRegen="7.5" mp="2355.0" mpRegen="2.7" />
-			<attack physical="15731.52506" magical="1499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="5305.35947" magical="1203.311781207645" />
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="17290.225575" hpRegen="9.5" mp="22225.455" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="20" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
@@ -531,7 +531,6 @@
 		</collision>
 	</npc>
 	<npc id="23723" level="100" type="L2Npc" name="Frost Ursus">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
 			<param name="MoveAroundSocial1" value="30" />
@@ -543,20 +542,17 @@
 			<param name="LongRangeGuardRate" value="5" />
 		</parameters>
 		<race>ANIMAL</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="7.5" mp="2355" mpRegen="2.7" />
-			<speed>
-				<walk ground="40" />
-				<run ground="180" />
-			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<vitals hp="17290.225575" hpRegen="9.5" mp="22225.455" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<ai clanHelpRange="400" aggroRange="100">
 			<clanList>
 				<clan>FROST_ANIMAL</clan>
@@ -584,10 +580,11 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.04046242775" hpRegen="7.5" mp="2355.0" mpRegen="2.7" />
-			<attack physical="5731.52506" magical="1499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="4305.35947" magical="1203.311781207645" />
+		<acquire exp="0" sp="0" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="17290.225575" hpRegen="9.5" mp="22225.455" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="80" />
 				<run ground="180" />
@@ -621,16 +618,17 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841.7282909073" hpRegen="7.5" mp="2355.0" mpRegen="2.7" />
-			<attack physical="5731.52506" magical="1499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
-			<defence physical="4305.35947" magical="1203.311781207645" />
+		<acquire exp="0" sp="0" />
+		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
+			<vitals hp="17290.225575" hpRegen="9.5" mp="22225.455" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<ai clanHelpRange="400" aggroRange="100">
 			<clanList>
 				<clan>FROST_ANIMAL</clan>
@@ -646,22 +644,22 @@
 		</collision>
 	</npc>
 	<npc id="23726" level="100" type="L2Monster" name="Frost Glacier Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+		<race>ELEMENTAL</race>
+		<sex>MALE</sex>
+		<acquire exp="1528257600" sp="3056600" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="524266.0" hpRegen="7.5" mp="23928.0" mpRegen="2.7" />
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
+			<vitals hp="5493381.321405" hpRegen="9.5" mp="7061382.677" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
+				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
 			</attribute>
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<skillList>
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="7" /> <!-- Spirits -->

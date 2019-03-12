@@ -3987,9 +3987,9 @@
 		<sex>MALE</sex>
 		<acquire exp="1528257600" sp="3056600" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3871504.046242775" hpRegen="7.5" mp="36613.0" mpRegen="2.7" />
-			<attack physical="47619.04761904762" magical="8403.361344537815" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="3703.703703703704" magical="2150.537634408602" />
+			<vitals hp="4225680.65733" hpRegen="9.5" mp="5431836.322" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="WATER" value="330" />
@@ -3999,7 +3999,7 @@
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" randomWalk="false" />
+		<status attackable="true" randomWalk="false" />
 		<ai clanHelpRange="800" aggroRange="400">
 			<clanList>
 				<clan>FROST_GOLEM</clan>
@@ -4018,14 +4018,13 @@
 		</collision>
 	</npc>
 	<npc id="23687" level="100" type="L2Monster" name="Frost Glacier Golem" title="Frostbringer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>MALE</sex>
-		<acquire exp="1528257600" sp="3056600" />
+		<acquire exp="2147483647" sp="12471844" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5032952.023121387" hpRegen="7.5" mp="36613.0" mpRegen="2.7" />
-			<attack physical="15570.537548504614" magical="9962.751329129412" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
-			<defence physical="2574" magical="1737" />
+			<vitals hp="4225680.65733" hpRegen="9.5" mp="5431836.322" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<attribute>
 				<defence fire="250" water="250" wind="200" earth="250" holy="250" dark="250" />
 				<attack type="WATER" value="330" />
@@ -4051,13 +4050,13 @@
 		</collision>
 	</npc>
 	<npc id="23688" level="100" type="L2Monster" name="Frost Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53771.1" hpRegen="7.5" mp="36613" mpRegen="2.7" />
-			<attack physical="10731.52506" magical="3499.53679" random="10" critical="4" accuracy="4.75" attackSpeed="250" type="POLE" range="80" distance="80" width="120" />
-			<defence physical="6305.35947" magical="3203.311781207645" />
+			<vitals hp="58690.23696" hpRegen="9.5" mp="75442.464" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<attribute>
 				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" />
 				<attack type="WATER" value="250" />
@@ -4091,18 +4090,19 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="19256267.64705882" hpRegen="7.5" mp="96766" mpRegen="2.7" />
-			<attack physical="21208.8451812642" magical="5528.31840933477" random="10" critical="4" accuracy="7" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3589.082047322" magical="2193.8" evasion="11" />
-			<attribute>
-				<attack type="WATER" value="200" />
-				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" default="300" />
-			</attribute>
+			<vitals hp="20653415.774325" hpRegen="9.5" mp="26548616.205" mpRegen="3.3" />
+			<attack physical="45713" magical="35171" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4133" magical="2399" />
 			<speed>
 				<walk ground="54" />
 				<run ground="180" />
 			</speed>
+			<attribute>
+				<attack type="WATER" value="200" />
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" default="300" />
+			</attribute>
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<status undying="false" />
