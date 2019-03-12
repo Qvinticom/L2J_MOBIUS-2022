@@ -3848,131 +3848,211 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23680" level="101" type="L2Npc" name="Flame Golem">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>HUMAN</race>
-		<sex>FEMALE</sex>
+	<npc id="23680" level="101" type="L2Monster" name="Flame Golem">
+		<race>ETC</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="16309358" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2511960" hpRegen="7.5" mp="47856" mpRegen="2.7" />
+			<vitals hp="3773488.103955" hpRegen="9.5" mp="4850572.347" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="13" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="76" />
 			<height normal="93" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="23681" level="100" type="L2Npc" name="Flame Stakato">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23681" level="100" type="L2Monster" name="Flame Stakato">
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="53771" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="117380.47392" hpRegen="9.5" mp="150884.928" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="25" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="23682" level="100" type="L2Npc" name="Flame Scorpion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23682" level="100" type="L2Monster" name="Flame Scorpion">
 		<race>BUG</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="499622600" sp="999300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="107542" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="704281.58169" hpRegen="9.5" mp="905307.946" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="37" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="52.8" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="23683" level="102" type="L2Npc" name="Seal Archangel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23683" level="102" type="L2Monster" name="Seal Archangel">
 		<race>DIVINE</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="12498818" hpRegen="7.5" mp="47856" mpRegen="2.7" />
+			<vitals hp="20653415.774325" hpRegen="9.5" mp="26548616.205" mpRegen="3.3" />
+			<attack physical="45713" magical="35171" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4133" magical="2399" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="76" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="23684" level="100" type="L2Npc" name="Seal Angel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23684" level="100" type="L2Monster" name="Seal Angel">
 		<race>DIVINE</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="953419.189635" hpRegen="9.5" mp="1225558.059" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="37.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
-	<npc id="23685" level="100" type="L2Npc" name="Seal Angel">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="23685" level="101" type="L2Monster" name="Seal Angel">
 		<race>DIVINE</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="2038660363" sp="4077339" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="953419.189635" hpRegen="9.5" mp="1225558.059" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<status attackable="false" />
-		<skillList>
-			<skill id="5466" level="1" /> <!-- Holy Attacks -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="35.25" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="19448" min="1" max="1" chance="80.25" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="57" min="35000000" max="70000000" chance="20" /> <!-- Adena -->
+				<item id="19447" min="1" max="1" chance="20.42" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="48568" min="1" max="3" chance="19.02" /> <!-- Guard Agathion Fragment -->
+				<item id="35340" min="1" max="1" chance="3" /> <!-- Eternal Gaiter Ingredient -->
+				<item id="35353" min="1" max="1" chance="2.993" /> <!-- Eternal Shoe Ingredient -->
+				<item id="35347" min="1" max="1" chance="2.967" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="35345" min="1" max="1" chance="2.951" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="35343" min="1" max="1" chance="2.942" /> <!-- Eternal Shield Ingredient -->
+				<item id="35344" min="1" max="1" chance="2.937" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="35339" min="1" max="1" chance="2.929" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="35348" min="1" max="1" chance="2.929" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="35350" min="1" max="1" chance="2.925" /> <!-- Eternal Tunic Ingredient -->
+				<item id="35354" min="1" max="1" chance="2.926" /> <!-- Eternal Sigil Ingredient -->
+				<item id="35338" min="1" max="1" chance="2.92" /> <!-- Eternal Helmet Ingredient -->
+				<item id="35341" min="1" max="1" chance="2.907" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="35349" min="1" max="1" chance="2.901" /> <!-- Eternal Circlet Ingredient -->
+				<item id="35351" min="1" max="1" chance="2.899" /> <!-- Eternal Stocking Ingredient -->
+				<item id="35352" min="1" max="1" chance="2.895" /> <!-- Eternal Glove Ingredient -->
+				<item id="35342" min="1" max="1" chance="2.89" /> <!-- Eternal Boot Ingredient -->
+				<item id="35346" min="1" max="1" chance="2.876" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="35473" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35474" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35475" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35476" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35477" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35478" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="46537" min="1" max="1" chance="0.75" /> <!-- Mystic Soul Crystal Fragment -->
+				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
+				<item id="35472" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35471" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35464" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35463" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35462" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35465" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35466" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35467" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35468" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35469" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35470" min="1" max="1" chance="0.75" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="38065" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Crafting Pack -->
+				<item id="38066" min="1" max="1" chance="0.3" /> <!-- Eternal Tunic Crafting Pack -->
+				<item id="38067" min="1" max="1" chance="0.3" /> <!-- Eternal Stockings Crafting Pack -->
+				<item id="38068" min="1" max="1" chance="0.3" /> <!-- Eternal Gloves Crafting Pack -->
+				<item id="38069" min="1" max="1" chance="0.3" /> <!-- Eternal Shoes Crafting Pack -->
+				<item id="38070" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Crafting Pack -->
+				<item id="38064" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Boots Crafting Pack -->
+				<item id="38063" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Gloves Crafting Pack -->
+				<item id="38054" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Crafting Pack -->
+				<item id="38055" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Crafting Pack -->
+				<item id="38056" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiters Crafting Pack -->
+				<item id="38057" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlets Crafting Pack -->
+				<item id="38058" min="1" max="1" chance="0.3" /> <!-- Eternal Boots Crafting Pack -->
+				<item id="38060" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Helmet Crafting Pack -->
+				<item id="38061" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Crafting Pack -->
+				<item id="38062" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Leggings Crafting Pack -->
+				<item id="38059" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Crafting Box -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23686" level="100" type="L2Monster" name="Frost Glacier Golem">
 		<parameters>

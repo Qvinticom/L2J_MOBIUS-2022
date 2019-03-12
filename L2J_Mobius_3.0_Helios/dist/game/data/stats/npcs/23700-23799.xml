@@ -85,53 +85,77 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="23704" level="101" type="L2Npc" name="Ifrit" title="Master of Flames">
+	<npc id="23704" level="101" type="L2Monster" name="Ifrit" title="Master of Flames">
 		<race>ELEMENTAL</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="1019330130" sp="2038669" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418660" hpRegen="7.5" mp="47856" mpRegen="2.7" />
+			<vitals hp="754697.368425" hpRegen="9.5" mp="970114.145" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
-		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17527" min="2" max="3" chance="81.06" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="30297" min="1" max="2" chance="83.8" /> <!-- Superior Giant's Codex -->
+				<item id="17526" min="1" max="2" chance="19.83" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46150" min="1" max="1" chance="9.969" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="46151" min="1" max="1" chance="2.563" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+				<item id="39738" min="1" max="1" chance="2.54" /> <!-- Rune Stone -->
+				<item id="30298" min="1" max="1" chance="2.53" /> <!-- Superior Giant's Codex - Mastery -->
+				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="23705" level="101" type="L2Npc" name="Arimanes" title="Master of Flames">
+	<npc id="23705" level="101" type="L2Npc" name="L2Monster" title="Master of Flames">
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="1019330130" sp="2038669" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="418660" hpRegen="7.5" mp="47856" mpRegen="2.7" />
+			<vitals hp="754697.368425" hpRegen="9.5" mp="970114.145" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="35" />
 				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
-		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
-			<radius normal="14" grown="17" />
-			<height normal="57.75" grown="69" />
+			<radius normal="14" />
+			<height normal="57.75" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="30297" min="1" max="2" chance="83.07" /> <!-- Superior Giant's Codex -->
+				<item id="17527" min="2" max="3" chance="78.22" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="2" chance="19.66" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46150" min="1" max="1" chance="9.991" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="46151" min="1" max="1" chance="2.57" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+				<item id="30298" min="1" max="1" chance="2.553" /> <!-- Superior Giant's Codex - Mastery -->
+				<item id="39738" min="1" max="1" chance="2.493" /> <!-- Rune Stone -->
+				<item id="46587" min="1" max="1" chance="0.75" /> <!-- Mystic Armor Piece -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23706" level="100" type="L2Npc" name="Kelbim's Follower">
 		<race>HUMAN</race>
@@ -193,29 +217,29 @@
 			<height normal="18" />
 		</collision>
 	</npc>
-	<npc id="23709" level="100" type="L2Npc" name="Flame Scarab">
+	<npc id="23709" level="100" type="L2Monster" name="Flame Scarab">
 		<race>BUG</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="499622600" sp="999300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="215084" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1408563.16338" hpRegen="9.5" mp="1810615.892" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="45" />
 				<run ground="180" />
 			</speed>
-			<attack physical="23610.1029394933" magical="5767.28134561036" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3839.95121517957" magical="2066.69244923556" />
-			<attribute>
-			<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 		</stats>
-		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="22" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="23710" level="100" type="L2Npc" name="Knight Guardian">
 		<race>HUMAN</race>
