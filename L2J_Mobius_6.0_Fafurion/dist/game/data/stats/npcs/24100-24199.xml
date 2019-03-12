@@ -2029,24 +2029,31 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="24178" level="85" type="L2Npc" name="Camille" title="Final Apostle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24178" level="107" type="L2Monster" name="Camille" title="Final Apostle">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="3934594.14195" hpRegen="9.5" mp="5057663.63" mpRegen="3.3" />
+			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="5913" magical="3434" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16899" level="2" /> <!-- Camille -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="24179" level="85" type="L2Npc" name="Kain van Halter" title="Void Apostle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2337,24 +2344,31 @@
 			<height normal="51" />
 		</collision>
 	</npc>
-	<npc id="24194" level="85" type="L2Npc" name="Camille" title="Final Apostle">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
+	<npc id="24194" level="107" type="L2RaidBoss" name="Camille" title="Final Apostle">
+		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+		<acquire exp="0" sp="0" raidPoints="21" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="19673739.795135" hpRegen="461.8588637" mp="25289306.759" mpRegen="3.3" />
+			<attack physical="312687.0433" magical="224243.5878" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="36252.75887" magical="17695.13061" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="16899" level="2" /> <!-- Camille -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="24195" level="85" type="L2Npc" name="Kain van Halter" title="Void Apostle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

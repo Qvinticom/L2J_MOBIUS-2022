@@ -310,21 +310,21 @@
 			<height normal="37.5" />
 		</collision>
 	</npc>
-	<npc id="24014" level="101" type="L2Npc" name="Castle Guard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24014" level="101" type="L2Monster" name="Castle Guard">
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="17421" />
+		<sex>MALE</sex>
+		<equipment rhand="17421" /> 
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
@@ -338,21 +338,21 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24015" level="101" type="L2Npc" name="Castle Guardian Knight">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24015" level="101" type="L2Monster" name="Castle Guardian Knight">
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
 		<equipment rhand="17417" lhand="17435" />
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16" />
 			<height normal="35.5" />
@@ -366,20 +366,20 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24016" level="101" type="L2Npc" name="Castle Berserker">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24016" level="101" type="L2Monster" name="Castle Berserker">
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="28" />
@@ -393,20 +393,20 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24017" level="101" type="L2Npc" name="Castle Soul Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24017" level="101" type="L2Monster" name="Castle Soul Reaper">
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="41" />
@@ -420,21 +420,21 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24018" level="101" type="L2Npc" name="Castle High Priest">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24018" level="101" type="L2Monster" name="Castle High Priest">
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="17426" />
+		<sex>MALE</sex>
+		<equipment rhand="17426" /> 
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="29" />
@@ -448,21 +448,21 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24019" level="101" type="L2Npc" name="Castle Dark Wizard">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24019" level="101" type="L2Monster" name="Castle Dark Wizard">
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<equipment rhand="17391" />
+		<equipment rhand="17391" /> 
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="11" />
 			<height normal="25.5" />
@@ -476,20 +476,20 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24020" level="101" type="L2Npc" name="Castle Choir">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24020" level="101" type="L2Monster" name="Castle Choir">
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="26.5" />
@@ -503,20 +503,20 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24021" level="101" type="L2Npc" name="Castle Soul Reaper">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24021" level="101" type="L2Monster" name="Castle Soul Reaper">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="14" />
 			<height normal="33.5" />
@@ -530,20 +530,20 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24022" level="101" type="L2Npc" name="Embryo Magic Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24022" level="101" type="L2Monster" name="Embryo Magic Cannon">
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="17" />
 			<height normal="28" />
@@ -557,20 +557,20 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24023" level="102" type="L2Npc" name="Embryo Castle Siege Tank">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24023" level="102" type="L2Monster" name="Embryo Castle Siege Tank">
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="27159121" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7702197" hpRegen="10.5" mp="49380" mpRegen="3.6" />
+			<vitals hp="11570306.651865" hpRegen="9.5" mp="14872873.041" mpRegen="3.3" />
+			<attack physical="45713" magical="35171" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4133" magical="2399" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="42" />
 			<height normal="57" />
@@ -579,7 +579,7 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 	</npc>
 	<npc id="24024" level="100" type="L2Npc" name="Embryo Raider">
@@ -1063,20 +1063,20 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24042" level="102" type="L2Npc" name="Embryo Castle Magic Cannon">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24042" level="102" type="L2Monster" name="Embryo Castle Magic Cannon">
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="27159121" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7702197" hpRegen="10.5" mp="49380" mpRegen="3.6" />
+			<vitals hp="11570306.651865" hpRegen="9.5" mp="14872873.041" mpRegen="3.3" />
+			<attack physical="45713" magical="35171" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4133" magical="2399" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30.6" />
 			<height normal="52.8" />
@@ -1085,24 +1085,24 @@
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16758" level="1" /> <!-- Embryo -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24043" level="101" type="L2Npc" name="Castle Archer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24043" level="101" type="L2Monster" name="Castle Archer">
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="15302" />
+		<sex>MALE</sex>
+		<equipment rhand="15302" /> 
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="10" />
 			<height normal="23.5" />
@@ -1116,20 +1116,20 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24044" level="101" type="L2Npc" name="Orc Mercenary Squad Commander">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24044" level="101" type="L2Monster" name="Orc Mercenary Squad Commander">
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="42" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="36.5" />
@@ -1143,21 +1143,21 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24045" level="101" type="L2Npc" name="Orc Mercenary Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24045" level="101" type="L2Monster" name="Orc Mercenary Warrior">
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38425" />
+		<sex>MALE</sex>
+		<equipment rhand="38425" /> 
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="48" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="33" />
@@ -1171,21 +1171,21 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24046" level="101" type="L2Npc" name="Orc Mercenary Member">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24046" level="101" type="L2Monster" name="Orc Mercenary Member">
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38445" />
+		<sex>MALE</sex>
+		<equipment rhand="38445" /> 
+		<acquire exp="117675675" sp="235439" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="476709.27936" hpRegen="9.5" mp="612778.624" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="29" />
@@ -1199,20 +1199,20 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24047" level="101" type="L2Npc" name="Castle Executor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24047" level="101" type="L2Monster" name="Castle Executor">
 		<race>HUMANOID</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="588378378" sp="1176787" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3057278" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="3336966.848265" hpRegen="9.5" mp="4289452.801" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="47" />
@@ -1226,20 +1226,20 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24048" level="101" type="L2Npc" name="Enhanced Poslof">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24048" level="101" type="L2Monster" name="Enhanced Poslof">
 		<race>ANIMAL</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="588378378" sp="1176787" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3057278" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="3336966.848265" hpRegen="9.5" mp="4289452.801" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="24" />
@@ -1253,20 +1253,20 @@
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 		</skillList>
 	</npc>
-	<npc id="24049" level="101" type="L2Npc" name="Castle Inquisitor">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="24049" level="101" type="L2Monster" name="Castle Inquisitor">
 		<race>DEMONIC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="588378378" sp="1176787" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3057278" hpRegen="10.5" mp="24308" mpRegen="3.6" />
+			<vitals hp="3336966.848265" hpRegen="9.5" mp="4289452.801" mpRegen="3.3" />
+			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3777" magical="2192" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="16.8" />
 			<height normal="42" />
