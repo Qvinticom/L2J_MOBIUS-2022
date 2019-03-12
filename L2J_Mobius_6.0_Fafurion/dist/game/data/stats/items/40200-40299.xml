@@ -810,6 +810,13 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="18156" level="1" /> <!-- Potion of Protection: Stun -->
+		</skills>
 	</item>
 	<item id="40254" name="Potion of Protection: Hold" type="EtcItem">
 		<!-- When used, increases Resistance to Hold Attacks by 5% and reduces PVP damage taken by 3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
@@ -817,6 +824,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="18157" level="1" /> <!-- Potion of Protection: Hold -->
+		</skills>
 	</item>
 	<item id="40255" name="Potion of Protection: Bleed" type="EtcItem">
 		<!-- When used, increases Resistance to Bleed Attacks by 5% and reduces PVP damage taken by 3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
@@ -824,6 +839,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="18158" level="1" /> <!-- Potion of Protection: Bleed -->
+		</skills>
 	</item>
 	<item id="40256" name="Potion of Protection: Paralyze" type="EtcItem">
 		<!-- When used, increases Resistance to Paralysis Attacks by 5% and reduces PVP damage taken by 3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
@@ -831,6 +854,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="18159" level="1" /> <!-- Potion of Protection: Paralyze -->
+		</skills>
 	</item>
 	<item id="40257" name="Potion of Protection: Mental" type="EtcItem">
 		<!-- When used, increases Resistance to MEN Attacks by 5% and reduces PVP damage taken by 3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
@@ -839,6 +870,14 @@
 		<set name="is_stackable" val="true" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="commissionItemType" val="POTION" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="18160" level="1" /> <!-- Potion of Protection: Mental -->
+		</skills>
 	</item>
 	<item id="40258" name="Potion of Protection: Sleep" type="EtcItem">
 		<!-- When used, increases Resistance to Sleep Attacks by 5% and reduces PVP damage taken by 3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
@@ -846,6 +885,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="18161" level="1" /> <!-- Potion of Protection: Sleep -->
+		</skills>
 	</item>
 	<item id="40259" name="Potion of Protection: Poison" type="EtcItem">
 		<!-- When used, increases Resistance to Poison Attacks by 5% and reduces PVP damage taken by 3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
@@ -853,6 +900,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="18162" level="1" /> <!-- Potion of Protection: Poison -->
+		</skills>
 	</item>
 	<item id="40260" name="Potion of Protection: Knock Back/ Knock Down" type="EtcItem">
 		<!-- When used, increases Resistance to Knock Back/ Knock Down Attacks by 5% and reduces PVP damage taken by 3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
@@ -860,6 +915,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="18163" level="1" /> <!-- Potion of Protection: Knock Back / Knock Down -->
+		</skills>
 	</item>
 	<item id="40261" name="Potion of Protection: Aerial Yoke" type="EtcItem">
 		<!-- When used, increases Resistance to Aerial Attacks by 5% and reduces PVP damage taken by 3%. Cannot be used in the Olympiad. Does not stack when used with other Potions of Protection. -->
@@ -867,6 +930,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="18164" level="1" /> <!-- Potion of Protection: Aerial Yoke -->
+		</skills>
 	</item>
 	<item id="40262" name="Faeron Support Box" additionalName="Ertheia Fighter" type="EtcItem">
 		<!-- Karla's gift for those who are struggling to make it in the Material Realm. Double-click to use. -->

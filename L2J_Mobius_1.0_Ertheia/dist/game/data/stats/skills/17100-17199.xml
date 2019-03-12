@@ -1061,25 +1061,110 @@
 		<!-- When used, increases stun resistance + 5%. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i01</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>37792</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<SHOCK>5</SHOCK>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17196" toLevel="1" name="Potion of Protection: Hold">
 		<!-- When used, increases hold resistance + 5%. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i06</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>37793</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<HOLD>5</HOLD>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17197" toLevel="1" name="Potion of Protection: Bleed">
 		<!-- When used, increases bleed resistance + 5%. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i00</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>37794</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<BLEED>5</BLEED>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17198" toLevel="1" name="Potion of Protection: Paralyze">
 		<!-- When used, increases paralysis resistance + 5%. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i07</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>37795</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<PARALYZE>5</PARALYZE>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17199" toLevel="1" name="Potion of Protection: Mental">
 		<!-- When used, increases mental attack resistance + 5%. Cannot be used in the Olympiad or the Ceremony of Chaos. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i04</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>37796</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<DERANGEMENT>5</DERANGEMENT>
+			</effect>
+		</effects>
 	</skill>
 </list>

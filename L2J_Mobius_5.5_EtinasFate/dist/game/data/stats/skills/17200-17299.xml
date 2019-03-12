@@ -4,21 +4,90 @@
 		<!-- Use this to increase the defense rate against Sleep by $s1. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i05</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>37797</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<SLEEP>5</SLEEP>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17201" toLevel="1" name="Potion of Protection: Poison (Low-grade)">
 		<!-- Use this to increase the defense rate against Poison by $s1. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i02</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>37798</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<POISON>5</POISON>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17202" toLevel="1" name="Potion of Protection: Knock Back/ Knock Down (Low-grade)">
 		<!-- Use this to increase the defense rate against Knock Back/ Knock Down by $s1. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i10</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>37799</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<KNOCKBACK>5</KNOCKBACK>
+				<KNOCKDOWN>5</KNOCKDOWN>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17203" toLevel="1" name="Potion of Protection: Aerial Yoke (Low-grade)">
 		<!-- Use this to increase the defense rate against Aerial Yoke by $s1. Unavailable to use in Olympiad. -->
 		<icon>icon.etc_fruit_juice_glass_bottle_i11</icon>
 		<operateType>A2</operateType>
+		<itemConsumeId>37800</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>1800</abnormalTime>
+		<abnormalType>POTION_OF_PROTECTION</abnormalType>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="DefenceTrait">
+				<AIRBIND>5</AIRBIND>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="17204" toLevel="1" name="Scroll: 100,000 SP">
 		<!-- Restores 100,000 SP. -->

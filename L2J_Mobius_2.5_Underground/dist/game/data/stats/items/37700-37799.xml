@@ -1262,6 +1262,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="17195" level="1" /> <!-- Potion of Protection: Stun -->
+		</skills>
 	</item>
 	<item id="37793" name="Potion of Protection: Hold" type="EtcItem">
 		<!-- Increases hold resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
@@ -1269,6 +1277,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="17196" level="1" /> <!-- Potion of Protection: Hold -->
+		</skills>
 	</item>
 	<item id="37794" name="Potion of Protection: Bleed" type="EtcItem">
 		<!-- Increases Bleed Resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
@@ -1276,6 +1292,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="17197" level="1" /> <!-- Potion of Protection: Bleed -->
+		</skills>
 	</item>
 	<item id="37795" name="Potion of Protection: Paralyze" type="EtcItem">
 		<!-- Increases paralysis resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
@@ -1283,6 +1307,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="17198" level="1" /> <!-- Potion of Protection: Paralyze -->
+		</skills>
 	</item>
 	<item id="37796" name="Potion of Protection: Mental" type="EtcItem">
 		<!-- Increases Mental resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
@@ -1290,6 +1322,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="17199" level="1" /> <!-- Potion of Protection: Mental -->
+		</skills>
 	</item>
 	<item id="37797" name="Potion of Protection: Sleep" type="EtcItem">
 		<!-- Increases Sleep Resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
@@ -1297,6 +1337,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="17200" level="1" /> <!-- Potion of Protection: Sleep -->
+		</skills>
 	</item>
 	<item id="37798" name="Potion of Protection: Poison" type="EtcItem">
 		<!-- Increases Poison Resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
@@ -1304,6 +1352,14 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="17201" level="1" /> <!-- Potion of Protection: Poison -->
+		</skills>
 	</item>
 	<item id="37799" name="Potion of Protection: Knock Back/ Knock Down" type="EtcItem">
 		<!-- Increases Knock Back / Knock Down resistance by 5% when used. Cannot be used in the Olympiad or the Ceremony of Chaos. When used with other types of protection potions, the effects do not overlap. -->
@@ -1311,5 +1367,13 @@
 		<set name="weight" val="10" />
 		<set name="etcitem_type" val="POTION" />
 		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="POTION" />
+		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="material" val="LIQUID" />
+		<set name="handler" val="ItemSkills" />
+		<set name="is_oly_restricted" val="true" />
+		<skills>
+			<skill id="17202" level="1" /> <!-- Potion of Protection: Knock Back/ Knock Down -->
+		</skills>
 	</item>
 </list>
