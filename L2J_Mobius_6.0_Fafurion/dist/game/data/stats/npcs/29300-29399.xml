@@ -643,140 +643,353 @@
 			<height normal="316.5" />
 		</collision>
 	</npc>
-	<npc id="29318" level="85" type="L2Npc" name="Etis van Etina" title="Overlord">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="29318" level="109" type="L2RaidBoss" name="Etis van Etina" title="Overlord">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="446461141.07331" hpRegen="479.3278415" mp="573896619.054" mpRegen="3.3" />
+			<attack physical="324513.8663" magical="232725.1967" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="37623.95403" magical="18364.41698" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="30" />
 			<height normal="78.6" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29319" level="109" type="L2RaidBoss" name="Etis van Etina" title="Overlord">
 		<race>HUMANOID</race>
-		<acquire exp="0" sp="0" raidPoints="0" />
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="2147483647" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="707640714" hpRegen="1912.28070175439" mp="110728" mpRegen="2018.51851851852" />
+			<vitals hp="446461141.07331" hpRegen="479.3278415" mp="573896619.054" mpRegen="3.3" />
+			<attack physical="324513.8663" magical="232725.1967" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="37623.95403" magical="18364.41698" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="51904.7619047619" magical="9159.66386554622" critical="4" attackSpeed="253" range="40" />
-			<defence physical="4037.03703703704" magical="2344.08602150538" />
 		</stats>
 		<status attackable="true" />
-		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
-		</skillList>
 		<collision>
 			<radius normal="42" />
 			<height normal="136.2" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17437" min="1" max="3" chance="20.78" /> <!-- Eternal Leather Armor -->
+				<item id="17439" min="1" max="3" chance="20.64" /> <!-- Eternal Leather Gloves -->
+				<item id="17440" min="1" max="3" chance="20.35" /> <!-- Eternal Leather Boots -->
+				<item id="17436" min="1" max="3" chance="19.69" /> <!-- Eternal Leather Helmet -->
+				<item id="17438" min="1" max="3" chance="19.44" /> <!-- Eternal Leather Leggings -->
+				<item id="17446" min="1" max="3" chance="17.48" /> <!-- Eternal Sigil -->
+				<item id="17442" min="1" max="3" chance="17.46" /> <!-- Eternal Tunic -->
+				<item id="17430" min="1" max="3" chance="17.23" /> <!-- Eternal Helmet -->
+				<item id="17445" min="1" max="3" chance="17.04" /> <!-- Eternal Shoes -->
+				<item id="17434" min="1" max="3" chance="16.92" /> <!-- Eternal Boots -->
+				<item id="17443" min="1" max="3" chance="16.8" /> <!-- Eternal Stockings -->
+				<item id="17431" min="1" max="3" chance="16.77" /> <!-- Eternal Breastplate -->
+				<item id="17433" min="1" max="3" chance="16.49" /> <!-- Eternal Gauntlets -->
+				<item id="17441" min="1" max="3" chance="16.47" /> <!-- Eternal Circlet -->
+				<item id="17435" min="1" max="3" chance="16.195" /> <!-- Eternal Shield -->
+				<item id="17444" min="1" max="3" chance="15.87" /> <!-- Eternal Gloves -->
+				<item id="17432" min="1" max="3" chance="15.86" /> <!-- Eternal Gaiters -->
+				<item id="17423" min="1" max="2" chance="9.156" /> <!-- Helios Shooter -->
+				<item id="17420" min="1" max="2" chance="9.151" /> <!-- Helios Fighter -->
+				<item id="17418" min="1" max="2" chance="9.114" /> <!-- Helios Slasher -->
+				<item id="17416" min="1" max="2" chance="9.106" /> <!-- Helios Shaper -->
+				<item id="17426" min="1" max="2" chance="9.097" /> <!-- Helios Retributer -->
+				<item id="17419" min="1" max="2" chance="9.078" /> <!-- Helios Avenger -->
+				<item id="17422" min="1" max="2" chance="9.062" /> <!-- Helios Thrower -->
+				<item id="17425" min="1" max="2" chance="9.049" /> <!-- Helios Caster -->
+				<item id="17421" min="1" max="2" chance="9.041" /> <!-- Helios Stormer -->
+				<item id="17424" min="1" max="2" chance="9.036" /> <!-- Helios Buster -->
+				<item id="17417" min="1" max="2" chance="9.03" /> <!-- Helios Cutter -->
+				<item id="35566" min="1" max="1" chance="80.44" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="35568" min="1" max="1" chance="79.99" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="37781" min="1" max="1" chance="49.98" /> <!-- Scroll of Blessing: Armor (R99-grade) -->
+				<item id="36389" min="10" max="20" chance="30.3" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="36162" min="1" max="1" chance="30.18" /> <!-- Scroll of Blessing: (R99-grade) -->
+				<item id="19448" min="10" max="20" chance="29.38" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="37772" min="1" max="1" chance="29.06" /> <!-- Scroll of Blessing: Weapon (R99-grade) -->
+				<item id="46508" min="1" max="1" chance="23.38" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46478" min="1" max="1" chance="22.47" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46493" min="1" max="1" chance="22.42" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46494" min="1" max="1" chance="20.45" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46509" min="1" max="1" chance="20.13" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="36386" min="10" max="20" chance="19.39" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+				<item id="46479" min="1" max="1" chance="19.16" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="19447" min="10" max="20" chance="19.09" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="17710" min="1" max="1" chance="17.43" /> <!-- Lv. 5 Legendary DEX Dye -->
+				<item id="17707" min="1" max="1" chance="17.27" /> <!-- Lv. 5 Ancient WIT Dye -->
+				<item id="17709" min="1" max="1" chance="17.24" /> <!-- Lv. 5 Legendary STR Dye -->
+				<item id="17705" min="1" max="1" chance="17.12" /> <!-- Lv. 5 Ancient CON Dye -->
+				<item id="17699" min="1" max="1" chance="17.07" /> <!-- Lv. 5 Giant CON Dye -->
+				<item id="17714" min="1" max="1" chance="17.06" /> <!-- Lv. 5 Legendary MEN Dye -->
+				<item id="17706" min="1" max="1" chance="16.98" /> <!-- Lv. 5 Ancient INT Dye -->
+				<item id="17711" min="1" max="1" chance="16.92" /> <!-- Lv. 5 Legendary CON Dye -->
+				<item id="46480" min="1" max="1" chance="16.74" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46495" min="1" max="1" chance="16.64" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46510" min="1" max="1" chance="16.54" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="17713" min="1" max="1" chance="16.53" /> <!-- Lv. 5 Legendary WIT Dye -->
+				<item id="17712" min="1" max="1" chance="16.53" /> <!-- Lv. 5 Legendary INT Dye -->
+				<item id="17702" min="1" max="1" chance="16.45" /> <!-- Lv. 5 Giant MEN Dye -->
+				<item id="17704" min="1" max="1" chance="16.34" /> <!-- Lv. 5 Ancient DEX Dye -->
+				<item id="17701" min="1" max="1" chance="16.22" /> <!-- Lv. 5 Giant WIT Dye -->
+				<item id="17708" min="1" max="1" chance="16.13" /> <!-- Lv. 5 Ancient MEN Dye -->
+				<item id="17703" min="1" max="1" chance="16" /> <!-- Lv. 5 Ancient STR Dye -->
+				<item id="17698" min="1" max="1" chance="15.91" /> <!-- Lv. 5 Giant DEX Dye -->
+				<item id="46463" min="1" max="1" chance="15.75" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="17697" min="1" max="1" chance="15.85" /> <!-- Lv. 5 Giant STR Dye -->
+				<item id="17700" min="1" max="1" chance="15.83" /> <!-- Lv. 5 Giant INT Dye -->
+				<item id="46448" min="1" max="1" chance="15.6" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="39485" min="1" max="1" chance="13.96" /> <!-- Alchemic Tome: Dye -->
+				<item id="39484" min="1" max="1" chance="13.84" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="46464" min="1" max="1" chance="13.71" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="39483" min="1" max="1" chance="13.69" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="46449" min="1" max="1" chance="13.2" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46496" min="1" max="1" chance="12.83" /> <!-- Pantheon's Soul Crystal - Stage 8 -->
+				<item id="46511" min="1" max="1" chance="12.68" /> <!-- Lionel's Soul Crystal - Stage 8 -->
+				<item id="46481" min="1" max="1" chance="12.08" /> <!-- Leona's Soul Crystal - Stage 8 -->
+				<item id="46465" min="1" max="1" chance="10.465" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="10.4" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46451" min="1" max="1" chance="8.5925" /> <!-- Kain's Soul Crystal - Stage 8 -->
+				<item id="46466" min="1" max="1" chance="8.536" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="29320" level="109" type="L2RaidBoss" name="Kain van Halter" title="Disciple of Void">
-		<race>ETC</race>
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="2147483647" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="10713486" hpRegen="1789.47368421053" mp="96766" mpRegen="1888.88888888889" />
+			<vitals hp="364757533.74678" hpRegen="479.3278415" mp="468871971.452" mpRegen="3.3" />
+			<attack physical="324513.8663" magical="232725.1967" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="37623.95403" magical="18364.41698" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="48571.4285714286" magical="8571.42857142857" critical="4" attackSpeed="253" range="40" />
-			<defence physical="3777.77777777778" magical="2193.54838709677" />
 		</stats>
 		<status attackable="true" />
 		<collision>
 			<radius normal="36" />
 			<height normal="87" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="17440" min="1" max="3" chance="20.88" /> <!-- Eternal Leather Boots -->
+				<item id="17437" min="1" max="3" chance="20.35" /> <!-- Eternal Leather Armor -->
+				<item id="17438" min="1" max="3" chance="20.34" /> <!-- Eternal Leather Leggings -->
+				<item id="17436" min="1" max="3" chance="19.32" /> <!-- Eternal Leather Helmet -->
+				<item id="17439" min="1" max="3" chance="19.14" /> <!-- Eternal Leather Gloves -->
+				<item id="17435" min="1" max="3" chance="17.09" /> <!-- Eternal Shield -->
+				<item id="17441" min="1" max="3" chance="17.08" /> <!-- Eternal Circlet -->
+				<item id="17433" min="1" max="3" chance="16.98" /> <!-- Eternal Gauntlets -->
+				<item id="17446" min="1" max="3" chance="16.625" /> <!-- Eternal Sigil -->
+				<item id="17430" min="1" max="3" chance="16.51" /> <!-- Eternal Helmet -->
+				<item id="17444" min="1" max="3" chance="16.46" /> <!-- Eternal Gloves -->
+				<item id="17432" min="1" max="3" chance="16.35" /> <!-- Eternal Gaiters -->
+				<item id="17434" min="1" max="3" chance="16.22" /> <!-- Eternal Boots -->
+				<item id="17442" min="1" max="3" chance="16.12" /> <!-- Eternal Tunic -->
+				<item id="17443" min="1" max="3" chance="16.09" /> <!-- Eternal Stockings -->
+				<item id="17445" min="1" max="3" chance="16.05" /> <!-- Eternal Shoes -->
+				<item id="17431" min="1" max="3" chance="15.95" /> <!-- Eternal Breastplate -->
+				<item id="17419" min="1" max="2" chance="9.14" /> <!-- Helios Avenger -->
+				<item id="17426" min="1" max="2" chance="9.135" /> <!-- Helios Retributer -->
+				<item id="17421" min="1" max="2" chance="9.131" /> <!-- Helios Stormer -->
+				<item id="17422" min="1" max="2" chance="9.126" /> <!-- Helios Thrower -->
+				<item id="17423" min="1" max="2" chance="9.106" /> <!-- Helios Shooter -->
+				<item id="17416" min="1" max="2" chance="9.104" /> <!-- Helios Shaper -->
+				<item id="17424" min="1" max="2" chance="9.076" /> <!-- Helios Buster -->
+				<item id="17418" min="1" max="2" chance="9.069" /> <!-- Helios Slasher -->
+				<item id="17425" min="1" max="2" chance="9.035" /> <!-- Helios Caster -->
+				<item id="17420" min="1" max="2" chance="9.03" /> <!-- Helios Fighter -->
+				<item id="17417" min="1" max="2" chance="9.028" /> <!-- Helios Cutter -->
+				<item id="35568" min="1" max="1" chance="71.21" /> <!-- Bloody Weapon Enhancement Stone -->
+				<item id="35566" min="1" max="1" chance="68.41" /> <!-- Dark Weapon Enhancement Stone -->
+				<item id="36160" min="1" max="3" chance="31.12" /> <!-- Scroll of Blessing: (R2-grade) (page does not exist) -->
+				<item id="19448" min="10" max="20" chance="30.73" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="36389" min="10" max="20" chance="30.38" /> <!-- Giant's Scroll: Enchant Armor (R-grade) -->
+				<item id="36162" min="1" max="1" chance="29.55" /> <!-- Scroll of Blessing: (R99-grade) -->
+				<item id="36161" min="1" max="3" chance="29.02" /> <!-- Scroll of Blessing: (R95-grade) (page does not exist) -->
+				<item id="46508" min="1" max="1" chance="23.6" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46493" min="1" max="1" chance="23.16" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46478" min="1" max="1" chance="22.47" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="36386" min="10" max="20" chance="20.2" /> <!-- Giant's Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="10" max="20" chance="19.63" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="46479" min="1" max="1" chance="19.31" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46509" min="1" max="1" chance="19.13" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="46494" min="1" max="1" chance="18.63" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="17712" min="1" max="1" chance="17.39" /> <!-- Lv. 5 Legendary INT Dye -->
+				<item id="17711" min="1" max="1" chance="17.28" /> <!-- Lv. 5 Legendary CON Dye -->
+				<item id="17705" min="1" max="1" chance="17.25" /> <!-- Lv. 5 Ancient CON Dye -->
+				<item id="17707" min="1" max="1" chance="17.18" /> <!-- Lv. 5 Ancient WIT Dye -->
+				<item id="17706" min="1" max="1" chance="17.18" /> <!-- Lv. 5 Ancient INT Dye -->
+				<item id="17700" min="1" max="1" chance="17.16" /> <!-- Lv. 5 Giant INT Dye -->
+				<item id="17703" min="1" max="1" chance="17.14" /> <!-- Lv. 5 Ancient STR Dye -->
+				<item id="17709" min="1" max="1" chance="17.08" /> <!-- Lv. 5 Legendary STR Dye -->
+				<item id="17708" min="1" max="1" chance="16.86" /> <!-- Lv. 5 Ancient MEN Dye -->
+				<item id="17699" min="1" max="1" chance="16.83" /> <!-- Lv. 5 Giant CON Dye -->
+				<item id="17714" min="1" max="1" chance="16.55" /> <!-- Lv. 5 Legendary MEN Dye -->
+				<item id="17713" min="1" max="1" chance="16.32" /> <!-- Lv. 5 Legendary WIT Dye -->
+				<item id="17702" min="1" max="1" chance="16.3" /> <!-- Lv. 5 Giant MEN Dye -->
+				<item id="17698" min="1" max="1" chance="16.21" /> <!-- Lv. 5 Giant DEX Dye -->
+				<item id="17704" min="1" max="1" chance="16.2" /> <!-- Lv. 5 Ancient DEX Dye -->
+				<item id="17710" min="1" max="1" chance="16.02" /> <!-- Lv. 5 Legendary DEX Dye -->
+				<item id="17701" min="1" max="1" chance="16.02" /> <!-- Lv. 5 Giant WIT Dye -->
+				<item id="17697" min="1" max="1" chance="15.94" /> <!-- Lv. 5 Giant STR Dye -->
+				<item id="46448" min="1" max="1" chance="15.29" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46463" min="1" max="1" chance="14.74" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46480" min="1" max="1" chance="14.49" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46495" min="1" max="1" chance="14.26" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46510" min="1" max="1" chance="13.39" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="46464" min="1" max="1" chance="12.87" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46449" min="1" max="1" chance="12.04" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46465" min="1" max="1" chance="9.353" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="9.285" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46511" min="1" max="1" chance="9.208" /> <!-- Lionel's Soul Crystal - Stage 8 -->
+				<item id="46496" min="1" max="1" chance="9.139" /> <!-- Pantheon's Soul Crystal - Stage 8 -->
+				<item id="46481" min="1" max="1" chance="9.131" /> <!-- Leona's Soul Crystal - Stage 8 -->
+				<item id="39484" min="1" max="1" chance="8.349" /> <!-- Alchemic Tome: Life Stone -->
+				<item id="39483" min="1" max="1" chance="8.312" /> <!-- Alchemic Tome: Enchant Scroll -->
+				<item id="39485" min="1" max="1" chance="8.2915" /> <!-- Alchemic Tome: Dye -->
+				<item id="46451" min="1" max="1" chance="6.163" /> <!-- Kain's Soul Crystal - Stage 8 -->
+				<item id="46466" min="1" max="1" chance="6.151" /> <!-- Mermoden's Soul Crystal - Stage 8 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="29321" level="85" type="L2Npc" name="Martyr of Greed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="29321" level="108" type="L2Monster" name="Martyr of Greed">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="14171760" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="78694960.44237" hpRegen="9.5" mp="101157228.658" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="65" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29322" level="85" type="L2Npc" name="Guide of Pride">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="29322" level="108" type="L2Monster" name="Guide of Pride">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="14171760" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="78694960.44237" hpRegen="9.5" mp="101157228.658" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="65" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29323" level="85" type="L2Npc" name="Seeker of Despair">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="29323" level="108" type="L2Monster" name="Seeker of Despair">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="14171760" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="78694960.44237" hpRegen="9.5" mp="101157228.658" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="60" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+		</skillList>
 	</npc>
-	<npc id="29324" level="85" type="L2Npc" name="Liberator of Lust">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="29324" level="108" type="L2Monster" name="Liberator of Lust">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="14171760" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="78694960.44237" hpRegen="9.5" mp="101157228.658" mpRegen="3.3" />
+			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="6269" magical="3641" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="60" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="16758" level="1" /> <!-- Embryo -->
+			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+		</skillList>
 	</npc>
 	<npc id="29325" level="108" type="L2GrandBoss" name="Orfen" title="Master of the Sea of Spores">
 		<parameters>
@@ -3190,13 +3403,14 @@
 			<skill id="32747" level="1" /> <!-- Cyrax -->
 		</skillList>
 	</npc>
-	<npc id="29375" level="115" type="L2RaidBoss" name="Temple Elite Captain">
+	<npc id="29375" level="115" type="L2Monster" name="Temple Elite Captain">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="239135357.24486" hpRegen="533.6802757" mp="36834.809" mpRegen="3.6" />
-			<attack physical="361311.4755" magical="259114.6109" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="41890.24801" magical="20446.81378" />
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="239135357.24486" hpRegen="9.5" mp="307392873.407" mpRegen="3.3" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
 			<speed>
 				<walk ground="70" />
 				<run ground="180" />
@@ -3214,14 +3428,15 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29376" level="115" type="L2RaidBoss" name="Temple Elite Archer">
+	<npc id="29376" level="115" type="L2Monster" name="Temple Elite Archer">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<equipment rhand="15302" />
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="239135357.24486" hpRegen="533.6802757" mp="36834.809" mpRegen="3.6" />
-			<attack physical="361311.4755" magical="259114.6109" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="41890.24801" magical="20446.81378" />
+		<equipment rhand="15302" /> 
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="39855892.979295" hpRegen="9.5" mp="51232145.703" mpRegen="3.3" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
 			<speed>
 				<walk ground="75" />
 				<run ground="180" />
@@ -3239,13 +3454,14 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29377" level="115" type="L2RaidBoss" name="Temple Elite Warrior">
+	<npc id="29377" level="115" type="L2Monster" name="Temple Elite Warrior">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="239135357.24486" hpRegen="533.6802757" mp="36834.809" mpRegen="3.6" />
-			<attack physical="361311.4755" magical="259114.6109" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="41890.24801" magical="20446.81378" />
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="59783839.153485" hpRegen="9.5" mp="76848218.149" mpRegen="3.3" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
 			<speed>
 				<walk ground="75" />
 				<run ground="180" />
@@ -3263,13 +3479,14 @@
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 		</skillList>
 	</npc>
-	<npc id="29378" level="85" type="L2RaidBoss" name="Temple Elite Wizard">
+	<npc id="29378" level="115" type="L2Monster" name="Temple Elite Wizard">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="239135357.24486" hpRegen="533.6802757" mp="36834.809" mpRegen="3.6" />
-			<attack physical="361311.4755" magical="259114.6109" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="41890.24801" magical="20446.81378" />
+		<acquire exp="0" sp="0" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="59783839.153485" hpRegen="9.5" mp="76848218.149" mpRegen="3.3" />
+			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="8761" magical="5090" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
