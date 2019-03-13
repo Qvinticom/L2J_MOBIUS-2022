@@ -3584,7 +3584,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="793" toLevel="8" name="Rush Impact">
+	<skill id="793" toLevel="10" name="Rush Impact">
 		<!-- Charges forward to attack the enemies in front with $s1 power added to P. Attack and inflicts Stun for $s2. Requires an ancient sword/ sword/ blunt/ spear/ fist weapon/ dual blunt/ dual sword weapon. -->
 		<icon>icon.skill0793</icon>
 		<abnormalLvl>
@@ -3596,13 +3596,15 @@
 			<value level="6">6</value>
 			<value level="7">7</value>
 			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="8">60</value>
-			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="10">60</value>
+			<value fromLevel="4" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>5-12</affectLimit>
 		<affectRange>600</affectRange>
@@ -3625,6 +3627,8 @@
 			<value level="6">101</value>
 			<value level="7">103</value>
 			<value level="8">105</value>
+			<value level="9">107</value>
+			<value level="10">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">83</value>
@@ -3635,6 +3639,8 @@
 			<value level="6">116</value>
 			<value level="7">122</value>
 			<value level="8">128</value>
+			<value level="9">134</value>
+			<value level="10">140</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>DA2</operateType>
@@ -3671,20 +3677,22 @@
 					<value level="6">17896</value>
 					<value level="7">18622</value>
 					<value level="8">19348</value>
+					<value level="9">19348</value>
+					<value level="10">19348</value>
 				</power>
 			</effect>
 			<effect name="BlockActions">
 				<allowedSkills>10279;10517;10025;10776;11770;1904;11264;11093;13314;1912</allowedSkills>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PhysicalDefence" fromLevel="4" toLevel="10" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="4" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalDefence" fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="MagicalDefence" fromLevel="4" toLevel="10" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="4" toLevel="8" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="4" toLevel="10" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

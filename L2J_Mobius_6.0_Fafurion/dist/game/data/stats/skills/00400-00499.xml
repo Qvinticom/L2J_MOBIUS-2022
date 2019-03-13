@@ -5272,7 +5272,7 @@
 			</condition>
 		</conditions>
 	</skill>
-	<skill id="485" toLevel="19" name="Disarm">
+	<skill id="485" toLevel="21" name="Disarm">
 		<!-- Disarms the enemy for $s1. Requires an ancient sword, sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0485</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -5280,8 +5280,8 @@
 		<abnormalType>DISARM</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="19">70</value>
-			<value fromLevel="15" toLevel="19" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="21">70</value>
+			<value fromLevel="15" toLevel="21" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
@@ -5306,6 +5306,8 @@
 			<value level="17">-655</value>
 			<value level="18">-655</value>
 			<value level="19">-655</value>
+			<value level="20">-655</value>
+			<value level="21">-655</value>
 		</effectPoint>
 		<effectRange>200</effectRange>
 		<hitTime>1000</hitTime>
@@ -5331,6 +5333,8 @@
 			<value level="17">101</value>
 			<value level="18">103</value>
 			<value level="19">105</value>
+			<value level="20">107</value>
+			<value level="21">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">25</value>
@@ -5352,6 +5356,8 @@
 			<value level="17">55</value>
 			<value level="18">55</value>
 			<value level="19">55</value>
+			<value level="20">55</value>
+			<value level="21">55</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>60000</reuseDelay>
@@ -5366,15 +5372,15 @@
 				<amount>-40</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PhysicalDefence" fromLevel="15" toLevel="21" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="15" toLevel="19" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="15" toLevel="21" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed" fromLevel="15" toLevel="21" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="15" toLevel="19" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
+					<value fromLevel="15" toLevel="21" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>

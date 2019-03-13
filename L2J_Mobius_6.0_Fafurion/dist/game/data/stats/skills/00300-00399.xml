@@ -897,7 +897,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="320" toLevel="17" name="Wrath">
+	<skill id="320" toLevel="19" name="Wrath">
 		<!-- Swings a spear to decrease nearby enemies' CP by $s1. Requires a polearm to be equipped. -->
 		<icon>icon.skill0320</icon>
 		<affectLimit>5-12</affectLimit>
@@ -922,6 +922,8 @@
 			<value level="15">-333</value>
 			<value level="16">-333</value>
 			<value level="17">-333</value>
+			<value level="18">-333</value>
+			<value level="19">-333</value>
 		</effectPoint>
 		<effectRange>400</effectRange>
 		<fanRange>0;0;80;150</fanRange>
@@ -944,6 +946,8 @@
 			<value level="15">101</value>
 			<value level="16">103</value>
 			<value level="17">105</value>
+			<value level="18">107</value>
+			<value level="19">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">66</value>
@@ -963,6 +967,8 @@
 			<value level="15">110</value>
 			<value level="16">120</value>
 			<value level="17">130</value>
+			<value level="18">140</value>
+			<value level="19">150</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -997,6 +1003,8 @@
 					<value level="15">-50</value>
 					<value level="16">-55</value>
 					<value level="17">-60</value>
+					<value level="18">-65</value>
+					<value level="19">-70</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1722,15 +1730,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="345" toLevel="15" name="Sonic Rage">
+	<skill id="345" toLevel="17" name="Sonic Rage">
 		<!-- Attacks the target with a deadly energy storm, lowers P. Def., and absorbs Momentum. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0345</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="15">80</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="17">80</value>
+			<value fromLevel="11" toLevel="17" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<castRange>600</castRange>
 		<coolTime>300</coolTime>
@@ -1753,6 +1761,8 @@
 			<value level="13">101</value>
 			<value level="14">103</value>
 			<value level="15">105</value>
+			<value level="16">107</value>
+			<value level="17">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1770,6 +1780,8 @@
 			<value level="13">73</value>
 			<value level="14">75</value>
 			<value level="15">77</value>
+			<value level="16">79</value>
+			<value level="17">81</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -1803,20 +1815,22 @@
 					<value level="13">812</value>
 					<value level="14">844</value>
 					<value level="15">876</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="16">876</value>
+					<value level="17">876</value>
+					<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="5" toLevel="15">
+			<effect name="PhysicalDefence" fromLevel="5" toLevel="17">
 				<amount>
-					<value fromLevel="5" toLevel="15">-23</value>
+					<value fromLevel="5" toLevel="17">-23</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="Speed" fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed" fromLevel="11" toLevel="17" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
+					<value fromLevel="11" toLevel="17" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1827,15 +1841,15 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="346" toLevel="15" name="Raging Force">
+	<skill id="346" toLevel="17" name="Raging Force">
 		<!-- Attacks the enemy with a devastating burst of wind and gathers Momentum while cutting their defenses. Requires a sword, blunt weapon, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0346</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="15">80</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="17">80</value>
+			<value fromLevel="11" toLevel="17" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<castRange>600</castRange>
 		<effectPoint>-709</effectPoint>
@@ -1859,6 +1873,8 @@
 			<value level="13">101</value>
 			<value level="14">103</value>
 			<value level="15">105</value>
+			<value level="16">107</value>
+			<value level="17">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">50</value>
@@ -1876,6 +1892,8 @@
 			<value level="13">73</value>
 			<value level="14">75</value>
 			<value level="15">77</value>
+			<value level="16">79</value>
+			<value level="17">81</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -1908,14 +1926,16 @@
 					<value level="13">812</value>
 					<value level="14">844</value>
 					<value level="15">876</value>
-					<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="16">876</value>
+					<value level="17">876</value>
+					<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>10</criticalChance>
 			</effect>
-			<effect name="Speed" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed" fromLevel="7" toLevel="17" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
+					<value fromLevel="7" toLevel="17" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1924,7 +1944,7 @@
 			<effect name="FocusMomentum">
 				<maxCharges>
 					<value fromLevel="1" toLevel="4">8</value>
-					<value fromLevel="5" toLevel="15">15</value>
+					<value fromLevel="5" toLevel="17">15</value>
 				</maxCharges>
 			</effect>
 		</selfEffects>

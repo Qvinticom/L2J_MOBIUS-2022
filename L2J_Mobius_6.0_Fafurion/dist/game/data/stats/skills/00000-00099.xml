@@ -722,7 +722,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="7" toLevel="44" name="Sonic Storm">
+	<skill id="7" toLevel="46" name="Sonic Storm">
 		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or duals word. Over-hit. Critical. -->
 		<icon>icon.skill0007</icon>
 		<affectLimit>5-12</affectLimit>
@@ -774,6 +774,8 @@
 			<value level="42">-709</value>
 			<value level="43">-709</value>
 			<value level="44">-709</value>
+			<value level="45">-709</value>
+			<value level="46">-709</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
@@ -822,6 +824,8 @@
 			<value level="42">101</value>
 			<value level="43">103</value>
 			<value level="44">105</value>
+			<value level="45">107</value>
+			<value level="46">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
@@ -868,6 +872,8 @@
 			<value level="42">204</value>
 			<value level="43">210</value>
 			<value level="44">216</value>
+			<value level="45">222</value>
+			<value level="46">228</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -932,16 +938,18 @@
 					<value level="42">23352</value>
 					<value level="43">24490</value>
 					<value level="44">25628</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="45">25628</value>
+					<value level="46">25628</value>
+					<value fromLevel="40" toLevel="46" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="44">15</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="46">15</value>
+					<value fromLevel="40" toLevel="46" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="44">1</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="46">1</value>
+					<value fromLevel="40" toLevel="46" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
@@ -3427,7 +3435,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="35" toLevel="44" name="Force Storm">
+	<skill id="35" toLevel="46" name="Force Storm">
 		<!-- Attacks the target and nearby enemies with $s1 Power added to P. Atk. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. Over-hit. Critical. -->
 		<icon>icon.skill0035</icon>
 		<affectLimit>5-12</affectLimit>
@@ -3479,6 +3487,8 @@
 			<value level="42">-709</value>
 			<value level="43">-709</value>
 			<value level="44">-709</value>
+			<value level="45">-709</value>
+			<value level="46">-709</value>
 		</effectPoint>
 		<effectRange>1000</effectRange>
 		<hitTime>1790</hitTime>
@@ -3516,18 +3526,19 @@
 			<value level="31">77</value>
 			<value level="32">79</value>
 			<value level="33">81</value>
-			<value level="34">83</value>
-			<value level="35">85</value>
-			<value level="36">86</value>
-			<value level="37">88</value>
-			<value level="38">90</value>
-			<value level="39">92</value>
-			<value level="40">94</value>
-			<value level="41">96</value>
-			<value level="42">98</value>
-			<value level="43">101</value>
-			<value level="44">103</value>
-			<value level="45">105</value>
+			<value level="34">85</value>
+			<value level="35">86</value>
+			<value level="36">88</value>
+			<value level="37">90</value>
+			<value level="38">92</value>
+			<value level="39">94</value>
+			<value level="40">96</value>
+			<value level="41">98</value>
+			<value level="42">101</value>
+			<value level="43">103</value>
+			<value level="44">105</value>
+			<value level="45">107</value>
+			<value level="46">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">55</value>
@@ -3574,6 +3585,8 @@
 			<value level="42">204</value>
 			<value level="43">210</value>
 			<value level="44">216</value>
+			<value level="45">222</value>
+			<value level="46">228</value>
 		</mpConsume>
 		<operateType>A1</operateType>
 		<reuseDelay>10000</reuseDelay>
@@ -3635,16 +3648,18 @@
 					<value level="42">23352</value>
 					<value level="43">24490</value>
 					<value level="44">25628</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="45">25628</value>
+					<value level="46">25628</value>
+					<value fromLevel="40" toLevel="46" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="44">15</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="46">15</value>
+					<value fromLevel="40" toLevel="46" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="44">1</value>
-					<value fromLevel="40" toLevel="44" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="46">1</value>
+					<value fromLevel="40" toLevel="46" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
@@ -4055,7 +4070,7 @@
 			<effect name="ConsumeBody" />
 		</effects>
 	</skill>
-	<skill id="48" toLevel="49" name="Thunder Storm">
+	<skill id="48" toLevel="51" name="Thunder Storm">
 		<!-- Swings a spear to attack nearby enemies with $s1 Power added to P. Atk. and causes Stun for $s2. Requires a polearm to be equipped. Ignores Shield Defense. Over-hit and Critical are possible. -->
 		<icon>icon.skill0048</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -4063,8 +4078,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="49">50</value>
-			<value fromLevel="45" toLevel="49" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="51">50</value>
+			<value fromLevel="45" toLevel="51" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>6-12</affectLimit>
 		<affectRange>150</affectRange>
@@ -4120,6 +4135,8 @@
 			<value level="47">-167</value>
 			<value level="48">-167</value>
 			<value level="49">-167</value>
+			<value level="50">-167</value>
+			<value level="51">-167</value>
 		</effectPoint>
 		<hitTime>1080</hitTime>
 		<isDebuff>true</isDebuff>
@@ -4174,6 +4191,8 @@
 			<value level="47">101</value>
 			<value level="48">103</value>
 			<value level="49">105</value>
+			<value level="50">107</value>
+			<value level="51">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">52</value>
@@ -4225,6 +4244,8 @@
 			<value level="47">137</value>
 			<value level="48">141</value>
 			<value level="49">145</value>
+			<value level="50">149</value>
+			<value level="51">153</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -4292,12 +4313,14 @@
 					<value level="47">39349</value>
 					<value level="48">40997</value>
 					<value level="49">42645</value>
-					<value fromLevel="45" toLevel="49" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="50">42645</value>
+					<value level="51">42645</value>
+					<value fromLevel="45" toLevel="51" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>
-					<value fromLevel="1" toLevel="49">15</value>
-					<value fromLevel="45" toLevel="49" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="51">15</value>
+					<value fromLevel="45" toLevel="51" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
@@ -6634,7 +6657,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="94" toLevel="7" name="Rage">
+	<skill id="94" toLevel="8" name="Rage">
 		<!-- P. Atk. +$s2 for $s1. Requires a sword, blunt weapon, spear, fist weapon, dual blunt weapon, or dual sword. -->
 		<icon>icon.skill0094</icon>
 		<abnormalLvl>
@@ -6645,10 +6668,11 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
+			<value level="8">8</value>
 		</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="7">600</value>
-			<value fromLevel="6" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
+			<value fromLevel="1" toLevel="8">600</value>
+			<value fromLevel="6" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + subIndex * 30}</value>
 		</abnormalTime>
 		<abnormalType>PA_UP_SPECIAL</abnormalType>
 		<effectPoint>235</effectPoint>
@@ -6661,6 +6685,7 @@
 			<value level="5">85</value>
 			<value level="6">90</value>
 			<value level="7">95</value>
+			<value level="8">110</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">11</value>
@@ -6670,6 +6695,7 @@
 			<value level="5">34</value>
 			<value level="6">36</value>
 			<value level="7">38</value>
+			<value level="8">40</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>30000</reuseDelay>
@@ -6699,6 +6725,7 @@
 					<value level="5">5</value>
 					<value level="6">10</value>
 					<value level="7">15</value>
+					<value level="8">20</value>
 				</pAtkAmount>
 				<pAtkmode>PER</pAtkmode>
 			</effect>
@@ -6711,6 +6738,7 @@
 					<value level="5">5</value>
 					<value level="6">10</value>
 					<value level="7">15</value>
+					<value level="8">20</value>
 				</pAtkAmount>
 				<pAtkmode>PER</pAtkmode>
 			</effect>
@@ -6733,9 +6761,9 @@
 					<item>DUALBLUNT</item>
 				</weaponType>
 			</effect>
-			<effect name="PhysicalAttackSpeed" fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PhysicalAttackSpeed" fromLevel="6" toLevel="8" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="6" toLevel="7" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
+					<value fromLevel="6" toLevel="8" fromSubLevel="2001" toSubLevel="2020">{0.6 + 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
