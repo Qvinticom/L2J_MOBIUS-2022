@@ -1,14 +1,14 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/skills.xsd">
-	<skill id="30500" toLevel="28" name="Lateral Hit">
+	<skill id="30500" toLevel="30" name="Lateral Hit">
 		<!-- Attacks target with $s1 Power added to P. Atk., and for $s2 P. Def. -$s3. Up to $s4 more damage if target is stunned. Requires a fist weapon. -->
 		<icon>icon.skill30500</icon>
 		<abnormalLvl>4</abnormalLvl>
 		<abnormalTime>20</abnormalTime>
 		<abnormalType>PD_DOWN</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="28">80</value>
-			<value fromLevel="24" toLevel="28" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="30">80</value>
+			<value fromLevel="24" toLevel="30" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<castRange>40</castRange>
 		<coolTime>500</coolTime>
@@ -44,6 +44,8 @@
 			<value level="26">101</value>
 			<value level="27">103</value>
 			<value level="28">105</value>
+			<value level="29">107</value>
+			<value level="30">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">8</value>
@@ -74,6 +76,8 @@
 			<value level="26">78</value>
 			<value level="27">79</value>
 			<value level="28">80</value>
+			<value level="29">81</value>
+			<value level="30">82</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -119,11 +123,13 @@
 					<value level="26">47996</value>
 					<value level="27">49514</value>
 					<value level="28">51032</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="29">52641</value>
+					<value level="30">54250</value>
+					<value fromLevel="24" toLevel="30" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="28">15</value>
-					<value fromLevel="24" toLevel="28" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="30">15</value>
+					<value fromLevel="24" toLevel="30" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance> <!-- Unconfirmed -->
 				<abnormalType>STUN</abnormalType>
 				<damageModifier>1.2</damageModifier>
@@ -132,13 +138,13 @@
 			<effect name="PhysicalDefence">
 				<amount>
 					<value fromLevel="1" toLevel="17">-10</value>
-					<value fromLevel="18" toLevel="28">-30</value>
+					<value fromLevel="18" toLevel="30">-30</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30501" toLevel="27" name="Backspin Impact">
+	<skill id="30501" toLevel="29" name="Backspin Impact">
 		<!-- Turns and deals a strong punch, creating wind. The energy of the wind hits the target, dealing $s1 damage and stunning it for $s2. Requires a fist weapon. -->
 		<icon>icon.skill30501</icon>
 		<castRange>40</castRange>
@@ -174,6 +180,8 @@
 			<value level="25">101</value>
 			<value level="26">103</value>
 			<value level="27">105</value>
+			<value level="28">107</value>
+			<value level="29">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">17</value>
@@ -203,6 +211,8 @@
 			<value level="25">78</value>
 			<value level="26">79</value>
 			<value level="27">80</value>
+			<value level="28">81</value>
+			<value level="29">82</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -246,18 +256,20 @@
 					<value level="25">71115</value>
 					<value level="26">73365</value>
 					<value level="27">75615</value>
-					<value fromLevel="23" toLevel="27" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="28">78000</value>
+					<value level="29">80385</value>
+					<value fromLevel="23" toLevel="29" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<pDefMod>0.7</pDefMod>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="27">15</value>
-					<value fromLevel="23" toLevel="27" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="29">15</value>
+					<value fromLevel="23" toLevel="29" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30502" toLevel="24" name="Chin Strike">
+	<skill id="30502" toLevel="26" name="Chin Strike">
 		<!-- Knocks down target for $s1. Requires a fist weapon. -->
 		<icon>icon.skill30502</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -299,6 +311,8 @@
 			<value level="22">101</value>
 			<value level="23">103</value>
 			<value level="24">105</value>
+			<value level="25">107</value>
+			<value level="26">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">34</value>
@@ -325,6 +339,8 @@
 			<value level="22">78</value>
 			<value level="23">79</value>
 			<value level="24">80</value>
+			<value level="25">80</value>
+			<value level="26">82</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -346,15 +362,15 @@
 				<distance>50</distance>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="20" toLevel="24" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PhysicalDefence" fromLevel="20" toLevel="26" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="20" toLevel="24" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="20" toLevel="26" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30503" toLevel="11" name="Spinning Kick">
+	<skill id="30503" toLevel="13" name="Spinning Kick">
 		<!-- Attacks target with $s1 Power added to P. Atk. Ignores Shield Defense. Requires a fist weapon. -->
 		<icon>icon.skill30503</icon>
 		<castRange>60</castRange>
@@ -374,6 +390,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">81</value>
@@ -387,6 +405,8 @@
 			<value level="9">84</value>
 			<value level="10">84</value>
 			<value level="11">84</value>
+			<value level="12">84</value>
+			<value level="13">84</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -414,18 +434,20 @@
 					<value level="9">88893</value>
 					<value level="10">91705</value>
 					<value level="11">94517</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="12">97498</value>
+					<value level="13">100479</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<ignoreShieldDefence>true</ignoreShieldDefence>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">15</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="13">15</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30504" toLevel="16" name="Gravity Hit">
+	<skill id="30504" toLevel="18" name="Gravity Hit">
 		<!-- Attacks target with $s1 Power added to P. Atk. Ignores $s2 of target's P. Def. Requires a fist weapon. -->
 		<icon>icon.skill30504</icon>
 		<castRange>40</castRange>
@@ -450,6 +472,8 @@
 			<value level="14">101</value>
 			<value level="15">103</value>
 			<value level="16">105</value>
+			<value level="17">107</value>
+			<value level="18">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">75</value>
@@ -468,6 +492,8 @@
 			<value level="14">86</value>
 			<value level="15">87</value>
 			<value level="16">88</value>
+			<value level="17">89</value>
+			<value level="18">90</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A1</operateType>
@@ -500,25 +526,27 @@
 					<value level="14">88893</value>
 					<value level="15">91705</value>
 					<value level="16">94517</value>
-					<value fromLevel="12" toLevel="16" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="17">97498</value>
+					<value level="18">100479</value>
+					<value fromLevel="12" toLevel="18" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<pDefMod>0.5</pDefMod>
 				<criticalChance>
-					<value fromLevel="1" toLevel="16">15</value>
+					<value fromLevel="1" toLevel="18">15</value>
 					<value fromLevel="12" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30505" toLevel="10" name="Pressure Punch">
+	<skill id="30505" toLevel="12" name="Pressure Punch">
 		<!-- Attacks nearby enemies with $s1 Power added to P. Atk, causing them to tumble toward you. Requires a fist weapon. -->
 		<icon>icon.skill30505</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>1</abnormalTime>
 		<activateRate> <!-- Guessed -->
-			<value fromLevel="1" toLevel="10">80</value>
-			<value fromLevel="6" toLevel="10" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="12">80</value>
+			<value fromLevel="6" toLevel="12" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectRange>200</affectRange>
 		<affectLimit>10-10</affectLimit>
@@ -536,6 +564,8 @@
 			<value level="8">101</value>
 			<value level="9">103</value>
 			<value level="10">105</value>
+			<value level="11">107</value>
+			<value level="12">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">149</value>
@@ -548,6 +578,8 @@
 			<value level="8">157</value>
 			<value level="9">159</value>
 			<value level="10">161</value>
+			<value level="11">162</value>
+			<value level="12">163</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<trait>PULL</trait>
@@ -577,7 +609,9 @@
 					<value level="8">39823</value>
 					<value level="9">41083</value>
 					<value level="10">42343</value>
-					<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="11">43679</value>
+					<value level="12">45015</value>
+					<value fromLevel="6" toLevel="12" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>15</criticalChance>
 			</effect>
@@ -586,15 +620,15 @@
 				<speed>333</speed>
 				<animationSpeed>333</animationSpeed>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="6" toLevel="10" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="PhysicalDefence" fromLevel="6" toLevel="12" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="6" toLevel="10" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="6" toLevel="12" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30506" toLevel="14" name="Distant Kick">
+	<skill id="30506" toLevel="16" name="Distant Kick">
 		<!-- Attacks frontal targets with $s1 Power added to P. Atk. and blows them away. Requires a fist weapon. -->
 		<icon>icon.skill30506</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -602,8 +636,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="14">80</value>
-			<value fromLevel="10" toLevel="14" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="16">80</value>
+			<value fromLevel="10" toLevel="16" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectRange>200</affectRange>
 		<castRange>80</castRange>
@@ -627,6 +661,8 @@
 			<value level="12">101</value>
 			<value level="13">103</value>
 			<value level="14">105</value>
+			<value level="15">107</value>
+			<value level="16">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">141</value>
@@ -643,6 +679,8 @@
 			<value level="12">157</value>
 			<value level="13">159</value>
 			<value level="14">161</value>
+			<value level="15">163</value>
+			<value level="16">165</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -676,7 +714,9 @@
 					<value level="12">49769</value>
 					<value level="13">51343</value>
 					<value level="14">52917</value>
-					<value fromLevel="10" toLevel="14" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="15">54585</value>
+					<value level="16">56253</value>
+					<value fromLevel="10" toLevel="16" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>15</criticalChance> <!-- Unconfirmed -->
 			</effect>
@@ -685,15 +725,15 @@
 				<distance>100</distance>
 				<animationSpeed>0</animationSpeed>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="10" toLevel="14" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="PhysicalDefence" fromLevel="10" toLevel="16" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="10" toLevel="14" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="10" toLevel="16" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30507" toLevel="24" name="Left Sidestep">
+	<skill id="30507" toLevel="26" name="Left Sidestep">
 		<!-- Disables targeting and finds weakness to the enemy's left. Enemy is stunned for$s1. Requires a fist weapon. -->
 		<icon>icon.skill30507</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -701,8 +741,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate> <!-- Unconfirmed -->
-			<value fromLevel="1" toLevel="24">80</value>
-			<value fromLevel="20" toLevel="24" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="26">80</value>
+			<value fromLevel="20" toLevel="26" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<effectPoint>-687</effectPoint>
 		<effectRange>900</effectRange> <!-- Unconfirmed -->
@@ -734,11 +774,13 @@
 			<value level="22">30</value>
 			<value level="23">30</value>
 			<value level="24">30</value>
+			<value level="25">30</value>
+			<value level="26">30</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>
-			<value fromLevel="1" toLevel="24">300</value>
-			<value fromLevel="20" toLevel="24" fromSubLevel="1001" toSubLevel="1020">{base + 10 * subIndex}</value>
+			<value fromLevel="1" toLevel="26">300</value>
+			<value fromLevel="20" toLevel="26" fromSubLevel="1001" toSubLevel="1020">{base + 10 * subIndex}</value>
 		</castRange>
 		<hitTime>100</hitTime>
 		<coolTime>300</coolTime>
@@ -759,7 +801,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30508" toLevel="27" name="Right Sidestep">
+	<skill id="30508" toLevel="29" name="Right Sidestep">
 		<!-- Disables targeting and finds weakness to the enemy's right. Decreases enemy's resistance to fist weapons by $s2 for $s1. The decrease in resistance is not canceled when striking. Requires a fist weapon. -->
 		<icon>icon.skill30508</icon>
 		<abnormalTime>5</abnormalTime>
@@ -797,11 +839,13 @@
 			<value level="25">32</value>
 			<value level="26">33</value>
 			<value level="27">34</value>
+			<value level="28">36</value>
+			<value level="29">36</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>
-			<value fromLevel="1" toLevel="27">300</value>
-			<value fromLevel="23" toLevel="27" fromSubLevel="1001" toSubLevel="1020">{base + 10 * subIndex}</value>
+			<value fromLevel="1" toLevel="29">300</value>
+			<value fromLevel="23" toLevel="29" fromSubLevel="1001" toSubLevel="1020">{base + 10 * subIndex}</value>
 		</castRange>
 		<hitTime>100</hitTime>
 		<coolTime>300</coolTime>
@@ -818,15 +862,15 @@
 			<effect name="DefenceTrait">
 				<FIST>
 					<value fromLevel="1" toLevel="16">-10</value>
-					<value fromLevel="17" toLevel="27">-30</value>
+					<value fromLevel="17" toLevel="29">-30</value>
 				</FIST>
 			</effect>
 			<effect name="TargetCancel">
 				<chance>90</chance>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="23" toLevel="27" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PhysicalDefence" fromLevel="23" toLevel="29" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="23" toLevel="27" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="23" toLevel="29" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1000,18 +1044,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30512" toLevel="3" name="Distortion">
+	<skill id="30512" toLevel="4" name="Distortion">
 		<!-- For $s1, distorts space to make attacks from any side as efficient as from behind. P. Atk. +$s2, P. Critical Damage +$s3, and P. Skill Power +$s4. Requires a fist weapon. -->
 		<icon>icon.skill30512</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="3">60</value>
-			<value fromLevel="2" toLevel="3" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="2" toLevel="3" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="4">60</value>
+			<value fromLevel="2" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="2" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<operateType>A2</operateType>
 		<targetType>SELF</targetType>
@@ -1035,6 +1080,7 @@
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">15</value>
+					<value level="4">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1043,6 +1089,7 @@
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">15</value>
+					<value level="4">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1051,12 +1098,13 @@
 					<value level="1">5</value>
 					<value level="2">10</value>
 					<value level="3">15</value>
+					<value level="4">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="DefenceCriticalDamage" fromLevel="2" toLevel="3" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="DefenceCriticalDamage" fromLevel="2" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="2" toLevel="3" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
+					<value fromLevel="2" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{-1 - ((subIndex - 1} * 0.5)}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1198,15 +1246,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30517" toLevel="11" name="Heavy Hand">
+	<skill id="30517" toLevel="13" name="Heavy Hand">
 		<!-- Increases the effect of gravity on nearby enemies to slow them down and block them from teleporting. Requires a fist weapon. -->
 		<icon>icon.skill30517</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>BLOCK_ESCAPE</abnormalType>
 		<activateRate>
-			<value fromLevel="7" toLevel="11">80</value>  <!-- Guessed -->
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="13">80</value>  <!-- Guessed -->
+			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
 		<affectRange>300</affectRange>
@@ -1227,6 +1275,8 @@
 			<value level="9">78</value>
 			<value level="10">79</value>
 			<value level="11">80</value>
+			<value level="12">82</value>
+			<value level="13">82</value>
 		</mpConsume>
 		<hitTime>2000</hitTime>
 		<coolTime>500</coolTime>
@@ -1245,23 +1295,23 @@
 				<amount>-100</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PhysicalDefence" fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30518" toLevel="11" name="Reverse Weight">
+	<skill id="30518" toLevel="13" name="Reverse Weight">
 		<!-- Attacks nearby enemies with $s1 Power added to P. Atk. and knocks them down. Damage increases with the number of enemies affected. Requires a fist weapon. -->
 		<icon>icon.skill30518</icon>
 		<abnormalTime>1</abnormalTime> <!-- Unconfirmed -->
 		<abnormalType>KNOCKDOWN</abnormalType>
 		<abnormalVisualEffect>KNOCKDOWN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="7" toLevel="11">80</value>  <!-- Guessed -->
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="13">80</value>  <!-- Guessed -->
+			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>2-6</affectLimit>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
@@ -1283,6 +1333,8 @@
 			<value level="9">1556</value>
 			<value level="10">1568</value>
 			<value level="11">1580</value>
+			<value level="12">1592</value>
+			<value level="13">1604</value>
 		</mpConsume>
 		<hitTime>3000</hitTime> <!-- Helios -->
 		<coolTime>500</coolTime>
@@ -1311,7 +1363,9 @@
 					<value level="9">49769</value>
 					<value level="10">51343</value>
 					<value level="11">52917</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="12">54585</value>
+					<value level="13">56253</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 			</effect>
@@ -1320,9 +1374,9 @@
 				<distance>50</distance>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="PhysicalDefence" fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1366,18 +1420,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30520" toLevel="3" name="Steel Mind">
+	<skill id="30520" toLevel="4" name="Steel Mind">
 		<!-- Your Invincible Spirit increases Attack by $s2, P. Critical Damage by $s3, P. Skill Critical Damage by $s4, Speed by $s5, Knock Back/ Knock Down/ Pull/ Danger Zone/ Aerial Yoke/ Aggression defense success rate by $s6 for $s1. Inflicts additional damage $s7 times stronger than the general attack. HP does not decrease below $s8 and recovers by $s9 when the effect expires. Requires a fist weapon. -->
 		<icon>icon.skill30520</icon>
 		<abnormalLvl>
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
 		</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="3">30</value>
-			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="1" toLevel="3" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="4">30</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="1" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalVisualEffect>PMENTAL_TRAIL</abnormalVisualEffect>
 		<abnormalType>STEEL_MIND</abnormalType>
@@ -1388,6 +1443,7 @@
 			<value level="1">221</value>
 			<value level="2">232</value>
 			<value level="3">243</value>
+			<value level="4">254</value>
 		</mpConsume>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -1406,6 +1462,7 @@
 					<value level="1">10</value>
 					<value level="2">10</value>
 					<value level="3">15</value>
+					<value level="4">20</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1432,6 +1489,7 @@
 					<value level="1">15</value>
 					<value level="2">30</value>
 					<value level="3">30</value>
+					<value level="4">35</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1440,6 +1498,7 @@
 					<value level="1">50</value>
 					<value level="2">70</value>
 					<value level="3">70</value>
+					<value level="4">70</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -1448,6 +1507,7 @@
 					<value level="1">10</value>
 					<value level="2">15</value>
 					<value level="3">15</value>
+					<value level="4">15</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -1458,6 +1518,7 @@
 					<value level="1">30</value>
 					<value level="2">30</value>
 					<value level="3">40</value>
+					<value level="4">50</value>
 				</power>
 			</effect>
 		</endEffects>
@@ -1587,14 +1648,14 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 	</skill>
-	<skill id="30530" toLevel="15" name="Crushing Air">
+	<skill id="30530" toLevel="17" name="Crushing Air">
 		<!-- Crushes the air to decrease target's battle strength. Requires a fist weapon. -->
 		<icon>icon.skill30530</icon>
 		<abnormalTime>10</abnormalTime> <!-- Unconfirmed -->
 		<abnormalVisualEffect>GRAVITY_SPACE_3</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="15">80</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="17">80</value>
+			<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<operateType>A2</operateType>
 		<targetType>ENEMY</targetType>
@@ -1615,10 +1676,12 @@
 			<value level="13">38</value>
 			<value level="14">38</value>
 			<value level="15">38</value>
+			<value level="16">38</value>
+			<value level="17">38</value>
 		</mpConsume>
 		<castRange>
-			<value fromLevel="1" toLevel="15">600</value>
-			<value fromLevel="11" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
+			<value fromLevel="1" toLevel="17">600</value>
+			<value fromLevel="11" toLevel="17" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
 		</castRange>
 		<hitTime>1000</hitTime>
 		<coolTime>500</coolTime>
@@ -1639,9 +1702,9 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="BlockEscape" />
-			<effect name="PhysicalDefence" fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="PhysicalDefence" fromLevel="11" toLevel="17" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="11" toLevel="15" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="11" toLevel="17" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2306,7 +2369,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30546" toLevel="11" name="Flying Knee Kick">
+	<skill id="30546" toLevel="13" name="Flying Knee Kick">
 		<!-- Lands a knee kick on the target. Target is knocked down for $s1. Fist weapon must be equipped. -->
 		<icon>icon.skill30546</icon>
 		<abnormalTime>3</abnormalTime>
@@ -2334,6 +2397,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">29</value>
@@ -2347,10 +2412,12 @@
 			<value level="9">32</value>
 			<value level="10">33</value>
 			<value level="11">34</value>
+			<value level="12">35</value>
+			<value level="13">36</value>
 		</mpConsume>
 		<castRange>
-			<value fromLevel="1" toLevel="11">300</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
+			<value fromLevel="1" toLevel="13">300</value>
+			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + 10 * subIndex}</value>
 		</castRange>
 		<hitTime>100</hitTime>
 		<coolTime>300</coolTime>
@@ -2373,15 +2440,15 @@
 				<distance>50</distance>
 				<knockDown>true</knockDown>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="PhysicalDefence" fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
 				<amount>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="30547" toLevel="4" name="Stamp Punch">
+	<skill id="30547" toLevel="6" name="Stamp Punch">
 		<!-- Throws a powerful punch to a fallen target with $s1 Power added to P. Atk. Ignores $s2 of target's P. Def. Fist weapon must be equipped. -->
 		<icon>icon.skill30547</icon>
 		<operateType>A1</operateType>
@@ -2392,6 +2459,8 @@
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
+			<value level="5">107</value>
+			<value level="6">109</value>
 		</magicLvl>
 		<mpConsume>85</mpConsume>
 		<castRange>80</castRange>
@@ -2418,11 +2487,13 @@
 					<value level="2">95080</value>
 					<value level="3">98736</value>
 					<value level="4">102392</value>
+					<value level="5">106267</value>
+					<value level="6">110142</value>
 				</power>
 				<pDefMod>0.5</pDefMod>
 				<criticalChance>
-					<value fromLevel="1" toLevel="4">15</value> <!-- Guessed -->
-					<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="6">15</value> <!-- Guessed -->
+					<value fromLevel="1" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 			</effect>
 		</effects>
