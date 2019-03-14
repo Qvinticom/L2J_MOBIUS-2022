@@ -75,7 +75,7 @@ public final class TeleportHolder
 	 */
 	public boolean isNoblesse()
 	{
-		return _type == TeleportType.NOBLES_ADENA || _type == TeleportType.NOBLES_TOKEN;
+		return (_type == TeleportType.NOBLES_ADENA) || (_type == TeleportType.NOBLES_TOKEN);
 	}
 	
 	/**
@@ -140,7 +140,7 @@ public final class TeleportHolder
 		}
 		
 		// Load variables
-		final int questZoneId = (_type == TeleportType.NORMAL) ? player.getQuestZoneId() : -1;
+		final int questZoneId = isNormalTeleport() ? player.getQuestZoneId() : -1;
 		
 		// Build html
 		final StringBuilder sb = new StringBuilder();
@@ -216,7 +216,7 @@ public final class TeleportHolder
 		}
 		
 		// Validate conditions for NORMAL teleport
-		if (_type == TeleportType.NORMAL)
+		if (isNormalTeleport())
 		{
 			if (npc.getCastle().getSiege().isInProgress())
 			{
@@ -270,7 +270,7 @@ public final class TeleportHolder
 	 */
 	private boolean shouldPayFee(L2PcInstance player, TeleportLocation loc)
 	{
-		return (_type != TeleportType.NORMAL) || (((player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
+		return !isNormalTeleport() || (((player.getLevel() > Config.MAX_FREE_TELEPORT_LEVEL) || player.isSubClassActive()) && ((loc.getFeeId() != 0) && (loc.getFeeCount() > 0)));
 	}
 	
 	/**
@@ -283,7 +283,7 @@ public final class TeleportHolder
 	 */
 	private long calculateFee(L2PcInstance player, TeleportLocation loc)
 	{
-		if (_type == TeleportType.NORMAL)
+		if (isNormalTeleport())
 		{
 			if (!player.isSubClassActive() && (player.getLevel() <= Config.MAX_FREE_TELEPORT_LEVEL))
 			{
@@ -299,6 +299,11 @@ public final class TeleportHolder
 			}
 		}
 		return loc.getFeeCount();
+	}
+	
+	private boolean isNormalTeleport()
+	{
+		return (_type == TeleportType.NORMAL) || (_type == TeleportType.HUNTING);
 	}
 	
 	/**

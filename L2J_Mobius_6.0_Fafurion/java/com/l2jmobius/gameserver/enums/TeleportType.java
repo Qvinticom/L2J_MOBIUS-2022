@@ -22,6 +22,7 @@ package com.l2jmobius.gameserver.enums;
 public enum TeleportType
 {
 	NORMAL,
+	HUNTING,
 	NOBLES_TOKEN,
 	NOBLES_ADENA,
 	OTHER;
