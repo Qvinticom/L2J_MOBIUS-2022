@@ -475,13 +475,40 @@ public class MultiSellChoose implements IClientIncomingPacket
 					{
 						addedItem.setEnchantLevel(itemEnchantment.getEnchantLevel());
 						addedItem.setAugmentation(itemEnchantment.getAugmentation(), false);
-						addedItem.setAttribute(new AttributeHolder(AttributeType.findByClientId(itemEnchantment.getAttackElementType()), itemEnchantment.getAttackElementPower()), false);
-						addedItem.setAttribute(new AttributeHolder(AttributeType.FIRE, itemEnchantment.getAttributeDefence(AttributeType.FIRE)), false);
-						addedItem.setAttribute(new AttributeHolder(AttributeType.WATER, itemEnchantment.getAttributeDefence(AttributeType.WATER)), false);
-						addedItem.setAttribute(new AttributeHolder(AttributeType.WIND, itemEnchantment.getAttributeDefence(AttributeType.WIND)), false);
-						addedItem.setAttribute(new AttributeHolder(AttributeType.EARTH, itemEnchantment.getAttributeDefence(AttributeType.EARTH)), false);
-						addedItem.setAttribute(new AttributeHolder(AttributeType.HOLY, itemEnchantment.getAttributeDefence(AttributeType.HOLY)), false);
-						addedItem.setAttribute(new AttributeHolder(AttributeType.DARK, itemEnchantment.getAttributeDefence(AttributeType.DARK)), false);
+						if (addedItem.isWeapon())
+						{
+							if (itemEnchantment.getAttackElementPower() > 0)
+							{
+								addedItem.setAttribute(new AttributeHolder(AttributeType.findByClientId(itemEnchantment.getAttackElementType()), itemEnchantment.getAttackElementPower()), false);
+							}
+						}
+						else
+						{
+							if (itemEnchantment.getAttributeDefence(AttributeType.FIRE) > 0)
+							{
+								addedItem.setAttribute(new AttributeHolder(AttributeType.FIRE, itemEnchantment.getAttributeDefence(AttributeType.FIRE)), false);
+							}
+							if (itemEnchantment.getAttributeDefence(AttributeType.WATER) > 0)
+							{
+								addedItem.setAttribute(new AttributeHolder(AttributeType.WATER, itemEnchantment.getAttributeDefence(AttributeType.WATER)), false);
+							}
+							if (itemEnchantment.getAttributeDefence(AttributeType.WIND) > 0)
+							{
+								addedItem.setAttribute(new AttributeHolder(AttributeType.WIND, itemEnchantment.getAttributeDefence(AttributeType.WIND)), false);
+							}
+							if (itemEnchantment.getAttributeDefence(AttributeType.EARTH) > 0)
+							{
+								addedItem.setAttribute(new AttributeHolder(AttributeType.EARTH, itemEnchantment.getAttributeDefence(AttributeType.EARTH)), false);
+							}
+							if (itemEnchantment.getAttributeDefence(AttributeType.HOLY) > 0)
+							{
+								addedItem.setAttribute(new AttributeHolder(AttributeType.HOLY, itemEnchantment.getAttributeDefence(AttributeType.HOLY)), false);
+							}
+							if (itemEnchantment.getAttributeDefence(AttributeType.DARK) > 0)
+							{
+								addedItem.setAttribute(new AttributeHolder(AttributeType.DARK, itemEnchantment.getAttributeDefence(AttributeType.DARK)), false);
+							}
+						}
 						if (_soulCrystalOptions != null)
 						{
 							for (int i = 0; i < _soulCrystalOptions.length; i++)
