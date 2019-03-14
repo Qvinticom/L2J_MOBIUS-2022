@@ -3407,18 +3407,23 @@
 			<height normal="97" />
 		</collision>
 	</npc>
-	<npc id="23797" level="85" type="L2Npc" name="El Fera">
+	<npc id="23797" level="102" type="L2Npc" name="El Fera">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="403282" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="103253.02524" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<speed>
 				<walk ground="39" />
 				<run ground="180" />
 			</speed>
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14817" level="1" /> <!-- Instant Kill Attack Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="10" />
 			<height normal="14" />
