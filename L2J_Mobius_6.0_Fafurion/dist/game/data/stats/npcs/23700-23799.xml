@@ -849,7 +849,7 @@
 		<race>GIANT</race>
 		<acquire exp="593525905" sp="593596" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="786157" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="858077.20758" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -886,12 +886,12 @@
 				<item id="36875" min="1" max="1" chance="0.0075" /> <!-- Recipe: Metallic Fiber - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="3.533" /> <!-- Orichalcum -->
+				<item id="36524" min="1" max="1" chance="3.499" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 				<item id="46080" min="1" max="1" chance="0.3" /> <!-- Recipe: Mysterious Soulshot (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.10" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -947,7 +947,7 @@
 		<race>GIANT</race>
 		<acquire exp="593525905" sp="593596" />
 		<stats>
-			<vitals hp="786157" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="858077.20758" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -983,11 +983,11 @@
 				<item id="36942" min="1" max="1" chance="0.03" /> <!-- Recipe: Synthetic Cokes - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="36524" min="1" max="1" chance="5.379" /> <!-- Orichalcum -->
+				<item id="36524" min="1" max="1" chance="5.264" /> <!-- Orichalcum -->
 				<item id="36525" min="1" max="1" chance="0.3" /> <!-- Durandil -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.22" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2356,7 +2356,7 @@
 		<sex>MALE</sex>
 		<acquire exp="908048947" sp="908061" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1277110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1393943.601" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -2387,10 +2387,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17430" min="1" max="1" chance="0.0075" /> <!-- Eternal Helmet - Heavy Armor -->
-				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17430" min="1" max="1" chance="0.0075" /> <!-- Eternal Helmet -->
+				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate -->
 				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="11.64" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="12.52" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
 				<item id="35332" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Fragment -->
 				<item id="35338" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Ingredient -->
@@ -2402,7 +2402,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.93" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2416,7 +2416,7 @@
 		<acquire exp="908048947" sp="908061" />
 		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1277110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1393943.601" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="190" />
@@ -2446,11 +2446,11 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17433" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlets - Heavy Armor -->
-				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17433" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlets -->
+				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters -->
 				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="12.65" /> <!-- Adamantite Wire -->
-				<item id="36544" min="1" max="1" chance="1.093" /> <!-- Orichalcum Wire -->
+				<item id="36543" min="1" max="1" chance="11.78" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="1.043" /> <!-- Orichalcum Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
 				<item id="35329" min="1" max="1" chance="0.3" /> <!-- Helios Slasher Fragment -->
 				<item id="35340" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiter Ingredient -->
@@ -2461,7 +2461,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.29" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2475,7 +2475,7 @@
 		<sex>MALE</sex>
 		<acquire exp="908048947" sp="908061" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1277110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1393943.601" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -2506,10 +2506,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots - Heavy Armor -->
-				<item id="17435" min="1" max="1" chance="0.03" /> <!-- Eternal Shield - Heavy Armor -->
+				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots -->
+				<item id="17435" min="1" max="1" chance="0.03" /> <!-- Eternal Shield -->
 				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="12.26" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="11.48" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
 				<item id="35332" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Fragment -->
 				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
@@ -2521,7 +2521,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="48.07" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2535,7 +2535,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1111149422" sp="1111186" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1383110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1509640.7937" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -2566,10 +2566,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17430" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet - Heavy Armor -->
+				<item id="17430" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet -->
 				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
 				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="6.494" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="6.352" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
 				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
 				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
@@ -2580,7 +2580,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.46" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2596,7 +2596,7 @@
 		<acquire exp="1111149422" sp="1111186" />
 		<equipment rhand="47163" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1383110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1509640.7937" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="190" />
@@ -2626,9 +2626,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17431" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17431" min="1" max="1" chance="0.03" /> <!-- Eternal Breastplate -->
 				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="6.422" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="6.336" /> <!-- Adamantite Wire -->
 				<item id="36544" min="1" max="1" chance="0.75" /> <!-- Orichalcum Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
 				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
@@ -2639,7 +2639,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="48.37" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2654,7 +2654,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1111149422" sp="1111186" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1383110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1509640.7937" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -2685,9 +2685,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17432" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17432" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiters -->
 				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="6.43" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="6.319" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
 				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
 				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
@@ -2698,7 +2698,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.85" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2712,7 +2712,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1111149422" sp="1111186" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1383110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1509640.7937" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
@@ -2743,10 +2743,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17433" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlets - Heavy Armor -->
+				<item id="17433" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlets -->
 				<item id="17421" min="1" max="1" chance="0.003" /> <!-- Helios Stormer -->
 				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="5.104" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="5.128" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
 				<item id="36544" min="1" max="1" chance="0.3" /> <!-- Orichalcum Wire -->
 				<item id="35465" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Gauntlets (60%) -->
@@ -2759,7 +2759,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.46" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2775,7 +2775,7 @@
 		<acquire exp="1111149422" sp="1111186" />
 		<equipment rhand="47163" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1383110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1509640.7937" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="190" />
@@ -2805,9 +2805,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17434" min="1" max="1" chance="0.075" /> <!-- Eternal Boots - Heavy Armor -->
+				<item id="17434" min="1" max="1" chance="0.075" /> <!-- Eternal Boots -->
 				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="6.393" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="6.349" /> <!-- Adamantite Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
 				<item id="35466" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Boots (60%) -->
 				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
@@ -2819,7 +2819,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.59" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2835,7 +2835,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1111149422" sp="1111186" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1383110" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="1509640.7937" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -2866,10 +2866,10 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17435" min="1" max="1" chance="0.03" /> <!-- Eternal Shield - Heavy Armor -->
+				<item id="17435" min="1" max="1" chance="0.03" /> <!-- Eternal Shield -->
 				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
 				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="6.441" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="6.372" /> <!-- Adamantite Wire -->
 				<item id="36544" min="1" max="1" chance="0.75" /> <!-- Orichalcum Wire -->
 				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
 				<item id="35467" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Shield (60%) -->
@@ -2881,7 +2881,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.17" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2893,9 +2893,9 @@
 		</parameters>
 		<race>GIANT</race>
 		<sex>MALE</sex>
-		<acquire exp="3703831584" sp="3703920" />
+		<acquire exp="2147483647" sp="3703920" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="23051835" hpRegen="7.5" mp="23928" mpRegen="2.7" />
+			<vitals hp="25160685.152625" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
@@ -2926,7 +2926,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="47126" min="1" max="1" chance="51.01" /> <!-- Key Card to the Controller Room -->
+				<item id="47126" min="1" max="1" chance="49.04" /> <!-- Key Card to the Controller Room -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3341,9 +3341,9 @@
 	</npc>
 	<npc id="23798" level="102" type="L2Monster" name="Delta Bathus" title="Superion Scout">
 		<race>GIANT</race>
-		<acquire exp="908048947" sp="908061" />
+		<acquire exp="182435180" sp="364972" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="308902.924065" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="40" />
 			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<attribute>
@@ -3371,31 +3371,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17430" min="1" max="1" chance="0.0075" /> <!-- Eternal Helmet - Heavy Armor -->
-				<item id="17431" min="1" max="1" chance="0.003" /> <!-- Eternal Breastplate - Heavy Armor -->
-				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="11.64" /> <!-- Adamantite Wire -->
-				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
-				<item id="35332" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Fragment -->
-				<item id="35338" min="1" max="1" chance="0.3" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35339" min="1" max="1" chance="0.3" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
+				<item id="47204" min="1" max="1" chance="5.603" /> <!-- Particle Dissolver Component -->
+				<item id="47203" min="1" max="1" chance="5.534" /> <!-- Material for Giants Lightning Protection Potion -->
+				<item id="47202" min="1" max="1" chance="5.492" /> <!-- Material for Giants Deterioration Protection Potion -->
+				<item id="47219" min="1" max="1" chance="0.003" /> <!-- Source of the Emperor -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23799" level="102" type="L2Monster" name="Delta Carcass" title="Superion Scout">
 		<race>GIANT</race>
-		<acquire exp="908048947" sp="908061" />
+		<acquire exp="182435180" sp="364972" />
 		<equipment rhand="15304" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="308902.924065" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="49047.619047619" magical="8655.46218487395" critical="4" attackSpeed="398" range="900" />
 			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<attribute>
@@ -3422,23 +3419,20 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17433" min="1" max="1" chance="0.03" /> <!-- Eternal Gauntlets - Heavy Armor -->
-				<item id="17432" min="1" max="1" chance="0.003" /> <!-- Eternal Gaiters - Heavy Armor -->
-				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="12.65" /> <!-- Adamantite Wire -->
-				<item id="36544" min="1" max="1" chance="1.093" /> <!-- Orichalcum Wire -->
-				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
-				<item id="35329" min="1" max="1" chance="0.3" /> <!-- Helios Slasher Fragment -->
-				<item id="35340" min="1" max="1" chance="0.3" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35341" min="1" max="1" chance="0.3" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="47202" min="1" max="1" chance="5.604" /> <!-- Material for Giants Deterioration Protection Potion -->
+				<item id="47204" min="1" max="1" chance="5.588" /> <!-- Particle Dissolver Component -->
+				<item id="47203" min="1" max="1" chance="5.546" /> <!-- Material for Giants Lightning Protection Potion -->
+				<item id="47219" min="1" max="1" chance="0.003" /> <!-- Source of the Emperor -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 </list>

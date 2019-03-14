@@ -2,9 +2,9 @@
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
 	<npc id="23800" level="102" type="L2Monster" name="Delta Kshana" title="Superion Scout">
 		<race>GIANT</race>
-		<acquire exp="908048947" sp="908061" />
+		<acquire exp="182435180" sp="364972" />
 		<stats>
-			<vitals hp="283012" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="308902.924065" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="140" />
@@ -32,23 +32,20 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17434" min="1" max="1" chance="0.03" /> <!-- Eternal Boots - Heavy Armor -->
-				<item id="17435" min="1" max="1" chance="0.03" /> <!-- Eternal Shield - Heavy Armor -->
-				<item id="57" min="29430" max="68561" chance="70" /> <!-- Adena -->
-				<item id="36543" min="1" max="1" chance="12.26" /> <!-- Adamantite Wire -->
-				<item id="47250" min="1" max="1" chance="0.75" /> <!-- Giant Crystal -->
-				<item id="35332" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Fragment -->
-				<item id="35342" min="1" max="1" chance="0.3" /> <!-- Eternal Boot Ingredient -->
-				<item id="35343" min="1" max="1" chance="0.3" /> <!-- Eternal Shield Ingredient -->
-				<item id="36545" min="1" max="1" chance="0.075" /> <!-- Durandil Wire -->
+				<item id="47202" min="1" max="1" chance="5.608" /> <!-- Material for Giants Deterioration Protection Potion -->
+				<item id="47203" min="1" max="1" chance="5.582" /> <!-- Material for Giants Lightning Protection Potion -->
+				<item id="47204" min="1" max="1" chance="5.564" /> <!-- Particle Dissolver Component -->
+				<item id="47219" min="1" max="1" chance="0.003" /> <!-- Source of the Emperor -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
-				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23801" level="89" type="L2Monster" name="Lillim Royal Knight">
@@ -544,12 +541,12 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23816" level="85" type="L2Npc" name="Om Bathus" title="Hunter">
+	<npc id="23816" level="103" type="L2Npc" name="Om Bathus" title="Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1509640.7937" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -558,17 +555,46 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="46" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17430" min="1" max="1" chance="0.03" /> <!-- Eternal Helmet -->
+				<item id="17418" min="1" max="1" chance="0.003" /> <!-- Helios Slasher -->
+				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="6.409" /> <!-- Adamantite Wire -->
+				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
+				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35462" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Helmet (60%) -->
+			</drop>
+			<spoil>
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.55" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
-	<npc id="23817" level="85" type="L2Npc" name="Om Kshana" title="Hunter">
+	<npc id="23817" level="103" type="L2Npc" name="Om Kshana" title="Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1509640.7937" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="180" />
@@ -577,10 +603,38 @@
 			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
 		<status attackable="false" />
+		<skillList>
+			<skill id="4416" level="11" /> <!-- Giants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
+		</skillList>
 		<collision>
 			<radius normal="24" />
 			<height normal="47.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17432" min="1" max="1" chance="0.03" /> <!-- Eternal Gaiters -->
+				<item id="57" min="31251" max="72861" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="6.368" /> <!-- Adamantite Wire -->
+				<item id="36545" min="1" max="1" chance="0.03" /> <!-- Durandil Wire -->
+				<item id="35456" min="1" max="1" chance="0.0075" /> <!-- Recipe: Helios Stormer (60%) -->
+				<item id="35464" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Gaiters (60%) -->
+			</drop>
+			<spoil>
+				<item id="36564" min="1" max="1" chance="0.75" /> <!-- Greater Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="47.79" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23820" level="85" type="L2Npc" name="Ketra Elite Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
