@@ -237,7 +237,7 @@
 		<equipment rhand="17421" />
 		<acquire exp="247302434" sp="247374" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="524380.585845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="3955" />
 			<attribute>
@@ -266,7 +266,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="22782" max="53245" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="3.22" /> <!-- Quality Leather -->
+				<item id="36519" min="1" max="1" chance="3.294" /> <!-- Quality Leather -->
 				<item id="35347" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Glove Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
 				<item id="35327" min="1" max="1" chance="0.3" /> <!-- Helios Shaper Fragment -->
@@ -276,7 +276,7 @@
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.12" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -286,7 +286,7 @@
 		<equipment rhand="17417" lhand="17435" />
 		<acquire exp="311374507" sp="311436" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="524380.585845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
@@ -318,17 +318,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves - Light Armor -->
+				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves -->
 				<item id="57" min="26676" max="62345" chance="70" /> <!-- Adena -->
 				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
 				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
 				<item id="36909" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum Wire - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36554" min="1" max="1" chance="2.023" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="1.997" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.71" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -338,7 +338,7 @@
 		<equipment rhand="17329" />
 		<acquire exp="247302434" sp="247374" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="524380.585845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="42356" magical="31566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="3955" />
 			<attribute>
@@ -367,7 +367,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="22782" max="53245" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="3.278" /> <!-- Quality Leather -->
+				<item id="36519" min="1" max="1" chance="3.267" /> <!-- Quality Leather -->
 				<item id="35348" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boot Ingredient -->
 				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
 				<item id="35337" min="1" max="1" chance="0.3" /> <!-- Helios Retributer Fragment -->
@@ -377,7 +377,7 @@
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.82" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -387,7 +387,7 @@
 		<equipment rhand="17325" lhand="17401" />
 		<acquire exp="311374507" sp="311436" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="7.5" mp="24308" mpRegen="2.7" />
+			<vitals hp="524380.585845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
@@ -417,7 +417,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots - Light Armor -->
+				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots -->
 				<item id="57" min="26676" max="62345" chance="70" /> <!-- Adena -->
 				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
 				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
@@ -427,7 +427,7 @@
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.88" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -438,7 +438,7 @@
 		<sex>MALE</sex>
 		<acquire exp="381103201" sp="381202" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="567903.626205" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5080" magical="5650" />
 			<attribute>
@@ -469,7 +469,7 @@
 		<dropLists>
 			<drop>
 				<item id="57" min="23299" max="54277" chance="70" /> <!-- Adena -->
-				<item id="35344" min="1" max="1" chance="1.075" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="35344" min="1" max="1" chance="1.02" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36540" min="1" max="1" chance="0.03" /> <!-- Exquisite Leather Braid -->
 				<item id="36907" min="1" max="1" chance="0.03" /> <!-- Recipe: Adamantite Wire - Upgrade -->
 				<item id="35468" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
@@ -478,7 +478,7 @@
 				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.54" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -489,7 +489,7 @@
 		<sex>MALE</sex>
 		<acquire exp="381103201" sp="381202" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="567903.626205" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="51396" magical="43516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5080" magical="5650" />
 			<attribute>
@@ -526,10 +526,10 @@
 				<item id="35469" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Leather Armor (60%) -->
 			</drop>
 			<spoil>
-				<item id="36554" min="1" max="1" chance="1.682" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36554" min="1" max="1" chance="1.703" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.36" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -540,7 +540,7 @@
 		<sex>MALE</sex>
 		<acquire exp="444700148" sp="444771" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="567903.626205" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -572,9 +572,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17438" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17438" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Leggings -->
 				<item id="57" min="27280" max="63554" chance="70" /> <!-- Adena -->
-				<item id="36539" min="1" max="1" chance="1.456" /> <!-- Quality Leather Braid -->
+				<item id="36539" min="1" max="1" chance="1.497" /> <!-- Quality Leather Braid -->
 				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36912" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Upgrade -->
 			</drop>
@@ -582,7 +582,7 @@
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.12" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -593,7 +593,7 @@
 		<sex>MALE</sex>
 		<acquire exp="444700148" sp="444771" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="567903.626205" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -625,9 +625,9 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor -->
 				<item id="57" min="27280" max="63554" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="5.78" /> <!-- Quality Leather -->
+				<item id="36519" min="1" max="1" chance="5.789" /> <!-- Quality Leather -->
 				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
 			</drop>
@@ -635,7 +635,7 @@
 				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.38" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -646,7 +646,7 @@
 		<acquire exp="311374507" sp="311436" />
 		<equipment rhand="17417" lhand="17435" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="524380.585845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
@@ -678,17 +678,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17439" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Gloves - Light Armor -->
-				<item id="57" min="26676" max="62345" chance="70" /> <!-- Adena -->
-				<item id="35346" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="36540" min="1" max="1" chance="0.075" /> <!-- Exquisite Leather Braid -->
-				<item id="36909" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum Wire - Downgrade -->
+				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
+				<item id="19440" min="1" max="2" chance="78.66" /> <!-- Gemstone (R-grade) -->
+				<item id="57" min="28318" max="66182" chance="70" /> <!-- Adena -->
+				<item id="35347" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="35327" min="1" max="1" chance="0.3" /> <!-- Helios Shaper Fragment -->
 			</drop>
 			<spoil>
-				<item id="36554" min="1" max="1" chance="2.023" /> <!-- Armor Fragment (High-grade) -->
+				<item id="19447" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="48.10" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -699,7 +699,7 @@
 		<acquire exp="311374507" sp="311436" />
 		<equipment rhand="17325" lhand="17401" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="524380.585845" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
@@ -731,17 +731,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots - Light Armor -->
-				<item id="57" min="26676" max="62345" chance="70" /> <!-- Adena -->
-				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
-				<item id="36911" min="1" max="1" chance="0.0075" /> <!-- Recipe: Orichalcum Wire - Combination -->
+				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Helios Retributer -->
+				<item id="19440" min="1" max="2" chance="78.59" /> <!-- Gemstone (R-grade) -->
+				<item id="57" min="28318" max="66182" chance="70" /> <!-- Adena -->
+				<item id="35348" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="35337" min="1" max="1" chance="0.3" /> <!-- Helios Retributer Fragment -->
 			</drop>
 			<spoil>
-				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
+				<item id="46081" min="1" max="1" chance="0.75" /> <!-- Recipe: Mysterious Blessed Spiritshot (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.30" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -752,7 +752,7 @@
 		<acquire exp="444700148" sp="444771" />
 		<equipment rhand="17392" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="567903.626205" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -786,7 +786,7 @@
 			<drop>
 				<item id="17416" min="1" max="1" chance="0.003" /> <!-- Helios Shaper -->
 				<item id="57" min="28960" max="67465" chance="70" /> <!-- Adena -->
-				<item id="19440" min="1" max="3" chance="71.54" /> <!-- Gemstone (R-grade) -->
+				<item id="19440" min="1" max="3" chance="70.32" /> <!-- Gemstone (R-grade) -->
 				<item id="35348" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boot Ingredient -->
 				<item id="37802" min="1" max="1" chance="0.0075" /> <!-- Dark Armor Enhancement Stone Fragment -->
 			</drop>
@@ -794,7 +794,7 @@
 				<item id="46081" min="1" max="1" chance="0.75" /> <!-- Recipe: Mysterious Blessed Spiritshot (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.22" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -805,7 +805,7 @@
 		<acquire exp="444700148" sp="444771" />
 		<equipment rhand="17426" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="567903.626205" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -837,28 +837,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor - Light Armor -->
-				<item id="57" min="27280" max="63554" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="5.78" /> <!-- Quality Leather -->
-				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
+				<item id="17426" min="1" max="1" chance="0.003" /> <!-- Helios Retributer -->
+				<item id="57" min="28960" max="67465" chance="70" /> <!-- Adena -->
+				<item id="19440" min="1" max="3" chance="70.31" /> <!-- Gemstone (R-grade) -->
+				<item id="35347" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="37802" min="1" max="1" chance="0.0075" /> <!-- Dark Armor Enhancement Stone Fragment -->
 			</drop>
 			<spoil>
-				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
+				<item id="19447" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="48.26" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23537" level="101" type="L2Monster" name="Atelia Elite Captain" title="Atelia Infuser">
+	<npc id="23537" level="102" type="L2Monster" name="Atelia Elite Captain" title="Atelia Infuser">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="17325" lhand="17401" />
-		<acquire exp="311374507" sp="311436" />
+		<acquire exp="381103201" sp="381202" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="473004" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="567903.626205" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="47356" magical="36566" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4718" magical="4955" />
 			<attribute>
@@ -890,28 +890,28 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17440" min="1" max="1" chance="0.03" /> <!-- Eternal Leather Boots - Light Armor -->
-				<item id="57" min="26676" max="62345" chance="70" /> <!-- Adena -->
-				<item id="35345" min="1" max="1" chance="0.3" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="36520" min="1" max="1" chance="0.3" /> <!-- Exquisite Leather -->
-				<item id="36911" min="1" max="1" chance="0.0075" /> <!-- Recipe: Orichalcum Wire - Combination -->
+				<item id="57" min="23299" max="54277" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="3.231" /> <!-- Quality Leather -->
+				<item id="35347" min="1" max="1" chance="1.653" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="35471" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="36906" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite Wire - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
+				<item id="36554" min="1" max="1" chance="1.745" /> <!-- Armor Fragment (High-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.35" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23538" level="102" type="L2Monster" name="Atelia High Priest" title="Atelia Infuser">
+	<npc id="23538" level="103" type="L2Monster" name="Atelia High Priest" title="Atelia Infuser">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="444700148" sp="444771" />
+		<acquire exp="544164784" sp="544241" />
 		<equipment rhand="17426" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="512263" hpRegen="11.5" mp="25074" mpRegen="3.9" />
+			<vitals hp="615038.65494" hpRegen="9.5" mp="31115.637" mpRegen="3.3" />
 			<attack physical="58229" magical="48516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -943,17 +943,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17437" min="1" max="1" chance="0.0075" /> <!-- Eternal Leather Armor - Light Armor -->
-				<item id="57" min="27280" max="63554" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="5.78" /> <!-- Quality Leather -->
-				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
+				<item id="57" min="23750" max="55375" chance="70" /> <!-- Adena -->
+				<item id="35346" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="36539" min="1" max="1" chance="0.75" /> <!-- Quality Leather Braid -->
+				<item id="35470" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="36910" min="1" max="1" chance="0.003" /> <!-- Recipe: Orichalcum Wire - Upgrade -->
 			</drop>
 			<spoil>
-				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
+				<item id="45931" min="1" max="1" chance="0.3" /> <!-- High-grade Spirit Stone -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.79" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -962,7 +962,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1328146" hpRegen="11.5" mp="50920" mpRegen="3.9" />
+			<vitals hp="1995150.706395" hpRegen="9.5" mp="83501.371" mpRegen="3.3" />
 			<attack physical="63121" magical="68961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5921" magical="5405" />
 			<speed>
@@ -2702,9 +2702,9 @@
 	<npc id="23586" level="103" type="L2Monster" name="Geork" title="Embryo Master Artisan">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="35530389720" sp="71060779" />
+		<acquire exp="2147483647" sp="12872748" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1142455" hpRegen="11.5" mp="50148" mpRegen="3.9" />
+			<vitals hp="1716205.519275" hpRegen="9.5" mp="82235.4" mpRegen="3.3" />
 			<attack physical="59121" magical="64961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4321" magical="4105" />
 			<attribute>
@@ -2731,12 +2731,12 @@
 			<height normal="29.5" />
 		</collision>
 	</npc>
-	<npc id="23587" level="104" type="L2Monster" name="Burnstein" title="Embryo Commander">
+	<npc id="23587" level="103" type="L2Monster" name="Burnstein" title="Embryo Commander">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="88825974282" sp="177652042" />
+		<acquire exp="2147483647" sp="18724036" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1713682" hpRegen="11.5" mp="50148" mpRegen="3.9" />
+			<vitals hp="2574307.963455" hpRegen="9.5" mp="82235.4" mpRegen="3.3" />
 			<attack physical="63121" magical="68961" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5921" magical="5405" />
 			<attribute>
@@ -2757,105 +2757,13 @@
 			<radius normal="14" />
 			<height normal="28.25" />
 		</collision>
-		<dropLists>
-			<drop>
-				<item id="17527" min="1" max="1" chance="59.26" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36574" min="1" max="1" chance="50.36" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="36586" min="1" max="1" chance="49.57" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="40.76" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="35349" min="1" max="1" chance="1.95" /> <!-- Eternal Circlet Ingredient -->
-				<item id="35354" min="1" max="1" chance="1.948" /> <!-- Eternal Sigil Ingredient -->
-				<item id="35353" min="1" max="1" chance="1.941" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35348" min="1" max="1" chance="1.932" /> <!-- Eternal Leather Boot Ingredient -->
-				<item id="35341" min="1" max="1" chance="1.93" /> <!-- Eternal Gauntlet Ingredient -->
-				<item id="35340" min="1" max="1" chance="1.927" /> <!-- Eternal Gaiter Ingredient -->
-				<item id="35352" min="1" max="1" chance="1.915" /> <!-- Eternal Glove Ingredient -->
-				<item id="35343" min="1" max="1" chance="1.907" /> <!-- Eternal Shield Ingredient -->
-				<item id="35346" min="1" max="1" chance="1.903" /> <!-- Eternal Leather Legging Ingredient -->
-				<item id="35347" min="1" max="1" chance="1.903" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35339" min="1" max="1" chance="1.901" /> <!-- Eternal Breastplate Ingredient -->
-				<item id="35344" min="1" max="1" chance="1.897" /> <!-- Eternal Leather Helmet Ingredient -->
-				<item id="35342" min="1" max="1" chance="1.863" /> <!-- Eternal Boot Ingredient -->
-				<item id="35351" min="1" max="1" chance="1.848" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35338" min="1" max="1" chance="1.842" /> <!-- Eternal Helmet Ingredient -->
-				<item id="35350" min="1" max="1" chance="1.839" /> <!-- Eternal Tunic Ingredient -->
-				<item id="35345" min="1" max="1" chance="1.838" /> <!-- Eternal Leather Armor Ingredient -->
-				<item id="35335" min="1" max="1" chance="0.75" /> <!-- Helios Buster Fragment -->
-				<item id="35327" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Fragment -->
-				<item id="35328" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Fragment -->
-				<item id="35329" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Fragment -->
-				<item id="35331" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Fragment -->
-				<item id="35332" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Fragment -->
-				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Fragment -->
-				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
-				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Fragment -->
-				<item id="35337" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Fragment -->
-				<item id="35336" min="1" max="1" chance="0.75" /> <!-- Helios Caster Fragment -->
-				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
-				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
-				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
-				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
-				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
-				<item id="35474" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Tunic (60%) -->
-				<item id="35475" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Stockings (60%) -->
-				<item id="35476" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gloves (60%) -->
-				<item id="35477" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shoes (60%) -->
-				<item id="35478" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Sigil (60%) -->
-				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
-				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
-				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
-				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
-				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
-				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
-				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
-				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
-				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
-				<item id="46493" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
-				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<item id="46478" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 5 -->
-				<item id="46477" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46446" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46447" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46462" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46461" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46448" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 5 -->
-				<item id="46495" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
-				<item id="46494" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
-				<item id="46509" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 6 -->
-				<item id="46510" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 7 -->
-				<item id="46480" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 7 -->
-				<item id="46479" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 6 -->
-				<item id="46463" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
-				<item id="46464" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
-				<item id="46449" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 6 -->
-				<item id="46465" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
-				<item id="46450" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 7 -->
-			</drop>
-			<lucky>
-				<item id="39629" min="3" max="3" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 	</npc>
 	<npc id="23588" level="102" type="L2Monster" name="Hummel" title="Embryo Quartermaster">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>HUMANOID</race>
-		<acquire exp="5738066516" sp="5738118" />
+		<acquire exp="2147483647" sp="5738118" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="638514" hpRegen="11.5" mp="49380" mpRegen="3.9" />
+			<vitals hp="959181.33633" hpRegen="9.5" mp="80975.917" mpRegen="3.3" />
 			<attack physical="59229" magical="49516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -2882,7 +2790,7 @@
 		<equipment rhand="17421" />
 		<acquire exp="60751239" sp="60797" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="436754" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="119177.31984" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="59229" magical="49516" random="30" critical="4" accuracy="95.25" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="5975" magical="6244" />
 			<attribute>
@@ -2904,15 +2812,15 @@
 				<clan>ATELIA_CLAN</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="30" />
 		</collision>
+		<dropLists>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="47.19" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23590" level="103" type="L2Npc" name="Adolph" title="Brainwashed Aden Vanguard">
 		<race>HUMAN</race>
