@@ -2958,9 +2958,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="2814917" sp="2884" />
+		<acquire exp="4166018" sp="3698" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13256" hpRegen="9.5" mp="1881" mpRegen="3.3" />
+			<vitals hp="86812.011255" hpRegen="8.5" mp="2334.058" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -2988,24 +2988,6 @@
 				<clan>HARNAK</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="17293" min="1" max="1" chance="0.003" /> <!-- Requiem Avenger -->
-				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
-				<item id="36517" min="1" max="1" chance="4.243" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
-				<item id="36797" min="1" max="1" chance="0.3" /> <!-- Requiem Avenger Fragment -->
-				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) -->
-				<item id="36735" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Avenger (60%) -->
-			</drop>
-			<spoil>
-				<item id="40205" min="1" max="1" chance="14.69" /> <!-- Requiem Fragment -->
-				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="28" grown="32" />
 			<height normal="46.15" grown="55" />
@@ -3017,6 +2999,30 @@
 			<id>4</id>
 			<id>5</id>
 		</extendDrop>
+		<dropLists>
+			<drop>
+				<item id="17293" min="1" max="1" chance="0.003" /> <!-- Requiem Avenger -->
+				<item id="57" min="1051" max="2450" chance="20" /> <!-- Adena -->
+				<item id="36517" min="1" max="1" chance="4.232" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
+				<item id="36797" min="1" max="1" chance="0.3" /> <!-- Requiem Avenger Fragment -->
+				<item id="30424" min="1" max="1" chance="0.03" /> <!-- Recipe: Spiritshot (R-grade) (for dwarves) -->
+				<item id="36735" min="1" max="1" chance="0.0075" /> <!-- Recipe: Requiem Avenger (60%) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="40205" min="1" max="1" chance="15.43" /> <!-- Requiem Fragment -->
+				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="22940" level="86" type="L2Monster" name="Demonic Carcass">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
