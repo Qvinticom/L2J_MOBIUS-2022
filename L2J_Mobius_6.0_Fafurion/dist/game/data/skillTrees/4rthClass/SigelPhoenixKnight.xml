@@ -132,6 +132,7 @@
 		<skill skillName="Heavy Hit" skillId="10250" skillLvl="1" getLevel="85" autoGet="true"/>
 		<skill skillName="Heavy Hit" skillId="10249" skillLvl="1" getLevel="85" autoGet="true"/>
 		<skill skillName="" skillId="14579" skillLvl="1" getLevel="85" autoGet="true"/>
+		<skill skillName="Summon Phoenix Cubic" skillId="10042" skillLvl="1" getLevel="85" levelUpSp="10000" />
 		
 		<skill skillName="Shield Charge" skillId="10008" skillLvl="2" getLevel="86" levelUpSp="50000" />
 		<skill skillName="Justice Punishment" skillId="10010" skillLvl="2" getLevel="86" levelUpSp="50000" />
@@ -182,6 +183,7 @@
 		<skill skillName="Chain Strike" skillId="10015" skillLvl="3" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Chain Galaxy" skillId="10014" skillLvl="4" getLevel="90" levelUpSp="370000" />
 		<skill skillName="Spike Shield" skillId="10021" skillLvl="2" getLevel="90" levelUpSp="370000" />
+		<skill skillName="Summon Phoenix Cubic" skillId="10042" skillLvl="2" getLevel="90" levelUpSp="370000" />
 
 		<skill skillName="Noble Sacrifice" skillId="10018" skillLvl="1" getLevel="91" levelUpSp="400000" />
 		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="3" getLevel="91" levelUpSp="400000" />
@@ -233,6 +235,7 @@
 		<skill skillName="Focus Shield" skillId="10020" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Chain Hydra" skillId="10016" skillLvl="4" getLevel="95" levelUpSp="1000000" />
 		<skill skillName="Spike Shield" skillId="10021" skillLvl="3" getLevel="95" levelUpSp="1000000" />
+		<skill skillName="Summon Phoenix Cubic" skillId="10042" skillLvl="3" getLevel="95" levelUpSp="1000000" />
 
 		<skill skillName="Noble Sacrifice" skillId="10018" skillLvl="2" getLevel="96" levelUpSp="4970000" />
 		<skill skillName="Superior Aggression" skillId="10026" skillLvl="5" getLevel="96" levelUpSp="4970000" />
@@ -297,6 +300,7 @@
 		<skill skillName="Riot Shield" skillId="10097" skillLvl="3" getLevel="99" levelUpSp="5000000">
 			<item id="39738" count="8" />
 		</skill>
+		<skill skillName="Summon Phoenix Cubic" skillId="10042" skillLvl="4" getLevel="99" levelUpSp="5000000" />
 
 		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="10001" skillLvl="5" getLevel="100" levelUpSp="88099899" />
 		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="5" getLevel="100" levelUpSp="88099899" />
@@ -327,6 +331,7 @@
 		<skill skillName="Riot Shield" skillId="10097" skillLvl="4" getLevel="101" levelUpSp="211440000">
 			<item id="39738" count="8" />
 		</skill>
+		<skill skillName="Summon Phoenix Cubic" skillId="10042" skillLvl="5" getLevel="101" levelUpSp="211440000" />
 
 		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="10001" skillLvl="6" getLevel="102" levelUpSp="507455418" />
 		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="6" getLevel="102" levelUpSp="507455418" />
@@ -356,6 +361,7 @@
 		<skill skillName="Riot Shield" skillId="10097" skillLvl="5" getLevel="103" levelUpSp="608946501">
 			<item id="39738" count="8" />
 		</skill>
+		<skill skillName="Summon Phoenix Cubic" skillId="10042" skillLvl="6" getLevel="103" levelUpSp="608946501" />
 
 		<skill skillName="Superior Sword/Blunt Weapon Mastery" skillId="10001" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
 		<skill skillName="Superior Elemental Mastery" skillId="10044" skillLvl="7" getLevel="104" levelUpSp="1461471604" />
@@ -385,5 +391,47 @@
 		<skill skillName="Riot Shield" skillId="10097" skillLvl="6" getLevel="105" levelUpSp="1753765925">
 			<item id="39738" count="8" />
 		</skill>
+		<skill skillName="Summon Phoenix Cubic" skillId="10042" skillLvl="7" getLevel="105" levelUpSp="1753765925" />
+
+		<!-- Fafurion Update -->
+		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="9" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Shield Wave" skillId="10012" skillLvl="11" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Rising Smash" skillId="10013" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Shield Charge" skillId="10008" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Protection of Faith" skillId="10019" skillLvl="6" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Shield Impact" skillId="10011" skillLvl="9" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="8" getLevel="85" levelUpSp="2525422932" />
+		<skill skillName="Flame Feather" skillId="19558" skillLvl="6" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Phoenix Glide" skillId="10097" skillLvl="7" getLevel="107" levelUpSp="2525422932">
+			<item id="39738" count="6" />
+		</skill>
+		<skill skillName="Summon Phoenix Cubic" skillId="10042" skillLvl="8" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Burning Chain Lash" skillId="19552" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Shield Bash" skillId="10009" skillLvl="12" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Chain Gust" skillId="10014" skillLvl="11" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Chain Strike" skillId="10015" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
+		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="10" getLevel="107" levelUpSp="2525422932" />
+
+		<skill skillName="Superior Aggression Aura" skillId="10027" skillLvl="10" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Shield Wave" skillId="10012" skillLvl="12" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Rising Smash" skillId="10013" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Shield Charge" skillId="10008" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Shield Impact" skillId="10011" skillLvl="10" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Vanishing Stun" skillId="10010" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Flame Feather" skillId="19558" skillLvl="7" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Phoenix Glide" skillId="10097" skillLvl="8" getLevel="109" levelUpSp="7273218046">
+			<item id="39738" count="6" />
+		</skill>
+		<skill skillName="Summon Phoenix Cubic" skillId="10042" skillLvl="9" getLevel="109" levelUpSp="7273218046" /> <!--duvidas nessa skill-->
+		<skill skillName="Burning Chain Lash" skillId="19552" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Shield Bash" skillId="10009" skillLvl="13" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Chain Gust" skillId="10014" skillLvl="12" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Chain Strike" skillId="10015" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
+		<skill skillName="Shield Boomerang" skillId="10026" skillLvl="11" getLevel="109" levelUpSp="7273218046" />
+
+		<skill skillName="Protection of Faith" skillId="10019" skillLvl="7" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Paladin's Frenzy" skillId="10098" skillLvl="5" getLevel="110" levelUpSp="17455723311" />
+		<skill skillName="Final Ultimate Defense" skillId="10017" skillLvl="9" getLevel="110" levelUpSp="17455723311" />
 	</skillTree>
 </list>
