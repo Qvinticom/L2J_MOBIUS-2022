@@ -2064,12 +2064,12 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="23566" level="100" type="L2Monster" name="Nymph Rose">
+	<npc id="23566" level="102" type="L2Monster" name="Nymph Rose">
 		<!-- Source: www.l2wiki.com -->
 		<race>PLANT</race>
-		<acquire exp="24981655" sp="59955" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4218" magical="1877" />
 			<attribute>
@@ -2091,7 +2091,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
 				<item id="35352" min="1" max="1" chance="0.075" /> <!-- Eternal Glove Ingredient -->
 				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Helios Buster Fragment -->
@@ -2101,16 +2101,16 @@
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.17" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23567" level="100" type="L2Monster" name="Nymph Rose">
+	<npc id="23567" level="102" type="L2Monster" name="Nymph Rose">
 		<!-- Source: www.l2wiki.com -->
 		<race>PLANT</race>
-		<acquire exp="24981655" sp="59955" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4218" magical="1877" />
 			<attribute>
@@ -2132,25 +2132,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
 				<item id="35354" min="1" max="1" chance="0.3" /> <!-- Eternal Sigil Ingredient -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
-				<item id="35476" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35476" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Gloves (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.24" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23568" level="100" type="L2Monster" name="Nymph Lily">
+	<npc id="23568" level="102" type="L2Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="37812025" sp="90748" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4218" magical="1877" />
 			<attribute>
@@ -2172,7 +2172,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
 				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
 				<item id="35353" min="1" max="1" chance="0.075" /> <!-- Eternal Shoe Ingredient -->
 				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Helios Caster Fragment -->
@@ -2182,16 +2182,16 @@
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.24" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23569" level="103" type="L2Monster" name="Nymph Lily">
+	<npc id="23569" level="102" type="L2Monster" name="Nymph Lily">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="37812025" sp="90748" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4218" magical="1877" />
 			<attribute>
@@ -2213,25 +2213,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
-				<item id="35349" min="1" max="1" chance="0.075" /> <!-- Eternal Circlet Ingredient -->
-				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
-				<item id="35477" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
+				<item id="35349" min="1" max="1" chance="0.3" /> <!-- Eternal Circlet Ingredient -->
+				<item id="36530" min="1" max="1" chance="0.03" /> <!-- Exquisite Fiber -->
+				<item id="35477" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Shoes (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.46" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23570" level="100" type="L2Monster" name="Nymph Tulip">
+	<npc id="23570" level="102" type="L2Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="24981655" sp="59955" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4218" magical="1877" />
 			<attribute>
@@ -2253,7 +2253,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="35351" min="1" max="1" chance="0.075" /> <!-- Eternal Stocking Ingredient -->
 			</drop>
@@ -2261,16 +2261,16 @@
 				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.44" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-		<npc id="23571" level="103" type="L2Monster" name="Nymph Tulip">
+		<npc id="23571" level="102" type="L2Monster" name="Nymph Tulip">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="69350056" sp="166440" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4218" magical="1877" />
 			<attribute>
@@ -2292,25 +2292,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17444" min="1" max="1" chance="0.003" /> <!-- Eternal Gloves - Robe -->
-				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
-				<item id="36549" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="36550" min="1" max="1" chance="0.0075" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="17444" min="1" max="1" chance="0.0075" /> <!-- Eternal Gloves -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
+				<item id="36549" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="36550" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Top-grade) -->
 			</drop>
 			<spoil>
 				<item id="36560" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.22" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23572" level="100" type="L2Monster" name="Nymph Cosmos">
+	<npc id="23572" level="102" type="L2Monster" name="Nymph Cosmos">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="24981655" sp="59955" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4218" magical="1877" />
 			<attribute>
@@ -2332,24 +2332,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="5613" max="13088" chance="30" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="1.273" /> <!-- Quality Fiber -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
+				<item id="36529" min="1" max="1" chance="1.182" /> <!-- Quality Fiber -->
 				<item id="35350" min="1" max="1" chance="0.03" /> <!-- Eternal Tunic Ingredient -->
 			</drop>
 			<spoil>
 				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.55" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23573" level="103" type="L2Monster" name="Nymph Cosmos">
+	<npc id="23573" level="102" type="L2Monster" name="Nymph Cosmos">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="69350056" sp="166440" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="28866" magical="12845" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="4218" magical="1877" />
 			<attribute>
@@ -2371,25 +2371,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17445" min="1" max="1" chance="0.003" /> <!-- Eternal Shoes - Robe -->
-				<item id="57" min="6829" max="15920" chance="30" /> <!-- Adena -->
-				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
-				<item id="36555" min="1" max="1" chance="0.0075" /> <!-- Armor Fragment (Top-grade) -->
+				<item id="17445" min="1" max="1" chance="0.0075" /> <!-- Eternal Shoes -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
+				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="36555" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Top-grade) -->
 			</drop>
 			<spoil>
 				<item id="36560" min="1" max="1" chance="0.03" /> <!-- Accessory Gem (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.60" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23574" level="103" type="L2Monster" name="Nymph Rose" title="Enraged">
 		<!-- Source: www.l2wiki.com -->
 		<race>PLANT</race>
-		<acquire exp="69350056" sp="166440" />
+		<acquire exp="187389843" sp="168577" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="245880" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="268373.57538" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6920" magical="1925" />
 			<attribute>
@@ -2413,25 +2413,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17446" min="1" max="1" chance="0.003" /> <!-- Eternal Sigil - Robe -->
-				<item id="57" min="9360" max="21823" chance="30" /> <!-- Adena -->
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="35478" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="17446" min="1" max="1" chance="0.0075" /> <!-- Eternal Sigil -->
+				<item id="57" min="3796" max="8850" chance="70" /> <!-- Adena -->
+				<item id="36549" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="35478" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Sigil (60%) -->
 			</drop>
 			<spoil>
-				<item id="19448" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19448" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.55" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23575" level="101" type="L2Monster" name="Nymph Lily" title="Enraged">
+	<npc id="23575" level="103" type="L2Monster" name="Nymph Lily" title="Enraged">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="37812025" sp="90748" />
+		<acquire exp="187389843" sp="168577" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="245880" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="268373.57538" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6920" magical="1925" />
 			<attribute>
@@ -2455,24 +2455,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
+				<item id="17441" min="1" max="1" chance="0.0075" /> <!-- Eternal Circlet -->
+				<item id="57" min="3796" max="8850" chance="70" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
-				<item id="35473" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35473" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Circlet (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="19447" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.56" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23576" level="101" type="L2Monster" name="Nymph Tulip" title="Enraged">
+	<npc id="23576" level="103" type="L2Monster" name="Nymph Tulip" title="Enraged">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="37812025" sp="90748" />
+		<acquire exp="187389843" sp="168577" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="245880" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="268373.57538" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6920" magical="1925" />
 			<attribute>
@@ -2496,24 +2497,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
-				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35475" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="17442" min="1" max="1" chance="0.003" /> <!-- Eternal Tunic -->
+				<item id="57" min="3796" max="8850" chance="70" /> <!-- Adena -->
+				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35475" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Stockings (60%) -->
 			</drop>
 			<spoil>
-				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+				<item id="19448" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.79" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23577" level="101" type="L2Monster" name="Nymph Cosmos" title="Enraged">
+	<npc id="23577" level="103" type="L2Monster" name="Nymph Cosmos" title="Enraged">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="37812025" sp="90748" />
+		<acquire exp="187389843" sp="168577" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="245880" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="268373.57538" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6920" magical="1925" />
 			<attribute>
@@ -2537,24 +2539,25 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
+				<item id="17443" min="1" max="1" chance="0.003" /> <!-- Eternal Stockings -->
+				<item id="57" min="3796" max="8850" chance="70" /> <!-- Adena -->
 				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
-				<item id="35474" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35474" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Tunic (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="19447" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.62" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23578" level="102" type="L2Monster" name="Nymph Guardian" title="Guardian of the Flower">
+	<npc id="23578" level="103" type="L2Monster" name="Nymph Guardian" title="Guardian of the Flower">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="112355490" sp="269653" />
+		<acquire exp="206128838" sp="185445" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="268373.57538" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="102565" magical="13384" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="14990" magical="1956" />
 			<attribute>
@@ -2578,19 +2581,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17424" min="1" max="1" chance="0.003" /> <!-- Helios Buster -->
-				<item id="57" min="19032" max="44338" chance="100" /> <!-- Adena -->
-				<item id="36554" min="1" max="1" chance="0.75" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35335" min="1" max="1" chance="0.3" /> <!-- Helios Buster Fragment -->
-				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Helios Caster Fragment -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="57" min="3796" max="8850" chance="70" /> <!-- Adena -->
+				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Helios Buster Fragment -->
+				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Helios Caster Fragment -->
 			</drop>
 			<spoil>
-				<item id="19448" min="1" max="1" chance="1.031" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="19447" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="36513" min="1" max="1" chance="0.3" /> <!-- Elcyum Powder -->
+				<item id="19447" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.00" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2637,12 +2638,12 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23582" level="101" type="L2Monster" name="Nymph Rose" title="Elegant">
+	<npc id="23582" level="102" type="L2Monster" name="Nymph Rose" title="Elegant">
 		<!-- Source: www.l2wiki.com -->
 		<race>PLANT</race>
-		<acquire exp="37812025" sp="90748" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6920" magical="1925" />
 			<attribute>
@@ -2664,7 +2665,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
 				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
 				<item id="35478" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Sigil (60%) -->
 			</drop>
@@ -2672,16 +2673,16 @@
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.40" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23583" level="101" type="L2Monster" name="Nymph Lily" title="Elegant">
+	<npc id="23583" level="102" type="L2Monster" name="Nymph Lily" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="37812025" sp="90748" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6920" magical="1925" />
 			<attribute>
@@ -2703,24 +2704,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
-				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
-				<item id="35473" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
+				<item id="36530" min="1" max="1" chance="0.3" /> <!-- Exquisite Fiber -->
+				<item id="35473" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Circlet (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.75" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23584" level="101" type="L2Monster" name="Nymph Tulip" title="Elegant">
+	<npc id="23584" level="102" type="L2Monster" name="Nymph Tulip" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="37812025" sp="90748" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6920" magical="1925" />
 			<attribute>
@@ -2742,24 +2743,24 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
-				<item id="36554" min="1" max="1" chance="0.075" /> <!-- Armor Fragment (High-grade) -->
-				<item id="35475" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
+				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35475" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Stockings (60%) -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.61" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23585" level="101" type="L2Monster" name="Nymph Cosmos" title="Elegant">
+	<npc id="23585" level="102" type="L2Monster" name="Nymph Cosmos" title="Elegant">
 		<!-- Source: www.l2wiki.com (2015-04-08) -->
 		<race>PLANT</race>
-		<acquire exp="37812025" sp="90748" />
+		<acquire exp="103367901" sp="93011" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="11.5" mp="24308" mpRegen="3.9" />
+			<vitals hp="185855.571615" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
 			<attack physical="47352" magical="13177" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="6920" magical="1925" />
 			<attribute>
@@ -2781,15 +2782,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="6507" max="15209" chance="30" /> <!-- Adena -->
-				<item id="36530" min="1" max="1" chance="0.075" /> <!-- Exquisite Fiber -->
-				<item id="35474" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="57" min="2435" max="5672" chance="70" /> <!-- Adena -->
+				<item id="36530" min="1" max="1" chance="0.3" /> <!-- Exquisite Fiber -->
+				<item id="35474" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Tunic (60%) -->
 			</drop>
 			<spoil>
-				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="36565" min="1" max="1" chance="0.0075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="48.03" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>

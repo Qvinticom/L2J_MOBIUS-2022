@@ -3024,11 +3024,11 @@
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23786" level="102" type="L2Monster" name="Nymph Rose" title="Contaminated">
+	<npc id="23786" level="103" type="L2Monster" name="Nymph Rose" title="Contaminated">
 		<race>PLANT</race>
-		<acquire exp="92292843" sp="92387" />
+		<acquire exp="187389843" sp="168577" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="268373.57538" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="49047.619047619" magical="8655.46218487395" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<attribute>
@@ -3052,25 +3052,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="12174" max="28361" chance="20" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
-				<item id="35352" min="1" max="1" chance="0.075" /> <!-- Eternal Glove Ingredient -->
-				<item id="35335" min="1" max="1" chance="0.03" /> <!-- Helios Buster Fragment -->
-				<item id="36549" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="57" min="3212" max="7489" chance="70" /> <!-- Adena -->
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="35478" min="1" max="1" chance="0.03" /> <!-- Recipe: Eternal Sigil (60%) -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="48.19" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23787" level="102" type="L2Monster" name="Nymph Lily" title="Contaminated">
+	<npc id="23787" level="103" type="L2Monster" name="Nymph Lily" title="Contaminated">
 		<race>PLANT</race>
-		<acquire exp="92292843" sp="92387" />
+		<acquire exp="187389843" sp="168577" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="268373.57538" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="49047.619047619" magical="8655.46218487395" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<attribute>
@@ -3094,25 +3092,63 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="12174" max="28361" chance="20" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="0.75" /> <!-- Quality Fiber -->
-				<item id="35353" min="1" max="1" chance="0.075" /> <!-- Eternal Shoe Ingredient -->
-				<item id="35336" min="1" max="1" chance="0.03" /> <!-- Helios Caster Fragment -->
-				<item id="36554" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (High-grade) -->
+				<item id="57" min="3212" max="7489" chance="70" /> <!-- Adena -->
+				<item id="36530" min="1" max="1" chance="0.3" /> <!-- Exquisite Fiber -->
+				<item id="35473" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Circlet (60%) -->
+			</drop>
+			<spoil>
+				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="47.07" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
+	</npc>
+	<npc id="23788" level="103" type="L2Monster" name="Nymph Tulip" title="Contaminated">
+		<race>PLANT</race>
+		<acquire exp="187389843" sp="168577" />
+		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+			<vitals hp="268373.57538" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
+			<attack physical="49047.619047619" magical="8655.46218487395" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3814.81481481481" magical="2215.05376344086" />
+			<attribute>
+				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
+				<attack type="EARTH" value="280" />
+			</attribute>
+			<speed>
+				<walk ground="60" />
+				<run ground="140" />
+			</speed>
+		</stats>
+		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="39" />
+		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="3212" max="7489" chance="70" /> <!-- Adena -->
+				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35475" min="1" max="1" chance="0.0075" /> <!-- Recipe: Eternal Stockings (60%) -->
 			</drop>
 			<spoil>
 				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.45" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23788" level="102" type="L2Monster" name="Nymph Tulip" title="Contaminated">
+	<npc id="23789" level="103" type="L2Monster" name="Nymph Cosmos" title="Contaminated">
 		<race>PLANT</race>
-		<acquire exp="92292843" sp="92387" />
+		<acquire exp="187389843" sp="168577" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="268373.57538" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="49047.619047619" magical="8655.46218487395" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3814.81481481481" magical="2215.05376344086" />
 			<attribute>
@@ -3136,63 +3172,23 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="12174" max="28361" chance="20" /> <!-- Adena -->
-				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
-				<item id="35351" min="1" max="1" chance="0.075" /> <!-- Eternal Stocking Ingredient -->
+				<item id="57" min="3212" max="7489" chance="70" /> <!-- Adena -->
+				<item id="36530" min="1" max="1" chance="0.3" /> <!-- Exquisite Fiber -->
+				<item id="35474" min="1" max="1" chance="0.003" /> <!-- Recipe: Eternal Tunic (60%) -->
 			</drop>
 			<spoil>
-				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.03" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23789" level="102" type="L2Monster" name="Nymph Cosmos" title="Contaminated">
-		<race>PLANT</race>
-		<acquire exp="92292843" sp="92387" />
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="245880" hpRegen="11.5" mp="24690" mpRegen="3.9" />
-			<attack physical="49047.619047619" magical="8655.46218487395" random="50" critical="4" accuracy="91" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
-			<defence physical="3814.81481481481" magical="2215.05376344086" />
-			<attribute>
-				<defence fire="150" water="200" wind="200" earth="200" holy="200" dark="200" />
-				<attack type="EARTH" value="280" />
-			</attribute>
-			<speed>
-				<walk ground="60" />
-				<run ground="140" />
-			</speed>
-		</stats>
-		<skillList>
-			<skill id="4416" level="5" /> <!-- Plants -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-		</skillList>
-		<collision>
-			<radius normal="14" />
-			<height normal="39" />
-		</collision>
-		<dropLists>
-			<drop>
-				<item id="57" min="12174" max="28361" chance="20" /> <!-- Adena -->
-				<item id="36529" min="1" max="1" chance="1.186" /> <!-- Quality Fiber -->
-				<item id="35350" min="1" max="1" chance="0.03" /> <!-- Eternal Tunic Ingredient -->
-			</drop>
-			<spoil>
-				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
-	</npc>
-	<npc id="23790" level="102" type="L2Monster" name="Kimerian's Shadows" title="Fairy Leader">
+	<npc id="23790" level="103" type="L2Monster" name="Kimerian's Shadows" title="Fairy Leader">
 		<race>FAIRY</race>
-		<acquire exp="82709042" sp="198501" />
+		<acquire exp="309193257" sp="278167" />
 		<stats>
-			<vitals hp="368820" hpRegen="11.5" mp="24690" mpRegen="3.9" />
+			<vitals hp="402560.993985" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<attack physical="48571.42857142857" magical="8571.428571428571" critical="4" attackSpeed="253" range="40" />
 			<defence physical="3777.777777777778" magical="2193.548387096774" />
 			<speed>
@@ -3212,28 +3208,26 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17424" min="1" max="1" chance="0.003" /> <!-- Helios Buster -->
-				<item id="57" min="11447" max="26672" chance="100" /> <!-- Adena -->
-				<item id="35335" min="1" max="1" chance="0.3" /> <!-- Helios Buster Fragment -->
-				<item id="35336" min="1" max="1" chance="0.3" /> <!-- Helios Caster Fragment -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="57" min="5840" max="13616" chance="70" /> <!-- Adena -->
 				<item id="36554" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (High-grade) -->
+				<item id="35335" min="1" max="1" chance="0.075" /> <!-- Helios Buster Fragment -->
+				<item id="35336" min="1" max="1" chance="0.075" /> <!-- Helios Caster Fragment -->
 			</drop>
 			<spoil>
-				<item id="19448" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="36513" min="1" max="1" chance="0.3" /> <!-- Elcyum Powder -->
-				<item id="19447" min="1" max="1" chance="0.075" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="19447" min="1" max="1" chance="0.03" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="48.24" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
-	<npc id="23790" level="85" type="L2Npc" name="Kimerian's Shadows" title="Fairy Leader">
+	<npc id="23790" level="103" type="L2Npc" name="Kimerian's Shadows" title="Fairy Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMAN</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="368820" hpRegen="7.5" mp="24690" mpRegen="2.7" />
+
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
