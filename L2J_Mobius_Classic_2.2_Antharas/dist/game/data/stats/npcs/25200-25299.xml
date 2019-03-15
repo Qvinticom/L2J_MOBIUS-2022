@@ -864,7 +864,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25220" level="73" type="L2RaidBoss" name="Death Lord Hallate" title="Raid Boss">
+	<npc id="25220" level="80" type="L2RaidBoss" name="Death Lord Hallate" title="Raid Boss">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25221" count="3" respawnTime="360" weightPoint="1" />
@@ -1565,9 +1565,9 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="1367516" sp="328" />
+		<acquire exp="83980800" sp="2519424" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="291852" hpRegen="182.410955849033" mp="1036" mpRegen="2.4" />
+			<vitals hp="557075.38604" hpRegen="101.2977436" mp="569046.15" mpRegen="2.4" />
 			<attack physical="1570.35490008098" magical="534.047830747273" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="742.95024" magical="362.44" evasion="-18" />
 			<speed>
@@ -1579,23 +1579,14 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4172" level="6" /> <!-- Stun -->
 			<skill id="4175" level="6" /> <!-- BOSS Haste -->
 			<skill id="4177" level="6" /> <!-- BOSS Cancel Magic -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4731" level="6" /> <!-- BOSS Mortal Blow -->
-			<skill id="4874" level="1" /> <!-- Raid Boss - Level 60 -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4874" level="1" /> <!-- Raid Boss (Lv. 60) -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
@@ -1605,49 +1596,49 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="2459" min="1" max="1" chance="3.1895" /> <!-- Demon's Gloves -->
-				<item id="2436" min="1" max="3" chance="3.1805" /> <!-- Theca Leather Boots -->
-				<item id="1127" min="1" max="3" chance="3.1775" /> <!-- Forgotten Boots -->
-				<item id="517" min="1" max="3" chance="3.1615" /> <!-- Compound Helmet -->
-				<item id="64" min="1" max="3" chance="3.1535" /> <!-- Compound Boots -->
-				<item id="107" min="1" max="3" chance="3.1465" /> <!-- Compound Shield -->
-				<item id="608" min="1" max="3" chance="3.1295" /> <!-- Mithril Gauntlets -->
-				<item id="2435" min="1" max="3" chance="3.1125" /> <!-- Demon's Boots -->
-				<item id="441" min="1" max="1" chance="3.1115" /> <!-- Demon's Tunic -->
-				<item id="400" min="1" max="1" chance="3.1075" /> <!-- Theca Leather Armor -->
-				<item id="2460" min="1" max="1" chance="3.1005" /> <!-- Theca Leather Gloves -->
-				<item id="60" min="1" max="1" chance="3.0975" /> <!-- Compound Armor -->
-				<item id="1149" min="1" max="3" chance="3.0915" /> <!-- Shining Circlet -->
-				<item id="472" min="1" max="1" chance="3.0875" /> <!-- Demon's Stockings -->
-				<item id="103" min="1" max="3" chance="3.0645" /> <!-- Tower Shield -->
-				<item id="420" min="1" max="1" chance="3.0575" /> <!-- Theca Leather Gaiters -->
-				<item id="145" min="1" max="1" chance="1.11" /> <!-- Sword of Whispering Death -->
-				<item id="197" min="1" max="1" chance="1.1" /> <!-- Paradia Staff -->
-				<item id="283" min="1" max="1" chance="1.097" /> <!-- Akat Longbow -->
-				<item id="76" min="1" max="1" chance="1.08" /> <!-- Sword of Delusion -->
-				<item id="200" min="1" max="1" chance="1.075" /> <!-- Sage's Staff -->
-				<item id="202" min="1" max="1" chance="1.067" /> <!-- Mace of Underworld -->
-				<item id="199" min="1" max="1" chance="1.066" /> <!-- Pa'agrio Hammer -->
-				<item id="132" min="1" max="1" chance="1.062" /> <!-- Ultimate Sword -->
-				<item id="77" min="1" max="1" chance="1.061" /> <!-- Tsurugi -->
-				<item id="174" min="1" max="1" chance="1.036" /> <!-- Nirvana Axe -->
-				<item id="196" min="1" max="1" chance="1.031" /> <!-- Stick of Eternity -->
-				<item id="231" min="1" max="1" chance="1.01" /> <!-- Grace Dagger -->
-				<item id="201" min="1" max="1" chance="1.01" /> <!-- Club of Nature -->
-				<item id="301" min="1" max="1" chance="1.007" /> <!-- scorpion -->
-				<item id="265" min="1" max="1" chance="1.007" /> <!-- Fisted Blade -->
-				<item id="162" min="1" max="1" chance="1.001" /> <!-- War Axe -->
-				<item id="198" min="1" max="1" chance="0.998" /> <!-- Inferno Staff -->
-				<item id="84" min="1" max="1" chance="0.997" /> <!-- Homunkulus' Sword -->
-				<item id="203" min="1" max="1" chance="0.996" /> <!-- Pa'agrio Axe -->
-				<item id="233" min="1" max="1" chance="0.994" /> <!-- Dark Screamer -->
-				<item id="95" min="1" max="1" chance="0.989" /> <!-- Poleaxe -->
-				<item id="134" min="1" max="1" chance="0.986" /> <!-- Sword of Nightmare -->
-				<item id="303" min="1" max="1" chance="0.98" /> <!-- Widow Maker -->
-				<item id="75" min="1" max="1" chance="0.979" /> <!-- Caliburs -->
+				<item id="1127" min="1" max="3" chance="5.069" /> <!-- Forgotten Boots -->
+				<item id="60" min="1" max="1" chance="5.063" /> <!-- Compound Armor -->
+				<item id="441" min="1" max="1" chance="5.059" /> <!-- Demon's Tunic -->
+				<item id="472" min="1" max="1" chance="5.033" /> <!-- Demon's Stockings -->
+				<item id="64" min="1" max="3" chance="5.025" /> <!-- Compound Boots -->
+				<item id="517" min="1" max="3" chance="5.006" /> <!-- Compound Helmet -->
+				<item id="107" min="1" max="3" chance="4.994" /> <!-- Compound Shield -->
+				<item id="608" min="1" max="3" chance="4.986" /> <!-- Mithril Gauntlets -->
+				<item id="2460" min="1" max="1" chance="4.985" /> <!-- Theca Leather Gloves -->
+				<item id="1149" min="1" max="3" chance="4.972" /> <!-- Shining Circlet -->
+				<item id="103" min="1" max="3" chance="4.971" /> <!-- Tower Shield -->
+				<item id="2435" min="1" max="3" chance="4.97" /> <!-- Demon's Boots -->
+				<item id="2459" min="1" max="1" chance="4.946" /> <!-- Demon's Gloves -->
+				<item id="2436" min="1" max="3" chance="4.941" /> <!-- Theca Leather Boots -->
+				<item id="400" min="1" max="1" chance="4.937" /> <!-- Theca Leather Armor -->
+				<item id="420" min="1" max="1" chance="4.936" /> <!-- Theca Leather Gaiters -->
+				<item id="162" min="1" max="1" chance="1.932" /> <!-- War Axe -->
+				<item id="84" min="1" max="1" chance="1.931" /> <!-- Homunkulus' Sword -->
+				<item id="301" min="1" max="1" chance="1.922" /> <!-- Scorpion -->
+				<item id="75" min="1" max="1" chance="1.915" /> <!-- Caliburs -->
+				<item id="174" min="1" max="1" chance="1.909" /> <!-- Nirvana Axe -->
+				<item id="231" min="1" max="1" chance="1.906" /> <!-- Grace Dagger -->
+				<item id="145" min="1" max="1" chance="1.896" /> <!-- Sword of Whispering Death -->
+				<item id="201" min="1" max="1" chance="1.896" /> <!-- Club of Nature -->
+				<item id="233" min="1" max="1" chance="1.889" /> <!-- Dark Screamer -->
+				<item id="283" min="1" max="1" chance="1.894" /> <!-- Akat Longbow -->
+				<item id="76" min="1" max="1" chance="1.884" /> <!-- Sword of Delusion -->
+				<item id="200" min="1" max="1" chance="1.86" /> <!-- Sage's Staff -->
+				<item id="303" min="1" max="1" chance="1.857" /> <!-- Widow Maker -->
+				<item id="196" min="1" max="1" chance="1.855" /> <!-- Stick of Eternity -->
+				<item id="199" min="1" max="1" chance="1.848" /> <!-- Pa'agrio Hammer -->
+				<item id="203" min="1" max="1" chance="1.845" /> <!-- Pa'agrio Axe -->
+				<item id="95" min="1" max="1" chance="1.842" /> <!-- Poleaxe -->
+				<item id="134" min="1" max="1" chance="1.838" /> <!-- Sword of Nightmare -->
+				<item id="77" min="1" max="1" chance="1.836" /> <!-- Tsurugi -->
+				<item id="197" min="1" max="1" chance="1.829" /> <!-- Paradia Staff -->
+				<item id="198" min="1" max="1" chance="1.824" /> <!-- Inferno Staff -->
+				<item id="202" min="1" max="1" chance="1.819" /> <!-- Mace of Underworld -->
+				<item id="132" min="1" max="1" chance="1.814" /> <!-- Ultimate Sword -->
+				<item id="265" min="1" max="1" chance="1.807" /> <!-- Fisted Blade -->
+				<item id="951" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 				<item id="952" min="1" max="1" chance="100" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="70000" min="11" max="32" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="951" min="1" max="1" chance="28.79" /> <!-- Scroll: Enchant Weapon (C-grade) -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -2586,9 +2577,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="106892354" sp="25654" />
+		<acquire exp="98560800" sp="2956824" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201" hpRegen="199.028977534023" mp="1188" mpRegen="2.7" />
+			<vitals hp="639533.32367" hpRegen="294.2109061" mp="653275.14" mpRegen="2.7" />
 			<attack physical="1946.68955029173" magical="701.405704892511" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="815.67099" magical="397.92" evasion="-18" />
 			<speed>
@@ -2600,22 +2591,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4172" level="6" /> <!-- Stun -->
 			<skill id="4175" level="6" /> <!-- BOSS Haste -->
 			<skill id="4177" level="6" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4730" level="6" /> <!-- BOSS Mortal Blow -->
-			<skill id="4883" level="1" /> <!-- Raid Boss - Level 65 -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4883" level="1" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
@@ -2625,20 +2607,21 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="918" min="1" max="1" chance="29.99" /> <!-- Adamantite Necklace -->
-				<item id="887" min="1" max="3" chance="29.75" /> <!-- Adamantite Ring -->
-				<item id="856" min="1" max="1" chance="28.55" /> <!-- Adamantite Earring -->
-				<item id="284" min="1" max="1" chance="2.568" /> <!-- Dark Elven Longbow -->
-				<item id="78" min="1" max="1" chance="2.526" /> <!-- Great Sword -->
-				<item id="243" min="1" max="1" chance="2.509" /> <!-- Twilight Knife -->
-				<item id="142" min="1" max="1" chance="2.496" /> <!-- Keshanberk -->
-				<item id="91" min="1" max="1" chance="2.493" /> <!-- Heavy War Axe -->
-				<item id="267" min="1" max="1" chance="2.45" /> <!-- Arthro Nail -->
-				<item id="229" min="1" max="1" chance="2.437" /> <!-- Kris -->
-				<item id="300" min="1" max="1" chance="2.434" /> <!-- Great Axe -->
+				<item id="887" min="1" max="3" chance="30.84" /> <!-- Adamantite Ring -->
+				<item id="856" min="1" max="1" chance="30.74" /> <!-- Adamantite Earring -->
+				<item id="918" min="1" max="1" chance="29.61" /> <!-- Adamantite Necklace -->
+				<item id="142" min="1" max="1" chance="6.9345" /> <!-- Keshanberk -->
+				<item id="78" min="1" max="1" chance="6.8995" /> <!-- Great Sword -->
+				<item id="229" min="1" max="1" chance="6.8835" /> <!-- Kris -->
+				<item id="300" min="1" max="1" chance="6.8715" /> <!-- Great Axe -->
+				<item id="243" min="1" max="1" chance="6.8685" /> <!-- Twilight Knife -->
+				<item id="267" min="1" max="1" chance="6.8155" /> <!-- Arthro Nail -->
+				<item id="91" min="1" max="1" chance="6.8125" /> <!-- Heavy War Axe -->
+				<item id="284" min="1" max="1" chance="6.8075" /> <!-- Dark Elven Longbow -->
 				<item id="70000" min="13" max="38" chance="100" /> <!-- Sealed Rune - Stage 1 -->
-				<item id="948" min="1" max="1" chance="50.26" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<item id="947" min="1" max="1" chance="49.56" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="947" min="1" max="1" chance="51.24" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="948" min="1" max="1" chance="50.81" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="90898" min="1" max="1" chance="0.3" /> <!-- Agathion's Soul -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -3425,9 +3408,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="77" /> <!-- Tsurugi -->
-		<acquire exp="6299596" sp="188987" raidPoints="5" />
+		<acquire exp="3149798" sp="94493" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="64658" hpRegen="50.5321359969236" mp="300" mpRegen="1.5" />
+			<vitals hp="249637.15548" hpRegen="47.62441308" mp="382501.425" mpRegen="1.5" />
 			<attack physical="189.606914466364" magical="24.2395745441976" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="334.84104" magical="163.34" evasion="-18" />
 			<speed>
@@ -3439,22 +3422,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4172" level="2" /> <!-- Stun -->
 			<skill id="4174" level="2" /> <!-- BOSS Shield -->
 			<skill id="4177" level="2" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4721" level="2" /> <!-- BOSS Strike -->
-			<skill id="4890" level="1" /> <!-- Raid Boss - Level 28 -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4890" level="1" /> <!-- Raid Boss (Lv. 28) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
@@ -3464,15 +3438,15 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="314" min="1" max="1" chance="5.74" /> <!-- Proof of Revenge -->
-				<item id="258" min="1" max="1" chance="5.71" /> <!-- Bagh-Nakh -->
-				<item id="313" min="1" max="1" chance="5.7" /> <!-- Temptation of Abyss -->
-				<item id="274" min="1" max="1" chance="5.697" /> <!-- Reinforced Bow -->
-				<item id="123" min="1" max="1" chance="5.644" /> <!-- Saber -->
-				<item id="291" min="1" max="1" chance="5.636" /> <!-- Trident -->
-				<item id="178" min="1" max="1" chance="5.624" /> <!-- Bone Staff -->
-				<item id="220" min="1" max="1" chance="5.614" /> <!-- Crafted Dagger -->
-				<item id="168" min="1" max="1" chance="5.597" /> <!-- Work Hammer -->
+				<item id="313" min="1" max="1" chance="5.736" /> <!-- Temptation of Abyss -->
+				<item id="314" min="1" max="1" chance="5.722" /> <!-- Proof of Revenge -->
+				<item id="123" min="1" max="1" chance="5.698" /> <!-- Saber -->
+				<item id="291" min="1" max="1" chance="5.686" /> <!-- Trident -->
+				<item id="258" min="1" max="1" chance="5.674" /> <!-- Bagh-Nakh -->
+				<item id="168" min="1" max="1" chance="5.644" /> <!-- Work Hammer -->
+				<item id="220" min="1" max="1" chance="5.626" /> <!-- Crafted Dagger -->
+				<item id="274" min="1" max="1" chance="5.623" /> <!-- Reinforced Bow -->
+				<item id="178" min="1" max="1" chance="5.612" /> <!-- Bone Staff -->
 				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="70000" min="3" max="8" chance="100" /> <!-- Sealed Rune - Stage 1 -->
 			</drop>
@@ -3939,7 +3913,7 @@
 			<height normal="61.5" />
 		</collision>
 	</npc>
-	<npc id="25283" level="89" type="L2GrandBoss" name="Lilith" title="Apostle">
+	<npc id="25283" level="82" type="L2GrandBoss" name="Lilith" title="Apostle">
 		<parameters>
 			<minions name="Privates">
 				<npc id="25284" count="4" respawnTime="360" weightPoint="1" />
@@ -4075,7 +4049,7 @@
 			<height normal="50" />
 		</collision>
 	</npc>
-	<npc id="25286" level="94" type="L2GrandBoss" name="Anakim" title="Fallen Angel">
+	<npc id="25286" level="82" type="L2GrandBoss" name="Anakim" title="Fallen Angel">
 		<!-- Ertheia -->
 		<parameters>
 			<minions name="Privates">

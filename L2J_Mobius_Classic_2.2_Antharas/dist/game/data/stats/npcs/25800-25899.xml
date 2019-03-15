@@ -5,7 +5,7 @@
 		<race>HUMANOID</race>
 		<equipment rhand="135" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2464650.93" mp="918304.2" mpRegen="1370.3703703704" hpRegen="67272.727272727" />
+			<vitals hp="1065031.87819" hpRegen="305.3568783" mp="902999.13" mpRegen="3" />
 			<attack physical="35238.095238095" magical="6218.487394958" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2740.7407407407" magical="1591.3978494624" />
 			<attribute>
@@ -25,17 +25,10 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="7" /> <!-- 74 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="5238" level="1" /> <!-- Freezing -->
-			<skill id="5467" level="1" /> <!-- Darkness Protection -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="50028" level="7" /> <!-- 74 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -48,7 +41,7 @@
 		<race>UNDEAD</race>
 		<equipment rhand="142" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2982228.03" mp="1012431.6" mpRegen="1407.4074074074" hpRegen="69090.909090909" />
+			<vitals hp="1288688.74749" hpRegen="310.756323" mp="995557.74" mpRegen="3" />
 			<attack physical="36190.476190476" magical="6386.5546218487" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2814.8148148148" magical="1634.4086021505" />
 			<attribute>
@@ -68,15 +61,10 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="8" /> <!-- 76 Lv. Raid Boss -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="6268" level="1" /> <!-- Jump Attack -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="8" /> <!-- 76 Lv. Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -89,7 +77,7 @@
 		<race>HUMANOID</race>
 		<equipment rhand="91" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="3608496.15" mp="1116206.1" mpRegen="1444.4444444444" hpRegen="70909.090909091" />
+			<vitals hp="1559313.48545" hpRegen="319.2293199" mp="1097602.665" mpRegen="3" />
 			<attack physical="37142.857142857" magical="6554.6218487395" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2888.8888888889" magical="1677.4193548387" />
 			<attribute>
@@ -109,11 +97,9 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="9" /> <!-- 78 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4415" level="12" /> <!-- Bare Hands -->
-			<skill id="5463" level="1" /> <!-- Water Attribute -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="9" /> <!-- 78 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -126,7 +112,7 @@
 		<race>HUMANOID</race>
 		<equipment rhand="229" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4366280.37" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -146,11 +132,9 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="10" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="5464" level="1" /> <!-- Wind Attribute -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="10" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -163,7 +147,7 @@
 		<race>HUMANOID</race>
 		<equipment rhand="175" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4366280.37" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -183,15 +167,13 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="11" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk.: -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk.: -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def.: -->
-			<skill id="5464" level="1" /> <!-- Wind Attribute -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="11" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -204,7 +186,7 @@
 		<race>UNDEAD</race>
 		<equipment rhand="78" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4366280.37" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -224,15 +206,13 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="12" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk.: -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk.: -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def.: -->
-			<skill id="5464" level="1" /> <!-- Wind Attribute -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="12" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -244,7 +224,7 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>HUMANOID</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4366280.37" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -264,15 +244,13 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="13" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk.: -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk.: -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def.: -->
-			<skill id="5464" level="1" /> <!-- Wind Attribute -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="13" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -285,7 +263,7 @@
 		<race>HUMANOID</race>
 		<equipment rhand="79" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="17597432.090909" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="7604251.7514242" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -305,16 +283,14 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="14" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="4" /> <!-- HP High: -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk.: -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk.: -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def.: -->
-			<skill id="5464" level="1" /> <!-- Wind Attribute -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="14" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="4" /> <!-- HP High -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -327,7 +303,7 @@
 		<race>HUMANOID</race>
 		<equipment rhand="171" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="13858193.152174" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="5988441.3251087" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -347,16 +323,14 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="15" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="5" /> <!-- HP High: -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk.: -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk.: -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def.: -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def.: -->
-			<skill id="5464" level="1" /> <!-- Wind Attribute -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="15" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="5" /> <!-- HP High -->
+			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -368,7 +342,7 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>DEMONIC</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="11524117.032787" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="4979833.8006066" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -388,15 +362,14 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="16" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="6" /> <!-- HP Very High: -->
-			<skill id="4410" level="17" /> <!-- Very Strong P. Atk.: -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk.: -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="16" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4408" level="6" /> <!-- HP Very High -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -409,7 +382,7 @@
 		<race>DIVINE</race>
 		<equipment rhand="80" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="10036773.935065" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="4337118.9262208" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -429,14 +402,13 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="17" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="50028" level="17" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="8" /> <!-- Angel -->
-			<skill id="4408" level="7" /> <!-- HP Very High: -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk.: -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk.: -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4408" level="7" /> <!-- HP Very High -->
+			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -449,7 +421,7 @@
 		<race>HUMANOID</race>
 		<equipment rhand="2504" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4366280.37" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="1886769.32971" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -469,15 +441,14 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="18" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x): -->
-			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk.: -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk.: -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="18" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
+			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -490,7 +461,7 @@
 		<race>HUMANOID</race>
 		<equipment rhand="6719" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4366280.18" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="1886769.2476067" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -510,14 +481,13 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="19" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="50028" level="19" /> <!-- 80 Lv. Raid Boss -->
 			<skill id="4416" level="6" /> <!-- Humanoid -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x): -->
-			<skill id="4410" level="20" /> <!-- Extremely Strong P. Atk.: -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk.: -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
-			<skill id="4415" level="3" /> <!-- Bare Hands -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
+			<skill id="4410" level="20" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>
@@ -529,7 +499,7 @@
 		<!-- Source: www.l2wiki.com -->
 		<race>UNDEAD</race>
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="4366280.2275" mp="1230615.9" mpRegen="1481.4814814815" hpRegen="72727.272727273" />
+			<vitals hp="1886769.2681325" hpRegen="319.2293199" mp="1210105.635" mpRegen="3" />
 			<attack physical="38095.238095238" magical="6722.6890756303" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2962.962962963" magical="1720.4301075269" />
 			<attribute>
@@ -549,16 +519,14 @@
 		</collision>
 		<skillList>
 			<skill id="50028" level="20" /> <!-- 80 Lv. Raid Boss -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x): -->
-			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk.: -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk.: -->
-			<skill id="4412" level="14" /> <!-- Strong P. Def.: -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def.: -->
-			<skill id="4415" level="11" /> <!-- Bare Hands -->
-			<skill id="4414" level="3" /> <!-- Heavy Armor Type -->
 			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="50028" level="20" /> <!-- 80 Lv. Raid Boss -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
+			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
+			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 		</skillList>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="false">
 			<clanList>

@@ -2882,9 +2882,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- Winged Spear -->
-		<acquire exp="2615583" sp="627" />
+		<acquire exp="2825409" sp="84762" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="59447" hpRegen="47.4274714721366" mp="273" mpRegen="1.5" />
+			<vitals hp="244718.09847" hpRegen="46.05583001" mp="374963.88" mpRegen="1.5" />
 			<attack physical="161.169491686233" magical="20.2881558958249" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="315.08454" magical="153.72" evasion="-18" />
 			<speed>
@@ -2896,22 +2896,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4174" level="2" /> <!-- BOSS Shield -->
 			<skill id="4177" level="2" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4723" level="2" /> <!-- BOSS Strike -->
 			<skill id="4738" level="2" /> <!-- BOSS Spinning Slash -->
-			<skill id="4930" level="1" /> <!-- Raid Boss - Level 26 -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4930" level="1" /> <!-- Raid Boss (Lv. 26) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -2921,16 +2912,16 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="604" min="2" max="8" chance="8.033" /> <!-- Quality Leather Gloves -->
-				<item id="626" min="2" max="8" chance="8.02" /> <!-- Bronze Shield -->
-				<item id="391" min="2" max="4" chance="8.018" /> <!-- Puma Skin Shirt -->
-				<item id="45" min="2" max="8" chance="8.004" /> <!-- Bone Helmet -->
-				<item id="40" min="2" max="8" chance="7.981" /> <!-- Leather Boots -->
-				<item id="376" min="2" max="4" chance="7.96" /> <!-- Iron Plate Gaiters -->
-				<item id="465" min="2" max="4" chance="7.945" /> <!-- Cursed Stockings -->
-				<item id="413" min="2" max="4" chance="7.943" /> <!-- Puma Skin Gaiters -->
-				<item id="432" min="2" max="4" chance="7.941" /> <!-- Cursed Tunic -->
-				<item id="347" min="2" max="4" chance="7.938" /> <!-- Ring Breastplate -->
+				<item id="626" min="2" max="8" chance="8.068" /> <!-- Bronze Shield -->
+				<item id="347" min="2" max="4" chance="8.066" /> <!-- Ring Breastplate -->
+				<item id="45" min="2" max="8" chance="8.05" /> <!-- Bone Helmet -->
+				<item id="376" min="2" max="4" chance="8.041" /> <!-- Iron Plate Gaiters -->
+				<item id="432" min="2" max="4" chance="8.026" /> <!-- Cursed Tunic -->
+				<item id="40" min="2" max="8" chance="7.982" /> <!-- Leather Boots -->
+				<item id="604" min="2" max="8" chance="7.97" /> <!-- Quality Leather Gloves -->
+				<item id="465" min="2" max="4" chance="7.95" /> <!-- Cursed Stockings -->
+				<item id="413" min="2" max="4" chance="7.948" /> <!-- Puma Skin Gaiters -->
+				<item id="391" min="2" max="4" chance="7.943" /> <!-- Puma Skin Shirt -->
 				<item id="955" min="2" max="8" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="2" max="6" chance="100" /> <!-- Sealed Rune - Stage 1 -->
@@ -4102,9 +4093,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="8468064" sp="254041" raidPoints="5" />
+		<acquire exp="4234032" sp="127020" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="82365" hpRegen="61.2927353271519" mp="372" mpRegen="1.8" />
+			<vitals hp="262370.88986" hpRegen="51.54587076" mp="402013.02" mpRegen="1.8" />
 			<attack physical="281.115059392479" magical="44.7780251490961" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="387.69285" magical="189.14" evasion="-18" />
 			<speed>
@@ -4116,22 +4107,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="3" /> <!-- BOSS Might -->
 			<skill id="4177" level="3" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4723" level="3" /> <!-- BOSS Strike -->
 			<skill id="4738" level="3" /> <!-- BOSS Spinning Slash -->
-			<skill id="4940" level="1" /> <!-- Raid Boss - Level 33 -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4940" level="1" /> <!-- Raid Boss (Lv. 33) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4141,17 +4123,17 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="912" min="1" max="1" chance="23.28" /> <!-- Near Forest Necklace -->
-				<item id="849" min="1" max="3" chance="22.76" /> <!-- Tiger's Eye -->
-				<item id="880" min="1" max="3" chance="22.31" /> <!-- Black Pearl Ring -->
-				<item id="379" min="1" max="3" chance="10.068" /> <!-- Dwarven Scale Gaiters -->
-				<item id="350" min="1" max="3" chance="10.051" /> <!-- Dwarven Scale Mail -->
-				<item id="378" min="1" max="3" chance="9.989" /> <!-- Compound Scale Gaiters -->
-				<item id="553" min="1" max="3" chance="9.978" /> <!-- Iron Boots -->
-				<item id="351" min="1" max="3" chance="9.971" /> <!-- Breastplate -->
-				<item id="63" min="1" max="3" chance="9.967" /> <!-- Gauntlets -->
-				<item id="47" min="1" max="3" chance="9.95" /> <!-- Helmet -->
-				<item id="349" min="1" max="3" chance="9.943" /> <!-- Compound Scale Mail -->
+				<item id="849" min="1" max="3" chance="24.46" /> <!-- Tiger's Eye -->
+				<item id="880" min="1" max="3" chance="22.71" /> <!-- Black Pearl Ring -->
+				<item id="912" min="1" max="1" chance="22.62" /> <!-- Near Forest Necklace -->
+				<item id="63" min="1" max="3" chance="10.069" /> <!-- Gauntlets -->
+				<item id="349" min="1" max="3" chance="10.062" /> <!-- Compound Scale Mail -->
+				<item id="350" min="1" max="3" chance="10.037" /> <!-- Dwarven Scale Mail -->
+				<item id="553" min="1" max="3" chance="10.034" /> <!-- Iron Boots -->
+				<item id="378" min="1" max="3" chance="10.007" /> <!-- Compound Scale Gaiters -->
+				<item id="47" min="1" max="3" chance="9.997" /> <!-- Helmet -->
+				<item id="379" min="1" max="3" chance="9.989" /> <!-- Dwarven Scale Gaiters -->
+				<item id="351" min="1" max="3" chance="9.968" /> <!-- Breastplate -->
 				<item id="955" min="2" max="4" chance="100" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="956" min="5" max="15" chance="100" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="70000" min="3" max="9" chance="100" /> <!-- Sealed Rune - Stage 1 -->
