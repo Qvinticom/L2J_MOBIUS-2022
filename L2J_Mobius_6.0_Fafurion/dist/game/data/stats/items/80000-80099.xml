@@ -1044,15 +1044,13 @@
 		<!-- A fragment of the Fafurion Knight. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
 		<set name="icon" val="icon.fafurion_avenger_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
-		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
-		</skills>
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -1066,8 +1064,8 @@
 		<!-- A fragment of the Fafurion Fighter. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
 		<set name="icon" val="icon.fafurion_fighter_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
@@ -1087,13 +1085,16 @@
 		<!-- A fragment of the Fafurion Stormer. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
 		<set name="icon" val="icon.fafurion_stormer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+		</skills>
 		<stats>
 			<stat type="pAtk">1188</stat>
 			<stat type="mAtk">517</stat>
@@ -1108,13 +1109,14 @@
 		<!-- A fragment of the Fafurion Retributer. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
 		<set name="icon" val="icon.fafurion_retributer_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
 		<stats>
 			<stat type="pAtk">1157</stat>
 			<stat type="mAtk">759</stat>
@@ -1130,9 +1132,12 @@
 		<set name="icon" val="icon.fafurion_dual_blunt_i00" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
 		<stats>
 			<stat type="pAtk">1445</stat>
 			<stat type="mAtk">517</stat>
@@ -1147,8 +1152,8 @@
 		<!-- A fragment of the Fafurion Dual Sword. Can be upgraded through Lionel Hunter the Fafurion s Watcher. Enchantment, Soul Crystal, Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i00" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
@@ -1167,14 +1172,15 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
@@ -1189,13 +1195,16 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -1210,13 +1219,17 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2146</stat>
 			<stat type="mAtk">935</stat>
@@ -1231,13 +1244,17 @@
 		<!-- A weapon bestowed with the dragon s wisdom. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<skills>
+			<skill id="8902" level="1" /> <!-- Dragon Mage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2090</stat>
 			<stat type="mAtk">1371</stat>
@@ -1253,9 +1270,15 @@
 		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -1270,13 +1293,16 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2611</stat>
 			<stat type="mAtk">935</stat>
@@ -1290,14 +1316,15 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
 		</skills>
 		<stats>
 			<stat type="pAtk">2488</stat>
@@ -1312,13 +1339,16 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -1333,13 +1363,17 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2488</stat>
 			<stat type="mAtk">1084</stat>
@@ -1354,13 +1388,17 @@
 		<!-- A weapon bestowed with the dragon s wisdom. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Casting Spd. +30%, P. Critical Rate +100, M. Skill Critical Rate +30%, M. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<skills>
+			<skill id="8902" level="1" /> <!-- Dragon Mage -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2423</stat>
 			<stat type="mAtk">1590</stat>
@@ -1376,9 +1414,15 @@
 		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -1393,13 +1437,16 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +30%, Max HP/ MP/ CP +30%, Atk. Spd. +30%, P. Critical Rate +100, P. Skill Critical Rate +30%, P. Skill Critical Damage +30%, and Damage to Dragons +100%. Additionally enables active skills Dignity and Fafurion Rising Wave. Can be upgraded through Lionel Hunter the Fafurion s Watcher. No Enchantment Augment, Crystallization, Appearance Modification, or Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8900" level="1" /> <!-- Dragon Fighter -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3027</stat>
 			<stat type="mAtk">1084</stat>
@@ -1413,14 +1460,15 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_avenger_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="POLE" />
+		<set name="bodypart" val="rhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
 		<skills>
-			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8901" level="1" /> <!-- Dragon Knight -->
 		</skills>
 		<stats>
 			<stat type="pAtk">2884</stat>
@@ -1435,13 +1483,16 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_fighter_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="FISHINGROD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALFIST" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1550" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8901" level="1" /> <!-- Dragon Knight -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3509</stat>
 			<stat type="mAtk">1257</stat>
@@ -1456,13 +1507,17 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_stormer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="POLE" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="BRONZE" />
 		<set name="weight" val="2010" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
+			<skill id="8901" level="1" /> <!-- Dragon Knight -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2884</stat>
 			<stat type="mAtk">1257</stat>
@@ -1477,13 +1532,17 @@
 		<!-- A weapon bestowed with the dragon s wisdom. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Casting Spd. +100%, P. Critical Rate +500, M. Skill Critical Rate +50%, M. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_retributer_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ETC" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="BLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="1080" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="is_magic_weapon" val="true" />
+		<skills>
+			<skill id="8903" level="1" /> <!-- Dragon Wizard -->
+		</skills>
 		<stats>
 			<stat type="pAtk">2809</stat>
 			<stat type="mAtk">1843</stat>
@@ -1499,9 +1558,15 @@
 		<set name="icon" val="icon.fafurion_dual_blunt_i01" />
 		<set name="default_action" val="EQUIP" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUALBLUNT" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="FINE_STEEL" />
 		<set name="weight" val="1740" />
+		<set name="soulshots" val="1" />
+		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8901" level="1" /> <!-- Dragon Knight -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3509</stat>
 			<stat type="mAtk">1257</stat>
@@ -1516,13 +1581,16 @@
 		<!-- A weapon bestowed with the dragon s power. When equipped, PvP Damage +50%, Max HP/ MP/ CP +100%, Atk. Spd. +100%, P. Critical Rate +500, P. Skill Critical Rate +50%, P. Skill Critical Damage +50%, and Damage to dragons +300%. Additionally enables active skills Dignity, Fafurion Rising Wave, and Fafurion s Breath. Enchantment Augment, Crystallization, Appearance Modification, Attribute Assignment allowed. Can bestow 1 special Soul Crystal. -->
 		<set name="icon" val="icon.fafurion_onehand_dual_sword_i01" />
 		<set name="default_action" val="EQUIP" />
-		<set name="weapon_type" val="ANCIENTSWORD" />
 		<set name="bodypart" val="lrhand" />
+		<set name="weapon_type" val="DUAL" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="STEEL" />
 		<set name="weight" val="1520" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<skills>
+			<skill id="8901" level="1" /> <!-- Dragon Knight -->
+		</skills>
 		<stats>
 			<stat type="pAtk">3509</stat>
 			<stat type="mAtk">1257</stat>
@@ -1719,6 +1787,7 @@
 		<set name="price" val="1616590000" />
 		<set name="soulshots" val="1" />
 		<set name="spiritshots" val="1" />
+		<set name="reuse_delay" val="1500" />
 		<set name="enchant_enabled" val="1" />
 		<set name="damage_range" val="0;0;10;0" />
 		<skills>
