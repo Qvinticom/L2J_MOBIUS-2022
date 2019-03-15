@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -59,6 +60,10 @@ public final class CpHeal extends AbstractEffect
 		}
 		
 		double amount = _power;
+		if ((item != null) && (item.isPotion() || item.isElixir()))
+		{
+			amount += effected.getStat().getValue(Stats.ADDITIONAL_POTION_CP, 0);
+		}
 		
 		// Prevents overheal and negative amount
 		amount = Math.max(Math.min(amount, effected.getMaxRecoverableCp() - effected.getCurrentCp()), 0);

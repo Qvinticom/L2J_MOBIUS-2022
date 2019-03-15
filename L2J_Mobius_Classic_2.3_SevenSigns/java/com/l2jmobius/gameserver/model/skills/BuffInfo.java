@@ -333,7 +333,7 @@ public final class BuffInfo
 			}
 			
 			// Call on start.
-			effect.onStart(_effector, _effected, _skill);
+			effect.onStart(_effector, _effected, _skill, _item);
 			
 			// If it's a continuous effect, if has ticks schedule a task with period, otherwise schedule a simple task to end it.
 			if (effect.getTicks() > 0)
@@ -360,7 +360,7 @@ public final class BuffInfo
 		if (_isInUse)
 		{
 			// Callback for on action time event.
-			continueForever = effect.onActionTime(_effector, _effected, _skill);
+			continueForever = effect.onActionTime(_effector, _effected, _skill, _item);
 		}
 		
 		if (!continueForever && _skill.isToggle())

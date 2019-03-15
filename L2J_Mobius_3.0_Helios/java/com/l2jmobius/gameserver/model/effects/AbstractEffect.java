@@ -97,9 +97,14 @@ public abstract class AbstractEffect
 		
 	}
 	
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		
+	}
+	
+	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	{
+		onStart(effector, effected, skill, null);
 	}
 	
 	public void onExit(L2Character effector, L2Character effected, Skill skill)
@@ -113,11 +118,25 @@ public abstract class AbstractEffect
 	 * @param effector
 	 * @param effected
 	 * @param skill
+	 * @param item
+	 * @return if {@code true} this effect will continue forever, if {@code false} it will stop after abnormal time has passed
+	 */
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
+	{
+		return false;
+	}
+	
+	/**
+	 * Called on each tick.<br>
+	 * If the abnormal time is lesser than zero it will last forever.
+	 * @param effector
+	 * @param effected
+	 * @param skill
 	 * @return if {@code true} this effect will continue forever, if {@code false} it will stop after abnormal time has passed
 	 */
 	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
 	{
-		return false;
+		return onActionTime(effector, effected, skill, null);
 	}
 	
 	/**

@@ -37,6 +37,9 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("AbsorbDamage", AbsorbDamage::new);
 		EffectHandler.getInstance().registerHandler("Accuracy", Accuracy::new);
 		EffectHandler.getInstance().registerHandler("AddHate", AddHate::new);
+		EffectHandler.getInstance().registerHandler("AdditionalPotionCp", AdditionalPotionCp::new);
+		EffectHandler.getInstance().registerHandler("AdditionalPotionHp", AdditionalPotionHp::new);
+		EffectHandler.getInstance().registerHandler("AdditionalPotionMp", AdditionalPotionMp::new);
 		EffectHandler.getInstance().registerHandler("AddSkillBySkill", AddSkillBySkill::new);
 		EffectHandler.getInstance().registerHandler("AddTeleportBookmarkSlot", AddTeleportBookmarkSlot::new);
 		EffectHandler.getInstance().registerHandler("AirBind", AirBind::new);

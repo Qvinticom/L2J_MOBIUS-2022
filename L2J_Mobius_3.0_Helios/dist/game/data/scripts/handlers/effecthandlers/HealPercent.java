@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.effects.L2EffectType;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.Stats;
 import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 
@@ -63,6 +64,11 @@ public final class HealPercent extends AbstractEffect
 		final boolean full = (power == 100.0);
 		
 		amount = full ? effected.getMaxHp() : (effected.getMaxHp() * power) / 100.0;
+		if ((item != null) && (item.isPotion() || item.isElixir()))
+		{
+			amount += effected.getStat().getValue(Stats.ADDITIONAL_POTION_HP, 0);
+		}
+		
 		// Prevents overheal
 		amount = Math.min(amount, effected.getMaxRecoverableHp() - effected.getCurrentHp());
 		if (amount >= 0)

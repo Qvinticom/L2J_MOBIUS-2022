@@ -19,7 +19,9 @@ package handlers.effecthandlers;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.Skill;
+import com.l2jmobius.gameserver.model.stats.Stats;
 
 /**
  * Mana Heal Over Time effect implementation.
@@ -35,7 +37,7 @@ public final class ManaHealOverTime extends AbstractEffect
 	}
 	
 	@Override
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
+	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		if (effected.isDead())
 		{
@@ -51,7 +53,13 @@ public final class ManaHealOverTime extends AbstractEffect
 			return true;
 		}
 		
-		mp += _power * getTicksMultiplier();
+		double power = _power;
+		if ((item != null) && (item.isPotion() || item.isElixir()))
+		{
+			power += effected.getStat().getValue(Stats.ADDITIONAL_POTION_MP, 0) / getTicks();
+		}
+		
+		mp += power * getTicksMultiplier();
 		mp = Math.min(mp, maxmp);
 		effected.setCurrentMp(mp, false);
 		effected.broadcastStatusUpdate(effector);
