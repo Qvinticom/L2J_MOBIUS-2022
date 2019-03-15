@@ -274,6 +274,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="35142" level="1" /> <!-- Reconstruction Society's Enchantment Pack -->
+		</skills>
 	</item>
 	<item id="48215" name="Circlet Spirit Stone" type="EtcItem">
 		<!-- Spirit Stone for circlets. Can only augment Noble/ Radiant circlets. -->
@@ -290,6 +295,11 @@
 		<set name="material" val="PAPER" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="immediate_effect" val="true" />
+		<set name="handler" val="ItemSkills" />
+		<skills>
+			<skill id="35143" level="1" /> <!-- Circlet Upgrade Stone Pack -->
+		</skills>
 	</item>
 	<item id="48217" name="Balthus Knights Supply Box" type="EtcItem">
 		<!-- Box containing Balthus Knights supplies. -->

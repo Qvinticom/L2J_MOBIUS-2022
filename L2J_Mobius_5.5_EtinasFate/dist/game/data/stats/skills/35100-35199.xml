@@ -1055,9 +1055,72 @@
 		</effects>
 	</skill>
 	<skill id="35142" toLevel="1" name="Reconstruction Society's Enchantment Pack">
+		<!-- Double-click to obtain Blessed Circlet Enchant Scroll. Has a chance to obtain Circlet Spirit Stone, Noble Circlet Upgrade Stone or Radiant Circlet Upgrade Stone. -->
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>48214</itemConsumeId> <!-- Reconstruction Society's Enchantment Pack -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="100">
+						<item id="48211" count="1" /> <!-- Blessed Circlet Enchant Scroll -->
+					</item>
+					<item chance="40">
+						<item id="48215" count="1" /> <!-- Circlet Spirit Stone -->
+					</item>
+					<item chance="30">
+						<item id="48212" count="1" /> <!-- Noble Circlet Upgrade Stone -->
+					</item>
+					<item chance="10">
+						<item id="48212" count="1" /> <!-- Radiant Circlet Upgrade Stone -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="35143" toLevel="1" name="Circlet Upgrade Stone Pack">
 		<operateType>A1</operateType>
+		<hitTime>500</hitTime>
+		<coolTime>500</coolTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<magicLvl>1</magicLvl>
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>48216</itemConsumeId> <!-- Circlet Upgrade Stone Pack -->
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<conditions>
+			<condition name="OpEncumbered">
+				<weightPercent>10</weightPercent>
+				<slotsPercent>10</slotsPercent>
+			</condition>
+		</conditions>
+		<effects>
+			<effect name="RestorationRandom">
+				<items>
+					<item chance="50">
+						<item id="48212" count="1" /> <!-- Noble Circlet Upgrade Stone -->
+					</item>
+					<item chance="50">
+						<item id="48212" count="1" /> <!-- Radiant Circlet Upgrade Stone -->
+					</item>
+				</items>
+			</effect>
+		</effects>
 	</skill>
 </list>
