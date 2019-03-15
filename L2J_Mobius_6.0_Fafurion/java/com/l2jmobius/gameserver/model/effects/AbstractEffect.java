@@ -26,8 +26,8 @@ import com.l2jmobius.gameserver.model.skills.Skill;
 /**
  * Abstract effect implementation.<br>
  * Instant effects should not override {@link #onExit(L2Character, L2Character, Skill)}.<br>
- * Instant effects should not override {@link #canStart(L2Character, L2Character, Skill)}, all checks should be done {@link #onStart(L2Character, L2Character, Skill)}.<br>
- * Do not call super class methods {@link #onStart(L2Character, L2Character, Skill)} nor {@link #onExit(L2Character, L2Character, Skill)}.
+ * Instant effects should not override {@link #canStart(L2Character, L2Character, Skill)}, all checks should be done {@link #onStart(L2Character, L2Character, Skill, L2ItemInstance)}.<br>
+ * Do not call super class methods {@link #onStart(L2Character, L2Character, Skill, L2ItemInstance)} nor {@link #onExit(L2Character, L2Character, Skill)}.
  * @author Zoey76
  */
 public abstract class AbstractEffect
@@ -102,11 +102,6 @@ public abstract class AbstractEffect
 		
 	}
 	
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
-	{
-		onStart(effector, effected, skill, null);
-	}
-	
 	public void onExit(L2Character effector, L2Character effected, Skill skill)
 	{
 		
@@ -124,19 +119,6 @@ public abstract class AbstractEffect
 	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		return false;
-	}
-	
-	/**
-	 * Called on each tick.<br>
-	 * If the abnormal time is lesser than zero it will last forever.
-	 * @param effector
-	 * @param effected
-	 * @param skill
-	 * @return if {@code true} this effect will continue forever, if {@code false} it will stop after abnormal time has passed
-	 */
-	public boolean onActionTime(L2Character effector, L2Character effected, Skill skill)
-	{
-		return onActionTime(effector, effected, skill, null);
 	}
 	
 	/**

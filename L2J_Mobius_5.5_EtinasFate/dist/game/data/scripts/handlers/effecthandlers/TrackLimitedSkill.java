@@ -21,6 +21,7 @@ import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.L2Character;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
 import com.l2jmobius.gameserver.model.holders.SkillHolder;
+import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.model.skills.BuffInfo;
 import com.l2jmobius.gameserver.model.skills.Skill;
 
@@ -47,7 +48,7 @@ public class TrackLimitedSkill extends AbstractEffect
 	}
 	
 	@Override
-	public void onStart(L2Character effector, L2Character effected, Skill skill)
+	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
 		trackAeoreLimit(effector, effected, skill, LIMIT_OF_AEORE); // Tracking Aeore Limit Debuff
 		trackSigelLimit(effector, effected, skill, LIMIT_OF_SIGEL); // Tracking Sigel Limit Debuff
