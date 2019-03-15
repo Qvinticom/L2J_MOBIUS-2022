@@ -2108,12 +2108,11 @@
 		<icon>icon.skill_potion_up</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="HealEffect">
+			<effect name="AdditionalPotionHp">
 				<amount>
 					<value level="1">500</value>
 					<value level="2">1000</value>
 				</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2441,12 +2440,11 @@
 		<icon>icon.skill_potion_up</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="HealEffect">
+			<effect name="AdditionalPotionHp">
 				<amount>
 					<value level="1">500</value>
 					<value level="2">1000</value>
 				</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
