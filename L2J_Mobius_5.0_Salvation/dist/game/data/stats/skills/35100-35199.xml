@@ -825,13 +825,11 @@
 	</skill>
 	<skill id="35120" toLevel="1" name="Circlet Spirit Stone Augmentation Effect">
 		<!-- Potion/ Elixir Effect +$s1 -->
-		<!-- TODO: Add Potion Elixir HP Bonus -->
 		<icon>Icon.bm_mineral_circlet_hair_acc</icon>
 		<operateType>P</operateType>
 		<effects>
-			<effect name="HealEffect">
-				<amount>5</amount>
-				<mode>PER</mode>
+			<effect name="AdditionalPotionHp">
+				<amount>500</amount>
 			</effect>
 		</effects>
 	</skill>
@@ -1061,8 +1059,8 @@
 		<coolTime>500</coolTime>
 		<isMagic>2</isMagic> <!-- Static Skill -->
 		<magicLvl>1</magicLvl>
-		<itemConsumeCount>1</itemConsumeCount>
 		<itemConsumeId>48214</itemConsumeId> <!-- Reconstruction Society's Enchantment Pack -->
+		<itemConsumeCount>1</itemConsumeCount>
 		<magicCriticalRate>5</magicCriticalRate>
 		<hitCancelTime>0</hitCancelTime>
 		<targetType>SELF</targetType>
@@ -1074,19 +1072,20 @@
 			</condition>
 		</conditions>
 		<effects>
+			<effect name="Restoration">
+				<itemId>48211</itemId>
+				<itemCount>1</itemCount>
+			</effect>
 			<effect name="RestorationRandom">
 				<items>
-					<item chance="100">
-						<item id="48211" count="1" /> <!-- Blessed Circlet Enchant Scroll -->
+					<item chance="33.33">
+						<item id="48212" count="1" /> <!-- Radiant Circlet Upgrade Stone -->
 					</item>
-					<item chance="40">
-						<item id="48215" count="1" /> <!-- Circlet Spirit Stone -->
-					</item>
-					<item chance="30">
+					<item chance="33.33">
 						<item id="48212" count="1" /> <!-- Noble Circlet Upgrade Stone -->
 					</item>
-					<item chance="10">
-						<item id="48212" count="1" /> <!-- Radiant Circlet Upgrade Stone -->
+					<item chance="33.33">
+						<item id="48215" count="1" /> <!-- Circlet Spirit Stone -->
 					</item>
 				</items>
 			</effect>
