@@ -182,7 +182,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11752" toLevel="11" name="Sustain">
+	<skill id="11752" toLevel="13" name="Sustain">
 		<!-- For $s1, Heals the selected party member by $s2 per second. Further increases incoming Healing power by $s3. Also increases your Healing power. -->
 		<icon>icon.skill11752</icon>
 		<abnormalTime>15</abnormalTime>
@@ -1367,7 +1367,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11766" toLevel="11" name="Dark Blast">
+	<skill id="11766" toLevel="13" name="Dark Blast">
 		<!-- Attacks target with $s1 Power added to M. Atk. -->
 		<icon>icon.skill11766</icon>
 		<effectPoint>
