@@ -149,6 +149,7 @@ public final class EffectMasterHandler
 		EffectHandler.getInstance().registerHandler("GetDamageLimit", GetDamageLimit::new);
 		EffectHandler.getInstance().registerHandler("GetMomentum", GetMomentum::new);
 		EffectHandler.getInstance().registerHandler("GiveClanReputation", GiveClanReputation::new);
+		EffectHandler.getInstance().registerHandler("GiveExpAndSp", GiveExpAndSp::new);
 		EffectHandler.getInstance().registerHandler("GiveFame", GiveFame::new);
 		EffectHandler.getInstance().registerHandler("GiveRecommendation", GiveRecommendation::new);
 		EffectHandler.getInstance().registerHandler("GiveSp", GiveSp::new);

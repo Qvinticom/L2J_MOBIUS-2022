@@ -44,12 +44,97 @@
 	<skill id="39204" toLevel="1" name="Dimensional Blessing">
 		<!-- Gives 3,700,000 XP/ 1,110,000 SP. -->
 		<icon>icon.BranchSys.icon.br_lucky_bag_i00</icon>
-		<operateType>A1</operateType>
+		<hitTime>200</hitTime>
+		<isMagic>2</isMagic> <!-- Static Skill -->
+		<itemConsumeCount>1</itemConsumeCount>
+		<itemConsumeId>90044</itemConsumeId>
+		<magicLvl>1</magicLvl>
+ 		<operateType>A1</operateType>
+		<reuseDelay>1000</reuseDelay>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<effects>
+			<effect name="GiveExpAndSp">
+				<xp>
+					<value level="1">37000000</value>
+				</xp>
+				<sp>
+					<value level="1">1110000</value>
+				</sp>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39205" toLevel="1" name="Dark Assassin Transformation Potion">
 		<!-- You are transformed into Dark Assassin. For 15 min., Max HP/ MP +5%, P./ M. Accuracy +1, P./ M. Atk. +2%, P./ M. Def. +2%, Atk. Spd. +3%, M. Critical Rate +10, Speed +4. Cooldown: 10 min. -->
 		<icon>icon.empty_bottle</icon>
-		<operateType>A1</operateType>
+		<abnormalLvl>1</abnormalLvl>
+		<abnormalTime>900</abnormalTime>
+		<abnormalType>CHANGEBODY</abnormalType>
+		<abnormalVisualEffect>DARK_ASSASSIN_SUIT</abnormalVisualEffect>
+		<blockedInOlympiad>true</blockedInOlympiad>
+		<effectPoint>1</effectPoint>
+		<isMagic>4</isMagic> <!-- Magic Skill -->
+		<magicLvl>56</magicLvl>
+		<operateType>A2</operateType>
+		<reuseDelay>900000</reuseDelay>
+		<hitTime>600</hitTime>
+		<stayAfterDeath>true</stayAfterDeath>
+		<irreplacableBuff>true</irreplacableBuff>
+		<basicProperty>NONE</basicProperty>
+		<magicCriticalRate>5</magicCriticalRate>
+		<hitCancelTime>0</hitCancelTime>
+		<targetType>SELF</targetType>
+		<affectScope>SINGLE</affectScope>
+		<itemConsumeId>90043</itemConsumeId>
+		<itemConsumeCount>1</itemConsumeCount>
+		<effects>
+			<effect name="MaxHp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>5</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Speed">
+				<amount>4</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PhysicalAttackSpeed">
+				<amount>3</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="Accuracy">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicAccuracy">
+				<amount>1</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="MagicCriticalRate">
+				<amount>10</amount>
+				<mode>DIFF</mode>
+			</effect>
+			<effect name="PAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MAtk">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>2</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="39206" toLevel="1" name="Monster Arena Belt">
 		<!-- When using the Belt CON +1, HORN +1, HP Recovery Bonus +2.31, MP +1.54, CP +3.07, Max HP/ MP/ CP +10%, damage received -3%. -->
