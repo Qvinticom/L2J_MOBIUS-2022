@@ -13,7 +13,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19301" toLevel="9" name="Istina Acid Swarm">
+	<skill id="19301" toLevel="11" name="Istina Acid Swarm">
 		<!-- Throws the bottle containing Istina's Acid at the target point to create an acidic area for $s1. Enemies within the area suffer P./ M. Def. -$s2 and Atk. Spd./ Speed/ Shield Def. -$s3 and cannot use magic skills. -->
 		<icon>icon.skill19301</icon>
 		Enemies within the area suffer P. Def/ M. Def -30% and Atk. Spd./ Speed/ Shield Def. -50% and cannot use magic skills. -->
@@ -30,6 +30,8 @@
 			<value level="7">7</value>
 			<value level="8">8</value>
 			<value level="9">9</value>
+			<value level="10">10</value>
+			<value level="11">11</value>
 		</abnormalLvl>
 		<reuseDelay>15000</reuseDelay>
 		<abnormalTime>15</abnormalTime>
@@ -50,6 +52,8 @@
 			<value level="7">101</value>
 			<value level="8">103</value>
 			<value level="9">105</value>
+			<value level="10">107</value>
+			<value level="11">109</value>
 		</magicLvl>
 		<lvlBonusRate>20</lvlBonusRate>
 		<mpConsume>1</mpConsume>
@@ -63,6 +67,8 @@
 			<value level="7">-709</value>
 			<value level="8">-709</value>
 			<value level="9">-709</value>
+			<value level="10">-709</value>
+			<value level="11">-709</value>
 		</effectPoint>
 		<effectRange>900</effectRange>
 		<isDebuff>true</isDebuff>
@@ -86,6 +92,8 @@
 					<value level="7">13547</value>
 					<value level="8">13548</value>
 					<value level="9">13549</value>
+					<value level="10">13550</value>
+					<value level="11">13551</value>
 				</npcId>
 				<npcCount>1</npcCount>
 				<despawnDelay>15000</despawnDelay>
@@ -194,7 +202,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19303" toLevel="7" name="Right Angle Reverse">
+	<skill id="19303" toLevel="9" name="Right Angle Reverse">
 		<!-- Moves to the right side of the target to attempt the Deadly Attack with $s1 Power added to P. Atk. and stun the target for $s2. Half-kill is possible. Requires a dagger or dual dagger to be equipped. -->
 		<icon>icon.skill19303</icon>
 		<abnormalLvl>
@@ -205,6 +213,8 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
 		</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>STUN</abnormalType>
@@ -222,6 +232,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">80</value>
@@ -231,6 +243,8 @@
 			<value level="5">100</value>
 			<value level="6">105</value>
 			<value level="7">110</value>
+			<value level="8">115</value>
+			<value level="9">120</value>
 		</mpConsume>
 		<hitTime>1500</hitTime>
 		<coolTime>500</coolTime>
@@ -262,6 +276,8 @@
 					<value level="5">56030</value>
 					<value level="6">58530</value>
 					<value level="7">61030</value>
+					<value level="8">64160</value>
+					<value level="9">67290</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<chanceBoost>300</chanceBoost>
@@ -318,7 +334,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19305" toLevel="7" name="Shadow Reverse">
+	<skill id="19305" toLevel="9" name="Shadow Reverse">
 		<!-- Attempts Deadly Attack on the target with $s1 power added to P. Attack and moves backward. Additionally, decreases Accuracy by $s3 for $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19305</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -335,6 +351,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">90</value>
@@ -344,6 +362,8 @@
 			<value level="5">118</value>
 			<value level="6">124</value>
 			<value level="7">130</value>
+			<value level="8">136</value>
+			<value level="9">142</value>
 		</mpConsume>
 		<hitTime>2030</hitTime>
 		<coolTime>500</coolTime>
@@ -373,6 +393,8 @@
 					<value level="5">60180</value>
 					<value level="6">62870</value>
 					<value level="7">65560</value>
+					<value level="8">68920</value>
+					<value level="9">72280</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<chanceBoost>300</chanceBoost>
@@ -526,7 +548,7 @@
 			<effect name="Plunder" />
 		</effects>
 	</skill>
-	<skill id="19311" toLevel="3" name="Dwarven Flare Bluff">
+	<skill id="19311" toLevel="5" name="Dwarven Flare Bluff">
 		<!-- Fires Special Flare to inflict Bluff on enemies in front for $s1. Requires dagger/ dual dagger. Consumes $s2 Soulstones. -->
 		<icon>icon.skill0537</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -548,6 +570,8 @@
 			<value level="1">101</value>
 			<value level="2">103</value>
 			<value level="3">105</value>
+			<value level="4">107</value>
+			<value level="5">109</value>
 		</magicLvl>
 		<mpConsume>155</mpConsume>
 		<hitTime>1000</hitTime>

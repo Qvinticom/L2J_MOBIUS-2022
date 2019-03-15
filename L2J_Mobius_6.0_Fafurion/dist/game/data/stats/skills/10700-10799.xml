@@ -178,15 +178,15 @@
 			<effect name="Plunder" />
 		</effects>
 	</skill>
-	<skill id="10703" toLevel="3" name="Armor Breaker">
+	<skill id="10703" toLevel="5" name="Armor Breaker">
 		<!-- In PvP, removes the target's armor for $s1. In PvE, decreases the target's P. Def. by $s2 for $s1. Requires a dagger or dual dagger to be equipped. Consumes $s3 Soulstones. -->
 		<icon>icon.skill10703</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>3</abnormalTime>
 		<abnormalType>DISARM</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="3">80</value> <!-- Guessed -->
-			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="5">80</value> <!-- Guessed -->
+			<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty> <!-- Guessed -->
 		<operateType>A2</operateType>
@@ -197,6 +197,8 @@
 			<value level="1">77</value>
 			<value level="2">79</value>
 			<value level="3">81</value>
+			<value level="4">83</value>
+			<value level="5">85</value>
 		</mpConsume>
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
@@ -208,7 +210,7 @@
 			<effect name="Disarmor" />
 		</effects>
 	</skill>
-	<skill id="10704" toLevel="3" name="Grim Reaper Possession">
+	<skill id="10704" toLevel="5" name="Grim Reaper Possession">
 		<!-- Raids the target in the distance of $s1 to inflict short Stun and increase your critical damage by $s3 for $s2. Requires dagger/ dual dagger. Consumes $s4 Soulstones. -->
 		<icon>icon.skill10704</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -216,8 +218,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="3">80</value> <!-- Guessed -->
-			<value fromLevel="1" toLevel="3" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="5">80</value> <!-- Guessed -->
+			<value fromLevel="1" toLevel="5" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectRange>200</affectRange> <!-- Guessed -->
 		<basicProperty>MAGIC</basicProperty> <!-- Guessed -->
@@ -255,7 +257,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
- 	<skill id="10705" toLevel="3" name="Easterly Wind Strike">
+ 	<skill id="10705" toLevel="5" name="Easterly Wind Strike">
 		<!-- Moves to the left side of the target to attempt Deadly Attack with $s1 power added to P. Atk. Causes Bleed on the target for $s2 Adds the Easterly Wind effect to the caster, which resets cooldown of Right Angle Reverse and Easterly Wind Strike. Half-kill is possible. Requires dagger/ dual dagger to be equipped. -->
 		<icon>icon.skill10705</icon>
  		<!-- Updated to GRAND CRUSADE -->
@@ -264,6 +266,8 @@
 			<value level="1">1</value>
 			<value level="2">2</value>
 			<value level="3">3</value>
+			<value level="4">4</value>
+			<value level="5">5</value>
 		</abnormalLvl>
 		<abnormalTime>15</abnormalTime>
 		<subordinationAbnormalType>BLEEDING</subordinationAbnormalType>
@@ -277,6 +281,8 @@
 			<value level="1">77</value>
 			<value level="2">79</value>
 			<value level="3">81</value>
+			<value level="4">83</value>
+			<value level="5">85</value>
 		</mpConsume>
 		<castRange>40</castRange>
 		<hitTime>1500</hitTime>
@@ -287,6 +293,8 @@
 			<value level="1">101</value>
 			<value level="2">103</value>
 			<value level="3">105</value>
+			<value level="4">107</value>
+			<value level="5">109</value>
 		</magicLvl>
 		<nextAction>ATTACK</nextAction>
 		<conditions>
@@ -309,6 +317,8 @@
 					<value level="1">56030</value>
 					<value level="2">58530</value>
 					<value level="3">61030</value>
+					<value level="4">64160</value>
+					<value level="5">67290</value>
 				</power>
 				<criticalChance>15</criticalChance> <!-- Guessed -->
 				<chanceBoost>365</chanceBoost> <!-- Guessed -->

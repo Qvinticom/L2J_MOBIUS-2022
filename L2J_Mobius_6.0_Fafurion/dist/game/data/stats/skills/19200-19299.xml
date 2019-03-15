@@ -2526,7 +2526,7 @@
 		<icon>icon.skill1397</icon>
 		<operateType>A1</operateType>
 	</skill>
-	<skill id="19296" toLevel="8" name="Counter Flip">
+	<skill id="19296" toLevel="10" name="Counter Flip">
 		<!-- Knocks down the opponent who attacked you for $s1 and moves you behind opponent's back. Cancels Counter Stance. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19296</icon>
 		<abnormalLvl>
@@ -2537,7 +2537,9 @@
 			<value level="5">5</value>
 			<value level="6">6</value>
 			<value level="7">7</value>
-			<value level="7">8</value>
+			<value level="8">8</value>
+			<value level="9">9</value>
+			<value level="10">10</value>
 		</abnormalLvl>
 		<abnormalTime>5</abnormalTime>
 		<abnormalType>COUNTER_FLIP</abnormalType>
@@ -2554,6 +2556,8 @@
 			<value level="6">101</value>
 			<value level="7">103</value>
 			<value level="8">105</value>
+			<value level="9">107</value>
+			<value level="10">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">42</value>
@@ -2564,6 +2568,8 @@
 			<value level="6">52</value>
 			<value level="7">54</value>
 			<value level="8">56</value>
+			<value level="9">58</value>
+			<value level="10">60</value>
 		</mpConsume>
 		<hitTime>100</hitTime>
 		<coolTime>100</coolTime>
@@ -2657,7 +2663,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="19298" toLevel="8" name="Flash Dagger">
+	<skill id="19298" toLevel="10" name="Flash Dagger">
 		<!-- Blinds enemies in front of you for $s1 and cancels their ability to pick a target. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19298</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2682,6 +2688,8 @@
 			<value level="6">101</value>
 			<value level="7">103</value>
 			<value level="8">105</value>
+			<value level="9">107</value>
+			<value level="10">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">74</value>
@@ -2692,6 +2700,8 @@
 			<value level="6">89</value>
 			<value level="7">92</value>
 			<value level="8">95</value>
+			<value level="9">98</value>
+			<value level="10">101</value>
 		</mpConsume>
 		<hitTime>1200</hitTime>
 		<coolTime>300</coolTime>
@@ -2716,7 +2726,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="19299" toLevel="7" name="Reverse Mana">
+	<skill id="19299" toLevel="9" name="Reverse Mana">
 		<!-- Attempts Deadly Attack with $s1 power added to P. Attack and recovers your MP by $s2. Half-kill is possible. Requires dagger/ dual dagger. -->
 		<icon>icon.skill19299</icon>
 		<operateType>A1</operateType>
@@ -2731,6 +2741,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">90</value>
@@ -2740,6 +2752,8 @@
 			<value level="5">118</value>
 			<value level="6">124</value>
 			<value level="7">130</value>
+			<value level="8">136</value>
+			<value level="9">142</value>
 		</mpConsume>
 		<hitTime>2030</hitTime>
 		<coolTime>500</coolTime>
@@ -2769,6 +2783,8 @@
 					<value level="5">58100</value>
 					<value level="6">60700</value>
 					<value level="7">63290</value>
+					<value level="8">66540</value>
+					<value level="9">69790</value>
 				</power>
 				<criticalChance>15</criticalChance>
 				<chanceBoost>300</chanceBoost>

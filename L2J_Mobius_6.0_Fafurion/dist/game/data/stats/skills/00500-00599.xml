@@ -2172,19 +2172,19 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="531" toLevel="8" name="Critical Wound">
+	<skill id="531" toLevel="9" name="Critical Wound">
 		<!-- Increases a target's P. Critical Damage Received by $s2 for $s1 by giving painful wounds. Requires a dagger/ dual dagger. -->
 		<icon>icon.skill0531</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="8">30</value>
-			<value fromLevel="4" toLevel="8" fromSubLevel="2001" toSubLevel="2010">{base + subIndex}</value>
-			<value fromLevel="4" toLevel="8" fromSubLevel="2011" toSubLevel="2020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="9">30</value>
+			<value fromLevel="4" toLevel="9" fromSubLevel="2001" toSubLevel="2010">{base + subIndex}</value>
+			<value fromLevel="4" toLevel="9" fromSubLevel="2011" toSubLevel="2020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>T_CRT_RATE_UP</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="8">80</value>
-			<value fromLevel="4" toLevel="8" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="9">80</value>
+			<value fromLevel="4" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<castRange>40</castRange>
@@ -2202,6 +2202,7 @@
 			<value level="6">101</value>
 			<value level="7">103</value>
 			<value level="8">105</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">43</value>
@@ -2212,6 +2213,7 @@
 			<value level="6">49</value>
 			<value level="7">52</value>
 			<value level="8">55</value>
+			<value level="9">67</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<operateType>A2</operateType>
@@ -2238,6 +2240,7 @@
 					<value level="6">35</value>
 					<value level="7">35</value>
 					<value level="8">35</value>
+					<value level="9">35</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
