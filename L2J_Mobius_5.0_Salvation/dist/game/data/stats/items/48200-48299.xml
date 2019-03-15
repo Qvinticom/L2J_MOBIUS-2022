@@ -66,6 +66,15 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<skills>
+			<skill id="35104" level="1" /> <!-- Warrior's Circlet) -->
+			<skill id="35105" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Warrior's Circlet Enchant Effect -->
+			<skill id="35105" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Warrior's Circlet Enchant Effect -->
+			<skill id="35105" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Warrior's Circlet Enchant Effect -->
+			<skill id="35105" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Warrior's Circlet Enchant Effect -->
+			<skill id="35105" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Warrior's Circlet Enchant Effect -->
+		</skills>
 	</item>
 	<item id="48203" name="Noble Circlet of Authority" type="Armor">
 		<!-- Noble Circlet of Authority.. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Circlet of Authority. Can be augmented. -->
@@ -76,6 +85,15 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<skills>
+			<skill id="35104" level="2" /> <!-- Warrior's Circlet -->
+			<skill id="35106" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Noble Warrior's Circlet Enchant Effect -->
+			<skill id="35106" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Noble Warrior's Circlet Enchant Effect -->
+			<skill id="35106" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Noble Warrior's Circlet Enchant Effect -->
+			<skill id="35106" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Noble Warrior's Circlet Enchant Effect -->
+			<skill id="35106" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Noble Warrior's Circlet Enchant Effect -->
+		</skills>
 	</item>
 	<item id="48204" name="Radiant Circlet of Authority" type="Armor">
 		<!-- Radiant Circlet of Authority. Can be augmented. -->
@@ -86,6 +104,15 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<skills>
+			<skill id="35104" level="3" /> <!-- Warrior's Circlet -->
+			<skill id="35107" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
+			<skill id="35107" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
+			<skill id="35107" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
+			<skill id="35107" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
+			<skill id="35107" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Radiant Warrior's Circlet Enchant Effect -->
+		</skills>
 	</item>
 	<item id="48205" name="Circlet of Foresight" type="Armor">
 		<!-- Circlet of Foresight. <Upgrade Requirement>. Enchant to +5 to upgrade to a Noble Circlet of Foresight. -->
@@ -100,6 +127,15 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<skills>
+			<skill id="35108" level="1" /> <!-- Wizard's Circlet -->
+			<skill id="35109" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Wizard's Circlet Enchant Effect -->
+			<skill id="35109" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Wizard's Circlet Enchant Effect -->
+			<skill id="35109" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Wizard's Circlet Enchant Effect -->
+			<skill id="35109" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Wizard's Circlet Enchant Effect -->
+			<skill id="35109" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Wizard's Circlet Enchant Effect -->
+		</skills>
 	</item>
 	<item id="48206" name="Noble Circlet of Foresight" type="Armor">
 		<!-- Noble Circlet of Foresight. <Upgrade Requirement>. Enchant to +5 to upgrade to a Rdiant Circlet of Foresight. Can be augmented. -->
@@ -110,6 +146,15 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<skills>
+			<skill id="35108" level="2" /> <!-- Wizard's Circlet -->
+			<skill id="35110" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Noble Wizard's Circlet Enchant Effect -->
+			<skill id="35110" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Noble Wizard's Circlet Enchant Effect -->
+			<skill id="35110" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Noble Wizard's Circlet Enchant Effect -->
+			<skill id="35110" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Noble Wizard's Circlet Enchant Effect -->
+			<skill id="35110" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Noble Wizard's Circlet Enchant Effect -->
+		</skills>
 	</item>
 	<item id="48207" name="Radiant Circlet of Foresight" type="Armor">
 		<!-- Radiant Circlet of Foresight. Can be augmented. -->
@@ -120,6 +165,15 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<skills>
+			<skill id="35108" level="3" /> <!-- Wizard's Circlet -->
+			<skill id="35111" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
+			<skill id="35111" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
+			<skill id="35111" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
+			<skill id="35111" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
+			<skill id="35111" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Radiant Wizard's Circlet Enchant Effect -->
+		</skills>
 	</item>
 	<item id="48208" name="Circlet of Grace" type="Armor">
 		<!-- Circlet of Grace. <Upgrade Requirement>. Enchant to +5 to upgrade to a Noble Circlet of Grace. -->
@@ -134,6 +188,15 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_private_storeable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<skills>
+			<skill id="35112" level="1" /> <!-- Knight's Circlet -->
+			<skill id="35113" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Knight's Circlet Enchant Effect -->
+			<skill id="35113" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Knight's Circlet Enchant Effect -->
+			<skill id="35113" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Knight's Circlet Enchant Effect -->
+			<skill id="35113" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Knight's Circlet Enchant Effect -->
+			<skill id="35113" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Knight's Circlet Enchant Effect -->
+		</skills>
 	</item>
 	<item id="48209" name="Noble Circlet of Grace" type="Armor">
 		<!-- Noble Circlet of Grace. <Upgrade Requirement>. Enchant to +5 to upgrade to a Radiant Circlet of Grace. Can be augmented. -->
@@ -144,6 +207,15 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<skills>
+			<skill id="35112" level="2" /> <!-- Knight's Circlet -->
+			<skill id="35114" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Noble Knight's Circlet Enchant Effect -->
+			<skill id="35114" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Noble Knight's Circlet Enchant Effect -->
+			<skill id="35114" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Noble Knight's Circlet Enchant Effect -->
+			<skill id="35114" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Noble Knight's Circlet Enchant Effect -->
+			<skill id="35114" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Noble Knight's Circlet Enchant Effect -->
+		</skills>
 	</item>
 	<item id="48210" name="Radiant Circlet of Grace" type="Armor">
 		<!-- Radiant Circlet of Grace. Can be augmented. -->
@@ -154,15 +226,32 @@
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<set name="enchant_enabled" val="8" />
+		<skills>
+			<skill id="35112" level="3" /> <!-- Knight's Circlet -->
+			<skill id="35115" level="1" type="ON_ENCHANT" type_value="1" /> <!-- Radiant Knight's Circlet Enchant Effect -->
+			<skill id="35115" level="2" type="ON_ENCHANT" type_value="2" /> <!-- Radiant Knight's Circlet Enchant Effect -->
+			<skill id="35115" level="3" type="ON_ENCHANT" type_value="3" /> <!-- Radiant Knight's Circlet Enchant Effect -->
+			<skill id="35115" level="4" type="ON_ENCHANT" type_value="4" /> <!-- Radiant Knight's Circlet Enchant Effect -->
+			<skill id="35115" level="5" type="ON_ENCHANT" type_value="5" /> <!-- Radiant Knight's Circlet Enchant Effect -->
+		</skills>
 	</item>
 	<item id="48211" name="Blessed Circlet Enchant Scroll" type="EtcItem">
 		<!-- Enchant scroll for Circlets of Authority/ Foresight/ Grace. Can be enchanted up to +5. If enchantment fails, the circlet's enchantment level is reset. -->
 		<set name="icon" val="icon.bm_blessed_scrl_of_ench_hair" />
 		<set name="default_action" val="SKILL_REDUCE" />
+		<set name="etcitem_type" val="ENCHT_AM" />
 		<set name="material" val="PAPER" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="EnchantScrolls" />
+		<set name="immediate_effect" val="true" />
+		<set name="is_stackable" val="true" />
+		<set name="commissionItemType" val="SCROLL_ENCHANT_ARMOR" />
+		<skills>
+			<skill id="35103" level="1" /> <!-- Blessed Circlet Enchant Scroll -->
+		</skills>
 	</item>
 	<item id="48212" name="Noble Upgrade Stone" type="EtcItem">
 		<!-- Ingredient needed to upgrade Circlets of Authority/ Foresight/ Grace into Noble Circlets. Talk to Head Blacksmith Ferris of Aden to upgrade +5 Circlets into Noble Circlets. -->
