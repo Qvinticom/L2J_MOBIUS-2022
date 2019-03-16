@@ -49,6 +49,11 @@ public final class Mute extends AbstractEffect
 	@Override
 	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
+		if ((effected == null) || effected.isRaid())
+		{
+			return;
+		}
+		
 		effected.abortCast();
 		effected.getAI().notifyEvent(CtrlEvent.EVT_MUTED);
 	}

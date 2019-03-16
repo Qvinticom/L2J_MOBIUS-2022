@@ -54,10 +54,14 @@ public final class Fear extends AbstractEffect
 	@Override
 	public boolean canStart(L2Character effector, L2Character effected, Skill skill)
 	{
-		final L2Character creature = effected;
-		return creature.isPlayer() || creature.isSummon() || (creature.isAttackable() && //
-			!((creature instanceof L2DefenderInstance) || (creature instanceof L2FortCommanderInstance) || //
-				(creature instanceof L2SiegeFlagInstance) || (creature.getTemplate().getRace() == Race.SIEGE_WEAPON)));
+		if ((effected == null) || effected.isRaid())
+		{
+			return false;
+		}
+		
+		return effected.isPlayer() || effected.isSummon() || (effected.isAttackable() //
+			&& !((effected instanceof L2DefenderInstance) || (effected instanceof L2FortCommanderInstance) //
+				|| (effected instanceof L2SiegeFlagInstance) || (effected.getTemplate().getRace() == Race.SIEGE_WEAPON)));
 	}
 	
 	@Override

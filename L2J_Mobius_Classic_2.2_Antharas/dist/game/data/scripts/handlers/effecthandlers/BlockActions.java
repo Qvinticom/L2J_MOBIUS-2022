@@ -60,6 +60,11 @@ public final class BlockActions extends AbstractEffect
 	@Override
 	public void onStart(L2Character effector, L2Character effected, Skill skill, L2ItemInstance item)
 	{
+		if ((effected == null) || effected.isRaid())
+		{
+			return;
+		}
+		
 		_allowedSkills.stream().forEach(effected::addBlockActionsAllowedSkill);
 		effected.startParalyze();
 		// Cancel running skill casters.
