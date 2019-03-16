@@ -702,6 +702,7 @@ public final class Config
 	public static float PET_XP_RATE;
 	public static int PET_FOOD_RATE;
 	public static float SINEATER_XP_RATE;
+	public static float LUCKY_CHANCE_MULTIPLIER;
 	public static int KARMA_DROP_LIMIT;
 	public static int KARMA_RATE_DROP;
 	public static int KARMA_RATE_DROP_ITEM;
@@ -1991,6 +1992,7 @@ public final class Config
 			PET_XP_RATE = RatesSettings.getFloat("PetXpRate", 1);
 			PET_FOOD_RATE = RatesSettings.getInt("PetFoodRate", 1);
 			SINEATER_XP_RATE = RatesSettings.getFloat("SinEaterXpRate", 1);
+			LUCKY_CHANCE_MULTIPLIER = RatesSettings.getFloat("LuckyChanceMultiplier", 1);
 			KARMA_DROP_LIMIT = RatesSettings.getInt("KarmaDropLimit", 10);
 			KARMA_RATE_DROP = RatesSettings.getInt("KarmaRateDrop", 70);
 			KARMA_RATE_DROP_ITEM = RatesSettings.getInt("KarmaRateDropItem", 50);

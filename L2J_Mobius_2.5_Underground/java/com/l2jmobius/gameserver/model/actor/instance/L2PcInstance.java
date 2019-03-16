@@ -14082,7 +14082,7 @@ public final class L2PcInstance extends L2Playable
 	
 	public boolean tryLuck()
 	{
-		if (((Rnd.nextDouble() * 100) < BaseStats.LUC.getValue(getLUC())) && !hasSkillReuse(CommonSkill.LUCKY_CLOVER.getSkill().getReuseHashCode()))
+		if (((Rnd.nextDouble() * 100) < (BaseStats.LUC.getValue(getLUC()) * Config.LUCKY_CHANCE_MULTIPLIER)) && !hasSkillReuse(CommonSkill.LUCKY_CLOVER.getSkill().getReuseHashCode()))
 		{
 			SkillCaster.triggerCast(this, this, CommonSkill.LUCKY_CLOVER.getSkill());
 			sendPacket(SystemMessageId.LADY_LUCK_SMILES_UPON_YOU);
