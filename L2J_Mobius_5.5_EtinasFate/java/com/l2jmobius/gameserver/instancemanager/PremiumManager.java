@@ -126,7 +126,7 @@ public class PremiumManager
 		}
 	}
 	
-	private void loadPremiumData(String accountName)
+	public void loadPremiumData(String accountName)
 	{
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement stmt = con.prepareStatement(LOAD_SQL))

@@ -30,6 +30,7 @@ import com.l2jmobius.commons.network.PacketWriter;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.idfactory.IdFactory;
+import com.l2jmobius.gameserver.instancemanager.PremiumManager;
 import com.l2jmobius.gameserver.model.CharSelectInfoPackage;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2World;
@@ -165,7 +166,31 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 		packet.writeC(0x01); // 0=can't play, 1=can play free until level 85, 2=100% free play
 		packet.writeD(0x02); // if 1, Korean client
 		packet.writeC(0x00); // Gift message for inactive accounts // 152
-		packet.writeC(0x00); // Balthus Knights, if 1 suggests premium account
+		
+		// Balthus Knights
+		if (Config.BALTHUS_KNIGHTS_ENABLED)
+		{
+			if (Config.BALTHUS_KNIGHTS_PREMIUM)
+			{
+				if (Config.PREMIUM_SYSTEM_ENABLED)
+				{
+					PremiumManager.getInstance().loadPremiumData(_loginName);
+					packet.writeC(PremiumManager.getInstance().getPremiumExpiration(_loginName) > 0 ? 0x01 : 0x00);
+				}
+				else
+				{
+					packet.writeC(0x00);
+				}
+			}
+			else
+			{
+				packet.writeC(0x01);
+			}
+		}
+		else
+		{
+			packet.writeC(0x00);
+		}
 		
 		long lastAccess = 0;
 		if (_activeId == -1)
@@ -213,8 +238,7 @@ public class CharSelectionInfo implements IClientOutgoingPacket
 			
 			packet.writeQ(charInfoPackage.getSp());
 			packet.writeQ(charInfoPackage.getExp());
-			packet.writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel()))); // High
-																																																																									// Five
+			packet.writeF((float) (charInfoPackage.getExp() - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())) / (ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel() + 1) - ExperienceData.getInstance().getExpForLevel(charInfoPackage.getLevel())));
 			packet.writeD(charInfoPackage.getLevel());
 			
 			packet.writeD(charInfoPackage.getReputation());

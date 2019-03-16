@@ -22,12 +22,14 @@ import java.util.logging.Logger;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
+import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.data.xml.impl.FakePlayerData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialEquipmentData;
 import com.l2jmobius.gameserver.data.xml.impl.InitialShortcutData;
 import com.l2jmobius.gameserver.data.xml.impl.PlayerTemplateData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
+import com.l2jmobius.gameserver.instancemanager.PremiumManager;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.L2World;
 import com.l2jmobius.gameserver.model.Location;
@@ -39,6 +41,7 @@ import com.l2jmobius.gameserver.model.base.ClassId;
 import com.l2jmobius.gameserver.model.events.Containers;
 import com.l2jmobius.gameserver.model.events.EventDispatcher;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerCreate;
+import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.items.PcItemTemplate;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.Disconnection;
@@ -148,6 +151,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		L2PcInstance newChar = null;
 		L2PcTemplate template = null;
+		boolean balthusKnights = false;
 		
 		/*
 		 * DrHouse: Since checks for duplicate names are done using SQL, lock must be held until data is written to DB as well.
@@ -165,8 +169,45 @@ public final class CharacterCreate implements IClientIncomingPacket
 				return;
 			}
 			
+			// Balthus Knights.
+			if (Config.BALTHUS_KNIGHTS_ENABLED && (!Config.BALTHUS_KNIGHTS_PREMIUM || (Config.PREMIUM_SYSTEM_ENABLED && (PremiumManager.getInstance().getPremiumExpiration(client.getAccountName()) > 0))))
+			{
+				if (_classId == 190)
+				{
+					_classId = 188; // EVISCERATOR
+					balthusKnights = true;
+				}
+				if (_classId == 191)
+				{
+					_classId = 189; // SAYHA_SEER
+					balthusKnights = true;
+				}
+				if ((_classId > 138) && (_classId < 147))
+				{
+					final String properClass = ClassId.getClassId(_classId).toString().split("_")[0];
+					for (ClassId classId : ClassId.values())
+					{
+						if (classId.getRace() == null)
+						{
+							continue;
+						}
+						if ((classId.getRace().ordinal() == _race) && classId.toString().startsWith(properClass))
+						{
+							_classId = classId.getId();
+							balthusKnights = true;
+							break;
+						}
+					}
+				}
+			}
+			else if (ClassId.getClassId(_classId).level() > 0)
+			{
+				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
+				return;
+			}
+			
 			template = PlayerTemplateData.getInstance().getTemplate(_classId);
-			if ((template == null) || (ClassId.getClassId(_classId).level() > 0))
+			if (template == null)
 			{
 				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 				return;
@@ -243,6 +284,17 @@ public final class CharacterCreate implements IClientIncomingPacket
 			newChar = L2PcInstance.create(template, client.getAccountName(), _name, new PcAppearance(_face, _hairColor, _hairStyle, _sex != 0));
 		}
 		
+		if (balthusKnights)
+		{
+			newChar.setExp(ExperienceData.getInstance().getExpForLevel(Config.BALTHUS_KNIGHTS_LEVEL));
+			newChar.getStat().setLevel((byte) Config.BALTHUS_KNIGHTS_LEVEL);
+			
+			if (Config.BALTHUS_KNIGHTS_REWARD_SKILLS)
+			{
+				newChar.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+			}
+		}
+		
 		// HP and MP are at maximum and CP is zero by default.
 		newChar.setCurrentHp(newChar.getMaxHp());
 		newChar.setCurrentMp(newChar.getMaxMp());
@@ -250,26 +302,12 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		client.sendPacket(CharCreateOk.STATIC_PACKET);
 		
-		initNewChar(client, newChar);
-		
-		LOGGER_ACCOUNTING.info("Created new character, " + newChar + ", " + client);
-	}
-	
-	private static boolean isValidName(String text)
-	{
-		return Config.CHARNAME_TEMPLATE_PATTERN.matcher(text).matches();
-	}
-	
-	private void initNewChar(L2GameClient client, L2PcInstance newChar)
-	{
 		L2World.getInstance().addObject(newChar);
 		
 		if (Config.STARTING_ADENA > 0)
 		{
 			newChar.addAdena("Init", Config.STARTING_ADENA, null, false);
 		}
-		
-		final L2PcTemplate template = newChar.getTemplate();
 		
 		if (Config.CUSTOM_STARTING_LOC)
 		{
@@ -279,6 +317,10 @@ public final class CharacterCreate implements IClientIncomingPacket
 		else if (Config.FACTION_SYSTEM_ENABLED)
 		{
 			newChar.setXYZInvisible(Config.FACTION_STARTING_LOCATION.getX(), Config.FACTION_STARTING_LOCATION.getY(), Config.FACTION_STARTING_LOCATION.getZ());
+		}
+		else if (balthusKnights)
+		{
+			newChar.setXYZInvisible(Config.BALTHUS_KNIGHTS_LOCATION.getX(), Config.BALTHUS_KNIGHTS_LOCATION.getY(), Config.BALTHUS_KNIGHTS_LOCATION.getZ());
 		}
 		else
 		{
@@ -318,6 +360,23 @@ public final class CharacterCreate implements IClientIncomingPacket
 				}
 			}
 		}
+		if (balthusKnights)
+		{
+			for (ItemHolder reward : Config.BALTHUS_KNIGHTS_REWARDS)
+			{
+				final L2ItemInstance item = newChar.getInventory().addItem("Balthus Rewards", reward.getId(), reward.getCount(), newChar, null);
+				if (item == null)
+				{
+					LOGGER.warning("Could not create item during char creation: itemId " + reward.getId() + ", amount " + reward.getCount() + ".");
+					continue;
+				}
+				
+				if (item.isEquipable())
+				{
+					newChar.getInventory().equipItem(item);
+				}
+			}
+		}
 		
 		for (L2SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, true))
 		{
@@ -338,5 +397,12 @@ public final class CharacterCreate implements IClientIncomingPacket
 		
 		final CharSelectionInfo cl = new CharSelectionInfo(client.getAccountName(), client.getSessionId().playOkID1);
 		client.setCharSelection(cl.getCharInfo());
+		
+		LOGGER_ACCOUNTING.info("Created new character, " + newChar + ", " + client);
+	}
+	
+	private static boolean isValidName(String text)
+	{
+		return Config.CHARNAME_TEMPLATE_PATTERN.matcher(text).matches();
 	}
 }
