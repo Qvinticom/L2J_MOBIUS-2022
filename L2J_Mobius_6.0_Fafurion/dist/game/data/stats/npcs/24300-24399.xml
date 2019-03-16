@@ -79,7 +79,7 @@
 	<npc id="24304" level="108" type="L2Monster" name="Groz Kropiora">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="2941100928" sp="2636064" />
+		<acquire exp="2147483647" sp="2636064" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7161240.455145" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -122,14 +122,14 @@
 				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.67" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.92" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24305" level="109" type="L2Monster" name="Groz Krotania">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3307195160" sp="2970250" />
+		<acquire exp="2147483647" sp="2970250" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7712104.32903" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
 			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -172,14 +172,14 @@
 				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.66" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.91" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24306" level="109" type="L2Monster" name="Groz Krophy">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3307195160" sp="2970250" />
+		<acquire exp="2147483647" sp="2970250" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7712104.32903" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
 			<attack physical="69212" magical="60406" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -222,14 +222,14 @@
 				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.97" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.22" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24307" level="110" type="L2Monster" name="Groz Krotany">
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="3680457000" sp="3303300" />
+		<acquire exp="2147483647" sp="3303300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8262970.09566" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
 			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -274,14 +274,14 @@
 				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.09" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.34" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24308" level="110" type="L2Monster" name="Water Drake" title="Fafurion's Henchman">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3680457000" sp="3303300" />
+		<acquire exp="2147483647" sp="3303300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="8262970.09566" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
 			<attack physical="72569" magical="64011" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -321,7 +321,7 @@
 				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="43.93" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.18" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -365,7 +365,7 @@
 				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.37" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.62" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -410,7 +410,7 @@
 				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.49" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.74" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -455,7 +455,7 @@
 				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.59" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.84" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -500,7 +500,7 @@
 				<item id="36555" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.66" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.91" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -544,7 +544,7 @@
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.9" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="48.15" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -589,7 +589,7 @@
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.79" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.04" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -634,7 +634,7 @@
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.66" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.91" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -679,7 +679,7 @@
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.95" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.20" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -731,7 +731,7 @@
 	<npc id="24318" level="115" type="L2Monster" name="Temple Guard Captain">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="7534890850" sp="54606960" />
+		<acquire exp="2147483647" sp="6771200" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="11956767.95688" hpRegen="9.5" mp="36834.809" mpRegen="3.3" />
 			<attack physical="89354" magical="82036" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -754,29 +754,31 @@
 		<skillList>
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Resist Stun -->
-			<skill id="16177" level="6" /> <!-- Knock Down Resistance -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="16177" level="10" /> <!-- Knock Down Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
 				<item id="57" min="54921" max="128184" chance="70" /> <!-- Adena -->
-				<item id="36550" min="1" max="1" chance="0.25" /> <!-- Weapon Fragment (Top-grade) -->
-				<item id="36555" min="1" max="1" chance="0.25" /> <!-- Armor Fragment (Top-grade) -->
+				<item id="36550" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="36555" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Top-grade) -->
 				<item id="80251" min="1" max="1" chance="0.03" /> <!-- Recipe: Krishna Dicing Death (60%) -->
 			</drop>
 			<spoil>
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.99" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24319" level="113" type="L2Monster" name="Elite Guardian Warrior">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="4294636077" sp="3856238" />
+		<acquire exp="2147483647" sp="3856238" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7230096.6255" hpRegen="9.5" mp="35881.884" mpRegen="3.3" />
 			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -816,7 +818,7 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="43.94" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.19" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -824,7 +826,7 @@
 		<race>DRAGON</race>
 		<sex>MALE</sex>
 		<equipment rhand="15302" /> 
-		<acquire exp="4294636077" sp="3856238" />
+		<acquire exp="2147483647" sp="3856238" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="7230096.6255" hpRegen="9.5" mp="35881.884" mpRegen="3.3" />
 			<attack physical="82640" magical="74826" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -864,14 +866,14 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.48" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.73" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24321" level="112" type="L2Monster" name="Temple Patrol Guard">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2739597056" sp="2458624" />
+		<acquire exp="2147483647" sp="2458624" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3442903.785915" hpRegen="9.5" mp="35405.827" mpRegen="3.3" />
 			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -909,14 +911,14 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.14" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.39" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24322" level="114" type="L2Monster" name="Temple Knight Recruit">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3434335956" sp="3080052" />
+		<acquire exp="2147483647" sp="3080052" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3795799.782015" hpRegen="9.5" mp="36358.752" mpRegen="3.3" />
 			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -954,14 +956,14 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.7" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.95" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24323" level="112" type="L2Monster" name="Temple Guard">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2739597056" sp="21856" />
+		<acquire exp="2147483647" sp="2458624" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3442903.785915" hpRegen="9.5" mp="35405.827" mpRegen="3.3" />
 			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -991,23 +993,23 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="57" min="35899" max="83740" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="1.551" /> <!-- Orichalcum Wire -->
+				<item id="57" min="34540" max="80522" chance="70" /> <!-- Adena -->
+				<item id="36544" min="1" max="1" chance="1.509" /> <!-- Orichalcum Wire -->
 				<item id="36545" min="1" max="1" chance="0.3" /> <!-- Durandil Wire -->
-				<item id="80279" min="1" max="1" chance="0.075" /> <!-- Krishna Cutter Fragment -->
+				<item id="80278" min="1" max="1" chance="0.075" /> <!-- Krishna Shaper Fragment -->
 			</drop>
 			<spoil>
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3" chance="45" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.93" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24324" level="114" type="L2Monster" name="Temple Guardian Warrior">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="3434335956" sp="3080052" />
+		<acquire exp="2147483647" sp="3080052" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3795799.782015" hpRegen="9.5" mp="36358.752" mpRegen="3.3" />
 			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1046,14 +1048,14 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.58" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.83" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24325" level="112" type="L2Monster" name="Temple Wizard">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2739597056" sp="2458624" />
+		<acquire exp="2147483647" sp="2458624" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3442903.785915" hpRegen="9.5" mp="35405.827" mpRegen="3.3" />
 			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1092,14 +1094,14 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.66" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.91" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24326" level="114" type="L2Monster" name="Temple Guardian Wizard">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="3434335956" sp="3080052" />
+		<acquire exp="2147483647" sp="3080052" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3795799.782015" hpRegen="9.5" mp="36358.752" mpRegen="3.3" />
 			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1138,14 +1140,14 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.81" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.06" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24327" level="112" type="L2Monster" name="Temple Priest">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2739597056" sp="2458624" />
+		<acquire exp="2147483647" sp="2458624" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3442903.785915" hpRegen="9.5" mp="35405.827" mpRegen="3.3" />
 			<attack physical="79283" magical="71221" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1184,14 +1186,14 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="43.97" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.22" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24328" level="114" type="L2Monster" name="Temple Guardian Priest">
 		<race>DRAGON</race>
 		<sex>FEMALE</sex>
-		<acquire exp="3434335956" sp="3080052" />
+		<acquire exp="2147483647" sp="3080052" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3795799.782015" hpRegen="9.5" mp="36358.752" mpRegen="3.3" />
 			<attack physical="85997" magical="78431" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1230,14 +1232,14 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.86" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.11" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24329" level="111" type="L2Monster" name="Starving Water Dragon">
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2446272945" sp="2193138" />
+		<acquire exp="2147483647" sp="2193138" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="2295269.400915" hpRegen="9.5" mp="34930.581" mpRegen="3.3" />
 			<attack physical="75926" magical="67616" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -1274,7 +1276,7 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.96" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.21" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>

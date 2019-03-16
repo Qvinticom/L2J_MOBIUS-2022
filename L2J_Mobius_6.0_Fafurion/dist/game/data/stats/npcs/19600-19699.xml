@@ -633,20 +633,20 @@
 			<height normal="0.001" />
 		</collision>
 	</npc>
-	<npc id="19647" level="100" type="L2Npc" name="Energy of Wind">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
+	<npc id="19647" level="100" type="L2Monster" name="Energy of Wind">
 		<race>ETC</race>
-		<sex>FEMALE</sex>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="9218.92998" hpRegen="9.5" mp="2922.844" mpRegen="3.3" />
+			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="3421" magical="1985" />
 			<speed>
 				<walk ground="1" />
 				<run ground="1" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="13" />
 			<height normal="13.9" />

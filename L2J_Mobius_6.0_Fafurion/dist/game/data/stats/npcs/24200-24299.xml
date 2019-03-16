@@ -1,138 +1,302 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="../../xsd/npcs.xsd">
-	<npc id="24200" level="85" type="L2Npc" name="Silence Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24200" level="97" type="L2Monster" name="Silence Warrior">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="25595490" sp="22957" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="68479.5141" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="50" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="21" />
 			<height normal="40" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4225" level="3" /> <!-- Stun Attack Resistance -->
+			<skill id="16547" level="5" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="689" max="1609" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="3.67" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.75" /> <!-- Adamantite -->
+				<item id="35327" min="1" max="1" chance="0.03" /> <!-- Helios Shaper Fragment -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24201" level="85" type="L2Npc" name="Silence Slave">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24201" level="97" type="L2Monster" name="Silence Slave">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="25595490" sp="22957" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="68479.5141" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="37" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="19" />
 			<height normal="32" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
+			<skill id="4225" level="3" /> <!-- Stun Attack Resistance -->
+			<skill id="16547" level="5" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="689" max="1609" chance="70" /> <!-- Adena -->
+				<item id="36542" min="1" max="1" chance="1.65" /> <!-- Silver Wire -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Helios Cutter Fragment -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24202" level="85" type="L2Npc" name="Silence Claw">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24202" level="97" type="L2Monster" name="Silence Claw">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="25595490" sp="22957" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="68479.5141" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="80" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="39.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4225" level="3" /> <!-- Stun Attack Resistance -->
+			<skill id="16547" level="5" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="689" max="1609" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="3.638" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.75" /> <!-- Adamantite -->
+				<item id="35330" min="1" max="1" chance="0.03" /> <!-- Helios Avenger Fragment -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24203" level="85" type="L2Npc" name="Silence Witch">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24203" level="97" type="L2Monster" name="Silence Witch">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="25595490" sp="22957" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="68479.5141" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="60" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="20" />
 			<height normal="49" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4225" level="3" /> <!-- Stun Attack Resistance -->
+			<skill id="16547" level="5" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="689" max="1609" chance="70" /> <!-- Adena -->
+				<item id="36548" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (Mid-grade) -->
+				<item id="35327" min="1" max="1" chance="0.03" /> <!-- Helios Shaper Fragment -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24204" level="85" type="L2Npc" name="Silence Hannibal" title="Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24204" level="97" type="L2Monster" name="Silence Hannibal" title="Watcher">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="26905600" sp="24181" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="68479.5141" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="38" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="23" />
 			<height normal="44" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
+			<skill id="4225" level="5" /> <!-- Stun Attack Resistance -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="861" max="2011" chance="70" /> <!-- Adena -->
+				<item id="36522" min="1" max="1" chance="4.515" /> <!-- Silver -->
+				<item id="36523" min="1" max="1" chance="0.75" /> <!-- Adamantite -->
+				<item id="35327" min="1" max="1" chance="0.03" /> <!-- Helios Shaper Fragment -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24205" level="85" type="L2Npc" name="Silence Preacle" title="Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="17330" />
+	<npc id="24205" level="97" type="L2Monster" name="Silence Preacle" title="Watcher">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<equipment rhand="17330" /> 
+		<acquire exp="26905600" sp="24181" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="68479.5141" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="43" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="18.4" />
 			<height normal="47.4" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4225" level="3" /> <!-- Stun Attack Resistance -->
+			<skill id="16547" level="5" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="861" max="2011" chance="70" /> <!-- Adena -->
+				<item id="36542" min="1" max="1" chance="2.149" /> <!-- Silver Wire -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="35328" min="1" max="1" chance="0.03" /> <!-- Helios Cutter Fragment -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="24206" level="85" type="L2Npc" name="Silence Phantom" title="Watcher">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24206" level="97" type="L2Monster" name="Silence Phantom" title="Watcher">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="26905600" sp="24181" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="68479.5141" hpRegen="8.5" mp="2829.579" mpRegen="3" />
+			<attack physical="6133.849316" magical="1082.670361" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="505.286762" magical="290.0837799" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="23" />
 			<height normal="52" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
+			<skill id="4225" level="3" /> <!-- Stun Attack Resistance -->
+			<skill id="16547" level="5" /> <!-- Danger Zone Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="861" max="2011" chance="70" /> <!-- Adena -->
+				<item id="36542" min="1" max="1" chance="2.149" /> <!-- Silver Wire -->
+				<item id="36543" min="1" max="1" chance="0.3" /> <!-- Adamantite Wire -->
+				<item id="35330" min="1" max="1" chance="0.03" /> <!-- Helios Avenger Fragment -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="24207" level="85" type="L2Npc" name="Hall Keeper Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -345,83 +509,157 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="24218" level="85" type="L2Npc" name="Valanga Orc Scout">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38445" />
+	<npc id="24218" level="104" type="L2Monster" name="Valanga Orc Scout">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="38445" /> 
+		<acquire exp="35790144" sp="32123" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="605532.658635" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
+			<attack physical="52427" magical="42381" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4845" magical="2813" />
 			<speed>
 				<walk ground="38" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="29" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="10414" max="24300" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="35.91" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="7.03" /> <!-- Weapon Fragment (Mid-grade) -->
+			</drop>
+			<spoil>
+				<item id="36547" min="1" max="1" chance="29.02" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="5.527" /> <!-- Weapon Fragment (Mid-grade) -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="9.918" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
-	<npc id="24219" level="85" type="L2Npc" name="Valanga Orc Warrior">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<equipment rhand="38425" />
+	<npc id="24219" level="104" type="L2Monster" name="Valanga Orc Warrior">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<equipment rhand="38425" /> 
+		<acquire exp="35790144" sp="32123" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="605532.658635" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
+			<attack physical="52427" magical="42381" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4845" magical="2813" />
 			<speed>
 				<walk ground="48" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="33" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="10414" max="24300" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="30.76" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="6.226" /> <!-- Armor Fragment (Mid-grade) -->
+			</drop>
+			<spoil>
+				<item id="36552" min="1" max="1" chance="25.17" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="4.802" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="9.894" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
-	<npc id="24220" level="85" type="L2Npc" name="Valanga Orc Slaughterer">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24220" level="104" type="L2Monster" name="Valanga Orc Slaughterer">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="35790144" sp="32123" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="605532.658635" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
+			<attack physical="52427" magical="42381" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4845" magical="2813" />
 			<speed>
 				<walk ground="42" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="36.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="10414" max="24300" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="21.69" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.908" /> <!-- Accessory Gem (High-grade) -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="10.78" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.961" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36560" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Top-grade) -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="9.928" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
-	<npc id="24221" level="85" type="L2Npc" name="Valanga Orc Shaman">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
+	<npc id="24221" level="104" type="L2Monster" name="Valanga Orc Shaman">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="35790144" sp="32123" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="605532.658635" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
+			<attack physical="52427" magical="42381" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="4845" magical="2813" />
 			<speed>
 				<walk ground="43" />
 				<run ground="150" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="28.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="57" min="10414" max="24300" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="24.34" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="2.232" /> <!-- Orichalcum Wire -->
+			</drop>
+			<spoil>
+				<item id="36543" min="1" max="1" chance="12.31" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="1.118" /> <!-- Orichalcum Wire -->
+				<item id="36560" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Top-grade) -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="9.954" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="24222" level="85" type="L2Npc" name="Frintezza Guard Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -543,7 +781,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.93" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="48.18" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -590,7 +828,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.4" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.65" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -638,7 +876,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.68" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.93" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -685,7 +923,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.79" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.04" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -716,13 +954,13 @@
 			<height normal="57" />
 		</collision>
 		<skillList>
+			<skill id="32469" level="1" /> <!-- Tabeth Strike -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
 			<skill id="16417" level="10" /> <!-- Faint Attack Resistance -->
-			<skill id="32469" level="1" /> <!-- Tabeth Strike -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -737,7 +975,7 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.36" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.61" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -768,12 +1006,12 @@
 			<height normal="38.5" />
 		</collision>
 		<skillList>
+			<skill id="32501" level="1" /> <!-- Tabeth Spike -->
 			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="14821" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Resist Sleep -->
-			<skill id="32501" level="1" /> <!-- Tabeth Spike -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 		</skillList>
 		<dropLists>
 			<drop>
@@ -787,14 +1025,14 @@
 				<item id="36565" min="1" max="1" chance="0.075" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.18" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.43" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24232" level="108" type="L2Monster" name="Arima" title="Orfen's Handmaiden">
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="5254515360" sp="4723920" />
+		<acquire exp="2147483647" sp="4723920" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="6820229.635815" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
 			<attack physical="65855" magical="56801" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -833,14 +1071,14 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.91" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.16" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="24233" level="107" type="L2Monster" name="Harane" title="Energy of the Sea of Spores Devourer">
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="3236872729" sp="2908046" />
+		<acquire exp="2147483647" sp="2908046" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
 			<vitals hp="3147797.71107" hpRegen="9.5" mp="32547.863" mpRegen="3.3" />
 			<attack physical="62498" magical="53196" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -882,7 +1120,7 @@
 				<item id="36565" min="1" max="1" chance="0.3" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.42" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.67" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -923,7 +1161,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="45.14" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.39" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -964,7 +1202,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.44" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.69" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1005,7 +1243,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.56" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.81" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1046,7 +1284,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.04" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.29" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1087,7 +1325,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.16" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="46.41" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -1130,7 +1368,7 @@
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
 			</spoil>
 			<lucky>
-				<item id="48979" min="1" max="3 " chance="44.77" /> <!-- Damaged Spellbook -->
+				<item id="48979" min="1" max="3" chance="47.02" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>

@@ -11,7 +11,7 @@
 		<sex>MALE</sex>
 		<acquire exp="88993" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2856" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<vitals hp="17136.282315" hpRegen="8.5" mp="1589.56" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -27,18 +27,13 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4607" level="1" /> <!-- Magma Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4607" level="1" /> <!-- Magma Attack -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -47,19 +42,16 @@
 				<clan>FIRE</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="6680" min="1" max="1" chance="0.0075" /> <!-- Sealed Draconic Leather Armor -->
-				<item id="6707" min="1" max="1" chance="1.371" /> <!-- Sealed Draconic Leather Armor Part -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6680" min="1" max="1" chance="0.0075" /> <!-- Sealed Draconic Leather Armor -->
+				<item id="6707" min="1" max="1" chance="1.261" /> <!-- Sealed Draconic Leather Armor Part -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18801" level="77" type="L2Monster" name="Adult Lavasaurus">
 		<!-- Confirmed CT2.5 -->
@@ -72,7 +64,7 @@
 		<sex>MALE</sex>
 		<acquire exp="88993" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2856" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<vitals hp="17136.282315" hpRegen="8.5" mp="1589.56" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<attribute>
@@ -88,18 +80,14 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4607" level="1" /> <!-- Magma Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4607" level="1" /> <!-- Magma Attack -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -108,19 +96,16 @@
 				<clan>FIRE</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="60" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="6370" min="1" max="1" chance="0.003" /> <!-- Saint Spear -->
 				<item id="6694" min="1" max="1" chance="0.3" /> <!-- Saint Spear Blade -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="12" />
-			<height normal="60" />
-		</collision>
 	</npc>
 	<npc id="18802" level="78" type="L2Monster" name="Elderly Lavasaurus">
 		<!-- Confirmed CT2.5 -->
@@ -133,7 +118,7 @@
 		<sex>MALE</sex>
 		<acquire exp="91319" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2974" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="17844.168945" hpRegen="8.5" mp="1622.811" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -149,18 +134,13 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4607" level="1" /> <!-- Magma Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4607" level="1" /> <!-- Magma Attack -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -169,21 +149,18 @@
 				<clan>FIRE</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="6675" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6674" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6702" min="1" max="1" chance="1.358" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
-				<item id="6701" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6675" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6674" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6702" min="1" max="1" chance="1.355" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6701" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18803" level="78" type="L2Monster" name="Ancient Lavasaurus">
 		<!-- Confirmed CT2.5 -->
@@ -196,7 +173,7 @@
 		<sex>MALE</sex>
 		<acquire exp="91319" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2974" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="17844.168945" hpRegen="8.5" mp="1622.811" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<attribute>
@@ -212,18 +189,13 @@
 		</stats>
 		<status undying="false" canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="14" /> <!-- HP Increase (6x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4607" level="1" /> <!-- Magma Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4607" level="1" /> <!-- Magma Attack -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
+			<skill id="4410" level="8" /> <!-- Weak P. Atk. -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>6</sNpcPropHpRate>
@@ -232,21 +204,18 @@
 				<clan>FIRE</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="6675" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Gaiters -->
-				<item id="6674" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Breastplate -->
-				<item id="6702" min="1" max="1" chance="1.285" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
-				<item id="6701" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate Part -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="75" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="6675" min="1" max="1" chance="0.0075" /> <!-- Sealed Imperial Crusader Gaiters -->
+				<item id="6674" min="1" max="1" chance="0.003" /> <!-- Sealed Imperial Crusader Breastplate -->
+				<item id="6702" min="1" max="1" chance="1.31" /> <!-- Sealed Imperial Crusader Gaiter Pattern -->
+				<item id="6701" min="1" max="1" chance="0.75" /> <!-- Sealed Imperial Crusader Breastplate Part -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="18804" level="78" type="L2Monster" name="Tar Beetle">
 		<!-- Confirmed CT2.5 -->
@@ -322,7 +291,7 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="3834.70137" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<speed>
@@ -332,17 +301,6 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -356,7 +314,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3958" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3461" hpRegen="8.5" mp="1708" mpRegen="3" />
+			<vitals hp="6921.768465" hpRegen="8.5" mp="1724.997" mpRegen="3" />
 			<attack physical="1012.32268463427" magical="691.285164307598" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="345.61127" magical="252.90333" />
 			<speed>
@@ -367,20 +325,13 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status undying="false" canBeSown="true" />
-		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="5" /> <!-- Very Weak P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="21.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="5311" min="1" max="1" chance="0.0009" /> <!-- Sealed Armor of Nightmare -->
@@ -388,23 +339,16 @@
 				<item id="5522" min="1" max="1" chance="0.075" /> <!-- Sealed Armor of Nightmare Pattern -->
 				<item id="5523" min="1" max="1" chance="0.075" /> <!-- Sealed Majestic Plate Armor Pattern -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="9" />
-			<height normal="21.5" />
-		</collision>
 	</npc>
 	<npc id="18808" level="82" type="L2Monster" name="Dark Shaman Varangka">
 		<!-- Confirmed CT2.5 -->
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="6719" /> <!-- Monster Only (Ketra Orc Chieftain) -->
-		<acquire exp="213500" sp="51" />
+		<acquire exp="213500" sp="51" raidPoints="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="21860" hpRegen="41.206725" mp="17430" mpRegen="50" />
+			<vitals hp="43719.88584" hpRegen="319.2293199" mp="17603.566" mpRegen="3" />
 			<attack physical="492.298548642662" magical="720.623302603812" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -420,17 +364,6 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
-			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5462" level="1" /> <!-- Fire Attacks -->
 			<skill id="6147" level="1" /> <!-- Kasha's Divine Protection -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -450,16 +383,6 @@
 				<item id="9550" min="1" max="1" chance="0.75" /> <!-- Dark Stone -->
 				<item id="9551" min="1" max="1" chance="0.75" /> <!-- Holy Stone -->
 				<item id="45929" min="1" max="3" chance="0.75" /> <!-- Spirit Stone -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
 	</npc>
@@ -727,7 +650,7 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="3834.70137" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<speed>
@@ -739,16 +662,6 @@
 		</stats>
 		<status canMove="false" canBeSown="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5313" level="9" /> <!-- NPC(party) -Magic Range Long Range DD - Fire -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -1561,7 +1474,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="4039.11783" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<speed>
@@ -1571,17 +1484,6 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<status canMove="false" canBeSown="true" />
-		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -1611,7 +1513,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4234" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<vitals hp="4234.070565" hpRegen="8.5" mp="1864.489" mpRegen="3" />
 			<attack physical="1188.87259499001" magical="811.84586495282" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="361.78814" magical="264.74086" />
 			<speed>
@@ -1622,15 +1524,6 @@
 		</stats>
 		<status attackable="false" talkable="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="6343" level="1" /> <!-- Maguen Plasma - Power -->
 			<skill id="6365" level="1" /> <!-- Maguen Plasma - Speed -->
 			<skill id="6366" level="1" /> <!-- Maguen Plasma - Critical -->
@@ -2498,7 +2391,7 @@
 		<equipment rhand="98" /> <!-- Halberd -->
 		<acquire exp="29424" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3643" hpRegen="8.5" mp="1743" mpRegen="3" />
+			<vitals hp="3642.90321" hpRegen="8.5" mp="1760.681" mpRegen="3" />
 			<attack physical="1055.28566004965" magical="720.623302603812" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="349.77477" magical="255.95" />
 			<attribute>
@@ -2514,22 +2407,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4273" level="4" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4424" level="4" /> <!-- Resist Hand-to-hand Weapons -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="4273" level="4" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai aggroRange="300" clanHelpRange="300" isAggressive="true" />
@@ -2546,7 +2435,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="16155.840405" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -2561,23 +2450,18 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4116" level="9" /> <!-- Resist M. Atk. -->
-			<skill id="4273" level="4" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4276" level="4" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6426" level="1" /> <!-- Priest's Ire -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="19" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4424" level="4" /> <!-- Resist Hand-to-hand Weapons -->
-			<skill id="4449" level="4" /> <!-- Greater Resist Two-handed Weapons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5601" level="9" /> <!-- Short-Range Physical Attack Resistance -->
-			<skill id="6426" level="1" /> <!-- Priest's Ire -->
+			<skill id="5601" level="9" /> <!-- Melee Attack Resistance -->
+			<skill id="4276" level="4" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="4273" level="4" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4424" level="4" /> <!-- Fist Weapon Resistance -->
+			<skill id="4449" level="4" /> <!-- Greater Two-handed Weapon Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>4</sNpcPropHpRate>
@@ -2587,23 +2471,23 @@
 				<clan>TANTAAR_LIZARD</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="119585" max="279251" chance="70" /> <!-- Adena -->
-				<item id="45929" min="1" max="12" chance="15.51" /> <!-- Spirit Stone -->
-				<item id="9554" min="1" max="1" chance="4.027" /> <!-- Earth Crystal -->
-			</drop>
-			<spoil>
-				<item id="36532" min="1" max="27" chance="90.175" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="5" chance="79.83" /> <!-- Synthetic Braid -->
-				<item id="36882" min="1" max="1" chance="5.072" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="0.75" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="53.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="119585" max="279251" chance="70" /> <!-- Adena -->
+				<item id="45929" min="1" max="12" chance="14.8" /> <!-- Spirit Stone -->
+				<item id="9554" min="1" max="1" chance="4.079" /> <!-- Earth Crystal -->
+			</drop>
+			<spoil>
+				<item id="36532" min="1" max="1" chance="86.99" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="1" chance="83.76" /> <!-- Synthetic Braid -->
+				<item id="36882" min="1" max="1" chance="5.03" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.75" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="18864" level="85" type="L2Monster" name="Fantasy Mushroom">
 		<!-- Confirmed CT2.5 -->
@@ -3108,9 +2992,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="31400" sp="7" />
+		<acquire exp="31401" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="3834.70137" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3126,31 +3010,28 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="6" />
+			<height normal="15" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="15766" min="1" max="1" chance="0.00299999999999999" /> <!-- Sealed Moirai Ring -->
-				<item id="15767" min="1" max="1" chance="0.00299999999999999" /> <!-- Sealed Moirai Earring -->
-				<item id="15768" min="1" max="1" chance="0.000899999999999997" /> <!-- Sealed Moirai Necklace -->
-				<item id="15772" min="1" max="1" chance="0.299999999999999" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="0.299999999999999" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="0.299999999999999" /> <!-- Sealed Moirai Necklace Gem -->
+				<item id="15766" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Ring -->
+				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->
+				<item id="15768" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Necklace -->
+				<item id="15772" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15773" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Earring Gem -->
+				<item id="15774" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Necklace Gem -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3158,17 +3039,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="6" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="18874" level="83" type="L2FeedableBeast" name="Young Kookaburra">
 		<!-- Confirmed CT2.5 -->
@@ -3183,7 +3057,7 @@
 		<sex>MALE</sex>
 		<acquire exp="50694" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="7670.033655" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3199,26 +3073,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="21" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="15703" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gauntlets -->
@@ -3234,17 +3107,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="12" />
-			<height normal="21" />
-		</collision>
 	</npc>
 	<npc id="18875" level="83" type="L2FeedableBeast" name="Young Kookaburra">
 		<!-- Confirmed CT2.5 -->
@@ -3259,7 +3125,7 @@
 		<sex>MALE</sex>
 		<acquire exp="67512" sp="16" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="7670.033655" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3275,26 +3141,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="12" />
+			<height normal="21" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -3304,14 +3169,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="12" />
-			<height normal="21" />
-		</collision>
 	</npc>
 	<npc id="18876" level="83" type="L2FeedableBeast" name="Adult Kookaburra">
 		<!-- Confirmed CT2.5 -->
@@ -3324,9 +3185,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="22991" sp="5" />
+		<acquire exp="22992" sp="5" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="11504.735025" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3342,30 +3203,29 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="26.4" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="15698" min="1" max="1" chance="0.00549999999999998" /> <!-- Sealed Moirai Leather Breastplate -->
-				<item id="15649" min="1" max="1" chance="1.076" /> <!-- Sealed Moirai Leather Breastplate Piece -->
+				<item id="15698" min="1" max="1" chance="0.0075" /> <!-- Sealed Moirai Leather Breastplate -->
+				<item id="15649" min="1" max="1" chance="1.016" /> <!-- Sealed Moirai Leather Breastplate Piece -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3373,17 +3233,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="8" />
-			<height normal="26.4" />
-		</collision>
 	</npc>
 	<npc id="18877" level="83" type="L2FeedableBeast" name="Adult Kookaburra">
 		<!-- Confirmed CT2.5 -->
@@ -3396,9 +3249,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="194703" sp="46" />
+		<acquire exp="194704" sp="46" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="11504.735025" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3414,26 +3267,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="26.4" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -3443,14 +3295,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="8" />
-			<height normal="26.4" />
-		</collision>
 	</npc>
 	<npc id="18878" level="83" type="L2FeedableBeast" name="Full Grown Kookaburra">
 		<!-- Confirmed CT2.5 -->
@@ -3466,7 +3314,7 @@
 		<sex>MALE</sex>
 		<acquire exp="32290" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="11504.735025" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3482,37 +3330,36 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" grown="13" />
+			<height normal="33" grown="40" />
+		</collision>
 		<dropLists>
 			<drop>
+				<item id="14109" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gauntlets -->
+				<item id="14113" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Gloves -->
+				<item id="14116" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Gloves -->
 				<item id="10215" min="1" max="1" chance="0.0009" /> <!-- Icarus Sawsword -->
 				<item id="10217" min="1" max="1" chance="0.0009" /> <!-- Icarus Spirit -->
-				<item id="14109" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Vesper Gauntlets -->
-				<item id="14113" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Vesper Leather Gloves -->
-				<item id="14116" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Vesper Gloves -->
-				<item id="15667" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Vesper Gauntlets Piece -->
-				<item id="15671" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Vesper Leather Gloves Piece -->
-				<item id="15674" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Vesper Gloves Piece -->
+				<item id="15667" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gauntlets Piece -->
+				<item id="15671" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Gloves Piece -->
+				<item id="15674" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Gloves Piece -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3520,17 +3367,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="10" grown="13" />
-			<height normal="33" grown="40" />
-		</collision>
 	</npc>
 	<npc id="18879" level="83" type="L2FeedableBeast" name="Full Grown Kookaburra">
 		<!-- Confirmed CT2.5 -->
@@ -3544,9 +3384,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="206548" sp="49" />
+		<acquire exp="206549" sp="49" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="11504.735025" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3562,27 +3402,26 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="10" grown="13" />
+			<height normal="33" grown="40" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -3592,14 +3431,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="10" grown="13" />
-			<height normal="33" grown="40" />
-		</collision>
 	</npc>
 	<npc id="18880" level="83" type="L2FeedableBeast" name="Baby Alpine Cougar">
 		<!-- Confirmed CT2.5 -->
@@ -3609,9 +3444,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="31400" sp="7" />
+		<acquire exp="31401" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="3834.70137" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3627,31 +3462,28 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15.7" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="15766" min="1" max="1" chance="0.00299999999999999" /> <!-- Sealed Moirai Ring -->
-				<item id="15767" min="1" max="1" chance="0.00299999999999999" /> <!-- Sealed Moirai Earring -->
-				<item id="15768" min="1" max="1" chance="0.000899999999999997" /> <!-- Sealed Moirai Necklace -->
-				<item id="15772" min="1" max="1" chance="0.299999999999999" /> <!-- Sealed Moirai Ring Gem -->
-				<item id="15773" min="1" max="1" chance="0.299999999999999" /> <!-- Sealed Moirai Earring Gem -->
-				<item id="15774" min="1" max="1" chance="0.299999999999999" /> <!-- Sealed Moirai Necklace Gem -->
+				<item id="15766" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Ring -->
+				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->
+				<item id="15768" min="1" max="1" chance="0.0009" /> <!-- Sealed Moirai Necklace -->
+				<item id="15772" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15773" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Earring Gem -->
+				<item id="15774" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Necklace Gem -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3659,17 +3491,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="8" />
-			<height normal="15.7" />
-		</collision>
 	</npc>
 	<npc id="18881" level="83" type="L2FeedableBeast" name="Young Cougar">
 		<!-- Confirmed CT2.5 -->
@@ -3684,7 +3509,7 @@
 		<sex>MALE</sex>
 		<acquire exp="50694" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="7670.033655" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3700,26 +3525,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="15706" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Boots -->
@@ -3735,17 +3559,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="13" />
-			<height normal="21" />
-		</collision>
 	</npc>
 	<npc id="18882" level="83" type="L2FeedableBeast" name="Young Cougar">
 		<!-- Confirmed CT2.5 -->
@@ -3760,7 +3577,7 @@
 		<sex>MALE</sex>
 		<acquire exp="67512" sp="16" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="7670.033655" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3776,26 +3593,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="13" />
+			<height normal="21" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -3805,14 +3621,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="13" />
-			<height normal="21" />
-		</collision>
 	</npc>
 	<npc id="18883" level="83" type="L2FeedableBeast" name="Adult Cougar">
 		<!-- Confirmed CT2.5 -->
@@ -3825,9 +3637,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="22991" sp="5" />
+		<acquire exp="22992" sp="5" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="11504.735025" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3843,29 +3655,28 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="16" />
+			<height normal="17.2" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="15697" min="1" max="1" chance="0.00299999999999998" /> <!-- Sealed Moirai Breastplate -->
+				<item id="15697" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Breastplate -->
 				<item id="15648" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Breastplate Piece -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -3874,17 +3685,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="16" />
-			<height normal="17.2" />
-		</collision>
 	</npc>
 	<npc id="18884" level="83" type="L2FeedableBeast" name="Adult Cougar">
 		<!-- Confirmed CT2.5 -->
@@ -3897,9 +3701,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="194703" sp="46" />
+		<acquire exp="194704" sp="46" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="11504.735025" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3915,26 +3719,25 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="16" />
+			<height normal="17.2" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -3944,14 +3747,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="16" />
-			<height normal="17.2" />
-		</collision>
 	</npc>
 	<npc id="18885" level="83" type="L2FeedableBeast" name="Full Grown Cougar">
 		<!-- Confirmed CT2.5 -->
@@ -3967,7 +3766,7 @@
 		<sex>MALE</sex>
 		<acquire exp="32290" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="11504.735025" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -3983,36 +3782,35 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="34" />
+			<height normal="28" grown="34" />
+		</collision>
 		<dropLists>
 			<drop>
+				<item id="14110" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Boots -->
+				<item id="14114" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Leather Boots -->
+				<item id="14117" min="1" max="1" chance="0.003" /> <!-- Sealed Vesper Shoes -->
 				<item id="10222" min="1" max="1" chance="0.0009" /> <!-- Icarus Hall -->
-				<item id="14110" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Vesper Boots -->
-				<item id="14114" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Vesper Leather Boots -->
-				<item id="14117" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Vesper Shoes -->
-				<item id="15668" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Vesper Boots Piece -->
-				<item id="15672" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Vesper Leather Boots Piece -->
-				<item id="15675" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Vesper Shoes Piece -->
+				<item id="15668" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Boots Piece -->
+				<item id="15672" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Leather Boots Piece -->
+				<item id="15675" min="1" max="1" chance="0.75" /> <!-- Sealed Vesper Shoes Piece -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4020,17 +3818,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="34" />
-			<height normal="28" grown="34" />
-		</collision>
 	</npc>
 	<npc id="18886" level="83" type="L2FeedableBeast" name="Full Grown Cougar">
 		<!-- Confirmed CT2.5 -->
@@ -4044,9 +3835,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="206548" sp="49" />
+		<acquire exp="206549" sp="49" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="3835" hpRegen="8.5" mp="1777" mpRegen="3" />
+			<vitals hp="11504.735025" hpRegen="8.5" mp="1794.743" mpRegen="3" />
 			<attack physical="1099.42361669366" magical="750.763809564873" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="353.86144" magical="258.94045" />
 			<attribute>
@@ -4062,27 +3853,26 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4074" level="1" /> <!-- NPC Haste -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
+			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="16" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="34" />
+			<height normal="28" grown="34" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4092,14 +3882,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="34" />
-			<height normal="28" grown="34" />
-		</collision>
 	</npc>
 	<npc id="18887" level="84" type="L2FeedableBeast" name="Baby Alpine Buffalo">
 		<!-- Confirmed CT2.5 -->
@@ -4109,9 +3895,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="34907" sp="8" />
+		<acquire exp="34908" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="4039.11783" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4127,29 +3913,26 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="8" />
+			<height normal="15" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="15766" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Ring -->
 				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->
 				<item id="15768" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Necklace -->
-				<item id="15772" min="1" max="1" chance="0.750000000000001" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15772" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Ring Gem -->
 				<item id="15773" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Earring Gem -->
 				<item id="15774" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Necklace Gem -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4159,17 +3942,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="8" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="18888" level="84" type="L2FeedableBeast" name="Young Buffalo">
 		<!-- Confirmed CT2.5 -->
@@ -4184,7 +3960,7 @@
 		<sex>MALE</sex>
 		<acquire exp="56458" sp="13" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="8078.23566" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4201,33 +3977,32 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="16" />
+			<height normal="22" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="15703" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Moirai Gauntlets -->
-				<item id="15704" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Moirai Leather Gloves -->
-				<item id="15705" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Moirai Gloves -->
-				<item id="15654" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Moirai Gauntlets Piece -->
-				<item id="15655" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Moirai Leather Gloves Piece -->
-				<item id="15656" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Moirai Gloves Piece -->
+				<item id="15703" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gauntlets -->
+				<item id="15704" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Gloves -->
+				<item id="15705" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Gloves -->
+				<item id="15654" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Gauntlets Piece -->
+				<item id="15655" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Leather Gloves Piece -->
+				<item id="15656" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Gloves Piece -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4235,17 +4010,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="16" />
-			<height normal="22" />
-		</collision>
 	</npc>
 	<npc id="18889" level="84" type="L2FeedableBeast" name="Young Buffalo">
 		<!-- Confirmed CT2.5 -->
@@ -4258,9 +4026,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="74100" sp="17" />
+		<acquire exp="74101" sp="17" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="8078.23566" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4277,25 +4045,24 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="16" />
+			<height normal="22" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4305,14 +4072,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="16" />
-			<height normal="22" />
-		</collision>
 	</npc>
 	<npc id="18890" level="84" type="L2FeedableBeast" name="Adult Buffalo">
 		<!-- Confirmed CT2.5 -->
@@ -4325,9 +4088,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="25480" sp="6" />
+		<acquire exp="25481" sp="6" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="12116.722575" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4344,29 +4107,28 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="16" />
+			<height normal="25.2" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="15699" min="1" max="1" chance="0.0300000000000005" /> <!-- Sealed Moirai Tunic -->
-				<item id="15650" min="1" max="1" chance="2.141" /> <!-- Sealed Moirai Tunic Piece -->
+				<item id="15699" min="1" max="1" chance="0.03" /> <!-- Sealed Moirai Tunic -->
+				<item id="15650" min="1" max="1" chance="2.158" /> <!-- Sealed Moirai Tunic Piece -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4374,17 +4136,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="16" />
-			<height normal="25.2" />
-		</collision>
 	</npc>
 	<npc id="18891" level="84" type="L2FeedableBeast" name="Adult Buffalo">
 		<!-- Confirmed CT2.5 -->
@@ -4397,9 +4152,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="214113" sp="51" />
+		<acquire exp="214114" sp="51" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="12116.722575" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4416,25 +4171,24 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="16" />
+			<height normal="25.2" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4444,14 +4198,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="16" />
-			<height normal="25.2" />
-		</collision>
 	</npc>
 	<npc id="18892" level="84" type="L2FeedableBeast" name="Full Grown Buffalo">
 		<!-- Confirmed CT2.5 -->
@@ -4465,9 +4215,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="35235" sp="8" />
+		<acquire exp="35236" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="12116.722575" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4484,32 +4234,31 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="22" grown="27" />
+			<height normal="31" grown="38" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="10221" min="1" max="1" chance="0.00300000000000001" /> <!-- Icarus Hand -->
-				<item id="13457" min="1" max="1" chance="0.000899999999999997" /> <!-- Vesper Cutter -->
-				<item id="13461" min="1" max="1" chance="0.000899999999999997" /> <!-- Vesper Fighter -->
-				<item id="15638" min="1" max="1" chance="0.300000000000001" /> <!-- Vesper Fighter Piece -->
+				<item id="10221" min="1" max="1" chance="0.003" /> <!-- Icarus Hand -->
+				<item id="13457" min="1" max="1" chance="0.0009" /> <!-- Vesper Cutter -->
+				<item id="13461" min="1" max="1" chance="0.0009" /> <!-- Vesper Fighter -->
+				<item id="15638" min="1" max="1" chance="0.3" /> <!-- Vesper Fighter Piece -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4517,17 +4266,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="22" grown="27" />
-			<height normal="31" grown="38" />
-		</collision>
 	</npc>
 	<npc id="18893" level="84" type="L2FeedableBeast" name="Full Grown Buffalo">
 		<!-- Confirmed CT2.5 -->
@@ -4543,7 +4285,7 @@
 		<sex>MALE</sex>
 		<acquire exp="226540" sp="54" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="12116.722575" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4560,26 +4302,25 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="22" grown="27" />
+			<height normal="31" grown="38" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4589,14 +4330,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="22" grown="27" />
-			<height normal="31" grown="38" />
-		</collision>
 	</npc>
 	<npc id="18894" level="84" type="L2FeedableBeast" name="Baby Alpine Grendel">
 		<!-- Confirmed CT2.5 -->
@@ -4606,9 +4343,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="34907" sp="8" />
+		<acquire exp="34908" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="4039.11783" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4623,29 +4360,26 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="12.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="15766" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Ring -->
 				<item id="15767" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Earring -->
 				<item id="15768" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Necklace -->
-				<item id="15772" min="1" max="1" chance="0.750000000000001" /> <!-- Sealed Moirai Ring Gem -->
+				<item id="15772" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Ring Gem -->
 				<item id="15773" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Earring Gem -->
 				<item id="15774" min="1" max="1" chance="0.3" /> <!-- Sealed Moirai Necklace Gem -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4655,17 +4389,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="9" />
-			<height normal="12.5" />
-		</collision>
 	</npc>
 	<npc id="18895" level="84" type="L2FeedableBeast" name="Young Grendel">
 		<!-- Confirmed CT2.5 -->
@@ -4680,7 +4407,7 @@
 		<sex>MALE</sex>
 		<acquire exp="56458" sp="13" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="8078.23566" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4696,33 +4423,32 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="12.5" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="15706" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Moirai Boots -->
-				<item id="15707" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Moirai Leather Boots -->
-				<item id="15708" min="1" max="1" chance="0.00300000000000006" /> <!-- Sealed Moirai Shoes -->
-				<item id="15657" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Moirai Boots Piece -->
-				<item id="15658" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Moirai Leather Boots Piece -->
-				<item id="15659" min="1" max="1" chance="0.749999999999992" /> <!-- Sealed Moirai Shoes Piece -->
+				<item id="15706" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Boots -->
+				<item id="15707" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Leather Boots -->
+				<item id="15708" min="1" max="1" chance="0.003" /> <!-- Sealed Moirai Shoes -->
+				<item id="15657" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Boots Piece -->
+				<item id="15658" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Leather Boots Piece -->
+				<item id="15659" min="1" max="1" chance="0.75" /> <!-- Sealed Moirai Shoes Piece -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4730,17 +4456,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="9" />
-			<height normal="12.5" />
-		</collision>
 	</npc>
 	<npc id="18896" level="84" type="L2FeedableBeast" name="Young Grendel">
 		<!-- Confirmed CT2.5 -->
@@ -4753,9 +4472,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="74100" sp="17" />
+		<acquire exp="74101" sp="17" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="8078.23566" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4771,25 +4490,24 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="16" /> <!-- Very Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="2" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="2" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="9" />
+			<height normal="12.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4799,14 +4517,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="9" />
-			<height normal="12.5" />
-		</collision>
 	</npc>
 	<npc id="18897" level="84" type="L2FeedableBeast" name="Adult Grendel">
 		<!-- Confirmed CT2.5 -->
@@ -4819,9 +4533,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="25480" sp="6" />
+		<acquire exp="25481" sp="6" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="12116.722575" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4838,28 +4552,27 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="15" grown="18" />
+			<height normal="39" grown="47.5" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="10216" min="1" max="1" chance="0.0055" /> <!-- Icarus Disperser -->
+				<item id="10216" min="1" max="1" chance="0.0075" /> <!-- Icarus Disperser -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -4867,17 +4580,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="15" grown="18" />
-			<height normal="39" grown="47.5" />
-		</collision>
 	</npc>
 	<npc id="18898" level="84" type="L2FeedableBeast" name="Adult Grendel">
 		<!-- Confirmed CT2.5 -->
@@ -4890,9 +4596,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="214113" sp="51" />
+		<acquire exp="214114" sp="51" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="12116.722575" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4909,25 +4615,24 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="15" grown="18" />
+			<height normal="39" grown="47.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -4937,14 +4642,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="15" grown="18" />
-			<height normal="39" grown="47.5" />
-		</collision>
 	</npc>
 	<npc id="18899" level="84" type="L2FeedableBeast" name="Full Grown Grendel">
 		<!-- Confirmed CT2.5 -->
@@ -4958,9 +4659,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="35235" sp="8" />
+		<acquire exp="35236" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4039" hpRegen="8.5" mp="1812" mpRegen="3" />
+			<vitals hp="12116.722575" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<attack physical="1144.73130112535" magical="781.703083407155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="357.86723" magical="261.87171" />
 			<attribute>
@@ -4976,31 +4677,30 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4028" level="2" /> <!-- NPC Might -->
-			<skill id="4071" level="3" /> <!-- Resist Bow/Crossbow Weapons -->
-			<skill id="4116" level="5" /> <!-- Resist M. Atk. -->
-			<skill id="4379" level="5" /> <!-- Resist Spear Weapons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
+			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="16" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="18" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4592" level="10" /> <!-- Decrease P. Def. -->
-			<skill id="5463" level="1" /> <!-- Water Attacks -->
-			<skill id="5620" level="7" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="6556" level="17" /> <!-- NPC water attack -->
+			<skill id="4071" level="3" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="5620" level="7" /> <!-- Melee Attack Vulnerability -->
+			<skill id="4379" level="5" /> <!-- Spear Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>3</sNpcPropHpRate>
 		<ai clanHelpRange="300" aggroRange="300" />
+		<collision>
+			<radius normal="34" />
+			<height normal="32.5" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="10223" min="1" max="1" chance="0.00300000000000001" /> <!-- Icarus Spitter -->
-				<item id="13467" min="1" max="1" chance="0.00300000000000001" /> <!-- Vesper Thrower -->
-				<item id="15644" min="1" max="1" chance="0.300000000000001" /> <!-- Vesper Thrower Piece -->
+				<item id="10223" min="1" max="1" chance="0.003" /> <!-- Icarus Spitter -->
+				<item id="13467" min="1" max="1" chance="0.003" /> <!-- Vesper Thrower -->
+				<item id="15644" min="1" max="1" chance="0.3" /> <!-- Vesper Thrower Piece -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -5008,16 +4708,9 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="34" />
-			<height normal="32.5" />
-		</collision>
 	</npc>
 </list>

@@ -489,9 +489,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="2042796" sp="2095" />
+		<acquire exp="9434694" sp="8453" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13188" hpRegen="9.5" mp="2770" mpRegen="3.3" />
+			<vitals hp="26376.03249" hpRegen="8.5" mp="2797.95" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="80" />
@@ -516,39 +516,16 @@
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
-		<dropLists>
-			<drop>
-				<item id="17298" min="1" max="1" chance="0.003" /> <!-- Requiem Buster -->
-				<item id="57" min="686" max="1600" chance="20" /> <!-- Adena -->
-				<item id="36802" min="1" max="1" chance="0.3" /> <!-- Requiem Buster Fragment -->
-				<item id="36552" min="1" max="1" chance="0.075" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="0.03" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="17527" min="1" max="1" chance="0.0075" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36740" min="1" max="1" chance="0.003" /> <!-- Recipe: Requiem Buster (60%) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<spoil>
-				<item id="36552" min="1" max="1" chance="0.75" /> <!-- Armor Fragment -->
-				<item id="36553" min="1" max="1" chance="0.3" /> <!-- Armor Fragment (Mid-grade) -->
-				<item id="36886" min="1" max="1" chance="9" /> <!-- Recipe: Durable Braid - Upgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="15" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="4.329" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="19217" level="99" type="L2Npc" name="Earth Wyrm Trasken" title="Hell's Gate">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -630,7 +607,7 @@
 			<height normal="27" />
 		</collision>
 	</npc>
-	<npc id="19220" level="88" type="L2Monster" name="Kartia Guard">
+	<npc id="19220" level="87" type="L2Monster" name="Kartia Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -643,7 +620,7 @@
 		<sex>MALE</sex>
 		<mpReward value="90" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4522" hpRegen="8.5" mp="1952" mpRegen="3" />
+			<vitals hp="4935.648045" hpRegen="8.5" mp="2422.457" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -658,11 +635,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14917" level="1" /> <!-- Dimensional Haste -->
 			<skill id="14911" level="1" /> <!-- Dimensional Blow -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -674,7 +649,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="19221" level="88" type="L2Monster" name="Kartia Watchman">
+	<npc id="19221" level="87" type="L2Monster" name="Kartia Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="200" />
@@ -687,7 +662,7 @@
 		<sex>MALE</sex>
 		<mpReward value="90" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4522" hpRegen="8.5" mp="2928" mpRegen="3" />
+			<vitals hp="4935.648045" hpRegen="8.5" mp="3633.28" mpRegen="3" />
 			<speed>
 				<walk ground="46" />
 				<run ground="120" />
@@ -702,13 +677,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="14924" level="1" /> <!-- Dimensional Magic Rift -->
 			<skill id="14918" level="1" /> <!-- Twisted Dimension Magic -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -720,7 +693,7 @@
 			<height normal="40.48" />
 		</collision>
 	</npc>
-	<npc id="19222" level="88" type="L2Monster" name="Kartia Dimensional Watchman">
+	<npc id="19222" level="87" type="L2Monster" name="Kartia Dimensional Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -737,7 +710,7 @@
 		<sex>MALE</sex>
 		<mpReward value="90" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="155063" hpRegen="8.5" mp="1952" mpRegen="3" />
+			<vitals hp="169248.626985" hpRegen="8.5" mp="2422.457" mpRegen="3" />
 			<speed>
 				<walk ground="68" />
 				<run ground="160" />
@@ -752,12 +725,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14930" level="1" /> <!-- Dimensional Sweep -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14930" level="1" /> <!-- Dimensional Sweep -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -769,7 +740,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="19223" level="93" type="L2Monster" name="Kartia Guard">
+	<npc id="19223" level="92" type="L2Monster" name="Kartia Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
@@ -782,7 +753,7 @@
 		<sex>FEMALE</sex>
 		<mpReward value="100" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4822" hpRegen="8.5" mp="2132" mpRegen="3" />
+			<vitals hp="5263.09293" hpRegen="8.5" mp="2645.482" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
@@ -797,12 +768,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14917" level="1" /> <!-- Dimensional Haste -->
 			<skill id="14912" level="1" /> <!-- Dimensional Blow -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -814,7 +783,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="19224" level="93" type="L2Monster" name="Kartia Watchman">
+	<npc id="19224" level="92" type="L2Monster" name="Kartia Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -827,7 +796,7 @@
 		<sex>FEMALE</sex>
 		<mpReward value="100" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4822" hpRegen="8.5" mp="3198" mpRegen="3" />
+			<vitals hp="5263.09293" hpRegen="8.5" mp="3968.223" mpRegen="3" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -842,12 +811,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="14925" level="1" /> <!-- Dimensional Magic Rift -->
 			<skill id="14919" level="1" /> <!-- Twisted Dimension Magic -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -859,7 +826,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="19225" level="93" type="L2Monster" name="Kartia Dimensional Watchman">
+	<npc id="19225" level="92" type="L2Monster" name="Kartia Dimensional Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -876,7 +843,7 @@
 		<sex>FEMALE</sex>
 		<mpReward value="100" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="165343" hpRegen="8.5" mp="2132" mpRegen="3" />
+			<vitals hp="180468.819345" hpRegen="8.5" mp="2645.482" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
@@ -891,13 +858,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="14936" level="1" /> <!-- Stun -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14931" level="1" /> <!-- Dimensional Sweep -->
 			<skill id="14939" level="1" /> <!-- Dimensional Shadow Dash -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -909,7 +874,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="19226" level="98" type="L2Monster" name="Kartia Guard">
+	<npc id="19226" level="97" type="L2Monster" name="Kartia Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -923,7 +888,7 @@
 		<equipment rhand="13979" /> <!-- Monster Only (Dragontroop Commando) -->
 		<mpReward value="110" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5253" hpRegen="8.5" mp="2317" mpRegen="3" />
+			<vitals hp="5733.75552" hpRegen="8.5" mp="2874.995" mpRegen="3" />
 			<speed>
 				<walk ground="56" />
 				<run ground="120" />
@@ -938,12 +903,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14917" level="1" /> <!-- Dimensional Haste -->
 			<skill id="14913" level="1" /> <!-- Dimensional Blow -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -955,7 +918,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="19227" level="98" type="L2Monster" name="Kartia Watchman">
+	<npc id="19227" level="97" type="L2Monster" name="Kartia Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -969,7 +932,7 @@
 		<equipment rhand="13981" /> <!-- Monster Only (Dragontoop Tactician) -->
 		<mpReward value="110" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="5253" hpRegen="8.5" mp="3476" mpRegen="3" />
+			<vitals hp="5733.75552" hpRegen="8.5" mp="4313.709" mpRegen="3" />
 			<speed>
 				<walk ground="82" />
 				<run ground="120" />
@@ -984,12 +947,10 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="14926" level="1" /> <!-- Dimensional Magic Rift -->
 			<skill id="14920" level="1" /> <!-- Twisted Dimension Magic -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -1001,7 +962,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="19228" level="98" type="L2Monster" name="Kartia Dimensional Watchman">
+	<npc id="19228" level="97" type="L2Monster" name="Kartia Dimensional Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -1019,7 +980,7 @@
 		<equipment rhand="13978" /> <!-- Monster Only (Dragontroop Commander) -->
 		<mpReward value="110" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="180135" hpRegen="8.5" mp="2317" mpRegen="3" />
+			<vitals hp="196614.56511" hpRegen="8.5" mp="2874.995" mpRegen="3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="160" />
@@ -1034,11 +995,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="14932" level="1" /> <!-- Dimensional Sweep -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -1050,7 +1009,7 @@
 			<height normal="46.5" />
 		</collision>
 	</npc>
-	<npc id="19229" level="88" type="L2Monster" name="Kartia Guard">
+	<npc id="19229" level="87" type="L2Monster" name="Kartia Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1061,9 +1020,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="1630396" sp="391" />
+		<acquire exp="1593552" sp="382" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430" hpRegen="8.5" mp="19524" mpRegen="30" />
+			<vitals hp="156862.503705" hpRegen="8.5" mp="24228.625" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="120" />
@@ -1078,14 +1037,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14917" level="1" /> <!-- Dimensional Haste -->
 			<skill id="14914" level="1" /> <!-- Dimensional Blow -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -1097,7 +1053,7 @@
 			<height normal="14" />
 		</collision>
 	</npc>
-	<npc id="19230" level="88" type="L2Monster" name="Kartia Watchman">
+	<npc id="19230" level="87" type="L2Monster" name="Kartia Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="200" />
@@ -1108,9 +1064,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="1630396" sp="391" />
+		<acquire exp="1593552" sp="382" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430" hpRegen="8.5" mp="29286" mpRegen="30" />
+			<vitals hp="156862.503705" hpRegen="8.5" mp="36342.532" mpRegen="3" />
 			<speed>
 				<walk ground="46" />
 				<run ground="120" />
@@ -1125,14 +1081,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
 			<skill id="14927" level="1" /> <!-- Dimensional Magic Rift -->
 			<skill id="14921" level="1" /> <!-- Twisted Dimension Magic -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
+			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -1144,7 +1097,7 @@
 			<height normal="40.48" />
 		</collision>
 	</npc>
-	<npc id="19231" level="88" type="L2Monster" name="Kartia Dimensional Watchman">
+	<npc id="19231" level="87" type="L2Monster" name="Kartia Dimensional Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1158,9 +1111,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="14131541" sp="3391" />
+		<acquire exp="13812194" sp="3314" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430" hpRegen="8.5" mp="19524" mpRegen="30" />
+			<vitals hp="1254900.02964" hpRegen="8.5" mp="24228.625" mpRegen="3" />
 			<speed>
 				<walk ground="68" />
 				<run ground="160" />
@@ -1175,17 +1128,14 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14937" level="1" /> <!-- Stun -->
+			<skill id="14933" level="1" /> <!-- Dimensional Sweep -->
+			<skill id="14939" level="1" /> <!-- Dimensional Shadow Dash -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="14937" level="1" /> <!-- Stun -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14933" level="1" /> <!-- Dimensional Sweep -->
-			<skill id="14939" level="1" /> <!-- Dimensional Shadow Dash -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -1197,7 +1147,7 @@
 			<height normal="34" />
 		</collision>
 	</npc>
-	<npc id="19232" level="93" type="L2Monster" name="Kartia Guard">
+	<npc id="19232" level="92" type="L2Monster" name="Kartia Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="150" />
@@ -1208,9 +1158,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1854851" sp="445" />
+		<acquire exp="1815178" sp="435" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="170731.90815" hpRegen="8.5" mp="26462.119" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
@@ -1225,15 +1175,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14917" level="1" /> <!-- Dimensional Haste -->
+			<skill id="14915" level="1" /> <!-- Dimensional Blow -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14917" level="1" /> <!-- Dimensional Haste -->
-			<skill id="14915" level="1" /> <!-- Dimensional Blow -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -1245,7 +1192,7 @@
 			<height normal="33" />
 		</collision>
 	</npc>
-	<npc id="19233" level="93" type="L2Monster" name="Kartia Watchman">
+	<npc id="19233" level="92" type="L2Monster" name="Kartia Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -1256,9 +1203,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="1854851" sp="445" />
+		<acquire exp="1815178" sp="435" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312844" hpRegen="8.5" mp="31986" mpRegen="30" />
+			<vitals hp="170731.90815" hpRegen="8.5" mp="39692.773" mpRegen="3" />
 			<speed>
 				<walk ground="80" />
 				<run ground="120" />
@@ -1273,15 +1220,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14928" level="1" /> <!-- Dimensional Magic Rift -->
+			<skill id="14922" level="1" /> <!-- Twisted Dimension Magic -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="14928" level="1" /> <!-- Dimensional Magic Rift -->
-			<skill id="14922" level="1" /> <!-- Twisted Dimension Magic -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -1293,7 +1237,7 @@
 			<height normal="40" />
 		</collision>
 	</npc>
-	<npc id="19234" level="93" type="L2Monster" name="Kartia Dimensional Watchman">
+	<npc id="19234" level="92" type="L2Monster" name="Kartia Dimensional Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="0" />
@@ -1307,9 +1251,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="16077028" sp="3858" />
+		<acquire exp="15733145" sp="3775" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="1365855.2652" hpRegen="8.5" mp="26462.119" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="160" />
@@ -1324,16 +1268,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14934" level="1" /> <!-- Dimensional Sweep -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14934" level="1" /> <!-- Dimensional Sweep -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -1345,7 +1286,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="19235" level="98" type="L2Monster" name="Kartia Guard">
+	<npc id="19235" level="97" type="L2Monster" name="Kartia Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="100" />
@@ -1356,10 +1297,10 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2064545" sp="495" />
+		<acquire exp="2022627" sp="485" />
 		<equipment rhand="13979" /> <!-- Monster Only (Dragontroop Commando) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356012" hpRegen="8.5" mp="23174" mpRegen="30" />
+			<vitals hp="194290.27425" hpRegen="8.5" mp="28758.06" mpRegen="3" />
 			<speed>
 				<walk ground="56" />
 				<run ground="120" />
@@ -1374,15 +1315,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14917" level="1" /> <!-- Dimensional Haste -->
+			<skill id="14916" level="1" /> <!-- Dimensional Blow -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14917" level="1" /> <!-- Dimensional Haste -->
-			<skill id="14916" level="1" /> <!-- Dimensional Blow -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -1394,7 +1332,7 @@
 			<height normal="42" />
 		</collision>
 	</npc>
-	<npc id="19236" level="98" type="L2Monster" name="Kartia Watchman">
+	<npc id="19236" level="97" type="L2Monster" name="Kartia Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="120" />
@@ -1405,10 +1343,10 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="2064545" sp="495" />
+		<acquire exp="2022627" sp="485" />
 		<equipment rhand="13981" /> <!-- Monster Only (Dragontoop Tactician) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356012" hpRegen="8.5" mp="34761" mpRegen="30" />
+			<vitals hp="194290.27425" hpRegen="8.5" mp="43137.09" mpRegen="3" />
 			<speed>
 				<walk ground="82" />
 				<run ground="120" />
@@ -1423,15 +1361,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14929" level="1" /> <!-- Dimensional Magic Rift -->
+			<skill id="14923" level="1" /> <!-- Twisted Dimension Magic -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="14929" level="1" /> <!-- Dimensional Magic Rift -->
-			<skill id="14923" level="1" /> <!-- Twisted Dimension Magic -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -1443,7 +1378,7 @@
 			<height normal="34.5" />
 		</collision>
 	</npc>
-	<npc id="19237" level="98" type="L2Monster" name="Kartia Dimensional Watchman">
+	<npc id="19237" level="97" type="L2Monster" name="Kartia Dimensional Watchman">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="MoveAroundSocial" value="130" />
@@ -1457,10 +1392,10 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="17895576" sp="4294" />
+		<acquire exp="17532224" sp="4207" />
 		<equipment rhand="13978" /> <!-- Monster Only (Dragontroop Commander) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="356012" hpRegen="8.5" mp="23174" mpRegen="30" />
+			<vitals hp="1554324.086745" hpRegen="8.5" mp="28758.06" mpRegen="3" />
 			<speed>
 				<walk ground="55" />
 				<run ground="160" />
@@ -1475,18 +1410,15 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14938" level="1" /> <!-- Stun -->
+			<skill id="14935" level="1" /> <!-- Dimensional Sweep -->
+			<skill id="14939" level="1" /> <!-- Dimensional Shadow Dash -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
 			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4408" level="12" /> <!-- HP Increase (4x) -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="14938" level="1" /> <!-- Stun -->
-			<skill id="14935" level="1" /> <!-- Dimensional Sweep -->
-			<skill id="14939" level="1" /> <!-- Dimensional Shadow Dash -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
@@ -2011,7 +1943,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1002466" hpRegen="8.5" mp="19524" mpRegen="30" />
+			<vitals hp="1054117.009125" hpRegen="319.2293199" mp="24228.625" mpRegen="3" />
 			<speed>
 				<walk ground="34" />
 				<run ground="200" />
@@ -2026,11 +1958,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14940" level="1" /> <!-- Rage Grand Blow -->
 			<skill id="14943" level="1" /> <!-- Dimensional Wring -->
 			<skill id="16550" level="1" /> <!-- Zellaka's Quake -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2057,7 +1989,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1636653" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="1720980.283995" hpRegen="8.5" mp="26462.119" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -2072,12 +2004,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14941" level="1" /> <!-- Bloody Grand Blow -->
 			<skill id="14944" level="1" /> <!-- Dimensional Pierce -->
 			<skill id="14947" level="1" /> <!-- Pelline's Thirst -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2104,7 +2036,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2979979" hpRegen="8.5" mp="23174" mpRegen="30" />
+			<vitals hp="3133520.735535" hpRegen="8.5" mp="28758.06" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -2119,12 +2051,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14942" level="1" /> <!-- Destruction Grand Blow -->
 			<skill id="14945" level="1" /> <!-- Dimensional Shock Wave -->
 			<skill id="14946" level="1" /> <!-- Kalios' Rage -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2484,7 +2416,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1877539" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="2049301.50993" hpRegen="8.5" mp="28293.357" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="210" />
@@ -2499,10 +2431,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<ai clanHelpRange="1000" aggroRange="450">
 			<clanList>
@@ -2667,7 +2597,7 @@
 		<sex>MALE</sex>
 		<acquire exp="9500684" sp="15201" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="443936" hpRegen="8.5" mp="23550" mpRegen="30" />
+			<vitals hp="484548.398235" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="170" />
@@ -2682,10 +2612,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -3360,7 +3288,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="19294" level="90" type="L2Monster" name="Cocoon Destroyer" title="Violent">
+	<npc id="19294" level="93" type="L2Monster" name="Cocoon Destroyer" title="Violent">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<parameters>
 			<param name="IsAggressive" value="1" />
@@ -3371,9 +3299,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1458000" sp="349" />
+		<acquire exp="6835477" sp="6140" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
+			<vitals hp="78952.7031" hpRegen="8.5" mp="2645.482" mpRegen="3" />
 			<speed>
 				<walk ground="13" />
 				<run ground="180" />
@@ -3388,25 +3316,17 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300">
 			<clanList>
 				<clan>M_FAIRY</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="17375" min="1" max="1" chance="4.936" /> <!-- Kimerian's Trace -->
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="27" />
@@ -3414,6 +3334,11 @@
 		<extendDrop>
 			<id>1</id>
 		</extendDrop>
+		<dropLists>
+			<drop>
+				<item id="17376" min="1" max="1" chance="4.957" /> <!-- Trace of Kimerian's Cavern -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="19295" level="90" type="L2Npc" name="Wisp">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3445,41 +3370,29 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="19296" level="93" type="L2Npc" name="Golem Generator" title="Virus-Infected">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<parameters>
-			<param name="Attack_BoostValue" value="140" />
-		</parameters>
-		<race>CONSTRUCT</race>
+	<npc id="19296" level="93" type="L2Monster" name="Golem Generator" title="Virus-Infected">
+		<race>ETC</race>
 		<sex>MALE</sex>
+		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
+			<vitals hp="78952.7031" hpRegen="8.5" mp="2645.482" mpRegen="3" />
+			<attack physical="5065.712489" magical="899.5376908" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="466.8068639" magical="262.8015874" />
 			<speed>
 				<walk ground="250" />
 				<run ground="100" />
 			</speed>
-			<attack physical="5065.71248916851" magical="899.53769081202" critical="4" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" accuracy="5" />
-			<defence physical="466.806863913762" magical="262.801587405588" />
-			<attribute>
-				<defence fire="100" water="100" wind="50" earth="100" holy="100" dark="100" />
-				<attack type="EARTH" value="180" />
-			</attribute>
-			<abnormalResist physical="0" magical="0" />
 		</stats>
-		<status attackable="false" undying="false" />
-		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-		</skillList>
-		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="33" />
 			<height normal="47.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+		</skillList>
 	</npc>
 	<npc id="19297" level="93" type="L2Monster" name="Alarm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

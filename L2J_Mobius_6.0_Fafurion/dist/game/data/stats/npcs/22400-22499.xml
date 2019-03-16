@@ -737,7 +737,7 @@
 		<equipment rhand="292" /> <!-- Pike -->
 		<acquire exp="1704" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="460" hpRegen="3.5" mp="259" mpRegen="1.5" />
+			<vitals hp="459.937035" hpRegen="3.5" mp="261.953" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="101.83533" magical="74.51868" />
 			<speed>
@@ -750,16 +750,9 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -767,10 +760,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="28" grown="33" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.079" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="0.954" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -778,14 +774,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="10" grown="12" />
-			<height normal="28" grown="33" />
-		</collision>
 	</npc>
 	<npc id="22453" level="25" type="L2Monster" name="White Skull Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -814,7 +806,7 @@
 		<equipment rhand="5285" /> <!-- Heavy Sword -->
 		<acquire exp="1704" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="460" hpRegen="3.5" mp="259" mpRegen="1.5" />
+			<vitals hp="459.937035" hpRegen="3.5" mp="261.953" mpRegen="1.5" />
 			<attack physical="64.83203" magical="44.27187" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="80" distance="80" width="120" />
 			<defence physical="101.83533" magical="74.51868" />
 			<speed>
@@ -827,18 +819,10 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="13" /> <!-- Two-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
-			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -847,10 +831,13 @@
 				<ignoreNpcId>22452</ignoreNpcId> <!-- White Skull Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="30.5" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.079" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="0.983" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -858,16 +845,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="12" />
-			<height normal="30.5" />
-		</collision>
 	</npc>
-	<npc id="22454" level="25" type="L2Monster" name="White Skull Kanabion" title="Void">
+	<npc id="22454" level="27" type="L2Monster" name="White Skull Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -893,9 +876,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="236" /> <!-- Soul Separator -->
-		<acquire exp="1704" sp="0" />
+		<acquire exp="2194" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="515" hpRegen="3.5" mp="286" mpRegen="1.5" />
+			<vitals hp="514.82664" hpRegen="3.5" mp="288.716" mpRegen="1.5" />
 			<attack physical="74.99121" magical="51.20928" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="108.28767" magical="79.24022" />
 			<speed>
@@ -909,18 +892,10 @@
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4436" level="5" /> <!-- Greater Resist Poison -->
-			<skill id="4437" level="5" /> <!-- Greater Resist Bleeding -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4436" level="5" /> <!-- Greater Poison Resistance -->
+			<skill id="4437" level="5" /> <!-- Greater Bleed Resistance -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -929,10 +904,13 @@
 				<ignoreNpcId>22452</ignoreNpcId> <!-- White Skull Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="14" grown="16.8" />
+			<height normal="37.5" grown="45" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.079" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="1.059" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -940,14 +918,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="14" grown="16.8" />
-			<height normal="37.5" grown="45" />
-		</collision>
 	</npc>
 	<npc id="22455" level="30" type="L2Monster" name="Begrudged Kanabion">
 		<!-- Confirmed CT2.5 -->
@@ -974,7 +948,7 @@
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<acquire exp="2248" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="604" hpRegen="3.5" mp="329" mpRegen="1.5" />
+			<vitals hp="603.785655" hpRegen="3.5" mp="332.51" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="86.68702" />
 			<speed>
@@ -987,16 +961,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1004,10 +970,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="21" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.302" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="1.224" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1015,14 +984,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="10" />
-			<height normal="21" />
-		</collision>
 	</npc>
 	<npc id="22456" level="30" type="L2Monster" name="Begrudged Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -1051,7 +1016,7 @@
 		<equipment rhand="129" /> <!-- Sword of Revolution -->
 		<acquire exp="2248" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="604" hpRegen="3.5" mp="329" mpRegen="1.5" />
+			<vitals hp="603.785655" hpRegen="3.5" mp="332.51" mpRegen="1.5" />
 			<attack physical="92.64226" magical="63.26266" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="118.46427" magical="86.68702" />
 			<speed>
@@ -1064,16 +1029,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1082,10 +1039,13 @@
 				<ignoreNpcId>22455</ignoreNpcId> <!-- Begrudged Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="12" grown="14" />
+			<height normal="22" grown="26.4" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.302" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="1.252" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1093,16 +1053,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="12" grown="14" />
-			<height normal="22" grown="26.4" />
-		</collision>
 	</npc>
-	<npc id="22457" level="30" type="L2Monster" name="Begrudged Kanabion" title="Void">
+	<npc id="22457" level="32" type="L2Monster" name="Begrudged Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1128,9 +1084,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="7886" /> <!-- Sword of Magic Fog -->
-		<acquire exp="2248" sp="0" />
+		<acquire exp="2823" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="668" hpRegen="4.5" mp="358" mpRegen="1.8" />
+			<vitals hp="668.138985" hpRegen="4.5" mp="361.706" mpRegen="1.8" />
 			<attack physical="106.16525" magical="72.49711" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="125.57727" magical="91.89199" />
 			<speed>
@@ -1144,16 +1100,9 @@
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -1162,10 +1111,13 @@
 				<ignoreNpcId>22455</ignoreNpcId> <!-- Begrudged Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="10" grown="12" />
+			<height normal="23" grown="27.6" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.302" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="1.41" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1173,14 +1125,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="10" grown="12" />
-			<height normal="23" grown="27.6" />
-		</collision>
 	</npc>
 	<npc id="22458" level="35" type="L2Monster" name="Rotten Kanabion">
 		<!-- Confirmed CT2.5 -->
@@ -1206,7 +1154,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3060" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="772" hpRegen="4.5" mp="402" mpRegen="1.8" />
+			<vitals hp="772.23996" hpRegen="4.5" mp="406.311" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="136.72948" magical="100.0527" />
 			<speed>
@@ -1219,16 +1167,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1236,10 +1176,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="30.5" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.648" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="1.643" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1247,14 +1190,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="13" />
-			<height normal="30.5" />
-		</collision>
 	</npc>
 	<npc id="22459" level="35" type="L2Monster" name="Rotten Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -1282,7 +1221,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3060" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="772" hpRegen="4.5" mp="402" mpRegen="1.8" />
+			<vitals hp="772.23996" hpRegen="4.5" mp="406.311" mpRegen="1.8" />
 			<attack physical="129.32896" magical="88.31491" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="136.72948" magical="100.0527" />
 			<speed>
@@ -1295,16 +1234,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1313,10 +1244,13 @@
 				<ignoreNpcId>22458</ignoreNpcId> <!-- Rotten Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="14" />
+			<height normal="22" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.648" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="1.707" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1324,16 +1258,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="14" />
-			<height normal="22" />
-		</collision>
 	</npc>
-	<npc id="22460" level="35" type="L2Monster" name="Rotten Kanabion" title="Void">
+	<npc id="22460" level="37" type="L2Monster" name="Rotten Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -1358,9 +1288,9 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3060" sp="0" />
+		<acquire exp="3775" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="847" hpRegen="4.5" mp="432" mpRegen="1.8" />
+			<vitals hp="846.68793" hpRegen="4.5" mp="436.318" mpRegen="1.8" />
 			<attack physical="146.82587" magical="100.26304" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="144.47758" magical="105.72243" />
 			<speed>
@@ -1373,16 +1303,8 @@
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -1391,10 +1313,13 @@
 				<ignoreNpcId>22458</ignoreNpcId> <!-- Rotten Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="30" />
+			<height normal="21.25" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="1.648" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="1.847" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1402,14 +1327,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="30" />
-			<height normal="21.25" />
-		</collision>
 	</npc>
 	<npc id="22461" level="40" type="L2Monster" name="Gluttonous Kanabion">
 		<!-- Confirmed CT2.5 -->
@@ -1436,7 +1357,7 @@
 		<equipment rhand="5128" /> <!-- Crokian Blade -->
 		<acquire exp="3997" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<vitals hp="965.930865" hpRegen="4.5" mp="482.545" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="156.55035" magical="114.55675" />
 			<speed>
@@ -1449,16 +1370,9 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1466,10 +1380,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="29" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.176" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="2.249" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1477,14 +1394,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="18" />
-			<height normal="29" />
-		</collision>
 	</npc>
 	<npc id="22462" level="40" type="L2Monster" name="Gluttonous Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -1512,7 +1425,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3997" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<vitals hp="965.930865" hpRegen="4.5" mp="482.545" mpRegen="1.8" />
 			<attack physical="176.36077" magical="120.43155" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="156.55035" magical="114.55675" />
 			<speed>
@@ -1524,16 +1437,9 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1542,10 +1448,13 @@
 				<ignoreNpcId>22461</ignoreNpcId> <!-- Gluttonous Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="33" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.176" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="2.149" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1553,16 +1462,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="25" />
-			<height normal="33" />
-		</collision>
 	</npc>
-	<npc id="22463" level="40" type="L2Monster" name="Gluttonous Kanabion" title="Void">
+	<npc id="22463" level="42" type="L2Monster" name="Gluttonous Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1588,9 +1493,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="5130" /> <!-- Nos Sword -->
-		<acquire exp="3997" sp="0" />
+		<acquire exp="4864" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1050" hpRegen="5.5" mp="531" mpRegen="2.1" />
+			<vitals hp="1049.84256" hpRegen="5.5" mp="536.071" mpRegen="2.1" />
 			<attack physical="198.34591" magical="135.44454" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="164.88513" magical="120.65578" />
 			<speed>
@@ -1604,16 +1509,8 @@
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -1622,10 +1519,13 @@
 				<ignoreNpcId>22461</ignoreNpcId> <!-- Gluttonous Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="26" grown="31.2" />
+			<height normal="42" grown="50.8" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="956" min="1" max="1" chance="2.176" /> <!-- Scroll: Enchant Armor (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="956" min="1" max="1" chance="2.428" /> <!-- Scroll: Enchant Armor (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1633,14 +1533,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="26" grown="31.2" />
-			<height normal="42" grown="50.8" />
-		</collision>
 	</npc>
 	<npc id="22464" level="45" type="L2Monster" name="Callous Kanabion">
 		<!-- Confirmed CT2.5 -->
@@ -1667,7 +1563,7 @@
 		<equipment rhand="7887" /> <!-- Mysterious Sword -->
 		<acquire exp="5059" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1183" hpRegen="5.5" mp="610" mpRegen="2.1" />
+			<vitals hp="1182.965625" hpRegen="5.5" mp="616.36" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="177.78746" magical="130.09715" />
 			<speed>
@@ -1680,16 +1576,9 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1697,10 +1586,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="32" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.128" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="952" min="1" max="1" chance="1.074" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1708,14 +1600,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="11" />
-			<height normal="32" />
-		</collision>
 	</npc>
 	<npc id="22465" level="45" type="L2Monster" name="Callous Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -1744,7 +1632,7 @@
 		<equipment rhand="298" /> <!-- Orcish Glaive -->
 		<acquire exp="5059" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1183" hpRegen="5.5" mp="610" mpRegen="2.1" />
+			<vitals hp="1182.965625" hpRegen="5.5" mp="616.36" mpRegen="2.1" />
 			<attack physical="234.89829" magical="160.40508" random="10" critical="4" accuracy="0" attackSpeed="253" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="177.78746" magical="130.09715" />
 			<speed>
@@ -1757,16 +1645,9 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1775,10 +1656,13 @@
 				<ignoreNpcId>22464</ignoreNpcId> <!-- Callous Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="13" grown="22" />
+			<height normal="35" grown="42.2" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.128" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="952" min="1" max="1" chance="1.068" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1786,16 +1670,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="13" grown="22" />
-			<height normal="35" grown="42.2" />
-		</collision>
 	</npc>
-	<npc id="22466" level="45" type="L2Monster" name="Callous Kanabion" title="Void">
+	<npc id="22466" level="47" type="L2Monster" name="Callous Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="70" />
@@ -1821,9 +1701,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="226" /> <!-- Cursed Dagger -->
-		<acquire exp="5059" sp="1" />
+		<acquire exp="6091" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1276" hpRegen="5.5" mp="665" mpRegen="2.1" />
+			<vitals hp="1275.71013" hpRegen="5.5" mp="671.508" mpRegen="2.1" />
 			<attack physical="261.69549" magical="178.7041" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="186.63569" magical="136.5719" />
 			<speed>
@@ -1837,16 +1717,9 @@
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -1855,10 +1728,13 @@
 				<ignoreNpcId>22464</ignoreNpcId> <!-- Callous Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="20" grown="24" />
+			<height normal="40" grown="48" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.128" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="952" min="1" max="1" chance="1.171" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1866,14 +1742,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="20" grown="24" />
-			<height normal="40" grown="48" />
-		</collision>
 	</npc>
 	<npc id="22467" level="50" type="L2Monster" name="Savage Kanabion">
 		<!-- Confirmed CT2.5 -->
@@ -1900,7 +1772,7 @@
 		<equipment rhand="77" /> <!-- Tsurugi -->
 		<acquire exp="5976" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1421" hpRegen="5.5" mp="747" mpRegen="2.1" />
+			<vitals hp="1420.82058" hpRegen="5.5" mp="754.23" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<speed>
@@ -1913,16 +1785,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -1930,10 +1794,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="29" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.421" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="952" min="1" max="1" chance="1.384" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1941,14 +1808,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="13" />
-			<height normal="29" />
-		</collision>
 	</npc>
 	<npc id="22468" level="50" type="L2Monster" name="Savage Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -1977,7 +1840,7 @@
 		<equipment rhand="75" /> <!-- Caliburs -->
 		<acquire exp="5976" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1421" hpRegen="5.5" mp="747" mpRegen="2.1" />
+			<vitals hp="1420.82058" hpRegen="5.5" mp="754.23" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<speed>
@@ -1990,16 +1853,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2008,10 +1863,13 @@
 				<ignoreNpcId>22467</ignoreNpcId> <!-- Savage Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="31" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.421" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="952" min="1" max="1" chance="1.39" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2019,16 +1877,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="13" />
-			<height normal="31" />
-		</collision>
 	</npc>
-	<npc id="22469" level="50" type="L2Monster" name="Savage Kanabion" title="Void">
+	<npc id="22469" level="52" type="L2Monster" name="Savage Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2054,9 +1908,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
-		<acquire exp="5976" sp="1" />
+		<acquire exp="7164" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1520" hpRegen="6.5" mp="804" mpRegen="2.4" />
+			<vitals hp="1519.874235" hpRegen="6.5" mp="811.811" mpRegen="2.4" />
 			<attack physical="337.18867" magical="230.25615" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="209.50106" magical="153.30378" />
 			<speed>
@@ -2070,16 +1924,8 @@
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2088,10 +1934,13 @@
 				<ignoreNpcId>22467</ignoreNpcId> <!-- Savage Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="13" grown="15.6" />
+			<height normal="31.5" grown="38.1" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="952" min="1" max="1" chance="1.421" /> <!-- Scroll: Enchant Armor (C-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="952" min="1" max="1" chance="1.457" /> <!-- Scroll: Enchant Armor (C-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2099,14 +1948,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="13" grown="15.6" />
-			<height normal="31.5" grown="38.1" />
-		</collision>
 	</npc>
 	<npc id="22470" level="55" type="L2Monster" name="Peerless Kanabion">
 		<!-- Confirmed CT2.5 -->
@@ -2133,7 +1978,7 @@
 		<equipment rhand="7888" /> <!-- Ecliptic Sword -->
 		<acquire exp="7230" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.18658" hpRegen="6.5" mp="897.777" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
 			<speed>
@@ -2146,16 +1991,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2163,10 +2000,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="10" />
+			<height normal="25.3" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2174,14 +2014,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="10" />
-			<height normal="25.3" />
-		</collision>
 	</npc>
 	<npc id="22471" level="55" type="L2Monster" name="Peerless Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -2210,7 +2046,7 @@
 		<equipment rhand="84" /> <!-- Homunkulus' Sword -->
 		<acquire exp="7230" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1673" hpRegen="6.5" mp="889" mpRegen="2.4" />
+			<vitals hp="1673.18658" hpRegen="6.5" mp="897.777" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
 			<speed>
@@ -2223,16 +2059,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2241,10 +2069,13 @@
 				<ignoreNpcId>22470</ignoreNpcId> <!-- Peerless Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="24" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2252,16 +2083,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="12" />
-			<height normal="24" />
-		</collision>
 	</npc>
-	<npc id="22472" level="55" type="L2Monster" name="Peerless Kanabion" title="Void">
+	<npc id="22472" level="57" type="L2Monster" name="Peerless Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="60" />
@@ -2287,9 +2114,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="135" /> <!-- Samurai Long Sword -->
-		<acquire exp="7230" sp="1" />
+		<acquire exp="8608" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1776" hpRegen="6.5" mp="948" mpRegen="2.4" />
+			<vitals hp="1776.025725" hpRegen="6.5" mp="957.791" mpRegen="2.4" />
 			<attack physical="424.23295" magical="289.69611" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="233.18839" magical="170.63714" />
 			<speed>
@@ -2303,16 +2130,8 @@
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2321,10 +2140,13 @@
 				<ignoreNpcId>22470</ignoreNpcId> <!-- Peerless Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="14" grown="17" />
+			<height normal="28.8" grown="34.9" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2332,14 +2154,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="14" grown="17" />
-			<height normal="28.8" grown="34.9" />
-		</collision>
 	</npc>
 	<npc id="22473" level="60" type="L2Monster" name="Massive Kanabion">
 		<!-- Confirmed CT2.5 -->
@@ -2366,7 +2184,7 @@
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<acquire exp="8605" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
+			<vitals hp="1933.12356" hpRegen="6.5" mp="1046.19" mpRegen="2.4" />
 			<attack physical="481.34551" magical="328.69659" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="181.21958" />
 			<speed>
@@ -2379,16 +2197,9 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2396,10 +2207,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2407,14 +2221,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="13" />
-			<height normal="26" />
-		</collision>
 	</npc>
 	<npc id="22474" level="60" type="L2Monster" name="Massive Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -2443,7 +2253,7 @@
 		<equipment rhand="148" /> <!-- Sword of Valhalla -->
 		<acquire exp="8605" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1933" hpRegen="6.5" mp="1036" mpRegen="2.4" />
+			<vitals hp="1933.12356" hpRegen="6.5" mp="1046.19" mpRegen="2.4" />
 			<attack physical="481.34551" magical="328.69659" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="247.65008" magical="181.21958" />
 			<speed>
@@ -2456,16 +2266,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2474,10 +2276,13 @@
 				<ignoreNpcId>22473</ignoreNpcId> <!-- Massive Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="13" grown="15" />
+			<height normal="28" grown="34" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2485,16 +2290,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="13" grown="15" />
-			<height normal="28" grown="34" />
-		</collision>
 	</npc>
-	<npc id="22475" level="60" type="L2Monster" name="Massive Kanabion" title="Void">
+	<npc id="22475" level="62" type="L2Monster" name="Massive Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="90" />
@@ -2520,9 +2321,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="161" /> <!-- Silver Axe -->
-		<acquire exp="8605" sp="2" />
+		<acquire exp="10185" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2037" hpRegen="7.5" mp="1097" mpRegen="2.7" />
+			<vitals hp="2037.224535" hpRegen="7.5" mp="1107.826" mpRegen="2.7" />
 			<attack physical="521.12391" magical="355.86007" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
 			<speed>
@@ -2536,16 +2337,8 @@
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2554,10 +2347,13 @@
 				<ignoreNpcId>22473</ignoreNpcId> <!-- Massive Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="13" grown="17" />
+			<height normal="32" grown="39" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="948" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (B-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2565,14 +2361,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="13" grown="17" />
-			<height normal="32" grown="39" />
-		</collision>
 	</npc>
 	<npc id="22476" level="65" type="L2Monster" name="Fervent Kanabion">
 		<!-- Confirmed CT2.5 -->
@@ -2599,7 +2391,7 @@
 		<equipment rhand="85" /> <!-- Corroded Phantom Sword -->
 		<acquire exp="10099" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193" hpRegen="7.5" mp="1188" mpRegen="2.7" />
+			<vitals hp="2193.06054" hpRegen="7.5" mp="1199.469" mpRegen="2.7" />
 			<attack physical="582.81759" magical="397.98887" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="198.95754" />
 			<speed>
@@ -2612,16 +2404,9 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2629,10 +2414,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="8" grown="9" />
+			<height normal="23.5" grown="29" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2640,14 +2428,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="8" grown="9" />
-			<height normal="23.5" grown="29" />
-		</collision>
 	</npc>
 	<npc id="22477" level="65" type="L2Monster" name="Fervent Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -2676,7 +2460,7 @@
 		<equipment rhand="6723" /> <!-- Monster Only (Vampire Warrior) -->
 		<acquire exp="10099" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2193" hpRegen="7.5" mp="1188" mpRegen="2.7" />
+			<vitals hp="2193.06054" hpRegen="7.5" mp="1199.469" mpRegen="2.7" />
 			<attack physical="582.81759" magical="397.98887" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="198.95754" />
 			<speed>
@@ -2688,16 +2472,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2706,10 +2482,13 @@
 				<ignoreNpcId>22476</ignoreNpcId> <!-- Fervent Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="9" grown="10" />
+			<height normal="31.5" grown="38" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2717,16 +2496,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="9" grown="10" />
-			<height normal="31.5" grown="38" />
-		</collision>
 	</npc>
-	<npc id="22478" level="65" type="L2Monster" name="Fervent Kanabion" title="Void">
+	<npc id="22478" level="67" type="L2Monster" name="Fervent Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="80" />
@@ -2752,9 +2527,9 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8686" /> <!-- Themis' Tongue -->
-		<acquire exp="10099" sp="2" />
+		<acquire exp="11894" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<vitals hp="2295.26877" hpRegen="7.5" mp="1263.538" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<speed>
@@ -2767,16 +2542,8 @@
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -2785,10 +2552,13 @@
 				<ignoreNpcId>22476</ignoreNpcId> <!-- Fervent Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="19" grown="22" />
+			<height normal="35" grown="42.9" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2796,14 +2566,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="19" grown="22" />
-			<height normal="35" grown="42.9" />
-		</collision>
 	</npc>
 	<npc id="22479" level="70" type="L2Monster" name="Ruptured Kanabion">
 		<!-- Confirmed CT2.5 -->
@@ -2829,7 +2595,7 @@
 		<sex>MALE</sex>
 		<acquire exp="11395" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.16471" hpRegen="7.5" mp="1358.425" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
@@ -2842,16 +2608,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2859,10 +2617,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="34" />
+			<height normal="35" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2870,14 +2631,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="34" />
-			<height normal="35" />
-		</collision>
 	</npc>
 	<npc id="22480" level="70" type="L2Monster" name="Ruptured Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -2905,7 +2662,7 @@
 		<sex>MALE</sex>
 		<acquire exp="11395" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.16471" hpRegen="7.5" mp="1358.425" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
@@ -2918,16 +2675,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -2936,10 +2685,13 @@
 				<ignoreNpcId>22479</ignoreNpcId> <!-- Ruptured Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="36" />
+			<height normal="43.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2947,16 +2699,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="36" />
-			<height normal="43.5" />
-		</collision>
 	</npc>
-	<npc id="22481" level="70" type="L2Monster" name="Ruptured Kanabion" title="Void">
+	<npc id="22481" level="72" type="L2Monster" name="Ruptured Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="110" />
@@ -2981,9 +2729,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="11395" sp="2" />
+		<acquire exp="13397" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<vitals hp="2540.06379" hpRegen="8.5" mp="1424.116" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="223.44881" />
 			<speed>
@@ -2997,16 +2745,8 @@
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -3015,10 +2755,13 @@
 				<ignoreNpcId>22479</ignoreNpcId> <!-- Ruptured Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="38" grown="46" />
+			<height normal="54" grown="65.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="730" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (A-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3026,14 +2769,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="38" grown="46" />
-			<height normal="54" grown="65.5" />
-		</collision>
 	</npc>
 	<npc id="22482" level="75" type="L2Monster" name="Sword Kanabion">
 		<!-- Confirmed CT2.5 -->
@@ -3059,7 +2798,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="13081" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2675.710515" hpRegen="8.5" mp="1522.247" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<speed>
@@ -3072,16 +2811,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -3089,10 +2820,13 @@
 				<clan>RIM</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="20" />
+			<height normal="40.5985" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3100,14 +2834,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="40.5985" />
-		</collision>
 	</npc>
 	<npc id="22483" level="75" type="L2Monster" name="Sword Kanabion" title="Doppler">
 		<!-- Confirmed CT2.5 -->
@@ -3135,7 +2865,7 @@
 		<sex>MALE</sex>
 		<acquire exp="13081" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2676" hpRegen="8.5" mp="1507" mpRegen="3" />
+			<vitals hp="2675.710515" hpRegen="8.5" mp="1522.247" mpRegen="3" />
 			<attack physical="794.70901" magical="542.68324" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="319.24623" magical="233.61053" />
 			<speed>
@@ -3148,16 +2878,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="200" aggroRange="300">
@@ -3166,10 +2888,13 @@
 				<ignoreNpcId>22482</ignoreNpcId> <!-- Sword Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="33" />
+			<height normal="49" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3177,16 +2902,12 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="33" />
-			<height normal="49" />
-		</collision>
 	</npc>
-	<npc id="22484" level="75" type="L2Monster" name="Sword Kanabion" title="Void">
+	<npc id="22484" level="77" type="L2Monster" name="Sword Kanabion" title="Void">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="MoveAroundSocial" value="160" />
@@ -3211,9 +2932,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="13081" sp="3" />
+		<acquire exp="18390" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2856" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<vitals hp="2856.152205" hpRegen="8.5" mp="1589.56" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="5" critical="8" accuracy="0" attackSpeed="253" type="DAGGER" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<speed>
@@ -3226,19 +2947,9 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4340" level="1" /> <!-- Ultimate Buff, 2nd -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="7" /> <!-- Daggers -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
 			<skill id="5719" level="1" /> <!-- Kamabion Susceptibility -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -3247,10 +2958,13 @@
 				<ignoreNpcId>22482</ignoreNpcId> <!-- Sword Kanabion -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="33" grown="39.6" />
+			<height normal="49" grown="60.5" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="960" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (S-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="960" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Armor (S-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -3258,14 +2972,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="33" grown="39.6" />
-			<height normal="49" grown="60.5" />
-		</collision>
 	</npc>
 	<npc id="22485" level="29" type="L2Monster" name="Lost Watchman">
 		<!-- Confirmed CT2.5 -->
@@ -3292,7 +3002,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2981" hpRegen="14.7623139950496" mp="315" mpRegen="1.5" />
+			<vitals hp="2981.073375" hpRegen="3.5" mp="317.912" mpRegen="1.5" />
 			<attack physical="197.913166994479" magical="135.149035208127" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="184.009568" magical="201.975312" />
 			<speed>
@@ -3306,15 +3016,9 @@
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4047" level="2" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3409,7 +3113,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="72" /> <!-- StormBringer -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5963" hpRegen="14.7623139950496" mp="315" mpRegen="1.5" />
+			<vitals hp="5962.777665" hpRegen="3.5" mp="317.912" mpRegen="1.5" />
 			<attack physical="162.779703287392" magical="111.157434266968" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="184.009568" magical="201.975312" />
 			<speed>
@@ -3423,16 +3127,10 @@
 		<skillList>
 			<skill id="4032" level="2" /> <!-- NPC Strike -->
 			<skill id="4098" level="3" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4613" level="2" /> <!-- NPC Clan Heal -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4613" level="2" /> <!-- NPC Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3470,7 +3168,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="68" /> <!-- Falchion -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="4390" hpRegen="20.0374788857507" mp="463" mpRegen="1.8" />
+			<vitals hp="4389.90657" hpRegen="4.5" mp="467.947" mpRegen="1.8" />
 			<attack physical="572.094397718011" magical="390.666298902313" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="243.948032" magical="267.765888" />
 			<speed>
@@ -3484,15 +3182,10 @@
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4047" level="3" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3587,7 +3280,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="16" /> <!-- Great Spear -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="8764" hpRegen="20.0011107318101" mp="463" mpRegen="1.8" />
+			<vitals hp="8764.040265" hpRegen="4.5" mp="467.947" mpRegen="1.8" />
 			<attack physical="473.633315537076" magical="323.430145716799" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="243.948032" magical="267.765888" />
 			<speed>
@@ -3601,16 +3294,11 @@
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
 			<skill id="4098" level="4" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4613" level="3" /> <!-- NPC Clan Heal -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4613" level="3" /> <!-- NPC Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3647,7 +3335,7 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9963" hpRegen="42.1792057329358" mp="720" mpRegen="2.1" />
+			<vitals hp="9962.778765" hpRegen="5.5" mp="727.467" mpRegen="2.1" />
 			<attack physical="939.100287140999" magical="641.283742632706" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="313.060832" magical="343.626504" />
 			<speed>
@@ -3661,15 +3349,10 @@
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4047" level="4" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3762,7 +3445,7 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="19926" hpRegen="42.1792057329358" mp="720" mpRegen="2.1" />
+			<vitals hp="19926.188445" hpRegen="5.5" mp="727.467" mpRegen="2.1" />
 			<attack physical="789.236403634055" magical="538.946139911501" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="313.060832" magical="343.626504" />
 			<speed>
@@ -3776,16 +3459,11 @@
 		<skillList>
 			<skill id="4032" level="4" /> <!-- NPC Strike -->
 			<skill id="4098" level="5" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4613" level="4" /> <!-- NPC Clan Heal -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4613" level="4" /> <!-- NPC Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3823,7 +3501,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="946" lhand="945" /> <!-- Skeleton Dagger / Skeleton Buckler -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="17981" hpRegen="70.9782228924142" mp="1007" mpRegen="2.4" />
+			<vitals hp="17981.0775" hpRegen="6.5" mp="1016.994" mpRegen="2.4" />
 			<attack physical="2124.50738127262" magical="1450.7631349585" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="388.505488" magical="426.437184" />
 			<speed>
@@ -3837,15 +3515,9 @@
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4047" level="5" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3939,7 +3611,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="35924" hpRegen="70.9036355437913" mp="1007" mpRegen="2.4" />
+			<vitals hp="35924.3001" hpRegen="6.5" mp="1016.994" mpRegen="2.4" />
 			<attack physical="1926.27081298952" magical="1315.3932568395" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="388.505488" magical="426.437184" />
 			<speed>
@@ -3953,16 +3625,11 @@
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
 			<skill id="4098" level="6" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4613" level="5" /> <!-- NPC Clan Heal -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4613" level="5" /> <!-- NPC Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -3999,7 +3666,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="20810" hpRegen="76.9462041405843" mp="1314" mpRegen="2.7" />
+			<vitals hp="20810.10036" hpRegen="7.5" mp="1326.796" mpRegen="2.7" />
 			<attack physical="3223.14678388188" magical="2200.991450698" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="465.841008" magical="511.323336" />
 			<speed>
@@ -4013,15 +3680,9 @@
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4047" level="6" /> <!-- Hold -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="3" /> <!-- Extremely Weak M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">
@@ -4114,7 +3775,7 @@
 		<race>BEAST</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="41576" hpRegen="76.8654232739137" mp="1314" mpRegen="2.7" />
+			<vitals hp="41576.03667" hpRegen="7.5" mp="1326.796" mpRegen="2.7" />
 			<attack physical="3159.42642416583" magical="2157.47870480887" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="465.841008" magical="511.323336" />
 			<speed>
@@ -4128,16 +3789,10 @@
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4098" level="7" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
+			<skill id="4613" level="6" /> <!-- NPC Clan Heal -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4412" level="7" /> <!-- Weak P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4613" level="6" /> <!-- NPC Clan Heal -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="1000" isAggressive="true">

@@ -605,7 +605,7 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="204238" hpRegen="140.389595300422" mp="1007" mpRegen="2.4" />
+			<vitals hp="204237.911055" hpRegen="178.4276342" mp="1216.5" mpRegen="2.4" />
 			<speed>
 				<walk ground="46" />
 				<run ground="200" />
@@ -616,36 +616,39 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14758" level="1" /> <!-- Raid Boss (Lv. 59) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14327" level="1" /> <!-- HP Drain -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="14758" level="1" /> <!-- Raid Boss (Lv. 59) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>OMAN</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="31.68" />
 			<height normal="60.72" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="2475" min="1" max="1" chance="12.05" /> <!-- Sealed Doom Gloves -->
+				<item id="2403" min="1" max="1" chance="4.305" /> <!-- Blue Wolf Stockings -->
+				<item id="7901" min="1" max="1" chance="1.533" /> <!-- Star Buster -->
+				<item id="210" min="1" max="1" chance="1.47" /> <!-- Staff of Evil Spirits -->
+				<item id="948" min="1" max="1" chance="24.85" /> <!-- Scroll: Enchant Armor (B-grade) -->
+				<item id="947" min="1" max="1" chance="4.053" /> <!-- Scroll: Enchant Weapon (B-grade) -->
+				<item id="46474" min="1" max="1" chance="1.112" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="1.073" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="1.043" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46475" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46490" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25810" level="58" type="L2Monster" name="Vladimir's Follower">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -682,9 +685,9 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="433606" sp="104" />
+		<acquire exp="433606" sp="104" raidPoints="0" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="226581" hpRegen="148.411184814856" mp="1097" mpRegen="2.7" />
+			<vitals hp="226581.134865" hpRegen="294.2109061" mp="1325.174" mpRegen="2.7" />
 			<speed>
 				<walk ground="46" />
 				<run ground="200" />
@@ -695,26 +698,27 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="14759" level="1" /> <!-- Raid Boss (Lv. 62) -->
 			<skill id="14421" level="1" /> <!-- Lazearth' Attack -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="14759" level="1" /> <!-- Raid Boss (Lv. 62) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>OMAN</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="31.68" />
+			<height normal="60.72" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="5305" min="1" max="1" chance="7.302" /> <!-- Sealed Tallum Stockings -->
-				<item id="5289" min="1" max="1" chance="4.559" /> <!-- Sealed Dark Crystal Helmet -->
-				<item id="5297" min="1" max="1" chance="4.538" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5305" min="1" max="1" chance="7.326" /> <!-- Sealed Tallum Stockings -->
+				<item id="5297" min="1" max="1" chance="4.611" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5289" min="1" max="1" chance="4.578" /> <!-- Sealed Dark Crystal Helmet -->
 				<item id="8678" min="1" max="1" chance="0.3" /> <!-- Sirra's Blade -->
 				<item id="8688" min="1" max="1" chance="0.3" /> <!-- Daimon Crystal -->
-				<item id="730" min="1" max="1" chance="17.65" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="16.33" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
@@ -730,25 +734,8 @@
 				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="79.39" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="31.68" />
-			<height normal="60.72" />
-		</collision>
 	</npc>
 	<npc id="25812" level="62" type="L2Monster" name="Lazearth" title="Destroyer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -824,9 +811,9 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="470082" sp="112" />
+		<acquire exp="470082" sp="112" raidPoints="0" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="252431" hpRegen="157.068083969282" mp="1219" mpRegen="2.7" />
+			<vitals hp="252430.984245" hpRegen="294.2109061" mp="1472.776" mpRegen="2.7" />
 			<speed>
 				<walk ground="60" />
 				<run ground="170" />
@@ -837,27 +824,28 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14423" level="1" /> <!-- Byron's Darkness Attack -->
+			<skill id="14760" level="1" /> <!-- Raid Boss (Lv. 66) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="14760" level="1" /> <!-- Raid Boss (Lv. 66) -->
-			<skill id="4415" level="11" /> <!-- Spears -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14423" level="1" /> <!-- Byron's Darkness Attack -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>OMAN</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="11" />
+			<height normal="34" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="5313" min="1" max="1" chance="9.864" /> <!-- Sealed Gauntlets of Nightmare -->
-				<item id="5314" min="1" max="1" chance="4.893" /> <!-- Sealed Boots of Nightmare -->
-				<item id="5311" min="1" max="1" chance="1.571" /> <!-- Sealed Armor of Nightmare -->
+				<item id="5313" min="1" max="1" chance="9.878" /> <!-- Sealed Gauntlets of Nightmare -->
+				<item id="5314" min="1" max="1" chance="4.981" /> <!-- Sealed Boots of Nightmare -->
+				<item id="5311" min="1" max="1" chance="1.559" /> <!-- Sealed Armor of Nightmare -->
 				<item id="8679" min="1" max="1" chance="0.3" /> <!-- Sword of Ipos -->
 				<item id="8682" min="1" max="1" chance="0.3" /> <!-- Naga's Storm -->
-				<item id="730" min="1" max="1" chance="18.55" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="18.11" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
@@ -873,25 +861,8 @@
 				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="78.86" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="11" />
-			<height normal="34" />
-		</collision>
 	</npc>
 	<npc id="25814" level="65" type="L2Monster" name="Byron's Maid">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -928,10 +899,10 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="502954" sp="120" />
+		<acquire exp="502954" sp="120" raidPoints="0" />
 		<equipment rhand="147" /> <!-- Tear of Darkness -->
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="274258" hpRegen="163.901363297288" mp="1345" mpRegen="2.7" />
+			<vitals hp="274258.119585" hpRegen="294.2109061" mp="1625.244" mpRegen="2.7" />
 			<speed>
 				<walk ground="50" />
 				<run ground="170" />
@@ -942,25 +913,26 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="14761" level="1" /> <!-- Raid Boss (Lv. 70) -->
 			<skill id="14424" level="1" /> <!-- Ken's Mark -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="14761" level="1" /> <!-- Raid Boss (Lv. 70) -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>OMAN</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="19" />
+			<height normal="48" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="5294" min="1" max="1" chance="13.83" /> <!-- Sealed Tallum Helmet -->
-				<item id="5293" min="1" max="1" chance="3.181" /> <!-- Sealed Tallum Plate Armor -->
+				<item id="5294" min="1" max="1" chance="13.79" /> <!-- Sealed Tallum Helmet -->
+				<item id="5293" min="1" max="1" chance="3.132" /> <!-- Sealed Tallum Plate Armor -->
 				<item id="8685" min="1" max="1" chance="0.75" /> <!-- Sobekk's Hurricane -->
 				<item id="8686" min="1" max="1" chance="0.75" /> <!-- Themis' Tongue -->
-				<item id="729" min="1" max="1" chance="2.648" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="2.642" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
@@ -976,34 +948,17 @@
 				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="80.53" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="19" />
-			<height normal="48" />
-		</collision>
 	</npc>
 	<npc id="25816" level="72" type="L2Monster" name="Heaven's Palace Sniper Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="518128" sp="124" />
+		<acquire exp="518128" sp="124" raidPoints="0" />
 		<equipment rhand="15302" /> <!-- Transparent Bow (NPC) -->
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="284017" hpRegen="166.91181661428" mp="1410" mpRegen="3" />
+			<vitals hp="284017.112805" hpRegen="299.9232164" mp="1703.911" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -1014,25 +969,26 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="14762" level="1" /> <!-- Raid Boss (Lv. 72) -->
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="14293" level="1" /> <!-- Range Strike -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="14762" level="1" /> <!-- Raid Boss (Lv. 72) -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>OMAN</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="30" />
+			<height normal="33" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="5295" min="1" max="1" chance="10.97" /> <!-- Sealed Tallum Gloves -->
-				<item id="5304" min="1" max="1" chance="7.063" /> <!-- Sealed Tallum Tunic -->
+				<item id="5295" min="1" max="1" chance="10.53" /> <!-- Sealed Tallum Gloves -->
+				<item id="5304" min="1" max="1" chance="7.094" /> <!-- Sealed Tallum Tunic -->
 				<item id="8683" min="1" max="1" chance="0.75" /> <!-- Tiphon's Spear -->
 				<item id="8684" min="1" max="1" chance="0.75" /> <!-- Shyeed's Bow -->
-				<item id="729" min="1" max="1" chance="2.865" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="729" min="1" max="1" chance="2.773" /> <!-- Scroll: Enchant Weapon (A-grade) -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
@@ -1048,25 +1004,8 @@
 				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="79.71" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="30" />
-			<height normal="33" />
-		</collision>
 	</npc>
 	<npc id="25817" level="72" type="L2Monster" name="Heaven's Palace Sniper Captain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1142,9 +1081,9 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>MALE</sex>
-		<acquire exp="540998" sp="129" />
+		<acquire exp="540998" sp="129" raidPoints="0" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="297703" hpRegen="171.270903950157" mp="1507" mpRegen="3" />
+			<vitals hp="297702.920985" hpRegen="310.756323" mp="1820.695" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="150" />
@@ -1155,27 +1094,28 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="14763" level="1" /> <!-- Raid Boss (Lv. 75) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14431" level="1" /> <!-- Strike -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="14763" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>OMAN</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="44" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="5318" min="1" max="1" chance="4.899" /> <!-- Sealed Majestic Gauntlets -->
-				<item id="5319" min="1" max="1" chance="3.22" /> <!-- Sealed Majestic Boots -->
-				<item id="5315" min="1" max="1" chance="2.328" /> <!-- Sealed Shield of Nightmare -->
-				<item id="5316" min="1" max="1" chance="1.45" /> <!-- Sealed Majestic Plate Armor -->
-				<item id="7901" min="1" max="1" chance="1.352" /> <!-- Star Buster -->
+				<item id="5318" min="1" max="1" chance="4.915" /> <!-- Sealed Majestic Gauntlets -->
+				<item id="5319" min="1" max="1" chance="3.264" /> <!-- Sealed Majestic Boots -->
+				<item id="5315" min="1" max="1" chance="2.383" /> <!-- Sealed Shield of Nightmare -->
+				<item id="5316" min="1" max="1" chance="1.525" /> <!-- Sealed Majestic Plate Armor -->
+				<item id="7901" min="1" max="1" chance="1.288" /> <!-- Star Buster -->
 				<item id="8687" min="1" max="1" chance="0.3" /> <!-- Cabrio's Hand -->
-				<item id="730" min="1" max="1" chance="11.39" /> <!-- Scroll: Enchant Armor (A-grade) -->
+				<item id="730" min="1" max="1" chance="11.28" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
@@ -1192,25 +1132,8 @@
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="79.31" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="18" />
-			<height normal="44" />
-		</collision>
 	</npc>
 	<npc id="25819" level="75" type="L2Monster" name="Heaven's Palace Healer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1247,9 +1170,9 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="540998" sp="129" />
+		<acquire exp="540998" sp="129" raidPoints="0" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="297703" hpRegen="171.270903950157" mp="1507" mpRegen="3" />
+			<vitals hp="297702.920985" hpRegen="310.756323" mp="1820.695" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="150" />
@@ -1260,27 +1183,28 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="14764" level="1" /> <!-- Raid Boss (Lv. 75) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14431" level="1" /> <!-- Strike -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="14764" level="1" /> <!-- Raid Boss (Lv. 75) -->
+			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
 				<clan>OMAN</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="24" />
+			<height normal="49" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="5308" min="1" max="1" chance="3.578" /> <!-- Sealed Dark Crystal Robe -->
-				<item id="5326" min="1" max="1" chance="2.413" /> <!-- Sealed Robe of Nightmare -->
-				<item id="5329" min="1" max="1" chance="2.328" /> <!-- Sealed Majestic Robe -->
+				<item id="5308" min="1" max="1" chance="3.62" /> <!-- Sealed Dark Crystal Robe -->
+				<item id="5326" min="1" max="1" chance="2.453" /> <!-- Sealed Robe of Nightmare -->
+				<item id="5329" min="1" max="1" chance="2.377" /> <!-- Sealed Majestic Robe -->
 				<item id="8683" min="1" max="1" chance="0.75" /> <!-- Tiphon's Spear -->
 				<item id="8685" min="1" max="1" chance="0.75" /> <!-- Sobekk's Hurricane -->
-				<item id="729" min="1" max="1" chance="1.479" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-				<item id="6570" min="1" max="1" chance="1.404" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="729" min="1" max="1" chance="1.509" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="6570" min="1" max="1" chance="1.45" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
@@ -1296,25 +1220,8 @@
 				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="81.85" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="24" />
-			<height normal="49" />
-		</collision>
 	</npc>
 	<npc id="25821" level="75" type="L2Monster" name="Heaven's Palace Goddess Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1359,7 +1266,7 @@
 		<sex>MALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="66024" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="72064.37313" hpRegen="8.5" mp="28293.357" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="150" />
@@ -1373,8 +1280,8 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1397,7 +1304,7 @@
 		<sex>MALE</sex>
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="66024" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="72064.37313" hpRegen="8.5" mp="28293.357" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="150" />
@@ -1411,8 +1318,8 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1572,7 +1479,7 @@
 		<acquire exp="441282100" sp="105907" raidPoints="7" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="236165" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="354769.182735" hpRegen="379.3777269" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -1587,14 +1494,10 @@
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14728" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4172" level="12" /> <!-- Stun -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1607,8 +1510,8 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="36574" min="1" max="1" chance="30.24" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="17526" min="1" max="1" chance="1.987" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36574" min="1" max="1" chance="31.06" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="1.951" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
@@ -1662,20 +1565,7 @@
 				<item id="46448" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 5 -->
 				<item id="46463" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
 				<item id="46508" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="25826" level="95" type="L2Monster" name="Nameless Subject" title="Raid Fighter">
@@ -1777,7 +1667,7 @@
 		<sex>MALE</sex>
 		<acquire exp="2508637" sp="602" />
 		<stats str="79" int="74" dex="42" wit="65" con="75" men="72">
-			<vitals hp="242366" hpRegen="108.35639820142" mp="610" mpRegen="2.1" />
+			<vitals hp="242365.99725" hpRegen="5.5" mp="737.199" mpRegen="2.1" />
 			<speed>
 				<walk ground="27" />
 				<run ground="150" />
@@ -1788,31 +1678,25 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="14286" level="1" /> <!-- Teleport -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="500" />
-		<dropLists>
-			<drop>
-				<item id="2497" min="1" max="1" chance="8.309" /> <!-- Full Plate Shield -->
-				<item id="473" min="1" max="1" chance="3.415" /> <!-- Divine Stockings -->
-				<item id="2438" min="1" max="1" chance="2.683" /> <!-- Full Plate Boots -->
-				<item id="7891" min="1" max="1" chance="1.503" /> <!-- Ecliptic Axe -->
-				<item id="2503" min="1" max="1" chance="1.479" /> <!-- Yaksa Mace -->
-				<item id="7897" min="1" max="1" chance="1.479" /> <!-- Dwarven Hammer -->
-				<item id="6573" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="59.85" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="20" grown="25" />
 			<height normal="35" grown="41.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="2497" min="1" max="1" chance="8.288" /> <!-- Full Plate Shield -->
+				<item id="473" min="1" max="1" chance="3.544" /> <!-- Divine Stockings -->
+				<item id="2438" min="1" max="1" chance="2.555" /> <!-- Full Plate Boots -->
+				<item id="7891" min="1" max="1" chance="1.59" /> <!-- Ecliptic Axe -->
+				<item id="7897" min="1" max="1" chance="1.561" /> <!-- Dwarven Hammer -->
+				<item id="2503" min="1" max="1" chance="1.542" /> <!-- Yaksa Mace -->
+				<item id="6573" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25829" level="45" type="L2Monster" name="Mertes">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2221,10 +2105,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="79392320" sp="19054" />
+		<acquire exp="79392320" sp="19054" raidPoints="0" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="556686" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="836258.274135" hpRegen="341.1770035" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="210" />
@@ -2239,70 +2123,50 @@
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
 		<skillList>
+			<skill id="4098" level="12" /> <!-- Silence -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14729" level="1" /> <!-- Raid Boss (Lv. 92) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4098" level="12" /> <!-- Silence -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<dropLists>
-			<drop>
-				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17527" min="1" max="1" chance="70.32" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36779" min="1" max="1" chance="4.617" /> <!-- Recipe: Twilight Shield (60%) -->
-				<item id="36850" min="1" max="1" chance="4.581" /> <!-- Twilight Glove Ingredient -->
-				<item id="36840" min="1" max="1" chance="4.581" /> <!-- Twilight Boot Ingredient -->
-				<item id="36788" min="1" max="1" chance="4.578" /> <!-- Recipe: Twilight Gloves (60%) -->
-				<item id="36784" min="1" max="1" chance="4.573" /> <!-- Recipe: Twilight Leather Boots (60%) -->
-				<item id="36774" min="1" max="1" chance="4.569" /> <!-- Recipe: Twilight Helmet (60%) -->
-				<item id="36841" min="1" max="1" chance="4.561" /> <!-- Twilight Shield Ingredient -->
-				<item id="36790" min="1" max="1" chance="4.556" /> <!-- Recipe: Twilight Sigil (60%) -->
-				<item id="36851" min="1" max="1" chance="4.546" /> <!-- Twilight Shoe Ingredient -->
-				<item id="36836" min="1" max="1" chance="4.544" /> <!-- Twilight Helmet Ingredient -->
-				<item id="36846" min="1" max="1" chance="4.542" /> <!-- Twilight Leather Boot Ingredient -->
-				<item id="36777" min="1" max="1" chance="4.541" /> <!-- Recipe: Twilight Gauntlets (60%) -->
-				<item id="36847" min="1" max="1" chance="4.532" /> <!-- Twilight Circlet Ingredient -->
-				<item id="36780" min="1" max="1" chance="4.521" /> <!-- Recipe: Twilight Leather Helmet (60%) -->
-				<item id="36783" min="1" max="1" chance="4.519" /> <!-- Recipe: Twilight Leather Gloves (60%) -->
-				<item id="36839" min="1" max="1" chance="4.518" /> <!-- Twilight Gauntlet Ingredient -->
-				<item id="36842" min="1" max="1" chance="4.518" /> <!-- Twilight Leather Helmet Ingredient -->
-				<item id="36778" min="1" max="1" chance="4.515" /> <!-- Recipe: Twilight Boots (60%) -->
-				<item id="36845" min="1" max="1" chance="4.505" /> <!-- Twilight Leather Glove Ingredient -->
-				<item id="36785" min="1" max="1" chance="4.496" /> <!-- Recipe: Twilight Circlet (60%) -->
-				<item id="36852" min="1" max="1" chance="4.478" /> <!-- Twilight Sigil Ingredient -->
-				<item id="36789" min="1" max="1" chance="4.485" /> <!-- Recipe: Twilight Shoes (60%) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="50" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="70.45" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36784" min="1" max="1" chance="4.617" /> <!-- Recipe: Twilight Leather Boots (60%) -->
+				<item id="36788" min="1" max="1" chance="4.616" /> <!-- Recipe: Twilight Gloves (60%) -->
+				<item id="36840" min="1" max="1" chance="4.614" /> <!-- Twilight Boot Ingredient -->
+				<item id="36790" min="1" max="1" chance="4.602" /> <!-- Recipe: Twilight Sigil (60%) -->
+				<item id="36778" min="1" max="1" chance="4.602" /> <!-- Recipe: Twilight Boots (60%) -->
+				<item id="36777" min="1" max="1" chance="4.593" /> <!-- Recipe: Twilight Gauntlets (60%) -->
+				<item id="36850" min="1" max="1" chance="4.581" /> <!-- Twilight Glove Ingredient -->
+				<item id="36845" min="1" max="1" chance="4.568" /> <!-- Twilight Leather Glove Ingredient -->
+				<item id="36779" min="1" max="1" chance="4.564" /> <!-- Recipe: Twilight Shield (60%) -->
+				<item id="36851" min="1" max="1" chance="4.563" /> <!-- Twilight Shoe Ingredient -->
+				<item id="36785" min="1" max="1" chance="4.561" /> <!-- Recipe: Twilight Circlet (60%) -->
+				<item id="36841" min="1" max="1" chance="4.561" /> <!-- Twilight Shield Ingredient -->
+				<item id="36836" min="1" max="1" chance="4.556" /> <!-- Twilight Helmet Ingredient -->
+				<item id="36780" min="1" max="1" chance="4.531" /> <!-- Recipe: Twilight Leather Helmet (60%) -->
+				<item id="36789" min="1" max="1" chance="4.518" /> <!-- Recipe: Twilight Shoes (60%) -->
+				<item id="36839" min="1" max="1" chance="4.517" /> <!-- Twilight Gauntlet Ingredient -->
+				<item id="36842" min="1" max="1" chance="4.516" /> <!-- Twilight Leather Helmet Ingredient -->
+				<item id="36847" min="1" max="1" chance="4.515" /> <!-- Twilight Circlet Ingredient -->
+				<item id="36774" min="1" max="1" chance="4.503" /> <!-- Recipe: Twilight Helmet (60%) -->
+				<item id="36783" min="1" max="1" chance="4.502" /> <!-- Recipe: Twilight Leather Gloves (60%) -->
+				<item id="36846" min="1" max="1" chance="4.5" /> <!-- Twilight Leather Boot Ingredient -->
+				<item id="36852" min="1" max="1" chance="4.482" /> <!-- Twilight Sigil Ingredient -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25838" level="93" type="L2RaidBoss" name="Mukshu the Coward" title="Raid Boss">
 		<parameters>
@@ -2313,10 +2177,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="102758769" sp="24662" />
+		<acquire exp="102758769" sp="24662" raidPoints="0" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="170948" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="256799.439705" hpRegen="348.6550231" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2331,60 +2195,39 @@
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="14733" level="1" /> <!-- Raid Boss (Lv. 93) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapon -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-			<skill id="14618" level="1" /> <!-- Knock Back Resistance -->
-			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<dropLists>
-			<drop>
-				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17527" min="1" max="1" chance="68.89" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36849" min="1" max="1" chance="4.2465" /> <!-- Twilight Stocking Ingredient -->
-				<item id="36837" min="1" max="1" chance="4.2275" /> <!-- Twilight Breastplate Ingredient -->
-				<item id="36787" min="1" max="1" chance="4.202" /> <!-- Recipe: Twilight Stockings (60%) -->
-				<item id="36844" min="1" max="1" chance="4.1925" /> <!-- Twilight Leather Legging Ingredient -->
-				<item id="36775" min="1" max="1" chance="4.186" /> <!-- Recipe: Twilight Breastplate (60%) -->
-				<item id="36776" min="1" max="1" chance="4.1825" /> <!-- Recipe: Twilight Gaiters (60%) -->
-				<item id="36838" min="1" max="1" chance="4.1795" /> <!-- Twilight Gaiter Ingredient -->
-				<item id="36843" min="1" max="1" chance="4.1745" /> <!-- Twilight Leather Armor Ingredient -->
-				<item id="36781" min="1" max="1" chance="4.1665" /> <!-- Recipe: Twilight Leather Armor (60%) -->
-				<item id="36782" min="1" max="1" chance="4.1135" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
-				<item id="36848" min="1" max="1" chance="4.109" /> <!-- Twilight Tunic Ingredient -->
-				<item id="36786" min="1" max="1" chance="4.0995" /> <!-- Recipe: Twilight Tunic (60%) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="26" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="70.9" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36849" min="1" max="1" chance="4.2485" /> <!-- Twilight Stocking Ingredient -->
+				<item id="36775" min="1" max="1" chance="4.2355" /> <!-- Recipe: Twilight Breastplate (60%) -->
+				<item id="36843" min="1" max="1" chance="4.226" /> <!-- Twilight Leather Armor Ingredient -->
+				<item id="36787" min="1" max="1" chance="4.2245" /> <!-- Recipe: Twilight Stockings (60%) -->
+				<item id="36844" min="1" max="1" chance="4.2065" /> <!-- Twilight Leather Legging Ingredient -->
+				<item id="36781" min="1" max="1" chance="4.197" /> <!-- Recipe: Twilight Leather Armor (60%) -->
+				<item id="36837" min="1" max="1" chance="4.1905" /> <!-- Twilight Breastplate Ingredient -->
+				<item id="36848" min="1" max="1" chance="4.1665" /> <!-- Twilight Tunic Ingredient -->
+				<item id="36782" min="1" max="1" chance="4.1395" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
+				<item id="36838" min="1" max="1" chance="4.1345" /> <!-- Twilight Gaiter Ingredient -->
+				<item id="36786" min="1" max="1" chance="4.1285" /> <!-- Recipe: Twilight Tunic (60%) -->
+				<item id="36776" min="1" max="1" chance="4.0975" /> <!-- Recipe: Twilight Gaiters (60%) -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25839" level="96" type="L2RaidBoss" name="Blind Hornafi" title="Raid Boss">
 		<parameters>
@@ -2396,11 +2239,11 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="201701376" sp="48408" />
+		<acquire exp="201701376" sp="48408" raidPoints="0" />
 		<equipment rhand="75" lhand="103" /> <!-- Caliburs / Tower Shield -->
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="595103" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="893968.7001" hpRegen="371.5754571" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="36" />
 				<run ground="255" />
@@ -2415,20 +2258,21 @@
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
 		<skillList>
+			<skill id="4073" level="12" /> <!-- Stun -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14734" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4073" level="12" /> <!-- Stun -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="44" />
+			<height normal="77" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17527" min="1" max="1" chance="50.7" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="50.82" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="35297" min="1" max="1" chance="0.3" /> <!-- Specter Cutter Fragment -->
 				<item id="35422" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Slasher (60%) -->
 				<item id="35423" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Avenger (60%) -->
@@ -2451,25 +2295,8 @@
 				<item id="35305" min="1" max="1" chance="0.3" /> <!-- Specter Caster Fragment -->
 				<item id="35306" min="1" max="1" chance="0.3" /> <!-- Specter Retributer Fragment -->
 				<item id="35420" min="1" max="1" chance="0.3" /> <!-- Recipe: Specter Shaper (60%) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="44" />
-			<height normal="77" />
-		</collision>
 	</npc>
 	<npc id="25840" level="94" type="L2RaidBoss" name="Enraged Master Kinen" title="Raid Boss">
 		<parameters>
@@ -2484,10 +2311,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="116034352" sp="27848" />
+		<acquire exp="116034352" sp="27848" raidPoints="0" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="575603" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="864675.947565" hpRegen="356.2141053" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="255" />
@@ -2502,29 +2329,27 @@
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="14730" level="1" /> <!-- Raid Boss (Lv. 94) -->
+			<skill id="4486" level="12" /> <!-- Decrease P. Def. -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="7" /> <!-- Dagger -->
-			<skill id="4486" level="12" /> <!-- Decrease P. Def. -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="20" />
+			<height normal="54" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="36574" min="1" max="1" chance="30.17" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="17526" min="1" max="1" chance="1.989" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36574" min="1" max="1" chance="28.78" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="2.064" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 				<item id="38001" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Gloves Crafting Pack - Light Armor -->
 				<item id="38002" min="1" max="1" chance="0.75" /> <!-- Twilight Leather Boots Crafting Pack - Light Armor -->
 				<item id="38003" min="1" max="1" chance="0.75" /> <!-- Twilight Circlet Crafting Pack - Robe -->
@@ -2542,25 +2367,8 @@
 				<item id="37993" min="1" max="1" chance="0.75" /> <!-- Twilight Breastplate Crafting Pack - Heavy Armor -->
 				<item id="37992" min="1" max="1" chance="0.75" /> <!-- Twilight Helmet Crafting Pack - Heavy Armor -->
 				<item id="38008" min="1" max="1" chance="0.75" /> <!-- Twilight Sigil Crafting Pack - Robe -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="54" />
-		</collision>
 	</npc>
 	<npc id="25841" level="95" type="L2RaidBoss" name="Sir Lesyinda of the Black Shadow" title="Raid Boss">
 		<parameters>
@@ -2571,11 +2379,11 @@
 		</parameters>
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="186239900" sp="44697" />
+		<acquire exp="186239900" sp="44697" raidPoints="0" />
 		<equipment rhand="78" /> <!-- Great Sword -->
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="589112" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="884969.32854" hpRegen="363.8542499" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="240" />
@@ -2590,30 +2398,27 @@
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="14731" level="1" /> <!-- Raid Boss (Lv. 95) -->
+			<skill id="14357" level="1" /> <!-- Black Lotus -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
-			<skill id="14357" level="1" /> <!-- Black Lotus -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="25" />
+			<height normal="62" grown="48" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17527" min="1" max="1" chance="80.75" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="79.47" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="35310" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlet Ingredient -->
 				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
 				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
@@ -2636,25 +2441,8 @@
 				<item id="35322" min="1" max="1" chance="0.3" /> <!-- Seraph Shoe Ingredient -->
 				<item id="35323" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Ingredient -->
 				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="25" />
-			<height normal="62" grown="48" />
-		</collision>
 	</npc>
 	<npc id="25842" level="95" type="L2Monster" name="Black Beast" title="Raid Fighter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2915,10 +2703,10 @@
 		</parameters>
 		<race>DRAGON</race>
 		<sex>MALE</sex>
-		<acquire exp="224759808" sp="53942" />
+		<acquire exp="224759808" sp="53942" raidPoints="0" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="595103" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="893968.7001" hpRegen="371.5754571" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="43" />
 				<run ground="255" />
@@ -2933,39 +2721,41 @@
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
 		<skillList>
+			<skill id="14360" level="1" /> <!-- Flame Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14732" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14360" level="1" /> <!-- Flame Attack -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 		</skillList>
+		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="35" />
+			<height normal="93" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17527" min="1" max="1" chance="29.98" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="46489" min="1" max="1" chance="1.313" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="1.297" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46474" min="1" max="1" chance="1.213" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46475" min="1" max="1" chance="1.128" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46505" min="1" max="1" chance="1.105" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46490" min="1" max="1" chance="1.044" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="17527" min="1" max="1" chance="28.95" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="46474" min="1" max="1" chance="1.266" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="1.213" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="1.191" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="1.084" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="1.069" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="1.06" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="35309" min="1" max="1" chance="0.75" /> <!-- Seraph Gaiter Ingredient -->
 				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="35315" min="1" max="1" chance="0.75" /> <!-- Seraph Leather Legging Ingredient -->
 				<item id="35320" min="1" max="1" chance="0.75" /> <!-- Seraph Stocking Ingredient -->
-				<item id="35433" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gaiters (60%) -->
 				<item id="46461" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46460" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="35439" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
 				<item id="46444" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46445" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46446" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="35439" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="46459" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="35433" min="1" max="1" chance="0.75" /> <!-- Recipe: Seraph Gaiters (60%) -->
 				<item id="46492" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
 				<item id="46493" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
 				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
@@ -2977,26 +2767,8 @@
 				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
 				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
 				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
-		<collision>
-			<radius normal="35" />
-			<height normal="93" />
-		</collision>
 	</npc>
 	<npc id="25846" level="96" type="L2RaidBoss" name="Yoentumak the Waiter" title="Raid Boss">
 		<parameters>
@@ -3010,10 +2782,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="328495104" sp="78838" />
+		<acquire exp="328495104" sp="78838" raidPoints="0" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="303889" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="456504.8574" hpRegen="371.5754571" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="270" />
@@ -3028,30 +2800,26 @@
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
 		<skillList>
+			<skill id="4118" level="12" /> <!-- Paralysis -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14735" level="1" /> <!-- Raid Boss (Lv. 96) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4118" level="12" /> <!-- Paralysis -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-			<skill id="14618" level="1" /> <!-- Knock Back Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
+		<collision>
+			<radius normal="18" />
+			<height normal="49" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="36586" min="1" max="1" chance="100" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17527" min="1" max="1" chance="51.04" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="49.01" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="35309" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiter Ingredient -->
 				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
 				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
@@ -3064,25 +2832,8 @@
 				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
 				<item id="35314" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Ingredient -->
 				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="18" />
-			<height normal="49" />
-		</collision>
 	</npc>
 	<npc id="25855" level="104" type="L2RaidBoss" name="Maliss" title="Grand Priest of Blood">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3429,11 +3180,11 @@
 			<height normal="45" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16982" level="1" /> <!-- Devil Horns of Shield -->
 			<skill id="16981" level="1" /> <!-- Fallen Execution -->
 			<skill id="14194" level="1" /> <!-- Range Stun -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 	</npc>
@@ -3467,11 +3218,11 @@
 			<height normal="39" />
 		</collision>
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="16983" level="1" /> <!-- Embryo's Blessing -->
 			<skill id="23707" level="1" /> <!-- Chaos Fire -->
 			<skill id="16984" level="1" /> <!-- Blind Spark -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 	</npc>
@@ -3523,10 +3274,10 @@
 		</parameters>
 		<race>PLANT</race>
 		<sex>MALE</sex>
-		<acquire exp="198916032" sp="47739" />
+		<acquire exp="198916032" sp="47739" raidPoints="0" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3453619" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="5188056.316305" hpRegen="356.2141053" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -3541,14 +3292,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14087" level="1" /> <!-- Apherus' Binding -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14723" level="1" /> <!-- Raid Boss (Lv. 94) -->
 			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14087" level="1" /> <!-- Apherus' Binding -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="800" />
 		<collision>
@@ -3557,14 +3306,14 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="17347" min="1" max="1" chance="5.395" /> <!-- Twilight Leather Gloves - Light Armor -->
-				<item id="17352" min="1" max="1" chance="5.314" /> <!-- Twilight Gloves - Robe -->
+				<item id="17352" min="1" max="1" chance="5.363" /> <!-- Twilight Gloves - Robe -->
+				<item id="17347" min="1" max="1" chance="5.343" /> <!-- Twilight Leather Gloves - Light Armor -->
 				<item id="17330" min="1" max="1" chance="0.3" /> <!-- Apocalypse Thrower -->
 				<item id="17334" min="1" max="1" chance="0.3" /> <!-- Apocalypse Retributer -->
-				<item id="17526" min="1" max="1" chance="5.631" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46474" min="1" max="1" chance="1.156" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46489" min="1" max="1" chance="1.15" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46504" min="1" max="1" chance="1.099" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="17526" min="1" max="1" chance="5.541" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46474" min="1" max="1" chance="1.116" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="1.093" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="1.07" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46505" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
@@ -3582,20 +3331,7 @@
 				<item id="46447" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 4 -->
 				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
 				<item id="46507" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="25867" level="98" type="L2RaidBoss" name="Spezion" title="Raid Boss">
@@ -3885,7 +3621,7 @@
 		<acquire exp="159805184" sp="38353" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1919368.982085" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="1919368.982085" hpRegen="319.2293199" mp="37388.722" mpRegen="3" />
 			<attack physical="22357.8239450089" magical="4004.46625608211" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2959.60951220743" magical="1625.94816873311" />
 			<speed>
@@ -3904,14 +3640,12 @@
 			<height normal="80" />
 		</collision>
 		<skillList>
+			<skill id="14645" level="1" /> <!-- Dark Arrow -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14720" level="1" /> <!-- Raid Boss (Lv. 88) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14645" level="1" /> <!-- Dark Arrow -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
@@ -3979,6 +3713,8 @@
 			<height normal="60" />
 		</collision>
 		<skillList>
+			<skill id="14519" level="1" /> <!-- Fire Pit of Hell -->
+			<skill id="14516" level="1" /> <!-- Darkness Scream -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
@@ -3988,9 +3724,6 @@
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14519" level="1" /> <!-- Fire Pit of Hell -->
-			<skill id="14516" level="1" /> <!-- Darkness Scream -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -4117,7 +3850,8 @@
 			<height normal="60" />
 		</collision>
 		<skillList>
-			<skill id="14712" level="1" /> <!-- Raid Boss (Lv. 96) -->
+			<skill id="14520" level="1" /> <!-- Ice Box of Hell -->
+			<skill id="14519" level="1" /> <!-- Fire Pit of Hell -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
@@ -4127,9 +3861,6 @@
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14520" level="1" /> <!-- Ice Box of Hell -->
-			<skill id="14519" level="1" /> <!-- Fire Pit of Hell -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -4395,10 +4126,10 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="42359318" sp="10166" />
+		<acquire exp="42359318" sp="10166" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="663776" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="997130.242665" hpRegen="379.3777269" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="270" />
@@ -4413,39 +4144,36 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="14749" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="14012" level="1" /> <!-- Iron Deal -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
+			<skill id="14749" level="1" /> <!-- Raid Boss (Lv. 97) -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
 			<radius normal="80" />
 			<height normal="91" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17387" min="1" max="1" chance="0.03" /> <!-- Specter Stormer -->
+				<item id="17390" min="1" max="1" chance="0.03" /> <!-- Specter Buster -->
+				<item id="17391" min="1" max="1" chance="0.03" /> <!-- Specter Caster -->
+				<item id="9557" min="1" max="1" chance="2.337" /> <!-- Holy Crystal -->
+				<item id="17526" min="1" max="1" chance="0.75" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="25881" level="98" type="L2Monster" name="Veridan" title="Hell's Warden">
+	<npc id="25881" level="99" type="L2Monster" name="Veridan" title="Hell's Warden">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="234222352" sp="56213" />
+		<acquire exp="2147483647" sp="10340349" raidPoints="0" />
 		<equipment rhand="5800" lhand="5799" /> <!-- Nephilim Lord / Nephilim Lord -->
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4540240" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="6820387.364565" hpRegen="395.225454" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="56" />
 				<run ground="180" />
@@ -4460,6 +4188,7 @@
 		</stats>
 		<status undying="false" isDeathPenalty="true" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14714" level="1" /> <!-- Raid Boss (Lv. 98) -->
@@ -4468,11 +4197,8 @@
 			<skill id="4438" level="3" /> <!-- Greater Sleep Resistance -->
 			<skill id="4437" level="3" /> <!-- Greater Bleed Resistance -->
 			<skill id="4436" level="3" /> <!-- Greater Poison Resistance -->
-			<skill id="4435" level="3" /> <!-- Greater Stun Resistance -->
+			<skill id="4435" level="3" /> <!-- High Stun Attack Resistance -->
 			<skill id="4439" level="3" /> <!-- Greater Hold Resistance -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -4483,6 +4209,90 @@
 			<radius normal="13" />
 			<height normal="55" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="36586" min="1" max="1" chance="80.84" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17527" min="1" max="1" chance="34.78" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="20.38" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="17526" min="1" max="1" chance="8.552" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35436" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shield (60%) -->
+				<item id="35435" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Boots (60%) -->
+				<item id="35434" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gauntlets (60%) -->
+				<item id="35433" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gaiters (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
+				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
+				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
+				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
+				<item id="35444" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Stockings (60%) -->
+				<item id="35445" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Gloves (60%) -->
+				<item id="35446" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="35447" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Sigil (60%) -->
+				<item id="35432" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="35431" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Helmet (60%) -->
+				<item id="35307" min="1" max="1" chance="0.3" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35308" min="1" max="1" chance="0.3" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35309" min="1" max="1" chance="0.3" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35310" min="1" max="1" chance="0.3" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35311" min="1" max="1" chance="0.3" /> <!-- Seraph Boot Ingredient -->
+				<item id="35312" min="1" max="1" chance="0.3" /> <!-- Seraph Shield Ingredient -->
+				<item id="35313" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35314" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35315" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35316" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35323" min="1" max="1" chance="0.3" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35322" min="1" max="1" chance="0.3" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35321" min="1" max="1" chance="0.3" /> <!-- Seraph Glove Ingredient -->
+				<item id="35320" min="1" max="1" chance="0.3" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35319" min="1" max="1" chance="0.3" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35318" min="1" max="1" chance="0.3" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35317" min="1" max="1" chance="0.3" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="38033" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Boots Crafting Pack - Light Armor -->
+				<item id="38034" min="1" max="1" chance="0.075" /> <!-- Seraph Circlet Crafting Pack - Robe -->
+				<item id="38035" min="1" max="1" chance="0.075" /> <!-- Seraph Tunic Crafting Pack - Robe -->
+				<item id="38036" min="1" max="1" chance="0.075" /> <!-- Seraph Stockings Crafting Pack - Robe -->
+				<item id="38037" min="1" max="1" chance="0.075" /> <!-- Seraph Gloves Crafting Pack - Robe -->
+				<item id="38038" min="1" max="1" chance="0.075" /> <!-- Seraph Shoes Crafting Pack - Robe -->
+				<item id="38039" min="1" max="1" chance="0.075" /> <!-- Seraph Sigil Crafting Pack - Robe -->
+				<item id="38032" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38031" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38030" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Armor Crafting Pack - Light Armor -->
+				<item id="38023" min="1" max="1" chance="0.075" /> <!-- Seraph Helmet Crafting Pack - Heavy Armor -->
+				<item id="38024" min="1" max="1" chance="0.075" /> <!-- Seraph Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38025" min="1" max="1" chance="0.075" /> <!-- Seraph Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38026" min="1" max="1" chance="0.075" /> <!-- Seraph Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38027" min="1" max="1" chance="0.075" /> <!-- Seraph Boots Crafting Pack - Heavy Armor -->
+				<item id="38028" min="1" max="1" chance="0.075" /> <!-- Seraph Shield Crafting Box - Heavy Armor -->
+				<item id="38029" min="1" max="1" chance="0.075" /> <!-- Seraph Leather Helmet Crafting Pack - Light Armor -->
+				<item id="46490" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46476" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46475" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46506" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46491" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46445" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46492" min="1" max="1" chance="0.0075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="0.0075" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46477" min="1" max="1" chance="0.0075" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46446" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46508" min="1" max="1" chance="0.0075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46493" min="1" max="1" chance="0.0075" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46507" min="1" max="1" chance="0.0075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46461" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46494" min="1" max="1" chance="0.003" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.003" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46464" min="1" max="1" chance="0.003" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46463" min="1" max="1" chance="0.003" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46462" min="1" max="1" chance="0.003" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46449" min="1" max="1" chance="0.003" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46448" min="1" max="1" chance="0.003" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="0.003" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46509" min="1" max="1" chance="0.003" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25882" level="88" type="L2RaidBoss" name="Zellaka" title="Lord of Kartia">
 		<parameters>
@@ -4495,10 +4305,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="4570101620" sp="5484121" />
+		<acquire exp="2147483647" sp="5484121" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3194997" hpRegen="8.5" mp="1846" mpRegen="3" />
+			<vitals hp="2015770.270425" hpRegen="8.5" mp="3027.463" mpRegen="3" />
 			<speed>
 				<walk ground="34" />
 				<run ground="200" />
@@ -4513,74 +4323,84 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14940" level="1" /> <!-- Rage Grand Blow -->
 			<skill id="14943" level="1" /> <!-- Dimensional Wring -->
 			<skill id="16550" level="1" /> <!-- Zellaka's Quake -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
+		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
+			<clanList>
+				<clan>UNDEAD</clan>
+			</clanList>
+		</ai>
+		<collision>
+			<radius normal="30" />
+			<height normal="54" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="17526" min="1" max="1" chance="50.58" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="17527" min="1" max="1" chance="48.84" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36574" min="1" max="1" chance="25.27" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="36586" min="1" max="1" chance="24.25" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="36751" min="1" max="1" chance="3.639" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
-				<item id="36737" min="1" max="1" chance="3.634" /> <!-- Recipe: Requiem Stormer (60%) -->
-				<item id="36818" min="1" max="1" chance="3.633" /> <!-- Immortal Stocking Ingredient -->
-				<item id="36817" min="1" max="1" chance="3.632" /> <!-- Immortal Tunic Ingredient -->
-				<item id="36816" min="1" max="1" chance="3.63" /> <!-- Immortal Circlet Ingredient -->
-				<item id="36736" min="1" max="1" chance="3.63" /> <!-- Recipe: Requiem Fighter (60%) -->
-				<item id="36757" min="1" max="1" chance="3.63" /> <!-- Recipe: Immortal Gloves (60%) -->
-				<item id="36753" min="1" max="1" chance="3.629" /> <!-- Recipe: Immortal Leather Boots (60%) -->
-				<item id="36758" min="1" max="1" chance="3.628" /> <!-- Recipe: Immortal Shoes (60%) -->
-				<item id="36747" min="1" max="1" chance="3.627" /> <!-- Recipe: Immortal Boots (60%) -->
-				<item id="36814" min="1" max="1" chance="3.625" /> <!-- Immortal Leather Glove Ingredient -->
-				<item id="36801" min="1" max="1" chance="3.621" /> <!-- Requiem Shooter Fragment -->
-				<item id="36815" min="1" max="1" chance="3.614" /> <!-- Immortal Leather Boot Ingredient -->
-				<item id="36755" min="1" max="1" chance="3.612" /> <!-- Recipe: Immortal Tunic (60%) -->
-				<item id="36794" min="1" max="1" chance="3.609" /> <!-- Requiem Shaper Fragment -->
-				<item id="36810" min="1" max="1" chance="3.609" /> <!-- Immortal Shield Ingredient -->
-				<item id="36796" min="1" max="1" chance="3.598" /> <!-- Requiem Slasher Fragment -->
-				<item id="36738" min="1" max="1" chance="3.591" /> <!-- Recipe: Requiem Thrower (60%) -->
-				<item id="36805" min="1" max="1" chance="3.586" /> <!-- Immortal Helmet Ingredient -->
-				<item id="36819" min="1" max="1" chance="3.583" /> <!-- Immortal Glove Ingredient -->
-				<item id="36740" min="1" max="1" chance="3.582" /> <!-- Recipe: Requiem Buster (60%) -->
-				<item id="36808" min="1" max="1" chance="3.58" /> <!-- Immortal Gauntlet Ingredient -->
-				<item id="36733" min="1" max="1" chance="3.579" /> <!-- Recipe: Requiem Cutter (60%) -->
-				<item id="36795" min="1" max="1" chance="3.578" /> <!-- Requiem Cutter Fragment -->
-				<item id="36752" min="1" max="1" chance="3.574" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
-				<item id="36797" min="1" max="1" chance="3.571" /> <!-- Requiem Avenger Fragment -->
-				<item id="36744" min="1" max="1" chance="3.571" /> <!-- Recipe: Immortal Breastplate (60%) -->
-				<item id="36754" min="1" max="1" chance="3.568" /> <!-- Recipe: Immortal Circlet (60%) -->
-				<item id="36749" min="1" max="1" chance="3.568" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
-				<item id="36800" min="1" max="1" chance="3.567" /> <!-- Requiem Thrower Fragment -->
-				<item id="36750" min="1" max="1" chance="3.567" /> <!-- Recipe: Immortal Leather Armor (60%) -->
-				<item id="36734" min="1" max="1" chance="3.566" /> <!-- Recipe: Requiem Slasher (60%) -->
-				<item id="36748" min="1" max="1" chance="3.564" /> <!-- Recipe: Immortal Shield (60%) -->
-				<item id="36799" min="1" max="1" chance="3.561" /> <!-- Requiem Stormer Fragment -->
-				<item id="36743" min="1" max="1" chance="3.56" /> <!-- Recipe: Immortal Helmet (60%) -->
-				<item id="36803" min="1" max="1" chance="3.557" /> <!-- Requiem Caster Fragment -->
-				<item id="36759" min="1" max="1" chance="3.558" /> <!-- Recipe: Immortal Sigil (60%) -->
-				<item id="36812" min="1" max="1" chance="3.553" /> <!-- Immortal Leather Armor Ingredient -->
-				<item id="36746" min="1" max="1" chance="3.553" /> <!-- Recipe: Immortal Gauntlets (60%) -->
-				<item id="36735" min="1" max="1" chance="3.547" /> <!-- Recipe: Requiem Avenger (60%) -->
-				<item id="36821" min="1" max="1" chance="3.548" /> <!-- Immortal Sigil Ingredient -->
-				<item id="36741" min="1" max="1" chance="3.543" /> <!-- Recipe: Requiem Caster (60%) -->
-				<item id="36756" min="1" max="1" chance="3.543" /> <!-- Recipe: Immortal Stockings (60%) -->
-				<item id="36809" min="1" max="1" chance="3.533" /> <!-- Immortal Boot Ingredient -->
-				<item id="36807" min="1" max="1" chance="3.528" /> <!-- Immortal Gaiter Ingredient -->
-				<item id="36806" min="1" max="1" chance="3.528" /> <!-- Immortal Breastplate Ingredient -->
-				<item id="36732" min="1" max="1" chance="3.524" /> <!-- Recipe: Requiem Shaper (60%) -->
-				<item id="36813" min="1" max="1" chance="3.524" /> <!-- Immortal Leather Legging Ingredient -->
-				<item id="36811" min="1" max="1" chance="3.522" /> <!-- Immortal Leather Helmet Ingredient -->
-				<item id="36739" min="1" max="1" chance="3.522" /> <!-- Recipe: Requiem Shooter (60%) -->
-				<item id="36742" min="1" max="1" chance="3.52" /> <!-- Recipe: Requiem Retributer (60%) -->
-				<item id="36798" min="1" max="1" chance="3.519" /> <!-- Requiem Fighter Fragment -->
-				<item id="36804" min="1" max="1" chance="3.517" /> <!-- Requiem Retributer Fragment -->
-				<item id="36802" min="1" max="1" chance="3.516" /> <!-- Requiem Buster Fragment -->
-				<item id="36745" min="1" max="1" chance="3.511" /> <!-- Recipe: Immortal Gaiters (60%) -->
-				<item id="36820" min="1" max="1" chance="3.504" /> <!-- Immortal Shoe Ingredient -->
+				<item id="17526" min="1" max="1" chance="50.2" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="49.76" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="25.78" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="36586" min="1" max="1" chance="25.16" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="36821" min="1" max="1" chance="3.675" /> <!-- Immortal Sigil Ingredient -->
+				<item id="36794" min="1" max="1" chance="3.638" /> <!-- Requiem Shaper Fragment -->
+				<item id="36815" min="1" max="1" chance="3.637" /> <!-- Immortal Leather Boot Ingredient -->
+				<item id="36734" min="1" max="1" chance="3.636" /> <!-- Recipe: Requiem Slasher (60%) -->
+				<item id="36811" min="1" max="1" chance="3.635" /> <!-- Immortal Leather Helmet Ingredient -->
+				<item id="36816" min="1" max="1" chance="3.633" /> <!-- Immortal Circlet Ingredient -->
+				<item id="36813" min="1" max="1" chance="3.629" /> <!-- Immortal Leather Legging Ingredient -->
+				<item id="36753" min="1" max="1" chance="3.628" /> <!-- Recipe: Immortal Leather Boots (60%) -->
+				<item id="36742" min="1" max="1" chance="3.627" /> <!-- Recipe: Requiem Retributer (60%) -->
+				<item id="36732" min="1" max="1" chance="3.625" /> <!-- Recipe: Requiem Shaper (60%) -->
+				<item id="36736" min="1" max="1" chance="3.617" /> <!-- Recipe: Requiem Fighter (60%) -->
+				<item id="36817" min="1" max="1" chance="3.614" /> <!-- Immortal Tunic Ingredient -->
+				<item id="36746" min="1" max="1" chance="3.614" /> <!-- Recipe: Immortal Gauntlets (60%) -->
+				<item id="36801" min="1" max="1" chance="3.611" /> <!-- Requiem Shooter Fragment -->
+				<item id="36740" min="1" max="1" chance="3.609" /> <!-- Recipe: Requiem Buster (60%) -->
+				<item id="36737" min="1" max="1" chance="3.608" /> <!-- Recipe: Requiem Stormer (60%) -->
+				<item id="36810" min="1" max="1" chance="3.605" /> <!-- Immortal Shield Ingredient -->
+				<item id="36758" min="1" max="1" chance="3.602" /> <!-- Recipe: Immortal Shoes (60%) -->
+				<item id="36820" min="1" max="1" chance="3.598" /> <!-- Immortal Shoe Ingredient -->
+				<item id="36757" min="1" max="1" chance="3.596" /> <!-- Recipe: Immortal Gloves (60%) -->
+				<item id="36819" min="1" max="1" chance="3.593" /> <!-- Immortal Glove Ingredient -->
+				<item id="36752" min="1" max="1" chance="3.592" /> <!-- Recipe: Immortal Leather Gloves (60%) -->
+				<item id="36814" min="1" max="1" chance="3.592" /> <!-- Immortal Leather Glove Ingredient -->
+				<item id="36747" min="1" max="1" chance="3.592" /> <!-- Recipe: Immortal Boots (60%) -->
+				<item id="36744" min="1" max="1" chance="3.589" /> <!-- Recipe: Immortal Breastplate (60%) -->
+				<item id="36748" min="1" max="1" chance="3.589" /> <!-- Recipe: Immortal Shield (60%) -->
+				<item id="36739" min="1" max="1" chance="3.589" /> <!-- Recipe: Requiem Shooter (60%) -->
+				<item id="36750" min="1" max="1" chance="3.588" /> <!-- Recipe: Immortal Leather Armor (60%) -->
+				<item id="36745" min="1" max="1" chance="3.583" /> <!-- Recipe: Immortal Gaiters (60%) -->
+				<item id="36812" min="1" max="1" chance="3.579" /> <!-- Immortal Leather Armor Ingredient -->
+				<item id="36741" min="1" max="1" chance="3.578" /> <!-- Recipe: Requiem Caster (60%) -->
+				<item id="36733" min="1" max="1" chance="3.574" /> <!-- Recipe: Requiem Cutter (60%) -->
+				<item id="36743" min="1" max="1" chance="3.569" /> <!-- Recipe: Immortal Helmet (60%) -->
+				<item id="36738" min="1" max="1" chance="3.568" /> <!-- Recipe: Requiem Thrower (60%) -->
+				<item id="36806" min="1" max="1" chance="3.567" /> <!-- Immortal Breastplate Ingredient -->
+				<item id="36798" min="1" max="1" chance="3.567" /> <!-- Requiem Fighter Fragment -->
+				<item id="36759" min="1" max="1" chance="3.568" /> <!-- Recipe: Immortal Sigil (60%) -->
+				<item id="36803" min="1" max="1" chance="3.562" /> <!-- Requiem Caster Fragment -->
+				<item id="36797" min="1" max="1" chance="3.561" /> <!-- Requiem Avenger Fragment -->
+				<item id="36818" min="1" max="1" chance="3.559" /> <!-- Immortal Stocking Ingredient -->
+				<item id="36809" min="1" max="1" chance="3.552" /> <!-- Immortal Boot Ingredient -->
+				<item id="36802" min="1" max="1" chance="3.551" /> <!-- Requiem Buster Fragment -->
+				<item id="36751" min="1" max="1" chance="3.543" /> <!-- Recipe: Immortal Leather Leggings (60%) -->
+				<item id="36749" min="1" max="1" chance="3.537" /> <!-- Recipe: Immortal Leather Helmet (60%) -->
+				<item id="36796" min="1" max="1" chance="3.536" /> <!-- Requiem Slasher Fragment -->
+				<item id="36735" min="1" max="1" chance="3.531" /> <!-- Recipe: Requiem Avenger (60%) -->
+				<item id="36795" min="1" max="1" chance="3.531" /> <!-- Requiem Cutter Fragment -->
+				<item id="36754" min="1" max="1" chance="3.529" /> <!-- Recipe: Immortal Circlet (60%) -->
+				<item id="36805" min="1" max="1" chance="3.525" /> <!-- Immortal Helmet Ingredient -->
+				<item id="36804" min="1" max="1" chance="3.522" /> <!-- Requiem Retributer Fragment -->
+				<item id="36756" min="1" max="1" chance="3.517" /> <!-- Recipe: Immortal Stockings (60%) -->
+				<item id="36807" min="1" max="1" chance="3.517" /> <!-- Immortal Gaiter Ingredient -->
+				<item id="36755" min="1" max="1" chance="3.511" /> <!-- Recipe: Immortal Tunic (60%) -->
+				<item id="36808" min="1" max="1" chance="3.504" /> <!-- Immortal Gauntlet Ingredient -->
+				<item id="36800" min="1" max="1" chance="3.502" /> <!-- Requiem Thrower Fragment -->
+				<item id="36799" min="1" max="1" chance="3.501" /> <!-- Requiem Stormer Fragment -->
 				<item id="46476" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="46489" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46490" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
@@ -4602,19 +4422,7 @@
 				<item id="46461" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
 				<item id="46507" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
-			<clanList>
-				<clan>UNDEAD</clan>
-			</clanList>
-		</ai>
-		<collision>
-			<radius normal="30" />
-			<height normal="54" />
-		</collision>
 	</npc>
 	<npc id="25883" level="93" type="L2RaidBoss" name="Pelline" title="Lord of Kartia">
 		<parameters>
@@ -4626,10 +4434,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="12716516673" sp="16912967" raidPoints="7" />
+		<acquire exp="2147483647" sp="16912967" raidPoints="7" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="10492650" hpRegen="8.5" mp="2023" mpRegen="3" />
+			<vitals hp="6619969.01292" hpRegen="348.6550231" mp="3317.801" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -4644,109 +4452,106 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14941" level="1" /> <!-- Bloody Grand Blow -->
 			<skill id="14944" level="1" /> <!-- Dimensional Pierce -->
 			<skill id="14947" level="1" /> <!-- Pelline's Thirst -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
 				<clan>DEMONIC</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="36574" min="1" max="1" chance="51.18" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="36586" min="1" max="1" chance="51.13" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="50.34" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="17527" min="1" max="1" chance="48.76" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36826" min="1" max="1" chance="3.639" /> <!-- Apocalypse Cutter Fragment -->
-				<item id="36783" min="1" max="1" chance="3.638" /> <!-- Recipe: Twilight Leather Gloves (60%) -->
-				<item id="36775" min="1" max="1" chance="3.632" /> <!-- Recipe: Twilight Breastplate (60%) -->
-				<item id="36834" min="1" max="1" chance="3.631" /> <!-- Apocalypse Caster Fragment -->
-				<item id="36847" min="1" max="1" chance="3.63" /> <!-- Twilight Circlet Ingredient -->
-				<item id="36830" min="1" max="1" chance="3.626" /> <!-- Apocalypse Stormer Fragment -->
-				<item id="36781" min="1" max="1" chance="3.623" /> <!-- Recipe: Twilight Leather Armor (60%) -->
-				<item id="36852" min="1" max="1" chance="3.627" /> <!-- Twilight Sigil Ingredient -->
-				<item id="36838" min="1" max="1" chance="3.621" /> <!-- Twilight Gaiter Ingredient -->
-				<item id="36785" min="1" max="1" chance="3.621" /> <!-- Recipe: Twilight Circlet (60%) -->
-				<item id="36842" min="1" max="1" chance="3.619" /> <!-- Twilight Leather Helmet Ingredient -->
-				<item id="36849" min="1" max="1" chance="3.614" /> <!-- Twilight Stocking Ingredient -->
-				<item id="36765" min="1" max="1" chance="3.611" /> <!-- Recipe: Apocalypse Slasher (60%) -->
-				<item id="36786" min="1" max="1" chance="3.604" /> <!-- Recipe: Twilight Tunic (60%) -->
-				<item id="36845" min="1" max="1" chance="3.603" /> <!-- Twilight Leather Glove Ingredient -->
-				<item id="36832" min="1" max="1" chance="3.602" /> <!-- Apocalypse Shooter Fragment -->
-				<item id="36837" min="1" max="1" chance="3.601" /> <!-- Twilight Breastplate Ingredient -->
-				<item id="36836" min="1" max="1" chance="3.6" /> <!-- Twilight Helmet Ingredient -->
-				<item id="36774" min="1" max="1" chance="3.591" /> <!-- Recipe: Twilight Helmet (60%) -->
-				<item id="36835" min="1" max="1" chance="3.591" /> <!-- Apocalypse Retributer Fragment -->
-				<item id="36827" min="1" max="1" chance="3.587" /> <!-- Apocalypse Slasher Fragment -->
-				<item id="36846" min="1" max="1" chance="3.587" /> <!-- Twilight Leather Boot Ingredient -->
-				<item id="36770" min="1" max="1" chance="3.587" /> <!-- Recipe: Apocalypse Shooter (60%) -->
-				<item id="36850" min="1" max="1" chance="3.586" /> <!-- Twilight Glove Ingredient -->
-				<item id="36767" min="1" max="1" chance="3.585" /> <!-- Recipe: Apocalypse Fighter (60%) -->
-				<item id="36843" min="1" max="1" chance="3.584" /> <!-- Twilight Leather Armor Ingredient -->
-				<item id="36766" min="1" max="1" chance="3.583" /> <!-- Recipe: Apocalypse Avenger (60%) -->
-				<item id="36844" min="1" max="1" chance="3.582" /> <!-- Twilight Leather Legging Ingredient -->
-				<item id="36833" min="1" max="1" chance="3.577" /> <!-- Apocalypse Buster Fragment -->
-				<item id="36790" min="1" max="1" chance="3.58" /> <!-- Recipe: Twilight Sigil (60%) -->
-				<item id="36763" min="1" max="1" chance="3.575" /> <!-- Recipe: Apocalypse Shaper (60%) -->
-				<item id="36779" min="1" max="1" chance="3.571" /> <!-- Recipe: Twilight Shield (60%) -->
-				<item id="36780" min="1" max="1" chance="3.566" /> <!-- Recipe: Twilight Leather Helmet (60%) -->
-				<item id="36768" min="1" max="1" chance="3.561" /> <!-- Recipe: Apocalypse Stormer (60%) -->
-				<item id="36828" min="1" max="1" chance="3.561" /> <!-- Apocalypse Avenger Fragment -->
-				<item id="36782" min="1" max="1" chance="3.56" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
-				<item id="36839" min="1" max="1" chance="3.555" /> <!-- Twilight Gauntlet Ingredient -->
-				<item id="36769" min="1" max="1" chance="3.553" /> <!-- Recipe: Apocalypse Thrower (60%) -->
-				<item id="36772" min="1" max="1" chance="3.552" /> <!-- Recipe: Apocalypse Caster (60%) -->
-				<item id="36825" min="1" max="1" chance="3.546" /> <!-- Apocalypse Shaper Fragment -->
-				<item id="36841" min="1" max="1" chance="3.546" /> <!-- Twilight Shield Ingredient -->
-				<item id="36778" min="1" max="1" chance="3.545" /> <!-- Recipe: Twilight Boots (60%) -->
-				<item id="36787" min="1" max="1" chance="3.544" /> <!-- Recipe: Twilight Stockings (60%) -->
-				<item id="36829" min="1" max="1" chance="3.541" /> <!-- Apocalypse Fighter Fragment -->
-				<item id="36764" min="1" max="1" chance="3.541" /> <!-- Recipe: Apocalypse Cutter (60%) -->
-				<item id="36840" min="1" max="1" chance="3.537" /> <!-- Twilight Boot Ingredient -->
-				<item id="36851" min="1" max="1" chance="3.531" /> <!-- Twilight Shoe Ingredient -->
-				<item id="36777" min="1" max="1" chance="3.528" /> <!-- Recipe: Twilight Gauntlets (60%) -->
-				<item id="36848" min="1" max="1" chance="3.525" /> <!-- Twilight Tunic Ingredient -->
-				<item id="36831" min="1" max="1" chance="3.521" /> <!-- Apocalypse Thrower Fragment -->
-				<item id="36788" min="1" max="1" chance="3.511" /> <!-- Recipe: Twilight Gloves (60%) -->
-				<item id="36776" min="1" max="1" chance="3.508" /> <!-- Recipe: Twilight Gaiters (60%) -->
-				<item id="36773" min="1" max="1" chance="3.507" /> <!-- Recipe: Apocalypse Retributer (60%) -->
-				<item id="36784" min="1" max="1" chance="3.506" /> <!-- Recipe: Twilight Leather Boots (60%) -->
-				<item id="36771" min="1" max="1" chance="3.504" /> <!-- Recipe: Apocalypse Buster (60%) -->
-				<item id="36789" min="1" max="1" chance="3.503" /> <!-- Recipe: Twilight Shoes (60%) -->
-				<item id="46476" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 3 -->
-				<item id="46489" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46490" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46491" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
-				<item id="46504" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46505" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46506" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<item id="46475" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 2 -->
-				<item id="46474" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 1 -->
-				<item id="46444" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 1 -->
-				<item id="46459" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
-				<item id="46462" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
-				<item id="46445" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 2 -->
-				<item id="46446" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 3 -->
-				<item id="46492" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
-				<item id="46447" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 4 -->
-				<item id="46460" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
-				<item id="46477" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 4 -->
-				<item id="46461" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
-				<item id="46507" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 4 -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="46" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="51.15" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="50.26" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="36586" min="1" max="1" chance="49.72" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="49.08" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="36841" min="1" max="1" chance="3.632" /> <!-- Twilight Shield Ingredient -->
+				<item id="36835" min="1" max="1" chance="3.632" /> <!-- Apocalypse Retributer Fragment -->
+				<item id="36782" min="1" max="1" chance="3.632" /> <!-- Recipe: Twilight Leather Leggings (60%) -->
+				<item id="36770" min="1" max="1" chance="3.625" /> <!-- Recipe: Apocalypse Shooter (60%) -->
+				<item id="36783" min="1" max="1" chance="3.622" /> <!-- Recipe: Twilight Leather Gloves (60%) -->
+				<item id="36849" min="1" max="1" chance="3.621" /> <!-- Twilight Stocking Ingredient -->
+				<item id="36768" min="1" max="1" chance="3.619" /> <!-- Recipe: Apocalypse Stormer (60%) -->
+				<item id="36838" min="1" max="1" chance="3.614" /> <!-- Twilight Gaiter Ingredient -->
+				<item id="36850" min="1" max="1" chance="3.613" /> <!-- Twilight Glove Ingredient -->
+				<item id="36787" min="1" max="1" chance="3.613" /> <!-- Recipe: Twilight Stockings (60%) -->
+				<item id="36772" min="1" max="1" chance="3.612" /> <!-- Recipe: Apocalypse Caster (60%) -->
+				<item id="36830" min="1" max="1" chance="3.611" /> <!-- Apocalypse Stormer Fragment -->
+				<item id="36786" min="1" max="1" chance="3.611" /> <!-- Recipe: Twilight Tunic (60%) -->
+				<item id="36788" min="1" max="1" chance="3.609" /> <!-- Recipe: Twilight Gloves (60%) -->
+				<item id="36837" min="1" max="1" chance="3.608" /> <!-- Twilight Breastplate Ingredient -->
+				<item id="36779" min="1" max="1" chance="3.606" /> <!-- Recipe: Twilight Shield (60%) -->
+				<item id="36839" min="1" max="1" chance="3.605" /> <!-- Twilight Gauntlet Ingredient -->
+				<item id="36775" min="1" max="1" chance="3.604" /> <!-- Recipe: Twilight Breastplate (60%) -->
+				<item id="36781" min="1" max="1" chance="3.601" /> <!-- Recipe: Twilight Leather Armor (60%) -->
+				<item id="36780" min="1" max="1" chance="3.599" /> <!-- Recipe: Twilight Leather Helmet (60%) -->
+				<item id="36785" min="1" max="1" chance="3.594" /> <!-- Recipe: Twilight Circlet (60%) -->
+				<item id="36852" min="1" max="1" chance="3.596" /> <!-- Twilight Sigil Ingredient -->
+				<item id="36790" min="1" max="1" chance="3.596" /> <!-- Recipe: Twilight Sigil (60%) -->
+				<item id="36840" min="1" max="1" chance="3.586" /> <!-- Twilight Boot Ingredient -->
+				<item id="36767" min="1" max="1" chance="3.586" /> <!-- Recipe: Apocalypse Fighter (60%) -->
+				<item id="36829" min="1" max="1" chance="3.584" /> <!-- Apocalypse Fighter Fragment -->
+				<item id="36764" min="1" max="1" chance="3.582" /> <!-- Recipe: Apocalypse Cutter (60%) -->
+				<item id="36827" min="1" max="1" chance="3.58" /> <!-- Apocalypse Slasher Fragment -->
+				<item id="36773" min="1" max="1" chance="3.577" /> <!-- Recipe: Apocalypse Retributer (60%) -->
+				<item id="36846" min="1" max="1" chance="3.571" /> <!-- Twilight Leather Boot Ingredient -->
+				<item id="36828" min="1" max="1" chance="3.568" /> <!-- Apocalypse Avenger Fragment -->
+				<item id="36763" min="1" max="1" chance="3.563" /> <!-- Recipe: Apocalypse Shaper (60%) -->
+				<item id="36847" min="1" max="1" chance="3.561" /> <!-- Twilight Circlet Ingredient -->
+				<item id="36765" min="1" max="1" chance="3.56" /> <!-- Recipe: Apocalypse Slasher (60%) -->
+				<item id="36832" min="1" max="1" chance="3.559" /> <!-- Apocalypse Shooter Fragment -->
+				<item id="36784" min="1" max="1" chance="3.556" /> <!-- Recipe: Twilight Leather Boots (60%) -->
+				<item id="36776" min="1" max="1" chance="3.552" /> <!-- Recipe: Twilight Gaiters (60%) -->
+				<item id="36833" min="1" max="1" chance="3.55" /> <!-- Apocalypse Buster Fragment -->
+				<item id="36771" min="1" max="1" chance="3.545" /> <!-- Recipe: Apocalypse Buster (60%) -->
+				<item id="36842" min="1" max="1" chance="3.541" /> <!-- Twilight Leather Helmet Ingredient -->
+				<item id="36825" min="1" max="1" chance="3.54" /> <!-- Apocalypse Shaper Fragment -->
+				<item id="36831" min="1" max="1" chance="3.539" /> <!-- Apocalypse Thrower Fragment -->
+				<item id="36769" min="1" max="1" chance="3.537" /> <!-- Recipe: Apocalypse Thrower (60%) -->
+				<item id="36836" min="1" max="1" chance="3.536" /> <!-- Twilight Helmet Ingredient -->
+				<item id="36774" min="1" max="1" chance="3.533" /> <!-- Recipe: Twilight Helmet (60%) -->
+				<item id="36834" min="1" max="1" chance="3.529" /> <!-- Apocalypse Caster Fragment -->
+				<item id="36851" min="1" max="1" chance="3.528" /> <!-- Twilight Shoe Ingredient -->
+				<item id="36848" min="1" max="1" chance="3.525" /> <!-- Twilight Tunic Ingredient -->
+				<item id="36844" min="1" max="1" chance="3.524" /> <!-- Twilight Leather Legging Ingredient -->
+				<item id="36789" min="1" max="1" chance="3.522" /> <!-- Recipe: Twilight Shoes (60%) -->
+				<item id="36845" min="1" max="1" chance="3.519" /> <!-- Twilight Leather Glove Ingredient -->
+				<item id="36766" min="1" max="1" chance="3.51" /> <!-- Recipe: Apocalypse Avenger (60%) -->
+				<item id="36778" min="1" max="1" chance="3.502" /> <!-- Recipe: Twilight Boots (60%) -->
+				<item id="36826" min="1" max="1" chance="3.501" /> <!-- Apocalypse Cutter Fragment -->
+				<item id="36777" min="1" max="1" chance="3.501" /> <!-- Recipe: Twilight Gauntlets (60%) -->
+				<item id="36843" min="1" max="1" chance="3.501" /> <!-- Twilight Leather Armor Ingredient -->
+				<item id="46476" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 3 -->
+				<item id="46475" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46474" min="1" max="1" chance="0.075" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="46490" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46491" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
+				<item id="46459" min="1" max="1" chance="0.075" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
+				<item id="46504" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 1 -->
+				<item id="46505" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46506" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 3 -->
+				<item id="46444" min="1" max="1" chance="0.075" /> <!-- Kain's Soul Crystal - Stage 1 -->
+				<item id="46489" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46492" min="1" max="1" chance="0.03" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46477" min="1" max="1" chance="0.03" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46462" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46461" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 3 -->
+				<item id="46460" min="1" max="1" chance="0.03" /> <!-- Mermoden's Soul Crystal - Stage 2 -->
+				<item id="46447" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46446" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 3 -->
+				<item id="46445" min="1" max="1" chance="0.03" /> <!-- Kain's Soul Crystal - Stage 2 -->
+				<item id="46507" min="1" max="1" chance="0.03" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25884" level="98" type="L2RaidBoss" name="Kalios" title="Lord of Kartia">
 		<parameters>
@@ -4758,10 +4563,10 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="35177164807" sp="70354390" raidPoints="7" />
+		<acquire exp="2147483647" sp="70354390" raidPoints="7" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="15665180" hpRegen="8.5" mp="2205" mpRegen="3" />
+			<vitals hp="9883395.77787" hpRegen="387.2610592" mp="3616.249" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -4776,57 +4581,61 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14804" level="10" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14942" level="1" /> <!-- Destruction Grand Blow -->
 			<skill id="14945" level="1" /> <!-- Dimensional Shock Wave -->
 			<skill id="14946" level="1" /> <!-- Kalios' Rage -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="600">
 			<clanList>
 				<clan>DRAGON</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="25" />
+			<height normal="65.5" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="36586" min="1" max="1" chance="75.08" /> <!-- Scroll: Modify Armor (R-grade) -->
-				<item id="17526" min="1" max="1" chance="51.17" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="17527" min="1" max="1" chance="50.94" /> <!-- Scroll: Enchant Armor (R-grade) -->
-				<item id="36574" min="1" max="1" chance="15.69" /> <!-- Scroll: Modify Weapon (R-grade) -->
-				<item id="45432" min="1" max="1" chance="10.029" /> <!-- Entrance Pass: Kartia's Labyrinth Lv. 95 Party -->
-				<item id="35318" min="1" max="1" chance="1.8555" /> <!-- Seraph Circlet Ingredient -->
-				<item id="35313" min="1" max="1" chance="1.8425" /> <!-- Seraph Leather Helmet Ingredient -->
-				<item id="35322" min="1" max="1" chance="1.84" /> <!-- Seraph Shoe Ingredient -->
-				<item id="35307" min="1" max="1" chance="1.833" /> <!-- Seraph Helmet Ingredient -->
-				<item id="35298" min="1" max="1" chance="1.832" /> <!-- Specter Slasher Fragment -->
-				<item id="35306" min="1" max="1" chance="1.829" /> <!-- Specter Retributer Fragment -->
-				<item id="35303" min="1" max="1" chance="1.828" /> <!-- Specter Shooter Fragment -->
-				<item id="35297" min="1" max="1" chance="1.8265" /> <!-- Specter Cutter Fragment -->
-				<item id="35312" min="1" max="1" chance="1.821" /> <!-- Seraph Shield Ingredient -->
-				<item id="35302" min="1" max="1" chance="1.816" /> <!-- Specter Thrower Fragment -->
-				<item id="35315" min="1" max="1" chance="1.8" /> <!-- Seraph Leather Legging Ingredient -->
-				<item id="35310" min="1" max="1" chance="1.793" /> <!-- Seraph Gauntlet Ingredient -->
-				<item id="35301" min="1" max="1" chance="1.785" /> <!-- Specter Stormer Fragment -->
-				<item id="35309" min="1" max="1" chance="1.784" /> <!-- Seraph Gaiter Ingredient -->
-				<item id="35300" min="1" max="1" chance="1.781" /> <!-- Specter Fighter Fragment -->
-				<item id="35308" min="1" max="1" chance="1.778" /> <!-- Seraph Breastplate Ingredient -->
-				<item id="35319" min="1" max="1" chance="1.773" /> <!-- Seraph Tunic Ingredient -->
-				<item id="35317" min="1" max="1" chance="1.769" /> <!-- Seraph Leather Boot Ingredient -->
-				<item id="35321" min="1" max="1" chance="1.769" /> <!-- Seraph Glove Ingredient -->
-				<item id="35323" min="1" max="1" chance="1.769" /> <!-- Seraph Sigil Ingredient -->
-				<item id="35314" min="1" max="1" chance="1.752" /> <!-- Seraph Leather Armor Ingredient -->
-				<item id="35304" min="1" max="1" chance="1.749" /> <!-- Specter Buster Fragment -->
-				<item id="35305" min="1" max="1" chance="1.732" /> <!-- Specter Caster Fragment -->
-				<item id="35311" min="1" max="1" chance="1.731" /> <!-- Seraph Boot Ingredient -->
-				<item id="35299" min="1" max="1" chance="1.728" /> <!-- Specter Avenger Fragment -->
-				<item id="35296" min="1" max="1" chance="1.72" /> <!-- Specter Shaper Fragment -->
-				<item id="35320" min="1" max="1" chance="1.719" /> <!-- Seraph Stocking Ingredient -->
-				<item id="35316" min="1" max="1" chance="1.718" /> <!-- Seraph Leather Glove Ingredient -->
-				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
-				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
-				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="36586" min="1" max="1" chance="73.58" /> <!-- Scroll: Modify Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="49.64" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="17527" min="1" max="1" chance="48.9" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="36574" min="1" max="1" chance="14.26" /> <!-- Scroll: Modify Weapon (R-grade) -->
+				<item id="45432" min="1" max="1" chance="10.069" /> <!-- Entrance Pass: Kartia's Labyrinth Lv. 95 Party -->
+				<item id="35319" min="1" max="1" chance="1.8515" /> <!-- Seraph Tunic Ingredient -->
+				<item id="35316" min="1" max="1" chance="1.837" /> <!-- Seraph Leather Glove Ingredient -->
+				<item id="35305" min="1" max="1" chance="1.8275" /> <!-- Specter Caster Fragment -->
+				<item id="35322" min="1" max="1" chance="1.8225" /> <!-- Seraph Shoe Ingredient -->
+				<item id="35296" min="1" max="1" chance="1.818" /> <!-- Specter Shaper Fragment -->
+				<item id="35310" min="1" max="1" chance="1.814" /> <!-- Seraph Gauntlet Ingredient -->
+				<item id="35318" min="1" max="1" chance="1.808" /> <!-- Seraph Circlet Ingredient -->
+				<item id="35323" min="1" max="1" chance="1.808" /> <!-- Seraph Sigil Ingredient -->
+				<item id="35306" min="1" max="1" chance="1.804" /> <!-- Specter Retributer Fragment -->
+				<item id="35299" min="1" max="1" chance="1.801" /> <!-- Specter Avenger Fragment -->
+				<item id="35317" min="1" max="1" chance="1.796" /> <!-- Seraph Leather Boot Ingredient -->
+				<item id="35309" min="1" max="1" chance="1.789" /> <!-- Seraph Gaiter Ingredient -->
+				<item id="35301" min="1" max="1" chance="1.789" /> <!-- Specter Stormer Fragment -->
+				<item id="35314" min="1" max="1" chance="1.789" /> <!-- Seraph Leather Armor Ingredient -->
+				<item id="35297" min="1" max="1" chance="1.779" /> <!-- Specter Cutter Fragment -->
+				<item id="35307" min="1" max="1" chance="1.774" /> <!-- Seraph Helmet Ingredient -->
+				<item id="35303" min="1" max="1" chance="1.771" /> <!-- Specter Shooter Fragment -->
+				<item id="35312" min="1" max="1" chance="1.764" /> <!-- Seraph Shield Ingredient -->
+				<item id="35298" min="1" max="1" chance="1.757" /> <!-- Specter Slasher Fragment -->
+				<item id="35320" min="1" max="1" chance="1.754" /> <!-- Seraph Stocking Ingredient -->
+				<item id="35313" min="1" max="1" chance="1.75" /> <!-- Seraph Leather Helmet Ingredient -->
+				<item id="35308" min="1" max="1" chance="1.749" /> <!-- Seraph Breastplate Ingredient -->
+				<item id="35321" min="1" max="1" chance="1.746" /> <!-- Seraph Glove Ingredient -->
+				<item id="35311" min="1" max="1" chance="1.737" /> <!-- Seraph Boot Ingredient -->
+				<item id="35300" min="1" max="1" chance="1.736" /> <!-- Specter Fighter Fragment -->
+				<item id="35315" min="1" max="1" chance="1.733" /> <!-- Seraph Leather Legging Ingredient -->
+				<item id="35304" min="1" max="1" chance="1.731" /> <!-- Specter Buster Fragment -->
+				<item id="35302" min="1" max="1" chance="1.717" /> <!-- Specter Thrower Fragment -->
 				<item id="35437" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Helmet (60%) -->
+				<item id="35438" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Armor (60%) -->
+				<item id="35439" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Leggings (60%) -->
+				<item id="35440" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Gloves (60%) -->
 				<item id="35441" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Leather Boots (60%) -->
 				<item id="35442" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Circlet (60%) -->
 				<item id="35443" min="1" max="1" chance="0.3" /> <!-- Recipe: Seraph Tunic (60%) -->
@@ -4877,14 +4686,7 @@
 				<item id="46463" min="1" max="1" chance="0.0075" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
 				<item id="46448" min="1" max="1" chance="0.0075" /> <!-- Kain's Soul Crystal - Stage 5 -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="25" />
-			<height normal="65.5" />
-		</collision>
 	</npc>
 	<npc id="25885" level="97" type="L2RaidBoss" name="Guillotine of Death" title="Raid Boss">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -5030,7 +4832,7 @@
 		<acquire exp="458933384" sp="110144" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="2229581.054775" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="2229581.054775" hpRegen="379.3777269" mp="37388.722" mpRegen="3" />
 			<attack physical="81115" magical="11368.0387932822" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="1100" distance="80" width="120" />
 			<defence physical="2107" magical="1210" />
 			<speed>
@@ -5049,22 +4851,11 @@
 			<height normal="52" />
 		</collision>
 		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="15217" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
@@ -5170,7 +4961,7 @@
 		<acquire exp="458933384" sp="110144" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="2229581.054775" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="2229581.054775" hpRegen="379.3777269" mp="37388.722" mpRegen="3" />
 			<attack physical="81115" magical="11368.0387932822" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2107" magical="1210" />
 			<speed>
@@ -5189,22 +4980,11 @@
 			<height normal="45.0" />
 		</collision>
 		<skillList>
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="15216" level="1" /> <!-- Raid Boss (Lv. 97) -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
@@ -5310,7 +5090,7 @@
 		<equipment rhand="96" /> <!-- scythe -->
 		<acquire exp="0" sp="0" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="314107.3419" hpRegen="45" mp="22428" mpRegen="30" />
+			<vitals hp="314107.3419" hpRegen="379.3777269" mp="36778.85" mpRegen="3" />
 			<attack physical="40918.7454632461" magical="7231.0886261522" random="10" critical="8" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="10" width="0" />
 			<defence physical="3393.34457" magical="1948.7171" />
 			<speed>
@@ -5329,22 +5109,11 @@
 			<height normal="58" />
 		</collision>
 		<skillList>
-			<skill id="15215" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4736" level="1" /> <!-- Spinning Slasher -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="15215" level="1" /> <!-- Raid Boss (Lv. 97) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 	</npc>
@@ -5509,10 +5278,10 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="3989190184" sp="957405" raidPoints="30" />
+		<acquire exp="2147483647" sp="957405" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3890976" hpRegen="172" mp="22800" mpRegen="30" />
+			<vitals hp="5845057.75881" hpRegen="379.3777269" mp="37388.722" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="250" />
@@ -5527,77 +5296,71 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="15215" level="1" /> <!-- Raid Boss (Lv. 97) -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="15077" level="1" /> <!-- Mighty Rush -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="15078" level="1" /> <!-- Scream Penetration -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="15215" level="1" /> <!-- Raid Boss (Lv. 97) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="1100" aggroRange="300">
 			<clanList>
 				<clan>ZOMBIE_ZOMBIE</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="40" />
+			<height normal="82" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="17405" min="1" max="1" chance="1.81" /> <!-- Seraph Leather Gloves - Light Armor -->
-				<item id="17396" min="1" max="1" chance="1.808" /> <!-- Seraph Helmet - Heavy Armor -->
-				<item id="17407" min="1" max="1" chance="1.801" /> <!-- Seraph Circlet - Robe -->
-				<item id="17411" min="1" max="1" chance="1.776" /> <!-- Seraph Shoes - Robe -->
-				<item id="17409" min="1" max="1" chance="1.774" /> <!-- Seraph Stockings - Robe -->
-				<item id="17400" min="1" max="1" chance="1.761" /> <!-- Seraph Boots - Heavy Armor -->
-				<item id="17410" min="1" max="1" chance="1.755" /> <!-- Seraph Gloves - Robe -->
-				<item id="17401" min="1" max="1" chance="1.741" /> <!-- Seraph Shield - Heavy Armor -->
-				<item id="17397" min="1" max="1" chance="1.74" /> <!-- Seraph Breastplate - Heavy Armor -->
-				<item id="17399" min="1" max="1" chance="1.737" /> <!-- Seraph Gauntlets - Heavy Armor -->
-				<item id="17408" min="1" max="1" chance="1.733" /> <!-- Seraph Tunic - Robe -->
-				<item id="17412" min="1" max="1" chance="1.726" /> <!-- Seraph Sigil - Robe -->
-				<item id="17402" min="1" max="1" chance="1.72" /> <!-- Seraph Leather Helmet - Light Armor -->
-				<item id="17398" min="1" max="1" chance="1.717" /> <!-- Seraph Gaiters - Heavy Armor -->
-				<item id="17403" min="1" max="1" chance="1.708" /> <!-- Seraph Leather Armor - Light Armor -->
-				<item id="17406" min="1" max="1" chance="1.7" /> <!-- Seraph Leather Boots - Light Armor -->
-				<item id="17404" min="1" max="1" chance="1.698" /> <!-- Seraph Leather Leggings - Light Armor -->
-				<item id="17385" min="1" max="1" chance="0.3" /> <!-- Specter Avenger -->
-				<item id="17384" min="1" max="1" chance="0.3" /> <!-- Specter Slasher -->
+				<item id="17396" min="1" max="1" chance="1.832" /> <!-- Seraph Helmet - Heavy Armor -->
+				<item id="17405" min="1" max="1" chance="1.824" /> <!-- Seraph Leather Gloves - Light Armor -->
+				<item id="17400" min="1" max="1" chance="1.804" /> <!-- Seraph Boots - Heavy Armor -->
+				<item id="17402" min="1" max="1" chance="1.797" /> <!-- Seraph Leather Helmet - Light Armor -->
+				<item id="17408" min="1" max="1" chance="1.796" /> <!-- Seraph Tunic - Robe -->
+				<item id="17406" min="1" max="1" chance="1.768" /> <!-- Seraph Leather Boots - Light Armor -->
+				<item id="17409" min="1" max="1" chance="1.764" /> <!-- Seraph Stockings - Robe -->
+				<item id="17401" min="1" max="1" chance="1.762" /> <!-- Seraph Shield - Heavy Armor -->
+				<item id="17410" min="1" max="1" chance="1.756" /> <!-- Seraph Gloves - Robe -->
+				<item id="17404" min="1" max="1" chance="1.756" /> <!-- Seraph Leather Leggings - Light Armor -->
+				<item id="17399" min="1" max="1" chance="1.738" /> <!-- Seraph Gauntlets - Heavy Armor -->
+				<item id="17403" min="1" max="1" chance="1.737" /> <!-- Seraph Leather Armor - Light Armor -->
+				<item id="17411" min="1" max="1" chance="1.732" /> <!-- Seraph Shoes - Robe -->
+				<item id="17407" min="1" max="1" chance="1.722" /> <!-- Seraph Circlet - Robe -->
+				<item id="17397" min="1" max="1" chance="1.72" /> <!-- Seraph Breastplate - Heavy Armor -->
+				<item id="17412" min="1" max="1" chance="1.721" /> <!-- Seraph Sigil - Robe -->
+				<item id="17398" min="1" max="1" chance="1.712" /> <!-- Seraph Gaiters - Heavy Armor -->
 				<item id="17383" min="1" max="1" chance="0.3" /> <!-- Specter Cutter -->
+				<item id="17384" min="1" max="1" chance="0.3" /> <!-- Specter Slasher -->
+				<item id="17385" min="1" max="1" chance="0.3" /> <!-- Specter Avenger -->
 				<item id="17386" min="1" max="1" chance="0.3" /> <!-- Specter Fighter -->
-				<item id="17392" min="1" max="1" chance="0.3" /> <!-- Specter Retributer -->
 				<item id="17387" min="1" max="1" chance="0.3" /> <!-- Specter Stormer -->
 				<item id="17388" min="1" max="1" chance="0.3" /> <!-- Specter Thrower -->
 				<item id="17389" min="1" max="1" chance="0.3" /> <!-- Specter Shooter -->
 				<item id="17390" min="1" max="1" chance="0.3" /> <!-- Specter Buster -->
 				<item id="17391" min="1" max="1" chance="0.3" /> <!-- Specter Caster -->
+				<item id="17392" min="1" max="1" chance="0.3" /> <!-- Specter Retributer -->
 				<item id="17382" min="1" max="1" chance="0.3" /> <!-- Specter Shaper -->
-				<item id="19448" min="1" max="1" chance="78.09" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
-				<item id="36978" min="1" max="1" chance="24.99" /> <!-- Scroll: Enchant Hair Accessory -->
-				<item id="45937" min="1" max="1" chance="24.4" /> <!-- Hair Accessory Spirit Stone -->
-				<item id="37780" min="1" max="1" chance="24.18" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
-				<item id="19447" min="1" max="1" chance="19.2" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="17706" min="1" max="1" chance="17.22" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
-				<item id="17707" min="1" max="1" chance="17.05" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
-				<item id="17704" min="1" max="1" chance="16.87" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
-				<item id="17703" min="1" max="1" chance="16.78" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
-				<item id="17708" min="1" max="1" chance="16.53" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
-				<item id="17705" min="1" max="1" chance="16.06" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
-				<item id="37771" min="1" max="1" chance="5.999" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
-				<item id="46474" min="1" max="1" chance="1.216" /> <!-- Leona's Soul Crystal - Stage 1 -->
+				<item id="19448" min="1" max="1" chance="81.35" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="45937" min="1" max="1" chance="26.19" /> <!-- Hair Accessory Spirit Stone -->
+				<item id="36978" min="1" max="1" chance="25.67" /> <!-- Scroll: Enchant Hair Accessory -->
+				<item id="37780" min="1" max="1" chance="24.56" /> <!-- Scroll of Blessing: Armor (R95-grade) -->
+				<item id="19447" min="1" max="1" chance="20.23" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="17704" min="1" max="1" chance="17.44" /> <!-- Lv. 5 Ancient DEX Dye - DEX +5/ Earth Resistance +25 -->
+				<item id="17706" min="1" max="1" chance="17.34" /> <!-- Lv. 5 Ancient INT Dye - INT +5/ Water Resistance +25 -->
+				<item id="17705" min="1" max="1" chance="16.77" /> <!-- Lv. 5 Ancient CON Dye - CON +5/ Dark Resistance +25 -->
+				<item id="17708" min="1" max="1" chance="16.57" /> <!-- Lv. 5 Ancient MEN Dye - MEN +5/ Holy Resistance +25 -->
+				<item id="17703" min="1" max="1" chance="16.44" /> <!-- Lv. 5 Ancient STR Dye - STR +5/ Fire Resistance +25 -->
+				<item id="17707" min="1" max="1" chance="16.18" /> <!-- Lv. 5 Ancient WIT Dye - WIT +5/ Wind Resistance +25 -->
+				<item id="37771" min="1" max="1" chance="5.95" /> <!-- Scroll of Blessing: Weapon (R95-grade) -->
+				<item id="46489" min="1" max="1" chance="1.304" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
+				<item id="46474" min="1" max="1" chance="1.27" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="1.21" /> <!-- Lionel's Soul Crystal - Stage 1 -->
-				<item id="46489" min="1" max="1" chance="1.197" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
-				<item id="46505" min="1" max="1" chance="1.128" /> <!-- Lionel's Soul Crystal - Stage 2 -->
-				<item id="46490" min="1" max="1" chance="1.114" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
-				<item id="46475" min="1" max="1" chance="1.109" /> <!-- Leona's Soul Crystal - Stage 2 -->
+				<item id="46505" min="1" max="1" chance="1.075" /> <!-- Lionel's Soul Crystal - Stage 2 -->
+				<item id="46490" min="1" max="1" chance="1.031" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
+				<item id="46475" min="1" max="1" chance="1.009" /> <!-- Leona's Soul Crystal - Stage 2 -->
 				<item id="46506" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="46476" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="46491" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
@@ -5617,25 +5380,8 @@
 				<item id="46477" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 4 -->
 				<item id="46462" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
 				<item id="46508" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 5 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="2" max="2" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="40" />
-			<height normal="82" />
-		</collision>
 	</npc>
 	<npc id="25893" level="97" type="L2Monster" name="Strain">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

@@ -1524,9 +1524,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="145" /> <!-- Sword of Whispering Death -->
-		<acquire exp="5918766" sp="1420" />
+		<acquire exp="5918766" sp="1420" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="159961" hpRegen="108.35639820142" mp="610" mpRegen="2.1" />
+			<vitals hp="240294.703305" hpRegen="108.3563982" mp="999.963" mpRegen="2.1" />
 			<attack physical="667.348949019213" magical="142.928040387499" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="533.36238" magical="260.2" evasion="-18" />
 			<speed>
@@ -1538,62 +1538,39 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4071" level="5" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4172" level="4" /> <!-- Stun -->
 			<skill id="4175" level="4" /> <!-- BOSS Haste -->
 			<skill id="4177" level="4" /> <!-- BOSS Cancel Magic -->
-			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4723" level="4" /> <!-- BOSS Strike -->
-			<skill id="4956" level="1" /> <!-- Raid Boss - Level 45 -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4956" level="1" /> <!-- Raid Boss (Lv. 45) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4071" level="5" /> <!-- Bow/ Crossbow Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
+		<collision>
+			<radius normal="24" />
+			<height normal="52" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="265" min="1" max="1" chance="4.677" /> <!-- Fisted Blade -->
-				<item id="60" min="1" max="1" chance="1.421" /> <!-- Compound Armor -->
-				<item id="4608" min="1" max="1" chance="11.83" /> <!-- Greater INT Dye <Int +3 Wit -3> -->
-				<item id="4607" min="1" max="1" chance="11.21" /> <!-- Greater INT Dye <Int +3 Men -3> -->
-				<item id="4609" min="1" max="1" chance="11.18" /> <!-- Greater MEN Dye <Men +3 Int -3> -->
-				<item id="1977" min="105" max="315" chance="5.397" /> <!-- Compound Armor Temper -->
-				<item id="2108" min="96" max="288" chance="2.06" /> <!-- Fisted Blade Piece -->
+				<item id="265" min="1" max="1" chance="4.706" /> <!-- Fisted Blade -->
+				<item id="60" min="1" max="1" chance="1.376" /> <!-- Compound Armor -->
+				<item id="4607" min="1" max="1" chance="12" /> <!-- Greater INT Dye <Int +3 Men -3> -->
+				<item id="4608" min="1" max="1" chance="11.55" /> <!-- Greater INT Dye <Int +3 Wit -3> -->
+				<item id="4609" min="1" max="1" chance="11.06" /> <!-- Greater MEN Dye <Men +3 Int -3> -->
+				<item id="1977" min="105" max="315" chance="5.417" /> <!-- Compound Armor Temper -->
+				<item id="2108" min="96" max="288" chance="2.065" /> <!-- Fisted Blade Piece -->
 				<item id="46489" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46474" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 1 -->
 				<item id="46504" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46459" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 1 -->
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="6573" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (C-grade) -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="60.43" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="24" />
-			<height normal="52" />
-		</collision>
 	</npc>
 	<npc id="25438" level="44" type="L2RaidBoss" name="Thief Kelbar" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->

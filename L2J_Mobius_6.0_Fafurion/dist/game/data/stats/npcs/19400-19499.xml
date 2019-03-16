@@ -12,7 +12,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1458000" sp="349" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13886" hpRegen="8.5" mp="2023" mpRegen="3" />
+			<vitals hp="45468.78222" hpRegen="8.5" mp="2510.045" mpRegen="3" />
 			<speed>
 				<walk ground="13" />
 				<run ground="180" />
@@ -27,28 +27,25 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300">
 			<clanList>
 				<clan>M_FAIRY</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="17375" min="1" max="1" chance="4.936" /> <!-- Kimerian's Trace -->
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="15" />
 			<height normal="27" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17375" min="1" max="1" chance="4.952" /> <!-- Kimerian's Trace -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="19401" level="93" type="L2Npc" name="Soldier">
 		<parameters>
@@ -1782,9 +1779,9 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ETC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="5654355" sp="5666" />
+		<acquire exp="8368445" sp="7491" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="34405.687695" hpRegen="8.5" mp="2874.995" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -1799,6 +1796,10 @@
 		<skillList>
 			<skill id="10781" level="1" /> <!-- Phoenix Arrow -->
 		</skillList>
+		<collision>
+			<radius normal="14" />
+			<height normal="34" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="994" max="2317" chance="70" /> <!-- Adena -->
@@ -1820,21 +1821,17 @@
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
-				<item id="36885" min="1" max="1" chance="9" /> <!-- Recipe: Durable Braid - Downgrade -->
+				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
 			</spoil>
 		</dropLists>
-		<collision>
-			<radius normal="14" />
-			<height normal="34" />
-		</collision>
 	</npc>
 	<npc id="19456" level="99" type="L2Monster" name="Te Ochdumann" title="Commander">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23034996" sp="23130" />
+		<acquire exp="34091700" sp="30677" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="172901.624835" hpRegen="8.5" mp="2922.844" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1847,14 +1844,18 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5466" level="1" /> <!-- Holy Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="50" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="2160" max="5031" chance="70" /> <!-- Adena -->
@@ -1871,22 +1872,18 @@
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
 				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
-				<item id="36885" min="1" max="1" chance="9" /> <!-- Recipe: Durable Braid - Downgrade -->
-				<item id="36887" min="1" max="1" chance="9" /> <!-- Recipe: Quality Braid - Upgrade -->
+				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
+				<item id="36887" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</spoil>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="50" />
-		</collision>
 	</npc>
 	<npc id="19457" level="99" type="L2Monster" name="Travis" title="Deceased King">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23034996" sp="23130" />
+		<acquire exp="34091700" sp="30677" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="172901.624835" hpRegen="8.5" mp="2922.844" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -1899,14 +1896,18 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5466" level="1" /> <!-- Holy Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="5" /> <!-- Very Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
+		<collision>
+			<radius normal="25" />
+			<height normal="40" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="2160" max="5031" chance="70" /> <!-- Adena -->
@@ -1923,14 +1924,10 @@
 				<item id="36534" min="1" max="1" chance="0.3" /> <!-- Durable Braid -->
 				<item id="36535" min="1" max="1" chance="0.03" /> <!-- Quality Braid -->
 				<item id="36886" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Braid - Upgrade -->
-				<item id="36885" min="1" max="1" chance="9" /> <!-- Recipe: Durable Braid - Downgrade -->
-				<item id="36887" min="1" max="1" chance="9" /> <!-- Recipe: Quality Braid - Upgrade -->
+				<item id="36885" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Braid - Downgrade -->
+				<item id="36887" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Braid - Upgrade -->
 			</spoil>
 		</dropLists>
-		<collision>
-			<radius normal="25" />
-			<height normal="40" />
-		</collision>
 	</npc>
 	<npc id="19458" level="99" type="L2Npc" name="Treasure Dealer Kaysen">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2010,7 +2007,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="380184" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1659857.238795" hpRegen="8.5" mp="2922.844" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -2035,7 +2032,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="380184" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1659857.238795" hpRegen="8.5" mp="2922.844" mpRegen="3" />
 			<speed>
 				<walk ground="25" />
 				<run ground="180" />
@@ -2060,7 +2057,7 @@
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="380184" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="1659857.238795" hpRegen="8.5" mp="2922.844" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />

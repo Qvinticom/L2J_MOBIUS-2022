@@ -467,7 +467,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="9" /> <!-- Cedar Staff -->
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1828" hpRegen="6.5" mp="977" mpRegen="2.4" />
+			<vitals hp="3656.152425" hpRegen="6.5" mp="986.987" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
@@ -479,29 +479,18 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4095" level="1" /> <!-- Damage Shield -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="4095" level="1" /> <!-- Damage Shield -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="1000" aggroRange="450" />
+		<collision>
+			<radius normal="10" />
+			<height normal="23" />
+		</collision>
 		<dropLists>
-			<spoil>
-				<item id="36533" min="1" max="1" chance="0.0009" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.0009" /> <!-- Durable Braid -->
-				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 			<drop>
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
@@ -510,14 +499,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 		</dropLists>
-		<collision>
-			<radius normal="10" />
-			<height normal="23" />
-		</collision>
 	</npc>
 	<npc id="21259" level="59" type="L2Monster" name="Fallen Orc Shaman">
 		<!-- Confirmed CT2.5 -->
@@ -534,9 +519,9 @@
 		</parameters>
 		<race>BEAST</race>
 		<sex>MALE</sex>
-		<acquire exp="46918" sp="11" />
+		<acquire exp="18767" sp="4" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1880" hpRegen="6.5" mp="1007" mpRegen="2.4" />
+			<vitals hp="3760.2534" hpRegen="6.5" mp="1016.994" mpRegen="2.4" />
 			<attack physical="461.94387" magical="315.44778" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="242.81593" magical="177.68216" />
 			<speed>
@@ -549,17 +534,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="5" /> <!-- Stun -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -568,28 +546,30 @@
 				<clan>BEAST</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="34" />
+			<height normal="28" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="58" max="135" chance="70" /> <!-- Adena -->
+				<item id="887" min="1" max="1" chance="0.03" /> <!-- Adamantite Ring -->
+				<item id="917" min="1" max="1" chance="0.03" /> <!-- Necklace of Mermaid -->
+				<item id="895" min="1" max="1" chance="0.03" /> <!-- Black Ore Ring -->
+				<item id="885" min="1" max="1" chance="0.03" /> <!-- Ring of Ages -->
+				<item id="856" min="1" max="1" chance="0.03" /> <!-- Adamantite Earring -->
+				<item id="855" min="1" max="1" chance="0.03" /> <!-- Nassen's Earring -->
+				<item id="854" min="1" max="1" chance="0.03" /> <!-- Earring of Seal -->
+				<item id="864" min="1" max="1" chance="0.0075" /> <!-- Black Ore Earring -->
+				<item id="926" min="1" max="1" chance="0.0075" /> <!-- Black Ore Necklace -->
+				<item id="440" min="1" max="1" chance="0.0075" /> <!-- Robe of Seal -->
+				<item id="918" min="1" max="1" chance="0.0075" /> <!-- Adamantite Necklace -->
+				<item id="922" min="1" max="1" chance="0.0075" /> <!-- Sage's Necklace -->
+				<item id="2398" min="1" max="1" chance="0.003" /> <!-- Blue Wolf Tunic -->
 				<item id="148" min="1" max="1" chance="0.0009" /> <!-- Sword of Valhalla -->
-				<item id="2398" min="1" max="1" chance="0.00300000000000001" /> <!-- Blue Wolf Tunic -->
-				<item id="440" min="1" max="1" chance="0.00549999999999999" /> <!-- Robe of Seal -->
-				<item id="887" min="1" max="1" chance="0.0300000000000009" /> <!-- Adamantite Ring -->
-				<item id="895" min="1" max="1" chance="0.0300000000000009" /> <!-- Black Ore Ring -->
-				<item id="885" min="1" max="1" chance="0.0300000000000009" /> <!-- Ring of Ages -->
-				<item id="917" min="1" max="1" chance="0.0300000000000009" /> <!-- Necklace of Mermaid -->
-				<item id="856" min="1" max="1" chance="0.0300000000000009" /> <!-- Adamantite Earring -->
-				<item id="855" min="1" max="1" chance="0.0300000000000009" /> <!-- Nassen's Earring -->
-				<item id="854" min="1" max="1" chance="0.0300000000000009" /> <!-- Earring of Seal -->
-				<item id="918" min="1" max="1" chance="0.00549999999999997" /> <!-- Adamantite Necklace -->
-				<item id="926" min="1" max="1" chance="0.00549999999999997" /> <!-- Black Ore Necklace -->
-				<item id="922" min="1" max="1" chance="0.00549999999999997" /> <!-- Sage's Necklace -->
-				<item id="864" min="1" max="1" chance="0.00549999999999997" /> <!-- Black Ore Earring -->
-				<item id="8728" min="1" max="1" chance="0.0749999999999995" /> <!-- Life Stone - Lv. 61 -->
-				<item id="8738" min="1" max="1" chance="0.0300000000000001" /> <!-- Mid-grade Life Stone - Lv. 61 -->
-				<item id="36518" min="1" max="1" chance="0.0300000000000001" /> <!-- Durable Leather -->
-				<item id="8748" min="1" max="1" chance="0.00300000000000001" /> <!-- High-grade Life Stone - Lv. 61 -->
-				<item id="8758" min="1" max="1" chance="0.000900000000000002" /> <!-- Top-grade Life Stone - Lv. 61 -->
+				<item id="57" min="58" max="135" chance="70" /> <!-- Adena -->
+				<item id="36518" min="1" max="1" chance="0.03" /> <!-- Durable Leather -->
+				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
+				<item id="45930" min="1" max="1" chance="0.0009" /> <!-- Mid-grade Spirit Stone -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -597,21 +577,14 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36562" min="1" max="1" chance="0.075" /> <!-- Greater Cokes -->
 				<item id="36563" min="1" max="1" chance="0.03" /> <!-- Synthetic Cokes -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="34" />
-			<height normal="28" />
-		</collision>
 	</npc>
 	<npc id="21260" level="50" type="L2Monster" name="Betrayer Orc Hero">
 		<!-- Confirmed CT2.5 -->
@@ -684,9 +657,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="21946" sp="5" />
+		<acquire exp="6583" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1421" hpRegen="5.5" mp="747" mpRegen="2.1" />
+			<vitals hp="1420.82058" hpRegen="5.5" mp="754.23" mpRegen="2.1" />
 			<attack physical="305.54906" magical="208.6504" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="200.23844" magical="146.5258" />
 			<speed>
@@ -699,34 +672,29 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
+			<skill id="4276" level="1" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<ai clanHelpRange="1000" aggroRange="450" />
+		<collision>
+			<radius normal="13.5" />
+			<height normal="25" />
+		</collision>
 		<dropLists>
 			<drop>
+				<item id="630" min="1" max="1" chance="0.075" /> <!-- Square Shield -->
+				<item id="631" min="1" max="1" chance="0.03" /> <!-- Eldarake -->
+				<item id="2495" min="1" max="1" chance="0.03" /> <!-- Chain Shield -->
+				<item id="71" min="1" max="1" chance="0.003" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="0.003" /> <!-- Stormbringer -->
+				<item id="226" min="1" max="1" chance="0.003" /> <!-- Cursed Dagger -->
+				<item id="7887" min="1" max="1" chance="0.003" /> <!-- Mysterious Sword -->
 				<item id="57" min="27" max="64" chance="70" /> <!-- Adena -->
-				<item id="630" min="1" max="1" chance="0.0749999999999996" /> <!-- Square Shield -->
-				<item id="631" min="1" max="1" chance="0.0299999999999998" /> <!-- Eldarake -->
-				<item id="2495" min="1" max="1" chance="0.0299999999999998" /> <!-- Chain Shield -->
-				<item id="71" min="1" max="1" chance="0.00299999999999998" /> <!-- Flamberge -->
-				<item id="72" min="1" max="1" chance="0.00299999999999998" /> <!-- Stormbringer -->
-				<item id="226" min="1" max="1" chance="0.00299999999999998" /> <!-- Cursed Dagger -->
-				<item id="7887" min="1" max="1" chance="0.00299999999999998" /> <!-- Mysterious Sword -->
 				<item id="36523" min="1" max="1" chance="0.03" /> <!-- Adamantite -->
-				<item id="36538" min="1" max="1" chance="0.00550000000000004" /> <!-- Durable Leather Braid -->
+				<item id="36538" min="1" max="1" chance="0.0075" /> <!-- Durable Leather Braid -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -734,22 +702,15 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="10.37" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="9.85" /> <!-- Thread -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 				<item id="36880" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="13.5" />
-			<height normal="25" />
-		</collision>
 	</npc>
 	<npc id="21262" level="51" type="L2Monster" name="Ol Mahum Transcender">
 		<!-- Confirmed CT2.5 -->
@@ -771,9 +732,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" lhand="102" /> <!-- Crimson Sword / Round Shield -->
-		<acquire exp="27201" sp="6" />
+		<acquire exp="8160" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1470" hpRegen="6.5" mp="775" mpRegen="2.4" />
+			<vitals hp="1470.03195" hpRegen="6.5" mp="782.615" mpRegen="2.4" />
 			<attack physical="353.71092" magical="241.5387" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="214.18326" magical="156.73001" />
 			<speed>
@@ -786,34 +747,29 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
+			<skill id="4276" level="1" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="1000" isAggressive="true" />
+		<collision>
+			<radius normal="14" grown="16" />
+			<height normal="27" grown="32" />
+		</collision>
 		<dropLists>
 			<drop>
+				<item id="630" min="1" max="1" chance="0.075" /> <!-- Square Shield -->
+				<item id="631" min="1" max="1" chance="0.075" /> <!-- Eldarake -->
+				<item id="2495" min="1" max="1" chance="0.075" /> <!-- Chain Shield -->
+				<item id="71" min="1" max="1" chance="0.003" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="0.003" /> <!-- Stormbringer -->
+				<item id="226" min="1" max="1" chance="0.003" /> <!-- Cursed Dagger -->
+				<item id="7887" min="1" max="1" chance="0.003" /> <!-- Mysterious Sword -->
 				<item id="57" min="34" max="79" chance="70" /> <!-- Adena -->
-				<item id="630" min="1" max="1" chance="0.0749999999999996" /> <!-- Square Shield -->
-				<item id="631" min="1" max="1" chance="0.0749999999999996" /> <!-- Eldarake -->
-				<item id="2495" min="1" max="1" chance="0.0749999999999996" /> <!-- Chain Shield -->
-				<item id="71" min="1" max="1" chance="0.00299999999999994" /> <!-- Flamberge -->
-				<item id="72" min="1" max="1" chance="0.00299999999999994" /> <!-- Stormbringer -->
-				<item id="226" min="1" max="1" chance="0.00299999999999994" /> <!-- Cursed Dagger -->
-				<item id="7887" min="1" max="1" chance="0.00299999999999994" /> <!-- Mysterious Sword -->
 				<item id="36528" min="1" max="1" chance="0.03" /> <!-- Metallic Fiber -->
-				<item id="36543" min="1" max="1" chance="0.00550000000000004" /> <!-- Adamantite Wire -->
+				<item id="36543" min="1" max="1" chance="0.0075" /> <!-- Adamantite Wire -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -821,7 +777,7 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
@@ -829,14 +785,7 @@
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="14" grown="16" />
-			<height normal="27" grown="32" />
-		</collision>
 	</npc>
 	<npc id="21263" level="52" type="L2Monster" name="Ol Mahum Transcender">
 		<!-- Confirmed CT2.5 -->
@@ -858,9 +807,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="38153" sp="9" />
+		<acquire exp="11446" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1520" hpRegen="6.5" mp="804" mpRegen="2.4" />
+			<vitals hp="1519.874235" hpRegen="6.5" mp="811.811" mpRegen="2.4" />
 			<attack physical="388.11142" magical="265.02979" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="223.6362" magical="163.64727" />
 			<speed>
@@ -873,32 +822,27 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="5" /> <!-- NPC Strike -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
+			<skill id="4276" level="1" /> <!-- Bow/ Crossbow Vulnerability -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="1000" isAggressive="true" />
+		<collision>
+			<radius normal="20" grown="24" />
+			<height normal="37" grown="44.5" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="46" max="107" chance="70" /> <!-- Adena -->
 				<item id="630" min="1" max="1" chance="0.3" /> <!-- Square Shield -->
-				<item id="631" min="1" max="1" chance="0.0749999999999989" /> <!-- Eldarake -->
-				<item id="2495" min="1" max="1" chance="0.0749999999999989" /> <!-- Chain Shield -->
+				<item id="631" min="1" max="1" chance="0.075" /> <!-- Eldarake -->
+				<item id="2495" min="1" max="1" chance="0.075" /> <!-- Chain Shield -->
 				<item id="71" min="1" max="1" chance="0.003" /> <!-- Flamberge -->
 				<item id="72" min="1" max="1" chance="0.003" /> <!-- Stormbringer -->
 				<item id="226" min="1" max="1" chance="0.003" /> <!-- Cursed Dagger -->
 				<item id="7887" min="1" max="1" chance="0.003" /> <!-- Mysterious Sword -->
+				<item id="57" min="46" max="107" chance="70" /> <!-- Adena -->
 				<item id="36538" min="1" max="1" chance="0.03" /> <!-- Durable Leather Braid -->
 				<item id="36548" min="1" max="1" chance="0.003" /> <!-- Weapon Fragment (Mid-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -908,22 +852,15 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.0055" /> <!-- Durable Braid -->
+				<item id="36534" min="1" max="1" chance="0.0075" /> <!-- Durable Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="20" grown="24" />
-			<height normal="37" grown="44.5" />
-		</collision>
 	</npc>
 	<npc id="21264" level="53" type="L2Monster" name="Ol Mahum Transcender">
 		<!-- Confirmed CT2.5 -->
@@ -945,9 +882,9 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<equipment rhand="127" /> <!-- Crimson Sword -->
-		<acquire exp="50071" sp="12" />
+		<acquire exp="15021" sp="3" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="1570" hpRegen="6.5" mp="832" mpRegen="2.4" />
+			<vitals hp="1569.71652" hpRegen="6.5" mp="840.196" mpRegen="2.4" />
 			<attack physical="442.8992" magical="302.44274" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
@@ -960,32 +897,29 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
 		<ai aggroRange="450" clanHelpRange="1000" isAggressive="true" />
+		<collision>
+			<radius normal="13" />
+			<height normal="26" />
+		</collision>
 		<dropLists>
 			<drop>
+				<item id="630" min="1" max="1" chance="0.3" /> <!-- Square Shield -->
+				<item id="631" min="1" max="1" chance="0.3" /> <!-- Eldarake -->
+				<item id="2495" min="1" max="1" chance="0.3" /> <!-- Chain Shield -->
+				<item id="71" min="1" max="1" chance="0.0075" /> <!-- Flamberge -->
+				<item id="72" min="1" max="1" chance="0.0075" /> <!-- Stormbringer -->
+				<item id="226" min="1" max="1" chance="0.0075" /> <!-- Cursed Dagger -->
+				<item id="7887" min="1" max="1" chance="0.0075" /> <!-- Mysterious Sword -->
 				<item id="57" min="59" max="138" chance="70" /> <!-- Adena -->
-				<item id="630" min="1" max="1" chance="0.300000000000001" /> <!-- Square Shield -->
-				<item id="631" min="1" max="1" chance="0.300000000000001" /> <!-- Eldarake -->
-				<item id="2495" min="1" max="1" chance="0.300000000000001" /> <!-- Chain Shield -->
-				<item id="71" min="1" max="1" chance="0.00550000000000001" /> <!-- Flamberge -->
-				<item id="72" min="1" max="1" chance="0.00550000000000001" /> <!-- Stormbringer -->
-				<item id="226" min="1" max="1" chance="0.00550000000000001" /> <!-- Cursed Dagger -->
-				<item id="7887" min="1" max="1" chance="0.00550000000000001" /> <!-- Mysterious Sword -->
 				<item id="36543" min="1" max="1" chance="0.03" /> <!-- Adamantite Wire -->
 				<item id="36553" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (Mid-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
@@ -995,22 +929,15 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36533" min="1" max="1" chance="0.075" /> <!-- Synthetic Braid -->
-				<item id="36534" min="1" max="1" chance="0.0055" /> <!-- Durable Braid -->
+				<item id="36534" min="1" max="1" chance="0.0075" /> <!-- Durable Braid -->
 				<item id="36880" min="1" max="1" chance="0.003" /> <!-- Recipe: Thread - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="13" />
-			<height normal="26" />
-		</collision>
 	</npc>
 	<npc id="21265" level="36" type="L2Monster" name="Cave Ant Larva">
 		<!-- Confirmed CT2.5 -->
@@ -1032,7 +959,7 @@
 		<sex>MALE</sex>
 		<acquire exp="571" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="809" hpRegen="4.5" mp="417" mpRegen="1.8" />
+			<vitals hp="808.83303" hpRegen="4.5" mp="420.909" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<speed>
@@ -1044,16 +971,7 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1071,11 +989,14 @@
 				<ignoreNpcId>21273</ignoreNpcId> <!-- Cave Noble Ant -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="10" max="25" chance="70" /> <!-- Adena -->
 				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1083,22 +1004,15 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.885" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="3.946" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="12" />
-			<height normal="8" />
-		</collision>
 	</npc>
 	<npc id="21266" level="36" type="L2Monster" name="Cave Ant Larva">
 		<!-- Confirmed CT2.5 -->
@@ -1117,7 +1031,7 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="809" hpRegen="4.5" mp="417" mpRegen="1.8" />
+			<vitals hp="808.83303" hpRegen="4.5" mp="420.909" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<speed>
@@ -1129,16 +1043,7 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1156,11 +1061,12 @@
 				<ignoreNpcId>21273</ignoreNpcId> <!-- Cave Noble Ant -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="10" max="25" chance="70" /> <!-- Adena -->
-				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1168,22 +1074,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="3.885" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="12" />
-			<height normal="8" />
-		</collision>
 	</npc>
 	<npc id="21267" level="36" type="L2Monster" name="Cave Ant Larva">
 		<!-- Confirmed CT2.5 -->
@@ -1202,7 +1096,7 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="809" hpRegen="4.5" mp="417" mpRegen="1.8" />
+			<vitals hp="808.83303" hpRegen="4.5" mp="420.909" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<speed>
@@ -1214,16 +1108,7 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1241,11 +1126,12 @@
 				<ignoreNpcId>21273</ignoreNpcId> <!-- Cave Noble Ant -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="10" max="25" chance="70" /> <!-- Adena -->
-				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1253,22 +1139,10 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<spoil>
-				<item id="36531" min="1" max="1" chance="3.885" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="12" />
-			<height normal="8" />
-		</collision>
 	</npc>
 	<npc id="21268" level="36" type="L2Monster" name="Cave Ant Larva">
 		<!-- Confirmed CT2.5 -->
@@ -1286,9 +1160,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="571" sp="0" />
+		<acquire exp="1062" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="809" hpRegen="4.5" mp="417" mpRegen="1.8" />
+			<vitals hp="1618.296975" hpRegen="4.5" mp="420.909" mpRegen="1.8" />
 			<attack physical="137.86467" magical="94.1437" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="140.57278" magical="102.86506" />
 			<speed>
@@ -1302,16 +1176,11 @@
 		<skillList>
 			<skill id="4151" level="3" /> <!-- NPC Windstrike - Magic -->
 			<skill id="4160" level="3" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1330,11 +1199,14 @@
 				<ignoreNpcId>21273</ignoreNpcId> <!-- Cave Noble Ant -->
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="12" />
+			<height normal="8" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="10" max="25" chance="70" /> <!-- Adena -->
-				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="57" min="19" max="46" chance="70" /> <!-- Adena -->
+				<item id="6037" min="1" max="3" chance="31.85" /> <!-- Scroll: Cancel Sleep -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1342,22 +1214,15 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="3.885" /> <!-- Thread -->
-				<item id="36532" min="1" max="1" chance="0.075" /> <!-- Thin Braid -->
-				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
+				<item id="36531" min="1" max="3" chance="7.207" /> <!-- Thread -->
+				<item id="36532" min="1" max="3" chance="0.3" /> <!-- Thin Braid -->
+				<item id="36533" min="1" max="3" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="12" />
-			<height normal="8" />
-		</collision>
 	</npc>
 	<npc id="21269" level="37" type="L2Monster" name="Cave Ant">
 		<!-- Confirmed CT2.5 -->
@@ -1377,7 +1242,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1212" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="847" hpRegen="4.5" mp="432" mpRegen="1.8" />
+			<vitals hp="846.68793" hpRegen="4.5" mp="436.318" mpRegen="1.8" />
 			<attack physical="146.82587" magical="100.26304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="144.47758" magical="105.72243" />
 			<speed>
@@ -1390,16 +1255,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1408,11 +1265,14 @@
 				<clan>ANT</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="22" max="52" chance="70" /> <!-- Adena -->
 				<item id="955" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1420,22 +1280,15 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="8.185" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="8.159" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="26" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="21270" level="38" type="L2Monster" name="Cave Ant Soldier">
 		<!-- Confirmed CT2.5 -->
@@ -1452,9 +1305,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="7005" sp="1" />
+		<acquire exp="1401" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="886" hpRegen="4.5" mp="447" mpRegen="1.8" />
+			<vitals hp="885.80466" hpRegen="4.5" mp="451.727" mpRegen="1.8" />
 			<attack physical="156.22273" magical="106.67987" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="148.44287" magical="108.62405" />
 			<speed>
@@ -1467,16 +1320,7 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1485,11 +1329,15 @@
 				<clan>ANT</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="35" grown="42" />
+			<height normal="17" grown="21" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="26" max="60" chance="70" /> <!-- Adena -->
-				<item id="6036" min="1" max="1" chance="0.750000000000001" /> <!-- Greater Magic Haste Potion -->
-				<item id="955" min="1" max="1" chance="0.0750000000000001" /> <!-- Scroll: Enchant Weapon (D-grade) -->
+				<item id="6036" min="1" max="1" chance="0.75" /> <!-- Greater Magic Haste Potion -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1497,22 +1345,15 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="9.498" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="9.496" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="35" grown="42" />
-			<height normal="17" grown="21" />
-		</collision>
 	</npc>
 	<npc id="21271" level="37" type="L2Monster" name="Cave Ant">
 		<!-- Confirmed CT2.5 -->
@@ -1534,9 +1375,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="1212" sp="0" />
+		<acquire exp="827" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="847" hpRegen="4.5" mp="432" mpRegen="1.8" />
+			<vitals hp="846.68793" hpRegen="4.5" mp="436.318" mpRegen="1.8" />
 			<attack physical="146.82587" magical="100.26304" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="144.47758" magical="105.72243" />
 			<speed>
@@ -1549,16 +1390,8 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1567,11 +1400,14 @@
 				<clan>ANT</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="26" />
+			<height normal="15" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="57" min="22" max="52" chance="70" /> <!-- Adena -->
-				<item id="955" min="1" max="1" chance="0.3" /> <!-- Scroll: Enchant Weapon (D-grade) -->
-				<!-- FIXME: Also drops herbs. -->
+				<item id="57" min="15" max="36" chance="70" /> <!-- Adena -->
+				<item id="955" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Weapon (D-grade) -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1579,22 +1415,15 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="8.185" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="5.638" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="26" />
-			<height normal="15" />
-		</collision>
 	</npc>
 	<npc id="21272" level="38" type="L2Monster" name="Cave Ant Soldier">
 		<!-- Confirmed CT2.5 -->
@@ -1615,9 +1444,9 @@
 		</parameters>
 		<race>BUG</race>
 		<sex>MALE</sex>
-		<acquire exp="7353" sp="1" />
+		<acquire exp="1470" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="886" hpRegen="4.5" mp="447" mpRegen="1.8" />
+			<vitals hp="885.80466" hpRegen="4.5" mp="451.727" mpRegen="1.8" />
 			<attack physical="156.22273" magical="106.67987" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="148.44287" magical="108.62405" />
 			<speed>
@@ -1630,16 +1459,7 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4032" level="3" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1648,6 +1468,10 @@
 				<clan>ANT</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="35" grown="42" />
+			<height normal="17" grown="21" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="27" max="63" chance="70" /> <!-- Adena -->
@@ -1659,22 +1483,15 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36531" min="1" max="1" chance="9.915" /> <!-- Thread -->
+				<item id="36531" min="1" max="1" chance="9.924" /> <!-- Thread -->
 				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
 				<item id="36533" min="1" max="1" chance="0.03" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="35" grown="42" />
-			<height normal="17" grown="21" />
-		</collision>
 	</npc>
 	<npc id="21273" level="39" type="L2Monster" name="Cave Noble Ant">
 		<!-- Confirmed CT2.5 -->
@@ -1770,7 +1587,7 @@
 		<sex>MALE</sex>
 		<acquire exp="10093" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2295" hpRegen="7.5" mp="1251" mpRegen="2.7" />
+			<vitals hp="2295.26877" hpRegen="7.5" mp="1263.538" mpRegen="2.7" />
 			<attack physical="624.93199" magical="426.74754" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="281.55251" magical="206.02791" />
 			<speed>
@@ -1783,16 +1600,9 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4067" level="6" /> <!-- NPC Mortal Blow -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -1801,6 +1611,10 @@
 				<clan>ANIMAL</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="8" />
+			<height normal="26.4" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="51" max="120" chance="70" /> <!-- Adena -->
@@ -1808,7 +1622,6 @@
 				<item id="45929" min="1" max="3" chance="0.003" /> <!-- Spirit Stone -->
 				<item id="36860" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Leather - Upgrade -->
 				<item id="45930" min="1" max="1" chance="0.0009" /> <!-- Mid-grade Spirit Stone -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1816,20 +1629,13 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="3.71" /> <!-- Leather -->
+				<item id="36517" min="1" max="1" chance="3.763" /> <!-- Leather -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="8" />
-			<height normal="26.4" />
-		</collision>
 	</npc>
 	<npc id="21275" level="67" type="L2Monster" name="Kookaburra">
 		<!-- Confirmed CT2.5 -->
@@ -2004,7 +1810,7 @@
 		<sex>MALE</sex>
 		<acquire exp="10397" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2345" hpRegen="7.5" mp="1282" mpRegen="2.7" />
+			<vitals hp="2345.111055" hpRegen="7.5" mp="1295.167" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="209.54692" />
 			<speed>
@@ -2017,16 +1823,8 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2035,13 +1833,16 @@
 				<clan>ANTELOPE</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="17" />
+			<height normal="34" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="53" max="124" chance="70" /> <!-- Adena -->
-				<item id="36517" min="1" max="1" chance="1.139" /> <!-- Leather -->
+				<item id="36517" min="1" max="1" chance="1.251" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<item id="36859" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Leather - Downgrade -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2049,21 +1850,14 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="1.922" /> <!-- Leather -->
+				<item id="36517" min="1" max="1" chance="1.843" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="17" />
-			<height normal="34" />
-		</collision>
 	</npc>
 	<npc id="21279" level="68" type="L2Monster" name="Antelope">
 		<!-- Confirmed CT2.5 -->
@@ -2239,7 +2033,7 @@
 		<sex>MALE</sex>
 		<acquire exp="10705" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2395" hpRegen="7.5" mp="1314" mpRegen="2.7" />
+			<vitals hp="2394.95334" hpRegen="7.5" mp="1326.796" mpRegen="2.7" />
 			<attack physical="667.50361" magical="455.81844" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="213.05139" />
 			<speed>
@@ -2252,17 +2046,9 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4067" level="1" /> <!-- Blow -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2271,12 +2057,15 @@
 				<clan>BANDERSNATCH</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="25" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="55" max="127" chance="70" /> <!-- Adena -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<item id="36862" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Leather - Upgrade -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2284,20 +2073,13 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="18" />
-			<height normal="25" />
-		</collision>
 	</npc>
 	<npc id="21283" level="69" type="L2Monster" name="Bandersnatch">
 		<!-- Confirmed CT2.5 -->
@@ -2468,7 +2250,7 @@
 		<sex>MALE</sex>
 		<acquire exp="11017" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="2444.16471" hpRegen="7.5" mp="1358.425" mpRegen="2.7" />
 			<attack physical="688.86373" magical="470.40463" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="216.53847" />
 			<speed>
@@ -2481,17 +2263,9 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4073" level="1" /> <!-- Stun -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2500,12 +2274,15 @@
 				<clan>BUFFALO</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="22" grown="27" />
+			<height normal="31" grown="38" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="57" max="131" chance="70" /> <!-- Adena -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<item id="36862" min="1" max="1" chance="0.0009" /> <!-- Recipe: Quality Leather - Upgrade -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2513,20 +2290,13 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="22" grown="27" />
-			<height normal="31" grown="38" />
-		</collision>
 	</npc>
 	<npc id="21287" level="70" type="L2Monster" name="Buffalo">
 		<!-- Confirmed CT2.5 -->
@@ -2697,7 +2467,7 @@
 		<sex>MALE</sex>
 		<acquire exp="11334" sp="2" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2492" hpRegen="8.5" mp="1377" mpRegen="3" />
+			<vitals hp="2492.11425" hpRegen="8.5" mp="1390.865" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="220.00525" />
 			<speed>
@@ -2710,18 +2480,9 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4789" level="2" /> <!-- NPC High Level -->
-			<skill id="5620" level="10" /> <!-- Short-Range Physical Attack Weakness -->
 			<skill id="4073" level="1" /> <!-- Stun -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2730,13 +2491,16 @@
 				<clan>GRENDEL</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="15" grown="18" />
+			<height normal="39" grown="47.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="58" max="136" chance="70" /> <!-- Adena -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
 				<item id="36859" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durable Leather - Downgrade -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -2744,21 +2508,14 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="15" grown="18" />
-			<height normal="39" grown="47.5" />
-		</collision>
 	</npc>
 	<npc id="21291" level="71" type="L2Monster" name="Grendel">
 		<!-- Confirmed CT2.5 -->
@@ -2935,7 +2692,7 @@
 		<sex>MALE</sex>
 		<acquire exp="34421" sp="8" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2444" hpRegen="7.5" mp="1345" mpRegen="2.7" />
+			<vitals hp="4887.698505" hpRegen="7.5" mp="1358.425" mpRegen="2.7" />
 			<attack physical="646.17968" magical="441.25696" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="286.3615" magical="190.662718462344" />
 			<speed>
@@ -2948,15 +2705,9 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Average P. Def. -->
-			<skill id="4413" level="13" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2966,24 +2717,30 @@
 				<clan>ALL</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="92" max="215" chance="70" /> <!-- Adena -->
-				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
-			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="34" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="92" max="215" chance="70" /> <!-- Adena -->
+				<item id="729" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (A-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21295" level="72" type="L2Monster" name="Canyon Antelope Slave">
 		<!-- Confirmed CT2.5 -->
@@ -3005,7 +2762,7 @@
 		<sex>MALE</sex>
 		<acquire exp="37505" sp="9" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<vitals hp="5080.12758" hpRegen="8.5" mp="1424.116" mpRegen="3" />
 			<attack physical="667.50361" magical="455.81844" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="291.15063" magical="193.851368417065" />
 			<speed>
@@ -3019,15 +2776,9 @@
 		<skillList>
 			<skill id="4032" level="6" /> <!-- NPC Strike -->
 			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Average P. Def. -->
-			<skill id="4413" level="13" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3037,24 +2788,30 @@
 				<clan>EYE</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="99" max="230" chance="70" /> <!-- Adena -->
-				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
-			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="17" />
 			<height normal="34" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="99" max="230" chance="70" /> <!-- Adena -->
+				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21296" level="71" type="L2Monster" name="Canyon Bandersnatch">
 		<!-- Confirmed CT2.5 -->
@@ -3074,7 +2831,7 @@
 		<sex>MALE</sex>
 		<acquire exp="52683" sp="12" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2492" hpRegen="8.5" mp="1377" mpRegen="3" />
+			<vitals hp="4984.2285" hpRegen="8.5" mp="1390.865" mpRegen="3" />
 			<attack physical="688.86373" magical="470.40463" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="295.91597" magical="197.024195544734" />
 			<speed>
@@ -3086,16 +2843,10 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Weak P. Def. -->
-			<skill id="4413" level="13" /> <!-- Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
 			<skill id="4579" level="7" /> <!-- Bleed -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3105,24 +2856,30 @@
 				<clan>ALL</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="100" max="233" chance="70" /> <!-- Adena -->
-				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
-			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="25" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="100" max="233" chance="70" /> <!-- Adena -->
+				<item id="36524" min="1" max="1" chance="0.03" /> <!-- Orichalcum -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 	<npc id="21297" level="73" type="L2Monster" name="Canyon Bandersnatch Slave">
 		<!-- Confirmed CT2.5 -->
@@ -3144,7 +2901,7 @@
 		<sex>MALE</sex>
 		<acquire exp="54363" sp="13" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
+			<vitals hp="5172.24117" hpRegen="8.5" mp="1456.556" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="200.178552092236" />
 			<speed>
@@ -3158,16 +2915,11 @@
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4090" level="1" /> <!-- NPC Wolf Spirit Totem -->
-			<skill id="4408" level="10" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="4" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4789" level="2" /> <!-- NPC High Level -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3177,24 +2929,30 @@
 				<clan>EYE</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="18" />
+			<height normal="25" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="97" max="227" chance="70" /> <!-- Adena -->
 				<item id="730" min="1" max="1" chance="0.075" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="36529" min="1" max="1" chance="0.075" /> <!-- Quality Fiber -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="3.531" /> <!-- Leather -->
+				<item id="36517" min="1" max="1" chance="3.524" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.75" /> <!-- Durable Leather -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="18" />
-			<height normal="25" />
-		</collision>
 	</npc>
 	<npc id="21298" level="71" type="L2Monster" name="Eye of Restrainer">
 		<!-- Confirmed CT2.5 -->
@@ -3213,7 +2971,7 @@
 		<sex>MALE</sex>
 		<acquire exp="33097" sp="7" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2492" hpRegen="8.5" mp="1377" mpRegen="3" />
+			<vitals hp="4984.2285" hpRegen="8.5" mp="1390.865" mpRegen="3" />
 			<attack physical="710.2185" magical="484.98717" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="300.65359" magical="220.00525" />
 			<speed>
@@ -3226,17 +2984,13 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="9" /> <!-- Slightly Strong M. Def. -->
+			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4789" level="2" /> <!-- NPC High Level -->
+			<skill id="4276" level="1" /> <!-- Bow/ Crossbow Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3246,6 +3000,10 @@
 				<clan>EYE</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="21" />
+			<height normal="43" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="5290" min="1" max="1" chance="0.003" /> <!-- Sealed Dark Crystal Gloves -->
@@ -3267,10 +3025,6 @@
 				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
 			</spoil>
 		</dropLists>
-		<collision>
-			<radius normal="21" />
-			<height normal="43" />
-		</collision>
 	</npc>
 	<npc id="21299" level="74" type="L2Monster" name="Valley Buffalo Slave">
 		<!-- Confirmed CT2.5 -->
@@ -3292,7 +3046,7 @@
 		<sex>MALE</sex>
 		<acquire exp="55862" sp="13" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="2632" hpRegen="8.5" mp="1475" mpRegen="3" />
+			<vitals hp="5263.723845" hpRegen="8.5" mp="1489.807" mpRegen="3" />
 			<attack physical="731.52506" magical="499.53679" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="305.35947" magical="203.311781207645" />
 			<speed>
@@ -3306,16 +3060,9 @@
 		<skillList>
 			<skill id="4032" level="7" /> <!-- NPC Strike -->
 			<skill id="4091" level="1" /> <!-- NPC Ogre Spirit Totem -->
-			<skill id="4408" level="10" /> <!-- HP Increase (3x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4789" level="2" /> <!-- NPC High Level -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -3325,23 +3072,29 @@
 				<clan>EYE</clan>
 			</clanList>
 		</ai>
-		<dropLists>
-			<drop>
-				<item id="57" min="105" max="244" chance="70" /> <!-- Adena -->
-				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
-			</drop>
-			<spoil>
-				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
-				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="22" grown="27" />
 			<height normal="31" grown="38" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="105" max="244" chance="70" /> <!-- Adena -->
+				<item id="36544" min="1" max="1" chance="0.03" /> <!-- Orichalcum Wire -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<spoil>
+				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
+				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
+			</spoil>
+		</dropLists>
 	</npc>
 </list>

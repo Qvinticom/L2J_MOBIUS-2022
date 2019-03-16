@@ -1619,9 +1619,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
-		<acquire exp="2969652" sp="712" />
+		<acquire exp="2969652" sp="712" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="528013" hpRegen="208.900753341411" mp="1314" mpRegen="2.7" />
+			<vitals hp="793185.707085" hpRegen="294.2109061" mp="2154.827" mpRegen="2.7" />
 			<attack physical="2246.91708261089" magical="804.539610755299" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="873.45189" magical="426.1" evasion="-18" />
 			<speed>
@@ -1633,40 +1633,34 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="6" /> <!-- BOSS Might -->
 			<skill id="4177" level="6" /> <!-- BOSS Cancel Magic -->
-			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4721" level="6" /> <!-- BOSS Strike -->
 			<skill id="4736" level="6" /> <!-- BOSS Spinning Slash -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4873" level="1" /> <!-- Raid Boss (Lv. 69) -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
 			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4873" level="1" /> <!-- Raid Boss - Level 69 -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
+		<collision>
+			<radius normal="30" grown="40" />
+			<height normal="46.5" grown="48.4" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="6328" min="1" max="1" chance="13" /> <!-- Sealed Majestic Ring -->
-				<item id="6327" min="1" max="1" chance="8.44" /> <!-- Sealed Majestic Earring -->
-				<item id="6326" min="1" max="1" chance="6.404" /> <!-- Sealed Majestic Necklace -->
+				<item id="6328" min="1" max="1" chance="12.98" /> <!-- Sealed Majestic Ring -->
+				<item id="6327" min="1" max="1" chance="8.516" /> <!-- Sealed Majestic Earring -->
+				<item id="6326" min="1" max="1" chance="6.304" /> <!-- Sealed Majestic Necklace -->
 				<item id="236" min="1" max="1" chance="0.75" /> <!-- Soul Separator -->
-				<item id="6342" min="9" max="27" chance="65.93" /> <!-- Sealed Majestic Earring Gemstone -->
-				<item id="6344" min="14" max="42" chance="32.17" /> <!-- Sealed Majestic Necklace Beads -->
-				<item id="6346" min="40" max="120" chance="22.57" /> <!-- Sealed Majestic Ring Gemstone -->
-				<item id="5537" min="4" max="12" chance="11.6" /> <!-- Soul Separator Head -->
+				<item id="6342" min="9" max="27" chance="65.84" /> <!-- Sealed Majestic Earring Gemstone -->
+				<item id="6344" min="14" max="42" chance="31.1" /> <!-- Sealed Majestic Necklace Beads -->
+				<item id="6346" min="40" max="120" chance="23.62" /> <!-- Sealed Majestic Ring Gemstone -->
+				<item id="5537" min="4" max="12" chance="10.98" /> <!-- Soul Separator Head -->
 				<item id="6578" min="1" max="1" chance="0.75" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
 				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
@@ -1684,25 +1678,8 @@
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="79.61" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="30" grown="40" />
-			<height normal="46.5" grown="48.4" />
-		</collision>
 	</npc>
 	<npc id="25234" level="60" type="L2RaidBoss" name="Ancient Weird Drake" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
@@ -2257,9 +2234,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="244058947" sp="58574" />
+		<acquire exp="244058947" sp="58574" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="766919" hpRegen="215.047207764907" mp="1410" mpRegen="3" />
+			<vitals hp="1152072.24111" hpRegen="299.9232164" mp="2312.161" mpRegen="3" />
 			<attack physical="2458.22210970458" magical="946.217239664632" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="916.07841" magical="446.9" evasion="-18" />
 			<speed>
@@ -2270,38 +2247,32 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4175" level="7" /> <!-- BOSS Haste -->
 			<skill id="4177" level="7" /> <!-- BOSS Cancel Magic -->
-			<skill id="4273" level="3" /> <!-- Resist Daggers/Rapier Weapon -->
-			<skill id="4274" level="1" /> <!-- Blunt Weapon Weak Point -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4720" level="7" /> <!-- BOSS Strike -->
 			<skill id="4735" level="7" /> <!-- BOSS Spinning Slash -->
-			<skill id="4275" level="2" /> <!-- Holy Attack Vulnerability -->
-			<skill id="4278" level="1" /> <!-- Dark Attack -->
-			<skill id="4880" level="1" /> <!-- Raid Boss - Level 72 -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
 			<skill id="4172" level="1" /> <!-- Stun -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4880" level="1" /> <!-- Raid Boss (Lv. 72) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="4275" level="2" /> <!-- Holy Vulnerability -->
+			<skill id="4278" level="1" /> <!-- Dark Attack -->
+			<skill id="4273" level="3" /> <!-- Dagger/ Rapier Resistance -->
+			<skill id="4274" level="1" /> <!-- Blunt Weapon Vulnerability -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
+		<collision>
+			<radius normal="15" />
+			<height normal="32.5" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="5312" min="1" max="1" chance="6.909" /> <!-- Sealed Helm of Nightmare -->
-				<item id="5317" min="1" max="1" chance="5.212" /> <!-- Sealed Majestic Circlet -->
-				<item id="5315" min="1" max="1" chance="2.995" /> <!-- Sealed Shield of Nightmare -->
-				<item id="236" min="1" max="1" chance="2.058" /> <!-- Soul Separator -->
-				<item id="6578" min="1" max="1" chance="2.512" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="5312" min="1" max="1" chance="6.984" /> <!-- Sealed Helm of Nightmare -->
+				<item id="5317" min="1" max="1" chance="5.245" /> <!-- Sealed Majestic Circlet -->
+				<item id="5315" min="1" max="1" chance="2.98" /> <!-- Sealed Shield of Nightmare -->
+				<item id="236" min="1" max="1" chance="2.075" /> <!-- Soul Separator -->
+				<item id="6578" min="1" max="1" chance="2.465" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
@@ -2317,25 +2288,8 @@
 				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="81.77" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="15" />
-			<height normal="32.5" />
-		</collision>
 	</npc>
 	<npc id="25252" level="70" type="L2RaidBoss" name="Palibati Queen Themis" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
@@ -2529,9 +2483,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="106892354" sp="25654" />
+		<acquire exp="106892354" sp="25654" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="688201" hpRegen="199.028977534023" mp="1188" mpRegen="2.7" />
+			<vitals hp="1033821.735405" hpRegen="294.2109061" mp="1948.022" mpRegen="2.7" />
 			<attack physical="1946.68955029173" magical="701.405704892511" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="815.67099" magical="397.92" evasion="-18" />
 			<speed>
@@ -2543,37 +2497,31 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4172" level="6" /> <!-- Stun -->
 			<skill id="4175" level="6" /> <!-- BOSS Haste -->
 			<skill id="4177" level="6" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4730" level="6" /> <!-- BOSS Mortal Blow -->
-			<skill id="4883" level="1" /> <!-- Raid Boss - Level 65 -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4883" level="1" /> <!-- Raid Boss (Lv. 65) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
+		<collision>
+			<radius normal="37" />
+			<height normal="98" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="5298" min="1" max="1" chance="12.01" /> <!-- Sealed Dark Crystal Leggings -->
-				<item id="5297" min="1" max="1" chance="7.639" /> <!-- Sealed Dark Crystal Leather Armor -->
-				<item id="5301" min="1" max="1" chance="4.661" /> <!-- Sealed Tallum Leather Armor -->
-				<item id="269" min="1" max="1" chance="1.483" /> <!-- Blood Tornado -->
-				<item id="5478" min="9" max="27" chance="48.63" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
-				<item id="5539" min="3" max="9" chance="34.17" /> <!-- Blood Tornado Edge -->
-				<item id="5482" min="32" max="96" chance="21.56" /> <!-- Sealed Dark Crystal Legging Design -->
-				<item id="5479" min="22" max="66" chance="14.06" /> <!-- Sealed Tallum Leather Armor Pattern -->
-				<item id="6570" min="1" max="1" chance="3.067" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="5298" min="1" max="1" chance="12.79" /> <!-- Sealed Dark Crystal Leggings -->
+				<item id="5297" min="1" max="1" chance="7.726" /> <!-- Sealed Dark Crystal Leather Armor -->
+				<item id="5301" min="1" max="1" chance="4.763" /> <!-- Sealed Tallum Leather Armor -->
+				<item id="269" min="1" max="1" chance="1.434" /> <!-- Blood Tornado -->
+				<item id="5478" min="9" max="27" chance="47.87" /> <!-- Sealed Dark Crystal Leather Armor Pattern -->
+				<item id="5539" min="3" max="9" chance="33.56" /> <!-- Blood Tornado Edge -->
+				<item id="5482" min="32" max="96" chance="21.24" /> <!-- Sealed Dark Crystal Legging Design -->
+				<item id="5479" min="22" max="66" chance="13.62" /> <!-- Sealed Tallum Leather Armor Pattern -->
+				<item id="6570" min="1" max="1" chance="3.097" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
 				<item id="46476" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 3 -->
 				<item id="46489" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 1 -->
 				<item id="46490" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 2 -->
@@ -2590,25 +2538,8 @@
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="6569" min="1" max="1" chance="0.3" /> <!-- Blessed Scroll: Enchant Weapon (A-grade) -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="80.56" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="37" />
-			<height normal="98" />
-		</collision>
 	</npc>
 	<npc id="25256" level="60" type="L2RaidBoss" name="Taik High Prefect Arak" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
@@ -2781,9 +2712,9 @@
 		<race>GIANT</race>
 		<sex>MALE</sex>
 		<equipment rhand="297" /> <!-- Glaive -->
-		<acquire exp="1991548" sp="477" />
+		<acquire exp="1991548" sp="477" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="346341" hpRegen="221.738396239018" mp="889" mpRegen="2.4" />
+			<vitals hp="520276.48377" hpRegen="178.4276342" mp="1458.178" mpRegen="2.4" />
 			<attack physical="2285.51806823986" magical="1298.16213238743" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="670.9086" magical="327.3" evasion="-18" />
 			<speed>
@@ -2795,54 +2726,31 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="5" /> <!-- BOSS Might -->
 			<skill id="4177" level="5" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4725" level="5" /> <!-- Stun -->
 			<skill id="4735" level="5" /> <!-- BOSS Spinning Slash -->
-			<skill id="4885" level="1" /> <!-- Raid Boss - Level 55 -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4885" level="1" /> <!-- Raid Boss (Lv. 55) -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
-		<dropLists>
-			<drop>
-				<item id="2402" min="1" max="1" chance="5.52" /> <!-- Stockings of Zubei -->
-				<item id="2406" min="1" max="1" chance="3.366" /> <!-- Avadon Robe -->
-				<item id="97" min="1" max="1" chance="3.248" /> <!-- Lance -->
-				<item id="2397" min="1" max="1" chance="1.553" /> <!-- Tunic of Zubei -->
-				<item id="4624" min="1" max="1" chance="20.92" /> <!-- Greater WIT Dye <Wit +4 Men -4> -->
-				<item id="4622" min="1" max="3" chance="9.78" /> <!-- Greater MEN Dye <Men +4 Wit -4> -->
-				<item id="4623" min="1" max="3" chance="6.766" /> <!-- Greater WIT Dye <Wit +4 Int -4> -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="68.75" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="66" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="2402" min="1" max="1" chance="5.547" /> <!-- Stockings of Zubei -->
+				<item id="2406" min="1" max="1" chance="3.418" /> <!-- Avadon Robe -->
+				<item id="97" min="1" max="1" chance="3.284" /> <!-- Lance -->
+				<item id="2397" min="1" max="1" chance="1.583" /> <!-- Tunic of Zubei -->
+				<item id="4624" min="1" max="1" chance="20.92" /> <!-- Greater WIT Dye <Wit +4 Men -4> -->
+				<item id="4622" min="1" max="3" chance="10.65" /> <!-- Greater MEN Dye <Men +4 Wit -4> -->
+				<item id="4623" min="1" max="3" chance="6.756" /> <!-- Greater WIT Dye <Wit +4 Int -4> -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25260" level="45" type="L2RaidBoss" name="Iron Giant Totem" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
@@ -3314,9 +3222,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="77" /> <!-- Tsurugi -->
-		<acquire exp="2615583" sp="627" />
+		<acquire exp="2615583" sp="627" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="64658" hpRegen="50.5321359969236" mp="300" mpRegen="1.5" />
+			<vitals hp="97129.995165" hpRegen="47.62441308" mp="492.277" mpRegen="1.5" />
 			<attack physical="189.606914466364" magical="24.2395745441976" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="334.84104" magical="163.34" evasion="-18" />
 			<speed>
@@ -3328,55 +3236,32 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4172" level="2" /> <!-- Stun -->
 			<skill id="4174" level="2" /> <!-- BOSS Shield -->
 			<skill id="4177" level="2" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4721" level="2" /> <!-- BOSS Strike -->
-			<skill id="4890" level="1" /> <!-- Raid Boss - Level 28 -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4890" level="1" /> <!-- Raid Boss (Lv. 28) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" />
-		<dropLists>
-			<drop>
-				<item id="2446" min="1" max="1" chance="7.873" /> <!-- Reinforced Leather Gloves -->
-				<item id="553" min="1" max="1" chance="7.855" /> <!-- Iron Boots -->
-				<item id="2422" min="1" max="1" chance="7.821" /> <!-- Reinforced Leather Boots -->
-				<item id="2447" min="1" max="1" chance="7.82" /> <!-- Gloves of Knowledge -->
-				<item id="2423" min="1" max="1" chance="7.774" /> <!-- Boots of Knowledge -->
-				<item id="63" min="1" max="1" chance="7.765" /> <!-- Gauntlets -->
-				<item id="157" min="1" max="1" chance="0.3" /> <!-- Spiked Club -->
-				<item id="186" min="1" max="1" chance="0.3" /> <!-- Staff of Magic -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="38.81" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="21" />
 			<height normal="43.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="63" min="1" max="1" chance="7.865" /> <!-- Gauntlets -->
+				<item id="2422" min="1" max="1" chance="7.86" /> <!-- Reinforced Leather Boots -->
+				<item id="2423" min="1" max="1" chance="7.828" /> <!-- Boots of Knowledge -->
+				<item id="2446" min="1" max="1" chance="7.815" /> <!-- Reinforced Leather Gloves -->
+				<item id="2447" min="1" max="1" chance="7.793" /> <!-- Gloves of Knowledge -->
+				<item id="553" min="1" max="1" chance="7.788" /> <!-- Iron Boots -->
+				<item id="157" min="1" max="1" chance="0.3" /> <!-- Spiked Club -->
+				<item id="186" min="1" max="1" chance="0.3" /> <!-- Staff of Magic -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="25273" level="50" type="L2RaidBoss" name="Carnamakos" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->

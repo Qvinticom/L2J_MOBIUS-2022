@@ -772,7 +772,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="48352" min="1" max="1" chance="10.048" /> <!-- Deathmask Shield Appearance Stone -->
+				<item id="48352" min="1" max="1" chance="10.048" /> <!-- Deathmask Shield Appearance Stone - 30-day -->
 				<item id="38050" min="1" max="1" chance="9.14" /> <!-- Helios Shooter Crafting Pack -->
 				<item id="38044" min="1" max="1" chance="9.129" /> <!-- Helios Cutter Crafting Pack -->
 				<item id="38043" min="1" max="1" chance="9.094" /> <!-- Helios Shaper Crafting Pack -->
@@ -839,7 +839,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="48352" min="1" max="1" chance="9.952" /> <!-- Deathmask Shield Appearance Stone -->
+				<item id="48352" min="1" max="1" chance="9.952" /> <!-- Deathmask Shield Appearance Stone - 30-day -->
 				<item id="38051" min="1" max="1" chance="9.137" /> <!-- Helios Buster Crafting Pack -->
 				<item id="38046" min="1" max="1" chance="9.114" /> <!-- Helios Avenger Crafting Pack -->
 				<item id="38044" min="1" max="1" chance="9.107" /> <!-- Helios Cutter Crafting Pack -->
@@ -1154,12 +1154,12 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17430" min="1" max="1" chance="100" /> <!-- Eternal Helmet -->
-				<item id="17431" min="1" max="1" chance="100" /> <!-- Eternal Breastplate -->
-				<item id="17432" min="1" max="1" chance="100" /> <!-- Eternal Gaiters -->
-				<item id="17433" min="1" max="1" chance="100" /> <!-- Eternal Gauntlets -->
-				<item id="17434" min="1" max="1" chance="100" /> <!-- Eternal Boots -->
-				<item id="17435" min="1" max="1" chance="100" /> <!-- Eternal Shield -->
+				<item id="17430" min="1" max="1" chance="100" /> <!-- Eternal Helmet - Heavy Armor -->
+				<item id="17431" min="1" max="1" chance="100" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17432" min="1" max="1" chance="100" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17433" min="1" max="1" chance="100" /> <!-- Eternal Gauntlets - Heavy Armor -->
+				<item id="17434" min="1" max="1" chance="100" /> <!-- Eternal Boots - Heavy Armor -->
+				<item id="17435" min="1" max="1" chance="100" /> <!-- Eternal Shield - Heavy Armor -->
 				<item id="19448" min="1" max="1" chance="2.939" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="1.982" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
@@ -1787,12 +1787,12 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17441" min="1" max="1" chance="100" /> <!-- Eternal Circlet -->
-				<item id="17442" min="1" max="1" chance="100" /> <!-- Eternal Tunic -->
-				<item id="17443" min="1" max="1" chance="100" /> <!-- Eternal Stockings -->
-				<item id="17444" min="1" max="1" chance="100" /> <!-- Eternal Gloves -->
-				<item id="17445" min="1" max="1" chance="100" /> <!-- Eternal Shoes -->
-				<item id="17446" min="1" max="1" chance="100" /> <!-- Eternal Sigil -->
+				<item id="17441" min="1" max="1" chance="100" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="100" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="100" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="100" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="100" /> <!-- Eternal Shoes - Robe -->
+				<item id="17446" min="1" max="1" chance="100" /> <!-- Eternal Sigil - Robe -->
 				<item id="19448" min="1" max="1" chance="3.033" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="2.064" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
@@ -1904,24 +1904,31 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="26235" level="104" type="L2Npc" name="Kain van Halter" title="Embryo Commander-in-chief">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
+	<npc id="26235" level="104" type="L2RaidBoss" name="Kain van Halter" title="Embryo Commander-in-chief">
+		<race>HUMANOID</race>
+		<sex>MALE</sex>
+		<acquire exp="0" sp="0" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="193111142.06454" hpRegen="436.263366" mp="72343.633" mpRegen="3.3" />
+			<attack physical="295358.4152" magical="211816.358" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="34243.68753" magical="16714.49407" />
 			<speed>
 				<walk ground="60" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="12" />
 			<height normal="36" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="16900" level="1" /> <!-- Kain van Halter -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
 	</npc>
 	<npc id="26236" level="104" type="L2RaidBoss" name="Camille" title="Final Disciple">
 		<race>HUMANOID</race>
@@ -1950,23 +1957,23 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17439" min="1" max="1" chance="1.232" /> <!-- Eternal Leather Gloves -->
-				<item id="17443" min="1" max="1" chance="1.23" /> <!-- Eternal Stockings -->
-				<item id="17434" min="1" max="1" chance="1.226" /> <!-- Eternal Boots -->
-				<item id="17437" min="1" max="1" chance="1.215" /> <!-- Eternal Leather Armor -->
-				<item id="17441" min="1" max="1" chance="1.213" /> <!-- Eternal Circlet -->
-				<item id="17433" min="1" max="1" chance="1.194" /> <!-- Eternal Gauntlets -->
-				<item id="17440" min="1" max="1" chance="1.19" /> <!-- Eternal Leather Boots -->
-				<item id="17444" min="1" max="1" chance="1.186" /> <!-- Eternal Gloves -->
-				<item id="17436" min="1" max="1" chance="1.184" /> <!-- Eternal Leather Helmet -->
-				<item id="17438" min="1" max="1" chance="1.174" /> <!-- Eternal Leather Leggings -->
-				<item id="17445" min="1" max="1" chance="1.174" /> <!-- Eternal Shoes -->
-				<item id="17442" min="1" max="1" chance="1.168" /> <!-- Eternal Tunic -->
-				<item id="17432" min="1" max="1" chance="1.162" /> <!-- Eternal Gaiters -->
-				<item id="17431" min="1" max="1" chance="1.153" /> <!-- Eternal Breastplate -->
-				<item id="17430" min="1" max="1" chance="1.153" /> <!-- Eternal Helmet -->
-				<item id="17435" min="1" max="1" chance="1.135" /> <!-- Eternal Shield -->
-				<item id="17446" min="1" max="1" chance="1.127" /> <!-- Eternal Sigil -->
+				<item id="17439" min="1" max="1" chance="1.232" /> <!-- Eternal Leather Gloves - Light Armor -->
+				<item id="17443" min="1" max="1" chance="1.23" /> <!-- Eternal Stockings - Robe -->
+				<item id="17434" min="1" max="1" chance="1.226" /> <!-- Eternal Boots - Heavy Armor -->
+				<item id="17437" min="1" max="1" chance="1.215" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17441" min="1" max="1" chance="1.213" /> <!-- Eternal Circlet - Robe -->
+				<item id="17433" min="1" max="1" chance="1.194" /> <!-- Eternal Gauntlets - Heavy Armor -->
+				<item id="17440" min="1" max="1" chance="1.19" /> <!-- Eternal Leather Boots - Light Armor -->
+				<item id="17444" min="1" max="1" chance="1.186" /> <!-- Eternal Gloves - Robe -->
+				<item id="17436" min="1" max="1" chance="1.184" /> <!-- Eternal Leather Helmet - Light Armor -->
+				<item id="17438" min="1" max="1" chance="1.174" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17445" min="1" max="1" chance="1.174" /> <!-- Eternal Shoes - Robe -->
+				<item id="17442" min="1" max="1" chance="1.168" /> <!-- Eternal Tunic - Robe -->
+				<item id="17432" min="1" max="1" chance="1.162" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17431" min="1" max="1" chance="1.153" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17430" min="1" max="1" chance="1.153" /> <!-- Eternal Helmet - Heavy Armor -->
+				<item id="17435" min="1" max="1" chance="1.135" /> <!-- Eternal Shield - Heavy Armor -->
+				<item id="17446" min="1" max="1" chance="1.127" /> <!-- Eternal Sigil - Robe -->
 				<item id="17417" min="1" max="1" chance="0.75" /> <!-- Helios Cutter -->
 				<item id="17418" min="1" max="1" chance="0.75" /> <!-- Helios Slasher -->
 				<item id="17419" min="1" max="1" chance="0.75" /> <!-- Helios Avenger -->
@@ -1980,12 +1987,12 @@
 				<item id="17416" min="1" max="1" chance="0.75" /> <!-- Helios Shaper -->
 				<item id="19448" min="1" max="1" chance="59.52" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="41.56" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="17713" min="1" max="1" chance="17.13" /> <!-- Lv. 5 Legendary WIT Dye -->
-				<item id="17710" min="1" max="1" chance="16.98" /> <!-- Lv. 5 Legendary DEX Dye -->
-				<item id="17709" min="1" max="1" chance="16.7" /> <!-- Lv. 5 Legendary STR Dye -->
-				<item id="17711" min="1" max="1" chance="16.47" /> <!-- Lv. 5 Legendary CON Dye -->
-				<item id="17712" min="1" max="1" chance="16.33" /> <!-- Lv. 5 Legendary INT Dye -->
-				<item id="17714" min="1" max="1" chance="16.3" /> <!-- Lv. 5 Legendary MEN Dye -->
+				<item id="17713" min="1" max="1" chance="17.13" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5/ MEN +1/ Wind Resistance +25 -->
+				<item id="17710" min="1" max="1" chance="16.98" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5/ CON +1/ Earth Resistance +25 -->
+				<item id="17709" min="1" max="1" chance="16.7" /> <!-- Lv. 5 Legendary STR Dye - STR +5/ DEX +1/ Fire Resistance +25 -->
+				<item id="17711" min="1" max="1" chance="16.47" /> <!-- Lv. 5 Legendary CON Dye - CON +5/ STR +1/ Dark Resistance +25 -->
+				<item id="17712" min="1" max="1" chance="16.33" /> <!-- Lv. 5 Legendary INT Dye - INT +5/ WIT +1/ Water Resistance +25 -->
+				<item id="17714" min="1" max="1" chance="16.3" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5/ INT +1/ Holy Resistance +25 -->
 				<item id="37069" min="1" max="1" chance="5.069" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
 				<item id="37068" min="1" max="1" chance="5.061" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
 				<item id="37078" min="1" max="1" chance="5.06" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
@@ -2304,43 +2311,101 @@
 			<height normal="94" />
 		</collision>
 	</npc>
-	<npc id="26249" level="85" type="L2Npc" name="Darion">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26249" level="102" type="L2RaidBoss" name="Darion">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="137655324" raidPoints="21" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="18900094.78743" hpRegen="419.6050136" mp="80975.917" mpRegen="3.3" />
+			<attack physical="284080.4007" magical="203728.3272" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="32936.12091" magical="16076.26507" />
 			<speed>
 				<walk ground="44" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="50" />
-			<height normal="812.165" />
+			<height normal="81.2165" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="46507" min="1" max="1" chance="1.815" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46477" min="1" max="1" chance="1.809" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46492" min="1" max="1" chance="1.777" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="1.672" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46478" min="1" max="1" chance="1.584" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46508" min="1" max="1" chance="1.565" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46447" min="1" max="1" chance="1.273" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46462" min="1" max="1" chance="1.185" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46463" min="1" max="1" chance="1.147" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46448" min="1" max="1" chance="1.123" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46509" min="1" max="1" chance="0.75" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="46494" min="1" max="1" chance="0.75" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="0.75" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46464" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46449" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="0.3" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46465" min="1" max="1" chance="0.3" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+				<item id="46495" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46510" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26250" level="85" type="L2Npc" name="Goldberg">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26250" level="105" type="L2RaidBoss" name="Goldberg">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="899342325" raidPoints="21" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="27112833.323535" hpRegen="444.7141361" mp="84773.83" mpRegen="3.3" />
+			<attack physical="301079.7437" magical="215919.4101" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="34907.01512" magical="17038.26718" />
 			<speed>
 				<walk ground="40" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="37.5" />
 			<height normal="64.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="46477" min="1" max="1" chance="4.19" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="4.152" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46492" min="1" max="1" chance="4.086" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="3.975" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46493" min="1" max="1" chance="3.94" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46508" min="1" max="1" chance="3.928" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46479" min="1" max="1" chance="3.196" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46509" min="1" max="1" chance="3.182" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="46494" min="1" max="1" chance="3.178" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46447" min="1" max="1" chance="2.817" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46462" min="1" max="1" chance="2.738" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46463" min="1" max="1" chance="2.661" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46448" min="1" max="1" chance="2.645" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="2.176" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46449" min="1" max="1" chance="2.136" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46495" min="1" max="1" chance="1.211" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46510" min="1" max="1" chance="1.19" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="46480" min="1" max="1" chance="1.102" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="0.75" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46465" min="1" max="1" chance="0.75" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26251" level="85" type="L2Npc" name="Handy Cannon Gunner">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2418,24 +2483,53 @@
 			<height normal="35" />
 		</collision>
 	</npc>
-	<npc id="26255" level="85" type="L2Npc" name="Zaken">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26255" level="108" type="L2RaidBoss" name="Zaken">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="2147483647" raidPoints="0" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="123163664.15391" hpRegen="470.5528213" mp="88540.925" mpRegen="3.3" />
+			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="36935.17502" magical="18028.22092" />
 			<speed>
 				<walk ground="42" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="24" />
 			<height normal="49.5" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="46492" min="1" max="1" chance="8.27" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46477" min="1" max="1" chance="8.221" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="8.219" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46478" min="1" max="1" chance="7.889" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46493" min="1" max="1" chance="7.844" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46508" min="1" max="1" chance="7.827" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46479" min="1" max="1" chance="6.392" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46494" min="1" max="1" chance="6.386" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46509" min="1" max="1" chance="6.376" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="46462" min="1" max="1" chance="5.554" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46447" min="1" max="1" chance="5.533" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46448" min="1" max="1" chance="5.261" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46463" min="1" max="1" chance="5.246" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46464" min="1" max="1" chance="4.405" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46449" min="1" max="1" chance="4.329" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="2.319" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46495" min="1" max="1" chance="2.268" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46510" min="1" max="1" chance="2.234" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="1.516" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46465" min="1" max="1" chance="1.503" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26256" level="85" type="L2Npc" name="Devil Guardian">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2629,43 +2723,101 @@
 			<height normal="55" />
 		</collision>
 	</npc>
-	<npc id="26266" level="85" type="L2Npc" name="Tauti">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26266" level="108" type="L2RaidBoss" name="Tauti">
+		<race>DEMONIC</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="2147483647" raidPoints="21" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="133016757.08433" hpRegen="470.5528213" mp="88540.925" mpRegen="3.3" />
+			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="36935.17502" magical="18028.22092" />
 			<speed>
 				<walk ground="40" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="40" />
 			<height normal="90" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="46477" min="1" max="1" chance="8.345" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46492" min="1" max="1" chance="8.344" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="8.31" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46493" min="1" max="1" chance="7.825" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46478" min="1" max="1" chance="7.817" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46508" min="1" max="1" chance="7.772" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46509" min="1" max="1" chance="6.486" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="46494" min="1" max="1" chance="6.481" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="6.373" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46447" min="1" max="1" chance="5.637" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46462" min="1" max="1" chance="5.557" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46448" min="1" max="1" chance="5.34" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46463" min="1" max="1" chance="5.246" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46449" min="1" max="1" chance="4.292" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46464" min="1" max="1" chance="4.277" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46510" min="1" max="1" chance="2.317" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="46480" min="1" max="1" chance="2.262" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46495" min="1" max="1" chance="2.254" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="1.587" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46465" min="1" max="1" chance="1.539" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="26267" level="85" type="L2Npc" name="Mary Reed">
-		<!-- AUTO GENERATED NPC TODO: FIX IT -->
-		<race>ETC</race>
-		<sex>FEMALE</sex>
-		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="8446" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+	<npc id="26267" level="108" type="L2RaidBoss" name="Mary Reed">
+		<race>UNDEAD</race>
+		<sex>MALE</sex>
+		<acquire exp="2147483647" sp="2147483647" raidPoints="21" />
+		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
+			<vitals hp="123163664.15391" hpRegen="470.5528213" mp="88540.925" mpRegen="3.3" />
+			<attack physical="318573.0144" magical="228464.7134" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
+			<defence physical="36935.17502" magical="18028.22092" />
 			<speed>
 				<walk ground="50" />
 				<run ground="300" />
 			</speed>
-			<attack physical="1950.2231755595" magical="1331.5869440987" critical="4" attackSpeed="253" range="40" />
-			<defence physical="405.85106382979" magical="297.0297029703" />
 		</stats>
-		<status attackable="false" />
+		<status attackable="true" />
 		<collision>
 			<radius normal="22" />
 			<height normal="62" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="46492" min="1" max="1" chance="8.344" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
+				<item id="46507" min="1" max="1" chance="8.343" /> <!-- Lionel's Soul Crystal - Stage 4 -->
+				<item id="46477" min="1" max="1" chance="8.254" /> <!-- Leona's Soul Crystal - Stage 4 -->
+				<item id="46508" min="1" max="1" chance="7.867" /> <!-- Lionel's Soul Crystal - Stage 5 -->
+				<item id="46478" min="1" max="1" chance="7.837" /> <!-- Leona's Soul Crystal - Stage 5 -->
+				<item id="46493" min="1" max="1" chance="7.791" /> <!-- Pantheon's Soul Crystal - Stage 5 -->
+				<item id="46494" min="1" max="1" chance="6.444" /> <!-- Pantheon's Soul Crystal - Stage 6 -->
+				<item id="46509" min="1" max="1" chance="6.433" /> <!-- Lionel's Soul Crystal - Stage 6 -->
+				<item id="46479" min="1" max="1" chance="6.407" /> <!-- Leona's Soul Crystal - Stage 6 -->
+				<item id="46462" min="1" max="1" chance="5.584" /> <!-- Mermoden's Soul Crystal - Stage 4 -->
+				<item id="46447" min="1" max="1" chance="5.578" /> <!-- Kain's Soul Crystal - Stage 4 -->
+				<item id="46448" min="1" max="1" chance="5.307" /> <!-- Kain's Soul Crystal - Stage 5 -->
+				<item id="46463" min="1" max="1" chance="5.208" /> <!-- Mermoden's Soul Crystal - Stage 5 -->
+				<item id="46449" min="1" max="1" chance="4.37" /> <!-- Kain's Soul Crystal - Stage 6 -->
+				<item id="46464" min="1" max="1" chance="4.295" /> <!-- Mermoden's Soul Crystal - Stage 6 -->
+				<item id="46480" min="1" max="1" chance="2.341" /> <!-- Leona's Soul Crystal - Stage 7 -->
+				<item id="46495" min="1" max="1" chance="2.321" /> <!-- Pantheon's Soul Crystal - Stage 7 -->
+				<item id="46510" min="1" max="1" chance="2.266" /> <!-- Lionel's Soul Crystal - Stage 7 -->
+				<item id="46450" min="1" max="1" chance="1.572" /> <!-- Kain's Soul Crystal - Stage 7 -->
+				<item id="46465" min="1" max="1" chance="1.507" /> <!-- Mermoden's Soul Crystal - Stage 7 -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="26268" level="85" type="L2Npc" name="Shield Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2843,7 +2995,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="46329" />
-		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
+		<acquire exp="2147483647" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="40264178.265075" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
 			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -2938,7 +3090,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="46331" />
-		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
+		<acquire exp="2147483647" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
 			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3033,7 +3185,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="46334" />
-		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
+		<acquire exp="2147483647" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
 			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3128,7 +3280,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="46335" />
-		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
+		<acquire exp="2147483647" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
 			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3302,7 +3454,7 @@
 	<npc id="26285" level="101" type="L2RaidBoss" name="Blood Devil Brutal" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
+		<acquire exp="2147483647" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="40264178.265075" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
 			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3396,7 +3548,7 @@
 	<npc id="26286" level="101" type="L2RaidBoss" name="Blood Devil Akun" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
+		<acquire exp="2147483647" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
 			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3490,7 +3642,7 @@
 	<npc id="26287" level="101" type="L2RaidBoss" name="Blood Devil Epica" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
+		<acquire exp="2147483647" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
 			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3584,7 +3736,7 @@
 	<npc id="26288" level="101" type="L2RaidBoss" name="Blood Queen Julia" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="68063897677" sp="136127856" raidPoints="100" />
+		<acquire exp="2147483647" sp="136127856" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="34224551.367585" hpRegen="411.3974312" mp="119362.169" mpRegen="3.3" />
 			<attack physical="278523.7147" magical="199743.3485" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3759,7 +3911,7 @@
 	<npc id="26293" level="105" type="L2RaidBoss" name="Valiant Edgar" title="Raid Boss">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
+		<acquire exp="2147483647" sp="137283300" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="25821704.26185" hpRegen="444.7141361" mp="126544.385" mpRegen="3.3" />
 			<attack physical="301079.7437" magical="215919.4101" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3853,7 +4005,7 @@
 	<npc id="26294" level="105" type="L2RaidBoss" name="Vicious Blood" title="Raid Boss">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
+		<acquire exp="2147483647" sp="137283300" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="21948448.307115" hpRegen="444.7141361" mp="126544.385" mpRegen="3.3" />
 			<attack physical="301079.7437" magical="215919.4101" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -3947,7 +4099,7 @@
 	<npc id="26295" level="105" type="L2RaidBoss" name="Coquette Morrigan" title="Raid Boss">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
+		<acquire exp="2147483647" sp="137283300" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="21948448.307115" hpRegen="444.7141361" mp="126544.385" mpRegen="3.3" />
 			<attack physical="301079.7437" magical="215919.4101" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
@@ -4041,7 +4193,7 @@
 	<npc id="26296" level="105" type="L2RaidBoss" name="Cunning Croby" title="Raid Boss">
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="152542462275" sp="137283300" raidPoints="100" />
+		<acquire exp="2147483647" sp="137283300" raidPoints="100" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
 			<vitals hp="21948448.307115" hpRegen="444.7141361" mp="126544.385" mpRegen="3.3" />
 			<attack physical="301079.7437" magical="215919.4101" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />

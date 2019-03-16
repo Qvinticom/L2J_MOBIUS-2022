@@ -4,9 +4,9 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DIVINE</race>
 		<sex>FEMALE</sex>
-		<acquire exp="5480618" sp="5570" />
+		<acquire exp="8111250" sp="7299" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="34405.687695" hpRegen="8.5" mp="2874.995" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -19,15 +19,18 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5466" level="1" /> <!-- Holy Attack -->
+			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="5466" level="1" /> <!-- Holy Attacks -->
 			<skill id="4410" level="19" /> <!-- Extremely Strong P. Atk. -->
 			<skill id="4411" level="19" /> <!-- Extremely Strong M. Atk. -->
 			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
 			<skill id="4413" level="8" /> <!-- Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="8" /> <!-- Angels -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
+		<collision>
+			<radius normal="30" />
+			<height normal="33" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="17448" min="1" max="1" chance="0.0009" /> <!-- Eternal Earring -->
@@ -38,7 +41,6 @@
 				<item id="19447" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 				<item id="19448" min="1" max="1" chance="0.0009" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="35480" min="1" max="1" chance="0.0009" /> <!-- Recipe: Eternal Earring (60%) -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -46,28 +48,21 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36533" min="1" max="1" chance="3.687" /> <!-- Synthetic Braid -->
+				<item id="36533" min="1" max="1" chance="3.694" /> <!-- Synthetic Braid -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="30" />
-			<height normal="33" />
-		</collision>
 	</npc>
 	<npc id="23301" level="95" type="L2Monster" name="Laido Destruction Golem">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="7333805" sp="7400" />
+		<acquire exp="10854006" sp="9747" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14806" hpRegen="10.5" mp="2205" mpRegen="3.6" />
+			<vitals hp="161605.09176" hpRegen="8.5" mp="2736.314" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
@@ -80,40 +75,46 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="30" />
+			<height normal="36" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="1683" max="3926" chance="20" /> <!-- Adena -->
 				<item id="9546" min="1" max="1" chance="0.3" /> <!-- Fire Stone -->
 				<item id="35308" min="1" max="1" chance="0.03" /> <!-- Seraph Breastplate Ingredient -->
 				<item id="35432" min="1" max="1" chance="0.0009" /> <!-- Recipe: Seraph Breastplate (60%) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="40206" min="1" max="1" chance="11.8" /> <!-- Specter Fragment -->
-				<item id="40211" min="1" max="1" chance="9" /> <!-- Recipe: R95 (100%) -->
+				<item id="40206" min="1" max="1" chance="12.25" /> <!-- Specter Fragment -->
+				<item id="40211" min="1" max="1" chance="0.0009" /> <!-- Recipe: R95 (100%) -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="30" />
-			<height normal="36" />
-		</collision>
 	</npc>
 	<npc id="23302" level="94" type="L2Monster" name="Laido Golem of Repairs">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="7769936" sp="7775" />
+		<acquire exp="11499435" sp="10338" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14547" hpRegen="10.5" mp="2169" mpRegen="3.6" />
+			<vitals hp="158777.961645" hpRegen="8.5" mp="2691.709" mpRegen="3" />
 			<speed>
 				<walk ground="18" />
 				<run ground="190" />
@@ -126,39 +127,45 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="19" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="1630" max="3803" chance="20" /> <!-- Adena -->
 				<item id="9548" min="1" max="1" chance="0.3" /> <!-- Earth Stone -->
 				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
 				<item id="36564" min="1" max="1" chance="0.03" /> <!-- Greater Synthetic Cokes -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="40206" min="1" max="1" chance="11.53" /> <!-- Specter Fragment -->
-				<item id="40211" min="1" max="1" chance="9" /> <!-- Recipe: R95 (100%) -->
+				<item id="40206" min="1" max="1" chance="11.19" /> <!-- Specter Fragment -->
+				<item id="40211" min="1" max="1" chance="0.0009" /> <!-- Recipe: R95 (100%) -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="19" />
-		</collision>
 	</npc>
 	<npc id="23303" level="94" type="L2Monster" name="Spicula Elite Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="4228379" sp="4241" />
+		<acquire exp="6257920" sp="5566" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14547" hpRegen="10.5" mp="2169" mpRegen="3.6" />
+			<vitals hp="63511.058475" hpRegen="8.5" mp="2691.709" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="180" />
@@ -171,15 +178,19 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<ai aggroRange="1000" isAggressive="true" />
+		<collision>
+			<radius normal="12" />
+			<height normal="26" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="1428" max="3332" chance="20" /> <!-- Adena -->
-				<item id="36528" min="1" max="1" chance="3.076" /> <!-- Metallic Fiber -->
+				<item id="36528" min="1" max="1" chance="3.014" /> <!-- Metallic Fiber -->
 				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
 				<item id="36778" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Boots (60%) -->
 				<item id="36784" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Leather Boots (60%) -->
@@ -187,7 +198,6 @@
 				<item id="36934" min="1" max="1" chance="0.0075" /> <!-- Recipe: Accessory Gem (Mid-grade) - Upgrade -->
 				<item id="36868" min="1" max="1" chance="0.003" /> <!-- Recipe: Adamantite - Upgrade -->
 				<item id="36895" min="1" max="1" chance="0.003" /> <!-- Recipe: Durable Leather Braid - Combination -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -195,31 +205,24 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="36528" min="1" max="1" chance="4.75" /> <!-- Metallic Fiber -->
+				<item id="36528" min="1" max="1" chance="4.714" /> <!-- Metallic Fiber -->
 				<item id="36529" min="1" max="1" chance="0.3" /> <!-- Quality Fiber -->
 				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="12" />
-			<height normal="26" />
-		</collision>
 	</npc>
 	<npc id="23304" level="96" type="L2Monster" name="Spicula Larva">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="12434503" sp="12441" />
+		<acquire exp="18403061" sp="16496" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14890" hpRegen="10.5" mp="2242" mpRegen="3.6" />
+			<vitals hp="195025.92114" hpRegen="8.5" mp="2782.541" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="160" />
@@ -232,12 +235,16 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
+		<collision>
+			<radius normal="18" grown="12" />
+			<height normal="35" grown="42" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="17411" min="1" max="1" chance="0.003" /> <!-- Seraph Shoes - Robe -->
@@ -247,19 +254,21 @@
 				<item id="9552" min="1" max="1" chance="0.0075" /> <!-- Fire Crystal -->
 				<item id="36564" min="1" max="1" chance="0.0075" /> <!-- Greater Synthetic Cokes -->
 				<item id="35446" min="1" max="1" chance="0.003" /> <!-- Recipe: Seraph Shoes (60%) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="9554" min="1" max="1" chance="0.075" /> <!-- Earth Crystal -->
 				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="18" grown="12" />
-			<height normal="35" grown="42" />
-		</collision>
 	</npc>
 	<npc id="23311" level="72" type="L2Monster" name="Valley Buffalo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -267,7 +276,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="37134" sp="8" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2540" hpRegen="8.5" mp="1410" mpRegen="3" />
+			<vitals hp="2772.24051" hpRegen="8.5" mp="1750.138" mpRegen="3" />
 			<speed>
 				<walk ground="80" />
 				<run ground="128" />
@@ -280,11 +289,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4032" level="1" /> <!-- Power Strike -->
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="3" /> <!-- Beast -->
-			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="22" grown="27" />
@@ -296,15 +305,21 @@
 				<item id="730" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Armor (A-grade) -->
 				<item id="36519" min="1" max="1" chance="0.03" /> <!-- Quality Leather -->
 				<item id="36554" min="1" max="1" chance="0.003" /> <!-- Armor Fragment (High-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23312" level="73" type="L2Monster" name="Valley Grendel">
@@ -313,7 +328,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="53824" sp="12" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2586" hpRegen="8.5" mp="1442" mpRegen="3" />
+			<vitals hp="2822.71371" hpRegen="8.5" mp="1789.066" mpRegen="3" />
 			<speed>
 				<walk ground="36" />
 				<run ground="128" />
@@ -326,11 +341,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4032" level="1" /> <!-- Power Strike -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4032" level="1" /> <!-- Power Strike -->
 		</skillList>
 		<collision>
 			<radius normal="15" grown="18" />
@@ -340,15 +355,21 @@
 			<drop>
 				<item id="57" min="97" max="227" chance="70" /> <!-- Adena -->
 				<item id="36519" min="1" max="1" chance="0.3" /> <!-- Quality Leather -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
 				<item id="36534" min="1" max="1" chance="0.03" /> <!-- Durable Braid -->
 				<item id="36882" min="1" max="1" chance="0.003" /> <!-- Recipe: Thin Braid - Upgrade -->
-				<item id="36881" min="1" max="1" chance="9" /> <!-- Recipe: Thin Braid - Downgrade -->
+				<item id="36881" min="1" max="1" chance="0.0009" /> <!-- Recipe: Thin Braid - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
 	</npc>
 	<npc id="23313" level="76" type="L2Monster" name="Disciple of Protection">
@@ -994,13 +1015,13 @@
 			</spoil>
 		</dropLists>
 	</npc>
-	<npc id="23330" level="99" type="L2Monster" name="Rubble">
+	<npc id="23330" level="102" type="L2Monster" name="Rubble">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="28744078" sp="28814" />
+		<acquire exp="23908392" sp="21432" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="516275.851755" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1013,41 +1034,36 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
-		<dropLists>
-			<drop>
-				<item id="17417" min="1" max="1" chance="0.0009" /> <!-- Helios Cutter -->
-				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
-				<item id="36563" min="1" max="1" chance="0.3" /> <!-- Synthetic Cokes -->
-				<item id="36564" min="1" max="1" chance="0.0075" /> <!-- Greater Synthetic Cokes -->
-				<item id="36863" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather - Upgrade -->
-			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="14.36" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="29" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="10026" max="23356" chance="70" /> <!-- Adena -->
+				<item id="36547" min="1" max="1" chance="33.72" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="6.717" /> <!-- Weapon Fragment (Mid-grade) -->
+			</drop>
+			<spoil>
+				<item id="36547" min="1" max="1" chance="26.72" /> <!-- Weapon Fragment -->
+				<item id="36548" min="1" max="1" chance="5.321" /> <!-- Weapon Fragment (Mid-grade) -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="9.834" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
-	<npc id="23334" level="99" type="L2Monster" name="Shelop">
+	<npc id="23334" level="102" type="L2Monster" name="Shelop">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="28744078" sp="28814" />
+		<acquire exp="23908392" sp="21432" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="516275.851755" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1060,40 +1076,37 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
-		<dropLists>
-			<drop>
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
-				<item id="36870" min="1" max="1" chance="0.0009" /> <!-- Recipe: Orichalcum - Upgrade -->
-				<item id="36900" min="1" max="1" chance="0.0009" /> <!-- Recipe: Exquisite Leather Braid - Combination -->
-			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="14.63" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="27" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="10026" max="23356" chance="70" /> <!-- Adena -->
+				<item id="36558" min="1" max="1" chance="19.5" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="1.876" /> <!-- Accessory Gem (High-grade) -->
+			</drop>
+			<spoil>
+				<item id="36558" min="1" max="1" chance="10.2" /> <!-- Accessory Gem (Mid-grade) -->
+				<item id="36559" min="1" max="1" chance="0.75" /> <!-- Accessory Gem (High-grade) -->
+				<item id="36560" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Top-grade) -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="9.887" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
-	<npc id="23336" level="99" type="L2Monster" name="Death Worm">
+	<npc id="23336" level="102" type="L2Monster" name="Death Worm">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="28744078" sp="28814" />
+		<acquire exp="23908392" sp="21432" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="516275.851755" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1106,41 +1119,37 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
-		<dropLists>
-			<drop>
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
-				<item id="35567" min="1" max="1" chance="0.0009" /> <!-- Dark Armor Enhancement Stone -->
-				<item id="36913" min="1" max="1" chance="0.0009" /> <!-- Recipe: Durandil Wire - Combination -->
-				<item id="36920" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (High-grade) - Upgrade -->
-			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="15.45" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="70" />
 			<height normal="41" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="10026" max="23356" chance="70" /> <!-- Adena -->
+				<item id="36543" min="1" max="1" chance="23.18" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="2.168" /> <!-- Orichalcum Wire -->
+			</drop>
+			<spoil>
+				<item id="36543" min="1" max="1" chance="12.8" /> <!-- Adamantite Wire -->
+				<item id="36544" min="1" max="1" chance="1.149" /> <!-- Orichalcum Wire -->
+				<item id="36560" min="1" max="1" chance="0.075" /> <!-- Accessory Gem (Top-grade) -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="9.863" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
-	<npc id="23337" level="99" type="L2Monster" name="Large Rubble">
+	<npc id="23337" level="102" type="L2Monster" name="Large Rubble">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
-		<acquire exp="28744078" sp="28814" />
+		<acquire exp="23908392" sp="21432" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="285150" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="516275.851755" hpRegen="9.5" mp="30638.769" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1153,32 +1162,28 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4458" level="4" /> <!-- Spear Vulnerability -->
-			<skill id="4450" level="2" /> <!-- Stun Vulnerability -->
 			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" />
-		<dropLists>
-			<drop>
-				<item id="17421" min="1" max="1" chance="0.0009" /> <!-- Helios Stormer -->
-				<item id="57" min="2610" max="6093" chance="70" /> <!-- Adena -->
-				<item id="36921" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Top-grade) - Upgrade -->
-				<item id="36928" min="1" max="1" chance="0.0009" /> <!-- Recipe: Armor Fragment (High-grade) - Upgrade -->
-			</drop>
-			<spoil>
-				<item id="40207" min="1" max="1" chance="14.81" /> <!-- Helios Fragment -->
-				<item id="40212" min="1" max="1" chance="9" /> <!-- Recipe: R99 (100%) -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="23" />
 			<height normal="40" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="10026" max="23356" chance="70" /> <!-- Adena -->
+				<item id="36552" min="1" max="1" chance="30.82" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="5.924" /> <!-- Armor Fragment (Mid-grade) -->
+			</drop>
+			<spoil>
+				<item id="36552" min="1" max="1" chance="25.09" /> <!-- Armor Fragment -->
+				<item id="36553" min="1" max="1" chance="4.648" /> <!-- Armor Fragment (Mid-grade) -->
+			</spoil>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="9.938" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23349" level="87" type="L2Monster" name="Noctum" title="Gravekeeper">
 		<parameters>
@@ -1253,9 +1258,9 @@
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="5560187" sp="5601" />
+		<acquire exp="8229016" sp="7341" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13497" hpRegen="9.5" mp="1917" mpRegen="3.3" />
+			<vitals hp="176781.12117" hpRegen="8.5" mp="2378.663" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="180" />
@@ -1268,19 +1273,23 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
+		<collision>
+			<radius normal="50" />
+			<height normal="60.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="17305" min="1" max="1" chance="0.0075" /> <!-- Immortal Breastplate - Heavy Armor -->
 				<item id="17312" min="1" max="1" chance="0.0075" /> <!-- Immortal Leather Leggings - Light Armor -->
 				<item id="17316" min="1" max="1" chance="0.0075" /> <!-- Immortal Tunic - Robe -->
 				<item id="57" min="1439" max="3357" chance="20" /> <!-- Adena -->
-				<item id="36810" min="1" max="1" chance="3.755" /> <!-- Immortal Shield Ingredient -->
-				<item id="36517" min="1" max="1" chance="2.58" /> <!-- Leather -->
+				<item id="36810" min="1" max="1" chance="3.689" /> <!-- Immortal Shield Ingredient -->
+				<item id="36517" min="1" max="1" chance="2.532" /> <!-- Leather -->
 				<item id="36518" min="1" max="1" chance="0.3" /> <!-- Durable Leather -->
 				<item id="36759" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Sigil (60%) -->
 				<item id="36748" min="1" max="1" chance="0.03" /> <!-- Recipe: Immortal Shield (60%) -->
@@ -1289,7 +1298,6 @@
 				<item id="36867" min="1" max="1" chance="0.0009" /> <!-- Recipe: Adamantite - Downgrade -->
 				<item id="36907" min="1" max="1" chance="0.0009" /> <!-- Recipe: Adamantite Wire - Upgrade -->
 				<item id="36918" min="1" max="1" chance="0.0009" /> <!-- Recipe: Weapon Fragment (Mid-grade) - Upgrade -->
-				<!-- FIXME: Also drops herbs. -->
 				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
 				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
 				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
@@ -1297,21 +1305,14 @@
 				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
 				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
 				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
 				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<spoil>
-				<item id="40205" min="1" max="1" chance="19.46" /> <!-- Requiem Fragment -->
+				<item id="40205" min="1" max="1" chance="19.97" /> <!-- Requiem Fragment -->
 				<item id="40210" min="1" max="1" chance="0.003" /> <!-- Recipe: R (100%) -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="50" />
-			<height normal="60.5" />
-		</collision>
 	</npc>
 	<npc id="23351" level="99" type="L2Monster" name="Wild Guardian Tree">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1319,7 +1320,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1464542" sp="2343" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="69160.9023" hpRegen="8.5" mp="2922.844" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1332,15 +1333,19 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4416" level="5" /> <!-- Plants -->
 		</skillList>
+		<collision>
+			<radius normal="60" />
+			<height normal="47" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="1109" max="2584" chance="70" /> <!-- Adena -->
-				<item id="36557" min="1" max="1" chance="2.534" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="2.556" /> <!-- Accessory Gem -->
 				<item id="36759" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Sigil (60%) -->
 				<item id="36748" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Shield (60%) -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
@@ -1351,19 +1356,12 @@
 				<item id="36867" min="1" max="1" chance="0.0009" /> <!-- Recipe: Adamantite - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="29.77" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="5.758" /> <!-- Durable Leather -->
+				<item id="36517" min="1" max="1" chance="30.86" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="5.675" /> <!-- Durable Leather -->
 				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="60" />
-			<height normal="47" />
-		</collision>
 	</npc>
 	<npc id="23352" level="98" type="L2Monster" name="Wild Protector Tree">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1371,7 +1369,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1435018" sp="344" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15761" hpRegen="10.5" mp="2317" mpRegen="3.6" />
+			<vitals hp="68811.37539" hpRegen="8.5" mp="2874.995" mpRegen="3" />
 			<speed>
 				<walk ground="36" />
 				<run ground="180" />
@@ -1384,15 +1382,19 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
+		<collision>
+			<radius normal="44" />
+			<height normal="35" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="1085" max="2529" chance="70" /> <!-- Adena -->
-				<item id="36557" min="1" max="1" chance="2.494" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="2.581" /> <!-- Accessory Gem -->
 				<item id="36759" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Sigil (60%) -->
 				<item id="36748" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Shield (60%) -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
@@ -1403,19 +1405,12 @@
 				<item id="36867" min="1" max="1" chance="0.0009" /> <!-- Recipe: Adamantite - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="28.57" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="5.533" /> <!-- Durable Leather -->
+				<item id="36517" min="1" max="1" chance="30.15" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="5.575" /> <!-- Durable Leather -->
 				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="44" />
-			<height normal="35" />
-		</collision>
 	</npc>
 	<npc id="23353" level="99" type="L2Monster" name="Wilderness Protector">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1423,7 +1418,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="1464542" sp="2343" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15841" hpRegen="10.5" mp="2355" mpRegen="3.6" />
+			<vitals hp="69160.9023" hpRegen="8.5" mp="2922.844" mpRegen="3" />
 			<speed>
 				<walk ground="57" />
 				<run ground="180" />
@@ -1436,15 +1431,19 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
+		<collision>
+			<radius normal="35" />
+			<height normal="46.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="1109" max="2584" chance="70" /> <!-- Adena -->
-				<item id="36557" min="1" max="1" chance="2.631" /> <!-- Accessory Gem -->
+				<item id="36557" min="1" max="1" chance="2.526" /> <!-- Accessory Gem -->
 				<item id="36759" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Sigil (60%) -->
 				<item id="36748" min="1" max="1" chance="0.3" /> <!-- Recipe: Immortal Shield (60%) -->
 				<item id="36558" min="1" max="1" chance="0.3" /> <!-- Accessory Gem (Mid-grade) -->
@@ -1455,27 +1454,20 @@
 				<item id="36867" min="1" max="1" chance="0.0009" /> <!-- Recipe: Adamantite - Downgrade -->
 			</drop>
 			<spoil>
-				<item id="36517" min="1" max="1" chance="30.7" /> <!-- Leather -->
-				<item id="36518" min="1" max="1" chance="5.632" /> <!-- Durable Leather -->
+				<item id="36517" min="1" max="1" chance="29.25" /> <!-- Leather -->
+				<item id="36518" min="1" max="1" chance="5.629" /> <!-- Durable Leather -->
 				<item id="36884" min="1" max="1" chance="0.0075" /> <!-- Recipe: Synthetic Braid - Upgrade -->
-				<item id="36883" min="1" max="1" chance="9" /> <!-- Recipe: Synthetic Braid - Downgrade -->
+				<item id="36883" min="1" max="1" chance="0.0009" /> <!-- Recipe: Synthetic Braid - Downgrade -->
 			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="35" />
-			<height normal="46.5" />
-		</collision>
 	</npc>
 	<npc id="23354" level="99" type="L2Monster" name="Decay Hannibal">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="38" />
 				<run ground="180" />
@@ -1489,31 +1481,40 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-				<item id="37801" min="1" max="1" chance="0.003" /> <!-- Bloody Armor Enhancement Stone Fragment -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="23" />
 			<height normal="44" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2288" max="5330" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
+				<item id="37801" min="1" max="1" chance="0.003" /> <!-- Bloody Armor Enhancement Stone Fragment -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="48.08" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23355" level="99" type="L2Monster" name="Armor Beast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
@@ -1527,31 +1528,40 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="15.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2288" max="5330" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.50" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23356" level="99" type="L2Monster" name="Klein Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1565,32 +1575,41 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="43" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2288" max="5330" chance="70" /> <!-- Adena -->
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.33" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23357" level="99" type="L2Monster" name="Disorder Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1604,31 +1623,40 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3422" max="7987" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="42" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2286" max="5325" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.59" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23358" level="99" type="L2Monster" name="Blow Archer">
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<equipment rhand="17330" /> <!-- Apocalypse Thrower -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="43" />
 				<run ground="170" />
@@ -1642,30 +1670,39 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2288" max="5330" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.40" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23360" level="99" type="L2Monster" name="Bizuard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1679,31 +1716,40 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3424" max="7993" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="38" />
 			<height normal="32" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2287" max="5328" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="48.03" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23361" level="99" type="L2Monster" name="Mutated Fly">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1717,33 +1763,42 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3424" max="7993" chance="20" /> <!-- Adena -->
-				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="35" />
 			<height normal="33" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2287" max="5328" chance="70" /> <!-- Adena -->
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.82" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23362" level="99" type="L2Monster" name="Amos Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="35" />
 				<run ground="110" />
@@ -1757,31 +1812,40 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="11" /> <!-- Giants -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="35" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2288" max="5330" chance="70" /> <!-- Adena -->
+				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="47.84" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23363" level="99" type="L2Monster" name="Amos Officer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="160" />
@@ -1795,30 +1859,39 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="11" /> <!-- Giants -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="35" />
 			<height normal="71.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2288" max="5330" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.51" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23364" level="99" type="L2Monster" name="Amos Master">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
@@ -1832,32 +1905,41 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="42" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2288" max="5330" chance="70" /> <!-- Adena -->
+				<item id="36564" min="1" max="1" chance="0.3" /> <!-- Greater Synthetic Cokes -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="47.73" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23365" level="99" type="L2Monster" name="Ailith Hunter">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="210" />
@@ -1871,31 +1953,40 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4276" level="2" /> <!-- Bow/Crossbow Vulnerability -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4276" level="2" /> <!-- Bow/ Crossbow Vulnerability -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-				<item id="36911" min="1" max="1" chance="0.003" /> <!-- Recipe: Orichalcum Wire - Combination -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="36" />
 			<height normal="43.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="2288" max="5330" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
+				<item id="36911" min="1" max="1" chance="0.003" /> <!-- Recipe: Orichalcum Wire - Combination -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.16" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23366" level="99" type="L2Monster" name="Durable Charger">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="20541.33057" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="13" />
 				<run ground="160" />
@@ -1912,27 +2003,27 @@
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="2575" max="6011" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="18" />
 			<height normal="38" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="1720" max="4007" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="47.40" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23367" level="99" type="L2Monster" name="Armor Beast">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="160" />
@@ -1946,31 +2037,40 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4416" level="8" /> <!-- Angels -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="22" />
 			<height normal="15.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5593" max="13029" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.76" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23368" level="99" type="L2Monster" name="Klein Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -1984,32 +2084,42 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="36549" min="1" max="1" chance="0.3" /> <!-- Weapon Fragment (High-grade) -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="43" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5593" max="13029" chance="70" /> <!-- Adena -->
+				<item id="37776" min="1" max="1" chance="0.3" /> <!-- Scroll of Blessing Scraps: Weapon (R-grade) -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="37773" min="1" max="1" chance="0.03" /> <!-- Recipe: Scroll of Blessing: Weapon (R-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="47.87" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23369" level="99" type="L2Monster" name="Disorder Warrior">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -2023,32 +2133,43 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3422" max="7987" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="25" />
 			<height normal="42" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5587" max="13015" chance="70" /> <!-- Adena -->
+				<item id="37785" min="1" max="1" chance="1.138" /> <!-- Scroll of Blessing Scraps: Armor (R-grade) -->
+				<item id="37782" min="1" max="1" chance="0.3" /> <!-- Recipe: Scroll of Blessing: Armor (R-grade) -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.32" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23370" level="99" type="L2Monster" name="Blow Archer">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<equipment rhand="17330" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="43" />
 				<run ground="170" />
@@ -2062,30 +2183,39 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3426" max="7995" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="30" />
 			<height normal="47" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5593" max="13029" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="47.29" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23372" level="99" type="L2Monster" name="Bizuard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -2099,31 +2229,40 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3424" max="7993" chance="20" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="38" />
 			<height normal="32" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5592" max="13025" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="47.16" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23373" level="99" type="L2Monster" name="Mutated Fly">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>BEAST</race>
 		<sex>FEMALE</sex>
-		<acquire exp="23093802" sp="23130" />
+		<acquire exp="34077096" sp="30579" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="41082.030225" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -2137,25 +2276,33 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4416" level="3" /> <!-- Beast -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="3424" max="7993" chance="20" /> <!-- Adena -->
-				<item id="36564" min="1" max="1" chance="0.075" /> <!-- Greater Synthetic Cokes -->
-				<item id="37791" min="1" max="1" chance="0.075" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="35" />
 			<height normal="33" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="5592" max="13025" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="47.61" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23384" level="99" type="L2Monster" name="Smaug">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2163,7 +2310,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="209630648" sp="209643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="46" />
 				<run ground="200" />
@@ -2177,29 +2324,37 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="10" /> <!-- Dragons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
-			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
-			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="10343" max="24140" chance="70" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="48" />
 			<height normal="53.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="10343" max="24140" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.32" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23385" level="99" type="L2Monster" name="Lunatikan">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2207,7 +2362,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="209630648" sp="209643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="36" />
 				<run ground="170" />
@@ -2221,30 +2376,37 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
-			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
-			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4225" level="3" /> <!-- Stun Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="10343" max="24140" chance="70" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="40" />
 			<height normal="73" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="10343" max="24140" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.29" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23386" level="99" type="L2Monster" name="Jabberwok">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2252,7 +2414,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="209630648" sp="209643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="56" />
 				<run ground="180" />
@@ -2266,30 +2428,38 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
-			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
-			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
+		<collision>
+			<radius normal="26" />
+			<height normal="47" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="39503" max="92199" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.75" /> <!-- Sealed Demonic Tome -->
 				<item id="36550" min="1" max="1" chance="0.075" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.23" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="26" />
-			<height normal="47" />
-		</collision>
 	</npc>
 	<npc id="23387" level="99" type="L2Monster" name="Kanzaroth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2297,7 +2467,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="209630648" sp="209643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="37" />
 				<run ground="180" />
@@ -2311,28 +2481,38 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4225" level="3" /> <!-- Stun Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
+		<collision>
+			<radius normal="40" />
+			<height normal="72" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="10343" max="24140" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="48.28" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="40" />
-			<height normal="72" />
-		</collision>
 	</npc>
 	<npc id="23388" level="99" type="L2Monster" name="Kandiloth">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2340,7 +2520,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="209630648" sp="209643" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="120" />
@@ -2354,28 +2534,38 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="8" /> <!-- Weak P. Def. -->
-			<skill id="4225" level="3" /> <!-- Stun Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
+		<collision>
+			<radius normal="38.7" />
+			<height normal="54.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="10343" max="24140" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="48.27" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="38.7" />
-			<height normal="54.5" />
-		</collision>
 	</npc>
 	<npc id="23389" level="99" type="L2Monster" name="Viper" title="Oasis Mirage">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2383,7 +2573,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="419261297" sp="419286" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -2397,13 +2587,14 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="30" />
@@ -2414,9 +2605,18 @@
 				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="37802" min="1" max="1" chance="0.003" /> <!-- Dark Armor Enhancement Stone Fragment -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.50" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -2469,7 +2669,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="419261297" sp="419286" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="316834" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="345819.022545" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="48" />
 				<run ground="150" />
@@ -2483,37 +2683,47 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
+		<collision>
+			<radius normal="28" />
+			<height normal="43.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
 				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
 				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.17" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="28" />
-			<height normal="43.5" />
-		</collision>
 	</npc>
-	<npc id="23392" level="99" type="L2Monster" name="Kefensis" title="Mirage Watcher">
+	<npc id="23392" level="100" type="L2Monster" name="Kefensis" title="Mirage Watcher">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>PLANT</race>
 		<sex>FEMALE</sex>
-		<acquire exp="419261297" sp="419286" />
+		<acquire exp="470551400" sp="470600" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="380400.10461" hpRegen="9.5" mp="29224.385" mpRegen="3.3" />
 			<speed>
 				<walk ground="48" />
 				<run ground="150" />
@@ -2527,29 +2737,39 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="5" /> <!-- Plants -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
-				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
-				<item id="57" min="13757" max="32109" chance="70" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="28" />
 			<height normal="43.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17423" min="1" max="1" chance="0.0009" /> <!-- Helios Shooter -->
+				<item id="17424" min="1" max="1" chance="0.0009" /> <!-- Helios Buster -->
+				<item id="57" min="9379" max="21865" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.20" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23393" level="99" type="L2Monster" name="Slaver">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2557,7 +2777,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="138356208" sp="138390" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="158417" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="172909.195815" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="56" />
 				<run ground="160" />
@@ -2571,37 +2791,45 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
-			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
-			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4287" level="3" /> <!-- Hold Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="9097" max="21233" chance="70" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="33" />
 			<height normal="58.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="9097" max="21233" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.97" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
-	<npc id="23394" level="99" type="L2Monster" name="Slaver">
+	<npc id="23394" level="100" type="L2Monster" name="Slaver">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>HUMANOID</race>
 		<sex>FEMALE</sex>
-		<acquire exp="138356208" sp="138390" />
+		<acquire exp="155281900" sp="155300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="174258" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="190199.42139" hpRegen="9.5" mp="29224.385" mpRegen="3.3" />
 			<speed>
 				<walk ground="56" />
 				<run ground="160" />
@@ -2615,29 +2843,37 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
-			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
-			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4287" level="3" /> <!-- Hold Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="9097" max="21233" chance="70" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="33" />
 			<height normal="58.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="6202" max="14459" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="46.45" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23395" level="100" type="L2Monster" name="Garion">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2645,7 +2881,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="235275700" sp="235300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="380400.10461" hpRegen="9.5" mp="29224.385" mpRegen="3.3" />
 			<speed>
 				<walk ground="35" />
 				<run ground="160" />
@@ -2659,31 +2895,37 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
-			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
-			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="9056" max="21113" chance="70" /> <!-- Adena -->
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="57" min="9056" max="21113" chance="70" /> <!-- Adena -->
+				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+			<lucky>
+				<item id="48979" min="1" max="3" chance="48.31" /> <!-- Damaged Spellbook -->
+			</lucky>
+		</dropLists>
 	</npc>
 	<npc id="23396" level="100" type="L2Monster" name="Garion Neti">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2691,7 +2933,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="235275700" sp="235300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="380400.10461" hpRegen="9.5" mp="29224.385" mpRegen="3.3" />
 			<speed>
 				<walk ground="15" />
 				<run ground="160" />
@@ -2705,32 +2947,38 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
-			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
-			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
+		<collision>
+			<radius normal="20" />
+			<height normal="36" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="9056" max="21113" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36943" min="1" max="1" chance="0.0009" /> <!-- Recipe: Greater Synthetic Cokes - Downgrade -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.47" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="20" />
-			<height normal="36" />
-		</collision>
 	</npc>
 	<npc id="23397" level="100" type="L2Monster" name="Desert Wendigo">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2738,7 +2986,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="235275700" sp="235300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="380400.10461" hpRegen="9.5" mp="29224.385" mpRegen="3.3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2752,29 +3000,38 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
+		<collision>
+			<radius normal="40" />
+			<height normal="45" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="9056" max="21113" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.76" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="40" />
-			<height normal="45" />
-		</collision>
 	</npc>
 	<npc id="23398" level="100" type="L2Monster" name="Koraza">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2782,7 +3039,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="235275700" sp="235300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="380400.10461" hpRegen="9.5" mp="29224.385" mpRegen="3.3" />
 			<speed>
 				<walk ground="29" />
 				<run ground="93" />
@@ -2796,29 +3053,38 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="3" /> <!-- Beast -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
+		<collision>
+			<radius normal="40" />
+			<height normal="55" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="9056" max="21113" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36565" min="1" max="1" chance="0.03" /> <!-- Exquisite Synthetic Cokes -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="47.96" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="40" />
-			<height normal="55" />
-		</collision>
 	</npc>
 	<npc id="23399" level="100" type="L2Monster" name="Bend Beetle">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -2826,7 +3092,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="235275700" sp="235300" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="348517" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="380400.10461" hpRegen="9.5" mp="29224.385" mpRegen="3.3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
@@ -2840,32 +3106,37 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4457" level="1" /> <!-- Fist Weapon Vulnerability -->
-			<skill id="4459" level="1" /> <!-- Dualsword Vulnerability -->
-			<skill id="4460" level="1" /> <!-- Sword Vulnerability -->
-			<skill id="4225" level="3" /> <!-- Stun Resistance -->
 			<skill id="16547" level="10" /> <!-- Danger Zone Attack Resistance -->
 			<skill id="4379" level="5" /> <!-- Spear Resistance -->
-			<skill id="14823" level="1" /> <!-- Lethal Strike Resistance -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="14823" level="1" /> <!-- Instant Kill Attack Resistance -->
+			<skill id="4461" level="1" /> <!-- Dagger/ Rapier Vulnerability -->
+			<skill id="16608" level="1" /> <!-- Servitor Attack Weakness -->
+			<skill id="4071" level="1" /> <!-- Bow/ Crossbow Resistance -->
 		</skillList>
+		<collision>
+			<radius normal="40" />
+			<height normal="67" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="57" min="12686" max="29576" chance="70" /> <!-- Adena -->
 				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
 				<item id="36550" min="1" max="1" chance="0.03" /> <!-- Weapon Fragment (Top-grade) -->
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="48979" min="1" max="3" chance="46.67" /> <!-- Damaged Spellbook -->
 			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="40" />
-			<height normal="67" />
-		</collision>
 	</npc>
 </list>

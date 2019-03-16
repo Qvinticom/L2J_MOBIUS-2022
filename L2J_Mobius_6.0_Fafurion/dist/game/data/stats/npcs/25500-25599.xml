@@ -602,9 +602,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="252824108" sp="60677" />
+		<acquire exp="252824108" sp="60677" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="776489" hpRegen="216.975797589338" mp="1442" mpRegen="3" />
+			<vitals hp="1166448.2703" hpRegen="305.3568783" mp="2364.876" mpRegen="3" />
 			<attack physical="2524.09043696216" magical="971.194375946055" random="5" critical="4" accuracy="5" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="930.08877" magical="453.74" evasion="-18" />
 			<speed>
@@ -615,34 +615,28 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4172" level="7" /> <!-- Stun -->
 			<skill id="4173" level="7" /> <!-- BOSS Might -->
 			<skill id="4177" level="7" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4730" level="7" /> <!-- BOSS Mortal Blow -->
-			<skill id="5034" level="1" /> <!-- Raid Boss - Level 73 -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5034" level="1" /> <!-- Raid Boss (Lv. 73) -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
+		<collision>
+			<radius normal="35" />
+			<height normal="46.3765" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="6683" min="1" max="1" chance="8.853" /> <!-- Sealed Draconic Leather Helmet -->
-				<item id="6678" min="1" max="1" chance="6.392" /> <!-- Sealed Imperial Crusader Shield -->
-				<item id="6679" min="1" max="1" chance="2.975" /> <!-- Sealed Imperial Crusader Helmet -->
+				<item id="6683" min="1" max="1" chance="8.935" /> <!-- Sealed Draconic Leather Helmet -->
+				<item id="6678" min="1" max="1" chance="6.294" /> <!-- Sealed Imperial Crusader Shield -->
+				<item id="6679" min="1" max="1" chance="2.949" /> <!-- Sealed Imperial Crusader Helmet -->
 				<item id="6367" min="1" max="1" chance="0.75" /> <!-- Angel Slayer -->
-				<item id="6570" min="1" max="1" chance="3.24" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
-				<item id="6578" min="1" max="1" chance="1.326" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
+				<item id="6570" min="1" max="1" chance="3.201" /> <!-- Blessed Scroll: Enchant Armor (A-grade) -->
+				<item id="6578" min="1" max="1" chance="1.248" /> <!-- Blessed Scroll: Enchant Armor (S-grade) -->
 				<item id="46505" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 2 -->
 				<item id="46504" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 1 -->
 				<item id="46491" min="1" max="1" chance="0.3" /> <!-- Pantheon's Soul Crystal - Stage 3 -->
@@ -658,25 +652,8 @@
 				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46444" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 1 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="78.84" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="35" />
-			<height normal="46.3765" />
-		</collision>
 	</npc>
 	<npc id="25524" level="76" type="L2RaidBoss" name="Flamestone Giant" title="Raid Boss">
 		<!-- Confirmed CT2.5 -->
@@ -858,9 +835,9 @@
 		</parameters>
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
-		<acquire exp="1670060147" sp="400814" />
+		<acquire exp="1670060147" sp="400814" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="675862" hpRegen="230.846907827579" mp="203" mpRegen="3" />
+			<vitals hp="1015285.452705" hpRegen="319.2293199" mp="332.51" mpRegen="3" />
 			<attack physical="2890.66549373349" magical="1122.08855778928" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="1024.125" magical="499.6" evasion="-12" />
 			<speed>
@@ -871,31 +848,25 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4172" level="10" /> <!-- Stun -->
 			<skill id="4173" level="10" /> <!-- BOSS Might -->
 			<skill id="4177" level="10" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4721" level="10" /> <!-- BOSS Strike -->
-			<skill id="5179" level="1" /> <!-- Raid Boss - Level 80 -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5179" level="1" /> <!-- Raid Boss (Lv. 80) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
+		<collision>
+			<radius normal="30" />
+			<height normal="42.5105" />
+		</collision>
 		<dropLists>
 			<drop>
-				<item id="6725" min="1" max="1" chance="7.448" /> <!-- Sealed Tateossian Ring -->
-				<item id="6724" min="1" max="1" chance="4.907" /> <!-- Sealed Tateossian Earring -->
-				<item id="6726" min="1" max="1" chance="3.693" /> <!-- Sealed Tateossian Necklace -->
+				<item id="6725" min="1" max="1" chance="7.442" /> <!-- Sealed Tateossian Ring -->
+				<item id="6724" min="1" max="1" chance="4.979" /> <!-- Sealed Tateossian Earring -->
+				<item id="6726" min="1" max="1" chance="3.664" /> <!-- Sealed Tateossian Necklace -->
 				<item id="6365" min="1" max="1" chance="0.3" /> <!-- Basalt Battlehammer -->
 				<item id="6366" min="1" max="1" chance="0.3" /> <!-- Imperial Staff -->
 				<item id="6369" min="1" max="1" chance="0.3" /> <!-- Dragon Hunter Axe -->
@@ -915,25 +886,8 @@
 				<item id="46446" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 3 -->
 				<item id="46445" min="1" max="1" chance="0.3" /> <!-- Kain's Soul Crystal - Stage 2 -->
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="88.33" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="30" />
-			<height normal="42.5105" />
-		</collision>
 	</npc>
 	<npc id="25528" level="22" type="L2RaidBoss" name="Tiberias" title="Prime Inspector">
 		<!-- Confirmed CT2.5 -->
@@ -1757,9 +1711,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="3100451" sp="744" />
+		<acquire exp="3100451" sp="744" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="2230489" hpRegen="187.223482496798" mp="1846" mpRegen="3" />
+			<vitals hp="2230489.572375" hpRegen="319.2293199" mp="2230.25" mpRegen="3" />
 			<attack physical="5211.07475815079" magical="3599.86628939184" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="731.989957674419" magical="353.810790697674" />
 			<attribute>
@@ -1775,27 +1729,20 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5044" level="2" /> <!-- NPC Ultimate Defense -->
 			<skill id="5247" level="9" /> <!-- Seed of Darkness -->
 			<skill id="5249" level="9" /> <!-- Boss Dark Circle -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5475" level="1" /> <!-- Raid Boss - Level 83 -->
-			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5475" level="1" /> <!-- Raid Boss (Lv. 83) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="300" isAggressive="true" />
+		<collision>
+			<radius normal="33" grown="39.6" />
+			<height normal="49" grown="60.5" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="6680" min="1" max="1" chance="0.75" /> <!-- Sealed Draconic Leather Armor -->
@@ -1803,31 +1750,14 @@
 				<item id="6366" min="1" max="1" chance="0.3" /> <!-- Imperial Staff -->
 				<item id="6369" min="1" max="1" chance="0.3" /> <!-- Dragon Hunter Axe -->
 				<item id="6579" min="1" max="1" chance="0.3" /> <!-- Arcana Mace -->
-				<item id="6707" min="24" max="72" chance="93.285" /> <!-- Sealed Draconic Leather Armor Part -->
-				<item id="6693" min="3" max="9" chance="33.41" /> <!-- Dragon Hunter Axe Blade -->
-				<item id="6689" min="18" max="54" chance="33.38" /> <!-- Basalt Battlehammer Head -->
-				<item id="6690" min="2" max="6" chance="33" /> <!-- Imperial Staff Head -->
-				<item id="6697" min="3" max="9" chance="31.97" /> <!-- Arcana Mace Head -->
+				<item id="6707" min="24" max="72" chance="92.625" /> <!-- Sealed Draconic Leather Armor Part -->
+				<item id="6690" min="2" max="6" chance="33.63" /> <!-- Imperial Staff Head -->
+				<item id="6693" min="3" max="9" chance="32.96" /> <!-- Dragon Hunter Axe Blade -->
+				<item id="6689" min="18" max="54" chance="32.84" /> <!-- Basalt Battlehammer Head -->
+				<item id="6697" min="3" max="9" chance="31.98" /> <!-- Arcana Mace Head -->
 				<item id="10301" min="1" max="1" chance="0.03" /> <!-- Transformation Sealbook: Demon Prince -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="90.41" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="33" grown="39.6" />
-			<height normal="49" grown="60.5" />
-		</collision>
 	</npc>
 	<npc id="25541" level="83" type="L2Monster" name="Fiend" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -1889,9 +1819,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="3100451" sp="744" />
+		<acquire exp="3100451" sp="744" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="2230489" hpRegen="187.223482496798" mp="1846" mpRegen="3" />
+			<vitals hp="2230489.572375" hpRegen="319.2293199" mp="2230.25" mpRegen="3" />
 			<attack physical="3571.03629544474" magical="2466.91014325959" random="5" critical="4" accuracy="4.75" attackSpeed="253" type="FIST" range="40" distance="80" width="120" />
 			<defence physical="731.989957674419" magical="353.810790697674" />
 			<attribute>
@@ -1907,23 +1837,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="1" /> <!-- Bare Hands -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="5246" level="9" /> <!-- Boss Dark Explosion -->
 			<skill id="5250" level="1" /> <!-- Stun -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5476" level="1" /> <!-- Raid Boss - Level 83 -->
-			<skill id="5479" level="1" /> <!-- Boss Petrification Resistance -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5476" level="1" /> <!-- Raid Boss (Lv. 83) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" aggroRange="300" clanHelpRange="2000" isAggressive="true">
@@ -1931,34 +1850,21 @@
 				<clan>RANKU</clan>
 			</clanList>
 		</ai>
+		<collision>
+			<radius normal="13" />
+			<height normal="29" />
+		</collision>
 		<dropLists>
 			<drop>
 				<item id="6364" min="1" max="1" chance="0.3" /> <!-- Forgotten Blade -->
 				<item id="6372" min="1" max="1" chance="0.3" /> <!-- Heaven's Divider -->
 				<item id="7575" min="1" max="1" chance="0.3" /> <!-- Draconic Bow -->
-				<item id="7579" min="14" max="42" chance="57" /> <!-- Draconic Bow Shaft -->
-				<item id="6696" min="81" max="243" chance="56.85" /> <!-- Heaven's Divider Edge -->
-				<item id="6688" min="40" max="120" chance="54.99" /> <!-- Forgotten Blade Edge -->
+				<item id="7579" min="14" max="42" chance="56.64" /> <!-- Draconic Bow Shaft -->
+				<item id="6696" min="81" max="243" chance="55.41" /> <!-- Heaven's Divider Edge -->
+				<item id="6688" min="40" max="120" chance="54.78" /> <!-- Forgotten Blade Edge -->
 				<item id="10299" min="1" max="1" chance="0.03" /> <!-- Transformation Sealbook: Ranku -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
 			</drop>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="89.91" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
 		</dropLists>
-		<collision>
-			<radius normal="13" />
-			<height normal="29" />
-		</collision>
 	</npc>
 	<npc id="25543" level="83" type="L2Monster" name="Eidolon" title="Raid Fighter">
 		<!-- Confirmed CT2.5 -->
@@ -2121,7 +2027,7 @@
 			<height normal="47.5" />
 		</collision>
 	</npc>
-	<npc id="25546" level="95" type="L2RaidBoss" name="Betrayed Rhianna" title="Forsaken Prisoner">
+	<npc id="25546" level="104" type="L2RaidBoss" name="Betrayed Rhianna" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2260,7 +2166,7 @@
 			<height normal="28" />
 		</collision>
 	</npc>
-	<npc id="25549" level="95" type="L2RaidBoss" name="Tesla the Deceiver" title="Forsaken Prisoner">
+	<npc id="25549" level="104" type="L2RaidBoss" name="Tesla the Deceiver" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2403,7 +2309,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25552" level="95" type="L2RaidBoss" name="Soul Hunter Chakundel" title="Forsaken Prisoner">
+	<npc id="25552" level="104" type="L2RaidBoss" name="Soul Hunter Chakundel" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
@@ -2420,9 +2326,9 @@
 		</parameters>
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
-		<acquire exp="138831575" sp="33319" raidPoints="7" />
+		<acquire exp="2147483647" sp="18019456" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1073425" hpRegen="8.5" mp="44116" mpRegen="30" />
+			<vitals hp="3531703.17942" hpRegen="436.263366" mp="83501.371" mpRegen="3.3" />
 			<attack physical="39019.9712170142" magical="6908.12226971491" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3399.66102851115" magical="1932.74142437597" evasion="-18" />
 			<attribute>
@@ -2437,22 +2343,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4172" level="12" /> <!-- Stun -->
 			<skill id="4173" level="12" /> <!-- BOSS Might -->
 			<skill id="4177" level="12" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
 			<skill id="4730" level="12" /> <!-- BOSS Mortal Blow -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>1.331</sNpcPropHpRate>
@@ -2462,7 +2358,7 @@
 			<height normal="32.5" />
 		</collision>
 	</npc>
-	<npc id="25553" level="97" type="L2RaidBoss" name="Durango the Crusher" title="Forsaken Prisoner">
+	<npc id="25553" level="105" type="L2RaidBoss" name="Durango the Crusher" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
@@ -2480,9 +2376,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="217112675" sp="52107" raidPoints="7" />
+		<acquire exp="2147483647" sp="36735300" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1169343" hpRegen="8.5" mp="45600" mpRegen="30" />
+			<vitals hp="3615043.896345" hpRegen="444.7141361" mp="84773.83" mpRegen="3.3" />
 			<attack physical="42936.9452133851" magical="7578.69252885478" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3537.007334063" magical="2030.586458985" evasion="-18" />
 			<attribute>
@@ -2497,22 +2393,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4170" level="12" /> <!-- BOSS Mortal Blow -->
 			<skill id="4172" level="12" /> <!-- Stun -->
 			<skill id="4175" level="12" /> <!-- BOSS Haste -->
 			<skill id="4177" level="12" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>1.331</sNpcPropHpRate>
@@ -2522,7 +2408,7 @@
 			<height normal="46.3765" />
 		</collision>
 	</npc>
-	<npc id="25554" level="97" type="L2RaidBoss" name="Brutus the Obstinate" title="Forsaken Prisoner">
+	<npc id="25554" level="105" type="L2RaidBoss" name="Brutus the Obstinate" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2679,7 +2565,7 @@
 			<height normal="31" grown="36" />
 		</collision>
 	</npc>
-	<npc id="25557" level="97" type="L2RaidBoss" name="Ranger Karankawa" title="Forsaken Prisoner">
+	<npc id="25557" level="105" type="L2RaidBoss" name="Ranger Karankawa" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2833,7 +2719,7 @@
 			<height normal="25.5" />
 		</collision>
 	</npc>
-	<npc id="25560" level="97" type="L2RaidBoss" name="Sargon the Mad" title="Forsaken Prisoner">
+	<npc id="25560" level="105" type="L2RaidBoss" name="Sargon the Mad" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -2989,7 +2875,7 @@
 			<height normal="31" />
 		</collision>
 	</npc>
-	<npc id="25563" level="99" type="L2RaidBoss" name="Beautiful Atrielle" title="Forsaken Prisoner">
+	<npc id="25563" level="106" type="L2RaidBoss" name="Beautiful Atrielle" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3160,7 +3046,7 @@
 			<height normal="23" />
 		</collision>
 	</npc>
-	<npc id="25566" level="99" type="L2RaidBoss" name="Nagen the Tomboy" title="Forsaken Prisoner">
+	<npc id="25566" level="106" type="L2RaidBoss" name="Nagen the Tomboy" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3338,7 +3224,7 @@
 			<height normal="20" />
 		</collision>
 	</npc>
-	<npc id="25569" level="99" type="L2RaidBoss" name="Jax the Destroyer" title="Forsaken Prisoner">
+	<npc id="25569" level="106" type="L2RaidBoss" name="Jax the Destroyer" title="Forsaken Prisoner">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3506,7 +3392,7 @@
 			<height normal="29" />
 		</collision>
 	</npc>
-	<npc id="25572" level="93" type="L2RaidBoss" name="Hager the Outlaw" title="Forsaken Inmate">
+	<npc id="25572" level="104" type="L2RaidBoss" name="Hager the Outlaw" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3657,7 +3543,7 @@
 			<height normal="38" />
 		</collision>
 	</npc>
-	<npc id="25575" level="93" type="L2RaidBoss" name="All-seeing Rango" title="Forsaken Inmate">
+	<npc id="25575" level="104" type="L2RaidBoss" name="All-seeing Rango" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -3808,7 +3694,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25578" level="93" type="L2RaidBoss" name="Jakard" title="Forsaken Inmate">
+	<npc id="25578" level="104" type="L2RaidBoss" name="Jakard" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm03_A" />
@@ -3825,9 +3711,9 @@
 		</parameters>
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
-		<acquire exp="133047567" sp="31931" raidPoints="7" />
+		<acquire exp="2147483647" sp="18019456" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1014635" hpRegen="8.5" mp="42648" mpRegen="30" />
+			<vitals hp="3531703.17942" hpRegen="436.263366" mp="83501.371" mpRegen="3.3" />
 			<attack physical="35459.9874241795" magical="6296.76383568414" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3267.64804739634" magical="1839.61111183911" evasion="-18" />
 			<attribute>
@@ -3843,21 +3729,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4176" level="12" /> <!-- BOSS Reflect Damage -->
 			<skill id="4177" level="12" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4730" level="12" /> <!-- BOSS Mortal Blow -->
 			<skill id="4735" level="12" /> <!-- BOSS Spinning Slash -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>1.331</sNpcPropHpRate>
@@ -3867,7 +3744,7 @@
 			<height normal="98" />
 		</collision>
 	</npc>
-	<npc id="25579" level="94" type="L2RaidBoss" name="Helsing" title="Forsaken Inmate">
+	<npc id="25579" level="105" type="L2RaidBoss" name="Helsing" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4021,7 +3898,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="25582" level="95" type="L2RaidBoss" name="Gillien" title="Forsaken Inmate">
+	<npc id="25582" level="105" type="L2RaidBoss" name="Gillien" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4173,7 +4050,7 @@
 			<height normal="30" />
 		</collision>
 	</npc>
-	<npc id="25585" level="96" type="L2RaidBoss" name="Medici" title="Forsaken Inmate">
+	<npc id="25585" level="105" type="L2RaidBoss" name="Medici" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4326,7 +4203,7 @@
 			<height normal="28.5" />
 		</collision>
 	</npc>
-	<npc id="25588" level="96" type="L2RaidBoss" name="Immortal Muus" title="Forsaken Inmate">
+	<npc id="25588" level="105" type="L2RaidBoss" name="Immortal Muus" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm02_A" />
@@ -4344,9 +4221,9 @@
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
-		<acquire exp="212659200" sp="51038" raidPoints="7" />
+		<acquire exp="2147483647" sp="36735300" raidPoints="0" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1098324" hpRegen="8.5" mp="44856" mpRegen="30" />
+			<vitals hp="3615043.896345" hpRegen="444.7141361" mp="84773.83" mpRegen="3.3" />
 			<attack physical="40918.7454632461" magical="7231.0886261522" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3467.65424908137" magical="1981.05995998537" evasion="-18" />
 			<attribute>
@@ -4362,21 +4239,12 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4172" level="12" /> <!-- Stun -->
 			<skill id="4175" level="12" /> <!-- BOSS Haste -->
 			<skill id="4177" level="12" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4731" level="12" /> <!-- BOSS Mortal Blow -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="1" /> <!-- Undead -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>1.331</sNpcPropHpRate>
@@ -4386,7 +4254,7 @@
 			<height normal="46.5" grown="48.4" />
 		</collision>
 	</npc>
-	<npc id="25589" level="97" type="L2RaidBoss" name="Brand the Exile" title="Forsaken Inmate">
+	<npc id="25589" level="106" type="L2RaidBoss" name="Brand the Exile" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">
@@ -4557,7 +4425,7 @@
 			<height normal="32" />
 		</collision>
 	</npc>
-	<npc id="25592" level="98" type="L2RaidBoss" name="Commander Koenig" title="Forsaken Inmate">
+	<npc id="25592" level="106" type="L2RaidBoss" name="Commander Koenig" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<param name="RaidSpawnMusic" value="Rm01_A" />
@@ -4575,9 +4443,9 @@
 		</parameters>
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
-		<acquire exp="369350632" sp="88644" raidPoints="7" />
+		<acquire exp="2147483647" sp="131056704" raidPoints="7" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1195586" hpRegen="8.5" mp="46348" mpRegen="30" />
+			<vitals hp="4417486.38831" hpRegen="453.2459686" mp="86021.959" mpRegen="3.3" />
 			<attack physical="45027.4086463771" magical="7933.39078546243" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3607.74748074426" magical="2081.35112045963" evasion="-18" />
 			<attribute>
@@ -4593,46 +4461,62 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="12" /> <!-- BOSS Might -->
 			<skill id="4177" level="12" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="4" /> <!-- HP High -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4721" level="12" /> <!-- BOSS Strike -->
 			<skill id="4736" level="12" /> <!-- BOSS Spinning Slash -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="4" /> <!-- Animals -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>1.331</sNpcPropHpRate>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="1000" />
-		<dropLists>
-			<drop>
-				<item id="36311" min="7" max="14" chance="100" /> <!-- Battleground Scroll: Damage Reflection Resistance -->
-				<!-- FIXME: Also drops herbs. -->
-				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
-				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
-				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
-				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
-				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
-				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
-				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
-				<item id="34850" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Magic -->
-				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="20" />
 			<height normal="33.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17527" min="1" max="1" chance="80.29" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="1" chance="20.27" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="35469" min="1" max="1" chance="1.836" /> <!-- Recipe: Eternal Leather Armor (60%) -->
+				<item id="35475" min="1" max="1" chance="1.833" /> <!-- Recipe: Eternal Stockings (60%) -->
+				<item id="35471" min="1" max="1" chance="1.808" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
+				<item id="35472" min="1" max="1" chance="1.806" /> <!-- Recipe: Eternal Leather Boots (60%) -->
+				<item id="35474" min="1" max="1" chance="1.807" /> <!-- Recipe: Eternal Tunic (60%) -->
+				<item id="35463" min="1" max="1" chance="1.792" /> <!-- Recipe: Eternal Breastplate (60%) -->
+				<item id="35468" min="1" max="1" chance="1.762" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
+				<item id="35478" min="1" max="1" chance="1.756" /> <!-- Recipe: Eternal Sigil (60%) -->
+				<item id="35470" min="1" max="1" chance="1.752" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
+				<item id="35476" min="1" max="1" chance="1.744" /> <!-- Recipe: Eternal Gloves (60%) -->
+				<item id="35464" min="1" max="1" chance="1.744" /> <!-- Recipe: Eternal Gaiters (60%) -->
+				<item id="35462" min="1" max="1" chance="1.733" /> <!-- Recipe: Eternal Helmet (60%) -->
+				<item id="35467" min="1" max="1" chance="1.727" /> <!-- Recipe: Eternal Shield (60%) -->
+				<item id="35465" min="1" max="1" chance="1.715" /> <!-- Recipe: Eternal Gauntlets (60%) -->
+				<item id="35477" min="1" max="1" chance="1.703" /> <!-- Recipe: Eternal Shoes (60%) -->
+				<item id="35473" min="1" max="1" chance="1.7" /> <!-- Recipe: Eternal Circlet (60%) -->
+				<item id="35466" min="1" max="1" chance="1.694" /> <!-- Recipe: Eternal Boots (60%) -->
+				<item id="35340" min="1" max="1" chance="0.75" /> <!-- Eternal Gaiter Ingredient -->
+				<item id="35342" min="1" max="1" chance="0.75" /> <!-- Eternal Boot Ingredient -->
+				<item id="35339" min="1" max="1" chance="0.75" /> <!-- Eternal Breastplate Ingredient -->
+				<item id="35338" min="1" max="1" chance="0.75" /> <!-- Eternal Helmet Ingredient -->
+				<item id="35343" min="1" max="1" chance="0.75" /> <!-- Eternal Shield Ingredient -->
+				<item id="35341" min="1" max="1" chance="0.75" /> <!-- Eternal Gauntlet Ingredient -->
+				<item id="35346" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Legging Ingredient -->
+				<item id="35347" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Glove Ingredient -->
+				<item id="35348" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Boot Ingredient -->
+				<item id="35349" min="1" max="1" chance="0.75" /> <!-- Eternal Circlet Ingredient -->
+				<item id="35350" min="1" max="1" chance="0.75" /> <!-- Eternal Tunic Ingredient -->
+				<item id="35351" min="1" max="1" chance="0.75" /> <!-- Eternal Stocking Ingredient -->
+				<item id="35352" min="1" max="1" chance="0.75" /> <!-- Eternal Glove Ingredient -->
+				<item id="35353" min="1" max="1" chance="0.75" /> <!-- Eternal Shoe Ingredient -->
+				<item id="35345" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Armor Ingredient -->
+				<item id="35344" min="1" max="1" chance="0.75" /> <!-- Eternal Leather Helmet Ingredient -->
+				<item id="35354" min="1" max="1" chance="0.75" /> <!-- Eternal Sigil Ingredient -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="25593" level="99" type="L2RaidBoss" name="Gerg the Hunter" title="Forsaken Inmate">
+	<npc id="25593" level="106" type="L2RaidBoss" name="Gerg the Hunter" title="Forsaken Inmate">
 		<!-- Confirmed CT2.5 -->
 		<parameters>
 			<minions name="Privates">

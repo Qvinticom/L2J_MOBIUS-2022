@@ -56,7 +56,7 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="312844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="170731.90815" hpRegen="8.5" mp="26462.119" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="130" />
@@ -71,14 +71,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="1000">
 			<clanList>
@@ -146,7 +143,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="15304" /> <!-- Transparent Crossbow (NPC) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="313367" hpRegen="8.5" mp="21690" mpRegen="30" />
+			<vitals hp="171017.08173" hpRegen="8.5" mp="26916.279" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="130" />
@@ -161,14 +158,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4408" level="9" /> <!-- HP Increase (1/2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai clanHelpRange="1000" aggroRange="450">
 			<clanList>
@@ -1237,14 +1231,14 @@
 			<height normal="19" />
 		</collision>
 	</npc>
-	<npc id="19327" level="95" type="L2Monster" name="Gustav">
+	<npc id="19327" level="105" type="L2Monster" name="Gustav">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="6149301075" sp="1475832" />
+		<acquire exp="2147483647" sp="91849275" />
 		<equipment rhand="15570" /> <!-- Finale Blade -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="530201" hpRegen="8.5" mp="2242" mpRegen="30" />
+			<vitals hp="3278828.031015" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<speed>
 				<walk ground="70" />
 				<run ground="110" />
@@ -1259,21 +1253,80 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="21" grown="24" />
 			<height normal="31" grown="38" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17416" min="1" max="1" chance="0.075" /> <!-- Helios Shaper -->
+				<item id="17425" min="1" max="1" chance="0.075" /> <!-- Helios Caster -->
+				<item id="17424" min="1" max="1" chance="0.075" /> <!-- Helios Buster -->
+				<item id="17423" min="1" max="1" chance="0.075" /> <!-- Helios Shooter -->
+				<item id="17422" min="1" max="1" chance="0.075" /> <!-- Helios Thrower -->
+				<item id="17421" min="1" max="1" chance="0.075" /> <!-- Helios Stormer -->
+				<item id="17420" min="1" max="1" chance="0.075" /> <!-- Helios Fighter -->
+				<item id="17419" min="1" max="1" chance="0.075" /> <!-- Helios Avenger -->
+				<item id="17418" min="1" max="1" chance="0.075" /> <!-- Helios Slasher -->
+				<item id="17417" min="1" max="1" chance="0.075" /> <!-- Helios Cutter -->
+				<item id="17426" min="1" max="1" chance="0.075" /> <!-- Helios Retributer -->
+				<item id="19448" min="1" max="1" chance="40.75" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="19447" min="1" max="1" chance="10.042" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="39738" min="1" max="1" chance="10" /> <!-- Rune Stone -->
+				<item id="37072" min="1" max="1" chance="5.068" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
+				<item id="37082" min="1" max="1" chance="5.059" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
+				<item id="37075" min="1" max="1" chance="5.059" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
+				<item id="37086" min="1" max="1" chance="5.048" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
+				<item id="37069" min="1" max="1" chance="5.033" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
+				<item id="37079" min="1" max="1" chance="5.032" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
+				<item id="37076" min="1" max="1" chance="5.028" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+				<item id="37084" min="1" max="1" chance="5.026" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
+				<item id="37074" min="1" max="1" chance="5.004" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
+				<item id="37073" min="1" max="1" chance="4.971" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
+				<item id="37071" min="1" max="1" chance="4.968" /> <!-- Monster Weapon Appearance Stone: Seknus' Magic Sword -->
+				<item id="37078" min="1" max="1" chance="4.955" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
+				<item id="37083" min="1" max="1" chance="4.952" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
+				<item id="37068" min="1" max="1" chance="4.95" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
+				<item id="37081" min="1" max="1" chance="4.947" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
+				<item id="37085" min="1" max="1" chance="4.939" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
+				<item id="37080" min="1" max="1" chance="4.937" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+				<item id="37070" min="1" max="1" chance="4.937" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dual Sword -->
+				<item id="37077" min="1" max="1" chance="4.932" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
+				<item id="37067" min="1" max="1" chance="4.93" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
+				<item id="38069" min="1" max="1" chance="1.245" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38059" min="1" max="1" chance="1.237" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="38070" min="1" max="1" chance="1.221" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38056" min="1" max="1" chance="1.204" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38060" min="1" max="1" chance="1.203" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38054" min="1" max="1" chance="1.196" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="38065" min="1" max="1" chance="1.192" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38067" min="1" max="1" chance="1.184" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38057" min="1" max="1" chance="1.176" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38066" min="1" max="1" chance="1.157" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="38062" min="1" max="1" chance="1.153" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38055" min="1" max="1" chance="1.15" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38068" min="1" max="1" chance="1.136" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38063" min="1" max="1" chance="1.136" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38061" min="1" max="1" chance="1.118" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38058" min="1" max="1" chance="1.115" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38064" min="1" max="1" chance="1.112" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38046" min="1" max="1" chance="0.3" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.3" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.3" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.3" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.3" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.3" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.3" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.3" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.3" /> <!-- Helios Fighter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.3" /> <!-- Helios Slasher Crafting Pack -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="19328" level="95" type="L2Monster" name="Gustav" title="Resurrected">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -1778,14 +1831,14 @@
 			<height normal="45" grown="52" />
 		</collision>
 	</npc>
-	<npc id="19342" level="95" type="L2Monster" name="Lidia von Hellmann" title="Lady of the Fortress of the Dead">
+	<npc id="19342" level="105" type="L2Monster" name="Lidia von Hellmann" title="Lady of the Fortress of the Dead">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
-		<acquire exp="18447903225" sp="4427496" />
+		<acquire exp="2147483647" sp="275569875" />
 		<equipment rhand="8209" /> <!-- Monster Only (Lidia Von Helmann Sword) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1030201" hpRegen="8.5" mp="2242" mpRegen="30" />
+			<vitals hp="6557656.06203" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<speed>
 				<walk ground="20" />
 				<run ground="180" />
@@ -1800,29 +1853,88 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
 			<radius normal="10" />
 			<height normal="25.4" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="17416" min="1" max="1" chance="0.075" /> <!-- Helios Shaper -->
+				<item id="17425" min="1" max="1" chance="0.075" /> <!-- Helios Caster -->
+				<item id="17424" min="1" max="1" chance="0.075" /> <!-- Helios Buster -->
+				<item id="17423" min="1" max="1" chance="0.075" /> <!-- Helios Shooter -->
+				<item id="17422" min="1" max="1" chance="0.075" /> <!-- Helios Thrower -->
+				<item id="17421" min="1" max="1" chance="0.075" /> <!-- Helios Stormer -->
+				<item id="17420" min="1" max="1" chance="0.075" /> <!-- Helios Fighter -->
+				<item id="17419" min="1" max="1" chance="0.075" /> <!-- Helios Avenger -->
+				<item id="17418" min="1" max="1" chance="0.075" /> <!-- Helios Slasher -->
+				<item id="17417" min="1" max="1" chance="0.075" /> <!-- Helios Cutter -->
+				<item id="17426" min="1" max="1" chance="0.075" /> <!-- Helios Retributer -->
+				<item id="19448" min="1" max="1" chance="40.8" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
+				<item id="39738" min="1" max="1" chance="9.995" /> <!-- Rune Stone -->
+				<item id="19447" min="1" max="1" chance="9.967" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
+				<item id="37082" min="1" max="1" chance="5.046" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
+				<item id="37078" min="1" max="1" chance="5.038" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
+				<item id="37071" min="1" max="1" chance="5.031" /> <!-- Monster Weapon Appearance Stone: Seknus' Magic Sword -->
+				<item id="37086" min="1" max="1" chance="5.03" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
+				<item id="37069" min="1" max="1" chance="5.024" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
+				<item id="37084" min="1" max="1" chance="5.02" /> <!-- Monster Weapon Appearance Stone: Spicula's Crossbow -->
+				<item id="37070" min="1" max="1" chance="5.02" /> <!-- Monster Weapon Appearance Stone: Tegaffe's Dual Sword -->
+				<item id="37079" min="1" max="1" chance="5.012" /> <!-- Monster Weapon Appearance Stone: Mimilead's Staff -->
+				<item id="37072" min="1" max="1" chance="5.01" /> <!-- Monster Weapon Appearance Stone: Tebot's Axe -->
+				<item id="37068" min="1" max="1" chance="5.008" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
+				<item id="37076" min="1" max="1" chance="5.003" /> <!-- Monster Weapon Appearance Stone: Drakos' Dual Dagger -->
+				<item id="37080" min="1" max="1" chance="5.001" /> <!-- Monster Weapon Appearance Stone: Satyr's Staff -->
+				<item id="37075" min="1" max="1" chance="4.998" /> <!-- Monster Weapon Appearance Stone: Drakos' Dagger -->
+				<item id="37083" min="1" max="1" chance="4.983" /> <!-- Monster Weapon Appearance Stone: Centaur's Bow -->
+				<item id="37077" min="1" max="1" chance="4.981" /> <!-- Monster Weapon Appearance Stone: Guillotine's Greatsword -->
+				<item id="37074" min="1" max="1" chance="4.96" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
+				<item id="37073" min="1" max="1" chance="4.96" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
+				<item id="37067" min="1" max="1" chance="4.952" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->
+				<item id="37085" min="1" max="1" chance="4.932" /> <!-- Monster Weapon Appearance Stone: Theor's Shield -->
+				<item id="37081" min="1" max="1" chance="4.931" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
+				<item id="38057" min="1" max="1" chance="1.245" /> <!-- Eternal Gauntlets Crafting Pack - Heavy Armor -->
+				<item id="38062" min="1" max="1" chance="1.238" /> <!-- Eternal Leather Leggings Crafting Pack - Light Armor -->
+				<item id="38059" min="1" max="1" chance="1.219" /> <!-- Eternal Shield Crafting Box - Heavy Armor -->
+				<item id="38061" min="1" max="1" chance="1.213" /> <!-- Eternal Leather Armor Crafting Pack - Light Armor -->
+				<item id="38064" min="1" max="1" chance="1.195" /> <!-- Eternal Leather Boots Crafting Pack - Light Armor -->
+				<item id="38056" min="1" max="1" chance="1.193" /> <!-- Eternal Gaiters Crafting Pack - Heavy Armor -->
+				<item id="38066" min="1" max="1" chance="1.189" /> <!-- Eternal Tunic Crafting Pack - Robe -->
+				<item id="38065" min="1" max="1" chance="1.172" /> <!-- Eternal Circlet Crafting Pack - Robe -->
+				<item id="38058" min="1" max="1" chance="1.159" /> <!-- Eternal Boots Crafting Pack - Heavy Armor -->
+				<item id="38063" min="1" max="1" chance="1.157" /> <!-- Eternal Leather Gloves Crafting Pack - Light Armor -->
+				<item id="38060" min="1" max="1" chance="1.146" /> <!-- Eternal Leather Helmet Crafting Pack - Light Armor -->
+				<item id="38068" min="1" max="1" chance="1.139" /> <!-- Eternal Gloves Crafting Pack - Robe -->
+				<item id="38069" min="1" max="1" chance="1.139" /> <!-- Eternal Shoes Crafting Pack - Robe -->
+				<item id="38054" min="1" max="1" chance="1.138" /> <!-- Eternal Helmet Crafting Pack - Heavy Armor -->
+				<item id="38070" min="1" max="1" chance="1.127" /> <!-- Eternal Sigil Crafting Pack - Robe -->
+				<item id="38055" min="1" max="1" chance="1.127" /> <!-- Eternal Breastplate Crafting Pack - Heavy Armor -->
+				<item id="38067" min="1" max="1" chance="1.126" /> <!-- Eternal Stockings Crafting Pack - Robe -->
+				<item id="38046" min="1" max="1" chance="0.3" /> <!-- Helios Avenger Crafting Pack -->
+				<item id="38043" min="1" max="1" chance="0.3" /> <!-- Helios Shaper Crafting Pack -->
+				<item id="38044" min="1" max="1" chance="0.3" /> <!-- Helios Cutter Crafting Pack -->
+				<item id="38045" min="1" max="1" chance="0.3" /> <!-- Helios Slasher Crafting Pack -->
+				<item id="38053" min="1" max="1" chance="0.3" /> <!-- Helios Retributer Crafting Pack -->
+				<item id="38052" min="1" max="1" chance="0.3" /> <!-- Helios Caster Crafting Pack -->
+				<item id="38051" min="1" max="1" chance="0.3" /> <!-- Helios Buster Crafting Pack -->
+				<item id="38050" min="1" max="1" chance="0.3" /> <!-- Helios Shooter Crafting Pack -->
+				<item id="38049" min="1" max="1" chance="0.3" /> <!-- Helios Thrower Crafting Pack -->
+				<item id="38048" min="1" max="1" chance="0.3" /> <!-- Helios Stormer Crafting Pack -->
+				<item id="38047" min="1" max="1" chance="0.3" /> <!-- Helios Fighter Crafting Pack -->
+			</drop>
+		</dropLists>
 	</npc>
-	<npc id="19343" level="95" type="L2Monster" name="Giselle von Hellmann" title="Vengeful Ghost of the von Hellmann House">
+	<npc id="19343" level="104" type="L2Monster" name="Giselle von Hellmann" title="Vengeful Ghost of the von Hellmann House">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="99" /> <!-- Apprentice's Spellbook -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1030201" hpRegen="8.5" mp="2242" mpRegen="30" />
+			<vitals hp="6557656.06203" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<speed>
 				<walk ground="46" />
 				<run ground="165" />
@@ -1837,15 +1949,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
@@ -1890,13 +1995,13 @@
 			<height normal="28" grown="34.5" />
 		</collision>
 	</npc>
-	<npc id="19345" level="95" type="L2Monster" name="Alfred von Hellmann" title="Master of the von Hellmann House">
+	<npc id="19345" level="104" type="L2Monster" name="Alfred von Hellmann" title="Master of the von Hellmann House">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="8679" /> <!-- Sword of Ipos -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1030201" hpRegen="8.5" mp="2242" mpRegen="30" />
+			<vitals hp="6557656.06203" hpRegen="9.5" mp="32075.861" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="160" />
@@ -1911,15 +2016,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="11" /> <!-- HP Increase (3x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
@@ -1927,13 +2025,13 @@
 			<height normal="35" grown="42.9" />
 		</collision>
 	</npc>
-	<npc id="19346" level="94" type="L2Monster" name="Vampire Adept">
+	<npc id="19346" level="104" type="L2Monster" name="Vampire Adept">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="382844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="437177.40729" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
 			<speed>
 				<walk ground="64" />
 				<run ground="180" />
@@ -1948,14 +2046,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
@@ -1963,13 +2055,13 @@
 			<height normal="21.5" grown="25.8" />
 		</collision>
 	</npc>
-	<npc id="19347" level="94" type="L2Monster" name="Vampire Soldier">
+	<npc id="19347" level="104" type="L2Monster" name="Vampire Soldier">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="234" /> <!-- Demon's Dagger -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="382844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="437177.40729" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="190" />
@@ -1984,14 +2076,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
@@ -1999,13 +2085,13 @@
 			<height normal="23.5" grown="29" />
 		</collision>
 	</npc>
-	<npc id="19348" level="94" type="L2Monster" name="Vampire Caster">
+	<npc id="19348" level="104" type="L2Monster" name="Vampire Caster">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="282844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="437177.40729" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
 			<speed>
 				<walk ground="64" />
 				<run ground="180" />
@@ -2020,14 +2106,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
@@ -2035,13 +2115,13 @@
 			<height normal="21.5" grown="25.8" />
 		</collision>
 	</npc>
-	<npc id="19349" level="94" type="L2Monster" name="Vampire Magister">
+	<npc id="19349" level="104" type="L2Monster" name="Vampire Magister">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="946" /> <!-- Skeleton Dagger -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="282844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="437177.40729" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
 			<speed>
 				<walk ground="46" />
 				<run ground="165" />
@@ -2056,14 +2136,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
@@ -2071,13 +2145,13 @@
 			<height normal="28" grown="34.5" />
 		</collision>
 	</npc>
-	<npc id="19350" level="95" type="L2Monster" name="Vampire Warlord">
+	<npc id="19350" level="104" type="L2Monster" name="Vampire Warlord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<equipment rhand="6723" /> <!-- Monster Only (Vampire Warrior) -->
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="482844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="437177.40729" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
 			<speed>
 				<walk ground="43" />
 				<run ground="165" />
@@ -2092,14 +2166,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
@@ -2107,12 +2175,12 @@
 			<height normal="31.5" grown="38" />
 		</collision>
 	</npc>
-	<npc id="19351" level="95" type="L2Monster" name="Vampire Leader">
+	<npc id="19351" level="104" type="L2Monster" name="Vampire Leader">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="382844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="437177.40729" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
 			<speed>
 				<walk ground="15" />
 				<run ground="185" />
@@ -2127,14 +2195,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>
@@ -2142,12 +2204,12 @@
 			<height normal="25.8" />
 		</collision>
 	</npc>
-	<npc id="19352" level="90" type="L2Monster" name="Sophie von Hellmann's Soul" title="Maligned">
+	<npc id="19352" level="104" type="L2Monster" name="Sophie von Hellmann's Soul" title="Maligned">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>UNDEAD</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="382844" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="437177.40729" hpRegen="9.5" mp="31594.938" mpRegen="3.3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="100" />
@@ -2162,13 +2224,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="15" /> <!-- Strong M. Atk. -->
-			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="450" />
 		<collision>

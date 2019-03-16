@@ -356,7 +356,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="336298896" sp="336361" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="170278.280265" hpRegen="9.5" mp="23785.008" mpRegen="3.3" />
 			<speed>
 				<walk ground="39" />
 				<run ground="120" />
@@ -366,25 +366,25 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="40046" min="1" max="1" chance="6.29" /> <!-- Dimensional Bracelet Enhancement Stone - WIT -->
-				<item id="40048" min="1" max="1" chance="6.273" /> <!-- Dimensional Bracelet Enhancement Stone - CHA -->
-				<item id="40041" min="1" max="1" chance="6.246" /> <!-- Dimensional Bracelet Enhancement Stone - STR -->
-				<item id="40045" min="1" max="1" chance="6.235" /> <!-- Dimensional Bracelet Enhancement Stone - MEN -->
-				<item id="40044" min="1" max="1" chance="6.227" /> <!-- Dimensional Bracelet Enhancement Stone - INT -->
-				<item id="40047" min="1" max="1" chance="6.211" /> <!-- Dimensional Bracelet Enhancement Stone - LUC -->
-				<item id="40043" min="1" max="1" chance="6.201" /> <!-- Dimensional Bracelet Enhancement Stone - CON -->
-				<item id="40042" min="1" max="1" chance="6.186" /> <!-- Dimensional Bracelet Enhancement Stone - DEX -->
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="8" />
 			<height normal="16.5" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="40041" min="1" max="1" chance="6.287" /> <!-- Dimensional Bracelet Enhancement Stone - STR -->
+				<item id="40042" min="1" max="1" chance="6.277" /> <!-- Dimensional Bracelet Enhancement Stone - DEX -->
+				<item id="40043" min="1" max="1" chance="6.276" /> <!-- Dimensional Bracelet Enhancement Stone - CON -->
+				<item id="40045" min="1" max="1" chance="6.25" /> <!-- Dimensional Bracelet Enhancement Stone - MEN -->
+				<item id="40046" min="1" max="1" chance="6.246" /> <!-- Dimensional Bracelet Enhancement Stone - WIT -->
+				<item id="40048" min="1" max="1" chance="6.24" /> <!-- Dimensional Bracelet Enhancement Stone - CHA -->
+				<item id="40047" min="1" max="1" chance="6.235" /> <!-- Dimensional Bracelet Enhancement Stone - LUC -->
+				<item id="40044" min="1" max="1" chance="6.19" /> <!-- Dimensional Bracelet Enhancement Stone - INT -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="19554" level="103" type="L2Monster" name="Unworldly Imp" title="Treasure Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -392,7 +392,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="342925316" sp="342988" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="170278.280265" hpRegen="9.5" mp="23785.008" mpRegen="3.3" />
 			<speed>
 				<walk ground="39" />
 				<run ground="120" />
@@ -402,26 +402,26 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="40063" min="1" max="2" chance="100" /> <!-- Secret Ancient Tome Fragment -->
-				<item id="40042" min="1" max="1" chance="13.11" /> <!-- Dimensional Bracelet Enhancement Stone - DEX -->
-				<item id="40043" min="1" max="1" chance="12.97" /> <!-- Dimensional Bracelet Enhancement Stone - CON -->
-				<item id="40044" min="1" max="1" chance="12.97" /> <!-- Dimensional Bracelet Enhancement Stone - INT -->
-				<item id="40041" min="1" max="1" chance="12.75" /> <!-- Dimensional Bracelet Enhancement Stone - STR -->
-				<item id="40047" min="1" max="1" chance="12.62" /> <!-- Dimensional Bracelet Enhancement Stone - LUC -->
-				<item id="40048" min="1" max="1" chance="12.43" /> <!-- Dimensional Bracelet Enhancement Stone - CHA -->
-				<item id="40045" min="1" max="1" chance="12.18" /> <!-- Dimensional Bracelet Enhancement Stone - MEN -->
-				<item id="40046" min="1" max="1" chance="11.96" /> <!-- Dimensional Bracelet Enhancement Stone - WIT -->
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="10" />
 			<height normal="26" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="40063" min="1" max="2" chance="100" /> <!-- Secret Ancient Tome Fragment -->
+				<item id="40042" min="1" max="1" chance="13.13" /> <!-- Dimensional Bracelet Enhancement Stone - DEX -->
+				<item id="40046" min="1" max="1" chance="13.12" /> <!-- Dimensional Bracelet Enhancement Stone - WIT -->
+				<item id="40044" min="1" max="1" chance="12.91" /> <!-- Dimensional Bracelet Enhancement Stone - INT -->
+				<item id="40045" min="1" max="1" chance="12.32" /> <!-- Dimensional Bracelet Enhancement Stone - MEN -->
+				<item id="40047" min="1" max="1" chance="12.3" /> <!-- Dimensional Bracelet Enhancement Stone - LUC -->
+				<item id="40043" min="1" max="1" chance="12.15" /> <!-- Dimensional Bracelet Enhancement Stone - CON -->
+				<item id="40041" min="1" max="1" chance="12.04" /> <!-- Dimensional Bracelet Enhancement Stone - STR -->
+				<item id="40048" min="1" max="1" chance="11.93" /> <!-- Dimensional Bracelet Enhancement Stone - CHA -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="19555" level="104" type="L2Monster" name="Abyssal Imp" title="Treasure Guard">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -429,7 +429,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="349616384" sp="349681" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="170278" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="170278.280265" hpRegen="9.5" mp="23785.008" mpRegen="3.3" />
 			<speed>
 				<walk ground="39" />
 				<run ground="120" />
@@ -439,26 +439,26 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="16357" level="2" /> <!-- Dimensional Barrier -->
 			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="16357" level="1" /> <!-- Dimensional Barrier -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="40063" min="2" max="4" chance="100" /> <!-- Secret Ancient Tome Fragment -->
-				<item id="40048" min="1" max="2" chance="12.82" /> <!-- Dimensional Bracelet Enhancement Stone - CHA -->
-				<item id="40042" min="1" max="2" chance="12.61" /> <!-- Dimensional Bracelet Enhancement Stone - DEX -->
-				<item id="40044" min="1" max="2" chance="12.6" /> <!-- Dimensional Bracelet Enhancement Stone - INT -->
-				<item id="40043" min="1" max="2" chance="12.58" /> <!-- Dimensional Bracelet Enhancement Stone - CON -->
-				<item id="40047" min="1" max="2" chance="12.56" /> <!-- Dimensional Bracelet Enhancement Stone - LUC -->
-				<item id="40041" min="1" max="2" chance="12.51" /> <!-- Dimensional Bracelet Enhancement Stone - STR -->
-				<item id="40045" min="1" max="2" chance="12.28" /> <!-- Dimensional Bracelet Enhancement Stone - MEN -->
-				<item id="40046" min="1" max="2" chance="11.92" /> <!-- Dimensional Bracelet Enhancement Stone - WIT -->
-			</drop>
-		</dropLists>
 		<collision>
 			<radius normal="12" />
 			<height normal="36" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="40063" min="2" max="4" chance="100" /> <!-- Secret Ancient Tome Fragment -->
+				<item id="40045" min="1" max="2" chance="12.96" /> <!-- Dimensional Bracelet Enhancement Stone - MEN -->
+				<item id="40047" min="1" max="2" chance="12.92" /> <!-- Dimensional Bracelet Enhancement Stone - LUC -->
+				<item id="40046" min="1" max="2" chance="12.75" /> <!-- Dimensional Bracelet Enhancement Stone - WIT -->
+				<item id="40041" min="1" max="2" chance="12.69" /> <!-- Dimensional Bracelet Enhancement Stone - STR -->
+				<item id="40042" min="1" max="2" chance="12.62" /> <!-- Dimensional Bracelet Enhancement Stone - DEX -->
+				<item id="40048" min="1" max="2" chance="12.57" /> <!-- Dimensional Bracelet Enhancement Stone - CHA -->
+				<item id="40043" min="1" max="2" chance="12.09" /> <!-- Dimensional Bracelet Enhancement Stone - CON -->
+				<item id="40044" min="1" max="2" chance="11.93" /> <!-- Dimensional Bracelet Enhancement Stone - INT -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="19556" level="99" type="L2Npc" name="Dimensional Trap">
 		<parameters>
@@ -839,7 +839,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="37639" hpRegen="10.5" mp="23550" mpRegen="3.6" />
+			<vitals hp="20541.33057" hpRegen="8.5" mp="29224.385" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="180" />
@@ -853,20 +853,15 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4410" level="6" /> <!-- Very Weak P. Atk. -->
 			<skill id="4411" level="6" /> <!-- Very Weak M. Atk. -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="20" />
 			<height normal="15" />
 		</collision>
-		<dropLists>
-			<spoil>
-				<item id="37791" min="1" max="1" chance="0.3" /> <!-- Sealed Demonic Tome -->
-			</spoil>
-		</dropLists>
 	</npc>
 	<npc id="19575" level="99" type="L2Npc" name="">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->

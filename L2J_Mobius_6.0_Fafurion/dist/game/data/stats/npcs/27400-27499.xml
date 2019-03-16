@@ -2539,7 +2539,7 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="573" hpRegen="3.5" mp="315" mpRegen="1.5" />
+			<vitals hp="572.87082" hpRegen="3.5" mp="317.912" mpRegen="1.5" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2553,14 +2553,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4073" level="1" /> <!-- Stun -->
+			<skill id="14093" level="1" /> <!-- Sakum Follower Blow -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="14" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="14" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4073" level="1" /> <!-- Stun -->
-			<skill id="14093" level="1" /> <!-- Sakum Follower Blow -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2577,7 +2576,7 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="736" hpRegen="4.5" mp="387" mpRegen="1.8" />
+			<vitals hp="736.277805" hpRegen="4.5" mp="390.902" mpRegen="1.8" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2591,14 +2590,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4073" level="1" /> <!-- Stun -->
+			<skill id="14094" level="1" /> <!-- Sakum Follower Blow -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="14" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
 			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
 			<skill id="4413" level="15" /> <!-- Strong M. Def. -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4073" level="1" /> <!-- Stun -->
-			<skill id="14094" level="1" /> <!-- Sakum Follower Blow -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2615,7 +2613,7 @@
 		<race>ANIMAL</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="966" hpRegen="4.5" mp="478" mpRegen="1.8" />
+			<vitals hp="1931.86173" hpRegen="4.5" mp="482.545" mpRegen="1.8" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2629,15 +2627,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14095" level="1" /> <!-- Sakum Chaos -->
+			<skill id="14352" level="1" /> <!-- Sakum Chaos -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 			<skill id="4411" level="14" /> <!-- Strong M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14095" level="1" /> <!-- Sakum Chaos -->
-			<skill id="14352" level="1" /> <!-- Sakum Chaos -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -3656,7 +3652,7 @@
 		<equipment rhand="91" /> <!-- Heavy War Axe -->
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3127" hpRegen="8.5" mp="1641" mpRegen="3" />
+			<vitals hp="4697.162175" hpRegen="319.2293199" mp="2690.898" mpRegen="3" />
 			<speed>
 				<walk ground="40" />
 				<run ground="170" />
@@ -3670,9 +3666,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="11" /> <!-- Giants -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4177" level="1" /> <!-- Cancel -->
+			<skill id="4416" level="11" /> <!-- Giants -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -3807,7 +3802,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="70" hpRegen="1" mp="1812" mpRegen="3" />
+			<vitals hp="70.031565" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<speed>
 				<walk ground="22" />
 				<run ground="150" />
@@ -3821,11 +3816,6 @@
 			<abnormalResist physical="0" magical="0" />
 		</stats>
 		<status attackable="false" undying="false" />
-		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5467" level="1" /> <!-- Dark Attack -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-		</skillList>
 		<ai clanHelpRange="450" aggroRange="300">
 			<clanList>
 				<clan>VI_NIGHTMARE</clan>
@@ -3835,6 +3825,19 @@
 			<radius normal="6" />
 			<height normal="12" />
 		</collision>
+		<dropLists>
+			<drop>
+				<item id="8600" min="1" max="1" chance="10" /> <!-- Herb of Life -->
+				<item id="8601" min="1" max="1" chance="8" /> <!-- Major Herb of Life -->
+				<item id="8602" min="1" max="1" chance="2" /> <!-- Superior Herb of Life -->
+				<item id="8603" min="1" max="1" chance="19.8" /> <!-- Herb of Mana -->
+				<item id="8604" min="1" max="1" chance="9.9" /> <!-- Major Herb of Mana -->
+				<item id="8605" min="1" max="1" chance="3.3" /> <!-- Superior Herb of Mana -->
+				<item id="34849" min="1" max="1" chance="0.7" /> <!-- Mysterious Herb of Power -->
+				<item id="34850" min="1" max="1" chance="0.7"/> <!-- Mysterious Herb of Magic -->
+				<item id="13028" min="1" max="1" chance="0.1" /> <!-- Vitality Replenishing Herb -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="27481" level="84" type="L2Monster" name="Blood Thirst" title="Succubus Lord">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
@@ -3848,7 +3851,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="10914" hpRegen="110.577296732991" mp="1812" mpRegen="3" />
+			<vitals hp="87312.32685" hpRegen="8.5" mp="1830.427" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="120" />
@@ -3863,15 +3866,13 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="4410" level="3" /> <!-- Extremely Weak P. Atk. -->
 			<skill id="4411" level="7" /> <!-- Weak M. Atk. -->
 			<skill id="4412" level="4" /> <!-- Extremely Weak P. Def. -->
 			<skill id="4413" level="4" /> <!-- Extremely Weak M. Def. -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>

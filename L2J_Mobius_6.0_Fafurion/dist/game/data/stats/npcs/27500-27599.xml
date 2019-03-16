@@ -6,7 +6,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="80" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3290" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<vitals hp="19769.09061" hpRegen="319.2293199" mp="2745.235" mpRegen="3" />
 			<speed>
 				<walk ground="27" />
 				<run ground="128" />
@@ -31,7 +31,7 @@
 		<race>ANIMAL</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3290" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<vitals hp="19769.09061" hpRegen="319.2293199" mp="2745.235" mpRegen="3" />
 			<speed>
 				<walk ground="26" />
 				<run ground="128" />
@@ -57,7 +57,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3290" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<vitals hp="19769.09061" hpRegen="319.2293199" mp="2745.235" mpRegen="3" />
 			<speed>
 				<walk ground="25" />
 				<run ground="128" />
@@ -83,7 +83,7 @@
 		<sex>FEMALE</sex>
 		<equipment rhand="2500" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="3290" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<vitals hp="19769.09061" hpRegen="319.2293199" mp="2745.235" mpRegen="3" />
 			<speed>
 				<walk ground="25" />
 				<run ground="128" />
@@ -559,12 +559,12 @@
 			<height normal="22.5" />
 		</collision>
 	</npc>
-	<npc id="27522" level="21" type="L2Monster" name="Windima" title="Clone">
+	<npc id="27522" level="28" type="L2Monster" name="Windima" title="Clone">
 		<!-- AUTO GENERATED NPC TODO: FIX IT -->
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="543" hpRegen="3.5" mp="300" mpRegen="1.5" />
+			<vitals hp="1185.489285" hpRegen="3.5" mp="372.249" mpRegen="1.5" />
 			<speed>
 				<walk ground="12" />
 				<run ground="128" />
@@ -576,18 +576,6 @@
 		<skillList>
 			<skill id="4416" level="7" /> <!-- Spirits -->
 		</skillList>
-		<dropLists>
-			<drop>
-				<item id="57" min="6" max="14" chance="70" /> <!-- Adena -->
-				<item id="36526" min="1" max="1" chance="20.32" /> <!-- Fiber -->
-			</drop>
-			<spoil>
-				<item id="36532" min="1" max="1" chance="0.3" /> <!-- Thin Braid -->
-			</spoil>
-			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
-			</lucky>
-		</dropLists>
 		<collision>
 			<radius normal="23" />
 			<height normal="90" />
@@ -1173,7 +1161,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4234" hpRegen="9.5" mp="1846" mpRegen="3.3" />
+			<vitals hp="4234.070565" hpRegen="8.5" mp="1864.489" mpRegen="3" />
 			<speed>
 				<walk ground="90" />
 				<run ground="170" />
@@ -1183,8 +1171,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4078" level="1" /> <!-- Flame Strike -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="29" />
@@ -1196,7 +1184,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4234" hpRegen="9.5" mp="1846" mpRegen="3.3" />
+			<vitals hp="4234.070565" hpRegen="8.5" mp="1864.489" mpRegen="3" />
 			<speed>
 				<walk ground="100" />
 				<run ground="170" />
@@ -1206,8 +1194,8 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4078" level="1" /> <!-- Flame Strike -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 		</skillList>
 		<collision>
 			<radius normal="25" />
@@ -1219,7 +1207,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="4234" hpRegen="9.5" mp="1846" mpRegen="3.3" />
+			<vitals hp="4234.070565" hpRegen="8.5" mp="1864.489" mpRegen="3" />
 			<speed>
 				<walk ground="23" />
 				<run ground="170" />
