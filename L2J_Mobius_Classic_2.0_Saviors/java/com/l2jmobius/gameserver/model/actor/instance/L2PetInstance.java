@@ -724,13 +724,7 @@ public class L2PetInstance extends L2Summon
 		sendPacket(petIU);
 		
 		// Send target update packet
-		if (!newItem.isStackable())
-		{
-			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addNewItem(newItem);
-			sendInventoryUpdate(iu);
-		}
-		else if ((playerOldItem != null) && newItem.isStackable())
+		if ((playerOldItem != null) && newItem.isStackable())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(newItem);

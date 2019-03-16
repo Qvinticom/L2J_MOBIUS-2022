@@ -71,6 +71,7 @@ import com.l2jmobius.gameserver.network.serverpackets.ActionFailed;
 import com.l2jmobius.gameserver.network.serverpackets.ExChangeNpcState;
 import com.l2jmobius.gameserver.network.serverpackets.InventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PetInventoryUpdate;
+import com.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import com.l2jmobius.gameserver.network.serverpackets.StopMove;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
 import com.l2jmobius.gameserver.taskmanager.DecayTaskManager;
@@ -623,8 +624,10 @@ public class L2PetInstance extends L2Summon
 			else
 			{
 				final L2ItemInstance item = _inventory.addItem("Pickup", target, getOwner(), this);
-				// sendPacket(new PetItemList(_inventory.getItems()));
-				sendPacket(new PetInventoryUpdate(item));
+				if (item != null)
+				{
+					getOwner().sendPacket(new PetItemList(getInventory().getItems()));
+				}
 			}
 		}
 		
@@ -705,7 +708,6 @@ public class L2PetInstance extends L2Summon
 		final L2ItemInstance oldItem = _inventory.getItemByObjectId(objectId);
 		final L2ItemInstance playerOldItem = target.getItemByItemId(oldItem.getId());
 		final L2ItemInstance newItem = _inventory.transferItem(process, objectId, count, target, actor, reference);
-		
 		if (newItem == null)
 		{
 			return null;
@@ -724,13 +726,7 @@ public class L2PetInstance extends L2Summon
 		sendPacket(petIU);
 		
 		// Send target update packet
-		if (!newItem.isStackable())
-		{
-			final InventoryUpdate iu = new InventoryUpdate();
-			iu.addNewItem(newItem);
-			sendInventoryUpdate(iu);
-		}
-		else if ((playerOldItem != null) && newItem.isStackable())
+		if ((playerOldItem != null) && newItem.isStackable())
 		{
 			final InventoryUpdate iu = new InventoryUpdate();
 			iu.addModifiedItem(newItem);

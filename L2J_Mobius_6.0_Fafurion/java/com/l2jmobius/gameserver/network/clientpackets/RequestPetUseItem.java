@@ -130,6 +130,7 @@ public final class RequestPetUseItem implements IClientIncomingPacket
 					{
 						activeChar.addTimeStampItem(item, reuseDelay);
 					}
+					activeChar.sendPacket(new PetItemList(pet.getInventory().getItems()));
 					pet.updateAndBroadcastStatus(1);
 				}
 			}

@@ -22,6 +22,7 @@ import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.actor.instance.L2PetInstance;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
+import com.l2jmobius.gameserver.network.serverpackets.PetItemList;
 import com.l2jmobius.gameserver.util.Util;
 
 /**
@@ -77,7 +78,12 @@ public final class RequestGetItemFromPet implements IClientIncomingPacket
 			return;
 		}
 		
-		if (pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet) == null)
+		final L2ItemInstance transferedItem = pet.transferItem("Transfer", _objectId, _amount, player.getInventory(), player, pet);
+		if (transferedItem != null)
+		{
+			player.sendPacket(new PetItemList(pet.getInventory().getItems()));
+		}
+		else
 		{
 			LOGGER.warning("Invalid item transfer request: " + pet.getName() + "(pet) --> " + player.getName());
 		}

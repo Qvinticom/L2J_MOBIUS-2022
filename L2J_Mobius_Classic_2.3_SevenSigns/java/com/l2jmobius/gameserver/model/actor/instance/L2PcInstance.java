@@ -225,7 +225,6 @@ import com.l2jmobius.gameserver.model.itemcontainer.PcFreight;
 import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
 import com.l2jmobius.gameserver.model.itemcontainer.PcRefund;
 import com.l2jmobius.gameserver.model.itemcontainer.PcWarehouse;
-import com.l2jmobius.gameserver.model.itemcontainer.PetInventory;
 import com.l2jmobius.gameserver.model.items.L2Armor;
 import com.l2jmobius.gameserver.model.items.L2EtcItem;
 import com.l2jmobius.gameserver.model.items.L2Henna;
@@ -303,7 +302,6 @@ import com.l2jmobius.gameserver.network.serverpackets.NicknameChanged;
 import com.l2jmobius.gameserver.network.serverpackets.ObservationMode;
 import com.l2jmobius.gameserver.network.serverpackets.ObservationReturn;
 import com.l2jmobius.gameserver.network.serverpackets.PartySmallWindowUpdate;
-import com.l2jmobius.gameserver.network.serverpackets.PetInventoryUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDelete;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PrivateStoreListBuy;
@@ -3596,21 +3594,6 @@ public final class L2PcInstance extends L2Playable
 			{
 				targetPlayer.sendItemList();
 			}
-		}
-		else if (target instanceof PetInventory)
-		{
-			final PetInventoryUpdate petIU = new PetInventoryUpdate();
-			
-			if (newItem.getCount() > count)
-			{
-				petIU.addModifiedItem(newItem);
-			}
-			else
-			{
-				petIU.addNewItem(newItem);
-			}
-			
-			((PetInventory) target).getOwner().sendPacket(petIU);
 		}
 		return newItem;
 	}

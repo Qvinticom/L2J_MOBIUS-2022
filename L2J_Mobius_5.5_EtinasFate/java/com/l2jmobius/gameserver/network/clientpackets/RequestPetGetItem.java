@@ -79,5 +79,4 @@ public final class RequestPetGetItem implements IClientIncomingPacket
 		
 		pet.getAI().setIntention(CtrlIntention.AI_INTENTION_PICK_UP, item);
 	}
-	
 }
