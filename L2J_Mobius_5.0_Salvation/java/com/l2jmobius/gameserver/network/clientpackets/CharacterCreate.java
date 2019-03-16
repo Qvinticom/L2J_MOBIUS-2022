@@ -174,15 +174,15 @@ public final class CharacterCreate implements IClientIncomingPacket
 			{
 				if (_classId == 190)
 				{
-					_classId = 188; // EVISCERATOR
+					_classId = 188; // Eviscerator
 					balthusKnights = true;
 				}
-				if (_classId == 191)
+				else if (_classId == 191)
 				{
-					_classId = 189; // SAYHA_SEER
+					_classId = 189; // Sayha Seer
 					balthusKnights = true;
 				}
-				if ((_classId > 138) && (_classId < 147))
+				else if ((_classId > 138) && (_classId < 147))
 				{
 					final String properClass = ClassId.getClassId(_classId).toString().split("_")[0];
 					for (ClassId classId : ClassId.values())
@@ -200,7 +200,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 					}
 				}
 			}
-			else if (ClassId.getClassId(_classId).level() > 0)
+			if (!balthusKnights && (ClassId.getClassId(_classId).level() > 0))
 			{
 				client.sendPacket(new CharCreateFail(CharCreateFail.REASON_CREATION_FAILED));
 				return;
