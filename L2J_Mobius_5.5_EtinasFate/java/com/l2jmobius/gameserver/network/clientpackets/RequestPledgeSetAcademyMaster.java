@@ -69,7 +69,7 @@ public final class RequestPledgeSetAcademyMaster implements IClientIncomingPacke
 		
 		L2ClanMember apprenticeMember;
 		L2ClanMember sponsorMember;
-		if (currentMember.getPledgeType() == L2Clan.SUBUNIT_ACADEMY)
+		if (currentMember.getPledgeType() == -1) // Academy - Removed.
 		{
 			apprenticeMember = currentMember;
 			sponsorMember = targetMember;

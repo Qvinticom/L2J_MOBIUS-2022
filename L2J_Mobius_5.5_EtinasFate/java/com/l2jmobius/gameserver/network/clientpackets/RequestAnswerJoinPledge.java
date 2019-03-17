@@ -98,7 +98,7 @@ public final class RequestAnswerJoinPledge implements IClientIncomingPacket
 				activeChar.sendPacket(new JoinPledge(requestor.getClanId()));
 				
 				activeChar.setPledgeType(pledgeType);
-				if (pledgeType == L2Clan.SUBUNIT_ACADEMY)
+				if (pledgeType == -1) // Academy - Removed.
 				{
 					activeChar.setPowerGrade(9); // academy
 					activeChar.setLvlJoinedAcademy(activeChar.getLevel());

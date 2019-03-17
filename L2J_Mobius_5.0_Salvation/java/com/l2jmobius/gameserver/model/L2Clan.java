@@ -67,7 +67,6 @@ import com.l2jmobius.gameserver.network.SystemMessageId;
 import com.l2jmobius.gameserver.network.serverpackets.CreatureSay;
 import com.l2jmobius.gameserver.network.serverpackets.ExSubPledgeSkillAdd;
 import com.l2jmobius.gameserver.network.serverpackets.IClientOutgoingPacket;
-import com.l2jmobius.gameserver.network.serverpackets.PledgeReceiveSubPledgeCreated;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowInfoUpdate;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListAll;
 import com.l2jmobius.gameserver.network.serverpackets.PledgeShowMemberListDeleteAll;
@@ -99,21 +98,10 @@ public class L2Clan implements IIdentifiable, INamable
 	public static final int PENALTY_TYPE_DISMISS_CLAN = 3;
 	/** Leader clan dissolve ally */
 	public static final int PENALTY_TYPE_DISSOLVE_ALLY = 4;
-	// Sub-unit types
-	/** Clan subunit type of Academy */
-	public static final int SUBUNIT_ACADEMY = -1;
-	/** Clan subunit type of Royal Guard A */
-	public static final int SUBUNIT_ROYAL1 = 100;
-	/** Clan subunit type of Royal Guard B */
-	public static final int SUBUNIT_ROYAL2 = 200;
-	/** Clan subunit type of Order of Knights A-1 */
-	public static final int SUBUNIT_KNIGHT1 = 1001;
-	/** Clan subunit type of Order of Knights A-2 */
-	public static final int SUBUNIT_KNIGHT2 = 1002;
-	/** Clan subunit type of Order of Knights B-1 */
-	public static final int SUBUNIT_KNIGHT3 = 2001;
-	/** Clan subunit type of Order of Knights B-2 */
-	public static final int SUBUNIT_KNIGHT4 = 2002;
+	
+	// Pledge types
+	public static final int PLEDGE_CLASS_COMMON = 0;
+	public static final int PLEDGE_CLASS_ELITE = 100;
 	
 	private String _name;
 	private int _clanId;
@@ -289,14 +277,14 @@ public class L2Clan implements IIdentifiable, INamable
 		
 		if (exLeader != null)
 		{
-			exLeader.setPledgeClass(L2ClanMember.calculatePledgeClass(exLeader));
+			exLeader.setPledgeClass(PLEDGE_CLASS_COMMON);
 			exLeader.broadcastUserInfo();
 			exLeader.checkItemRestriction();
 		}
 		
 		if (newLeader != null)
 		{
-			newLeader.setPledgeClass(L2ClanMember.calculatePledgeClass(newLeader));
+			newLeader.setPledgeClass(PLEDGE_CLASS_COMMON);
 			newLeader.getClanPrivileges().setAll();
 			
 			if (getLevel() >= SiegeManager.getInstance().getSiegeClanMinLevel())
@@ -377,7 +365,7 @@ public class L2Clan implements IIdentifiable, INamable
 		addClanMember(member);
 		member.setPlayerInstance(player);
 		player.setClan(this);
-		player.setPledgeClass(L2ClanMember.calculatePledgeClass(player));
+		player.setPledgeClass(PLEDGE_CLASS_COMMON);
 		player.sendPacket(new PledgeShowMemberListUpdate(player));
 		player.sendPacket(new PledgeSkillList(this));
 		
@@ -526,7 +514,6 @@ public class L2Clan implements IIdentifiable, INamable
 				player.setClanJoinExpiryTime(clanJoinExpiryTime);
 			}
 			
-			player.setPledgeClass(L2ClanMember.calculatePledgeClass(player));
 			player.broadcastUserInfo();
 			// disable clan tab
 			player.sendPacket(PledgeShowMemberListDeleteAll.STATIC_PACKET);
@@ -561,102 +548,6 @@ public class L2Clan implements IIdentifiable, INamable
 			}
 		}
 		return result;
-	}
-	
-	/**
-	 * @param pledgeType the Id of the pledge type.
-	 * @return the maximum number of members allowed for a given {@code pledgeType}.
-	 */
-	public int getMaxNrOfMembers(int pledgeType)
-	{
-		int limit = 0;
-		
-		switch (pledgeType)
-		{
-			case 0:
-			{
-				switch (_level)
-				{
-					case 3:
-					{
-						limit = 30;
-						break;
-					}
-					case 2:
-					{
-						limit = 20;
-						break;
-					}
-					case 1:
-					{
-						limit = 15;
-						break;
-					}
-					case 0:
-					{
-						limit = 10;
-						break;
-					}
-					default:
-					{
-						limit = 40;
-						break;
-					}
-				}
-				break;
-			}
-			case -1:
-			{
-				limit = 20;
-				break;
-			}
-			case 100:
-			case 200:
-			{
-				switch (_level)
-				{
-					case 11:
-					{
-						limit = 30;
-						break;
-					}
-					default:
-					{
-						limit = 20;
-						break;
-					}
-				}
-				break;
-			}
-			case 1001:
-			case 1002:
-			case 2001:
-			case 2002:
-			{
-				switch (_level)
-				{
-					case 9:
-					case 10:
-					case 11:
-					{
-						limit = 25;
-						break;
-					}
-					default:
-					{
-						limit = 10;
-						break;
-					}
-				}
-				break;
-			}
-			default:
-			{
-				break;
-			}
-		}
-		
-		return limit;
 	}
 	
 	/**
@@ -1841,35 +1732,15 @@ public class L2Clan implements IIdentifiable, INamable
 		return _subPledges.values().toArray(new SubPledge[_subPledges.values().size()]);
 	}
 	
-	public SubPledge createSubPledge(L2PcInstance player, int pledgeType, int leaderId, String subPledgeName)
+	public SubPledge createSubPledge(int pledgeType)
 	{
-		SubPledge subPledge = null;
-		pledgeType = getAvailablePledgeTypes(pledgeType);
-		if (pledgeType == 0)
+		if ((_subPledges == null) || (_subPledges.get(pledgeType) != null))
 		{
-			if (pledgeType == SUBUNIT_ACADEMY)
-			{
-				player.sendPacket(SystemMessageId.YOUR_CLAN_HAS_ALREADY_ESTABLISHED_A_CLAN_ACADEMY);
-			}
-			else
-			{
-				player.sendMessage("You can't create any more sub-units of this type");
-			}
-			return null;
-		}
-		if (_leader.getObjectId() == leaderId)
-		{
-			player.sendMessage("Leader is not correct");
 			return null;
 		}
 		
-		// Royal Guard 5000 points per each
-		// Order of Knights 10000 points per each
-		if ((pledgeType != -1) && (((_reputationScore < Config.ROYAL_GUARD_COST) && (pledgeType < SUBUNIT_KNIGHT1)) || ((_reputationScore < Config.KNIGHT_UNIT_COST) && (pledgeType > SUBUNIT_ROYAL2))))
-		{
-			player.sendPacket(SystemMessageId.THE_CLAN_REPUTATION_IS_TOO_LOW);
-			return null;
-		}
+		final String subPledgeName = pledgeType == PLEDGE_CLASS_COMMON ? "COMMON" : "ELITE";
+		SubPledge subPledge = null;
 		
 		try (Connection con = DatabaseFactory.getConnection();
 			PreparedStatement ps = con.prepareStatement("INSERT INTO clan_subpledges (clan_id,sub_pledge_id,name,leader_id) values (?,?,?,?)"))
@@ -1877,79 +1748,20 @@ public class L2Clan implements IIdentifiable, INamable
 			ps.setInt(1, _clanId);
 			ps.setInt(2, pledgeType);
 			ps.setString(3, subPledgeName);
-			ps.setInt(4, pledgeType != -1 ? leaderId : 0);
+			ps.setInt(4, _leader.getObjectId());
 			ps.execute();
 			
-			subPledge = new SubPledge(pledgeType, subPledgeName, leaderId);
+			subPledge = new SubPledge(pledgeType, subPledgeName, _leader.getObjectId());
 			_subPledges.put(pledgeType, subPledge);
-			
-			if (pledgeType != -1)
-			{
-				// Royal Guard 5000 points per each
-				// Order of Knights 10000 points per each
-				if (pledgeType < SUBUNIT_KNIGHT1)
-				{
-					setReputationScore(_reputationScore - Config.ROYAL_GUARD_COST, true);
-				}
-				else
-				{
-					setReputationScore(_reputationScore - Config.KNIGHT_UNIT_COST, true);
-					// TODO: clan lvl9 or more can reinforce knights cheaper if first knight unit already created, use Config.KNIGHT_REINFORCE_COST
-				}
-			}
 		}
 		catch (Exception e)
 		{
 			LOGGER.log(Level.SEVERE, "Error saving sub clan data: " + e.getMessage(), e);
 		}
 		
-		broadcastToOnlineMembers(new PledgeShowInfoUpdate(_leader.getClan()));
-		broadcastToOnlineMembers(new PledgeReceiveSubPledgeCreated(subPledge, _leader.getClan()));
+		// broadcastToOnlineMembers(new PledgeShowInfoUpdate(_leader.getClan()));
+		// broadcastToOnlineMembers(new PledgeReceiveSubPledgeCreated(subPledge, _leader.getClan()));
 		return subPledge;
-	}
-	
-	public int getAvailablePledgeTypes(int pledgeType)
-	{
-		if (_subPledges.get(pledgeType) != null)
-		{
-			// LOGGER.warning("found sub-unit with id: "+pledgeType);
-			switch (pledgeType)
-			{
-				case SUBUNIT_ACADEMY:
-				{
-					return 0;
-				}
-				case SUBUNIT_ROYAL1:
-				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_ROYAL2);
-					break;
-				}
-				case SUBUNIT_ROYAL2:
-				{
-					return 0;
-				}
-				case SUBUNIT_KNIGHT1:
-				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT2);
-					break;
-				}
-				case SUBUNIT_KNIGHT2:
-				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT3);
-					break;
-				}
-				case SUBUNIT_KNIGHT3:
-				{
-					pledgeType = getAvailablePledgeTypes(SUBUNIT_KNIGHT4);
-					break;
-				}
-				case SUBUNIT_KNIGHT4:
-				{
-					return 0;
-				}
-			}
-		}
-		return pledgeType;
 	}
 	
 	public void updateSubPledgeInDB(int pledgeType)
@@ -2243,18 +2055,11 @@ public class L2Clan implements IIdentifiable, INamable
 			activeChar.sendPacket(SystemMessageId.IN_ORDER_TO_JOIN_THE_CLAN_ACADEMY_YOU_MUST_BE_UNAFFILIATED_WITH_A_CLAN_AND_BE_AN_UNAWAKENED_CHARACTER_LV_84_OR_BELOW_FPR_BOTH_MAIN_AND_SUBCLASS);
 			return false;
 		}
-		if (getSubPledgeMembersCount(pledgeType) >= getMaxNrOfMembers(pledgeType))
+		if (getSubPledgeMembersCount(pledgeType) >= (pledgeType == 0 ? ClanLevelData.getCommonMemberLimit(_level) : ClanLevelData.getEliteMemberLimit(_level)))
 		{
-			if (pledgeType == 0)
-			{
-				final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_FULL_AND_CANNOT_ACCEPT_ADDITIONAL_CLAN_MEMBERS_AT_THIS_TIME);
-				sm.addString(_name);
-				activeChar.sendPacket(sm);
-			}
-			else
-			{
-				activeChar.sendPacket(SystemMessageId.THIS_CLAN_IS_FULL_AND_CANNOT_ACCEPT_NEW_MEMBERS_AT_THIS_TIME);
-			}
+			final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_IS_FULL_AND_CANNOT_ACCEPT_ADDITIONAL_CLAN_MEMBERS_AT_THIS_TIME);
+			sm.addString(_name);
+			activeChar.sendPacket(sm);
 			return false;
 		}
 		return true;

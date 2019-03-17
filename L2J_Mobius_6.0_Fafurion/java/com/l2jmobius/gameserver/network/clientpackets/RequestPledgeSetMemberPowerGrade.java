@@ -74,7 +74,7 @@ public final class RequestPledgeSetMemberPowerGrade implements IClientIncomingPa
 			return;
 		}
 		
-		if (member.getPledgeType() == L2Clan.SUBUNIT_ACADEMY)
+		if (member.getPledgeType() == -1) // Academy - Removed.
 		{
 			// also checked from client side
 			activeChar.sendPacket(SystemMessageId.THAT_PRIVILEGE_CANNOT_BE_GRANTED_TO_A_CLAN_ACADEMY_MEMBER);

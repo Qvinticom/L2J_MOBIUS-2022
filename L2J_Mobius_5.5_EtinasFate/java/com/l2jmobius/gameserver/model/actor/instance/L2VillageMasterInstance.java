@@ -30,7 +30,6 @@ import com.l2jmobius.gameserver.instancemanager.FortManager;
 import com.l2jmobius.gameserver.instancemanager.FortSiegeManager;
 import com.l2jmobius.gameserver.instancemanager.SiegeManager;
 import com.l2jmobius.gameserver.model.L2Clan;
-import com.l2jmobius.gameserver.model.L2Clan.SubPledge;
 import com.l2jmobius.gameserver.model.L2ClanMember;
 import com.l2jmobius.gameserver.model.L2SkillLearn;
 import com.l2jmobius.gameserver.model.actor.L2Character;
@@ -46,8 +45,6 @@ import com.l2jmobius.gameserver.network.serverpackets.MagicSkillLaunched;
 import com.l2jmobius.gameserver.network.serverpackets.MagicSkillUse;
 import com.l2jmobius.gameserver.network.serverpackets.NpcHtmlMessage;
 import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
-import com.l2jmobius.gameserver.network.serverpackets.UserInfo;
-import com.l2jmobius.gameserver.util.Util;
 
 /**
  * This class ...
@@ -123,51 +120,6 @@ public class L2VillageMasterInstance extends L2NpcInstance
 			}
 			
 			ClanTable.getInstance().createClan(player, cmdParams);
-		}
-		else if (actualCommand.equalsIgnoreCase("create_academy"))
-		{
-			if (cmdParams.isEmpty())
-			{
-				return;
-			}
-			
-			createSubPledge(player, cmdParams, null, L2Clan.SUBUNIT_ACADEMY, 5);
-		}
-		else if (actualCommand.equalsIgnoreCase("rename_pledge"))
-		{
-			if (cmdParams.isEmpty() || cmdParams2.isEmpty())
-			{
-				return;
-			}
-			
-			renameSubPledge(player, Integer.parseInt(cmdParams), cmdParams2);
-		}
-		else if (actualCommand.equalsIgnoreCase("create_royal"))
-		{
-			if (cmdParams.isEmpty())
-			{
-				return;
-			}
-			
-			createSubPledge(player, cmdParams, cmdParams2, L2Clan.SUBUNIT_ROYAL1, 6);
-		}
-		else if (actualCommand.equalsIgnoreCase("create_knight"))
-		{
-			if (cmdParams.isEmpty())
-			{
-				return;
-			}
-			
-			createSubPledge(player, cmdParams, cmdParams2, L2Clan.SUBUNIT_KNIGHT1, 7);
-		}
-		else if (actualCommand.equalsIgnoreCase("assign_subpl_leader"))
-		{
-			if (cmdParams.isEmpty())
-			{
-				return;
-			}
-			
-			assignSubPledgeLeader(player, cmdParams, cmdParams2);
 		}
 		else if (actualCommand.equalsIgnoreCase("create_ally"))
 		{
@@ -369,207 +321,6 @@ public class L2VillageMasterInstance extends L2NpcInstance
 		final L2Clan clan = player.getClan();
 		clan.setDissolvingExpiryTime(0);
 		clan.updateClanInDB();
-	}
-	
-	private static void createSubPledge(L2PcInstance player, String clanName, String leaderName, int pledgeType, int minClanLvl)
-	{
-		if (!player.isClanLeader())
-		{
-			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-			return;
-		}
-		
-		final L2Clan clan = player.getClan();
-		if (clan.getLevel() < minClanLvl)
-		{
-			if (pledgeType == L2Clan.SUBUNIT_ACADEMY)
-			{
-				player.sendPacket(SystemMessageId.TO_ESTABLISH_A_CLAN_ACADEMY_YOUR_CLAN_MUST_BE_LEVEL_5_OR_HIGHER);
-			}
-			else
-			{
-				player.sendPacket(SystemMessageId.THE_CONDITIONS_NECESSARY_TO_CREATE_A_MILITARY_UNIT_HAVE_NOT_BEEN_MET);
-			}
-			
-			return;
-		}
-		if (!Util.isAlphaNumeric(clanName) || !isValidName(clanName) || (2 > clanName.length()))
-		{
-			player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
-			return;
-		}
-		if (clanName.length() > 16)
-		{
-			player.sendPacket(SystemMessageId.CLAN_NAME_S_LENGTH_IS_INCORRECT);
-			return;
-		}
-		
-		for (L2Clan tempClan : ClanTable.getInstance().getClans())
-		{
-			if (tempClan.getSubPledge(clanName) != null)
-			{
-				if (pledgeType == L2Clan.SUBUNIT_ACADEMY)
-				{
-					final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.S1_ALREADY_EXISTS);
-					sm.addString(clanName);
-					player.sendPacket(sm);
-				}
-				else
-				{
-					player.sendPacket(SystemMessageId.ANOTHER_MILITARY_UNIT_IS_ALREADY_USING_THAT_NAME_PLEASE_ENTER_A_DIFFERENT_NAME);
-				}
-				
-				return;
-			}
-		}
-		
-		if (pledgeType != L2Clan.SUBUNIT_ACADEMY)
-		{
-			if ((clan.getClanMember(leaderName) == null) || (clan.getClanMember(leaderName).getPledgeType() != 0))
-			{
-				if (pledgeType >= L2Clan.SUBUNIT_KNIGHT1)
-				{
-					player.sendPacket(SystemMessageId.THE_CAPTAIN_OF_THE_ORDER_OF_KNIGHTS_CANNOT_BE_APPOINTED);
-				}
-				else if (pledgeType >= L2Clan.SUBUNIT_ROYAL1)
-				{
-					player.sendPacket(SystemMessageId.THE_ROYAL_GUARD_CAPTAIN_CANNOT_BE_APPOINTED);
-				}
-				
-				return;
-			}
-		}
-		
-		final int leaderId = pledgeType != L2Clan.SUBUNIT_ACADEMY ? clan.getClanMember(leaderName).getObjectId() : 0;
-		
-		if (clan.createSubPledge(player, pledgeType, leaderId, clanName) == null)
-		{
-			return;
-		}
-		
-		SystemMessage sm;
-		if (pledgeType == L2Clan.SUBUNIT_ACADEMY)
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.CONGRATULATIONS_THE_S1_S_CLAN_ACADEMY_HAS_BEEN_CREATED);
-			sm.addString(player.getClan().getName());
-		}
-		else if (pledgeType >= L2Clan.SUBUNIT_KNIGHT1)
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_KNIGHTS_OF_S1_HAVE_BEEN_CREATED);
-			sm.addString(player.getClan().getName());
-		}
-		else if (pledgeType >= L2Clan.SUBUNIT_ROYAL1)
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.THE_ROYAL_GUARD_OF_S1_HAVE_BEEN_CREATED);
-			sm.addString(player.getClan().getName());
-		}
-		else
-		{
-			sm = SystemMessage.getSystemMessage(SystemMessageId.YOUR_CLAN_HAS_BEEN_CREATED);
-		}
-		player.sendPacket(sm);
-		
-		if (pledgeType != L2Clan.SUBUNIT_ACADEMY)
-		{
-			final L2ClanMember leaderSubPledge = clan.getClanMember(leaderName);
-			final L2PcInstance leaderPlayer = leaderSubPledge.getPlayerInstance();
-			if (leaderPlayer != null)
-			{
-				leaderPlayer.setPledgeClass(L2ClanMember.calculatePledgeClass(leaderPlayer));
-				leaderPlayer.sendPacket(new UserInfo(leaderPlayer));
-			}
-		}
-	}
-	
-	private static void renameSubPledge(L2PcInstance player, int pledgeType, String pledgeName)
-	{
-		if (!player.isClanLeader())
-		{
-			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-			return;
-		}
-		
-		final L2Clan clan = player.getClan();
-		final SubPledge subPledge = player.getClan().getSubPledge(pledgeType);
-		
-		if (subPledge == null)
-		{
-			player.sendMessage("Pledge don't exists.");
-			return;
-		}
-		if (!Util.isAlphaNumeric(pledgeName) || !isValidName(pledgeName) || (2 > pledgeName.length()))
-		{
-			player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
-			return;
-		}
-		if (pledgeName.length() > 16)
-		{
-			player.sendPacket(SystemMessageId.CLAN_NAME_S_LENGTH_IS_INCORRECT);
-			return;
-		}
-		
-		subPledge.setName(pledgeName);
-		clan.updateSubPledgeInDB(subPledge.getId());
-		clan.broadcastClanStatus();
-		player.sendMessage("Pledge name changed.");
-	}
-	
-	private static void assignSubPledgeLeader(L2PcInstance player, String clanName, String leaderName)
-	{
-		if (!player.isClanLeader())
-		{
-			player.sendPacket(SystemMessageId.YOU_ARE_NOT_AUTHORIZED_TO_DO_THAT);
-			return;
-		}
-		if (leaderName.length() > 16)
-		{
-			player.sendPacket(SystemMessageId.YOUR_TITLE_CANNOT_EXCEED_16_CHARACTERS_IN_LENGTH_PLEASE_TRY_AGAIN);
-			return;
-		}
-		if (player.getName().equals(leaderName))
-		{
-			player.sendPacket(SystemMessageId.THE_ROYAL_GUARD_CAPTAIN_CANNOT_BE_APPOINTED);
-			return;
-		}
-		
-		final L2Clan clan = player.getClan();
-		final SubPledge subPledge = player.getClan().getSubPledge(clanName);
-		
-		if ((null == subPledge) || (subPledge.getId() == L2Clan.SUBUNIT_ACADEMY))
-		{
-			player.sendPacket(SystemMessageId.CLAN_NAME_IS_INVALID);
-			return;
-		}
-		if ((clan.getClanMember(leaderName) == null) || (clan.getClanMember(leaderName).getPledgeType() != 0))
-		{
-			if (subPledge.getId() >= L2Clan.SUBUNIT_KNIGHT1)
-			{
-				player.sendPacket(SystemMessageId.THE_CAPTAIN_OF_THE_ORDER_OF_KNIGHTS_CANNOT_BE_APPOINTED);
-			}
-			else if (subPledge.getId() >= L2Clan.SUBUNIT_ROYAL1)
-			{
-				player.sendPacket(SystemMessageId.THE_ROYAL_GUARD_CAPTAIN_CANNOT_BE_APPOINTED);
-			}
-			
-			return;
-		}
-		
-		subPledge.setLeaderId(clan.getClanMember(leaderName).getObjectId());
-		clan.updateSubPledgeInDB(subPledge.getId());
-		
-		final L2ClanMember leaderSubPledge = clan.getClanMember(leaderName);
-		final L2PcInstance leaderPlayer = leaderSubPledge.getPlayerInstance();
-		if (leaderPlayer != null)
-		{
-			leaderPlayer.setPledgeClass(L2ClanMember.calculatePledgeClass(leaderPlayer));
-			leaderPlayer.sendPacket(new UserInfo(leaderPlayer));
-		}
-		
-		clan.broadcastClanStatus();
-		final SystemMessage sm = SystemMessage.getSystemMessage(SystemMessageId.C1_HAS_BEEN_SELECTED_AS_THE_CAPTAIN_OF_S2);
-		sm.addString(leaderName);
-		sm.addString(clanName);
-		clan.broadcastToOnlineMembers(sm);
 	}
 	
 	/**

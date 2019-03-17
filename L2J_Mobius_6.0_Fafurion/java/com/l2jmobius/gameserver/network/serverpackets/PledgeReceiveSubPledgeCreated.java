@@ -50,7 +50,7 @@ public class PledgeReceiveSubPledgeCreated implements IClientOutgoingPacket
 	private String getLeaderName()
 	{
 		final int LeaderId = _subPledge.getLeaderId();
-		if ((_subPledge.getId() == L2Clan.SUBUNIT_ACADEMY) || (LeaderId == 0))
+		if ((_subPledge.getId() == -1) || (LeaderId == 0))
 		{
 			return "";
 		}

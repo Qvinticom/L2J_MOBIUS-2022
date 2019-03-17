@@ -1040,25 +1040,22 @@ public final class L2PcInstance extends L2Playable
 		}
 		if ((clan != null) && (targetClan != null))
 		{
-			if ((target.getPledgeType() != L2Clan.SUBUNIT_ACADEMY) && (getPledgeType() != L2Clan.SUBUNIT_ACADEMY))
+			ClanWar war = clan.getWarWith(target.getClan().getId());
+			if (war != null)
 			{
-				ClanWar war = clan.getWarWith(target.getClan().getId());
-				if (war != null)
+				switch (war.getState())
 				{
-					switch (war.getState())
+					case DECLARATION:
+					case BLOOD_DECLARATION:
 					{
-						case DECLARATION:
-						case BLOOD_DECLARATION:
-						{
-							result |= RelationChanged.RELATION_DECLARED_WAR;
-							break;
-						}
-						case MUTUAL:
-						{
-							result |= RelationChanged.RELATION_DECLARED_WAR;
-							result |= RelationChanged.RELATION_MUTUAL_WAR;
-							break;
-						}
+						result |= RelationChanged.RELATION_DECLARED_WAR;
+						break;
+					}
+					case MUTUAL:
+					{
+						result |= RelationChanged.RELATION_DECLARED_WAR;
+						result |= RelationChanged.RELATION_MUTUAL_WAR;
+						break;
 					}
 				}
 			}
@@ -9036,6 +9033,10 @@ public final class L2PcInstance extends L2Playable
 	
 	public void setPledgeType(int typeId)
 	{
+		if (_clan != null)
+		{
+			_clan.createSubPledge(typeId);
+		}
 		_pledgeType = typeId;
 	}
 	

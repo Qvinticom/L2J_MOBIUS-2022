@@ -47,8 +47,8 @@ public class ExPledgeShowInfoUpdate extends AbstractItemPacket
 		OutgoingPackets.EX_PLEDGE_SHOW_INFO_UPDATE.writeId(packet);
 		packet.writeD(clan.getId()); // Pledge ID
 		packet.writeD(ClanLevelData.getLevelRequirement(clan.getLevel())); // Next level cost
-		packet.writeD(0); // Max pledge members
-		packet.writeD(0); // Max elite members
+		packet.writeD(ClanLevelData.getCommonMemberLimit(clan.getLevel())); // Max pledge members
+		packet.writeD(ClanLevelData.getEliteMemberLimit(clan.getLevel())); // Max elite members
 		return true;
 	}
 }

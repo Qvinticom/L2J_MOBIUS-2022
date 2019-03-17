@@ -714,6 +714,10 @@ public class L2ClanMember
 					break;
 				}
 				case 11:
+				case 12:
+				case 13:
+				case 14:
+				case 15:
 				{
 					switch (player.getPledgeType())
 					{

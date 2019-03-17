@@ -41,17 +41,7 @@ public class PledgeReceiveMemberInfo implements IClientOutgoingPacket
 		packet.writeS(_member.getName());
 		packet.writeS(_member.getTitle()); // title
 		packet.writeD(_member.getPowerGrade()); // power
-		
-		// clan or subpledge name
-		if (_member.getPledgeType() != 0)
-		{
-			packet.writeS((_member.getClan().getSubPledge(_member.getPledgeType())).getName());
-		}
-		else
-		{
-			packet.writeS(_member.getClan().getName());
-		}
-		
+		packet.writeS(_member.getClan().getName());
 		packet.writeS(_member.getApprenticeOrSponsorName()); // name of this member's apprentice/sponsor
 		return true;
 	}
