@@ -81,8 +81,10 @@ import com.l2jmobius.gameserver.network.clientpackets.mentoring.RequestMentorLis
 import com.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookClose;
 import com.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookOpen;
 import com.l2jmobius.gameserver.network.clientpackets.monsterbook.RequestMonsterBookReward;
+import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeAnnounce;
 import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeItemBuy;
 import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeItemList;
+import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeLevelUp;
 import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasteryInfo;
 import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeMasteryReset;
 import com.l2jmobius.gameserver.network.clientpackets.pledgeV2.RequestExPledgeSkillInfo;
@@ -422,7 +424,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	EX_PLEDGE_CONTRIBUTION_RANK(0x13E, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_CONTRIBUTION_INFO(0x13F, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_CONTRIBUTION_REWARD(0x140, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_LEVEL_UP(0x141, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_LEVEL_UP(0x141, RequestExPledgeLevelUp::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_MISSION_INFO(0x142, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_MISSION_REWARD(0x143, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_MASTERY_INFO(0x144, RequestExPledgeMasteryInfo::new, ConnectionState.IN_GAME),
@@ -432,7 +434,7 @@ public enum ExIncomingPackets implements IIncomingPackets<L2GameClient>
 	EX_PLEDGE_SKILL_ACTIVATE(0x148, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_LIST(0x149, RequestExPledgeItemList::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_ACTIVATE(0x14A, null, ConnectionState.IN_GAME),
-	EX_PLEDGE_ANNOUNCE(0x14B, null, ConnectionState.IN_GAME),
+	EX_PLEDGE_ANNOUNCE(0x14B, RequestExPledgeAnnounce::new, ConnectionState.IN_GAME),
 	EX_PLEDGE_ANNOUNCE_SET(0x14C, null, ConnectionState.IN_GAME),
 	EX_CREATE_PLEDGE(0x14D, null, ConnectionState.IN_GAME),
 	EX_PLEDGE_ITEM_INFO(0x14E, null, ConnectionState.IN_GAME),
