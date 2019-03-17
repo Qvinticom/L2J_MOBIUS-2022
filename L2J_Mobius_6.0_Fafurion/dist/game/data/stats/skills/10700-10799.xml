@@ -1072,7 +1072,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10760" toLevel="11" name="Tornado Shot">
+	<skill id="10760" toLevel="13" name="Tornado Shot">
 		<!-- Attacks target with $s1 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10760</icon>
 		<operateType>A1</operateType>
@@ -1088,6 +1088,8 @@
 			<value level="9">125</value>
 			<value level="10">129</value>
 			<value level="11">133</value>
+			<value level="12">137</value>
+			<value level="13">141</value>
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1500</effectRange>
@@ -1106,6 +1108,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<effectPoint>
 			<value level="1">-689</value>
@@ -1119,6 +1123,8 @@
 			<value level="9">-716</value>
 			<value level="10">-719</value>
 			<value level="11">-722</value>
+			<value level="12">-725</value>
+			<value level="13">-728</value>
 		</effectPoint>
 		<reuseDelay>7000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -1150,21 +1156,23 @@
 					<value level="9">33258</value>
 					<value level="10">34786</value>
 					<value level="11">36314</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="12">37934</value>
+					<value level="13">39554</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="13">5</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="11">1</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="13">1</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10761" toLevel="11" name="Bow Strike">
+	<skill id="10761" toLevel="13" name="Bow Strike">
 		<!-- Knocks back frontal enemies. Attacks target with $s1 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10761</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1172,8 +1180,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="7" toLevel="11">200</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="7" toLevel="13">200</value>
+			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
@@ -1190,6 +1198,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">60</value>
@@ -1203,6 +1213,8 @@
 			<value level="9">77</value>
 			<value level="10">80</value>
 			<value level="11">83</value>
+			<value level="12">86</value>
+			<value level="13">89</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>40</castRange>
@@ -1222,6 +1234,8 @@
 			<value level="9">-716</value>
 			<value level="10">-719</value>
 			<value level="11">-722</value>
+			<value level="12">-725</value>
+			<value level="13">-729</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<basicProperty>NONE</basicProperty>
@@ -1254,7 +1268,9 @@
 					<value level="9">4063</value>
 					<value level="10">4239</value>
 					<value level="11">4415</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="12">4602</value>
+					<value level="13">4789</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>5</criticalChance>
@@ -1273,7 +1289,7 @@
 			<effect name="BlockActions" />
 		</effects>
 	</skill>
-	<skill id="10762" toLevel="11" name="Quick Shot">
+	<skill id="10762" toLevel="13" name="Quick Shot">
 		<!-- Attacks target with $s1 Power added to P. Atk. Disregards $s2 of the target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10762</icon>
 		<operateType>A1</operateType>
@@ -1290,6 +1306,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">79</value>
@@ -1303,6 +1321,8 @@
 			<value level="9">102</value>
 			<value level="10">105</value>
 			<value level="11">108</value>
+			<value level="12">110</value>
+			<value level="13">112</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>1100</castRange>
@@ -1321,6 +1341,8 @@
 			<value level="9">-717</value>
 			<value level="10">-720</value>
 			<value level="11">-723</value>
+			<value level="12">-726</value>
+			<value level="13">-729</value>
 		</effectPoint>
 		<reuseDelay>5000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -1348,21 +1370,23 @@
 					<value level="9">39249</value>
 					<value level="10">41163</value>
 					<value level="11">43077</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="12">45106</value>
+					<value level="13">47135</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="13">5</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="11">0.7</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.69 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="13">0.7</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.69 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 				<overHit>true</overHit>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10763" toLevel="11" name="Pinpoint Shot">
+	<skill id="10763" toLevel="13" name="Pinpoint Shot">
 		<!-- Aims for target's weak points to attack with $s1 Power added to P. Atk. Disregards $s2 of target's P. Def. Requires a bow or crossbow to be equipped. Over-hit. Critical. Half-kill. -->
 		<icon>icon.skill10763</icon>
 		<operateType>A1</operateType>
@@ -1380,6 +1404,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">117</value>
@@ -1393,6 +1419,8 @@
 			<value level="9">148</value>
 			<value level="10">152</value>
 			<value level="11">156</value>
+			<value level="12">160</value>
+			<value level="13">164</value>
 		</mpConsume>
 		<castRange>1100</castRange>
 		<hitTime>2200</hitTime>
@@ -1409,6 +1437,8 @@
 			<value level="9">-716</value>
 			<value level="10">-719</value>
 			<value level="11">-722</value>
+			<value level="12">-725</value>
+			<value level="13">-728</value>
 		</effectPoint>
 		<effectRange>1500</effectRange>
 		<reuseDelay>7000</reuseDelay>
@@ -1437,15 +1467,17 @@
 					<value level="9">56259</value>
 					<value level="10">59003</value>
 					<value level="11">61747</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="12">64656</value>
+					<value level="13">67565</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">10</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="13">10</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="11">0.7</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.69 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="13">0.7</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.69 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 				<overHit>true</overHit>
 			</effect>
@@ -1585,7 +1617,7 @@
 			</effect>
 		</selfEffects>
 	</skill>
-	<skill id="10769" toLevel="9" name="Impact Shot">
+	<skill id="10769" toLevel="11" name="Impact Shot">
 		<!-- Fires an arrow at the enemy with $s1 Power added to P. Atk. Stuns the enemy for $s2. Requires a bow or crossbow to be equipped. Over-hit. -->
 		<icon>icon.skill10769</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1593,8 +1625,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>STUN</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">90</value>
-			<value fromLevel="4" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="11">90</value>
+			<value fromLevel="4" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<nextAction>ATTACK</nextAction>
@@ -1609,6 +1641,8 @@
 			<value level="7">101</value>
 			<value level="8">103</value>
 			<value level="9">105</value>
+			<value level="10">107</value>
+			<value level="11">109</value>
 		</magicLvl>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
@@ -1622,6 +1656,8 @@
 			<value level="7">129</value>
 			<value level="8">134</value>
 			<value level="9">139</value>
+			<value level="10">144</value>
+			<value level="11">149</value>
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1500</effectRange>
@@ -1638,6 +1674,8 @@
 			<value level="7">-719</value>
 			<value level="8">-723</value>
 			<value level="9">-727</value>
+			<value level="10">-731</value>
+			<value level="11">-735</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<trait>SHOCK</trait>
@@ -1664,11 +1702,13 @@
 					<value level="7">43724</value>
 					<value level="8">45734</value>
 					<value level="9">47744</value>
-					<value fromLevel="4" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="10">49875</value>
+					<value level="11">52006</value>
+					<value fromLevel="4" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="9">5</value>
-					<value fromLevel="4" toLevel="9" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="11">5</value>
+					<value fromLevel="4" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<overHit>true</overHit>
 			</effect>
@@ -1677,7 +1717,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10770" toLevel="11" name="Recoil Shot">
+	<skill id="10770" toLevel="13" name="Recoil Shot">
 		<!-- Shoots an arrow with $s1 Power added to P. Atk. to Knock Back target. Requires a bow or crossbow to be equipped. Over-hit. Critical. Chance of canceling the enemy's target. -->
 		<icon>icon.skill10770</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -1685,8 +1725,8 @@
 		<abnormalType>STUN</abnormalType>
 		<abnormalVisualEffect>KNOCKBACK</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">90</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="13">90</value>
+			<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>PHYSICAL</basicProperty>
 		<nextAction>ATTACK</nextAction>
@@ -1703,6 +1743,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<lvlBonusRate>20</lvlBonusRate>
 		<operateType>A2</operateType>
@@ -1718,6 +1760,8 @@
 			<value level="9">130</value>
 			<value level="10">133</value>
 			<value level="11">136</value>
+			<value level="12">139</value>
+			<value level="13">142</value>
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1500</effectRange>
@@ -1736,6 +1780,8 @@
 			<value level="9">-717</value>
 			<value level="10">-720</value>
 			<value level="11">-723</value>
+			<value level="12">-727</value>
+			<value level="13">-731</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<trait>KNOCKDOWN</trait>
@@ -1764,12 +1810,14 @@
 					<value level="9">45432</value>
 					<value level="10">47520</value>
 					<value level="11">49608</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="12">51821</value>
+					<value level="13">54034</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="13">5</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 			</effect>
 			<effect name="KnockBack">
@@ -1781,7 +1829,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10771" toLevel="11" name="Multiple Arrow">
+	<skill id="10771" toLevel="13" name="Multiple Arrow">
 		<!-- Attacks frontal enemies with $s1 Power added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10771</icon>
 		<operateType>A1</operateType>
@@ -1801,6 +1849,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">124</value>
@@ -1814,6 +1864,8 @@
 			<value level="9">159</value>
 			<value level="10">163</value>
 			<value level="11">167</value>
+			<value level="12">171</value>
+			<value level="13">175</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>1100</castRange>
@@ -1832,6 +1884,8 @@
 			<value level="9">-717</value>
 			<value level="10">-720</value>
 			<value level="11">-723</value>
+			<value level="12">-726</value>
+			<value level="13">-729</value>
 		</effectPoint>
 		<reuseDelay>7000</reuseDelay>
 		<fanRange>0;0;900;90</fanRange>
@@ -1861,21 +1915,23 @@
 					<value level="9">35966</value>
 					<value level="10">37720</value>
 					<value level="11">39474</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="12">41333</value>
+					<value level="13">43192</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="13">5</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="11">1</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="13">1</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10772" toLevel="11" name="Heavy Arrow Rain">
+	<skill id="10772" toLevel="13" name="Heavy Arrow Rain">
 		<!-- Showers the enemy and nearby enemies with a rain of arrows, to inflict damage with $s1 damage added to P. Atk. Requires a bow or crossbow to be equipped. Over-hit. Critical. -->
 		<icon>icon.skill10772</icon>
 		<operateType>A1</operateType>
@@ -1894,6 +1950,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">125</value>
@@ -1907,6 +1965,8 @@
 			<value level="9">159</value>
 			<value level="10">164</value>
 			<value level="11">169</value>
+			<value level="12">174</value>
+			<value level="13">179</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>1100</castRange>
@@ -1925,6 +1985,8 @@
 			<value level="9">-716</value>
 			<value level="10">-719</value>
 			<value level="11">-722</value>
+			<value level="12">-726</value>
+			<value level="13">-730</value>
 		</effectPoint>
 		<reuseDelay>15000</reuseDelay>
 		<targetType>ENEMY</targetType>
@@ -1953,16 +2015,18 @@
 					<value level="9">33772</value>
 					<value level="10">35526</value>
 					<value level="11">37280</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="12">39139</value>
+					<value level="13">40998</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<overHit>true</overHit>
 				<criticalChance>
-					<value fromLevel="1" toLevel="11">5</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="13">5</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="11">1</value>
-					<value fromLevel="7" toLevel="11" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="13">1</value>
+					<value fromLevel="7" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
@@ -2197,7 +2261,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10777" toLevel="4" name="Lure Shot">
+	<skill id="10777" toLevel="6" name="Lure Shot">
 		<!-- Draws in the enemy's attention. Requires a bow or crossbow to be equipped. -->
 		<icon>icon.skill10777</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2210,6 +2274,8 @@
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
+			<value level="5">107</value>
+			<value level="6">109</value>
 		</magicLvl>
 		<mpConsume>77</mpConsume>
 		<castRange>1100</castRange>
@@ -2326,15 +2392,15 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10780" toLevel="9" name="Slow Shot">
+	<skill id="10780" toLevel="11" name="Slow Shot">
 		<!-- Attacks target with $s1 Power added to P. Atk. For $s2, Speed -$s3. Requires a bow or crossbow to be equipped. -->
 		<icon>icon.skill10780</icon>
 		<abnormalLvl>3</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SPEED_DOWN</abnormalType>
 		<activateRate>
-			<value fromLevel="1" toLevel="9">40</value>
-			<value fromLevel="5" toLevel="9" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="11">40</value>
+			<value fromLevel="5" toLevel="11" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<lvlBonusRate>20</lvlBonusRate>
@@ -2350,6 +2416,8 @@
 			<value level="7">101</value>
 			<value level="8">103</value>
 			<value level="9">105</value>
+			<value level="10">107</value>
+			<value level="11">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">94</value>
@@ -2361,6 +2429,8 @@
 			<value level="7">121</value>
 			<value level="8">126</value>
 			<value level="9">131</value>
+			<value level="10">133</value>
+			<value level="11">141</value>
 		</mpConsume>
 		<nextAction>ATTACK</nextAction>
 		<castRange>1100</castRange>
@@ -2378,6 +2448,8 @@
 			<value level="7">-717</value>
 			<value level="8">-721</value>
 			<value level="9">-725</value>
+			<value level="10">-729</value>
+			<value level="11">-733</value>
 		</effectPoint>
 		<isDebuff>true</isDebuff>
 		<targetType>ENEMY</targetType>
@@ -2403,7 +2475,9 @@
 					<value level="7">42001</value>
 					<value level="8">43930</value>
 					<value level="9">45960</value>
-					<value fromLevel="5" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="10">48112</value>
+					<value level="11">50264</value>
+					<value fromLevel="5" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
 					<value fromLevel="1" toLevel="11">5</value>
@@ -2416,7 +2490,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10781" toLevel="4" name="Phoenix Arrow">
+	<skill id="10781" toLevel="6" name="Phoenix Arrow">
 		<!-- Shoots a magical arrow to obliterate an area. Attacks targets within the skill's range with $s1 power. Bow/ Crossbow required. -->
 		<icon>icon.skill10781</icon>
 		<affectLimit>5-12</affectLimit>
@@ -2428,6 +2502,8 @@
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
+			<value level="5">107</value>
+			<value level="6">109</value>
 		</magicLvl>
 		<mpConsume>1067</mpConsume>
 		<castRange>1100</castRange>
@@ -2458,15 +2534,17 @@
 					<value level="2">56558</value>
 					<value level="3">59316</value>
 					<value level="4">62074</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+					<value level="5">64997</value>
+					<value level="6">67920</value>
+					<value fromLevel="1" toLevel="6" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 				</power>
 				<criticalChance>
-					<value fromLevel="1" toLevel="4">5</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
+					<value fromLevel="1" toLevel="6">5</value>
+					<value fromLevel="1" toLevel="6" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 				<pDefMod>
-					<value fromLevel="1" toLevel="4">1</value>
-					<value fromLevel="1" toLevel="4" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
+					<value fromLevel="1" toLevel="6">1</value>
+					<value fromLevel="1" toLevel="6" fromSubLevel="3001" toSubLevel="3020">{0.99 - 0.006 * (subIndex - 1)}</value>
 				</pDefMod>
 			</effect>
 		</effects>
@@ -2507,14 +2585,14 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10783" toLevel="4" name="Mind's Eye">
+	<skill id="10783" toLevel="5" name="Mind's Eye">
 		<!-- For $s1, opens the eye of infinity to increase Accuracy +$s2, Critical Rate +$s3, and Critical Damage +$s4. -->
 		<icon>icon.skill10783</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="4">60</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
-			<value fromLevel="3" toLevel="4" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="5">60</value>
+			<value fromLevel="3" toLevel="5" fromSubLevel="1001" toSubLevel="1010">{base + subIndex}</value>
+			<value fromLevel="3" toLevel="5" fromSubLevel="1011" toSubLevel="1020">{base + 10 + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>POSSESSION</abnormalType>
 		<operateType>A2</operateType>
@@ -2524,12 +2602,14 @@
 			<value level="2">90</value>
 			<value level="3">95</value>
 			<value level="4">99</value>
+			<value level="5">110</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">54</value>
 			<value level="2">59</value>
 			<value level="3">64</value>
 			<value level="4">64</value>
+			<value level="5">64</value>
 		</mpConsume>
 		<hitTime>3000</hitTime>
 		<coolTime>500</coolTime>
@@ -2547,6 +2627,7 @@
 					<value level="2">30</value>
 					<value level="3">35</value>
 					<value level="4">40</value>
+					<value level="5">40</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
@@ -2556,6 +2637,7 @@
 					<value level="2">90</value>
 					<value level="3">110</value>
 					<value level="4">130</value>
+					<value level="5">130</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2565,12 +2647,13 @@
 					<value level="2">220</value>
 					<value level="3">240</value>
 					<value level="4">250</value>
+					<value level="5">250</value>
 				</amount>
 				<mode>DIFF</mode>
 			</effect>
-			<effect name="Speed" fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="Speed" fromLevel="3" toLevel="5" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
-					<value fromLevel="3" toLevel="4" fromSubLevel="2001" toSubLevel="2020">{2 * subIndex}</value>
+					<value fromLevel="3" toLevel="5" fromSubLevel="2001" toSubLevel="2020">{2 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -2610,7 +2693,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10785" toLevel="5" name="Flare">
+	<skill id="10785" toLevel="7" name="Flare">
 		<!-- Fires a Flare to reveal nearby hiding enemies or traps. Requires a bow or crossbow to be equipped. -->
 		<icon>icon.skill10785</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2620,6 +2703,8 @@
 			<value level="3">1</value>
 			<value level="4">2</value>
 			<value level="5">3</value>
+			<value level="6">3</value>
+			<value level="7">3</value>
 		</abnormalTime>
 		<!-- TODO set name="abnormalType" val="" / -->
 		<affectLimit>5-12</affectLimit>
@@ -2632,6 +2717,8 @@
 			<value level="3">101</value>
 			<value level="4">103</value>
 			<value level="5">105</value>
+			<value level="6">107</value>
+			<value level="7">109</value>
 		</magicLvl>
 		<mpConsume>70</mpConsume>
 		<hitTime>1200</hitTime>
@@ -2663,7 +2750,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10786" toLevel="6" name="Time Bomb">
+	<skill id="10786" toLevel="8" name="Time Bomb">
 		<!-- Plants a time bomb on target that detonates after $s1 to inflict damage with $s2 power. While the bomb is being installed, target's P. Accuracy decreases by $s3. -->
 		<icon>icon.skill10786</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2678,6 +2765,8 @@
 			<value level="4">101</value>
 			<value level="5">103</value>
 			<value level="6">105</value>
+			<value level="7">107</value>
+			<value level="8">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">66</value>
@@ -2686,6 +2775,8 @@
 			<value level="4">75</value>
 			<value level="5">78</value>
 			<value level="6">81</value>
+			<value level="7">84</value>
+			<value level="8">87</value>
 		</mpConsume>
 		<castRange>1100</castRange>
 		<effectRange>1400</effectRange>
@@ -2698,6 +2789,8 @@
 			<value level="4">-718</value>
 			<value level="5">-722</value>
 			<value level="6">-726</value>
+			<value level="7">-730</value>
+			<value level="8">-734</value>
 		</effectPoint>
 		<basicProperty>PHYSICAL</basicProperty>
 		<lvlBonusRate>30</lvlBonusRate>
@@ -2722,6 +2815,8 @@
 					<value level="4">2</value>
 					<value level="5">3</value>
 					<value level="6">4</value>
+					<value level="7">5</value>
+					<value level="8">6</value>
 				</skillLevel>
 			</effect>
 		</endEffects>
@@ -2849,7 +2944,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10791" toLevel="4" name="Frost Trap">
+	<skill id="10791" toLevel="6" name="Frost Trap">
 		<!-- Plants a Frost Trap, decreasing the enemy's Speed, Atk. Spd. and Casting Spd. -->
 		<icon>icon.skill10791</icon>
 		<operateType>A1</operateType>
@@ -2858,6 +2953,8 @@
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
+			<value level="5">107</value>
+			<value level="6">109</value>
 		</magicLvl>
 		<mpConsume>39</mpConsume>
 		<hitTime>800</hitTime>
@@ -2883,11 +2980,13 @@
 					<value level="2">13461</value>
 					<value level="3">13462</value>
 					<value level="4">13463</value>
+					<value level="5">13464</value>
+					<value level="6">13465</value>
 				</npcId>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="10792" toLevel="4" name="Gravity Trap">
+	<skill id="10792" toLevel="6" name="Gravity Trap">
 		<!-- Plants a Gravity Trap, immobilizing the enemy. -->
 		<icon>icon.skill10792</icon>
 		<operateType>A1</operateType>
@@ -2896,6 +2995,8 @@
 			<value level="2">101</value>
 			<value level="3">103</value>
 			<value level="4">105</value>
+			<value level="5">107</value>
+			<value level="6">109</value>
 		</magicLvl>
 		<mpConsume>39</mpConsume>
 		<hitTime>800</hitTime>
@@ -2921,6 +3022,8 @@
 					<value level="2">13464</value>
 					<value level="3">13465</value>
 					<value level="4">13466</value>
+					<value level="5">13467</value>
+					<value level="6">13468</value>
 				</npcId>
 			</effect>
 		</effects>
