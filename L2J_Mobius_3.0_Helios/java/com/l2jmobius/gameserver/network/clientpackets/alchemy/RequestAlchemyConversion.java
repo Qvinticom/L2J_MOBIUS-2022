@@ -16,9 +16,6 @@
  */
 package com.l2jmobius.gameserver.network.clientpackets.alchemy;
 
-import java.util.HashSet;
-import java.util.Set;
-
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.AlchemyData;
@@ -43,22 +40,20 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 	private int _craftTimes;
 	private int _skillId;
 	private int _skillLevel;
-	
-	private final Set<ItemHolder> _ingredients = new HashSet<>();
+	// private final Set<ItemHolder> _ingredients = new HashSet<>();
 	
 	@Override
 	public boolean read(L2GameClient client, PacketReader packet)
 	{
 		_craftTimes = packet.readD();
-		packet.readH(); // TODO: Find me
+		packet.readH();
 		_skillId = packet.readD();
 		_skillLevel = packet.readD();
-		
-		final int ingredientsSize = packet.readD();
-		for (int i = 0; i < ingredientsSize; i++)
-		{
-			_ingredients.add(new ItemHolder(packet.readD(), packet.readQ()));
-		}
+		// final int ingredientsSize = packet.readD();
+		// for (int i = 0; i < ingredientsSize; i++)
+		// {
+		// _ingredients.add(new ItemHolder(packet.readD(), packet.readQ()));
+		// }
 		return true;
 	}
 	
@@ -99,14 +94,13 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 			return;
 		}
 		
-		// TODO : Implement this
 		// if (!_ingredients.equals(data.getIngredients()))
 		// {
 		// LOGGER.warning("Client ingredients are not same as server ingredients for alchemy conversion player: "+ +"", player);
 		// return;
 		// }
 		
-		// TODO: Figure out the chance
+		// Chance based on grade.
 		final int baseChance;
 		switch (data.getGrade())
 		{
@@ -132,30 +126,11 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 			}
 		}
 		
+		// Calculate success and failure count.
 		int successCount = 0;
 		int failureCount = 0;
-		
-		// Run _craftItems iteration of item craft
-		final InventoryUpdate ui = new InventoryUpdate();
-		CRAFTLOOP: for (int i = 0; i < _craftTimes; i++)
+		for (int i = 0; i < _craftTimes; i++)
 		{
-			// for each tries, check if player have enough items and destroy
-			for (ItemHolder ingredient : data.getIngredients())
-			{
-				final L2ItemInstance item = player.getInventory().getItemByItemId(ingredient.getId());
-				if (item == null)
-				{
-					break CRAFTLOOP;
-				}
-				if (item.getCount() < ingredient.getCount())
-				{
-					break CRAFTLOOP;
-				}
-				
-				player.getInventory().destroyItem("Alchemy", item, ingredient.getCount(), player, null);
-				ui.addItem(item);
-			}
-			
 			if (Rnd.get(100) < baseChance)
 			{
 				successCount++;
@@ -166,12 +141,31 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 			}
 		}
 		
+		for (ItemHolder ingredient : data.getIngredients())
+		{
+			if (player.getInventory().getInventoryItemCount(ingredient.getId(), -1) < (ingredient.getCount() * _craftTimes))
+			{
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_INGREDIENTS);
+				return;
+			}
+		}
+		
+		final InventoryUpdate ui = new InventoryUpdate();
+		
+		// Destroy ingredients.
+		for (ItemHolder ingredient : data.getIngredients())
+		{
+			final L2ItemInstance item = player.getInventory().getItemByItemId(ingredient.getId());
+			ui.addItem(item);
+			player.getInventory().destroyItem("Alchemy", item, ingredient.getCount() * _craftTimes, player, null);
+		}
+		// Add success items.
 		if (successCount > 0)
 		{
 			final L2ItemInstance item = player.getInventory().addItem("Alchemy", data.getProductionSuccess().getId(), data.getProductionSuccess().getCount() * successCount, player, null);
 			ui.addItem(item);
 		}
-		
+		// Add failed items.
 		if (failureCount > 0)
 		{
 			final L2ItemInstance item = player.getInventory().addItem("Alchemy", data.getProductionFailure().getId(), data.getProductionFailure().getCount() * failureCount, player, null);
@@ -180,6 +174,5 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		
 		player.sendPacket(new ExAlchemyConversion(successCount, failureCount));
 		player.sendInventoryUpdate(ui);
-		
 	}
 }
