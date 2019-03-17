@@ -1790,22 +1790,29 @@ public final class L2ItemInstance extends L2Object
 		{
 			return true;
 		}
-		final L2PcInstance owner = getActingPlayer();
-		for (Condition condition : _item.getConditions())
+		if ((_loc == ItemLocation.PET) || (_loc == ItemLocation.PET_EQUIP))
 		{
-			if (condition == null)
+			return true;
+		}
+		L2Character owner = getActingPlayer();
+		if (owner != null)
+		{
+			for (Condition condition : _item.getConditions())
 			{
-				continue;
-			}
-			try
-			{
-				if (!condition.test(owner, owner, null, null))
+				if (condition == null)
 				{
-					return false;
+					continue;
 				}
-			}
-			catch (Exception e)
-			{
+				try
+				{
+					if (!condition.test(owner, owner, null, null))
+					{
+						return false;
+					}
+				}
+				catch (Exception e)
+				{
+				}
 			}
 		}
 		return true;
