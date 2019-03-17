@@ -17,7 +17,7 @@
 package com.l2jmobius.gameserver.network.serverpackets.pledgeV2;
 
 import com.l2jmobius.commons.network.PacketWriter;
-import com.l2jmobius.gameserver.data.xml.impl.ClanLevelTable;
+import com.l2jmobius.gameserver.data.xml.impl.ClanLevelData;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.network.OutgoingPackets;
@@ -46,7 +46,7 @@ public class ExPledgeShowInfoUpdate extends AbstractItemPacket
 		
 		OutgoingPackets.EX_PLEDGE_SHOW_INFO_UPDATE.writeId(packet);
 		packet.writeD(clan.getId()); // Pledge ID
-		packet.writeD(ClanLevelTable.getLevelRequirement(clan.getLevel())); // Next level cost
+		packet.writeD(ClanLevelData.getLevelRequirement(clan.getLevel())); // Next level cost
 		packet.writeD(0); // Max pledge members
 		packet.writeD(0); // Max elite members
 		return true;

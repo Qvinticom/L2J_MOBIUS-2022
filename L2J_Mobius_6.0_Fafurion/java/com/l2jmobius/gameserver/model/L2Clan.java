@@ -40,7 +40,7 @@ import com.l2jmobius.gameserver.communitybbs.Manager.ForumsBBSManager;
 import com.l2jmobius.gameserver.data.sql.impl.CharNameTable;
 import com.l2jmobius.gameserver.data.sql.impl.ClanTable;
 import com.l2jmobius.gameserver.data.sql.impl.CrestTable;
-import com.l2jmobius.gameserver.data.xml.impl.ClanLevelTable;
+import com.l2jmobius.gameserver.data.xml.impl.ClanLevelData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillTreesData;
 import com.l2jmobius.gameserver.enums.ClanRewardType;
@@ -2502,7 +2502,7 @@ public class L2Clan implements IIdentifiable, INamable
 		boolean increasedLevel = false;
 		if (_level < 15)
 		{
-			final int requiredReputation = ClanLevelTable.getLevelRequirement(_level);
+			final int requiredReputation = ClanLevelData.getLevelRequirement(_level);
 			if (requiredReputation <= _reputationScore)
 			{
 				setReputationScore(_reputationScore - requiredReputation, true);
