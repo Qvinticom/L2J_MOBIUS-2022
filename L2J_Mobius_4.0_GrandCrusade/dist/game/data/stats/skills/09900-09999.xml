@@ -1029,6 +1029,24 @@
 		<reuseDelay>300000</reuseDelay>
 		<effectPoint>1</effectPoint>
 		<isMagic>4</isMagic>
+		<effects>
+			<effect name="MaxCp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxMp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MaxHp">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+		</effects>
 	</skill>
 	<skill id="9983" toLevel="1" name="Scroll of Escape: Wall of Argos">
 		<!-- Return to the Wall of Argos. -->
