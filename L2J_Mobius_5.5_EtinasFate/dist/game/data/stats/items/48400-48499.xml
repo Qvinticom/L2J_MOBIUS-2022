@@ -1000,7 +1000,7 @@
 		<!-- A Dragon Shirt. <Upgrade Condition>. Can be upgraded to Dragon Leather Shirt when enhanced to +5. Level 85 or higher. -->
 		<set name="icon" val="icon.bm_dragon_shirt" />
 		<set name="default_action" val="EQUIP" />
-		<set name="bodypart" val="gloves" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="SILVER" />
 		<set name="weight" val="120" />
@@ -1008,6 +1008,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond>
+			<player level="85" />
+		</cond>
 		<stats>
 			<stat type="mDef">23</stat>
 			<stat type="pDef">46</stat>
@@ -1017,6 +1020,7 @@
 		<!-- A Dragon Leather Shirt. <Upgrade Condition>. Can be upgraded to Dragon Rind Leather Shirt when enhanced to +5. Level 99 or higher. -->
 		<set name="icon" val="icon.bm_dragon_leather_shirt" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
@@ -1024,6 +1028,9 @@
 		<set name="is_dropable" val="false" />
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
+		<cond>
+			<player level="99" />
+		</cond>
 		<stats>
 			<stat type="mDef">27</stat>
 			<stat type="pDef">54</stat>
@@ -1033,10 +1040,14 @@
 		<!-- A Dragon Rind Leather Shirt. Level 105 or higher. -->
 		<set name="icon" val="icon.bm_dragon_rind_leather_shirt" />
 		<set name="default_action" val="EQUIP" />
+		<set name="bodypart" val="underwear" />
 		<set name="immediate_effect" val="true" />
 		<set name="material" val="WOOD" />
 		<set name="weight" val="10" />
 		<set name="is_sellable" val="false" />
+		<cond>
+			<player level="105" />
+		</cond>
 		<stats>
 			<stat type="mDef">31</stat>
 			<stat type="pDef">62</stat>
