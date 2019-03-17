@@ -44,7 +44,7 @@ public class PledgeShowMemberListAll implements IClientOutgoingPacket
 	{
 		final L2Clan clan = player.getClan();
 		player.sendPacket(new PledgeShowMemberListAll(clan, true));
-		for (L2PcInstance member : clan.getOnlineMembers(0))
+		for (L2ClanMember member : clan.getMembers())
 		{
 			if (member.getPledgeType() != L2Clan.PLEDGE_CLASS_COMMON)
 			{

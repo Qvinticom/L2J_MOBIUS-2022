@@ -43,7 +43,7 @@ public final class PledgeShowMemberListUpdate implements IClientOutgoingPacket
 		_name = member.getName();
 		_level = member.getLevel();
 		_classId = member.getClassId();
-		_objectId = member.getObjectId();
+		_objectId = member.isOnline() ? member.getObjectId() : 0;
 		_pledgeType = member.getPledgeType();
 		_onlineStatus = member.getOnlineStatus();
 	}

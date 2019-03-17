@@ -1734,12 +1734,12 @@ public class L2Clan implements IIdentifiable, INamable
 	
 	public SubPledge createSubPledge(int pledgeType)
 	{
-		if ((_subPledges == null) || (_subPledges.get(pledgeType) != null))
+		if ((_subPledges.get(pledgeType) != null) || (pledgeType == PLEDGE_CLASS_COMMON))
 		{
 			return null;
 		}
 		
-		final String subPledgeName = pledgeType == PLEDGE_CLASS_COMMON ? "COMMON" : "ELITE";
+		final String subPledgeName = "ELITE"; // For now only elite exists.
 		SubPledge subPledge = null;
 		
 		try (Connection con = DatabaseFactory.getConnection();
