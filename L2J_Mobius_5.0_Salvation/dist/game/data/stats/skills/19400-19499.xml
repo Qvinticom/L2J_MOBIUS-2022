@@ -570,11 +570,6 @@
 		<isDebuff>true</isDebuff>
 		<effects>
 			<effect name="BlockControl" />
-			<effect name="KnockBack">
-				<distance>100</distance>
-				<speed>600</speed>
-				<knockDown>true</knockDown>
-			</effect>
 		</effects>
 	</skill>
 	<skill id="19420" toLevel="4" name="Quadruple Elemental Blast">
