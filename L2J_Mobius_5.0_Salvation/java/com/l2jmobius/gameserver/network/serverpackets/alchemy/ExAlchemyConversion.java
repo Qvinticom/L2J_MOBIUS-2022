@@ -39,7 +39,7 @@ public class ExAlchemyConversion implements IClientOutgoingPacket
 	{
 		OutgoingPackets.EX_ALCHEMY_CONVERSION.writeId(packet);
 		
-		packet.writeC(0x00); // TODO: Find me
+		packet.writeC((_successCount == 0) && (_failureCount == 0) ? 0x01 : 0x00);
 		packet.writeD(_successCount);
 		packet.writeD(_failureCount);
 		return true;

@@ -69,27 +69,32 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_DURING_BATTLE);
+			player.sendPacket(new ExAlchemyConversion(0, 0));
 			return;
 		}
 		else if (player.isInStoreMode() || (player.getPrivateStoreType() != PrivateStoreType.NONE))
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_TRADING_OR_USING_A_PRIVATE_STORE_OR_SHOP);
+			player.sendPacket(new ExAlchemyConversion(0, 0));
 			return;
 		}
 		else if (player.isDead())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_DEAD);
+			player.sendPacket(new ExAlchemyConversion(0, 0));
 			return;
 		}
 		else if (player.isMovementDisabled())
 		{
 			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_IMMOBILE);
+			player.sendPacket(new ExAlchemyConversion(0, 0));
 			return;
 		}
 		
 		final AlchemyCraftData data = AlchemyData.getInstance().getCraftData(_skillId, _skillLevel);
 		if (data == null)
 		{
+			player.sendPacket(new ExAlchemyConversion(0, 0));
 			LOGGER.warning("Missing AlchemyData for skillId: " + _skillId + ", skillLevel: " + _skillLevel);
 			return;
 		}
@@ -146,6 +151,7 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 			if (player.getInventory().getInventoryItemCount(ingredient.getId(), -1) < (ingredient.getCount() * _craftTimes))
 			{
 				player.sendPacket(SystemMessageId.NOT_ENOUGH_INGREDIENTS);
+				player.sendPacket(new ExAlchemyConversion(0, 0));
 				return;
 			}
 		}
