@@ -61,13 +61,13 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11225" toLevel="7" name="Physical Soul Barrier">
+	<skill id="11225" toLevel="9" name="Physical Soul Barrier">
 		<!-- For $s1, own P. Def. +$s2, Bow/ Crossbow Resistance +$s3, and Critical Damage Received -$s4. -->
 		<icon>icon.skill11869</icon>
 		<abnormalLvl>1</abnormalLvl>
 		<abnormalTime>
-			<value fromLevel="1" toLevel="7">20</value>
-			<value fromLevel="3" toLevel="7" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
+			<value fromLevel="1" toLevel="9">20</value>
+			<value fromLevel="3" toLevel="9" fromSubLevel="1001" toSubLevel="1020">{base + 0.5 * subIndex}</value>
 		</abnormalTime>
 		<abnormalType>PD_UP_SPECIAL</abnormalType> <!-- Guessed -->
 		<operateType>A2</operateType>
@@ -81,6 +81,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<mpConsume>498</mpConsume>
 		<hitTime>1000</hitTime>
@@ -97,6 +99,8 @@
 					<value level="5">130</value>
 					<value level="6">140</value>
 					<value level="7">150</value>
+					<value level="8">160</value>
+					<value level="9">170</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>

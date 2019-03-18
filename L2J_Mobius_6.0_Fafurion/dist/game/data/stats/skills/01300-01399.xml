@@ -1439,7 +1439,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1334" toLevel="16" name="Summon Cursed Man">
+	<skill id="1334" toLevel="18" name="Summon Cursed Man">
 		<!-- Summons a Cursed Man. Requires $s1 Spirit Ore. -->
 		<icon>icon.skill1334</icon>
 		<coolTime>500</coolTime>
@@ -1460,6 +1460,8 @@
 			<value level="14">0</value>
 			<value level="15">0</value>
 			<value level="16">0</value>
+			<value level="17">0</value>
+			<value level="18">0</value>
 		</itemConsumeCount>
 		<itemConsumeId>3031</itemConsumeId>
 		<magicLvl>
@@ -1479,6 +1481,8 @@
 			<value level="14">101</value>
 			<value level="15">103</value>
 			<value level="16">105</value>
+			<value level="17">107</value>
+			<value level="18">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">82</value>
@@ -1497,6 +1501,8 @@
 			<value level="14">495</value>
 			<value level="15">507</value>
 			<value level="16">519</value>
+			<value level="17">531</value>
+			<value level="18">543</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">21</value>
@@ -1515,6 +1521,8 @@
 			<value level="14">100</value>
 			<value level="15">103</value>
 			<value level="16">105</value>
+			<value level="17">107</value>
+			<value level="18">110</value>
 		</mpInitialConsume>
 		<hitTime>3500</hitTime>
 		<isMagic>1</isMagic> <!-- Magic Skill -->
@@ -1546,6 +1554,8 @@
 					<value level="14">15194</value>
 					<value level="15">15195</value>
 					<value level="16">15196</value>
+					<value level="17">15197</value>
+					<value level="18">15198</value>
 				</npcId>
 				<lifeTime>3600</lifeTime>
 				<consumeItemId>3031</consumeItemId> <!-- Spirit Ore -->
@@ -1566,6 +1576,8 @@
 					<value level="14">0</value>
 					<value level="15">0</value>
 					<value level="16">0</value>
+					<value level="17">0</value>
+					<value level="18">0</value>
 				</consumeItemCount>
 			</effect>
 		</effects>
