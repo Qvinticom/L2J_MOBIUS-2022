@@ -2520,7 +2520,7 @@ public final class L2PcInstance extends L2Playable
 		// Give all normal skills if activated Auto-Learn is activated, included AutoGet skills.
 		if (Config.AUTO_LEARN_SKILLS)
 		{
-			giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+			giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, Config.AUTO_LEARN_FP_SKILLS, true);
 		}
 		else
 		{
@@ -2581,14 +2581,15 @@ public final class L2PcInstance extends L2Playable
 	/**
 	 * Give all available skills to the player.
 	 * @param includedByFs if {@code true} forgotten scroll skills present in the skill tree will be added
+	 * @param includedByFp if {@code true} forgotten power skills present in the skill tree will be added
 	 * @param includeAutoGet if {@code true} auto-get skills present in the skill tree will be added
 	 * @return the amount of new skills earned
 	 */
-	public int giveAvailableSkills(boolean includedByFs, boolean includeAutoGet)
+	public int giveAvailableSkills(boolean includedByFs, boolean includedByFp, boolean includeAutoGet)
 	{
 		int skillCounter = 0;
 		// Get available skills
-		final Collection<Skill> skills = SkillTreesData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includedByFs, includeAutoGet);
+		final Collection<Skill> skills = SkillTreesData.getInstance().getAllAvailableSkills(this, getTemplate().getClassId(), includedByFs, includedByFp, includeAutoGet);
 		final List<Skill> skillsForStore = new ArrayList<>();
 		
 		for (Skill skill : skills)

@@ -167,6 +167,7 @@ public final class Config
 	public static Map<Integer, Integer> SKILL_REUSE_LIST;
 	public static boolean AUTO_LEARN_SKILLS;
 	public static boolean AUTO_LEARN_FS_SKILLS;
+	public static boolean AUTO_LEARN_FP_SKILLS;
 	public static boolean AUTO_LOOT_HERBS;
 	public static byte BUFFS_MAX_AMOUNT;
 	public static byte TRIGGERED_BUFFS_MAX_AMOUNT;
@@ -1492,6 +1493,7 @@ public final class Config
 			
 			AUTO_LEARN_SKILLS = Character.getBoolean("AutoLearnSkills", false);
 			AUTO_LEARN_FS_SKILLS = Character.getBoolean("AutoLearnForgottenScrollSkills", false);
+			AUTO_LEARN_FP_SKILLS = Character.getBoolean("AutoLearnForgottenPowerSkills", false);
 			AUTO_LOOT_HERBS = Character.getBoolean("AutoLootHerbs", false);
 			BUFFS_MAX_AMOUNT = Character.getByte("MaxBuffAmount", (byte) 20);
 			TRIGGERED_BUFFS_MAX_AMOUNT = Character.getByte("MaxTriggeredBuffAmount", (byte) 12);

@@ -632,12 +632,13 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param player the learning skill player
 	 * @param classId the learning skill class Id
 	 * @param includeByFs if {@code true} skills from Forgotten Scroll will be included
+	 * @param includeByFp if {@code true} skills from Forgotten Power books will be included
 	 * @param includeAutoGet if {@code true} Auto-Get skills will be included
 	 * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
 	 */
-	public List<L2SkillLearn> getAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
+	public List<L2SkillLearn> getAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeByFp, boolean includeAutoGet)
 	{
-		return getAvailableSkills(player, classId, includeByFs, includeAutoGet, player);
+		return getAvailableSkills(player, classId, includeByFs, includeByFp, includeAutoGet, player);
 	}
 	
 	/**
@@ -645,11 +646,12 @@ public final class SkillTreesData implements IGameXmlReader
 	 * @param player the learning skill player
 	 * @param classId the learning skill class Id
 	 * @param includeByFs if {@code true} skills from Forgotten Scroll will be included
+	 * @param includeByFp if {@code true} skills from Forgotten Power books will be included
 	 * @param includeAutoGet if {@code true} Auto-Get skills will be included
 	 * @param holder
 	 * @return all available skills for a given {@code player}, {@code classId}, {@code includeByFs} and {@code includeAutoGet}
 	 */
-	private List<L2SkillLearn> getAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet, ISkillsHolder holder)
+	private List<L2SkillLearn> getAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeByFp, boolean includeAutoGet, ISkillsHolder holder)
 	{
 		final List<L2SkillLearn> result = new LinkedList<>();
 		final Map<Long, L2SkillLearn> skills = getCompleteClassSkillTree(classId);
@@ -667,7 +669,7 @@ public final class SkillTreesData implements IGameXmlReader
 		{
 			final L2SkillLearn skill = entry.getValue();
 			
-			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || isRemoveSkill(classId, skill.getSkillId()))
+			if (((skill.getSkillId() == CommonSkill.DIVINE_INSPIRATION.getId()) && (!Config.AUTO_LEARN_DIVINE_INSPIRATION && includeAutoGet) && !player.isGM()) || (!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || (!includeByFp && (skill.getSkillId() > 11399) && (skill.getSkillId() < 11405)) || isRemoveSkill(classId, skill.getSkillId()))
 			{
 				continue;
 			}
@@ -702,14 +704,14 @@ public final class SkillTreesData implements IGameXmlReader
 		return result;
 	}
 	
-	public Collection<Skill> getAllAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
+	public Collection<Skill> getAllAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeByFp, boolean includeAutoGet)
 	{
 		// Get available skills
 		final PlayerSkillHolder holder = new PlayerSkillHolder(player);
 		final Set<Integer> removed = new HashSet<>();
 		for (int i = 0; i < 1000; i++) // Infinite loop warning
 		{
-			final List<L2SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeAutoGet, holder);
+			final List<L2SkillLearn> learnable = getAvailableSkills(player, classId, includeByFs, includeByFp, includeAutoGet, holder);
 			if (learnable.isEmpty())
 			{
 				// No more skills to learn
@@ -1407,7 +1409,7 @@ public final class SkillTreesData implements IGameXmlReader
 		return minLevel;
 	}
 	
-	public List<L2SkillLearn> getNextAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeAutoGet)
+	public List<L2SkillLearn> getNextAvailableSkills(L2PcInstance player, ClassId classId, boolean includeByFs, boolean includeByFp, boolean includeAutoGet)
 	{
 		final Map<Long, L2SkillLearn> completeClassSkillTree = getCompleteClassSkillTree(classId);
 		final List<L2SkillLearn> result = new LinkedList<>();
@@ -1425,7 +1427,7 @@ public final class SkillTreesData implements IGameXmlReader
 				{
 					continue;
 				}
-				if ((!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()))
+				if ((!includeAutoGet && skill.isAutoGet()) || (!includeByFs && skill.isLearnedByFS()) || (!includeByFp && (skill.getSkillId() > 11399) && (skill.getSkillId() < 11405)))
 				{
 					continue;
 				}

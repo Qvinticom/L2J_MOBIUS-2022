@@ -39,8 +39,8 @@ public class AcquireSkillList implements IClientOutgoingPacket
 	public AcquireSkillList(L2PcInstance activeChar)
 	{
 		_activeChar = activeChar;
-		_learnable = SkillTreesData.getInstance().getAvailableSkills(activeChar, activeChar.getClassId(), false, false);
-		_learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(activeChar, activeChar.getClassId(), false, false));
+		_learnable = SkillTreesData.getInstance().getAvailableSkills(activeChar, activeChar.getClassId(), false, true, false);
+		_learnable.addAll(SkillTreesData.getInstance().getNextAvailableSkills(activeChar, activeChar.getClassId(), false, true, false));
 	}
 	
 	@Override

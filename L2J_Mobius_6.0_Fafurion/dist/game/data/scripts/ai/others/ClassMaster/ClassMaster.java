@@ -432,7 +432,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 					}
 					if (Config.AUTO_LEARN_SKILLS)
 					{
-						player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+						player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, Config.AUTO_LEARN_FP_SKILLS, true);
 					}
 					player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 					player.broadcastUserInfo();
@@ -456,7 +456,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 				}
 				else
 				{
-					player.giveAvailableSkills(true, true);
+					player.giveAvailableSkills(true, true, true);
 				}
 				break;
 			}
@@ -863,7 +863,7 @@ public final class ClassMaster extends AbstractNpcAI implements IGameXmlReader
 			}
 			if (Config.AUTO_LEARN_SKILLS)
 			{
-				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+				player.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, Config.AUTO_LEARN_FP_SKILLS, true);
 			}
 			player.store(false); // Save player cause if server crashes before this char is saved, he will lose class and the money payed for class change.
 			player.broadcastUserInfo();

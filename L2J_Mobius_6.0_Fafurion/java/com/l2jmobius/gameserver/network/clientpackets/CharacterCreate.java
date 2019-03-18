@@ -291,7 +291,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 			
 			if (Config.BALTHUS_KNIGHTS_REWARD_SKILLS)
 			{
-				newChar.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, true);
+				newChar.giveAvailableSkills(Config.AUTO_LEARN_FS_SKILLS, Config.AUTO_LEARN_FP_SKILLS, true);
 			}
 		}
 		
@@ -378,7 +378,7 @@ public final class CharacterCreate implements IClientIncomingPacket
 			}
 		}
 		
-		for (L2SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, true))
+		for (L2SkillLearn skill : SkillTreesData.getInstance().getAvailableSkills(newChar, newChar.getClassId(), false, false, true))
 		{
 			newChar.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
 		}
