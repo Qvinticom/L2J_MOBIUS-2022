@@ -86,8 +86,8 @@ public class L2NpcInstance extends L2Npc
 			return;
 		}
 		
-		// Normal skills, No LearnedByFS, no AutoGet skills.
-		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableSkills(player, classId, false, true, false);
+		// Normal skills, No LearnedByFS, No LearnedByFP, no AutoGet skills.
+		final List<L2SkillLearn> skills = SkillTreesData.getInstance().getAvailableSkills(player, classId, false, false, false);
 		if (skills.isEmpty())
 		{
 			final Map<Long, L2SkillLearn> skillTree = SkillTreesData.getInstance().getCompleteClassSkillTree(classId);
