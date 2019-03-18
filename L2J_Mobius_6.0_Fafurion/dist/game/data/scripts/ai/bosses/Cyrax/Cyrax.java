@@ -42,4 +42,9 @@ public final class Cyrax extends AbstractNpcAI
 		npc.dropItem(killer, FONDUS_STONE, 1);
 		return super.onKill(npc, killer, isSummon);
 	}
+	
+	public static void main(String[] args)
+	{
+		new Cyrax();
+	}
 }
