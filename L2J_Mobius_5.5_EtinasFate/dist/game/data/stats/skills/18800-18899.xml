@@ -53,12 +53,10 @@
 			<value level="4">icon.etc_bm_jewel_topaz_i00</value>
 			<value level="5">icon.etc_bm_jewel_topaz_i00</value>
 			<value level="6">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
-			<value level="7">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
-			<value level="8">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
-			<value level="9">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
-			<value level="10">icon.bm_jewel_absdmg_high_lv1_lavianrose</value>
 		</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<staticReuse>true</staticReuse>
 	</skill>
 	<skill id="18815" toLevel="6" name="Tanzanite">
 		<!-- Tanzanite - Barrier can be used. -->
@@ -69,12 +67,10 @@
 			<value level="4">icon.etc_bm_jewel_tanzanite</value>
 			<value level="5">icon.etc_bm_jewel_tanzanite</value>
 			<value level="6">icon.bm_jewel_tanzanite_high_lv1_lavianrose</value>
-			<value level="7">icon.bm_jewel_tanzanite_high_lv1_lavianrose</value>
-			<value level="8">icon.bm_jewel_tanzanite_high_lv1_lavianrose</value>
-			<value level="9">icon.bm_jewel_tanzanite_high_lv1_lavianrose</value>
-			<value level="10">icon.bm_jewel_tanzanite_high_lv1_lavianrose</value>
 		</icon>
 		<operateType>A1</operateType>
+		<reuseDelay>30000</reuseDelay>
+		<staticReuse>true</staticReuse>
 	</skill>
 	<skill id="18816" toLevel="1" name="Gust - Dance">
 		<!-- The gust makes you dance a cheerful dance. -->

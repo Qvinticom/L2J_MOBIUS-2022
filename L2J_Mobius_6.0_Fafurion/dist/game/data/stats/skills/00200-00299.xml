@@ -6102,9 +6102,9 @@
 					<value level="17">-34</value>
 				</POLE>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="11" toLevel="13" fromSubLevel="1001" toSubLevel="1020">
+			<effect name="PhysicalDefence" fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">
 				<amount>
-					<value fromLevel="11" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{-0.6 - 0.4 * subIndex}</value>
+					<value fromLevel="11" toLevel="17" fromSubLevel="1001" toSubLevel="1020">{-0.6 - 0.4 * subIndex}</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
