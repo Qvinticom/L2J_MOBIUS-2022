@@ -491,7 +491,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2042796" sp="2095" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13188" hpRegen="9.5" mp="2770" mpRegen="3.3" />
+			<vitals hp="16642.27587" hpRegen="8.5" mp="2246.47" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="80" />
@@ -2011,7 +2011,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1002466" hpRegen="8.5" mp="19524" mpRegen="30" />
+			<vitals hp="903529.58601" hpRegen="8.5" mp="15833.964" mpRegen="3" />
 			<speed>
 				<walk ground="34" />
 				<run ground="200" />
@@ -2026,11 +2026,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="14804" level="1" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14940" level="1" /> <!-- Rage Grand Blow -->
 			<skill id="14943" level="1" /> <!-- Dimensional Wring -->
 			<skill id="16550" level="1" /> <!-- Zellaka's Quake -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="14804" level="1" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2057,7 +2057,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1636653" hpRegen="8.5" mp="21324" mpRegen="30" />
+			<vitals hp="1475127.21954" hpRegen="8.5" mp="17293.764" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="200" />
@@ -2072,12 +2072,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5462" level="1" /> <!-- Fire Attack -->
-			<skill id="14804" level="1" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14941" level="1" /> <!-- Bloody Grand Blow -->
 			<skill id="14944" level="1" /> <!-- Dimensional Pierce -->
 			<skill id="14947" level="1" /> <!-- Pelline's Thirst -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5462" level="1" /> <!-- Fire Attack -->
+			<skill id="14804" level="1" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -2104,7 +2104,7 @@
 		<race>DEMONIC</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="2979979" hpRegen="8.5" mp="23174" mpRegen="30" />
+			<vitals hp="2685876.448395" hpRegen="8.5" mp="18794.114" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="200" />
@@ -2119,12 +2119,12 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="5464" level="1" /> <!-- Wind Attack -->
-			<skill id="14804" level="1" /> <!-- Damage Reflect Attack Resistance -->
 			<skill id="14942" level="1" /> <!-- Destruction Grand Blow -->
 			<skill id="14945" level="1" /> <!-- Dimensional Shock Wave -->
 			<skill id="14946" level="1" /> <!-- Kalios' Rage -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="14804" level="1" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -3453,7 +3453,7 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="14467" hpRegen="8.5" mp="2132" mpRegen="3" />
+			<vitals hp="47374.776435" hpRegen="8.5" mp="1729.052" mpRegen="3" />
 			<speed>
 				<walk ground="250" />
 				<run ground="100" />
@@ -3468,12 +3468,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4414" level="1" /> <!-- Heavy Armor Type -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4408" level="13" /> <!-- HP Increase (5x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
 		</skillList>
 		<ai aggroRange="450" isAggressive="true" clanHelpRange="300" />
 		<collision>

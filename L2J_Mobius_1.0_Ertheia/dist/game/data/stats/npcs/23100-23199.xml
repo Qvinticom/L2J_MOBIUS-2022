@@ -4207,7 +4207,7 @@
 		<acquire exp="1147643" sp="275" />
 		<mpReward value="93" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13188" hpRegen="8.5" mp="2770" mpRegen="3" />
+			<vitals hp="25912.309965" hpRegen="8.5" mp="2246.47" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="80" />
@@ -4222,6 +4222,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
+			<skill id="14639" level="1" /> <!-- Compound Poison -->
+			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="5464" level="1" /> <!-- Wind Attack -->
 			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
 			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
@@ -4230,17 +4232,6 @@
 			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
 			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14639" level="1" /> <!-- Compound Poison -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-			<skill id="14618" level="1" /> <!-- Knock Back Resistance -->
-			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<dropLists>

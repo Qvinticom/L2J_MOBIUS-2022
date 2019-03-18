@@ -2246,7 +2246,7 @@
 		<sex>MALE</sex>
 		<acquire exp="792" sp="23" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="424" hpRegen="2.5" mp="174" mpRegen="1.2" />
+			<vitals hp="124.14024" hpRegen="2.5" mp="153.99" mpRegen="1.2" />
 			<attack physical="37.82932" magical="25.83252" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="69.1457235" magical="59.52687" evasion="10" />
 			<speed>
@@ -2260,17 +2260,10 @@
 		<skillList>
 			<skill id="4152" level="1" /> <!-- NPC HP Drain - Magic -->
 			<skill id="4160" level="1" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4276" level="1" /> <!-- Weak Point against Bow/Crossbow Weapons -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
+			<skill id="4416" level="2" /> <!-- Magical Creatures -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="2" /> <!-- Magic Creatures -->
 			<skill id="4281" level="1" /> <!-- Wind Attack Vulnerability -->
+			<skill id="4276" level="1" /> <!-- Bow Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2319,7 +2312,7 @@
 		<sex>MALE</sex>
 		<equipment rhand="9" /> <!-- Cedar Staff -->
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1928" hpRegen="6.5" mp="977" mpRegen="2.4" />
+			<vitals hp="1023.41805" hpRegen="8.5" mp="1218.645" mpRegen="3" />
 			<attack physical="602.6356364" magical="482.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="321.793719" magical="214.1539" />
 			<speed>
@@ -2331,12 +2324,8 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4095" level="1" /> <!-- Damage Shield -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -2378,7 +2367,7 @@
 		<sex>MALE</sex>
 		<acquire exp="20524" sp="615" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="1984" hpRegen="6.5" mp="1007" mpRegen="2.4" />
+			<vitals hp="1042.87654" hpRegen="8.5" mp="1247.85" mpRegen="3" />
 			<attack physical="632.6356364" magical="502.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="331.793719" magical="224.1539" />
 			<speed>
@@ -2391,13 +2380,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4073" level="5" /> <!-- Stun -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>

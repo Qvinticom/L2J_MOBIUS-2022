@@ -1427,7 +1427,7 @@
 				<item id="17526" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (R-grade) -->
 			</spoil>
 			<lucky>
-				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Pocket - Stage 1 -->
+				<item id="39629" min="1" max="1" chance="100" /> <!-- Fortune Bag - Stage 1 -->
 			</lucky>
 		</dropLists>
 	</npc>
@@ -4111,7 +4111,7 @@
 		<acquire exp="2042796" sp="2095" />
 		<mpReward value="93" type="DIFF" ticks="10" affects="SOLO" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13188" hpRegen="9.5" mp="2770" mpRegen="3.3" />
+			<vitals hp="25912.309965" hpRegen="8.5" mp="2246.47" mpRegen="3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="80" />

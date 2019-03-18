@@ -313,7 +313,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="13094" sp="392" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2367" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+			<vitals hp="921.44571" hpRegen="7.5" mp="1078.815" mpRegen="2.7" />
 			<speed>
 				<walk ground="36" />
 				<run ground="174" />
@@ -323,7 +323,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 		</skillList>
 		<collision>
 			<radius normal="15.6" />

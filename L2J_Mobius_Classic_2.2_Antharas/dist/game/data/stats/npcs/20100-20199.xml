@@ -214,7 +214,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49" min="1" max="1" chance="2.369" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.369" /> <!-- Gloves -->
 				<item id="37" min="1" max="1" chance="2.272" /> <!-- Leather Shoes -->
 				<item id="57" min="43" max="101" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="9.905" /> <!-- Leather Shoe Texture -->
@@ -2157,8 +2157,8 @@
 				<item id="3006" min="1" max="1" chance="0.75" /> <!-- Recipe: Demon's Gloves -->
 				<item id="3017" min="1" max="1" chance="0.75" /> <!-- Recipe: Divine Gloves -->
 				<item id="2170" min="1" max="1" chance="0.75" /> <!-- Recipe: Nassen's Earring -->
-				<item id="4601" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR (STR 3 CON -3) -->
-				<item id="4603" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON (Con 3 Str -3) -->
+				<item id="4601" min="1" max="1" chance="0.075" /> <!-- Greater Dye of STR <STR +3 CON -3> - 2nd Class Transfer -->
+				<item id="4603" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON <Con +3 Str -3> - 2nd Class Transfer -->
 				<item id="2356" min="1" max="1" chance="0.03" /> <!-- Recipe: Demon's Staff -->
 			</drop>
 			<spoil>
@@ -2224,8 +2224,8 @@
 				<item id="1876" min="1" max="1" chance="0.3" /> <!-- Mithril Ore -->
 				<item id="5268" min="1" max="1" chance="0.075" /> <!-- Recipe: Greater Soulshot Compressed Package (D-grade) -->
 				<item id="2256" min="1" max="1" chance="0.03" /> <!-- Recipe: Assassin Knife -->
-				<item id="4602" min="1" max="1" chance="0.003" /> <!-- Greater Dye of STR (STR 3 DEX -3) -->
-				<item id="4606" min="1" max="1" chance="0.003" /> <!-- Greater Dye of DEX (Dex 3 CON -3) -->
+				<item id="4602" min="1" max="1" chance="0.003" /> <!-- Greater Dye of STR <STR +3 DEX -3> - 2nd Class Transfer -->
+				<item id="4606" min="1" max="1" chance="0.003" /> <!-- Greater Dye of DEX <Dex +3 CON -3> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="1870" min="1" max="1" chance="55.29" /> <!-- Coal -->

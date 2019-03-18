@@ -2165,7 +2165,7 @@
 		<equipment rhand="15301" /> <!-- Transparent Pole (NPC) -->
 		<acquire exp="202583506944" sp="293716117" raidPoints="1000" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="209461939" hpRegen="10.5" mp="47100" mpRegen="3.6" />
+			<vitals hp="314655530.69429" hpRegen="9.5" mp="38198.1" mpRegen="3.3" />
 			<speed>
 				<walk ground="100" />
 				<run ground="270" />
@@ -2179,11 +2179,6 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4415" level="1"/> <!-- Bare Hands -->
-			<skill id="4416" level="10"/> <!-- Dragons -->
-			<skill id="5464" level="1"/> <!-- Wind Attack -->
-			<skill id="14765" level="4"/> <!-- Blood Siphon Resistance -->
-			<skill id="15638" level="1"/> <!-- Lindvior -->
 			<skill id="15271" level="1"/> <!-- Body Slam -->
 			<skill id="15272" level="1"/> <!-- Wind Breath -->
 			<skill id="15273" level="1"/> <!-- Tail Swipe -->
@@ -2192,6 +2187,10 @@
 			<skill id="15591" level="1"/> <!-- Wind Pull -->
 			<skill id="15275" level="1"/> <!-- Tornado -->
 			<skill id="15600" level="1"/> <!-- Lindvior's Attack -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5464" level="1" /> <!-- Wind Attack -->
+			<skill id="15638" level="1" /> <!-- Lindvior -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai aggroRange="2000" isAggressive="true" />
 		<dropLists>

@@ -5778,7 +5778,7 @@
 		<race>ELEMENTAL</race>
 		<sex>FEMALE</sex>
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3334120" hpRegen="10.5" mp="47100" mpRegen="3.6" />
+			<vitals hp="5008545.22593" hpRegen="9.5" mp="38198.1" mpRegen="3.3" />
 			<speed>
 				<walk ground="30" />
 				<run ground="200" />
@@ -5792,10 +5792,10 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
+			<skill id="4416" level="7" /> <!-- Spirits -->
 			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4416" level="7" /> <!-- Spirits -->
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="14804" level="1" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<collision>
 			<radius normal="16" />

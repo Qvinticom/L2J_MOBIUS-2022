@@ -1493,7 +1493,7 @@
 		<sex>MALE</sex>
 		<acquire />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3902308" hpRegen="556.482123682282" mp="18468" mpRegen="500" />
+			<vitals hp="5862082.36917" hpRegen="8.5" mp="14977.548" mpRegen="3" />
 			<attack physical="15345.2612622437" magical="23259.5421477133" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1876.129926" magical="529.48" evasion="-18" />
 			<attribute>
@@ -1508,27 +1508,16 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="5467" level="1" /> <!-- Dark Attacks -->
-			<skill id="5598" level="12" /> <!-- Flash Resistance -->
 			<skill id="6732" level="1" /> <!-- Mirage -->
 			<skill id="6886" level="1" /> <!-- Complete Recovery -->
 			<skill id="6887" level="1" /> <!-- Fatal Strike -->
 			<skill id="6888" level="1" /> <!-- Fatal Shot -->
 			<skill id="6891" level="1" /> <!-- Power Attack -->
 			<skill id="6892" level="1" /> <!-- Power Shot -->
-			<skill id="6905" level="1" /> <!-- 85 level Raid Boss -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="6905" level="1" /> <!-- Raid Boss (Lv. 85) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
 		</skillList>
 		<corpseTime>14</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -1559,7 +1548,7 @@
 		<sex>MALE</sex>
 		<acquire />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3902308" hpRegen="556.482123682282" mp="18468" mpRegen="500" />
+			<vitals hp="5862082.36917" hpRegen="8.5" mp="14977.548" mpRegen="3" />
 			<attack physical="15345.2612622437" magical="23259.5421477133" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1876.129926" magical="529.48" evasion="-18" />
 			<attribute>
@@ -1575,26 +1564,15 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="12" /> <!-- Flash Resistance -->
 			<skill id="6886" level="1" /> <!-- Complete Recovery -->
 			<skill id="6887" level="1" /> <!-- Fatal Strike -->
 			<skill id="6888" level="1" /> <!-- Fatal Shot -->
 			<skill id="6893" level="1" /> <!-- Power Attack -->
 			<skill id="6894" level="1" /> <!-- Power Shot -->
-			<skill id="6906" level="1" /> <!-- Raid Boss (Lv. 85) -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
 		</skillList>
 		<corpseTime>14</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -1867,7 +1845,7 @@
 		<sex>MALE</sex>
 		<acquire />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3902308" hpRegen="556.482123682282" mp="18468" mpRegen="500" />
+			<vitals hp="5862082.36917" hpRegen="8.5" mp="14977.548" mpRegen="3" />
 			<attack physical="11508.9459466828" magical="14537.2138423208" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1876.129926" magical="529.48" evasion="-18" />
 			<attribute>
@@ -1883,22 +1861,11 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="15" /> <!-- Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="12" /> <!-- Flash Resistance -->
 			<skill id="6895" level="1" /> <!-- Power Attack -->
-			<skill id="6907" level="1" /> <!-- 85 level Raid Boss -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="6907" level="1" /> <!-- Raid Boss (Lv. 85) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai clanHelpRange="300" aggroRange="1000" />
@@ -4881,7 +4848,7 @@
 		<acquire exp="886192384" sp="212686" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1093126" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="1642104.552525" hpRegen="8.5" mp="18490.8" mpRegen="3" />
 			<attack physical="27947.2799312612" magical="5005.58282010264" attackSpeed="253" range="40" type="SWORD" distance="80" width="120" random="10" critical="4" accuracy="5" />
 			<defence physical="2959.60951220743" magical="1625.94816873311" />
 			<attribute>
@@ -4895,36 +4862,18 @@
 			<abnormalResist physical="230" magical="230" />
 		</stats>
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="3" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="12" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14747" level="1" /> <!-- Raid Boss (Lv. 88) -->
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
-			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
-			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="4728" level="3" /> <!-- Stun -->
 			<skill id="6268" level="1" /> <!-- Jump Attack -->
 			<skill id="14110" level="1" /> <!-- Teredor Blow -->
 			<skill id="14111" level="1" /> <!-- Teredor Range Attack -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14620" level="1" /> <!-- Aerial Yoke Resistance 1 -->
-			<skill id="14622" level="1" /> <!-- Banishment Resistance -->
-			<skill id="14623" level="1" /> <!-- Mutation Resistance -->
-			<skill id="14617" level="1" /> <!-- Knock Down Resistance -->
-			<skill id="14619" level="1" /> <!-- Disarm Resistance -->
-			<skill id="5599" level="10" /> <!-- Stun Resistance -->
-			<skill id="14618" level="1" /> <!-- Knock Back Resistance -->
-			<skill id="14621" level="1" /> <!-- Pulling Resistance -->
 			<skill id="14112" level="2" /> <!-- Teredor Poison -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="14747" level="1" /> <!-- Raid Boss (Lv. 88) -->
+			<skill id="4438" level="5" /> <!-- Greater Sleep Resistance -->
+			<skill id="4440" level="5" /> <!-- Greater Paralysis Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 		</skillList>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
 			<clanList>

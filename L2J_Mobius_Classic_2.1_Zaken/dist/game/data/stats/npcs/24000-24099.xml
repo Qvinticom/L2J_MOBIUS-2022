@@ -313,7 +313,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="13094" sp="392" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2367" hpRegen="10.5" mp="1219" mpRegen="3.6" />
+			<vitals hp="921.44571" hpRegen="7.5" mp="1078.815" mpRegen="2.7" />
 			<speed>
 				<walk ground="36" />
 				<run ground="174" />
@@ -323,7 +323,11 @@
 		</stats>
 		<status attackable="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Full Magic Attack Resistance -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
+			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
+			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
 		</skillList>
 		<collision>
 			<radius normal="15.6" />
@@ -451,7 +455,7 @@
 		<race>GIANT</race>
 		<acquire exp="1444329" sp="43329" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="420390" hpRegen="8.5" mp="2411" mpRegen="3" />
+			<vitals hp="20709.25218" hpRegen="8.5" mp="2133.735" mpRegen="3" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -491,7 +495,7 @@
 		<race>GIANT</race>
 		<acquire exp="528416" sp="15852" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="110475" hpRegen="8.5" mp="2361" mpRegen="3" />
+			<vitals hp="9070.36575" hpRegen="8.5" mp="2089.485" mpRegen="3" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -623,7 +627,7 @@
 		<race>GIANT</race>
 		<acquire exp="257609" sp="7728" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="36828" hpRegen="8.5" mp="2361" mpRegen="3" />
+			<vitals hp="2267.77617" hpRegen="8.5" mp="2089.485" mpRegen="3" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -787,7 +791,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="86040" sp="2581" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="16932" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<vitals hp="2085.26046" hpRegen="8.5" mp="1871.775" mpRegen="3" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -882,7 +886,7 @@
 		<race>DEMONIC</race>
 		<acquire exp="90904" sp="2727" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17548" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<vitals hp="2161.12394" hpRegen="8.5" mp="1957.62" mpRegen="3" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -980,7 +984,7 @@
 		<race>DEMONIC</race>
 		<acquire exp="94263" sp="2827" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17842" hpRegen="8.5" mp="2261" mpRegen="3" />
+			<vitals hp="2197.33151" hpRegen="8.5" mp="2000.985" mpRegen="3" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -1262,7 +1266,7 @@
 		<race>DEMONIC</race>
 		<acquire exp="129198" sp="3875" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="26323" hpRegen="8.5" mp="2212" mpRegen="3" />
+			<vitals hp="2161.2060433333" hpRegen="8.5" mp="1957.62" mpRegen="3" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -1670,7 +1674,7 @@
 		<race>DIVINE</race>
 		<acquire exp="15123" sp="453" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6232" hpRegen="8.5" mp="2066" mpRegen="3" />
+			<vitals hp="1535.00392" hpRegen="8.5" mp="1828.41" mpRegen="3" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->
@@ -1718,7 +1722,7 @@
 		<race>UNDEAD</race>
 		<acquire exp="15549" sp="466" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="6351" hpRegen="8.5" mp="2115" mpRegen="3" />
+			<vitals hp="1564.31481" hpRegen="8.5" mp="1871.775" mpRegen="3" />
 			<speed>
 				<walk ground="60" /> <!-- Need retail value -->
 				<run ground="120" /> <!-- Need retail value -->

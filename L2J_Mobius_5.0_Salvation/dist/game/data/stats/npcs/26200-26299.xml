@@ -772,7 +772,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="48352" min="1" max="1" chance="10.048" /> <!-- Deathmask Shield Appearance Stone -->
+				<item id="48352" min="1" max="1" chance="10.048" /> <!-- Deathmask Shield Appearance Stone - 30-day -->
 				<item id="38050" min="1" max="1" chance="9.14" /> <!-- Helios Shooter Crafting Pack -->
 				<item id="38044" min="1" max="1" chance="9.129" /> <!-- Helios Cutter Crafting Pack -->
 				<item id="38043" min="1" max="1" chance="9.094" /> <!-- Helios Shaper Crafting Pack -->
@@ -839,7 +839,7 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="48352" min="1" max="1" chance="9.952" /> <!-- Deathmask Shield Appearance Stone -->
+				<item id="48352" min="1" max="1" chance="9.952" /> <!-- Deathmask Shield Appearance Stone - 30-day -->
 				<item id="38051" min="1" max="1" chance="9.137" /> <!-- Helios Buster Crafting Pack -->
 				<item id="38046" min="1" max="1" chance="9.114" /> <!-- Helios Avenger Crafting Pack -->
 				<item id="38044" min="1" max="1" chance="9.107" /> <!-- Helios Cutter Crafting Pack -->
@@ -1154,12 +1154,12 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17430" min="1" max="1" chance="100" /> <!-- Eternal Helmet -->
-				<item id="17431" min="1" max="1" chance="100" /> <!-- Eternal Breastplate -->
-				<item id="17432" min="1" max="1" chance="100" /> <!-- Eternal Gaiters -->
-				<item id="17433" min="1" max="1" chance="100" /> <!-- Eternal Gauntlets -->
-				<item id="17434" min="1" max="1" chance="100" /> <!-- Eternal Boots -->
-				<item id="17435" min="1" max="1" chance="100" /> <!-- Eternal Shield -->
+				<item id="17430" min="1" max="1" chance="100" /> <!-- Eternal Helmet - Heavy Armor -->
+				<item id="17431" min="1" max="1" chance="100" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17432" min="1" max="1" chance="100" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17433" min="1" max="1" chance="100" /> <!-- Eternal Gauntlets - Heavy Armor -->
+				<item id="17434" min="1" max="1" chance="100" /> <!-- Eternal Boots - Heavy Armor -->
+				<item id="17435" min="1" max="1" chance="100" /> <!-- Eternal Shield - Heavy Armor -->
 				<item id="19448" min="1" max="1" chance="2.939" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="1.982" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
@@ -1207,7 +1207,7 @@
 		<sex>FEMALE</sex>
 		<acquire exp="2147483647" sp="63371076" raidPoints="7" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="11570306.651865" hpRegen="419.6050136" mp="80975.917" mpRegen="3.3" />
+			<vitals hp="11570307.913695" hpRegen="9.5" mp="40047.18" mpRegen="3.3" />
 			<attack physical="284080.4007" magical="203728.3272" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="32936.12091" magical="16076.26507" />
 			<speed>
@@ -1787,12 +1787,12 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17441" min="1" max="1" chance="100" /> <!-- Eternal Circlet -->
-				<item id="17442" min="1" max="1" chance="100" /> <!-- Eternal Tunic -->
-				<item id="17443" min="1" max="1" chance="100" /> <!-- Eternal Stockings -->
-				<item id="17444" min="1" max="1" chance="100" /> <!-- Eternal Gloves -->
-				<item id="17445" min="1" max="1" chance="100" /> <!-- Eternal Shoes -->
-				<item id="17446" min="1" max="1" chance="100" /> <!-- Eternal Sigil -->
+				<item id="17441" min="1" max="1" chance="100" /> <!-- Eternal Circlet - Robe -->
+				<item id="17442" min="1" max="1" chance="100" /> <!-- Eternal Tunic - Robe -->
+				<item id="17443" min="1" max="1" chance="100" /> <!-- Eternal Stockings - Robe -->
+				<item id="17444" min="1" max="1" chance="100" /> <!-- Eternal Gloves - Robe -->
+				<item id="17445" min="1" max="1" chance="100" /> <!-- Eternal Shoes - Robe -->
+				<item id="17446" min="1" max="1" chance="100" /> <!-- Eternal Sigil - Robe -->
 				<item id="19448" min="1" max="1" chance="3.033" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="2.064" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
 			</drop>
@@ -1950,23 +1950,23 @@
 		</skillList>
 		<dropLists>
 			<drop>
-				<item id="17439" min="1" max="1" chance="1.232" /> <!-- Eternal Leather Gloves -->
-				<item id="17443" min="1" max="1" chance="1.23" /> <!-- Eternal Stockings -->
-				<item id="17434" min="1" max="1" chance="1.226" /> <!-- Eternal Boots -->
-				<item id="17437" min="1" max="1" chance="1.215" /> <!-- Eternal Leather Armor -->
-				<item id="17441" min="1" max="1" chance="1.213" /> <!-- Eternal Circlet -->
-				<item id="17433" min="1" max="1" chance="1.194" /> <!-- Eternal Gauntlets -->
-				<item id="17440" min="1" max="1" chance="1.19" /> <!-- Eternal Leather Boots -->
-				<item id="17444" min="1" max="1" chance="1.186" /> <!-- Eternal Gloves -->
-				<item id="17436" min="1" max="1" chance="1.184" /> <!-- Eternal Leather Helmet -->
-				<item id="17438" min="1" max="1" chance="1.174" /> <!-- Eternal Leather Leggings -->
-				<item id="17445" min="1" max="1" chance="1.174" /> <!-- Eternal Shoes -->
-				<item id="17442" min="1" max="1" chance="1.168" /> <!-- Eternal Tunic -->
-				<item id="17432" min="1" max="1" chance="1.162" /> <!-- Eternal Gaiters -->
-				<item id="17431" min="1" max="1" chance="1.153" /> <!-- Eternal Breastplate -->
-				<item id="17430" min="1" max="1" chance="1.153" /> <!-- Eternal Helmet -->
-				<item id="17435" min="1" max="1" chance="1.135" /> <!-- Eternal Shield -->
-				<item id="17446" min="1" max="1" chance="1.127" /> <!-- Eternal Sigil -->
+				<item id="17439" min="1" max="1" chance="1.232" /> <!-- Eternal Leather Gloves - Light Armor -->
+				<item id="17443" min="1" max="1" chance="1.23" /> <!-- Eternal Stockings - Robe -->
+				<item id="17434" min="1" max="1" chance="1.226" /> <!-- Eternal Boots - Heavy Armor -->
+				<item id="17437" min="1" max="1" chance="1.215" /> <!-- Eternal Leather Armor - Light Armor -->
+				<item id="17441" min="1" max="1" chance="1.213" /> <!-- Eternal Circlet - Robe -->
+				<item id="17433" min="1" max="1" chance="1.194" /> <!-- Eternal Gauntlets - Heavy Armor -->
+				<item id="17440" min="1" max="1" chance="1.19" /> <!-- Eternal Leather Boots - Light Armor -->
+				<item id="17444" min="1" max="1" chance="1.186" /> <!-- Eternal Gloves - Robe -->
+				<item id="17436" min="1" max="1" chance="1.184" /> <!-- Eternal Leather Helmet - Light Armor -->
+				<item id="17438" min="1" max="1" chance="1.174" /> <!-- Eternal Leather Leggings - Light Armor -->
+				<item id="17445" min="1" max="1" chance="1.174" /> <!-- Eternal Shoes - Robe -->
+				<item id="17442" min="1" max="1" chance="1.168" /> <!-- Eternal Tunic - Robe -->
+				<item id="17432" min="1" max="1" chance="1.162" /> <!-- Eternal Gaiters - Heavy Armor -->
+				<item id="17431" min="1" max="1" chance="1.153" /> <!-- Eternal Breastplate - Heavy Armor -->
+				<item id="17430" min="1" max="1" chance="1.153" /> <!-- Eternal Helmet - Heavy Armor -->
+				<item id="17435" min="1" max="1" chance="1.135" /> <!-- Eternal Shield - Heavy Armor -->
+				<item id="17446" min="1" max="1" chance="1.127" /> <!-- Eternal Sigil - Robe -->
 				<item id="17417" min="1" max="1" chance="0.75" /> <!-- Helios Cutter -->
 				<item id="17418" min="1" max="1" chance="0.75" /> <!-- Helios Slasher -->
 				<item id="17419" min="1" max="1" chance="0.75" /> <!-- Helios Avenger -->
@@ -1980,12 +1980,12 @@
 				<item id="17416" min="1" max="1" chance="0.75" /> <!-- Helios Shaper -->
 				<item id="19448" min="1" max="1" chance="59.52" /> <!-- Blessed Scroll: Enchant Armor (R-grade) -->
 				<item id="19447" min="1" max="1" chance="41.56" /> <!-- Blessed Scroll: Enchant Weapon (R-grade) -->
-				<item id="17713" min="1" max="1" chance="17.13" /> <!-- Lv. 5 Legendary WIT Dye -->
-				<item id="17710" min="1" max="1" chance="16.98" /> <!-- Lv. 5 Legendary DEX Dye -->
-				<item id="17709" min="1" max="1" chance="16.7" /> <!-- Lv. 5 Legendary STR Dye -->
-				<item id="17711" min="1" max="1" chance="16.47" /> <!-- Lv. 5 Legendary CON Dye -->
-				<item id="17712" min="1" max="1" chance="16.33" /> <!-- Lv. 5 Legendary INT Dye -->
-				<item id="17714" min="1" max="1" chance="16.3" /> <!-- Lv. 5 Legendary MEN Dye -->
+				<item id="17713" min="1" max="1" chance="17.13" /> <!-- Lv. 5 Legendary WIT Dye - WIT +5 / MEN +1 / Wind Resistance +25 -->
+				<item id="17710" min="1" max="1" chance="16.98" /> <!-- Lv. 5 Legendary DEX Dye - DEX +5 / CON +1 / Earth Resistance +25 -->
+				<item id="17709" min="1" max="1" chance="16.7" /> <!-- Lv. 5 Legendary STR Dye - STR +5 / DEX +1 / Fire Resistance +25 -->
+				<item id="17711" min="1" max="1" chance="16.47" /> <!-- Lv. 5 Legendary CON Dye - CON +5 / STR +1 / Dark Resistance +25 -->
+				<item id="17712" min="1" max="1" chance="16.33" /> <!-- Lv. 5 Legendary INT Dye - INT +5 / WIT +1 / Water Resistance +25 -->
+				<item id="17714" min="1" max="1" chance="16.3" /> <!-- Lv. 5 Legendary MEN Dye - MEN +5 / INT +1 / Holy Resistance +25 -->
 				<item id="37069" min="1" max="1" chance="5.069" /> <!-- Monster Weapon Appearance Stone: Octavis' Sword -->
 				<item id="37068" min="1" max="1" chance="5.061" /> <!-- Monster Weapon Appearance Stone: Sword of Corruption -->
 				<item id="37078" min="1" max="1" chance="5.06" /> <!-- Monster Weapon Appearance Stone: Thesakar's Spear -->
@@ -2001,7 +2001,7 @@
 				<item id="37082" min="1" max="1" chance="4.991" /> <!-- Monster Weapon Appearance Stone: Kanadis' Bow -->
 				<item id="37074" min="1" max="1" chance="4.983" /> <!-- Monster Weapon Appearance Stone: Tebot's Dual Blunt Weapon -->
 				<item id="37073" min="1" max="1" chance="4.978" /> <!-- Monster Weapon Appearance Stone: Glakias' Hammer -->
-				<item id="37071" min="1" max="1" chance="4.973" /> <!-- Monster Weapon Appearance Stone: Seknus' Magic Sword -->
+				<item id="37071" min="1" max="1" chance="4.973" /> <!-- Monster Weapon Appearance Stone: Seknus' One-handed Magic Sword -->
 				<item id="37086" min="1" max="1" chance="4.96" /> <!-- Monster Weapon Appearance Stone: Shield of Corruption -->
 				<item id="37081" min="1" max="1" chance="4.959" /> <!-- Monster Weapon Appearance Stone: Kanadis' Hand -->
 				<item id="37067" min="1" max="1" chance="4.951" /> <!-- Monster Weapon Appearance Stone: Theor's Sword -->

@@ -1003,7 +1003,7 @@
 		<dropLists>
 			<drop>
 				<item id="37" min="1" max="1" chance="2.508" /> <!-- Leather Shoes -->
-				<item id="49" min="1" max="1" chance="2.49" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.49" /> <!-- Gloves -->
 				<item id="57" min="47" max="112" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="10.73" /> <!-- Leather Shoe Texture -->
 				<item id="1864" min="1" max="1" chance="7.58" /> <!-- Stem -->
@@ -1329,7 +1329,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49" min="1" max="1" chance="2.712" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.712" /> <!-- Gloves -->
 				<item id="37" min="1" max="1" chance="2.686" /> <!-- Leather Shoes -->
 				<item id="57" min="52" max="120" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="12.26" /> <!-- Leather Shoe Texture -->
@@ -2900,7 +2900,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots (item) -->
+				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots -->
 				<item id="51" min="1" max="1" chance="0.3" /> <!-- Bracer -->
 				<item id="57" min="72" max="168" chance="70" /> <!-- Adena -->
 				<item id="1930" min="1" max="1" chance="6.66" /> <!-- Boot Lining -->
@@ -2967,7 +2967,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots (item) -->
+				<item id="39" min="1" max="1" chance="0.3" /> <!-- Boots -->
 				<item id="51" min="1" max="1" chance="0.3" /> <!-- Bracer -->
 				<item id="57" min="72" max="167" chance="70" /> <!-- Adena -->
 				<item id="1930" min="1" max="1" chance="6.644" /> <!-- Boot Lining -->
@@ -5250,10 +5250,10 @@
 				<item id="2928" min="1" max="1" chance="1.502" /> <!-- Elven Mithril Glove Design -->
 				<item id="1885" min="1" max="1" chance="0.75" /> <!-- High-grade Suede -->
 				<item id="2974" min="1" max="1" chance="0.3" /> <!-- Recipe: Elven Mithril Stockings -->
-				<item id="4469" min="1" max="1" chance="0.03" /> <!-- Dye of STR (STR 1 CON -1) -->
-				<item id="4470" min="1" max="1" chance="0.03" /> <!-- Dye of STR (STR 1 DEX -1) -->
-				<item id="4477" min="1" max="1" chance="0.03" /> <!-- Dye of MEN (Men 1 Int -1) -->
-				<item id="4478" min="1" max="1" chance="0.03" /> <!-- Dye of MEN (Men 1 Wit -1) -->
+				<item id="4469" min="1" max="1" chance="0.03" /> <!-- Dye of STR <STR +1 CON -1> - 1st Class Transfer -->
+				<item id="4470" min="1" max="1" chance="0.03" /> <!-- Dye of STR <STR +1 DEX -1> - 1st Class Transfer -->
+				<item id="4477" min="1" max="1" chance="0.03" /> <!-- Dye of MEN <Men +1 Int -1> - 1st Class Transfer -->
+				<item id="4478" min="1" max="1" chance="0.03" /> <!-- Dye of MEN <Men +1 Wit -1> - 1st Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="1884" min="1" max="1" chance="64.71" /> <!-- Cord -->
@@ -5633,7 +5633,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49" min="1" max="1" chance="1.969" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="1.969" /> <!-- Gloves -->
 				<item id="37" min="1" max="1" chance="1.949" /> <!-- Leather Shoes -->
 				<item id="57" min="37" max="87" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="8.445" /> <!-- Leather Shoe Texture -->

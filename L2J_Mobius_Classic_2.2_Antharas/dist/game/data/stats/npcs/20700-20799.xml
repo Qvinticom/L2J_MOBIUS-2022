@@ -924,10 +924,10 @@
 				<item id="4438" min="1" max="1" chance="0.75" /> <!-- Knuckle Duster Edge -->
 				<item id="2227" min="1" max="1" chance="0.75" /> <!-- Recipe: Forgotten Boots -->
 				<item id="2224" min="1" max="1" chance="0.3" /> <!-- Recipe: Demon's Tunic -->
-				<item id="4559" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT (Int 1 Men -1) -->
-				<item id="4560" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT (Int 1 Wit -1) -->
-				<item id="4563" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit 1 Int -1) -->
-				<item id="4564" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT (Wit 1 Men -1) -->
+				<item id="4559" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int +1 Men -1> - 2nd Class Transfer -->
+				<item id="4560" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int +1 Wit -1> - 2nd Class Transfer -->
+				<item id="4563" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit +1 Int -1> - 2nd Class Transfer -->
+				<item id="4564" min="1" max="1" chance="0.075" /> <!-- Greater Dye of WIT <Wit +1 Men -1> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="2951" min="1" max="1" chance="51.69" /> <!-- Rind Leather Glove Design -->
@@ -2429,7 +2429,7 @@
 		</collision>
 		<dropLists>
 			<drop>
-				<item id="49" min="1" max="1" chance="2.248" /> <!-- Gloves (item) -->
+				<item id="49" min="1" max="1" chance="2.248" /> <!-- Gloves -->
 				<item id="37" min="1" max="1" chance="2.221" /> <!-- Leather Shoes -->
 				<item id="57" min="41" max="98" chance="70" /> <!-- Adena -->
 				<item id="1921" min="1" max="3" chance="9.508" /> <!-- Leather Shoe Texture -->

@@ -4507,7 +4507,7 @@
 		<acquire exp="79724627136" sp="127559403" raidPoints="300" />
 		<mpReward value="53" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="365847722" hpRegen="83912.6868303249" mp="47100" mpRegen="30" />
+			<vitals hp="549579600.97662" hpRegen="8.5" mp="38198.1" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -4522,17 +4522,10 @@
 		</stats>
 		<status attackable="false" showName="false" undying="false" isDeathPenalty="true" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="14335" level="1" /> <!-- Haunting -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14717" level="1" /> <!-- Trasken -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4411" level="21" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="14804" level="1" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="1500" aggroRange="300">
 			<clanList>

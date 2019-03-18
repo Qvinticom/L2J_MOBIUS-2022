@@ -1298,12 +1298,12 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="29020" level="80" type="L2GrandBoss" name="Baium">
+	<npc id="29020" level="75" type="L2GrandBoss" name="Baium">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="1024738848" sp="30742165" raidPoints="450" />
+		<acquire exp="51267002" sp="1538010" raidPoints="450" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="237154151.7786561" hpRegen="750" mp="11772.40026160889" mpRegen="99" />
+			<vitals hp="10334675.47262" hpRegen="310.756323" mp="15930" mpRegen="3" />
 			<attack physical="3374.18" magical="2200" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3300" magical="2200" />
 			<speed>
@@ -1314,17 +1314,7 @@
 		</stats>
 		<status attackable="true" undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4127" level="1" /> <!-- Baium: General Attack -->
-			<skill id="4256" level="1" /> <!-- 100% stun resistance. -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<corpseTime>13</corpseTime>
@@ -1459,9 +1449,9 @@
 	<npc id="29022" level="75" type="L2GrandBoss" name="Zaken">
 		<race>UNDEAD</race>
 		<sex>MALE</sex>
-		<acquire exp="102487500" sp="3074625" />
+		<acquire exp="102487500" sp="3074625" raidPoints="0" />
 		<stats str="60" int="76" dex="73" wit="70" con="57" men="80">
-			<vitals hp="28531442" hpRegen="2649" mp="12240" mpRegen="240" />
+			<vitals hp="7027579.47902" hpRegen="310.756323" mp="10832.4" mpRegen="3" />
 			<attack physical="33864" magical="42273" random="30" critical="4" accuracy="40" attackSpeed="206" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3680" magical="4661" />
 			<speed>
@@ -1473,20 +1463,11 @@
 		</stats>
 		<status undying="false" noSleepMode="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="1" /> <!-- Undead -->
 			<skill id="4221" level="1" /> <!-- Range Dual Attack -->
 			<skill id="4220" level="1" /> <!-- Dual Attack -->
 			<skill id="4218" level="1" /> <!-- Drain -->
 			<skill id="4219" level="1" /> <!-- Hold -->
+			<skill id="4416" level="1" /> <!-- Undead -->
 		</skillList>
 		<corpseTime>300</corpseTime>
 		<exCrtEffect>true</exCrtEffect>

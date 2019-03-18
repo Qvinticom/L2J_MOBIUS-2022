@@ -2882,9 +2882,9 @@
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- Winged Spear -->
-		<acquire exp="2615583" sp="627" />
+		<acquire exp="5650819" sp="169524" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="59447" hpRegen="47.4274714721366" mp="273" mpRegen="1.5" />
+			<vitals hp="244718.59109" hpRegen="46.05583001" mp="195395.61" mpRegen="1.5" />
 			<attack physical="161.169491686233" magical="20.2881558958249" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="315.08454" magical="153.72" evasion="-18" />
 			<speed>
@@ -2896,22 +2896,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4174" level="2" /> <!-- BOSS Shield -->
 			<skill id="4177" level="2" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4723" level="2" /> <!-- BOSS Strike -->
 			<skill id="4738" level="2" /> <!-- BOSS Spinning Slash -->
-			<skill id="4930" level="1" /> <!-- Raid Boss - Level 26 -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4930" level="1" /> <!-- Raid Boss (Lv. 26) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />
@@ -4104,7 +4095,7 @@
 		<equipment rhand="127" /> <!-- Crimson Sword -->
 		<acquire exp="8468064" sp="254041" raidPoints="5" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="82365" hpRegen="61.2927353271519" mp="372" mpRegen="1.8" />
+			<vitals hp="262371.62879" hpRegen="51.54587076" mp="209491.005" mpRegen="1.8" />
 			<attack physical="281.115059392479" magical="44.7780251490961" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="387.69285" magical="189.14" evasion="-18" />
 			<speed>
@@ -4116,22 +4107,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4173" level="3" /> <!-- BOSS Might -->
 			<skill id="4177" level="3" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4723" level="3" /> <!-- BOSS Strike -->
 			<skill id="4738" level="3" /> <!-- BOSS Spinning Slash -->
-			<skill id="4940" level="1" /> <!-- Raid Boss - Level 33 -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="4940" level="1" /> <!-- Raid Boss (Lv. 33) -->
+			<skill id="4416" level="6" /> <!-- Humanoid -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" />

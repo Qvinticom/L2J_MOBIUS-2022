@@ -3286,7 +3286,7 @@
 		<sex>MALE</sex>
 		<acquire exp="3876384" sp="930" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430" hpRegen="8.5" mp="19524" mpRegen="30" />
+			<vitals hp="188235.382995" hpRegen="8.5" mp="15833.964" mpRegen="3" />
 			<attack physical="27947.2799312612" magical="5005.58282010264" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="422.801358886775" magical="232.278309819016" />
 			<attribute>
@@ -3301,28 +3301,15 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="17" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="15" /> <!-- Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
-			<skill id="5622" level="1" /> <!-- Double Skill Attack -->
 			<skill id="6381" level="1" /> <!-- Bistakon Soul Beam -->
 			<skill id="6385" level="1" /> <!-- Bistakon Critical Claw -->
-			<skill id="4435" level="5" /> <!-- Greater Stun Resistance -->
 			<skill id="6388" level="1" /> <!-- Bistakon Jump Blow -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4435" level="5" /> <!-- High Stun Attack Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -3870,7 +3857,7 @@
 		<sex>MALE</sex>
 		<acquire exp="1902456" sp="456" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430" hpRegen="8.5" mp="29286" mpRegen="30" />
+			<vitals hp="94118.006955" hpRegen="8.5" mp="23750.946" mpRegen="3" />
 			<attack physical="27947.2799312612" magical="10061.020775254" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="338.24108710942" magical="232.278309819016" />
 			<attribute>
@@ -3885,26 +3872,14 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4388" level="4" /> <!-- Resist Paralysis Attacks -->
-			<skill id="4408" level="9" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="16" /> <!-- Very Strong P. Atk. -->
-			<skill id="4411" level="17" /> <!-- Very Strong M. Atk. -->
-			<skill id="4412" level="16" /> <!-- Very Strong P. Def. -->
-			<skill id="4413" level="8" /> <!-- Extremely Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="3" /> <!-- Beasts -->
-			<skill id="4438" level="4" /> <!-- Greater Resist Sleep -->
-			<skill id="4439" level="4" /> <!-- Greater Resist Hold -->
-			<skill id="4441" level="5" /> <!-- Greater Resist Mental Derangement -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
-			<skill id="5598" level="9" /> <!-- Flash Resistance -->
-			<skill id="5599" level="9" /> <!-- Stun Resistance -->
 			<skill id="6416" level="1" /> <!-- Reptilikon Poison Breath -->
 			<skill id="6417" level="1" /> <!-- Reptilikon Poison Shot -->
 			<skill id="6418" level="1" /> <!-- Reptilikon Fury Poison Bomb -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4439" level="4" /> <!-- Greater Hold Resistance -->
+			<skill id="4438" level="4" /> <!-- Greater Sleep Resistance -->
+			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>

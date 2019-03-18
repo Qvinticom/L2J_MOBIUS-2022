@@ -4015,7 +4015,7 @@
 		<acquire exp="159805184" sp="38353" raidPoints="30" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="1919368.982085" hpRegen="8.5" mp="22800" mpRegen="30" />
+			<vitals hp="1919370.243915" hpRegen="8.5" mp="18490.8" mpRegen="3" />
 			<attack physical="22357.8239450089" magical="4004.46625608211" random="10" critical="4" accuracy="0" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="2959.60951220743" magical="1625.94816873311" />
 			<speed>
@@ -4034,14 +4034,12 @@
 			<height normal="80" />
 		</collision>
 		<skillList>
+			<skill id="14645" level="1" /> <!-- Dark Arrow -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="14720" level="1" /> <!-- Raid Boss (Lv. 88) -->
 			<skill id="4416" level="1" /> <!-- Undead -->
-			<skill id="5467" level="1" /> <!-- Strong against the dark elemental. -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
-			<skill id="14645" level="1" /> <!-- Dark Arrow -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
+			<skill id="5467" level="1" /> <!-- Dark Attack -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<dropLists>
@@ -4150,17 +4148,17 @@
 				<item id="35344" min="1" max="1" chance="1.827" /> <!-- Eternal Leather Helmet Ingredient -->
 				<item id="35352" min="1" max="1" chance="1.827" /> <!-- Eternal Glove Ingredient -->
 				<item id="35347" min="1" max="1" chance="1.825" /> <!-- Eternal Leather Glove Ingredient -->
-				<item id="35327" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Fragment -->
-				<item id="35328" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Fragment -->
-				<item id="35329" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Fragment -->
-				<item id="35336" min="1" max="1" chance="0.75" /> <!-- Helios Caster Fragment -->
-				<item id="35331" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Fragment -->
-				<item id="35335" min="1" max="1" chance="0.75" /> <!-- Helios Buster Fragment -->
-				<item id="35332" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Fragment -->
-				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Fragment -->
-				<item id="35337" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Fragment -->
-				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
-				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Fragment -->
+				<item id="35327" min="1" max="1" chance="0.75" /> <!-- Amaranthine Shaper Fragment -->
+				<item id="35328" min="1" max="1" chance="0.75" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="35329" min="1" max="1" chance="0.75" /> <!-- Amaranthine Slasher Fragment -->
+				<item id="35336" min="1" max="1" chance="0.75" /> <!-- Amaranthine Caster Fragment -->
+				<item id="35331" min="1" max="1" chance="0.75" /> <!-- Amaranthine Fighter Fragment -->
+				<item id="35335" min="1" max="1" chance="0.75" /> <!-- Amaranthine Buster Fragment -->
+				<item id="35332" min="1" max="1" chance="0.75" /> <!-- Amaranthine Stormer Fragment -->
+				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Amaranthine Thrower Fragment -->
+				<item id="35337" min="1" max="1" chance="0.75" /> <!-- Amaranthine Retributer Fragment -->
+				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Amaranthine Shooter Fragment -->
+				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Amaranthine Avenger Fragment -->
 				<item id="35473" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Circlet (60%) -->
 				<item id="35472" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Boots (60%) -->
 				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
@@ -4176,22 +4174,22 @@
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
 				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
-				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
-				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
-				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
-				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
-				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Cutter (60%) -->
+				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Avenger (60%) -->
+				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shaper (60%) -->
+				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Fighter (60%) -->
+				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Stormer (60%) -->
+				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Thrower (60%) -->
+				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shooter (60%) -->
+				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Buster (60%) -->
+				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Caster (60%) -->
 				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
 				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Slasher (60%) -->
 				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
 				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
 				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
+				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Retributer (60%) -->
 				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
 				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->
@@ -4217,7 +4215,7 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="25877" level="105" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
+	<npc id="25877" level="104" type="L2RaidBoss" name="Isadora" title="Great Magus of Greed">
 		<parameters>
 			<param name="IsAggressive" value="1" />
 			<skill name="Skill02_ID" id="14519" level="1" />
@@ -4228,7 +4226,7 @@
 		<acquire exp="2147483647" sp="173206388" raidPoints="7" />
 		<mpReward value="20" type="PER" ticks="10" affects="PARTY" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="3127248.178605" hpRegen="444.7141361" mp="54258.333" mpRegen="3.3" />
+			<vitals hp="3127250.07135" hpRegen="9.5" mp="26833.557" mpRegen="3.3" />
 			<attack physical="301079.7437" magical="215919.4101" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="34907.01512" magical="17038.26718" />
 			<speed>
@@ -4246,7 +4244,8 @@
 			<height normal="60" />
 		</collision>
 		<skillList>
-			<skill id="14712" level="1" /> <!-- Raid Boss (Lv. 96) -->
+			<skill id="14520" level="1" /> <!-- Ice Box of Hell -->
+			<skill id="14519" level="1" /> <!-- Fire Pit of Hell -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="5467" level="1" /> <!-- Dark Attack -->
 			<skill id="14620" level="4" /> <!-- Aerial Yoke Resistance -->
@@ -4256,9 +4255,6 @@
 			<skill id="4441" level="5" /> <!-- Greater Mental Attack Resistance -->
 			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 			<skill id="4439" level="5" /> <!-- Greater Hold Resistance -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
-			<skill id="14520" level="1" /> <!-- Ice Box of Hell -->
-			<skill id="14519" level="1" /> <!-- Fire Pit of Hell -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300">
 			<clanList>
@@ -4288,17 +4284,17 @@
 				<item id="35342" min="1" max="1" chance="1.862" /> <!-- Eternal Boot Ingredient -->
 				<item id="35340" min="1" max="1" chance="1.856" /> <!-- Eternal Gaiter Ingredient -->
 				<item id="35351" min="1" max="1" chance="1.832" /> <!-- Eternal Stocking Ingredient -->
-				<item id="35327" min="1" max="1" chance="0.75" /> <!-- Helios Shaper Fragment -->
-				<item id="35328" min="1" max="1" chance="0.75" /> <!-- Helios Cutter Fragment -->
-				<item id="35329" min="1" max="1" chance="0.75" /> <!-- Helios Slasher Fragment -->
-				<item id="35331" min="1" max="1" chance="0.75" /> <!-- Helios Fighter Fragment -->
-				<item id="35332" min="1" max="1" chance="0.75" /> <!-- Helios Stormer Fragment -->
-				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Helios Thrower Fragment -->
-				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Helios Shooter Fragment -->
-				<item id="35335" min="1" max="1" chance="0.75" /> <!-- Helios Buster Fragment -->
-				<item id="35337" min="1" max="1" chance="0.75" /> <!-- Helios Retributer Fragment -->
-				<item id="35336" min="1" max="1" chance="0.75" /> <!-- Helios Caster Fragment -->
-				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Helios Avenger Fragment -->
+				<item id="35327" min="1" max="1" chance="0.75" /> <!-- Amaranthine Shaper Fragment -->
+				<item id="35328" min="1" max="1" chance="0.75" /> <!-- Amaranthine Cutter Fragment -->
+				<item id="35329" min="1" max="1" chance="0.75" /> <!-- Amaranthine Slasher Fragment -->
+				<item id="35331" min="1" max="1" chance="0.75" /> <!-- Amaranthine Fighter Fragment -->
+				<item id="35332" min="1" max="1" chance="0.75" /> <!-- Amaranthine Stormer Fragment -->
+				<item id="35333" min="1" max="1" chance="0.75" /> <!-- Amaranthine Thrower Fragment -->
+				<item id="35334" min="1" max="1" chance="0.75" /> <!-- Amaranthine Shooter Fragment -->
+				<item id="35335" min="1" max="1" chance="0.75" /> <!-- Amaranthine Buster Fragment -->
+				<item id="35337" min="1" max="1" chance="0.75" /> <!-- Amaranthine Retributer Fragment -->
+				<item id="35336" min="1" max="1" chance="0.75" /> <!-- Amaranthine Caster Fragment -->
+				<item id="35330" min="1" max="1" chance="0.75" /> <!-- Amaranthine Avenger Fragment -->
 				<item id="35471" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Gloves (60%) -->
 				<item id="35470" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Leggings (60%) -->
 				<item id="35469" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Armor (60%) -->
@@ -4314,22 +4310,22 @@
 				<item id="46506" min="1" max="1" chance="0.3" /> <!-- Lionel's Soul Crystal - Stage 3 -->
 				<item id="35468" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Leather Helmet (60%) -->
 				<item id="35467" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Shield (60%) -->
-				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Cutter (60%) -->
-				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Avenger (60%) -->
-				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shaper (60%) -->
-				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Fighter (60%) -->
-				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Stormer (60%) -->
-				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Thrower (60%) -->
-				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Shooter (60%) -->
-				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Buster (60%) -->
-				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Caster (60%) -->
+				<item id="35452" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Cutter (60%) -->
+				<item id="35454" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Avenger (60%) -->
+				<item id="35451" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shaper (60%) -->
+				<item id="35455" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Fighter (60%) -->
+				<item id="35456" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Stormer (60%) -->
+				<item id="35457" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Thrower (60%) -->
+				<item id="35458" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Shooter (60%) -->
+				<item id="35459" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Buster (60%) -->
+				<item id="35460" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Caster (60%) -->
 				<item id="35466" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Boots (60%) -->
 				<item id="35465" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gauntlets (60%) -->
-				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Slasher (60%) -->
+				<item id="35453" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Slasher (60%) -->
 				<item id="35464" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Gaiters (60%) -->
 				<item id="35463" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Breastplate (60%) -->
 				<item id="35462" min="1" max="1" chance="0.3" /> <!-- Recipe: Eternal Helmet (60%) -->
-				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Helios Retributer (60%) -->
+				<item id="35461" min="1" max="1" chance="0.3" /> <!-- Recipe: Amaranthine Retributer (60%) -->
 				<item id="46507" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 4 -->
 				<item id="46508" min="1" max="1" chance="0.075" /> <!-- Lionel's Soul Crystal - Stage 5 -->
 				<item id="46492" min="1" max="1" chance="0.075" /> <!-- Pantheon's Soul Crystal - Stage 4 -->

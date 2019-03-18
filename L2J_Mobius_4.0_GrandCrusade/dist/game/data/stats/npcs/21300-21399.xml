@@ -4181,7 +4181,7 @@
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
 		<acquire exp="90202" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5713" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<vitals hp="5263.09293" hpRegen="8.5" mp="1276.514" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<speed>
@@ -4196,17 +4196,8 @@
 			<skill id="4032" level="8" /> <!-- NPC Strike -->
 			<skill id="4072" level="8" /> <!-- Stun -->
 			<skill id="4092" level="1" /> <!-- NPC Puma Spirit Totem -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4271,7 +4262,7 @@
 		<equipment rhand="2504" lhand="6918" /> <!-- Meteor Shower / Monster Only (Shield of Silenos) -->
 		<acquire exp="75070" sp="18" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5713" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<vitals hp="5263.09293" hpRegen="8.5" mp="1276.514" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<speed>
@@ -4283,18 +4274,11 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4357,7 +4341,7 @@
 		<sex>MALE</sex>
 		<acquire exp="93567" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5713" hpRegen="8.5" mp="1574" mpRegen="3" />
+			<vitals hp="3605.04831" hpRegen="8.5" mp="1276.514" mpRegen="3" />
 			<attack physical="856.44055895414" magical="584.837886935576" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="328.27073" magical="240.21427" />
 			<speed>
@@ -4370,17 +4354,12 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4067" level="8" /> <!-- NPC Mortal Blow -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -4444,7 +4423,7 @@
 		<equipment rhand="142" lhand="6918" /> <!-- Keshanberk / Monster Only (Shield of Silenos) -->
 		<acquire exp="82322" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="5480.12769" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" shield="166" shieldRate="20" />
 			<speed>
@@ -4458,21 +4437,14 @@
 		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="8" /> <!-- Stun -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="8" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4537,7 +4509,7 @@
 		<equipment rhand="6917" /> <!-- Monster Only (Poison Sting) -->
 		<acquire exp="85799" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="5480.12769" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="5" critical="8" accuracy="0" attackSpeed="253" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -4550,17 +4522,12 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4040" level="8" /> <!-- NPC Bow Attack -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="5" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4630,7 +4597,7 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="83438" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="5480.12769" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -4646,18 +4613,10 @@
 			<skill id="4031" level="3" /> <!-- NPC Clan Aegis -->
 			<skill id="4098" level="8" /> <!-- Silence -->
 			<skill id="4160" level="8" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4563" level="8" /> <!-- NPC Solar Flare - Magic -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -4908,7 +4867,7 @@
 		<equipment rhand="142" lhand="6918" /> <!-- Keshanberk / Monster Only (Shield of Silenos) -->
 		<acquire exp="89275" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="5480.12769" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" shield="171" shieldRate="20" />
 			<speed>
@@ -4922,21 +4881,16 @@
 		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
-			<skill id="4789" level="6" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5087,7 +5041,7 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="122882" sp="29" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="5480.12769" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -5102,20 +5056,12 @@
 			<skill id="4033" level="9" /> <!-- NPC Burn -->
 			<skill id="4035" level="9" /> <!-- Poison -->
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5181,7 +5127,7 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="78287" sp="18" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="5480.12769" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -5194,19 +5140,10 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4099" level="2" /> <!-- NPC Berserk -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4571" level="9" /> <!-- NPC Blazing Circle -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5278,7 +5215,7 @@
 		<equipment rhand="2504" /> <!-- Meteor Shower -->
 		<acquire exp="89275" sp="21" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="5480.12769" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -5292,21 +5229,16 @@
 		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4410" level="10" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="10" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="12" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="12" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4572" level="9" /> <!-- NPC Triple Sonic Slash -->
-			<skill id="4789" level="7" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5371,7 +5303,7 @@
 		<sex>MALE</sex>
 		<acquire exp="82751" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="5480.12769" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -5384,19 +5316,13 @@
 		<status undying="false" canBeSown="true" />
 		<skillList>
 			<skill id="4032" level="9" /> <!-- NPC Strike -->
-			<skill id="4277" level="5" /> <!-- Resist Poison Attacks -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4416" level="5" /> <!-- Plants -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="5" /> <!-- Plants -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4279" level="1" /> <!-- Fire Vulnerability -->
+			<skill id="4277" level="5" /> <!-- Poison Resistance -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<sNpcPropHpRate>2</sNpcPropHpRate>
@@ -5473,7 +5399,7 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
+			<vitals hp="11841.01272" hpRegen="8.5" mp="1330.851" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -5488,19 +5414,13 @@
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4562" level="9" /> <!-- NPC Solar Flare -->
+			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
 			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4562" level="9" /> <!-- NPC Solar Flare -->
-			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5574,7 +5494,7 @@
 		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
+			<vitals hp="11841.01272" hpRegen="8.5" mp="1330.851" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -5588,22 +5508,15 @@
 		<skillList>
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
-			<skill id="4085" level="1" /> <!-- Critical Damage -->
-			<skill id="4086" level="1" /> <!-- Critical Chance -->
 			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="13" /> <!-- Slightly Strong M. Atk. -->
+			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
+			<skill id="4033" level="1" /> <!-- Aura Burn -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 			<skill id="4413" level="9" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
-			<skill id="4033" level="1" /> <!-- Aura Burn -->
+			<skill id="4085" level="1" /> <!-- Critical Damage -->
+			<skill id="4086" level="1" /> <!-- Critical Chance -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5675,7 +5588,7 @@
 		<equipment rhand="2500" /> <!-- Dark Legion's Edge -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
+			<vitals hp="11841.01272" hpRegen="8.5" mp="1330.851" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -5690,20 +5603,11 @@
 			<skill id="4038" level="5" /> <!-- Decrease Atk. Spd. -->
 			<skill id="4072" level="9" /> <!-- Stun -->
 			<skill id="4077" level="9" /> <!-- NPC Aura Burn -->
+			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4085" level="1" /> <!-- Critical Damage -->
 			<skill id="4086" level="1" /> <!-- Critical Chance -->
-			<skill id="4317" level="1" /> <!-- Increase Rage Might -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="60" spiritChance="60" />
 		<exCrtEffect>false</exCrtEffect>
@@ -5769,7 +5673,7 @@
 		<sex>MALE</sex>
 		<acquire exp="95010" sp="22" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="3753.313335" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -5781,18 +5685,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
+			<skill id="4580" level="9" /> <!-- Decrease P. Atk. -->
+			<skill id="4416" level="4" /> <!-- Animals -->
 			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
 			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
 			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
 			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="4" /> <!-- Animals -->
-			<skill id="4580" level="9" /> <!-- Decrease P. Atk. -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<exCrtEffect>false</exCrtEffect>
 		<ai type="BALANCED" clanHelpRange="300" aggroRange="300">
@@ -5862,7 +5761,7 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
+			<vitals hp="11841.01272" hpRegen="8.5" mp="1330.851" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -5877,20 +5776,12 @@
 			<skill id="4033" level="9" /> <!-- NPC Burn -->
 			<skill id="4119" level="3" /> <!-- Decrease Accuracy -->
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
 			<skill id="4576" level="3" /> <!-- NPC Clan Buff - Damage Shield -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6091,7 +5982,7 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="4327" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9870" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<vitals hp="11841.01272" hpRegen="8.5" mp="1330.851" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -6103,18 +5994,13 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="12" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="12" /> <!-- Slightly Strong M. Atk. -->
-			<skill id="4412" level="10" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4413" level="10" /> <!-- Slightly Weak M. Def. -->
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4562" level="9" /> <!-- NPC Solar Flare -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
+			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
+			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
+			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6151,7 +6037,6 @@
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
 		<acquire exp="175270" sp="42" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9383" hpRegen="8.5" mp="1641" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" shield="179" shieldRate="20" />
 			<speed>
@@ -6163,18 +6048,7 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="9" /> <!-- Slightly Weak P. Atk. -->
-			<skill id="4411" level="9" /> <!-- Slightly Weak M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="8" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6241,7 +6115,7 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="4327" sp="1" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="9870" hpRegen="8.5" mp="1674" mpRegen="3" />
+			<vitals hp="3753.313335" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="20" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -6255,19 +6129,10 @@
 		<skillList>
 			<skill id="4030" level="3" /> <!-- NPC Clan Might -->
 			<skill id="4160" level="9" /> <!-- NPC Aura Burn - Magic -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="6" /> <!-- Blunt Weapons -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4563" level="9" /> <!-- NPC Solar Flare - Magic -->
 			<skill id="4575" level="2" /> <!-- NPC Clan Buff - Haste -->
-			<skill id="4789" level="10" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="50" spiritChance="50" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6304,7 +6169,7 @@
 		<equipment rhand="2500" lhand="6918" /> <!-- Dark Legion's Edge / Monster Only (Shield of Silenos) -->
 		<acquire exp="85784" sp="20" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
+			<vitals hp="3753.313335" hpRegen="8.5" mp="1303.277" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" shield="183" shieldRate="20" />
 			<speed>
@@ -6316,18 +6181,9 @@
 		</stats>
 		<status undying="false" canBeSown="true" />
 		<skillList>
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
 			<skill id="4573" level="9" /> <!-- NPC Sonic Blaster -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5620" level="6" /> <!-- Melee Attack Vulnerability -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>
@@ -6385,7 +6241,6 @@
 		<equipment rhand="6716" /> <!-- Monster Only (Silenos Shaman) -->
 		<acquire exp="79574" sp="19" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="5948" hpRegen="8.5" mp="1607" mpRegen="3" />
 			<attack physical="890.50085998804" magical="608.096657928153" random="10" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="332.70061" magical="243.45587" />
 			<speed>
@@ -6399,17 +6254,6 @@
 		<skillList>
 			<skill id="4066" level="9" /> <!-- NPC Twister -->
 			<skill id="4098" level="9" /> <!-- Silence -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-			<skill id="4789" level="9" /> <!-- NPC High Level -->
-			<skill id="5620" level="6" /> <!-- Short-Range Physical Attack Weakness -->
 		</skillList>
 		<shots shotChance="30" spiritChance="30" />
 		<exCrtEffect>false</exCrtEffect>

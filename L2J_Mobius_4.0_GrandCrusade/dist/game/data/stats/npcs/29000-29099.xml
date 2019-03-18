@@ -3660,7 +3660,7 @@
 		<sex>MALE</sex>
 		<acquire exp="155833466880" sp="225935474" raidPoints="1000" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="689482245" hpRegen="1830" mp="2025740" mpRegen="1000" />
+			<vitals hp="1035746170.0036" hpRegen="9.5" mp="1642875.14" mpRegen="3.3" />
 			<attack physical="4799.20533" magical="263.60854" random="30" critical="4" accuracy="5" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3974.13793" magical="496.01325" />
 			<attribute>
@@ -3675,22 +3675,12 @@
 		</stats>
 		<status undying="false" noSleepMode="true" isDeathPenalty="true" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4071" level="2" /> <!-- Resist Bow/Crossbow Weapons -->
 			<skill id="4112" level="1" /> <!-- Ordinary Attack -->
-			<skill id="4122" level="1" /> <!-- Antharas -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="10" /> <!-- Dragons -->
-			<skill id="5465" level="1" /> <!-- Earth Attacks -->
 			<skill id="5093" level="1" /> <!-- Antharas Meteor -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="10" /> <!-- Dragons -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4122" level="1" /> <!-- Antharas -->
+			<skill id="14804" level="10" /> <!-- Damage Reflection Attack Resistance -->
 		</skillList>
 		<corpseTime>14</corpseTime>
 		<exCrtEffect>true</exCrtEffect>
@@ -5127,7 +5117,7 @@
 		<sex>MALE</sex>
 		<acquire exp="5885016" sp="1412" />
 		<stats str="164" int="188" dex="55" wit="78" con="111" men="149">
-			<vitals hp="961780" hpRegen="369.61370264709" mp="2051" mpRegen="3.21" />
+			<vitals hp="1444795.980915" hpRegen="8.5" mp="1663.361" mpRegen="3" />
 			<attack physical="6129.55481158677" magical="4888.35447858044" random="10" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="1185.643995" magical="578.3992" evasion="-11" />
 			<speed>
@@ -5138,23 +5128,13 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
 			<skill id="4174" level="10" /> <!-- BOSS Shield -->
 			<skill id="4177" level="10" /> <!-- BOSS Cancel Magic -->
-			<skill id="4408" level="1" /> <!-- HP Increase (1x) -->
-			<skill id="4409" level="1" /> <!-- MP Increase (1x) -->
-			<skill id="4410" level="11" /> <!-- Average P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="4416" level="9" /> <!-- Demons -->
-			<skill id="4494" level="1" /> <!-- Raid Boss -->
 			<skill id="4726" level="10" /> <!-- Stun -->
 			<skill id="5119" level="1" /> <!-- Bleed -->
-			<skill id="5181" level="1" /> <!-- Raid Boss - Level 80 -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="4494" level="1" /> <!-- Raid Boss -->
+			<skill id="5181" level="1" /> <!-- Raid Boss (Lv. 80) -->
+			<skill id="4416" level="9" /> <!-- Demons -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
 		<ai type="BALANCED" isAggressive="true" aggroRange="1000" />

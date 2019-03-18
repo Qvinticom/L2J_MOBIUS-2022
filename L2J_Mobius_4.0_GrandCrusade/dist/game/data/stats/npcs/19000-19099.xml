@@ -13,7 +13,7 @@
 		<sex>MALE</sex>
 		<mpReward value="26" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13568" hpRegen="8.5" mp="1952" mpRegen="3" />
+			<vitals hp="8886.437775" hpRegen="8.5" mp="1583.072" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -24,11 +24,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="14183" level="1" /> <!-- Millipede Blow -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
 			<skill id="14120" level="1" /> <!-- Enhance -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -452,7 +450,7 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430" hpRegen="8.5" mp="19524" mpRegen="30" />
+			<vitals hp="188235.382995" hpRegen="8.5" mp="15833.964" mpRegen="3" />
 			<speed>
 				<walk ground="60" />
 				<run ground="180" />
@@ -467,11 +465,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
 			<skill id="14184" level="1" /> <!-- Millipede Ultimate Blow -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -494,7 +490,7 @@
 		<sex>MALE</sex>
 		<mpReward value="15" type="DIFF" ticks="10" affects="PARTY" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="13568" hpRegen="8.5" mp="1952" mpRegen="3" />
+			<vitals hp="2221.451715" hpRegen="8.5" mp="1583.072" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -509,12 +505,9 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="14182" level="1" /> <!-- Millipede Blow -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai aggroRange="600" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -778,7 +771,7 @@
 		<race>BUG</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="287430" hpRegen="8.5" mp="19524" mpRegen="30" />
+			<vitals hp="47058.68802" hpRegen="8.5" mp="15833.964" mpRegen="3" />
 			<speed>
 				<walk ground="45" />
 				<run ground="170" />
@@ -793,14 +786,11 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
-			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
-			<skill id="4416" level="12" /> <!-- Bugs -->
-			<skill id="4408" level="8" /> <!-- HP Increase (1/4x) -->
 			<skill id="14183" level="1" /> <!-- Millipede Blow -->
 			<skill id="14412" level="1" /> <!-- Incubatioin -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="2" /> <!-- Blood Siphon Resistance -->
+			<skill id="4416" level="12" /> <!-- Bugs -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
+			<skill id="4412" level="9" /> <!-- Slightly Weak P. Def. -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>
@@ -1247,7 +1237,7 @@
 		<race>CONSTRUCT</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="15685" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<vitals hp="10272.55803" hpRegen="8.5" mp="1849.08" mpRegen="3" />
 			<speed>
 				<walk ground="54" />
 				<run ground="170" />
@@ -1262,10 +1252,8 @@
 		</stats>
 		<status attackable="false" showName="false" undying="false" />
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="4" /> <!-- Blood Siphon Resistance -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300" />
 		<collision>
@@ -2326,7 +2314,7 @@
 		<race>CONSTRUCT</race>
 		<sex>FEMALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="17072893" hpRegen="8.5" mp="47100" mpRegen="30" />
+			<vitals hp="11180863.64256" hpRegen="8.5" mp="38198.1" mpRegen="3" />
 			<speed>
 				<walk ground="50" />
 				<run ground="120" />
@@ -2341,15 +2329,8 @@
 		</stats>
 		<status attackable="false" undying="false" />
 		<skillList>
-			<skill id="5465" level="1" /> <!-- Earth Attack -->
 			<skill id="4416" level="2" /> <!-- Magic Creatures -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
-			<skill id="14765" level="3" /> <!-- Blood Siphon Resistance -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4411" level="21" /> <!-- Extremely Strong M. Atk. -->
-			<skill id="4413" level="21" /> <!-- Extremely Strong M. Def. -->
-			<skill id="4410" level="21" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4412" level="21" /> <!-- Extremely Strong P. Def. -->
+			<skill id="5465" level="1" /> <!-- Earth Attack -->
 		</skillList>
 		<ai clanHelpRange="300" aggroRange="300" />
 		<collision>
@@ -2422,7 +2403,7 @@
 		<race>DIVINE</race>
 		<sex>MALE</sex>
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="7624" hpRegen="8.5" mp="2280" mpRegen="3" />
+			<vitals hp="4993.692225" hpRegen="8.5" mp="1849.08" mpRegen="3" />
 			<speed>
 				<walk ground="65" />
 				<run ground="220" />
@@ -2432,8 +2413,8 @@
 			<abnormalResist physical="10" magical="10" />
 		</stats>
 		<skillList>
-			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 			<skill id="4416" level="8" /> <!-- Angels -->
+			<skill id="4414" level="3" /> <!-- Light Armor Type -->
 		</skillList>
 		<ai aggroRange="300" isAggressive="true" clanHelpRange="300">
 			<clanList>

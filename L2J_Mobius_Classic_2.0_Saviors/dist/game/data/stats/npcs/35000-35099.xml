@@ -2365,9 +2365,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="79" /> <!-- Damascus Sword -->
-		<acquire exp="939" sp="1" />
+		<acquire exp="422" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="2944391" hpRegen="7.5" mp="1842" mpRegen="2.7" />
+			<vitals hp="1145723.2805" hpRegen="7.5" mp="1630.17" mpRegen="2.7" />
 			<attack physical="2331.27036" magical="397.98887" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="271.89033" magical="198.95754" />
 			<speed>
@@ -2378,15 +2378,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="13" /> <!-- Slightly Strong P. Def. -->
-			<skill id="4413" level="13" /> <!-- Slightly Strong M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2409,9 +2400,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="142" /> <!-- Keshanberk -->
-		<acquire exp="901" sp="1" />
+		<acquire exp="384" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="981463" hpRegen="7.5" mp="1842" mpRegen="2.7" />
+			<vitals hp="381907.84227" hpRegen="7.5" mp="1630.17" mpRegen="2.7" />
 			<attack physical="2084.49564" magical="355.86007" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="257.34267" magical="188.3122" />
 			<speed>
@@ -2422,15 +2413,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="10" /> <!-- HP Increase (2x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="13" /> <!-- Slightly Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2498,9 +2480,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="6579" /> <!-- Arcana Mace -->
-		<acquire exp="827" sp="1" />
+		<acquire exp="336" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14136" hpRegen="6.5" mp="2059" mpRegen="2.4" />
+			<vitals hp="5693.70196" hpRegen="6.5" mp="864.645" mpRegen="2.4" />
 			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
@@ -2512,15 +2494,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4026" level="1" /> <!-- Gludio Flame -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2544,9 +2517,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
-		<acquire exp="827" sp="1" />
+		<acquire exp="336" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14136" hpRegen="6.5" mp="2059" mpRegen="2.4" />
+			<vitals hp="5693.70196" hpRegen="6.5" mp="864.645" mpRegen="2.4" />
 			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
@@ -2558,15 +2531,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4027" level="1" /> <!-- Gludio Heal -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2589,9 +2553,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
-		<acquire exp="827" sp="1" />
+		<acquire exp="336" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14136" hpRegen="6.5" mp="2059" mpRegen="2.4" />
+			<vitals hp="5693.70196" hpRegen="6.5" mp="864.645" mpRegen="2.4" />
 			<attack physical="885.7984" magical="302.44274" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
@@ -2602,15 +2566,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2677,9 +2632,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- Elven Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="313" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="13812" hpRegen="6.5" mp="1988" mpRegen="2.4" />
+			<vitals hp="5369.80431" hpRegen="6.5" mp="812.43" mpRegen="2.4" />
 			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="228.40135" magical="167.1342" />
 			<speed>
@@ -2690,15 +2645,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -2721,9 +2667,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- Elven Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="313" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="13812" hpRegen="6.5" mp="1988" mpRegen="2.4" />
+			<vitals hp="5369.80431" hpRegen="6.5" mp="812.43" mpRegen="2.4" />
 			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="228.40135" magical="167.1342" />
 			<speed>
@@ -2734,15 +2680,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3074,9 +3011,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="6579" /> <!-- Arcana Mace -->
-		<acquire exp="827" sp="1" />
+		<acquire exp="336" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14136" hpRegen="6.5" mp="2059" mpRegen="2.4" />
+			<vitals hp="5693.70196" hpRegen="6.5" mp="864.645" mpRegen="2.4" />
 			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
@@ -3088,15 +3025,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4026" level="1" /> <!-- Gludio Flame -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3120,9 +3048,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>FEMALE</sex>
 		<equipment rhand="193" /> <!-- Stick of Faith -->
-		<acquire exp="827" sp="1" />
+		<acquire exp="336" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14136" hpRegen="6.5" mp="2059" mpRegen="2.4" />
+			<vitals hp="5693.70196" hpRegen="6.5" mp="864.645" mpRegen="2.4" />
 			<attack physical="885.7984" magical="302.44274" random="50" critical="1" accuracy="9" attackSpeed="253" type="BLUNT" range="40" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
@@ -3134,15 +3062,6 @@
 		<status undying="false" />
 		<skillList>
 			<skill id="4027" level="1" /> <!-- Gludio Heal -->
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="5" /> <!-- Blunt Weapons -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3165,9 +3084,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="94" /> <!-- Bec de Corbin -->
-		<acquire exp="827" sp="1" />
+		<acquire exp="336" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="14136" hpRegen="6.5" mp="2059" mpRegen="2.4" />
+			<vitals hp="5693.70196" hpRegen="6.5" mp="864.645" mpRegen="2.4" />
 			<attack physical="885.7984" magical="302.44274" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="237.99429" magical="174.1539" />
 			<speed>
@@ -3178,15 +3097,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3209,9 +3119,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="93" /> <!-- Winged Spear -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="313" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="13812" hpRegen="6.5" mp="1988" mpRegen="2.4" />
+			<vitals hp="5369.80431" hpRegen="6.5" mp="812.43" mpRegen="2.4" />
 			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="0" attackSpeed="216" type="POLE" range="80" distance="80" width="120" />
 			<defence physical="228.40135" magical="167.1342" />
 			<speed>
@@ -3222,15 +3132,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="11" /> <!-- Spears -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3253,9 +3154,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="2499" /> <!-- Elven Long Sword -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="313" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="13812" hpRegen="6.5" mp="1988" mpRegen="2.4" />
+			<vitals hp="5369.80431" hpRegen="6.5" mp="812.43" mpRegen="2.4" />
 			<attack physical="811.9291" magical="277.22116" random="30" critical="4" accuracy="4.75" attackSpeed="253" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="228.40135" magical="167.1342" />
 			<speed>
@@ -3266,15 +3167,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="3" /> <!-- One-handed Sword -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>
@@ -3297,9 +3189,9 @@
 		<race>CASTLE_GUARD</race>
 		<sex>MALE</sex>
 		<equipment rhand="276" /> <!-- Elven Bow -->
-		<acquire exp="792" sp="1" />
+		<acquire exp="313" sp="0" />
 		<stats str="40" int="21" dex="30" wit="20" con="43" men="10">
-			<vitals hp="13812" hpRegen="6.5" mp="1988" mpRegen="2.4" />
+			<vitals hp="5369.80431" hpRegen="6.5" mp="812.43" mpRegen="2.4" />
 			<attack physical="1804.10646" magical="277.22116" random="10" critical="8" accuracy="0" attackSpeed="227" reuseDelay="1500" type="BOW" range="1100" distance="10" width="0" />
 			<defence physical="228.40135" magical="167.1342" />
 			<speed>
@@ -3310,15 +3202,6 @@
 		</stats>
 		<status undying="false" />
 		<skillList>
-			<skill id="4045" level="1" /> <!-- Resist Full Magic Attack -->
-			<skill id="4408" level="16" /> <!-- HP Increase (8x) -->
-			<skill id="4409" level="11" /> <!-- MP Increase (3x) -->
-			<skill id="4410" level="18" /> <!-- Extremely Strong P. Atk. -->
-			<skill id="4411" level="11" /> <!-- Average M. Atk. -->
-			<skill id="4412" level="11" /> <!-- Average P. Def. -->
-			<skill id="4413" level="11" /> <!-- Average M. Def. -->
-			<skill id="4414" level="2" /> <!-- Standard Type -->
-			<skill id="4415" level="9" /> <!-- Bows -->
 			<skill id="4416" level="22" /> <!-- Defending Army -->
 		</skillList>
 		<exCrtEffect>true</exCrtEffect>

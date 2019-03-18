@@ -61,7 +61,7 @@
 				<item id="17527" min="2" max="3" chance="80.93" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="30297" min="1" max="2" chance="85.05" /> <!-- Superior Giant's Codex -->
 				<item id="17526" min="1" max="2" chance="19.85" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46150" min="1" max="1" chance="9.997" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="46150" min="1" max="1" chance="9.997" /> <!-- Superior Giant's Codex Chapter 1 -->
 				<item id="46151" min="1" max="1" chance="2.51" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
 				<item id="30298" min="1" max="1" chance="2.475" /> <!-- Superior Giant's Codex - Mastery -->
 				<item id="39738" min="1" max="1" chance="2.475" /> <!-- Rune Stone -->
@@ -69,30 +69,40 @@
 			</drop>
 		</dropLists>
 	</npc>
-	<npc id="23703" level="101" type="L2Npc" name="Ice Knight" title="Winter Omen">
+	<npc id="23703" level="101" type="L2Monster" name="Ice Knight">
 		<race>HUMANOID</race>
 		<sex>MALE</sex>
 		<acquire exp="2147483647" sp="6235973" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="1056419.848875" hpRegen="9.5" mp="29693.143" mpRegen="3.3" />
+			<vitals hp="528212.13264" hpRegen="9.5" mp="19405.608" mpRegen="3.3" />
 			<attack physical="42356" magical="31566" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3777" magical="2192" />
-			<attribute>
-				<defence fire="150" water="150" wind="150" earth="150" holy="150" dark="150" default="150" />
-			</attribute>
 			<speed>
 				<walk ground="20" />
 				<run ground="180" />
 			</speed>
 		</stats>
-		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
-			<skill id="4416" level="6" /> <!-- Humanoids -->
-		</skillList>
+		<status attackable="true" />
 		<collision>
 			<radius normal="15" />
 			<height normal="31" />
 		</collision>
+		<skillList>
+			<skill id="4416" level="6" /> <!-- Humanoids -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
+		</skillList>
+		<dropLists>
+			<drop>
+				<item id="30297" min="1" max="2" chance="47.49" /> <!-- Superior Giant's Codex -->
+				<item id="17527" min="2" max="3" chance="42.675" /> <!-- Scroll: Enchant Armor (R-grade) -->
+				<item id="17526" min="1" max="2" chance="10.7" /> <!-- Scroll: Enchant Weapon (R-grade) -->
+				<item id="46150" min="1" max="1" chance="5.466" /> <!-- Superior Giant's Codex Chapter 1 -->
+				<item id="30298" min="1" max="1" chance="1.402" /> <!-- Superior Giant's Codex - Mastery -->
+				<item id="46151" min="1" max="1" chance="1.397" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
+				<item id="39738" min="1" max="1" chance="1.372" /> <!-- Rune Stone -->
+				<item id="46587" min="1" max="1" chance="0" /> <!-- Mystic Armor Piece -->
+			</drop>
+		</dropLists>
 	</npc>
 	<npc id="23704" level="101" type="L2Monster" name="Ifrit" title="Master of Flames">
 		<race>ELEMENTAL</race>
@@ -122,7 +132,7 @@
 				<item id="17527" min="2" max="3" chance="81.06" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="30297" min="1" max="2" chance="83.8" /> <!-- Superior Giant's Codex -->
 				<item id="17526" min="1" max="2" chance="19.83" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46150" min="1" max="1" chance="9.969" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="46150" min="1" max="1" chance="9.969" /> <!-- Superior Giant's Codex Chapter 1 -->
 				<item id="46151" min="1" max="1" chance="2.563" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
 				<item id="39738" min="1" max="1" chance="2.54" /> <!-- Rune Stone -->
 				<item id="30298" min="1" max="1" chance="2.53" /> <!-- Superior Giant's Codex - Mastery -->
@@ -158,7 +168,7 @@
 				<item id="30297" min="1" max="2" chance="83.07" /> <!-- Superior Giant's Codex -->
 				<item id="17527" min="2" max="3" chance="78.22" /> <!-- Scroll: Enchant Armor (R-grade) -->
 				<item id="17526" min="1" max="2" chance="19.66" /> <!-- Scroll: Enchant Weapon (R-grade) -->
-				<item id="46150" min="1" max="1" chance="9.991" /> <!-- Superior Giant's Codex - Chapter 1 -->
+				<item id="46150" min="1" max="1" chance="9.991" /> <!-- Superior Giant's Codex Chapter 1 -->
 				<item id="46151" min="1" max="1" chance="2.57" /> <!-- Superior Giant's Codex - Mastery Chapter 1 -->
 				<item id="30298" min="1" max="1" chance="2.553" /> <!-- Superior Giant's Codex - Mastery -->
 				<item id="39738" min="1" max="1" chance="2.493" /> <!-- Rune Stone -->
@@ -363,7 +373,7 @@
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="476709.27936" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
+			<vitals hp="286026.57708" hpRegen="9.5" mp="19713.788" mpRegen="3.3" />
 			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="1985" />
 			<speed>
@@ -382,7 +392,7 @@
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
 		<stats str="88" int="79" dex="55" wit="78" con="82" men="78">
-			<vitals hp="476709.27936" hpRegen="9.5" mp="30165.145" mpRegen="3.3" />
+			<vitals hp="286026.57708" hpRegen="9.5" mp="19713.788" mpRegen="3.3" />
 			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="1985" />
 			<speed>
@@ -606,7 +616,7 @@
 		<sex>MALE</sex>
 		<acquire exp="0" sp="0" />
 		<stats str="79" int="34" dex="42" wit="66" con="75" men="12">
-			<vitals hp="17290.225575" hpRegen="9.5" mp="2922.844" mpRegen="3.3" />
+			<vitals hp="10374.76626" hpRegen="9.5" mp="1909.905" mpRegen="3.3" />
 			<attack physical="38999" magical="27961" random="30" critical="4.75" accuracy="4.75" attackSpeed="250" type="SWORD" range="40" distance="80" width="120" />
 			<defence physical="3421" magical="1985" />
 			<speed>
@@ -621,8 +631,8 @@
 			</clanList>
 		</ai>
 		<skillList>
-			<skill id="5463" level="1" /> <!-- Water Attack -->
 			<skill id="4416" level="3" /> <!-- Beast -->
+			<skill id="5463" level="1" /> <!-- Water Attack -->
 		</skillList>
 		<collision>
 			<radius normal="22" grown="27" />

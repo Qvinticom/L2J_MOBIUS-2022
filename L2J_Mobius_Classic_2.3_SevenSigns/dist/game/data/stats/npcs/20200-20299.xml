@@ -650,10 +650,10 @@
 				<item id="1937" min="1" max="1" chance="3.323" /> <!-- Scale Gaiter Fragment -->
 				<item id="1935" min="1" max="1" chance="2.098" /> <!-- Scale Mail Fragment -->
 				<item id="2185" min="1" max="1" chance="1.138" /> <!-- Recipe: Iron Boots -->
-				<item id="4471" min="1" max="1" chance="0.03" /> <!-- Dye of CON (Con 1 Str -1) -->
-				<item id="4472" min="1" max="1" chance="0.03" /> <!-- Dye of CON (Con 1 DEX -1) -->
-				<item id="4479" min="1" max="1" chance="0.03" /> <!-- Dye of WIT (Wit 1 Int -1) -->
-				<item id="4480" min="1" max="1" chance="0.03" /> <!-- Dye of WIT (Wit 1 Men -1) -->
+				<item id="4471" min="1" max="1" chance="0.03" /> <!-- Dye of CON <Con +1 Str -1> - 1st Class Transfer -->
+				<item id="4472" min="1" max="1" chance="0.03" /> <!-- Dye of CON <Con +1 DEX -1> - 1st Class Transfer -->
+				<item id="4479" min="1" max="1" chance="0.03" /> <!-- Dye of WIT <Wit +1 Int -1> - 1st Class Transfer -->
+				<item id="4480" min="1" max="1" chance="0.03" /> <!-- Dye of WIT <Wit +1 Men -1> - 1st Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="2183" min="1" max="1" chance="11.51" /> <!-- Recipe: Mithril Banded Mail -->
@@ -1478,10 +1478,10 @@
 				<item id="2319" min="1" max="1" chance="0.03" /> <!-- Recipe: Raid Sword -->
 				<item id="2334" min="1" max="1" chance="0.03" /> <!-- Recipe: Sword of Whispering Death -->
 				<item id="951" min="1" max="1" chance="0.03" /> <!-- Scroll: Enchant Weapon (C-grade) -->
-				<item id="4553" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR (STR 1 CON -1) -->
-				<item id="4554" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR (STR 1 DEX -1) -->
-				<item id="4557" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX (Dex 1 Str -1) -->
-				<item id="4558" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX (Dex 1 CON -1) -->
+				<item id="4553" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR <STR +1 CON -1> - 2nd Class Transfer -->
+				<item id="4554" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR <STR +1 DEX -1> - 2nd Class Transfer -->
+				<item id="4557" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX <Dex +1 Str -1> - 2nd Class Transfer -->
+				<item id="4558" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX <Dex +1 CON -1> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="1876" min="1" max="1" chance="61.62" /> <!-- Mithril Ore -->
@@ -2292,8 +2292,8 @@
 				<item id="2075" min="1" max="1" chance="0.3" /> <!-- Orcish Glaive Blade -->
 				<item id="2062" min="1" max="1" chance="0.3" /> <!-- Scythe Edge -->
 				<item id="1877" min="1" max="1" chance="0.3" /> <!-- Adamantite Nugget -->
-				<item id="4602" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR (STR 3 DEX -3) -->
-				<item id="4606" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX (Dex 3 CON -3) -->
+				<item id="4602" min="1" max="1" chance="0.03" /> <!-- Greater Dye of STR <STR +3 DEX -3> - 2nd Class Transfer -->
+				<item id="4606" min="1" max="1" chance="0.03" /> <!-- Greater Dye of DEX <Dex +3 CON -3> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="2074" min="1" max="1" chance="1.262" /> <!-- Crystallized Ice Bow Shaft -->
@@ -2513,8 +2513,8 @@
 				<item id="1968" min="1" max="1" chance="2.695" /> <!-- Dwarven Chain Mail Shirt Material -->
 				<item id="1877" min="1" max="1" chance="0.75" /> <!-- Adamantite Nugget -->
 				<item id="2345" min="1" max="1" chance="0.075" /> <!-- Recipe: Dark Screamer -->
-				<item id="4604" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON (Con 3 DEX -3) -->
-				<item id="4605" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX (Dex 3 Str -3) -->
+				<item id="4604" min="1" max="1" chance="0.075" /> <!-- Greater Dye of CON <Con +3 DEX -3> - 2nd Class Transfer -->
+				<item id="4605" min="1" max="1" chance="0.075" /> <!-- Greater Dye of DEX <Dex +3 Str -3> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="1877" min="1" max="1" chance="24.69" /> <!-- Adamantite Nugget -->
@@ -2954,8 +2954,8 @@
 				<item id="1876" min="1" max="1" chance="6.867" /> <!-- Mithril Ore -->
 				<item id="1874" min="1" max="1" chance="2.302" /> <!-- Oriharukon Ore -->
 				<item id="2345" min="1" max="1" chance="0.075" /> <!-- Recipe: Dark Screamer -->
-				<item id="4607" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT (Int 3 Men -3) -->
-				<item id="4609" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN (Men 3 Int -3) -->
+				<item id="4607" min="1" max="1" chance="0.075" /> <!-- Greater Dye of INT <Int +3 Men -3> - 2nd Class Transfer -->
+				<item id="4609" min="1" max="1" chance="0.075" /> <!-- Greater Dye of MEN <Men +3 Int -3> - 2nd Class Transfer -->
 			</drop>
 			<spoil>
 				<item id="1877" min="1" max="1" chance="39.44" /> <!-- Adamantite Nugget -->
@@ -4832,8 +4832,8 @@
 				<item id="4050" min="1" max="3" chance="5.854" /> <!-- Adamantite Ring Wire -->
 				<item id="1867" min="7" max="21" chance="4.059" /> <!-- Animal Skin -->
 				<item id="4049" min="1" max="3" chance="3.236" /> <!-- Adamantite Earring Gemstone -->
-				<item id="4608" min="1" max="1" chance="0.3" /> <!-- Greater Dye of INT (Int 3 Wit -3) -->
-				<item id="4610" min="1" max="1" chance="0.3" /> <!-- Greater Dye of MEN (Men 3 Wit -3) -->
+				<item id="4608" min="1" max="1" chance="0.3" /> <!-- Greater Dye of INT <Int +3 Wit -3> - 2nd Class Transfer -->
+				<item id="4610" min="1" max="1" chance="0.3" /> <!-- Greater Dye of MEN <Men +3 Wit -3> - 2nd Class Transfer -->
 				<item id="4969" min="1" max="1" chance="0.075" /> <!-- Recipe: Twilight Knife (60%) -->
 			</drop>
 			<spoil>
