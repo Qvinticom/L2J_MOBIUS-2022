@@ -151,45 +151,45 @@ public class MysticTavern extends AbstractNpcAI
 					npc.broadcastPacket(new OnEventTrigger(18133000, true));
 					_brodien.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-50000, -148560, -14152));
 					_brodien.setHeading(48440);
-					startQuestTimer("msg_text_brodien_1", 16000, _brodien, null);
-					startQuestTimer("msg_text_brodien_2", 23000, _brodien, null);
-					startQuestTimer("msg_text_brodien_3", 31000, _brodien, null);
+					startQuestTimer("msg_text_brodien_1", 16000, _brodien, player);
+					startQuestTimer("msg_text_brodien_2", 23000, _brodien, player);
+					startQuestTimer("msg_text_brodien_3", 31000, _brodien, player);
 				}
 				else if (GLOBE_2_ZONE.isInsideZone(npc))
 				{
 					npc.broadcastPacket(new OnEventTrigger(18132000, true));
 					_lupia.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-50161, -148356, -14152));
 					_lupia.setHeading(45808);
-					startQuestTimer("msg_text_lupia_1", 12000, _lupia, null);
-					startQuestTimer("msg_text_lupia_2", 19000, _lupia, null);
-					startQuestTimer("msg_text_lupia_3", 27000, _lupia, null);
+					startQuestTimer("msg_text_lupia_1", 12000, _lupia, player);
+					startQuestTimer("msg_text_lupia_2", 19000, _lupia, player);
+					startQuestTimer("msg_text_lupia_3", 27000, _lupia, player);
 				}
 				else if (GLOBE_3_ZONE.isInsideZone(npc))
 				{
 					npc.broadcastPacket(new OnEventTrigger(18131000, true));
 					_mey.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-50092, -148096, -14152));
 					_mey.setHeading(34669);
-					startQuestTimer("msg_text_mey_1", 8000, _mey, null);
-					startQuestTimer("msg_text_mey_2", 15000, _mey, null);
-					startQuestTimer("msg_text_mey_3", 23000, _mey, null);
+					startQuestTimer("msg_text_mey_1", 8000, _mey, player);
+					startQuestTimer("msg_text_mey_2", 15000, _mey, player);
+					startQuestTimer("msg_text_mey_3", 23000, _mey, player);
 				}
 				else if (GLOBE_4_ZONE.isInsideZone(npc))
 				{
 					npc.broadcastPacket(new OnEventTrigger(18135000, true));
 					_lollia.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-49480, -148074, -14152));
 					_lollia.setHeading(13255);
-					startQuestTimer("msg_text_lollia_1", 10000, _lollia, null);
-					startQuestTimer("msg_text_lollia_2", 17000, _lollia, null);
-					startQuestTimer("msg_text_lollia_3", 25000, _lollia, null);
+					startQuestTimer("msg_text_lollia_1", 10000, _lollia, player);
+					startQuestTimer("msg_text_lollia_2", 17000, _lollia, player);
+					startQuestTimer("msg_text_lollia_3", 25000, _lollia, player);
 				}
 				else if (GLOBE_5_ZONE.isInsideZone(npc))
 				{
 					npc.broadcastPacket(new OnEventTrigger(18134000, true));
 					_hanna.getAI().setIntention(CtrlIntention.AI_INTENTION_MOVE_TO, new Location(-49283, -148179, -14152));
 					_hanna.setHeading(26747);
-					startQuestTimer("msg_text_hanna_1", 12000, _hanna, null);
-					startQuestTimer("msg_text_hanna_2", 19000, _hanna, null);
-					startQuestTimer("msg_text_hanna_3", 27000, _hanna, null);
+					startQuestTimer("msg_text_hanna_1", 12000, _hanna, player);
+					startQuestTimer("msg_text_hanna_2", 19000, _hanna, player);
+					startQuestTimer("msg_text_hanna_3", 27000, _hanna, player);
 				}
 				break;
 			}
@@ -209,8 +209,8 @@ public class MysticTavern extends AbstractNpcAI
 			{
 				_brodien.broadcastPacket(new NpcSay(_brodien.getObjectId(), ChatType.NPC_GENERAL, _brodien.getId(), NpcStringId.WELL_WHOSE_STORY_SHOULD_I_TELL_YOU_TODAY));
 				GLOBE_1_ZONE.broadcastPacket(new PlaySound(3, "Npcdialog1.brodien_inzone_3", 0, 0, 0, 0, 0));
-				startQuestTimer("enter_instance", 3000, npc, player);
-				startQuestTimer("return", 6000, npc, null);
+				startQuestTimer("enter_instance", 3000, _brodien, player);
+				startQuestTimer("return", 6000, _brodien, null);
 				npc.broadcastPacket(new OnEventTrigger(18133000, false));
 				break;
 			}
@@ -230,8 +230,8 @@ public class MysticTavern extends AbstractNpcAI
 			{
 				_lupia.broadcastPacket(new NpcSay(_lupia.getObjectId(), ChatType.NPC_GENERAL, _lupia.getId(), NpcStringId.YOU_HAVE_TO_BE_READY));
 				GLOBE_2_ZONE.broadcastPacket(new PlaySound(3, "Npcdialog1.rupia_inzone_3", 0, 0, 0, 0, 0));
-				startQuestTimer("enter_instance", 3000, npc, player);
-				startQuestTimer("return", 6000, npc, null);
+				startQuestTimer("enter_instance", 3000, _lupia, player);
+				startQuestTimer("return", 6000, _lupia, null);
 				npc.broadcastPacket(new OnEventTrigger(18132000, false));
 				break;
 			}
@@ -251,8 +251,8 @@ public class MysticTavern extends AbstractNpcAI
 			{
 				_mey.broadcastPacket(new NpcSay(_mey.getObjectId(), ChatType.NPC_GENERAL, _mey.getId(), NpcStringId.WHICH_STORY_DO_YOU_WANT_TO_HEAR));
 				GLOBE_3_ZONE.broadcastPacket(new PlaySound(3, "Npcdialog1.mae_inzone_3", 0, 0, 0, 0, 0));
-				startQuestTimer("enter_instance", 3000, npc, player);
-				startQuestTimer("return", 6000, npc, null);
+				startQuestTimer("enter_instance", 3000, _mey, player);
+				startQuestTimer("return", 6000, _mey, null);
 				npc.broadcastPacket(new OnEventTrigger(18131000, false));
 				break;
 			}
@@ -272,8 +272,8 @@ public class MysticTavern extends AbstractNpcAI
 			{
 				_lollia.broadcastPacket(new NpcSay(_lollia.getObjectId(), ChatType.NPC_GENERAL, _lollia.getId(), NpcStringId.HEH_WHAT_SHOULD_I_TALK_ABOUT_NEXT_HMM));
 				GLOBE_4_ZONE.broadcastPacket(new PlaySound(3, "Npcdialog1.lollia_inzone_3", 0, 0, 0, 0, 0));
-				startQuestTimer("enter_instance", 3000, npc, player);
-				startQuestTimer("return", 6000, npc, null);
+				startQuestTimer("enter_instance", 3000, _lollia, player);
+				startQuestTimer("return", 6000, _lollia, null);
 				npc.broadcastPacket(new OnEventTrigger(18135000, false));
 				break;
 			}
@@ -294,8 +294,8 @@ public class MysticTavern extends AbstractNpcAI
 			{
 				_hanna.broadcastPacket(new NpcSay(_hanna.getObjectId(), ChatType.NPC_GENERAL, _hanna.getId(), NpcStringId.SIT_DOWN_FIRST_I_CAN_T_START_OTHERWISE));
 				GLOBE_5_ZONE.broadcastPacket(new PlaySound(3, "Npcdialog1.hanna_inzone_3", 0, 0, 0, 0, 0));
-				startQuestTimer("enter_instance", 3000, npc, player);
-				startQuestTimer("return", 6000, npc, null);
+				startQuestTimer("enter_instance", 3000, _hanna, player);
+				startQuestTimer("return", 6000, _hanna, null);
 				npc.broadcastPacket(new OnEventTrigger(18134000, false));
 				break;
 			}
