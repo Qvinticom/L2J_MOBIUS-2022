@@ -592,7 +592,7 @@ public class PaulinasSupportBox implements IItemHandler
 							player.addItem(getClass().getSimpleName(), BOX_R_LIGHT, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_DUALDAGGER_R, 1, player, true);
 						}
-						if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_YR_GROUP, classId.getId()))
+						else if (CategoryData.getInstance().isInCategory(CategoryType.SIXTH_YR_GROUP, classId.getId()))
 						{
 							player.addItem(getClass().getSimpleName(), BOX_R_LIGHT, 1, player, true);
 							player.addItem(getClass().getSimpleName(), WEAPON_BOW_R, 1, player, true);
