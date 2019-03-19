@@ -16,12 +16,18 @@
  */
 package quests.Q10417_DaimonTheWhiteEyed;
 
+import java.util.HashSet;
+import java.util.Set;
+
+import com.l2jmobius.gameserver.enums.QuestSound;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.L2Npc;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
+import com.l2jmobius.gameserver.model.holders.NpcLogListHolder;
 import com.l2jmobius.gameserver.model.quest.Quest;
 import com.l2jmobius.gameserver.model.quest.QuestState;
 import com.l2jmobius.gameserver.model.quest.State;
+import com.l2jmobius.gameserver.network.NpcStringId;
 
 import quests.Q10416_InSearchOfTheEyeOfArgos.Q10416_InSearchOfTheEyeOfArgos;
 
@@ -35,9 +41,23 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	private static final int EYE_OF_ARGOS = 31683;
 	private static final int JANITT = 33851;
 	private static final int DAIMON_THE_WHITEEYED = 27499;
+	private static final int[] MONSTERS =
+	{
+		21294, // Canyon Antelope
+		21296, // Canyon Bandersnatch
+		23311, // Valley Buffalo
+		23312, // Valley Grendel
+		21295, // Canyon Antelope Slave
+		21297, // Canyon Bandersnatch Slave
+		21299, // Valley Buffalo Slave
+		21304, // Valley Grendel Slave
+	};
+	// Items
+	private static final int EAA = 730; // Scroll: Enchant Armor (A-grade)
 	// Misc
 	private static final int MIN_LEVEL = 70;
 	private static final int MAX_LEVEL = 75;
+	private static final String KILL_COUNT_VAR = "KillCount";
 	
 	public Q10417_DaimonTheWhiteEyed()
 	{
@@ -45,9 +65,10 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 		addStartNpc(EYE_OF_ARGOS);
 		addTalkId(EYE_OF_ARGOS, JANITT);
 		addKillId(DAIMON_THE_WHITEEYED);
+		addKillId(MONSTERS);
 		addCondNotRace(Race.ERTHEIA, "31683-09.html");
 		addCondLevel(MIN_LEVEL, MAX_LEVEL, "31683-08.htm");
-		addCondCompletedQuest(Q10416_InSearchOfTheEyeOfArgos.class.getSimpleName(), "31683-08.htm");
+		addCondCompletedQuest(Q10416_InSearchOfTheEyeOfArgos.class.getSimpleName(), "31683-08.html");
 	}
 	
 	@Override
@@ -81,17 +102,23 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 					st.setCond(3, true);
 					htmltext = event;
 				}
+				else if (st.isCond(3))
+				{
+					st.setCond(4, true);
+					htmltext = "31683-07.html";
+				}
 				break;
 			}
 			case "31683-03.html":
 			{
-				if (st.isCond(3))
+				if (st.isCond(4))
 				{
 					st.exitQuest(false, true);
+					giveItems(player, EAA, 5);
 					giveStoryQuestReward(npc, player);
 					if (player.getLevel() > MIN_LEVEL)
 					{
-						addExpAndSp(player, 306167814, 3265);
+						addExpAndSp(player, 2_721_600, 653);
 					}
 					htmltext = event;
 				}
@@ -130,7 +157,12 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 				}
 				case 3:
 				{
-					htmltext = npc.getId() == EYE_OF_ARGOS ? "31683-07.html" : "33851-02.html";
+					htmltext = npc.getId() == EYE_OF_ARGOS ? "31683-06.html" : "33851-01.html";
+					break;
+				}
+				case 4:
+				{
+					htmltext = npc.getId() == EYE_OF_ARGOS ? "31683-06.html" : "33851-02.html";
 					break;
 				}
 			}
@@ -142,11 +174,50 @@ public final class Q10417_DaimonTheWhiteEyed extends Quest
 	public String onKill(L2Npc npc, L2PcInstance killer, boolean isSummon)
 	{
 		final QuestState st = getQuestState(killer, false);
-		
 		if ((st != null) && st.isCond(1))
 		{
-			st.setCond(2, true);
+			int count = st.getInt(KILL_COUNT_VAR);
+			st.set(KILL_COUNT_VAR, ++count);
+			if (count >= 100)
+			{
+				st.setCond(2, true);
+			}
+			else
+			{
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_ITEMGET);
+			}
+		}
+		else if ((st != null) && st.isCond(2))
+		{
+			int killeddaimoneye = st.getInt("killed_" + DAIMON_THE_WHITEEYED);
+			if (npc.getId() == DAIMON_THE_WHITEEYED)
+			{
+				killeddaimoneye++;
+				st.set("killed_" + DAIMON_THE_WHITEEYED, killeddaimoneye);
+				playSound(killer, QuestSound.ITEMSOUND_QUEST_MIDDLE);
+				if (killeddaimoneye > 0)
+				{
+					st.setCond(3, true);
+				}
+			}
 		}
 		return super.onKill(npc, killer, isSummon);
+	}
+	
+	@Override
+	public Set<NpcLogListHolder> getNpcLogList(L2PcInstance player)
+	{
+		final QuestState st = getQuestState(player, false);
+		if ((st != null) && st.isCond(1) && st.isStarted())
+		{
+			final int killCount = st.getInt(KILL_COUNT_VAR);
+			if (killCount > 0)
+			{
+				final Set<NpcLogListHolder> holder = new HashSet<>();
+				holder.add(new NpcLogListHolder(NpcStringId.DEFEAT_THE_BEASTS_OF_THE_VALLEY_2, killCount));
+				return holder;
+			}
+		}
+		return super.getNpcLogList(player);
 	}
 }
