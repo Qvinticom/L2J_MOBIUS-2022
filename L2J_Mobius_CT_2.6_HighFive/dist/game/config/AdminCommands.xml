@@ -92,6 +92,12 @@
 	<!-- ADMIN DELETE -->
 	<admin command="admin_delete" accessLevel="100" />
 
+	<!-- ADMIN DESTROY ITEMS -->
+	<admin command="admin_destroy_items" accessLevel="100" confirmDlg="true" />
+	<admin command="admin_destroy_all_items" accessLevel="100" confirmDlg="true" />
+	<admin command="admin_destroyitems" accessLevel="100" confirmDlg="true" />
+	<admin command="admin_destroyallitems" accessLevel="100" confirmDlg="true" />
+
 	<!-- ADMIN DISCONNECT -->
 	<admin command="admin_character_disconnect" accessLevel="100" />
 

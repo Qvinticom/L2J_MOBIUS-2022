@@ -65,6 +65,7 @@ import handlers.admincommandhandlers.AdminClan;
 import handlers.admincommandhandlers.AdminCreateItem;
 import handlers.admincommandhandlers.AdminCursedWeapons;
 import handlers.admincommandhandlers.AdminDelete;
+import handlers.admincommandhandlers.AdminDestroyItems;
 import handlers.admincommandhandlers.AdminDisconnect;
 import handlers.admincommandhandlers.AdminDoorControl;
 import handlers.admincommandhandlers.AdminEditChar;
@@ -365,6 +366,7 @@ public class MasterHandler
 			AdminCreateItem.class,
 			AdminCursedWeapons.class,
 			AdminDelete.class,
+			AdminDestroyItems.class,
 			AdminDisconnect.class,
 			AdminDoorControl.class,
 			AdminEditChar.class,
