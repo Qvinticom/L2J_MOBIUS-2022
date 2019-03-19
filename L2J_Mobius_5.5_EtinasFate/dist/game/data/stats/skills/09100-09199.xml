@@ -3457,11 +3457,11 @@
 				<mode>PER</mode>
 			</effect>
 			<effect name="DispelBySlotProbability">
-				<dispel>MULTI_BUFF;COUNTER_CRITICAL</dispel>
+				<dispel>MULTI_BUFF;COUNTER_CRITICAL;CRITICAL_PROB_UP;CRITICAL_DMG_UP;MAGIC_CRITICAL_UP</dispel>
 				<rate>100</rate>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>MULTI_BUFF;COUNTER_CRITICAL</slot>
+				<slot>MULTI_BUFF;COUNTER_CRITICAL;CRITICAL_PROB_UP;CRITICAL_DMG_UP;MAGIC_CRITICAL_UP</slot>
 			</effect>
 		</effects>
 	</skill>

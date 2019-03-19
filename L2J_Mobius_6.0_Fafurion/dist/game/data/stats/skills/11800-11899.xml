@@ -825,7 +825,7 @@
 				<dispel>IMPROVE_CRT_RATE_DMG_UP,-1;CRITICAL_PROB_UP,-1;CRITICAL_DMG_UP,-1;CHEAP_MAGIC,-1;MAGIC_CRITICAL_UP,-1</dispel>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>IMPROVE_CRT_RATE_DMG_UP;CRITICAL_PROB_UP;CRITICAL_DMG_UP;CHEAP_MAGIC;MAGIC_CRITICAL_UP</slot>
+				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
 			</effect>
 			<effect name="CriticalDamage">
 				<amount>35</amount>
@@ -1130,10 +1130,10 @@
 		<affectScope>SINGLE</affectScope>
 		<effects>
 			<effect name="DispelBySlotProbability">
-				<dispel>MULTI_BUFF;COUNTER_CRITICAL</dispel>
+				<dispel>MULTI_BUFF;COUNTER_CRITICAL;CRITICAL_PROB_UP;CRITICAL_DMG_UP;MAGIC_CRITICAL_UP</dispel>
 			</effect>
 			<effect name="BlockAbnormalSlot">
-				<slot>MULTI_BUFF;COUNTER_CRITICAL</slot>
+				<slot>MULTI_BUFF;COUNTER_CRITICAL;CRITICAL_PROB_UP;CRITICAL_DMG_UP;MAGIC_CRITICAL_UP</slot>
 			</effect>
 			<effect name="PAtk">
 				<amount>10</amount>
