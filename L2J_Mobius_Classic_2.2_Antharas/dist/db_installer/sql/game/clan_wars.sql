@@ -8,6 +8,5 @@ CREATE TABLE IF NOT EXISTS `clan_wars` (
   `startTime` bigint(13) NOT NULL DEFAULT 0,
   `endTime` bigint(13) NOT NULL DEFAULT 0,
   `state` tinyint(4) NOT NULL DEFAULT 0,
-  KEY `clan1` (`clan1`),
-  KEY `clan2` (`clan2`)
+  PRIMARY KEY (`clan1`,`clan2`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
