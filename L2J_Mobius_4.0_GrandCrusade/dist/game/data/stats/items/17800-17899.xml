@@ -333,6 +333,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
 		<skills>
 			<skill id="13279" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
 		</skills>
@@ -369,6 +370,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
 		</skills>
@@ -404,6 +406,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<skills>
 			<skill id="13258" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
 		</skills>
@@ -439,6 +442,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
 			<skill id="13253" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
 		</skills>
@@ -475,6 +479,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<skills>
 			<skill id="13264" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
 		</skills>
@@ -511,6 +516,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
@@ -549,6 +555,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BOW" />
 		<skills>
 			<skill id="13289" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
 		</skills>
@@ -586,6 +593,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<skills>
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
 		</skills>
@@ -623,6 +631,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
 		</skills>
@@ -659,6 +668,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
 			<skill id="13296" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
 		</skills>
@@ -696,6 +706,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
 			<skill id="13301" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
 		</skills>
@@ -733,6 +744,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<skills>
 			<skill id="13274" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
 		</skills>
@@ -768,6 +780,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<skills>
 			<skill id="13284" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
 		</skills>
@@ -804,6 +817,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<skills>
 			<skill id="13269" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
 		</skills>
@@ -1319,6 +1333,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
 		<skills>
 			<skill id="13280" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
 		</skills>
@@ -1355,6 +1370,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="ONE_HAND_SWORD" />
 		<skills>
 			<skill id="13252" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Sword Special Ability -->
 		</skills>
@@ -1390,6 +1406,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="TWO_HAND_SWORD" />
 		<skills>
 			<skill id="13259" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Two-handed Sword Special Ability -->
 		</skills>
@@ -1425,6 +1442,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BLUNT_WEAPON" />
 		<skills>
 			<skill id="13254" level="3" type="ON_ENCHANT" type_value="4" /> <!-- One-handed Blunt Special Ability -->
 		</skills>
@@ -1461,6 +1479,7 @@
 		<set name="damage_range" val="0;0;32;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="FIST_WEAPON" />
 		<skills>
 			<skill id="13265" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Fist Weapon Special Ability -->
 		</skills>
@@ -1497,6 +1516,7 @@
 		<set name="damage_range" val="0;0;66;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="SPEAR" />
 		<skills>
 			<skill id="3599" level="1" /> <!-- Polearm Multi-attack -->
 			<skill id="13263" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Spear Special Ability -->
@@ -1535,6 +1555,7 @@
 		<set name="damage_range" val="0;0;10;0" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="BOW" />
 		<skills>
 			<skill id="13290" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Bow Special Ability -->
 		</skills>
@@ -1572,6 +1593,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="CROSSBOW" />
 		<skills>
 			<skill id="13294" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Crossbow Special Ability -->
 		</skills>
@@ -1609,6 +1631,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_SWORD" />
 		<skills>
 			<skill id="13295" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Sword Special Ability -->
 		</skills>
@@ -1645,6 +1668,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="ONE_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
 			<skill id="13297" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic One-handed Blunt Special Ability -->
 		</skills>
@@ -1682,6 +1706,7 @@
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
 		<set name="is_magic_weapon" val="true" />
+		<set name="commissionItemType" val="TWO_HAND_MAGIC_BLUNT_WEAPON" />
 		<skills>
 			<skill id="13302" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Magic Two-handed Blunt Special Ability -->
 		</skills>
@@ -1719,6 +1744,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUALSWORD" />
 		<skills>
 			<skill id="13275" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dualsword Special Ability -->
 		</skills>
@@ -1754,6 +1780,7 @@
 		<set name="damage_range" val="0;0;44;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_DAGGER" />
 		<skills>
 			<skill id="13285" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Dagger Special Ability -->
 		</skills>
@@ -1790,6 +1817,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DUAL_BLUNT_WEAPON" />
 		<skills>
 			<skill id="13270" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dual Blunt Weapon Special Ability -->
 		</skills>
@@ -2308,6 +2336,7 @@
 		<set name="damage_range" val="0;0;40;120" />
 		<set name="immediate_effect" val="true" />
 		<set name="spiritshots" val="1" />
+		<set name="commissionItemType" val="DAGGER" />
 		<skills>
 			<skill id="13281" level="3" type="ON_ENCHANT" type_value="4" /> <!-- Dagger Special Ability -->
 		</skills>
