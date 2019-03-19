@@ -19,11 +19,14 @@ package com.l2jmobius.gameserver.network.clientpackets.alchemy;
 import com.l2jmobius.commons.network.PacketReader;
 import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.data.xml.impl.AlchemyData;
+import com.l2jmobius.gameserver.datatables.ItemTable;
 import com.l2jmobius.gameserver.enums.PrivateStoreType;
 import com.l2jmobius.gameserver.enums.Race;
 import com.l2jmobius.gameserver.model.actor.instance.L2PcInstance;
 import com.l2jmobius.gameserver.model.alchemy.AlchemyCraftData;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
+import com.l2jmobius.gameserver.model.itemcontainer.PcInventory;
+import com.l2jmobius.gameserver.model.items.L2Item;
 import com.l2jmobius.gameserver.model.items.instance.L2ItemInstance;
 import com.l2jmobius.gameserver.network.L2GameClient;
 import com.l2jmobius.gameserver.network.SystemMessageId;
@@ -68,26 +71,26 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		
 		if (AttackStanceTaskManager.getInstance().hasAttackStanceTask(player))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_DURING_BATTLE);
 			player.sendPacket(new ExAlchemyConversion(0, 0));
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_DURING_BATTLE);
 			return;
 		}
 		else if (player.isInStoreMode() || (player.getPrivateStoreType() != PrivateStoreType.NONE))
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_TRADING_OR_USING_A_PRIVATE_STORE_OR_SHOP);
 			player.sendPacket(new ExAlchemyConversion(0, 0));
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_TRADING_OR_USING_A_PRIVATE_STORE_OR_SHOP);
 			return;
 		}
 		else if (player.isDead())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_DEAD);
 			player.sendPacket(new ExAlchemyConversion(0, 0));
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_DEAD);
 			return;
 		}
 		else if (player.isMovementDisabled())
 		{
-			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_IMMOBILE);
 			player.sendPacket(new ExAlchemyConversion(0, 0));
+			player.sendPacket(SystemMessageId.YOU_CANNOT_USE_ALCHEMY_WHILE_IMMOBILE);
 			return;
 		}
 		
@@ -132,6 +135,10 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 		}
 		
 		// Calculate success and failure count.
+		final L2Item successItemTemplate = ItemTable.getInstance().getTemplate(data.getProductionSuccess().getId());
+		final L2Item failureItemTemplate = ItemTable.getInstance().getTemplate(data.getProductionFailure().getId());
+		int totalWeight = 0;
+		int totalslots = (successItemTemplate.isStackable() ? 1 : 0) + (failureItemTemplate.isStackable() ? 1 : 0);
 		int successCount = 0;
 		int failureCount = 0;
 		for (int i = 0; i < _craftTimes; i++)
@@ -139,21 +146,35 @@ public class RequestAlchemyConversion implements IClientIncomingPacket
 			if (Rnd.get(100) < baseChance)
 			{
 				successCount++;
+				totalWeight += successItemTemplate.getWeight();
+				totalslots += successItemTemplate.isStackable() ? 0 : 1;
 			}
 			else
 			{
 				failureCount++;
+				totalWeight += failureItemTemplate.getWeight();
+				totalslots += failureItemTemplate.isStackable() ? 0 : 1;
 			}
 		}
 		
+		// Check if player has enough ingredients.
 		for (ItemHolder ingredient : data.getIngredients())
 		{
 			if (player.getInventory().getInventoryItemCount(ingredient.getId(), -1) < (ingredient.getCount() * _craftTimes))
 			{
-				player.sendPacket(SystemMessageId.NOT_ENOUGH_INGREDIENTS);
 				player.sendPacket(new ExAlchemyConversion(0, 0));
+				player.sendPacket(SystemMessageId.NOT_ENOUGH_INGREDIENTS);
 				return;
 			}
+		}
+		
+		// Weight and capacity check.
+		final PcInventory inventory = player.getInventory();
+		if (!inventory.validateWeight(totalWeight) || ((totalslots > 0) && !inventory.validateCapacity(totalslots)))
+		{
+			player.sendPacket(new ExAlchemyConversion(0, 0));
+			player.sendPacket(SystemMessageId.THERE_IS_NOT_ENOUGH_INVENTORY_SPACE_PLEASE_MAKE_MORE_ROOM_AND_TRY_AGAIN);
+			return;
 		}
 		
 		final InventoryUpdate ui = new InventoryUpdate();
