@@ -157,7 +157,7 @@ public final class Q10336_DividedSakumKanilov extends Quest
 		if ((st != null) && st.isStarted() && st.isCond(1))
 		{
 			st.set("killed_" + KANILOV, 1);
-			st.setCond(2);
+			st.setCond(2, true);
 		}
 		return super.onKill(npc, killer, isSummon);
 	}
