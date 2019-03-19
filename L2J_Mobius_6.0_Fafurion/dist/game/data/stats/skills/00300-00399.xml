@@ -2753,7 +2753,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="367" toLevel="11" name="Dance of Medusa">
+	<skill id="367" toLevel="13" name="Dance of Medusa">
 		<!-- Dances to stir up the illusion of Medusa. Petrifies nearby enemies for $s1. Requires a dual sword. -->
 		<icon>icon.skill0367</icon>
 		<abnormalLvl>1</abnormalLvl>
@@ -2761,8 +2761,8 @@
 		<abnormalType>TURN_STONE</abnormalType>
 		<abnormalVisualEffect>FLESH_STONE</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="11">40</value>
-			<value fromLevel="7" toLevel="11" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="13">40</value>
+			<value fromLevel="7" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
@@ -2786,6 +2786,8 @@
 			<value level="9">101</value>
 			<value level="10">103</value>
 			<value level="11">105</value>
+			<value level="12">107</value>
+			<value level="13">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">43</value>
@@ -2799,6 +2801,8 @@
 			<value level="9">179</value>
 			<value level="10">192</value>
 			<value level="11">205</value>
+			<value level="12">218</value>
+			<value level="13">231</value>
 		</mpConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>120000</reuseDelay>

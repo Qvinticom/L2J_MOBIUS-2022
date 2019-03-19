@@ -4289,7 +4289,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="1244" toLevel="13" name="Freezing Flame">
+	<skill id="1244" toLevel="15" name="Freezing Flame">
 		<!-- Strikes the target with a magical cold flame. For $s1, causes -$s2 HP per second on the enemy and -$s3 during PvP. -->
 		<icon>icon.skill1244</icon>
 		<abnormalLvl>
@@ -4306,14 +4306,16 @@
 			<value level="11">15</value>
 			<value level="12">16</value>
 			<value level="13">17</value>
+			<value level="14">18</value>
+			<value level="15">19</value>
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>DOT_ATTR</abnormalType>
 		<abnormalVisualEffect>DOT_BLEEDING</abnormalVisualEffect>
 		<activateRate>70</activateRate>
 		<activateRate>
-			<value fromLevel="1" toLevel="13">70</value>
-			<value fromLevel="9" toLevel="13" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="15">70</value>
+			<value fromLevel="9" toLevel="15" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<basicProperty>MAGIC</basicProperty>
 		<castRange>900</castRange>
@@ -4340,6 +4342,8 @@
 			<value level="11">101</value>
 			<value level="12">103</value>
 			<value level="13">105</value>
+			<value level="14">107</value>
+			<value level="15">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">44</value>
@@ -4355,6 +4359,8 @@
 			<value level="11">78</value>
 			<value level="12">82</value>
 			<value level="13">87</value>
+			<value level="14">111</value>
+			<value level="15">116</value>
 		</mpConsume>
 		<mpInitialConsume>
 			<value level="1">11</value>
@@ -4370,6 +4376,8 @@
 			<value level="11">18</value>
 			<value level="12">19</value>
 			<value level="13">19</value>
+			<value level="14">19</value>
+			<value level="15">19</value>
 		</mpInitialConsume>
 		<operateType>A2</operateType>
 		<reuseDelay>5000</reuseDelay>
@@ -4392,6 +4400,8 @@
 					<value level="11">498</value>
 					<value level="12">509</value>
 					<value level="13">520</value>
+					<value level="14">531</value>
+					<value level="15">542</value>
 				</power>
 				<ticks>1</ticks>
 			</effect>
@@ -4412,18 +4422,20 @@
 					<value level="11">421</value>
 					<value level="12">430</value>
 					<value level="13">439</value>
+					<value level="14">448</value>
+					<value level="15">457</value>
 				</power>
 				<ticks>1</ticks>
 			</effect>
-			<effect name="PhysicalDefence" fromLevel="9" toLevel="13" fromSubLevel="2001" toSubLevel="2020">
+			<effect name="PhysicalDefence" fromLevel="9" toLevel="15" fromSubLevel="2001" toSubLevel="2020">
  				<amount>
- 					<value fromLevel="9" toLevel="13" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
+ 					<value fromLevel="9" toLevel="15" fromSubLevel="2001" toSubLevel="2020">{-0.6 - 0.4 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>
-			<effect name="Speed" fromLevel="9" toLevel="13" fromSubLevel="3001" toSubLevel="3020">
+			<effect name="Speed" fromLevel="9" toLevel="15" fromSubLevel="3001" toSubLevel="3020">
  				<amount>
- 					<value fromLevel="9" toLevel="13" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
+ 					<value fromLevel="9" toLevel="15" fromSubLevel="3001" toSubLevel="3020">{-2 * subIndex}</value>
  				</amount>
  				<mode>PER</mode>
  			</effect>

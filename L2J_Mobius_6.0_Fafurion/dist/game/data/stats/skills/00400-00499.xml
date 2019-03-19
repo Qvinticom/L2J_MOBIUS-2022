@@ -2578,7 +2578,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="437" toLevel="10" name="Song of Silence">
+	<skill id="437" toLevel="12" name="Song of Silence">
 		<!-- Sings a Song of Silence. Blocks all the enemies' physical/ magic skills for $s1. -->
 		<icon>icon.skill0437</icon>
 		<abnormalLvl>
@@ -2592,13 +2592,15 @@
 			<value level="8">8</value>
 			<value level="9">9</value>
 			<value level="10">10</value>
+			<value level="11">11</value>
+			<value level="12">12</value>
 		</abnormalLvl>
 		<abnormalTime>10</abnormalTime>
 		<abnormalType>SILENCE_ALL</abnormalType>
 		<abnormalVisualEffect>SILENCE</abnormalVisualEffect>
 		<activateRate>
-			<value fromLevel="1" toLevel="10">60</value>
-			<value fromLevel="6" toLevel="10" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
+			<value fromLevel="1" toLevel="12">60</value>
+			<value fromLevel="6" toLevel="12" fromSubLevel="1001" toSubLevel="1020">{base + base / 100 * subIndex}</value>
 		</activateRate>
 		<affectLimit>10-10</affectLimit>
 		<affectRange>150</affectRange>
@@ -2619,6 +2621,8 @@
 			<value level="8">101</value>
 			<value level="9">103</value>
 			<value level="10">105</value>
+			<value level="11">107</value>
+			<value level="12">109</value>
 		</magicLvl>
 		<mpConsume>166</mpConsume>
 		<operateType>A2</operateType>

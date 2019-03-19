@@ -189,7 +189,7 @@
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11603" toLevel="4" name="Seal of Extortion">
+	<skill id="11603" toLevel="9" name="Seal of Extortion">
 		<!-- For $s1, Heal received by the target and nearby enemies -$s2. -->
 		<icon>
 			<value level="1">icon.skill11559</value>
@@ -216,6 +216,11 @@
 			<value level="2">278</value>
 			<value level="3">306</value>
 			<value level="4">332</value>
+			<value level="5">358</value>
+			<value level="6">384</value>
+			<value level="7">410</value>
+			<value level="8">436</value>
+			<value level="9">462</value>
 		</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>2110</hitTime>
@@ -231,6 +236,11 @@
 					<value level="2">-50</value>
 					<value level="3">-60</value>
 					<value level="4">-70</value>
+					<value level="5">-80</value>
+					<value level="6">-90</value>
+					<value level="7">-100</value>
+					<value level="8">-110</value>
+					<value level="9">-120</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -240,6 +250,11 @@
 					<value level="2">-50</value>
 					<value level="3">-60</value>
 					<value level="4">-70</value>
+					<value level="5">-80</value>
+					<value level="6">-90</value>
+					<value level="7">-100</value>
+					<value level="8">-110</value>
+					<value level="9">-120</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
@@ -249,12 +264,17 @@
 					<value level="2">-50</value>
 					<value level="3">-60</value>
 					<value level="4">-70</value>
+					<value level="5">-80</value>
+					<value level="6">-90</value>
+					<value level="7">-100</value>
+					<value level="8">-110</value>
+					<value level="9">-120</value>
 				</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
-	<skill id="11604" toLevel="7" name="Curse of Mortalize">
+	<skill id="11604" toLevel="9" name="Curse of Mortalize">
 		<!-- Removes Invincibility of target and nearby enemies during PvP. -->
 		<icon>icon.skill11604</icon>
 		<affectLimit>10-10</affectLimit> <!-- Custom -->
@@ -271,6 +291,8 @@
 			<value level="5">101</value>
 			<value level="6">103</value>
 			<value level="7">105</value>
+			<value level="8">107</value>
+			<value level="9">109</value>
 		</magicLvl>
 		<mpConsume>
 			<value level="1">252</value>
@@ -280,6 +302,8 @@
 			<value level="5">358</value>
 			<value level="6">385</value>
 			<value level="7">412</value>
+			<value level="8">439</value>
+			<value level="9">466</value>
 		</mpConsume>
 		<castRange>900</castRange>
 		<hitTime>2110</hitTime>
