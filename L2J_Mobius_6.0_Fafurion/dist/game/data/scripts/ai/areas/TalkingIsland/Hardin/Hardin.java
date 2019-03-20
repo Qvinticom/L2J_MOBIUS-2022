@@ -16,6 +16,8 @@
  */
 package ai.areas.TalkingIsland.Hardin;
 
+import java.util.List;
+
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ClassListData;
 import com.l2jmobius.gameserver.data.xml.impl.SkillData;
@@ -98,11 +100,11 @@ public final class Hardin extends AbstractNpcAI
 					}
 					if (Config.HARDIN_RETAIL_LIMITATIONS)
 					{
-						if (c == ClassId.TYRR_MAESTRO && (player.getRace() != Race.DWARF))
+						if ((c == ClassId.TYRR_MAESTRO) && (player.getRace() != Race.DWARF))
 						{
 							continue;
 						}
-						if (c == ClassId.ISS_DOMINATOR && (player.getRace() != Race.ORC))
+						if ((c == ClassId.ISS_DOMINATOR) && (player.getRace() != Race.ORC))
 						{
 							continue;
 						}
@@ -152,6 +154,14 @@ public final class Hardin extends AbstractNpcAI
 			for (L2SkillLearn skill : SkillTreesData.getInstance().getRaceSkillTree(player.getRace()))
 			{
 				player.addSkill(SkillData.getInstance().getSkill(skill.getSkillId(), skill.getSkillLevel()), true);
+			}
+			final List<Integer> removedSkillIds = Config.HARDIN_REMOVED_SKILLS.get(newClass.getId());
+			if (removedSkillIds != null)
+			{
+				for (int skillId : removedSkillIds)
+				{
+					player.removeSkill(skillId);
+				}
 			}
 			player.store(false);
 			player.broadcastUserInfo();

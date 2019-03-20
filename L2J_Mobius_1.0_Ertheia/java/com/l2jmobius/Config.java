@@ -759,6 +759,7 @@ public final class Config
 	public static boolean HARDIN_RETAIL_LIMITATIONS;
 	public static boolean HARDIN_ENABLE_DUALCLASS_CHECKS;
 	public static boolean HARDIN_ENABLE_ERTHEIAS;
+	public static Map<Integer, List<Integer>> HARDIN_REMOVED_SKILLS;
 	
 	// --------------------------------------------------
 	// Vitality Settings
@@ -1501,6 +1502,22 @@ public final class Config
 			HARDIN_RETAIL_LIMITATIONS = Character.getBoolean("HardinRetailLimitations", true);
 			HARDIN_ENABLE_DUALCLASS_CHECKS = Character.getBoolean("HardinEnableDualClassChecks", true);
 			HARDIN_ENABLE_ERTHEIAS = Character.getBoolean("HardinEnableErtheias", false);
+			HARDIN_REMOVED_SKILLS = new HashMap<>();
+			for (String classRow : Character.getString("HardinRemovedSkills", "").split(";"))
+			{
+				if (classRow.isEmpty())
+				{
+					continue;
+				}
+				final String[] classInfo = classRow.split(",");
+				final int classId = Integer.parseInt(classInfo[0]);
+				HARDIN_REMOVED_SKILLS.put(classId, new ArrayList<>());
+				for (int i = 1; i < classInfo.length; i++)
+				{
+					HARDIN_REMOVED_SKILLS.get(classId).add(Integer.parseInt(classInfo[i]));
+				}
+			}
+			
 			ENABLE_VITALITY = Character.getBoolean("EnableVitality", true);
 			STARTING_VITALITY_POINTS = Character.getInt("StartingVitalityPoints", 140000);
 			RAIDBOSS_USE_VITALITY = Character.getBoolean("RaidbossUseVitality", true);
