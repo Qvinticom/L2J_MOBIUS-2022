@@ -103,7 +103,7 @@ public final class Plunder extends AbstractEffect
 			final boolean lucky = player.tryLuck();
 			for (ItemHolder sweepedItem : items)
 			{
-				final ItemHolder rewardedItem = new ItemHolder(sweepedItem.getId(), sweepedItem.getCount() * (lucky ? 1 : 2));
+				final ItemHolder rewardedItem = new ItemHolder(sweepedItem.getId(), sweepedItem.getCount() * (lucky ? 2 : 1));
 				final L2Party party = effector.getParty();
 				if (party != null)
 				{
