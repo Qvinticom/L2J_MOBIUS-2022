@@ -99,6 +99,7 @@ public class L2Attackable extends L2Npc
 	private final AtomicReference<ItemHolder> _harvestItem = new AtomicReference<>();
 	// Spoil
 	private int _spoilerObjectId;
+	private boolean _plundered = false;
 	private final AtomicReference<Collection<ItemHolder>> _sweepItems = new AtomicReference<>();
 	// Over-hit
 	private boolean _overhit;
@@ -1024,7 +1025,7 @@ public class L2Attackable extends L2Npc
 		
 		npcTemplate.getExtendDrop().stream().map(ExtendDropData.getInstance()::getExtendDropById).filter(Objects::nonNull).forEach(e -> e.reward(player, this));
 		
-		if (isSpoiled())
+		if (isSpoiled() && !_plundered)
 		{
 			_sweepItems.set(npcTemplate.calculateDrops(DropType.SPOIL, this, player));
 		}
@@ -1430,6 +1431,7 @@ public class L2Attackable extends L2Npc
 		// Clear Harvester reward
 		_harvestItem.set(null);
 		_sweepItems.set(null);
+		_plundered = false;
 		
 		// fake players
 		if (isFakePlayer())
@@ -1510,6 +1512,17 @@ public class L2Attackable extends L2Npc
 	public final void setSpoilerObjectId(int spoilerObjectId)
 	{
 		_spoilerObjectId = spoilerObjectId;
+	}
+	
+	/**
+	 * Sets state of the mob to plundered.
+	 * @param player
+	 */
+	public void setPlundered(L2PcInstance player)
+	{
+		_plundered = true;
+		_spoilerObjectId = player.getObjectId();
+		_sweepItems.set(getTemplate().calculateDrops(DropType.SPOIL, this, player));
 	}
 	
 	/**

@@ -90,32 +90,32 @@ public final class Plunder extends AbstractEffect
 			return;
 		}
 		
+		monster.setPlundered(player);
+		
 		if (!player.getInventory().checkInventorySlotsAndWeight(monster.getSpoilLootItems(), false, false))
 		{
 			return;
 		}
 		
-		monster.setSpoilerObjectId(effector.getObjectId());
-		
-		if (monster.isSweepActive())
+		final Collection<ItemHolder> items = monster.takeSweep();
+		if (items != null)
 		{
-			final Collection<ItemHolder> items = monster.takeSweep();
-			if (items != null)
+			final boolean lucky = player.tryLuck();
+			for (ItemHolder sweepedItem : items)
 			{
-				for (ItemHolder sweepedItem : items)
+				final ItemHolder rewardedItem = new ItemHolder(sweepedItem.getId(), sweepedItem.getCount() * (lucky ? 1 : 2));
+				final L2Party party = effector.getParty();
+				if (party != null)
 				{
-					final L2Party party = effector.getParty();
-					if (party != null)
-					{
-						party.distributeItem(player, sweepedItem, true, monster);
-					}
-					else
-					{
-						player.addItem("Plunder", sweepedItem, effected, true);
-					}
+					party.distributeItem(player, rewardedItem, true, monster);
+				}
+				else
+				{
+					player.addItem("Plunder", rewardedItem, effected, true);
 				}
 			}
 		}
+		
 		monster.getAI().notifyEvent(CtrlEvent.EVT_ATTACKED, effector);
 	}
 }
