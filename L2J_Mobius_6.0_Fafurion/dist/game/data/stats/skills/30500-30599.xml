@@ -147,10 +147,14 @@
 	<skill id="30501" toLevel="29" name="Backspin Impact">
 		<!-- Turns and deals a strong punch, creating wind. The energy of the wind hits the target, dealing $s1 damage and stunning it for $s2. Requires a fist weapon. -->
 		<icon>icon.skill30501</icon>
-		<castRange>40</castRange>
+		<abnormalTime>9</abnormalTime>
+		<abnormalType>STUN</abnormalType>
+		<abnormalVisualEffect>STUN</abnormalVisualEffect>
+		<trait>SHOCK</trait>
+		<castRange>600</castRange>
 		<coolTime>500</coolTime>
 		<effectPoint>-687</effectPoint>
-		<effectRange>400</effectRange>
+		<effectRange>600</effectRange>
 		<hitTime>1000</hitTime>
 		<magicLvl>
 			<value level="1">20</value>
@@ -267,6 +271,7 @@
 					<value fromLevel="23" toLevel="29" fromSubLevel="2001" toSubLevel="2020">{base + base / 100 * subIndex}</value>
 				</criticalChance>
 			</effect>
+			<effect name="BlockActions" />
 		</effects>
 	</skill>
 	<skill id="30502" toLevel="26" name="Chin Strike">
@@ -1201,6 +1206,10 @@
 		<effects>
 			<effect name="SphericBarrier">
 				<amount>150</amount>
+			</effect>
+			<effect name="PhysicalDefence">
+				<amount>50</amount>
+				<mode>PER</mode>
 			</effect>
 			<effect name="Speed" fromLevel="1" toLevel="1" fromSubLevel="2001" toSubLevel="2020">
 				<amount>
