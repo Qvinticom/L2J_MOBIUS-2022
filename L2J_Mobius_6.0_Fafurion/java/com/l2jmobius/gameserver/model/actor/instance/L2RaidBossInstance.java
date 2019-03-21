@@ -17,10 +17,7 @@
 package com.l2jmobius.gameserver.model.actor.instance;
 
 import com.l2jmobius.Config;
-import com.l2jmobius.commons.concurrent.ThreadPool;
-import com.l2jmobius.commons.util.Rnd;
 import com.l2jmobius.gameserver.enums.InstanceType;
-import com.l2jmobius.gameserver.model.L2Spawn;
 import com.l2jmobius.gameserver.model.actor.templates.L2NpcTemplate;
 import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
 
@@ -30,8 +27,6 @@ import com.l2jmobius.gameserver.network.serverpackets.PlaySound;
  */
 public class L2RaidBossInstance extends L2MonsterInstance
 {
-	private static final int RAIDBOSS_MAINTENANCE_INTERVAL = 30000; // 30 sec
-	
 	private boolean _useRaidCurse = true;
 	
 	/**
@@ -58,47 +53,6 @@ public class L2RaidBossInstance extends L2MonsterInstance
 		super.onSpawn();
 		setRandomWalking(false);
 		broadcastPacket(new PlaySound(1, getParameters().getString("RaidSpawnMusic", "Rm01_A"), 0, 0, 0, 0, 0));
-	}
-	
-	@Override
-	protected int getMaintenanceInterval()
-	{
-		return RAIDBOSS_MAINTENANCE_INTERVAL;
-	}
-	
-	/**
-	 * Spawn all minions at a regular interval Also if boss is too far from home location at the time of this check, teleport it home.
-	 */
-	@Override
-	protected void startMaintenanceTask()
-	{
-		_maintenanceTask = ThreadPool.scheduleAtFixedRate(() -> checkAndReturnToSpawn(), 60000, getMaintenanceInterval() + Rnd.get(5000));
-	}
-	
-	protected void checkAndReturnToSpawn()
-	{
-		if (isDead() || isMovementDisabled() || !canReturnToSpawnPoint())
-		{
-			return;
-		}
-		
-		final L2Spawn spawn = getSpawn();
-		if (spawn == null)
-		{
-			return;
-		}
-		
-		final int spawnX = spawn.getX();
-		final int spawnY = spawn.getY();
-		final int spawnZ = spawn.getZ();
-		
-		if (!isInCombat() && !isMovementDisabled())
-		{
-			if (!isInsideRadius3D(spawnX, spawnY, spawnZ, Math.max(Config.MAX_DRIFT_RANGE, 200)))
-			{
-				teleToLocation(spawnX, spawnY, spawnZ);
-			}
-		}
 	}
 	
 	@Override

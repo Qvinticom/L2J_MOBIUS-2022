@@ -2262,6 +2262,12 @@ public class L2AttackableAI extends L2CharacterAI
 			return;
 		}
 		
+		// Prevent thinking in non active regions.
+		if (!_actor.isInActiveRegion())
+		{
+			return;
+		}
+		
 		// Start thinking action
 		_thinking = true;
 		

@@ -16,8 +16,6 @@
  */
 package com.l2jmobius.gameserver.model.actor.instance;
 
-import java.util.concurrent.ScheduledFuture;
-
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.InstanceType;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -38,14 +36,10 @@ import com.l2jmobius.gameserver.util.MinionList;
  */
 public class L2MonsterInstance extends L2Attackable
 {
-	private static final int MONSTER_MAINTENANCE_INTERVAL = 1000;
-	
 	protected boolean _enableMinions = true;
 	
 	private L2MonsterInstance _master = null;
 	private volatile MinionList _minionList = null;
-	
-	protected ScheduledFuture<?> _maintenanceTask = null;
 	
 	/**
 	 * Creates a monster.
@@ -109,8 +103,6 @@ public class L2MonsterInstance extends L2Attackable
 				setIsRaidMinion(_master.isRaid());
 				_master.getMinionList().onMinionSpawn(this);
 			}
-			
-			startMaintenanceTask();
 		}
 		
 		// dynamic script-based minions spawned here, after all preparations.
@@ -128,15 +120,6 @@ public class L2MonsterInstance extends L2Attackable
 		}
 	}
 	
-	protected int getMaintenanceInterval()
-	{
-		return MONSTER_MAINTENANCE_INTERVAL;
-	}
-	
-	protected void startMaintenanceTask()
-	{
-	}
-	
 	@Override
 	public boolean doDie(L2Character killer)
 	{
@@ -145,24 +128,12 @@ public class L2MonsterInstance extends L2Attackable
 			return false;
 		}
 		
-		if (_maintenanceTask != null)
-		{
-			_maintenanceTask.cancel(false); // doesn't do it?
-			_maintenanceTask = null;
-		}
-		
 		return true;
 	}
 	
 	@Override
 	public boolean deleteMe()
 	{
-		if (_maintenanceTask != null)
-		{
-			_maintenanceTask.cancel(false);
-			_maintenanceTask = null;
-		}
-		
 		if (hasMinions())
 		{
 			getMinionList().onMasterDie(true);

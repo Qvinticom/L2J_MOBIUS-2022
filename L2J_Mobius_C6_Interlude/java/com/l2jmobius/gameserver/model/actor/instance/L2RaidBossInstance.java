@@ -34,7 +34,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public final class L2RaidBossInstance extends L2MonsterInstance
 {
-	private static final int RAIDBOSS_MAINTENANCE_INTERVAL = 20000; // 20 sec
 	private RaidBossSpawnManager.StatusEnum _raidStatus;
 	
 	/**
@@ -58,12 +57,6 @@ public final class L2RaidBossInstance extends L2MonsterInstance
 	public boolean isRaid()
 	{
 		return true;
-	}
-	
-	@Override
-	protected int getMaintenanceInterval()
-	{
-		return RAIDBOSS_MAINTENANCE_INTERVAL;
 	}
 	
 	@Override
@@ -135,7 +128,7 @@ public final class L2RaidBossInstance extends L2MonsterInstance
 			}
 			
 			_minionList.maintainMinions();
-		}, 60000, getMaintenanceInterval());
+		}, 60000, 20000);
 	}
 	
 	/**

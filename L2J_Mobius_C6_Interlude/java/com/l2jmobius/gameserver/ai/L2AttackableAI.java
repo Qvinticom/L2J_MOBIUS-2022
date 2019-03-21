@@ -339,6 +339,12 @@ public class L2AttackableAI extends L2CharacterAI
 	@Override
 	public void changeIntention(CtrlIntention intention, Object arg0, Object arg1)
 	{
+		// Prevent thinking in non active regions.
+		if (!_actor.isInActiveRegion())
+		{
+			return;
+		}
+		
 		if ((intention == AI_INTENTION_IDLE) || (intention == AI_INTENTION_ACTIVE))
 		{
 			// Check if actor is not dead

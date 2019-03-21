@@ -41,7 +41,6 @@ import com.l2jmobius.gameserver.util.MinionList;
  */
 public class L2MonsterInstance extends L2Attackable
 {
-	private static final int MONSTER_MAINTENANCE_INTERVAL = 1000;
 	protected final MinionList _minionList;
 	protected ScheduledFuture<?> _minionMaintainTask = null;
 	
@@ -152,20 +151,11 @@ public class L2MonsterInstance extends L2Attackable
 	}
 	
 	/**
-	 * Gets the maintenance interval.
-	 * @return the maintenance interval
-	 */
-	protected int getMaintenanceInterval()
-	{
-		return MONSTER_MAINTENANCE_INTERVAL;
-	}
-	
-	/**
 	 * Spawn all minions at a regular interval.
 	 */
 	protected void manageMinions()
 	{
-		_minionMaintainTask = ThreadPool.schedule(() -> _minionList.spawnMinions(), getMaintenanceInterval());
+		_minionMaintainTask = ThreadPool.schedule(() -> _minionList.spawnMinions(), 1000);
 	}
 	
 	public void callMinions()

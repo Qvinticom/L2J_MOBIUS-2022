@@ -32,7 +32,6 @@ import com.l2jmobius.gameserver.network.serverpackets.SystemMessage;
  */
 public final class L2GrandBossInstance extends L2MonsterInstance
 {
-	private static final int BOSS_MAINTENANCE_INTERVAL = 10000;
 	private boolean _useRaidCurse = true;
 	
 	/**
@@ -45,12 +44,6 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 		setInstanceType(InstanceType.L2GrandBossInstance);
 		setIsRaid(true);
 		setLethalable(false);
-	}
-	
-	@Override
-	protected int getMaintenanceInterval()
-	{
-		return BOSS_MAINTENANCE_INTERVAL;
 	}
 	
 	@Override

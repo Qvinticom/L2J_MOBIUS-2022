@@ -34,8 +34,6 @@ import com.l2jmobius.gameserver.templates.chars.L2NpcTemplate;
  */
 public final class L2GrandBossInstance extends L2MonsterInstance
 {
-	private static final int BOSS_MAINTENANCE_INTERVAL = 20000;
-	
 	/**
 	 * Constructor for L2GrandBossInstance. This represent all grandbosses.
 	 * @param objectId ID of the instance
@@ -44,12 +42,6 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 	public L2GrandBossInstance(int objectId, L2NpcTemplate template)
 	{
 		super(objectId, template);
-	}
-	
-	@Override
-	protected int getMaintenanceInterval()
-	{
-		return BOSS_MAINTENANCE_INTERVAL;
 	}
 	
 	@Override
@@ -122,7 +114,7 @@ public final class L2GrandBossInstance extends L2MonsterInstance
 			}
 			
 			_minionList.maintainMinions();
-		}, 60000, getMaintenanceInterval());
+		}, 60000, 20000);
 	}
 	
 	@Override
