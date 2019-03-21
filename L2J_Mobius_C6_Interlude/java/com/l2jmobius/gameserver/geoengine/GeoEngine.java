@@ -827,7 +827,8 @@ public class GeoEngine
 		int ny = gpy;
 		
 		// loop
-		do
+		int count = 0;
+		while (count++ < Config.MAX_ITERATIONS)
 		{
 			direction = 0;
 			
@@ -878,7 +879,8 @@ public class GeoEngine
 				return new GeoLocation(gox, goy, goz);
 			}
 		}
-		while (true);
+		
+		return new GeoLocation(gox, goy, goz);
 	}
 	
 	/**

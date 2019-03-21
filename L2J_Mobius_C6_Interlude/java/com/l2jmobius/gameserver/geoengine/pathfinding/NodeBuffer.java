@@ -39,10 +39,6 @@ public class NodeBuffer
 	private int _gty = 0;
 	private short _gtz = 0;
 	
-	// pathfinding statistics
-	private long _timeStamp = 0;
-	private long _lastElapsedTime = 0;
-	
 	private Node _current = null;
 	
 	/**
@@ -77,9 +73,6 @@ public class NodeBuffer
 	 */
 	public final Node findPath(int gox, int goy, short goz, int gtx, int gty, short gtz)
 	{
-		// load timestamp
-		_timeStamp = System.currentTimeMillis();
-		
 		// set coordinates (middle of the line (gox,goy) - (gtx,gty), will be in the center of the buffer)
 		_cx = gox + ((gtx - gox - _size) / 2);
 		_cy = goy + ((gty - goy - _size) / 2);
@@ -106,7 +99,7 @@ public class NodeBuffer
 			// move pointer
 			_current = _current.getChild();
 		}
-		while ((_current != null) && (++count < Config.MAX_ITERATIONS));
+		while ((_current != null) && (count++ < Config.MAX_ITERATIONS));
 		
 		return null;
 	}
@@ -132,12 +125,6 @@ public class NodeBuffer
 		}
 		
 		_lock.unlock();
-		_lastElapsedTime = System.currentTimeMillis() - _timeStamp;
-	}
-	
-	public final long getElapsedTime()
-	{
-		return _lastElapsedTime;
 	}
 	
 	/**

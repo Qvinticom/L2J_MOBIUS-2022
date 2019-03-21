@@ -135,7 +135,8 @@ final class GeoEnginePathfinding extends GeoEngine
 		GeoLocation nodeB = (GeoLocation) point.next();
 		
 		// iterate thought the path to optimize it
-		while (point.hasNext())
+		int count = 0;
+		while (point.hasNext() && (count++ < Config.MAX_ITERATIONS))
 		{
 			// get node C
 			GeoLocation nodeC = (GeoLocation) path.get(point.nextIndex());
@@ -184,7 +185,8 @@ final class GeoEnginePathfinding extends GeoEngine
 		Node parent = target.getParent();
 		
 		// while parent exists
-		while (parent != null)
+		int count = 0;
+		while ((parent != null) && (count++ < Config.MAX_ITERATIONS))
 		{
 			// get parent <> target direction X/Y
 			final int nx = parent.getLoc().getGeoX() - target.getLoc().getGeoX();
