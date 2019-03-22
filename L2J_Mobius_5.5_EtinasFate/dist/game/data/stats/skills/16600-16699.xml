@@ -53,11 +53,11 @@
 		<targetType>ENEMY</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>-30</amount>
 				<mode>PER</mode>
 			</effect>
@@ -690,7 +690,7 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>
 					<value level="1">50</value>
 					<value level="2">100</value>

@@ -934,11 +934,11 @@
 		<targetType>SELF</targetType>
 		<affectScope>SINGLE</affectScope>
 		<effects>
-			<effect name="PhysicalAttack">
+			<effect name="PAtk">
 				<amount>35</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicalAttack">
+			<effect name="MAtk">
 				<amount>40</amount>
 				<mode>PER</mode>
 			</effect>
