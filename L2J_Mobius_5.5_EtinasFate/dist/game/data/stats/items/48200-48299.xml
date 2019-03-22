@@ -441,6 +441,10 @@
 		<set name="is_depositable" val="false" />
 		<set name="is_sellable" val="false" />
 		<set name="is_stackable" val="true" />
+		<set name="handler" val="ExtractableItems" />		
+		<capsuled_items>
+			<item id="36731" min="3" max="3" chance="100" /> <!-- Instilled with Giants' Power -->
+		</capsuled_items>		
 	</item>
 	<item id="48229" name="Chorong's Summon Friend Scroll" type="EtcItem">
 		<!-- Can summon a friend to your location once every 30 min. Target a party member and double-click to use the skill. -->
