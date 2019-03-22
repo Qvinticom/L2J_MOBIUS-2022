@@ -54,8 +54,6 @@ public class RecieveAdventurerBuffs extends AbstractNpcAI
 		new SkillHolder(15643, 1), // Drum Melody (Adventurer)
 		new SkillHolder(15644, 1), // Pipe Organ Melody (Adventurer)
 		new SkillHolder(15645, 1), // Guitar Melody (Adventurer)
-		new SkillHolder(15646, 1), // Harp Melody (Adventurer)
-		new SkillHolder(15647, 1), // Lute Melody (Adventurer)
 		new SkillHolder(15651, 1), // Prevailing Sonata (Adventurer)
 		new SkillHolder(15652, 1), // Daring Sonata (Adventurer)
 		new SkillHolder(15653, 1), // Refreshing Sonata (Adventurer)

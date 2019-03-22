@@ -41,8 +41,6 @@ public final class HungryHorse extends LongTimeEvent
 		new SkillHolder(15643, 1), // Drum Melody
 		new SkillHolder(15644, 1), // Pipe Organ Melody
 		new SkillHolder(15645, 1), // Guitar Melody
-		new SkillHolder(15646, 1), // Harp Melody
-		new SkillHolder(15647, 1), // Lute Melody
 		new SkillHolder(15651, 1), // Prevailing Sonata
 		new SkillHolder(15652, 1), // Daring Sonata
 		new SkillHolder(15653, 1), // Refreshing Sonata

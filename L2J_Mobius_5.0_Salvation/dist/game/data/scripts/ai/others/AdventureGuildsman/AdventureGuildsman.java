@@ -62,10 +62,8 @@ public class AdventureGuildsman extends AbstractNpcAI
 	{
 		new SkillHolder(9273, 1), // Player Commendation - Horn Melody
 		new SkillHolder(9274, 1), // Player Commendation - Drum Melody
-		new SkillHolder(9275, 1), // Player Commendation - Lute Melody
 		new SkillHolder(9276, 1), // Player Commendation - Pipe Organ Melody
 		new SkillHolder(9277, 1), // Player Commendation - Guitar Melody
-		new SkillHolder(9278, 1), // Player Commendation - Harp Melody
 	};
 	private static final SkillHolder[] GROUP_SONATA =
 	{

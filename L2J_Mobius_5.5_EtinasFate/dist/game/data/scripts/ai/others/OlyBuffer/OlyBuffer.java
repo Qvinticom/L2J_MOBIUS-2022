@@ -42,8 +42,6 @@ public final class OlyBuffer extends AbstractNpcAI
 		new SkillHolder(14739, 1), // Olympiad - Drum Melody
 		new SkillHolder(14740, 1), // Olympiad - Pipe Organ Melody
 		new SkillHolder(14741, 1), // Olympiad - Guitar Melody
-		new SkillHolder(14742, 1), // Olympiad - Harp Melody
-		new SkillHolder(14743, 1), // Olympiad - Lute Melody
 	};
 	
 	private OlyBuffer()

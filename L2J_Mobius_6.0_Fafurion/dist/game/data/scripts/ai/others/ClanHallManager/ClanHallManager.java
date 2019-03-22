@@ -85,8 +85,6 @@ public final class ClanHallManager extends AbstractNpcAI
 		4353, // Blessed Shield
 		4358, // Guidance
 		4354, // Vampiric Rage
-		15378, // Harp Melody
-		15379, // Lute Melody
 		15380, // Knight's Harmony
 		15381, // Warrior's Harmony
 		15382, // Wizard's Harmony
