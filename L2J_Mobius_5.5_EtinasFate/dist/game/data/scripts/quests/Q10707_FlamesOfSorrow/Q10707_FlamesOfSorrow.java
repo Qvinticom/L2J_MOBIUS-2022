@@ -168,7 +168,7 @@ public final class Q10707_FlamesOfSorrow extends Quest
 			final L2Npc spirit = addSpawn(SPIRIT, npc, false, 5000);
 			spirit.broadcastSay(ChatType.NPC_GENERAL, NpcStringId.THANK_YOU_DELIVER_THIS_MARK_OF_GRATITUDE_TO_LEO);
 			
-			if (getQuestItemsCount(killer, MARK) == 5)
+			if (getQuestItemsCount(killer, MARK) == 10)
 			{
 				st.setCond(2, true);
 			}
