@@ -18,6 +18,7 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -63,21 +64,34 @@ public class AdminLevel implements IAdminCommandHandler
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_set_level"))
 		{
-			final int maxLevel = ExperienceData.getInstance().getMaxLevel();
+			if ((targetChar == null) || !targetChar.isPlayer())
+			{
+				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET); // incorrect target!
+				return false;
+			}
+			
+			final L2PcInstance targetPlayer = targetChar.getActingPlayer();
+			int maxLevel = ExperienceData.getInstance().getMaxLevel();
+			if (targetPlayer.isSubClassActive() && (Config.MAX_SUBCLASS_LEVEL < maxLevel))
+			{
+				maxLevel = Config.MAX_SUBCLASS_LEVEL;
+			}
+			
 			try
 			{
-				if ((targetChar == null) || !targetChar.isPlayer())
-				{
-					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET); // incorrect target!
-					return false;
-				}
-				final L2PcInstance targetPlayer = (L2PcInstance) targetChar;
-				
 				final byte lvl = Byte.parseByte(val);
 				if ((lvl >= 1) && (lvl <= maxLevel))
 				{
-					targetPlayer.setExp(ExperienceData.getInstance().getExpForLevel(lvl));
-					targetPlayer.getStat().setLevel(lvl);
+					final long pXp = targetPlayer.getExp();
+					final long tXp = ExperienceData.getInstance().getExpForLevel(lvl);
+					if (pXp > tXp)
+					{
+						targetPlayer.removeExpAndSp(pXp - tXp, 0);
+					}
+					else if (pXp < tXp)
+					{
+						targetPlayer.addExpAndSp(tXp - pXp, 0);
+					}
 					targetPlayer.setCurrentHpMp(targetPlayer.getMaxHp(), targetPlayer.getMaxMp());
 					targetPlayer.setCurrentCp(targetPlayer.getMaxCp());
 					targetPlayer.broadcastUserInfo();

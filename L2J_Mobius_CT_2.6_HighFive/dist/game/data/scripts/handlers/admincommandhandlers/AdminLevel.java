@@ -18,6 +18,7 @@ package handlers.admincommandhandlers;
 
 import java.util.StringTokenizer;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.data.xml.impl.ExperienceData;
 import com.l2jmobius.gameserver.handler.IAdminCommandHandler;
 import com.l2jmobius.gameserver.model.L2Object;
@@ -63,21 +64,26 @@ public class AdminLevel implements IAdminCommandHandler
 		}
 		else if (actualCommand.equalsIgnoreCase("admin_set_level"))
 		{
+			if ((targetChar == null) || !targetChar.isPlayer())
+			{
+				activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET); // incorrect target!
+				return false;
+			}
+			
+			final L2PcInstance targetPlayer = targetChar.getActingPlayer();
+			int maxLevel = ExperienceData.getInstance().getMaxLevel();
+			if (targetPlayer.isSubClassActive() && (Config.MAX_SUBCLASS_LEVEL < maxLevel))
+			{
+				maxLevel = Config.MAX_SUBCLASS_LEVEL;
+			}
+			
 			try
 			{
-				if ((targetChar == null) || !targetChar.isPlayer())
-				{
-					activeChar.sendPacket(SystemMessageId.THAT_IS_AN_INCORRECT_TARGET); // incorrect target!
-					return false;
-				}
-				final L2PcInstance targetPlayer = (L2PcInstance) targetChar;
-				
 				final byte lvl = Byte.parseByte(val);
-				if ((lvl >= 1) && (lvl <= ExperienceData.getInstance().getMaxLevel()))
+				if ((lvl >= 1) && (lvl <= maxLevel))
 				{
 					final long pXp = targetPlayer.getExp();
 					final long tXp = ExperienceData.getInstance().getExpForLevel(lvl);
-					
 					if (pXp > tXp)
 					{
 						targetPlayer.removeExpAndSp(pXp - tXp, 0);
@@ -86,16 +92,19 @@ public class AdminLevel implements IAdminCommandHandler
 					{
 						targetPlayer.addExpAndSp(tXp - pXp, 0);
 					}
+					targetPlayer.setCurrentHpMp(targetPlayer.getMaxHp(), targetPlayer.getMaxMp());
+					targetPlayer.setCurrentCp(targetPlayer.getMaxCp());
+					targetPlayer.broadcastUserInfo();
 				}
 				else
 				{
-					BuilderUtil.sendSysMessage(activeChar, "You must specify level between 1 and " + ExperienceData.getInstance().getMaxLevel() + ".");
+					BuilderUtil.sendSysMessage(activeChar, "You must specify level between 1 and " + maxLevel + ".");
 					return false;
 				}
 			}
 			catch (NumberFormatException e)
 			{
-				BuilderUtil.sendSysMessage(activeChar, "You must specify level between 1 and " + ExperienceData.getInstance().getMaxLevel() + ".");
+				BuilderUtil.sendSysMessage(activeChar, "You must specify level between 1 and " + maxLevel + ".");
 				return false;
 			}
 		}
