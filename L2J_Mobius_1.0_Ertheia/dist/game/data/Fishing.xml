@@ -1,28 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <list xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="./xsd/Fishing.xsd">
 	<baitDistance min="90" max="250" />
-	<experienceRate min="650" max="700" />
-	<skillPointsRate min="40" max="45" />
+	<xpRate min="1" max="1" /> <!-- XP modifiction rate -->
+	<spRate min="1" max="1" /> <!-- SP modifiction rate -->
 	<baits>
-		<bait itemId="45495" level="1" minPlayerLevel="85" chance="64" timeMin="45000" timeMax="45000" waitMin="15000" waitMax="15000"> <!-- Normal Bait -->
-			<catch itemId="45473" /> <!-- Fresh Blue Mackerel -->
-			<catch itemId="45474" /> <!-- Fresh Minnow -->
-			<catch itemId="45475" /> <!-- Fresh Flatcatch -->
-			<catch itemId="45476" /> <!-- Fresh Mandarin catch -->
-			<catch itemId="45477" /> <!-- Fresh Rockcatch -->
-			<catch itemId="45478" /> <!-- Fresh Goldcatch -->
-			<catch itemId="45479" /> <!-- Fresh Salmon -->
-			<catch itemId="45480" /> <!-- Fresh Eel -->
-			<catch itemId="45486" /> <!-- Wooden Treasure Chest -->
+		<bait itemId="45495" minPlayerLevel="85" chance="64" timeMin="105000" waitMin="15000" > <!-- Normal Bait -->
+			<catch itemId="45473" chance="70" multiplier ="1" /> <!-- Fresh Blue Mackerel -->
+			<catch itemId="45474" chance="3" multiplier ="1" /> <!-- Fresh Minnow -->
+			<catch itemId="45475" chance="3" multiplier ="1" /> <!-- Fresh Flatcatch -->
+			<catch itemId="45476" chance="3" multiplier ="1" /> <!-- Fresh Mandarin catch -->
+			<catch itemId="45477" chance="3" multiplier ="1" /> <!-- Fresh Rockcatch -->
+			<catch itemId="45478" chance="3" multiplier ="1" /> <!-- Fresh Goldcatch -->
+			<catch itemId="45479" chance="3" multiplier ="1" /> <!-- Fresh Salmon -->
+			<catch itemId="45480" chance="3" multiplier ="1" /> <!-- Fresh Eel -->
+			<catch itemId="45486" chance="3" multiplier ="1" /> <!-- Wooden Treasure Chest -->
 		</bait>
-		<bait itemId="45496" level="2" minPlayerLevel="85" chance="64" timeMin="45000" timeMax="45000" waitMin="15000" waitMax="15000"> <!-- Special Bait -->
-			<catch itemId="45481" /> <!-- Fresh Marlin -->
-			<catch itemId="45482" /> <!-- Fresh Catcatch -->
-			<catch itemId="45483" /> <!-- Fresh Tuna -->
-			<catch itemId="45484" /> <!-- Fresh Carp -->
-			<catch itemId="45485" /> <!-- Fresh Whale -->
-			<catch itemId="45487" /> <!-- Silver Treasure Chest -->
-			<catch itemId="45488" /> <!-- Golden Treasure Chest -->
+		<bait itemId="45496" minPlayerLevel="99" chance="64" timeMin="105000" waitMin="15000" > <!-- Special Bait -->
+			<catch itemId="45481" chance="14" multiplier ="1" /> <!-- Fresh Marlin -->
+			<catch itemId="45482" chance="14" multiplier ="1" /> <!-- Fresh Catcatch -->
+			<catch itemId="45483" chance="14" multiplier ="1" /> <!-- Fresh Tuna -->
+			<catch itemId="45484" chance="14" multiplier ="1" /> <!-- Fresh Carp -->
+			<catch itemId="45485" chance="14" multiplier ="1" /> <!-- Fresh Whale -->
+			<catch itemId="45487" chance="14" multiplier ="1" /> <!-- Silver Treasure Chest -->
+			<catch itemId="45488" chance="14" multiplier ="1" /> <!-- Golden Treasure Chest -->
 		</bait>
 	</baits>
+	<rods>
+		<rod itemId="45492" /> <!-- Normal Fishing Rod - 30-day -->
+		<rod itemId="45494" /> <!-- Sturdy Fishing Rod -->
+	</rods>
 </list>

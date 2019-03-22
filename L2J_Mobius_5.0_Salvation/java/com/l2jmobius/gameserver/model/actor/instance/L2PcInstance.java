@@ -125,7 +125,6 @@ import com.l2jmobius.gameserver.model.ArenaParticipantsHolder;
 import com.l2jmobius.gameserver.model.BlockList;
 import com.l2jmobius.gameserver.model.ClanPrivilege;
 import com.l2jmobius.gameserver.model.ClanWar;
-import com.l2jmobius.gameserver.model.Fishing;
 import com.l2jmobius.gameserver.model.L2AccessLevel;
 import com.l2jmobius.gameserver.model.L2Clan;
 import com.l2jmobius.gameserver.model.L2ClanMember;
@@ -209,6 +208,7 @@ import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPvPCh
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerPvPKill;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerReputationChanged;
 import com.l2jmobius.gameserver.model.events.impl.character.player.OnPlayerSubChange;
+import com.l2jmobius.gameserver.model.fishing.Fishing;
 import com.l2jmobius.gameserver.model.holders.AttendanceInfoHolder;
 import com.l2jmobius.gameserver.model.holders.ItemHolder;
 import com.l2jmobius.gameserver.model.holders.MonsterBookCardHolder;

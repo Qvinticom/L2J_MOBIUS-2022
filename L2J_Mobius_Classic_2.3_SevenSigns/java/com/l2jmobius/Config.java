@@ -1086,6 +1086,7 @@ public final class Config
 	public static float PREMIUM_RATE_SPOIL_AMOUNT;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_CHANCE_BY_ID;
 	public static Map<Integer, Float> PREMIUM_RATE_DROP_AMOUNT_BY_ID;
+	public static boolean PREMIUM_ONLY_FISHING;
 	public static boolean PC_CAFE_ENABLED;
 	public static boolean PC_CAFE_ONLY_PREMIUM;
 	public static int PC_CAFE_MAX_POINTS;
@@ -2564,6 +2565,7 @@ public final class Config
 					}
 				}
 			}
+			PREMIUM_ONLY_FISHING = PremiumSystem.getBoolean("PremiumOnlyFishing", true);
 			
 			// Load PrivateStoreRange config file (if exists)
 			final PropertiesParser PrivateStoreRange = new PropertiesParser(CUSTOM_PRIVATE_STORE_RANGE_CONFIG_FILE);

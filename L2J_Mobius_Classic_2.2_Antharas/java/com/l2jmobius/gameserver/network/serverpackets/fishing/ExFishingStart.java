@@ -29,20 +29,17 @@ public class ExFishingStart implements IClientOutgoingPacket
 {
 	private final L2PcInstance _player;
 	private final int _fishType;
-	private final int _baitType;
 	private final ILocational _baitLocation;
 	
 	/**
 	 * @param player
 	 * @param fishType
-	 * @param baitType - 0 = newbie, 1 = normal, 2 = night
 	 * @param baitLocation
 	 */
-	public ExFishingStart(L2PcInstance player, int fishType, int baitType, ILocational baitLocation)
+	public ExFishingStart(L2PcInstance player, int fishType, ILocational baitLocation)
 	{
 		_player = player;
 		_fishType = fishType;
-		_baitType = baitType;
 		_baitLocation = baitLocation;
 	}
 	
@@ -55,7 +52,7 @@ public class ExFishingStart implements IClientOutgoingPacket
 		packet.writeD(_baitLocation.getX());
 		packet.writeD(_baitLocation.getY());
 		packet.writeD(_baitLocation.getZ());
-		packet.writeC(_baitType);
+		packet.writeC(0x01); // 0 = newbie, 1 = normal, 2 = night
 		return true;
 	}
 }

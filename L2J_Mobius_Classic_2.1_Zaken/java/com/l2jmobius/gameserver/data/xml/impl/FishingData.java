@@ -25,8 +25,12 @@ import org.w3c.dom.Document;
 import org.w3c.dom.NamedNodeMap;
 import org.w3c.dom.Node;
 
+import com.l2jmobius.Config;
 import com.l2jmobius.commons.util.IGameXmlReader;
-import com.l2jmobius.gameserver.model.FishingBaitData;
+import com.l2jmobius.gameserver.datatables.ItemTable;
+import com.l2jmobius.gameserver.model.fishing.FishingBait;
+import com.l2jmobius.gameserver.model.fishing.FishingCatch;
+import com.l2jmobius.gameserver.model.fishing.FishingRod;
 
 /**
  * This class holds the Fishing information.
@@ -35,7 +39,8 @@ import com.l2jmobius.gameserver.model.FishingBaitData;
 public final class FishingData implements IGameXmlReader
 {
 	private static final Logger LOGGER = Logger.getLogger(FishingData.class.getName());
-	private final Map<Integer, FishingBaitData> _baitData = new HashMap<>();
+	private final Map<Integer, FishingBait> _baitData = new HashMap<>();
+	private final Map<Integer, FishingRod> _rodData = new HashMap<>();
 	private int _baitDistanceMin;
 	private int _baitDistanceMax;
 	private double _expRateMin;
@@ -56,7 +61,7 @@ public final class FishingData implements IGameXmlReader
 	{
 		_baitData.clear();
 		parseDatapackFile("data/Fishing.xml");
-		LOGGER.info(getClass().getSimpleName() + ": Loaded Fishing Data.");
+		LOGGER.info(getClass().getSimpleName() + ": Loaded " + _baitData.size() + " bait and " + _rodData.size() + " rod data.");
 	}
 	
 	@Override
@@ -76,13 +81,13 @@ public final class FishingData implements IGameXmlReader
 							_baitDistanceMax = parseInteger(listItem.getAttributes(), "max");
 							break;
 						}
-						case "experienceRate":
+						case "xpRate":
 						{
 							_expRateMin = parseDouble(listItem.getAttributes(), "min");
 							_expRateMax = parseDouble(listItem.getAttributes(), "max");
 							break;
 						}
-						case "skillPointsRate":
+						case "spRate":
 						{
 							_spRateMin = parseDouble(listItem.getAttributes(), "min");
 							_spRateMax = parseDouble(listItem.getAttributes(), "max");
@@ -96,20 +101,39 @@ public final class FishingData implements IGameXmlReader
 								{
 									final NamedNodeMap attrs = bait.getAttributes();
 									final int itemId = parseInteger(attrs, "itemId");
-									final int level = parseInteger(attrs, "level");
-									final int minPlayerLevel = parseInteger(attrs, "minPlayerLevel");
+									final byte level = parseByte(attrs, "level", (byte) 1);
+									final byte minPlayerLevel = parseByte(attrs, "minPlayerLevel");
+									final byte maxPlayerLevel = parseByte(attrs, "minPlayerLevel", Config.PLAYER_MAXIMUM_LEVEL);
 									final double chance = parseDouble(attrs, "chance");
 									final int timeMin = parseInteger(attrs, "timeMin");
-									final int timeMax = parseInteger(attrs, "timeMax");
+									final int timeMax = parseInteger(attrs, "timeMax", timeMin);
 									final int waitMin = parseInteger(attrs, "waitMin");
-									final int waitMax = parseInteger(attrs, "waitMax");
-									final FishingBaitData baitData = new FishingBaitData(itemId, level, minPlayerLevel, chance, timeMin, timeMax, waitMin, waitMax);
+									final int waitMax = parseInteger(attrs, "waitMax", waitMin);
+									final boolean isPremiumOnly = parseBoolean(attrs, "isPremiumOnly", false);
 									
+									if (ItemTable.getInstance().getTemplate(itemId) == null)
+									{
+										LOGGER.info(getClass().getSimpleName() + ": Could not find item with id " + itemId);
+										continue;
+									}
+									
+									final FishingBait baitData = new FishingBait(itemId, level, minPlayerLevel, maxPlayerLevel, chance, timeMin, timeMax, waitMin, waitMax, isPremiumOnly);
 									for (Node c = bait.getFirstChild(); c != null; c = c.getNextSibling())
 									{
 										if ("catch".equalsIgnoreCase(c.getNodeName()))
 										{
-											baitData.addReward(parseInteger(c.getAttributes(), "itemId"));
+											final NamedNodeMap cAttrs = c.getAttributes();
+											final int cId = parseInteger(cAttrs, "itemId");
+											final float cChance = parseFloat(cAttrs, "chance");
+											final float cMultiplier = parseFloat(cAttrs, "multiplier", 1f);
+											
+											if (ItemTable.getInstance().getTemplate(cId) == null)
+											{
+												LOGGER.info(getClass().getSimpleName() + ": Could not find item with id " + itemId);
+												continue;
+											}
+											
+											baitData.addReward(new FishingCatch(cId, cChance, cMultiplier));
 										}
 									}
 									_baitData.put(baitData.getItemId(), baitData);
@@ -117,20 +141,42 @@ public final class FishingData implements IGameXmlReader
 							}
 							break;
 						}
+						case "rods":
+						{
+							for (Node rod = listItem.getFirstChild(); rod != null; rod = rod.getNextSibling())
+							{
+								if ("rod".equalsIgnoreCase(rod.getNodeName()))
+								{
+									final NamedNodeMap attrs = rod.getAttributes();
+									final int itemId = parseInteger(attrs, "itemId");
+									final int reduceFishingTime = parseInteger(attrs, "reduceFishingTime", 0);
+									final float xpMultiplier = parseFloat(attrs, "xpMultiplier", 1f);
+									final float spMultiplier = parseFloat(attrs, "spMultiplier", 1f);
+									
+									if (ItemTable.getInstance().getTemplate(itemId) == null)
+									{
+										LOGGER.info(getClass().getSimpleName() + ": Could not find item with id " + itemId);
+										continue;
+									}
+									
+									_rodData.put(itemId, new FishingRod(itemId, reduceFishingTime, xpMultiplier, spMultiplier));
+								}
+							}
+						}
 					}
 				}
 			}
 		}
 	}
 	
-	/**
-	 * Gets the fishing rod.
-	 * @param baitItemId the item id
-	 * @return A list of reward item ids
-	 */
-	public FishingBaitData getBaitData(int baitItemId)
+	public FishingBait getBaitData(int baitItemId)
 	{
 		return _baitData.get(baitItemId);
+	}
+	
+	public FishingRod getRodData(int rodItemId)
+	{
+		return _rodData.get(rodItemId);
 	}
 	
 	public int getBaitDistanceMin()
