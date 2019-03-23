@@ -9676,7 +9676,7 @@ public final class L2PcInstance extends L2Playable
 				return false;
 			}
 			
-			// Commit after database INSERT incase exception is thrown.
+			// Commit after database INSERT in case exception is thrown.
 			getSubClasses().put(newClass.getClassIndex(), newClass);
 			
 			final ClassId subTemplate = ClassId.getClassId(classId);
@@ -9684,6 +9684,11 @@ public final class L2PcInstance extends L2Playable
 			final Map<Integer, Skill> prevSkillList = new HashMap<>();
 			for (L2SkillLearn skillInfo : skillTree.values())
 			{
+				if (!Config.AUTO_LEARN_FP_SKILLS && (skillInfo.getSkillId() > 11399) && (skillInfo.getSkillId() < 11405))
+				{
+					continue;
+				}
+				
 				if (skillInfo.getGetLevel() <= newClass.getLevel())
 				{
 					final Skill prevSkill = prevSkillList.get(skillInfo.getSkillId());
