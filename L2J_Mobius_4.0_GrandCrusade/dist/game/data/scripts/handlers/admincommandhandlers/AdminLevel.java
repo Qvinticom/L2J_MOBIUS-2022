@@ -72,7 +72,7 @@ public class AdminLevel implements IAdminCommandHandler
 			
 			final L2PcInstance targetPlayer = targetChar.getActingPlayer();
 			int maxLevel = ExperienceData.getInstance().getMaxLevel();
-			if (targetPlayer.isSubClassActive() && (Config.MAX_SUBCLASS_LEVEL < maxLevel))
+			if (targetPlayer.isSubClassActive() && !targetPlayer.isDualClassActive() && (Config.MAX_SUBCLASS_LEVEL < maxLevel))
 			{
 				maxLevel = Config.MAX_SUBCLASS_LEVEL;
 			}
