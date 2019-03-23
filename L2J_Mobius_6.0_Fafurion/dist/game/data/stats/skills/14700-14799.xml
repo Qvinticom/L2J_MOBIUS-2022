@@ -450,19 +450,19 @@
 				<slot>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
 			</effect>
 			<effect name="PAtk">
-				<amount>17</amount>
+				<amount>23</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MAtk">
-				<amount>79</amount>
+				<amount>88</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="MagicalDefence">
-				<amount>30</amount>
+				<amount>40</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="PhysicalDefence">
-				<amount>15</amount>
+				<amount>35</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -505,57 +505,21 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>MULTI_BUFF;COUNTER_CRITICAL;CRITICAL_PROB_UP;CRITICAL_DMG_UP;MAGIC_CRITICAL_UP</slot>
 			</effect>
-			<effect name="PAtk">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>-15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxMp">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="CriticalDamage">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="HpRegen">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="DefenceCriticalDamage">
-				<amount>-30</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="ResistAbnormalByCategory">
-				<amount>-10</amount>
-				<slot>DEBUFF</slot>
-			</effect>
 			<effect name="MagicCriticalRate">
 				<amount>20</amount>
 				<mode>DIFF</mode>
+			</effect>
+			<effect name="CriticalDamage">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="CriticalRate">
+				<amount>30</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="DefenceCriticalDamage">
+				<amount>-50</amount>
+				<mode>PER</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -601,6 +565,10 @@
 				<amount>20</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="VampiricAttack">
+				<amount>9</amount>
+				<chance>80</chance>
+			</effect>
 		</effects>
 	</skill>
 	<skill id="14741" toLevel="1" name="Olympiad - Guitar Melody">
@@ -629,16 +597,16 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>35</amount>
+			<effect name="PhysicalAttackSpeed">
+				<amount>60</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>32</amount>
+			<effect name="MagicalAttackSpeed">
+				<amount>60</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicCriticalRate">
-				<amount>20</amount>
+			<effect name="Speed">
+				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicMpCost">
@@ -647,17 +615,17 @@
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
@@ -1232,19 +1200,19 @@
 				<slot>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
 			</effect>
 			<effect name="PAtk">
-				<amount>23</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>91</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MAtk">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalDefence">
-				<amount>15</amount>
+				<amount>35</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1409,16 +1377,16 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>35</amount>
+			<effect name="PhysicalAttackSpeed">
+				<amount>60</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>38</amount>
+			<effect name="MagicalAttackSpeed">
+				<amount>60</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicCriticalRate">
-				<amount>20</amount>
+			<effect name="Speed">
+				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicMpCost">
@@ -1427,17 +1395,17 @@
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
@@ -1885,19 +1853,19 @@
 				<slot>IMPROVE_PA_PD_UP;PA_UP;PD_UP;IMPROVE_MA_MD_UP;MD_UP;MA_UP;KAMAEL_SPECIAL</slot>
 			</effect>
 			<effect name="PAtk">
-				<amount>17</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>79</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
 				<amount>30</amount>
 				<mode>PER</mode>
 			</effect>
+			<effect name="MAtk">
+				<amount>100</amount>
+				<mode>PER</mode>
+			</effect>
+			<effect name="MagicalDefence">
+				<amount>40</amount>
+				<mode>PER</mode>
+			</effect>
 			<effect name="PhysicalDefence">
-				<amount>15</amount>
+				<amount>35</amount>
 				<mode>PER</mode>
 			</effect>
 		</effects>
@@ -1941,57 +1909,21 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>MULTI_BUFF;COUNTER_CRITICAL;CRITICAL_PROB_UP;CRITICAL_DMG_UP;MAGIC_CRITICAL_UP</slot>
 			</effect>
-			<effect name="PAtk">
-				<amount>10</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MAtk">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="Speed">
-				<amount>-15</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalDefence">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalDefence">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="PhysicalAttackSpeed">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MagicalAttackSpeed">
-				<amount>20</amount>
-				<mode>PER</mode>
-			</effect>
-			<effect name="MaxMp">
-				<amount>20</amount>
-				<mode>PER</mode>
+			<effect name="MagicCriticalRate">
+				<amount>40</amount>
+				<mode>DIFF</mode>
 			</effect>
 			<effect name="CriticalDamage">
-				<amount>20</amount>
+				<amount>34</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="HpRegen">
-				<amount>20</amount>
+			<effect name="CriticalRate">
+				<amount>38</amount>
 				<mode>PER</mode>
 			</effect>
 			<effect name="DefenceCriticalDamage">
-				<amount>-30</amount>
+				<amount>-50</amount>
 				<mode>PER</mode>
-			</effect>
-			<effect name="ResistAbnormalByCategory">
-				<amount>-10</amount>
-				<slot>DEBUFF</slot>
-			</effect>
-			<effect name="MagicCriticalRate">
-				<amount>20</amount>
-				<mode>DIFF</mode>
 			</effect>
 		</effects>
 	</skill>
@@ -2067,16 +1999,16 @@
 			<effect name="BlockAbnormalSlot">
 				<slot>ATTACK_TIME_DOWN;CASTING_TIME_DOWN;SPEED_UP;CHEAP_MAGIC</slot>
 			</effect>
-			<effect name="CriticalDamage">
-				<amount>35</amount>
+			<effect name="PhysicalAttackSpeed">
+				<amount>60</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="CriticalRate">
-				<amount>32</amount>
+			<effect name="MagicalAttackSpeed">
+				<amount>60</amount>
 				<mode>PER</mode>
 			</effect>
-			<effect name="MagicCriticalRate">
-				<amount>20</amount>
+			<effect name="Speed">
+				<amount>10</amount>
 				<mode>DIFF</mode>
 			</effect>
 			<effect name="MagicMpCost">
@@ -2085,17 +2017,17 @@
 				<magicType>1</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>0</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>3</magicType>
 			</effect>
 			<effect name="MagicMpCost">
-				<amount>-20</amount>
+				<amount>-10</amount>
 				<mode>PER</mode>
 				<magicType>22</magicType>
 			</effect>
