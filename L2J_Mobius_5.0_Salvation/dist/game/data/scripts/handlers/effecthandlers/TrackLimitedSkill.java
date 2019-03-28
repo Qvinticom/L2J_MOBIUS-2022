@@ -16,7 +16,7 @@
  */
 package handlers.effecthandlers;
 
-import com.l2jmobius.gameserver.model.CharEffectList;
+import com.l2jmobius.gameserver.model.EffectList;
 import com.l2jmobius.gameserver.model.StatsSet;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -75,7 +75,7 @@ public class TrackLimitedSkill extends AbstractEffect
 	private void trackAeoreLimit(Creature effector, Creature effected, Skill skill, int limitSkillId)
 	{
 		limitAeoreLevel = 0;
-		CharEffectList effectList = effected.getEffectList();
+		EffectList effectList = effected.getEffectList();
 		for (BuffInfo debuff : effectList.getDebuffs())
 		{
 			if (debuff.getSkill().getId() == limitSkillId)
@@ -98,7 +98,7 @@ public class TrackLimitedSkill extends AbstractEffect
 	private void trackSigelLimit(Creature effector, Creature effected, Skill skill, int limitSkillId)
 	{
 		limitSigelLevel = 0;
-		CharEffectList effectList = effected.getEffectList();
+		EffectList effectList = effected.getEffectList();
 		for (BuffInfo debuff : effectList.getDebuffs())
 		{
 			if (debuff.getSkill().getId() == limitSkillId)
@@ -121,7 +121,7 @@ public class TrackLimitedSkill extends AbstractEffect
 	private void trackIssLimit(Creature effector, Creature effected, Skill skill, int limitSkillId)
 	{
 		limitIssLevel = 0;
-		CharEffectList effectList = effected.getEffectList();
+		EffectList effectList = effected.getEffectList();
 		for (BuffInfo debuff : effectList.getDebuffs())
 		{
 			if (debuff.getSkill().getId() == limitSkillId)

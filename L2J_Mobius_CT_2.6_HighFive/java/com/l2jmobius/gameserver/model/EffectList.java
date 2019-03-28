@@ -59,9 +59,9 @@ import com.l2jmobius.gameserver.network.serverpackets.ShortBuffStatusUpdate;
  * Methods may resemble List interface, although it doesn't implement such interface.
  * @author Zoey76
  */
-public final class CharEffectList
+public final class EffectList
 {
-	private static final Logger LOGGER = Logger.getLogger(CharEffectList.class.getName());
+	private static final Logger LOGGER = Logger.getLogger(EffectList.class.getName());
 	/** Queue containing all effects from buffs for this effect list. */
 	private volatile Queue<BuffInfo> _buffs = new ConcurrentLinkedQueue<>();
 	/** Queue containing all triggered skills for this effect list. */
@@ -101,7 +101,7 @@ public final class CharEffectList
 	 * Constructor for effect list.
 	 * @param owner the creature that owns this effect list
 	 */
-	public CharEffectList(Creature owner)
+	public EffectList(Creature owner)
 	{
 		_owner = owner;
 	}

@@ -68,7 +68,7 @@ import com.l2jmobius.gameserver.instancemanager.QuestManager;
 import com.l2jmobius.gameserver.instancemanager.TimersManager;
 import com.l2jmobius.gameserver.instancemanager.ZoneManager;
 import com.l2jmobius.gameserver.model.AccessLevel;
-import com.l2jmobius.gameserver.model.CharEffectList;
+import com.l2jmobius.gameserver.model.EffectList;
 import com.l2jmobius.gameserver.model.CreatureContainer;
 import com.l2jmobius.gameserver.model.Hit;
 import com.l2jmobius.gameserver.model.Location;
@@ -232,7 +232,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	
 	private volatile Map<Integer, IgnoreSkillHolder> _ignoreSkillEffects;
 	/** Creatures effect list. */
-	private final CharEffectList _effectList = new CharEffectList(this);
+	private final EffectList _effectList = new EffectList(this);
 	/** The creature that summons this character. */
 	private Creature _summoner = null;
 	
@@ -345,7 +345,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 		setIsInvul(true);
 	}
 	
-	public final CharEffectList getEffectList()
+	public final EffectList getEffectList()
 	{
 		return _effectList;
 	}
@@ -4676,7 +4676,7 @@ public abstract class Creature extends WorldObject implements ISkillsHolder, IDe
 	 * Check if target is affected with special buff
 	 * @param flag int
 	 * @return boolean
-	 * @see CharEffectList#isAffected(EffectFlag)
+	 * @see EffectList#isAffected(EffectFlag)
 	 */
 	public boolean isAffected(EffectFlag flag)
 	{

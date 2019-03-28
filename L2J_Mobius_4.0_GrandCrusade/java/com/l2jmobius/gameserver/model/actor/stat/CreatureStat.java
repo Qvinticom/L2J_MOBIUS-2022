@@ -36,7 +36,7 @@ import java.util.stream.Stream;
 import com.l2jmobius.Config;
 import com.l2jmobius.gameserver.enums.AttributeType;
 import com.l2jmobius.gameserver.enums.Position;
-import com.l2jmobius.gameserver.model.CharEffectList;
+import com.l2jmobius.gameserver.model.EffectList;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.items.instance.ItemInstance;
 import com.l2jmobius.gameserver.model.skills.AbnormalType;
@@ -783,7 +783,7 @@ public class CreatureStat
 			resetStats();
 			
 			// Collect all necessary effects
-			final CharEffectList effectList = _creature.getEffectList();
+			final EffectList effectList = _creature.getEffectList();
 			final Stream<BuffInfo> passives = effectList.getPassives().stream().filter(BuffInfo::isInUse).filter(info -> info.getSkill().checkConditions(SkillConditionScope.PASSIVE, _creature, _creature));
 			final Stream<BuffInfo> options = effectList.getOptions().stream().filter(BuffInfo::isInUse);
 			final Stream<BuffInfo> effectsStream = Stream.concat(effectList.getEffects().stream().filter(BuffInfo::isInUse), Stream.concat(passives, options));

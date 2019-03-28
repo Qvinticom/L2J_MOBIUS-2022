@@ -25,7 +25,7 @@ import java.util.concurrent.ScheduledFuture;
 import com.l2jmobius.Config;
 import com.l2jmobius.commons.concurrent.ThreadPool;
 import com.l2jmobius.gameserver.GameTimeController;
-import com.l2jmobius.gameserver.model.CharEffectList;
+import com.l2jmobius.gameserver.model.EffectList;
 import com.l2jmobius.gameserver.model.actor.Creature;
 import com.l2jmobius.gameserver.model.actor.Summon;
 import com.l2jmobius.gameserver.model.effects.AbstractEffect;
@@ -290,7 +290,7 @@ public final class BuffInfo
 	 * Stops all the effects for this buff info.<br>
 	 * Removes effects stats.<br>
 	 * <b>It will not remove the buff info from the effect list</b>.<br>
-	 * Instead call {@link CharEffectList#stopSkillEffects(boolean, Skill)}
+	 * Instead call {@link EffectList#stopSkillEffects(boolean, Skill)}
 	 * @param removed if {@code true} the skill will be handled as removed
 	 */
 	public void stopAllEffects(boolean removed)
