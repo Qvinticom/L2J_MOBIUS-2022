@@ -18,6 +18,7 @@ package quests.Q00753_ReactingToACrisis;
 
 import com.l2jmobius.commons.util.CommonUtil;
 import com.l2jmobius.gameserver.enums.QuestType;
+import com.l2jmobius.gameserver.model.WorldObject;
 import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
 import com.l2jmobius.gameserver.model.quest.Quest;
@@ -149,7 +150,7 @@ public final class Q00753_ReactingToACrisis extends Quest
 	}
 	
 	@Override
-	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, com.l2jmobius.gameserver.model.WorldObject[] targets, boolean isSummon)
+	public String onSkillSee(Npc npc, PlayerInstance player, Skill skill, WorldObject[] targets, boolean isSummon)
 	{
 		if (!npc.isDead() && (player.getTarget() == npc) && (skill.getId() == VACCINE))
 		{
