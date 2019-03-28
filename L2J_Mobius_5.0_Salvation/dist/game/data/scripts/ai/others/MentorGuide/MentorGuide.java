@@ -34,7 +34,6 @@ import com.l2jmobius.gameserver.instancemanager.MentorManager;
 import com.l2jmobius.gameserver.model.Mentee;
 import com.l2jmobius.gameserver.model.actor.Npc;
 import com.l2jmobius.gameserver.model.actor.instance.PlayerInstance;
-import com.l2jmobius.gameserver.model.base.ClassLevel;
 import com.l2jmobius.gameserver.model.entity.Message;
 import com.l2jmobius.gameserver.model.events.EventType;
 import com.l2jmobius.gameserver.model.events.ListenerRegisterType;
@@ -83,10 +82,8 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 	{
 		new SkillHolder(9227, 1), // Mentor's Poem of Horn
 		new SkillHolder(9228, 1), // Mentor's Poem of Drum
-		new SkillHolder(9229, 1), // Mentor's Poem of Lute
 		new SkillHolder(9230, 1), // Mentor's Poem of Organ
 		new SkillHolder(9231, 1), // Mentor's Poem of Guitar
-		new SkillHolder(9232, 1), // Mentor's Poem of Harp
 		new SkillHolder(17082, 1), // Mentor's Prevailing Sonata
 		new SkillHolder(17083, 1), // Mentor's Daring Sonata
 		new SkillHolder(17084, 1), // Mentor's Refreshing Sonata
@@ -151,7 +148,7 @@ public final class MentorGuide extends AbstractNpcAI implements IGameXmlReader
 		
 		if (event.equalsIgnoreCase("exchange"))
 		{
-			if (hasQuestItems(player, MENTEE_CERT) && (player.getLevel() >= MAX_LEVEL) && (player.getClassId().level() == ClassLevel.AWAKEN.ordinal()))
+			if (hasQuestItems(player, MENTEE_CERT) && (player.getLevel() >= MAX_LEVEL) && player.isInCategory(CategoryType.SIXTH_CLASS_GROUP))
 			{
 				takeItems(player, MENTEE_CERT, 1);
 				giveItems(player, DIPLOMA, 40);
